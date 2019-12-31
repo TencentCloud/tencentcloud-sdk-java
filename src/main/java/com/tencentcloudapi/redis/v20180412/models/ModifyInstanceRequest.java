@@ -32,16 +32,16 @@ public class ModifyInstanceRequest extends AbstractModel{
     /**
     * 实例Id
     */
-    @SerializedName("InstanceId")
+    @SerializedName("InstanceIds")
     @Expose
-    private String InstanceId;
+    private String [] InstanceIds;
 
     /**
     * 实例的新名称
     */
-    @SerializedName("InstanceName")
+    @SerializedName("InstanceNames")
     @Expose
-    private String InstanceName;
+    private String [] InstanceNames;
 
     /**
     * 项目Id
@@ -52,6 +52,27 @@ public class ModifyInstanceRequest extends AbstractModel{
 
     /**
     * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    */
+    @SerializedName("AutoRenews")
+    @Expose
+    private Integer [] AutoRenews;
+
+    /**
+    * 已经废弃
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 已经废弃
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * 已经废弃
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -75,34 +96,34 @@ public class ModifyInstanceRequest extends AbstractModel{
 
     /**
      * Get 实例Id 
-     * @return InstanceId 实例Id
+     * @return InstanceIds 实例Id
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
     }
 
     /**
      * Set 实例Id
-     * @param InstanceId 实例Id
+     * @param InstanceIds 实例Id
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
     /**
      * Get 实例的新名称 
-     * @return InstanceName 实例的新名称
+     * @return InstanceNames 实例的新名称
      */
-    public String getInstanceName() {
-        return this.InstanceName;
+    public String [] getInstanceNames() {
+        return this.InstanceNames;
     }
 
     /**
      * Set 实例的新名称
-     * @param InstanceName 实例的新名称
+     * @param InstanceNames 实例的新名称
      */
-    public void setInstanceName(String InstanceName) {
-        this.InstanceName = InstanceName;
+    public void setInstanceNames(String [] InstanceNames) {
+        this.InstanceNames = InstanceNames;
     }
 
     /**
@@ -123,15 +144,63 @@ public class ModifyInstanceRequest extends AbstractModel{
 
     /**
      * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
-     * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @return AutoRenews 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public Integer [] getAutoRenews() {
+        return this.AutoRenews;
+    }
+
+    /**
+     * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * @param AutoRenews 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     */
+    public void setAutoRenews(Integer [] AutoRenews) {
+        this.AutoRenews = AutoRenews;
+    }
+
+    /**
+     * Get 已经废弃 
+     * @return InstanceId 已经废弃
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 已经废弃
+     * @param InstanceId 已经废弃
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 已经废弃 
+     * @return InstanceName 已经废弃
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 已经废弃
+     * @param InstanceName 已经废弃
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 已经废弃 
+     * @return AutoRenew 已经废弃
      */
     public Integer getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
-     * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 已经废弃
+     * @param AutoRenew 已经废弃
      */
     public void setAutoRenew(Integer AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -142,9 +211,12 @@ public class ModifyInstanceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operation", this.Operation);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "AutoRenews.", this.AutoRenews);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeDeployGroupListResponse extends AbstractModel{
 
     /**
+    * 符合条件的记录总数。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Integer Total;
+
+    /**
     * 返回列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -31,18 +38,27 @@ public class DescribeDeployGroupListResponse extends AbstractModel{
     private DeployGroupInfo [] Items;
 
     /**
-    * 符合条件的记录总数
-    */
-    @SerializedName("Total")
-    @Expose
-    private Integer Total;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 符合条件的记录总数。 
+     * @return Total 符合条件的记录总数。
+     */
+    public Integer getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 符合条件的记录总数。
+     * @param Total 符合条件的记录总数。
+     */
+    public void setTotal(Integer Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 返回列表。
@@ -65,22 +81,6 @@ public class DescribeDeployGroupListResponse extends AbstractModel{
     }
 
     /**
-     * Get 符合条件的记录总数 
-     * @return Total 符合条件的记录总数
-     */
-    public Integer getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set 符合条件的记录总数
-     * @param Total 符合条件的记录总数
-     */
-    public void setTotal(Integer Total) {
-        this.Total = Total;
-    }
-
-    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -100,8 +100,8 @@ public class DescribeDeployGroupListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

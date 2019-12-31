@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SmsSid extends AbstractModel{
 
     /**
-    * 卡片id
+    * 卡片ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Iccid")
@@ -31,16 +31,16 @@ public class SmsSid extends AbstractModel{
     private String Iccid;
 
     /**
-    * 信息流水id
+    * 信息流水ID
     */
     @SerializedName("Sid")
     @Expose
     private String Sid;
 
     /**
-     * Get 卡片id
+     * Get 卡片ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Iccid 卡片id
+     * @return Iccid 卡片ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIccid() {
@@ -48,9 +48,9 @@ public class SmsSid extends AbstractModel{
     }
 
     /**
-     * Set 卡片id
+     * Set 卡片ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Iccid 卡片id
+     * @param Iccid 卡片ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIccid(String Iccid) {
@@ -58,16 +58,16 @@ public class SmsSid extends AbstractModel{
     }
 
     /**
-     * Get 信息流水id 
-     * @return Sid 信息流水id
+     * Get 信息流水ID 
+     * @return Sid 信息流水ID
      */
     public String getSid() {
         return this.Sid;
     }
 
     /**
-     * Set 信息流水id
-     * @param Sid 信息流水id
+     * Set 信息流水ID
+     * @param Sid 信息流水ID
      */
     public void setSid(String Sid) {
         this.Sid = Sid;

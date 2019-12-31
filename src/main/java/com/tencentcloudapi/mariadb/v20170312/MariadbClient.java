@@ -129,6 +129,24 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateTmpInstances）用于创建临时实例。
+     * @param req CreateTmpInstancesRequest
+     * @return CreateTmpInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTmpInstancesResponse CreateTmpInstances(CreateTmpInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTmpInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTmpInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTmpInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse

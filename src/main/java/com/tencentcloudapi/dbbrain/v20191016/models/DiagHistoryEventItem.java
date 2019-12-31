@@ -51,7 +51,7 @@ public class DiagHistoryEventItem extends AbstractModel{
     private Long EventId;
 
     /**
-    * 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+    * 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
     */
     @SerializedName("Severity")
     @Expose
@@ -160,16 +160,16 @@ public class DiagHistoryEventItem extends AbstractModel{
     }
 
     /**
-     * Get 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。 
-     * @return Severity 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+     * Get 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。 
+     * @return Severity 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
      */
     public Long getSeverity() {
         return this.Severity;
     }
 
     /**
-     * Set 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
-     * @param Severity 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+     * Set 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
+     * @param Severity 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
      */
     public void setSeverity(Long Severity) {
         this.Severity = Severity;

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KickOutUserRequest extends AbstractModel{
+public class DismissRoomRequest extends AbstractModel{
 
     /**
     * TRTC的SDKAppId。
@@ -35,13 +35,6 @@ public class KickOutUserRequest extends AbstractModel{
     @SerializedName("RoomId")
     @Expose
     private Long RoomId;
-
-    /**
-    * 要踢的用户列表，最多10个。
-    */
-    @SerializedName("UserIds")
-    @Expose
-    private String [] UserIds;
 
     /**
      * Get TRTC的SDKAppId。 
@@ -76,28 +69,11 @@ public class KickOutUserRequest extends AbstractModel{
     }
 
     /**
-     * Get 要踢的用户列表，最多10个。 
-     * @return UserIds 要踢的用户列表，最多10个。
-     */
-    public String [] getUserIds() {
-        return this.UserIds;
-    }
-
-    /**
-     * Set 要踢的用户列表，最多10个。
-     * @param UserIds 要踢的用户列表，最多10个。
-     */
-    public void setUserIds(String [] UserIds) {
-        this.UserIds = UserIds;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
-        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
 
     }
 }

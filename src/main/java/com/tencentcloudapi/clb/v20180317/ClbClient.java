@@ -38,6 +38,25 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *监听器或转发规则绑定目标组。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req AssociateTargetGroupsRequest
+     * @return AssociateTargetGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateTargetGroupsResponse AssociateTargetGroups(AssociateTargetGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateTargetGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateTargetGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateTargetGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户需要先创建出一个HTTPS:443监听器，并在其下创建转发规则。通过调用本接口，系统会自动创建出一个HTTP:80监听器（如果之前不存在），并在其下创建转发规则，与HTTPS:443监听器下的Domains（在入参中指定）对应。创建成功后可以通过HTTP:80地址自动跳转为HTTPS:443地址进行访问。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req AutoRewriteRequest
@@ -170,6 +189,24 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *创建目标组。（目标组功能正在灰度中，需要开通白名单支持）
+     * @param req CreateTargetGroupRequest
+     * @return CreateTargetGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTargetGroupResponse CreateTargetGroup(CreateTargetGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTargetGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTargetGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTargetGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用来删除负载均衡实例下的监听器（四层和七层）。
 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req DeleteListenerRequest
@@ -239,6 +276,43 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除目标组
+     * @param req DeleteTargetGroupsRequest
+     * @return DeleteTargetGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTargetGroupsResponse DeleteTargetGroups(DeleteTargetGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTargetGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTargetGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTargetGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将服务器从目标组中解绑。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req DeregisterTargetGroupInstancesRequest
+     * @return DeregisterTargetGroupInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeregisterTargetGroupInstancesResponse DeregisterTargetGroupInstances(DeregisterTargetGroupInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeregisterTargetGroupInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeregisterTargetGroupInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeregisterTargetGroupInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -447,6 +521,60 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *获取目标组绑定的服务器信息
+     * @param req DescribeTargetGroupInstancesRequest
+     * @return DescribeTargetGroupInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTargetGroupInstancesResponse DescribeTargetGroupInstances(DescribeTargetGroupInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTargetGroupInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTargetGroupInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTargetGroupInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取目标组列表
+     * @param req DescribeTargetGroupListRequest
+     * @return DescribeTargetGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTargetGroupListResponse DescribeTargetGroupList(DescribeTargetGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTargetGroupListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTargetGroupListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTargetGroupList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询目标组信息
+     * @param req DescribeTargetGroupsRequest
+     * @return DescribeTargetGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTargetGroupsResponse DescribeTargetGroups(DescribeTargetGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTargetGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTargetGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTargetGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeTargetHealth 接口用来获取负载均衡后端服务的健康检查结果，不支持传统型负载均衡。
      * @param req DescribeTargetHealthRequest
      * @return DescribeTargetHealthResponse
@@ -494,6 +622,25 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解除规则的目标组关联关系。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req DisassociateTargetGroupsRequest
+     * @return DisassociateTargetGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateTargetGroupsResponse DisassociateTargetGroups(DisassociateTargetGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateTargetGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateTargetGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateTargetGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -633,6 +780,62 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *修改目标组的名称或者默认端口属性
+     * @param req ModifyTargetGroupAttributeRequest
+     * @return ModifyTargetGroupAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTargetGroupAttributeResponse ModifyTargetGroupAttribute(ModifyTargetGroupAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTargetGroupAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTargetGroupAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTargetGroupAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量修改目标组服务器端口。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req ModifyTargetGroupInstancesPortRequest
+     * @return ModifyTargetGroupInstancesPortResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTargetGroupInstancesPortResponse ModifyTargetGroupInstancesPort(ModifyTargetGroupInstancesPortRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTargetGroupInstancesPortResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTargetGroupInstancesPortResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTargetGroupInstancesPort"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量修改目标组的服务器权重。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req ModifyTargetGroupInstancesWeightRequest
+     * @return ModifyTargetGroupInstancesWeightResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTargetGroupInstancesWeightResponse ModifyTargetGroupInstancesWeight(ModifyTargetGroupInstancesWeightRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTargetGroupInstancesWeightResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTargetGroupInstancesWeightResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTargetGroupInstancesWeight"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ModifyTargetPort接口用于修改监听器绑定的后端服务的端口。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req ModifyTargetPortRequest
@@ -664,6 +867,25 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyTargetWeightResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyTargetWeight"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *注册服务器到目标组。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req RegisterTargetGroupInstancesRequest
+     * @return RegisterTargetGroupInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterTargetGroupInstancesResponse RegisterTargetGroupInstances(RegisterTargetGroupInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RegisterTargetGroupInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RegisterTargetGroupInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RegisterTargetGroupInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -13,14 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KickOutUserResponse extends AbstractModel{
+public class DescribeTargetGroupListResponse extends AbstractModel{
+
+    /**
+    * 显示的结果数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Integer TotalCount;
+
+    /**
+    * 显示的目标组信息集合
+    */
+    @SerializedName("TargetGroupSet")
+    @Expose
+    private TargetGroupInfo [] TargetGroupSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +42,38 @@ public class KickOutUserResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 显示的结果数量 
+     * @return TotalCount 显示的结果数量
+     */
+    public Integer getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 显示的结果数量
+     * @param TotalCount 显示的结果数量
+     */
+    public void setTotalCount(Integer TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 显示的目标组信息集合 
+     * @return TargetGroupSet 显示的目标组信息集合
+     */
+    public TargetGroupInfo [] getTargetGroupSet() {
+        return this.TargetGroupSet;
+    }
+
+    /**
+     * Set 显示的目标组信息集合
+     * @param TargetGroupSet 显示的目标组信息集合
+     */
+    public void setTargetGroupSet(TargetGroupInfo [] TargetGroupSet) {
+        this.TargetGroupSet = TargetGroupSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +95,8 @@ public class KickOutUserResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TargetGroupSet.", this.TargetGroupSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

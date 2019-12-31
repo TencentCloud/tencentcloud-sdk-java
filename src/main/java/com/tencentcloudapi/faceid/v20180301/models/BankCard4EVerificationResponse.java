@@ -44,7 +44,7 @@ public class BankCard4EVerificationResponse extends AbstractModel{
 '-3': '身份证号码有误'
 '-4': '银行卡号码有误'
 '-5': '手机号码不合法'
-'-18': '服务繁忙'
+'-18': '验证中心服务繁忙'
     */
     @SerializedName("Result")
     @Expose
@@ -86,7 +86,7 @@ public class BankCard4EVerificationResponse extends AbstractModel{
 '-3': '身份证号码有误'
 '-4': '银行卡号码有误'
 '-5': '手机号码不合法'
-'-18': '服务繁忙' 
+'-18': '验证中心服务繁忙' 
      * @return Result 认证结果码
 收费结果码：
 '0': '认证通过'
@@ -108,7 +108,7 @@ public class BankCard4EVerificationResponse extends AbstractModel{
 '-3': '身份证号码有误'
 '-4': '银行卡号码有误'
 '-5': '手机号码不合法'
-'-18': '服务繁忙'
+'-18': '验证中心服务繁忙'
      */
     public String getResult() {
         return this.Result;
@@ -136,7 +136,7 @@ public class BankCard4EVerificationResponse extends AbstractModel{
 '-3': '身份证号码有误'
 '-4': '银行卡号码有误'
 '-5': '手机号码不合法'
-'-18': '服务繁忙'
+'-18': '验证中心服务繁忙'
      * @param Result 认证结果码
 收费结果码：
 '0': '认证通过'
@@ -158,7 +158,7 @@ public class BankCard4EVerificationResponse extends AbstractModel{
 '-3': '身份证号码有误'
 '-4': '银行卡号码有误'
 '-5': '手机号码不合法'
-'-18': '服务繁忙'
+'-18': '验证中心服务繁忙'
      */
     public void setResult(String Result) {
         this.Result = Result;

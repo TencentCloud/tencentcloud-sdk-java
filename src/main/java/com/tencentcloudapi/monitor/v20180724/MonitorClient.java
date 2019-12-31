@@ -74,6 +74,24 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *删除告警策略组
+     * @param req DeletePolicyGroupRequest
+     * @return DeletePolicyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePolicyGroupResponse DeletePolicyGroup(DeletePolicyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePolicyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePolicyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePolicyGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取平台事件列表
      * @param req DescribeAccidentEventListRequest
      * @return DescribeAccidentEventListResponse
@@ -103,6 +121,42 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBaseMetricsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBaseMetrics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取已绑定对象列表
+     * @param req DescribeBindingPolicyObjectListRequest
+     * @return DescribeBindingPolicyObjectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBindingPolicyObjectListResponse DescribeBindingPolicyObjectList(DescribeBindingPolicyObjectListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBindingPolicyObjectListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBindingPolicyObjectList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取基础策略组详情
+     * @param req DescribePolicyGroupInfoRequest
+     * @return DescribePolicyGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyGroupInfoResponse DescribePolicyGroupInfo(DescribePolicyGroupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePolicyGroupInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePolicyGroupInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePolicyGroupInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -183,6 +237,42 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PutMonitorDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PutMonitorData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除全部的关联对象
+     * @param req UnBindingAllPolicyObjectRequest
+     * @return UnBindingAllPolicyObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnBindingAllPolicyObjectResponse UnBindingAllPolicyObject(UnBindingAllPolicyObjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnBindingAllPolicyObjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnBindingAllPolicyObjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnBindingAllPolicyObject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除策略的关联对象
+     * @param req UnBindingPolicyObjectRequest
+     * @return UnBindingPolicyObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnBindingPolicyObjectResponse UnBindingPolicyObject(UnBindingPolicyObjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnBindingPolicyObjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnBindingPolicyObjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnBindingPolicyObject"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

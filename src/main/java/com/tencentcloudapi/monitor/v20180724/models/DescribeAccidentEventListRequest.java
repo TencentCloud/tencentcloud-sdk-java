@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAccidentEventListRequest extends AbstractModel{
 
     /**
-    * 接口模块名，当前接口取值policy
+    * 接口模块名，当前接口取值monitor
     */
     @SerializedName("Module")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     private String AffectResource;
 
     /**
-     * Get 接口模块名，当前接口取值policy 
-     * @return Module 接口模块名，当前接口取值policy
+     * Get 接口模块名，当前接口取值monitor 
+     * @return Module 接口模块名，当前接口取值monitor
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 接口模块名，当前接口取值policy
-     * @param Module 接口模块名，当前接口取值policy
+     * Set 接口模块名，当前接口取值monitor
+     * @param Module 接口模块名，当前接口取值monitor
      */
     public void setModule(String Module) {
         this.Module = Module;

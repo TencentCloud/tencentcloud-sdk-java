@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class SendSmsRequest extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("Sdkappid")
     @Expose
     private Integer Sdkappid;
 
     /**
-    * 卡片id
+    * 卡片ID
     */
     @SerializedName("Iccid")
     @Expose
     private String Iccid;
 
     /**
-    * 短信内容
+    * 短信内容长度70限制
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 应用id 
-     * @return Sdkappid 应用id
+     * Get 应用ID 
+     * @return Sdkappid 应用ID
      */
     public Integer getSdkappid() {
         return this.Sdkappid;
     }
 
     /**
-     * Set 应用id
-     * @param Sdkappid 应用id
+     * Set 应用ID
+     * @param Sdkappid 应用ID
      */
     public void setSdkappid(Integer Sdkappid) {
         this.Sdkappid = Sdkappid;
     }
 
     /**
-     * Get 卡片id 
-     * @return Iccid 卡片id
+     * Get 卡片ID 
+     * @return Iccid 卡片ID
      */
     public String getIccid() {
         return this.Iccid;
     }
 
     /**
-     * Set 卡片id
-     * @param Iccid 卡片id
+     * Set 卡片ID
+     * @param Iccid 卡片ID
      */
     public void setIccid(String Iccid) {
         this.Iccid = Iccid;
     }
 
     /**
-     * Get 短信内容 
-     * @return Content 短信内容
+     * Get 短信内容长度70限制 
+     * @return Content 短信内容长度70限制
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 短信内容
-     * @param Content 短信内容
+     * Set 短信内容长度70限制
+     * @param Content 短信内容长度70限制
      */
     public void setContent(String Content) {
         this.Content = Content;

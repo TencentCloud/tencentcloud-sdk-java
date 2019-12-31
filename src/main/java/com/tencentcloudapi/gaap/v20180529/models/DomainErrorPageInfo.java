@@ -83,6 +83,14 @@ public class DomainErrorPageInfo extends AbstractModel{
     private String Body;
 
     /**
+    * 规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 错误定制响应的配置ID 
      * @return ErrorPageId 错误定制响应的配置ID
      */
@@ -227,6 +235,26 @@ public class DomainErrorPageInfo extends AbstractModel{
     }
 
     /**
+     * Get 规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 规则状态,0为成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -238,6 +266,7 @@ public class DomainErrorPageInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ClearHeaders.", this.ClearHeaders);
         this.setParamArrayObj(map, prefix + "SetHeaders.", this.SetHeaders);
         this.setParamSimple(map, prefix + "Body", this.Body);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

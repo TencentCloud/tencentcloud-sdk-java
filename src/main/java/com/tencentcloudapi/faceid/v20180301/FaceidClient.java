@@ -290,6 +290,42 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询手机号在网时长，输入手机号进行查询。
+     * @param req MobileNetworkTimeVerificationRequest
+     * @return MobileNetworkTimeVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public MobileNetworkTimeVerificationResponse MobileNetworkTimeVerification(MobileNetworkTimeVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MobileNetworkTimeVerificationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MobileNetworkTimeVerificationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MobileNetworkTimeVerification"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于验证手机号的状态，您可以输入手机号进行查询。
+     * @param req MobileStatusRequest
+     * @return MobileStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public MobileStatusResponse MobileStatus(MobileStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MobileStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MobileStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MobileStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于校验手机号、姓名和身份证号的真实性和一致性。
      * @param req PhoneVerificationRequest
      * @return PhoneVerificationResponse

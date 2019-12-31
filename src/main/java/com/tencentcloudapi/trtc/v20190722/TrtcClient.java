@@ -38,17 +38,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *接口说明：把房间所有用户从房间踢出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
-     * @param req DissolveRoomRequest
-     * @return DissolveRoomResponse
+     *接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+     * @param req DismissRoomRequest
+     * @return DismissRoomResponse
      * @throws TencentCloudSDKException
      */
-    public DissolveRoomResponse DissolveRoom(DissolveRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DissolveRoomResponse> rsp = null;
+    public DismissRoomResponse DismissRoom(DismissRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DismissRoomResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<DissolveRoomResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DismissRoomResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DissolveRoom"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "DismissRoom"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -56,17 +56,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *接口说明：将用户从房间踢出。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
-     * @param req KickOutUserRequest
-     * @return KickOutUserResponse
+     *接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+     * @param req RemoveUserRequest
+     * @return RemoveUserResponse
      * @throws TencentCloudSDKException
      */
-    public KickOutUserResponse KickOutUser(KickOutUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<KickOutUserResponse> rsp = null;
+    public RemoveUserResponse RemoveUser(RemoveUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveUserResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<KickOutUserResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<RemoveUserResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "KickOutUser"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "RemoveUser"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

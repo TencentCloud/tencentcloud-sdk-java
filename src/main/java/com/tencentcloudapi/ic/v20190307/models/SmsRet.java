@@ -37,14 +37,14 @@ public class SmsRet extends AbstractModel{
     private String Msg;
 
     /**
-    * 卡片id
+    * 卡片ID
     */
     @SerializedName("Iccid")
     @Expose
     private String Iccid;
 
     /**
-    * 流水id
+    * 流水ID
     */
     @SerializedName("Sid")
     @Expose
@@ -83,32 +83,32 @@ public class SmsRet extends AbstractModel{
     }
 
     /**
-     * Get 卡片id 
-     * @return Iccid 卡片id
+     * Get 卡片ID 
+     * @return Iccid 卡片ID
      */
     public String getIccid() {
         return this.Iccid;
     }
 
     /**
-     * Set 卡片id
-     * @param Iccid 卡片id
+     * Set 卡片ID
+     * @param Iccid 卡片ID
      */
     public void setIccid(String Iccid) {
         this.Iccid = Iccid;
     }
 
     /**
-     * Get 流水id 
-     * @return Sid 流水id
+     * Get 流水ID 
+     * @return Sid 流水ID
      */
     public String getSid() {
         return this.Sid;
     }
 
     /**
-     * Set 流水id
-     * @param Sid 流水id
+     * Set 流水ID
+     * @param Sid 流水ID
      */
     public void setSid(String Sid) {
         this.Sid = Sid;

@@ -13,67 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DissolveRoomRequest extends AbstractModel{
+public class AssociateTargetGroupsResponse extends AbstractModel{
 
     /**
-    * TRTC的SDKAppId。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("SdkAppId")
+    @SerializedName("RequestId")
     @Expose
-    private Long SdkAppId;
+    private String RequestId;
 
     /**
-    * 房间号。
-    */
-    @SerializedName("RoomId")
-    @Expose
-    private Long RoomId;
-
-    /**
-     * Get TRTC的SDKAppId。 
-     * @return SdkAppId TRTC的SDKAppId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set TRTC的SDKAppId。
-     * @param SdkAppId TRTC的SDKAppId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
-    }
-
-    /**
-     * Get 房间号。 
-     * @return RoomId 房间号。
-     */
-    public Long getRoomId() {
-        return this.RoomId;
-    }
-
-    /**
-     * Set 房间号。
-     * @param RoomId 房间号。
-     */
-    public void setRoomId(Long RoomId) {
-        this.RoomId = RoomId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

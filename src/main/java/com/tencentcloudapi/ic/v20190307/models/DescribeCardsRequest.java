@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCardsRequest extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("Sdkappid")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeCardsRequest extends AbstractModel{
     private Integer Limit;
 
     /**
-     * Get 应用id 
-     * @return Sdkappid 应用id
+     * Get 应用ID 
+     * @return Sdkappid 应用ID
      */
     public String getSdkappid() {
         return this.Sdkappid;
     }
 
     /**
-     * Set 应用id
-     * @param Sdkappid 应用id
+     * Set 应用ID
+     * @param Sdkappid 应用ID
      */
     public void setSdkappid(String Sdkappid) {
         this.Sdkappid = Sdkappid;

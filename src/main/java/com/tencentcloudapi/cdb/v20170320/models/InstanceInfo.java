@@ -302,6 +302,14 @@ public class InstanceInfo extends AbstractModel{
     private String DeviceClass;
 
     /**
+    * 置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployGroupId")
+    @Expose
+    private String DeployGroupId;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -950,6 +958,26 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
+     * Get 置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployGroupId 置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeployGroupId() {
+        return this.DeployGroupId;
+    }
+
+    /**
+     * Set 置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployGroupId 置放群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployGroupId(String DeployGroupId) {
+        this.DeployGroupId = DeployGroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -992,6 +1020,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Qps", this.Qps);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
+        this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
 
     }
 }

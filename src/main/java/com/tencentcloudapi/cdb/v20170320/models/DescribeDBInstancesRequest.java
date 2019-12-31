@@ -198,6 +198,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Integer WithMaster;
 
     /**
+    * 置放群组ID列表。
+    */
+    @SerializedName("DeployGroupIds")
+    @Expose
+    private String [] DeployGroupIds;
+
+    /**
      * Get 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。 
      * @return ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      */
@@ -598,6 +605,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 置放群组ID列表。 
+     * @return DeployGroupIds 置放群组ID列表。
+     */
+    public String [] getDeployGroupIds() {
+        return this.DeployGroupIds;
+    }
+
+    /**
+     * Set 置放群组ID列表。
+     * @param DeployGroupIds 置放群组ID列表。
+     */
+    public void setDeployGroupIds(String [] DeployGroupIds) {
+        this.DeployGroupIds = DeployGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -626,6 +649,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WithDr", this.WithDr);
         this.setParamSimple(map, prefix + "WithRo", this.WithRo);
         this.setParamSimple(map, prefix + "WithMaster", this.WithMaster);
+        this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
 
     }
 }

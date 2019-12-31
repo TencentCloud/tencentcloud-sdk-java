@@ -69,7 +69,7 @@ public class InstanceMultiParam extends AbstractModel{
     */
     @SerializedName("EnumValue")
     @Expose
-    private String EnumValue;
+    private String [] EnumValue;
 
     /**
     * 参数状态, 1: 修改中， 2：修改完成
@@ -178,7 +178,7 @@ public class InstanceMultiParam extends AbstractModel{
      * Get 参数说明 
      * @return EnumValue 参数说明
      */
-    public String getEnumValue() {
+    public String [] getEnumValue() {
         return this.EnumValue;
     }
 
@@ -186,7 +186,7 @@ public class InstanceMultiParam extends AbstractModel{
      * Set 参数说明
      * @param EnumValue 参数说明
      */
-    public void setEnumValue(String EnumValue) {
+    public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
@@ -216,7 +216,7 @@ public class InstanceMultiParam extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
         this.setParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
         this.setParamSimple(map, prefix + "Tips", this.Tips);
-        this.setParamSimple(map, prefix + "EnumValue", this.EnumValue);
+        this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "Status", this.Status);
 
     }

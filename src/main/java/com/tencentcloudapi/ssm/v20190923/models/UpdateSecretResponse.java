@@ -13,14 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DissolveRoomResponse extends AbstractModel{
+public class UpdateSecretResponse extends AbstractModel{
+
+    /**
+    * 凭据名称。
+    */
+    @SerializedName("SecretName")
+    @Expose
+    private String SecretName;
+
+    /**
+    * 凭据版本号。
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +42,38 @@ public class DissolveRoomResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 凭据名称。 
+     * @return SecretName 凭据名称。
+     */
+    public String getSecretName() {
+        return this.SecretName;
+    }
+
+    /**
+     * Set 凭据名称。
+     * @param SecretName 凭据名称。
+     */
+    public void setSecretName(String SecretName) {
+        this.SecretName = SecretName;
+    }
+
+    /**
+     * Get 凭据版本号。 
+     * @return VersionId 凭据版本号。
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set 凭据版本号。
+     * @param VersionId 凭据版本号。
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +95,8 @@ public class DissolveRoomResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

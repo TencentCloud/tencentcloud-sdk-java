@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeCardRequest extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("Sdkappid")
     @Expose
     private Integer Sdkappid;
 
     /**
-    * 卡片id
+    * 卡片ID
     */
     @SerializedName("Iccid")
     @Expose
     private String Iccid;
 
     /**
-     * Get 应用id 
-     * @return Sdkappid 应用id
+     * Get 应用ID 
+     * @return Sdkappid 应用ID
      */
     public Integer getSdkappid() {
         return this.Sdkappid;
     }
 
     /**
-     * Set 应用id
-     * @param Sdkappid 应用id
+     * Set 应用ID
+     * @param Sdkappid 应用ID
      */
     public void setSdkappid(Integer Sdkappid) {
         this.Sdkappid = Sdkappid;
     }
 
     /**
-     * Get 卡片id 
-     * @return Iccid 卡片id
+     * Get 卡片ID 
+     * @return Iccid 卡片ID
      */
     public String getIccid() {
         return this.Iccid;
     }
 
     /**
-     * Set 卡片id
-     * @param Iccid 卡片id
+     * Set 卡片ID
+     * @param Iccid 卡片ID
      */
     public void setIccid(String Iccid) {
         this.Iccid = Iccid;

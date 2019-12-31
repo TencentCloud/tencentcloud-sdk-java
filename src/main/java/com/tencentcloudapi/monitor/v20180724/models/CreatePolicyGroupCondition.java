@@ -44,7 +44,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     private Integer AlarmNotifyPeriod;
 
     /**
-    * 比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
+    * 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
     */
     @SerializedName("CalcType")
     @Expose
@@ -58,7 +58,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     private Float CalcValue;
 
     /**
-    * Storm检测周期单位秒，若指标有默认值可不填
+    * 数据聚合周期(单位秒)，若指标有默认值可不填
     */
     @SerializedName("CalcPeriod")
     @Expose
@@ -127,16 +127,16 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     }
 
     /**
-     * Get 比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。 
-     * @return CalcType 比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
+     * Get 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。 
+     * @return CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
      */
     public Integer getCalcType() {
         return this.CalcType;
     }
 
     /**
-     * Set 比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
-     * @param CalcType 比较类型，范围0-6，分别对应[>,<,>=,<=,==,!=,!]。如果指标有配置默认比较类型值可以不填。
+     * Set 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
+     * @param CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
      */
     public void setCalcType(Integer CalcType) {
         this.CalcType = CalcType;
@@ -159,16 +159,16 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     }
 
     /**
-     * Get Storm检测周期单位秒，若指标有默认值可不填 
-     * @return CalcPeriod Storm检测周期单位秒，若指标有默认值可不填
+     * Get 数据聚合周期(单位秒)，若指标有默认值可不填 
+     * @return CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
      */
     public Integer getCalcPeriod() {
         return this.CalcPeriod;
     }
 
     /**
-     * Set Storm检测周期单位秒，若指标有默认值可不填
-     * @param CalcPeriod Storm检测周期单位秒，若指标有默认值可不填
+     * Set 数据聚合周期(单位秒)，若指标有默认值可不填
+     * @param CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
      */
     public void setCalcPeriod(Integer CalcPeriod) {
         this.CalcPeriod = CalcPeriod;

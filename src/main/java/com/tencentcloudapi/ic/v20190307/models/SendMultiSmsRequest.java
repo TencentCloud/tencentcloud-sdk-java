@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendMultiSmsRequest extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("Sdkappid")
     @Expose
@@ -37,23 +37,23 @@ public class SendMultiSmsRequest extends AbstractModel{
     private String [] Iccids;
 
     /**
-    * 短信内容
+    * 短信内容 长度限制 70
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 应用id 
-     * @return Sdkappid 应用id
+     * Get 应用ID 
+     * @return Sdkappid 应用ID
      */
     public String getSdkappid() {
         return this.Sdkappid;
     }
 
     /**
-     * Set 应用id
-     * @param Sdkappid 应用id
+     * Set 应用ID
+     * @param Sdkappid 应用ID
      */
     public void setSdkappid(String Sdkappid) {
         this.Sdkappid = Sdkappid;
@@ -76,16 +76,16 @@ public class SendMultiSmsRequest extends AbstractModel{
     }
 
     /**
-     * Get 短信内容 
-     * @return Content 短信内容
+     * Get 短信内容 长度限制 70 
+     * @return Content 短信内容 长度限制 70
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 短信内容
-     * @param Content 短信内容
+     * Set 短信内容 长度限制 70
+     * @param Content 短信内容 长度限制 70
      */
     public void setContent(String Content) {
         this.Content = Content;

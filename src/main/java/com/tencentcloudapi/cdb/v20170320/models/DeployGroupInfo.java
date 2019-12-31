@@ -44,18 +44,34 @@ public class DeployGroupInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 置放群组描述。
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
-
-    /**
     * 置放群组实例配额。
     */
     @SerializedName("Quota")
     @Expose
     private Integer Quota;
+
+    /**
+    * 置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Affinity")
+    @Expose
+    private String Affinity;
+
+    /**
+    * 置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LimitNum")
+    @Expose
+    private Integer LimitNum;
+
+    /**
+    * 置放群组详细信息。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
      * Get 置放群组 ID。 
@@ -106,22 +122,6 @@ public class DeployGroupInfo extends AbstractModel{
     }
 
     /**
-     * Get 置放群组描述。 
-     * @return Description 置放群组描述。
-     */
-    public String getDescription() {
-        return this.Description;
-    }
-
-    /**
-     * Set 置放群组描述。
-     * @param Description 置放群组描述。
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
-    }
-
-    /**
      * Get 置放群组实例配额。 
      * @return Quota 置放群组实例配额。
      */
@@ -138,14 +138,72 @@ public class DeployGroupInfo extends AbstractModel{
     }
 
     /**
+     * Get 置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Affinity 置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAffinity() {
+        return this.Affinity;
+    }
+
+    /**
+     * Set 置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Affinity 置放群组亲和性策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAffinity(String Affinity) {
+        this.Affinity = Affinity;
+    }
+
+    /**
+     * Get 置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LimitNum 置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getLimitNum() {
+        return this.LimitNum;
+    }
+
+    /**
+     * Set 置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LimitNum 置放群组亲和性策略1的限制实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLimitNum(Integer LimitNum) {
+        this.LimitNum = LimitNum;
+    }
+
+    /**
+     * Get 置放群组详细信息。 
+     * @return Description 置放群组详细信息。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 置放群组详细信息。
+     * @param Description 置放群组详细信息。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Quota", this.Quota);
+        this.setParamSimple(map, prefix + "Affinity", this.Affinity);
+        this.setParamSimple(map, prefix + "LimitNum", this.LimitNum);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

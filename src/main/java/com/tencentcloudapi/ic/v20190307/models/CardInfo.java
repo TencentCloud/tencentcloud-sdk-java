@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CardInfo extends AbstractModel{
 
     /**
-    * 卡片id
+    * 卡片ID
     */
     @SerializedName("Iccid")
     @Expose
@@ -54,7 +54,7 @@ public class CardInfo extends AbstractModel{
     private String Imei;
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("Sdkappid")
     @Expose
@@ -106,7 +106,7 @@ public class CardInfo extends AbstractModel{
     private String ProductId;
 
     /**
-    * 流量池id
+    * 流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoolId")
@@ -176,7 +176,7 @@ public class CardInfo extends AbstractModel{
     private Integer IsActivated;
 
     /**
-    * 订单id
+    * 订单ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderId")
@@ -222,16 +222,16 @@ public class CardInfo extends AbstractModel{
     private Integer Provider;
 
     /**
-     * Get 卡片id 
-     * @return Iccid 卡片id
+     * Get 卡片ID 
+     * @return Iccid 卡片ID
      */
     public String getIccid() {
         return this.Iccid;
     }
 
     /**
-     * Set 卡片id
-     * @param Iccid 卡片id
+     * Set 卡片ID
+     * @param Iccid 卡片ID
      */
     public void setIccid(String Iccid) {
         this.Iccid = Iccid;
@@ -298,16 +298,16 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
-     * Get 应用id 
-     * @return Sdkappid 应用id
+     * Get 应用ID 
+     * @return Sdkappid 应用ID
      */
     public String getSdkappid() {
         return this.Sdkappid;
     }
 
     /**
-     * Set 应用id
-     * @param Sdkappid 应用id
+     * Set 应用ID
+     * @param Sdkappid 应用ID
      */
     public void setSdkappid(String Sdkappid) {
         this.Sdkappid = Sdkappid;
@@ -422,9 +422,9 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
-     * Get 流量池id
+     * Get 流量池ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PoolId 流量池id
+     * @return PoolId 流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPoolId() {
@@ -432,9 +432,9 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
-     * Set 流量池id
+     * Set 流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoolId 流量池id
+     * @param PoolId 流量池ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoolId(String PoolId) {
@@ -594,9 +594,9 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
-     * Get 订单id
+     * Get 订单ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrderId 订单id
+     * @return OrderId 订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderId() {
@@ -604,9 +604,9 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
-     * Set 订单id
+     * Set 订单ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrderId 订单id
+     * @param OrderId 订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderId(String OrderId) {

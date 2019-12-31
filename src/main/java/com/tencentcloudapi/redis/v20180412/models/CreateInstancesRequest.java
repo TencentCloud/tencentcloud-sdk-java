@@ -107,7 +107,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIdList;
 
     /**
-    * 用户自定义的端口 不填则默认为6379
+    * 用户自定义的端口 不填则默认为6379，范围[1024,65535]
     */
     @SerializedName("VPort")
     @Expose
@@ -341,16 +341,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户自定义的端口 不填则默认为6379 
-     * @return VPort 用户自定义的端口 不填则默认为6379
+     * Get 用户自定义的端口 不填则默认为6379，范围[1024,65535] 
+     * @return VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]
      */
     public Integer getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 用户自定义的端口 不填则默认为6379
-     * @param VPort 用户自定义的端口 不填则默认为6379
+     * Set 用户自定义的端口 不填则默认为6379，范围[1024,65535]
+     * @param VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]
      */
     public void setVPort(Integer VPort) {
         this.VPort = VPort;

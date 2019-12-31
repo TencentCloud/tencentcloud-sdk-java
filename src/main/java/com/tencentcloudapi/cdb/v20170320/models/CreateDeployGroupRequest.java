@@ -37,6 +37,20 @@ public class CreateDeployGroupRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 置放群组的亲和性策略。
+    */
+    @SerializedName("Affinity")
+    @Expose
+    private Integer [] Affinity;
+
+    /**
+    * 置放群组亲和性策略1的实例限制个数。
+    */
+    @SerializedName("LimitNum")
+    @Expose
+    private Integer LimitNum;
+
+    /**
      * Get 置放群组名称，最长不能超过60个字符。 
      * @return DeployGroupName 置放群组名称，最长不能超过60个字符。
      */
@@ -69,11 +83,45 @@ public class CreateDeployGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 置放群组的亲和性策略。 
+     * @return Affinity 置放群组的亲和性策略。
+     */
+    public Integer [] getAffinity() {
+        return this.Affinity;
+    }
+
+    /**
+     * Set 置放群组的亲和性策略。
+     * @param Affinity 置放群组的亲和性策略。
+     */
+    public void setAffinity(Integer [] Affinity) {
+        this.Affinity = Affinity;
+    }
+
+    /**
+     * Get 置放群组亲和性策略1的实例限制个数。 
+     * @return LimitNum 置放群组亲和性策略1的实例限制个数。
+     */
+    public Integer getLimitNum() {
+        return this.LimitNum;
+    }
+
+    /**
+     * Set 置放群组亲和性策略1的实例限制个数。
+     * @param LimitNum 置放群组亲和性策略1的实例限制个数。
+     */
+    public void setLimitNum(Integer LimitNum) {
+        this.LimitNum = LimitNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArraySimple(map, prefix + "Affinity.", this.Affinity);
+        this.setParamSimple(map, prefix + "LimitNum", this.LimitNum);
 
     }
 }

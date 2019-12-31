@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDeployGroupResponse extends AbstractModel{
 
     /**
-    * 置放群组ID
+    * 置放群组ID。
     */
     @SerializedName("DeployGroupId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDeployGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 置放群组ID 
-     * @return DeployGroupId 置放群组ID
+     * Get 置放群组ID。 
+     * @return DeployGroupId 置放群组ID。
      */
     public String getDeployGroupId() {
         return this.DeployGroupId;
     }
 
     /**
-     * Set 置放群组ID
-     * @param DeployGroupId 置放群组ID
+     * Set 置放群组ID。
+     * @param DeployGroupId 置放群组ID。
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
