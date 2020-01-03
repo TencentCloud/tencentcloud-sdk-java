@@ -13,67 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.es.v20180416.models;
+package com.tencentcloudapi.tiems.v20190416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MultiZoneInfo extends AbstractModel{
+public class DeleteRsgAsGroupRequest extends AbstractModel{
 
     /**
-    * 可用区
+    * 伸缩组 ID
     */
-    @SerializedName("Zone")
+    @SerializedName("Id")
     @Expose
-    private String Zone;
+    private String Id;
 
     /**
-    * 子网ID
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
-
-    /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get 伸缩组 ID 
+     * @return Id 伸缩组 ID
      */
-    public String getZone() {
-        return this.Zone;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set 伸缩组 ID
+     * @param Id 伸缩组 ID
      */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
-
-    /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

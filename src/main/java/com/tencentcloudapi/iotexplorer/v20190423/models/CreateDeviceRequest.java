@@ -37,6 +37,41 @@ public class CreateDeviceRequest extends AbstractModel{
     private String DeviceName;
 
     /**
+    * LoRaWAN 设备地址
+    */
+    @SerializedName("DevAddr")
+    @Expose
+    private String DevAddr;
+
+    /**
+    * LoRaWAN 应用密钥
+    */
+    @SerializedName("AppKey")
+    @Expose
+    private String AppKey;
+
+    /**
+    * LoRaWAN 设备唯一标识
+    */
+    @SerializedName("DevEUI")
+    @Expose
+    private String DevEUI;
+
+    /**
+    * LoRaWAN 应用会话密钥
+    */
+    @SerializedName("AppSKey")
+    @Expose
+    private String AppSKey;
+
+    /**
+    * LoRaWAN 网络会话密钥
+    */
+    @SerializedName("NwkSKey")
+    @Expose
+    private String NwkSKey;
+
+    /**
      * Get 产品ID。 
      * @return ProductId 产品ID。
      */
@@ -69,11 +104,96 @@ public class CreateDeviceRequest extends AbstractModel{
     }
 
     /**
+     * Get LoRaWAN 设备地址 
+     * @return DevAddr LoRaWAN 设备地址
+     */
+    public String getDevAddr() {
+        return this.DevAddr;
+    }
+
+    /**
+     * Set LoRaWAN 设备地址
+     * @param DevAddr LoRaWAN 设备地址
+     */
+    public void setDevAddr(String DevAddr) {
+        this.DevAddr = DevAddr;
+    }
+
+    /**
+     * Get LoRaWAN 应用密钥 
+     * @return AppKey LoRaWAN 应用密钥
+     */
+    public String getAppKey() {
+        return this.AppKey;
+    }
+
+    /**
+     * Set LoRaWAN 应用密钥
+     * @param AppKey LoRaWAN 应用密钥
+     */
+    public void setAppKey(String AppKey) {
+        this.AppKey = AppKey;
+    }
+
+    /**
+     * Get LoRaWAN 设备唯一标识 
+     * @return DevEUI LoRaWAN 设备唯一标识
+     */
+    public String getDevEUI() {
+        return this.DevEUI;
+    }
+
+    /**
+     * Set LoRaWAN 设备唯一标识
+     * @param DevEUI LoRaWAN 设备唯一标识
+     */
+    public void setDevEUI(String DevEUI) {
+        this.DevEUI = DevEUI;
+    }
+
+    /**
+     * Get LoRaWAN 应用会话密钥 
+     * @return AppSKey LoRaWAN 应用会话密钥
+     */
+    public String getAppSKey() {
+        return this.AppSKey;
+    }
+
+    /**
+     * Set LoRaWAN 应用会话密钥
+     * @param AppSKey LoRaWAN 应用会话密钥
+     */
+    public void setAppSKey(String AppSKey) {
+        this.AppSKey = AppSKey;
+    }
+
+    /**
+     * Get LoRaWAN 网络会话密钥 
+     * @return NwkSKey LoRaWAN 网络会话密钥
+     */
+    public String getNwkSKey() {
+        return this.NwkSKey;
+    }
+
+    /**
+     * Set LoRaWAN 网络会话密钥
+     * @param NwkSKey LoRaWAN 网络会话密钥
+     */
+    public void setNwkSKey(String NwkSKey) {
+        this.NwkSKey = NwkSKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "DevAddr", this.DevAddr);
+        this.setParamSimple(map, prefix + "AppKey", this.AppKey);
+        this.setParamSimple(map, prefix + "DevEUI", this.DevEUI);
+        this.setParamSimple(map, prefix + "AppSKey", this.AppSKey);
+        this.setParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
 
     }
 }

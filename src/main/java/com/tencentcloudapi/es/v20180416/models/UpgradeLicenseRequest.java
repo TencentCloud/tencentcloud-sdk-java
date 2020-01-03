@@ -51,6 +51,20 @@ public class UpgradeLicenseRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
+    * 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+    */
+    @SerializedName("BasicSecurityType")
+    @Expose
+    private Integer BasicSecurityType;
+
+    /**
+    * 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
+    */
+    @SerializedName("ForceRestart")
+    @Expose
+    private Boolean ForceRestart;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -115,6 +129,38 @@ public class UpgradeLicenseRequest extends AbstractModel{
     }
 
     /**
+     * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li> 
+     * @return BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     */
+    public Integer getBasicSecurityType() {
+        return this.BasicSecurityType;
+    }
+
+    /**
+     * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @param BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     */
+    public void setBasicSecurityType(Integer BasicSecurityType) {
+        this.BasicSecurityType = BasicSecurityType;
+    }
+
+    /**
+     * Get 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false 
+     * @return ForceRestart 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
+     */
+    public Boolean getForceRestart() {
+        return this.ForceRestart;
+    }
+
+    /**
+     * Set 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
+     * @param ForceRestart 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
+     */
+    public void setForceRestart(Boolean ForceRestart) {
+        this.ForceRestart = ForceRestart;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class UpgradeLicenseRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+        this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
 
     }
 }

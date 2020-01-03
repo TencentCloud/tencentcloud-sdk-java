@@ -86,6 +86,13 @@ public class SpecItemInfo extends AbstractModel{
     private Integer Pid;
 
     /**
+    * 机器类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 规格ID 
      * @return SpecCode 规格ID
      */
@@ -230,6 +237,22 @@ public class SpecItemInfo extends AbstractModel{
     }
 
     /**
+     * Get 机器类型 
+     * @return Type 机器类型
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 机器类型
+     * @param Type 机器类型
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class SpecItemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MinStorage", this.MinStorage);
         this.setParamSimple(map, prefix + "Qps", this.Qps);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

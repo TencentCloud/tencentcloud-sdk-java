@@ -51,6 +51,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String LicenseType;
 
     /**
+    * 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+    */
+    @SerializedName("BasicSecurityType")
+    @Expose
+    private Integer BasicSecurityType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -115,6 +122,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li> 
+     * @return BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     */
+    public Integer getBasicSecurityType() {
+        return this.BasicSecurityType;
+    }
+
+    /**
+     * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @param BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     */
+    public void setBasicSecurityType(Integer BasicSecurityType) {
+        this.BasicSecurityType = BasicSecurityType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EsVersion", this.EsVersion);
         this.setParamSimple(map, prefix + "CheckOnly", this.CheckOnly);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
 
     }
 }

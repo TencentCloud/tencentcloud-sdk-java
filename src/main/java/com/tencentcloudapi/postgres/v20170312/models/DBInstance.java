@@ -184,6 +184,13 @@ public class DBInstance extends AbstractModel{
     private DBInstanceNetInfo [] DBInstanceNetInfo;
 
     /**
+    * 机器类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -552,6 +559,22 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 机器类型 
+     * @return Type 机器类型
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 机器类型
+     * @param Type 机器类型
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -578,6 +601,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

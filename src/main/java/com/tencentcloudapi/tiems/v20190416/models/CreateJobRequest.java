@@ -30,18 +30,11 @@ public class CreateJobRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 同时处理任务的 Worker 个数
+    * 使用的资源组 Id，默认使用共享资源组
     */
-    @SerializedName("WorkerCount")
+    @SerializedName("ResourceGroupId")
     @Expose
-    private Long WorkerCount;
-
-    /**
-    * 使用的配置 Id
-    */
-    @SerializedName("ConfigId")
-    @Expose
-    private String ConfigId;
+    private String ResourceGroupId;
 
     /**
     * 处理器配置, 单位为1/1000核；范围[100, 256000]
@@ -79,11 +72,18 @@ public class CreateJobRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 使用的资源组 Id，默认使用共享资源组
+    * 同时处理任务的 Worker 个数
     */
-    @SerializedName("ResourceGroupId")
+    @SerializedName("WorkerCount")
     @Expose
-    private String ResourceGroupId;
+    private Long WorkerCount;
+
+    /**
+    * 使用的配置 Id
+    */
+    @SerializedName("ConfigId")
+    @Expose
+    private String ConfigId;
 
     /**
     * GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
@@ -107,6 +107,13 @@ public class CreateJobRequest extends AbstractModel{
     private String GpuType;
 
     /**
+    * 量化输入
+    */
+    @SerializedName("QuantizationInput")
+    @Expose
+    private QuantizationInput QuantizationInput;
+
+    /**
      * Get 任务名称 
      * @return Name 任务名称
      */
@@ -123,35 +130,19 @@ public class CreateJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 同时处理任务的 Worker 个数 
-     * @return WorkerCount 同时处理任务的 Worker 个数
+     * Get 使用的资源组 Id，默认使用共享资源组 
+     * @return ResourceGroupId 使用的资源组 Id，默认使用共享资源组
      */
-    public Long getWorkerCount() {
-        return this.WorkerCount;
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
     }
 
     /**
-     * Set 同时处理任务的 Worker 个数
-     * @param WorkerCount 同时处理任务的 Worker 个数
+     * Set 使用的资源组 Id，默认使用共享资源组
+     * @param ResourceGroupId 使用的资源组 Id，默认使用共享资源组
      */
-    public void setWorkerCount(Long WorkerCount) {
-        this.WorkerCount = WorkerCount;
-    }
-
-    /**
-     * Get 使用的配置 Id 
-     * @return ConfigId 使用的配置 Id
-     */
-    public String getConfigId() {
-        return this.ConfigId;
-    }
-
-    /**
-     * Set 使用的配置 Id
-     * @param ConfigId 使用的配置 Id
-     */
-    public void setConfigId(String ConfigId) {
-        this.ConfigId = ConfigId;
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
@@ -235,19 +226,35 @@ public class CreateJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 使用的资源组 Id，默认使用共享资源组 
-     * @return ResourceGroupId 使用的资源组 Id，默认使用共享资源组
+     * Get 同时处理任务的 Worker 个数 
+     * @return WorkerCount 同时处理任务的 Worker 个数
      */
-    public String getResourceGroupId() {
-        return this.ResourceGroupId;
+    public Long getWorkerCount() {
+        return this.WorkerCount;
     }
 
     /**
-     * Set 使用的资源组 Id，默认使用共享资源组
-     * @param ResourceGroupId 使用的资源组 Id，默认使用共享资源组
+     * Set 同时处理任务的 Worker 个数
+     * @param WorkerCount 同时处理任务的 Worker 个数
      */
-    public void setResourceGroupId(String ResourceGroupId) {
-        this.ResourceGroupId = ResourceGroupId;
+    public void setWorkerCount(Long WorkerCount) {
+        this.WorkerCount = WorkerCount;
+    }
+
+    /**
+     * Get 使用的配置 Id 
+     * @return ConfigId 使用的配置 Id
+     */
+    public String getConfigId() {
+        return this.ConfigId;
+    }
+
+    /**
+     * Set 使用的配置 Id
+     * @param ConfigId 使用的配置 Id
+     */
+    public void setConfigId(String ConfigId) {
+        this.ConfigId = ConfigId;
     }
 
     /**
@@ -299,21 +306,38 @@ public class CreateJobRequest extends AbstractModel{
     }
 
     /**
+     * Get 量化输入 
+     * @return QuantizationInput 量化输入
+     */
+    public QuantizationInput getQuantizationInput() {
+        return this.QuantizationInput;
+    }
+
+    /**
+     * Set 量化输入
+     * @param QuantizationInput 量化输入
+     */
+    public void setQuantizationInput(QuantizationInput QuantizationInput) {
+        this.QuantizationInput = QuantizationInput;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "WorkerCount", this.WorkerCount);
-        this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);
         this.setParamObj(map, prefix + "PredictInput.", this.PredictInput);
         this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+        this.setParamSimple(map, prefix + "WorkerCount", this.WorkerCount);
+        this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
         this.setParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);
+        this.setParamObj(map, prefix + "QuantizationInput.", this.QuantizationInput);
 
     }
 }

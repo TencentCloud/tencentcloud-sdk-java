@@ -53,6 +53,30 @@ public class ExposeInfo extends AbstractModel{
     private String SubnetId;
 
     /**
+    * GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GateWayServiceId")
+    @Expose
+    private String GateWayServiceId;
+
+    /**
+    * GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GateWayAPIId")
+    @Expose
+    private String GateWayAPIId;
+
+    /**
+    * GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GateWayDomain")
+    @Expose
+    private String GateWayDomain;
+
+    /**
      * Get 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通） 
      * @return ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      */
@@ -125,6 +149,66 @@ public class ExposeInfo extends AbstractModel{
     }
 
     /**
+     * Get GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GateWayServiceId GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGateWayServiceId() {
+        return this.GateWayServiceId;
+    }
+
+    /**
+     * Set GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GateWayServiceId GATEWAY 服务id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGateWayServiceId(String GateWayServiceId) {
+        this.GateWayServiceId = GateWayServiceId;
+    }
+
+    /**
+     * Get GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GateWayAPIId GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGateWayAPIId() {
+        return this.GateWayAPIId;
+    }
+
+    /**
+     * Set GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GateWayAPIId GATEWAY api id，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGateWayAPIId(String GateWayAPIId) {
+        this.GateWayAPIId = GateWayAPIId;
+    }
+
+    /**
+     * Get GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GateWayDomain GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGateWayDomain() {
+        return this.GateWayDomain;
+    }
+
+    /**
+     * Set GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GateWayDomain GATEWAY domain，ExposeType = GATEWAY 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGateWayDomain(String GateWayDomain) {
+        this.GateWayDomain = GateWayDomain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +216,9 @@ public class ExposeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "GateWayServiceId", this.GateWayServiceId);
+        this.setParamSimple(map, prefix + "GateWayAPIId", this.GateWayAPIId);
+        this.setParamSimple(map, prefix + "GateWayDomain", this.GateWayDomain);
 
     }
 }

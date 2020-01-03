@@ -38,6 +38,20 @@ public class AiContentReviewResult extends AbstractModel{
     private String Type;
 
     /**
+    * 采样频率，即对视频每秒截取进行审核的帧数。
+    */
+    @SerializedName("SampleRate")
+    @Expose
+    private Float SampleRate;
+
+    /**
+    * 审核的视频时长，单位：秒。
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Float Duration;
+
+    /**
     * 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -139,6 +153,38 @@ public class AiContentReviewResult extends AbstractModel{
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 采样频率，即对视频每秒截取进行审核的帧数。 
+     * @return SampleRate 采样频率，即对视频每秒截取进行审核的帧数。
+     */
+    public Float getSampleRate() {
+        return this.SampleRate;
+    }
+
+    /**
+     * Set 采样频率，即对视频每秒截取进行审核的帧数。
+     * @param SampleRate 采样频率，即对视频每秒截取进行审核的帧数。
+     */
+    public void setSampleRate(Float SampleRate) {
+        this.SampleRate = SampleRate;
+    }
+
+    /**
+     * Get 审核的视频时长，单位：秒。 
+     * @return Duration 审核的视频时长，单位：秒。
+     */
+    public Float getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 审核的视频时长，单位：秒。
+     * @param Duration 审核的视频时长，单位：秒。
+     */
+    public void setDuration(Float Duration) {
+        this.Duration = Duration;
     }
 
     /**
@@ -286,6 +332,8 @@ public class AiContentReviewResult extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamObj(map, prefix + "PornTask.", this.PornTask);
         this.setParamObj(map, prefix + "TerrorismTask.", this.TerrorismTask);
         this.setParamObj(map, prefix + "PoliticalTask.", this.PoliticalTask);

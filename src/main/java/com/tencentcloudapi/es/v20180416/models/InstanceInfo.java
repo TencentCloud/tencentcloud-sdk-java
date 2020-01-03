@@ -191,7 +191,7 @@ public class InstanceInfo extends AbstractModel{
     private String EsConfig;
 
     /**
-    * ES访问控制配置
+    * Kibana访问控制配置
     */
     @SerializedName("EsAcl")
     @Expose
@@ -266,6 +266,141 @@ public class InstanceInfo extends AbstractModel{
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
+
+    /**
+    * 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableHotWarmMode")
+    @Expose
+    private Boolean EnableHotWarmMode;
+
+    /**
+    * 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarmNodeType")
+    @Expose
+    private String WarmNodeType;
+
+    /**
+    * 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarmNodeNum")
+    @Expose
+    private Integer WarmNodeNum;
+
+    /**
+    * 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarmCpuNum")
+    @Expose
+    private Integer WarmCpuNum;
+
+    /**
+    * 冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarmMemSize")
+    @Expose
+    private Integer WarmMemSize;
+
+    /**
+    * 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarmDiskType")
+    @Expose
+    private String WarmDiskType;
+
+    /**
+    * 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WarmDiskSize")
+    @Expose
+    private Integer WarmDiskSize;
+
+    /**
+    * 集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeInfoList")
+    @Expose
+    private NodeInfo [] NodeInfoList;
+
+    /**
+    * Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsPublicUrl")
+    @Expose
+    private String EsPublicUrl;
+
+    /**
+    * 多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MultiZoneInfo")
+    @Expose
+    private ZoneDetail [] MultiZoneInfo;
+
+    /**
+    * 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployMode")
+    @Expose
+    private Integer DeployMode;
+
+    /**
+    * ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicAccess")
+    @Expose
+    private String PublicAccess;
+
+    /**
+    * ES公网访问控制配置
+    */
+    @SerializedName("EsPublicAcl")
+    @Expose
+    private EsAcl EsPublicAcl;
+
+    /**
+    * Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaPrivateUrl")
+    @Expose
+    private String KibanaPrivateUrl;
+
+    /**
+    * Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaPublicAccess")
+    @Expose
+    private String KibanaPublicAccess;
+
+    /**
+    * Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaPrivateAccess")
+    @Expose
+    private String KibanaPrivateAccess;
+
+    /**
+    * 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityType")
+    @Expose
+    private Integer SecurityType;
 
     /**
      * Get 实例ID 
@@ -652,16 +787,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get ES访问控制配置 
-     * @return EsAcl ES访问控制配置
+     * Get Kibana访问控制配置 
+     * @return EsAcl Kibana访问控制配置
      */
     public EsAcl getEsAcl() {
         return this.EsAcl;
     }
 
     /**
-     * Set ES访问控制配置
-     * @param EsAcl ES访问控制配置
+     * Set Kibana访问控制配置
+     * @param EsAcl Kibana访问控制配置
      */
     public void setEsAcl(EsAcl EsAcl) {
         this.EsAcl = EsAcl;
@@ -828,6 +963,342 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableHotWarmMode 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableHotWarmMode() {
+        return this.EnableHotWarmMode;
+    }
+
+    /**
+     * Set 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableHotWarmMode 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableHotWarmMode(Boolean EnableHotWarmMode) {
+        this.EnableHotWarmMode = EnableHotWarmMode;
+    }
+
+    /**
+     * Get 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarmNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWarmNodeType() {
+        return this.WarmNodeType;
+    }
+
+    /**
+     * Set 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarmNodeType(String WarmNodeType) {
+        this.WarmNodeType = WarmNodeType;
+    }
+
+    /**
+     * Get 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarmNodeNum 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getWarmNodeNum() {
+        return this.WarmNodeNum;
+    }
+
+    /**
+     * Set 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmNodeNum 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarmNodeNum(Integer WarmNodeNum) {
+        this.WarmNodeNum = WarmNodeNum;
+    }
+
+    /**
+     * Get 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarmCpuNum 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getWarmCpuNum() {
+        return this.WarmCpuNum;
+    }
+
+    /**
+     * Set 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmCpuNum 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarmCpuNum(Integer WarmCpuNum) {
+        this.WarmCpuNum = WarmCpuNum;
+    }
+
+    /**
+     * Get 冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarmMemSize 冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getWarmMemSize() {
+        return this.WarmMemSize;
+    }
+
+    /**
+     * Set 冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmMemSize 冷节点内存内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarmMemSize(Integer WarmMemSize) {
+        this.WarmMemSize = WarmMemSize;
+    }
+
+    /**
+     * Get 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarmDiskType 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWarmDiskType() {
+        return this.WarmDiskType;
+    }
+
+    /**
+     * Set 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmDiskType 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarmDiskType(String WarmDiskType) {
+        this.WarmDiskType = WarmDiskType;
+    }
+
+    /**
+     * Get 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WarmDiskSize 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getWarmDiskSize() {
+        return this.WarmDiskSize;
+    }
+
+    /**
+     * Set 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmDiskSize 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWarmDiskSize(Integer WarmDiskSize) {
+        this.WarmDiskSize = WarmDiskSize;
+    }
+
+    /**
+     * Get 集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeInfoList 集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NodeInfo [] getNodeInfoList() {
+        return this.NodeInfoList;
+    }
+
+    /**
+     * Set 集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeInfoList 集群节点信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeInfoList(NodeInfo [] NodeInfoList) {
+        this.NodeInfoList = NodeInfoList;
+    }
+
+    /**
+     * Get Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsPublicUrl Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsPublicUrl() {
+        return this.EsPublicUrl;
+    }
+
+    /**
+     * Set Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsPublicUrl Es公网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsPublicUrl(String EsPublicUrl) {
+        this.EsPublicUrl = EsPublicUrl;
+    }
+
+    /**
+     * Get 多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MultiZoneInfo 多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ZoneDetail [] getMultiZoneInfo() {
+        return this.MultiZoneInfo;
+    }
+
+    /**
+     * Set 多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MultiZoneInfo 多可用区网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
+        this.MultiZoneInfo = MultiZoneInfo;
+    }
+
+    /**
+     * Get 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getDeployMode() {
+        return this.DeployMode;
+    }
+
+    /**
+     * Set 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployMode(Integer DeployMode) {
+        this.DeployMode = DeployMode;
+    }
+
+    /**
+     * Get ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicAccess() {
+        return this.PublicAccess;
+    }
+
+    /**
+     * Set ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicAccess(String PublicAccess) {
+        this.PublicAccess = PublicAccess;
+    }
+
+    /**
+     * Get ES公网访问控制配置 
+     * @return EsPublicAcl ES公网访问控制配置
+     */
+    public EsAcl getEsPublicAcl() {
+        return this.EsPublicAcl;
+    }
+
+    /**
+     * Set ES公网访问控制配置
+     * @param EsPublicAcl ES公网访问控制配置
+     */
+    public void setEsPublicAcl(EsAcl EsPublicAcl) {
+        this.EsPublicAcl = EsPublicAcl;
+    }
+
+    /**
+     * Get Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaPrivateUrl Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKibanaPrivateUrl() {
+        return this.KibanaPrivateUrl;
+    }
+
+    /**
+     * Set Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaPrivateUrl Kibana内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaPrivateUrl(String KibanaPrivateUrl) {
+        this.KibanaPrivateUrl = KibanaPrivateUrl;
+    }
+
+    /**
+     * Get Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKibanaPublicAccess() {
+        return this.KibanaPublicAccess;
+    }
+
+    /**
+     * Set Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaPublicAccess(String KibanaPublicAccess) {
+        this.KibanaPublicAccess = KibanaPublicAccess;
+    }
+
+    /**
+     * Get Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKibanaPrivateAccess() {
+        return this.KibanaPrivateAccess;
+    }
+
+    /**
+     * Set Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaPrivateAccess(String KibanaPrivateAccess) {
+        this.KibanaPrivateAccess = KibanaPrivateAccess;
+    }
+
+    /**
+     * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getSecurityType() {
+        return this.SecurityType;
+    }
+
+    /**
+     * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityType(Integer SecurityType) {
+        this.SecurityType = SecurityType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -866,6 +1337,23 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "EnableHotWarmMode", this.EnableHotWarmMode);
+        this.setParamSimple(map, prefix + "WarmNodeType", this.WarmNodeType);
+        this.setParamSimple(map, prefix + "WarmNodeNum", this.WarmNodeNum);
+        this.setParamSimple(map, prefix + "WarmCpuNum", this.WarmCpuNum);
+        this.setParamSimple(map, prefix + "WarmMemSize", this.WarmMemSize);
+        this.setParamSimple(map, prefix + "WarmDiskType", this.WarmDiskType);
+        this.setParamSimple(map, prefix + "WarmDiskSize", this.WarmDiskSize);
+        this.setParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
+        this.setParamSimple(map, prefix + "EsPublicUrl", this.EsPublicUrl);
+        this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+        this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
+        this.setParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
+        this.setParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
+        this.setParamSimple(map, prefix + "KibanaPrivateUrl", this.KibanaPrivateUrl);
+        this.setParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
+        this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
+        this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
 
     }
 }

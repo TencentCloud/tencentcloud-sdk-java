@@ -51,6 +51,13 @@ public class CreateServiceRequest extends AbstractModel{
     private String ScaleMode;
 
     /**
+    * 部署要使用的资源组Id，默认为共享资源组
+    */
+    @SerializedName("ResourceGroupId")
+    @Expose
+    private String ResourceGroupId;
+
+    /**
     * 处理器配置, 单位为1/1000核；范围[100, 256000]
     */
     @SerializedName("Cpu")
@@ -70,13 +77,6 @@ public class CreateServiceRequest extends AbstractModel{
     @SerializedName("Cluster")
     @Expose
     private String Cluster;
-
-    /**
-    * 部署要使用的资源组Id，默认为共享资源组
-    */
-    @SerializedName("ResourceGroupId")
-    @Expose
-    private String ResourceGroupId;
 
     /**
     * 默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
@@ -178,6 +178,22 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 部署要使用的资源组Id，默认为共享资源组 
+     * @return ResourceGroupId 部署要使用的资源组Id，默认为共享资源组
+     */
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
+    }
+
+    /**
+     * Set 部署要使用的资源组Id，默认为共享资源组
+     * @param ResourceGroupId 部署要使用的资源组Id，默认为共享资源组
+     */
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
+    }
+
+    /**
      * Get 处理器配置, 单位为1/1000核；范围[100, 256000] 
      * @return Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
      */
@@ -223,22 +239,6 @@ public class CreateServiceRequest extends AbstractModel{
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
-    }
-
-    /**
-     * Get 部署要使用的资源组Id，默认为共享资源组 
-     * @return ResourceGroupId 部署要使用的资源组Id，默认为共享资源组
-     */
-    public String getResourceGroupId() {
-        return this.ResourceGroupId;
-    }
-
-    /**
-     * Set 部署要使用的资源组Id，默认为共享资源组
-     * @param ResourceGroupId 部署要使用的资源组Id，默认为共享资源组
-     */
-    public void setResourceGroupId(String ResourceGroupId) {
-        this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
@@ -329,10 +329,10 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceConfigId", this.ServiceConfigId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);
-        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
         this.setParamSimple(map, prefix + "GpuMemory", this.GpuMemory);

@@ -39,6 +39,25 @@ public class VehicleLicenseOCRResponse extends AbstractModel{
     private TextVehicleBack BackInfo;
 
     /**
+    * 告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+    */
+    @SerializedName("RecognizeWarnCode")
+    @Expose
+    private Integer [] RecognizeWarnCode;
+
+    /**
+    * 告警码说明
+注：告警信息可以同时存在多个
+    */
+    @SerializedName("RecognizeWarnMsg")
+    @Expose
+    private String [] RecognizeWarnMsg;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +105,58 @@ public class VehicleLicenseOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个 
+     * @return RecognizeWarnCode 告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+     */
+    public Integer [] getRecognizeWarnCode() {
+        return this.RecognizeWarnCode;
+    }
+
+    /**
+     * Set 告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+     * @param RecognizeWarnCode 告警码	告警码消息	                                                告警码说明
+-9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+-9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+-9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+注：告警码可以同时存在多个
+     */
+    public void setRecognizeWarnCode(Integer [] RecognizeWarnCode) {
+        this.RecognizeWarnCode = RecognizeWarnCode;
+    }
+
+    /**
+     * Get 告警码说明
+注：告警信息可以同时存在多个 
+     * @return RecognizeWarnMsg 告警码说明
+注：告警信息可以同时存在多个
+     */
+    public String [] getRecognizeWarnMsg() {
+        return this.RecognizeWarnMsg;
+    }
+
+    /**
+     * Set 告警码说明
+注：告警信息可以同时存在多个
+     * @param RecognizeWarnMsg 告警码说明
+注：告警信息可以同时存在多个
+     */
+    public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {
+        this.RecognizeWarnMsg = RecognizeWarnMsg;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -107,6 +178,8 @@ public class VehicleLicenseOCRResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "FrontInfo.", this.FrontInfo);
         this.setParamObj(map, prefix + "BackInfo.", this.BackInfo);
+        this.setParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
+        this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -67,6 +67,21 @@ public class MLIDCardOCRResponse extends AbstractModel{
     private String Image;
 
     /**
+    * 扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
+    */
+    @SerializedName("AdvancedInfo")
+    @Expose
+    private String AdvancedInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -178,6 +193,54 @@ public class MLIDCardOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+} 
+     * @return AdvancedInfo 扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
+     */
+    public String getAdvancedInfo() {
+        return this.AdvancedInfo;
+    }
+
+    /**
+     * Set 扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
+     * @param AdvancedInfo 扩展字段:
+{
+    ID:{
+        Confidence:0.9999
+    },
+    Name:{
+        Confidence:0.9996
+    }
+}
+     */
+    public void setAdvancedInfo(String AdvancedInfo) {
+        this.AdvancedInfo = AdvancedInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -203,6 +266,7 @@ public class MLIDCardOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Sex", this.Sex);
         this.setParamArraySimple(map, prefix + "Warn.", this.Warn);
         this.setParamSimple(map, prefix + "Image", this.Image);
+        this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -43,7 +43,9 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
     * 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
     */
     @SerializedName("Status")
     @Expose
@@ -167,11 +169,15 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
      * Get 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成 
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果 
      * @return Status 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
      */
     public String getStatus() {
         return this.Status;
@@ -181,11 +187,15 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
      * Set 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
      * @param Status 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- PAUSED: 表示录制已暂停
+- STOPPED: 表示录制已停止，正在处理并上传视频
+- FINISHED: 表示视频处理并上传完成，成功生成录制结果
      */
     public void setStatus(String Status) {
         this.Status = Status;

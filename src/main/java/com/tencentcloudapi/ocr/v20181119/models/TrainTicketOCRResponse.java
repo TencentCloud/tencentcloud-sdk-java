@@ -93,6 +93,20 @@ public class TrainTicketOCRResponse extends AbstractModel{
     private String ID;
 
     /**
+    * 发票消费类型
+    */
+    @SerializedName("InvoiceType")
+    @Expose
+    private String InvoiceType;
+
+    /**
+    * 序列号
+    */
+    @SerializedName("SerialNumber")
+    @Expose
+    private String SerialNumber;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +274,38 @@ public class TrainTicketOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 发票消费类型 
+     * @return InvoiceType 发票消费类型
+     */
+    public String getInvoiceType() {
+        return this.InvoiceType;
+    }
+
+    /**
+     * Set 发票消费类型
+     * @param InvoiceType 发票消费类型
+     */
+    public void setInvoiceType(String InvoiceType) {
+        this.InvoiceType = InvoiceType;
+    }
+
+    /**
+     * Get 序列号 
+     * @return SerialNumber 序列号
+     */
+    public String getSerialNumber() {
+        return this.SerialNumber;
+    }
+
+    /**
+     * Set 序列号
+     * @param SerialNumber 序列号
+     */
+    public void setSerialNumber(String SerialNumber) {
+        this.SerialNumber = SerialNumber;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -289,6 +335,8 @@ public class TrainTicketOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "SeatCategory", this.SeatCategory);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "InvoiceType", this.InvoiceType);
+        this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

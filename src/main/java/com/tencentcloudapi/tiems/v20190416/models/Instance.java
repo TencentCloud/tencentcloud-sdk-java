@@ -149,6 +149,13 @@ public class Instance extends AbstractModel{
     private Long GpuRequested;
 
     /**
+    * 节点所在伸缩组 ID
+    */
+    @SerializedName("RsgAsGroupId")
+    @Expose
+    private String RsgAsGroupId;
+
+    /**
      * Get 节点 ID 
      * @return Id 节点 ID
      */
@@ -437,6 +444,22 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 节点所在伸缩组 ID 
+     * @return RsgAsGroupId 节点所在伸缩组 ID
+     */
+    public String getRsgAsGroupId() {
+        return this.RsgAsGroupId;
+    }
+
+    /**
+     * Set 节点所在伸缩组 ID
+     * @param RsgAsGroupId 节点所在伸缩组 ID
+     */
+    public void setRsgAsGroupId(String RsgAsGroupId) {
+        this.RsgAsGroupId = RsgAsGroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "CpuRequested", this.CpuRequested);
         this.setParamSimple(map, prefix + "MemoryRequested", this.MemoryRequested);
         this.setParamSimple(map, prefix + "GpuRequested", this.GpuRequested);
+        this.setParamSimple(map, prefix + "RsgAsGroupId", this.RsgAsGroupId);
 
     }
 }

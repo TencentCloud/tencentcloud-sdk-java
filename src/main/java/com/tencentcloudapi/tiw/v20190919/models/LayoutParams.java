@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class LayoutParams extends AbstractModel{
 
     /**
-    * 流画面宽，取值范围[1,3000]
+    * 流画面宽，取值范围[2,3000]
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 流画面高，取值范围[1,3000]
+    * 流画面高，取值范围[2,3000]
     */
     @SerializedName("Height")
     @Expose
@@ -59,32 +59,32 @@ z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
     private Long ZOrder;
 
     /**
-     * Get 流画面宽，取值范围[1,3000] 
-     * @return Width 流画面宽，取值范围[1,3000]
+     * Get 流画面宽，取值范围[2,3000] 
+     * @return Width 流画面宽，取值范围[2,3000]
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 流画面宽，取值范围[1,3000]
-     * @param Width 流画面宽，取值范围[1,3000]
+     * Set 流画面宽，取值范围[2,3000]
+     * @param Width 流画面宽，取值范围[2,3000]
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 流画面高，取值范围[1,3000] 
-     * @return Height 流画面高，取值范围[1,3000]
+     * Get 流画面高，取值范围[2,3000] 
+     * @return Height 流画面高，取值范围[2,3000]
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 流画面高，取值范围[1,3000]
-     * @param Height 流画面高，取值范围[1,3000]
+     * Set 流画面高，取值范围[2,3000]
+     * @param Height 流画面高，取值范围[2,3000]
      */
     public void setHeight(Long Height) {
         this.Height = Height;

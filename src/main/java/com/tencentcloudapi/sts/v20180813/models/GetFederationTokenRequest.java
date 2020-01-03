@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetFederationTokenRequest extends AbstractModel{
 
     /**
-    * 调用方英文名称，由字母组成。
+    * 您可以自定义调用方英文名称，由字母组成。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +33,7 @@ public class GetFederationTokenRequest extends AbstractModel{
     * 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
-2、策略语法参照 CAM 策略语法。
+2、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。
     */
     @SerializedName("Policy")
@@ -48,16 +48,16 @@ public class GetFederationTokenRequest extends AbstractModel{
     private Integer DurationSeconds;
 
     /**
-     * Get 调用方英文名称，由字母组成。 
-     * @return Name 调用方英文名称，由字母组成。
+     * Get 您可以自定义调用方英文名称，由字母组成。 
+     * @return Name 您可以自定义调用方英文名称，由字母组成。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 调用方英文名称，由字母组成。
-     * @param Name 调用方英文名称，由字母组成。
+     * Set 您可以自定义调用方英文名称，由字母组成。
+     * @param Name 您可以自定义调用方英文名称，由字母组成。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -67,12 +67,12 @@ public class GetFederationTokenRequest extends AbstractModel{
      * Get 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
-2、策略语法参照 CAM 策略语法。
+2、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。 
      * @return Policy 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
-2、策略语法参照 CAM 策略语法。
+2、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。
      */
     public String getPolicy() {
@@ -83,12 +83,12 @@ public class GetFederationTokenRequest extends AbstractModel{
      * Set 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
-2、策略语法参照 CAM 策略语法。
+2、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。
      * @param Policy 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
-2、策略语法参照 CAM 策略语法。
+2、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 3、策略中不能包含 principal 元素。
      */
     public void setPolicy(String Policy) {

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
 
     /**
+    * 帧率，取值范围：[1, 30]，单位：Hz。
+    */
+    @SerializedName("Fps")
+    @Expose
+    private Long Fps;
+
+    /**
     * 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -35,7 +42,7 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
     private Long Width;
 
     /**
-    * 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+    * 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -47,11 +54,14 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
     private Long Height;
 
     /**
-    * 帧率，取值范围：[1, 30]，单位：Hz。
+    * 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
     */
-    @SerializedName("Fps")
+    @SerializedName("ResolutionAdaptive")
     @Expose
-    private Long Fps;
+    private String ResolutionAdaptive;
 
     /**
     * 动图格式，取值为 gif 和 webp。默认为 gif。
@@ -87,6 +97,22 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+     * Get 帧率，取值范围：[1, 30]，单位：Hz。 
+     * @return Fps 帧率，取值范围：[1, 30]，单位：Hz。
+     */
+    public Long getFps() {
+        return this.Fps;
+    }
+
+    /**
+     * Set 帧率，取值范围：[1, 30]，单位：Hz。
+     * @param Fps 帧率，取值范围：[1, 30]，单位：Hz。
+     */
+    public void setFps(Long Fps) {
+        this.Fps = Fps;
+    }
 
     /**
      * Get 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -125,13 +151,13 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Get 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。 
-     * @return Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @return Height 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -143,13 +169,13 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Set 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Set 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
-     * @param Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @param Height 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -161,19 +187,31 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 帧率，取值范围：[1, 30]，单位：Hz。 
-     * @return Fps 帧率，取值范围：[1, 30]，单位：Hz。
+     * Get 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。 
+     * @return ResolutionAdaptive 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
      */
-    public Long getFps() {
-        return this.Fps;
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
     }
 
     /**
-     * Set 帧率，取值范围：[1, 30]，单位：Hz。
-     * @param Fps 帧率，取值范围：[1, 30]，单位：Hz。
+     * Set 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
+     * @param ResolutionAdaptive 分辨率自适应，可选值：
+<li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+<li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+默认值：open。
      */
-    public void setFps(Long Fps) {
-        this.Fps = Fps;
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
@@ -260,9 +298,10 @@ public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
-        this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Quality", this.Quality);
         this.setParamSimple(map, prefix + "Name", this.Name);

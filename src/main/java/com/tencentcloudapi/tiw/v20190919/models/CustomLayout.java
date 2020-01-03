@@ -34,7 +34,7 @@ public class CustomLayout extends AbstractModel{
     */
     @SerializedName("InputStreamList")
     @Expose
-    private StreamLayout InputStreamList;
+    private StreamLayout [] InputStreamList;
 
     /**
      * Get 混流画布参数 
@@ -56,7 +56,7 @@ public class CustomLayout extends AbstractModel{
      * Get 流布局参数 
      * @return InputStreamList 流布局参数
      */
-    public StreamLayout getInputStreamList() {
+    public StreamLayout [] getInputStreamList() {
         return this.InputStreamList;
     }
 
@@ -64,7 +64,7 @@ public class CustomLayout extends AbstractModel{
      * Set 流布局参数
      * @param InputStreamList 流布局参数
      */
-    public void setInputStreamList(StreamLayout InputStreamList) {
+    public void setInputStreamList(StreamLayout [] InputStreamList) {
         this.InputStreamList = InputStreamList;
     }
 
@@ -73,7 +73,7 @@ public class CustomLayout extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Canvas.", this.Canvas);
-        this.setParamObj(map, prefix + "InputStreamList.", this.InputStreamList);
+        this.setParamArrayObj(map, prefix + "InputStreamList.", this.InputStreamList);
 
     }
 }

@@ -72,6 +72,20 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Integer OrderByType;
 
     /**
+    * 节点标签信息列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
+    * 私有网络vip列表
+    */
+    @SerializedName("IpList")
+    @Expose
+    private String [] IpList;
+
+    /**
      * Get 集群实例所属可用区，不传则默认所有可用区 
      * @return Zone 集群实例所属可用区，不传则默认所有可用区
      */
@@ -184,6 +198,38 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 节点标签信息列表 
+     * @return TagList 节点标签信息列表
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 节点标签信息列表
+     * @param TagList 节点标签信息列表
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
+     * Get 私有网络vip列表 
+     * @return IpList 私有网络vip列表
+     */
+    public String [] getIpList() {
+        return this.IpList;
+    }
+
+    /**
+     * Set 私有网络vip列表
+     * @param IpList 私有网络vip列表
+     */
+    public void setIpList(String [] IpList) {
+        this.IpList = IpList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderByKey", this.OrderByKey);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
 
     }
 }

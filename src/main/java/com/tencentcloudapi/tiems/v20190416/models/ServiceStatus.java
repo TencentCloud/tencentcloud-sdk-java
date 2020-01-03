@@ -68,6 +68,14 @@ public class ServiceStatus extends AbstractModel{
     private String Message;
 
     /**
+    * 副本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplicaInfos")
+    @Expose
+    private ReplicaInfo [] ReplicaInfos;
+
+    /**
      * Get 预期副本数 
      * @return DesiredReplicas 预期副本数
      */
@@ -176,6 +184,26 @@ public class ServiceStatus extends AbstractModel{
     }
 
     /**
+     * Get 副本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplicaInfos 副本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReplicaInfo [] getReplicaInfos() {
+        return this.ReplicaInfos;
+    }
+
+    /**
+     * Set 副本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplicaInfos 副本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplicaInfos(ReplicaInfo [] ReplicaInfos) {
+        this.ReplicaInfos = ReplicaInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -185,6 +213,7 @@ public class ServiceStatus extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
         this.setParamArraySimple(map, prefix + "Replicas.", this.Replicas);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamArrayObj(map, prefix + "ReplicaInfos.", this.ReplicaInfos);
 
     }
 }

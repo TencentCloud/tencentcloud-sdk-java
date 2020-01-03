@@ -56,6 +56,24 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
+     *创建资源组的伸缩组。当前一个资源组仅允许创建一个伸缩组。
+     * @param req CreateRsgAsGroupRequest
+     * @return CreateRsgAsGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRsgAsGroupResponse CreateRsgAsGroup(CreateRsgAsGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRsgAsGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRsgAsGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRsgAsGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建运行环境
      * @param req CreateRuntimeRequest
      * @return CreateRuntimeResponse
@@ -110,6 +128,24 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
+     *删除资源组中的节点。目前仅支持删除已经到期的预付费节点，和按量付费节点。
+     * @param req DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除任务
      * @param req DeleteJobRequest
      * @return DeleteJobResponse
@@ -121,6 +157,42 @@ public class TiemsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除资源组
+     * @param req DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceGroupResponse DeleteResourceGroup(DeleteResourceGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteResourceGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteResourceGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteResourceGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *伸缩
+     * @param req DeleteRsgAsGroupRequest
+     * @return DeleteRsgAsGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRsgAsGroupResponse DeleteRsgAsGroup(DeleteRsgAsGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRsgAsGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRsgAsGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRsgAsGroup"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -200,6 +272,60 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
+     *获取资源组列表
+     * @param req DescribeResourceGroupsRequest
+     * @return DescribeResourceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGroupsResponse DescribeResourceGroups(DescribeResourceGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeResourceGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询伸缩组活动
+     * @param req DescribeRsgAsGroupActivitiesRequest
+     * @return DescribeRsgAsGroupActivitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRsgAsGroupActivitiesResponse DescribeRsgAsGroupActivities(DescribeRsgAsGroupActivitiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRsgAsGroupActivitiesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRsgAsGroupActivitiesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRsgAsGroupActivities"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询资源组的伸缩组信息
+     * @param req DescribeRsgAsGroupsRequest
+     * @return DescribeRsgAsGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRsgAsGroupsResponse DescribeRsgAsGroups(DescribeRsgAsGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRsgAsGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRsgAsGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRsgAsGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *描述服务运行环境
      * @param req DescribeRuntimesRequest
      * @return DescribeRuntimesResponse
@@ -254,6 +380,42 @@ public class TiemsClient extends AbstractClient{
     }
 
     /**
+     *停用资源组的伸缩组
+     * @param req DisableRsgAsGroupRequest
+     * @return DisableRsgAsGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableRsgAsGroupResponse DisableRsgAsGroup(DisableRsgAsGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableRsgAsGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableRsgAsGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableRsgAsGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用资源组的伸缩组
+     * @param req EnableRsgAsGroupRequest
+     * @return EnableRsgAsGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableRsgAsGroupResponse EnableRsgAsGroup(EnableRsgAsGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableRsgAsGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableRsgAsGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableRsgAsGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *暴露服务
      * @param req ExposeServiceRequest
      * @return ExposeServiceResponse
@@ -283,6 +445,24 @@ public class TiemsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateJobResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdateJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新资源组的伸缩组
+     * @param req UpdateRsgAsGroupRequest
+     * @return UpdateRsgAsGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRsgAsGroupResponse UpdateRsgAsGroup(UpdateRsgAsGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRsgAsGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateRsgAsGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateRsgAsGroup"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

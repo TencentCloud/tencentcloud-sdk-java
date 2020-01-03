@@ -72,6 +72,27 @@ public class UpdateServiceRequest extends AbstractModel{
     private String GpuType;
 
     /**
+    * 处理器配置，单位为 1/1000 核
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * 内存配置，单位为1M
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Long Memory;
+
+    /**
+    * 显卡配置，单位为 1/1000 卡
+    */
+    @SerializedName("Gpu")
+    @Expose
+    private Long Gpu;
+
+    /**
      * Get 服务Id 
      * @return ServiceId 服务Id
      */
@@ -184,6 +205,54 @@ public class UpdateServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 处理器配置，单位为 1/1000 核 
+     * @return Cpu 处理器配置，单位为 1/1000 核
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 处理器配置，单位为 1/1000 核
+     * @param Cpu 处理器配置，单位为 1/1000 核
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get 内存配置，单位为1M 
+     * @return Memory 内存配置，单位为1M
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 内存配置，单位为1M
+     * @param Memory 内存配置，单位为1M
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get 显卡配置，单位为 1/1000 卡 
+     * @return Gpu 显卡配置，单位为 1/1000 卡
+     */
+    public Long getGpu() {
+        return this.Gpu;
+    }
+
+    /**
+     * Set 显卡配置，单位为 1/1000 卡
+     * @param Gpu 显卡配置，单位为 1/1000 卡
+     */
+    public void setGpu(Long Gpu) {
+        this.Gpu = Gpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +263,9 @@ public class UpdateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceAction", this.ServiceAction);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Gpu", this.Gpu);
 
     }
 }

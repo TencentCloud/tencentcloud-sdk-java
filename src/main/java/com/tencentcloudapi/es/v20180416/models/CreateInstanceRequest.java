@@ -30,32 +30,11 @@ public class CreateInstanceRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 节点数量（2-50个）
-    */
-    @SerializedName("NodeNum")
-    @Expose
-    private Integer NodeNum;
-
-    /**
     * 实例版本（支持"5.6.4"、"6.4.3"）
     */
     @SerializedName("EsVersion")
     @Expose
     private String EsVersion;
-
-    /**
-    * 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-    */
-    @SerializedName("NodeType")
-    @Expose
-    private String NodeType;
-
-    /**
-    * 节点磁盘容量（单位GB）
-    */
-    @SerializedName("DiskSize")
-    @Expose
-    private Integer DiskSize;
 
     /**
     * 私有网络ID
@@ -86,6 +65,14 @@ public class CreateInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
+    * 已废弃请使用NodeInfoList
+节点数量（2-50个）
+    */
+    @SerializedName("NodeNum")
+    @Expose
+    private Integer NodeNum;
+
+    /**
     * 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
     */
     @SerializedName("ChargeType")
@@ -107,11 +94,28 @@ public class CreateInstanceRequest extends AbstractModel{
     private String RenewFlag;
 
     /**
-    * 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+    * 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 已废弃请使用NodeInfoList
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
+
+    /**
+    * 已废弃请使用NodeInfoList
+节点磁盘容量（单位GB）
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Integer DiskSize;
 
     /**
     * 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
@@ -135,28 +139,32 @@ public class CreateInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-    * 是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+    * 已废弃请使用NodeInfoList
+是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
     */
     @SerializedName("EnableDedicatedMaster")
     @Expose
     private Boolean EnableDedicatedMaster;
 
     /**
-    * 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+    * 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
     */
     @SerializedName("MasterNodeNum")
     @Expose
     private Integer MasterNodeNum;
 
     /**
-    * 专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * 已废弃请使用NodeInfoList
+专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
     */
     @SerializedName("MasterNodeType")
     @Expose
     private String MasterNodeType;
 
     /**
-    * 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+    * 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
@@ -181,7 +189,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("MultiZoneInfo")
     @Expose
-    private MultiZoneInfo [] MultiZoneInfo;
+    private ZoneDetail [] MultiZoneInfo;
 
     /**
     * License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
@@ -189,6 +197,27 @@ public class CreateInstanceRequest extends AbstractModel{
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
+
+    /**
+    * 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
+    */
+    @SerializedName("NodeInfoList")
+    @Expose
+    private NodeInfo [] NodeInfoList;
+
+    /**
+    * 节点标签信息列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
+    * 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+    */
+    @SerializedName("BasicSecurityType")
+    @Expose
+    private Integer BasicSecurityType;
 
     /**
      * Get 可用区 
@@ -207,22 +236,6 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点数量（2-50个） 
-     * @return NodeNum 节点数量（2-50个）
-     */
-    public Integer getNodeNum() {
-        return this.NodeNum;
-    }
-
-    /**
-     * Set 节点数量（2-50个）
-     * @param NodeNum 节点数量（2-50个）
-     */
-    public void setNodeNum(Integer NodeNum) {
-        this.NodeNum = NodeNum;
-    }
-
-    /**
      * Get 实例版本（支持"5.6.4"、"6.4.3"） 
      * @return EsVersion 实例版本（支持"5.6.4"、"6.4.3"）
      */
@@ -236,38 +249,6 @@ public class CreateInstanceRequest extends AbstractModel{
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
-    }
-
-    /**
-     * Get 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
-     * @return NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     */
-    public String getNodeType() {
-        return this.NodeType;
-    }
-
-    /**
-     * Set 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     */
-    public void setNodeType(String NodeType) {
-        this.NodeType = NodeType;
-    }
-
-    /**
-     * Get 节点磁盘容量（单位GB） 
-     * @return DiskSize 节点磁盘容量（单位GB）
-     */
-    public Integer getDiskSize() {
-        return this.DiskSize;
-    }
-
-    /**
-     * Set 节点磁盘容量（单位GB）
-     * @param DiskSize 节点磁盘容量（单位GB）
-     */
-    public void setDiskSize(Integer DiskSize) {
-        this.DiskSize = DiskSize;
     }
 
     /**
@@ -335,6 +316,26 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 已废弃请使用NodeInfoList
+节点数量（2-50个） 
+     * @return NodeNum 已废弃请使用NodeInfoList
+节点数量（2-50个）
+     */
+    public Integer getNodeNum() {
+        return this.NodeNum;
+    }
+
+    /**
+     * Set 已废弃请使用NodeInfoList
+节点数量（2-50个）
+     * @param NodeNum 已废弃请使用NodeInfoList
+节点数量（2-50个）
+     */
+    public void setNodeNum(Integer NodeNum) {
+        this.NodeNum = NodeNum;
+    }
+
+    /**
      * Get 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR 
      * @return ChargeType 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
      */
@@ -383,19 +384,63 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD 
-     * @return DiskType 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+     * Get 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
+     * @return NodeType 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param NodeType 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 已废弃请使用NodeInfoList
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD 
+     * @return DiskType 已废弃请使用NodeInfoList
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
-     * @param DiskType 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+     * Set 已废弃请使用NodeInfoList
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+     * @param DiskType 已废弃请使用NodeInfoList
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
+    }
+
+    /**
+     * Get 已废弃请使用NodeInfoList
+节点磁盘容量（单位GB） 
+     * @return DiskSize 已废弃请使用NodeInfoList
+节点磁盘容量（单位GB）
+     */
+    public Integer getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set 已废弃请使用NodeInfoList
+节点磁盘容量（单位GB）
+     * @param DiskSize 已废弃请使用NodeInfoList
+节点磁盘容量（单位GB）
+     */
+    public void setDiskSize(Integer DiskSize) {
+        this.DiskSize = DiskSize;
     }
 
     /**
@@ -447,64 +492,80 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false 
-     * @return EnableDedicatedMaster 是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+     * Get 已废弃请使用NodeInfoList
+是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false 
+     * @return EnableDedicatedMaster 已废弃请使用NodeInfoList
+是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
      */
     public Boolean getEnableDedicatedMaster() {
         return this.EnableDedicatedMaster;
     }
 
     /**
-     * Set 是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
-     * @param EnableDedicatedMaster 是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+     * Set 已废弃请使用NodeInfoList
+是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
+     * @param EnableDedicatedMaster 已废弃请使用NodeInfoList
+是否创建专用主节点<li>true：开启专用主节点</li><li>false：不开启专用主节点</li>默认值false
      */
     public void setEnableDedicatedMaster(Boolean EnableDedicatedMaster) {
         this.EnableDedicatedMaster = EnableDedicatedMaster;
     }
 
     /**
-     * Get 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传） 
-     * @return MasterNodeNum 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+     * Get 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传） 
+     * @return MasterNodeNum 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
      */
     public Integer getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
     /**
-     * Set 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
-     * @param MasterNodeNum 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+     * Set 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
+     * @param MasterNodeNum 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
      */
     public void setMasterNodeNum(Integer MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
     /**
-     * Get 专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
-     * @return MasterNodeType 专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get 已废弃请使用NodeInfoList
+专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
+     * @return MasterNodeType 已废弃请使用NodeInfoList
+专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * Set 专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param MasterNodeType 专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set 已废弃请使用NodeInfoList
+专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param MasterNodeType 已废弃请使用NodeInfoList
+专用主节点类型（EnableDedicatedMaster为true时必传）<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
     }
 
     /**
-     * Get 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义） 
-     * @return MasterNodeDiskSize 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+     * Get 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义） 
+     * @return MasterNodeDiskSize 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
      */
     public Integer getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * Set 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
-     * @param MasterNodeDiskSize 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+     * Set 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
+     * @param MasterNodeDiskSize 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
      */
     public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
@@ -546,7 +607,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 多可用区部署时可用区的详细信息(DeployMode为1时必传) 
      * @return MultiZoneInfo 多可用区部署时可用区的详细信息(DeployMode为1时必传)
      */
-    public MultiZoneInfo [] getMultiZoneInfo() {
+    public ZoneDetail [] getMultiZoneInfo() {
         return this.MultiZoneInfo;
     }
 
@@ -554,7 +615,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 多可用区部署时可用区的详细信息(DeployMode为1时必传)
      * @param MultiZoneInfo 多可用区部署时可用区的详细信息(DeployMode为1时必传)
      */
-    public void setMultiZoneInfo(MultiZoneInfo [] MultiZoneInfo) {
+    public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
         this.MultiZoneInfo = MultiZoneInfo;
     }
 
@@ -575,22 +636,70 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等 
+     * @return NodeInfoList 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
+     */
+    public NodeInfo [] getNodeInfoList() {
+        return this.NodeInfoList;
+    }
+
+    /**
+     * Set 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
+     * @param NodeInfoList 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
+     */
+    public void setNodeInfoList(NodeInfo [] NodeInfoList) {
+        this.NodeInfoList = NodeInfoList;
+    }
+
+    /**
+     * Get 节点标签信息列表 
+     * @return TagList 节点标签信息列表
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 节点标签信息列表
+     * @param TagList 节点标签信息列表
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
+     * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li> 
+     * @return BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     */
+    public Integer getBasicSecurityType() {
+        return this.BasicSecurityType;
+    }
+
+    /**
+     * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @param BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     */
+    public void setBasicSecurityType(Integer BasicSecurityType) {
+        this.BasicSecurityType = BasicSecurityType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "EsVersion", this.EsVersion);
-        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
-        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "ChargePeriod", this.ChargePeriod);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
@@ -602,6 +711,9 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
         this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
 
     }
 }

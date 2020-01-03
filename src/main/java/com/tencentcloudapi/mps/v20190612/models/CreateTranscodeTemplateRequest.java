@@ -78,7 +78,7 @@ public class CreateTranscodeTemplateRequest extends AbstractModel{
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * 极速高清转码参数，需联系商务架构师开通后才能使用。
+    * 极速高清转码参数。
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -221,16 +221,16 @@ public class CreateTranscodeTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 极速高清转码参数，需联系商务架构师开通后才能使用。 
-     * @return TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+     * Get 极速高清转码参数。 
+     * @return TEHDConfig 极速高清转码参数。
      */
     public TEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set 极速高清转码参数，需联系商务架构师开通后才能使用。
-     * @param TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
+     * Set 极速高清转码参数。
+     * @param TEHDConfig 极速高清转码参数。
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;

@@ -573,6 +573,24 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
+     * @param req DescribeMediaMetaDataRequest
+     * @return DescribeMediaMetaDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaMetaDataResponse DescribeMediaMetaData(DescribeMediaMetaDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaMetaDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaMetaDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaMetaData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
      * @param req DescribePersonSamplesRequest
      * @return DescribePersonSamplesResponse

@@ -74,6 +74,24 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *查询实时录制回调地址
+     * @param req DescribeOnlineRecordCallbackRequest
+     * @return DescribeOnlineRecordCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallback(DescribeOnlineRecordCallbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOnlineRecordCallbackResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOnlineRecordCallbackResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeOnlineRecordCallback"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询文档转码任务的执行进度与转码结果
      * @param req DescribeTranscodeRequest
      * @return DescribeTranscodeResponse
@@ -85,6 +103,24 @@ public class TiwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTranscode"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询文档转码回调地址
+     * @param req DescribeTranscodeCallbackRequest
+     * @return DescribeTranscodeCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTranscodeCallbackResponse DescribeTranscodeCallback(DescribeTranscodeCallbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTranscodeCallbackResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTranscodeCallbackResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTranscodeCallback"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * 视频处理对象的类型，现在仅支持 COS。
+    * 输入来源对象的类型，现在仅支持 COS。
     */
     @SerializedName("Type")
     @Expose
@@ -37,16 +37,16 @@ public class MediaInputInfo extends AbstractModel{
     private CosInputInfo CosInputInfo;
 
     /**
-     * Get 视频处理对象的类型，现在仅支持 COS。 
-     * @return Type 视频处理对象的类型，现在仅支持 COS。
+     * Get 输入来源对象的类型，现在仅支持 COS。 
+     * @return Type 输入来源对象的类型，现在仅支持 COS。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 视频处理对象的类型，现在仅支持 COS。
-     * @param Type 视频处理对象的类型，现在仅支持 COS。
+     * Set 输入来源对象的类型，现在仅支持 COS。
+     * @param Type 输入来源对象的类型，现在仅支持 COS。
      */
     public void setType(String Type) {
         this.Type = Type;

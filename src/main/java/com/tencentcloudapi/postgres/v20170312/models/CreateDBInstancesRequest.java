@@ -107,6 +107,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 续费标记：0-正常续费（默认）；1-自动续费；
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Integer AutoRenewFlag;
+
+    /**
      * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
      * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      */
@@ -299,6 +306,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 续费标记：0-正常续费（默认）；1-自动续费； 
+     * @return AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
+     */
+    public Integer getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 续费标记：0-正常续费（默认）；1-自动续费；
+     * @param AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
+     */
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

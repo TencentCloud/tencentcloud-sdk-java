@@ -65,6 +65,13 @@ public class HostResource extends AbstractModel{
     private Integer DiskAvailable;
 
     /**
+    * cdh实例磁盘类型
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
      * Get cdh实例总cpu核数 
      * @return CpuTotal cdh实例总cpu核数
      */
@@ -161,6 +168,22 @@ public class HostResource extends AbstractModel{
     }
 
     /**
+     * Get cdh实例磁盘类型 
+     * @return DiskType cdh实例磁盘类型
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set cdh实例磁盘类型
+     * @param DiskType cdh实例磁盘类型
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class HostResource extends AbstractModel{
         this.setParamSimple(map, prefix + "MemAvailable", this.MemAvailable);
         this.setParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
         this.setParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }

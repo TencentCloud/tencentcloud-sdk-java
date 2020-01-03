@@ -72,6 +72,43 @@ public class TaxiInvoiceOCRResponse extends AbstractModel{
     private String Distance;
 
     /**
+    * 发票所在地
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * 车牌号
+    */
+    @SerializedName("PlateNumber")
+    @Expose
+    private String PlateNumber;
+
+    /**
+    * 发票消费类型
+    */
+    @SerializedName("InvoiceType")
+    @Expose
+    private String InvoiceType;
+
+    /**
+    * 省
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Province")
+    @Expose
+    private String Province;
+
+    /**
+    * 市
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("City")
+    @Expose
+    private String City;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +228,94 @@ public class TaxiInvoiceOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 发票所在地 
+     * @return Location 发票所在地
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 发票所在地
+     * @param Location 发票所在地
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * Get 车牌号 
+     * @return PlateNumber 车牌号
+     */
+    public String getPlateNumber() {
+        return this.PlateNumber;
+    }
+
+    /**
+     * Set 车牌号
+     * @param PlateNumber 车牌号
+     */
+    public void setPlateNumber(String PlateNumber) {
+        this.PlateNumber = PlateNumber;
+    }
+
+    /**
+     * Get 发票消费类型 
+     * @return InvoiceType 发票消费类型
+     */
+    public String getInvoiceType() {
+        return this.InvoiceType;
+    }
+
+    /**
+     * Set 发票消费类型
+     * @param InvoiceType 发票消费类型
+     */
+    public void setInvoiceType(String InvoiceType) {
+        this.InvoiceType = InvoiceType;
+    }
+
+    /**
+     * Get 省
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Province 省
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProvince() {
+        return this.Province;
+    }
+
+    /**
+     * Set 省
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Province 省
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProvince(String Province) {
+        this.Province = Province;
+    }
+
+    /**
+     * Get 市
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return City 市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCity() {
+        return this.City;
+    }
+
+    /**
+     * Set 市
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param City 市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCity(String City) {
+        this.City = City;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +342,11 @@ public class TaxiInvoiceOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "GetOnTime", this.GetOnTime);
         this.setParamSimple(map, prefix + "GetOffTime", this.GetOffTime);
         this.setParamSimple(map, prefix + "Distance", this.Distance);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "PlateNumber", this.PlateNumber);
+        this.setParamSimple(map, prefix + "InvoiceType", this.InvoiceType);
+        this.setParamSimple(map, prefix + "Province", this.Province);
+        this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

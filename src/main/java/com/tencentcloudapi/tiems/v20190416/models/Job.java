@@ -31,6 +31,7 @@ public class Job extends AbstractModel{
 
     /**
     * 集群名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cluster")
     @Expose
@@ -52,6 +53,7 @@ public class Job extends AbstractModel{
 
     /**
     * Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Runtime")
     @Expose
@@ -67,6 +69,7 @@ public class Job extends AbstractModel{
 
     /**
     * 配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigId")
     @Expose
@@ -74,6 +77,7 @@ public class Job extends AbstractModel{
 
     /**
     * 预测输入
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PredictInput")
     @Expose
@@ -190,6 +194,22 @@ public class Job extends AbstractModel{
     private String ConfigVersion;
 
     /**
+    * Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 量化输入
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuantizationInput")
+    @Expose
+    private QuantizationInput QuantizationInput;
+
+    /**
      * Get 任务 Id 
      * @return Id 任务 Id
      */
@@ -206,8 +226,10 @@ public class Job extends AbstractModel{
     }
 
     /**
-     * Get 集群名 
+     * Get 集群名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cluster 集群名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCluster() {
         return this.Cluster;
@@ -215,7 +237,9 @@ public class Job extends AbstractModel{
 
     /**
      * Set 集群名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Cluster 集群名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
@@ -254,8 +278,10 @@ public class Job extends AbstractModel{
     }
 
     /**
-     * Get Worker 使用的运行环境 
+     * Get Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Runtime Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntime() {
         return this.Runtime;
@@ -263,7 +289,9 @@ public class Job extends AbstractModel{
 
     /**
      * Set Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Runtime Worker 使用的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
@@ -290,8 +318,10 @@ public class Job extends AbstractModel{
     }
 
     /**
-     * Get 配置 Id 
+     * Get 配置 Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigId 配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -299,15 +329,19 @@ public class Job extends AbstractModel{
 
     /**
      * Set 配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigId 配置 Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 预测输入 
+     * Get 预测输入
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PredictInput 预测输入
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public PredictInput getPredictInput() {
         return this.PredictInput;
@@ -315,7 +349,9 @@ public class Job extends AbstractModel{
 
     /**
      * Set 预测输入
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PredictInput 预测输入
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPredictInput(PredictInput PredictInput) {
         this.PredictInput = PredictInput;
@@ -594,6 +630,46 @@ public class Job extends AbstractModel{
     }
 
     /**
+     * Get Job类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobType Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobType Job类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 量化输入
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuantizationInput 量化输入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QuantizationInput getQuantizationInput() {
+        return this.QuantizationInput;
+    }
+
+    /**
+     * Set 量化输入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuantizationInput 量化输入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuantizationInput(QuantizationInput QuantizationInput) {
+        this.QuantizationInput = QuantizationInput;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -619,6 +695,8 @@ public class Job extends AbstractModel{
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);
         this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);
         this.setParamSimple(map, prefix + "ConfigVersion", this.ConfigVersion);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "QuantizationInput.", this.QuantizationInput);
 
     }
 }

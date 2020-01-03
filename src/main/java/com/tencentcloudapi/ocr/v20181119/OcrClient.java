@@ -675,7 +675,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持定额发票的发票号码、发票代码及金额等关键字段的识别。
+     *本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
      * @param req QuotaInvoiceOCRRequest
      * @return QuotaInvoiceOCRResponse
      * @throws TencentCloudSDKException
@@ -747,7 +747,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期等字段。
+     *本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期、上下车时间、里程、车牌号、发票类型及所属地区等字段。
      * @param req TaxiInvoiceOCRRequest
      * @return TaxiInvoiceOCRResponse
      * @throws TencentCloudSDKException
@@ -801,7 +801,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别等。
+     *本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别、发票类型及序列号等。
 
      * @param req TrainTicketOCRRequest
      * @return TrainTicketOCRResponse

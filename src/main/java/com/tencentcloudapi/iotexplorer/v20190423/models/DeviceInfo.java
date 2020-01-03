@@ -93,6 +93,46 @@ public class DeviceInfo extends AbstractModel{
     private Long LogLevel;
 
     /**
+    * LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DevAddr")
+    @Expose
+    private String DevAddr;
+
+    /**
+    * LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppKey")
+    @Expose
+    private String AppKey;
+
+    /**
+    * LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DevEUI")
+    @Expose
+    private String DevEUI;
+
+    /**
+    * LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppSKey")
+    @Expose
+    private String AppSKey;
+
+    /**
+    * LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NwkSKey")
+    @Expose
+    private String NwkSKey;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -265,6 +305,106 @@ public class DeviceInfo extends AbstractModel{
     }
 
     /**
+     * Get LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DevAddr LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDevAddr() {
+        return this.DevAddr;
+    }
+
+    /**
+     * Set LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DevAddr LoRaWAN 设备地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDevAddr(String DevAddr) {
+        this.DevAddr = DevAddr;
+    }
+
+    /**
+     * Get LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppKey LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppKey() {
+        return this.AppKey;
+    }
+
+    /**
+     * Set LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppKey LoRaWAN 应用密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppKey(String AppKey) {
+        this.AppKey = AppKey;
+    }
+
+    /**
+     * Get LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DevEUI LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDevEUI() {
+        return this.DevEUI;
+    }
+
+    /**
+     * Set LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DevEUI LoRaWAN 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDevEUI(String DevEUI) {
+        this.DevEUI = DevEUI;
+    }
+
+    /**
+     * Get LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppSKey LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppSKey() {
+        return this.AppSKey;
+    }
+
+    /**
+     * Set LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppSKey LoRaWAN 应用会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppSKey(String AppSKey) {
+        this.AppSKey = AppSKey;
+    }
+
+    /**
+     * Get LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NwkSKey LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNwkSKey() {
+        return this.NwkSKey;
+    }
+
+    /**
+     * Set LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NwkSKey LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNwkSKey(String NwkSKey) {
+        this.NwkSKey = NwkSKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -277,6 +417,11 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "DeviceCert", this.DeviceCert);
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
+        this.setParamSimple(map, prefix + "DevAddr", this.DevAddr);
+        this.setParamSimple(map, prefix + "AppKey", this.AppKey);
+        this.setParamSimple(map, prefix + "DevEUI", this.DevEUI);
+        this.setParamSimple(map, prefix + "AppSKey", this.AppSKey);
+        this.setParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
 
     }
 }

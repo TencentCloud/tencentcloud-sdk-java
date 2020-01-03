@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.tiems.v20190416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContentApprovalRequest extends AbstractModel{
+public class EnableRsgAsGroupRequest extends AbstractModel{
 
     /**
-    * 待审核的文本（仅支持UTF-8格式，不超过2000字）
+    * 伸缩组 ID
     */
-    @SerializedName("Text")
+    @SerializedName("Id")
     @Expose
-    private String Text;
+    private String Id;
 
     /**
-     * Get 待审核的文本（仅支持UTF-8格式，不超过2000字） 
-     * @return Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * Get 伸缩组 ID 
+     * @return Id 伸缩组 ID
      */
-    public String getText() {
-        return this.Text;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set 待审核的文本（仅支持UTF-8格式，不超过2000字）
-     * @param Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * Set 伸缩组 ID
+     * @param Id 伸缩组 ID
      */
-    public void setText(String Text) {
-        this.Text = Text;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

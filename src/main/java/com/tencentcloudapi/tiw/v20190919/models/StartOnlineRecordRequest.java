@@ -37,7 +37,7 @@ public class StartOnlineRecordRequest extends AbstractModel{
     private Long RoomId;
 
     /**
-    * 用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+    * 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
     */
     @SerializedName("RecordUserId")
@@ -131,9 +131,9 @@ MIX_STREAM - 混流功能
     }
 
     /**
-     * Get 用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+     * Get 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复 
-     * @return RecordUserId 用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+     * @return RecordUserId 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
      */
     public String getRecordUserId() {
@@ -141,9 +141,9 @@ MIX_STREAM - 混流功能
     }
 
     /**
-     * Set 用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+     * Set 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
-     * @param RecordUserId 用于实时录制服务进房的用户Id，格式为"tic_record_user_${RoomId}_${Random}"，其中 ${RoomId} 与录制房间号对应，${Random}为一个随机字符串。
+     * @param RecordUserId 用于实时录制服务进房的用户Id，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId}` 与录制房间号对应，`${Random}`为一个随机字符串。
 实时录制服务会使用这个用户Id进房进行录制房间内的音视频与白板，为了防止进房冲突，请保证此 用户Id不重复
      */
     public void setRecordUserId(String RecordUserId) {

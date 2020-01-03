@@ -145,14 +145,14 @@ baseline/main/high。默认baseline
     private Integer FpsToOrig;
 
     /**
-    * 是否是急速高清模板，0：否，1：是。默认0。
+    * 是否是极速高清模板，0：否，1：是。默认0。
     */
     @SerializedName("AiTransCode")
     @Expose
     private Integer AiTransCode;
 
     /**
-    * 急速高清相比VideoBitrate少多少码率，0.1到0.5
+    * 极速高清相比VideoBitrate少多少码率，0.1到0.5
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -443,32 +443,32 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Get 是否是急速高清模板，0：否，1：是。默认0。 
-     * @return AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
+     * Get 是否是极速高清模板，0：否，1：是。默认0。 
+     * @return AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
      */
     public Integer getAiTransCode() {
         return this.AiTransCode;
     }
 
     /**
-     * Set 是否是急速高清模板，0：否，1：是。默认0。
-     * @param AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
+     * Set 是否是极速高清模板，0：否，1：是。默认0。
+     * @param AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
      */
     public void setAiTransCode(Integer AiTransCode) {
         this.AiTransCode = AiTransCode;
     }
 
     /**
-     * Get 急速高清相比VideoBitrate少多少码率，0.1到0.5 
-     * @return AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Get 极速高清相比VideoBitrate少多少码率，0.1到0.5 
+     * @return AdaptBitratePercent 极速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set 急速高清相比VideoBitrate少多少码率，0.1到0.5
-     * @param AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Set 极速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @param AdaptBitratePercent 极速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

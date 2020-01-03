@@ -37,7 +37,8 @@ public class UpdateInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 节点个数（2-50个）
+    * 已废弃请使用NodeInfoList
+节点个数（2-50个）
     */
     @SerializedName("NodeNum")
     @Expose
@@ -65,35 +66,40 @@ public class UpdateInstanceRequest extends AbstractModel{
     private EsAcl EsAcl;
 
     /**
-    * 磁盘大小（单位GB）
+    * 已废弃请使用NodeInfoList
+磁盘大小（单位GB）
     */
     @SerializedName("DiskSize")
     @Expose
     private Integer DiskSize;
 
     /**
-    * 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 专用主节点个数（只支持3个或5个）
+    * 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
     */
     @SerializedName("MasterNodeNum")
     @Expose
     private Integer MasterNodeNum;
 
     /**
-    * 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+    * 已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
     */
     @SerializedName("MasterNodeType")
     @Expose
     private String MasterNodeType;
 
     /**
-    * 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+    * 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
@@ -112,6 +118,41 @@ public class UpdateInstanceRequest extends AbstractModel{
     @SerializedName("CosBackup")
     @Expose
     private CosBackup CosBackup;
+
+    /**
+    * 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+    */
+    @SerializedName("NodeInfoList")
+    @Expose
+    private NodeInfo [] NodeInfoList;
+
+    /**
+    * 公网访问状态
+    */
+    @SerializedName("PublicAccess")
+    @Expose
+    private String PublicAccess;
+
+    /**
+    * 公网访问控制列表
+    */
+    @SerializedName("EsPublicAcl")
+    @Expose
+    private EsPublicAcl EsPublicAcl;
+
+    /**
+    * Kibana公网访问状态
+    */
+    @SerializedName("KibanaPublicAccess")
+    @Expose
+    private String KibanaPublicAccess;
+
+    /**
+    * Kibana内网访问状态
+    */
+    @SerializedName("KibanaPrivateAccess")
+    @Expose
+    private String KibanaPrivateAccess;
 
     /**
      * Get 实例ID 
@@ -146,16 +187,20 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点个数（2-50个） 
-     * @return NodeNum 节点个数（2-50个）
+     * Get 已废弃请使用NodeInfoList
+节点个数（2-50个） 
+     * @return NodeNum 已废弃请使用NodeInfoList
+节点个数（2-50个）
      */
     public Integer getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 节点个数（2-50个）
-     * @param NodeNum 节点个数（2-50个）
+     * Set 已废弃请使用NodeInfoList
+节点个数（2-50个）
+     * @param NodeNum 已废弃请使用NodeInfoList
+节点个数（2-50个）
      */
     public void setNodeNum(Integer NodeNum) {
         this.NodeNum = NodeNum;
@@ -210,80 +255,100 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 磁盘大小（单位GB） 
-     * @return DiskSize 磁盘大小（单位GB）
+     * Get 已废弃请使用NodeInfoList
+磁盘大小（单位GB） 
+     * @return DiskSize 已废弃请使用NodeInfoList
+磁盘大小（单位GB）
      */
     public Integer getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 磁盘大小（单位GB）
-     * @param DiskSize 磁盘大小（单位GB）
+     * Set 已废弃请使用NodeInfoList
+磁盘大小（单位GB）
+     * @param DiskSize 已废弃请使用NodeInfoList
+磁盘大小（单位GB）
      */
     public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
-     * @return NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
+     * @return NodeType 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param NodeType 已废弃请使用NodeInfoList
+节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 专用主节点个数（只支持3个或5个） 
-     * @return MasterNodeNum 专用主节点个数（只支持3个或5个）
+     * Get 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个） 
+     * @return MasterNodeNum 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
      */
     public Integer getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
     /**
-     * Set 专用主节点个数（只支持3个或5个）
-     * @param MasterNodeNum 专用主节点个数（只支持3个或5个）
+     * Set 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
+     * @param MasterNodeNum 已废弃请使用NodeInfoList
+专用主节点个数（只支持3个或5个）
      */
     public void setMasterNodeNum(Integer MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
     /**
-     * Get 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
-     * @return MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get 已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
+     * @return MasterNodeType 已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * Set 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
-     * @param MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set 已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param MasterNodeType 已废弃请使用NodeInfoList
+专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
     }
 
     /**
-     * Get 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义） 
-     * @return MasterNodeDiskSize 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * Get 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义） 
+     * @return MasterNodeDiskSize 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
     public Integer getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * Set 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
-     * @param MasterNodeDiskSize 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * Set 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * @param MasterNodeDiskSize 已废弃请使用NodeInfoList
+专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
     public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
@@ -322,6 +387,86 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改 
+     * @return NodeInfoList 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+     */
+    public NodeInfo [] getNodeInfoList() {
+        return this.NodeInfoList;
+    }
+
+    /**
+     * Set 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+     * @param NodeInfoList 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+     */
+    public void setNodeInfoList(NodeInfo [] NodeInfoList) {
+        this.NodeInfoList = NodeInfoList;
+    }
+
+    /**
+     * Get 公网访问状态 
+     * @return PublicAccess 公网访问状态
+     */
+    public String getPublicAccess() {
+        return this.PublicAccess;
+    }
+
+    /**
+     * Set 公网访问状态
+     * @param PublicAccess 公网访问状态
+     */
+    public void setPublicAccess(String PublicAccess) {
+        this.PublicAccess = PublicAccess;
+    }
+
+    /**
+     * Get 公网访问控制列表 
+     * @return EsPublicAcl 公网访问控制列表
+     */
+    public EsPublicAcl getEsPublicAcl() {
+        return this.EsPublicAcl;
+    }
+
+    /**
+     * Set 公网访问控制列表
+     * @param EsPublicAcl 公网访问控制列表
+     */
+    public void setEsPublicAcl(EsPublicAcl EsPublicAcl) {
+        this.EsPublicAcl = EsPublicAcl;
+    }
+
+    /**
+     * Get Kibana公网访问状态 
+     * @return KibanaPublicAccess Kibana公网访问状态
+     */
+    public String getKibanaPublicAccess() {
+        return this.KibanaPublicAccess;
+    }
+
+    /**
+     * Set Kibana公网访问状态
+     * @param KibanaPublicAccess Kibana公网访问状态
+     */
+    public void setKibanaPublicAccess(String KibanaPublicAccess) {
+        this.KibanaPublicAccess = KibanaPublicAccess;
+    }
+
+    /**
+     * Get Kibana内网访问状态 
+     * @return KibanaPrivateAccess Kibana内网访问状态
+     */
+    public String getKibanaPrivateAccess() {
+        return this.KibanaPrivateAccess;
+    }
+
+    /**
+     * Set Kibana内网访问状态
+     * @param KibanaPrivateAccess Kibana内网访问状态
+     */
+    public void setKibanaPrivateAccess(String KibanaPrivateAccess) {
+        this.KibanaPrivateAccess = KibanaPrivateAccess;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +483,11 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         this.setParamObj(map, prefix + "CosBackup.", this.CosBackup);
+        this.setParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
+        this.setParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
+        this.setParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
+        this.setParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
+        this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
 
     }
 }

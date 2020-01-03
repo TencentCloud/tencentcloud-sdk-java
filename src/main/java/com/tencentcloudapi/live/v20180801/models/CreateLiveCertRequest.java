@@ -24,10 +24,19 @@ public class CreateLiveCertRequest extends AbstractModel{
 
     /**
     * 证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
     */
     @SerializedName("CertType")
     @Expose
     private Integer CertType;
+
+    /**
+    * 证书名称。
+    */
+    @SerializedName("CertName")
+    @Expose
+    private String CertName;
 
     /**
     * 证书内容，即公钥。
@@ -44,13 +53,6 @@ public class CreateLiveCertRequest extends AbstractModel{
     private String HttpsKey;
 
     /**
-    * 证书名称。
-    */
-    @SerializedName("CertName")
-    @Expose
-    private String CertName;
-
-    /**
     * 描述。
     */
     @SerializedName("Description")
@@ -58,8 +60,19 @@ public class CreateLiveCertRequest extends AbstractModel{
     private String Description;
 
     /**
-     * Get 证书类型。0-用户添加证书；1-腾讯云托管证书。 
+    * 腾讯云证书托管ID。
+    */
+    @SerializedName("CloudCertId")
+    @Expose
+    private String CloudCertId;
+
+    /**
+     * Get 证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。 
      * @return CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
      */
     public Integer getCertType() {
         return this.CertType;
@@ -67,10 +80,30 @@ public class CreateLiveCertRequest extends AbstractModel{
 
     /**
      * Set 证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
      * @param CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
+注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
+当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
      */
     public void setCertType(Integer CertType) {
         this.CertType = CertType;
+    }
+
+    /**
+     * Get 证书名称。 
+     * @return CertName 证书名称。
+     */
+    public String getCertName() {
+        return this.CertName;
+    }
+
+    /**
+     * Set 证书名称。
+     * @param CertName 证书名称。
+     */
+    public void setCertName(String CertName) {
+        this.CertName = CertName;
     }
 
     /**
@@ -106,22 +139,6 @@ public class CreateLiveCertRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书名称。 
-     * @return CertName 证书名称。
-     */
-    public String getCertName() {
-        return this.CertName;
-    }
-
-    /**
-     * Set 证书名称。
-     * @param CertName 证书名称。
-     */
-    public void setCertName(String CertName) {
-        this.CertName = CertName;
-    }
-
-    /**
      * Get 描述。 
      * @return Description 描述。
      */
@@ -138,14 +155,31 @@ public class CreateLiveCertRequest extends AbstractModel{
     }
 
     /**
+     * Get 腾讯云证书托管ID。 
+     * @return CloudCertId 腾讯云证书托管ID。
+     */
+    public String getCloudCertId() {
+        return this.CloudCertId;
+    }
+
+    /**
+     * Set 腾讯云证书托管ID。
+     * @param CloudCertId 腾讯云证书托管ID。
+     */
+    public void setCloudCertId(String CloudCertId) {
+        this.CloudCertId = CloudCertId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "CertName", this.CertName);
         this.setParamSimple(map, prefix + "HttpsCrt", this.HttpsCrt);
         this.setParamSimple(map, prefix + "HttpsKey", this.HttpsKey);
-        this.setParamSimple(map, prefix + "CertName", this.CertName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "CloudCertId", this.CloudCertId);
 
     }
 }

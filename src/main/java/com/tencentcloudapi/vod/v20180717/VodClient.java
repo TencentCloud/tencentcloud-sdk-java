@@ -300,7 +300,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建用户自定义转码模板，数量上限：1000。
+     *创建用户自定义转码模板，数量上限：100。
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
      * @throws TencentCloudSDKException
@@ -1065,6 +1065,25 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ExecuteFunctionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ExecuteFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     ** 对媒体禁播后，除了点播控制台预览，其他场景访问视频各种资源的 URL（原始文件、转码输出文件、截图等）均会返回 403。
+  禁播/解禁操作全网生效时间约 5~10 分钟。
+     * @param req ForbidMediaDistributionRequest
+     * @return ForbidMediaDistributionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForbidMediaDistributionResponse ForbidMediaDistribution(ForbidMediaDistributionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ForbidMediaDistributionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ForbidMediaDistributionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ForbidMediaDistribution"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
