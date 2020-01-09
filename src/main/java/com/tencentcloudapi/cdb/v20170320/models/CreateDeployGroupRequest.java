@@ -37,14 +37,14 @@ public class CreateDeployGroupRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 置放群组的亲和性策略。
+    * 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
     */
     @SerializedName("Affinity")
     @Expose
     private Integer [] Affinity;
 
     /**
-    * 置放群组亲和性策略1的实例限制个数。
+    * 置放群组亲和性策略1中同台物理机上实例的限制个数。
     */
     @SerializedName("LimitNum")
     @Expose
@@ -83,32 +83,32 @@ public class CreateDeployGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 置放群组的亲和性策略。 
-     * @return Affinity 置放群组的亲和性策略。
+     * Get 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。 
+     * @return Affinity 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
      */
     public Integer [] getAffinity() {
         return this.Affinity;
     }
 
     /**
-     * Set 置放群组的亲和性策略。
-     * @param Affinity 置放群组的亲和性策略。
+     * Set 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
+     * @param Affinity 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
      */
     public void setAffinity(Integer [] Affinity) {
         this.Affinity = Affinity;
     }
 
     /**
-     * Get 置放群组亲和性策略1的实例限制个数。 
-     * @return LimitNum 置放群组亲和性策略1的实例限制个数。
+     * Get 置放群组亲和性策略1中同台物理机上实例的限制个数。 
+     * @return LimitNum 置放群组亲和性策略1中同台物理机上实例的限制个数。
      */
     public Integer getLimitNum() {
         return this.LimitNum;
     }
 
     /**
-     * Set 置放群组亲和性策略1的实例限制个数。
-     * @param LimitNum 置放群组亲和性策略1的实例限制个数。
+     * Set 置放群组亲和性策略1中同台物理机上实例的限制个数。
+     * @param LimitNum 置放群组亲和性策略1中同台物理机上实例的限制个数。
      */
     public void setLimitNum(Integer LimitNum) {
         this.LimitNum = LimitNum;

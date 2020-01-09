@@ -74,6 +74,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(BalanceRoGroupLoad)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
+     * @param req BalanceRoGroupLoadRequest
+     * @return BalanceRoGroupLoadResponse
+     * @throws TencentCloudSDKException
+     */
+    public BalanceRoGroupLoadResponse BalanceRoGroupLoad(BalanceRoGroupLoadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BalanceRoGroupLoadResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BalanceRoGroupLoadResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BalanceRoGroupLoad"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CloseWanService)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问。
      * @param req CloseWanServiceRequest
      * @return CloseWanServiceResponse
@@ -818,6 +836,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
+     * @param req DescribeRoGroupsRequest
+     * @return DescribeRoGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoGroupsResponse DescribeRoGroups(DescribeRoGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRoGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeRollbackRangeTime)用于查询云数据库实例可回档的时间范围。
      * @param req DescribeRollbackRangeTimeRequest
      * @return DescribeRollbackRangeTimeResponse
@@ -1271,6 +1307,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyRoGroupInfo）用于更新云数据库只读组的信息。包括设置实例延迟超限剔除策略，设置只读实例读权重等。
+     * @param req ModifyRoGroupInfoRequest
+     * @return ModifyRoGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoGroupInfoResponse ModifyRoGroupInfo(ModifyRoGroupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoGroupInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoGroupInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyRoGroupInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
      * @param req ModifyTimeWindowRequest
      * @return ModifyTimeWindowResponse
@@ -1342,6 +1396,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenWanServiceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "OpenWanService"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。
+     * @param req ReleaseIsolatedDBInstancesRequest
+     * @return ReleaseIsolatedDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseIsolatedDBInstancesResponse ReleaseIsolatedDBInstances(ReleaseIsolatedDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseIsolatedDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseIsolatedDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReleaseIsolatedDBInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

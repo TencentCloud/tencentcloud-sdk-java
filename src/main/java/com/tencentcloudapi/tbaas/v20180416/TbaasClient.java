@@ -110,7 +110,7 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *bcos分页查询当前群组下的区块列表
+     *Bcos分页查询当前群组下的区块列表
      * @param req GetBlockListHandlerRequest
      * @return GetBlockListHandlerResponse
      * @throws TencentCloudSDKException

@@ -44,7 +44,7 @@ public class BcosBlockObj extends AbstractModel{
     private String BlockTimestamp;
 
     /**
-    * 打包节点id
+    * 打包节点ID
     */
     @SerializedName("Sealer")
     @Expose
@@ -127,16 +127,16 @@ public class BcosBlockObj extends AbstractModel{
     }
 
     /**
-     * Get 打包节点id 
-     * @return Sealer 打包节点id
+     * Get 打包节点ID 
+     * @return Sealer 打包节点ID
      */
     public String getSealer() {
         return this.Sealer;
     }
 
     /**
-     * Set 打包节点id
-     * @param Sealer 打包节点id
+     * Set 打包节点ID
+     * @param Sealer 打包节点ID
      */
     public void setSealer(String Sealer) {
         this.Sealer = Sealer;

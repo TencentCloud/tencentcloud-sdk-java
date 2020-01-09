@@ -26,7 +26,8 @@ public class VideoTemplateInfo extends AbstractModel{
     * 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+<li>av1：AOMedia Video 1 编码</li>
+目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
     */
     @SerializedName("Codec")
     @Expose
@@ -100,11 +101,13 @@ public class VideoTemplateInfo extends AbstractModel{
      * Get 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。 
+<li>av1：AOMedia Video 1 编码</li>
+目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。 
      * @return Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+<li>av1：AOMedia Video 1 编码</li>
+目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
      */
     public String getCodec() {
         return this.Codec;
@@ -114,11 +117,13 @@ public class VideoTemplateInfo extends AbstractModel{
      * Set 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+<li>av1：AOMedia Video 1 编码</li>
+目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
      * @param Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+<li>av1：AOMedia Video 1 编码</li>
+目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

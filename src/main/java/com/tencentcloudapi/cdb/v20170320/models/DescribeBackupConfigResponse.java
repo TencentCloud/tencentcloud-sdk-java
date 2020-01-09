@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeBackupConfigResponse extends AbstractModel{
 
     /**
-    * 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
+    * 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
     */
     @SerializedName("StartTimeMin")
     @Expose
     private Integer StartTimeMin;
 
     /**
-    * 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
+    * 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
     */
     @SerializedName("StartTimeMax")
     @Expose
     private Integer StartTimeMax;
 
     /**
-    * 备份过期时间，单位为天。
+    * 备份文件保留时间，单位为天。
     */
     @SerializedName("BackupExpireDays")
     @Expose
@@ -51,11 +51,18 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     private String BackupMethod;
 
     /**
-    * Binlog 过期时间，单位为天。
+    * Binlog 文件保留时间，单位为天。
     */
     @SerializedName("BinlogExpireDays")
     @Expose
     private Integer BinlogExpireDays;
+
+    /**
+    * 实例自动备份的时间窗。
+    */
+    @SerializedName("BackupTimeWindow")
+    @Expose
+    private CommonTimeWindow BackupTimeWindow;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -65,48 +72,48 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。 
-     * @return StartTimeMin 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
+     * Get 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
+     * @return StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
     public Integer getStartTimeMin() {
         return this.StartTimeMin;
     }
 
     /**
-     * Set 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
-     * @param StartTimeMin 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
+     * Set 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @param StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
     public void setStartTimeMin(Integer StartTimeMin) {
         this.StartTimeMin = StartTimeMin;
     }
 
     /**
-     * Get 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。 
-     * @return StartTimeMax 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
+     * Get 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
+     * @return StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
     public Integer getStartTimeMax() {
         return this.StartTimeMax;
     }
 
     /**
-     * Set 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
-     * @param StartTimeMax 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
+     * Set 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @param StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
     public void setStartTimeMax(Integer StartTimeMax) {
         this.StartTimeMax = StartTimeMax;
     }
 
     /**
-     * Get 备份过期时间，单位为天。 
-     * @return BackupExpireDays 备份过期时间，单位为天。
+     * Get 备份文件保留时间，单位为天。 
+     * @return BackupExpireDays 备份文件保留时间，单位为天。
      */
     public Integer getBackupExpireDays() {
         return this.BackupExpireDays;
     }
 
     /**
-     * Set 备份过期时间，单位为天。
-     * @param BackupExpireDays 备份过期时间，单位为天。
+     * Set 备份文件保留时间，单位为天。
+     * @param BackupExpireDays 备份文件保留时间，单位为天。
      */
     public void setBackupExpireDays(Integer BackupExpireDays) {
         this.BackupExpireDays = BackupExpireDays;
@@ -129,19 +136,35 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get Binlog 过期时间，单位为天。 
-     * @return BinlogExpireDays Binlog 过期时间，单位为天。
+     * Get Binlog 文件保留时间，单位为天。 
+     * @return BinlogExpireDays Binlog 文件保留时间，单位为天。
      */
     public Integer getBinlogExpireDays() {
         return this.BinlogExpireDays;
     }
 
     /**
-     * Set Binlog 过期时间，单位为天。
-     * @param BinlogExpireDays Binlog 过期时间，单位为天。
+     * Set Binlog 文件保留时间，单位为天。
+     * @param BinlogExpireDays Binlog 文件保留时间，单位为天。
      */
     public void setBinlogExpireDays(Integer BinlogExpireDays) {
         this.BinlogExpireDays = BinlogExpireDays;
+    }
+
+    /**
+     * Get 实例自动备份的时间窗。 
+     * @return BackupTimeWindow 实例自动备份的时间窗。
+     */
+    public CommonTimeWindow getBackupTimeWindow() {
+        return this.BackupTimeWindow;
+    }
+
+    /**
+     * Set 实例自动备份的时间窗。
+     * @param BackupTimeWindow 实例自动备份的时间窗。
+     */
+    public void setBackupTimeWindow(CommonTimeWindow BackupTimeWindow) {
+        this.BackupTimeWindow = BackupTimeWindow;
     }
 
     /**
@@ -169,6 +192,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupExpireDays", this.BackupExpireDays);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
+        this.setParamObj(map, prefix + "BackupTimeWindow.", this.BackupTimeWindow);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

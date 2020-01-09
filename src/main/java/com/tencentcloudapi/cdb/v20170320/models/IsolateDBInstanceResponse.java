@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class IsolateDBInstanceResponse extends AbstractModel{
 
     /**
-    * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+    * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncRequestId")
@@ -38,9 +38,9 @@ public class IsolateDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * Get 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncRequestId() {
@@ -48,9 +48,9 @@ public class IsolateDBInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * Set 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncRequestId(String AsyncRequestId) {

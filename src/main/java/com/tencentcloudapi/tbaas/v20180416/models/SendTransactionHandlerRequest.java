@@ -44,13 +44,6 @@ public class SendTransactionHandlerRequest extends AbstractModel{
     private String GroupPk;
 
     /**
-    * 私钥用户编号
-    */
-    @SerializedName("KeyUser")
-    @Expose
-    private String KeyUser;
-
-    /**
     * 合约编号
     */
     @SerializedName("ContractId")
@@ -120,22 +113,6 @@ public class SendTransactionHandlerRequest extends AbstractModel{
     }
 
     /**
-     * Get 私钥用户编号 
-     * @return KeyUser 私钥用户编号
-     */
-    public String getKeyUser() {
-        return this.KeyUser;
-    }
-
-    /**
-     * Set 私钥用户编号
-     * @param KeyUser 私钥用户编号
-     */
-    public void setKeyUser(String KeyUser) {
-        this.KeyUser = KeyUser;
-    }
-
-    /**
      * Get 合约编号 
      * @return ContractId 合约编号
      */
@@ -190,7 +167,6 @@ public class SendTransactionHandlerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "GroupPk", this.GroupPk);
-        this.setParamSimple(map, prefix + "KeyUser", this.KeyUser);
         this.setParamSimple(map, prefix + "ContractId", this.ContractId);
         this.setParamSimple(map, prefix + "FuncName", this.FuncName);
         this.setParamArraySimple(map, prefix + "FuncParam.", this.FuncParam);

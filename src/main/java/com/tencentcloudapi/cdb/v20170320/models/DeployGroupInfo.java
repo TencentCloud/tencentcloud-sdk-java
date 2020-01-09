@@ -44,14 +44,14 @@ public class DeployGroupInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 置放群组实例配额。
+    * 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
     */
     @SerializedName("Quota")
     @Expose
     private Integer Quota;
 
     /**
-    * 置放群组亲和性策略。
+    * 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Affinity")
@@ -59,7 +59,7 @@ public class DeployGroupInfo extends AbstractModel{
     private String Affinity;
 
     /**
-    * 置放群组亲和性策略1的限制实例个数。
+    * 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitNum")
@@ -122,25 +122,25 @@ public class DeployGroupInfo extends AbstractModel{
     }
 
     /**
-     * Get 置放群组实例配额。 
-     * @return Quota 置放群组实例配额。
+     * Get 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。 
+     * @return Quota 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
      */
     public Integer getQuota() {
         return this.Quota;
     }
 
     /**
-     * Set 置放群组实例配额。
-     * @param Quota 置放群组实例配额。
+     * Set 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
+     * @param Quota 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
      */
     public void setQuota(Integer Quota) {
         this.Quota = Quota;
     }
 
     /**
-     * Get 置放群组亲和性策略。
+     * Get 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Affinity 置放群组亲和性策略。
+     * @return Affinity 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAffinity() {
@@ -148,9 +148,9 @@ public class DeployGroupInfo extends AbstractModel{
     }
 
     /**
-     * Set 置放群组亲和性策略。
+     * Set 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Affinity 置放群组亲和性策略。
+     * @param Affinity 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffinity(String Affinity) {
@@ -158,9 +158,9 @@ public class DeployGroupInfo extends AbstractModel{
     }
 
     /**
-     * Get 置放群组亲和性策略1的限制实例个数。
+     * Get 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LimitNum 置放群组亲和性策略1的限制实例个数。
+     * @return LimitNum 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getLimitNum() {
@@ -168,9 +168,9 @@ public class DeployGroupInfo extends AbstractModel{
     }
 
     /**
-     * Set 置放群组亲和性策略1的限制实例个数。
+     * Set 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LimitNum 置放群组亲和性策略1的限制实例个数。
+     * @param LimitNum 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitNum(Integer LimitNum) {
