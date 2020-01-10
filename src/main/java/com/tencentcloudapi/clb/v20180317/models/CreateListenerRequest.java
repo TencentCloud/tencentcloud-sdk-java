@@ -58,7 +58,7 @@ public class CreateListenerRequest extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+    * 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
     */
     @SerializedName("Certificate")
     @Expose
@@ -167,16 +167,16 @@ public class CreateListenerRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器 
-     * @return Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * Get 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。 
+     * @return Certificate 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
-     * @param Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * Set 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
+     * @param Certificate 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;

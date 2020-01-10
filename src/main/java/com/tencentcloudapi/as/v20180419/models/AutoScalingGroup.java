@@ -198,6 +198,15 @@ public class AutoScalingGroup extends AbstractModel{
     private Integer Ipv6AddressCount;
 
     /**
+    * 多可用区/子网策略。
+<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
+<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+    */
+    @SerializedName("MultiZoneSubnetPolicy")
+    @Expose
+    private String MultiZoneSubnetPolicy;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -598,6 +607,30 @@ public class AutoScalingGroup extends AbstractModel{
     }
 
     /**
+     * Get 多可用区/子网策略。
+<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
+<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。 
+     * @return MultiZoneSubnetPolicy 多可用区/子网策略。
+<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
+<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+     */
+    public String getMultiZoneSubnetPolicy() {
+        return this.MultiZoneSubnetPolicy;
+    }
+
+    /**
+     * Set 多可用区/子网策略。
+<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
+<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+     * @param MultiZoneSubnetPolicy 多可用区/子网策略。
+<br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
+<br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+     */
+    public void setMultiZoneSubnetPolicy(String MultiZoneSubnetPolicy) {
+        this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -626,6 +659,7 @@ public class AutoScalingGroup extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+        this.setParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
 
     }
 }

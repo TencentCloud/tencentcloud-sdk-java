@@ -51,6 +51,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private String NodeNameType;
 
     /**
+    * 集群自定义参数
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private ClusterExtraArgs ExtraArgs;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -115,6 +122,22 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get 集群自定义参数 
+     * @return ExtraArgs 集群自定义参数
+     */
+    public ClusterExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set 集群自定义参数
+     * @param ExtraArgs 集群自定义参数
+     */
+    public void setExtraArgs(ClusterExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
 
     }
 }

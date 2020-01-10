@@ -146,6 +146,24 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取基础告警策略条件
+     * @param req DescribePolicyConditionListRequest
+     * @return DescribePolicyConditionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyConditionListResponse DescribePolicyConditionList(DescribePolicyConditionListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePolicyConditionListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePolicyConditionListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePolicyConditionList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取基础策略组详情
      * @param req DescribePolicyGroupInfoRequest
      * @return DescribePolicyGroupInfoResponse
@@ -157,6 +175,24 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePolicyGroupInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePolicyGroupInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取基础策略告警组列表
+     * @param req DescribePolicyGroupListRequest
+     * @return DescribePolicyGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyGroupListResponse DescribePolicyGroupList(DescribePolicyGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePolicyGroupListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePolicyGroupListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePolicyGroupList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

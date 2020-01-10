@@ -860,6 +860,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
+     * @param req DescribeLivePackageInfoRequest
+     * @return DescribeLivePackageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLivePackageInfoResponse DescribeLivePackageInfo(DescribeLivePackageInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLivePackageInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLivePackageInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLivePackageInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询播放鉴权key。
      * @param req DescribeLivePlayAuthKeyRequest
      * @return DescribeLivePlayAuthKeyResponse

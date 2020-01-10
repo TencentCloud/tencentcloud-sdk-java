@@ -30,6 +30,15 @@ public class TranscodeTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
+    * 视频转码自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RawParameter")
+    @Expose
+    private RawTranscodeParameter RawParameter;
+
+    /**
     * 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -68,15 +77,6 @@ public class TranscodeTaskInput extends AbstractModel{
     private NumberFormat ObjectNumberFormat;
 
     /**
-    * 视频转码自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RawParameter")
-    @Expose
-    private RawTranscodeParameter RawParameter;
-
-    /**
      * Get 视频转码模板 ID。 
      * @return Definition 视频转码模板 ID。
      */
@@ -90,6 +90,30 @@ public class TranscodeTaskInput extends AbstractModel{
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get 视频转码自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RawParameter 视频转码自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RawTranscodeParameter getRawParameter() {
+        return this.RawParameter;
+    }
+
+    /**
+     * Set 视频转码自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RawParameter 视频转码自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRawParameter(RawTranscodeParameter RawParameter) {
+        this.RawParameter = RawParameter;
     }
 
     /**
@@ -185,40 +209,16 @@ public class TranscodeTaskInput extends AbstractModel{
     }
 
     /**
-     * Get 视频转码自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RawParameter 视频转码自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public RawTranscodeParameter getRawParameter() {
-        return this.RawParameter;
-    }
-
-    /**
-     * Set 视频转码自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RawParameter 视频转码自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRawParameter(RawTranscodeParameter RawParameter) {
-        this.RawParameter = RawParameter;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
         this.setParamObj(map, prefix + "ObjectNumberFormat.", this.ObjectNumberFormat);
-        this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
 
     }
 }

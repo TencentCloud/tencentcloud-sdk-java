@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class ApplyUserCertResponse extends AbstractModel{
 
     /**
+    * 证书ID
+    */
+    @SerializedName("CertId")
+    @Expose
+    private Integer CertId;
+
+    /**
+    * 证书DN
+    */
+    @SerializedName("CertDn")
+    @Expose
+    private String CertDn;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 证书ID 
+     * @return CertId 证书ID
+     */
+    public Integer getCertId() {
+        return this.CertId;
+    }
+
+    /**
+     * Set 证书ID
+     * @param CertId 证书ID
+     */
+    public void setCertId(Integer CertId) {
+        this.CertId = CertId;
+    }
+
+    /**
+     * Get 证书DN 
+     * @return CertDn 证书DN
+     */
+    public String getCertDn() {
+        return this.CertDn;
+    }
+
+    /**
+     * Set 证书DN
+     * @param CertDn 证书DN
+     */
+    public void setCertDn(String CertDn) {
+        this.CertDn = CertDn;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +95,8 @@ public class ApplyUserCertResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamSimple(map, prefix + "CertDn", this.CertDn);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

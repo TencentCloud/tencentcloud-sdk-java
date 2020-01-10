@@ -343,6 +343,44 @@ public class IaiClient extends AbstractClient{
     }
 
     /**
+     *获取人员查重任务列表，按任务创建时间逆序（最新的在前面）。
+
+只保留最近1年的数据。
+     * @param req GetCheckSimilarPersonJobIdListRequest
+     * @return GetCheckSimilarPersonJobIdListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCheckSimilarPersonJobIdListResponse GetCheckSimilarPersonJobIdList(GetCheckSimilarPersonJobIdListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCheckSimilarPersonJobIdListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCheckSimilarPersonJobIdListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetCheckSimilarPersonJobIdList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取人员库信息。
+     * @param req GetGroupInfoRequest
+     * @return GetGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetGroupInfoResponse GetGroupInfo(GetGroupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetGroupInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetGroupInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetGroupInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取人员库列表。
      * @param req GetGroupListRequest
      * @return GetGroupListResponse

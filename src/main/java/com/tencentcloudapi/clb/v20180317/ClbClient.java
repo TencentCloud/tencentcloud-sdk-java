@@ -466,7 +466,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，默认返该负载均衡器下的默认数据长度（20 个）的监听器。
+     *DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse
      * @throws TencentCloudSDKException
@@ -484,7 +484,25 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *查询负载均衡实例列表
+     *根据证书ID查询其在一个地域中所关联到负载均衡实例列表
+     * @param req DescribeLoadBalancerListByCertIdRequest
+     * @return DescribeLoadBalancerListByCertIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancerListByCertIdResponse DescribeLoadBalancerListByCertId(DescribeLoadBalancerListByCertIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancerListByCertIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerListByCertIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLoadBalancerListByCertId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询一个地域的负载均衡实例列表
 
      * @param req DescribeLoadBalancersRequest
      * @return DescribeLoadBalancersResponse

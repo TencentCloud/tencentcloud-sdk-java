@@ -37,6 +37,13 @@ public class RunInstancesForNode extends AbstractModel{
     private String [] RunInstancesPara;
 
     /**
+    * 节点高级设置，该参数会覆盖集群级别设置的InstanceAdvancedSettings，和上边的RunInstancesPara按照顺序一一对应（当前只对节点自定义参数ExtraArgs生效）。
+    */
+    @SerializedName("InstanceAdvancedSettingsOverrides")
+    @Expose
+    private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
+
+    /**
      * Get 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD节点最小配置为4C8G。 
      * @return NodeRole 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD节点最小配置为4C8G。
      */
@@ -69,11 +76,28 @@ public class RunInstancesForNode extends AbstractModel{
     }
 
     /**
+     * Get 节点高级设置，该参数会覆盖集群级别设置的InstanceAdvancedSettings，和上边的RunInstancesPara按照顺序一一对应（当前只对节点自定义参数ExtraArgs生效）。 
+     * @return InstanceAdvancedSettingsOverrides 节点高级设置，该参数会覆盖集群级别设置的InstanceAdvancedSettings，和上边的RunInstancesPara按照顺序一一对应（当前只对节点自定义参数ExtraArgs生效）。
+     */
+    public InstanceAdvancedSettings [] getInstanceAdvancedSettingsOverrides() {
+        return this.InstanceAdvancedSettingsOverrides;
+    }
+
+    /**
+     * Set 节点高级设置，该参数会覆盖集群级别设置的InstanceAdvancedSettings，和上边的RunInstancesPara按照顺序一一对应（当前只对节点自定义参数ExtraArgs生效）。
+     * @param InstanceAdvancedSettingsOverrides 节点高级设置，该参数会覆盖集群级别设置的InstanceAdvancedSettings，和上边的RunInstancesPara按照顺序一一对应（当前只对节点自定义参数ExtraArgs生效）。
+     */
+    public void setInstanceAdvancedSettingsOverrides(InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides) {
+        this.InstanceAdvancedSettingsOverrides = InstanceAdvancedSettingsOverrides;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamArraySimple(map, prefix + "RunInstancesPara.", this.RunInstancesPara);
+        this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
 
     }
 }

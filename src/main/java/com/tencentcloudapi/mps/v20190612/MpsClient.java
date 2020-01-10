@@ -791,6 +791,25 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *对已发起的任务进行管理。
+> 注意：目前仅支持终止执行中的直播流处理任务。
+     * @param req ManageTaskRequest
+     * @return ManageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageTaskResponse ManageTask(ManageTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ManageTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改用户自定义内容分析模板。
 
 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。

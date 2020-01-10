@@ -51,6 +51,13 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private InternetAccessible InternetChargeInfo;
 
     /**
+    * Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Boolean LoadBalancerPassToTarget;
+
+    /**
      * Get 负载均衡的唯一ID 
      * @return LoadBalancerId 负载均衡的唯一ID
      */
@@ -115,6 +122,22 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。 
+     * @return LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     */
+    public Boolean getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * @param LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     */
+    public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
         this.setParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
 
     }
 }

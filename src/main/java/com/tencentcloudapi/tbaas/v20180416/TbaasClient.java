@@ -128,6 +128,24 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *获取区块内的交易列表
+     * @param req GetBlockTransactionListForUserRequest
+     * @return GetBlockTransactionListForUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBlockTransactionListForUserResponse GetBlockTransactionListForUser(GetBlockTransactionListForUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBlockTransactionListForUserResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBlockTransactionListForUserResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetBlockTransactionListForUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取区块链网络概要
      * @param req GetClusterSummaryRequest
      * @return GetClusterSummaryResponse

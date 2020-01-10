@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Key extends AbstractModel{
 
     /**
-    * 加密track类型。
+    * 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
     */
     @SerializedName("Track")
     @Expose
@@ -51,16 +51,24 @@ public class Key extends AbstractModel{
     private String Iv;
 
     /**
-     * Get 加密track类型。 
-     * @return Track 加密track类型。
+    * 该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InsertTimestamp")
+    @Expose
+    private Integer InsertTimestamp;
+
+    /**
+     * Get 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。 
+     * @return Track 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
      */
     public String getTrack() {
         return this.Track;
     }
 
     /**
-     * Set 加密track类型。
-     * @param Track 加密track类型。
+     * Set 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
+     * @param Track 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
      */
     public void setTrack(String Track) {
         this.Track = Track;
@@ -115,6 +123,26 @@ public class Key extends AbstractModel{
     }
 
     /**
+     * Get 该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InsertTimestamp 该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Integer getInsertTimestamp() {
+        return this.InsertTimestamp;
+    }
+
+    /**
+     * Set 该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InsertTimestamp 该key生成时的时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInsertTimestamp(Integer InsertTimestamp) {
+        this.InsertTimestamp = InsertTimestamp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +150,7 @@ public class Key extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Iv", this.Iv);
+        this.setParamSimple(map, prefix + "InsertTimestamp", this.InsertTimestamp);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SearchPersonsReturnsByGroupRequest extends AbstractModel{
 
     /**
-    * 希望搜索的人员库列表，上限10个。
+    * 希望搜索的人员库列表，上限60个。
     */
     @SerializedName("GroupIds")
     @Expose
@@ -101,16 +101,16 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     private Long NeedPersonInfo;
 
     /**
-     * Get 希望搜索的人员库列表，上限10个。 
-     * @return GroupIds 希望搜索的人员库列表，上限10个。
+     * Get 希望搜索的人员库列表，上限60个。 
+     * @return GroupIds 希望搜索的人员库列表，上限60个。
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 希望搜索的人员库列表，上限10个。
-     * @param GroupIds 希望搜索的人员库列表，上限10个。
+     * Set 希望搜索的人员库列表，上限60个。
+     * @param GroupIds 希望搜索的人员库列表，上限60个。
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;

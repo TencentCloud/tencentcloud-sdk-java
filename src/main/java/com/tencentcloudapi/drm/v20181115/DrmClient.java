@@ -57,6 +57,24 @@ public class DrmClient extends AbstractClient{
     }
 
     /**
+     *该接口用来设置加密的秘钥。注意，同一个content id，只能设置一次！
+     * @param req CreateEncryptKeysRequest
+     * @return CreateEncryptKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEncryptKeysResponse CreateEncryptKeys(CreateEncryptKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEncryptKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEncryptKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateEncryptKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用来生成DRM方案对应的播放许可证，开发者需提供DRM方案类型、内容类型参数，后台将生成许可证后返回许可证数据
 开发者需要转发终端设备发出的许可证请求信息。
      * @param req CreateLicenseRequest
@@ -89,6 +107,25 @@ public class DrmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteFairPlayPemResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteFairPlayPem"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用来查询指定DRM类型、ContentType的所有加密秘钥
+
+     * @param req DescribeAllKeysRequest
+     * @return DescribeAllKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllKeysResponse DescribeAllKeys(DescribeAllKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllKeys"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

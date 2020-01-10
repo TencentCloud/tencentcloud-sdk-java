@@ -37,6 +37,13 @@ public class ExistedInstancesForNode extends AbstractModel{
     private ExistedInstancesPara ExistedInstancesPara;
 
     /**
+    * 节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
+    */
+    @SerializedName("InstanceAdvancedSettingsOverride")
+    @Expose
+    private InstanceAdvancedSettings InstanceAdvancedSettingsOverride;
+
+    /**
      * Get 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。 
      * @return NodeRole 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
      */
@@ -69,11 +76,28 @@ public class ExistedInstancesForNode extends AbstractModel{
     }
 
     /**
+     * Get 节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效） 
+     * @return InstanceAdvancedSettingsOverride 节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
+     */
+    public InstanceAdvancedSettings getInstanceAdvancedSettingsOverride() {
+        return this.InstanceAdvancedSettingsOverride;
+    }
+
+    /**
+     * Set 节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
+     * @param InstanceAdvancedSettingsOverride 节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
+     */
+    public void setInstanceAdvancedSettingsOverride(InstanceAdvancedSettings InstanceAdvancedSettingsOverride) {
+        this.InstanceAdvancedSettingsOverride = InstanceAdvancedSettingsOverride;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamObj(map, prefix + "ExistedInstancesPara.", this.ExistedInstancesPara);
+        this.setParamObj(map, prefix + "InstanceAdvancedSettingsOverride.", this.InstanceAdvancedSettingsOverride);
 
     }
 }
