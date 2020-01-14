@@ -107,6 +107,15 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Integer Limit;
 
     /**
+    * 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter Filters;
+
+    /**
      * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
@@ -299,6 +308,30 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
+     * Get 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li> 
+     * @return Filters 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+     */
+    public Filter getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+     * @param Filters 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+     */
+    public void setFilters(Filter Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +347,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

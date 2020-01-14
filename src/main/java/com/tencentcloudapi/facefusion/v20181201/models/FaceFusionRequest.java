@@ -59,6 +59,7 @@ public class FaceFusionRequest extends AbstractModel{
 
     /**
     * 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
     */
     @SerializedName("CelebrityIdentify")
     @Expose
@@ -145,8 +146,10 @@ public class FaceFusionRequest extends AbstractModel{
     }
 
     /**
-     * Get 0表示不需要鉴政，1表示需要鉴政。默认值为0。 
+     * Get 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。 
      * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     public Integer getCelebrityIdentify() {
         return this.CelebrityIdentify;
@@ -154,7 +157,9 @@ public class FaceFusionRequest extends AbstractModel{
 
     /**
      * Set 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     public void setCelebrityIdentify(Integer CelebrityIdentify) {
         this.CelebrityIdentify = CelebrityIdentify;

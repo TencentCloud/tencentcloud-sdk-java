@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class RecognizeCarResponse extends AbstractModel{
 
     /**
-    * 汽车的四个矩形顶点坐标
+    * 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
     */
     @SerializedName("CarCoords")
     @Expose
     private Coord [] CarCoords;
 
     /**
-    * 车辆属性识别的结果数组
+    * 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
     */
     @SerializedName("CarTags")
     @Expose
@@ -44,32 +44,32 @@ public class RecognizeCarResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 汽车的四个矩形顶点坐标 
-     * @return CarCoords 汽车的四个矩形顶点坐标
+     * Get 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。 
+     * @return CarCoords 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
      */
     public Coord [] getCarCoords() {
         return this.CarCoords;
     }
 
     /**
-     * Set 汽车的四个矩形顶点坐标
-     * @param CarCoords 汽车的四个矩形顶点坐标
+     * Set 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
+     * @param CarCoords 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
      */
     public void setCarCoords(Coord [] CarCoords) {
         this.CarCoords = CarCoords;
     }
 
     /**
-     * Get 车辆属性识别的结果数组 
-     * @return CarTags 车辆属性识别的结果数组
+     * Get 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。 
+     * @return CarTags 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
      */
     public CarTagItem [] getCarTags() {
         return this.CarTags;
     }
 
     /**
-     * Set 车辆属性识别的结果数组
-     * @param CarTags 车辆属性识别的结果数组
+     * Set 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+     * @param CarTags 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
      */
     public void setCarTags(CarTagItem [] CarTags) {
         this.CarTags = CarTags;

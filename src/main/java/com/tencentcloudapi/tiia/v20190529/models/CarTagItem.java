@@ -65,6 +65,13 @@ public class CarTagItem extends AbstractModel{
     private Long Year;
 
     /**
+    * 车辆在图片中的坐标信息
+    */
+    @SerializedName("CarLocation")
+    @Expose
+    private Coord [] CarLocation;
+
+    /**
      * Get 车系 
      * @return Serial 车系
      */
@@ -161,6 +168,22 @@ public class CarTagItem extends AbstractModel{
     }
 
     /**
+     * Get 车辆在图片中的坐标信息 
+     * @return CarLocation 车辆在图片中的坐标信息
+     */
+    public Coord [] getCarLocation() {
+        return this.CarLocation;
+    }
+
+    /**
+     * Set 车辆在图片中的坐标信息
+     * @param CarLocation 车辆在图片中的坐标信息
+     */
+    public void setCarLocation(Coord [] CarLocation) {
+        this.CarLocation = CarLocation;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CarTagItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Color", this.Color);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Year", this.Year);
+        this.setParamArrayObj(map, prefix + "CarLocation.", this.CarLocation);
 
     }
 }

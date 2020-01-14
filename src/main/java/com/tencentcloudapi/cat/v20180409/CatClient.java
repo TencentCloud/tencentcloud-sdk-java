@@ -74,46 +74,6 @@ public class CatClient extends AbstractClient{
     }
 
     /**
-     *为拨测任务创建告警策略
-     * @param req CreateAlarmPloicyRequest
-     * @return CreateAlarmPloicyResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateAlarmPloicyResponse CreateAlarmPloicy(CreateAlarmPloicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAlarmPloicyResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAlarmPloicyResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateAlarmPloicy"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *创建拨测任务（创建任务并发起验证）
-
-操作提示：
-下一步，请通过VerifyCatResult 接口，验证一下拨测验证是否成功。如果成功，则可通过RunTask 接口运行该任务。
-
-     * @param req CreateTaskRequest
-     * @return CreateTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskResponse CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTaskResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTaskResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateTask"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *创建拨测任务(扩充)
      * @param req CreateTaskExRequest
      * @return CreateTaskExResponse
@@ -168,24 +128,6 @@ public class CatClient extends AbstractClient{
     }
 
     /**
-     *查询拨测分组详情
-     * @param req DescribeAgentGroupRequest
-     * @return DescribeAgentGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAgentGroupResponse DescribeAgentGroup(DescribeAgentGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAgentGroupResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAgentGroupResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAgentGroup"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询拨测分组列表
      * @param req DescribeAgentGroupsRequest
      * @return DescribeAgentGroupsResponse
@@ -215,24 +157,6 @@ public class CatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeAgents"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询用户的告警接收组列表
-     * @param req DescribeAlarmGroupsRequest
-     * @return DescribeAlarmGroupsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAlarmGroupsResponse DescribeAlarmGroups(DescribeAlarmGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAlarmGroupsResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAlarmGroupsResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAlarmGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -312,24 +236,6 @@ public class CatClient extends AbstractClient{
     }
 
     /**
-     *查询拨测任务详情
-     * @param req DescribeTaskRequest
-     * @return DescribeTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTask"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询拨测任务信息
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
@@ -341,24 +247,6 @@ public class CatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskDetail"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询拨测任务列表
-     * @param req DescribeTasksRequest
-     * @return DescribeTasksResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTasksResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTasks"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -449,24 +337,6 @@ public class CatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetRealAvailRatioResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetRealAvailRatio"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询拨测任务的统计数据
-     * @param req GetRespTimeTrendRequest
-     * @return GetRespTimeTrendResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetRespTimeTrendResponse GetRespTimeTrend(GetRespTimeTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRespTimeTrendResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetRespTimeTrendResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetRespTimeTrend"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -575,44 +445,6 @@ public class CatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAgentGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAgentGroup"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *为拨测任务修改告警策略
-     * @param req ModifyAlarmPloicyRequest
-     * @return ModifyAlarmPloicyResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAlarmPloicyResponse ModifyAlarmPloicy(ModifyAlarmPloicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAlarmPloicyResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPloicyResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAlarmPloicy"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *修改 拨测任务。
-如果验证未成功，请先验证成功。避免修改为失败率100%的拨测任务。
-
-     * @param req ModifyTaskRequest
-     * @return ModifyTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTaskResponse ModifyTask(ModifyTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTaskResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTaskResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTask"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

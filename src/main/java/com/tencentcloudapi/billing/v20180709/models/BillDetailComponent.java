@@ -135,6 +135,30 @@ public class BillDetailComponent extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
+    * 组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ItemCode")
+    @Expose
+    private String ItemCode;
+
+    /**
+    * 组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComponentCode")
+    @Expose
+    private String ComponentCode;
+
+    /**
+    * 合同价
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContractPrice")
+    @Expose
+    private String ContractPrice;
+
+    /**
      * Get 组件类型:资源组件类型的名称，如内存、硬盘等 
      * @return ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      */
@@ -391,6 +415,66 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
+     * Get 组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ItemCode 组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getItemCode() {
+        return this.ItemCode;
+    }
+
+    /**
+     * Set 组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ItemCode 组件类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItemCode(String ItemCode) {
+        this.ItemCode = ItemCode;
+    }
+
+    /**
+     * Get 组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComponentCode 组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComponentCode() {
+        return this.ComponentCode;
+    }
+
+    /**
+     * Set 组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComponentCode 组件名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComponentCode(String ComponentCode) {
+        this.ComponentCode = ComponentCode;
+    }
+
+    /**
+     * Get 合同价
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContractPrice 合同价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContractPrice() {
+        return this.ContractPrice;
+    }
+
+    /**
+     * Set 合同价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContractPrice 合同价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContractPrice(String ContractPrice) {
+        this.ContractPrice = ContractPrice;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +494,9 @@ public class BillDetailComponent extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "ItemCode", this.ItemCode);
+        this.setParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
+        this.setParamSimple(map, prefix + "ContractPrice", this.ContractPrice);
 
     }
 }

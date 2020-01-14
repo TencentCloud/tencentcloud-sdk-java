@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCertListResponse extends AbstractModel{
 
     /**
-    * 总数量
+    * 总数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 列表
+    * 列表。
     */
     @SerializedName("CertificateSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeCertListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总数量 
-     * @return TotalCount 总数量
+     * Get 总数量。 
+     * @return TotalCount 总数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数量
-     * @param TotalCount 总数量
+     * Set 总数量。
+     * @param TotalCount 总数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 列表 
-     * @return CertificateSet 列表
+     * Get 列表。 
+     * @return CertificateSet 列表。
      */
     public SSLCertificate [] getCertificateSet() {
         return this.CertificateSet;
     }
 
     /**
-     * Set 列表
-     * @param CertificateSet 列表
+     * Set 列表。
+     * @param CertificateSet 列表。
      */
     public void setCertificateSet(SSLCertificate [] CertificateSet) {
         this.CertificateSet = CertificateSet;

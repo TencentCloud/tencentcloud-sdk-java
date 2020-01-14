@@ -157,6 +157,30 @@ public class BillDetail extends AbstractModel{
     private BillTagInfo [] Tags;
 
     /**
+    * 商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
+    * 子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ActionType")
+    @Expose
+    private String ActionType;
+
+    /**
      * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -465,6 +489,66 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
+     * Get 商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessCode 商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set 商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessCode 商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
+    /**
+     * Get 子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCode 子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set 子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCode 子商品名称代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get 交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ActionType 交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getActionType() {
+        return this.ActionType;
+    }
+
+    /**
+     * Set 交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ActionType 交易类型代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActionType(String ActionType) {
+        this.ActionType = ActionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -487,6 +571,9 @@ public class BillDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
 
     }
 }

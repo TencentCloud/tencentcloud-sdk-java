@@ -44,7 +44,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String GameId;
 
     /**
-    * 游戏区域
+    * 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
     */
     @SerializedName("GameRegion")
     @Expose
@@ -58,25 +58,60 @@ public class CreateSessionRequest extends AbstractModel{
     private String GameParas;
 
     /**
-    * 分辨率
+    * 分辨率,，可设置为1080p或720p
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * 背景图url
+    * 背景图url，格式为png或jpeg，宽高1920*1080
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 资源池编号
+    * 资源池编号，1表示正式，2表示测试
     */
     @SerializedName("SetNo")
     @Expose
     private Long SetNo;
+
+    /**
+    * 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
+    * 单位Mbps，动态调整最大码率
+    */
+    @SerializedName("MaxBitrate")
+    @Expose
+    private Long MaxBitrate;
+
+    /**
+    * 单位Mbps，动态调整最小码率
+    */
+    @SerializedName("MinBitrate")
+    @Expose
+    private Long MinBitrate;
+
+    /**
+    * 帧率，可设置为30、45或60
+    */
+    @SerializedName("Fps")
+    @Expose
+    private Long Fps;
+
+    /**
+    * 游戏用户IP，用于就近调度，例如125.127.178.228
+    */
+    @SerializedName("UserIp")
+    @Expose
+    private String UserIp;
 
     /**
      * Get 客户端session信息，从JSSDK请求中获得 
@@ -127,16 +162,16 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏区域 
-     * @return GameRegion 游戏区域
+     * Get 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等 
+     * @return GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
      */
     public String getGameRegion() {
         return this.GameRegion;
     }
 
     /**
-     * Set 游戏区域
-     * @param GameRegion 游戏区域
+     * Set 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+     * @param GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
      */
     public void setGameRegion(String GameRegion) {
         this.GameRegion = GameRegion;
@@ -159,51 +194,131 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 分辨率 
-     * @return Resolution 分辨率
+     * Get 分辨率,，可设置为1080p或720p 
+     * @return Resolution 分辨率,，可设置为1080p或720p
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 分辨率
-     * @param Resolution 分辨率
+     * Set 分辨率,，可设置为1080p或720p
+     * @param Resolution 分辨率,，可设置为1080p或720p
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 背景图url 
-     * @return ImageUrl 背景图url
+     * Get 背景图url，格式为png或jpeg，宽高1920*1080 
+     * @return ImageUrl 背景图url，格式为png或jpeg，宽高1920*1080
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 背景图url
-     * @param ImageUrl 背景图url
+     * Set 背景图url，格式为png或jpeg，宽高1920*1080
+     * @param ImageUrl 背景图url，格式为png或jpeg，宽高1920*1080
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 资源池编号 
-     * @return SetNo 资源池编号
+     * Get 资源池编号，1表示正式，2表示测试 
+     * @return SetNo 资源池编号，1表示正式，2表示测试
      */
     public Long getSetNo() {
         return this.SetNo;
     }
 
     /**
-     * Set 资源池编号
-     * @param SetNo 资源池编号
+     * Set 资源池编号，1表示正式，2表示测试
+     * @param SetNo 资源池编号，1表示正式，2表示测试
      */
     public void setSetNo(Long SetNo) {
         this.SetNo = SetNo;
+    }
+
+    /**
+     * Get 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效) 
+     * @return Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * @param Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
+    /**
+     * Get 单位Mbps，动态调整最大码率 
+     * @return MaxBitrate 单位Mbps，动态调整最大码率
+     */
+    public Long getMaxBitrate() {
+        return this.MaxBitrate;
+    }
+
+    /**
+     * Set 单位Mbps，动态调整最大码率
+     * @param MaxBitrate 单位Mbps，动态调整最大码率
+     */
+    public void setMaxBitrate(Long MaxBitrate) {
+        this.MaxBitrate = MaxBitrate;
+    }
+
+    /**
+     * Get 单位Mbps，动态调整最小码率 
+     * @return MinBitrate 单位Mbps，动态调整最小码率
+     */
+    public Long getMinBitrate() {
+        return this.MinBitrate;
+    }
+
+    /**
+     * Set 单位Mbps，动态调整最小码率
+     * @param MinBitrate 单位Mbps，动态调整最小码率
+     */
+    public void setMinBitrate(Long MinBitrate) {
+        this.MinBitrate = MinBitrate;
+    }
+
+    /**
+     * Get 帧率，可设置为30、45或60 
+     * @return Fps 帧率，可设置为30、45或60
+     */
+    public Long getFps() {
+        return this.Fps;
+    }
+
+    /**
+     * Set 帧率，可设置为30、45或60
+     * @param Fps 帧率，可设置为30、45或60
+     */
+    public void setFps(Long Fps) {
+        this.Fps = Fps;
+    }
+
+    /**
+     * Get 游戏用户IP，用于就近调度，例如125.127.178.228 
+     * @return UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public String getUserIp() {
+        return this.UserIp;
+    }
+
+    /**
+     * Set 游戏用户IP，用于就近调度，例如125.127.178.228
+     * @param UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public void setUserIp(String UserIp) {
+        this.UserIp = UserIp;
     }
 
     /**
@@ -218,6 +333,11 @@ public class CreateSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "SetNo", this.SetNo);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
+        this.setParamSimple(map, prefix + "MaxBitrate", this.MaxBitrate);
+        this.setParamSimple(map, prefix + "MinBitrate", this.MinBitrate);
+        this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "UserIp", this.UserIp);
 
     }
 }

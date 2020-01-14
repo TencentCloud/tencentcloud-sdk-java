@@ -51,6 +51,13 @@ public class TrylockWorkerRequest extends AbstractModel{
     private Long SetNo;
 
     /**
+    * 游戏用户IP，用于就近调度，例如125.127.178.228
+    */
+    @SerializedName("UserIp")
+    @Expose
+    private String UserIp;
+
+    /**
      * Get 游戏用户ID 
      * @return UserId 游戏用户ID
      */
@@ -115,6 +122,22 @@ public class TrylockWorkerRequest extends AbstractModel{
     }
 
     /**
+     * Get 游戏用户IP，用于就近调度，例如125.127.178.228 
+     * @return UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public String getUserIp() {
+        return this.UserIp;
+    }
+
+    /**
+     * Set 游戏用户IP，用于就近调度，例如125.127.178.228
+     * @param UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public void setUserIp(String UserIp) {
+        this.UserIp = UserIp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class TrylockWorkerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GameId", this.GameId);
         this.setParamSimple(map, prefix + "GameRegion", this.GameRegion);
         this.setParamSimple(map, prefix + "SetNo", this.SetNo);
+        this.setParamSimple(map, prefix + "UserIp", this.UserIp);
 
     }
 }

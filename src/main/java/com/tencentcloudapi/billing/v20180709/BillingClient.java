@@ -182,6 +182,96 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *查询消耗明细
+     * @param req DescribeCostDetailRequest
+     * @return DescribeCostDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostDetailResponse DescribeCostDetail(DescribeCostDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCostDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCostDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCostDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取按产品汇总消耗详情
+     * @param req DescribeCostSummaryByProductRequest
+     * @return DescribeCostSummaryByProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByProductResponse DescribeCostSummaryByProduct(DescribeCostSummaryByProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCostSummaryByProductResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCostSummaryByProductResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCostSummaryByProduct"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取按项目汇总消耗详情
+     * @param req DescribeCostSummaryByProjectRequest
+     * @return DescribeCostSummaryByProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByProjectResponse DescribeCostSummaryByProject(DescribeCostSummaryByProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCostSummaryByProjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCostSummaryByProjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCostSummaryByProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取按地域汇总消耗详情
+     * @param req DescribeCostSummaryByRegionRequest
+     * @return DescribeCostSummaryByRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByRegionResponse DescribeCostSummaryByRegion(DescribeCostSummaryByRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCostSummaryByRegionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCostSummaryByRegionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCostSummaryByRegion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取按资源汇总消耗详情
+     * @param req DescribeCostSummaryByResourceRequest
+     * @return DescribeCostSummaryByResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostSummaryByResourceResponse DescribeCostSummaryByResource(DescribeCostSummaryByResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCostSummaryByResourceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCostSummaryByResourceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCostSummaryByResource"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询订单
      * @param req DescribeDealsByCondRequest
      * @return DescribeDealsByCondResponse

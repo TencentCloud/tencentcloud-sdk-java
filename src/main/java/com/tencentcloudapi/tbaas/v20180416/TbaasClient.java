@@ -74,6 +74,24 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *动态部署合约
+     * @param req DeployDynamicContractHandlerRequest
+     * @return DeployDynamicContractHandlerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployDynamicContractHandlerResponse DeployDynamicContractHandler(DeployDynamicContractHandlerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeployDynamicContractHandlerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeployDynamicContractHandlerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeployDynamicContractHandler"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *下载用户证书
      * @param req DownloadUserCertRequest
      * @return DownloadUserCertResponse
@@ -319,6 +337,24 @@ public class TbaasClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SrvInvokeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SrvInvoke"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据动态部署的合约发送交易
+     * @param req TransByDynamicContractHandlerRequest
+     * @return TransByDynamicContractHandlerResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransByDynamicContractHandlerResponse TransByDynamicContractHandler(TransByDynamicContractHandlerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TransByDynamicContractHandlerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<TransByDynamicContractHandlerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "TransByDynamicContractHandler"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

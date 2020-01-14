@@ -23,184 +23,184 @@ import java.util.HashMap;
 public class DescribeCertListRequest extends AbstractModel{
 
     /**
-    * 模块名称，应填ssl
+    * 模块名称，应填 ssl。
     */
     @SerializedName("ModuleType")
     @Expose
     private String ModuleType;
 
     /**
-    * 页数，默认第一页
+    * 页数，默认第一页。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页条数，默认每页20条
+    * 每页条数，默认每页20条。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索关键字
+    * 搜索关键字。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
+    * 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
     */
     @SerializedName("CertType")
     @Expose
     private String CertType;
 
     /**
-    * 证书id
+    * 证书ID。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 是否同时获取证书内容
+    * 是否同时获取证书内容。
     */
     @SerializedName("WithCert")
     @Expose
     private String WithCert;
 
     /**
-    * 如传，则只返回可以给该域名使用的证书
+    * 如传，则只返回可以给该域名使用的证书。
     */
     @SerializedName("AltDomain")
     @Expose
     private String AltDomain;
 
     /**
-     * Get 模块名称，应填ssl 
-     * @return ModuleType 模块名称，应填ssl
+     * Get 模块名称，应填 ssl。 
+     * @return ModuleType 模块名称，应填 ssl。
      */
     public String getModuleType() {
         return this.ModuleType;
     }
 
     /**
-     * Set 模块名称，应填ssl
-     * @param ModuleType 模块名称，应填ssl
+     * Set 模块名称，应填 ssl。
+     * @param ModuleType 模块名称，应填 ssl。
      */
     public void setModuleType(String ModuleType) {
         this.ModuleType = ModuleType;
     }
 
     /**
-     * Get 页数，默认第一页 
-     * @return Offset 页数，默认第一页
+     * Get 页数，默认第一页。 
+     * @return Offset 页数，默认第一页。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页数，默认第一页
-     * @param Offset 页数，默认第一页
+     * Set 页数，默认第一页。
+     * @param Offset 页数，默认第一页。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页条数，默认每页20条 
-     * @return Limit 每页条数，默认每页20条
+     * Get 每页条数，默认每页20条。 
+     * @return Limit 每页条数，默认每页20条。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数，默认每页20条
-     * @param Limit 每页条数，默认每页20条
+     * Set 每页条数，默认每页20条。
+     * @param Limit 每页条数，默认每页20条。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return SearchKey 搜索关键字
+     * Get 搜索关键字。 
+     * @return SearchKey 搜索关键字。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键字
-     * @param SearchKey 搜索关键字
+     * Set 搜索关键字。
+     * @param SearchKey 搜索关键字。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 证书类型（目前支持:CA=客户端证书,SVR=服务器证书） 
-     * @return CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
+     * Get 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。 
+     * @return CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
      */
     public String getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
-     * @param CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
+     * Set 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
+     * @param CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
      */
     public void setCertType(String CertType) {
         this.CertType = CertType;
     }
 
     /**
-     * Get 证书id 
-     * @return Id 证书id
+     * Get 证书ID。 
+     * @return Id 证书ID。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 证书id
-     * @param Id 证书id
+     * Set 证书ID。
+     * @param Id 证书ID。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否同时获取证书内容 
-     * @return WithCert 是否同时获取证书内容
+     * Get 是否同时获取证书内容。 
+     * @return WithCert 是否同时获取证书内容。
      */
     public String getWithCert() {
         return this.WithCert;
     }
 
     /**
-     * Set 是否同时获取证书内容
-     * @param WithCert 是否同时获取证书内容
+     * Set 是否同时获取证书内容。
+     * @param WithCert 是否同时获取证书内容。
      */
     public void setWithCert(String WithCert) {
         this.WithCert = WithCert;
     }
 
     /**
-     * Get 如传，则只返回可以给该域名使用的证书 
-     * @return AltDomain 如传，则只返回可以给该域名使用的证书
+     * Get 如传，则只返回可以给该域名使用的证书。 
+     * @return AltDomain 如传，则只返回可以给该域名使用的证书。
      */
     public String getAltDomain() {
         return this.AltDomain;
     }
 
     /**
-     * Set 如传，则只返回可以给该域名使用的证书
-     * @param AltDomain 如传，则只返回可以给该域名使用的证书
+     * Set 如传，则只返回可以给该域名使用的证书。
+     * @param AltDomain 如传，则只返回可以给该域名使用的证书。
      */
     public void setAltDomain(String AltDomain) {
         this.AltDomain = AltDomain;

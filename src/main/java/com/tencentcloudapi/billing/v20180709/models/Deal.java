@@ -135,6 +135,21 @@ public class Deal extends AbstractModel{
     private Float TotalCost;
 
     /**
+    * 产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 子产品编码
+    */
+    @SerializedName("SubProductCode")
+    @Expose
+    private String SubProductCode;
+
+    /**
      * Get 订单号 
      * @return OrderId 订单号
      */
@@ -391,6 +406,42 @@ public class Deal extends AbstractModel{
     }
 
     /**
+     * Get 产品编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCode 产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set 产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCode 产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get 子产品编码 
+     * @return SubProductCode 子产品编码
+     */
+    public String getSubProductCode() {
+        return this.SubProductCode;
+    }
+
+    /**
+     * Set 子产品编码
+     * @param SubProductCode 子产品编码
+     */
+    public void setSubProductCode(String SubProductCode) {
+        this.SubProductCode = SubProductCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +461,8 @@ public class Deal extends AbstractModel{
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
 
     }
 }

@@ -159,7 +159,7 @@ public class SSLCertificate extends AbstractModel{
     private SSLProjectInfo ProjectInfo;
 
     /**
-    * 证书Id
+    * 证书ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -571,9 +571,9 @@ public class SSLCertificate extends AbstractModel{
     }
 
     /**
-     * Get 证书Id
+     * Get 证书ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 证书Id
+     * @return Id 证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -581,9 +581,9 @@ public class SSLCertificate extends AbstractModel{
     }
 
     /**
-     * Set 证书Id
+     * Set 证书ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 证书Id
+     * @param Id 证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {

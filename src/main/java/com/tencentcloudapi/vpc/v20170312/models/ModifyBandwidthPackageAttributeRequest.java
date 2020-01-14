@@ -37,6 +37,13 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     private String BandwidthPackageName;
 
     /**
+    * 带宽包计费模式
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
      * Get 带宽包唯一标识ID 
      * @return BandwidthPackageId 带宽包唯一标识ID
      */
@@ -69,11 +76,28 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 带宽包计费模式 
+     * @return ChargeType 带宽包计费模式
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 带宽包计费模式
+     * @param ChargeType 带宽包计费模式
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
 
     }
 }

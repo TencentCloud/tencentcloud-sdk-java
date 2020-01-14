@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeWorkersRequest extends AbstractModel{
 
     /**
-    * 资源池编号，值为2的幂，1表示共用，2表示测试
+    * 资源池编号，1表示正式，2表示测试
     */
     @SerializedName("SetNo")
     @Expose
     private Long SetNo;
 
     /**
-     * Get 资源池编号，值为2的幂，1表示共用，2表示测试 
-     * @return SetNo 资源池编号，值为2的幂，1表示共用，2表示测试
+     * Get 资源池编号，1表示正式，2表示测试 
+     * @return SetNo 资源池编号，1表示正式，2表示测试
      */
     public Long getSetNo() {
         return this.SetNo;
     }
 
     /**
-     * Set 资源池编号，值为2的幂，1表示共用，2表示测试
-     * @param SetNo 资源池编号，值为2的幂，1表示共用，2表示测试
+     * Set 资源池编号，1表示正式，2表示测试
+     * @param SetNo 资源池编号，1表示正式，2表示测试
      */
     public void setSetNo(Long SetNo) {
         this.SetNo = SetNo;

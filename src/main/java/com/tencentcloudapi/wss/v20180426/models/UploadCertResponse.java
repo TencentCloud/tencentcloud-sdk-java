@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UploadCertResponse extends AbstractModel{
 
     /**
-    * 证书ID
+    * 证书ID。
     */
     @SerializedName("Id")
     @Expose
@@ -37,16 +37,16 @@ public class UploadCertResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 证书ID 
-     * @return Id 证书ID
+     * Get 证书ID。 
+     * @return Id 证书ID。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 证书ID
-     * @param Id 证书ID
+     * Set 证书ID。
+     * @param Id 证书ID。
      */
     public void setId(String Id) {
         this.Id = Id;
