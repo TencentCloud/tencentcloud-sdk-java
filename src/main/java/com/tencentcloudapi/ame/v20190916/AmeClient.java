@@ -109,4 +109,22 @@ public class AmeClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *客户上报用户数据功能，为了更好的为用户提供优质服务
+     * @param req ReportDataRequest
+     * @return ReportDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportDataResponse ReportData(ReportDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReportDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReportDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReportData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

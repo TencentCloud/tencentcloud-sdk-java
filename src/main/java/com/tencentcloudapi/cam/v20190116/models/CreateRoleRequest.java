@@ -44,7 +44,7 @@ public class CreateRoleRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 是否允许登录
+    * 是否允许登录 1 为允许 0 为不允许
     */
     @SerializedName("ConsoleLogin")
     @Expose
@@ -99,16 +99,16 @@ public class CreateRoleRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否允许登录 
-     * @return ConsoleLogin 是否允许登录
+     * Get 是否允许登录 1 为允许 0 为不允许 
+     * @return ConsoleLogin 是否允许登录 1 为允许 0 为不允许
      */
     public Long getConsoleLogin() {
         return this.ConsoleLogin;
     }
 
     /**
-     * Set 是否允许登录
-     * @param ConsoleLogin 是否允许登录
+     * Set 是否允许登录 1 为允许 0 为不允许
+     * @param ConsoleLogin 是否允许登录 1 为允许 0 为不允许
      */
     public void setConsoleLogin(Long ConsoleLogin) {
         this.ConsoleLogin = ConsoleLogin;

@@ -37,9 +37,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long SubServiceType;
 
     /**
-    * 引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+    * 引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
     */
@@ -90,6 +90,13 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long DataLen;
 
     /**
+    * 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+    */
+    @SerializedName("HotwordId")
+    @Expose
+    private String HotwordId;
+
+    /**
      * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
@@ -122,14 +129,14 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+     * Get 引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。 
-     * @return EngSerViceType 引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+     * @return EngSerViceType 引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
      */
@@ -138,14 +145,14 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Set 引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+     * Set 引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
-     * @param EngSerViceType 引擎类型。
-8k：电话 8k 中文普通话通用；
-16k：16k 中文普通话通用；
+     * @param EngSerViceType 引擎模型类型。
+8k_zh：电话 8k 中文普通话通用；
+16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
 16k_ca：16k 粤语。
      */
@@ -250,6 +257,22 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
+     * Get 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。 
+     * @return HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     */
+    public String getHotwordId() {
+        return this.HotwordId;
+    }
+
+    /**
+     * Set 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * @param HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     */
+    public void setHotwordId(String HotwordId) {
+        this.HotwordId = HotwordId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -262,6 +285,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "DataLen", this.DataLen);
+        this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
 
     }
 }

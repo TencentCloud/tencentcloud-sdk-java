@@ -90,6 +90,14 @@ public class StrategyInfo extends AbstractModel{
     private Long IsAttached;
 
     /**
+    * 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deactived")
+    @Expose
+    private Long Deactived;
+
+    /**
      * Get 策略ID。 
      * @return PolicyId 策略ID。
      */
@@ -250,6 +258,26 @@ public class StrategyInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeactived() {
+        return this.Deactived;
+    }
+
+    /**
+     * Set 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeactived(Long Deactived) {
+        this.Deactived = Deactived;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -262,6 +290,7 @@ public class StrategyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Attachments", this.Attachments);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "IsAttached", this.IsAttached);
+        this.setParamSimple(map, prefix + "Deactived", this.Deactived);
 
     }
 }

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteNonlocalLoginPlacesRequest extends AbstractModel{
 
     /**
-    * 异地登录事件Id数组。
+    * 异地登录事件ID数组。
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get 异地登录事件Id数组。 
-     * @return Ids 异地登录事件Id数组。
+     * Get 异地登录事件ID数组。 
+     * @return Ids 异地登录事件ID数组。
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 异地登录事件Id数组。
-     * @param Ids 异地登录事件Id数组。
+     * Set 异地登录事件ID数组。
+     * @param Ids 异地登录事件ID数组。
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

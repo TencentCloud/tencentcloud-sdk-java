@@ -74,6 +74,14 @@ public class DeployGroupInfo extends AbstractModel{
     private String Description;
 
     /**
+    * 置放群组物理机型属性。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DevClass")
+    @Expose
+    private String DevClass;
+
+    /**
      * Get 置放群组 ID。 
      * @return DeployGroupId 置放群组 ID。
      */
@@ -194,6 +202,26 @@ public class DeployGroupInfo extends AbstractModel{
     }
 
     /**
+     * Get 置放群组物理机型属性。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DevClass 置放群组物理机型属性。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDevClass() {
+        return this.DevClass;
+    }
+
+    /**
+     * Set 置放群组物理机型属性。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DevClass 置放群组物理机型属性。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDevClass(String DevClass) {
+        this.DevClass = DevClass;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -204,6 +232,7 @@ public class DeployGroupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Affinity", this.Affinity);
         this.setParamSimple(map, prefix + "LimitNum", this.LimitNum);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "DevClass", this.DevClass);
 
     }
 }

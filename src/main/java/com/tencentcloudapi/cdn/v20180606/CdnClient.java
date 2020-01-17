@@ -38,6 +38,42 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *AddCdnDomain 用于新增内容分发网络加速域名。
+     * @param req AddCdnDomainRequest
+     * @return AddCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCdnDomainResponse AddCdnDomain(AddCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DeleteCdnDomain 用于删除指定加速域名
+     * @param req DeleteCdnDomainRequest
+     * @return DeleteCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCdnDomainResponse DeleteCdnDomain(DeleteCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeCdnData 用于查询 CDN 实时访问监控数据，支持以下指标查询：
 
 + 流量（单位为 byte）
@@ -94,6 +130,42 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCdnIpResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeCdnIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
+     * @param req DescribeDomainsRequest
+     * @return DescribeDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomains"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeDomainsConfig 用于查询内容分发网络加速域名（含境内、境外）的所有配置信息。
+     * @param req DescribeDomainsConfigRequest
+     * @return DescribeDomainsConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainsConfigResponse DescribeDomainsConfig(DescribeDomainsConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainsConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainsConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainsConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -241,6 +313,25 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
+对应内容分发网络控制台【图片鉴黄】页面。
+     * @param req DescribeUrlViolationsRequest
+     * @return DescribeUrlViolationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUrlViolationsResponse DescribeUrlViolations(DescribeUrlViolationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUrlViolationsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUrlViolationsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeUrlViolations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，全网访问会直接返回 403。（接口尚在内测中，暂未全量开放使用）
      * @param req DisableCachesRequest
      * @return DisableCachesResponse
@@ -277,7 +368,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *GetDisableRecords 用户查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
+     *GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
      * @param req GetDisableRecordsRequest
      * @return GetDisableRecordsResponse
      * @throws TencentCloudSDKException
@@ -302,6 +393,8 @@ public class CdnClient extends AbstractClient{
 + 依据总流量、总请求数对客户端运营商排序，从大至小返回运营商列表
 + 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
 + 依据总回源流量、回源峰值带宽、总回源请求数、平均回源失败率、2XX/3XX/4XX/5XX 回源状态码对域名排序，从大至小返回域名列表
+
+注意：仅支持 90 天内数据查询
      * @param req ListTopDataRequest
      * @return ListTopDataResponse
      * @throws TencentCloudSDKException
@@ -370,6 +463,80 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PushUrlsCacheResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PushUrlsCache"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *StartCdnDomain 用于启用已停用域名的加速服务
+     * @param req StartCdnDomainRequest
+     * @return StartCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartCdnDomainResponse StartCdnDomain(StartCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *StopCdnDomain 用于停止域名的加速服务。
+注意：停止加速服务后，访问至加速节点的请求将会直接返回 404。为避免对您的业务造成影响，请在停止加速服务前将解析切走。
+     * @param req StopCdnDomainRequest
+     * @return StopCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCdnDomainResponse StopCdnDomain(StopCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *UpdateDomainConfig 用于修改内容分发网络加速域名配置信息
+注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口。Https配置由于证书的特殊性，更新时不用传递证书和密钥字段。
+     * @param req UpdateDomainConfigRequest
+     * @return UpdateDomainConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDomainConfigResponse UpdateDomainConfig(UpdateDomainConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDomainConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDomainConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateDomainConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(UpdatePayType)用于修改账号计费类型，暂不支持月结用户或子账号修改。
+     * @param req UpdatePayTypeRequest
+     * @return UpdatePayTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePayTypeResponse UpdatePayType(UpdatePayTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdatePayTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdatePayTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdatePayType"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

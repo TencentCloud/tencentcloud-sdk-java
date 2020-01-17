@@ -30,7 +30,7 @@ public class RoGroupAttr extends AbstractModel{
     private String RoGroupName;
 
     /**
-    * RO 实例最大延迟阀值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+    * RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
@@ -74,16 +74,16 @@ public class RoGroupAttr extends AbstractModel{
     }
 
     /**
-     * Get RO 实例最大延迟阀值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。 
-     * @return RoMaxDelayTime RO 实例最大延迟阀值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * Get RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。 
+     * @return RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
      */
     public Integer getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set RO 实例最大延迟阀值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
-     * @param RoMaxDelayTime RO 实例最大延迟阀值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * Set RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * @param RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
      */
     public void setRoMaxDelayTime(Integer RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;

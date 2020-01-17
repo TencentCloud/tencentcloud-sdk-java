@@ -72,7 +72,7 @@ public class MongodbShardInfo extends AbstractModel{
     private Integer SecondaryNum;
 
     /**
-    * 分片物理id
+    * 分片物理ID
     */
     @SerializedName("RealReplicaSetId")
     @Expose
@@ -191,16 +191,16 @@ public class MongodbShardInfo extends AbstractModel{
     }
 
     /**
-     * Get 分片物理id 
-     * @return RealReplicaSetId 分片物理id
+     * Get 分片物理ID 
+     * @return RealReplicaSetId 分片物理ID
      */
     public String getRealReplicaSetId() {
         return this.RealReplicaSetId;
     }
 
     /**
-     * Set 分片物理id
-     * @param RealReplicaSetId 分片物理id
+     * Set 分片物理ID
+     * @param RealReplicaSetId 分片物理ID
      */
     public void setRealReplicaSetId(String RealReplicaSetId) {
         this.RealReplicaSetId = RealReplicaSetId;

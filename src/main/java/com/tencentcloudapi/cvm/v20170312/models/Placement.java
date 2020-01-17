@@ -37,7 +37,7 @@ public class Placement extends AbstractModel{
     private Integer ProjectId;
 
     /**
-    * 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
+    * 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
     */
     @SerializedName("HostIds")
     @Expose
@@ -49,6 +49,13 @@ public class Placement extends AbstractModel{
     @SerializedName("HostIps")
     @Expose
     private String [] HostIps;
+
+    /**
+    * 实例所属的专用宿主机ID，仅用于出参。
+    */
+    @SerializedName("HostId")
+    @Expose
+    private String HostId;
 
     /**
      * Get 实例所属的[可用区](/document/product/213/9452#zone)ID。该参数也可以通过调用  [DescribeZones](/document/api/213/9455) 的返回值中的Zone字段来获取。 
@@ -83,16 +90,16 @@ public class Placement extends AbstractModel{
     }
 
     /**
-     * Get 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。 
-     * @return HostIds 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
+     * Get 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。 
+     * @return HostIds 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
      */
     public String [] getHostIds() {
         return this.HostIds;
     }
 
     /**
-     * Set 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
-     * @param HostIds 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
+     * Set 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
+     * @param HostIds 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
      */
     public void setHostIds(String [] HostIds) {
         this.HostIds = HostIds;
@@ -115,6 +122,22 @@ public class Placement extends AbstractModel{
     }
 
     /**
+     * Get 实例所属的专用宿主机ID，仅用于出参。 
+     * @return HostId 实例所属的专用宿主机ID，仅用于出参。
+     */
+    public String getHostId() {
+        return this.HostId;
+    }
+
+    /**
+     * Set 实例所属的专用宿主机ID，仅用于出参。
+     * @param HostId 实例所属的专用宿主机ID，仅用于出参。
+     */
+    public void setHostId(String HostId) {
+        this.HostId = HostId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class Placement extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "HostIds.", this.HostIds);
         this.setParamArraySimple(map, prefix + "HostIps.", this.HostIps);
+        this.setParamSimple(map, prefix + "HostId", this.HostId);
 
     }
 }

@@ -1607,6 +1607,24 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
+     *本接口 (OpenProVersion) 用于开通专业版。
+     * @param req OpenProVersionRequest
+     * @return OpenProVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenProVersionResponse OpenProVersion(OpenProVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenProVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenProVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OpenProVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
      * @param req OpenProVersionPrepaidRequest
      * @return OpenProVersionPrepaidResponse

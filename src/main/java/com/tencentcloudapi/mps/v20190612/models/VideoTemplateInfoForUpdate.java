@@ -81,7 +81,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     */
     @SerializedName("Gop")
     @Expose
-    private String Gop;
+    private Long Gop;
 
     /**
     * 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
@@ -240,7 +240,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
      * Get 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。当填 0 时，系统将自动设置 gop 长度。 
      * @return Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。当填 0 时，系统将自动设置 gop 长度。
      */
-    public String getGop() {
+    public Long getGop() {
         return this.Gop;
     }
 
@@ -248,7 +248,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
      * Set 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。当填 0 时，系统将自动设置 gop 长度。
      * @param Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。当填 0 时，系统将自动设置 gop 长度。
      */
-    public void setGop(String Gop) {
+    public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 

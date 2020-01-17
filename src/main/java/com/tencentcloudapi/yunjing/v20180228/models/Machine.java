@@ -40,6 +40,7 @@ public class Machine extends AbstractModel{
     * 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -147,10 +148,12 @@ public class Machine extends AbstractModel{
     /**
      * Get 主机状态。
 <li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li> 
+<li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li> 
      * @return MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
      */
     public String getMachineStatus() {
         return this.MachineStatus;
@@ -160,9 +163,11 @@ public class Machine extends AbstractModel{
      * Set 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
      * @param MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
+<li>MACHINE_STOPPED: 已关机</li>
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;

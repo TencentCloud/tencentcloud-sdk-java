@@ -110,6 +110,27 @@ public class BruteAttack extends AbstractModel{
     private String Uuid;
 
     /**
+    * 是否专业版。
+    */
+    @SerializedName("IsProVersion")
+    @Expose
+    private Boolean IsProVersion;
+
+    /**
+    * 阻断状态。
+    */
+    @SerializedName("BanStatus")
+    @Expose
+    private String BanStatus;
+
+    /**
+    * 机器UUID
+    */
+    @SerializedName("Quuid")
+    @Expose
+    private String Quuid;
+
+    /**
      * Get 事件ID。 
      * @return Id 事件ID。
      */
@@ -314,6 +335,54 @@ public class BruteAttack extends AbstractModel{
     }
 
     /**
+     * Get 是否专业版。 
+     * @return IsProVersion 是否专业版。
+     */
+    public Boolean getIsProVersion() {
+        return this.IsProVersion;
+    }
+
+    /**
+     * Set 是否专业版。
+     * @param IsProVersion 是否专业版。
+     */
+    public void setIsProVersion(Boolean IsProVersion) {
+        this.IsProVersion = IsProVersion;
+    }
+
+    /**
+     * Get 阻断状态。 
+     * @return BanStatus 阻断状态。
+     */
+    public String getBanStatus() {
+        return this.BanStatus;
+    }
+
+    /**
+     * Set 阻断状态。
+     * @param BanStatus 阻断状态。
+     */
+    public void setBanStatus(String BanStatus) {
+        this.BanStatus = BanStatus;
+    }
+
+    /**
+     * Get 机器UUID 
+     * @return Quuid 机器UUID
+     */
+    public String getQuuid() {
+        return this.Quuid;
+    }
+
+    /**
+     * Set 机器UUID
+     * @param Quuid 机器UUID
+     */
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -329,6 +398,9 @@ public class BruteAttack extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
+        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
 
     }
 }

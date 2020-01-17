@@ -38,6 +38,42 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
+     *添加短信签名
+     * @param req AddSmsSignRequest
+     * @return AddSmsSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddSmsSignResponse AddSmsSign(AddSmsSignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddSmsSignResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddSmsSignResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddSmsSign"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加短信模板
+     * @param req AddSmsTemplateRequest
+     * @return AddSmsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddSmsTemplateResponse AddSmsTemplate(AddSmsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddSmsTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddSmsTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddSmsTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *统计用户回执的数据。
      * @param req CallbackStatusStatisticsRequest
      * @return CallbackStatusStatisticsResponse
@@ -49,6 +85,78 @@ public class SmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CallbackStatusStatisticsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CallbackStatusStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除短信签名
+     * @param req DeleteSmsSignRequest
+     * @return DeleteSmsSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSmsSignResponse DeleteSmsSign(DeleteSmsSignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSmsSignResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSmsSignResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSmsSign"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除短信模板
+     * @param req DeleteSmsTemplateRequest
+     * @return DeleteSmsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSmsTemplateResponse DeleteSmsTemplate(DeleteSmsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSmsTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSmsTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSmsTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改短信签名
+     * @param req ModifySmsSignRequest
+     * @return ModifySmsSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySmsSignResponse ModifySmsSign(ModifySmsSignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySmsSignResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySmsSignResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySmsSign"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改短信模板
+     * @param req ModifySmsTemplateRequest
+     * @return ModifySmsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySmsTemplateResponse ModifySmsTemplate(ModifySmsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySmsTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySmsTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySmsTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

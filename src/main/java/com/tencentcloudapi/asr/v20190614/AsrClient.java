@@ -38,6 +38,29 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *用户通过本接口进行热词表的创建。
+<br>•   默认最多可创建30个热词表。
+<br>•   每个热词表最多可添加128个词，每个词最长10个字，不能超出限制。
+<br>•   热词表可以通过数组或者本地文件形式上传。
+<br>•   本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
+<br>•   热词权重取值范围为[1,10]之间的整数，权重越大代表该词被识别出来的概率越大。
+     * @param req CreateAsrVocabRequest
+     * @return CreateAsrVocabResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAsrVocabResponse CreateAsrVocab(CreateAsrVocabRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAsrVocabResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAsrVocabResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAsrVocab"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口服务对录音时长1小时以内的录音文件进行识别，异步返回识别全部结果。
 <br>• 接口是 HTTP RESTful 形式
 <br>• 接口支持wav、mp3、silk、amr、m4a等主流音频格式
@@ -55,6 +78,24 @@ public class AsrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateRecTaskResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateRecTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过本接口进行热词表的删除。
+     * @param req DeleteAsrVocabRequest
+     * @return DeleteAsrVocabResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAsrVocabResponse DeleteAsrVocab(DeleteAsrVocabRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAsrVocabResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAsrVocabResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAsrVocab"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -83,6 +124,24 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *用户根据词表的ID可以获取对应的热词表信息
+     * @param req GetAsrVocabRequest
+     * @return GetAsrVocabResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAsrVocabResponse GetAsrVocab(GetAsrVocabRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAsrVocabResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAsrVocabResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetAsrVocab"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于对60秒之内的短音频文件进行识别。
 <br>•   支持中文普通话、英语、粤语。
 <br>•   支持本地语音文件上传和语音URL上传两种请求方式。
@@ -99,6 +158,24 @@ public class AsrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SentenceRecognitionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SentenceRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过本接口进行对应的词表信息更新。
+     * @param req UpdateAsrVocabRequest
+     * @return UpdateAsrVocabResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAsrVocabResponse UpdateAsrVocab(UpdateAsrVocabRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAsrVocabResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAsrVocabResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateAsrVocab"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

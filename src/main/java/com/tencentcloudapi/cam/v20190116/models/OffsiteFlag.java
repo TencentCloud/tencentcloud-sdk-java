@@ -51,6 +51,13 @@ public class OffsiteFlag extends AbstractModel{
     private Long NotifyWechat;
 
     /**
+    * 提示
+    */
+    @SerializedName("Tips")
+    @Expose
+    private Long Tips;
+
+    /**
      * Get 验证标识 
      * @return VerifyFlag 验证标识
      */
@@ -115,6 +122,22 @@ public class OffsiteFlag extends AbstractModel{
     }
 
     /**
+     * Get 提示 
+     * @return Tips 提示
+     */
+    public Long getTips() {
+        return this.Tips;
+    }
+
+    /**
+     * Set 提示
+     * @param Tips 提示
+     */
+    public void setTips(Long Tips) {
+        this.Tips = Tips;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class OffsiteFlag extends AbstractModel{
         this.setParamSimple(map, prefix + "NotifyPhone", this.NotifyPhone);
         this.setParamSimple(map, prefix + "NotifyEmail", this.NotifyEmail);
         this.setParamSimple(map, prefix + "NotifyWechat", this.NotifyWechat);
+        this.setParamSimple(map, prefix + "Tips", this.Tips);
 
     }
 }

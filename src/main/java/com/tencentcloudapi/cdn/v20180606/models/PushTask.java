@@ -71,6 +71,14 @@ global：全球
     private String Area;
 
     /**
+    * 预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 预热任务 ID 
      * @return TaskId 预热任务 ID
      */
@@ -191,6 +199,26 @@ global：全球
     }
 
     /**
+     * Get 预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 预热任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +228,7 @@ global：全球
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

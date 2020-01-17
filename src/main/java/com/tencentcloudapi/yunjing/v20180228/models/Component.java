@@ -60,7 +60,7 @@ public class Component extends AbstractModel{
     /**
     * 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
     */
     @SerializedName("ComponentType")
     @Expose
@@ -163,10 +163,10 @@ public class Component extends AbstractModel{
     /**
      * Get 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li> 
+<li>WEB：Web组件</li> 
      * @return ComponentType 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
      */
     public String getComponentType() {
         return this.ComponentType;
@@ -175,10 +175,10 @@ public class Component extends AbstractModel{
     /**
      * Set 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
      * @param ComponentType 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：Web组件</li>
      */
     public void setComponentType(String ComponentType) {
         this.ComponentType = ComponentType;

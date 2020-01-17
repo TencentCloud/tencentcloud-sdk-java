@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdatePolicyRequest extends AbstractModel{
 
     /**
-    * 策略 id
+    * 策略ID
     */
     @SerializedName("PolicyId")
     @Expose
@@ -44,23 +44,23 @@ public class UpdatePolicyRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 策略文档
+    * 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
     */
     @SerializedName("PolicyDocument")
     @Expose
     private String PolicyDocument;
 
     /**
-     * Get 策略 id 
-     * @return PolicyId 策略 id
+     * Get 策略ID 
+     * @return PolicyId 策略ID
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略 id
-     * @param PolicyId 策略 id
+     * Set 策略ID
+     * @param PolicyId 策略ID
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
@@ -99,16 +99,16 @@ public class UpdatePolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略文档 
-     * @return PolicyDocument 策略文档
+     * Get 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo 
+     * @return PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public String getPolicyDocument() {
         return this.PolicyDocument;
     }
 
     /**
-     * Set 策略文档
-     * @param PolicyDocument 策略文档
+     * Set 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
+     * @param PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public void setPolicyDocument(String PolicyDocument) {
         this.PolicyDocument = PolicyDocument;

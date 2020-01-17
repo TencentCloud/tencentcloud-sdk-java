@@ -45,7 +45,7 @@ public class ComponentStatistics extends AbstractModel{
 
     /**
     * 组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
     */
     @SerializedName("ComponentType")
@@ -109,10 +109,10 @@ public class ComponentStatistics extends AbstractModel{
 
     /**
      * Get 组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li> 
      * @return ComponentType 组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
      */
     public String getComponentType() {
@@ -121,10 +121,10 @@ public class ComponentStatistics extends AbstractModel{
 
     /**
      * Set 组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
      * @param ComponentType 组件类型。
-<li>WEB：web组件</li>
+<li>WEB：Web组件</li>
 <li>SYSTEM：系统组件</li>
      */
     public void setComponentType(String ComponentType) {

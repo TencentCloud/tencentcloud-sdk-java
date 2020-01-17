@@ -94,7 +94,7 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 
     /**
     * 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
     */
     @SerializedName("Isp")
@@ -104,7 +104,7 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
     /**
     * 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
     */
     @SerializedName("District")
@@ -355,10 +355,10 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 
     /**
      * Get 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询 
      * @return Isp 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
      */
     public Integer getIsp() {
@@ -367,10 +367,10 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 
     /**
      * Set 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
      * @param Isp 查询中国境内CDN数据时，指定运营商查询，不填充表示查询所有运营商
-运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84)
+运营商编码可以查看 [运营商编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定运营商查询时，不可同时指定省份、IP协议查询
      */
     public void setIsp(Integer Isp) {
@@ -380,11 +380,11 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
     /**
      * Get 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询 
      * @return District 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
      */
     public Integer getDistrict() {
@@ -394,11 +394,11 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
     /**
      * Set 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
      * @param District 查询中国境内CDN数据时，指定省份查询，不填充表示查询所有省份
 查询中国境外CDN数据时，指定国家/地区查询，不填充表示查询所有国家/地区
-省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 指定（中国境内）省份查询时，不可同时指定运营商、IP协议查询
      */
     public void setDistrict(Integer District) {

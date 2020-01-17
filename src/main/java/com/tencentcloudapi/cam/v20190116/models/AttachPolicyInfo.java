@@ -94,6 +94,14 @@ public class AttachPolicyInfo extends AbstractModel{
     private Long OperateUinType;
 
     /**
+    * 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deactived")
+    @Expose
+    private Long Deactived;
+
+    /**
      * Get 策略id 
      * @return PolicyId 策略id
      */
@@ -270,6 +278,26 @@ public class AttachPolicyInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeactived() {
+        return this.Deactived;
+    }
+
+    /**
+     * Set 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeactived(Long Deactived) {
+        this.Deactived = Deactived;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -282,6 +310,7 @@ public class AttachPolicyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "OperateOwnerUin", this.OperateOwnerUin);
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
         this.setParamSimple(map, prefix + "OperateUinType", this.OperateUinType);
+        this.setParamSimple(map, prefix + "Deactived", this.Deactived);
 
     }
 }

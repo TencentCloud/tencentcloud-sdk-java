@@ -59,6 +59,14 @@ public class AttachedPolicyOfRole extends AbstractModel{
     private Long CreateMode;
 
     /**
+    * 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deactived")
+    @Expose
+    private Long Deactived;
+
+    /**
      * Get 策略ID 
      * @return PolicyId 策略ID
      */
@@ -143,6 +151,26 @@ public class AttachedPolicyOfRole extends AbstractModel{
     }
 
     /**
+     * Get 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeactived() {
+        return this.Deactived;
+    }
+
+    /**
+     * Set 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deactived 是否已下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeactived(Long Deactived) {
+        this.Deactived = Deactived;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +179,7 @@ public class AttachedPolicyOfRole extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
         this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
+        this.setParamSimple(map, prefix + "Deactived", this.Deactived);
 
     }
 }

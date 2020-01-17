@@ -102,7 +102,7 @@ public class InstanceInfo extends AbstractModel{
     private Integer AutoRenew;
 
     /**
-    * 数据复制方式
+    * 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
     */
     @SerializedName("ProtectMode")
     @Expose
@@ -152,7 +152,7 @@ public class InstanceInfo extends AbstractModel{
     private String DeadlineTime;
 
     /**
-    * 可用区部署方式
+    * 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
     */
     @SerializedName("DeployMode")
     @Expose
@@ -494,16 +494,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 数据复制方式 
-     * @return ProtectMode 数据复制方式
+     * Get 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制 
+     * @return ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      */
     public Integer getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set 数据复制方式
-     * @param ProtectMode 数据复制方式
+     * Set 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
+     * @param ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      */
     public void setProtectMode(Integer ProtectMode) {
         this.ProtectMode = ProtectMode;
@@ -610,16 +610,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 可用区部署方式 
-     * @return DeployMode 可用区部署方式
+     * Get 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区 
+     * @return DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      */
     public Integer getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 可用区部署方式
-     * @param DeployMode 可用区部署方式
+     * Set 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
+     * @param DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      */
     public void setDeployMode(Integer DeployMode) {
         this.DeployMode = DeployMode;

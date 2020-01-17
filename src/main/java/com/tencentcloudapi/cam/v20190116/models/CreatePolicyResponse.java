@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePolicyResponse extends AbstractModel{
 
     /**
-    * 新增策略id
+    * 新增策略ID
     */
     @SerializedName("PolicyId")
     @Expose
@@ -37,16 +37,16 @@ public class CreatePolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 新增策略id 
-     * @return PolicyId 新增策略id
+     * Get 新增策略ID 
+     * @return PolicyId 新增策略ID
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 新增策略id
-     * @param PolicyId 新增策略id
+     * Set 新增策略ID
+     * @param PolicyId 新增策略ID
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

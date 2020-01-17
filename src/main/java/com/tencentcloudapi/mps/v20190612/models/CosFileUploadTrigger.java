@@ -37,7 +37,7 @@ public class CosFileUploadTrigger extends AbstractModel{
     private String Region;
 
     /**
-    * 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+    * 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
     */
     @SerializedName("Dir")
     @Expose
@@ -83,16 +83,16 @@ public class CosFileUploadTrigger extends AbstractModel{
     }
 
     /**
-     * Get 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。 
-     * @return Dir 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+     * Get 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。 
+     * @return Dir 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
      */
     public String getDir() {
         return this.Dir;
     }
 
     /**
-     * Set 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
-     * @param Dir 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+     * Set 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
+     * @param Dir 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
      */
     public void setDir(String Dir) {
         this.Dir = Dir;

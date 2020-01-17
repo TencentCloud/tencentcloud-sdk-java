@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AddMachineTagRequest extends AbstractModel{
 
     /**
-    * 云主机ID
+    * 云服务器ID
     */
     @SerializedName("Quuid")
     @Expose
@@ -37,30 +37,30 @@ public class AddMachineTagRequest extends AbstractModel{
     private Long TagId;
 
     /**
-    * 主机地区
+    * 云服务器地区
     */
     @SerializedName("MRegion")
     @Expose
     private String MRegion;
 
     /**
-    * 主机地区类型(CVM|BM)
+    * 云服务器类型(CVM|BM)
     */
     @SerializedName("MArea")
     @Expose
     private String MArea;
 
     /**
-     * Get 云主机ID 
-     * @return Quuid 云主机ID
+     * Get 云服务器ID 
+     * @return Quuid 云服务器ID
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 云主机ID
-     * @param Quuid 云主机ID
+     * Set 云服务器ID
+     * @param Quuid 云服务器ID
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
@@ -83,32 +83,32 @@ public class AddMachineTagRequest extends AbstractModel{
     }
 
     /**
-     * Get 主机地区 
-     * @return MRegion 主机地区
+     * Get 云服务器地区 
+     * @return MRegion 云服务器地区
      */
     public String getMRegion() {
         return this.MRegion;
     }
 
     /**
-     * Set 主机地区
-     * @param MRegion 主机地区
+     * Set 云服务器地区
+     * @param MRegion 云服务器地区
      */
     public void setMRegion(String MRegion) {
         this.MRegion = MRegion;
     }
 
     /**
-     * Get 主机地区类型(CVM|BM) 
-     * @return MArea 主机地区类型(CVM|BM)
+     * Get 云服务器类型(CVM|BM) 
+     * @return MArea 云服务器类型(CVM|BM)
      */
     public String getMArea() {
         return this.MArea;
     }
 
     /**
-     * Set 主机地区类型(CVM|BM)
-     * @param MArea 主机地区类型(CVM|BM)
+     * Set 云服务器类型(CVM|BM)
+     * @param MArea 云服务器类型(CVM|BM)
      */
     public void setMArea(String MArea) {
         this.MArea = MArea;

@@ -39,9 +39,9 @@ public class SpecificationInfo extends AbstractModel{
     /**
     * 售卖规格信息
     */
-    @SerializedName("SpecItem")
+    @SerializedName("SpecItems")
     @Expose
-    private SpecItem [] SpecItem;
+    private SpecItem [] SpecItems;
 
     /**
      * Get 地域信息 
@@ -77,18 +77,18 @@ public class SpecificationInfo extends AbstractModel{
 
     /**
      * Get 售卖规格信息 
-     * @return SpecItem 售卖规格信息
+     * @return SpecItems 售卖规格信息
      */
-    public SpecItem [] getSpecItem() {
-        return this.SpecItem;
+    public SpecItem [] getSpecItems() {
+        return this.SpecItems;
     }
 
     /**
      * Set 售卖规格信息
-     * @param SpecItem 售卖规格信息
+     * @param SpecItems 售卖规格信息
      */
-    public void setSpecItem(SpecItem [] SpecItem) {
-        this.SpecItem = SpecItem;
+    public void setSpecItems(SpecItem [] SpecItems) {
+        this.SpecItems = SpecItems;
     }
 
     /**
@@ -97,7 +97,7 @@ public class SpecificationInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamArrayObj(map, prefix + "SpecItem.", this.SpecItem);
+        this.setParamArrayObj(map, prefix + "SpecItems.", this.SpecItems);
 
     }
 }
