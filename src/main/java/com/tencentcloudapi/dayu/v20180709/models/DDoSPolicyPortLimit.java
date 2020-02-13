@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DDoSPolicyPortLimit extends AbstractModel{
 
     /**
-    * 协议，取值范围[tcp,udp,icmp,all]
+    * 协议，取值范围[tcp,udp,all]
     */
     @SerializedName("Protocol")
     @Expose
@@ -76,16 +76,16 @@ public class DDoSPolicyPortLimit extends AbstractModel{
     private Long Kind;
 
     /**
-     * Get 协议，取值范围[tcp,udp,icmp,all] 
-     * @return Protocol 协议，取值范围[tcp,udp,icmp,all]
+     * Get 协议，取值范围[tcp,udp,all] 
+     * @return Protocol 协议，取值范围[tcp,udp,all]
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议，取值范围[tcp,udp,icmp,all]
-     * @param Protocol 协议，取值范围[tcp,udp,icmp,all]
+     * Set 协议，取值范围[tcp,udp,all]
+     * @param Protocol 协议，取值范围[tcp,udp,all]
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

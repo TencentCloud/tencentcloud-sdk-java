@@ -30,7 +30,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 欲购买实例的数量，目前只支持购买1个实例
+    * 欲购买实例的数量，目前支持购买1-10个实例
     */
     @SerializedName("Count")
     @Expose
@@ -75,6 +75,13 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     private Integer ShardCount;
 
     /**
+    * 付费类型。postpaid：按量付费   prepaid：预付费
+    */
+    @SerializedName("Paymode")
+    @Expose
+    private String Paymode;
+
+    /**
      * Get 欲新购实例的可用区ID。 
      * @return Zone 欲新购实例的可用区ID。
      */
@@ -91,16 +98,16 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     }
 
     /**
-     * Get 欲购买实例的数量，目前只支持购买1个实例 
-     * @return Count 欲购买实例的数量，目前只支持购买1个实例
+     * Get 欲购买实例的数量，目前支持购买1-10个实例 
+     * @return Count 欲购买实例的数量，目前支持购买1-10个实例
      */
     public Integer getCount() {
         return this.Count;
     }
 
     /**
-     * Set 欲购买实例的数量，目前只支持购买1个实例
-     * @param Count 欲购买实例的数量，目前只支持购买1个实例
+     * Set 欲购买实例的数量，目前支持购买1-10个实例
+     * @param Count 欲购买实例的数量，目前支持购买1-10个实例
      */
     public void setCount(Integer Count) {
         this.Count = Count;
@@ -199,6 +206,22 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     }
 
     /**
+     * Get 付费类型。postpaid：按量付费   prepaid：预付费 
+     * @return Paymode 付费类型。postpaid：按量付费   prepaid：预付费
+     */
+    public String getPaymode() {
+        return this.Paymode;
+    }
+
+    /**
+     * Set 付费类型。postpaid：按量付费   prepaid：预付费
+     * @param Paymode 付费类型。postpaid：按量付费   prepaid：预付费
+     */
+    public void setPaymode(String Paymode) {
+        this.Paymode = Paymode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -209,6 +232,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
         this.setParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
         this.setParamSimple(map, prefix + "ShardCount", this.ShardCount);
+        this.setParamSimple(map, prefix + "Paymode", this.Paymode);
 
     }
 }

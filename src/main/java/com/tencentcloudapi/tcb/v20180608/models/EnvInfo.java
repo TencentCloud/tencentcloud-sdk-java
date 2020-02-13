@@ -62,7 +62,6 @@ public class EnvInfo extends AbstractModel{
     /**
     * 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
     */
     @SerializedName("Status")
@@ -105,6 +104,30 @@ public class EnvInfo extends AbstractModel{
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
+
+    /**
+    * 云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogServices")
+    @Expose
+    private LogServiceInfo [] LogServices;
+
+    /**
+    * 静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StaticStorages")
+    @Expose
+    private StaticStorageInfo [] StaticStorages;
+
+    /**
+    * 是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAutoDegrade")
+    @Expose
+    private Boolean IsAutoDegrade;
 
     /**
      * Get 账户下该环境唯一标识 
@@ -197,11 +220,9 @@ public class EnvInfo extends AbstractModel{
     /**
      * Get 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li> 
      * @return Status 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      */
     public String getStatus() {
@@ -211,11 +232,9 @@ public class EnvInfo extends AbstractModel{
     /**
      * Set 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      * @param Status 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
-<li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      */
     public void setStatus(String Status) {
@@ -311,6 +330,66 @@ public class EnvInfo extends AbstractModel{
     }
 
     /**
+     * Get 云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogServices 云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LogServiceInfo [] getLogServices() {
+        return this.LogServices;
+    }
+
+    /**
+     * Set 云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogServices 云日志服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogServices(LogServiceInfo [] LogServices) {
+        this.LogServices = LogServices;
+    }
+
+    /**
+     * Get 静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StaticStorages 静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StaticStorageInfo [] getStaticStorages() {
+        return this.StaticStorages;
+    }
+
+    /**
+     * Set 静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StaticStorages 静态资源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStaticStorages(StaticStorageInfo [] StaticStorages) {
+        this.StaticStorages = StaticStorages;
+    }
+
+    /**
+     * Get 是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAutoDegrade 是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsAutoDegrade() {
+        return this.IsAutoDegrade;
+    }
+
+    /**
+     * Set 是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAutoDegrade 是否到期自动降为免费版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAutoDegrade(Boolean IsAutoDegrade) {
+        this.IsAutoDegrade = IsAutoDegrade;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -325,6 +404,9 @@ public class EnvInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Functions.", this.Functions);
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
+        this.setParamArrayObj(map, prefix + "LogServices.", this.LogServices);
+        this.setParamArrayObj(map, prefix + "StaticStorages.", this.StaticStorages);
+        this.setParamSimple(map, prefix + "IsAutoDegrade", this.IsAutoDegrade);
 
     }
 }

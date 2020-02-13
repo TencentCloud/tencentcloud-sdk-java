@@ -30,8 +30,8 @@ public class AutoSummarizationRequest extends AbstractModel{
     private String Text;
 
     /**
-    * 指定摘要的长度（默认值为200）
-注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
+    * 指定摘要的长度上限（默认值为200）
+注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
     */
     @SerializedName("Length")
     @Expose
@@ -54,20 +54,20 @@ public class AutoSummarizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定摘要的长度（默认值为200）
-注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动 
-     * @return Length 指定摘要的长度（默认值为200）
-注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
+     * Get 指定摘要的长度上限（默认值为200）
+注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。 
+     * @return Length 指定摘要的长度上限（默认值为200）
+注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
      */
     public Long getLength() {
         return this.Length;
     }
 
     /**
-     * Set 指定摘要的长度（默认值为200）
-注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
-     * @param Length 指定摘要的长度（默认值为200）
-注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
+     * Set 指定摘要的长度上限（默认值为200）
+注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
+     * @param Length 指定摘要的长度上限（默认值为200）
+注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
      */
     public void setLength(Long Length) {
         this.Length = Length;

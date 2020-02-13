@@ -30,6 +30,14 @@ public class WatermarkInput extends AbstractModel{
     private Long Definition;
 
     /**
+    * 水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+    */
+    @SerializedName("RawParameter")
+    @Expose
+    private RawWatermarkParameter RawParameter;
+
+    /**
     * 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
     */
     @SerializedName("TextContent")
@@ -77,6 +85,26 @@ public class WatermarkInput extends AbstractModel{
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get 水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。 
+     * @return RawParameter 水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+     */
+    public RawWatermarkParameter getRawParameter() {
+        return this.RawParameter;
+    }
+
+    /**
+     * Set 水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+     * @param RawParameter 水印自定义参数，当 Definition 填 0 时有效。
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+     */
+    public void setRawParameter(RawWatermarkParameter RawParameter) {
+        this.RawParameter = RawParameter;
     }
 
     /**
@@ -172,6 +200,7 @@ public class WatermarkInput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
         this.setParamSimple(map, prefix + "SvgContent", this.SvgContent);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

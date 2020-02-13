@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InitDBInstancesResponse extends AbstractModel{
 
     /**
-    * 异步任务Id，可通过 DescribeFlow 查询任务状态。
+    * 异步任务ID，可通过 DescribeFlow 查询任务状态。
     */
     @SerializedName("FlowId")
     @Expose
@@ -44,16 +44,16 @@ public class InitDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务Id，可通过 DescribeFlow 查询任务状态。 
-     * @return FlowId 异步任务Id，可通过 DescribeFlow 查询任务状态。
+     * Get 异步任务ID，可通过 DescribeFlow 查询任务状态。 
+     * @return FlowId 异步任务ID，可通过 DescribeFlow 查询任务状态。
      */
     public Integer getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步任务Id，可通过 DescribeFlow 查询任务状态。
-     * @param FlowId 异步任务Id，可通过 DescribeFlow 查询任务状态。
+     * Set 异步任务ID，可通过 DescribeFlow 查询任务状态。
+     * @param FlowId 异步任务ID，可通过 DescribeFlow 查询任务状态。
      */
     public void setFlowId(Integer FlowId) {
         this.FlowId = FlowId;

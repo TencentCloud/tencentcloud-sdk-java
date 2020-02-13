@@ -74,6 +74,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeBillingData 用于查询实际计费数据明细。
+     * @param req DescribeBillingDataRequest
+     * @return DescribeBillingDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillingDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillingDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillingData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeCdnData 用于查询 CDN 实时访问监控数据，支持以下指标查询：
 
 + 流量（单位为 byte）

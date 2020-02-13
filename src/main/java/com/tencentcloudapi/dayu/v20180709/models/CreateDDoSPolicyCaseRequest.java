@@ -177,6 +177,20 @@ public class CreateDDoSPolicyCaseRequest extends AbstractModel{
     private String HasVPN;
 
     /**
+    * TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+    */
+    @SerializedName("TcpPortList")
+    @Expose
+    private String TcpPortList;
+
+    /**
+    * UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+    */
+    @SerializedName("UdpPortList")
+    @Expose
+    private String UdpPortList;
+
+    /**
      * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
@@ -529,6 +543,38 @@ public class CreateDDoSPolicyCaseRequest extends AbstractModel{
     }
 
     /**
+     * Get TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000 
+     * @return TcpPortList TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     */
+    public String getTcpPortList() {
+        return this.TcpPortList;
+    }
+
+    /**
+     * Set TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     * @param TcpPortList TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     */
+    public void setTcpPortList(String TcpPortList) {
+        this.TcpPortList = TcpPortList;
+    }
+
+    /**
+     * Get UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000 
+     * @return UdpPortList UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     */
+    public String getUdpPortList() {
+        return this.UdpPortList;
+    }
+
+    /**
+     * Set UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     * @param UdpPortList UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+     */
+    public void setUdpPortList(String UdpPortList) {
+        this.UdpPortList = UdpPortList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +600,8 @@ public class CreateDDoSPolicyCaseRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MinUdpPackageLen", this.MinUdpPackageLen);
         this.setParamSimple(map, prefix + "MaxUdpPackageLen", this.MaxUdpPackageLen);
         this.setParamSimple(map, prefix + "HasVPN", this.HasVPN);
+        this.setParamSimple(map, prefix + "TcpPortList", this.TcpPortList);
+        this.setParamSimple(map, prefix + "UdpPortList", this.UdpPortList);
 
     }
 }

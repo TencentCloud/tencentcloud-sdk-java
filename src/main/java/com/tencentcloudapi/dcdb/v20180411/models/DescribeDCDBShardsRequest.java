@@ -30,7 +30,7 @@ public class DescribeDCDBShardsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 分片Id列表。
+    * 分片ID列表。
     */
     @SerializedName("ShardInstanceIds")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeDCDBShardsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分片Id列表。 
-     * @return ShardInstanceIds 分片Id列表。
+     * Get 分片ID列表。 
+     * @return ShardInstanceIds 分片ID列表。
      */
     public String [] getShardInstanceIds() {
         return this.ShardInstanceIds;
     }
 
     /**
-     * Set 分片Id列表。
-     * @param ShardInstanceIds 分片Id列表。
+     * Set 分片ID列表。
+     * @param ShardInstanceIds 分片ID列表。
      */
     public void setShardInstanceIds(String [] ShardInstanceIds) {
         this.ShardInstanceIds = ShardInstanceIds;

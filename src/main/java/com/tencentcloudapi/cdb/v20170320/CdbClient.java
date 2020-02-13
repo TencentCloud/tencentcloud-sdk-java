@@ -436,6 +436,42 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBackupOverview)用于查询用户的备份概览。返回用户当前备份总个数、备份总的占用容量、赠送的免费容量、计费容量（容量单位为字节）。
+     * @param req DescribeBackupOverviewRequest
+     * @return DescribeBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupOverviewResponse DescribeBackupOverview(DescribeBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupOverview"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeBackupSummaries)用于查询备份的统计情况，返回以实例为维度的备份占用容量，以及每个实例的数据备份和日志备份的个数和容量（容量单位为字节）。
+     * @param req DescribeBackupSummariesRequest
+     * @return DescribeBackupSummariesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupSummariesResponse DescribeBackupSummaries(DescribeBackupSummariesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupSummariesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupSummariesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupSummaries"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名 (已废弃)。
 旧版本支持全量备份后，用户如果分库表下载逻辑备份文件，需要用到此接口。
 新版本支持(CreateBackup)创建逻辑备份的时候，直接发起指定库表备份，用户直接下载该备份文件即可。
@@ -467,6 +503,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeBinlogBackupOverview)用于查询用户在当前地域总的日志备份概览。
+     * @param req DescribeBinlogBackupOverviewRequest
+     * @return DescribeBinlogBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogBackupOverviewResponse DescribeBinlogBackupOverview(DescribeBinlogBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBinlogBackupOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBinlogBackupOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBinlogBackupOverview"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -667,6 +721,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBZoneConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBZoneConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeDataBackupOverview)用于查询用户在当前地域总的数据备份概览。
+     * @param req DescribeDataBackupOverviewRequest
+     * @return DescribeDataBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataBackupOverviewResponse DescribeDataBackupOverview(DescribeDataBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataBackupOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataBackupOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDataBackupOverview"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -128,6 +128,24 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取基础告警列表
+     * @param req DescribeBasicAlarmListRequest
+     * @return DescribeBasicAlarmListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBasicAlarmListResponse DescribeBasicAlarmList(DescribeBasicAlarmListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBasicAlarmListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBasicAlarmListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBasicAlarmList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取已绑定对象列表
      * @param req DescribeBindingPolicyObjectListRequest
      * @return DescribeBindingPolicyObjectListResponse

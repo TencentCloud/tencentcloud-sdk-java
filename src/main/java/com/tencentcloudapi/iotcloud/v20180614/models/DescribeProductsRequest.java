@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProductsRequest extends AbstractModel{
 
     /**
-    * 分页偏移，Offset从0开始
+    * 偏移量，Offset从0开始
     */
     @SerializedName("Offset")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeProductsRequest extends AbstractModel{
     private Integer Limit;
 
     /**
-     * Get 分页偏移，Offset从0开始 
-     * @return Offset 分页偏移，Offset从0开始
+     * Get 偏移量，Offset从0开始 
+     * @return Offset 偏移量，Offset从0开始
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移，Offset从0开始
-     * @param Offset 分页偏移，Offset从0开始
+     * Set 偏移量，Offset从0开始
+     * @param Offset 偏移量，Offset从0开始
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;

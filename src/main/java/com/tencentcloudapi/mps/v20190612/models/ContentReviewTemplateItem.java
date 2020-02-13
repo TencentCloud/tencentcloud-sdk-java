@@ -45,6 +45,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
     * 鉴黄控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PornConfigure")
     @Expose
@@ -52,6 +53,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
     * 鉴恐控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorismConfigure")
     @Expose
@@ -59,27 +61,40 @@ public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
     * 鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoliticalConfigure")
     @Expose
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
+    * 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProhibitedConfigure")
+    @Expose
+    private ProhibitedConfigureInfo ProhibitedConfigure;
+
+    /**
     * 用户自定义内容审核控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -134,8 +149,10 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 鉴黄控制参数。 
+     * Get 鉴黄控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PornConfigure 鉴黄控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
@@ -143,15 +160,19 @@ public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
      * Set 鉴黄控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PornConfigure 鉴黄控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get 鉴恐控制参数。 
+     * Get 鉴恐控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TerrorismConfigure 鉴恐控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
@@ -159,15 +180,19 @@ public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
      * Set 鉴恐控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorismConfigure 鉴恐控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get 鉴政控制参数。 
+     * Get 鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PoliticalConfigure 鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
@@ -175,15 +200,51 @@ public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
      * Set 鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalConfigure 鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
     }
 
     /**
-     * Get 用户自定义内容审核控制参数。 
+     * Get 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProhibitedConfigureInfo getProhibitedConfigure() {
+        return this.ProhibitedConfigure;
+    }
+
+    /**
+     * Set 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
+        this.ProhibitedConfigure = ProhibitedConfigure;
+    }
+
+    /**
+     * Get 用户自定义内容审核控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserDefineConfigure 用户自定义内容审核控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
@@ -191,39 +252,41 @@ public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
      * Set 用户自定义内容审核控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefineConfigure 用户自定义内容审核控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
+     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
+     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -239,6 +302,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
         this.setParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
         this.setParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+        this.setParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

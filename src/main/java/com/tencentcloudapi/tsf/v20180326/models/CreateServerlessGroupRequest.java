@@ -37,18 +37,18 @@ public class CreateServerlessGroupRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * 程序包Id
+    * 分组所属名字空间ID
     */
-    @SerializedName("PkgId")
+    @SerializedName("NamespaceId")
     @Expose
-    private String PkgId;
+    private String NamespaceId;
 
     /**
-    * VpcConfig对象
+    * 分组所属集群ID
     */
-    @SerializedName("VpcConfig")
+    @SerializedName("ClusterId")
     @Expose
-    private VpcConfig VpcConfig;
+    private String ClusterId;
 
     /**
      * Get 分组所属应用ID 
@@ -83,35 +83,35 @@ public class CreateServerlessGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 程序包Id 
-     * @return PkgId 程序包Id
+     * Get 分组所属名字空间ID 
+     * @return NamespaceId 分组所属名字空间ID
      */
-    public String getPkgId() {
-        return this.PkgId;
+    public String getNamespaceId() {
+        return this.NamespaceId;
     }
 
     /**
-     * Set 程序包Id
-     * @param PkgId 程序包Id
+     * Set 分组所属名字空间ID
+     * @param NamespaceId 分组所属名字空间ID
      */
-    public void setPkgId(String PkgId) {
-        this.PkgId = PkgId;
+    public void setNamespaceId(String NamespaceId) {
+        this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get VpcConfig对象 
-     * @return VpcConfig VpcConfig对象
+     * Get 分组所属集群ID 
+     * @return ClusterId 分组所属集群ID
      */
-    public VpcConfig getVpcConfig() {
-        return this.VpcConfig;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set VpcConfig对象
-     * @param VpcConfig VpcConfig对象
+     * Set 分组所属集群ID
+     * @param ClusterId 分组所属集群ID
      */
-    public void setVpcConfig(VpcConfig VpcConfig) {
-        this.VpcConfig = VpcConfig;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -120,8 +120,8 @@ public class CreateServerlessGroupRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
-        this.setParamSimple(map, prefix + "PkgId", this.PkgId);
-        this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

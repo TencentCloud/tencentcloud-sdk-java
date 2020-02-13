@@ -24,7 +24,6 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
 
     /**
     * Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -35,7 +34,6 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -43,17 +41,14 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
 
     /**
     * Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ocr 文字涉黄评分，分值为0到100。 
      * @return Confidence Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -61,9 +56,7 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
 
     /**
      * Set Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -73,13 +66,11 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
      * Get Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>block。</li> 
      * @return Suggestion Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -90,22 +81,18 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ocr 文字有涉黄嫌疑的视频片段列表。 
      * @return SegmentSet Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -113,9 +100,7 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
 
     /**
      * Set Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -163,6 +163,30 @@ public class DCDBShardInfo extends AbstractModel{
     private String ProxyVersion;
 
     /**
+    * 付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Paymode")
+    @Expose
+    private String Paymode;
+
+    /**
+    * 分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShardMasterZone")
+    @Expose
+    private String ShardMasterZone;
+
+    /**
+    * 分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShardSlaveZones")
+    @Expose
+    private String [] ShardSlaveZones;
+
+    /**
      * Get 所属实例Id 
      * @return InstanceId 所属实例Id
      */
@@ -483,6 +507,66 @@ public class DCDBShardInfo extends AbstractModel{
     }
 
     /**
+     * Get 付费模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Paymode 付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPaymode() {
+        return this.Paymode;
+    }
+
+    /**
+     * Set 付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Paymode 付费模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPaymode(String Paymode) {
+        this.Paymode = Paymode;
+    }
+
+    /**
+     * Get 分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShardMasterZone 分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getShardMasterZone() {
+        return this.ShardMasterZone;
+    }
+
+    /**
+     * Set 分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShardMasterZone 分片的主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShardMasterZone(String ShardMasterZone) {
+        this.ShardMasterZone = ShardMasterZone;
+    }
+
+    /**
+     * Get 分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShardSlaveZones 分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getShardSlaveZones() {
+        return this.ShardSlaveZones;
+    }
+
+    /**
+     * Set 分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShardSlaveZones 分片的从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShardSlaveZones(String [] ShardSlaveZones) {
+        this.ShardSlaveZones = ShardSlaveZones;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -506,6 +590,9 @@ public class DCDBShardInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ShardId", this.ShardId);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
+        this.setParamSimple(map, prefix + "Paymode", this.Paymode);
+        this.setParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
+        this.setParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
 
     }
 }

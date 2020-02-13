@@ -52,7 +52,7 @@ public class DescribeGroupProIspPlayInfoListRequest extends AbstractModel{
     private String [] ProvinceNames;
 
     /**
-    * 运营商列表，默认不填，则返回个运营商的数据。
+    * 运营商列表，默认不填，则返回整个运营商的数据。
     */
     @SerializedName("IspNames")
     @Expose
@@ -134,16 +134,16 @@ public class DescribeGroupProIspPlayInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get 运营商列表，默认不填，则返回个运营商的数据。 
-     * @return IspNames 运营商列表，默认不填，则返回个运营商的数据。
+     * Get 运营商列表，默认不填，则返回整个运营商的数据。 
+     * @return IspNames 运营商列表，默认不填，则返回整个运营商的数据。
      */
     public String [] getIspNames() {
         return this.IspNames;
     }
 
     /**
-     * Set 运营商列表，默认不填，则返回个运营商的数据。
-     * @param IspNames 运营商列表，默认不填，则返回个运营商的数据。
+     * Set 运营商列表，默认不填，则返回整个运营商的数据。
+     * @param IspNames 运营商列表，默认不填，则返回整个运营商的数据。
      */
     public void setIspNames(String [] IspNames) {
         this.IspNames = IspNames;

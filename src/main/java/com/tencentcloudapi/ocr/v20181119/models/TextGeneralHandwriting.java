@@ -44,7 +44,9 @@ public class TextGeneralHandwriting extends AbstractModel{
     private Coord [] Polygon;
 
     /**
-    * 此字段为扩展字段
+    * 此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -99,16 +101,24 @@ public class TextGeneralHandwriting extends AbstractModel{
     }
 
     /**
-     * Get 此字段为扩展字段 
-     * @return AdvancedInfo 此字段为扩展字段
+     * Get 此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。 
+     * @return AdvancedInfo 此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
      */
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set 此字段为扩展字段
-     * @param AdvancedInfo 此字段为扩展字段
+     * Set 此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
+     * @param AdvancedInfo 此字段为扩展字段。
+能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+其中ParagNo为段落行，从1开始。
      */
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;

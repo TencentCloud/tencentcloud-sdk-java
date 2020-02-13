@@ -79,6 +79,13 @@ public class DescribeSimpleGroupsRequest extends AbstractModel{
     private String SearchWord;
 
     /**
+    * 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+    */
+    @SerializedName("AppMicroServiceType")
+    @Expose
+    private String AppMicroServiceType;
+
+    /**
      * Get 部署组ID列表，不填写时查询全量 
      * @return GroupIdList 部署组ID列表，不填写时查询全量
      */
@@ -207,6 +214,22 @@ public class DescribeSimpleGroupsRequest extends AbstractModel{
     }
 
     /**
+     * Get 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用 
+     * @return AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     */
+    public String getAppMicroServiceType() {
+        return this.AppMicroServiceType;
+    }
+
+    /**
+     * Set 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     * @param AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     */
+    public void setAppMicroServiceType(String AppMicroServiceType) {
+        this.AppMicroServiceType = AppMicroServiceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribeSimpleGroupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
 
     }
 }

@@ -30,11 +30,18 @@ public class CreateApplicationRequest extends AbstractModel{
     private String ApplicationName;
 
     /**
-    * 应用类型
+    * 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
     */
     @SerializedName("ApplicationType")
     @Expose
     private String ApplicationType;
+
+    /**
+    * 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+    */
+    @SerializedName("MicroserviceType")
+    @Expose
+    private String MicroserviceType;
 
     /**
     * 应用描述
@@ -51,18 +58,18 @@ public class CreateApplicationRequest extends AbstractModel{
     private String ApplicationLogConfig;
 
     /**
-    * 应用微服务类型
-    */
-    @SerializedName("MicroserviceType")
-    @Expose
-    private String MicroserviceType;
-
-    /**
-    * 应有资源类型
+    * 应用资源类型，废弃参数
     */
     @SerializedName("ApplicationResourceType")
     @Expose
     private String ApplicationResourceType;
+
+    /**
+    * 应用runtime类型
+    */
+    @SerializedName("ApplicationRuntimeType")
+    @Expose
+    private String ApplicationRuntimeType;
 
     /**
      * Get 应用名称 
@@ -81,19 +88,35 @@ public class CreateApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用类型 
-     * @return ApplicationType 应用类型
+     * Get 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用 
+     * @return ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set 应用类型
-     * @param ApplicationType 应用类型
+     * Set 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+     * @param ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
+    }
+
+    /**
+     * Get 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用 
+     * @return MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+     */
+    public String getMicroserviceType() {
+        return this.MicroserviceType;
+    }
+
+    /**
+     * Set 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+     * @param MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+     */
+    public void setMicroserviceType(String MicroserviceType) {
+        this.MicroserviceType = MicroserviceType;
     }
 
     /**
@@ -129,35 +152,35 @@ public class CreateApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用微服务类型 
-     * @return MicroserviceType 应用微服务类型
-     */
-    public String getMicroserviceType() {
-        return this.MicroserviceType;
-    }
-
-    /**
-     * Set 应用微服务类型
-     * @param MicroserviceType 应用微服务类型
-     */
-    public void setMicroserviceType(String MicroserviceType) {
-        this.MicroserviceType = MicroserviceType;
-    }
-
-    /**
-     * Get 应有资源类型 
-     * @return ApplicationResourceType 应有资源类型
+     * Get 应用资源类型，废弃参数 
+     * @return ApplicationResourceType 应用资源类型，废弃参数
      */
     public String getApplicationResourceType() {
         return this.ApplicationResourceType;
     }
 
     /**
-     * Set 应有资源类型
-     * @param ApplicationResourceType 应有资源类型
+     * Set 应用资源类型，废弃参数
+     * @param ApplicationResourceType 应用资源类型，废弃参数
      */
     public void setApplicationResourceType(String ApplicationResourceType) {
         this.ApplicationResourceType = ApplicationResourceType;
+    }
+
+    /**
+     * Get 应用runtime类型 
+     * @return ApplicationRuntimeType 应用runtime类型
+     */
+    public String getApplicationRuntimeType() {
+        return this.ApplicationRuntimeType;
+    }
+
+    /**
+     * Set 应用runtime类型
+     * @param ApplicationRuntimeType 应用runtime类型
+     */
+    public void setApplicationRuntimeType(String ApplicationRuntimeType) {
+        this.ApplicationRuntimeType = ApplicationRuntimeType;
     }
 
     /**
@@ -166,10 +189,11 @@ public class CreateApplicationRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamSimple(map, prefix + "ApplicationDesc", this.ApplicationDesc);
         this.setParamSimple(map, prefix + "ApplicationLogConfig", this.ApplicationLogConfig);
-        this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
+        this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
 
     }
 }

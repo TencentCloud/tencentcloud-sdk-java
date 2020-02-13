@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DstInfo extends AbstractModel{
 
     /**
-    * 目标实例Id，如cdb-jd92ijd8
+    * 目标实例ID，如cdb-jd92ijd8
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,16 +58,16 @@ public class DstInfo extends AbstractModel{
     private Integer ReadOnly;
 
     /**
-     * Get 目标实例Id，如cdb-jd92ijd8 
-     * @return InstanceId 目标实例Id，如cdb-jd92ijd8
+     * Get 目标实例ID，如cdb-jd92ijd8 
+     * @return InstanceId 目标实例ID，如cdb-jd92ijd8
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 目标实例Id，如cdb-jd92ijd8
-     * @param InstanceId 目标实例Id，如cdb-jd92ijd8
+     * Set 目标实例ID，如cdb-jd92ijd8
+     * @param InstanceId 目标实例ID，如cdb-jd92ijd8
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

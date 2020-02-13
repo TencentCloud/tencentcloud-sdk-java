@@ -79,6 +79,20 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
     private String [] NamespaceTypeList;
 
     /**
+    * 通过命名空间名精确过滤
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
+    * 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private String IsDefault;
+
+    /**
      * Get 命名空间ID列表，不传入时查询全量 
      * @return NamespaceIdList 命名空间ID列表，不传入时查询全量
      */
@@ -207,6 +221,38 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
     }
 
     /**
+     * Get 通过命名空间名精确过滤 
+     * @return NamespaceName 通过命名空间名精确过滤
+     */
+    public String getNamespaceName() {
+        return this.NamespaceName;
+    }
+
+    /**
+     * Set 通过命名空间名精确过滤
+     * @param NamespaceName 通过命名空间名精确过滤
+     */
+    public void setNamespaceName(String NamespaceName) {
+        this.NamespaceName = NamespaceName;
+    }
+
+    /**
+     * Get 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间 
+     * @return IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     */
+    public String getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     * @param IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     */
+    public void setIsDefault(String IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +264,8 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "NamespaceResourceTypeList.", this.NamespaceResourceTypeList);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamArraySimple(map, prefix + "NamespaceTypeList.", this.NamespaceTypeList);
+        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

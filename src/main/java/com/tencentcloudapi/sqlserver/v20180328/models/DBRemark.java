@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DBRemark extends AbstractModel{
 
     /**
-    * 据库名
+    * 数据库名称
     */
     @SerializedName("Name")
     @Expose
@@ -37,16 +37,16 @@ public class DBRemark extends AbstractModel{
     private String Remark;
 
     /**
-     * Get 据库名 
-     * @return Name 据库名
+     * Get 数据库名称 
+     * @return Name 数据库名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 据库名
-     * @param Name 据库名
+     * Set 数据库名称
+     * @param Name 数据库名称
      */
     public void setName(String Name) {
         this.Name = Name;

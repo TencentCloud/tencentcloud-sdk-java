@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAccountResponse extends AbstractModel{
 
     /**
-    * 实例Id，透传入参。
+    * 实例ID，透传入参。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,16 +58,16 @@ public class CreateAccountResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例Id，透传入参。 
-     * @return InstanceId 实例Id，透传入参。
+     * Get 实例ID，透传入参。 
+     * @return InstanceId 实例ID，透传入参。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id，透传入参。
-     * @param InstanceId 实例Id，透传入参。
+     * Set 实例ID，透传入参。
+     * @param InstanceId 实例ID，透传入参。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DBBackupTimeConfig extends AbstractModel{
 
     /**
-    * 实例 Id
+    * 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,16 +44,16 @@ public class DBBackupTimeConfig extends AbstractModel{
     private String EndBackupTime;
 
     /**
-     * Get 实例 Id 
-     * @return InstanceId 实例 Id
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 Id
-     * @param InstanceId 实例 Id
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeBackupUrlRequest extends AbstractModel{
 
     /**
-    * 实例Id
+    * 实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份Id，通过DescribeInstanceBackups接口可查
+    * 备份ID，通过DescribeInstanceBackups接口可查
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份Id，通过DescribeInstanceBackups接口可查 
-     * @return BackupId 备份Id，通过DescribeInstanceBackups接口可查
+     * Get 备份ID，通过DescribeInstanceBackups接口可查 
+     * @return BackupId 备份ID，通过DescribeInstanceBackups接口可查
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份Id，通过DescribeInstanceBackups接口可查
-     * @param BackupId 备份Id，通过DescribeInstanceBackups接口可查
+     * Set 备份ID，通过DescribeInstanceBackups接口可查
+     * @param BackupId 备份ID，通过DescribeInstanceBackups接口可查
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;

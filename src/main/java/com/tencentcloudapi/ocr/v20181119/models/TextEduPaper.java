@@ -23,33 +23,81 @@ import java.util.HashMap;
 public class TextEduPaper extends AbstractModel{
 
     /**
-    * 识别出的文本行内容
+    * 识别出的字段名称（关键字）
+    */
+    @SerializedName("Item")
+    @Expose
+    private String Item;
+
+    /**
+    * 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
     */
     @SerializedName("DetectedText")
     @Expose
     private String DetectedText;
 
     /**
-     * Get 识别出的文本行内容 
-     * @return DetectedText 识别出的文本行内容
+    * 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+    */
+    @SerializedName("Itemcoord")
+    @Expose
+    private ItemCoord Itemcoord;
+
+    /**
+     * Get 识别出的字段名称（关键字） 
+     * @return Item 识别出的字段名称（关键字）
+     */
+    public String getItem() {
+        return this.Item;
+    }
+
+    /**
+     * Set 识别出的字段名称（关键字）
+     * @param Item 识别出的字段名称（关键字）
+     */
+    public void setItem(String Item) {
+        this.Item = Item;
+    }
+
+    /**
+     * Get 识别出的字段名称对应的值，也就是字段Item对应的字符串结果 
+     * @return DetectedText 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
      */
     public String getDetectedText() {
         return this.DetectedText;
     }
 
     /**
-     * Set 识别出的文本行内容
-     * @param DetectedText 识别出的文本行内容
+     * Set 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
+     * @param DetectedText 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
      */
     public void setDetectedText(String DetectedText) {
         this.DetectedText = DetectedText;
     }
 
     /**
+     * Get 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height） 
+     * @return Itemcoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public ItemCoord getItemcoord() {
+        return this.Itemcoord;
+    }
+
+    /**
+     * Set 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param Itemcoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public void setItemcoord(ItemCoord Itemcoord) {
+        this.Itemcoord = Itemcoord;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Item", this.Item);
         this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);
+        this.setParamObj(map, prefix + "Itemcoord.", this.Itemcoord);
 
     }
 }

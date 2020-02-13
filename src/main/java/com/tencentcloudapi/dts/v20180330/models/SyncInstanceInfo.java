@@ -30,7 +30,7 @@ public class SyncInstanceInfo extends AbstractModel{
     private String Region;
 
     /**
-    * 实例短Id
+    * 实例短ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -53,16 +53,16 @@ public class SyncInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例短Id 
-     * @return InstanceId 实例短Id
+     * Get 实例短ID 
+     * @return InstanceId 实例短ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例短Id
-     * @param InstanceId 实例短Id
+     * Set 实例短ID
+     * @param InstanceId 实例短ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DBInstance extends AbstractModel{
 
     /**
-    * 实例 Id，唯一标识一个 TDSQL 实例
+    * 实例 ID，唯一标识一个 TDSQL 实例
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,14 +37,14 @@ public class DBInstance extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 实例所属应用 Id
+    * 实例所属应用 ID
     */
     @SerializedName("AppId")
     @Expose
     private Integer AppId;
 
     /**
-    * 实例所属项目 Id
+    * 实例所属项目 ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -65,14 +65,14 @@ public class DBInstance extends AbstractModel{
     private String Zone;
 
     /**
-    * 私有网络 Id，基础网络时为 0
+    * 私有网络 ID，基础网络时为 0
     */
     @SerializedName("VpcId")
     @Expose
     private Integer VpcId;
 
     /**
-    * 子网 Id，基础网络时为 0
+    * 子网 ID，基础网络时为 0
     */
     @SerializedName("SubnetId")
     @Expose
@@ -177,14 +177,14 @@ public class DBInstance extends AbstractModel{
     private Integer Storage;
 
     /**
-    * 字符串型的私有网络Id
+    * 字符串型的私有网络ID
     */
     @SerializedName("UniqueVpcId")
     @Expose
     private String UniqueVpcId;
 
     /**
-    * 字符串型的私有网络子网Id
+    * 字符串型的私有网络子网ID
     */
     @SerializedName("UniqueSubnetId")
     @Expose
@@ -212,21 +212,21 @@ public class DBInstance extends AbstractModel{
     private Integer IsTmp;
 
     /**
-    * 独享集群Id，为空表示为普通实例
+    * 独享集群ID，为空表示为普通实例
     */
     @SerializedName("ExclusterId")
     @Expose
     private String ExclusterId;
 
     /**
-    * 数字实例Id（过时字段，请勿依赖该值）
+    * 数字实例ID（过时字段，请勿依赖该值）
     */
     @SerializedName("Id")
     @Expose
     private Integer Id;
 
     /**
-    * 产品类型 Id
+    * 产品类型 ID
     */
     @SerializedName("Pid")
     @Expose
@@ -292,16 +292,16 @@ public class DBInstance extends AbstractModel{
     private Integer IsEncryptSupported;
 
     /**
-     * Get 实例 Id，唯一标识一个 TDSQL 实例 
-     * @return InstanceId 实例 Id，唯一标识一个 TDSQL 实例
+     * Get 实例 ID，唯一标识一个 TDSQL 实例 
+     * @return InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 Id，唯一标识一个 TDSQL 实例
-     * @param InstanceId 实例 Id，唯一标识一个 TDSQL 实例
+     * Set 实例 ID，唯一标识一个 TDSQL 实例
+     * @param InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -324,32 +324,32 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 实例所属应用 Id 
-     * @return AppId 实例所属应用 Id
+     * Get 实例所属应用 ID 
+     * @return AppId 实例所属应用 ID
      */
     public Integer getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 实例所属应用 Id
-     * @param AppId 实例所属应用 Id
+     * Set 实例所属应用 ID
+     * @param AppId 实例所属应用 ID
      */
     public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 实例所属项目 Id 
-     * @return ProjectId 实例所属项目 Id
+     * Get 实例所属项目 ID 
+     * @return ProjectId 实例所属项目 ID
      */
     public Integer getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 实例所属项目 Id
-     * @param ProjectId 实例所属项目 Id
+     * Set 实例所属项目 ID
+     * @param ProjectId 实例所属项目 ID
      */
     public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
@@ -388,32 +388,32 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 私有网络 Id，基础网络时为 0 
-     * @return VpcId 私有网络 Id，基础网络时为 0
+     * Get 私有网络 ID，基础网络时为 0 
+     * @return VpcId 私有网络 ID，基础网络时为 0
      */
     public Integer getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络 Id，基础网络时为 0
-     * @param VpcId 私有网络 Id，基础网络时为 0
+     * Set 私有网络 ID，基础网络时为 0
+     * @param VpcId 私有网络 ID，基础网络时为 0
      */
     public void setVpcId(Integer VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 Id，基础网络时为 0 
-     * @return SubnetId 子网 Id，基础网络时为 0
+     * Get 子网 ID，基础网络时为 0 
+     * @return SubnetId 子网 ID，基础网络时为 0
      */
     public Integer getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 Id，基础网络时为 0
-     * @param SubnetId 子网 Id，基础网络时为 0
+     * Set 子网 ID，基础网络时为 0
+     * @param SubnetId 子网 ID，基础网络时为 0
      */
     public void setSubnetId(Integer SubnetId) {
         this.SubnetId = SubnetId;
@@ -644,32 +644,32 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 字符串型的私有网络Id 
-     * @return UniqueVpcId 字符串型的私有网络Id
+     * Get 字符串型的私有网络ID 
+     * @return UniqueVpcId 字符串型的私有网络ID
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set 字符串型的私有网络Id
-     * @param UniqueVpcId 字符串型的私有网络Id
+     * Set 字符串型的私有网络ID
+     * @param UniqueVpcId 字符串型的私有网络ID
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
     }
 
     /**
-     * Get 字符串型的私有网络子网Id 
-     * @return UniqueSubnetId 字符串型的私有网络子网Id
+     * Get 字符串型的私有网络子网ID 
+     * @return UniqueSubnetId 字符串型的私有网络子网ID
      */
     public String getUniqueSubnetId() {
         return this.UniqueSubnetId;
     }
 
     /**
-     * Set 字符串型的私有网络子网Id
-     * @param UniqueSubnetId 字符串型的私有网络子网Id
+     * Set 字符串型的私有网络子网ID
+     * @param UniqueSubnetId 字符串型的私有网络子网ID
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
         this.UniqueSubnetId = UniqueSubnetId;
@@ -724,48 +724,48 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 独享集群Id，为空表示为普通实例 
-     * @return ExclusterId 独享集群Id，为空表示为普通实例
+     * Get 独享集群ID，为空表示为普通实例 
+     * @return ExclusterId 独享集群ID，为空表示为普通实例
      */
     public String getExclusterId() {
         return this.ExclusterId;
     }
 
     /**
-     * Set 独享集群Id，为空表示为普通实例
-     * @param ExclusterId 独享集群Id，为空表示为普通实例
+     * Set 独享集群ID，为空表示为普通实例
+     * @param ExclusterId 独享集群ID，为空表示为普通实例
      */
     public void setExclusterId(String ExclusterId) {
         this.ExclusterId = ExclusterId;
     }
 
     /**
-     * Get 数字实例Id（过时字段，请勿依赖该值） 
-     * @return Id 数字实例Id（过时字段，请勿依赖该值）
+     * Get 数字实例ID（过时字段，请勿依赖该值） 
+     * @return Id 数字实例ID（过时字段，请勿依赖该值）
      */
     public Integer getId() {
         return this.Id;
     }
 
     /**
-     * Set 数字实例Id（过时字段，请勿依赖该值）
-     * @param Id 数字实例Id（过时字段，请勿依赖该值）
+     * Set 数字实例ID（过时字段，请勿依赖该值）
+     * @param Id 数字实例ID（过时字段，请勿依赖该值）
      */
     public void setId(Integer Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 产品类型 Id 
-     * @return Pid 产品类型 Id
+     * Get 产品类型 ID 
+     * @return Pid 产品类型 ID
      */
     public Integer getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 产品类型 Id
-     * @param Pid 产品类型 Id
+     * Set 产品类型 ID
+     * @param Pid 产品类型 ID
      */
     public void setPid(Integer Pid) {
         this.Pid = Pid;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * 实例所属的可用区id
+    * 实例所属的可用区ID
     */
     @SerializedName("ZoneId")
     @Expose
@@ -149,16 +149,16 @@ public class CreateInstancesRequest extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * Get 实例所属的可用区id 
-     * @return ZoneId 实例所属的可用区id
+     * Get 实例所属的可用区ID 
+     * @return ZoneId 实例所属的可用区ID
      */
     public Integer getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所属的可用区id
-     * @param ZoneId 实例所属的可用区id
+     * Set 实例所属的可用区ID
+     * @param ZoneId 实例所属的可用区ID
      */
     public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;

@@ -31,6 +31,9 @@ public class AiContentReviewResult extends AbstractModel{
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
+<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Prohibited.Asr：Asr 文字鉴违禁</li>
+<li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
     */
     @SerializedName("Type")
     @Expose
@@ -93,6 +96,30 @@ public class AiContentReviewResult extends AbstractModel{
     private AiReviewTaskPoliticalOcrResult PoliticalOcrTask;
 
     /**
+    * 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TerrorismOcrTask")
+    @Expose
+    private AiReviewTaskTerrorismOcrResult TerrorismOcrTask;
+
+    /**
+    * 视频内容审核 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProhibitedAsrTask")
+    @Expose
+    private AiReviewTaskProhibitedAsrResult ProhibitedAsrTask;
+
+    /**
+    * 视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProhibitedOcrTask")
+    @Expose
+    private AiReviewTaskProhibitedOcrResult ProhibitedOcrTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
 <li>Terrorism：图片鉴恐</li>
@@ -100,7 +127,10 @@ public class AiContentReviewResult extends AbstractModel{
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
-<li>Political.Ocr：Ocr 文字鉴政</li> 
+<li>Political.Ocr：Ocr 文字鉴政</li>
+<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Prohibited.Asr：Asr 文字鉴违禁</li>
+<li>Prohibited.Ocr：Ocr 文字鉴违禁</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
 <li>Terrorism：图片鉴恐</li>
@@ -109,6 +139,9 @@ public class AiContentReviewResult extends AbstractModel{
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
+<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Prohibited.Asr：Asr 文字鉴违禁</li>
+<li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
      */
     public String getType() {
         return this.Type;
@@ -123,6 +156,9 @@ public class AiContentReviewResult extends AbstractModel{
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
+<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Prohibited.Asr：Asr 文字鉴违禁</li>
+<li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
 <li>Terrorism：图片鉴恐</li>
@@ -131,6 +167,9 @@ public class AiContentReviewResult extends AbstractModel{
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
 <li>Political.Ocr：Ocr 文字鉴政</li>
+<li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+<li>Prohibited.Asr：Asr 文字鉴违禁</li>
+<li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -277,6 +316,66 @@ public class AiContentReviewResult extends AbstractModel{
     }
 
     /**
+     * Get 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TerrorismOcrTask 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() {
+        return this.TerrorismOcrTask;
+    }
+
+    /**
+     * Set 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TerrorismOcrTask 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult TerrorismOcrTask) {
+        this.TerrorismOcrTask = TerrorismOcrTask;
+    }
+
+    /**
+     * Get 视频内容审核 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProhibitedAsrTask 视频内容审核 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() {
+        return this.ProhibitedAsrTask;
+    }
+
+    /**
+     * Set 视频内容审核 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProhibitedAsrTask 视频内容审核 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult ProhibitedAsrTask) {
+        this.ProhibitedAsrTask = ProhibitedAsrTask;
+    }
+
+    /**
+     * Get 视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProhibitedOcrTask 视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() {
+        return this.ProhibitedOcrTask;
+    }
+
+    /**
+     * Set 视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProhibitedOcrTask 视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult ProhibitedOcrTask) {
+        this.ProhibitedOcrTask = ProhibitedOcrTask;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -288,6 +387,9 @@ public class AiContentReviewResult extends AbstractModel{
         this.setParamObj(map, prefix + "PornOcrTask.", this.PornOcrTask);
         this.setParamObj(map, prefix + "PoliticalAsrTask.", this.PoliticalAsrTask);
         this.setParamObj(map, prefix + "PoliticalOcrTask.", this.PoliticalOcrTask);
+        this.setParamObj(map, prefix + "TerrorismOcrTask.", this.TerrorismOcrTask);
+        this.setParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
+        this.setParamObj(map, prefix + "ProhibitedOcrTask.", this.ProhibitedOcrTask);
 
     }
 }

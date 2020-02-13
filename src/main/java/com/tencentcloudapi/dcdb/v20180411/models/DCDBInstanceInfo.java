@@ -37,7 +37,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private String InstanceName;
 
     /**
-    * APPID
+    * AppID
     */
     @SerializedName("AppId")
     @Expose
@@ -184,28 +184,28 @@ public class DCDBInstanceInfo extends AbstractModel{
     private Integer IsTmp;
 
     /**
-    * 独享集群Id，为空表示非独享集群实例
+    * 独享集群ID，为空表示非独享集群实例
     */
     @SerializedName("ExclusterId")
     @Expose
     private String ExclusterId;
 
     /**
-    * 字符串型的私有网络Id
+    * 字符串型的私有网络ID
     */
     @SerializedName("UniqueVpcId")
     @Expose
     private String UniqueVpcId;
 
     /**
-    * 字符串型的私有网络子网Id
+    * 字符串型的私有网络子网ID
     */
     @SerializedName("UniqueSubnetId")
     @Expose
     private String UniqueSubnetId;
 
     /**
-    * 数字实例Id（过时字段，请勿依赖该值）
+    * 数字实例ID（过时字段，请勿依赖该值）
     */
     @SerializedName("Id")
     @Expose
@@ -233,7 +233,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private Integer WanPort;
 
     /**
-    * 产品类型 Id（过时字段，请勿依赖该值）
+    * 产品类型 ID（过时字段，请勿依赖该值）
     */
     @SerializedName("Pid")
     @Expose
@@ -322,16 +322,16 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get APPID 
-     * @return AppId APPID
+     * Get AppID 
+     * @return AppId AppID
      */
     public Integer getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set APPID
-     * @param AppId APPID
+     * Set AppID
+     * @param AppId AppID
      */
     public void setAppId(Integer AppId) {
         this.AppId = AppId;
@@ -658,64 +658,64 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 独享集群Id，为空表示非独享集群实例 
-     * @return ExclusterId 独享集群Id，为空表示非独享集群实例
+     * Get 独享集群ID，为空表示非独享集群实例 
+     * @return ExclusterId 独享集群ID，为空表示非独享集群实例
      */
     public String getExclusterId() {
         return this.ExclusterId;
     }
 
     /**
-     * Set 独享集群Id，为空表示非独享集群实例
-     * @param ExclusterId 独享集群Id，为空表示非独享集群实例
+     * Set 独享集群ID，为空表示非独享集群实例
+     * @param ExclusterId 独享集群ID，为空表示非独享集群实例
      */
     public void setExclusterId(String ExclusterId) {
         this.ExclusterId = ExclusterId;
     }
 
     /**
-     * Get 字符串型的私有网络Id 
-     * @return UniqueVpcId 字符串型的私有网络Id
+     * Get 字符串型的私有网络ID 
+     * @return UniqueVpcId 字符串型的私有网络ID
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set 字符串型的私有网络Id
-     * @param UniqueVpcId 字符串型的私有网络Id
+     * Set 字符串型的私有网络ID
+     * @param UniqueVpcId 字符串型的私有网络ID
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
     }
 
     /**
-     * Get 字符串型的私有网络子网Id 
-     * @return UniqueSubnetId 字符串型的私有网络子网Id
+     * Get 字符串型的私有网络子网ID 
+     * @return UniqueSubnetId 字符串型的私有网络子网ID
      */
     public String getUniqueSubnetId() {
         return this.UniqueSubnetId;
     }
 
     /**
-     * Set 字符串型的私有网络子网Id
-     * @param UniqueSubnetId 字符串型的私有网络子网Id
+     * Set 字符串型的私有网络子网ID
+     * @param UniqueSubnetId 字符串型的私有网络子网ID
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
         this.UniqueSubnetId = UniqueSubnetId;
     }
 
     /**
-     * Get 数字实例Id（过时字段，请勿依赖该值） 
-     * @return Id 数字实例Id（过时字段，请勿依赖该值）
+     * Get 数字实例ID（过时字段，请勿依赖该值） 
+     * @return Id 数字实例ID（过时字段，请勿依赖该值）
      */
     public Integer getId() {
         return this.Id;
     }
 
     /**
-     * Set 数字实例Id（过时字段，请勿依赖该值）
-     * @param Id 数字实例Id（过时字段，请勿依赖该值）
+     * Set 数字实例ID（过时字段，请勿依赖该值）
+     * @param Id 数字实例ID（过时字段，请勿依赖该值）
      */
     public void setId(Integer Id) {
         this.Id = Id;
@@ -770,16 +770,16 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 产品类型 Id（过时字段，请勿依赖该值） 
-     * @return Pid 产品类型 Id（过时字段，请勿依赖该值）
+     * Get 产品类型 ID（过时字段，请勿依赖该值） 
+     * @return Pid 产品类型 ID（过时字段，请勿依赖该值）
      */
     public Integer getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 产品类型 Id（过时字段，请勿依赖该值）
-     * @param Pid 产品类型 Id（过时字段，请勿依赖该值）
+     * Set 产品类型 ID（过时字段，请勿依赖该值）
+     * @param Pid 产品类型 ID（过时字段，请勿依赖该值）
      */
     public void setPid(Integer Pid) {
         this.Pid = Pid;

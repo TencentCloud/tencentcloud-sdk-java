@@ -72,6 +72,13 @@ public class CreateClusterRequest extends AbstractModel{
     private String TsfZoneId;
 
     /**
+    * 私有网络子网ID
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -184,6 +191,22 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 私有网络子网ID 
+     * @return SubnetId 私有网络子网ID
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 私有网络子网ID
+     * @param SubnetId 私有网络子网ID
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
         this.setParamSimple(map, prefix + "TsfRegionId", this.TsfRegionId);
         this.setParamSimple(map, prefix + "TsfZoneId", this.TsfZoneId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

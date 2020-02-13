@@ -37,11 +37,25 @@ public class DeployServerlessGroupRequest extends AbstractModel{
     private String PkgId;
 
     /**
-    * VpcConfig对象，和创建接口中对象一致
+    * 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
     */
-    @SerializedName("VpcConfig")
+    @SerializedName("Memory")
     @Expose
-    private VpcConfig VpcConfig;
+    private String Memory;
+
+    /**
+    * 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+    */
+    @SerializedName("InstanceRequest")
+    @Expose
+    private Long InstanceRequest;
+
+    /**
+    * 部署组启动参数，不传表示维持原态
+    */
+    @SerializedName("StartupParameters")
+    @Expose
+    private String StartupParameters;
 
     /**
      * Get 部署组ID 
@@ -76,19 +90,51 @@ public class DeployServerlessGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get VpcConfig对象，和创建接口中对象一致 
-     * @return VpcConfig VpcConfig对象，和创建接口中对象一致
+     * Get 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态 
+     * @return Memory 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
      */
-    public VpcConfig getVpcConfig() {
-        return this.VpcConfig;
+    public String getMemory() {
+        return this.Memory;
     }
 
     /**
-     * Set VpcConfig对象，和创建接口中对象一致
-     * @param VpcConfig VpcConfig对象，和创建接口中对象一致
+     * Set 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
+     * @param Memory 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
      */
-    public void setVpcConfig(VpcConfig VpcConfig) {
-        this.VpcConfig = VpcConfig;
+    public void setMemory(String Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态 
+     * @return InstanceRequest 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+     */
+    public Long getInstanceRequest() {
+        return this.InstanceRequest;
+    }
+
+    /**
+     * Set 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+     * @param InstanceRequest 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+     */
+    public void setInstanceRequest(Long InstanceRequest) {
+        this.InstanceRequest = InstanceRequest;
+    }
+
+    /**
+     * Get 部署组启动参数，不传表示维持原态 
+     * @return StartupParameters 部署组启动参数，不传表示维持原态
+     */
+    public String getStartupParameters() {
+        return this.StartupParameters;
+    }
+
+    /**
+     * Set 部署组启动参数，不传表示维持原态
+     * @param StartupParameters 部署组启动参数，不传表示维持原态
+     */
+    public void setStartupParameters(String StartupParameters) {
+        this.StartupParameters = StartupParameters;
     }
 
     /**
@@ -97,7 +143,9 @@ public class DeployServerlessGroupRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
-        this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "InstanceRequest", this.InstanceRequest);
+        this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
 
     }
 }

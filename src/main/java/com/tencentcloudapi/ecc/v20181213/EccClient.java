@@ -38,6 +38,25 @@ public class EccClient extends AbstractClient{
     }
 
     /**
+     *https://ecc.tencentcloudapi.com/?Action=CorrectMultiImage
+多图像识别批改接口
+     * @param req CorrectMultiImageRequest
+     * @return CorrectMultiImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CorrectMultiImageResponse CorrectMultiImage(CorrectMultiImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CorrectMultiImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CorrectMultiImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CorrectMultiImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *异步任务结果查询接口
      * @param req DescribeTaskRequest
      * @return DescribeTaskResponse

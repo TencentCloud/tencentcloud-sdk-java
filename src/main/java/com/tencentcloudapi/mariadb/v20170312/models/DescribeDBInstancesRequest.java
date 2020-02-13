@@ -121,7 +121,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Integer ExclusterType;
 
     /**
-    * 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+    * 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
     */
     @SerializedName("ExclusterIds")
     @Expose
@@ -352,16 +352,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9 
-     * @return ExclusterIds 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     * Get 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9 
+     * @return ExclusterIds 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
      */
     public String [] getExclusterIds() {
         return this.ExclusterIds;
     }
 
     /**
-     * Set 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
-     * @param ExclusterIds 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+     * Set 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
+     * @param ExclusterIds 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
      */
     public void setExclusterIds(String [] ExclusterIds) {
         this.ExclusterIds = ExclusterIds;

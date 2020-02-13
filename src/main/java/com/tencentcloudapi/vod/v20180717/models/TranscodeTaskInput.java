@@ -38,6 +38,13 @@ public class TranscodeTaskInput extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * 马赛克列表，最大可支持 10 张。
+    */
+    @SerializedName("MosaicSet")
+    @Expose
+    private MosaicInput [] MosaicSet;
+
+    /**
      * Get 视频转码模板 ID。 
      * @return Definition 视频转码模板 ID。
      */
@@ -74,11 +81,28 @@ public class TranscodeTaskInput extends AbstractModel{
     }
 
     /**
+     * Get 马赛克列表，最大可支持 10 张。 
+     * @return MosaicSet 马赛克列表，最大可支持 10 张。
+     */
+    public MosaicInput [] getMosaicSet() {
+        return this.MosaicSet;
+    }
+
+    /**
+     * Set 马赛克列表，最大可支持 10 张。
+     * @param MosaicSet 马赛克列表，最大可支持 10 张。
+     */
+    public void setMosaicSet(MosaicInput [] MosaicSet) {
+        this.MosaicSet = MosaicSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
 
     }
 }

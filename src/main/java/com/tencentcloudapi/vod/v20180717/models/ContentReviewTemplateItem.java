@@ -68,6 +68,17 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
+    * 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProhibitedConfigure")
+    @Expose
+    private ProhibitedConfigureInfo ProhibitedConfigure;
+
+    /**
     * 用户自定义内容审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -92,14 +103,14 @@ public class ContentReviewTemplateItem extends AbstractModel{
     private Float ScreenshotInterval;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -214,6 +225,38 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
+     * Get 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProhibitedConfigureInfo getProhibitedConfigure() {
+        return this.ProhibitedConfigure;
+    }
+
+    /**
+     * Set 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
+        this.ProhibitedConfigure = ProhibitedConfigure;
+    }
+
+    /**
      * Get 用户自定义内容审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserDefineConfigure 用户自定义内容审核控制参数。
@@ -274,32 +317,32 @@ public class ContentReviewTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -315,6 +358,7 @@ public class ContentReviewTemplateItem extends AbstractModel{
         this.setParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
         this.setParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+        this.setParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
         this.setParamSimple(map, prefix + "ReviewWallSwitch", this.ReviewWallSwitch);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);

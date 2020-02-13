@@ -127,6 +127,46 @@ public class ServerlessGroup extends AbstractModel{
     private String PkgVersion;
 
     /**
+    * 所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Memory")
+    @Expose
+    private String Memory;
+
+    /**
+    * 要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceRequest")
+    @Expose
+    private Long InstanceRequest;
+
+    /**
+    * 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartupParameters")
+    @Expose
+    private String StartupParameters;
+
+    /**
+    * 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * 部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceCount")
+    @Expose
+    private Long InstanceCount;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -387,6 +427,106 @@ public class ServerlessGroup extends AbstractModel{
     }
 
     /**
+     * Get 所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Memory 所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Memory 所需实例内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMemory(String Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get 要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceRequest 要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceRequest() {
+        return this.InstanceRequest;
+    }
+
+    /**
+     * Set 要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceRequest 要求最小实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceRequest(Long InstanceRequest) {
+        this.InstanceRequest = InstanceRequest;
+    }
+
+    /**
+     * Get 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartupParameters 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartupParameters() {
+        return this.StartupParameters;
+    }
+
+    /**
+     * Set 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartupParameters 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartupParameters(String StartupParameters) {
+        this.StartupParameters = StartupParameters;
+    }
+
+    /**
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get 部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceCount 部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceCount() {
+        return this.InstanceCount;
+    }
+
+    /**
+     * Set 部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceCount 部署组实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceCount(Long InstanceCount) {
+        this.InstanceCount = InstanceCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -403,6 +543,11 @@ public class ServerlessGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "PkgVersion", this.PkgVersion);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "InstanceRequest", this.InstanceRequest);
+        this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
 
     }
 }

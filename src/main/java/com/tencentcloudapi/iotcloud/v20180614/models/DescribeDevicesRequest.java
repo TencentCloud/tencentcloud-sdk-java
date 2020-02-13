@@ -30,14 +30,14 @@ public class DescribeDevicesRequest extends AbstractModel{
     private String ProductId;
 
     /**
-    * 分页偏移
+    * 偏移量，Offset从0开始
     */
     @SerializedName("Offset")
     @Expose
     private Integer Offset;
 
     /**
-    * 分页的大小，数值范围 10-100
+    * 分页的大小，数值范围 10-250
     */
     @SerializedName("Limit")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeDevicesRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页偏移 
-     * @return Offset 分页偏移
+     * Get 偏移量，Offset从0开始 
+     * @return Offset 偏移量，Offset从0开始
      */
     public Integer getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移
-     * @param Offset 分页偏移
+     * Set 偏移量，Offset从0开始
+     * @param Offset 偏移量，Offset从0开始
      */
     public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页的大小，数值范围 10-100 
-     * @return Limit 分页的大小，数值范围 10-100
+     * Get 分页的大小，数值范围 10-250 
+     * @return Limit 分页的大小，数值范围 10-250
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页的大小，数值范围 10-100
-     * @param Limit 分页的大小，数值范围 10-100
+     * Set 分页的大小，数值范围 10-250
+     * @param Limit 分页的大小，数值范围 10-250
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

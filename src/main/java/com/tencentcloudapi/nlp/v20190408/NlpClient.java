@@ -192,28 +192,6 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
-     *敏感词识别接口能够识别出文本中的所有敏感词，帮助用户及时、精准地防范违规风险，广泛用于各种高危涉敏场景（如资讯、评论、聊天室）的敏感信息过滤。
-
-该功能基于10万级大规模敏感词库，结合多种文本对抗方法、政策权威指令等，高效识别敏感词及其各类变种。同时我们会根据大规模语料和实时反误杀系统，不断更新迭代，确保效果持续提升。
-
-目前能够支持对政治、色情、辱骂/低俗、暴恐/毒品、广告/灌水、迷信/邪教、其他违法、综合等8大类敏感信息的识别。
-     * @param req SensitiveWordsRecognitionRequest
-     * @return SensitiveWordsRecognitionResponse
-     * @throws TencentCloudSDKException
-     */
-    public SensitiveWordsRecognitionResponse SensitiveWordsRecognition(SensitiveWordsRecognitionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SensitiveWordsRecognitionResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<SensitiveWordsRecognitionResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SensitiveWordsRecognition"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *句向量接口能够将输入的句子映射成一个固定维度的向量，用来表示这个句子的语义特征，可用于文本聚类、文本相似度、文本分类等任务，能够显著提高它们的效果。
 
 该句向量服务由腾讯知文自然语言处理团队联合腾讯AI Lab共同打造，基于千亿级大规模互联网语料并采用AI Lab自研的DSG算法训练而成，在腾讯内部诸多业务的NLP任务上实测效果显著。
@@ -292,34 +270,6 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
-     *文本审核接口能够识别文本信息中的色情、政治等有害内容，帮助用户及时、精准地防范违规风险，可用于内容审核、敏感信息过滤、舆情监控等场景。
-
-该功能基于10万级大规模敏感词库，结合多种文本对抗方法、政策权威指令等，并运用了深度学习技术，高效识别高危有害内容。同时我们会根据大规模语料和实时反误杀系统，不断更新迭代，确保效果持续提升。
-
-文本审核接口目前提供以下三个功能：
-
-1、文本恶意级别：将文本分为3个级别，包括正常、恶意、可疑送审；
-
-2、文本恶意类型：把文本分为10个类别，包括正常、政治、色情、辱骂/低俗、暴恐/毒品、广告/灌水、迷信/邪教、其他违法、综合、联系方式/链接；
-
-3、恶意关键词：文本中所有涉嫌恶意的关键词。
-     * @param req TextApprovalRequest
-     * @return TextApprovalResponse
-     * @throws TencentCloudSDKException
-     */
-    public TextApprovalResponse TextApproval(TextApprovalRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextApprovalResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextApprovalResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TextApproval"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *文本分类接口能够对用户输入的文本进行自动分类，将其映射到具体的类目上，用户只需要提供待分类的文本，而无需关注具体实现。
 
 该功能基于基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升。
@@ -328,7 +278,7 @@ public class NlpClient extends AbstractClient{
 
 - 通用领域分类体系，包括15个分类类目，分别是汽车、科技、健康、体育、旅行、教育、职业、文化、军事、房产、娱乐、女性、奥运、财经以及其他，适用于通用的场景。
 
-- 新闻领域分类体系，包括37个一级分类类目，285个二级分类，已应用于腾讯新闻的文章分类。
+- 新闻领域分类体系，包括37个一级分类类目，285个二级分类（详细请见 [类目体系映射表](https://cloud.tencent.com/document/product/271/36459)），已应用于腾讯新闻的文章分类。
 
 更多垂直领域的分类体系即将推出，敬请期待。
      * @param req TextClassificationRequest

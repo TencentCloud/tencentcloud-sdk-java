@@ -86,6 +86,13 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     private String ResourceType;
 
     /**
+    * 下一步动作
+    */
+    @SerializedName("NextAction")
+    @Expose
+    private String NextAction;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -237,6 +244,22 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     }
 
     /**
+     * Get 下一步动作 
+     * @return NextAction 下一步动作
+     */
+    public String getNextAction() {
+        return this.NextAction;
+    }
+
+    /**
+     * Set 下一步动作
+     * @param NextAction 下一步动作
+     */
+    public void setNextAction(String NextAction) {
+        this.NextAction = NextAction;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -265,6 +288,7 @@ public class DescribeComputeEnvResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "NextAction", this.NextAction);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

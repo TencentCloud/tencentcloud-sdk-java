@@ -48,7 +48,7 @@ public class SearchMediaRequest extends AbstractModel{
     /**
     * 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
     */
     @SerializedName("StartTime")
     @Expose
@@ -57,7 +57,7 @@ public class SearchMediaRequest extends AbstractModel{
     /**
     * 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
     */
     @SerializedName("EndTime")
     @Expose
@@ -175,10 +175,10 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Get 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li> 
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li> 
      * @return StartTime 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public String getStartTime() {
         return this.StartTime;
@@ -187,10 +187,10 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Set 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      * @param StartTime 创建时间的开始时间。
 <li>大于等于开始时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -199,10 +199,10 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Get 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li> 
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li> 
      * @return EndTime 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public String getEndTime() {
         return this.EndTime;
@@ -211,10 +211,10 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Set 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      * @param EndTime 创建时间的结束时间。
 <li>小于结束时间。</li>
-<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+<li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -58,7 +58,7 @@ public class BackupInfo extends AbstractModel{
     private String InternetUrl;
 
     /**
-    * 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+    * 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
     */
     @SerializedName("Type")
     @Expose
@@ -72,7 +72,7 @@ public class BackupInfo extends AbstractModel{
     private Integer BackupId;
 
     /**
-    * 备份任务状态
+    * 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
     */
     @SerializedName("Status")
     @Expose
@@ -86,11 +86,32 @@ public class BackupInfo extends AbstractModel{
     private String FinishTime;
 
     /**
-    * 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+    * （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
+
+    /**
+    * 备份任务的开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+    */
+    @SerializedName("Method")
+    @Expose
+    private String Method;
+
+    /**
+    * 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+    */
+    @SerializedName("Way")
+    @Expose
+    private String Way;
 
     /**
      * Get 备份文件名 
@@ -173,16 +194,16 @@ public class BackupInfo extends AbstractModel{
     }
 
     /**
-     * Get 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备 
-     * @return Type 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+     * Get 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。 
+     * @return Type 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
-     * @param Type 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+     * Set 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
+     * @param Type 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -205,16 +226,16 @@ public class BackupInfo extends AbstractModel{
     }
 
     /**
-     * Get 备份任务状态 
-     * @return Status 备份任务状态
+     * Get 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。 
+     * @return Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份任务状态
-     * @param Status 备份任务状态
+     * Set 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     * @param Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -237,19 +258,67 @@ public class BackupInfo extends AbstractModel{
     }
 
     /**
-     * Get 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值 
-     * @return Creator 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+     * Get （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。 
+     * @return Creator （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
-     * @param Creator 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+     * Set （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+     * @param Creator （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
+    }
+
+    /**
+     * Get 备份任务的开始时间 
+     * @return StartTime 备份任务的开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 备份任务的开始时间
+     * @param StartTime 备份任务的开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。 
+     * @return Method 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     */
+    public String getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     * @param Method 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     */
+    public void setMethod(String Method) {
+        this.Method = Method;
+    }
+
+    /**
+     * Get 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。 
+     * @return Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+     */
+    public String getWay() {
+        return this.Way;
+    }
+
+    /**
+     * Set 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+     * @param Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+     */
+    public void setWay(String Way) {
+        this.Way = Way;
     }
 
     /**
@@ -266,6 +335,9 @@ public class BackupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "Way", this.Way);
 
     }
 }

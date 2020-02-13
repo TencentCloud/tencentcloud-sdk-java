@@ -64,6 +64,18 @@ public class DataDisk extends AbstractModel{
     private String SnapshotId;
 
     /**
+    * 数据盘是否随子机销毁。取值范围：
+<li>TRUE：加密
+<li>FALSE：不加密<br>
+默认取值：FALSE<br>
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
      * Get 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。 
      * @return DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
@@ -168,6 +180,42 @@ public class DataDisk extends AbstractModel{
     }
 
     /**
+     * Get 数据盘是否随子机销毁。取值范围：
+<li>TRUE：加密
+<li>FALSE：不加密<br>
+默认取值：FALSE<br>
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Encrypt 数据盘是否随子机销毁。取值范围：
+<li>TRUE：加密
+<li>FALSE：不加密<br>
+默认取值：FALSE<br>
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set 数据盘是否随子机销毁。取值范围：
+<li>TRUE：加密
+<li>FALSE：不加密<br>
+默认取值：FALSE<br>
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Encrypt 数据盘是否随子机销毁。取值范围：
+<li>TRUE：加密
+<li>FALSE：不加密<br>
+默认取值：FALSE<br>
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -176,6 +224,7 @@ public class DataDisk extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
 
     }
 }

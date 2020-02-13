@@ -79,6 +79,13 @@ public class ComputeEnvView extends AbstractModel{
     private String ResourceType;
 
     /**
+    * 下一步动作
+    */
+    @SerializedName("NextAction")
+    @Expose
+    private String NextAction;
+
+    /**
      * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
@@ -207,6 +214,22 @@ public class ComputeEnvView extends AbstractModel{
     }
 
     /**
+     * Get 下一步动作 
+     * @return NextAction 下一步动作
+     */
+    public String getNextAction() {
+        return this.NextAction;
+    }
+
+    /**
+     * Set 下一步动作
+     * @param NextAction 下一步动作
+     */
+    public void setNextAction(String NextAction) {
+        this.NextAction = NextAction;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class ComputeEnvView extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "NextAction", this.NextAction);
 
     }
 }

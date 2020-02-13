@@ -39,6 +39,24 @@ public class TsfClient extends AbstractClient{
 
     /**
      *添加云主机节点至TSF集群
+     * @param req AddClusterInstancesRequest
+     * @return AddClusterInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddClusterInstancesResponse AddClusterInstances(AddClusterInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddClusterInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddClusterInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddClusterInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加云主机节点至TSF集群
      * @param req AddInstancesRequest
      * @return AddInstancesResponse
      * @throws TencentCloudSDKException

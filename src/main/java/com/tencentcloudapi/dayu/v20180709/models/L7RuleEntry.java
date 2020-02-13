@@ -72,7 +72,7 @@ public class L7RuleEntry extends AbstractModel{
     private Long KeepEnable;
 
     /**
-    * 规则ID
+    * 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
     */
     @SerializedName("RuleId")
     @Expose
@@ -261,16 +261,16 @@ public class L7RuleEntry extends AbstractModel{
     }
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段； 
+     * @return RuleId 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
+     * @param RuleId 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

@@ -56,6 +56,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *添加CC防护的访问频率控制规则
+     * @param req CreateCCFrequencyRulesRequest
+     * @return CreateCCFrequencyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCCFrequencyRulesResponse CreateCCFrequencyRules(CreateCCFrequencyRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCCFrequencyRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCCFrequencyRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCCFrequencyRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建CC自定义策略
      * @param req CreateCCSelfDefinePolicyRequest
      * @return CreateCCSelfDefinePolicyResponse
@@ -110,7 +128,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *资源实例重命名，支持独享包、共享包、高防IP、高防IP专业版、棋牌盾；
+     *资源实例重命名，支持独享包、共享包、高防IP、高防IP专业版；
      * @param req CreateInstanceNameRequest
      * @return CreateInstanceNameResponse
      * @throws TencentCloudSDKException
@@ -157,24 +175,6 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateL4RulesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateL4Rules"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *支持读取，添加，删除7层CC自定义规则
-     * @param req CreateL7CCRuleRequest
-     * @return CreateL7CCRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateL7CCRuleResponse CreateL7CCRule(CreateL7CCRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateL7CCRuleResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateL7CCRuleResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateL7CCRule"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -265,6 +265,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateUnblockIpResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateUnblockIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除CC防护的访问频率控制规则
+     * @param req DeleteCCFrequencyRulesRequest
+     * @return DeleteCCFrequencyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCCFrequencyRulesResponse DeleteCCFrequencyRules(DeleteCCFrequencyRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCCFrequencyRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCCFrequencyRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCCFrequencyRules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -380,7 +398,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *为大禹子产品提供从巴拉多获取指标统计数据的接口
+     *为大禹子产品提供业务转发指标数据的接口
      * @param req DescribeBaradDataRequest
      * @return DescribeBaradDataResponse
      * @throws TencentCloudSDKException
@@ -391,6 +409,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBaradDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBaradData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取基础防护CC防护阈值
+     * @param req DescribeBasicCCThresholdRequest
+     * @return DescribeBasicCCThresholdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBasicCCThresholdResponse DescribeBasicCCThreshold(DescribeBasicCCThresholdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBasicCCThresholdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBasicCCThresholdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBasicCCThreshold"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -445,6 +481,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCCEvListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeCCEvList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取CC防护的访问频率控制规则
+     * @param req DescribeCCFrequencyRulesRequest
+     * @return DescribeCCFrequencyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCFrequencyRulesResponse DescribeCCFrequencyRules(DescribeCCFrequencyRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCFrequencyRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCFrequencyRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCCFrequencyRules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -535,6 +589,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSAlarmThresholdResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDDoSAlarmThreshold"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取DDoS攻击源IP地域分布图，支持全球攻击分布和国内省份攻击分布；
+     * @param req DescribeDDoSAttackIPRegionMapRequest
+     * @return DescribeDDoSAttackIPRegionMapResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSAttackIPRegionMapResponse DescribeDDoSAttackIPRegionMap(DescribeDDoSAttackIPRegionMapRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSAttackIPRegionMapResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackIPRegionMapResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDDoSAttackIPRegionMap"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -920,7 +992,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *获取产品总览统计，支持高防包、高防IP、高防IP专业版、棋牌盾
+     *获取产品总览统计，支持高防包、高防IP、高防IP专业版；
      * @param req DescribePackIndexRequest
      * @return DescribePackIndexResponse
      * @throws TencentCloudSDKException
@@ -1046,7 +1118,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *获取回源IP段，支持的产品：高防IP，高防IP专业版，棋牌盾；
+     *获取回源IP段，支持的产品：高防IP，高防IP专业版；
      * @param req DescribeSourceIpSegmentRequest
      * @return DescribeSourceIpSegmentResponse
      * @throws TencentCloudSDKException
@@ -1165,6 +1237,42 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCCAlarmThresholdResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyCCAlarmThreshold"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改CC防护的访问频率控制规则
+     * @param req ModifyCCFrequencyRulesRequest
+     * @return ModifyCCFrequencyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCCFrequencyRulesResponse ModifyCCFrequencyRules(ModifyCCFrequencyRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCCFrequencyRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCCFrequencyRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCCFrequencyRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开启或关闭CC防护的访问频率控制规则
+     * @param req ModifyCCFrequencyRulesStatusRequest
+     * @return ModifyCCFrequencyRulesStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCCFrequencyRulesStatusResponse ModifyCCFrequencyRulesStatus(ModifyCCFrequencyRulesStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCCFrequencyRulesStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCCFrequencyRulesStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCCFrequencyRulesStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

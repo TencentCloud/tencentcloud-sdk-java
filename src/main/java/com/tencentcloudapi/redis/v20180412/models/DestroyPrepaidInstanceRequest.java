@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DestroyPrepaidInstanceRequest extends AbstractModel{
 
     /**
-    * 实例Id
+    * 实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

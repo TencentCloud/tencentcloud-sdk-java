@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class DescribeServerlessGroupsRequest extends AbstractModel{
 
     /**
-    * 分组所属应用ID
-    */
-    @SerializedName("ApplicationId")
-    @Expose
-    private String ApplicationId;
-
-    /**
     * 搜索字段，模糊搜索groupName字段
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
+
+    /**
+    * 分组所属应用ID
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
 
     /**
     * 排序字段，默认为 createTime字段，支持id， name， createTime
@@ -65,20 +65,18 @@ public class DescribeServerlessGroupsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 分组所属应用ID 
-     * @return ApplicationId 分组所属应用ID
-     */
-    public String getApplicationId() {
-        return this.ApplicationId;
-    }
+    * 分组所属名字空间ID
+    */
+    @SerializedName("NamespaceId")
+    @Expose
+    private String NamespaceId;
 
     /**
-     * Set 分组所属应用ID
-     * @param ApplicationId 分组所属应用ID
-     */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
-    }
+    * 分组所属集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
 
     /**
      * Get 搜索字段，模糊搜索groupName字段 
@@ -94,6 +92,22 @@ public class DescribeServerlessGroupsRequest extends AbstractModel{
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
+    }
+
+    /**
+     * Get 分组所属应用ID 
+     * @return ApplicationId 分组所属应用ID
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 分组所属应用ID
+     * @param ApplicationId 分组所属应用ID
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
     }
 
     /**
@@ -161,15 +175,49 @@ public class DescribeServerlessGroupsRequest extends AbstractModel{
     }
 
     /**
+     * Get 分组所属名字空间ID 
+     * @return NamespaceId 分组所属名字空间ID
+     */
+    public String getNamespaceId() {
+        return this.NamespaceId;
+    }
+
+    /**
+     * Set 分组所属名字空间ID
+     * @param NamespaceId 分组所属名字空间ID
+     */
+    public void setNamespaceId(String NamespaceId) {
+        this.NamespaceId = NamespaceId;
+    }
+
+    /**
+     * Get 分组所属集群ID 
+     * @return ClusterId 分组所属集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 分组所属集群ID
+     * @param ClusterId 分组所属集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

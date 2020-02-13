@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class CreateNamespaceRequest extends AbstractModel{
 
     /**
-    * 集群ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * 命名空间名称
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
+
+    /**
+    * 集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
 
     /**
     * 命名空间描述
@@ -51,20 +51,18 @@ public class CreateNamespaceRequest extends AbstractModel{
     private String NamespaceResourceType;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
+    * 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+    */
+    @SerializedName("NamespaceType")
+    @Expose
+    private String NamespaceType;
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
+    * 命名空间ID
+    */
+    @SerializedName("NamespaceId")
+    @Expose
+    private String NamespaceId;
 
     /**
      * Get 命名空间名称 
@@ -80,6 +78,22 @@ public class CreateNamespaceRequest extends AbstractModel{
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
+    }
+
+    /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterId 集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -115,13 +129,47 @@ public class CreateNamespaceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间) 
+     * @return NamespaceType 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+     */
+    public String getNamespaceType() {
+        return this.NamespaceType;
+    }
+
+    /**
+     * Set 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+     * @param NamespaceType 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+     */
+    public void setNamespaceType(String NamespaceType) {
+        this.NamespaceType = NamespaceType;
+    }
+
+    /**
+     * Get 命名空间ID 
+     * @return NamespaceId 命名空间ID
+     */
+    public String getNamespaceId() {
+        return this.NamespaceId;
+    }
+
+    /**
+     * Set 命名空间ID
+     * @param NamespaceId 命名空间ID
+     */
+    public void setNamespaceId(String NamespaceId) {
+        this.NamespaceId = NamespaceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NamespaceDesc", this.NamespaceDesc);
         this.setParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
+        this.setParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
 
     }
 }

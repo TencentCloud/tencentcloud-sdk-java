@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePcapRequest extends AbstractModel{
 
     /**
-    * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+    * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
     */
     @SerializedName("Business")
     @Expose
@@ -58,16 +58,16 @@ public class DescribePcapRequest extends AbstractModel{
     private String Ip;
 
     /**
-     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾） 
-     * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
+     * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
-     * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
         this.Business = Business;

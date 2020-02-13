@@ -44,6 +44,14 @@ public class GeneralHandwritingOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String Scene;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -104,11 +112,32 @@ public class GeneralHandwritingOCRRequest extends AbstractModel{
     }
 
     /**
+     * Get 场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。 
+     * @return Scene 场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
+     */
+    public String getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set 场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
+     * @param Scene 场景字段，默认不用填写。
+可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
+     */
+    public void setScene(String Scene) {
+        this.Scene = Scene;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
 
     }
 }

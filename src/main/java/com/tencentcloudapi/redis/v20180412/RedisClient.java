@@ -38,6 +38,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *回收站实例立即下线
      * @param req CleanUpInstanceRequest
      * @return CleanUpInstanceResponse
@@ -157,6 +175,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupUrlResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupUrl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+     * @param req DescribeDBSecurityGroupsRequest
+     * @return DescribeDBSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -506,6 +542,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
+     * @param req DescribeProjectSecurityGroupsRequest
+     * @return DescribeProjectSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProjectSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实例慢查询记录
      * @param req DescribeSlowLogRequest
      * @return DescribeSlowLogResponse
@@ -614,6 +668,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启用读写分离
      * @param req EnableReplicaReadonlyRequest
      * @return EnableReplicaReadonlyResponse
@@ -625,6 +697,60 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableReplicaReadonlyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "EnableReplicaReadonly"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询新购实例价格
+     * @param req InquiryPriceCreateInstanceRequest
+     * @return InquiryPriceCreateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceCreateInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例续费价格（包年包月）
+     * @param req InquiryPriceRenewInstanceRequest
+     * @return InquiryPriceRenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceRenewInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例扩容价格
+     * @param req InquiryPriceUpgradeInstanceRequest
+     * @return InquiryPriceUpgradeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceUpgradeInstanceResponse InquiryPriceUpgradeInstance(InquiryPriceUpgradeInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceUpgradeInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceUpgradeInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -679,6 +805,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAutoBackupConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDBInstanceSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -30,6 +30,13 @@ public class TerrorismConfigureInfo extends AbstractModel{
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
+    * 文本鉴恐任务控制参数。
+    */
+    @SerializedName("OcrReviewInfo")
+    @Expose
+    private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
+
+    /**
      * Get 画面鉴恐任务控制参数。 
      * @return ImgReviewInfo 画面鉴恐任务控制参数。
      */
@@ -46,10 +53,27 @@ public class TerrorismConfigureInfo extends AbstractModel{
     }
 
     /**
+     * Get 文本鉴恐任务控制参数。 
+     * @return OcrReviewInfo 文本鉴恐任务控制参数。
+     */
+    public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
+        return this.OcrReviewInfo;
+    }
+
+    /**
+     * Set 文本鉴恐任务控制参数。
+     * @param OcrReviewInfo 文本鉴恐任务控制参数。
+     */
+    public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
+        this.OcrReviewInfo = OcrReviewInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
+        this.setParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
 
     }
 }

@@ -68,7 +68,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private Integer ShardCount;
 
     /**
-    * 欲购买实例的数量，目前只支持购买1个实例
+    * 欲购买实例的数量
     */
     @SerializedName("Count")
     @Expose
@@ -119,6 +119,20 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
+
+    /**
+    * 安全组id
+    */
+    @SerializedName("SecurityGroupId")
+    @Expose
+    private String SecurityGroupId;
+
+    /**
+    * 实例名称， 可以通过该字段自主的设置实例的名字
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
 
     /**
      * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。 
@@ -229,16 +243,16 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 欲购买实例的数量，目前只支持购买1个实例 
-     * @return Count 欲购买实例的数量，目前只支持购买1个实例
+     * Get 欲购买实例的数量 
+     * @return Count 欲购买实例的数量
      */
     public Integer getCount() {
         return this.Count;
     }
 
     /**
-     * Set 欲购买实例的数量，目前只支持购买1个实例
-     * @param Count 欲购买实例的数量，目前只支持购买1个实例
+     * Set 欲购买实例的数量
+     * @param Count 欲购买实例的数量
      */
     public void setCount(Integer Count) {
         this.Count = Count;
@@ -357,6 +371,38 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全组id 
+     * @return SecurityGroupId 安全组id
+     */
+    public String getSecurityGroupId() {
+        return this.SecurityGroupId;
+    }
+
+    /**
+     * Set 安全组id
+     * @param SecurityGroupId 安全组id
+     */
+    public void setSecurityGroupId(String SecurityGroupId) {
+        this.SecurityGroupId = SecurityGroupId;
+    }
+
+    /**
+     * Get 实例名称， 可以通过该字段自主的设置实例的名字 
+     * @return InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名称， 可以通过该字段自主的设置实例的名字
+     * @param InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -373,6 +419,8 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
 
     }
 }
