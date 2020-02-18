@@ -27,7 +27,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
     * 模板名称。
@@ -41,35 +41,35 @@ public class SnapshotTemplateInfo extends AbstractModel{
     */
     @SerializedName("SnapshotInterval")
     @Expose
-    private Integer SnapshotInterval;
+    private Long SnapshotInterval;
 
     /**
     * 截图宽度。0-3000 0原始宽度并适配原始比例
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 截图高度。0-2000 0原始高度并适配原始比例
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 是否开启鉴黄，0：不开启，1：开启。
     */
     @SerializedName("PornFlag")
     @Expose
-    private Integer PornFlag;
+    private Long PornFlag;
 
     /**
     * Cos AppId。
     */
     @SerializedName("CosAppId")
     @Expose
-    private Integer CosAppId;
+    private Long CosAppId;
 
     /**
     * Cos Bucket名称。
@@ -96,7 +96,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -104,7 +104,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Set 模板Id。
      * @param TemplateId 模板Id。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
@@ -128,7 +128,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Get 截图时间间隔。5-300秒。 
      * @return SnapshotInterval 截图时间间隔。5-300秒。
      */
-    public Integer getSnapshotInterval() {
+    public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
@@ -136,7 +136,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Set 截图时间间隔。5-300秒。
      * @param SnapshotInterval 截图时间间隔。5-300秒。
      */
-    public void setSnapshotInterval(Integer SnapshotInterval) {
+    public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
@@ -144,7 +144,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Get 截图宽度。0-3000 0原始宽度并适配原始比例 
      * @return Width 截图宽度。0-3000 0原始宽度并适配原始比例
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -152,7 +152,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Set 截图宽度。0-3000 0原始宽度并适配原始比例
      * @param Width 截图宽度。0-3000 0原始宽度并适配原始比例
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -160,7 +160,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Get 截图高度。0-2000 0原始高度并适配原始比例 
      * @return Height 截图高度。0-2000 0原始高度并适配原始比例
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -168,7 +168,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Set 截图高度。0-2000 0原始高度并适配原始比例
      * @param Height 截图高度。0-2000 0原始高度并适配原始比例
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -176,7 +176,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Get 是否开启鉴黄，0：不开启，1：开启。 
      * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。
      */
-    public Integer getPornFlag() {
+    public Long getPornFlag() {
         return this.PornFlag;
     }
 
@@ -184,7 +184,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Set 是否开启鉴黄，0：不开启，1：开启。
      * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。
      */
-    public void setPornFlag(Integer PornFlag) {
+    public void setPornFlag(Long PornFlag) {
         this.PornFlag = PornFlag;
     }
 
@@ -192,7 +192,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Get Cos AppId。 
      * @return CosAppId Cos AppId。
      */
-    public Integer getCosAppId() {
+    public Long getCosAppId() {
         return this.CosAppId;
     }
 
@@ -200,7 +200,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
      * Set Cos AppId。
      * @param CosAppId Cos AppId。
      */
-    public void setCosAppId(Integer CosAppId) {
+    public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
     }
 

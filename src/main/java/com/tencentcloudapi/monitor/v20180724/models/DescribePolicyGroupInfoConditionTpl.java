@@ -27,7 +27,7 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 策略组名称
@@ -61,7 +61,7 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel{
      * Get 策略组id 
      * @return GroupId 策略组id
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -69,7 +69,7 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel{
      * Set 策略组id
      * @param GroupId 策略组id
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 

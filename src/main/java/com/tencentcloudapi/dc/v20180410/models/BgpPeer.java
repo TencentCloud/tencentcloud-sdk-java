@@ -27,7 +27,7 @@ public class BgpPeer extends AbstractModel{
     */
     @SerializedName("Asn")
     @Expose
-    private Integer Asn;
+    private Long Asn;
 
     /**
     * 用户侧BGP密钥
@@ -40,7 +40,7 @@ public class BgpPeer extends AbstractModel{
      * Get 用户侧，BGP Asn 
      * @return Asn 用户侧，BGP Asn
      */
-    public Integer getAsn() {
+    public Long getAsn() {
         return this.Asn;
     }
 
@@ -48,7 +48,7 @@ public class BgpPeer extends AbstractModel{
      * Set 用户侧，BGP Asn
      * @param Asn 用户侧，BGP Asn
      */
-    public void setAsn(Integer Asn) {
+    public void setAsn(Long Asn) {
         this.Asn = Asn;
     }
 

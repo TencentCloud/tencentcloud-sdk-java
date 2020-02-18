@@ -48,7 +48,7 @@ public class DelayInfo extends AbstractModel{
     */
     @SerializedName("DelayInterval")
     @Expose
-    private Integer DelayInterval;
+    private Long DelayInterval;
 
     /**
     * 创建时间，UTC时间。
@@ -75,7 +75,7 @@ public class DelayInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 推流域名。 
@@ -129,7 +129,7 @@ public class DelayInfo extends AbstractModel{
      * Get 延播时间，单位：秒。 
      * @return DelayInterval 延播时间，单位：秒。
      */
-    public Integer getDelayInterval() {
+    public Long getDelayInterval() {
         return this.DelayInterval;
     }
 
@@ -137,7 +137,7 @@ public class DelayInfo extends AbstractModel{
      * Set 延播时间，单位：秒。
      * @param DelayInterval 延播时间，单位：秒。
      */
-    public void setDelayInterval(Integer DelayInterval) {
+    public void setDelayInterval(Long DelayInterval) {
         this.DelayInterval = DelayInterval;
     }
 
@@ -197,7 +197,7 @@ public class DelayInfo extends AbstractModel{
 -1：已过期，
 1： 生效中。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -209,7 +209,7 @@ public class DelayInfo extends AbstractModel{
 -1：已过期，
 1： 生效中。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

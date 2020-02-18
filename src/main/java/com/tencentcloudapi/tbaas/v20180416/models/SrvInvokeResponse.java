@@ -27,7 +27,7 @@ public class SrvInvokeResponse extends AbstractModel{
     */
     @SerializedName("RetCode")
     @Expose
-    private Integer RetCode;
+    private Long RetCode;
 
     /**
     * 返回消息
@@ -54,7 +54,7 @@ public class SrvInvokeResponse extends AbstractModel{
      * Get 返回码 
      * @return RetCode 返回码
      */
-    public Integer getRetCode() {
+    public Long getRetCode() {
         return this.RetCode;
     }
 
@@ -62,7 +62,7 @@ public class SrvInvokeResponse extends AbstractModel{
      * Set 返回码
      * @param RetCode 返回码
      */
-    public void setRetCode(Integer RetCode) {
+    public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;
     }
 

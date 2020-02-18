@@ -41,7 +41,7 @@ public class IPSECOptionsSpecification extends AbstractModel{
     */
     @SerializedName("IPSECSaLifetimeSeconds")
     @Expose
-    private Integer IPSECSaLifetimeSeconds;
+    private Long IPSECSaLifetimeSeconds;
 
     /**
     * PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
@@ -55,7 +55,7 @@ public class IPSECOptionsSpecification extends AbstractModel{
     */
     @SerializedName("IPSECSaLifetimeTraffic")
     @Expose
-    private Integer IPSECSaLifetimeTraffic;
+    private Long IPSECSaLifetimeTraffic;
 
     /**
      * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128 
@@ -93,7 +93,7 @@ public class IPSECOptionsSpecification extends AbstractModel{
      * Get IPsec SA lifetime(s)：单位秒，取值范围：180-604800 
      * @return IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
      */
-    public Integer getIPSECSaLifetimeSeconds() {
+    public Long getIPSECSaLifetimeSeconds() {
         return this.IPSECSaLifetimeSeconds;
     }
 
@@ -101,7 +101,7 @@ public class IPSECOptionsSpecification extends AbstractModel{
      * Set IPsec SA lifetime(s)：单位秒，取值范围：180-604800
      * @param IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
      */
-    public void setIPSECSaLifetimeSeconds(Integer IPSECSaLifetimeSeconds) {
+    public void setIPSECSaLifetimeSeconds(Long IPSECSaLifetimeSeconds) {
         this.IPSECSaLifetimeSeconds = IPSECSaLifetimeSeconds;
     }
 
@@ -125,7 +125,7 @@ public class IPSECOptionsSpecification extends AbstractModel{
      * Get IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800 
      * @return IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
      */
-    public Integer getIPSECSaLifetimeTraffic() {
+    public Long getIPSECSaLifetimeTraffic() {
         return this.IPSECSaLifetimeTraffic;
     }
 
@@ -133,7 +133,7 @@ public class IPSECOptionsSpecification extends AbstractModel{
      * Set IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
      * @param IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
      */
-    public void setIPSECSaLifetimeTraffic(Integer IPSECSaLifetimeTraffic) {
+    public void setIPSECSaLifetimeTraffic(Long IPSECSaLifetimeTraffic) {
         this.IPSECSaLifetimeTraffic = IPSECSaLifetimeTraffic;
     }
 

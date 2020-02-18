@@ -27,7 +27,7 @@ public class BcosTransInfo extends AbstractModel{
     */
     @SerializedName("BlockNumber")
     @Expose
-    private Integer BlockNumber;
+    private Long BlockNumber;
 
     /**
     * 区块时间戳
@@ -75,7 +75,7 @@ public class BcosTransInfo extends AbstractModel{
      * Get 所属区块高度 
      * @return BlockNumber 所属区块高度
      */
-    public Integer getBlockNumber() {
+    public Long getBlockNumber() {
         return this.BlockNumber;
     }
 
@@ -83,7 +83,7 @@ public class BcosTransInfo extends AbstractModel{
      * Set 所属区块高度
      * @param BlockNumber 所属区块高度
      */
-    public void setBlockNumber(Integer BlockNumber) {
+    public void setBlockNumber(Long BlockNumber) {
         this.BlockNumber = BlockNumber;
     }
 

@@ -34,7 +34,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Integer TimeSpan;
+    private Long TimeSpan;
 
     /**
     * 变配参数
@@ -48,7 +48,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
     * 位置信息
@@ -84,7 +84,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
      * Get 时间长度。按量用例长度为3600。 
      * @return TimeSpan 时间长度。按量用例长度为3600。
      */
-    public Integer getTimeSpan() {
+    public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -92,7 +92,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
      * Set 时间长度。按量用例长度为3600。
      * @param TimeSpan 时间长度。按量用例长度为3600。
      */
-    public void setTimeSpan(Integer TimeSpan) {
+    public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -116,7 +116,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
      * Get 计费类型 
      * @return PayMode 计费类型
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
@@ -124,7 +124,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
      * Set 计费类型
      * @param PayMode 计费类型
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 

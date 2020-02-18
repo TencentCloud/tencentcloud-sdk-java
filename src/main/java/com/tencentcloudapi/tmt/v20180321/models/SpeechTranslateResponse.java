@@ -34,7 +34,7 @@ public class SpeechTranslateResponse extends AbstractModel{
     */
     @SerializedName("RecognizeStatus")
     @Expose
-    private Integer RecognizeStatus;
+    private Long RecognizeStatus;
 
     /**
     * 识别出的源文
@@ -55,7 +55,7 @@ public class SpeechTranslateResponse extends AbstractModel{
     */
     @SerializedName("Seq")
     @Expose
-    private Integer Seq;
+    private Long Seq;
 
     /**
     * 源语言
@@ -76,7 +76,7 @@ public class SpeechTranslateResponse extends AbstractModel{
     */
     @SerializedName("VadSeq")
     @Expose
-    private Integer VadSeq;
+    private Long VadSeq;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -105,7 +105,7 @@ public class SpeechTranslateResponse extends AbstractModel{
      * Get 语音识别状态 1-进行中 0-完成 
      * @return RecognizeStatus 语音识别状态 1-进行中 0-完成
      */
-    public Integer getRecognizeStatus() {
+    public Long getRecognizeStatus() {
         return this.RecognizeStatus;
     }
 
@@ -113,7 +113,7 @@ public class SpeechTranslateResponse extends AbstractModel{
      * Set 语音识别状态 1-进行中 0-完成
      * @param RecognizeStatus 语音识别状态 1-进行中 0-完成
      */
-    public void setRecognizeStatus(Integer RecognizeStatus) {
+    public void setRecognizeStatus(Long RecognizeStatus) {
         this.RecognizeStatus = RecognizeStatus;
     }
 
@@ -153,7 +153,7 @@ public class SpeechTranslateResponse extends AbstractModel{
      * Get 第几个语音分片 
      * @return Seq 第几个语音分片
      */
-    public Integer getSeq() {
+    public Long getSeq() {
         return this.Seq;
     }
 
@@ -161,7 +161,7 @@ public class SpeechTranslateResponse extends AbstractModel{
      * Set 第几个语音分片
      * @param Seq 第几个语音分片
      */
-    public void setSeq(Integer Seq) {
+    public void setSeq(Long Seq) {
         this.Seq = Seq;
     }
 
@@ -201,7 +201,7 @@ public class SpeechTranslateResponse extends AbstractModel{
      * Get 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值 
      * @return VadSeq 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
      */
-    public Integer getVadSeq() {
+    public Long getVadSeq() {
         return this.VadSeq;
     }
 
@@ -209,7 +209,7 @@ public class SpeechTranslateResponse extends AbstractModel{
      * Set 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
      * @param VadSeq 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
      */
-    public void setVadSeq(Integer VadSeq) {
+    public void setVadSeq(Long VadSeq) {
         this.VadSeq = VadSeq;
     }
 

@@ -27,13 +27,13 @@ public class DeleteLiveCertRequest extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Integer CertId;
+    private Long CertId;
 
     /**
      * Get 证书Id。 
      * @return CertId 证书Id。
      */
-    public Integer getCertId() {
+    public Long getCertId() {
         return this.CertId;
     }
 
@@ -41,7 +41,7 @@ public class DeleteLiveCertRequest extends AbstractModel{
      * Set 证书Id。
      * @param CertId 证书Id。
      */
-    public void setCertId(Integer CertId) {
+    public void setCertId(Long CertId) {
         this.CertId = CertId;
     }
 

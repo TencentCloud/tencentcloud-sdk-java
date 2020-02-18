@@ -34,63 +34,63 @@ public class DeviceHardwareInfo extends AbstractModel{
     */
     @SerializedName("IsElastic")
     @Expose
-    private Integer IsElastic;
+    private Long IsElastic;
 
     /**
     * 机型计费模式，1 为预付费，2 为后付费
     */
     @SerializedName("CpmPayMode")
     @Expose
-    private Integer CpmPayMode;
+    private Long CpmPayMode;
 
     /**
     * 自定义机型，CPU 型号 ID（非自定义机型返回0）
     */
     @SerializedName("CpuId")
     @Expose
-    private Integer CpuId;
+    private Long CpuId;
 
     /**
     * 自定义机型，内存大小, 单位 GB（非自定义机型返回0）
     */
     @SerializedName("Mem")
     @Expose
-    private Integer Mem;
+    private Long Mem;
 
     /**
     * 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
     */
     @SerializedName("ContainRaidCard")
     @Expose
-    private Integer ContainRaidCard;
+    private Long ContainRaidCard;
 
     /**
     * 自定义机型系统盘类型ID（若没有则返回0）
     */
     @SerializedName("SystemDiskTypeId")
     @Expose
-    private Integer SystemDiskTypeId;
+    private Long SystemDiskTypeId;
 
     /**
     * 自定义机型系统盘数量（若没有则返回0）
     */
     @SerializedName("SystemDiskCount")
     @Expose
-    private Integer SystemDiskCount;
+    private Long SystemDiskCount;
 
     /**
     * 自定义机型数据盘类型 ID（若没有则返回0）
     */
     @SerializedName("DataDiskTypeId")
     @Expose
-    private Integer DataDiskTypeId;
+    private Long DataDiskTypeId;
 
     /**
     * 自定义机型数据盘数量（若没有则返回0）
     */
     @SerializedName("DataDiskCount")
     @Expose
-    private Integer DataDiskCount;
+    private Long DataDiskCount;
 
     /**
     * CPU 型号描述
@@ -147,7 +147,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 是否自定义机型 
      * @return IsElastic 是否自定义机型
      */
-    public Integer getIsElastic() {
+    public Long getIsElastic() {
         return this.IsElastic;
     }
 
@@ -155,7 +155,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 是否自定义机型
      * @param IsElastic 是否自定义机型
      */
-    public void setIsElastic(Integer IsElastic) {
+    public void setIsElastic(Long IsElastic) {
         this.IsElastic = IsElastic;
     }
 
@@ -163,7 +163,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 机型计费模式，1 为预付费，2 为后付费 
      * @return CpmPayMode 机型计费模式，1 为预付费，2 为后付费
      */
-    public Integer getCpmPayMode() {
+    public Long getCpmPayMode() {
         return this.CpmPayMode;
     }
 
@@ -171,7 +171,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 机型计费模式，1 为预付费，2 为后付费
      * @param CpmPayMode 机型计费模式，1 为预付费，2 为后付费
      */
-    public void setCpmPayMode(Integer CpmPayMode) {
+    public void setCpmPayMode(Long CpmPayMode) {
         this.CpmPayMode = CpmPayMode;
     }
 
@@ -179,7 +179,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 自定义机型，CPU 型号 ID（非自定义机型返回0） 
      * @return CpuId 自定义机型，CPU 型号 ID（非自定义机型返回0）
      */
-    public Integer getCpuId() {
+    public Long getCpuId() {
         return this.CpuId;
     }
 
@@ -187,7 +187,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 自定义机型，CPU 型号 ID（非自定义机型返回0）
      * @param CpuId 自定义机型，CPU 型号 ID（非自定义机型返回0）
      */
-    public void setCpuId(Integer CpuId) {
+    public void setCpuId(Long CpuId) {
         this.CpuId = CpuId;
     }
 
@@ -195,7 +195,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 自定义机型，内存大小, 单位 GB（非自定义机型返回0） 
      * @return Mem 自定义机型，内存大小, 单位 GB（非自定义机型返回0）
      */
-    public Integer getMem() {
+    public Long getMem() {
         return this.Mem;
     }
 
@@ -203,7 +203,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 自定义机型，内存大小, 单位 GB（非自定义机型返回0）
      * @param Mem 自定义机型，内存大小, 单位 GB（非自定义机型返回0）
      */
-    public void setMem(Integer Mem) {
+    public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
@@ -211,7 +211,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡 
      * @return ContainRaidCard 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
      */
-    public Integer getContainRaidCard() {
+    public Long getContainRaidCard() {
         return this.ContainRaidCard;
     }
 
@@ -219,7 +219,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
      * @param ContainRaidCard 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
      */
-    public void setContainRaidCard(Integer ContainRaidCard) {
+    public void setContainRaidCard(Long ContainRaidCard) {
         this.ContainRaidCard = ContainRaidCard;
     }
 
@@ -227,7 +227,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 自定义机型系统盘类型ID（若没有则返回0） 
      * @return SystemDiskTypeId 自定义机型系统盘类型ID（若没有则返回0）
      */
-    public Integer getSystemDiskTypeId() {
+    public Long getSystemDiskTypeId() {
         return this.SystemDiskTypeId;
     }
 
@@ -235,7 +235,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 自定义机型系统盘类型ID（若没有则返回0）
      * @param SystemDiskTypeId 自定义机型系统盘类型ID（若没有则返回0）
      */
-    public void setSystemDiskTypeId(Integer SystemDiskTypeId) {
+    public void setSystemDiskTypeId(Long SystemDiskTypeId) {
         this.SystemDiskTypeId = SystemDiskTypeId;
     }
 
@@ -243,7 +243,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 自定义机型系统盘数量（若没有则返回0） 
      * @return SystemDiskCount 自定义机型系统盘数量（若没有则返回0）
      */
-    public Integer getSystemDiskCount() {
+    public Long getSystemDiskCount() {
         return this.SystemDiskCount;
     }
 
@@ -251,7 +251,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 自定义机型系统盘数量（若没有则返回0）
      * @param SystemDiskCount 自定义机型系统盘数量（若没有则返回0）
      */
-    public void setSystemDiskCount(Integer SystemDiskCount) {
+    public void setSystemDiskCount(Long SystemDiskCount) {
         this.SystemDiskCount = SystemDiskCount;
     }
 
@@ -259,7 +259,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 自定义机型数据盘类型 ID（若没有则返回0） 
      * @return DataDiskTypeId 自定义机型数据盘类型 ID（若没有则返回0）
      */
-    public Integer getDataDiskTypeId() {
+    public Long getDataDiskTypeId() {
         return this.DataDiskTypeId;
     }
 
@@ -267,7 +267,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 自定义机型数据盘类型 ID（若没有则返回0）
      * @param DataDiskTypeId 自定义机型数据盘类型 ID（若没有则返回0）
      */
-    public void setDataDiskTypeId(Integer DataDiskTypeId) {
+    public void setDataDiskTypeId(Long DataDiskTypeId) {
         this.DataDiskTypeId = DataDiskTypeId;
     }
 
@@ -275,7 +275,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Get 自定义机型数据盘数量（若没有则返回0） 
      * @return DataDiskCount 自定义机型数据盘数量（若没有则返回0）
      */
-    public Integer getDataDiskCount() {
+    public Long getDataDiskCount() {
         return this.DataDiskCount;
     }
 
@@ -283,7 +283,7 @@ public class DeviceHardwareInfo extends AbstractModel{
      * Set 自定义机型数据盘数量（若没有则返回0）
      * @param DataDiskCount 自定义机型数据盘数量（若没有则返回0）
      */
-    public void setDataDiskCount(Integer DataDiskCount) {
+    public void setDataDiskCount(Long DataDiskCount) {
         this.DataDiskCount = DataDiskCount;
     }
 

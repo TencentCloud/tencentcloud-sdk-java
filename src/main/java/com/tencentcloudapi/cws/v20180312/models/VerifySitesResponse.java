@@ -27,14 +27,14 @@ public class VerifySitesResponse extends AbstractModel{
     */
     @SerializedName("SuccessNumber")
     @Expose
-    private Integer SuccessNumber;
+    private Long SuccessNumber;
 
     /**
     * 验证失败的根域名数量。
     */
     @SerializedName("FailNumber")
     @Expose
-    private Integer FailNumber;
+    private Long FailNumber;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class VerifySitesResponse extends AbstractModel{
      * Get 验证成功的根域名数量。 
      * @return SuccessNumber 验证成功的根域名数量。
      */
-    public Integer getSuccessNumber() {
+    public Long getSuccessNumber() {
         return this.SuccessNumber;
     }
 
@@ -55,7 +55,7 @@ public class VerifySitesResponse extends AbstractModel{
      * Set 验证成功的根域名数量。
      * @param SuccessNumber 验证成功的根域名数量。
      */
-    public void setSuccessNumber(Integer SuccessNumber) {
+    public void setSuccessNumber(Long SuccessNumber) {
         this.SuccessNumber = SuccessNumber;
     }
 
@@ -63,7 +63,7 @@ public class VerifySitesResponse extends AbstractModel{
      * Get 验证失败的根域名数量。 
      * @return FailNumber 验证失败的根域名数量。
      */
-    public Integer getFailNumber() {
+    public Long getFailNumber() {
         return this.FailNumber;
     }
 
@@ -71,7 +71,7 @@ public class VerifySitesResponse extends AbstractModel{
      * Set 验证失败的根域名数量。
      * @param FailNumber 验证失败的根域名数量。
      */
-    public void setFailNumber(Integer FailNumber) {
+    public void setFailNumber(Long FailNumber) {
         this.FailNumber = FailNumber;
     }
 

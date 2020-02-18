@@ -34,14 +34,14 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
     * 云盘所属项目ID。 如传入则仅用于鉴权。
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
      * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
@@ -63,7 +63,7 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
      * Get 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。 
      * @return DiskSize 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -71,7 +71,7 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
      * Set 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      * @param DiskSize 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -79,7 +79,7 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
      * Get 云盘所属项目ID。 如传入则仅用于鉴权。 
      * @return ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -87,7 +87,7 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
      * Set 云盘所属项目ID。 如传入则仅用于鉴权。
      * @param ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

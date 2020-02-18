@@ -41,14 +41,14 @@ public class DescribeTaskRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数量。默认取值100，最大取值1000。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 过滤条件，详情如下：
@@ -94,7 +94,7 @@ public class DescribeTaskRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -102,7 +102,7 @@ public class DescribeTaskRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -110,7 +110,7 @@ public class DescribeTaskRequest extends AbstractModel{
      * Get 返回数量。默认取值100，最大取值1000。 
      * @return Limit 返回数量。默认取值100，最大取值1000。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -118,7 +118,7 @@ public class DescribeTaskRequest extends AbstractModel{
      * Set 返回数量。默认取值100，最大取值1000。
      * @param Limit 返回数量。默认取值100，最大取值1000。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

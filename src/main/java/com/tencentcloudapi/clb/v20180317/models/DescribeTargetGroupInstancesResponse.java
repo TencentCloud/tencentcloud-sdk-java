@@ -27,7 +27,7 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 绑定的服务器信息
@@ -41,7 +41,7 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
     */
     @SerializedName("RealCount")
     @Expose
-    private Integer RealCount;
+    private Long RealCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,7 +54,7 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
      * Get 本次查询的结果数量 
      * @return TotalCount 本次查询的结果数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -62,7 +62,7 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
      * Set 本次查询的结果数量
      * @param TotalCount 本次查询的结果数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
@@ -86,7 +86,7 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
      * Get 实际统计数量，不受Limit，Offset，CAM的影响 
      * @return RealCount 实际统计数量，不受Limit，Offset，CAM的影响
      */
-    public Integer getRealCount() {
+    public Long getRealCount() {
         return this.RealCount;
     }
 
@@ -94,7 +94,7 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
      * Set 实际统计数量，不受Limit，Offset，CAM的影响
      * @param RealCount 实际统计数量，不受Limit，Offset，CAM的影响
      */
-    public void setRealCount(Integer RealCount) {
+    public void setRealCount(Long RealCount) {
         this.RealCount = RealCount;
     }
 

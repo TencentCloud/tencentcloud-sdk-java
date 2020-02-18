@@ -27,7 +27,7 @@ public class DescribeBrandMediaReportResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 按天计算的每天文章数
@@ -47,7 +47,7 @@ public class DescribeBrandMediaReportResponse extends AbstractModel{
      * Get 查询范围内文章总数 
      * @return TotalCount 查询范围内文章总数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeBrandMediaReportResponse extends AbstractModel{
      * Set 查询范围内文章总数
      * @param TotalCount 查询范围内文章总数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -27,62 +27,62 @@ public class TaskMetrics extends AbstractModel{
     */
     @SerializedName("SubmittedCount")
     @Expose
-    private Integer SubmittedCount;
+    private Long SubmittedCount;
 
     /**
     * Pending个数
     */
     @SerializedName("PendingCount")
     @Expose
-    private Integer PendingCount;
+    private Long PendingCount;
 
     /**
     * Runnable个数
     */
     @SerializedName("RunnableCount")
     @Expose
-    private Integer RunnableCount;
+    private Long RunnableCount;
 
     /**
     * Starting个数
     */
     @SerializedName("StartingCount")
     @Expose
-    private Integer StartingCount;
+    private Long StartingCount;
 
     /**
     * Running个数
     */
     @SerializedName("RunningCount")
     @Expose
-    private Integer RunningCount;
+    private Long RunningCount;
 
     /**
     * Succeed个数
     */
     @SerializedName("SucceedCount")
     @Expose
-    private Integer SucceedCount;
+    private Long SucceedCount;
 
     /**
     * FailedInterrupted个数
     */
     @SerializedName("FailedInterruptedCount")
     @Expose
-    private Integer FailedInterruptedCount;
+    private Long FailedInterruptedCount;
 
     /**
     * Failed个数
     */
     @SerializedName("FailedCount")
     @Expose
-    private Integer FailedCount;
+    private Long FailedCount;
 
     /**
      * Get Submitted个数 
      * @return SubmittedCount Submitted个数
      */
-    public Integer getSubmittedCount() {
+    public Long getSubmittedCount() {
         return this.SubmittedCount;
     }
 
@@ -90,7 +90,7 @@ public class TaskMetrics extends AbstractModel{
      * Set Submitted个数
      * @param SubmittedCount Submitted个数
      */
-    public void setSubmittedCount(Integer SubmittedCount) {
+    public void setSubmittedCount(Long SubmittedCount) {
         this.SubmittedCount = SubmittedCount;
     }
 
@@ -98,7 +98,7 @@ public class TaskMetrics extends AbstractModel{
      * Get Pending个数 
      * @return PendingCount Pending个数
      */
-    public Integer getPendingCount() {
+    public Long getPendingCount() {
         return this.PendingCount;
     }
 
@@ -106,7 +106,7 @@ public class TaskMetrics extends AbstractModel{
      * Set Pending个数
      * @param PendingCount Pending个数
      */
-    public void setPendingCount(Integer PendingCount) {
+    public void setPendingCount(Long PendingCount) {
         this.PendingCount = PendingCount;
     }
 
@@ -114,7 +114,7 @@ public class TaskMetrics extends AbstractModel{
      * Get Runnable个数 
      * @return RunnableCount Runnable个数
      */
-    public Integer getRunnableCount() {
+    public Long getRunnableCount() {
         return this.RunnableCount;
     }
 
@@ -122,7 +122,7 @@ public class TaskMetrics extends AbstractModel{
      * Set Runnable个数
      * @param RunnableCount Runnable个数
      */
-    public void setRunnableCount(Integer RunnableCount) {
+    public void setRunnableCount(Long RunnableCount) {
         this.RunnableCount = RunnableCount;
     }
 
@@ -130,7 +130,7 @@ public class TaskMetrics extends AbstractModel{
      * Get Starting个数 
      * @return StartingCount Starting个数
      */
-    public Integer getStartingCount() {
+    public Long getStartingCount() {
         return this.StartingCount;
     }
 
@@ -138,7 +138,7 @@ public class TaskMetrics extends AbstractModel{
      * Set Starting个数
      * @param StartingCount Starting个数
      */
-    public void setStartingCount(Integer StartingCount) {
+    public void setStartingCount(Long StartingCount) {
         this.StartingCount = StartingCount;
     }
 
@@ -146,7 +146,7 @@ public class TaskMetrics extends AbstractModel{
      * Get Running个数 
      * @return RunningCount Running个数
      */
-    public Integer getRunningCount() {
+    public Long getRunningCount() {
         return this.RunningCount;
     }
 
@@ -154,7 +154,7 @@ public class TaskMetrics extends AbstractModel{
      * Set Running个数
      * @param RunningCount Running个数
      */
-    public void setRunningCount(Integer RunningCount) {
+    public void setRunningCount(Long RunningCount) {
         this.RunningCount = RunningCount;
     }
 
@@ -162,7 +162,7 @@ public class TaskMetrics extends AbstractModel{
      * Get Succeed个数 
      * @return SucceedCount Succeed个数
      */
-    public Integer getSucceedCount() {
+    public Long getSucceedCount() {
         return this.SucceedCount;
     }
 
@@ -170,7 +170,7 @@ public class TaskMetrics extends AbstractModel{
      * Set Succeed个数
      * @param SucceedCount Succeed个数
      */
-    public void setSucceedCount(Integer SucceedCount) {
+    public void setSucceedCount(Long SucceedCount) {
         this.SucceedCount = SucceedCount;
     }
 
@@ -178,7 +178,7 @@ public class TaskMetrics extends AbstractModel{
      * Get FailedInterrupted个数 
      * @return FailedInterruptedCount FailedInterrupted个数
      */
-    public Integer getFailedInterruptedCount() {
+    public Long getFailedInterruptedCount() {
         return this.FailedInterruptedCount;
     }
 
@@ -186,7 +186,7 @@ public class TaskMetrics extends AbstractModel{
      * Set FailedInterrupted个数
      * @param FailedInterruptedCount FailedInterrupted个数
      */
-    public void setFailedInterruptedCount(Integer FailedInterruptedCount) {
+    public void setFailedInterruptedCount(Long FailedInterruptedCount) {
         this.FailedInterruptedCount = FailedInterruptedCount;
     }
 
@@ -194,7 +194,7 @@ public class TaskMetrics extends AbstractModel{
      * Get Failed个数 
      * @return FailedCount Failed个数
      */
-    public Integer getFailedCount() {
+    public Long getFailedCount() {
         return this.FailedCount;
     }
 
@@ -202,7 +202,7 @@ public class TaskMetrics extends AbstractModel{
      * Set Failed个数
      * @param FailedCount Failed个数
      */
-    public void setFailedCount(Integer FailedCount) {
+    public void setFailedCount(Long FailedCount) {
         this.FailedCount = FailedCount;
     }
 

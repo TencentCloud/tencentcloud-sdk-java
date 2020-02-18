@@ -27,14 +27,14 @@ public class SyncDetailInfo extends AbstractModel{
     */
     @SerializedName("StepAll")
     @Expose
-    private Integer StepAll;
+    private Long StepAll;
 
     /**
     * 当前步骤
     */
     @SerializedName("StepNow")
     @Expose
-    private Integer StepNow;
+    private Long StepNow;
 
     /**
     * 总进度
@@ -55,14 +55,14 @@ public class SyncDetailInfo extends AbstractModel{
     */
     @SerializedName("MasterSlaveDistance")
     @Expose
-    private Integer MasterSlaveDistance;
+    private Long MasterSlaveDistance;
 
     /**
     * 主从差距，秒
     */
     @SerializedName("SecondsBehindMaster")
     @Expose
-    private Integer SecondsBehindMaster;
+    private Long SecondsBehindMaster;
 
     /**
     * 步骤信息
@@ -75,7 +75,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Get 总步骤数 
      * @return StepAll 总步骤数
      */
-    public Integer getStepAll() {
+    public Long getStepAll() {
         return this.StepAll;
     }
 
@@ -83,7 +83,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Set 总步骤数
      * @param StepAll 总步骤数
      */
-    public void setStepAll(Integer StepAll) {
+    public void setStepAll(Long StepAll) {
         this.StepAll = StepAll;
     }
 
@@ -91,7 +91,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Get 当前步骤 
      * @return StepNow 当前步骤
      */
-    public Integer getStepNow() {
+    public Long getStepNow() {
         return this.StepNow;
     }
 
@@ -99,7 +99,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Set 当前步骤
      * @param StepNow 当前步骤
      */
-    public void setStepNow(Integer StepNow) {
+    public void setStepNow(Long StepNow) {
         this.StepNow = StepNow;
     }
 
@@ -139,7 +139,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Get 主从差距，MB 
      * @return MasterSlaveDistance 主从差距，MB
      */
-    public Integer getMasterSlaveDistance() {
+    public Long getMasterSlaveDistance() {
         return this.MasterSlaveDistance;
     }
 
@@ -147,7 +147,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Set 主从差距，MB
      * @param MasterSlaveDistance 主从差距，MB
      */
-    public void setMasterSlaveDistance(Integer MasterSlaveDistance) {
+    public void setMasterSlaveDistance(Long MasterSlaveDistance) {
         this.MasterSlaveDistance = MasterSlaveDistance;
     }
 
@@ -155,7 +155,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Get 主从差距，秒 
      * @return SecondsBehindMaster 主从差距，秒
      */
-    public Integer getSecondsBehindMaster() {
+    public Long getSecondsBehindMaster() {
         return this.SecondsBehindMaster;
     }
 
@@ -163,7 +163,7 @@ public class SyncDetailInfo extends AbstractModel{
      * Set 主从差距，秒
      * @param SecondsBehindMaster 主从差距，秒
      */
-    public void setSecondsBehindMaster(Integer SecondsBehindMaster) {
+    public void setSecondsBehindMaster(Long SecondsBehindMaster) {
         this.SecondsBehindMaster = SecondsBehindMaster;
     }
 

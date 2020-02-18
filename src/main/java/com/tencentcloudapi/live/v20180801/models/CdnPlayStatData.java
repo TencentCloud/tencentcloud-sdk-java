@@ -48,14 +48,14 @@ public class CdnPlayStatData extends AbstractModel{
     */
     @SerializedName("Request")
     @Expose
-    private Integer Request;
+    private Long Request;
 
     /**
     * 并发连接数。
     */
     @SerializedName("Online")
     @Expose
-    private Integer Online;
+    private Long Online;
 
     /**
      * Get 时间点，格式为yyyy-mm-dd HH:MM:SS。 
@@ -109,7 +109,7 @@ public class CdnPlayStatData extends AbstractModel{
      * Get 新增请求数。 
      * @return Request 新增请求数。
      */
-    public Integer getRequest() {
+    public Long getRequest() {
         return this.Request;
     }
 
@@ -117,7 +117,7 @@ public class CdnPlayStatData extends AbstractModel{
      * Set 新增请求数。
      * @param Request 新增请求数。
      */
-    public void setRequest(Integer Request) {
+    public void setRequest(Long Request) {
         this.Request = Request;
     }
 
@@ -125,7 +125,7 @@ public class CdnPlayStatData extends AbstractModel{
      * Get 并发连接数。 
      * @return Online 并发连接数。
      */
-    public Integer getOnline() {
+    public Long getOnline() {
         return this.Online;
     }
 
@@ -133,7 +133,7 @@ public class CdnPlayStatData extends AbstractModel{
      * Set 并发连接数。
      * @param Online 并发连接数。
      */
-    public void setOnline(Integer Online) {
+    public void setOnline(Long Online) {
         this.Online = Online;
     }
 

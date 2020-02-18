@@ -27,7 +27,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("ProductId")
     @Expose
-    private Integer ProductId;
+    private Long ProductId;
 
     /**
     * VPC设置参数
@@ -55,7 +55,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("SupportHA")
     @Expose
-    private Integer SupportHA;
+    private Long SupportHA;
 
     /**
     * 实例名称
@@ -69,7 +69,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
     * 集群位置信息
@@ -83,7 +83,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Integer TimeSpan;
+    private Long TimeSpan;
 
     /**
     * 时间单位
@@ -125,7 +125,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Integer AutoRenew;
+    private Long AutoRenew;
 
     /**
     * 客户端Token
@@ -146,14 +146,14 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("RemoteLoginAtCreate")
     @Expose
-    private Integer RemoteLoginAtCreate;
+    private Long RemoteLoginAtCreate;
 
     /**
     * 是否开启安全集群，0表示不开启，非0表示开启
     */
     @SerializedName("CheckSecurity")
     @Expose
-    private Integer CheckSecurity;
+    private Long CheckSecurity;
 
     /**
     * 访问外部文件系统
@@ -166,7 +166,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 产品ID 
      * @return ProductId 产品ID
      */
-    public Integer getProductId() {
+    public Long getProductId() {
         return this.ProductId;
     }
 
@@ -174,7 +174,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 产品ID
      * @param ProductId 产品ID
      */
-    public void setProductId(Integer ProductId) {
+    public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
@@ -230,7 +230,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 支持HA 
      * @return SupportHA 支持HA
      */
-    public Integer getSupportHA() {
+    public Long getSupportHA() {
         return this.SupportHA;
     }
 
@@ -238,7 +238,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 支持HA
      * @param SupportHA 支持HA
      */
-    public void setSupportHA(Integer SupportHA) {
+    public void setSupportHA(Long SupportHA) {
         this.SupportHA = SupportHA;
     }
 
@@ -262,7 +262,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 计费类型 
      * @return PayMode 计费类型
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
@@ -270,7 +270,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 计费类型
      * @param PayMode 计费类型
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -294,7 +294,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 时间长度 
      * @return TimeSpan 时间长度
      */
-    public Integer getTimeSpan() {
+    public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -302,7 +302,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 时间长度
      * @param TimeSpan 时间长度
      */
-    public void setTimeSpan(Integer TimeSpan) {
+    public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -390,7 +390,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 自动续费 
      * @return AutoRenew 自动续费
      */
-    public Integer getAutoRenew() {
+    public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -398,7 +398,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 自动续费
      * @param AutoRenew 自动续费
      */
-    public void setAutoRenew(Integer AutoRenew) {
+    public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
@@ -438,7 +438,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效 
      * @return RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      */
-    public Integer getRemoteLoginAtCreate() {
+    public Long getRemoteLoginAtCreate() {
         return this.RemoteLoginAtCreate;
     }
 
@@ -446,7 +446,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      * @param RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      */
-    public void setRemoteLoginAtCreate(Integer RemoteLoginAtCreate) {
+    public void setRemoteLoginAtCreate(Long RemoteLoginAtCreate) {
         this.RemoteLoginAtCreate = RemoteLoginAtCreate;
     }
 
@@ -454,7 +454,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 是否开启安全集群，0表示不开启，非0表示开启 
      * @return CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
      */
-    public Integer getCheckSecurity() {
+    public Long getCheckSecurity() {
         return this.CheckSecurity;
     }
 
@@ -462,7 +462,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 是否开启安全集群，0表示不开启，非0表示开启
      * @param CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
      */
-    public void setCheckSecurity(Integer CheckSecurity) {
+    public void setCheckSecurity(Long CheckSecurity) {
         this.CheckSecurity = CheckSecurity;
     }
 

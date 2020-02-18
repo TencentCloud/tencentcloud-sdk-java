@@ -41,7 +41,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     */
     @SerializedName("WaitSwitch")
     @Expose
-    private Integer WaitSwitch;
+    private Long WaitSwitch;
 
     /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
@@ -79,7 +79,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
      * Get 切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。 
      * @return WaitSwitch 切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
      */
-    public Integer getWaitSwitch() {
+    public Long getWaitSwitch() {
         return this.WaitSwitch;
     }
 
@@ -87,7 +87,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
      * Set 切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
      * @param WaitSwitch 切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
      */
-    public void setWaitSwitch(Integer WaitSwitch) {
+    public void setWaitSwitch(Long WaitSwitch) {
         this.WaitSwitch = WaitSwitch;
     }
 

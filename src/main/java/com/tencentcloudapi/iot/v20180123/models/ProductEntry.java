@@ -41,7 +41,7 @@ public class ProductEntry extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * 产品名称
@@ -69,7 +69,7 @@ public class ProductEntry extends AbstractModel{
     */
     @SerializedName("AuthType")
     @Expose
-    private Integer AuthType;
+    private Long AuthType;
 
     /**
     * 数据协议（native/template）
@@ -83,7 +83,7 @@ public class ProductEntry extends AbstractModel{
     */
     @SerializedName("Deleted")
     @Expose
-    private Integer Deleted;
+    private Long Deleted;
 
     /**
     * 备注
@@ -156,7 +156,7 @@ public class ProductEntry extends AbstractModel{
      * Get AppId 
      * @return AppId AppId
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
@@ -164,7 +164,7 @@ public class ProductEntry extends AbstractModel{
      * Set AppId
      * @param AppId AppId
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
@@ -220,7 +220,7 @@ public class ProductEntry extends AbstractModel{
      * Get 鉴权类型（0：直连，1：Token） 
      * @return AuthType 鉴权类型（0：直连，1：Token）
      */
-    public Integer getAuthType() {
+    public Long getAuthType() {
         return this.AuthType;
     }
 
@@ -228,7 +228,7 @@ public class ProductEntry extends AbstractModel{
      * Set 鉴权类型（0：直连，1：Token）
      * @param AuthType 鉴权类型（0：直连，1：Token）
      */
-    public void setAuthType(Integer AuthType) {
+    public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
     }
 
@@ -252,7 +252,7 @@ public class ProductEntry extends AbstractModel{
      * Get 删除（0未删除） 
      * @return Deleted 删除（0未删除）
      */
-    public Integer getDeleted() {
+    public Long getDeleted() {
         return this.Deleted;
     }
 
@@ -260,7 +260,7 @@ public class ProductEntry extends AbstractModel{
      * Set 删除（0未删除）
      * @param Deleted 删除（0未删除）
      */
-    public void setDeleted(Integer Deleted) {
+    public void setDeleted(Long Deleted) {
         this.Deleted = Deleted;
     }
 

@@ -62,14 +62,14 @@ public class DescribeDBErrlogsRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 分页返回，返回第几页的数据，从第0页开始计数
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
      * Get 实例ID，形如postgres-5bq3wfjd 
@@ -155,7 +155,7 @@ public class DescribeDBErrlogsRequest extends AbstractModel{
      * Get 分页返回，每页返回的最大数量。取值为1-100 
      * @return Limit 分页返回，每页返回的最大数量。取值为1-100
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -163,7 +163,7 @@ public class DescribeDBErrlogsRequest extends AbstractModel{
      * Set 分页返回，每页返回的最大数量。取值为1-100
      * @param Limit 分页返回，每页返回的最大数量。取值为1-100
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -171,7 +171,7 @@ public class DescribeDBErrlogsRequest extends AbstractModel{
      * Get 分页返回，返回第几页的数据，从第0页开始计数 
      * @return Offset 分页返回，返回第几页的数据，从第0页开始计数
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -179,7 +179,7 @@ public class DescribeDBErrlogsRequest extends AbstractModel{
      * Set 分页返回，返回第几页的数据，从第0页开始计数
      * @param Offset 分页返回，返回第几页的数据，从第0页开始计数
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 

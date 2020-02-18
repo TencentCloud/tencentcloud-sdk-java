@@ -27,7 +27,7 @@ public class SecurityGroupPolicy extends AbstractModel{
     */
     @SerializedName("PolicyIndex")
     @Expose
-    private Integer PolicyIndex;
+    private Long PolicyIndex;
 
     /**
     * 协议, 取值: TCP,UDP, ICMP。
@@ -103,7 +103,7 @@ public class SecurityGroupPolicy extends AbstractModel{
      * Get 安全组规则索引号。 
      * @return PolicyIndex 安全组规则索引号。
      */
-    public Integer getPolicyIndex() {
+    public Long getPolicyIndex() {
         return this.PolicyIndex;
     }
 
@@ -111,7 +111,7 @@ public class SecurityGroupPolicy extends AbstractModel{
      * Set 安全组规则索引号。
      * @param PolicyIndex 安全组规则索引号。
      */
-    public void setPolicyIndex(Integer PolicyIndex) {
+    public void setPolicyIndex(Long PolicyIndex) {
         this.PolicyIndex = PolicyIndex;
     }
 

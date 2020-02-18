@@ -34,7 +34,7 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
     */
     @SerializedName("DesiredCapacity")
     @Expose
-    private Integer DesiredCapacity;
+    private Long DesiredCapacity;
 
     /**
      * Get 伸缩组ID 
@@ -56,7 +56,7 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
      * Get 期望实例数 
      * @return DesiredCapacity 期望实例数
      */
-    public Integer getDesiredCapacity() {
+    public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
@@ -64,7 +64,7 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
      * Set 期望实例数
      * @param DesiredCapacity 期望实例数
      */
-    public void setDesiredCapacity(Integer DesiredCapacity) {
+    public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 

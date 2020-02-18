@@ -49,7 +49,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("Forward")
     @Expose
-    private Integer Forward;
+    private Long Forward;
 
     /**
     * 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
@@ -74,7 +74,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 负载均衡实例的创建时间。
@@ -97,7 +97,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 私有网络的 ID
@@ -113,7 +113,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("OpenBgp")
     @Expose
-    private Integer OpenBgp;
+    private Long OpenBgp;
 
     /**
     * 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
@@ -129,7 +129,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("Isolation")
     @Expose
-    private Integer Isolation;
+    private Long Isolation;
 
     /**
     * 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
@@ -193,7 +193,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("NumericalVpcId")
     @Expose
-    private Integer NumericalVpcId;
+    private Long NumericalVpcId;
 
     /**
     * 负载均衡IP地址所属的ISP
@@ -403,7 +403,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。 
      * @return Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      */
-    public Integer getForward() {
+    public Long getForward() {
         return this.Forward;
     }
 
@@ -411,7 +411,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      * @param Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      */
-    public void setForward(Integer Forward) {
+    public void setForward(Long Forward) {
         this.Forward = Forward;
     }
 
@@ -463,7 +463,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 0：创建中，1：正常运行。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -475,7 +475,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 0：创建中，1：正常运行。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -523,7 +523,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 负载均衡实例所属的项目 ID， 0 表示默认项目。 
      * @return ProjectId 负载均衡实例所属的项目 ID， 0 表示默认项目。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -531,7 +531,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 负载均衡实例所属的项目 ID， 0 表示默认项目。
      * @param ProjectId 负载均衡实例所属的项目 ID， 0 表示默认项目。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -561,7 +561,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @return OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getOpenBgp() {
+    public Long getOpenBgp() {
         return this.OpenBgp;
     }
 
@@ -571,7 +571,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOpenBgp(Integer OpenBgp) {
+    public void setOpenBgp(Long OpenBgp) {
         this.OpenBgp = OpenBgp;
     }
 
@@ -601,7 +601,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @return Isolation 0：表示未被隔离，1：表示被隔离。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getIsolation() {
+    public Long getIsolation() {
         return this.Isolation;
     }
 
@@ -611,7 +611,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param Isolation 0：表示未被隔离，1：表示被隔离。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIsolation(Integer Isolation) {
+    public void setIsolation(Long Isolation) {
         this.Isolation = Isolation;
     }
 
@@ -761,7 +761,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @return NumericalVpcId 数值形式的私有网络 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getNumericalVpcId() {
+    public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
@@ -771,7 +771,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param NumericalVpcId 数值形式的私有网络 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setNumericalVpcId(Integer NumericalVpcId) {
+    public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
     }
 

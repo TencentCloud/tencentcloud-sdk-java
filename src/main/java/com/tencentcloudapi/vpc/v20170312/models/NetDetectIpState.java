@@ -39,21 +39,21 @@ public class NetDetectIpState extends AbstractModel{
     */
     @SerializedName("State")
     @Expose
-    private Integer State;
+    private Long State;
 
     /**
     * 时延，单位毫秒
     */
     @SerializedName("Delay")
     @Expose
-    private Integer Delay;
+    private Long Delay;
 
     /**
     * 丢包率
     */
     @SerializedName("PacketLossRate")
     @Expose
-    private Integer PacketLossRate;
+    private Long PacketLossRate;
 
     /**
      * Get 探测目的IPv4地址。 
@@ -85,7 +85,7 @@ public class NetDetectIpState extends AbstractModel{
 -3：IN ACL丢包；
 -4：其他错误；
      */
-    public Integer getState() {
+    public Long getState() {
         return this.State;
     }
 
@@ -103,7 +103,7 @@ public class NetDetectIpState extends AbstractModel{
 -3：IN ACL丢包；
 -4：其他错误；
      */
-    public void setState(Integer State) {
+    public void setState(Long State) {
         this.State = State;
     }
 
@@ -111,7 +111,7 @@ public class NetDetectIpState extends AbstractModel{
      * Get 时延，单位毫秒 
      * @return Delay 时延，单位毫秒
      */
-    public Integer getDelay() {
+    public Long getDelay() {
         return this.Delay;
     }
 
@@ -119,7 +119,7 @@ public class NetDetectIpState extends AbstractModel{
      * Set 时延，单位毫秒
      * @param Delay 时延，单位毫秒
      */
-    public void setDelay(Integer Delay) {
+    public void setDelay(Long Delay) {
         this.Delay = Delay;
     }
 
@@ -127,7 +127,7 @@ public class NetDetectIpState extends AbstractModel{
      * Get 丢包率 
      * @return PacketLossRate 丢包率
      */
-    public Integer getPacketLossRate() {
+    public Long getPacketLossRate() {
         return this.PacketLossRate;
     }
 
@@ -135,7 +135,7 @@ public class NetDetectIpState extends AbstractModel{
      * Set 丢包率
      * @param PacketLossRate 丢包率
      */
-    public void setPacketLossRate(Integer PacketLossRate) {
+    public void setPacketLossRate(Long PacketLossRate) {
         this.PacketLossRate = PacketLossRate;
     }
 

@@ -62,21 +62,21 @@ public class ParameterDetail extends AbstractModel{
     */
     @SerializedName("NeedReboot")
     @Expose
-    private Integer NeedReboot;
+    private Long NeedReboot;
 
     /**
     * 参数允许的最大值
     */
     @SerializedName("Max")
     @Expose
-    private Integer Max;
+    private Long Max;
 
     /**
     * 参数允许的最小值
     */
     @SerializedName("Min")
     @Expose
-    private Integer Min;
+    private Long Min;
 
     /**
     * 参数的可选枚举值。如果为非枚举参数，则为空
@@ -169,7 +169,7 @@ public class ParameterDetail extends AbstractModel{
      * Get 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启 
      * @return NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      */
-    public Integer getNeedReboot() {
+    public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
@@ -177,7 +177,7 @@ public class ParameterDetail extends AbstractModel{
      * Set 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      * @param NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      */
-    public void setNeedReboot(Integer NeedReboot) {
+    public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
@@ -185,7 +185,7 @@ public class ParameterDetail extends AbstractModel{
      * Get 参数允许的最大值 
      * @return Max 参数允许的最大值
      */
-    public Integer getMax() {
+    public Long getMax() {
         return this.Max;
     }
 
@@ -193,7 +193,7 @@ public class ParameterDetail extends AbstractModel{
      * Set 参数允许的最大值
      * @param Max 参数允许的最大值
      */
-    public void setMax(Integer Max) {
+    public void setMax(Long Max) {
         this.Max = Max;
     }
 
@@ -201,7 +201,7 @@ public class ParameterDetail extends AbstractModel{
      * Get 参数允许的最小值 
      * @return Min 参数允许的最小值
      */
-    public Integer getMin() {
+    public Long getMin() {
         return this.Min;
     }
 
@@ -209,7 +209,7 @@ public class ParameterDetail extends AbstractModel{
      * Set 参数允许的最小值
      * @param Min 参数允许的最小值
      */
-    public void setMin(Integer Min) {
+    public void setMin(Long Min) {
         this.Min = Min;
     }
 

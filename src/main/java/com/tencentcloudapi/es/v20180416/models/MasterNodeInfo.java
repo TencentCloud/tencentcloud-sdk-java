@@ -41,28 +41,28 @@ public class MasterNodeInfo extends AbstractModel{
     */
     @SerializedName("MasterNodeNum")
     @Expose
-    private Integer MasterNodeNum;
+    private Long MasterNodeNum;
 
     /**
     * 专用主节点CPU核数
     */
     @SerializedName("MasterNodeCpuNum")
     @Expose
-    private Integer MasterNodeCpuNum;
+    private Long MasterNodeCpuNum;
 
     /**
     * 专用主节点内存大小，单位GB
     */
     @SerializedName("MasterNodeMemSize")
     @Expose
-    private Integer MasterNodeMemSize;
+    private Long MasterNodeMemSize;
 
     /**
     * 专用主节点磁盘大小，单位GB
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
-    private Integer MasterNodeDiskSize;
+    private Long MasterNodeDiskSize;
 
     /**
     * 专用主节点磁盘类型
@@ -107,7 +107,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Get 专用主节点个数 
      * @return MasterNodeNum 专用主节点个数
      */
-    public Integer getMasterNodeNum() {
+    public Long getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
@@ -115,7 +115,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Set 专用主节点个数
      * @param MasterNodeNum 专用主节点个数
      */
-    public void setMasterNodeNum(Integer MasterNodeNum) {
+    public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
@@ -123,7 +123,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Get 专用主节点CPU核数 
      * @return MasterNodeCpuNum 专用主节点CPU核数
      */
-    public Integer getMasterNodeCpuNum() {
+    public Long getMasterNodeCpuNum() {
         return this.MasterNodeCpuNum;
     }
 
@@ -131,7 +131,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Set 专用主节点CPU核数
      * @param MasterNodeCpuNum 专用主节点CPU核数
      */
-    public void setMasterNodeCpuNum(Integer MasterNodeCpuNum) {
+    public void setMasterNodeCpuNum(Long MasterNodeCpuNum) {
         this.MasterNodeCpuNum = MasterNodeCpuNum;
     }
 
@@ -139,7 +139,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Get 专用主节点内存大小，单位GB 
      * @return MasterNodeMemSize 专用主节点内存大小，单位GB
      */
-    public Integer getMasterNodeMemSize() {
+    public Long getMasterNodeMemSize() {
         return this.MasterNodeMemSize;
     }
 
@@ -147,7 +147,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Set 专用主节点内存大小，单位GB
      * @param MasterNodeMemSize 专用主节点内存大小，单位GB
      */
-    public void setMasterNodeMemSize(Integer MasterNodeMemSize) {
+    public void setMasterNodeMemSize(Long MasterNodeMemSize) {
         this.MasterNodeMemSize = MasterNodeMemSize;
     }
 
@@ -155,7 +155,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Get 专用主节点磁盘大小，单位GB 
      * @return MasterNodeDiskSize 专用主节点磁盘大小，单位GB
      */
-    public Integer getMasterNodeDiskSize() {
+    public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
@@ -163,7 +163,7 @@ public class MasterNodeInfo extends AbstractModel{
      * Set 专用主节点磁盘大小，单位GB
      * @param MasterNodeDiskSize 专用主节点磁盘大小，单位GB
      */
-    public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
+    public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
     }
 

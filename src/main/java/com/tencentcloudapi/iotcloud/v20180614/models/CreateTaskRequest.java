@@ -48,7 +48,7 @@ public class CreateTaskRequest extends AbstractModel{
     */
     @SerializedName("ScheduleTimeInSeconds")
     @Expose
-    private Integer ScheduleTimeInSeconds;
+    private Long ScheduleTimeInSeconds;
 
     /**
     * 任务描述细节，描述见下 Task
@@ -62,7 +62,7 @@ public class CreateTaskRequest extends AbstractModel{
     */
     @SerializedName("MaxExecutionTimeInSeconds")
     @Expose
-    private Integer MaxExecutionTimeInSeconds;
+    private Long MaxExecutionTimeInSeconds;
 
     /**
      * Get 任务类型，取值为 “UpdateShadow” 或者 “PublishMessage” 
@@ -116,7 +116,7 @@ public class CreateTaskRequest extends AbstractModel{
      * Get 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后 
      * @return ScheduleTimeInSeconds 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
      */
-    public Integer getScheduleTimeInSeconds() {
+    public Long getScheduleTimeInSeconds() {
         return this.ScheduleTimeInSeconds;
     }
 
@@ -124,7 +124,7 @@ public class CreateTaskRequest extends AbstractModel{
      * Set 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
      * @param ScheduleTimeInSeconds 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
      */
-    public void setScheduleTimeInSeconds(Integer ScheduleTimeInSeconds) {
+    public void setScheduleTimeInSeconds(Long ScheduleTimeInSeconds) {
         this.ScheduleTimeInSeconds = ScheduleTimeInSeconds;
     }
 
@@ -148,7 +148,7 @@ public class CreateTaskRequest extends AbstractModel{
      * Get 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400 
      * @return MaxExecutionTimeInSeconds 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
      */
-    public Integer getMaxExecutionTimeInSeconds() {
+    public Long getMaxExecutionTimeInSeconds() {
         return this.MaxExecutionTimeInSeconds;
     }
 
@@ -156,7 +156,7 @@ public class CreateTaskRequest extends AbstractModel{
      * Set 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
      * @param MaxExecutionTimeInSeconds 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
      */
-    public void setMaxExecutionTimeInSeconds(Integer MaxExecutionTimeInSeconds) {
+    public void setMaxExecutionTimeInSeconds(Long MaxExecutionTimeInSeconds) {
         this.MaxExecutionTimeInSeconds = MaxExecutionTimeInSeconds;
     }
 

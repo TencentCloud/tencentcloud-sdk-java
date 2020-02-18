@@ -34,7 +34,7 @@ public class ModifyComputeEnvRequest extends AbstractModel{
     */
     @SerializedName("DesiredComputeNodeCount")
     @Expose
-    private Integer DesiredComputeNodeCount;
+    private Long DesiredComputeNodeCount;
 
     /**
     * 计算环境名称
@@ -77,7 +77,7 @@ public class ModifyComputeEnvRequest extends AbstractModel{
      * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
-    public Integer getDesiredComputeNodeCount() {
+    public Long getDesiredComputeNodeCount() {
         return this.DesiredComputeNodeCount;
     }
 
@@ -85,7 +85,7 @@ public class ModifyComputeEnvRequest extends AbstractModel{
      * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
-    public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
+    public void setDesiredComputeNodeCount(Long DesiredComputeNodeCount) {
         this.DesiredComputeNodeCount = DesiredComputeNodeCount;
     }
 

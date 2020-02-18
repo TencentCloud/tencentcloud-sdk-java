@@ -35,7 +35,7 @@ public class DescribeExistedInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -68,7 +68,7 @@ public class DescribeExistedInstancesResponse extends AbstractModel{
      * Get 符合条件的实例数量。 
      * @return TotalCount 符合条件的实例数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -76,7 +76,7 @@ public class DescribeExistedInstancesResponse extends AbstractModel{
      * Set 符合条件的实例数量。
      * @param TotalCount 符合条件的实例数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -27,7 +27,7 @@ public class DescribeBinlogsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 符合查询条件的二进制日志文件详情。
@@ -47,7 +47,7 @@ public class DescribeBinlogsResponse extends AbstractModel{
      * Get 符合查询条件的日志文件总数。 
      * @return TotalCount 符合查询条件的日志文件总数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeBinlogsResponse extends AbstractModel{
      * Set 符合查询条件的日志文件总数。
      * @param TotalCount 符合查询条件的日志文件总数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

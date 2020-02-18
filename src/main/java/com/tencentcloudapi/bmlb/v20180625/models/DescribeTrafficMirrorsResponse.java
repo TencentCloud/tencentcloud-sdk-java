@@ -27,7 +27,7 @@ public class DescribeTrafficMirrorsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
@@ -47,7 +47,7 @@ public class DescribeTrafficMirrorsResponse extends AbstractModel{
      * Get 流量镜像总数。 
      * @return TotalCount 流量镜像总数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeTrafficMirrorsResponse extends AbstractModel{
      * Set 流量镜像总数。
      * @param TotalCount 流量镜像总数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

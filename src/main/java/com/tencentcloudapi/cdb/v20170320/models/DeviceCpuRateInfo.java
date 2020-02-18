@@ -27,20 +27,20 @@ public class DeviceCpuRateInfo extends AbstractModel{
     */
     @SerializedName("CpuCore")
     @Expose
-    private Integer CpuCore;
+    private Long CpuCore;
 
     /**
     * Cpu使用率
     */
     @SerializedName("Rate")
     @Expose
-    private Integer [] Rate;
+    private Long [] Rate;
 
     /**
      * Get Cpu核编号 
      * @return CpuCore Cpu核编号
      */
-    public Integer getCpuCore() {
+    public Long getCpuCore() {
         return this.CpuCore;
     }
 
@@ -48,7 +48,7 @@ public class DeviceCpuRateInfo extends AbstractModel{
      * Set Cpu核编号
      * @param CpuCore Cpu核编号
      */
-    public void setCpuCore(Integer CpuCore) {
+    public void setCpuCore(Long CpuCore) {
         this.CpuCore = CpuCore;
     }
 
@@ -56,7 +56,7 @@ public class DeviceCpuRateInfo extends AbstractModel{
      * Get Cpu使用率 
      * @return Rate Cpu使用率
      */
-    public Integer [] getRate() {
+    public Long [] getRate() {
         return this.Rate;
     }
 
@@ -64,7 +64,7 @@ public class DeviceCpuRateInfo extends AbstractModel{
      * Set Cpu使用率
      * @param Rate Cpu使用率
      */
-    public void setRate(Integer [] Rate) {
+    public void setRate(Long [] Rate) {
         this.Rate = Rate;
     }
 

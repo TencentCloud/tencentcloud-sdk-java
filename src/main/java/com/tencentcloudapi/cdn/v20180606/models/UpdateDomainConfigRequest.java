@@ -34,7 +34,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 源站配置
@@ -245,7 +245,7 @@ global：全球加速
      * Get 项目 ID 
      * @return ProjectId 项目 ID
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -253,7 +253,7 @@ global：全球加速
      * Set 项目 ID
      * @param ProjectId 项目 ID
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

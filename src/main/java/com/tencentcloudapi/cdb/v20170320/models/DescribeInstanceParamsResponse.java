@@ -27,7 +27,7 @@ public class DescribeInstanceParamsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 参数详情。
@@ -47,7 +47,7 @@ public class DescribeInstanceParamsResponse extends AbstractModel{
      * Get 实例的参数总数。 
      * @return TotalCount 实例的参数总数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeInstanceParamsResponse extends AbstractModel{
      * Set 实例的参数总数。
      * @param TotalCount 实例的参数总数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

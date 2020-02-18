@@ -34,7 +34,7 @@ public class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
      * Get 任务ID，例如msp-jitoh33n 
@@ -56,7 +56,7 @@ public class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel{
      * Get 项目ID，例如10005 
      * @return ProjectId 项目ID，例如10005
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -64,7 +64,7 @@ public class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel{
      * Set 项目ID，例如10005
      * @param ProjectId 项目ID，例如10005
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

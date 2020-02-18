@@ -34,7 +34,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends Abst
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Integer InternetMaxBandwidthOut;
+    private Long InternetMaxBandwidthOut;
 
     /**
      * Get VPN网关实例ID。 
@@ -56,7 +56,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends Abst
      * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。 
      * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
-    public Integer getInternetMaxBandwidthOut() {
+    public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -64,7 +64,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends Abst
      * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
-    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

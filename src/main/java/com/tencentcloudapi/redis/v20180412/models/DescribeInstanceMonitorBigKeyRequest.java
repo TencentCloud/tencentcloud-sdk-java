@@ -34,7 +34,7 @@ public class DescribeInstanceMonitorBigKeyRequest extends AbstractModel{
     */
     @SerializedName("ReqType")
     @Expose
-    private Integer ReqType;
+    private Long ReqType;
 
     /**
     * 时间；例如："20190219"
@@ -63,7 +63,7 @@ public class DescribeInstanceMonitorBigKeyRequest extends AbstractModel{
      * Get 请求类型：1——string类型，2——所有类型 
      * @return ReqType 请求类型：1——string类型，2——所有类型
      */
-    public Integer getReqType() {
+    public Long getReqType() {
         return this.ReqType;
     }
 
@@ -71,7 +71,7 @@ public class DescribeInstanceMonitorBigKeyRequest extends AbstractModel{
      * Set 请求类型：1——string类型，2——所有类型
      * @param ReqType 请求类型：1——string类型，2——所有类型
      */
-    public void setReqType(Integer ReqType) {
+    public void setReqType(Long ReqType) {
         this.ReqType = ReqType;
     }
 

@@ -28,7 +28,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
     */
     @SerializedName("EventId")
     @Expose
-    private Integer EventId;
+    private Long EventId;
 
     /**
     * 事件中文名
@@ -124,7 +124,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
     */
     @SerializedName("SupportAlarm")
     @Expose
-    private Integer SupportAlarm;
+    private Long SupportAlarm;
 
     /**
     * 事件类型
@@ -140,7 +140,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
     */
     @SerializedName("StartTime")
     @Expose
-    private Integer StartTime;
+    private Long StartTime;
 
     /**
     * 更新时间
@@ -148,7 +148,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Integer UpdateTime;
+    private Long UpdateTime;
 
     /**
     * 实例对象信息
@@ -172,7 +172,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
     */
     @SerializedName("IsAlarmConfig")
     @Expose
-    private Integer IsAlarmConfig;
+    private Long IsAlarmConfig;
 
     /**
     * 策略信息
@@ -188,7 +188,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @return EventId 事件ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getEventId() {
+    public Long getEventId() {
         return this.EventId;
     }
 
@@ -198,7 +198,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @param EventId 事件ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEventId(Integer EventId) {
+    public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
@@ -428,7 +428,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @return SupportAlarm 是否支持告警
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getSupportAlarm() {
+    public Long getSupportAlarm() {
         return this.SupportAlarm;
     }
 
@@ -438,7 +438,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @param SupportAlarm 是否支持告警
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSupportAlarm(Integer SupportAlarm) {
+    public void setSupportAlarm(Long SupportAlarm) {
         this.SupportAlarm = SupportAlarm;
     }
 
@@ -468,7 +468,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @return StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return this.StartTime;
     }
 
@@ -478,7 +478,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @param StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStartTime(Integer StartTime) {
+    public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
@@ -488,7 +488,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getUpdateTime() {
+    public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
@@ -498,7 +498,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUpdateTime(Integer UpdateTime) {
+    public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
@@ -548,7 +548,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @return IsAlarmConfig 是否配置告警
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getIsAlarmConfig() {
+    public Long getIsAlarmConfig() {
         return this.IsAlarmConfig;
     }
 
@@ -558,7 +558,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
      * @param IsAlarmConfig 是否配置告警
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIsAlarmConfig(Integer IsAlarmConfig) {
+    public void setIsAlarmConfig(Long IsAlarmConfig) {
         this.IsAlarmConfig = IsAlarmConfig;
     }
 

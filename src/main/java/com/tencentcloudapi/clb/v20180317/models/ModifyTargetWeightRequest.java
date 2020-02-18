@@ -69,7 +69,7 @@ public class ModifyTargetWeightRequest extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
      * Get 负载均衡实例 ID 
@@ -171,7 +171,7 @@ public class ModifyTargetWeightRequest extends AbstractModel{
      * Get 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。 
      * @return Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -179,7 +179,7 @@ public class ModifyTargetWeightRequest extends AbstractModel{
      * Set 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      * @param Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 

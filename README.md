@@ -106,3 +106,7 @@ System.setProperty("https.proxyPort", "真实代理端口");
 <version>2.0.6</version>
 </dependency>
 ```
+
+# 其他问题
+
+请注意，从3.0.x版本升级到3.1.x版本有兼容性问题，对于Integer字段的使用修改为了Long类型，需要重新编译项目。

@@ -27,7 +27,7 @@ public class SyncCheckStepInfo extends AbstractModel{
     */
     @SerializedName("StepNo")
     @Expose
-    private Integer StepNo;
+    private Long StepNo;
 
     /**
     * 步骤展现名称
@@ -41,7 +41,7 @@ public class SyncCheckStepInfo extends AbstractModel{
     */
     @SerializedName("StepCode")
     @Expose
-    private Integer StepCode;
+    private Long StepCode;
 
     /**
     * 步骤执行结果提示
@@ -54,7 +54,7 @@ public class SyncCheckStepInfo extends AbstractModel{
      * Get 步骤序列 
      * @return StepNo 步骤序列
      */
-    public Integer getStepNo() {
+    public Long getStepNo() {
         return this.StepNo;
     }
 
@@ -62,7 +62,7 @@ public class SyncCheckStepInfo extends AbstractModel{
      * Set 步骤序列
      * @param StepNo 步骤序列
      */
-    public void setStepNo(Integer StepNo) {
+    public void setStepNo(Long StepNo) {
         this.StepNo = StepNo;
     }
 
@@ -86,7 +86,7 @@ public class SyncCheckStepInfo extends AbstractModel{
      * Get 步骤执行结果代码 
      * @return StepCode 步骤执行结果代码
      */
-    public Integer getStepCode() {
+    public Long getStepCode() {
         return this.StepCode;
     }
 
@@ -94,7 +94,7 @@ public class SyncCheckStepInfo extends AbstractModel{
      * Set 步骤执行结果代码
      * @param StepCode 步骤执行结果代码
      */
-    public void setStepCode(Integer StepCode) {
+    public void setStepCode(Long StepCode) {
         this.StepCode = StepCode;
     }
 

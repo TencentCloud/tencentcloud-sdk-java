@@ -27,21 +27,21 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     */
     @SerializedName("StartTimeMin")
     @Expose
-    private Integer StartTimeMin;
+    private Long StartTimeMin;
 
     /**
     * 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
     */
     @SerializedName("StartTimeMax")
     @Expose
-    private Integer StartTimeMax;
+    private Long StartTimeMax;
 
     /**
     * 备份文件保留时间，单位为天。
     */
     @SerializedName("BackupExpireDays")
     @Expose
-    private Integer BackupExpireDays;
+    private Long BackupExpireDays;
 
     /**
     * 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
@@ -55,7 +55,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     */
     @SerializedName("BinlogExpireDays")
     @Expose
-    private Integer BinlogExpireDays;
+    private Long BinlogExpireDays;
 
     /**
     * 实例自动备份的时间窗。
@@ -75,7 +75,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Get 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
      * @return StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
-    public Integer getStartTimeMin() {
+    public Long getStartTimeMin() {
         return this.StartTimeMin;
     }
 
@@ -83,7 +83,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Set 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      * @param StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
-    public void setStartTimeMin(Integer StartTimeMin) {
+    public void setStartTimeMin(Long StartTimeMin) {
         this.StartTimeMin = StartTimeMin;
     }
 
@@ -91,7 +91,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Get 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
      * @return StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
-    public Integer getStartTimeMax() {
+    public Long getStartTimeMax() {
         return this.StartTimeMax;
     }
 
@@ -99,7 +99,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Set 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      * @param StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      */
-    public void setStartTimeMax(Integer StartTimeMax) {
+    public void setStartTimeMax(Long StartTimeMax) {
         this.StartTimeMax = StartTimeMax;
     }
 
@@ -107,7 +107,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Get 备份文件保留时间，单位为天。 
      * @return BackupExpireDays 备份文件保留时间，单位为天。
      */
-    public Integer getBackupExpireDays() {
+    public Long getBackupExpireDays() {
         return this.BackupExpireDays;
     }
 
@@ -115,7 +115,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Set 备份文件保留时间，单位为天。
      * @param BackupExpireDays 备份文件保留时间，单位为天。
      */
-    public void setBackupExpireDays(Integer BackupExpireDays) {
+    public void setBackupExpireDays(Long BackupExpireDays) {
         this.BackupExpireDays = BackupExpireDays;
     }
 
@@ -139,7 +139,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Get Binlog 文件保留时间，单位为天。 
      * @return BinlogExpireDays Binlog 文件保留时间，单位为天。
      */
-    public Integer getBinlogExpireDays() {
+    public Long getBinlogExpireDays() {
         return this.BinlogExpireDays;
     }
 
@@ -147,7 +147,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
      * Set Binlog 文件保留时间，单位为天。
      * @param BinlogExpireDays Binlog 文件保留时间，单位为天。
      */
-    public void setBinlogExpireDays(Integer BinlogExpireDays) {
+    public void setBinlogExpireDays(Long BinlogExpireDays) {
         this.BinlogExpireDays = BinlogExpireDays;
     }
 

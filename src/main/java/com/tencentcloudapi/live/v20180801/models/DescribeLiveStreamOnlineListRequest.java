@@ -41,7 +41,7 @@ public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页大小，最大100。 
@@ -50,7 +50,7 @@ public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
     * 流名称，用于精确查询。
@@ -95,7 +95,7 @@ public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
      * Get 取得第几页，默认1。 
      * @return PageNum 取得第几页，默认1。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -103,7 +103,7 @@ public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
      * Set 取得第几页，默认1。
      * @param PageNum 取得第几页，默认1。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -115,7 +115,7 @@ public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
 取值：10~100之间的任意整数。
 默认值：10。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -127,7 +127,7 @@ public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
 取值：10~100之间的任意整数。
 默认值：10。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 

@@ -55,7 +55,7 @@ public class GetDeviceLogRequest extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 时间排序（desc/asc）
@@ -146,7 +146,7 @@ public class GetDeviceLogRequest extends AbstractModel{
      * Get 查询数据量 
      * @return Size 查询数据量
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -154,7 +154,7 @@ public class GetDeviceLogRequest extends AbstractModel{
      * Set 查询数据量
      * @param Size 查询数据量
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 

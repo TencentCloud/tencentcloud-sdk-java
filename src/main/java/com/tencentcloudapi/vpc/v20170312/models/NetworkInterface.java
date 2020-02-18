@@ -138,7 +138,7 @@ public class NetworkInterface extends AbstractModel{
     */
     @SerializedName("EniType")
     @Expose
-    private Integer EniType;
+    private Long EniType;
 
     /**
      * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
@@ -408,7 +408,7 @@ public class NetworkInterface extends AbstractModel{
      * Get 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。 
      * @return EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      */
-    public Integer getEniType() {
+    public Long getEniType() {
         return this.EniType;
     }
 
@@ -416,7 +416,7 @@ public class NetworkInterface extends AbstractModel{
      * Set 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      * @param EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      */
-    public void setEniType(Integer EniType) {
+    public void setEniType(Long EniType) {
         this.EniType = EniType;
     }
 

@@ -41,14 +41,14 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 地域
@@ -69,14 +69,14 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("VpcId")
     @Expose
-    private Integer VpcId;
+    private Long VpcId;
 
     /**
     * Subnet数字ID
     */
     @SerializedName("SubnetId")
     @Expose
-    private Integer SubnetId;
+    private Long SubnetId;
 
     /**
     * 状态中文描述
@@ -90,7 +90,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 内网IP
@@ -104,7 +104,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Integer Vport;
+    private Long Vport;
 
     /**
     * 创建时间
@@ -118,28 +118,28 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Integer AutoRenewFlag;
+    private Long AutoRenewFlag;
 
     /**
     * 内存大小，单位 GB
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 存储大小，单位 GB
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 分片个数
     */
     @SerializedName("ShardCount")
     @Expose
-    private Integer ShardCount;
+    private Long ShardCount;
 
     /**
     * 到期时间
@@ -174,14 +174,14 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("NodeCount")
     @Expose
-    private Integer NodeCount;
+    private Long NodeCount;
 
     /**
     * 临时实例标记，0 为非临时实例
     */
     @SerializedName("IsTmp")
     @Expose
-    private Integer IsTmp;
+    private Long IsTmp;
 
     /**
     * 独享集群ID，为空表示非独享集群实例
@@ -209,7 +209,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 外网访问的域名，公网可解析
@@ -230,14 +230,14 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("WanPort")
     @Expose
-    private Integer WanPort;
+    private Long WanPort;
 
     /**
     * 产品类型 ID（过时字段，请勿依赖该值）
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
     * 实例最后更新时间，格式为 2006-01-02 15:04:05
@@ -273,21 +273,21 @@ public class DCDBInstanceInfo extends AbstractModel{
     */
     @SerializedName("Locker")
     @Expose
-    private Integer Locker;
+    private Long Locker;
 
     /**
     * 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
     */
     @SerializedName("WanStatus")
     @Expose
-    private Integer WanStatus;
+    private Long WanStatus;
 
     /**
     * 该实例是否支持审计。1-支持；0-不支持
     */
     @SerializedName("IsAuditSupported")
     @Expose
-    private Integer IsAuditSupported;
+    private Long IsAuditSupported;
 
     /**
      * Get 实例ID 
@@ -325,7 +325,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get AppID 
      * @return AppId AppID
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
@@ -333,7 +333,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set AppID
      * @param AppId AppID
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
@@ -341,7 +341,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -349,7 +349,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -389,7 +389,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get VPC数字ID 
      * @return VpcId VPC数字ID
      */
-    public Integer getVpcId() {
+    public Long getVpcId() {
         return this.VpcId;
     }
 
@@ -397,7 +397,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set VPC数字ID
      * @param VpcId VPC数字ID
      */
-    public void setVpcId(Integer VpcId) {
+    public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -405,7 +405,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get Subnet数字ID 
      * @return SubnetId Subnet数字ID
      */
-    public Integer getSubnetId() {
+    public Long getSubnetId() {
         return this.SubnetId;
     }
 
@@ -413,7 +413,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set Subnet数字ID
      * @param SubnetId Subnet数字ID
      */
-    public void setSubnetId(Integer SubnetId) {
+    public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
@@ -437,7 +437,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 状态 
      * @return Status 状态
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -445,7 +445,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 状态
      * @param Status 状态
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -469,7 +469,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 内网端口 
      * @return Vport 内网端口
      */
-    public Integer getVport() {
+    public Long getVport() {
         return this.Vport;
     }
 
@@ -477,7 +477,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 内网端口
      * @param Vport 内网端口
      */
-    public void setVport(Integer Vport) {
+    public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
@@ -501,7 +501,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 自动续费标志 
      * @return AutoRenewFlag 自动续费标志
      */
-    public Integer getAutoRenewFlag() {
+    public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -509,7 +509,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 自动续费标志
      * @param AutoRenewFlag 自动续费标志
      */
-    public void setAutoRenewFlag(Integer AutoRenewFlag) {
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
@@ -517,7 +517,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -525,7 +525,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -533,7 +533,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 存储大小，单位 GB 
      * @return Storage 存储大小，单位 GB
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
@@ -541,7 +541,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 存储大小，单位 GB
      * @param Storage 存储大小，单位 GB
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
@@ -549,7 +549,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 分片个数 
      * @return ShardCount 分片个数
      */
-    public Integer getShardCount() {
+    public Long getShardCount() {
         return this.ShardCount;
     }
 
@@ -557,7 +557,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 分片个数
      * @param ShardCount 分片个数
      */
-    public void setShardCount(Integer ShardCount) {
+    public void setShardCount(Long ShardCount) {
         this.ShardCount = ShardCount;
     }
 
@@ -629,7 +629,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 节点数，2 为一主一从， 3 为一主二从 
      * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
-    public Integer getNodeCount() {
+    public Long getNodeCount() {
         return this.NodeCount;
     }
 
@@ -637,7 +637,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 节点数，2 为一主一从， 3 为一主二从
      * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
-    public void setNodeCount(Integer NodeCount) {
+    public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
@@ -645,7 +645,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 临时实例标记，0 为非临时实例 
      * @return IsTmp 临时实例标记，0 为非临时实例
      */
-    public Integer getIsTmp() {
+    public Long getIsTmp() {
         return this.IsTmp;
     }
 
@@ -653,7 +653,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 临时实例标记，0 为非临时实例
      * @param IsTmp 临时实例标记，0 为非临时实例
      */
-    public void setIsTmp(Integer IsTmp) {
+    public void setIsTmp(Long IsTmp) {
         this.IsTmp = IsTmp;
     }
 
@@ -709,7 +709,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 数字实例ID（过时字段，请勿依赖该值） 
      * @return Id 数字实例ID（过时字段，请勿依赖该值）
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
@@ -717,7 +717,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 数字实例ID（过时字段，请勿依赖该值）
      * @param Id 数字实例ID（过时字段，请勿依赖该值）
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
@@ -757,7 +757,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 外网端口 
      * @return WanPort 外网端口
      */
-    public Integer getWanPort() {
+    public Long getWanPort() {
         return this.WanPort;
     }
 
@@ -765,7 +765,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 外网端口
      * @param WanPort 外网端口
      */
-    public void setWanPort(Integer WanPort) {
+    public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
@@ -773,7 +773,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 产品类型 ID（过时字段，请勿依赖该值） 
      * @return Pid 产品类型 ID（过时字段，请勿依赖该值）
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
@@ -781,7 +781,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 产品类型 ID（过时字段，请勿依赖该值）
      * @param Pid 产品类型 ID（过时字段，请勿依赖该值）
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
@@ -855,7 +855,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * @return Locker 实例处于异步任务状态时，表示异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getLocker() {
+    public Long getLocker() {
         return this.Locker;
     }
 
@@ -865,7 +865,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * @param Locker 实例处于异步任务状态时，表示异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLocker(Integer Locker) {
+    public void setLocker(Long Locker) {
         this.Locker = Locker;
     }
 
@@ -873,7 +873,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中 
      * @return WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
-    public Integer getWanStatus() {
+    public Long getWanStatus() {
         return this.WanStatus;
     }
 
@@ -881,7 +881,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
-    public void setWanStatus(Integer WanStatus) {
+    public void setWanStatus(Long WanStatus) {
         this.WanStatus = WanStatus;
     }
 
@@ -889,7 +889,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Get 该实例是否支持审计。1-支持；0-不支持 
      * @return IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
-    public Integer getIsAuditSupported() {
+    public Long getIsAuditSupported() {
         return this.IsAuditSupported;
     }
 
@@ -897,7 +897,7 @@ public class DCDBInstanceInfo extends AbstractModel{
      * Set 该实例是否支持审计。1-支持；0-不支持
      * @param IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
-    public void setIsAuditSupported(Integer IsAuditSupported) {
+    public void setIsAuditSupported(Long IsAuditSupported) {
         this.IsAuditSupported = IsAuditSupported;
     }
 

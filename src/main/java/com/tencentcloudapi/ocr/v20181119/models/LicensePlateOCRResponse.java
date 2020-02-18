@@ -34,7 +34,7 @@ public class LicensePlateOCRResponse extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Integer Confidence;
+    private Long Confidence;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class LicensePlateOCRResponse extends AbstractModel{
      * Get 置信度，0 - 100 之间。 
      * @return Confidence 置信度，0 - 100 之间。
      */
-    public Integer getConfidence() {
+    public Long getConfidence() {
         return this.Confidence;
     }
 
@@ -71,7 +71,7 @@ public class LicensePlateOCRResponse extends AbstractModel{
      * Set 置信度，0 - 100 之间。
      * @param Confidence 置信度，0 - 100 之间。
      */
-    public void setConfidence(Integer Confidence) {
+    public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 

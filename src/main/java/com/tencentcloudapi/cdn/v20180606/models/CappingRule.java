@@ -49,7 +49,7 @@ path 时填充绝对路径，如 /xxx/test.html
     */
     @SerializedName("KBpsThreshold")
     @Expose
-    private Integer KBpsThreshold;
+    private Long KBpsThreshold;
 
     /**
      * Get 规则类型：
@@ -119,7 +119,7 @@ path 时填充绝对路径，如 /xxx/test.html
      * Get 下行速度值设置，单位为 KB/s 
      * @return KBpsThreshold 下行速度值设置，单位为 KB/s
      */
-    public Integer getKBpsThreshold() {
+    public Long getKBpsThreshold() {
         return this.KBpsThreshold;
     }
 
@@ -127,7 +127,7 @@ path 时填充绝对路径，如 /xxx/test.html
      * Set 下行速度值设置，单位为 KB/s
      * @param KBpsThreshold 下行速度值设置，单位为 KB/s
      */
-    public void setKBpsThreshold(Integer KBpsThreshold) {
+    public void setKBpsThreshold(Long KBpsThreshold) {
         this.KBpsThreshold = KBpsThreshold;
     }
 

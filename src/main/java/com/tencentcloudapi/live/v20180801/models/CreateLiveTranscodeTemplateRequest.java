@@ -35,7 +35,7 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
     */
     @SerializedName("VideoBitrate")
     @Expose
-    private Integer VideoBitrate;
+    private Long VideoBitrate;
 
     /**
     * 视频编码：h264/h265，默认h264。
@@ -57,7 +57,7 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
     */
     @SerializedName("AudioBitrate")
     @Expose
-    private Integer AudioBitrate;
+    private Long AudioBitrate;
 
     /**
     * 模板描述。
@@ -71,49 +71,49 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 是否保留视频，0：否，1：是。默认1。
     */
     @SerializedName("NeedVideo")
     @Expose
-    private Integer NeedVideo;
+    private Long NeedVideo;
 
     /**
     * 是否保留音频，0：否，1：是。默认1。
     */
     @SerializedName("NeedAudio")
     @Expose
-    private Integer NeedAudio;
+    private Long NeedAudio;
 
     /**
     * 高，默认0。
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 帧率，默认0。
     */
     @SerializedName("Fps")
     @Expose
-    private Integer Fps;
+    private Long Fps;
 
     /**
     * 关键帧间隔，单位：秒。默认原始的间隔
     */
     @SerializedName("Gop")
     @Expose
-    private Integer Gop;
+    private Long Gop;
 
     /**
     * 是否旋转，0：否，1：是。默认0。
     */
     @SerializedName("Rotate")
     @Expose
-    private Integer Rotate;
+    private Long Rotate;
 
     /**
     * 编码质量：
@@ -128,28 +128,28 @@ baseline/main/high。默认baseline
     */
     @SerializedName("BitrateToOrig")
     @Expose
-    private Integer BitrateToOrig;
+    private Long BitrateToOrig;
 
     /**
     * 是否不超过原始高，0：否，1：是。默认0。
     */
     @SerializedName("HeightToOrig")
     @Expose
-    private Integer HeightToOrig;
+    private Long HeightToOrig;
 
     /**
     * 是否不超过原始帧率，0：否，1：是。默认0。
     */
     @SerializedName("FpsToOrig")
     @Expose
-    private Integer FpsToOrig;
+    private Long FpsToOrig;
 
     /**
     * 是否是极速高清模板，0：否，1：是。默认0。
     */
     @SerializedName("AiTransCode")
     @Expose
-    private Integer AiTransCode;
+    private Long AiTransCode;
 
     /**
     * 极速高清相比VideoBitrate少多少码率，0.1到0.5
@@ -180,7 +180,7 @@ baseline/main/high。默认baseline
      * @return VideoBitrate 视频码率。范围：100-8000。
 注意：码率必须是100的倍数。
      */
-    public Integer getVideoBitrate() {
+    public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
@@ -190,7 +190,7 @@ baseline/main/high。默认baseline
      * @param VideoBitrate 视频码率。范围：100-8000。
 注意：码率必须是100的倍数。
      */
-    public void setVideoBitrate(Integer VideoBitrate) {
+    public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
@@ -234,7 +234,7 @@ baseline/main/high。默认baseline
      * Get 音频码率：默认0。0-500。 
      * @return AudioBitrate 音频码率：默认0。0-500。
      */
-    public Integer getAudioBitrate() {
+    public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
@@ -242,7 +242,7 @@ baseline/main/high。默认baseline
      * Set 音频码率：默认0。0-500。
      * @param AudioBitrate 音频码率：默认0。0-500。
      */
-    public void setAudioBitrate(Integer AudioBitrate) {
+    public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
     }
 
@@ -266,7 +266,7 @@ baseline/main/high。默认baseline
      * Get 宽，默认0。 
      * @return Width 宽，默认0。
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -274,7 +274,7 @@ baseline/main/high。默认baseline
      * Set 宽，默认0。
      * @param Width 宽，默认0。
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -282,7 +282,7 @@ baseline/main/high。默认baseline
      * Get 是否保留视频，0：否，1：是。默认1。 
      * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
      */
-    public Integer getNeedVideo() {
+    public Long getNeedVideo() {
         return this.NeedVideo;
     }
 
@@ -290,7 +290,7 @@ baseline/main/high。默认baseline
      * Set 是否保留视频，0：否，1：是。默认1。
      * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
      */
-    public void setNeedVideo(Integer NeedVideo) {
+    public void setNeedVideo(Long NeedVideo) {
         this.NeedVideo = NeedVideo;
     }
 
@@ -298,7 +298,7 @@ baseline/main/high。默认baseline
      * Get 是否保留音频，0：否，1：是。默认1。 
      * @return NeedAudio 是否保留音频，0：否，1：是。默认1。
      */
-    public Integer getNeedAudio() {
+    public Long getNeedAudio() {
         return this.NeedAudio;
     }
 
@@ -306,7 +306,7 @@ baseline/main/high。默认baseline
      * Set 是否保留音频，0：否，1：是。默认1。
      * @param NeedAudio 是否保留音频，0：否，1：是。默认1。
      */
-    public void setNeedAudio(Integer NeedAudio) {
+    public void setNeedAudio(Long NeedAudio) {
         this.NeedAudio = NeedAudio;
     }
 
@@ -314,7 +314,7 @@ baseline/main/high。默认baseline
      * Get 高，默认0。 
      * @return Height 高，默认0。
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -322,7 +322,7 @@ baseline/main/high。默认baseline
      * Set 高，默认0。
      * @param Height 高，默认0。
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -330,7 +330,7 @@ baseline/main/high。默认baseline
      * Get 帧率，默认0。 
      * @return Fps 帧率，默认0。
      */
-    public Integer getFps() {
+    public Long getFps() {
         return this.Fps;
     }
 
@@ -338,7 +338,7 @@ baseline/main/high。默认baseline
      * Set 帧率，默认0。
      * @param Fps 帧率，默认0。
      */
-    public void setFps(Integer Fps) {
+    public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
@@ -346,7 +346,7 @@ baseline/main/high。默认baseline
      * Get 关键帧间隔，单位：秒。默认原始的间隔 
      * @return Gop 关键帧间隔，单位：秒。默认原始的间隔
      */
-    public Integer getGop() {
+    public Long getGop() {
         return this.Gop;
     }
 
@@ -354,7 +354,7 @@ baseline/main/high。默认baseline
      * Set 关键帧间隔，单位：秒。默认原始的间隔
      * @param Gop 关键帧间隔，单位：秒。默认原始的间隔
      */
-    public void setGop(Integer Gop) {
+    public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
@@ -362,7 +362,7 @@ baseline/main/high。默认baseline
      * Get 是否旋转，0：否，1：是。默认0。 
      * @return Rotate 是否旋转，0：否，1：是。默认0。
      */
-    public Integer getRotate() {
+    public Long getRotate() {
         return this.Rotate;
     }
 
@@ -370,7 +370,7 @@ baseline/main/high。默认baseline
      * Set 是否旋转，0：否，1：是。默认0。
      * @param Rotate 是否旋转，0：否，1：是。默认0。
      */
-    public void setRotate(Integer Rotate) {
+    public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
@@ -398,7 +398,7 @@ baseline/main/high。默认baseline
      * Get 是否不超过原始码率，0：否，1：是。默认0。 
      * @return BitrateToOrig 是否不超过原始码率，0：否，1：是。默认0。
      */
-    public Integer getBitrateToOrig() {
+    public Long getBitrateToOrig() {
         return this.BitrateToOrig;
     }
 
@@ -406,7 +406,7 @@ baseline/main/high。默认baseline
      * Set 是否不超过原始码率，0：否，1：是。默认0。
      * @param BitrateToOrig 是否不超过原始码率，0：否，1：是。默认0。
      */
-    public void setBitrateToOrig(Integer BitrateToOrig) {
+    public void setBitrateToOrig(Long BitrateToOrig) {
         this.BitrateToOrig = BitrateToOrig;
     }
 
@@ -414,7 +414,7 @@ baseline/main/high。默认baseline
      * Get 是否不超过原始高，0：否，1：是。默认0。 
      * @return HeightToOrig 是否不超过原始高，0：否，1：是。默认0。
      */
-    public Integer getHeightToOrig() {
+    public Long getHeightToOrig() {
         return this.HeightToOrig;
     }
 
@@ -422,7 +422,7 @@ baseline/main/high。默认baseline
      * Set 是否不超过原始高，0：否，1：是。默认0。
      * @param HeightToOrig 是否不超过原始高，0：否，1：是。默认0。
      */
-    public void setHeightToOrig(Integer HeightToOrig) {
+    public void setHeightToOrig(Long HeightToOrig) {
         this.HeightToOrig = HeightToOrig;
     }
 
@@ -430,7 +430,7 @@ baseline/main/high。默认baseline
      * Get 是否不超过原始帧率，0：否，1：是。默认0。 
      * @return FpsToOrig 是否不超过原始帧率，0：否，1：是。默认0。
      */
-    public Integer getFpsToOrig() {
+    public Long getFpsToOrig() {
         return this.FpsToOrig;
     }
 
@@ -438,7 +438,7 @@ baseline/main/high。默认baseline
      * Set 是否不超过原始帧率，0：否，1：是。默认0。
      * @param FpsToOrig 是否不超过原始帧率，0：否，1：是。默认0。
      */
-    public void setFpsToOrig(Integer FpsToOrig) {
+    public void setFpsToOrig(Long FpsToOrig) {
         this.FpsToOrig = FpsToOrig;
     }
 
@@ -446,7 +446,7 @@ baseline/main/high。默认baseline
      * Get 是否是极速高清模板，0：否，1：是。默认0。 
      * @return AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
      */
-    public Integer getAiTransCode() {
+    public Long getAiTransCode() {
         return this.AiTransCode;
     }
 
@@ -454,7 +454,7 @@ baseline/main/high。默认baseline
      * Set 是否是极速高清模板，0：否，1：是。默认0。
      * @param AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
      */
-    public void setAiTransCode(Integer AiTransCode) {
+    public void setAiTransCode(Long AiTransCode) {
         this.AiTransCode = AiTransCode;
     }
 

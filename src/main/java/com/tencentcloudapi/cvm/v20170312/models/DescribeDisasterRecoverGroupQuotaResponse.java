@@ -27,35 +27,35 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
     */
     @SerializedName("GroupQuota")
     @Expose
-    private Integer GroupQuota;
+    private Long GroupQuota;
 
     /**
     * 当前用户已经创建的置放群组数量。
     */
     @SerializedName("CurrentNum")
     @Expose
-    private Integer CurrentNum;
+    private Long CurrentNum;
 
     /**
     * 物理机类型容灾组内实例的配额数。
     */
     @SerializedName("CvmInHostGroupQuota")
     @Expose
-    private Integer CvmInHostGroupQuota;
+    private Long CvmInHostGroupQuota;
 
     /**
     * 交换机类型容灾组内实例的配额数。
     */
     @SerializedName("CvmInSwGroupQuota")
     @Expose
-    private Integer CvmInSwGroupQuota;
+    private Long CvmInSwGroupQuota;
 
     /**
     * 机架类型容灾组内实例的配额数。
     */
     @SerializedName("CvmInRackGroupQuota")
     @Expose
-    private Integer CvmInRackGroupQuota;
+    private Long CvmInRackGroupQuota;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -68,7 +68,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Get 可创建置放群组数量的上限。 
      * @return GroupQuota 可创建置放群组数量的上限。
      */
-    public Integer getGroupQuota() {
+    public Long getGroupQuota() {
         return this.GroupQuota;
     }
 
@@ -76,7 +76,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Set 可创建置放群组数量的上限。
      * @param GroupQuota 可创建置放群组数量的上限。
      */
-    public void setGroupQuota(Integer GroupQuota) {
+    public void setGroupQuota(Long GroupQuota) {
         this.GroupQuota = GroupQuota;
     }
 
@@ -84,7 +84,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Get 当前用户已经创建的置放群组数量。 
      * @return CurrentNum 当前用户已经创建的置放群组数量。
      */
-    public Integer getCurrentNum() {
+    public Long getCurrentNum() {
         return this.CurrentNum;
     }
 
@@ -92,7 +92,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Set 当前用户已经创建的置放群组数量。
      * @param CurrentNum 当前用户已经创建的置放群组数量。
      */
-    public void setCurrentNum(Integer CurrentNum) {
+    public void setCurrentNum(Long CurrentNum) {
         this.CurrentNum = CurrentNum;
     }
 
@@ -100,7 +100,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Get 物理机类型容灾组内实例的配额数。 
      * @return CvmInHostGroupQuota 物理机类型容灾组内实例的配额数。
      */
-    public Integer getCvmInHostGroupQuota() {
+    public Long getCvmInHostGroupQuota() {
         return this.CvmInHostGroupQuota;
     }
 
@@ -108,7 +108,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Set 物理机类型容灾组内实例的配额数。
      * @param CvmInHostGroupQuota 物理机类型容灾组内实例的配额数。
      */
-    public void setCvmInHostGroupQuota(Integer CvmInHostGroupQuota) {
+    public void setCvmInHostGroupQuota(Long CvmInHostGroupQuota) {
         this.CvmInHostGroupQuota = CvmInHostGroupQuota;
     }
 
@@ -116,7 +116,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Get 交换机类型容灾组内实例的配额数。 
      * @return CvmInSwGroupQuota 交换机类型容灾组内实例的配额数。
      */
-    public Integer getCvmInSwGroupQuota() {
+    public Long getCvmInSwGroupQuota() {
         return this.CvmInSwGroupQuota;
     }
 
@@ -124,7 +124,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Set 交换机类型容灾组内实例的配额数。
      * @param CvmInSwGroupQuota 交换机类型容灾组内实例的配额数。
      */
-    public void setCvmInSwGroupQuota(Integer CvmInSwGroupQuota) {
+    public void setCvmInSwGroupQuota(Long CvmInSwGroupQuota) {
         this.CvmInSwGroupQuota = CvmInSwGroupQuota;
     }
 
@@ -132,7 +132,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Get 机架类型容灾组内实例的配额数。 
      * @return CvmInRackGroupQuota 机架类型容灾组内实例的配额数。
      */
-    public Integer getCvmInRackGroupQuota() {
+    public Long getCvmInRackGroupQuota() {
         return this.CvmInRackGroupQuota;
     }
 
@@ -140,7 +140,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
      * Set 机架类型容灾组内实例的配额数。
      * @param CvmInRackGroupQuota 机架类型容灾组内实例的配额数。
      */
-    public void setCvmInRackGroupQuota(Integer CvmInRackGroupQuota) {
+    public void setCvmInRackGroupQuota(Long CvmInRackGroupQuota) {
         this.CvmInRackGroupQuota = CvmInRackGroupQuota;
     }
 

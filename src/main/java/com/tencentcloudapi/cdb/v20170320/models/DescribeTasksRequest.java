@@ -53,7 +53,7 @@ public class DescribeTasksRequest extends AbstractModel{
     */
     @SerializedName("TaskTypes")
     @Expose
-    private Integer [] TaskTypes;
+    private Long [] TaskTypes;
 
     /**
     * 任务状态，不传值则查询所有任务状态，支持的值包括：
@@ -68,7 +68,7 @@ public class DescribeTasksRequest extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Integer [] TaskStatus;
+    private Long [] TaskStatus;
 
     /**
     * 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
@@ -89,14 +89,14 @@ public class DescribeTasksRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 单次请求返回的数量，默认值为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
@@ -158,7 +158,7 @@ public class DescribeTasksRequest extends AbstractModel{
 12 - 删除云数据库库表；
 13 - 灾备实例提升为主。
      */
-    public Integer [] getTaskTypes() {
+    public Long [] getTaskTypes() {
         return this.TaskTypes;
     }
 
@@ -190,7 +190,7 @@ public class DescribeTasksRequest extends AbstractModel{
 12 - 删除云数据库库表；
 13 - 灾备实例提升为主。
      */
-    public void setTaskTypes(Integer [] TaskTypes) {
+    public void setTaskTypes(Long [] TaskTypes) {
         this.TaskTypes = TaskTypes;
     }
 
@@ -214,7 +214,7 @@ public class DescribeTasksRequest extends AbstractModel{
 5 - 已删除；
 6 - 已暂停。
      */
-    public Integer [] getTaskStatus() {
+    public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -238,7 +238,7 @@ public class DescribeTasksRequest extends AbstractModel{
 5 - 已删除；
 6 - 已暂停。
      */
-    public void setTaskStatus(Integer [] TaskStatus) {
+    public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -278,7 +278,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Get 记录偏移量，默认值为0。 
      * @return Offset 记录偏移量，默认值为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -286,7 +286,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Set 记录偏移量，默认值为0。
      * @param Offset 记录偏移量，默认值为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -294,7 +294,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Get 单次请求返回的数量，默认值为20，最大值为100。 
      * @return Limit 单次请求返回的数量，默认值为20，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -302,7 +302,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Set 单次请求返回的数量，默认值为20，最大值为100。
      * @param Limit 单次请求返回的数量，默认值为20，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

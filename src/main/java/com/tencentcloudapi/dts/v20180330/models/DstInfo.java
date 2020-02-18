@@ -48,14 +48,14 @@ public class DstInfo extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
     */
     @SerializedName("ReadOnly")
     @Expose
-    private Integer ReadOnly;
+    private Long ReadOnly;
 
     /**
      * Get 目标实例ID，如cdb-jd92ijd8 
@@ -109,7 +109,7 @@ public class DstInfo extends AbstractModel{
      * Get 目标实例vport。已废弃，无需填写 
      * @return Port 目标实例vport。已废弃，无需填写
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -117,7 +117,7 @@ public class DstInfo extends AbstractModel{
      * Set 目标实例vport。已废弃，无需填写
      * @param Port 目标实例vport。已废弃，无需填写
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
@@ -125,7 +125,7 @@ public class DstInfo extends AbstractModel{
      * Get 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。 
      * @return ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
-    public Integer getReadOnly() {
+    public Long getReadOnly() {
         return this.ReadOnly;
     }
 
@@ -133,7 +133,7 @@ public class DstInfo extends AbstractModel{
      * Set 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      * @param ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
-    public void setReadOnly(Integer ReadOnly) {
+    public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 

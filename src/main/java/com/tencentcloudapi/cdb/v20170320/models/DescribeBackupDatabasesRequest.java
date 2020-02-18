@@ -48,14 +48,14 @@ public class DescribeBackupDatabasesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 分页大小，最小值为1，最大值为2000。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
@@ -109,7 +109,7 @@ public class DescribeBackupDatabasesRequest extends AbstractModel{
      * Get 分页偏移量。 
      * @return Offset 分页偏移量。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -117,7 +117,7 @@ public class DescribeBackupDatabasesRequest extends AbstractModel{
      * Set 分页偏移量。
      * @param Offset 分页偏移量。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -125,7 +125,7 @@ public class DescribeBackupDatabasesRequest extends AbstractModel{
      * Get 分页大小，最小值为1，最大值为2000。 
      * @return Limit 分页大小，最小值为1，最大值为2000。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -133,7 +133,7 @@ public class DescribeBackupDatabasesRequest extends AbstractModel{
      * Set 分页大小，最小值为1，最大值为2000。
      * @param Limit 分页大小，最小值为1，最大值为2000。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

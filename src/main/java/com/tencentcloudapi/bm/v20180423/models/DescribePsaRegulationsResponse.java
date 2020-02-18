@@ -27,7 +27,7 @@ public class DescribePsaRegulationsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 返回规则列表
@@ -47,7 +47,7 @@ public class DescribePsaRegulationsResponse extends AbstractModel{
      * Get 返回规则数量 
      * @return TotalCount 返回规则数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribePsaRegulationsResponse extends AbstractModel{
      * Set 返回规则数量
      * @param TotalCount 返回规则数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

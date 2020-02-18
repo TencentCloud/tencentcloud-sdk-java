@@ -27,7 +27,7 @@ public class ZoneConf extends AbstractModel{
     */
     @SerializedName("DeployMode")
     @Expose
-    private Integer [] DeployMode;
+    private Long [] DeployMode;
 
     /**
     * 主实例所在的可用区
@@ -54,7 +54,7 @@ public class ZoneConf extends AbstractModel{
      * Get 可用区部署方式，可能的值为：0-单可用区；1-多可用区 
      * @return DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
      */
-    public Integer [] getDeployMode() {
+    public Long [] getDeployMode() {
         return this.DeployMode;
     }
 
@@ -62,7 +62,7 @@ public class ZoneConf extends AbstractModel{
      * Set 可用区部署方式，可能的值为：0-单可用区；1-多可用区
      * @param DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
      */
-    public void setDeployMode(Integer [] DeployMode) {
+    public void setDeployMode(Long [] DeployMode) {
         this.DeployMode = DeployMode;
     }
 

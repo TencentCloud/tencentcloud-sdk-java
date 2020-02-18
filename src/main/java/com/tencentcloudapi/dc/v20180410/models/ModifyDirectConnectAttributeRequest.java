@@ -48,7 +48,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     */
     @SerializedName("Vlan")
     @Expose
-    private Integer Vlan;
+    private Long Vlan;
 
     /**
     * 物理专线调试腾讯侧互联 IP。
@@ -151,7 +151,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
      * Get 物理专线调试VLAN。 
      * @return Vlan 物理专线调试VLAN。
      */
-    public Integer getVlan() {
+    public Long getVlan() {
         return this.Vlan;
     }
 
@@ -159,7 +159,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
      * Set 物理专线调试VLAN。
      * @param Vlan 物理专线调试VLAN。
      */
-    public void setVlan(Integer Vlan) {
+    public void setVlan(Long Vlan) {
         this.Vlan = Vlan;
     }
 

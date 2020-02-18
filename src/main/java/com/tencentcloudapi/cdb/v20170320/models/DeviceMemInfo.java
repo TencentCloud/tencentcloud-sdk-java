@@ -27,20 +27,20 @@ public class DeviceMemInfo extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Integer [] Total;
+    private Long [] Total;
 
     /**
     * 已使用内存。free命令中Mem:一行used的值,单位：KB
     */
     @SerializedName("Used")
     @Expose
-    private Integer [] Used;
+    private Long [] Used;
 
     /**
      * Get 总内存大小。free命令中Mem:一行total的值,单位：KB 
      * @return Total 总内存大小。free命令中Mem:一行total的值,单位：KB
      */
-    public Integer [] getTotal() {
+    public Long [] getTotal() {
         return this.Total;
     }
 
@@ -48,7 +48,7 @@ public class DeviceMemInfo extends AbstractModel{
      * Set 总内存大小。free命令中Mem:一行total的值,单位：KB
      * @param Total 总内存大小。free命令中Mem:一行total的值,单位：KB
      */
-    public void setTotal(Integer [] Total) {
+    public void setTotal(Long [] Total) {
         this.Total = Total;
     }
 
@@ -56,7 +56,7 @@ public class DeviceMemInfo extends AbstractModel{
      * Get 已使用内存。free命令中Mem:一行used的值,单位：KB 
      * @return Used 已使用内存。free命令中Mem:一行used的值,单位：KB
      */
-    public Integer [] getUsed() {
+    public Long [] getUsed() {
         return this.Used;
     }
 
@@ -64,7 +64,7 @@ public class DeviceMemInfo extends AbstractModel{
      * Set 已使用内存。free命令中Mem:一行used的值,单位：KB
      * @param Used 已使用内存。free命令中Mem:一行used的值,单位：KB
      */
-    public void setUsed(Integer [] Used) {
+    public void setUsed(Long [] Used) {
         this.Used = Used;
     }
 

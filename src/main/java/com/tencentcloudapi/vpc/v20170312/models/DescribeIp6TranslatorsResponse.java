@@ -27,7 +27,7 @@ public class DescribeIp6TranslatorsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 符合过滤条件的IPV6转换实例详细信息
@@ -47,7 +47,7 @@ public class DescribeIp6TranslatorsResponse extends AbstractModel{
      * Get 符合过滤条件的IPV6转换实例数量。 
      * @return TotalCount 符合过滤条件的IPV6转换实例数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeIp6TranslatorsResponse extends AbstractModel{
      * Set 符合过滤条件的IPV6转换实例数量。
      * @param TotalCount 符合过滤条件的IPV6转换实例数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

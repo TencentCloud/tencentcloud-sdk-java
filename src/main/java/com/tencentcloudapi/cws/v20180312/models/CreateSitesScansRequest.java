@@ -27,7 +27,7 @@ public class CreateSitesScansRequest extends AbstractModel{
     */
     @SerializedName("SiteIds")
     @Expose
-    private Integer [] SiteIds;
+    private Long [] SiteIds;
 
     /**
     * 扫描模式，normal-正常扫描；deep-深度扫描
@@ -41,13 +41,13 @@ public class CreateSitesScansRequest extends AbstractModel{
     */
     @SerializedName("RateLimit")
     @Expose
-    private Integer RateLimit;
+    private Long RateLimit;
 
     /**
      * Get 站点的ID列表 
      * @return SiteIds 站点的ID列表
      */
-    public Integer [] getSiteIds() {
+    public Long [] getSiteIds() {
         return this.SiteIds;
     }
 
@@ -55,7 +55,7 @@ public class CreateSitesScansRequest extends AbstractModel{
      * Set 站点的ID列表
      * @param SiteIds 站点的ID列表
      */
-    public void setSiteIds(Integer [] SiteIds) {
+    public void setSiteIds(Long [] SiteIds) {
         this.SiteIds = SiteIds;
     }
 
@@ -79,7 +79,7 @@ public class CreateSitesScansRequest extends AbstractModel{
      * Get 扫描速率限制，每秒发送X个HTTP请求 
      * @return RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
-    public Integer getRateLimit() {
+    public Long getRateLimit() {
         return this.RateLimit;
     }
 
@@ -87,7 +87,7 @@ public class CreateSitesScansRequest extends AbstractModel{
      * Set 扫描速率限制，每秒发送X个HTTP请求
      * @param RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
-    public void setRateLimit(Integer RateLimit) {
+    public void setRateLimit(Long RateLimit) {
         this.RateLimit = RateLimit;
     }
 

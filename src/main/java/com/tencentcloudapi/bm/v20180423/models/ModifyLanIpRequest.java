@@ -55,7 +55,7 @@ public class ModifyLanIpRequest extends AbstractModel{
     */
     @SerializedName("RebootDevice")
     @Expose
-    private Integer RebootDevice;
+    private Long RebootDevice;
 
     /**
      * Get 物理机ID 
@@ -125,7 +125,7 @@ public class ModifyLanIpRequest extends AbstractModel{
      * Get 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0 
      * @return RebootDevice 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
      */
-    public Integer getRebootDevice() {
+    public Long getRebootDevice() {
         return this.RebootDevice;
     }
 
@@ -133,7 +133,7 @@ public class ModifyLanIpRequest extends AbstractModel{
      * Set 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
      * @param RebootDevice 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
      */
-    public void setRebootDevice(Integer RebootDevice) {
+    public void setRebootDevice(Long RebootDevice) {
         this.RebootDevice = RebootDevice;
     }
 

@@ -27,14 +27,14 @@ public class SentenceRecognitionRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 子服务类型。2，一句话识别。
     */
     @SerializedName("SubServiceType")
     @Expose
-    private Integer SubServiceType;
+    private Long SubServiceType;
 
     /**
     * 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
@@ -48,7 +48,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
     */
     @SerializedName("SourceType")
     @Expose
-    private Integer SourceType;
+    private Long SourceType;
 
     /**
     * 识别音频的音频格式（支持mp3,wav）。
@@ -83,13 +83,13 @@ public class SentenceRecognitionRequest extends AbstractModel{
     */
     @SerializedName("DataLen")
     @Expose
-    private Integer DataLen;
+    private Long DataLen;
 
     /**
      * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -97,7 +97,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
      * Set 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -105,7 +105,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
      * Get 子服务类型。2，一句话识别。 
      * @return SubServiceType 子服务类型。2，一句话识别。
      */
-    public Integer getSubServiceType() {
+    public Long getSubServiceType() {
         return this.SubServiceType;
     }
 
@@ -113,7 +113,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
      * Set 子服务类型。2，一句话识别。
      * @param SubServiceType 子服务类型。2，一句话识别。
      */
-    public void setSubServiceType(Integer SubServiceType) {
+    public void setSubServiceType(Long SubServiceType) {
         this.SubServiceType = SubServiceType;
     }
 
@@ -137,7 +137,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
      * Get 语音数据来源。0：语音 URL；1：语音数据（post body）。 
      * @return SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      */
-    public Integer getSourceType() {
+    public Long getSourceType() {
         return this.SourceType;
     }
 
@@ -145,7 +145,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
      * Set 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      */
-    public void setSourceType(Integer SourceType) {
+    public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
@@ -217,7 +217,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
      * Get 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。 
      * @return DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
-    public Integer getDataLen() {
+    public Long getDataLen() {
         return this.DataLen;
     }
 
@@ -225,7 +225,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
      * Set 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      * @param DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
      */
-    public void setDataLen(Integer DataLen) {
+    public void setDataLen(Long DataLen) {
         this.DataLen = DataLen;
     }
 

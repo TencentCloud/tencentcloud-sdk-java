@@ -55,7 +55,7 @@ public class Snapshot extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
     * 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
@@ -76,7 +76,7 @@ public class Snapshot extends AbstractModel{
     */
     @SerializedName("Percent")
     @Expose
-    private Integer Percent;
+    private Long Percent;
 
     /**
     * 快照的创建时间。
@@ -132,7 +132,7 @@ public class Snapshot extends AbstractModel{
     */
     @SerializedName("ImageCount")
     @Expose
-    private Integer ImageCount;
+    private Long ImageCount;
 
     /**
     * 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
@@ -146,7 +146,7 @@ public class Snapshot extends AbstractModel{
     */
     @SerializedName("ShareReference")
     @Expose
-    private Integer ShareReference;
+    private Long ShareReference;
 
     /**
      * Get 快照ID。 
@@ -216,7 +216,7 @@ public class Snapshot extends AbstractModel{
      * Get 创建此快照的云硬盘大小，单位GB。 
      * @return DiskSize 创建此快照的云硬盘大小，单位GB。
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -224,7 +224,7 @@ public class Snapshot extends AbstractModel{
      * Set 创建此快照的云硬盘大小，单位GB。
      * @param DiskSize 创建此快照的云硬盘大小，单位GB。
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -264,7 +264,7 @@ public class Snapshot extends AbstractModel{
      * Get 快照创建进度百分比，快照创建成功后此字段恒为100。 
      * @return Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
      */
-    public Integer getPercent() {
+    public Long getPercent() {
         return this.Percent;
     }
 
@@ -272,7 +272,7 @@ public class Snapshot extends AbstractModel{
      * Set 快照创建进度百分比，快照创建成功后此字段恒为100。
      * @param Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
      */
-    public void setPercent(Integer Percent) {
+    public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
@@ -392,7 +392,7 @@ public class Snapshot extends AbstractModel{
      * Get 快照关联的镜像个数。 
      * @return ImageCount 快照关联的镜像个数。
      */
-    public Integer getImageCount() {
+    public Long getImageCount() {
         return this.ImageCount;
     }
 
@@ -400,7 +400,7 @@ public class Snapshot extends AbstractModel{
      * Set 快照关联的镜像个数。
      * @param ImageCount 快照关联的镜像个数。
      */
-    public void setImageCount(Integer ImageCount) {
+    public void setImageCount(Long ImageCount) {
         this.ImageCount = ImageCount;
     }
 
@@ -424,7 +424,7 @@ public class Snapshot extends AbstractModel{
      * Get 快照当前被共享数 
      * @return ShareReference 快照当前被共享数
      */
-    public Integer getShareReference() {
+    public Long getShareReference() {
         return this.ShareReference;
     }
 
@@ -432,7 +432,7 @@ public class Snapshot extends AbstractModel{
      * Set 快照当前被共享数
      * @param ShareReference 快照当前被共享数
      */
-    public void setShareReference(Integer ShareReference) {
+    public void setShareReference(Long ShareReference) {
         this.ShareReference = ShareReference;
     }
 

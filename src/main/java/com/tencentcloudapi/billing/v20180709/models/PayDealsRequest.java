@@ -34,7 +34,7 @@ public class PayDealsRequest extends AbstractModel{
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Integer AutoVoucher;
+    private Long AutoVoucher;
 
     /**
     * 代金券ID列表,目前仅支持指定一张代金券
@@ -63,7 +63,7 @@ public class PayDealsRequest extends AbstractModel{
      * Get 是否自动使用代金券,1:是,0否,默认0 
      * @return AutoVoucher 是否自动使用代金券,1:是,0否,默认0
      */
-    public Integer getAutoVoucher() {
+    public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
@@ -71,7 +71,7 @@ public class PayDealsRequest extends AbstractModel{
      * Set 是否自动使用代金券,1:是,0否,默认0
      * @param AutoVoucher 是否自动使用代金券,1:是,0否,默认0
      */
-    public void setAutoVoucher(Integer AutoVoucher) {
+    public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 

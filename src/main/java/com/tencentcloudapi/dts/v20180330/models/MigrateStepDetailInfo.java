@@ -27,7 +27,7 @@ public class MigrateStepDetailInfo extends AbstractModel{
     */
     @SerializedName("StepNo")
     @Expose
-    private Integer StepNo;
+    private Long StepNo;
 
     /**
     * 步骤展现名称
@@ -48,13 +48,13 @@ public class MigrateStepDetailInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 步骤序列 
      * @return StepNo 步骤序列
      */
-    public Integer getStepNo() {
+    public Long getStepNo() {
         return this.StepNo;
     }
 
@@ -62,7 +62,7 @@ public class MigrateStepDetailInfo extends AbstractModel{
      * Set 步骤序列
      * @param StepNo 步骤序列
      */
-    public void setStepNo(Integer StepNo) {
+    public void setStepNo(Long StepNo) {
         this.StepNo = StepNo;
     }
 
@@ -102,7 +102,7 @@ public class MigrateStepDetailInfo extends AbstractModel{
      * Get 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行 
      * @return Status 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -110,7 +110,7 @@ public class MigrateStepDetailInfo extends AbstractModel{
      * Set 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
      * @param Status 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

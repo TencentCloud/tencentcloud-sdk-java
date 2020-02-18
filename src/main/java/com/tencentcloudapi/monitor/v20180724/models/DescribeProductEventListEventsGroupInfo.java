@@ -28,7 +28,7 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 策略名
@@ -44,7 +44,7 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel{
      * @return GroupId 策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -54,7 +54,7 @@ public class DescribeProductEventListEventsGroupInfo extends AbstractModel{
      * @param GroupId 策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 

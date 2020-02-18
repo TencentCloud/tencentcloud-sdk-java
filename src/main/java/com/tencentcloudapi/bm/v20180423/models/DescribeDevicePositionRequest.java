@@ -27,14 +27,14 @@ public class DescribeDevicePositionRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 数量限制
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 私有网络ID
@@ -68,7 +68,7 @@ public class DescribeDevicePositionRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -76,7 +76,7 @@ public class DescribeDevicePositionRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -84,7 +84,7 @@ public class DescribeDevicePositionRequest extends AbstractModel{
      * Get 数量限制 
      * @return Limit 数量限制
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -92,7 +92,7 @@ public class DescribeDevicePositionRequest extends AbstractModel{
      * Set 数量限制
      * @param Limit 数量限制
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

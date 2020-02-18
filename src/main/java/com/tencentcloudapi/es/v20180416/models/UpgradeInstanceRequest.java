@@ -55,7 +55,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     */
     @SerializedName("BasicSecurityType")
     @Expose
-    private Integer BasicSecurityType;
+    private Long BasicSecurityType;
 
     /**
      * Get 实例ID 
@@ -125,7 +125,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
      * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li> 
      * @return BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
-    public Integer getBasicSecurityType() {
+    public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
@@ -133,7 +133,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
      * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      * @param BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
-    public void setBasicSecurityType(Integer BasicSecurityType) {
+    public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;
     }
 

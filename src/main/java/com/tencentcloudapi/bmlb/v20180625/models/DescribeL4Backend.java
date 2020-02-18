@@ -27,7 +27,7 @@ public class DescribeL4Backend extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 黑石物理机的主机ID。
@@ -40,7 +40,7 @@ public class DescribeL4Backend extends AbstractModel{
      * Get 待绑定的主机端口，可选值1~65535。 
      * @return Port 待绑定的主机端口，可选值1~65535。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -48,7 +48,7 @@ public class DescribeL4Backend extends AbstractModel{
      * Set 待绑定的主机端口，可选值1~65535。
      * @param Port 待绑定的主机端口，可选值1~65535。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

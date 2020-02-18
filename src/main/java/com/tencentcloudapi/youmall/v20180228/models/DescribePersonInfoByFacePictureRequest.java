@@ -34,7 +34,7 @@ public class DescribePersonInfoByFacePictureRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 人脸图片BASE编码
@@ -63,7 +63,7 @@ public class DescribePersonInfoByFacePictureRequest extends AbstractModel{
      * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -71,7 +71,7 @@ public class DescribePersonInfoByFacePictureRequest extends AbstractModel{
      * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 

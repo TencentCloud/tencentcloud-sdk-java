@@ -27,13 +27,13 @@ public class ProductMetadata extends AbstractModel{
     */
     @SerializedName("CreationDate")
     @Expose
-    private Integer CreationDate;
+    private Long CreationDate;
 
     /**
      * Get 产品创建时间 
      * @return CreationDate 产品创建时间
      */
-    public Integer getCreationDate() {
+    public Long getCreationDate() {
         return this.CreationDate;
     }
 
@@ -41,7 +41,7 @@ public class ProductMetadata extends AbstractModel{
      * Set 产品创建时间
      * @param CreationDate 产品创建时间
      */
-    public void setCreationDate(Integer CreationDate) {
+    public void setCreationDate(Long CreationDate) {
         this.CreationDate = CreationDate;
     }
 

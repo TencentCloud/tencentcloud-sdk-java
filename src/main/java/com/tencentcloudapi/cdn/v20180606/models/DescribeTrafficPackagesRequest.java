@@ -27,20 +27,20 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 分页查询记录个数，默认100，最大1000
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 分页查询起始地址，默认 0（第一页） 
      * @return Offset 分页查询起始地址，默认 0（第一页）
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -48,7 +48,7 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
      * Set 分页查询起始地址，默认 0（第一页）
      * @param Offset 分页查询起始地址，默认 0（第一页）
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -56,7 +56,7 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
      * Get 分页查询记录个数，默认100，最大1000 
      * @return Limit 分页查询记录个数，默认100，最大1000
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -64,7 +64,7 @@ public class DescribeTrafficPackagesRequest extends AbstractModel{
      * Set 分页查询记录个数，默认100，最大1000
      * @param Limit 分页查询记录个数，默认100，最大1000
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

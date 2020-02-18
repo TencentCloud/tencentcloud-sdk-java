@@ -76,7 +76,7 @@ public class DevicePositionInfo extends AbstractModel{
     */
     @SerializedName("PosCode")
     @Expose
-    private Integer PosCode;
+    private Long PosCode;
 
     /**
     * 交换机名称
@@ -215,7 +215,7 @@ public class DevicePositionInfo extends AbstractModel{
      * Get 机位 
      * @return PosCode 机位
      */
-    public Integer getPosCode() {
+    public Long getPosCode() {
         return this.PosCode;
     }
 
@@ -223,7 +223,7 @@ public class DevicePositionInfo extends AbstractModel{
      * Set 机位
      * @param PosCode 机位
      */
-    public void setPosCode(Integer PosCode) {
+    public void setPosCode(Long PosCode) {
         this.PosCode = PosCode;
     }
 

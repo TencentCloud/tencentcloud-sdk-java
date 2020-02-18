@@ -27,7 +27,7 @@ public class CreateParamTemplateResponse extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateParamTemplateResponse extends AbstractModel{
      * Get 参数模板 ID。 
      * @return TemplateId 参数模板 ID。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -48,7 +48,7 @@ public class CreateParamTemplateResponse extends AbstractModel{
      * Set 参数模板 ID。
      * @param TemplateId 参数模板 ID。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 

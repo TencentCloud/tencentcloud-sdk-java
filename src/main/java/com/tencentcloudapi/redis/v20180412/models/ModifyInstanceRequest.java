@@ -48,14 +48,14 @@ public class ModifyInstanceRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
     */
     @SerializedName("AutoRenews")
     @Expose
-    private Integer [] AutoRenews;
+    private Long [] AutoRenews;
 
     /**
     * 已经废弃
@@ -76,7 +76,7 @@ public class ModifyInstanceRequest extends AbstractModel{
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Integer AutoRenew;
+    private Long AutoRenew;
 
     /**
      * Get 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记 
@@ -130,7 +130,7 @@ public class ModifyInstanceRequest extends AbstractModel{
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -138,7 +138,7 @@ public class ModifyInstanceRequest extends AbstractModel{
      * Set 项目Id
      * @param ProjectId 项目Id
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -146,7 +146,7 @@ public class ModifyInstanceRequest extends AbstractModel{
      * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
      * @return AutoRenews 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
-    public Integer [] getAutoRenews() {
+    public Long [] getAutoRenews() {
         return this.AutoRenews;
     }
 
@@ -154,7 +154,7 @@ public class ModifyInstanceRequest extends AbstractModel{
      * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param AutoRenews 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
-    public void setAutoRenews(Integer [] AutoRenews) {
+    public void setAutoRenews(Long [] AutoRenews) {
         this.AutoRenews = AutoRenews;
     }
 
@@ -194,7 +194,7 @@ public class ModifyInstanceRequest extends AbstractModel{
      * Get 已经废弃 
      * @return AutoRenew 已经废弃
      */
-    public Integer getAutoRenew() {
+    public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -202,7 +202,7 @@ public class ModifyInstanceRequest extends AbstractModel{
      * Set 已经废弃
      * @param AutoRenew 已经废弃
      */
-    public void setAutoRenew(Integer AutoRenew) {
+    public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 

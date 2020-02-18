@@ -48,56 +48,56 @@ public class SellConfig extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * CPU核心数
     */
     @SerializedName("Cpu")
     @Expose
-    private Integer Cpu;
+    private Long Cpu;
 
     /**
     * 磁盘最小规格，单位为GB
     */
     @SerializedName("VolumeMin")
     @Expose
-    private Integer VolumeMin;
+    private Long VolumeMin;
 
     /**
     * 磁盘最大规格，单位为GB
     */
     @SerializedName("VolumeMax")
     @Expose
-    private Integer VolumeMax;
+    private Long VolumeMax;
 
     /**
     * 磁盘步长，单位为GB
     */
     @SerializedName("VolumeStep")
     @Expose
-    private Integer VolumeStep;
+    private Long VolumeStep;
 
     /**
     * 链接数
     */
     @SerializedName("Connection")
     @Expose
-    private Integer Connection;
+    private Long Connection;
 
     /**
     * 每秒查询数量
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
     * 每秒IO数量
     */
     @SerializedName("Iops")
     @Expose
-    private Integer Iops;
+    private Long Iops;
 
     /**
     * 应用场景描述
@@ -111,7 +111,7 @@ public class SellConfig extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 设备类型 
@@ -165,7 +165,7 @@ public class SellConfig extends AbstractModel{
      * Get 内存大小，单位为MB 
      * @return Memory 内存大小，单位为MB
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -173,7 +173,7 @@ public class SellConfig extends AbstractModel{
      * Set 内存大小，单位为MB
      * @param Memory 内存大小，单位为MB
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -181,7 +181,7 @@ public class SellConfig extends AbstractModel{
      * Get CPU核心数 
      * @return Cpu CPU核心数
      */
-    public Integer getCpu() {
+    public Long getCpu() {
         return this.Cpu;
     }
 
@@ -189,7 +189,7 @@ public class SellConfig extends AbstractModel{
      * Set CPU核心数
      * @param Cpu CPU核心数
      */
-    public void setCpu(Integer Cpu) {
+    public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -197,7 +197,7 @@ public class SellConfig extends AbstractModel{
      * Get 磁盘最小规格，单位为GB 
      * @return VolumeMin 磁盘最小规格，单位为GB
      */
-    public Integer getVolumeMin() {
+    public Long getVolumeMin() {
         return this.VolumeMin;
     }
 
@@ -205,7 +205,7 @@ public class SellConfig extends AbstractModel{
      * Set 磁盘最小规格，单位为GB
      * @param VolumeMin 磁盘最小规格，单位为GB
      */
-    public void setVolumeMin(Integer VolumeMin) {
+    public void setVolumeMin(Long VolumeMin) {
         this.VolumeMin = VolumeMin;
     }
 
@@ -213,7 +213,7 @@ public class SellConfig extends AbstractModel{
      * Get 磁盘最大规格，单位为GB 
      * @return VolumeMax 磁盘最大规格，单位为GB
      */
-    public Integer getVolumeMax() {
+    public Long getVolumeMax() {
         return this.VolumeMax;
     }
 
@@ -221,7 +221,7 @@ public class SellConfig extends AbstractModel{
      * Set 磁盘最大规格，单位为GB
      * @param VolumeMax 磁盘最大规格，单位为GB
      */
-    public void setVolumeMax(Integer VolumeMax) {
+    public void setVolumeMax(Long VolumeMax) {
         this.VolumeMax = VolumeMax;
     }
 
@@ -229,7 +229,7 @@ public class SellConfig extends AbstractModel{
      * Get 磁盘步长，单位为GB 
      * @return VolumeStep 磁盘步长，单位为GB
      */
-    public Integer getVolumeStep() {
+    public Long getVolumeStep() {
         return this.VolumeStep;
     }
 
@@ -237,7 +237,7 @@ public class SellConfig extends AbstractModel{
      * Set 磁盘步长，单位为GB
      * @param VolumeStep 磁盘步长，单位为GB
      */
-    public void setVolumeStep(Integer VolumeStep) {
+    public void setVolumeStep(Long VolumeStep) {
         this.VolumeStep = VolumeStep;
     }
 
@@ -245,7 +245,7 @@ public class SellConfig extends AbstractModel{
      * Get 链接数 
      * @return Connection 链接数
      */
-    public Integer getConnection() {
+    public Long getConnection() {
         return this.Connection;
     }
 
@@ -253,7 +253,7 @@ public class SellConfig extends AbstractModel{
      * Set 链接数
      * @param Connection 链接数
      */
-    public void setConnection(Integer Connection) {
+    public void setConnection(Long Connection) {
         this.Connection = Connection;
     }
 
@@ -261,7 +261,7 @@ public class SellConfig extends AbstractModel{
      * Get 每秒查询数量 
      * @return Qps 每秒查询数量
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -269,7 +269,7 @@ public class SellConfig extends AbstractModel{
      * Set 每秒查询数量
      * @param Qps 每秒查询数量
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
@@ -277,7 +277,7 @@ public class SellConfig extends AbstractModel{
      * Get 每秒IO数量 
      * @return Iops 每秒IO数量
      */
-    public Integer getIops() {
+    public Long getIops() {
         return this.Iops;
     }
 
@@ -285,7 +285,7 @@ public class SellConfig extends AbstractModel{
      * Set 每秒IO数量
      * @param Iops 每秒IO数量
      */
-    public void setIops(Integer Iops) {
+    public void setIops(Long Iops) {
         this.Iops = Iops;
     }
 
@@ -309,7 +309,7 @@ public class SellConfig extends AbstractModel{
      * Get 状态值 
      * @return Status 状态值
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -317,7 +317,7 @@ public class SellConfig extends AbstractModel{
      * Set 状态值
      * @param Status 状态值
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

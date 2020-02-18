@@ -62,7 +62,7 @@ public class SingleRecord extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Integer Duration;
+    private Long Duration;
 
     /**
     * 产品ID。
@@ -164,7 +164,7 @@ public class SingleRecord extends AbstractModel{
      * Get 通话时长。 
      * @return Duration 通话时长。
      */
-    public Integer getDuration() {
+    public Long getDuration() {
         return this.Duration;
     }
 
@@ -172,7 +172,7 @@ public class SingleRecord extends AbstractModel{
      * Set 通话时长。
      * @param Duration 通话时长。
      */
-    public void setDuration(Integer Duration) {
+    public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 

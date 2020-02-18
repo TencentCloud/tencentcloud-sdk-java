@@ -55,7 +55,7 @@ public class CreateAccountRequest extends AbstractModel{
     */
     @SerializedName("ReadOnly")
     @Expose
-    private Integer ReadOnly;
+    private Long ReadOnly;
 
     /**
     * 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
@@ -70,7 +70,7 @@ public class CreateAccountRequest extends AbstractModel{
     */
     @SerializedName("DelayThresh")
     @Expose
-    private Integer DelayThresh;
+    private Long DelayThresh;
 
     /**
      * Get 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
@@ -140,7 +140,7 @@ public class CreateAccountRequest extends AbstractModel{
      * Get 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败，3：只从备机读取。 
      * @return ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败，3：只从备机读取。
      */
-    public Integer getReadOnly() {
+    public Long getReadOnly() {
         return this.ReadOnly;
     }
 
@@ -148,7 +148,7 @@ public class CreateAccountRequest extends AbstractModel{
      * Set 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败，3：只从备机读取。
      * @param ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败，3：只从备机读取。
      */
-    public void setReadOnly(Integer ReadOnly) {
+    public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
@@ -174,7 +174,7 @@ public class CreateAccountRequest extends AbstractModel{
      * @return DelayThresh 如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
      */
-    public Integer getDelayThresh() {
+    public Long getDelayThresh() {
         return this.DelayThresh;
     }
 
@@ -184,7 +184,7 @@ public class CreateAccountRequest extends AbstractModel{
      * @param DelayThresh 如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
      */
-    public void setDelayThresh(Integer DelayThresh) {
+    public void setDelayThresh(Long DelayThresh) {
         this.DelayThresh = DelayThresh;
     }
 

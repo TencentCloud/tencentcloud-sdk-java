@@ -41,7 +41,7 @@ public class DescribeContainerLogRequest extends AbstractModel{
     */
     @SerializedName("Tail")
     @Expose
-    private Integer Tail;
+    private Long Tail;
 
     /**
     * 日志起始时间
@@ -86,7 +86,7 @@ public class DescribeContainerLogRequest extends AbstractModel{
      * Get 日志显示尾部行数 
      * @return Tail 日志显示尾部行数
      */
-    public Integer getTail() {
+    public Long getTail() {
         return this.Tail;
     }
 
@@ -94,7 +94,7 @@ public class DescribeContainerLogRequest extends AbstractModel{
      * Set 日志显示尾部行数
      * @param Tail 日志显示尾部行数
      */
-    public void setTail(Integer Tail) {
+    public void setTail(Long Tail) {
         this.Tail = Tail;
     }
 

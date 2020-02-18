@@ -27,21 +27,21 @@ public class Vul extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 站点ID。
     */
     @SerializedName("SiteId")
     @Expose
-    private Integer SiteId;
+    private Long SiteId;
 
     /**
     * 扫描引擎的扫描任务ID。
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
     * 漏洞级别：high、middle、low、notice。
@@ -132,14 +132,14 @@ public class Vul extends AbstractModel{
     */
     @SerializedName("IsReported")
     @Expose
-    private Integer IsReported;
+    private Long IsReported;
 
     /**
     * 云用户appid。
     */
     @SerializedName("Appid")
     @Expose
-    private Integer Appid;
+    private Long Appid;
 
     /**
     * 云用户标识。
@@ -152,7 +152,7 @@ public class Vul extends AbstractModel{
      * Get 漏洞ID。 
      * @return Id 漏洞ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
@@ -160,7 +160,7 @@ public class Vul extends AbstractModel{
      * Set 漏洞ID。
      * @param Id 漏洞ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
@@ -168,7 +168,7 @@ public class Vul extends AbstractModel{
      * Get 站点ID。 
      * @return SiteId 站点ID。
      */
-    public Integer getSiteId() {
+    public Long getSiteId() {
         return this.SiteId;
     }
 
@@ -176,7 +176,7 @@ public class Vul extends AbstractModel{
      * Set 站点ID。
      * @param SiteId 站点ID。
      */
-    public void setSiteId(Integer SiteId) {
+    public void setSiteId(Long SiteId) {
         this.SiteId = SiteId;
     }
 
@@ -184,7 +184,7 @@ public class Vul extends AbstractModel{
      * Get 扫描引擎的扫描任务ID。 
      * @return TaskId 扫描引擎的扫描任务ID。
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -192,7 +192,7 @@ public class Vul extends AbstractModel{
      * Set 扫描引擎的扫描任务ID。
      * @param TaskId 扫描引擎的扫描任务ID。
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
@@ -392,7 +392,7 @@ public class Vul extends AbstractModel{
      * Get 是否已经添加误报，0-否，1-是。 
      * @return IsReported 是否已经添加误报，0-否，1-是。
      */
-    public Integer getIsReported() {
+    public Long getIsReported() {
         return this.IsReported;
     }
 
@@ -400,7 +400,7 @@ public class Vul extends AbstractModel{
      * Set 是否已经添加误报，0-否，1-是。
      * @param IsReported 是否已经添加误报，0-否，1-是。
      */
-    public void setIsReported(Integer IsReported) {
+    public void setIsReported(Long IsReported) {
         this.IsReported = IsReported;
     }
 
@@ -408,7 +408,7 @@ public class Vul extends AbstractModel{
      * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
-    public Integer getAppid() {
+    public Long getAppid() {
         return this.Appid;
     }
 
@@ -416,7 +416,7 @@ public class Vul extends AbstractModel{
      * Set 云用户appid。
      * @param Appid 云用户appid。
      */
-    public void setAppid(Integer Appid) {
+    public void setAppid(Long Appid) {
         this.Appid = Appid;
     }
 

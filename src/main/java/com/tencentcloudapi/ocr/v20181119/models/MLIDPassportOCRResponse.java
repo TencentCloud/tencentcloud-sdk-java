@@ -78,7 +78,7 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     */
     @SerializedName("Warn")
     @Expose
-    private Integer [] Warn;
+    private Long [] Warn;
 
     /**
     * 证件图片
@@ -229,7 +229,7 @@ public class MLIDPassportOCRResponse extends AbstractModel{
 -9103	证照翻拍告警
 -9102	证照复印件告警
      */
-    public Integer [] getWarn() {
+    public Long [] getWarn() {
         return this.Warn;
     }
 
@@ -241,7 +241,7 @@ public class MLIDPassportOCRResponse extends AbstractModel{
 -9103	证照翻拍告警
 -9102	证照复印件告警
      */
-    public void setWarn(Integer [] Warn) {
+    public void setWarn(Long [] Warn) {
         this.Warn = Warn;
     }
 

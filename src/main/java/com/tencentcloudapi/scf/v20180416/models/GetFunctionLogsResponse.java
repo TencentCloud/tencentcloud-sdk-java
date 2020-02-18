@@ -27,7 +27,7 @@ public class GetFunctionLogsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 函数日志信息
@@ -54,7 +54,7 @@ public class GetFunctionLogsResponse extends AbstractModel{
      * Get 函数日志的总数 
      * @return TotalCount 函数日志的总数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -62,7 +62,7 @@ public class GetFunctionLogsResponse extends AbstractModel{
      * Set 函数日志的总数
      * @param TotalCount 函数日志的总数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

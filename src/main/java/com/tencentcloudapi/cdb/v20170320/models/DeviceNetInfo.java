@@ -27,41 +27,41 @@ public class DeviceNetInfo extends AbstractModel{
     */
     @SerializedName("Conn")
     @Expose
-    private Integer [] Conn;
+    private Long [] Conn;
 
     /**
     * 网卡入包量，单位：个/秒
     */
     @SerializedName("PackageIn")
     @Expose
-    private Integer [] PackageIn;
+    private Long [] PackageIn;
 
     /**
     * 网卡出包量，单位：个/秒
     */
     @SerializedName("PackageOut")
     @Expose
-    private Integer [] PackageOut;
+    private Long [] PackageOut;
 
     /**
     * 入流量，单位：kbps
     */
     @SerializedName("FlowIn")
     @Expose
-    private Integer [] FlowIn;
+    private Long [] FlowIn;
 
     /**
     * 出流量，单位：kbps
     */
     @SerializedName("FlowOut")
     @Expose
-    private Integer [] FlowOut;
+    private Long [] FlowOut;
 
     /**
      * Get tcp连接数 
      * @return Conn tcp连接数
      */
-    public Integer [] getConn() {
+    public Long [] getConn() {
         return this.Conn;
     }
 
@@ -69,7 +69,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Set tcp连接数
      * @param Conn tcp连接数
      */
-    public void setConn(Integer [] Conn) {
+    public void setConn(Long [] Conn) {
         this.Conn = Conn;
     }
 
@@ -77,7 +77,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Get 网卡入包量，单位：个/秒 
      * @return PackageIn 网卡入包量，单位：个/秒
      */
-    public Integer [] getPackageIn() {
+    public Long [] getPackageIn() {
         return this.PackageIn;
     }
 
@@ -85,7 +85,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Set 网卡入包量，单位：个/秒
      * @param PackageIn 网卡入包量，单位：个/秒
      */
-    public void setPackageIn(Integer [] PackageIn) {
+    public void setPackageIn(Long [] PackageIn) {
         this.PackageIn = PackageIn;
     }
 
@@ -93,7 +93,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Get 网卡出包量，单位：个/秒 
      * @return PackageOut 网卡出包量，单位：个/秒
      */
-    public Integer [] getPackageOut() {
+    public Long [] getPackageOut() {
         return this.PackageOut;
     }
 
@@ -101,7 +101,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Set 网卡出包量，单位：个/秒
      * @param PackageOut 网卡出包量，单位：个/秒
      */
-    public void setPackageOut(Integer [] PackageOut) {
+    public void setPackageOut(Long [] PackageOut) {
         this.PackageOut = PackageOut;
     }
 
@@ -109,7 +109,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Get 入流量，单位：kbps 
      * @return FlowIn 入流量，单位：kbps
      */
-    public Integer [] getFlowIn() {
+    public Long [] getFlowIn() {
         return this.FlowIn;
     }
 
@@ -117,7 +117,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Set 入流量，单位：kbps
      * @param FlowIn 入流量，单位：kbps
      */
-    public void setFlowIn(Integer [] FlowIn) {
+    public void setFlowIn(Long [] FlowIn) {
         this.FlowIn = FlowIn;
     }
 
@@ -125,7 +125,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Get 出流量，单位：kbps 
      * @return FlowOut 出流量，单位：kbps
      */
-    public Integer [] getFlowOut() {
+    public Long [] getFlowOut() {
         return this.FlowOut;
     }
 
@@ -133,7 +133,7 @@ public class DeviceNetInfo extends AbstractModel{
      * Set 出流量，单位：kbps
      * @param FlowOut 出流量，单位：kbps
      */
-    public void setFlowOut(Integer [] FlowOut) {
+    public void setFlowOut(Long [] FlowOut) {
         this.FlowOut = FlowOut;
     }
 

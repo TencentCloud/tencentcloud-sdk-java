@@ -27,7 +27,7 @@ public class DescribeSitesRequest extends AbstractModel{
     */
     @SerializedName("SiteIds")
     @Expose
-    private Integer [] SiteIds;
+    private Long [] SiteIds;
 
     /**
     * 过滤条件
@@ -41,20 +41,20 @@ public class DescribeSitesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数量，默认为10，最大值为100
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 站点ID列表 
      * @return SiteIds 站点ID列表
      */
-    public Integer [] getSiteIds() {
+    public Long [] getSiteIds() {
         return this.SiteIds;
     }
 
@@ -62,7 +62,7 @@ public class DescribeSitesRequest extends AbstractModel{
      * Set 站点ID列表
      * @param SiteIds 站点ID列表
      */
-    public void setSiteIds(Integer [] SiteIds) {
+    public void setSiteIds(Long [] SiteIds) {
         this.SiteIds = SiteIds;
     }
 
@@ -86,7 +86,7 @@ public class DescribeSitesRequest extends AbstractModel{
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -94,7 +94,7 @@ public class DescribeSitesRequest extends AbstractModel{
      * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -102,7 +102,7 @@ public class DescribeSitesRequest extends AbstractModel{
      * Get 返回数量，默认为10，最大值为100 
      * @return Limit 返回数量，默认为10，最大值为100
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -110,7 +110,7 @@ public class DescribeSitesRequest extends AbstractModel{
      * Set 返回数量，默认为10，最大值为100
      * @param Limit 返回数量，默认为10，最大值为100
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

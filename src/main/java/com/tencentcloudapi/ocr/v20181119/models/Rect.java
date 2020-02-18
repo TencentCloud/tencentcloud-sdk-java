@@ -27,34 +27,34 @@ public class Rect extends AbstractModel{
     */
     @SerializedName("X")
     @Expose
-    private Integer X;
+    private Long X;
 
     /**
     * 左上角y
     */
     @SerializedName("Y")
     @Expose
-    private Integer Y;
+    private Long Y;
 
     /**
     * 宽度
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 高度
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
      * Get 左上角x 
      * @return X 左上角x
      */
-    public Integer getX() {
+    public Long getX() {
         return this.X;
     }
 
@@ -62,7 +62,7 @@ public class Rect extends AbstractModel{
      * Set 左上角x
      * @param X 左上角x
      */
-    public void setX(Integer X) {
+    public void setX(Long X) {
         this.X = X;
     }
 
@@ -70,7 +70,7 @@ public class Rect extends AbstractModel{
      * Get 左上角y 
      * @return Y 左上角y
      */
-    public Integer getY() {
+    public Long getY() {
         return this.Y;
     }
 
@@ -78,7 +78,7 @@ public class Rect extends AbstractModel{
      * Set 左上角y
      * @param Y 左上角y
      */
-    public void setY(Integer Y) {
+    public void setY(Long Y) {
         this.Y = Y;
     }
 
@@ -86,7 +86,7 @@ public class Rect extends AbstractModel{
      * Get 宽度 
      * @return Width 宽度
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -94,7 +94,7 @@ public class Rect extends AbstractModel{
      * Set 宽度
      * @param Width 宽度
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -102,7 +102,7 @@ public class Rect extends AbstractModel{
      * Get 高度 
      * @return Height 高度
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -110,7 +110,7 @@ public class Rect extends AbstractModel{
      * Set 高度
      * @param Height 高度
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 

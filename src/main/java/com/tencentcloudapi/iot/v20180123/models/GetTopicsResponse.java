@@ -34,7 +34,7 @@ public class GetTopicsResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Integer Total;
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class GetTopicsResponse extends AbstractModel{
      * Get Topic总数 
      * @return Total Topic总数
      */
-    public Integer getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -71,7 +71,7 @@ public class GetTopicsResponse extends AbstractModel{
      * Set Topic总数
      * @param Total Topic总数
      */
-    public void setTotal(Integer Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 

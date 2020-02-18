@@ -27,7 +27,7 @@ public class NodeInfo extends AbstractModel{
     */
     @SerializedName("NodeNum")
     @Expose
-    private Integer NodeNum;
+    private Long NodeNum;
 
     /**
     * 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
@@ -58,13 +58,13 @@ public class NodeInfo extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
      * Get 节点数量 
      * @return NodeNum 节点数量
      */
-    public Integer getNodeNum() {
+    public Long getNodeNum() {
         return this.NodeNum;
     }
 
@@ -72,7 +72,7 @@ public class NodeInfo extends AbstractModel{
      * Set 节点数量
      * @param NodeNum 节点数量
      */
-    public void setNodeNum(Integer NodeNum) {
+    public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
@@ -140,7 +140,7 @@ public class NodeInfo extends AbstractModel{
      * Get 节点磁盘容量（单位GB） 
      * @return DiskSize 节点磁盘容量（单位GB）
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -148,7 +148,7 @@ public class NodeInfo extends AbstractModel{
      * Set 节点磁盘容量（单位GB）
      * @param DiskSize 节点磁盘容量（单位GB）
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 

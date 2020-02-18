@@ -27,28 +27,28 @@ public class TextTable extends AbstractModel{
     */
     @SerializedName("ColTl")
     @Expose
-    private Integer ColTl;
+    private Long ColTl;
 
     /**
     * 单元格左上角的行索引
     */
     @SerializedName("RowTl")
     @Expose
-    private Integer RowTl;
+    private Long RowTl;
 
     /**
     * 单元格右下角的列索引
     */
     @SerializedName("ColBr")
     @Expose
-    private Integer ColBr;
+    private Long ColBr;
 
     /**
     * 单元格右下角的行索引
     */
     @SerializedName("RowBr")
     @Expose
-    private Integer RowBr;
+    private Long RowBr;
 
     /**
     * 单元格文字
@@ -69,7 +69,7 @@ public class TextTable extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Integer Confidence;
+    private Long Confidence;
 
     /**
     * 文本行坐标，以四个顶点坐标表示
@@ -89,7 +89,7 @@ public class TextTable extends AbstractModel{
      * Get 单元格左上角的列索引 
      * @return ColTl 单元格左上角的列索引
      */
-    public Integer getColTl() {
+    public Long getColTl() {
         return this.ColTl;
     }
 
@@ -97,7 +97,7 @@ public class TextTable extends AbstractModel{
      * Set 单元格左上角的列索引
      * @param ColTl 单元格左上角的列索引
      */
-    public void setColTl(Integer ColTl) {
+    public void setColTl(Long ColTl) {
         this.ColTl = ColTl;
     }
 
@@ -105,7 +105,7 @@ public class TextTable extends AbstractModel{
      * Get 单元格左上角的行索引 
      * @return RowTl 单元格左上角的行索引
      */
-    public Integer getRowTl() {
+    public Long getRowTl() {
         return this.RowTl;
     }
 
@@ -113,7 +113,7 @@ public class TextTable extends AbstractModel{
      * Set 单元格左上角的行索引
      * @param RowTl 单元格左上角的行索引
      */
-    public void setRowTl(Integer RowTl) {
+    public void setRowTl(Long RowTl) {
         this.RowTl = RowTl;
     }
 
@@ -121,7 +121,7 @@ public class TextTable extends AbstractModel{
      * Get 单元格右下角的列索引 
      * @return ColBr 单元格右下角的列索引
      */
-    public Integer getColBr() {
+    public Long getColBr() {
         return this.ColBr;
     }
 
@@ -129,7 +129,7 @@ public class TextTable extends AbstractModel{
      * Set 单元格右下角的列索引
      * @param ColBr 单元格右下角的列索引
      */
-    public void setColBr(Integer ColBr) {
+    public void setColBr(Long ColBr) {
         this.ColBr = ColBr;
     }
 
@@ -137,7 +137,7 @@ public class TextTable extends AbstractModel{
      * Get 单元格右下角的行索引 
      * @return RowBr 单元格右下角的行索引
      */
-    public Integer getRowBr() {
+    public Long getRowBr() {
         return this.RowBr;
     }
 
@@ -145,7 +145,7 @@ public class TextTable extends AbstractModel{
      * Set 单元格右下角的行索引
      * @param RowBr 单元格右下角的行索引
      */
-    public void setRowBr(Integer RowBr) {
+    public void setRowBr(Long RowBr) {
         this.RowBr = RowBr;
     }
 
@@ -185,7 +185,7 @@ public class TextTable extends AbstractModel{
      * Get 置信度 0 ~100 
      * @return Confidence 置信度 0 ~100
      */
-    public Integer getConfidence() {
+    public Long getConfidence() {
         return this.Confidence;
     }
 
@@ -193,7 +193,7 @@ public class TextTable extends AbstractModel{
      * Set 置信度 0 ~100
      * @param Confidence 置信度 0 ~100
      */
-    public void setConfidence(Integer Confidence) {
+    public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 

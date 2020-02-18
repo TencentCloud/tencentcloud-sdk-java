@@ -44,7 +44,7 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 状态描述
@@ -60,7 +60,7 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 断开时间
@@ -139,7 +139,7 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
      * @return Status 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -149,7 +149,7 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
      * @param Status 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -179,7 +179,7 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
      * @return Offset 同步时延，单位：字节
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -189,7 +189,7 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
      * @param Offset 同步时延，单位：字节
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 

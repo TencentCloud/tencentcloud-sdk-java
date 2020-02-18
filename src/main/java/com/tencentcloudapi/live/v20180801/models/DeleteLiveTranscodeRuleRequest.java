@@ -52,7 +52,7 @@ public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
      * Get 推流域名。
@@ -120,7 +120,7 @@ public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
      * @return TemplateId 模板ID。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -130,7 +130,7 @@ public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
      * @param TemplateId 模板ID。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 

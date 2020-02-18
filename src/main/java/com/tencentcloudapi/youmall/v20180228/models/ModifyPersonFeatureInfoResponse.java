@@ -34,35 +34,35 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 请求的顾客id
     */
     @SerializedName("PersonId")
     @Expose
-    private Integer PersonId;
+    private Long PersonId;
 
     /**
     * 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
     */
     @SerializedName("PersonIdBind")
     @Expose
-    private Integer PersonIdBind;
+    private Long PersonIdBind;
 
     /**
     * 请求的顾客类型
     */
     @SerializedName("PersonType")
     @Expose
-    private Integer PersonType;
+    private Long PersonType;
 
     /**
     * 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
     */
     @SerializedName("SimilarPersonIds")
     @Expose
-    private Integer [] SimilarPersonIds;
+    private Long [] SimilarPersonIds;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -91,7 +91,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Get 店铺ID，如果不填表示操作集团身份库 
      * @return ShopId 店铺ID，如果不填表示操作集团身份库
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -99,7 +99,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Set 店铺ID，如果不填表示操作集团身份库
      * @param ShopId 店铺ID，如果不填表示操作集团身份库
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -107,7 +107,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Get 请求的顾客id 
      * @return PersonId 请求的顾客id
      */
-    public Integer getPersonId() {
+    public Long getPersonId() {
         return this.PersonId;
     }
 
@@ -115,7 +115,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Set 请求的顾客id
      * @param PersonId 请求的顾客id
      */
-    public void setPersonId(Integer PersonId) {
+    public void setPersonId(Long PersonId) {
         this.PersonId = PersonId;
     }
 
@@ -123,7 +123,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Get 图片实际绑定person_id，可能与请求的person_id不同，以此id为准 
      * @return PersonIdBind 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
      */
-    public Integer getPersonIdBind() {
+    public Long getPersonIdBind() {
         return this.PersonIdBind;
     }
 
@@ -131,7 +131,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Set 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
      * @param PersonIdBind 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
      */
-    public void setPersonIdBind(Integer PersonIdBind) {
+    public void setPersonIdBind(Long PersonIdBind) {
         this.PersonIdBind = PersonIdBind;
     }
 
@@ -139,7 +139,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Get 请求的顾客类型 
      * @return PersonType 请求的顾客类型
      */
-    public Integer getPersonType() {
+    public Long getPersonType() {
         return this.PersonType;
     }
 
@@ -147,7 +147,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Set 请求的顾客类型
      * @param PersonType 请求的顾客类型
      */
-    public void setPersonType(Integer PersonType) {
+    public void setPersonType(Long PersonType) {
         this.PersonType = PersonType;
     }
 
@@ -155,7 +155,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Get 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人 
      * @return SimilarPersonIds 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
      */
-    public Integer [] getSimilarPersonIds() {
+    public Long [] getSimilarPersonIds() {
         return this.SimilarPersonIds;
     }
 
@@ -163,7 +163,7 @@ public class ModifyPersonFeatureInfoResponse extends AbstractModel{
      * Set 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
      * @param SimilarPersonIds 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
      */
-    public void setSimilarPersonIds(Integer [] SimilarPersonIds) {
+    public void setSimilarPersonIds(Long [] SimilarPersonIds) {
         this.SimilarPersonIds = SimilarPersonIds;
     }
 

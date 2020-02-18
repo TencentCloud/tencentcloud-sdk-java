@@ -27,20 +27,20 @@ public class HourTrafficInfoDetail extends AbstractModel{
     */
     @SerializedName("Hour")
     @Expose
-    private Integer Hour;
+    private Long Hour;
 
     /**
     * 分时客流量
     */
     @SerializedName("HourTrafficTotalCount")
     @Expose
-    private Integer HourTrafficTotalCount;
+    private Long HourTrafficTotalCount;
 
     /**
      * Get 小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23 
      * @return Hour 小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
      */
-    public Integer getHour() {
+    public Long getHour() {
         return this.Hour;
     }
 
@@ -48,7 +48,7 @@ public class HourTrafficInfoDetail extends AbstractModel{
      * Set 小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
      * @param Hour 小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23
      */
-    public void setHour(Integer Hour) {
+    public void setHour(Long Hour) {
         this.Hour = Hour;
     }
 
@@ -56,7 +56,7 @@ public class HourTrafficInfoDetail extends AbstractModel{
      * Get 分时客流量 
      * @return HourTrafficTotalCount 分时客流量
      */
-    public Integer getHourTrafficTotalCount() {
+    public Long getHourTrafficTotalCount() {
         return this.HourTrafficTotalCount;
     }
 
@@ -64,7 +64,7 @@ public class HourTrafficInfoDetail extends AbstractModel{
      * Set 分时客流量
      * @param HourTrafficTotalCount 分时客流量
      */
-    public void setHourTrafficTotalCount(Integer HourTrafficTotalCount) {
+    public void setHourTrafficTotalCount(Long HourTrafficTotalCount) {
         this.HourTrafficTotalCount = HourTrafficTotalCount;
     }
 

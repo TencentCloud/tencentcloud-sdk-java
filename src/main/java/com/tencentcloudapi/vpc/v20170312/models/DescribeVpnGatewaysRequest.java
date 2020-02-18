@@ -48,14 +48,14 @@ public class DescribeVpnGatewaysRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 请求对象个数
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。 
@@ -121,7 +121,7 @@ public class DescribeVpnGatewaysRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -129,7 +129,7 @@ public class DescribeVpnGatewaysRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -137,7 +137,7 @@ public class DescribeVpnGatewaysRequest extends AbstractModel{
      * Get 请求对象个数 
      * @return Limit 请求对象个数
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -145,7 +145,7 @@ public class DescribeVpnGatewaysRequest extends AbstractModel{
      * Set 请求对象个数
      * @param Limit 请求对象个数
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

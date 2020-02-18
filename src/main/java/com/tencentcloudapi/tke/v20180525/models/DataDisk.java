@@ -41,7 +41,7 @@ public class DataDisk extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
     * 是否自动化格式盘并挂载
@@ -93,7 +93,7 @@ public class DataDisk extends AbstractModel{
      * Get 云盘大小(G） 
      * @return DiskSize 云盘大小(G）
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -101,7 +101,7 @@ public class DataDisk extends AbstractModel{
      * Set 云盘大小(G）
      * @param DiskSize 云盘大小(G）
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 

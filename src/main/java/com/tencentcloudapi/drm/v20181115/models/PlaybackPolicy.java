@@ -27,20 +27,20 @@ public class PlaybackPolicy extends AbstractModel{
     */
     @SerializedName("LicenseDurationSeconds")
     @Expose
-    private Integer LicenseDurationSeconds;
+    private Long LicenseDurationSeconds;
 
     /**
     * 开始播放后，允许最长播放时间
     */
     @SerializedName("PlaybackDurationSeconds")
     @Expose
-    private Integer PlaybackDurationSeconds;
+    private Long PlaybackDurationSeconds;
 
     /**
      * Get 播放许可证的有效期 
      * @return LicenseDurationSeconds 播放许可证的有效期
      */
-    public Integer getLicenseDurationSeconds() {
+    public Long getLicenseDurationSeconds() {
         return this.LicenseDurationSeconds;
     }
 
@@ -48,7 +48,7 @@ public class PlaybackPolicy extends AbstractModel{
      * Set 播放许可证的有效期
      * @param LicenseDurationSeconds 播放许可证的有效期
      */
-    public void setLicenseDurationSeconds(Integer LicenseDurationSeconds) {
+    public void setLicenseDurationSeconds(Long LicenseDurationSeconds) {
         this.LicenseDurationSeconds = LicenseDurationSeconds;
     }
 
@@ -56,7 +56,7 @@ public class PlaybackPolicy extends AbstractModel{
      * Get 开始播放后，允许最长播放时间 
      * @return PlaybackDurationSeconds 开始播放后，允许最长播放时间
      */
-    public Integer getPlaybackDurationSeconds() {
+    public Long getPlaybackDurationSeconds() {
         return this.PlaybackDurationSeconds;
     }
 
@@ -64,7 +64,7 @@ public class PlaybackPolicy extends AbstractModel{
      * Set 开始播放后，允许最长播放时间
      * @param PlaybackDurationSeconds 开始播放后，允许最长播放时间
      */
-    public void setPlaybackDurationSeconds(Integer PlaybackDurationSeconds) {
+    public void setPlaybackDurationSeconds(Long PlaybackDurationSeconds) {
         this.PlaybackDurationSeconds = PlaybackDurationSeconds;
     }
 

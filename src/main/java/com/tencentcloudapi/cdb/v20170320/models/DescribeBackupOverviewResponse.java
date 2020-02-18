@@ -27,28 +27,28 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
     */
     @SerializedName("BackupCount")
     @Expose
-    private Integer BackupCount;
+    private Long BackupCount;
 
     /**
     * 用户在当前地域备份的总容量
     */
     @SerializedName("BackupVolume")
     @Expose
-    private Integer BackupVolume;
+    private Long BackupVolume;
 
     /**
     * 用户在当前地域备份的计费容量，即超出赠送容量的部分。
     */
     @SerializedName("BillingVolume")
     @Expose
-    private Integer BillingVolume;
+    private Long BillingVolume;
 
     /**
     * 用户在当前地域获得的赠送备份容量。
     */
     @SerializedName("FreeVolume")
     @Expose
-    private Integer FreeVolume;
+    private Long FreeVolume;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,7 +61,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Get 用户在当前地域备份的总个数（包含数据备份和日志备份）。 
      * @return BackupCount 用户在当前地域备份的总个数（包含数据备份和日志备份）。
      */
-    public Integer getBackupCount() {
+    public Long getBackupCount() {
         return this.BackupCount;
     }
 
@@ -69,7 +69,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Set 用户在当前地域备份的总个数（包含数据备份和日志备份）。
      * @param BackupCount 用户在当前地域备份的总个数（包含数据备份和日志备份）。
      */
-    public void setBackupCount(Integer BackupCount) {
+    public void setBackupCount(Long BackupCount) {
         this.BackupCount = BackupCount;
     }
 
@@ -77,7 +77,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Get 用户在当前地域备份的总容量 
      * @return BackupVolume 用户在当前地域备份的总容量
      */
-    public Integer getBackupVolume() {
+    public Long getBackupVolume() {
         return this.BackupVolume;
     }
 
@@ -85,7 +85,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Set 用户在当前地域备份的总容量
      * @param BackupVolume 用户在当前地域备份的总容量
      */
-    public void setBackupVolume(Integer BackupVolume) {
+    public void setBackupVolume(Long BackupVolume) {
         this.BackupVolume = BackupVolume;
     }
 
@@ -93,7 +93,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Get 用户在当前地域备份的计费容量，即超出赠送容量的部分。 
      * @return BillingVolume 用户在当前地域备份的计费容量，即超出赠送容量的部分。
      */
-    public Integer getBillingVolume() {
+    public Long getBillingVolume() {
         return this.BillingVolume;
     }
 
@@ -101,7 +101,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Set 用户在当前地域备份的计费容量，即超出赠送容量的部分。
      * @param BillingVolume 用户在当前地域备份的计费容量，即超出赠送容量的部分。
      */
-    public void setBillingVolume(Integer BillingVolume) {
+    public void setBillingVolume(Long BillingVolume) {
         this.BillingVolume = BillingVolume;
     }
 
@@ -109,7 +109,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Get 用户在当前地域获得的赠送备份容量。 
      * @return FreeVolume 用户在当前地域获得的赠送备份容量。
      */
-    public Integer getFreeVolume() {
+    public Long getFreeVolume() {
         return this.FreeVolume;
     }
 
@@ -117,7 +117,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
      * Set 用户在当前地域获得的赠送备份容量。
      * @param FreeVolume 用户在当前地域获得的赠送备份容量。
      */
-    public void setFreeVolume(Integer FreeVolume) {
+    public void setFreeVolume(Long FreeVolume) {
         this.FreeVolume = FreeVolume;
     }
 

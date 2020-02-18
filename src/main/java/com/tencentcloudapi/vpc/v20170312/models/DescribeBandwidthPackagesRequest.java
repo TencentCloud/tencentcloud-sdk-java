@@ -48,14 +48,14 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 查询带宽包数量限制
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 带宽包唯一ID列表 
@@ -121,7 +121,7 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
      * Get 查询带宽包偏移量 
      * @return Offset 查询带宽包偏移量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -129,7 +129,7 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
      * Set 查询带宽包偏移量
      * @param Offset 查询带宽包偏移量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -137,7 +137,7 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
      * Get 查询带宽包数量限制 
      * @return Limit 查询带宽包数量限制
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -145,7 +145,7 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
      * Set 查询带宽包数量限制
      * @param Limit 查询带宽包数量限制
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

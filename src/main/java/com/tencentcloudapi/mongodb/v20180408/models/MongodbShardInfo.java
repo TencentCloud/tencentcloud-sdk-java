@@ -48,28 +48,28 @@ public class MongodbShardInfo extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 分片磁盘规格，单位为MB
     */
     @SerializedName("Volume")
     @Expose
-    private Integer Volume;
+    private Long Volume;
 
     /**
     * 分片Oplog大小，单位为MB
     */
     @SerializedName("OplogSize")
     @Expose
-    private Integer OplogSize;
+    private Long OplogSize;
 
     /**
     * 分片从节点数
     */
     @SerializedName("SecondaryNum")
     @Expose
-    private Integer SecondaryNum;
+    private Long SecondaryNum;
 
     /**
     * 分片物理ID
@@ -130,7 +130,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Get 分片内存规格，单位为MB 
      * @return Memory 分片内存规格，单位为MB
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -138,7 +138,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Set 分片内存规格，单位为MB
      * @param Memory 分片内存规格，单位为MB
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -146,7 +146,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Get 分片磁盘规格，单位为MB 
      * @return Volume 分片磁盘规格，单位为MB
      */
-    public Integer getVolume() {
+    public Long getVolume() {
         return this.Volume;
     }
 
@@ -154,7 +154,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Set 分片磁盘规格，单位为MB
      * @param Volume 分片磁盘规格，单位为MB
      */
-    public void setVolume(Integer Volume) {
+    public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
@@ -162,7 +162,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Get 分片Oplog大小，单位为MB 
      * @return OplogSize 分片Oplog大小，单位为MB
      */
-    public Integer getOplogSize() {
+    public Long getOplogSize() {
         return this.OplogSize;
     }
 
@@ -170,7 +170,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Set 分片Oplog大小，单位为MB
      * @param OplogSize 分片Oplog大小，单位为MB
      */
-    public void setOplogSize(Integer OplogSize) {
+    public void setOplogSize(Long OplogSize) {
         this.OplogSize = OplogSize;
     }
 
@@ -178,7 +178,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Get 分片从节点数 
      * @return SecondaryNum 分片从节点数
      */
-    public Integer getSecondaryNum() {
+    public Long getSecondaryNum() {
         return this.SecondaryNum;
     }
 
@@ -186,7 +186,7 @@ public class MongodbShardInfo extends AbstractModel{
      * Set 分片从节点数
      * @param SecondaryNum 分片从节点数
      */
-    public void setSecondaryNum(Integer SecondaryNum) {
+    public void setSecondaryNum(Long SecondaryNum) {
         this.SecondaryNum = SecondaryNum;
     }
 

@@ -64,7 +64,7 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
     */
     @SerializedName("SortId")
     @Expose
-    private Integer SortId;
+    private Long SortId;
 
     /**
     * 是否支持默认策略
@@ -173,7 +173,7 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
      * Get 排序id 
      * @return SortId 排序id
      */
-    public Integer getSortId() {
+    public Long getSortId() {
         return this.SortId;
     }
 
@@ -181,7 +181,7 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
      * Set 排序id
      * @param SortId 排序id
      */
-    public void setSortId(Integer SortId) {
+    public void setSortId(Long SortId) {
         this.SortId = SortId;
     }
 

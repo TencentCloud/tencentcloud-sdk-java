@@ -62,7 +62,7 @@ public class SignInfo extends AbstractModel{
     */
     @SerializedName("CertType")
     @Expose
-    private Integer CertType;
+    private Long CertType;
 
     /**
     * 签名域的标签值
@@ -155,7 +155,7 @@ public class SignInfo extends AbstractModel{
      * Get 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1 
      * @return CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
-    public Integer getCertType() {
+    public Long getCertType() {
         return this.CertType;
     }
 
@@ -163,7 +163,7 @@ public class SignInfo extends AbstractModel{
      * Set 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      * @param CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
-    public void setCertType(Integer CertType) {
+    public void setCertType(Long CertType) {
         this.CertType = CertType;
     }
 

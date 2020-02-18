@@ -27,28 +27,28 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
     */
     @SerializedName("TotalNum")
     @Expose
-    private Integer TotalNum;
+    private Long TotalNum;
 
     /**
     * 总页数。
     */
     @SerializedName("TotalPage")
     @Expose
-    private Integer TotalPage;
+    private Long TotalPage;
 
     /**
     * 分页的页码。
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页显示的条数。
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
     * 禁推流列表。
@@ -68,7 +68,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Get 符合条件的总个数。 
      * @return TotalNum 符合条件的总个数。
      */
-    public Integer getTotalNum() {
+    public Long getTotalNum() {
         return this.TotalNum;
     }
 
@@ -76,7 +76,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Set 符合条件的总个数。
      * @param TotalNum 符合条件的总个数。
      */
-    public void setTotalNum(Integer TotalNum) {
+    public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
@@ -84,7 +84,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Get 总页数。 
      * @return TotalPage 总页数。
      */
-    public Integer getTotalPage() {
+    public Long getTotalPage() {
         return this.TotalPage;
     }
 
@@ -92,7 +92,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Set 总页数。
      * @param TotalPage 总页数。
      */
-    public void setTotalPage(Integer TotalPage) {
+    public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;
     }
 
@@ -100,7 +100,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Get 分页的页码。 
      * @return PageNum 分页的页码。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -108,7 +108,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Set 分页的页码。
      * @param PageNum 分页的页码。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -116,7 +116,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Get 每页显示的条数。 
      * @return PageSize 每页显示的条数。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -124,7 +124,7 @@ public class DescribeLiveForbidStreamListResponse extends AbstractModel{
      * Set 每页显示的条数。
      * @param PageSize 每页显示的条数。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 

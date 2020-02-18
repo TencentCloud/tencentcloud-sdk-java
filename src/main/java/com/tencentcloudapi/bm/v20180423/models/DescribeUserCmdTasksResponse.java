@@ -27,7 +27,7 @@ public class DescribeUserCmdTasksResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 脚本任务信息列表
@@ -47,7 +47,7 @@ public class DescribeUserCmdTasksResponse extends AbstractModel{
      * Get 脚本任务信息数量 
      * @return TotalCount 脚本任务信息数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeUserCmdTasksResponse extends AbstractModel{
      * Set 脚本任务信息数量
      * @param TotalCount 脚本任务信息数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

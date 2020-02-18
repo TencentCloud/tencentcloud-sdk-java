@@ -34,7 +34,7 @@ public class ZoneDayFlow extends AbstractModel{
     */
     @SerializedName("FlowCount")
     @Expose
-    private Integer FlowCount;
+    private Long FlowCount;
 
     /**
      * Get 日期，如 2018-08-6 
@@ -56,7 +56,7 @@ public class ZoneDayFlow extends AbstractModel{
      * Get 客流量 
      * @return FlowCount 客流量
      */
-    public Integer getFlowCount() {
+    public Long getFlowCount() {
         return this.FlowCount;
     }
 
@@ -64,7 +64,7 @@ public class ZoneDayFlow extends AbstractModel{
      * Set 客流量
      * @param FlowCount 客流量
      */
-    public void setFlowCount(Integer FlowCount) {
+    public void setFlowCount(Long FlowCount) {
         this.FlowCount = FlowCount;
     }
 

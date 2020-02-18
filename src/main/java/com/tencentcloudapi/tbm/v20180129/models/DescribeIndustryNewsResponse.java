@@ -27,21 +27,21 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
     */
     @SerializedName("NewsCount")
     @Expose
-    private Integer NewsCount;
+    private Long NewsCount;
 
     /**
     * 总计来源数量
     */
     @SerializedName("FromCount")
     @Expose
-    private Integer FromCount;
+    private Long FromCount;
 
     /**
     * 总计疑似负面数量
     */
     @SerializedName("AdverseCount")
     @Expose
-    private Integer AdverseCount;
+    private Long AdverseCount;
 
     /**
     * 文章列表
@@ -68,7 +68,7 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
      * Get 总计文章数量 
      * @return NewsCount 总计文章数量
      */
-    public Integer getNewsCount() {
+    public Long getNewsCount() {
         return this.NewsCount;
     }
 
@@ -76,7 +76,7 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
      * Set 总计文章数量
      * @param NewsCount 总计文章数量
      */
-    public void setNewsCount(Integer NewsCount) {
+    public void setNewsCount(Long NewsCount) {
         this.NewsCount = NewsCount;
     }
 
@@ -84,7 +84,7 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
      * Get 总计来源数量 
      * @return FromCount 总计来源数量
      */
-    public Integer getFromCount() {
+    public Long getFromCount() {
         return this.FromCount;
     }
 
@@ -92,7 +92,7 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
      * Set 总计来源数量
      * @param FromCount 总计来源数量
      */
-    public void setFromCount(Integer FromCount) {
+    public void setFromCount(Long FromCount) {
         this.FromCount = FromCount;
     }
 
@@ -100,7 +100,7 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
      * Get 总计疑似负面数量 
      * @return AdverseCount 总计疑似负面数量
      */
-    public Integer getAdverseCount() {
+    public Long getAdverseCount() {
         return this.AdverseCount;
     }
 
@@ -108,7 +108,7 @@ public class DescribeIndustryNewsResponse extends AbstractModel{
      * Set 总计疑似负面数量
      * @param AdverseCount 总计疑似负面数量
      */
-    public void setAdverseCount(Integer AdverseCount) {
+    public void setAdverseCount(Long AdverseCount) {
         this.AdverseCount = AdverseCount;
     }
 

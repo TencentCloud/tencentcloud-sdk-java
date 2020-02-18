@@ -27,7 +27,7 @@ public class InstanceNode extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 节点详细信息
@@ -40,7 +40,7 @@ public class InstanceNode extends AbstractModel{
      * Get Id 
      * @return Id Id
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
@@ -48,7 +48,7 @@ public class InstanceNode extends AbstractModel{
      * Set Id
      * @param Id Id
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 

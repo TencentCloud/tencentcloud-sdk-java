@@ -27,7 +27,7 @@ public class DescribeAccountsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 符合查询条件的账号详细信息。
@@ -47,7 +47,7 @@ public class DescribeAccountsResponse extends AbstractModel{
      * Get 符合查询条件的账号数量。 
      * @return TotalCount 符合查询条件的账号数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeAccountsResponse extends AbstractModel{
      * Set 符合查询条件的账号数量。
      * @param TotalCount 符合查询条件的账号数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

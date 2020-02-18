@@ -28,7 +28,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
     */
     @SerializedName("StatusChangeAmount")
     @Expose
-    private Integer StatusChangeAmount;
+    private Long StatusChangeAmount;
 
     /**
     * 告警状态未配置的事件数量
@@ -36,7 +36,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
     */
     @SerializedName("UnConfigAlarmAmount")
     @Expose
-    private Integer UnConfigAlarmAmount;
+    private Long UnConfigAlarmAmount;
 
     /**
     * 异常事件数量
@@ -44,7 +44,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
     */
     @SerializedName("UnNormalEventAmount")
     @Expose
-    private Integer UnNormalEventAmount;
+    private Long UnNormalEventAmount;
 
     /**
     * 未恢复的事件数量
@@ -52,7 +52,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
     */
     @SerializedName("UnRecoverAmount")
     @Expose
-    private Integer UnRecoverAmount;
+    private Long UnRecoverAmount;
 
     /**
      * Get 状态变更的事件数量
@@ -60,7 +60,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @return StatusChangeAmount 状态变更的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getStatusChangeAmount() {
+    public Long getStatusChangeAmount() {
         return this.StatusChangeAmount;
     }
 
@@ -70,7 +70,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @param StatusChangeAmount 状态变更的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatusChangeAmount(Integer StatusChangeAmount) {
+    public void setStatusChangeAmount(Long StatusChangeAmount) {
         this.StatusChangeAmount = StatusChangeAmount;
     }
 
@@ -80,7 +80,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @return UnConfigAlarmAmount 告警状态未配置的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getUnConfigAlarmAmount() {
+    public Long getUnConfigAlarmAmount() {
         return this.UnConfigAlarmAmount;
     }
 
@@ -90,7 +90,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @param UnConfigAlarmAmount 告警状态未配置的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnConfigAlarmAmount(Integer UnConfigAlarmAmount) {
+    public void setUnConfigAlarmAmount(Long UnConfigAlarmAmount) {
         this.UnConfigAlarmAmount = UnConfigAlarmAmount;
     }
 
@@ -100,7 +100,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @return UnNormalEventAmount 异常事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getUnNormalEventAmount() {
+    public Long getUnNormalEventAmount() {
         return this.UnNormalEventAmount;
     }
 
@@ -110,7 +110,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @param UnNormalEventAmount 异常事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnNormalEventAmount(Integer UnNormalEventAmount) {
+    public void setUnNormalEventAmount(Long UnNormalEventAmount) {
         this.UnNormalEventAmount = UnNormalEventAmount;
     }
 
@@ -120,7 +120,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @return UnRecoverAmount 未恢复的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getUnRecoverAmount() {
+    public Long getUnRecoverAmount() {
         return this.UnRecoverAmount;
     }
 
@@ -130,7 +130,7 @@ public class DescribeProductEventListOverView extends AbstractModel{
      * @param UnRecoverAmount 未恢复的事件数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnRecoverAmount(Integer UnRecoverAmount) {
+    public void setUnRecoverAmount(Long UnRecoverAmount) {
         this.UnRecoverAmount = UnRecoverAmount;
     }
 

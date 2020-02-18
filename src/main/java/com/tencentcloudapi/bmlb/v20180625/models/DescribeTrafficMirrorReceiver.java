@@ -34,7 +34,7 @@ public class DescribeTrafficMirrorReceiver extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
      * Get 物理机实例ID。 
@@ -56,7 +56,7 @@ public class DescribeTrafficMirrorReceiver extends AbstractModel{
      * Get 物理机绑定的端口。 
      * @return Port 物理机绑定的端口。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -64,7 +64,7 @@ public class DescribeTrafficMirrorReceiver extends AbstractModel{
      * Set 物理机绑定的端口。
      * @param Port 物理机绑定的端口。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

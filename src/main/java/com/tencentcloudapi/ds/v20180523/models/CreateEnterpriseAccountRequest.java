@@ -48,7 +48,7 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
     */
     @SerializedName("IdentType")
     @Expose
-    private Integer IdentType;
+    private Long IdentType;
 
     /**
     * 企业用户营业执照号码
@@ -76,7 +76,7 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
     */
     @SerializedName("TransactorIdentType")
     @Expose
-    private Integer TransactorIdentType;
+    private Long TransactorIdentType;
 
     /**
     * 经办人证件号码
@@ -144,7 +144,7 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
      * Get 企业用户证件类型，8代表营业执照，详情请见常见问题 
      * @return IdentType 企业用户证件类型，8代表营业执照，详情请见常见问题
      */
-    public Integer getIdentType() {
+    public Long getIdentType() {
         return this.IdentType;
     }
 
@@ -152,7 +152,7 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
      * Set 企业用户证件类型，8代表营业执照，详情请见常见问题
      * @param IdentType 企业用户证件类型，8代表营业执照，详情请见常见问题
      */
-    public void setIdentType(Integer IdentType) {
+    public void setIdentType(Long IdentType) {
         this.IdentType = IdentType;
     }
 
@@ -208,7 +208,7 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
      * Get 经办人证件类型，0代表身份证 
      * @return TransactorIdentType 经办人证件类型，0代表身份证
      */
-    public Integer getTransactorIdentType() {
+    public Long getTransactorIdentType() {
         return this.TransactorIdentType;
     }
 
@@ -216,7 +216,7 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
      * Set 经办人证件类型，0代表身份证
      * @param TransactorIdentType 经办人证件类型，0代表身份证
      */
-    public void setTransactorIdentType(Integer TransactorIdentType) {
+    public void setTransactorIdentType(Long TransactorIdentType) {
         this.TransactorIdentType = TransactorIdentType;
     }
 

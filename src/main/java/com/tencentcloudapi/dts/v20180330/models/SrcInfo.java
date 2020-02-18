@@ -41,7 +41,7 @@ public class SrcInfo extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 实例的用户名
@@ -171,7 +171,7 @@ public class SrcInfo extends AbstractModel{
      * Get 实例的端口 
      * @return Port 实例的端口
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -179,7 +179,7 @@ public class SrcInfo extends AbstractModel{
      * Set 实例的端口
      * @param Port 实例的端口
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

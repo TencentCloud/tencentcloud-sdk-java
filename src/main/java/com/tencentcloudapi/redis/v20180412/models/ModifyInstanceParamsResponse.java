@@ -34,7 +34,7 @@ public class ModifyInstanceParamsResponse extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class ModifyInstanceParamsResponse extends AbstractModel{
      * Get 任务ID 
      * @return TaskId 任务ID
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -71,7 +71,7 @@ public class ModifyInstanceParamsResponse extends AbstractModel{
      * Set 任务ID
      * @param TaskId 任务ID
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 

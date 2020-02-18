@@ -41,21 +41,21 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 通道ID，固定字段：0
     */
     @SerializedName("ChannelId")
     @Expose
-    private Integer ChannelId;
+    private Long ChannelId;
 
     /**
     * 获取的最新交易的区块数量，取值范围1~5
     */
     @SerializedName("LatestBlockNumber")
     @Expose
-    private Integer LatestBlockNumber;
+    private Long LatestBlockNumber;
 
     /**
     * 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
@@ -83,14 +83,14 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 需要获取的交易数量
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 模块名称，固定字段：transaction 
@@ -128,7 +128,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Get 组织ID，固定字段：0 
      * @return GroupId 组织ID，固定字段：0
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -136,7 +136,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Set 组织ID，固定字段：0
      * @param GroupId 组织ID，固定字段：0
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
@@ -144,7 +144,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Get 通道ID，固定字段：0 
      * @return ChannelId 通道ID，固定字段：0
      */
-    public Integer getChannelId() {
+    public Long getChannelId() {
         return this.ChannelId;
     }
 
@@ -152,7 +152,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Set 通道ID，固定字段：0
      * @param ChannelId 通道ID，固定字段：0
      */
-    public void setChannelId(Integer ChannelId) {
+    public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;
     }
 
@@ -160,7 +160,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Get 获取的最新交易的区块数量，取值范围1~5 
      * @return LatestBlockNumber 获取的最新交易的区块数量，取值范围1~5
      */
-    public Integer getLatestBlockNumber() {
+    public Long getLatestBlockNumber() {
         return this.LatestBlockNumber;
     }
 
@@ -168,7 +168,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Set 获取的最新交易的区块数量，取值范围1~5
      * @param LatestBlockNumber 获取的最新交易的区块数量，取值范围1~5
      */
-    public void setLatestBlockNumber(Integer LatestBlockNumber) {
+    public void setLatestBlockNumber(Long LatestBlockNumber) {
         this.LatestBlockNumber = LatestBlockNumber;
     }
 
@@ -224,7 +224,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Get 需要获取的起始交易偏移 
      * @return Offset 需要获取的起始交易偏移
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -232,7 +232,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Set 需要获取的起始交易偏移
      * @param Offset 需要获取的起始交易偏移
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -240,7 +240,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Get 需要获取的交易数量 
      * @return Limit 需要获取的交易数量
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -248,7 +248,7 @@ public class GetLatesdTransactionListRequest extends AbstractModel{
      * Set 需要获取的交易数量
      * @param Limit 需要获取的交易数量
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

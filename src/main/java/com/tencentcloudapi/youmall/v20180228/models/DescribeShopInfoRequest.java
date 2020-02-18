@@ -27,20 +27,20 @@ public class DescribeShopInfoRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * Limit:每页的数据项，最大100，超过100会被强制指定为100
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit 
      * @return Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -48,7 +48,7 @@ public class DescribeShopInfoRequest extends AbstractModel{
      * Set 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -56,7 +56,7 @@ public class DescribeShopInfoRequest extends AbstractModel{
      * Get Limit:每页的数据项，最大100，超过100会被强制指定为100 
      * @return Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -64,7 +64,7 @@ public class DescribeShopInfoRequest extends AbstractModel{
      * Set Limit:每页的数据项，最大100，超过100会被强制指定为100
      * @param Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

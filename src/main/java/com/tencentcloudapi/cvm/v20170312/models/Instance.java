@@ -48,14 +48,14 @@ public class Instance extends AbstractModel{
     */
     @SerializedName("CPU")
     @Expose
-    private Integer CPU;
+    private Long CPU;
 
     /**
     * 实例内存容量，单位：`GB`。
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
@@ -275,7 +275,7 @@ public class Instance extends AbstractModel{
      * Get 实例的CPU核数，单位：核。 
      * @return CPU 实例的CPU核数，单位：核。
      */
-    public Integer getCPU() {
+    public Long getCPU() {
         return this.CPU;
     }
 
@@ -283,7 +283,7 @@ public class Instance extends AbstractModel{
      * Set 实例的CPU核数，单位：核。
      * @param CPU 实例的CPU核数，单位：核。
      */
-    public void setCPU(Integer CPU) {
+    public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
@@ -291,7 +291,7 @@ public class Instance extends AbstractModel{
      * Get 实例内存容量，单位：`GB`。 
      * @return Memory 实例内存容量，单位：`GB`。
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -299,7 +299,7 @@ public class Instance extends AbstractModel{
      * Set 实例内存容量，单位：`GB`。
      * @param Memory 实例内存容量，单位：`GB`。
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 

@@ -27,7 +27,7 @@ public class DescribeFairPlayPemRequest extends AbstractModel{
     */
     @SerializedName("BailorId")
     @Expose
-    private Integer BailorId;
+    private Long BailorId;
 
     /**
     * 需要查询的pem id。
@@ -35,13 +35,13 @@ public class DescribeFairPlayPemRequest extends AbstractModel{
     */
     @SerializedName("FairPlayPemId")
     @Expose
-    private Integer FairPlayPemId;
+    private Long FairPlayPemId;
 
     /**
      * Get 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。 
      * @return BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
-    public Integer getBailorId() {
+    public Long getBailorId() {
         return this.BailorId;
     }
 
@@ -49,7 +49,7 @@ public class DescribeFairPlayPemRequest extends AbstractModel{
      * Set 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      * @param BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
-    public void setBailorId(Integer BailorId) {
+    public void setBailorId(Long BailorId) {
         this.BailorId = BailorId;
     }
 
@@ -59,7 +59,7 @@ public class DescribeFairPlayPemRequest extends AbstractModel{
      * @return FairPlayPemId 需要查询的pem id。
 当该值未填入时，将返回所有的私钥信息。
      */
-    public Integer getFairPlayPemId() {
+    public Long getFairPlayPemId() {
         return this.FairPlayPemId;
     }
 
@@ -69,7 +69,7 @@ public class DescribeFairPlayPemRequest extends AbstractModel{
      * @param FairPlayPemId 需要查询的pem id。
 当该值未填入时，将返回所有的私钥信息。
      */
-    public void setFairPlayPemId(Integer FairPlayPemId) {
+    public void setFairPlayPemId(Long FairPlayPemId) {
         this.FairPlayPemId = FairPlayPemId;
     }
 

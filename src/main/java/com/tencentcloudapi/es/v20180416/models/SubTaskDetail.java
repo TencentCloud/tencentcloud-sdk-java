@@ -55,7 +55,7 @@ public class SubTaskDetail extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 升级检查失败的索引名
@@ -76,7 +76,7 @@ public class SubTaskDetail extends AbstractModel{
     */
     @SerializedName("Level")
     @Expose
-    private Integer Level;
+    private Long Level;
 
     /**
      * Get 子任务名 
@@ -146,7 +146,7 @@ public class SubTaskDetail extends AbstractModel{
      * Get 子任务状态，0处理中 1成功 -1失败 
      * @return Status 子任务状态，0处理中 1成功 -1失败
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -154,7 +154,7 @@ public class SubTaskDetail extends AbstractModel{
      * Set 子任务状态，0处理中 1成功 -1失败
      * @param Status 子任务状态，0处理中 1成功 -1失败
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -194,7 +194,7 @@ public class SubTaskDetail extends AbstractModel{
      * Get 子任务等级，1警告 2失败 
      * @return Level 子任务等级，1警告 2失败
      */
-    public Integer getLevel() {
+    public Long getLevel() {
         return this.Level;
     }
 
@@ -202,7 +202,7 @@ public class SubTaskDetail extends AbstractModel{
      * Set 子任务等级，1警告 2失败
      * @param Level 子任务等级，1警告 2失败
      */
-    public void setLevel(Integer Level) {
+    public void setLevel(Long Level) {
         this.Level = Level;
     }
 

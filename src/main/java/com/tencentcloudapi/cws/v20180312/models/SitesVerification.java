@@ -55,7 +55,7 @@ public class SitesVerification extends AbstractModel{
     */
     @SerializedName("VerifyStatus")
     @Expose
-    private Integer VerifyStatus;
+    private Long VerifyStatus;
 
     /**
     * CreatedAt。
@@ -76,14 +76,14 @@ public class SitesVerification extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云用户appid
     */
     @SerializedName("Appid")
     @Expose
-    private Integer Appid;
+    private Long Appid;
 
     /**
     * 用于验证站点的url，即访问该url获取验证数据。
@@ -167,7 +167,7 @@ public class SitesVerification extends AbstractModel{
      * Get 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。 
      * @return VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
-    public Integer getVerifyStatus() {
+    public Long getVerifyStatus() {
         return this.VerifyStatus;
     }
 
@@ -175,7 +175,7 @@ public class SitesVerification extends AbstractModel{
      * Set 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      * @param VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
-    public void setVerifyStatus(Integer VerifyStatus) {
+    public void setVerifyStatus(Long VerifyStatus) {
         this.VerifyStatus = VerifyStatus;
     }
 
@@ -215,7 +215,7 @@ public class SitesVerification extends AbstractModel{
      * Get ID。 
      * @return Id ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
@@ -223,7 +223,7 @@ public class SitesVerification extends AbstractModel{
      * Set ID。
      * @param Id ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
@@ -231,7 +231,7 @@ public class SitesVerification extends AbstractModel{
      * Get 云用户appid 
      * @return Appid 云用户appid
      */
-    public Integer getAppid() {
+    public Long getAppid() {
         return this.Appid;
     }
 
@@ -239,7 +239,7 @@ public class SitesVerification extends AbstractModel{
      * Set 云用户appid
      * @param Appid 云用户appid
      */
-    public void setAppid(Integer Appid) {
+    public void setAppid(Long Appid) {
         this.Appid = Appid;
     }
 

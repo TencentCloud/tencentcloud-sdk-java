@@ -27,7 +27,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 区域名称
@@ -41,20 +41,20 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
     */
     @SerializedName("TrafficTotalCount")
     @Expose
-    private Integer TrafficTotalCount;
+    private Long TrafficTotalCount;
 
     /**
     * 平均停留时间
     */
     @SerializedName("AvgStayTime")
     @Expose
-    private Integer AvgStayTime;
+    private Long AvgStayTime;
 
     /**
      * Get 区域ID 
      * @return ZoneId 区域ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -62,7 +62,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Set 区域ID
      * @param ZoneId 区域ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -86,7 +86,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Get 客流量 
      * @return TrafficTotalCount 客流量
      */
-    public Integer getTrafficTotalCount() {
+    public Long getTrafficTotalCount() {
         return this.TrafficTotalCount;
     }
 
@@ -94,7 +94,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Set 客流量
      * @param TrafficTotalCount 客流量
      */
-    public void setTrafficTotalCount(Integer TrafficTotalCount) {
+    public void setTrafficTotalCount(Long TrafficTotalCount) {
         this.TrafficTotalCount = TrafficTotalCount;
     }
 
@@ -102,7 +102,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Get 平均停留时间 
      * @return AvgStayTime 平均停留时间
      */
-    public Integer getAvgStayTime() {
+    public Long getAvgStayTime() {
         return this.AvgStayTime;
     }
 
@@ -110,7 +110,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Set 平均停留时间
      * @param AvgStayTime 平均停留时间
      */
-    public void setAvgStayTime(Integer AvgStayTime) {
+    public void setAvgStayTime(Long AvgStayTime) {
         this.AvgStayTime = AvgStayTime;
     }
 

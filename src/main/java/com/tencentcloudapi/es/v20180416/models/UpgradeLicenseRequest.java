@@ -41,7 +41,7 @@ public class UpgradeLicenseRequest extends AbstractModel{
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Integer AutoVoucher;
+    private Long AutoVoucher;
 
     /**
     * 代金券ID列表（目前仅支持指定一张代金券）
@@ -55,7 +55,7 @@ public class UpgradeLicenseRequest extends AbstractModel{
     */
     @SerializedName("BasicSecurityType")
     @Expose
-    private Integer BasicSecurityType;
+    private Long BasicSecurityType;
 
     /**
     * 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
@@ -100,7 +100,7 @@ public class UpgradeLicenseRequest extends AbstractModel{
      * Get 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0 
      * @return AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      */
-    public Integer getAutoVoucher() {
+    public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
@@ -108,7 +108,7 @@ public class UpgradeLicenseRequest extends AbstractModel{
      * Set 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      * @param AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      */
-    public void setAutoVoucher(Integer AutoVoucher) {
+    public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
@@ -132,7 +132,7 @@ public class UpgradeLicenseRequest extends AbstractModel{
      * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li> 
      * @return BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
-    public Integer getBasicSecurityType() {
+    public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
@@ -140,7 +140,7 @@ public class UpgradeLicenseRequest extends AbstractModel{
      * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      * @param BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
-    public void setBasicSecurityType(Integer BasicSecurityType) {
+    public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;
     }
 

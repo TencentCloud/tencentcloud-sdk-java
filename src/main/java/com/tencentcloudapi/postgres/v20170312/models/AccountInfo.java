@@ -48,7 +48,7 @@ public class AccountInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 帐号创建时间
@@ -116,7 +116,7 @@ public class AccountInfo extends AbstractModel{
      * Get 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中 
      * @return Status 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -124,7 +124,7 @@ public class AccountInfo extends AbstractModel{
      * Set 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      * @param Status 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

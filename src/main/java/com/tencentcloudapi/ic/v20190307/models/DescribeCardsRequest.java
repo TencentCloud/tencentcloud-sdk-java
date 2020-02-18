@@ -34,14 +34,14 @@ public class DescribeCardsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 列表限制
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 应用ID 
@@ -63,7 +63,7 @@ public class DescribeCardsRequest extends AbstractModel{
      * Get 偏移值 
      * @return Offset 偏移值
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribeCardsRequest extends AbstractModel{
      * Set 偏移值
      * @param Offset 偏移值
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribeCardsRequest extends AbstractModel{
      * Get 列表限制 
      * @return Limit 列表限制
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribeCardsRequest extends AbstractModel{
      * Set 列表限制
      * @param Limit 列表限制
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

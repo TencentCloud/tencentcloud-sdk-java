@@ -52,7 +52,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     */
     @SerializedName("BailorId")
     @Expose
-    private Integer BailorId;
+    private Long BailorId;
 
     /**
     * 私钥的优先级，优先级数值越高，优先级越高。
@@ -60,7 +60,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     */
     @SerializedName("Priority")
     @Expose
-    private Integer Priority;
+    private Long Priority;
 
     /**
      * Get 加密后的fairplay方案申请时使用的私钥。
@@ -130,7 +130,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
      * Get 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。 
      * @return BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
-    public Integer getBailorId() {
+    public Long getBailorId() {
         return this.BailorId;
     }
 
@@ -138,7 +138,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
      * Set 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      * @param BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
-    public void setBailorId(Integer BailorId) {
+    public void setBailorId(Long BailorId) {
         this.BailorId = BailorId;
     }
 
@@ -148,7 +148,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
      * @return Priority 私钥的优先级，优先级数值越高，优先级越高。
 该值可以不传，后台将自动分配一个优先级。
      */
-    public Integer getPriority() {
+    public Long getPriority() {
         return this.Priority;
     }
 
@@ -158,7 +158,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
      * @param Priority 私钥的优先级，优先级数值越高，优先级越高。
 该值可以不传，后台将自动分配一个优先级。
      */
-    public void setPriority(Integer Priority) {
+    public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 

@@ -34,7 +34,7 @@ public class DescribeHardwareSpecificationResponse extends AbstractModel{
     */
     @SerializedName("MemSet")
     @Expose
-    private Integer [] MemSet;
+    private Long [] MemSet;
 
     /**
     * 硬盘型号列表
@@ -70,7 +70,7 @@ public class DescribeHardwareSpecificationResponse extends AbstractModel{
      * Get 内存的取值，单位为G 
      * @return MemSet 内存的取值，单位为G
      */
-    public Integer [] getMemSet() {
+    public Long [] getMemSet() {
         return this.MemSet;
     }
 
@@ -78,7 +78,7 @@ public class DescribeHardwareSpecificationResponse extends AbstractModel{
      * Set 内存的取值，单位为G
      * @param MemSet 内存的取值，单位为G
      */
-    public void setMemSet(Integer [] MemSet) {
+    public void setMemSet(Long [] MemSet) {
         this.MemSet = MemSet;
     }
 

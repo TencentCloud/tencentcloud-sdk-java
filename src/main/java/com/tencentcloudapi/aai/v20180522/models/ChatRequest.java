@@ -34,7 +34,7 @@ public class ChatRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
@@ -63,7 +63,7 @@ public class ChatRequest extends AbstractModel{
      * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -71,7 +71,7 @@ public class ChatRequest extends AbstractModel{
      * Set 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

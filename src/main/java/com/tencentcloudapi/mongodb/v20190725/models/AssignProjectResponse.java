@@ -27,7 +27,7 @@ public class AssignProjectResponse extends AbstractModel{
     */
     @SerializedName("FlowIds")
     @Expose
-    private Integer [] FlowIds;
+    private Long [] FlowIds;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class AssignProjectResponse extends AbstractModel{
      * Get 返回的异步任务ID列表 
      * @return FlowIds 返回的异步任务ID列表
      */
-    public Integer [] getFlowIds() {
+    public Long [] getFlowIds() {
         return this.FlowIds;
     }
 
@@ -48,7 +48,7 @@ public class AssignProjectResponse extends AbstractModel{
      * Set 返回的异步任务ID列表
      * @param FlowIds 返回的异步任务ID列表
      */
-    public void setFlowIds(Integer [] FlowIds) {
+    public void setFlowIds(Long [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 

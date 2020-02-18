@@ -27,7 +27,7 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * IP地址模版。
@@ -47,7 +47,7 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
      * Get 符合条件的实例数量。 
      * @return TotalCount 符合条件的实例数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
      * Set 符合条件的实例数量。
      * @param TotalCount 符合条件的实例数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

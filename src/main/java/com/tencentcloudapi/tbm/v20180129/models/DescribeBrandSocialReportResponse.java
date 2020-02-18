@@ -27,7 +27,7 @@ public class DescribeBrandSocialReportResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 按天计算的统计数据
@@ -47,7 +47,7 @@ public class DescribeBrandSocialReportResponse extends AbstractModel{
      * Get 累计统计数据 
      * @return TotalCount 累计统计数据
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeBrandSocialReportResponse extends AbstractModel{
      * Set 累计统计数据
      * @param TotalCount 累计统计数据
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

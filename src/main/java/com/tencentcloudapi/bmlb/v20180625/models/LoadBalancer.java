@@ -34,7 +34,7 @@ public class LoadBalancer extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 负载均衡器名称
@@ -55,7 +55,7 @@ public class LoadBalancer extends AbstractModel{
     */
     @SerializedName("Exclusive")
     @Expose
-    private Integer Exclusive;
+    private Long Exclusive;
 
     /**
     * 该负载均衡对应的tgw集群（fullnat,tunnel,dnat）
@@ -90,7 +90,7 @@ public class LoadBalancer extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 无
@@ -153,7 +153,7 @@ public class LoadBalancer extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
     * 负载均衡个性化配置ID
@@ -224,7 +224,7 @@ public class LoadBalancer extends AbstractModel{
      * Get 项目ID，通过v2/DescribeProject 接口获得 
      * @return ProjectId 项目ID，通过v2/DescribeProject 接口获得
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -232,7 +232,7 @@ public class LoadBalancer extends AbstractModel{
      * Set 项目ID，通过v2/DescribeProject 接口获得
      * @param ProjectId 项目ID，通过v2/DescribeProject 接口获得
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -272,7 +272,7 @@ public class LoadBalancer extends AbstractModel{
      * Get 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾 
      * @return Exclusive 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      */
-    public Integer getExclusive() {
+    public Long getExclusive() {
         return this.Exclusive;
     }
 
@@ -280,7 +280,7 @@ public class LoadBalancer extends AbstractModel{
      * Set 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      * @param Exclusive 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      */
-    public void setExclusive(Integer Exclusive) {
+    public void setExclusive(Long Exclusive) {
         this.Exclusive = Exclusive;
     }
 
@@ -352,7 +352,7 @@ public class LoadBalancer extends AbstractModel{
      * Get 无 
      * @return Status 无
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -360,7 +360,7 @@ public class LoadBalancer extends AbstractModel{
      * Set 无
      * @param Status 无
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -496,7 +496,7 @@ public class LoadBalancer extends AbstractModel{
      * Get 无 
      * @return Bandwidth 无
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -504,7 +504,7 @@ public class LoadBalancer extends AbstractModel{
      * Set 无
      * @param Bandwidth 无
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

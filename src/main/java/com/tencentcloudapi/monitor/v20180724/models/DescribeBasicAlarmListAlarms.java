@@ -27,7 +27,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 项目ID
@@ -35,7 +35,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 项目名称
@@ -51,7 +51,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 告警状态
@@ -67,7 +67,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 策略组名
@@ -91,7 +91,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Integer Duration;
+    private Long Duration;
 
     /**
     * 结束时间
@@ -147,7 +147,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     */
     @SerializedName("MetricId")
     @Expose
-    private Integer MetricId;
+    private Long MetricId;
 
     /**
     * 指标名
@@ -163,7 +163,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     */
     @SerializedName("AlarmType")
     @Expose
-    private Integer AlarmType;
+    private Long AlarmType;
 
     /**
     * 地域
@@ -201,7 +201,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * Get 该条告警的ID 
      * @return Id 该条告警的ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
@@ -209,7 +209,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * Set 该条告警的ID
      * @param Id 该条告警的ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
@@ -219,7 +219,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @return ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -229,7 +229,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @param ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -259,7 +259,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @return Status 告警状态ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -269,7 +269,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @param Status 告警状态ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -299,7 +299,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @return GroupId 策略组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -309,7 +309,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @param GroupId 策略组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
@@ -359,7 +359,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @return Duration 持续时间，单位s
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDuration() {
+    public Long getDuration() {
         return this.Duration;
     }
 
@@ -369,7 +369,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @param Duration 持续时间，单位s
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDuration(Integer Duration) {
+    public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
@@ -499,7 +499,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @return MetricId 指标ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getMetricId() {
+    public Long getMetricId() {
         return this.MetricId;
     }
 
@@ -509,7 +509,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @param MetricId 指标ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMetricId(Integer MetricId) {
+    public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
     }
 
@@ -539,7 +539,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @return AlarmType 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getAlarmType() {
+    public Long getAlarmType() {
         return this.AlarmType;
     }
 
@@ -549,7 +549,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
      * @param AlarmType 告警类型，0表示指标告警，2表示产品事件告警，3表示平台事件告警
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAlarmType(Integer AlarmType) {
+    public void setAlarmType(Long AlarmType) {
         this.AlarmType = AlarmType;
     }
 

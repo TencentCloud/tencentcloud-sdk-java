@@ -34,28 +34,28 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
     */
     @SerializedName("HealthSwitch")
     @Expose
-    private Integer HealthSwitch;
+    private Long HealthSwitch;
 
     /**
     * 健康检查判断健康的次数，最小值2，最大值10。
     */
     @SerializedName("HealthNum")
     @Expose
-    private Integer HealthNum;
+    private Long HealthNum;
 
     /**
     * 健康检查判断不健康的次数，最小值2，最大值10。
     */
     @SerializedName("UnhealthNum")
     @Expose
-    private Integer UnhealthNum;
+    private Long UnhealthNum;
 
     /**
     * 健康检查间隔，单位：秒，最小值5，最大值300。
     */
     @SerializedName("IntervalTime")
     @Expose
-    private Integer IntervalTime;
+    private Long IntervalTime;
 
     /**
     * 检查的域名配置。
@@ -76,7 +76,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
     */
     @SerializedName("HttpCodes")
     @Expose
-    private Integer [] HttpCodes;
+    private Long [] HttpCodes;
 
     /**
      * Get 流量镜像实例ID。 
@@ -98,7 +98,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Get 健康检查开关，0：关闭，1：打开 
      * @return HealthSwitch 健康检查开关，0：关闭，1：打开
      */
-    public Integer getHealthSwitch() {
+    public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
@@ -106,7 +106,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Set 健康检查开关，0：关闭，1：打开
      * @param HealthSwitch 健康检查开关，0：关闭，1：打开
      */
-    public void setHealthSwitch(Integer HealthSwitch) {
+    public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
@@ -114,7 +114,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Get 健康检查判断健康的次数，最小值2，最大值10。 
      * @return HealthNum 健康检查判断健康的次数，最小值2，最大值10。
      */
-    public Integer getHealthNum() {
+    public Long getHealthNum() {
         return this.HealthNum;
     }
 
@@ -122,7 +122,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Set 健康检查判断健康的次数，最小值2，最大值10。
      * @param HealthNum 健康检查判断健康的次数，最小值2，最大值10。
      */
-    public void setHealthNum(Integer HealthNum) {
+    public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
@@ -130,7 +130,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Get 健康检查判断不健康的次数，最小值2，最大值10。 
      * @return UnhealthNum 健康检查判断不健康的次数，最小值2，最大值10。
      */
-    public Integer getUnhealthNum() {
+    public Long getUnhealthNum() {
         return this.UnhealthNum;
     }
 
@@ -138,7 +138,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Set 健康检查判断不健康的次数，最小值2，最大值10。
      * @param UnhealthNum 健康检查判断不健康的次数，最小值2，最大值10。
      */
-    public void setUnhealthNum(Integer UnhealthNum) {
+    public void setUnhealthNum(Long UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
@@ -146,7 +146,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Get 健康检查间隔，单位：秒，最小值5，最大值300。 
      * @return IntervalTime 健康检查间隔，单位：秒，最小值5，最大值300。
      */
-    public Integer getIntervalTime() {
+    public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
@@ -154,7 +154,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Set 健康检查间隔，单位：秒，最小值5，最大值300。
      * @param IntervalTime 健康检查间隔，单位：秒，最小值5，最大值300。
      */
-    public void setIntervalTime(Integer IntervalTime) {
+    public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
@@ -194,7 +194,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Get 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。 
      * @return HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
-    public Integer [] getHttpCodes() {
+    public Long [] getHttpCodes() {
         return this.HttpCodes;
     }
 
@@ -202,7 +202,7 @@ public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
      * Set 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      * @param HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
-    public void setHttpCodes(Integer [] HttpCodes) {
+    public void setHttpCodes(Long [] HttpCodes) {
         this.HttpCodes = HttpCodes;
     }
 

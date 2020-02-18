@@ -27,13 +27,13 @@ public class CreateVulsMisinformationRequest extends AbstractModel{
     */
     @SerializedName("VulIds")
     @Expose
-    private Integer [] VulIds;
+    private Long [] VulIds;
 
     /**
      * Get 漏洞ID列表 
      * @return VulIds 漏洞ID列表
      */
-    public Integer [] getVulIds() {
+    public Long [] getVulIds() {
         return this.VulIds;
     }
 
@@ -41,7 +41,7 @@ public class CreateVulsMisinformationRequest extends AbstractModel{
      * Set 漏洞ID列表
      * @param VulIds 漏洞ID列表
      */
-    public void setVulIds(Integer [] VulIds) {
+    public void setVulIds(Long [] VulIds) {
         this.VulIds = VulIds;
     }
 

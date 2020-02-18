@@ -27,7 +27,7 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     */
     @SerializedName("Balance")
     @Expose
-    private Integer Balance;
+    private Long Balance;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
      * Get 云账户信息中的”展示可用余额”字段，单位为"分" 
      * @return Balance 云账户信息中的”展示可用余额”字段，单位为"分"
      */
-    public Integer getBalance() {
+    public Long getBalance() {
         return this.Balance;
     }
 
@@ -48,7 +48,7 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
      * Set 云账户信息中的”展示可用余额”字段，单位为"分"
      * @param Balance 云账户信息中的”展示可用余额”字段，单位为"分"
      */
-    public void setBalance(Integer Balance) {
+    public void setBalance(Long Balance) {
         this.Balance = Balance;
     }
 

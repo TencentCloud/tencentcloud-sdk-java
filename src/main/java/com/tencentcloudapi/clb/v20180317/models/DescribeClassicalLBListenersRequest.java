@@ -48,14 +48,14 @@ public class DescribeClassicalLBListenersRequest extends AbstractModel{
     */
     @SerializedName("ListenerPort")
     @Expose
-    private Integer ListenerPort;
+    private Long ListenerPort;
 
     /**
     * 监听器的状态，0 表示创建中，1 表示运行中
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 负载均衡实例 ID 
@@ -109,7 +109,7 @@ public class DescribeClassicalLBListenersRequest extends AbstractModel{
      * Get 负载均衡监听端口， 范围[1-65535] 
      * @return ListenerPort 负载均衡监听端口， 范围[1-65535]
      */
-    public Integer getListenerPort() {
+    public Long getListenerPort() {
         return this.ListenerPort;
     }
 
@@ -117,7 +117,7 @@ public class DescribeClassicalLBListenersRequest extends AbstractModel{
      * Set 负载均衡监听端口， 范围[1-65535]
      * @param ListenerPort 负载均衡监听端口， 范围[1-65535]
      */
-    public void setListenerPort(Integer ListenerPort) {
+    public void setListenerPort(Long ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
@@ -125,7 +125,7 @@ public class DescribeClassicalLBListenersRequest extends AbstractModel{
      * Get 监听器的状态，0 表示创建中，1 表示运行中 
      * @return Status 监听器的状态，0 表示创建中，1 表示运行中
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -133,7 +133,7 @@ public class DescribeClassicalLBListenersRequest extends AbstractModel{
      * Set 监听器的状态，0 表示创建中，1 表示运行中
      * @param Status 监听器的状态，0 表示创建中，1 表示运行中
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

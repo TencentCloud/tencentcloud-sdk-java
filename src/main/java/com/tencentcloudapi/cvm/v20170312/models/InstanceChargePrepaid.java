@@ -27,7 +27,7 @@ public class InstanceChargePrepaid extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费<br><br>默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
@@ -40,7 +40,7 @@ public class InstanceChargePrepaid extends AbstractModel{
      * Get 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。 
      * @return Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -48,7 +48,7 @@ public class InstanceChargePrepaid extends AbstractModel{
      * Set 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
      * @param Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 

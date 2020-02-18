@@ -41,7 +41,7 @@ public class CustomImageProcess extends AbstractModel{
     */
     @SerializedName("StepType")
     @Expose
-    private Integer StepType;
+    private Long StepType;
 
     /**
      * Get 步骤 
@@ -79,7 +79,7 @@ public class CustomImageProcess extends AbstractModel{
      * Get 0: 已完成 1: 当前进行 2: 未开始 
      * @return StepType 0: 已完成 1: 当前进行 2: 未开始
      */
-    public Integer getStepType() {
+    public Long getStepType() {
         return this.StepType;
     }
 
@@ -87,7 +87,7 @@ public class CustomImageProcess extends AbstractModel{
      * Set 0: 已完成 1: 当前进行 2: 未开始
      * @param StepType 0: 已完成 1: 当前进行 2: 未开始
      */
-    public void setStepType(Integer StepType) {
+    public void setStepType(Long StepType) {
         this.StepType = StepType;
     }
 

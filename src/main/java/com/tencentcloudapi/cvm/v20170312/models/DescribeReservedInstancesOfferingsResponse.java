@@ -27,7 +27,7 @@ public class DescribeReservedInstancesOfferingsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 符合条件的预留实例计费列表。
@@ -47,7 +47,7 @@ public class DescribeReservedInstancesOfferingsResponse extends AbstractModel{
      * Get 符合条件的预留实例计费数量。 
      * @return TotalCount 符合条件的预留实例计费数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeReservedInstancesOfferingsResponse extends AbstractModel{
      * Set 符合条件的预留实例计费数量。
      * @param TotalCount 符合条件的预留实例计费数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -27,27 +27,27 @@ public class ListMigrationTaskRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 记录条数，默认值为10
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 项目ID，默认值为空
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
      * Get 记录起始数，默认值为0 
      * @return Offset 记录起始数，默认值为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -55,7 +55,7 @@ public class ListMigrationTaskRequest extends AbstractModel{
      * Set 记录起始数，默认值为0
      * @param Offset 记录起始数，默认值为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -63,7 +63,7 @@ public class ListMigrationTaskRequest extends AbstractModel{
      * Get 记录条数，默认值为10 
      * @return Limit 记录条数，默认值为10
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -71,7 +71,7 @@ public class ListMigrationTaskRequest extends AbstractModel{
      * Set 记录条数，默认值为10
      * @param Limit 记录条数，默认值为10
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -79,7 +79,7 @@ public class ListMigrationTaskRequest extends AbstractModel{
      * Get 项目ID，默认值为空 
      * @return ProjectId 项目ID，默认值为空
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -87,7 +87,7 @@ public class ListMigrationTaskRequest extends AbstractModel{
      * Set 项目ID，默认值为空
      * @param ProjectId 项目ID，默认值为空
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

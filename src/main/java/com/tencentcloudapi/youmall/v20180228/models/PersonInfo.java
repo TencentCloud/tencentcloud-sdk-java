@@ -27,7 +27,7 @@ public class PersonInfo extends AbstractModel{
     */
     @SerializedName("PersonId")
     @Expose
-    private Integer PersonId;
+    private Long PersonId;
 
     /**
     * 人脸图片Base64内容，已弃用，返回默认空值
@@ -41,21 +41,21 @@ public class PersonInfo extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
     * 年龄
     */
     @SerializedName("Age")
     @Expose
-    private Integer Age;
+    private Long Age;
 
     /**
     * 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
     */
     @SerializedName("PersonType")
     @Expose
-    private Integer PersonType;
+    private Long PersonType;
 
     /**
     * 人脸图片Url，在有效期内可以访问下载
@@ -72,27 +72,27 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     */
     @SerializedName("PersonSubType")
     @Expose
-    private Integer PersonSubType;
+    private Long PersonSubType;
 
     /**
     * 到访次数，-1表示未知
     */
     @SerializedName("VisitTimes")
     @Expose
-    private Integer VisitTimes;
+    private Long VisitTimes;
 
     /**
     * 到访天数，-1表示未知
     */
     @SerializedName("VisitDays")
     @Expose
-    private Integer VisitDays;
+    private Long VisitDays;
 
     /**
      * Get 用户ID 
      * @return PersonId 用户ID
      */
-    public Integer getPersonId() {
+    public Long getPersonId() {
         return this.PersonId;
     }
 
@@ -100,7 +100,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 用户ID
      * @param PersonId 用户ID
      */
-    public void setPersonId(Integer PersonId) {
+    public void setPersonId(Long PersonId) {
         this.PersonId = PersonId;
     }
 
@@ -124,7 +124,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 性别：0男1女 
      * @return Gender 性别：0男1女
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -132,7 +132,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 性别：0男1女
      * @param Gender 性别：0男1女
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
@@ -140,7 +140,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 年龄 
      * @return Age 年龄
      */
-    public Integer getAge() {
+    public Long getAge() {
         return this.Age;
     }
 
@@ -148,7 +148,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 年龄
      * @param Age 年龄
      */
-    public void setAge(Integer Age) {
+    public void setAge(Long Age) {
         this.Age = Age;
     }
 
@@ -156,7 +156,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 身份类型（0表示普通顾客，1 白名单，2 表示黑名单） 
      * @return PersonType 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
      */
-    public Integer getPersonType() {
+    public Long getPersonType() {
         return this.PersonType;
     }
 
@@ -164,7 +164,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
      * @param PersonType 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
      */
-    public void setPersonType(Integer PersonType) {
+    public void setPersonType(Long PersonType) {
         this.PersonType = PersonType;
     }
 
@@ -194,7 +194,7 @@ PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
-    public Integer getPersonSubType() {
+    public Long getPersonSubType() {
         return this.PersonSubType;
     }
 
@@ -208,7 +208,7 @@ PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
-    public void setPersonSubType(Integer PersonSubType) {
+    public void setPersonSubType(Long PersonSubType) {
         this.PersonSubType = PersonSubType;
     }
 
@@ -216,7 +216,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 到访次数，-1表示未知 
      * @return VisitTimes 到访次数，-1表示未知
      */
-    public Integer getVisitTimes() {
+    public Long getVisitTimes() {
         return this.VisitTimes;
     }
 
@@ -224,7 +224,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 到访次数，-1表示未知
      * @param VisitTimes 到访次数，-1表示未知
      */
-    public void setVisitTimes(Integer VisitTimes) {
+    public void setVisitTimes(Long VisitTimes) {
         this.VisitTimes = VisitTimes;
     }
 
@@ -232,7 +232,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 到访天数，-1表示未知 
      * @return VisitDays 到访天数，-1表示未知
      */
-    public Integer getVisitDays() {
+    public Long getVisitDays() {
         return this.VisitDays;
     }
 
@@ -240,7 +240,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 到访天数，-1表示未知
      * @param VisitDays 到访天数，-1表示未知
      */
-    public void setVisitDays(Integer VisitDays) {
+    public void setVisitDays(Long VisitDays) {
         this.VisitDays = VisitDays;
     }
 

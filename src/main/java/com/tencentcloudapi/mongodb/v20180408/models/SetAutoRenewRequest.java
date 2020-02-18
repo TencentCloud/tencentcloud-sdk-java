@@ -34,7 +34,7 @@ public class SetAutoRenewRequest extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Integer AutoRenewFlag;
+    private Long AutoRenewFlag;
 
     /**
      * Get 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
@@ -56,7 +56,7 @@ public class SetAutoRenewRequest extends AbstractModel{
      * Get 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费 
      * @return AutoRenewFlag 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
      */
-    public Integer getAutoRenewFlag() {
+    public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -64,7 +64,7 @@ public class SetAutoRenewRequest extends AbstractModel{
      * Set 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
      * @param AutoRenewFlag 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
      */
-    public void setAutoRenewFlag(Integer AutoRenewFlag) {
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 

@@ -34,28 +34,28 @@ public class DescribeCameraPersonRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 摄像头id
     */
     @SerializedName("CameraId")
     @Expose
-    private Integer CameraId;
+    private Long CameraId;
 
     /**
     * 拉取开始时间戳，单位秒
     */
     @SerializedName("StartTime")
     @Expose
-    private Integer StartTime;
+    private Long StartTime;
 
     /**
     * 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
     */
     @SerializedName("EndTime")
     @Expose
-    private Integer EndTime;
+    private Long EndTime;
 
     /**
     * pos机id
@@ -69,14 +69,14 @@ public class DescribeCameraPersonRequest extends AbstractModel{
     */
     @SerializedName("Num")
     @Expose
-    private Integer Num;
+    private Long Num;
 
     /**
     * 是否需要base64的图片，0-不需要，1-需要，默认0
     */
     @SerializedName("IsNeedPic")
     @Expose
-    private Integer IsNeedPic;
+    private Long IsNeedPic;
 
     /**
      * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
@@ -98,7 +98,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -106,7 +106,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -114,7 +114,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Get 摄像头id 
      * @return CameraId 摄像头id
      */
-    public Integer getCameraId() {
+    public Long getCameraId() {
         return this.CameraId;
     }
 
@@ -122,7 +122,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Set 摄像头id
      * @param CameraId 摄像头id
      */
-    public void setCameraId(Integer CameraId) {
+    public void setCameraId(Long CameraId) {
         this.CameraId = CameraId;
     }
 
@@ -130,7 +130,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Get 拉取开始时间戳，单位秒 
      * @return StartTime 拉取开始时间戳，单位秒
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return this.StartTime;
     }
 
@@ -138,7 +138,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Set 拉取开始时间戳，单位秒
      * @param StartTime 拉取开始时间戳，单位秒
      */
-    public void setStartTime(Integer StartTime) {
+    public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
@@ -146,7 +146,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Get 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10 
      * @return EndTime 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
      */
-    public Integer getEndTime() {
+    public Long getEndTime() {
         return this.EndTime;
     }
 
@@ -154,7 +154,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Set 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
      * @param EndTime 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
      */
-    public void setEndTime(Integer EndTime) {
+    public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
@@ -178,7 +178,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Get 拉取图片数，默认为1，最大为3 
      * @return Num 拉取图片数，默认为1，最大为3
      */
-    public Integer getNum() {
+    public Long getNum() {
         return this.Num;
     }
 
@@ -186,7 +186,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Set 拉取图片数，默认为1，最大为3
      * @param Num 拉取图片数，默认为1，最大为3
      */
-    public void setNum(Integer Num) {
+    public void setNum(Long Num) {
         this.Num = Num;
     }
 
@@ -194,7 +194,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Get 是否需要base64的图片，0-不需要，1-需要，默认0 
      * @return IsNeedPic 是否需要base64的图片，0-不需要，1-需要，默认0
      */
-    public Integer getIsNeedPic() {
+    public Long getIsNeedPic() {
         return this.IsNeedPic;
     }
 
@@ -202,7 +202,7 @@ public class DescribeCameraPersonRequest extends AbstractModel{
      * Set 是否需要base64的图片，0-不需要，1-需要，默认0
      * @param IsNeedPic 是否需要base64的图片，0-不需要，1-需要，默认0
      */
-    public void setIsNeedPic(Integer IsNeedPic) {
+    public void setIsNeedPic(Long IsNeedPic) {
         this.IsNeedPic = IsNeedPic;
     }
 

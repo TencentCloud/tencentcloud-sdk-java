@@ -48,7 +48,7 @@ public class UpdateTopicPolicyRequest extends AbstractModel{
     */
     @SerializedName("Privilege")
     @Expose
-    private Integer Privilege;
+    private Long Privilege;
 
     /**
     * 代理订阅信息
@@ -109,7 +109,7 @@ public class UpdateTopicPolicyRequest extends AbstractModel{
      * Get Topic权限 
      * @return Privilege Topic权限
      */
-    public Integer getPrivilege() {
+    public Long getPrivilege() {
         return this.Privilege;
     }
 
@@ -117,7 +117,7 @@ public class UpdateTopicPolicyRequest extends AbstractModel{
      * Set Topic权限
      * @param Privilege Topic权限
      */
-    public void setPrivilege(Integer Privilege) {
+    public void setPrivilege(Long Privilege) {
         this.Privilege = Privilege;
     }
 

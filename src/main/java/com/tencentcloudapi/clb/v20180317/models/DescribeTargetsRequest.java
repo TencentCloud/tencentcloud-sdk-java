@@ -48,7 +48,7 @@ public class DescribeTargetsRequest extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
      * Get 负载均衡实例 ID 
@@ -102,7 +102,7 @@ public class DescribeTargetsRequest extends AbstractModel{
      * Get 监听器端口 
      * @return Port 监听器端口
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -110,7 +110,7 @@ public class DescribeTargetsRequest extends AbstractModel{
      * Set 监听器端口
      * @param Port 监听器端口
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

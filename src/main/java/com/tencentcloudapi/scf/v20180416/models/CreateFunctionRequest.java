@@ -55,14 +55,14 @@ public class CreateFunctionRequest extends AbstractModel{
     */
     @SerializedName("MemorySize")
     @Expose
-    private Integer MemorySize;
+    private Long MemorySize;
 
     /**
     * 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
     */
     @SerializedName("Timeout")
     @Expose
-    private Integer Timeout;
+    private Long Timeout;
 
     /**
     * 函数的环境变量
@@ -195,7 +195,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Get 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯 
      * @return MemorySize 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      */
-    public Integer getMemorySize() {
+    public Long getMemorySize() {
         return this.MemorySize;
     }
 
@@ -203,7 +203,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Set 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      * @param MemorySize 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      */
-    public void setMemorySize(Integer MemorySize) {
+    public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
@@ -211,7 +211,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Get 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒 
      * @return Timeout 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      */
-    public Integer getTimeout() {
+    public Long getTimeout() {
         return this.Timeout;
     }
 
@@ -219,7 +219,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Set 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      * @param Timeout 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      */
-    public void setTimeout(Integer Timeout) {
+    public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 

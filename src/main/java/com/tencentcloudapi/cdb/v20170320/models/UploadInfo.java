@@ -27,20 +27,20 @@ public class UploadInfo extends AbstractModel{
     */
     @SerializedName("AllSliceNum")
     @Expose
-    private Integer AllSliceNum;
+    private Long AllSliceNum;
 
     /**
     * 已完成分片数
     */
     @SerializedName("CompleteNum")
     @Expose
-    private Integer CompleteNum;
+    private Long CompleteNum;
 
     /**
      * Get 文件所有分片数 
      * @return AllSliceNum 文件所有分片数
      */
-    public Integer getAllSliceNum() {
+    public Long getAllSliceNum() {
         return this.AllSliceNum;
     }
 
@@ -48,7 +48,7 @@ public class UploadInfo extends AbstractModel{
      * Set 文件所有分片数
      * @param AllSliceNum 文件所有分片数
      */
-    public void setAllSliceNum(Integer AllSliceNum) {
+    public void setAllSliceNum(Long AllSliceNum) {
         this.AllSliceNum = AllSliceNum;
     }
 
@@ -56,7 +56,7 @@ public class UploadInfo extends AbstractModel{
      * Get 已完成分片数 
      * @return CompleteNum 已完成分片数
      */
-    public Integer getCompleteNum() {
+    public Long getCompleteNum() {
         return this.CompleteNum;
     }
 
@@ -64,7 +64,7 @@ public class UploadInfo extends AbstractModel{
      * Set 已完成分片数
      * @param CompleteNum 已完成分片数
      */
-    public void setCompleteNum(Integer CompleteNum) {
+    public void setCompleteNum(Long CompleteNum) {
         this.CompleteNum = CompleteNum;
     }
 

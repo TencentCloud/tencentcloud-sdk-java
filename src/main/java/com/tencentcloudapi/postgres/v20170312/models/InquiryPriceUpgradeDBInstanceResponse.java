@@ -27,14 +27,14 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     */
     @SerializedName("OriginalPrice")
     @Expose
-    private Integer OriginalPrice;
+    private Long OriginalPrice;
 
     /**
     * 实际需要付款金额
     */
     @SerializedName("Price")
     @Expose
-    private Integer Price;
+    private Long Price;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
      * Get 总费用，打折前的 
      * @return OriginalPrice 总费用，打折前的
      */
-    public Integer getOriginalPrice() {
+    public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
@@ -55,7 +55,7 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
      * Set 总费用，打折前的
      * @param OriginalPrice 总费用，打折前的
      */
-    public void setOriginalPrice(Integer OriginalPrice) {
+    public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
@@ -63,7 +63,7 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
      * Get 实际需要付款金额 
      * @return Price 实际需要付款金额
      */
-    public Integer getPrice() {
+    public Long getPrice() {
         return this.Price;
     }
 
@@ -71,7 +71,7 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
      * Set 实际需要付款金额
      * @param Price 实际需要付款金额
      */
-    public void setPrice(Integer Price) {
+    public void setPrice(Long Price) {
         this.Price = Price;
     }
 

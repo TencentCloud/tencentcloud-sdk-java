@@ -27,13 +27,13 @@ public class DescribeLiveRecordTemplatesRequest extends AbstractModel{
     */
     @SerializedName("IsDelayLive")
     @Expose
-    private Integer IsDelayLive;
+    private Long IsDelayLive;
 
     /**
      * Get 是否属于慢直播模板 
      * @return IsDelayLive 是否属于慢直播模板
      */
-    public Integer getIsDelayLive() {
+    public Long getIsDelayLive() {
         return this.IsDelayLive;
     }
 
@@ -41,7 +41,7 @@ public class DescribeLiveRecordTemplatesRequest extends AbstractModel{
      * Set 是否属于慢直播模板
      * @param IsDelayLive 是否属于慢直播模板
      */
-    public void setIsDelayLive(Integer IsDelayLive) {
+    public void setIsDelayLive(Long IsDelayLive) {
         this.IsDelayLive = IsDelayLive;
     }
 

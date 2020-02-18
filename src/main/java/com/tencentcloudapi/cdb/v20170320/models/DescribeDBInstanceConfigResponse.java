@@ -27,14 +27,14 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
     */
     @SerializedName("ProtectMode")
     @Expose
-    private Integer ProtectMode;
+    private Long ProtectMode;
 
     /**
     * 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
     */
     @SerializedName("DeployMode")
     @Expose
-    private Integer DeployMode;
+    private Long DeployMode;
 
     /**
     * 实例可用区信息，格式如 "ap-shanghai-1"。
@@ -68,7 +68,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
      * Get 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。 
      * @return ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
      */
-    public Integer getProtectMode() {
+    public Long getProtectMode() {
         return this.ProtectMode;
     }
 
@@ -76,7 +76,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
      * Set 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
      * @param ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
      */
-    public void setProtectMode(Integer ProtectMode) {
+    public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
@@ -84,7 +84,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
      * Get 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。 
      * @return DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
      */
-    public Integer getDeployMode() {
+    public Long getDeployMode() {
         return this.DeployMode;
     }
 
@@ -92,7 +92,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
      * Set 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
      * @param DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
      */
-    public void setDeployMode(Integer DeployMode) {
+    public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 

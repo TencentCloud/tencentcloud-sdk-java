@@ -27,7 +27,7 @@ public class DescribeDBBackupsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 备份列表
@@ -47,7 +47,7 @@ public class DescribeDBBackupsResponse extends AbstractModel{
      * Get 返回备份列表中备份文件的个数 
      * @return TotalCount 返回备份列表中备份文件的个数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBBackupsResponse extends AbstractModel{
      * Set 返回备份列表中备份文件的个数
      * @param TotalCount 返回备份列表中备份文件的个数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

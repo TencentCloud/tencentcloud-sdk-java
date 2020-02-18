@@ -27,7 +27,7 @@ public class CreateBackupResponse extends AbstractModel{
     */
     @SerializedName("BackupId")
     @Expose
-    private Integer BackupId;
+    private Long BackupId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateBackupResponse extends AbstractModel{
      * Get 备份任务 ID。 
      * @return BackupId 备份任务 ID。
      */
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.BackupId;
     }
 
@@ -48,7 +48,7 @@ public class CreateBackupResponse extends AbstractModel{
      * Set 备份任务 ID。
      * @param BackupId 备份任务 ID。
      */
-    public void setBackupId(Integer BackupId) {
+    public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 

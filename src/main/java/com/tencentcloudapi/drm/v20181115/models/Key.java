@@ -56,7 +56,7 @@ public class Key extends AbstractModel{
     */
     @SerializedName("InsertTimestamp")
     @Expose
-    private Integer InsertTimestamp;
+    private Long InsertTimestamp;
 
     /**
      * Get 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。 
@@ -128,7 +128,7 @@ public class Key extends AbstractModel{
      * @return InsertTimestamp 该key生成时的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getInsertTimestamp() {
+    public Long getInsertTimestamp() {
         return this.InsertTimestamp;
     }
 
@@ -138,7 +138,7 @@ public class Key extends AbstractModel{
      * @param InsertTimestamp 该key生成时的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInsertTimestamp(Integer InsertTimestamp) {
+    public void setInsertTimestamp(Long InsertTimestamp) {
         this.InsertTimestamp = InsertTimestamp;
     }
 

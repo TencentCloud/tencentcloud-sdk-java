@@ -41,21 +41,21 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 查询结果限制，默认值10
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 项目列表，默认值-1
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 排序字段，当前支持以下排序字段：clusterId、addTime、status
@@ -69,7 +69,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("Asc")
     @Expose
-    private Integer Asc;
+    private Long Asc;
 
     /**
      * Get 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage 
@@ -107,7 +107,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 查询偏移量，默认0 
      * @return Offset 查询偏移量，默认0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -115,7 +115,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 查询偏移量，默认0
      * @param Offset 查询偏移量，默认0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -123,7 +123,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 查询结果限制，默认值10 
      * @return Limit 查询结果限制，默认值10
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -131,7 +131,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 查询结果限制，默认值10
      * @param Limit 查询结果限制，默认值10
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -139,7 +139,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 项目列表，默认值-1 
      * @return ProjectId 项目列表，默认值-1
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -147,7 +147,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 项目列表，默认值-1
      * @param ProjectId 项目列表，默认值-1
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -171,7 +171,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 排序方法，0降序，1升序 
      * @return Asc 排序方法，0降序，1升序
      */
-    public Integer getAsc() {
+    public Long getAsc() {
         return this.Asc;
     }
 
@@ -179,7 +179,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 排序方法，0降序，1升序
      * @param Asc 排序方法，0降序，1升序
      */
-    public void setAsc(Integer Asc) {
+    public void setAsc(Long Asc) {
         this.Asc = Asc;
     }
 

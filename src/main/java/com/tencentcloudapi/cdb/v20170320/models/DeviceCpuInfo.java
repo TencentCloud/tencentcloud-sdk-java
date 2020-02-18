@@ -34,7 +34,7 @@ public class DeviceCpuInfo extends AbstractModel{
     */
     @SerializedName("Load")
     @Expose
-    private Integer [] Load;
+    private Long [] Load;
 
     /**
      * Get 实例CPU平均使用率 
@@ -56,7 +56,7 @@ public class DeviceCpuInfo extends AbstractModel{
      * Get 实例CPU监控数据 
      * @return Load 实例CPU监控数据
      */
-    public Integer [] getLoad() {
+    public Long [] getLoad() {
         return this.Load;
     }
 
@@ -64,7 +64,7 @@ public class DeviceCpuInfo extends AbstractModel{
      * Set 实例CPU监控数据
      * @param Load 实例CPU监控数据
      */
-    public void setLoad(Integer [] Load) {
+    public void setLoad(Long [] Load) {
         this.Load = Load;
     }
 

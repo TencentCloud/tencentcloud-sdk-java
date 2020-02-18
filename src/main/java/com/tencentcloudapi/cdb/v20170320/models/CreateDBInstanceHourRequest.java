@@ -27,21 +27,21 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Integer GoodsNum;
+    private Long GoodsNum;
 
     /**
     * 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
     */
     @SerializedName("Volume")
     @Expose
-    private Integer Volume;
+    private Long Volume;
 
     /**
     * MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
@@ -69,7 +69,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
@@ -104,7 +104,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
@@ -125,14 +125,14 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("ProtectMode")
     @Expose
-    private Integer ProtectMode;
+    private Long ProtectMode;
 
     /**
     * 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
     */
     @SerializedName("DeployMode")
     @Expose
-    private Integer DeployMode;
+    private Long DeployMode;
 
     /**
     * 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
@@ -167,7 +167,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Integer AutoRenewFlag;
+    private Long AutoRenewFlag;
 
     /**
     * 实例名称。
@@ -201,7 +201,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
-    public Integer getGoodsNum() {
+    public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -209,7 +209,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
-    public void setGoodsNum(Integer GoodsNum) {
+    public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -217,7 +217,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。 
      * @return Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -225,7 +225,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -233,7 +233,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。 
      * @return Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      */
-    public Integer getVolume() {
+    public Long getVolume() {
         return this.Volume;
     }
 
@@ -241,7 +241,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      * @param Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      */
-    public void setVolume(Integer Volume) {
+    public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
@@ -297,7 +297,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。 
      * @return ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -305,7 +305,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      * @param ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -377,7 +377,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 自定义端口，端口支持范围：[ 1024-65535 ] 。 
      * @return Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -385,7 +385,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 自定义端口，端口支持范围：[ 1024-65535 ] 。
      * @param Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
@@ -425,7 +425,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。 
      * @return ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
-    public Integer getProtectMode() {
+    public Long getProtectMode() {
         return this.ProtectMode;
     }
 
@@ -433,7 +433,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
-    public void setProtectMode(Integer ProtectMode) {
+    public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
@@ -441,7 +441,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。 
      * @return DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
-    public Integer getDeployMode() {
+    public Long getDeployMode() {
         return this.DeployMode;
     }
 
@@ -449,7 +449,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
-    public void setDeployMode(Integer DeployMode) {
+    public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
@@ -521,7 +521,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 购买按量计费实例该字段无意义。 
      * @return AutoRenewFlag 购买按量计费实例该字段无意义。
      */
-    public Integer getAutoRenewFlag() {
+    public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -529,7 +529,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 购买按量计费实例该字段无意义。
      * @param AutoRenewFlag 购买按量计费实例该字段无意义。
      */
-    public void setAutoRenewFlag(Integer AutoRenewFlag) {
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 

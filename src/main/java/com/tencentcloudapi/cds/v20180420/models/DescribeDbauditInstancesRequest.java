@@ -34,14 +34,14 @@ public class DescribeDbauditInstancesRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，默认1
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
      * Get 查询条件地域 
@@ -63,7 +63,7 @@ public class DescribeDbauditInstancesRequest extends AbstractModel{
      * Get 限制数目，默认10， 最大50 
      * @return Limit 限制数目，默认10， 最大50
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -71,7 +71,7 @@ public class DescribeDbauditInstancesRequest extends AbstractModel{
      * Set 限制数目，默认10， 最大50
      * @param Limit 限制数目，默认10， 最大50
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -79,7 +79,7 @@ public class DescribeDbauditInstancesRequest extends AbstractModel{
      * Get 偏移量，默认1 
      * @return Offset 偏移量，默认1
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -87,7 +87,7 @@ public class DescribeDbauditInstancesRequest extends AbstractModel{
      * Set 偏移量，默认1
      * @param Offset 偏移量，默认1
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 

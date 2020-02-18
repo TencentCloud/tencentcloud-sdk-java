@@ -48,14 +48,14 @@ public class CdsAuditInstance extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 续费标识
     */
     @SerializedName("RenewFlag")
     @Expose
-    private Integer RenewFlag;
+    private Long RenewFlag;
 
     /**
     * 所属地域
@@ -69,14 +69,14 @@ public class CdsAuditInstance extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
     * 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss
@@ -151,7 +151,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -159,7 +159,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -167,7 +167,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Get 续费标识 
      * @return RenewFlag 续费标识
      */
-    public Integer getRenewFlag() {
+    public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
@@ -175,7 +175,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Set 续费标识
      * @param RenewFlag 续费标识
      */
-    public void setRenewFlag(Integer RenewFlag) {
+    public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
@@ -199,7 +199,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Get 付费模式（数据安全审计只支持预付费：1） 
      * @return PayMode 付费模式（数据安全审计只支持预付费：1）
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
@@ -207,7 +207,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Set 付费模式（数据安全审计只支持预付费：1）
      * @param PayMode 付费模式（数据安全审计只支持预付费：1）
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -215,7 +215,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Get 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期 
      * @return Status 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -223,7 +223,7 @@ public class CdsAuditInstance extends AbstractModel{
      * Set 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
      * @param Status 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

@@ -34,7 +34,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 待删除对象实例的唯一id列表
@@ -63,7 +63,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
      * Get 策略组id 
      * @return GroupId 策略组id
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -71,7 +71,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
      * Set 策略组id
      * @param GroupId 策略组id
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 

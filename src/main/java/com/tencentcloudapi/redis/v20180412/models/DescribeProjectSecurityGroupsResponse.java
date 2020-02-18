@@ -34,7 +34,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Integer Total;
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      * Get 符合条件的安全组总数量。 
      * @return Total 符合条件的安全组总数量。
      */
-    public Integer getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -71,7 +71,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      * Set 符合条件的安全组总数量。
      * @param Total 符合条件的安全组总数量。
      */
-    public void setTotal(Integer Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 

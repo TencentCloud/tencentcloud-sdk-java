@@ -62,21 +62,21 @@ public class ModifyL7BackendWeightRequest extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
     * 已绑定的主机端口。
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 绑定类型。0：物理机 1：虚拟机 2：半托管机器
     */
     @SerializedName("BindType")
     @Expose
-    private Integer BindType;
+    private Long BindType;
 
     /**
      * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
@@ -162,7 +162,7 @@ public class ModifyL7BackendWeightRequest extends AbstractModel{
      * Get 权重信息，可选值0~100。 
      * @return Weight 权重信息，可选值0~100。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -170,7 +170,7 @@ public class ModifyL7BackendWeightRequest extends AbstractModel{
      * Set 权重信息，可选值0~100。
      * @param Weight 权重信息，可选值0~100。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
@@ -178,7 +178,7 @@ public class ModifyL7BackendWeightRequest extends AbstractModel{
      * Get 已绑定的主机端口。 
      * @return Port 已绑定的主机端口。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -186,7 +186,7 @@ public class ModifyL7BackendWeightRequest extends AbstractModel{
      * Set 已绑定的主机端口。
      * @param Port 已绑定的主机端口。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
@@ -194,7 +194,7 @@ public class ModifyL7BackendWeightRequest extends AbstractModel{
      * Get 绑定类型。0：物理机 1：虚拟机 2：半托管机器 
      * @return BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
-    public Integer getBindType() {
+    public Long getBindType() {
         return this.BindType;
     }
 
@@ -202,7 +202,7 @@ public class ModifyL7BackendWeightRequest extends AbstractModel{
      * Set 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      * @param BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
-    public void setBindType(Integer BindType) {
+    public void setBindType(Long BindType) {
         this.BindType = BindType;
     }
 

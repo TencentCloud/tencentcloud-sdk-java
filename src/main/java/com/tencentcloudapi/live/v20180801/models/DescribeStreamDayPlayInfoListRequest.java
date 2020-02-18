@@ -42,14 +42,14 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页个数，范围[100,1000]，默认值是1000。
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
      * Get 日期，
@@ -91,7 +91,7 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
      * Get 页号，范围[1,10]，默认值是1。 
      * @return PageNum 页号，范围[1,10]，默认值是1。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -99,7 +99,7 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
      * Set 页号，范围[1,10]，默认值是1。
      * @param PageNum 页号，范围[1,10]，默认值是1。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -107,7 +107,7 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
      * Get 每页个数，范围[100,1000]，默认值是1000。 
      * @return PageSize 每页个数，范围[100,1000]，默认值是1000。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -115,7 +115,7 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
      * Set 每页个数，范围[100,1000]，默认值是1000。
      * @param PageSize 每页个数，范围[100,1000]，默认值是1000。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 

@@ -27,27 +27,27 @@ public class AddShardConfig extends AbstractModel{
     */
     @SerializedName("ShardCount")
     @Expose
-    private Integer ShardCount;
+    private Long ShardCount;
 
     /**
     * 分片内存大小，单位 GB
     */
     @SerializedName("ShardMemory")
     @Expose
-    private Integer ShardMemory;
+    private Long ShardMemory;
 
     /**
     * 分片存储大小，单位 GB
     */
     @SerializedName("ShardStorage")
     @Expose
-    private Integer ShardStorage;
+    private Long ShardStorage;
 
     /**
      * Get 新增分片的数量 
      * @return ShardCount 新增分片的数量
      */
-    public Integer getShardCount() {
+    public Long getShardCount() {
         return this.ShardCount;
     }
 
@@ -55,7 +55,7 @@ public class AddShardConfig extends AbstractModel{
      * Set 新增分片的数量
      * @param ShardCount 新增分片的数量
      */
-    public void setShardCount(Integer ShardCount) {
+    public void setShardCount(Long ShardCount) {
         this.ShardCount = ShardCount;
     }
 
@@ -63,7 +63,7 @@ public class AddShardConfig extends AbstractModel{
      * Get 分片内存大小，单位 GB 
      * @return ShardMemory 分片内存大小，单位 GB
      */
-    public Integer getShardMemory() {
+    public Long getShardMemory() {
         return this.ShardMemory;
     }
 
@@ -71,7 +71,7 @@ public class AddShardConfig extends AbstractModel{
      * Set 分片内存大小，单位 GB
      * @param ShardMemory 分片内存大小，单位 GB
      */
-    public void setShardMemory(Integer ShardMemory) {
+    public void setShardMemory(Long ShardMemory) {
         this.ShardMemory = ShardMemory;
     }
 
@@ -79,7 +79,7 @@ public class AddShardConfig extends AbstractModel{
      * Get 分片存储大小，单位 GB 
      * @return ShardStorage 分片存储大小，单位 GB
      */
-    public Integer getShardStorage() {
+    public Long getShardStorage() {
         return this.ShardStorage;
     }
 
@@ -87,7 +87,7 @@ public class AddShardConfig extends AbstractModel{
      * Set 分片存储大小，单位 GB
      * @param ShardStorage 分片存储大小，单位 GB
      */
-    public void setShardStorage(Integer ShardStorage) {
+    public void setShardStorage(Long ShardStorage) {
         this.ShardStorage = ShardStorage;
     }
 

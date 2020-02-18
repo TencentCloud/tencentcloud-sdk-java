@@ -27,7 +27,7 @@ public class DescribeIpInfoResponse extends AbstractModel{
     */
     @SerializedName("ReturnCode")
     @Expose
-    private Integer ReturnCode;
+    private Long ReturnCode;
 
     /**
     * 判定结果，如：black、white、grey
@@ -41,7 +41,7 @@ public class DescribeIpInfoResponse extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Integer Confidence;
+    private Long Confidence;
 
     /**
     * 威胁类型。
@@ -98,7 +98,7 @@ malware IP = 恶意IP
      * Get 是否有数据，0代表有数据，1代表没有数据 
      * @return ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
-    public Integer getReturnCode() {
+    public Long getReturnCode() {
         return this.ReturnCode;
     }
 
@@ -106,7 +106,7 @@ malware IP = 恶意IP
      * Set 是否有数据，0代表有数据，1代表没有数据
      * @param ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
-    public void setReturnCode(Integer ReturnCode) {
+    public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
@@ -130,7 +130,7 @@ malware IP = 恶意IP
      * Get 置信度，取值0-100 
      * @return Confidence 置信度，取值0-100
      */
-    public Integer getConfidence() {
+    public Long getConfidence() {
         return this.Confidence;
     }
 
@@ -138,7 +138,7 @@ malware IP = 恶意IP
      * Set 置信度，取值0-100
      * @param Confidence 置信度，取值0-100
      */
-    public void setConfidence(Integer Confidence) {
+    public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 

@@ -34,7 +34,7 @@ public class ClientConnection extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
      * Get 连接的客户端IP 
@@ -56,7 +56,7 @@ public class ClientConnection extends AbstractModel{
      * Get 对应客户端IP的连接数 
      * @return Count 对应客户端IP的连接数
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -64,7 +64,7 @@ public class ClientConnection extends AbstractModel{
      * Set 对应客户端IP的连接数
      * @param Count 对应客户端IP的连接数
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 

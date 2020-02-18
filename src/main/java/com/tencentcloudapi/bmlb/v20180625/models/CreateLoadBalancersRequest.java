@@ -48,14 +48,14 @@ public class CreateLoadBalancersRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 购买黑石负载均衡实例的数量。默认值为1, 最大值为20。
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Integer GoodsNum;
+    private Long GoodsNum;
 
     /**
     * 黑石负载均衡的计费模式，取值为flow和bandwidth，其中flow模式表示流量模式，bandwidth表示带宽模式。默认值为flow。
@@ -76,7 +76,7 @@ public class CreateLoadBalancersRequest extends AbstractModel{
     */
     @SerializedName("Exclusive")
     @Expose
-    private Integer Exclusive;
+    private Long Exclusive;
 
     /**
     * 指定的VIP，如果指定，则数量必须与goodsNum一致。如果不指定，则由后台分配随机VIP。
@@ -151,7 +151,7 @@ public class CreateLoadBalancersRequest extends AbstractModel{
      * Get 负载均衡所属项目ID。不填则属于默认项目。 
      * @return ProjectId 负载均衡所属项目ID。不填则属于默认项目。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -159,7 +159,7 @@ public class CreateLoadBalancersRequest extends AbstractModel{
      * Set 负载均衡所属项目ID。不填则属于默认项目。
      * @param ProjectId 负载均衡所属项目ID。不填则属于默认项目。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -167,7 +167,7 @@ public class CreateLoadBalancersRequest extends AbstractModel{
      * Get 购买黑石负载均衡实例的数量。默认值为1, 最大值为20。 
      * @return GoodsNum 购买黑石负载均衡实例的数量。默认值为1, 最大值为20。
      */
-    public Integer getGoodsNum() {
+    public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -175,7 +175,7 @@ public class CreateLoadBalancersRequest extends AbstractModel{
      * Set 购买黑石负载均衡实例的数量。默认值为1, 最大值为20。
      * @param GoodsNum 购买黑石负载均衡实例的数量。默认值为1, 最大值为20。
      */
-    public void setGoodsNum(Integer GoodsNum) {
+    public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -215,7 +215,7 @@ public class CreateLoadBalancersRequest extends AbstractModel{
      * Get 负载均衡的独占类别，取值为0表示非独占，1表示四层独占，2表示七层独占，3表示四层和七层独占，4表示共享容灾。 
      * @return Exclusive 负载均衡的独占类别，取值为0表示非独占，1表示四层独占，2表示七层独占，3表示四层和七层独占，4表示共享容灾。
      */
-    public Integer getExclusive() {
+    public Long getExclusive() {
         return this.Exclusive;
     }
 
@@ -223,7 +223,7 @@ public class CreateLoadBalancersRequest extends AbstractModel{
      * Set 负载均衡的独占类别，取值为0表示非独占，1表示四层独占，2表示七层独占，3表示四层和七层独占，4表示共享容灾。
      * @param Exclusive 负载均衡的独占类别，取值为0表示非独占，1表示四层独占，2表示七层独占，3表示四层和七层独占，4表示共享容灾。
      */
-    public void setExclusive(Integer Exclusive) {
+    public void setExclusive(Long Exclusive) {
         this.Exclusive = Exclusive;
     }
 

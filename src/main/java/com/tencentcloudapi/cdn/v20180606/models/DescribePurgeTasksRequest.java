@@ -58,14 +58,14 @@ path：目录刷新记录
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 分页查询限制数目，默认为 20
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 支持域名过滤，或 http(s):// 开头完整 URL 过滤
@@ -174,7 +174,7 @@ path：目录刷新记录
      * Get 分页查询偏移量，默认为 0 （第一页） 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -182,7 +182,7 @@ path：目录刷新记录
      * Set 分页查询偏移量，默认为 0 （第一页）
      * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -190,7 +190,7 @@ path：目录刷新记录
      * Get 分页查询限制数目，默认为 20 
      * @return Limit 分页查询限制数目，默认为 20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -198,7 +198,7 @@ path：目录刷新记录
      * Set 分页查询限制数目，默认为 20
      * @param Limit 分页查询限制数目，默认为 20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

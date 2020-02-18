@@ -48,28 +48,28 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 是否需要返回记录数量，0不需要，1需要，默认不需要
     */
     @SerializedName("NeedRecordNum")
     @Expose
-    private Integer NeedRecordNum;
+    private Long NeedRecordNum;
 
     /**
     * 是否需要返回过滤条件，0不需要，1需要，默认不需要
     */
     @SerializedName("NeedConditionValue")
     @Expose
-    private Integer NeedConditionValue;
+    private Long NeedConditionValue;
 
     /**
     * 过滤条件，只支持ResourceKeyword(资源关键字，支持资源id及资源名称模糊查询)，ProjectIds（项目id），RegionIds(地域id)，PayModes(付费模式，可选prePay和postPay)，HideFreeCost（是否隐藏0元流水，可选0和1），OrderByCost（按费用排序规则，可选desc和asc）
@@ -130,7 +130,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Get 每次获取数据量 
      * @return Limit 每次获取数据量
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -138,7 +138,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Set 每次获取数据量
      * @param Limit 每次获取数据量
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -146,7 +146,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -154,7 +154,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -162,7 +162,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Get 是否需要返回记录数量，0不需要，1需要，默认不需要 
      * @return NeedRecordNum 是否需要返回记录数量，0不需要，1需要，默认不需要
      */
-    public Integer getNeedRecordNum() {
+    public Long getNeedRecordNum() {
         return this.NeedRecordNum;
     }
 
@@ -170,7 +170,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Set 是否需要返回记录数量，0不需要，1需要，默认不需要
      * @param NeedRecordNum 是否需要返回记录数量，0不需要，1需要，默认不需要
      */
-    public void setNeedRecordNum(Integer NeedRecordNum) {
+    public void setNeedRecordNum(Long NeedRecordNum) {
         this.NeedRecordNum = NeedRecordNum;
     }
 
@@ -178,7 +178,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Get 是否需要返回过滤条件，0不需要，1需要，默认不需要 
      * @return NeedConditionValue 是否需要返回过滤条件，0不需要，1需要，默认不需要
      */
-    public Integer getNeedConditionValue() {
+    public Long getNeedConditionValue() {
         return this.NeedConditionValue;
     }
 
@@ -186,7 +186,7 @@ public class DescribeCostSummaryByResourceRequest extends AbstractModel{
      * Set 是否需要返回过滤条件，0不需要，1需要，默认不需要
      * @param NeedConditionValue 是否需要返回过滤条件，0不需要，1需要，默认不需要
      */
-    public void setNeedConditionValue(Integer NeedConditionValue) {
+    public void setNeedConditionValue(Long NeedConditionValue) {
         this.NeedConditionValue = NeedConditionValue;
     }
 

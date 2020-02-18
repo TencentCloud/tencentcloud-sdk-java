@@ -62,21 +62,21 @@ public class GetBlockTransactionListForUserRequest extends AbstractModel{
     */
     @SerializedName("BlockId")
     @Expose
-    private Integer BlockId;
+    private Long BlockId;
 
     /**
     * 查询的交易列表起始偏移地址
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 查询的交易列表数量
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 模块名，固定字段：transaction 
@@ -162,7 +162,7 @@ public class GetBlockTransactionListForUserRequest extends AbstractModel{
      * Get 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID 
      * @return BlockId 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      */
-    public Integer getBlockId() {
+    public Long getBlockId() {
         return this.BlockId;
     }
 
@@ -170,7 +170,7 @@ public class GetBlockTransactionListForUserRequest extends AbstractModel{
      * Set 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      * @param BlockId 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      */
-    public void setBlockId(Integer BlockId) {
+    public void setBlockId(Long BlockId) {
         this.BlockId = BlockId;
     }
 
@@ -178,7 +178,7 @@ public class GetBlockTransactionListForUserRequest extends AbstractModel{
      * Get 查询的交易列表起始偏移地址 
      * @return Offset 查询的交易列表起始偏移地址
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -186,7 +186,7 @@ public class GetBlockTransactionListForUserRequest extends AbstractModel{
      * Set 查询的交易列表起始偏移地址
      * @param Offset 查询的交易列表起始偏移地址
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -194,7 +194,7 @@ public class GetBlockTransactionListForUserRequest extends AbstractModel{
      * Get 查询的交易列表数量 
      * @return Limit 查询的交易列表数量
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -202,7 +202,7 @@ public class GetBlockTransactionListForUserRequest extends AbstractModel{
      * Set 查询的交易列表数量
      * @param Limit 查询的交易列表数量
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

@@ -34,7 +34,7 @@ public class BinlogInfo extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -84,7 +84,7 @@ public class BinlogInfo extends AbstractModel{
      * Get 备份文件大小，单位：Byte 
      * @return Size 备份文件大小，单位：Byte
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -92,7 +92,7 @@ public class BinlogInfo extends AbstractModel{
      * Set 备份文件大小，单位：Byte
      * @param Size 备份文件大小，单位：Byte
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 

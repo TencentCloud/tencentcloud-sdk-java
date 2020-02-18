@@ -29,7 +29,7 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
     */
     @SerializedName("PackageType")
     @Expose
-    private Integer PackageType;
+    private Long PackageType;
 
     /**
      * Get 包类型，可选值：
@@ -39,7 +39,7 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 0：流量包；
 1：转码包。
      */
-    public Integer getPackageType() {
+    public Long getPackageType() {
         return this.PackageType;
     }
 
@@ -51,7 +51,7 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
 0：流量包；
 1：转码包。
      */
-    public void setPackageType(Integer PackageType) {
+    public void setPackageType(Long PackageType) {
         this.PackageType = PackageType;
     }
 

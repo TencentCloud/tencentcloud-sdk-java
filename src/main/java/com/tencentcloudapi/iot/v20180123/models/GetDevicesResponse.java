@@ -34,7 +34,7 @@ public class GetDevicesResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Integer Total;
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class GetDevicesResponse extends AbstractModel{
      * Get 设备总数 
      * @return Total 设备总数
      */
-    public Integer getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -71,7 +71,7 @@ public class GetDevicesResponse extends AbstractModel{
      * Set 设备总数
      * @param Total 设备总数
      */
-    public void setTotal(Integer Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 

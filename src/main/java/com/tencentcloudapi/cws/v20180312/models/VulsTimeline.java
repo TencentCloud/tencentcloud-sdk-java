@@ -27,14 +27,14 @@ public class VulsTimeline extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云用户appid。
     */
     @SerializedName("Appid")
     @Expose
-    private Integer Appid;
+    private Long Appid;
 
     /**
     * 日期。
@@ -48,49 +48,49 @@ public class VulsTimeline extends AbstractModel{
     */
     @SerializedName("PageCount")
     @Expose
-    private Integer PageCount;
+    private Long PageCount;
 
     /**
     * 已验证网站总数量。
     */
     @SerializedName("SiteNum")
     @Expose
-    private Integer SiteNum;
+    private Long SiteNum;
 
     /**
     * 受影响的网站总数量。
     */
     @SerializedName("ImpactSiteNum")
     @Expose
-    private Integer ImpactSiteNum;
+    private Long ImpactSiteNum;
 
     /**
     * 高危漏洞总数量。
     */
     @SerializedName("VulsHighNum")
     @Expose
-    private Integer VulsHighNum;
+    private Long VulsHighNum;
 
     /**
     * 中危漏洞总数量。
     */
     @SerializedName("VulsMiddleNum")
     @Expose
-    private Integer VulsMiddleNum;
+    private Long VulsMiddleNum;
 
     /**
     * 低危漏洞总数量。
     */
     @SerializedName("VulsLowNum")
     @Expose
-    private Integer VulsLowNum;
+    private Long VulsLowNum;
 
     /**
     * 风险提示总数量
     */
     @SerializedName("VulsNoticeNum")
     @Expose
-    private Integer VulsNoticeNum;
+    private Long VulsNoticeNum;
 
     /**
     * 记录添加时间。
@@ -110,7 +110,7 @@ public class VulsTimeline extends AbstractModel{
      * Get ID。 
      * @return Id ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
@@ -118,7 +118,7 @@ public class VulsTimeline extends AbstractModel{
      * Set ID。
      * @param Id ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
@@ -126,7 +126,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
-    public Integer getAppid() {
+    public Long getAppid() {
         return this.Appid;
     }
 
@@ -134,7 +134,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 云用户appid。
      * @param Appid 云用户appid。
      */
-    public void setAppid(Integer Appid) {
+    public void setAppid(Long Appid) {
         this.Appid = Appid;
     }
 
@@ -158,7 +158,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 扫描页面总数量。 
      * @return PageCount 扫描页面总数量。
      */
-    public Integer getPageCount() {
+    public Long getPageCount() {
         return this.PageCount;
     }
 
@@ -166,7 +166,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 扫描页面总数量。
      * @param PageCount 扫描页面总数量。
      */
-    public void setPageCount(Integer PageCount) {
+    public void setPageCount(Long PageCount) {
         this.PageCount = PageCount;
     }
 
@@ -174,7 +174,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 已验证网站总数量。 
      * @return SiteNum 已验证网站总数量。
      */
-    public Integer getSiteNum() {
+    public Long getSiteNum() {
         return this.SiteNum;
     }
 
@@ -182,7 +182,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 已验证网站总数量。
      * @param SiteNum 已验证网站总数量。
      */
-    public void setSiteNum(Integer SiteNum) {
+    public void setSiteNum(Long SiteNum) {
         this.SiteNum = SiteNum;
     }
 
@@ -190,7 +190,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 受影响的网站总数量。 
      * @return ImpactSiteNum 受影响的网站总数量。
      */
-    public Integer getImpactSiteNum() {
+    public Long getImpactSiteNum() {
         return this.ImpactSiteNum;
     }
 
@@ -198,7 +198,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 受影响的网站总数量。
      * @param ImpactSiteNum 受影响的网站总数量。
      */
-    public void setImpactSiteNum(Integer ImpactSiteNum) {
+    public void setImpactSiteNum(Long ImpactSiteNum) {
         this.ImpactSiteNum = ImpactSiteNum;
     }
 
@@ -206,7 +206,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 高危漏洞总数量。 
      * @return VulsHighNum 高危漏洞总数量。
      */
-    public Integer getVulsHighNum() {
+    public Long getVulsHighNum() {
         return this.VulsHighNum;
     }
 
@@ -214,7 +214,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 高危漏洞总数量。
      * @param VulsHighNum 高危漏洞总数量。
      */
-    public void setVulsHighNum(Integer VulsHighNum) {
+    public void setVulsHighNum(Long VulsHighNum) {
         this.VulsHighNum = VulsHighNum;
     }
 
@@ -222,7 +222,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 中危漏洞总数量。 
      * @return VulsMiddleNum 中危漏洞总数量。
      */
-    public Integer getVulsMiddleNum() {
+    public Long getVulsMiddleNum() {
         return this.VulsMiddleNum;
     }
 
@@ -230,7 +230,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 中危漏洞总数量。
      * @param VulsMiddleNum 中危漏洞总数量。
      */
-    public void setVulsMiddleNum(Integer VulsMiddleNum) {
+    public void setVulsMiddleNum(Long VulsMiddleNum) {
         this.VulsMiddleNum = VulsMiddleNum;
     }
 
@@ -238,7 +238,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 低危漏洞总数量。 
      * @return VulsLowNum 低危漏洞总数量。
      */
-    public Integer getVulsLowNum() {
+    public Long getVulsLowNum() {
         return this.VulsLowNum;
     }
 
@@ -246,7 +246,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 低危漏洞总数量。
      * @param VulsLowNum 低危漏洞总数量。
      */
-    public void setVulsLowNum(Integer VulsLowNum) {
+    public void setVulsLowNum(Long VulsLowNum) {
         this.VulsLowNum = VulsLowNum;
     }
 
@@ -254,7 +254,7 @@ public class VulsTimeline extends AbstractModel{
      * Get 风险提示总数量 
      * @return VulsNoticeNum 风险提示总数量
      */
-    public Integer getVulsNoticeNum() {
+    public Long getVulsNoticeNum() {
         return this.VulsNoticeNum;
     }
 
@@ -262,7 +262,7 @@ public class VulsTimeline extends AbstractModel{
      * Set 风险提示总数量
      * @param VulsNoticeNum 风险提示总数量
      */
-    public void setVulsNoticeNum(Integer VulsNoticeNum) {
+    public void setVulsNoticeNum(Long VulsNoticeNum) {
         this.VulsNoticeNum = VulsNoticeNum;
     }
 

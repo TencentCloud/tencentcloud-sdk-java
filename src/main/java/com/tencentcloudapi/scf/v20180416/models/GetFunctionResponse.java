@@ -62,14 +62,14 @@ public class GetFunctionResponse extends AbstractModel{
     */
     @SerializedName("CodeSize")
     @Expose
-    private Integer CodeSize;
+    private Long CodeSize;
 
     /**
     * 函数的超时时间
     */
     @SerializedName("Timeout")
     @Expose
-    private Integer Timeout;
+    private Long Timeout;
 
     /**
     * 函数的版本
@@ -83,7 +83,7 @@ public class GetFunctionResponse extends AbstractModel{
     */
     @SerializedName("MemorySize")
     @Expose
-    private Integer MemorySize;
+    private Long MemorySize;
 
     /**
     * 函数的运行环境
@@ -139,7 +139,7 @@ public class GetFunctionResponse extends AbstractModel{
     */
     @SerializedName("ErrNo")
     @Expose
-    private Integer ErrNo;
+    private Long ErrNo;
 
     /**
     * 函数的命名空间
@@ -323,7 +323,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 函数代码大小 
      * @return CodeSize 函数代码大小
      */
-    public Integer getCodeSize() {
+    public Long getCodeSize() {
         return this.CodeSize;
     }
 
@@ -331,7 +331,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 函数代码大小
      * @param CodeSize 函数代码大小
      */
-    public void setCodeSize(Integer CodeSize) {
+    public void setCodeSize(Long CodeSize) {
         this.CodeSize = CodeSize;
     }
 
@@ -339,7 +339,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 函数的超时时间 
      * @return Timeout 函数的超时时间
      */
-    public Integer getTimeout() {
+    public Long getTimeout() {
         return this.Timeout;
     }
 
@@ -347,7 +347,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 函数的超时时间
      * @param Timeout 函数的超时时间
      */
-    public void setTimeout(Integer Timeout) {
+    public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
@@ -371,7 +371,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 函数的最大可用内存 
      * @return MemorySize 函数的最大可用内存
      */
-    public Integer getMemorySize() {
+    public Long getMemorySize() {
         return this.MemorySize;
     }
 
@@ -379,7 +379,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 函数的最大可用内存
      * @param MemorySize 函数的最大可用内存
      */
-    public void setMemorySize(Integer MemorySize) {
+    public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
@@ -499,7 +499,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 代码错误码 
      * @return ErrNo 代码错误码
      */
-    public Integer getErrNo() {
+    public Long getErrNo() {
         return this.ErrNo;
     }
 
@@ -507,7 +507,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 代码错误码
      * @param ErrNo 代码错误码
      */
-    public void setErrNo(Integer ErrNo) {
+    public void setErrNo(Long ErrNo) {
         this.ErrNo = ErrNo;
     }
 

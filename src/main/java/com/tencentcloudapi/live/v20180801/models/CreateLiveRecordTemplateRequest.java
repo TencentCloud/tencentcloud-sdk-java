@@ -70,7 +70,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     */
     @SerializedName("IsDelayLive")
     @Expose
-    private Integer IsDelayLive;
+    private Long IsDelayLive;
 
     /**
     * HLS专属录制参数。
@@ -188,7 +188,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
      * @return IsDelayLive 0：普通直播，
 1：慢直播。
      */
-    public Integer getIsDelayLive() {
+    public Long getIsDelayLive() {
         return this.IsDelayLive;
     }
 
@@ -198,7 +198,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
      * @param IsDelayLive 0：普通直播，
 1：慢直播。
      */
-    public void setIsDelayLive(Integer IsDelayLive) {
+    public void setIsDelayLive(Long IsDelayLive) {
         this.IsDelayLive = IsDelayLive;
     }
 

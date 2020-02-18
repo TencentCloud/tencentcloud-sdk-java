@@ -27,28 +27,28 @@ public class RoVipInfo extends AbstractModel{
     */
     @SerializedName("RoVipStatus")
     @Expose
-    private Integer RoVipStatus;
+    private Long RoVipStatus;
 
     /**
     * 只读vip的子网
     */
     @SerializedName("RoSubnetId")
     @Expose
-    private Integer RoSubnetId;
+    private Long RoSubnetId;
 
     /**
     * 只读vip的私有网络
     */
     @SerializedName("RoVpcId")
     @Expose
-    private Integer RoVpcId;
+    private Long RoVpcId;
 
     /**
     * 只读vip的端口号
     */
     @SerializedName("RoVport")
     @Expose
-    private Integer RoVport;
+    private Long RoVport;
 
     /**
     * 只读vip
@@ -61,7 +61,7 @@ public class RoVipInfo extends AbstractModel{
      * Get 只读vip状态 
      * @return RoVipStatus 只读vip状态
      */
-    public Integer getRoVipStatus() {
+    public Long getRoVipStatus() {
         return this.RoVipStatus;
     }
 
@@ -69,7 +69,7 @@ public class RoVipInfo extends AbstractModel{
      * Set 只读vip状态
      * @param RoVipStatus 只读vip状态
      */
-    public void setRoVipStatus(Integer RoVipStatus) {
+    public void setRoVipStatus(Long RoVipStatus) {
         this.RoVipStatus = RoVipStatus;
     }
 
@@ -77,7 +77,7 @@ public class RoVipInfo extends AbstractModel{
      * Get 只读vip的子网 
      * @return RoSubnetId 只读vip的子网
      */
-    public Integer getRoSubnetId() {
+    public Long getRoSubnetId() {
         return this.RoSubnetId;
     }
 
@@ -85,7 +85,7 @@ public class RoVipInfo extends AbstractModel{
      * Set 只读vip的子网
      * @param RoSubnetId 只读vip的子网
      */
-    public void setRoSubnetId(Integer RoSubnetId) {
+    public void setRoSubnetId(Long RoSubnetId) {
         this.RoSubnetId = RoSubnetId;
     }
 
@@ -93,7 +93,7 @@ public class RoVipInfo extends AbstractModel{
      * Get 只读vip的私有网络 
      * @return RoVpcId 只读vip的私有网络
      */
-    public Integer getRoVpcId() {
+    public Long getRoVpcId() {
         return this.RoVpcId;
     }
 
@@ -101,7 +101,7 @@ public class RoVipInfo extends AbstractModel{
      * Set 只读vip的私有网络
      * @param RoVpcId 只读vip的私有网络
      */
-    public void setRoVpcId(Integer RoVpcId) {
+    public void setRoVpcId(Long RoVpcId) {
         this.RoVpcId = RoVpcId;
     }
 
@@ -109,7 +109,7 @@ public class RoVipInfo extends AbstractModel{
      * Get 只读vip的端口号 
      * @return RoVport 只读vip的端口号
      */
-    public Integer getRoVport() {
+    public Long getRoVport() {
         return this.RoVport;
     }
 
@@ -117,7 +117,7 @@ public class RoVipInfo extends AbstractModel{
      * Set 只读vip的端口号
      * @param RoVport 只读vip的端口号
      */
-    public void setRoVport(Integer RoVport) {
+    public void setRoVport(Long RoVport) {
         this.RoVport = RoVport;
     }
 

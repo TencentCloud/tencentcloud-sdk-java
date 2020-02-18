@@ -34,7 +34,7 @@ public class DevicesBindInfoBackend extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
      * Get 黑石物理机的主机ID、托管主机ID或虚拟机IP。 
@@ -56,7 +56,7 @@ public class DevicesBindInfoBackend extends AbstractModel{
      * Get 主机端口。 
      * @return Port 主机端口。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -64,7 +64,7 @@ public class DevicesBindInfoBackend extends AbstractModel{
      * Set 主机端口。
      * @param Port 主机端口。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

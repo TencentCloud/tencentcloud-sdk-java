@@ -34,14 +34,14 @@ public class MasterInfo extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
     * 可用区ID
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 可用区信息
@@ -69,7 +69,7 @@ public class MasterInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 实例名称
@@ -83,28 +83,28 @@ public class MasterInfo extends AbstractModel{
     */
     @SerializedName("InstanceType")
     @Expose
-    private Integer InstanceType;
+    private Long InstanceType;
 
     /**
     * 任务状态
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Integer TaskStatus;
+    private Long TaskStatus;
 
     /**
     * 内存容量
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 硬盘容量
     */
     @SerializedName("Volume")
     @Expose
-    private Integer Volume;
+    private Long Volume;
 
     /**
     * 实例机型
@@ -118,21 +118,21 @@ public class MasterInfo extends AbstractModel{
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
     * 私有网络ID
     */
     @SerializedName("VpcId")
     @Expose
-    private Integer VpcId;
+    private Long VpcId;
 
     /**
     * 子网ID
     */
     @SerializedName("SubnetId")
     @Expose
-    private Integer SubnetId;
+    private Long SubnetId;
 
     /**
     * 独享集群ID
@@ -168,7 +168,7 @@ public class MasterInfo extends AbstractModel{
      * Get 地域ID 
      * @return RegionId 地域ID
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -176,7 +176,7 @@ public class MasterInfo extends AbstractModel{
      * Set 地域ID
      * @param RegionId 地域ID
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -184,7 +184,7 @@ public class MasterInfo extends AbstractModel{
      * Get 可用区ID 
      * @return ZoneId 可用区ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -192,7 +192,7 @@ public class MasterInfo extends AbstractModel{
      * Set 可用区ID
      * @param ZoneId 可用区ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -248,7 +248,7 @@ public class MasterInfo extends AbstractModel{
      * Get 实例状态 
      * @return Status 实例状态
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -256,7 +256,7 @@ public class MasterInfo extends AbstractModel{
      * Set 实例状态
      * @param Status 实例状态
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -280,7 +280,7 @@ public class MasterInfo extends AbstractModel{
      * Get 实例类型 
      * @return InstanceType 实例类型
      */
-    public Integer getInstanceType() {
+    public Long getInstanceType() {
         return this.InstanceType;
     }
 
@@ -288,7 +288,7 @@ public class MasterInfo extends AbstractModel{
      * Set 实例类型
      * @param InstanceType 实例类型
      */
-    public void setInstanceType(Integer InstanceType) {
+    public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
@@ -296,7 +296,7 @@ public class MasterInfo extends AbstractModel{
      * Get 任务状态 
      * @return TaskStatus 任务状态
      */
-    public Integer getTaskStatus() {
+    public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -304,7 +304,7 @@ public class MasterInfo extends AbstractModel{
      * Set 任务状态
      * @param TaskStatus 任务状态
      */
-    public void setTaskStatus(Integer TaskStatus) {
+    public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -312,7 +312,7 @@ public class MasterInfo extends AbstractModel{
      * Get 内存容量 
      * @return Memory 内存容量
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -320,7 +320,7 @@ public class MasterInfo extends AbstractModel{
      * Set 内存容量
      * @param Memory 内存容量
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -328,7 +328,7 @@ public class MasterInfo extends AbstractModel{
      * Get 硬盘容量 
      * @return Volume 硬盘容量
      */
-    public Integer getVolume() {
+    public Long getVolume() {
         return this.Volume;
     }
 
@@ -336,7 +336,7 @@ public class MasterInfo extends AbstractModel{
      * Set 硬盘容量
      * @param Volume 硬盘容量
      */
-    public void setVolume(Integer Volume) {
+    public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
@@ -360,7 +360,7 @@ public class MasterInfo extends AbstractModel{
      * Get 每秒查询数 
      * @return Qps 每秒查询数
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -368,7 +368,7 @@ public class MasterInfo extends AbstractModel{
      * Set 每秒查询数
      * @param Qps 每秒查询数
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
@@ -376,7 +376,7 @@ public class MasterInfo extends AbstractModel{
      * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
-    public Integer getVpcId() {
+    public Long getVpcId() {
         return this.VpcId;
     }
 
@@ -384,7 +384,7 @@ public class MasterInfo extends AbstractModel{
      * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
-    public void setVpcId(Integer VpcId) {
+    public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -392,7 +392,7 @@ public class MasterInfo extends AbstractModel{
      * Get 子网ID 
      * @return SubnetId 子网ID
      */
-    public Integer getSubnetId() {
+    public Long getSubnetId() {
         return this.SubnetId;
     }
 
@@ -400,7 +400,7 @@ public class MasterInfo extends AbstractModel{
      * Set 子网ID
      * @param SubnetId 子网ID
      */
-    public void setSubnetId(Integer SubnetId) {
+    public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 

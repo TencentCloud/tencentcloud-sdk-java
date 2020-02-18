@@ -27,14 +27,14 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 限制数目
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
@@ -55,14 +55,14 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Integer Order;
+    private Long Order;
 
     /**
     * 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 下单人账号ID列表
@@ -82,7 +82,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -90,7 +90,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -98,7 +98,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Get 限制数目 
      * @return Limit 限制数目
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -106,7 +106,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Set 限制数目
      * @param Limit 限制数目
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -146,7 +146,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Get 0:下单时间降序；其他：下单时间升序 
      * @return Order 0:下单时间降序；其他：下单时间升序
      */
-    public Integer getOrder() {
+    public Long getOrder() {
         return this.Order;
     }
 
@@ -154,7 +154,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Set 0:下单时间降序；其他：下单时间升序
      * @param Order 0:下单时间降序；其他：下单时间升序
      */
-    public void setOrder(Integer Order) {
+    public void setOrder(Long Order) {
         this.Order = Order;
     }
 
@@ -162,7 +162,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Get 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中) 
      * @return Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -170,7 +170,7 @@ public class DescribeAgentPayDealsRequest extends AbstractModel{
      * Set 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      * @param Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

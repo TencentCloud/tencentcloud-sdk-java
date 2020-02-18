@@ -34,7 +34,7 @@ public class DateCount extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
      * Get 统计日期 
@@ -56,7 +56,7 @@ public class DateCount extends AbstractModel{
      * Get 统计值 
      * @return Count 统计值
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -64,7 +64,7 @@ public class DateCount extends AbstractModel{
      * Set 统计值
      * @param Count 统计值
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 

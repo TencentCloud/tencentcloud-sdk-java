@@ -34,7 +34,7 @@ public class HttpStatusInfo extends AbstractModel{
     */
     @SerializedName("Num")
     @Expose
-    private Integer Num;
+    private Long Num;
 
     /**
      * Get 播放HTTP状态码。 
@@ -56,7 +56,7 @@ public class HttpStatusInfo extends AbstractModel{
      * Get 个数。 
      * @return Num 个数。
      */
-    public Integer getNum() {
+    public Long getNum() {
         return this.Num;
     }
 
@@ -64,7 +64,7 @@ public class HttpStatusInfo extends AbstractModel{
      * Set 个数。
      * @param Num 个数。
      */
-    public void setNum(Integer Num) {
+    public void setNum(Long Num) {
         this.Num = Num;
     }
 

@@ -48,7 +48,7 @@ public class PlaySumStatInfo extends AbstractModel{
     */
     @SerializedName("TotalRequest")
     @Expose
-    private Integer TotalRequest;
+    private Long TotalRequest;
 
     /**
      * Get 域名或流id。 
@@ -102,7 +102,7 @@ public class PlaySumStatInfo extends AbstractModel{
      * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
-    public Integer getTotalRequest() {
+    public Long getTotalRequest() {
         return this.TotalRequest;
     }
 
@@ -110,7 +110,7 @@ public class PlaySumStatInfo extends AbstractModel{
      * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
-    public void setTotalRequest(Integer TotalRequest) {
+    public void setTotalRequest(Long TotalRequest) {
         this.TotalRequest = TotalRequest;
     }
 

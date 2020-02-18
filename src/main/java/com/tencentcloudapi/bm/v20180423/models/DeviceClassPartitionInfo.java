@@ -27,7 +27,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
     */
     @SerializedName("RaidId")
     @Expose
-    private Integer RaidId;
+    private Long RaidId;
 
     /**
     * RAID名称
@@ -48,49 +48,49 @@ public class DeviceClassPartitionInfo extends AbstractModel{
     */
     @SerializedName("SystemDiskSize")
     @Expose
-    private Integer SystemDiskSize;
+    private Long SystemDiskSize;
 
     /**
     * 系统盘/分区默认大小（单位GiB）
     */
     @SerializedName("SysRootSpace")
     @Expose
-    private Integer SysRootSpace;
+    private Long SysRootSpace;
 
     /**
     * 系统盘swap分区默认大小（单位GiB）
     */
     @SerializedName("SysSwaporuefiSpace")
     @Expose
-    private Integer SysSwaporuefiSpace;
+    private Long SysSwaporuefiSpace;
 
     /**
     * 系统盘/usr/local分区默认大小（单位GiB）
     */
     @SerializedName("SysUsrlocalSpace")
     @Expose
-    private Integer SysUsrlocalSpace;
+    private Long SysUsrlocalSpace;
 
     /**
     * 系统盘/data分区默认大小（单位GiB）
     */
     @SerializedName("SysDataSpace")
     @Expose
-    private Integer SysDataSpace;
+    private Long SysDataSpace;
 
     /**
     * 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
     */
     @SerializedName("SysIsUefiType")
     @Expose
-    private Integer SysIsUefiType;
+    private Long SysIsUefiType;
 
     /**
     * 数据盘总大小
     */
     @SerializedName("DataDiskSize")
     @Expose
-    private Integer DataDiskSize;
+    private Long DataDiskSize;
 
     /**
     * 硬盘列表
@@ -103,7 +103,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get RAID类型ID 
      * @return RaidId RAID类型ID
      */
-    public Integer getRaidId() {
+    public Long getRaidId() {
         return this.RaidId;
     }
 
@@ -111,7 +111,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set RAID类型ID
      * @param RaidId RAID类型ID
      */
-    public void setRaidId(Integer RaidId) {
+    public void setRaidId(Long RaidId) {
         this.RaidId = RaidId;
     }
 
@@ -151,7 +151,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get 系统盘总大小（单位GiB） 
      * @return SystemDiskSize 系统盘总大小（单位GiB）
      */
-    public Integer getSystemDiskSize() {
+    public Long getSystemDiskSize() {
         return this.SystemDiskSize;
     }
 
@@ -159,7 +159,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set 系统盘总大小（单位GiB）
      * @param SystemDiskSize 系统盘总大小（单位GiB）
      */
-    public void setSystemDiskSize(Integer SystemDiskSize) {
+    public void setSystemDiskSize(Long SystemDiskSize) {
         this.SystemDiskSize = SystemDiskSize;
     }
 
@@ -167,7 +167,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get 系统盘/分区默认大小（单位GiB） 
      * @return SysRootSpace 系统盘/分区默认大小（单位GiB）
      */
-    public Integer getSysRootSpace() {
+    public Long getSysRootSpace() {
         return this.SysRootSpace;
     }
 
@@ -175,7 +175,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set 系统盘/分区默认大小（单位GiB）
      * @param SysRootSpace 系统盘/分区默认大小（单位GiB）
      */
-    public void setSysRootSpace(Integer SysRootSpace) {
+    public void setSysRootSpace(Long SysRootSpace) {
         this.SysRootSpace = SysRootSpace;
     }
 
@@ -183,7 +183,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get 系统盘swap分区默认大小（单位GiB） 
      * @return SysSwaporuefiSpace 系统盘swap分区默认大小（单位GiB）
      */
-    public Integer getSysSwaporuefiSpace() {
+    public Long getSysSwaporuefiSpace() {
         return this.SysSwaporuefiSpace;
     }
 
@@ -191,7 +191,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set 系统盘swap分区默认大小（单位GiB）
      * @param SysSwaporuefiSpace 系统盘swap分区默认大小（单位GiB）
      */
-    public void setSysSwaporuefiSpace(Integer SysSwaporuefiSpace) {
+    public void setSysSwaporuefiSpace(Long SysSwaporuefiSpace) {
         this.SysSwaporuefiSpace = SysSwaporuefiSpace;
     }
 
@@ -199,7 +199,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get 系统盘/usr/local分区默认大小（单位GiB） 
      * @return SysUsrlocalSpace 系统盘/usr/local分区默认大小（单位GiB）
      */
-    public Integer getSysUsrlocalSpace() {
+    public Long getSysUsrlocalSpace() {
         return this.SysUsrlocalSpace;
     }
 
@@ -207,7 +207,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set 系统盘/usr/local分区默认大小（单位GiB）
      * @param SysUsrlocalSpace 系统盘/usr/local分区默认大小（单位GiB）
      */
-    public void setSysUsrlocalSpace(Integer SysUsrlocalSpace) {
+    public void setSysUsrlocalSpace(Long SysUsrlocalSpace) {
         this.SysUsrlocalSpace = SysUsrlocalSpace;
     }
 
@@ -215,7 +215,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get 系统盘/data分区默认大小（单位GiB） 
      * @return SysDataSpace 系统盘/data分区默认大小（单位GiB）
      */
-    public Integer getSysDataSpace() {
+    public Long getSysDataSpace() {
         return this.SysDataSpace;
     }
 
@@ -223,7 +223,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set 系统盘/data分区默认大小（单位GiB）
      * @param SysDataSpace 系统盘/data分区默认大小（单位GiB）
      */
-    public void setSysDataSpace(Integer SysDataSpace) {
+    public void setSysDataSpace(Long SysDataSpace) {
         this.SysDataSpace = SysDataSpace;
     }
 
@@ -231,7 +231,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动 
      * @return SysIsUefiType 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
      */
-    public Integer getSysIsUefiType() {
+    public Long getSysIsUefiType() {
         return this.SysIsUefiType;
     }
 
@@ -239,7 +239,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
      * @param SysIsUefiType 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
      */
-    public void setSysIsUefiType(Integer SysIsUefiType) {
+    public void setSysIsUefiType(Long SysIsUefiType) {
         this.SysIsUefiType = SysIsUefiType;
     }
 
@@ -247,7 +247,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Get 数据盘总大小 
      * @return DataDiskSize 数据盘总大小
      */
-    public Integer getDataDiskSize() {
+    public Long getDataDiskSize() {
         return this.DataDiskSize;
     }
 
@@ -255,7 +255,7 @@ public class DeviceClassPartitionInfo extends AbstractModel{
      * Set 数据盘总大小
      * @param DataDiskSize 数据盘总大小
      */
-    public void setDataDiskSize(Integer DataDiskSize) {
+    public void setDataDiskSize(Long DataDiskSize) {
         this.DataDiskSize = DataDiskSize;
     }
 

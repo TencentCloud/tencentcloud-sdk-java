@@ -27,7 +27,7 @@ public class DescribeBackupTimeResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 实例备份时间配置信息
@@ -48,7 +48,7 @@ public class DescribeBackupTimeResponse extends AbstractModel{
      * Get 返回的配置数量 
      * @return TotalCount 返回的配置数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -56,7 +56,7 @@ public class DescribeBackupTimeResponse extends AbstractModel{
      * Set 返回的配置数量
      * @param TotalCount 返回的配置数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -27,49 +27,49 @@ public class DescribeVulsNumberResponse extends AbstractModel{
     */
     @SerializedName("ImpactSiteNumber")
     @Expose
-    private Integer ImpactSiteNumber;
+    private Long ImpactSiteNumber;
 
     /**
     * 已验证的网站总数。
     */
     @SerializedName("SiteNumber")
     @Expose
-    private Integer SiteNumber;
+    private Long SiteNumber;
 
     /**
     * 高风险漏洞总数。
     */
     @SerializedName("VulsHighNumber")
     @Expose
-    private Integer VulsHighNumber;
+    private Long VulsHighNumber;
 
     /**
     * 中风险漏洞总数。
     */
     @SerializedName("VulsMiddleNumber")
     @Expose
-    private Integer VulsMiddleNumber;
+    private Long VulsMiddleNumber;
 
     /**
     * 低高风险漏洞总数。
     */
     @SerializedName("VulsLowNumber")
     @Expose
-    private Integer VulsLowNumber;
+    private Long VulsLowNumber;
 
     /**
     * 风险提示总数。
     */
     @SerializedName("VulsNoticeNumber")
     @Expose
-    private Integer VulsNoticeNumber;
+    private Long VulsNoticeNumber;
 
     /**
     * 扫描页面总数。
     */
     @SerializedName("PageCount")
     @Expose
-    private Integer PageCount;
+    private Long PageCount;
 
     /**
     * 已验证的网站列表。
@@ -96,7 +96,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Get 受影响的网站总数。 
      * @return ImpactSiteNumber 受影响的网站总数。
      */
-    public Integer getImpactSiteNumber() {
+    public Long getImpactSiteNumber() {
         return this.ImpactSiteNumber;
     }
 
@@ -104,7 +104,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Set 受影响的网站总数。
      * @param ImpactSiteNumber 受影响的网站总数。
      */
-    public void setImpactSiteNumber(Integer ImpactSiteNumber) {
+    public void setImpactSiteNumber(Long ImpactSiteNumber) {
         this.ImpactSiteNumber = ImpactSiteNumber;
     }
 
@@ -112,7 +112,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Get 已验证的网站总数。 
      * @return SiteNumber 已验证的网站总数。
      */
-    public Integer getSiteNumber() {
+    public Long getSiteNumber() {
         return this.SiteNumber;
     }
 
@@ -120,7 +120,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Set 已验证的网站总数。
      * @param SiteNumber 已验证的网站总数。
      */
-    public void setSiteNumber(Integer SiteNumber) {
+    public void setSiteNumber(Long SiteNumber) {
         this.SiteNumber = SiteNumber;
     }
 
@@ -128,7 +128,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Get 高风险漏洞总数。 
      * @return VulsHighNumber 高风险漏洞总数。
      */
-    public Integer getVulsHighNumber() {
+    public Long getVulsHighNumber() {
         return this.VulsHighNumber;
     }
 
@@ -136,7 +136,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Set 高风险漏洞总数。
      * @param VulsHighNumber 高风险漏洞总数。
      */
-    public void setVulsHighNumber(Integer VulsHighNumber) {
+    public void setVulsHighNumber(Long VulsHighNumber) {
         this.VulsHighNumber = VulsHighNumber;
     }
 
@@ -144,7 +144,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Get 中风险漏洞总数。 
      * @return VulsMiddleNumber 中风险漏洞总数。
      */
-    public Integer getVulsMiddleNumber() {
+    public Long getVulsMiddleNumber() {
         return this.VulsMiddleNumber;
     }
 
@@ -152,7 +152,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Set 中风险漏洞总数。
      * @param VulsMiddleNumber 中风险漏洞总数。
      */
-    public void setVulsMiddleNumber(Integer VulsMiddleNumber) {
+    public void setVulsMiddleNumber(Long VulsMiddleNumber) {
         this.VulsMiddleNumber = VulsMiddleNumber;
     }
 
@@ -160,7 +160,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Get 低高风险漏洞总数。 
      * @return VulsLowNumber 低高风险漏洞总数。
      */
-    public Integer getVulsLowNumber() {
+    public Long getVulsLowNumber() {
         return this.VulsLowNumber;
     }
 
@@ -168,7 +168,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Set 低高风险漏洞总数。
      * @param VulsLowNumber 低高风险漏洞总数。
      */
-    public void setVulsLowNumber(Integer VulsLowNumber) {
+    public void setVulsLowNumber(Long VulsLowNumber) {
         this.VulsLowNumber = VulsLowNumber;
     }
 
@@ -176,7 +176,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Get 风险提示总数。 
      * @return VulsNoticeNumber 风险提示总数。
      */
-    public Integer getVulsNoticeNumber() {
+    public Long getVulsNoticeNumber() {
         return this.VulsNoticeNumber;
     }
 
@@ -184,7 +184,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Set 风险提示总数。
      * @param VulsNoticeNumber 风险提示总数。
      */
-    public void setVulsNoticeNumber(Integer VulsNoticeNumber) {
+    public void setVulsNoticeNumber(Long VulsNoticeNumber) {
         this.VulsNoticeNumber = VulsNoticeNumber;
     }
 
@@ -192,7 +192,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Get 扫描页面总数。 
      * @return PageCount 扫描页面总数。
      */
-    public Integer getPageCount() {
+    public Long getPageCount() {
         return this.PageCount;
     }
 
@@ -200,7 +200,7 @@ public class DescribeVulsNumberResponse extends AbstractModel{
      * Set 扫描页面总数。
      * @param PageCount 扫描页面总数。
      */
-    public void setPageCount(Integer PageCount) {
+    public void setPageCount(Long PageCount) {
         this.PageCount = PageCount;
     }
 

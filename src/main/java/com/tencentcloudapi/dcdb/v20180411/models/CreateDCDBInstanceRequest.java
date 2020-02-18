@@ -34,7 +34,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -42,7 +42,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("ShardMemory")
     @Expose
-    private Integer ShardMemory;
+    private Long ShardMemory;
 
     /**
     * 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
@@ -50,7 +50,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("ShardStorage")
     @Expose
-    private Integer ShardStorage;
+    private Long ShardStorage;
 
     /**
     * 单个分片节点个数，可以通过 DescribeShardSpec
@@ -58,28 +58,28 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("ShardNodeCount")
     @Expose
-    private Integer ShardNodeCount;
+    private Long ShardNodeCount;
 
     /**
     * 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
     */
     @SerializedName("ShardCount")
     @Expose
-    private Integer ShardCount;
+    private Long ShardCount;
 
     /**
     * 欲购买实例的数量
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 虚拟私有网络 ID，不传或传空表示创建为基础网络
@@ -154,7 +154,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -162,7 +162,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
@@ -172,7 +172,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * @return ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public Integer getShardMemory() {
+    public Long getShardMemory() {
         return this.ShardMemory;
     }
 
@@ -182,7 +182,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * @param ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public void setShardMemory(Integer ShardMemory) {
+    public void setShardMemory(Long ShardMemory) {
         this.ShardMemory = ShardMemory;
     }
 
@@ -192,7 +192,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * @return ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public Integer getShardStorage() {
+    public Long getShardStorage() {
         return this.ShardStorage;
     }
 
@@ -202,7 +202,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * @param ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public void setShardStorage(Integer ShardStorage) {
+    public void setShardStorage(Long ShardStorage) {
         this.ShardStorage = ShardStorage;
     }
 
@@ -212,7 +212,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * @return ShardNodeCount 单个分片节点个数，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public Integer getShardNodeCount() {
+    public Long getShardNodeCount() {
         return this.ShardNodeCount;
     }
 
@@ -222,7 +222,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * @param ShardNodeCount 单个分片节点个数，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public void setShardNodeCount(Integer ShardNodeCount) {
+    public void setShardNodeCount(Long ShardNodeCount) {
         this.ShardNodeCount = ShardNodeCount;
     }
 
@@ -230,7 +230,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Get 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。 
      * @return ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
-    public Integer getShardCount() {
+    public Long getShardCount() {
         return this.ShardCount;
     }
 
@@ -238,7 +238,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Set 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      * @param ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
-    public void setShardCount(Integer ShardCount) {
+    public void setShardCount(Long ShardCount) {
         this.ShardCount = ShardCount;
     }
 
@@ -246,7 +246,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Get 欲购买实例的数量 
      * @return Count 欲购买实例的数量
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -254,7 +254,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Set 欲购买实例的数量
      * @param Count 欲购买实例的数量
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
@@ -262,7 +262,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Get 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目 
      * @return ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -270,7 +270,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
      * Set 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      * @param ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

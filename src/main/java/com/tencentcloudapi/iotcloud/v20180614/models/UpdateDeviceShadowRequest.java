@@ -48,7 +48,7 @@ public class UpdateDeviceShadowRequest extends AbstractModel{
     */
     @SerializedName("ShadowVersion")
     @Expose
-    private Integer ShadowVersion;
+    private Long ShadowVersion;
 
     /**
     * 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
@@ -109,7 +109,7 @@ public class UpdateDeviceShadowRequest extends AbstractModel{
      * Get 当前版本号，需要和后台的version保持一致，才能更新成功 
      * @return ShadowVersion 当前版本号，需要和后台的version保持一致，才能更新成功
      */
-    public Integer getShadowVersion() {
+    public Long getShadowVersion() {
         return this.ShadowVersion;
     }
 
@@ -117,7 +117,7 @@ public class UpdateDeviceShadowRequest extends AbstractModel{
      * Set 当前版本号，需要和后台的version保持一致，才能更新成功
      * @param ShadowVersion 当前版本号，需要和后台的version保持一致，才能更新成功
      */
-    public void setShadowVersion(Integer ShadowVersion) {
+    public void setShadowVersion(Long ShadowVersion) {
         this.ShadowVersion = ShadowVersion;
     }
 

@@ -34,21 +34,21 @@ public class BigKeyTypeInfo extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 大小
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 时间戳
     */
     @SerializedName("Updatetime")
     @Expose
-    private Integer Updatetime;
+    private Long Updatetime;
 
     /**
      * Get 类型 
@@ -70,7 +70,7 @@ public class BigKeyTypeInfo extends AbstractModel{
      * Get 数量 
      * @return Count 数量
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -78,7 +78,7 @@ public class BigKeyTypeInfo extends AbstractModel{
      * Set 数量
      * @param Count 数量
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
@@ -86,7 +86,7 @@ public class BigKeyTypeInfo extends AbstractModel{
      * Get 大小 
      * @return Size 大小
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -94,7 +94,7 @@ public class BigKeyTypeInfo extends AbstractModel{
      * Set 大小
      * @param Size 大小
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 
@@ -102,7 +102,7 @@ public class BigKeyTypeInfo extends AbstractModel{
      * Get 时间戳 
      * @return Updatetime 时间戳
      */
-    public Integer getUpdatetime() {
+    public Long getUpdatetime() {
         return this.Updatetime;
     }
 
@@ -110,7 +110,7 @@ public class BigKeyTypeInfo extends AbstractModel{
      * Set 时间戳
      * @param Updatetime 时间戳
      */
-    public void setUpdatetime(Integer Updatetime) {
+    public void setUpdatetime(Long Updatetime) {
         this.Updatetime = Updatetime;
     }
 

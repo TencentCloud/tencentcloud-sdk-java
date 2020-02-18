@@ -34,7 +34,7 @@ public class ListFunctionsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class ListFunctionsResponse extends AbstractModel{
      * Get 总数 
      * @return TotalCount 总数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -71,7 +71,7 @@ public class ListFunctionsResponse extends AbstractModel{
      * Set 总数
      * @param TotalCount 总数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

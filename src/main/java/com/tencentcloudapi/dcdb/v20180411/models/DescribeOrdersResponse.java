@@ -27,7 +27,7 @@ public class DescribeOrdersResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer [] TotalCount;
+    private Long [] TotalCount;
 
     /**
     * 订单信息列表。
@@ -47,7 +47,7 @@ public class DescribeOrdersResponse extends AbstractModel{
      * Get 返回的订单数量。 
      * @return TotalCount 返回的订单数量。
      */
-    public Integer [] getTotalCount() {
+    public Long [] getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeOrdersResponse extends AbstractModel{
      * Set 返回的订单数量。
      * @param TotalCount 返回的订单数量。
      */
-    public void setTotalCount(Integer [] TotalCount) {
+    public void setTotalCount(Long [] TotalCount) {
         this.TotalCount = TotalCount;
     }
 

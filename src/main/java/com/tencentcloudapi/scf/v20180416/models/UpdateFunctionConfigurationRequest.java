@@ -41,14 +41,14 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     */
     @SerializedName("MemorySize")
     @Expose
-    private Integer MemorySize;
+    private Long MemorySize;
 
     /**
     * 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
     */
     @SerializedName("Timeout")
     @Expose
-    private Integer Timeout;
+    private Long Timeout;
 
     /**
     * 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
@@ -149,7 +149,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Get 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M 
      * @return MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      */
-    public Integer getMemorySize() {
+    public Long getMemorySize() {
         return this.MemorySize;
     }
 
@@ -157,7 +157,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Set 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      * @param MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      */
-    public void setMemorySize(Integer MemorySize) {
+    public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
@@ -165,7 +165,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Get 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒 
      * @return Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      */
-    public Integer getTimeout() {
+    public Long getTimeout() {
         return this.Timeout;
     }
 
@@ -173,7 +173,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Set 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      * @param Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      */
-    public void setTimeout(Integer Timeout) {
+    public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 

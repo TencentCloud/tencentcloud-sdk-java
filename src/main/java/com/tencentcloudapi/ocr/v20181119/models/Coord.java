@@ -27,20 +27,20 @@ public class Coord extends AbstractModel{
     */
     @SerializedName("X")
     @Expose
-    private Integer X;
+    private Long X;
 
     /**
     * 纵坐标
     */
     @SerializedName("Y")
     @Expose
-    private Integer Y;
+    private Long Y;
 
     /**
      * Get 横坐标 
      * @return X 横坐标
      */
-    public Integer getX() {
+    public Long getX() {
         return this.X;
     }
 
@@ -48,7 +48,7 @@ public class Coord extends AbstractModel{
      * Set 横坐标
      * @param X 横坐标
      */
-    public void setX(Integer X) {
+    public void setX(Long X) {
         this.X = X;
     }
 
@@ -56,7 +56,7 @@ public class Coord extends AbstractModel{
      * Get 纵坐标 
      * @return Y 纵坐标
      */
-    public Integer getY() {
+    public Long getY() {
         return this.Y;
     }
 
@@ -64,7 +64,7 @@ public class Coord extends AbstractModel{
      * Set 纵坐标
      * @param Y 纵坐标
      */
-    public void setY(Integer Y) {
+    public void setY(Long Y) {
         this.Y = Y;
     }
 

@@ -48,14 +48,14 @@ public class DescribeBrandSocialOpinionRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 查询条数上限，默认20
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 列表显示标记，若为true，则返回文章列表详情
@@ -116,7 +116,7 @@ public class DescribeBrandSocialOpinionRequest extends AbstractModel{
      * Get 查询偏移，默认从0开始 
      * @return Offset 查询偏移，默认从0开始
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -124,7 +124,7 @@ public class DescribeBrandSocialOpinionRequest extends AbstractModel{
      * Set 查询偏移，默认从0开始
      * @param Offset 查询偏移，默认从0开始
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -132,7 +132,7 @@ public class DescribeBrandSocialOpinionRequest extends AbstractModel{
      * Get 查询条数上限，默认20 
      * @return Limit 查询条数上限，默认20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -140,7 +140,7 @@ public class DescribeBrandSocialOpinionRequest extends AbstractModel{
      * Set 查询条数上限，默认20
      * @param Limit 查询条数上限，默认20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

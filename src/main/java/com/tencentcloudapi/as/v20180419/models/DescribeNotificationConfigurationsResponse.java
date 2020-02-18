@@ -27,7 +27,7 @@ public class DescribeNotificationConfigurationsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 弹性伸缩事件通知详细信息列表。
@@ -47,7 +47,7 @@ public class DescribeNotificationConfigurationsResponse extends AbstractModel{
      * Get 符合条件的通知数量。 
      * @return TotalCount 符合条件的通知数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeNotificationConfigurationsResponse extends AbstractModel{
      * Set 符合条件的通知数量。
      * @param TotalCount 符合条件的通知数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

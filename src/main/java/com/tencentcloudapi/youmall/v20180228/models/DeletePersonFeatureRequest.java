@@ -34,14 +34,14 @@ public class DeletePersonFeatureRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 顾客ID
     */
     @SerializedName("PersonId")
     @Expose
-    private Integer PersonId;
+    private Long PersonId;
 
     /**
      * Get 公司ID 
@@ -63,7 +63,7 @@ public class DeletePersonFeatureRequest extends AbstractModel{
      * Get 门店ID 
      * @return ShopId 门店ID
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -71,7 +71,7 @@ public class DeletePersonFeatureRequest extends AbstractModel{
      * Set 门店ID
      * @param ShopId 门店ID
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -79,7 +79,7 @@ public class DeletePersonFeatureRequest extends AbstractModel{
      * Get 顾客ID 
      * @return PersonId 顾客ID
      */
-    public Integer getPersonId() {
+    public Long getPersonId() {
         return this.PersonId;
     }
 
@@ -87,7 +87,7 @@ public class DeletePersonFeatureRequest extends AbstractModel{
      * Set 顾客ID
      * @param PersonId 顾客ID
      */
-    public void setPersonId(Integer PersonId) {
+    public void setPersonId(Long PersonId) {
         this.PersonId = PersonId;
     }
 

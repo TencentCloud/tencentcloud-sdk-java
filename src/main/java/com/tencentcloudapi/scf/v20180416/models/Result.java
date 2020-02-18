@@ -48,7 +48,7 @@ public class Result extends AbstractModel{
     */
     @SerializedName("MemUsage")
     @Expose
-    private Integer MemUsage;
+    private Long MemUsage;
 
     /**
     * 表示执行函数的耗时，单位是毫秒，异步调用返回为空
@@ -62,7 +62,7 @@ public class Result extends AbstractModel{
     */
     @SerializedName("BillDuration")
     @Expose
-    private Integer BillDuration;
+    private Long BillDuration;
 
     /**
     * 此次函数执行的Id
@@ -76,7 +76,7 @@ public class Result extends AbstractModel{
     */
     @SerializedName("InvokeResult")
     @Expose
-    private Integer InvokeResult;
+    private Long InvokeResult;
 
     /**
      * Get 表示执行过程中的日志输出，异步调用返回为空 
@@ -130,7 +130,7 @@ public class Result extends AbstractModel{
      * Get 执行函数时的内存大小，单位为Byte，异步调用返回为空 
      * @return MemUsage 执行函数时的内存大小，单位为Byte，异步调用返回为空
      */
-    public Integer getMemUsage() {
+    public Long getMemUsage() {
         return this.MemUsage;
     }
 
@@ -138,7 +138,7 @@ public class Result extends AbstractModel{
      * Set 执行函数时的内存大小，单位为Byte，异步调用返回为空
      * @param MemUsage 执行函数时的内存大小，单位为Byte，异步调用返回为空
      */
-    public void setMemUsage(Integer MemUsage) {
+    public void setMemUsage(Long MemUsage) {
         this.MemUsage = MemUsage;
     }
 
@@ -162,7 +162,7 @@ public class Result extends AbstractModel{
      * Get 表示函数的计费耗时，单位是毫秒，异步调用返回为空 
      * @return BillDuration 表示函数的计费耗时，单位是毫秒，异步调用返回为空
      */
-    public Integer getBillDuration() {
+    public Long getBillDuration() {
         return this.BillDuration;
     }
 
@@ -170,7 +170,7 @@ public class Result extends AbstractModel{
      * Set 表示函数的计费耗时，单位是毫秒，异步调用返回为空
      * @param BillDuration 表示函数的计费耗时，单位是毫秒，异步调用返回为空
      */
-    public void setBillDuration(Integer BillDuration) {
+    public void setBillDuration(Long BillDuration) {
         this.BillDuration = BillDuration;
     }
 
@@ -194,7 +194,7 @@ public class Result extends AbstractModel{
      * Get 0为正确，异步调用返回为空 
      * @return InvokeResult 0为正确，异步调用返回为空
      */
-    public Integer getInvokeResult() {
+    public Long getInvokeResult() {
         return this.InvokeResult;
     }
 
@@ -202,7 +202,7 @@ public class Result extends AbstractModel{
      * Set 0为正确，异步调用返回为空
      * @param InvokeResult 0为正确，异步调用返回为空
      */
-    public void setInvokeResult(Integer InvokeResult) {
+    public void setInvokeResult(Long InvokeResult) {
         this.InvokeResult = InvokeResult;
     }
 

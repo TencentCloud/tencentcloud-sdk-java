@@ -34,7 +34,7 @@ public class DescribeLogDownloadListResponse extends AbstractModel{
     */
     @SerializedName("TotalNum")
     @Expose
-    private Integer TotalNum;
+    private Long TotalNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeLogDownloadListResponse extends AbstractModel{
      * Get 总条数。 
      * @return TotalNum 总条数。
      */
-    public Integer getTotalNum() {
+    public Long getTotalNum() {
         return this.TotalNum;
     }
 
@@ -71,7 +71,7 @@ public class DescribeLogDownloadListResponse extends AbstractModel{
      * Set 总条数。
      * @param TotalNum 总条数。
      */
-    public void setTotalNum(Integer TotalNum) {
+    public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 

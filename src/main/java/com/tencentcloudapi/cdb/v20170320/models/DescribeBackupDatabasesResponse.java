@@ -27,7 +27,7 @@ public class DescribeBackupDatabasesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 符合查询条件的数据库数组。
@@ -47,7 +47,7 @@ public class DescribeBackupDatabasesResponse extends AbstractModel{
      * Get 返回的数据个数。 
      * @return TotalCount 返回的数据个数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeBackupDatabasesResponse extends AbstractModel{
      * Set 返回的数据个数。
      * @param TotalCount 返回的数据个数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

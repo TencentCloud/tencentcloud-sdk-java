@@ -34,7 +34,7 @@ public class DescribeDeviceOperationLogResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeDeviceOperationLogResponse extends AbstractModel{
      * Get 返回数目 
      * @return TotalCount 返回数目
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -71,7 +71,7 @@ public class DescribeDeviceOperationLogResponse extends AbstractModel{
      * Set 返回数目
      * @param TotalCount 返回数目
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

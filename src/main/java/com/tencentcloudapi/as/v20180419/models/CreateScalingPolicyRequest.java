@@ -48,7 +48,7 @@ public class CreateScalingPolicyRequest extends AbstractModel{
     */
     @SerializedName("AdjustmentValue")
     @Expose
-    private Integer AdjustmentValue;
+    private Long AdjustmentValue;
 
     /**
     * 告警监控指标。
@@ -62,7 +62,7 @@ public class CreateScalingPolicyRequest extends AbstractModel{
     */
     @SerializedName("Cooldown")
     @Expose
-    private Integer Cooldown;
+    private Long Cooldown;
 
     /**
     * 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
@@ -123,7 +123,7 @@ public class CreateScalingPolicyRequest extends AbstractModel{
      * Get 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。 
      * @return AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      */
-    public Integer getAdjustmentValue() {
+    public Long getAdjustmentValue() {
         return this.AdjustmentValue;
     }
 
@@ -131,7 +131,7 @@ public class CreateScalingPolicyRequest extends AbstractModel{
      * Set 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      * @param AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      */
-    public void setAdjustmentValue(Integer AdjustmentValue) {
+    public void setAdjustmentValue(Long AdjustmentValue) {
         this.AdjustmentValue = AdjustmentValue;
     }
 
@@ -155,7 +155,7 @@ public class CreateScalingPolicyRequest extends AbstractModel{
      * Get 冷却时间，单位为秒。默认冷却时间300秒。 
      * @return Cooldown 冷却时间，单位为秒。默认冷却时间300秒。
      */
-    public Integer getCooldown() {
+    public Long getCooldown() {
         return this.Cooldown;
     }
 
@@ -163,7 +163,7 @@ public class CreateScalingPolicyRequest extends AbstractModel{
      * Set 冷却时间，单位为秒。默认冷却时间300秒。
      * @param Cooldown 冷却时间，单位为秒。默认冷却时间300秒。
      */
-    public void setCooldown(Integer Cooldown) {
+    public void setCooldown(Long Cooldown) {
         this.Cooldown = Cooldown;
     }
 

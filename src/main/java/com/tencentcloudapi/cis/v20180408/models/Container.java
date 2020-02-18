@@ -76,7 +76,7 @@ public class Container extends AbstractModel{
     */
     @SerializedName("RestartCount")
     @Expose
-    private Integer RestartCount;
+    private Long RestartCount;
 
     /**
     * 当前状态
@@ -222,7 +222,7 @@ public class Container extends AbstractModel{
      * Get 重启次数 
      * @return RestartCount 重启次数
      */
-    public Integer getRestartCount() {
+    public Long getRestartCount() {
         return this.RestartCount;
     }
 
@@ -230,7 +230,7 @@ public class Container extends AbstractModel{
      * Set 重启次数
      * @param RestartCount 重启次数
      */
-    public void setRestartCount(Integer RestartCount) {
+    public void setRestartCount(Long RestartCount) {
         this.RestartCount = RestartCount;
     }
 

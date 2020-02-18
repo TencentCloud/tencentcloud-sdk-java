@@ -55,7 +55,7 @@ public class QueryLogsRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
@@ -132,7 +132,7 @@ public class QueryLogsRequest extends AbstractModel{
      * Get 单次要返回的日志条数上限 
      * @return Limit 单次要返回的日志条数上限
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -140,7 +140,7 @@ public class QueryLogsRequest extends AbstractModel{
      * Set 单次要返回的日志条数上限
      * @param Limit 单次要返回的日志条数上限
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

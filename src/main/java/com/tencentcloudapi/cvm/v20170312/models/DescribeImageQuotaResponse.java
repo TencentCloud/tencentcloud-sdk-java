@@ -27,7 +27,7 @@ public class DescribeImageQuotaResponse extends AbstractModel{
     */
     @SerializedName("ImageNumQuota")
     @Expose
-    private Integer ImageNumQuota;
+    private Long ImageNumQuota;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeImageQuotaResponse extends AbstractModel{
      * Get 账户的镜像配额 
      * @return ImageNumQuota 账户的镜像配额
      */
-    public Integer getImageNumQuota() {
+    public Long getImageNumQuota() {
         return this.ImageNumQuota;
     }
 
@@ -48,7 +48,7 @@ public class DescribeImageQuotaResponse extends AbstractModel{
      * Set 账户的镜像配额
      * @param ImageNumQuota 账户的镜像配额
      */
-    public void setImageNumQuota(Integer ImageNumQuota) {
+    public void setImageNumQuota(Long ImageNumQuota) {
         this.ImageNumQuota = ImageNumQuota;
     }
 

@@ -61,7 +61,7 @@ public class ModifyBlockIPListRequest extends AbstractModel{
     */
     @SerializedName("ExpireTime")
     @Expose
-    private Integer ExpireTime;
+    private Long ExpireTime;
 
     /**
     * 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
@@ -162,7 +162,7 @@ public class ModifyBlockIPListRequest extends AbstractModel{
      * Get 过期时间，单位秒，默认值3600 
      * @return ExpireTime 过期时间，单位秒，默认值3600
      */
-    public Integer getExpireTime() {
+    public Long getExpireTime() {
         return this.ExpireTime;
     }
 
@@ -170,7 +170,7 @@ public class ModifyBlockIPListRequest extends AbstractModel{
      * Set 过期时间，单位秒，默认值3600
      * @param ExpireTime 过期时间，单位秒，默认值3600
      */
-    public void setExpireTime(Integer ExpireTime) {
+    public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 

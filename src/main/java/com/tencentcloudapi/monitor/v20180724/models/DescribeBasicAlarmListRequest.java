@@ -34,28 +34,28 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     */
     @SerializedName("StartTime")
     @Expose
-    private Integer StartTime;
+    private Long StartTime;
 
     /**
     * 结束时间，默认当前时间戳
     */
     @SerializedName("EndTime")
     @Expose
-    private Integer EndTime;
+    private Long EndTime;
 
     /**
     * 每页返回的数量，默认20
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 页偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 根据发生时间排序，取值ASC或DESC
@@ -69,7 +69,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     */
     @SerializedName("ProjectIds")
     @Expose
-    private Integer [] ProjectIds;
+    private Long [] ProjectIds;
 
     /**
     * 根据策略类型过滤
@@ -83,7 +83,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     */
     @SerializedName("AlarmStatus")
     @Expose
-    private Integer [] AlarmStatus;
+    private Long [] AlarmStatus;
 
     /**
     * 根据告警对象过滤
@@ -97,7 +97,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     */
     @SerializedName("InstanceGroupIds")
     @Expose
-    private Integer [] InstanceGroupIds;
+    private Long [] InstanceGroupIds;
 
     /**
      * Get 接口模块名，当前取值monitor 
@@ -119,7 +119,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Get 起始时间，默认一天前的时间戳 
      * @return StartTime 起始时间，默认一天前的时间戳
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return this.StartTime;
     }
 
@@ -127,7 +127,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Set 起始时间，默认一天前的时间戳
      * @param StartTime 起始时间，默认一天前的时间戳
      */
-    public void setStartTime(Integer StartTime) {
+    public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
@@ -135,7 +135,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Get 结束时间，默认当前时间戳 
      * @return EndTime 结束时间，默认当前时间戳
      */
-    public Integer getEndTime() {
+    public Long getEndTime() {
         return this.EndTime;
     }
 
@@ -143,7 +143,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Set 结束时间，默认当前时间戳
      * @param EndTime 结束时间，默认当前时间戳
      */
-    public void setEndTime(Integer EndTime) {
+    public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
@@ -151,7 +151,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Get 每页返回的数量，默认20 
      * @return Limit 每页返回的数量，默认20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -159,7 +159,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Set 每页返回的数量，默认20
      * @param Limit 每页返回的数量，默认20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -167,7 +167,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Get 页偏移量，默认0 
      * @return Offset 页偏移量，默认0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -175,7 +175,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Set 页偏移量，默认0
      * @param Offset 页偏移量，默认0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -199,7 +199,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Get 根据项目ID过滤 
      * @return ProjectIds 根据项目ID过滤
      */
-    public Integer [] getProjectIds() {
+    public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
@@ -207,7 +207,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Set 根据项目ID过滤
      * @param ProjectIds 根据项目ID过滤
      */
-    public void setProjectIds(Integer [] ProjectIds) {
+    public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
@@ -231,7 +231,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Get 根据告警状态过滤 
      * @return AlarmStatus 根据告警状态过滤
      */
-    public Integer [] getAlarmStatus() {
+    public Long [] getAlarmStatus() {
         return this.AlarmStatus;
     }
 
@@ -239,7 +239,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Set 根据告警状态过滤
      * @param AlarmStatus 根据告警状态过滤
      */
-    public void setAlarmStatus(Integer [] AlarmStatus) {
+    public void setAlarmStatus(Long [] AlarmStatus) {
         this.AlarmStatus = AlarmStatus;
     }
 
@@ -263,7 +263,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Get 根据实例组ID过滤 
      * @return InstanceGroupIds 根据实例组ID过滤
      */
-    public Integer [] getInstanceGroupIds() {
+    public Long [] getInstanceGroupIds() {
         return this.InstanceGroupIds;
     }
 
@@ -271,7 +271,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
      * Set 根据实例组ID过滤
      * @param InstanceGroupIds 根据实例组ID过滤
      */
-    public void setInstanceGroupIds(Integer [] InstanceGroupIds) {
+    public void setInstanceGroupIds(Long [] InstanceGroupIds) {
         this.InstanceGroupIds = InstanceGroupIds;
     }
 

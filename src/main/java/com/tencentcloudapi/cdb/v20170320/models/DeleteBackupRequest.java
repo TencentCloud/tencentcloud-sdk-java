@@ -34,7 +34,7 @@ public class DeleteBackupRequest extends AbstractModel{
     */
     @SerializedName("BackupId")
     @Expose
-    private Integer BackupId;
+    private Long BackupId;
 
     /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
@@ -56,7 +56,7 @@ public class DeleteBackupRequest extends AbstractModel{
      * Get 备份任务 ID。该任务 ID 为 [创建云数据库备份](https://cloud.tencent.com/document/api/236/15844) 接口返回的任务 ID。 
      * @return BackupId 备份任务 ID。该任务 ID 为 [创建云数据库备份](https://cloud.tencent.com/document/api/236/15844) 接口返回的任务 ID。
      */
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.BackupId;
     }
 
@@ -64,7 +64,7 @@ public class DeleteBackupRequest extends AbstractModel{
      * Set 备份任务 ID。该任务 ID 为 [创建云数据库备份](https://cloud.tencent.com/document/api/236/15844) 接口返回的任务 ID。
      * @param BackupId 备份任务 ID。该任务 ID 为 [创建云数据库备份](https://cloud.tencent.com/document/api/236/15844) 接口返回的任务 ID。
      */
-    public void setBackupId(Integer BackupId) {
+    public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 

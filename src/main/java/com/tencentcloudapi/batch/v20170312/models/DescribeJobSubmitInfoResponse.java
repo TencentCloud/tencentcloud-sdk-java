@@ -48,7 +48,7 @@ public class DescribeJobSubmitInfoResponse extends AbstractModel{
     */
     @SerializedName("Priority")
     @Expose
-    private Integer Priority;
+    private Long Priority;
 
     /**
     * 任务信息
@@ -123,7 +123,7 @@ public class DescribeJobSubmitInfoResponse extends AbstractModel{
      * Get 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级 
      * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      */
-    public Integer getPriority() {
+    public Long getPriority() {
         return this.Priority;
     }
 
@@ -131,7 +131,7 @@ public class DescribeJobSubmitInfoResponse extends AbstractModel{
      * Set 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      * @param Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      */
-    public void setPriority(Integer Priority) {
+    public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 

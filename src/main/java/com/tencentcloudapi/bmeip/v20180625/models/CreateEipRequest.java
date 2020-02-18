@@ -27,7 +27,7 @@ public class CreateEipRequest extends AbstractModel{
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Integer GoodsNum;
+    private Long GoodsNum;
 
     /**
     * EIP计费方式，flow-流量计费；bandwidth-带宽计费
@@ -41,7 +41,7 @@ public class CreateEipRequest extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
     * EIP模式，目前支持tunnel和fullnat
@@ -55,7 +55,7 @@ public class CreateEipRequest extends AbstractModel{
     */
     @SerializedName("Exclusive")
     @Expose
-    private Integer Exclusive;
+    private Long Exclusive;
 
     /**
     * EIP归属私有网络ID，例如vpc-k7j1t2x1
@@ -75,7 +75,7 @@ public class CreateEipRequest extends AbstractModel{
      * Get 申请数量，默认为1, 最大 20 
      * @return GoodsNum 申请数量，默认为1, 最大 20
      */
-    public Integer getGoodsNum() {
+    public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -83,7 +83,7 @@ public class CreateEipRequest extends AbstractModel{
      * Set 申请数量，默认为1, 最大 20
      * @param GoodsNum 申请数量，默认为1, 最大 20
      */
-    public void setGoodsNum(Integer GoodsNum) {
+    public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -107,7 +107,7 @@ public class CreateEipRequest extends AbstractModel{
      * Get 带宽设定值（只在带宽计费时生效） 
      * @return Bandwidth 带宽设定值（只在带宽计费时生效）
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -115,7 +115,7 @@ public class CreateEipRequest extends AbstractModel{
      * Set 带宽设定值（只在带宽计费时生效）
      * @param Bandwidth 带宽设定值（只在带宽计费时生效）
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -139,7 +139,7 @@ public class CreateEipRequest extends AbstractModel{
      * Get 是否使用独占集群，0：不使用，1：使用。默认为0 
      * @return Exclusive 是否使用独占集群，0：不使用，1：使用。默认为0
      */
-    public Integer getExclusive() {
+    public Long getExclusive() {
         return this.Exclusive;
     }
 
@@ -147,7 +147,7 @@ public class CreateEipRequest extends AbstractModel{
      * Set 是否使用独占集群，0：不使用，1：使用。默认为0
      * @param Exclusive 是否使用独占集群，0：不使用，1：使用。默认为0
      */
-    public void setExclusive(Integer Exclusive) {
+    public void setExclusive(Long Exclusive) {
         this.Exclusive = Exclusive;
     }
 

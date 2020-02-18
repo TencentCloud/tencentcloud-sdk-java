@@ -41,21 +41,21 @@ public class InstanceClusterNode extends AbstractModel{
     */
     @SerializedName("Role")
     @Expose
-    private Integer Role;
+    private Long Role;
 
     /**
     * 节点状态：0-readwrite, 1-read, 2-backup
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 服务状态：0-down；1-on
     */
     @SerializedName("Connected")
     @Expose
-    private Integer Connected;
+    private Long Connected;
 
     /**
     * 节点创建时间
@@ -83,14 +83,14 @@ public class InstanceClusterNode extends AbstractModel{
     */
     @SerializedName("Keys")
     @Expose
-    private Integer Keys;
+    private Long Keys;
 
     /**
     * 节点qps
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
     * 节点qps倾斜度
@@ -104,7 +104,7 @@ public class InstanceClusterNode extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 节点存储倾斜度
@@ -149,7 +149,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Get 集群角色：0-master；1-slave 
      * @return Role 集群角色：0-master；1-slave
      */
-    public Integer getRole() {
+    public Long getRole() {
         return this.Role;
     }
 
@@ -157,7 +157,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Set 集群角色：0-master；1-slave
      * @param Role 集群角色：0-master；1-slave
      */
-    public void setRole(Integer Role) {
+    public void setRole(Long Role) {
         this.Role = Role;
     }
 
@@ -165,7 +165,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Get 节点状态：0-readwrite, 1-read, 2-backup 
      * @return Status 节点状态：0-readwrite, 1-read, 2-backup
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -173,7 +173,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Set 节点状态：0-readwrite, 1-read, 2-backup
      * @param Status 节点状态：0-readwrite, 1-read, 2-backup
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -181,7 +181,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Get 服务状态：0-down；1-on 
      * @return Connected 服务状态：0-down；1-on
      */
-    public Integer getConnected() {
+    public Long getConnected() {
         return this.Connected;
     }
 
@@ -189,7 +189,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Set 服务状态：0-down；1-on
      * @param Connected 服务状态：0-down；1-on
      */
-    public void setConnected(Integer Connected) {
+    public void setConnected(Long Connected) {
         this.Connected = Connected;
     }
 
@@ -245,7 +245,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Get 节点key分布 
      * @return Keys 节点key分布
      */
-    public Integer getKeys() {
+    public Long getKeys() {
         return this.Keys;
     }
 
@@ -253,7 +253,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Set 节点key分布
      * @param Keys 节点key分布
      */
-    public void setKeys(Integer Keys) {
+    public void setKeys(Long Keys) {
         this.Keys = Keys;
     }
 
@@ -261,7 +261,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Get 节点qps 
      * @return Qps 节点qps
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -269,7 +269,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Set 节点qps
      * @param Qps 节点qps
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
@@ -293,7 +293,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Get 节点存储 
      * @return Storage 节点存储
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
@@ -301,7 +301,7 @@ public class InstanceClusterNode extends AbstractModel{
      * Set 节点存储
      * @param Storage 节点存储
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 

@@ -27,14 +27,14 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
     */
     @SerializedName("EventId")
     @Expose
-    private Integer EventId;
+    private Long EventId;
 
     /**
     * 事件告警规则id
     */
     @SerializedName("RuleId")
     @Expose
-    private Integer RuleId;
+    private Long RuleId;
 
     /**
     * 事件名称
@@ -48,20 +48,20 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
-    private Integer AlarmNotifyPeriod;
+    private Long AlarmNotifyPeriod;
 
     /**
     * 告警发送收敛类型。0连续告警，1指数告警
     */
     @SerializedName("AlarmNotifyType")
     @Expose
-    private Integer AlarmNotifyType;
+    private Long AlarmNotifyType;
 
     /**
      * Get 事件id 
      * @return EventId 事件id
      */
-    public Integer getEventId() {
+    public Long getEventId() {
         return this.EventId;
     }
 
@@ -69,7 +69,7 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
      * Set 事件id
      * @param EventId 事件id
      */
-    public void setEventId(Integer EventId) {
+    public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
@@ -77,7 +77,7 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
      * Get 事件告警规则id 
      * @return RuleId 事件告警规则id
      */
-    public Integer getRuleId() {
+    public Long getRuleId() {
         return this.RuleId;
     }
 
@@ -85,7 +85,7 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
      * Set 事件告警规则id
      * @param RuleId 事件告警规则id
      */
-    public void setRuleId(Integer RuleId) {
+    public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
@@ -109,7 +109,7 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
      * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
      * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      */
-    public Integer getAlarmNotifyPeriod() {
+    public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
@@ -117,7 +117,7 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
      * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      */
-    public void setAlarmNotifyPeriod(Integer AlarmNotifyPeriod) {
+    public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
@@ -125,7 +125,7 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
      * Get 告警发送收敛类型。0连续告警，1指数告警 
      * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      */
-    public Integer getAlarmNotifyType() {
+    public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
@@ -133,7 +133,7 @@ public class DescribePolicyGroupInfoEventCondition extends AbstractModel{
      * Set 告警发送收敛类型。0连续告警，1指数告警
      * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      */
-    public void setAlarmNotifyType(Integer AlarmNotifyType) {
+    public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 

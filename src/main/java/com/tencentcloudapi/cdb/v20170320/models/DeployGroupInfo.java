@@ -48,7 +48,7 @@ public class DeployGroupInfo extends AbstractModel{
     */
     @SerializedName("Quota")
     @Expose
-    private Integer Quota;
+    private Long Quota;
 
     /**
     * 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
@@ -64,7 +64,7 @@ public class DeployGroupInfo extends AbstractModel{
     */
     @SerializedName("LimitNum")
     @Expose
-    private Integer LimitNum;
+    private Long LimitNum;
 
     /**
     * 置放群组详细信息。
@@ -133,7 +133,7 @@ public class DeployGroupInfo extends AbstractModel{
      * Get 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。 
      * @return Quota 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
      */
-    public Integer getQuota() {
+    public Long getQuota() {
         return this.Quota;
     }
 
@@ -141,7 +141,7 @@ public class DeployGroupInfo extends AbstractModel{
      * Set 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
      * @param Quota 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
      */
-    public void setQuota(Integer Quota) {
+    public void setQuota(Long Quota) {
         this.Quota = Quota;
     }
 
@@ -171,7 +171,7 @@ public class DeployGroupInfo extends AbstractModel{
      * @return LimitNum 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getLimitNum() {
+    public Long getLimitNum() {
         return this.LimitNum;
     }
 
@@ -181,7 +181,7 @@ public class DeployGroupInfo extends AbstractModel{
      * @param LimitNum 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLimitNum(Integer LimitNum) {
+    public void setLimitNum(Long LimitNum) {
         this.LimitNum = LimitNum;
     }
 

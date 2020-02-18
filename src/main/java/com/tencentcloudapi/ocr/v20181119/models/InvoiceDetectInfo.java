@@ -50,7 +50,7 @@ public class InvoiceDetectInfo extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Integer Type;
+    private Long Type;
 
     /**
     * 识别出的图片在混贴票据图片中的位置信息。
@@ -119,7 +119,7 @@ public class InvoiceDetectInfo extends AbstractModel{
 13：过路过桥费发票
 14：购物小票
      */
-    public Integer getType() {
+    public Long getType() {
         return this.Type;
     }
 
@@ -159,7 +159,7 @@ public class InvoiceDetectInfo extends AbstractModel{
 13：过路过桥费发票
 14：购物小票
      */
-    public void setType(Integer Type) {
+    public void setType(Long Type) {
         this.Type = Type;
     }
 

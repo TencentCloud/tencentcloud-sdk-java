@@ -27,7 +27,7 @@ public class BindL4Backend extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 待绑定的黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
@@ -41,20 +41,20 @@ public class BindL4Backend extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
     * 自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查）
     */
     @SerializedName("ProbePort")
     @Expose
-    private Integer ProbePort;
+    private Long ProbePort;
 
     /**
      * Get 待绑定的主机端口，可选值1~65535。 
      * @return Port 待绑定的主机端口，可选值1~65535。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -62,7 +62,7 @@ public class BindL4Backend extends AbstractModel{
      * Set 待绑定的主机端口，可选值1~65535。
      * @param Port 待绑定的主机端口，可选值1~65535。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
@@ -86,7 +86,7 @@ public class BindL4Backend extends AbstractModel{
      * Get 待绑定的主机权重，可选值0~100。 
      * @return Weight 待绑定的主机权重，可选值0~100。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -94,7 +94,7 @@ public class BindL4Backend extends AbstractModel{
      * Set 待绑定的主机权重，可选值0~100。
      * @param Weight 待绑定的主机权重，可选值0~100。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
@@ -102,7 +102,7 @@ public class BindL4Backend extends AbstractModel{
      * Get 自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查） 
      * @return ProbePort 自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查）
      */
-    public Integer getProbePort() {
+    public Long getProbePort() {
         return this.ProbePort;
     }
 
@@ -110,7 +110,7 @@ public class BindL4Backend extends AbstractModel{
      * Set 自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查）
      * @param ProbePort 自定义探测的主机端口，可选值1~65535。（需要监听器开启自定义健康检查）
      */
-    public void setProbePort(Integer ProbePort) {
+    public void setProbePort(Long ProbePort) {
         this.ProbePort = ProbePort;
     }
 

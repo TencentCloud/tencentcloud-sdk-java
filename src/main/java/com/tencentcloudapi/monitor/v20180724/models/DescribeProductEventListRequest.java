@@ -90,7 +90,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     */
     @SerializedName("IsAlarmConfig")
     @Expose
-    private Integer IsAlarmConfig;
+    private Long IsAlarmConfig;
 
     /**
     * 按更新时间排序，ASC表示升序，DESC表示降序，默认DESC
@@ -104,28 +104,28 @@ public class DescribeProductEventListRequest extends AbstractModel{
     */
     @SerializedName("StartTime")
     @Expose
-    private Integer StartTime;
+    private Long StartTime;
 
     /**
     * 结束时间，默认当前时间戳
     */
     @SerializedName("EndTime")
     @Expose
-    private Integer EndTime;
+    private Long EndTime;
 
     /**
     * 页偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 每页返回的数量，默认20
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 接口模块名，固定值"monitor" 
@@ -275,7 +275,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Get 告警状态配置过滤，1表示已配置，0表示未配置 
      * @return IsAlarmConfig 告警状态配置过滤，1表示已配置，0表示未配置
      */
-    public Integer getIsAlarmConfig() {
+    public Long getIsAlarmConfig() {
         return this.IsAlarmConfig;
     }
 
@@ -283,7 +283,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Set 告警状态配置过滤，1表示已配置，0表示未配置
      * @param IsAlarmConfig 告警状态配置过滤，1表示已配置，0表示未配置
      */
-    public void setIsAlarmConfig(Integer IsAlarmConfig) {
+    public void setIsAlarmConfig(Long IsAlarmConfig) {
         this.IsAlarmConfig = IsAlarmConfig;
     }
 
@@ -307,7 +307,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Get 起始时间，默认一天前的时间戳 
      * @return StartTime 起始时间，默认一天前的时间戳
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return this.StartTime;
     }
 
@@ -315,7 +315,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Set 起始时间，默认一天前的时间戳
      * @param StartTime 起始时间，默认一天前的时间戳
      */
-    public void setStartTime(Integer StartTime) {
+    public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
@@ -323,7 +323,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Get 结束时间，默认当前时间戳 
      * @return EndTime 结束时间，默认当前时间戳
      */
-    public Integer getEndTime() {
+    public Long getEndTime() {
         return this.EndTime;
     }
 
@@ -331,7 +331,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Set 结束时间，默认当前时间戳
      * @param EndTime 结束时间，默认当前时间戳
      */
-    public void setEndTime(Integer EndTime) {
+    public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
@@ -339,7 +339,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Get 页偏移量，默认0 
      * @return Offset 页偏移量，默认0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -347,7 +347,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Set 页偏移量，默认0
      * @param Offset 页偏移量，默认0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -355,7 +355,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Get 每页返回的数量，默认20 
      * @return Limit 每页返回的数量，默认20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -363,7 +363,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
      * Set 每页返回的数量，默认20
      * @param Limit 每页返回的数量，默认20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

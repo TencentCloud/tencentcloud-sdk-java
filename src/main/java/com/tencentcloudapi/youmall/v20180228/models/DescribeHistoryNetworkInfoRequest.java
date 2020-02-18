@@ -27,7 +27,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
     */
     @SerializedName("Time")
     @Expose
-    private Integer Time;
+    private Long Time;
 
     /**
     * 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -41,7 +41,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 拉取开始日期，格式：2018-09-05
@@ -62,20 +62,20 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 拉取偏移，返回offset之后的数据
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
      * Get 请求时间戳 
      * @return Time 请求时间戳
      */
-    public Integer getTime() {
+    public Long getTime() {
         return this.Time;
     }
 
@@ -83,7 +83,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
      * Set 请求时间戳
      * @param Time 请求时间戳
      */
-    public void setTime(Integer Time) {
+    public void setTime(Long Time) {
         this.Time = Time;
     }
 
@@ -107,7 +107,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
      * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -115,7 +115,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
      * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -155,7 +155,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
      * Get 拉取条数，默认10 
      * @return Limit 拉取条数，默认10
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -163,7 +163,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
      * Set 拉取条数，默认10
      * @param Limit 拉取条数，默认10
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -171,7 +171,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
      * Get 拉取偏移，返回offset之后的数据 
      * @return Offset 拉取偏移，返回offset之后的数据
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -179,7 +179,7 @@ public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
      * Set 拉取偏移，返回offset之后的数据
      * @param Offset 拉取偏移，返回offset之后的数据
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 

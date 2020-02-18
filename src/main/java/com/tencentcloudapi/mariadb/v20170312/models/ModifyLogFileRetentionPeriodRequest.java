@@ -34,7 +34,7 @@ public class ModifyLogFileRetentionPeriodRequest extends AbstractModel{
     */
     @SerializedName("Days")
     @Expose
-    private Integer Days;
+    private Long Days;
 
     /**
      * Get 实例 ID，形如：tdsql-ow728lmc。 
@@ -56,7 +56,7 @@ public class ModifyLogFileRetentionPeriodRequest extends AbstractModel{
      * Get 保存的天数,不能超过30 
      * @return Days 保存的天数,不能超过30
      */
-    public Integer getDays() {
+    public Long getDays() {
         return this.Days;
     }
 
@@ -64,7 +64,7 @@ public class ModifyLogFileRetentionPeriodRequest extends AbstractModel{
      * Set 保存的天数,不能超过30
      * @param Days 保存的天数,不能超过30
      */
-    public void setDays(Integer Days) {
+    public void setDays(Long Days) {
         this.Days = Days;
     }
 

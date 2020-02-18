@@ -48,21 +48,21 @@ public class TrafficMirrorListener extends AbstractModel{
     */
     @SerializedName("LoadBalancerPort")
     @Expose
-    private Integer LoadBalancerPort;
+    private Long LoadBalancerPort;
 
     /**
     * 当前带宽。
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
     * 带宽上限。
     */
     @SerializedName("MaxBandwidth")
     @Expose
-    private Integer MaxBandwidth;
+    private Long MaxBandwidth;
 
     /**
     * 监听器类型。
@@ -76,7 +76,7 @@ public class TrafficMirrorListener extends AbstractModel{
     */
     @SerializedName("SslMode")
     @Expose
-    private Integer SslMode;
+    private Long SslMode;
 
     /**
     * 服务端证书ID。
@@ -200,7 +200,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Get 监听器的监听端口。 
      * @return LoadBalancerPort 监听器的监听端口。
      */
-    public Integer getLoadBalancerPort() {
+    public Long getLoadBalancerPort() {
         return this.LoadBalancerPort;
     }
 
@@ -208,7 +208,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Set 监听器的监听端口。
      * @param LoadBalancerPort 监听器的监听端口。
      */
-    public void setLoadBalancerPort(Integer LoadBalancerPort) {
+    public void setLoadBalancerPort(Long LoadBalancerPort) {
         this.LoadBalancerPort = LoadBalancerPort;
     }
 
@@ -216,7 +216,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Get 当前带宽。 
      * @return Bandwidth 当前带宽。
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -224,7 +224,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Set 当前带宽。
      * @param Bandwidth 当前带宽。
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -232,7 +232,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Get 带宽上限。 
      * @return MaxBandwidth 带宽上限。
      */
-    public Integer getMaxBandwidth() {
+    public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
@@ -240,7 +240,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Set 带宽上限。
      * @param MaxBandwidth 带宽上限。
      */
-    public void setMaxBandwidth(Integer MaxBandwidth) {
+    public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
     }
 
@@ -264,7 +264,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Get 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。 
      * @return SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public Integer getSslMode() {
+    public Long getSslMode() {
         return this.SslMode;
     }
 
@@ -272,7 +272,7 @@ public class TrafficMirrorListener extends AbstractModel{
      * Set 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      * @param SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public void setSslMode(Integer SslMode) {
+    public void setSslMode(Long SslMode) {
         this.SslMode = SslMode;
     }
 

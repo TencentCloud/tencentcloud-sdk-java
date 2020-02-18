@@ -41,7 +41,7 @@ public class DescribeBindingPolicyObjectListInstance extends AbstractModel{
     */
     @SerializedName("IsShielded")
     @Expose
-    private Integer IsShielded;
+    private Long IsShielded;
 
     /**
     * 对象所在的地域
@@ -86,7 +86,7 @@ public class DescribeBindingPolicyObjectListInstance extends AbstractModel{
      * Get 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽 
      * @return IsShielded 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
      */
-    public Integer getIsShielded() {
+    public Long getIsShielded() {
         return this.IsShielded;
     }
 
@@ -94,7 +94,7 @@ public class DescribeBindingPolicyObjectListInstance extends AbstractModel{
      * Set 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
      * @param IsShielded 对象是否被屏蔽，0表示未屏蔽，1表示被屏蔽
      */
-    public void setIsShielded(Integer IsShielded) {
+    public void setIsShielded(Long IsShielded) {
         this.IsShielded = IsShielded;
     }
 

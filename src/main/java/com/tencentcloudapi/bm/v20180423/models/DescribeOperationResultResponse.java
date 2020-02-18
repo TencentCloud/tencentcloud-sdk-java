@@ -34,7 +34,7 @@ public class DescribeOperationResultResponse extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Integer TaskStatus;
+    private Long TaskStatus;
 
     /**
     * 各实例对应任务的状态ID
@@ -68,7 +68,7 @@ public class DescribeOperationResultResponse extends AbstractModel{
 6：部分未完成，部分失败<br>
 7：部分未完成，部分失败，部分成功
      */
-    public Integer getTaskStatus() {
+    public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -90,7 +90,7 @@ public class DescribeOperationResultResponse extends AbstractModel{
 6：部分未完成，部分失败<br>
 7：部分未完成，部分失败，部分成功
      */
-    public void setTaskStatus(Integer TaskStatus) {
+    public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 

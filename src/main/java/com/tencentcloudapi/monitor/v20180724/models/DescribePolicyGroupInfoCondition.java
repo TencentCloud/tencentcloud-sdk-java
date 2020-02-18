@@ -34,21 +34,21 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 指标id
     */
     @SerializedName("MetricId")
     @Expose
-    private Integer MetricId;
+    private Long MetricId;
 
     /**
     * 阈值规则id
     */
     @SerializedName("RuleId")
     @Expose
-    private Integer RuleId;
+    private Long RuleId;
 
     /**
     * 指标单位
@@ -62,21 +62,21 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
     */
     @SerializedName("AlarmNotifyType")
     @Expose
-    private Integer AlarmNotifyType;
+    private Long AlarmNotifyType;
 
     /**
     * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
-    private Integer AlarmNotifyPeriod;
+    private Long AlarmNotifyPeriod;
 
     /**
     * 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
     */
     @SerializedName("CalcType")
     @Expose
-    private Integer CalcType;
+    private Long CalcType;
 
     /**
     * 检测阈值
@@ -90,7 +90,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
     */
     @SerializedName("ContinueTime")
     @Expose
-    private Integer ContinueTime;
+    private Long ContinueTime;
 
     /**
      * Get 指标名称 
@@ -112,7 +112,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Get 数据聚合周期(单位秒) 
      * @return Period 数据聚合周期(单位秒)
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -120,7 +120,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Set 数据聚合周期(单位秒)
      * @param Period 数据聚合周期(单位秒)
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
@@ -128,7 +128,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Get 指标id 
      * @return MetricId 指标id
      */
-    public Integer getMetricId() {
+    public Long getMetricId() {
         return this.MetricId;
     }
 
@@ -136,7 +136,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Set 指标id
      * @param MetricId 指标id
      */
-    public void setMetricId(Integer MetricId) {
+    public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
     }
 
@@ -144,7 +144,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Get 阈值规则id 
      * @return RuleId 阈值规则id
      */
-    public Integer getRuleId() {
+    public Long getRuleId() {
         return this.RuleId;
     }
 
@@ -152,7 +152,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Set 阈值规则id
      * @param RuleId 阈值规则id
      */
-    public void setRuleId(Integer RuleId) {
+    public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
@@ -176,7 +176,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Get 告警发送收敛类型。0连续告警，1指数告警 
      * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      */
-    public Integer getAlarmNotifyType() {
+    public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
@@ -184,7 +184,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Set 告警发送收敛类型。0连续告警，1指数告警
      * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      */
-    public void setAlarmNotifyType(Integer AlarmNotifyType) {
+    public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
@@ -192,7 +192,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
      * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      */
-    public Integer getAlarmNotifyPeriod() {
+    public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
@@ -200,7 +200,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      */
-    public void setAlarmNotifyPeriod(Integer AlarmNotifyPeriod) {
+    public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
@@ -208,7 +208,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Get 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降 
      * @return CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
      */
-    public Integer getCalcType() {
+    public Long getCalcType() {
         return this.CalcType;
     }
 
@@ -216,7 +216,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Set 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
      * @param CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等，7表示日同比上涨，8表示日同比下降，9表示周同比上涨，10表示周同比下降，11表示周期环比上涨，12表示周期环比下降
      */
-    public void setCalcType(Integer CalcType) {
+    public void setCalcType(Long CalcType) {
         this.CalcType = CalcType;
     }
 
@@ -240,7 +240,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Get 持续多长时间触发规则会告警(单位秒) 
      * @return ContinueTime 持续多长时间触发规则会告警(单位秒)
      */
-    public Integer getContinueTime() {
+    public Long getContinueTime() {
         return this.ContinueTime;
     }
 
@@ -248,7 +248,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
      * Set 持续多长时间触发规则会告警(单位秒)
      * @param ContinueTime 持续多长时间触发规则会告警(单位秒)
      */
-    public void setContinueTime(Integer ContinueTime) {
+    public void setContinueTime(Long ContinueTime) {
         this.ContinueTime = ContinueTime;
     }
 

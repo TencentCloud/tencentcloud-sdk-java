@@ -34,7 +34,7 @@ public class Rule extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * 名称
@@ -69,14 +69,14 @@ public class Rule extends AbstractModel{
     */
     @SerializedName("Active")
     @Expose
-    private Integer Active;
+    private Long Active;
 
     /**
     * 已删除
     */
     @SerializedName("Deleted")
     @Expose
-    private Integer Deleted;
+    private Long Deleted;
 
     /**
     * 创建时间
@@ -97,14 +97,14 @@ public class Rule extends AbstractModel{
     */
     @SerializedName("MsgOrder")
     @Expose
-    private Integer MsgOrder;
+    private Long MsgOrder;
 
     /**
     * 数据类型（0：文本，1：二进制）
     */
     @SerializedName("DataType")
     @Expose
-    private Integer DataType;
+    private Long DataType;
 
     /**
      * Get 规则Id 
@@ -126,7 +126,7 @@ public class Rule extends AbstractModel{
      * Get AppId 
      * @return AppId AppId
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
@@ -134,7 +134,7 @@ public class Rule extends AbstractModel{
      * Set AppId
      * @param AppId AppId
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
@@ -206,7 +206,7 @@ public class Rule extends AbstractModel{
      * Get 已启动 
      * @return Active 已启动
      */
-    public Integer getActive() {
+    public Long getActive() {
         return this.Active;
     }
 
@@ -214,7 +214,7 @@ public class Rule extends AbstractModel{
      * Set 已启动
      * @param Active 已启动
      */
-    public void setActive(Integer Active) {
+    public void setActive(Long Active) {
         this.Active = Active;
     }
 
@@ -222,7 +222,7 @@ public class Rule extends AbstractModel{
      * Get 已删除 
      * @return Deleted 已删除
      */
-    public Integer getDeleted() {
+    public Long getDeleted() {
         return this.Deleted;
     }
 
@@ -230,7 +230,7 @@ public class Rule extends AbstractModel{
      * Set 已删除
      * @param Deleted 已删除
      */
-    public void setDeleted(Integer Deleted) {
+    public void setDeleted(Long Deleted) {
         this.Deleted = Deleted;
     }
 
@@ -270,7 +270,7 @@ public class Rule extends AbstractModel{
      * Get 消息顺序 
      * @return MsgOrder 消息顺序
      */
-    public Integer getMsgOrder() {
+    public Long getMsgOrder() {
         return this.MsgOrder;
     }
 
@@ -278,7 +278,7 @@ public class Rule extends AbstractModel{
      * Set 消息顺序
      * @param MsgOrder 消息顺序
      */
-    public void setMsgOrder(Integer MsgOrder) {
+    public void setMsgOrder(Long MsgOrder) {
         this.MsgOrder = MsgOrder;
     }
 
@@ -286,7 +286,7 @@ public class Rule extends AbstractModel{
      * Get 数据类型（0：文本，1：二进制） 
      * @return DataType 数据类型（0：文本，1：二进制）
      */
-    public Integer getDataType() {
+    public Long getDataType() {
         return this.DataType;
     }
 
@@ -294,7 +294,7 @@ public class Rule extends AbstractModel{
      * Set 数据类型（0：文本，1：二进制）
      * @param DataType 数据类型（0：文本，1：二进制）
      */
-    public void setDataType(Integer DataType) {
+    public void setDataType(Long DataType) {
         this.DataType = DataType;
     }
 

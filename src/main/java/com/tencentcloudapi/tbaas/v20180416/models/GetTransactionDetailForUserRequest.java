@@ -62,7 +62,7 @@ public class GetTransactionDetailForUserRequest extends AbstractModel{
     */
     @SerializedName("BlockId")
     @Expose
-    private Integer BlockId;
+    private Long BlockId;
 
     /**
     * 交易ID，需要查询的详情的交易ID
@@ -155,7 +155,7 @@ public class GetTransactionDetailForUserRequest extends AbstractModel{
      * Get 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID 
      * @return BlockId 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      */
-    public Integer getBlockId() {
+    public Long getBlockId() {
         return this.BlockId;
     }
 
@@ -163,7 +163,7 @@ public class GetTransactionDetailForUserRequest extends AbstractModel{
      * Set 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      * @param BlockId 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      */
-    public void setBlockId(Integer BlockId) {
+    public void setBlockId(Long BlockId) {
         this.BlockId = BlockId;
     }
 

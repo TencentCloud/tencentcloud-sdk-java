@@ -27,13 +27,13 @@ public class DescribeParamTemplateInfoRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
      * Get 参数模板 ID。 
      * @return TemplateId 参数模板 ID。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -41,7 +41,7 @@ public class DescribeParamTemplateInfoRequest extends AbstractModel{
      * Set 参数模板 ID。
      * @param TemplateId 参数模板 ID。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 

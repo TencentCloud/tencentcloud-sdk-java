@@ -48,28 +48,28 @@ public class TaskInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 任务创建时间，Unix 时间戳
     */
     @SerializedName("CreateTime")
     @Expose
-    private Integer CreateTime;
+    private Long CreateTime;
 
     /**
     * 最后任务更新时间，Unix 时间戳
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Integer UpdateTime;
+    private Long UpdateTime;
 
     /**
     * 返回的错误码
     */
     @SerializedName("RetCode")
     @Expose
-    private Integer RetCode;
+    private Long RetCode;
 
     /**
     * 返回的错误信息
@@ -130,7 +130,7 @@ public class TaskInfo extends AbstractModel{
      * Get 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消 
      * @return Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -138,7 +138,7 @@ public class TaskInfo extends AbstractModel{
      * Set 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      * @param Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -146,7 +146,7 @@ public class TaskInfo extends AbstractModel{
      * Get 任务创建时间，Unix 时间戳 
      * @return CreateTime 任务创建时间，Unix 时间戳
      */
-    public Integer getCreateTime() {
+    public Long getCreateTime() {
         return this.CreateTime;
     }
 
@@ -154,7 +154,7 @@ public class TaskInfo extends AbstractModel{
      * Set 任务创建时间，Unix 时间戳
      * @param CreateTime 任务创建时间，Unix 时间戳
      */
-    public void setCreateTime(Integer CreateTime) {
+    public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
@@ -162,7 +162,7 @@ public class TaskInfo extends AbstractModel{
      * Get 最后任务更新时间，Unix 时间戳 
      * @return UpdateTime 最后任务更新时间，Unix 时间戳
      */
-    public Integer getUpdateTime() {
+    public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
@@ -170,7 +170,7 @@ public class TaskInfo extends AbstractModel{
      * Set 最后任务更新时间，Unix 时间戳
      * @param UpdateTime 最后任务更新时间，Unix 时间戳
      */
-    public void setUpdateTime(Integer UpdateTime) {
+    public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
@@ -178,7 +178,7 @@ public class TaskInfo extends AbstractModel{
      * Get 返回的错误码 
      * @return RetCode 返回的错误码
      */
-    public Integer getRetCode() {
+    public Long getRetCode() {
         return this.RetCode;
     }
 
@@ -186,7 +186,7 @@ public class TaskInfo extends AbstractModel{
      * Set 返回的错误码
      * @param RetCode 返回的错误码
      */
-    public void setRetCode(Integer RetCode) {
+    public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;
     }
 

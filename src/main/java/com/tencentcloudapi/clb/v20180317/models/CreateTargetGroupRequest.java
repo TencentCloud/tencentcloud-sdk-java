@@ -41,7 +41,7 @@ public class CreateTargetGroupRequest extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 目标组绑定的后端服务器
@@ -86,7 +86,7 @@ public class CreateTargetGroupRequest extends AbstractModel{
      * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口 
      * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -94,7 +94,7 @@ public class CreateTargetGroupRequest extends AbstractModel{
      * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口
      * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

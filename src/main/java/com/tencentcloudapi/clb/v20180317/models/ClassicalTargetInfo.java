@@ -34,7 +34,7 @@ public class ClassicalTargetInfo extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
      * Get 后端实例ID 
@@ -56,7 +56,7 @@ public class ClassicalTargetInfo extends AbstractModel{
      * Get 权重，取值范围 [0, 100] 
      * @return Weight 权重，取值范围 [0, 100]
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -64,7 +64,7 @@ public class ClassicalTargetInfo extends AbstractModel{
      * Set 权重，取值范围 [0, 100]
      * @param Weight 权重，取值范围 [0, 100]
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 

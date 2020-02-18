@@ -28,7 +28,7 @@ public class InstanceGroup extends AbstractModel{
     */
     @SerializedName("InstanceGroupId")
     @Expose
-    private Integer InstanceGroupId;
+    private Long InstanceGroupId;
 
     /**
     * 实例组名
@@ -44,7 +44,7 @@ public class InstanceGroup extends AbstractModel{
      * @return InstanceGroupId 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getInstanceGroupId() {
+    public Long getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
@@ -54,7 +54,7 @@ public class InstanceGroup extends AbstractModel{
      * @param InstanceGroupId 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInstanceGroupId(Integer InstanceGroupId) {
+    public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 

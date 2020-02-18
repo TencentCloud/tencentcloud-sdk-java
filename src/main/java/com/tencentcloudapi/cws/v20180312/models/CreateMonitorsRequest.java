@@ -48,14 +48,14 @@ public class CreateMonitorsRequest extends AbstractModel{
     */
     @SerializedName("Crontab")
     @Expose
-    private Integer Crontab;
+    private Long Crontab;
 
     /**
     * 扫描速率限制，每秒发送X个HTTP请求
     */
     @SerializedName("RateLimit")
     @Expose
-    private Integer RateLimit;
+    private Long RateLimit;
 
     /**
     * 首次扫描开始时间
@@ -116,7 +116,7 @@ public class CreateMonitorsRequest extends AbstractModel{
      * Get 扫描周期，单位小时，每X小时执行一次 
      * @return Crontab 扫描周期，单位小时，每X小时执行一次
      */
-    public Integer getCrontab() {
+    public Long getCrontab() {
         return this.Crontab;
     }
 
@@ -124,7 +124,7 @@ public class CreateMonitorsRequest extends AbstractModel{
      * Set 扫描周期，单位小时，每X小时执行一次
      * @param Crontab 扫描周期，单位小时，每X小时执行一次
      */
-    public void setCrontab(Integer Crontab) {
+    public void setCrontab(Long Crontab) {
         this.Crontab = Crontab;
     }
 
@@ -132,7 +132,7 @@ public class CreateMonitorsRequest extends AbstractModel{
      * Get 扫描速率限制，每秒发送X个HTTP请求 
      * @return RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
-    public Integer getRateLimit() {
+    public Long getRateLimit() {
         return this.RateLimit;
     }
 
@@ -140,7 +140,7 @@ public class CreateMonitorsRequest extends AbstractModel{
      * Set 扫描速率限制，每秒发送X个HTTP请求
      * @param RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
-    public void setRateLimit(Integer RateLimit) {
+    public void setRateLimit(Long RateLimit) {
         this.RateLimit = RateLimit;
     }
 

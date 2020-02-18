@@ -48,7 +48,7 @@ public class CreateAccountResponse extends AbstractModel{
     */
     @SerializedName("ReadOnly")
     @Expose
-    private Integer ReadOnly;
+    private Long ReadOnly;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -109,7 +109,7 @@ public class CreateAccountResponse extends AbstractModel{
      * Get 透传入参。 
      * @return ReadOnly 透传入参。
      */
-    public Integer getReadOnly() {
+    public Long getReadOnly() {
         return this.ReadOnly;
     }
 
@@ -117,7 +117,7 @@ public class CreateAccountResponse extends AbstractModel{
      * Set 透传入参。
      * @param ReadOnly 透传入参。
      */
-    public void setReadOnly(Integer ReadOnly) {
+    public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 

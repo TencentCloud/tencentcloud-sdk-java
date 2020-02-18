@@ -34,7 +34,7 @@ public class DescribeFlowLogsResponse extends AbstractModel{
     */
     @SerializedName("TotalNum")
     @Expose
-    private Integer TotalNum;
+    private Long TotalNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeFlowLogsResponse extends AbstractModel{
      * Get 流日志总数目 
      * @return TotalNum 流日志总数目
      */
-    public Integer getTotalNum() {
+    public Long getTotalNum() {
         return this.TotalNum;
     }
 
@@ -71,7 +71,7 @@ public class DescribeFlowLogsResponse extends AbstractModel{
      * Set 流日志总数目
      * @param TotalNum 流日志总数目
      */
-    public void setTotalNum(Integer TotalNum) {
+    public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 

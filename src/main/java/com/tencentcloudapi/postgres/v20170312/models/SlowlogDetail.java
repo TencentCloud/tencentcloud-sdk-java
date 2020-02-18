@@ -34,7 +34,7 @@ public class SlowlogDetail extends AbstractModel{
     */
     @SerializedName("TotalCalls")
     @Expose
-    private Integer TotalCalls;
+    private Long TotalCalls;
 
     /**
     * 脱敏后的慢SQL列表
@@ -63,7 +63,7 @@ public class SlowlogDetail extends AbstractModel{
      * Get 调用总次数 
      * @return TotalCalls 调用总次数
      */
-    public Integer getTotalCalls() {
+    public Long getTotalCalls() {
         return this.TotalCalls;
     }
 
@@ -71,7 +71,7 @@ public class SlowlogDetail extends AbstractModel{
      * Set 调用总次数
      * @param TotalCalls 调用总次数
      */
-    public void setTotalCalls(Integer TotalCalls) {
+    public void setTotalCalls(Long TotalCalls) {
         this.TotalCalls = TotalCalls;
     }
 

@@ -27,13 +27,13 @@ public class QueryApiKeyRequest extends AbstractModel{
     */
     @SerializedName("TargetUin")
     @Expose
-    private Integer TargetUin;
+    private Long TargetUin;
 
     /**
      * Get 待查询的账号(不填默认查当前账号) 
      * @return TargetUin 待查询的账号(不填默认查当前账号)
      */
-    public Integer getTargetUin() {
+    public Long getTargetUin() {
         return this.TargetUin;
     }
 
@@ -41,7 +41,7 @@ public class QueryApiKeyRequest extends AbstractModel{
      * Set 待查询的账号(不填默认查当前账号)
      * @param TargetUin 待查询的账号(不填默认查当前账号)
      */
-    public void setTargetUin(Integer TargetUin) {
+    public void setTargetUin(Long TargetUin) {
         this.TargetUin = TargetUin;
     }
 

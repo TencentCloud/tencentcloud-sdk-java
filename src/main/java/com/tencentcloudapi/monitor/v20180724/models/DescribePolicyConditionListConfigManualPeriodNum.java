@@ -28,7 +28,7 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     */
     @SerializedName("Default")
     @Expose
-    private Integer Default;
+    private Long Default;
 
     /**
     * 可选周期数
@@ -36,7 +36,7 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
     */
     @SerializedName("Keys")
     @Expose
-    private Integer [] Keys;
+    private Long [] Keys;
 
     /**
     * 是否必须
@@ -51,7 +51,7 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
      * @return Default 默认周期数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDefault() {
+    public Long getDefault() {
         return this.Default;
     }
 
@@ -61,7 +61,7 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
      * @param Default 默认周期数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefault(Integer Default) {
+    public void setDefault(Long Default) {
         this.Default = Default;
     }
 
@@ -71,7 +71,7 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
      * @return Keys 可选周期数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getKeys() {
+    public Long [] getKeys() {
         return this.Keys;
     }
 
@@ -81,7 +81,7 @@ public class DescribePolicyConditionListConfigManualPeriodNum extends AbstractMo
      * @param Keys 可选周期数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKeys(Integer [] Keys) {
+    public void setKeys(Long [] Keys) {
         this.Keys = Keys;
     }
 

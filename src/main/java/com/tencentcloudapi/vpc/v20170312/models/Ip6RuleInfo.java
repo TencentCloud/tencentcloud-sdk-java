@@ -27,7 +27,7 @@ public class Ip6RuleInfo extends AbstractModel{
     */
     @SerializedName("Vport6")
     @Expose
-    private Integer Vport6;
+    private Long Vport6;
 
     /**
     * 协议类型，支持TCP/UDP
@@ -48,13 +48,13 @@ public class Ip6RuleInfo extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Integer Vport;
+    private Long Vport;
 
     /**
      * Get IPV6端口号，可在0~65535范围取值 
      * @return Vport6 IPV6端口号，可在0~65535范围取值
      */
-    public Integer getVport6() {
+    public Long getVport6() {
         return this.Vport6;
     }
 
@@ -62,7 +62,7 @@ public class Ip6RuleInfo extends AbstractModel{
      * Set IPV6端口号，可在0~65535范围取值
      * @param Vport6 IPV6端口号，可在0~65535范围取值
      */
-    public void setVport6(Integer Vport6) {
+    public void setVport6(Long Vport6) {
         this.Vport6 = Vport6;
     }
 
@@ -102,7 +102,7 @@ public class Ip6RuleInfo extends AbstractModel{
      * Get IPV4端口号，可在0~65535范围取值 
      * @return Vport IPV4端口号，可在0~65535范围取值
      */
-    public Integer getVport() {
+    public Long getVport() {
         return this.Vport;
     }
 
@@ -110,7 +110,7 @@ public class Ip6RuleInfo extends AbstractModel{
      * Set IPV4端口号，可在0~65535范围取值
      * @param Vport IPV4端口号，可在0~65535范围取值
      */
-    public void setVport(Integer Vport) {
+    public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 

@@ -41,7 +41,7 @@ public class InquiryPriceDbauditInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Integer TimeSpan;
+    private Long TimeSpan;
 
     /**
     * 购买时长单位，y：年；m：月
@@ -93,7 +93,7 @@ public class InquiryPriceDbauditInstanceRequest extends AbstractModel{
      * Get 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m） 
      * @return TimeSpan 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
      */
-    public Integer getTimeSpan() {
+    public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -101,7 +101,7 @@ public class InquiryPriceDbauditInstanceRequest extends AbstractModel{
      * Set 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
      * @param TimeSpan 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
      */
-    public void setTimeSpan(Integer TimeSpan) {
+    public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 

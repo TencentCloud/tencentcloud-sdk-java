@@ -35,7 +35,7 @@ public class DescribeUrlViolationsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -68,7 +68,7 @@ public class DescribeUrlViolationsResponse extends AbstractModel{
      * Get 记录总数，用于分页 
      * @return TotalCount 记录总数，用于分页
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -76,7 +76,7 @@ public class DescribeUrlViolationsResponse extends AbstractModel{
      * Set 记录总数，用于分页
      * @param TotalCount 记录总数，用于分页
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

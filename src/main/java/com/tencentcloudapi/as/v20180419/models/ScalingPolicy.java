@@ -55,14 +55,14 @@ public class ScalingPolicy extends AbstractModel{
     */
     @SerializedName("AdjustmentValue")
     @Expose
-    private Integer AdjustmentValue;
+    private Long AdjustmentValue;
 
     /**
     * 冷却时间。
     */
     @SerializedName("Cooldown")
     @Expose
-    private Integer Cooldown;
+    private Long Cooldown;
 
     /**
     * 告警监控指标。
@@ -146,7 +146,7 @@ public class ScalingPolicy extends AbstractModel{
      * Get 告警触发后，期望实例数的调整值。 
      * @return AdjustmentValue 告警触发后，期望实例数的调整值。
      */
-    public Integer getAdjustmentValue() {
+    public Long getAdjustmentValue() {
         return this.AdjustmentValue;
     }
 
@@ -154,7 +154,7 @@ public class ScalingPolicy extends AbstractModel{
      * Set 告警触发后，期望实例数的调整值。
      * @param AdjustmentValue 告警触发后，期望实例数的调整值。
      */
-    public void setAdjustmentValue(Integer AdjustmentValue) {
+    public void setAdjustmentValue(Long AdjustmentValue) {
         this.AdjustmentValue = AdjustmentValue;
     }
 
@@ -162,7 +162,7 @@ public class ScalingPolicy extends AbstractModel{
      * Get 冷却时间。 
      * @return Cooldown 冷却时间。
      */
-    public Integer getCooldown() {
+    public Long getCooldown() {
         return this.Cooldown;
     }
 
@@ -170,7 +170,7 @@ public class ScalingPolicy extends AbstractModel{
      * Set 冷却时间。
      * @param Cooldown 冷却时间。
      */
-    public void setCooldown(Integer Cooldown) {
+    public void setCooldown(Long Cooldown) {
         this.Cooldown = Cooldown;
     }
 

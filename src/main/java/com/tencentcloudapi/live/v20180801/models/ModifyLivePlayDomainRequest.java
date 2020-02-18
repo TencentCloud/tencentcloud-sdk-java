@@ -34,7 +34,7 @@ public class ModifyLivePlayDomainRequest extends AbstractModel{
     */
     @SerializedName("PlayType")
     @Expose
-    private Integer PlayType;
+    private Long PlayType;
 
     /**
      * Get 播放域名。 
@@ -56,7 +56,7 @@ public class ModifyLivePlayDomainRequest extends AbstractModel{
      * Get 拉流域名类型。1-国内；2-全球；3-境外 
      * @return PlayType 拉流域名类型。1-国内；2-全球；3-境外
      */
-    public Integer getPlayType() {
+    public Long getPlayType() {
         return this.PlayType;
     }
 
@@ -64,7 +64,7 @@ public class ModifyLivePlayDomainRequest extends AbstractModel{
      * Set 拉流域名类型。1-国内；2-全球；3-境外
      * @param PlayType 拉流域名类型。1-国内；2-全球；3-境外
      */
-    public void setPlayType(Integer PlayType) {
+    public void setPlayType(Long PlayType) {
         this.PlayType = PlayType;
     }
 

@@ -34,14 +34,14 @@ public class PersonProfile extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Integer Gender;
+    private Long Gender;
 
     /**
     * 年龄
     */
     @SerializedName("Age")
     @Expose
-    private Integer Age;
+    private Long Age;
 
     /**
     * 首次到场时间
@@ -55,7 +55,7 @@ public class PersonProfile extends AbstractModel{
     */
     @SerializedName("ArrivedCount")
     @Expose
-    private Integer ArrivedCount;
+    private Long ArrivedCount;
 
     /**
     * 客户图片
@@ -91,7 +91,7 @@ public class PersonProfile extends AbstractModel{
      * Get 性别 
      * @return Gender 性别
      */
-    public Integer getGender() {
+    public Long getGender() {
         return this.Gender;
     }
 
@@ -99,7 +99,7 @@ public class PersonProfile extends AbstractModel{
      * Set 性别
      * @param Gender 性别
      */
-    public void setGender(Integer Gender) {
+    public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
@@ -107,7 +107,7 @@ public class PersonProfile extends AbstractModel{
      * Get 年龄 
      * @return Age 年龄
      */
-    public Integer getAge() {
+    public Long getAge() {
         return this.Age;
     }
 
@@ -115,7 +115,7 @@ public class PersonProfile extends AbstractModel{
      * Set 年龄
      * @param Age 年龄
      */
-    public void setAge(Integer Age) {
+    public void setAge(Long Age) {
         this.Age = Age;
     }
 
@@ -139,7 +139,7 @@ public class PersonProfile extends AbstractModel{
      * Get 来访次数 
      * @return ArrivedCount 来访次数
      */
-    public Integer getArrivedCount() {
+    public Long getArrivedCount() {
         return this.ArrivedCount;
     }
 
@@ -147,7 +147,7 @@ public class PersonProfile extends AbstractModel{
      * Set 来访次数
      * @param ArrivedCount 来访次数
      */
-    public void setArrivedCount(Integer ArrivedCount) {
+    public void setArrivedCount(Long ArrivedCount) {
         this.ArrivedCount = ArrivedCount;
     }
 

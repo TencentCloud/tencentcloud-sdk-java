@@ -36,7 +36,7 @@ public class DescribeCostDetailResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Integer Total;
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -71,7 +71,7 @@ public class DescribeCostDetailResponse extends AbstractModel{
      * @return Total 记录数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -81,7 +81,7 @@ public class DescribeCostDetailResponse extends AbstractModel{
      * @param Total 记录数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotal(Integer Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 

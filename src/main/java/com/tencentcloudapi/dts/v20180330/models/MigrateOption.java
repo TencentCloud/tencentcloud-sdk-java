@@ -27,7 +27,7 @@ public class MigrateOption extends AbstractModel{
     */
     @SerializedName("RunMode")
     @Expose
-    private Integer RunMode;
+    private Long RunMode;
 
     /**
     * 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
@@ -41,28 +41,28 @@ public class MigrateOption extends AbstractModel{
     */
     @SerializedName("MigrateType")
     @Expose
-    private Integer MigrateType;
+    private Long MigrateType;
 
     /**
     * 迁移对象，1-整个实例，2-指定库表
     */
     @SerializedName("MigrateObject")
     @Expose
-    private Integer MigrateObject;
+    private Long MigrateObject;
 
     /**
     * 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
     */
     @SerializedName("ConsistencyType")
     @Expose
-    private Integer ConsistencyType;
+    private Long ConsistencyType;
 
     /**
     * 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
     */
     @SerializedName("IsOverrideRoot")
     @Expose
-    private Integer IsOverrideRoot;
+    private Long IsOverrideRoot;
 
     /**
     * 不同数据库用到的额外参数.以JSON格式描述. 
@@ -97,7 +97,7 @@ MySQL暂不支持额外参数设置。
      * Get 任务运行模式，值包括：1-立即执行，2-定时执行 
      * @return RunMode 任务运行模式，值包括：1-立即执行，2-定时执行
      */
-    public Integer getRunMode() {
+    public Long getRunMode() {
         return this.RunMode;
     }
 
@@ -105,7 +105,7 @@ MySQL暂不支持额外参数设置。
      * Set 任务运行模式，值包括：1-立即执行，2-定时执行
      * @param RunMode 任务运行模式，值包括：1-立即执行，2-定时执行
      */
-    public void setRunMode(Integer RunMode) {
+    public void setRunMode(Long RunMode) {
         this.RunMode = RunMode;
     }
 
@@ -129,7 +129,7 @@ MySQL暂不支持额外参数设置。
      * Get 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移 
      * @return MigrateType 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
      */
-    public Integer getMigrateType() {
+    public Long getMigrateType() {
         return this.MigrateType;
     }
 
@@ -137,7 +137,7 @@ MySQL暂不支持额外参数设置。
      * Set 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
      * @param MigrateType 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
      */
-    public void setMigrateType(Integer MigrateType) {
+    public void setMigrateType(Long MigrateType) {
         this.MigrateType = MigrateType;
     }
 
@@ -145,7 +145,7 @@ MySQL暂不支持额外参数设置。
      * Get 迁移对象，1-整个实例，2-指定库表 
      * @return MigrateObject 迁移对象，1-整个实例，2-指定库表
      */
-    public Integer getMigrateObject() {
+    public Long getMigrateObject() {
         return this.MigrateObject;
     }
 
@@ -153,7 +153,7 @@ MySQL暂不支持额外参数设置。
      * Set 迁移对象，1-整个实例，2-指定库表
      * @param MigrateObject 迁移对象，1-整个实例，2-指定库表
      */
-    public void setMigrateObject(Integer MigrateObject) {
+    public void setMigrateObject(Long MigrateObject) {
         this.MigrateObject = MigrateObject;
     }
 
@@ -161,7 +161,7 @@ MySQL暂不支持额外参数设置。
      * Get 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测 
      * @return ConsistencyType 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      */
-    public Integer getConsistencyType() {
+    public Long getConsistencyType() {
         return this.ConsistencyType;
     }
 
@@ -169,7 +169,7 @@ MySQL暂不支持额外参数设置。
      * Set 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      * @param ConsistencyType 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      */
-    public void setConsistencyType(Integer ConsistencyType) {
+    public void setConsistencyType(Long ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
     }
 
@@ -177,7 +177,7 @@ MySQL暂不支持额外参数设置。
      * Get 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0 
      * @return IsOverrideRoot 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
      */
-    public Integer getIsOverrideRoot() {
+    public Long getIsOverrideRoot() {
         return this.IsOverrideRoot;
     }
 
@@ -185,7 +185,7 @@ MySQL暂不支持额外参数设置。
      * Set 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
      * @param IsOverrideRoot 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
      */
-    public void setIsOverrideRoot(Integer IsOverrideRoot) {
+    public void setIsOverrideRoot(Long IsOverrideRoot) {
         this.IsOverrideRoot = IsOverrideRoot;
     }
 

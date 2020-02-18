@@ -41,7 +41,7 @@ public class DictInfo extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
      * Get 词典键值 
@@ -79,7 +79,7 @@ public class DictInfo extends AbstractModel{
      * Get 词典大小，单位B 
      * @return Size 词典大小，单位B
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -87,7 +87,7 @@ public class DictInfo extends AbstractModel{
      * Set 词典大小，单位B
      * @param Size 词典大小，单位B
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 

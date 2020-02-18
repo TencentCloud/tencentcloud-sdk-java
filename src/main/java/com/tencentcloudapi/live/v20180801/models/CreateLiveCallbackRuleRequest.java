@@ -41,7 +41,7 @@ public class CreateLiveCallbackRuleRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
      * Get 推流域名。 
@@ -79,7 +79,7 @@ public class CreateLiveCallbackRuleRequest extends AbstractModel{
      * Get 模板ID。 
      * @return TemplateId 模板ID。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -87,7 +87,7 @@ public class CreateLiveCallbackRuleRequest extends AbstractModel{
      * Set 模板ID。
      * @param TemplateId 模板ID。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 

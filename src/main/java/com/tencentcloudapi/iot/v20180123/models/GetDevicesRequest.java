@@ -34,14 +34,14 @@ public class GetDevicesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 长度
     */
     @SerializedName("Length")
     @Expose
-    private Integer Length;
+    private Long Length;
 
     /**
     * 关键字查询
@@ -70,7 +70,7 @@ public class GetDevicesRequest extends AbstractModel{
      * Get 偏移 
      * @return Offset 偏移
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -78,7 +78,7 @@ public class GetDevicesRequest extends AbstractModel{
      * Set 偏移
      * @param Offset 偏移
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -86,7 +86,7 @@ public class GetDevicesRequest extends AbstractModel{
      * Get 长度 
      * @return Length 长度
      */
-    public Integer getLength() {
+    public Long getLength() {
         return this.Length;
     }
 
@@ -94,7 +94,7 @@ public class GetDevicesRequest extends AbstractModel{
      * Set 长度
      * @param Length 长度
      */
-    public void setLength(Integer Length) {
+    public void setLength(Long Length) {
         this.Length = Length;
     }
 

@@ -48,7 +48,7 @@ public class InitDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Integer Vport;
+    private Long Vport;
 
     /**
      * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
@@ -102,7 +102,7 @@ public class InitDBInstancesRequest extends AbstractModel{
      * Get 实例的端口，取值范围为[1024, 65535] 
      * @return Vport 实例的端口，取值范围为[1024, 65535]
      */
-    public Integer getVport() {
+    public Long getVport() {
         return this.Vport;
     }
 
@@ -110,7 +110,7 @@ public class InitDBInstancesRequest extends AbstractModel{
      * Set 实例的端口，取值范围为[1024, 65535]
      * @param Vport 实例的端口，取值范围为[1024, 65535]
      */
-    public void setVport(Integer Vport) {
+    public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 

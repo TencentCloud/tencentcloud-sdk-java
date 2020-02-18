@@ -27,7 +27,7 @@ public class DescribeSitesVerificationResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 验证信息列表。
@@ -47,7 +47,7 @@ public class DescribeSitesVerificationResponse extends AbstractModel{
      * Get 验证信息数量。 
      * @return TotalCount 验证信息数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeSitesVerificationResponse extends AbstractModel{
      * Set 验证信息数量。
      * @param TotalCount 验证信息数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

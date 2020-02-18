@@ -59,7 +59,7 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
     */
     @SerializedName("Types")
     @Expose
-    private Integer [] Types;
+    private Long [] Types;
 
     /**
      * Get 图片的 Base64 值。
@@ -147,7 +147,7 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 12：购车发票
 13：过路过桥费发票
      */
-    public Integer [] getTypes() {
+    public Long [] getTypes() {
         return this.Types;
     }
 
@@ -177,7 +177,7 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 12：购车发票
 13：过路过桥费发票
      */
-    public void setTypes(Integer [] Types) {
+    public void setTypes(Long [] Types) {
         this.Types = Types;
     }
 

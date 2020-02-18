@@ -36,7 +36,7 @@ public class LBChargePrepaid extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
      * Get 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
@@ -64,7 +64,7 @@ public class LBChargePrepaid extends AbstractModel{
      * @return Period 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -74,7 +74,7 @@ public class LBChargePrepaid extends AbstractModel{
      * @param Period 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 

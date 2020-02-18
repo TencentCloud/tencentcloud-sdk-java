@@ -41,14 +41,14 @@ public class DescribeL7ListenersExRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 此VPC中获取负载均衡的数量。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 过滤条件。
@@ -100,7 +100,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
      * Get 此VPC中获取负载均衡的偏移。 
      * @return Offset 此VPC中获取负载均衡的偏移。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -108,7 +108,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
      * Set 此VPC中获取负载均衡的偏移。
      * @param Offset 此VPC中获取负载均衡的偏移。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -116,7 +116,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
      * Get 此VPC中获取负载均衡的数量。 
      * @return Limit 此VPC中获取负载均衡的数量。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -124,7 +124,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
      * Set 此VPC中获取负载均衡的数量。
      * @param Limit 此VPC中获取负载均衡的数量。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

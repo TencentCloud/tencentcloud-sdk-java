@@ -34,7 +34,7 @@ public class PlayCodeTotalInfo extends AbstractModel{
     */
     @SerializedName("Num")
     @Expose
-    private Integer Num;
+    private Long Num;
 
     /**
      * Get HTTP code，可选值包括400,403,404,500,502,503,504 
@@ -56,7 +56,7 @@ public class PlayCodeTotalInfo extends AbstractModel{
      * Get 总次数 
      * @return Num 总次数
      */
-    public Integer getNum() {
+    public Long getNum() {
         return this.Num;
     }
 
@@ -64,7 +64,7 @@ public class PlayCodeTotalInfo extends AbstractModel{
      * Set 总次数
      * @param Num 总次数
      */
-    public void setNum(Integer Num) {
+    public void setNum(Long Num) {
         this.Num = Num;
     }
 

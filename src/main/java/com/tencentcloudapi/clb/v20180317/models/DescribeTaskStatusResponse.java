@@ -27,7 +27,7 @@ public class DescribeTaskStatusResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeTaskStatusResponse extends AbstractModel{
      * Get 任务的当前状态。 0：成功，1：失败，2：进行中。 
      * @return Status 任务的当前状态。 0：成功，1：失败，2：进行中。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -48,7 +48,7 @@ public class DescribeTaskStatusResponse extends AbstractModel{
      * Set 任务的当前状态。 0：成功，1：失败，2：进行中。
      * @param Status 任务的当前状态。 0：成功，1：失败，2：进行中。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

@@ -27,7 +27,7 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
     */
     @SerializedName("AutoBackupType")
     @Expose
-    private Integer AutoBackupType;
+    private Long AutoBackupType;
 
     /**
     * Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
@@ -54,7 +54,7 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
      * Get 备份类型。自动备份类型： 1 “定时回档” 
      * @return AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
      */
-    public Integer getAutoBackupType() {
+    public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
@@ -62,7 +62,7 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
      * Set 备份类型。自动备份类型： 1 “定时回档”
      * @param AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
      */
-    public void setAutoBackupType(Integer AutoBackupType) {
+    public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
     }
 

@@ -50,7 +50,7 @@ public class RuleOutput extends AbstractModel{
     */
     @SerializedName("SessionExpireTime")
     @Expose
-    private Integer SessionExpireTime;
+    private Long SessionExpireTime;
 
     /**
     * 健康检查信息
@@ -231,7 +231,7 @@ public class RuleOutput extends AbstractModel{
      * Get 会话保持时间 
      * @return SessionExpireTime 会话保持时间
      */
-    public Integer getSessionExpireTime() {
+    public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
@@ -239,7 +239,7 @@ public class RuleOutput extends AbstractModel{
      * Set 会话保持时间
      * @param SessionExpireTime 会话保持时间
      */
-    public void setSessionExpireTime(Integer SessionExpireTime) {
+    public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 

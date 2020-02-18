@@ -34,14 +34,14 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 区域ID
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 区域名称
@@ -91,7 +91,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel{
      * Get 店铺ID 
      * @return ShopId 店铺ID
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -99,7 +99,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel{
      * Set 店铺ID
      * @param ShopId 店铺ID
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -107,7 +107,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel{
      * Get 区域ID 
      * @return ZoneId 区域ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -115,7 +115,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel{
      * Set 区域ID
      * @param ZoneId 区域ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 

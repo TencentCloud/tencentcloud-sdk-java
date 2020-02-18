@@ -41,7 +41,7 @@ public class DescribeThreatInfoRequest extends AbstractModel{
     */
     @SerializedName("Option")
     @Expose
-    private Integer Option;
+    private Long Option;
 
     /**
      * Get 查询对象，域名或IP 
@@ -79,7 +79,7 @@ public class DescribeThreatInfoRequest extends AbstractModel{
      * Get 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。 
      * @return Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
-    public Integer getOption() {
+    public Long getOption() {
         return this.Option;
     }
 
@@ -87,7 +87,7 @@ public class DescribeThreatInfoRequest extends AbstractModel{
      * Set 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      * @param Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
-    public void setOption(Integer Option) {
+    public void setOption(Long Option) {
         this.Option = Option;
     }
 

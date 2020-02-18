@@ -34,14 +34,14 @@ public class DescribeUploadedFilesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 单次请求返回的数量，默认值为20。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 文件路径。该字段应填用户主账号的OwnerUin信息。 
@@ -63,7 +63,7 @@ public class DescribeUploadedFilesRequest extends AbstractModel{
      * Get 记录偏移量，默认值为0。 
      * @return Offset 记录偏移量，默认值为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribeUploadedFilesRequest extends AbstractModel{
      * Set 记录偏移量，默认值为0。
      * @param Offset 记录偏移量，默认值为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribeUploadedFilesRequest extends AbstractModel{
      * Get 单次请求返回的数量，默认值为20。 
      * @return Limit 单次请求返回的数量，默认值为20。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribeUploadedFilesRequest extends AbstractModel{
      * Set 单次请求返回的数量，默认值为20。
      * @param Limit 单次请求返回的数量，默认值为20。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

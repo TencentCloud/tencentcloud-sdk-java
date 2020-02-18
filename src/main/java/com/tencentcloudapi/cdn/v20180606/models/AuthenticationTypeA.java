@@ -45,7 +45,7 @@ public class AuthenticationTypeA extends AbstractModel{
     */
     @SerializedName("ExpireTime")
     @Expose
-    private Integer ExpireTime;
+    private Long ExpireTime;
 
     /**
     * 鉴权/不做鉴权的文件扩展名列表设置
@@ -113,7 +113,7 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
      * @return ExpireTime 签名过期时间设置
 单位为秒，最大可设置为 31536000
      */
-    public Integer getExpireTime() {
+    public Long getExpireTime() {
         return this.ExpireTime;
     }
 
@@ -123,7 +123,7 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
      * @param ExpireTime 签名过期时间设置
 单位为秒，最大可设置为 31536000
      */
-    public void setExpireTime(Integer ExpireTime) {
+    public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 

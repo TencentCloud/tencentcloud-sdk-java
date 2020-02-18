@@ -28,7 +28,7 @@ public class OriginPullTimeout extends AbstractModel{
     */
     @SerializedName("ConnectTimeout")
     @Expose
-    private Integer ConnectTimeout;
+    private Long ConnectTimeout;
 
     /**
     * 回源接收超时时间，单位为秒，要求10 ~ 60之间
@@ -36,7 +36,7 @@ public class OriginPullTimeout extends AbstractModel{
     */
     @SerializedName("ReceiveTimeout")
     @Expose
-    private Integer ReceiveTimeout;
+    private Long ReceiveTimeout;
 
     /**
      * Get 回源建连超时时间，单位为秒，要求5~60之间
@@ -44,7 +44,7 @@ public class OriginPullTimeout extends AbstractModel{
      * @return ConnectTimeout 回源建连超时时间，单位为秒，要求5~60之间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getConnectTimeout() {
+    public Long getConnectTimeout() {
         return this.ConnectTimeout;
     }
 
@@ -54,7 +54,7 @@ public class OriginPullTimeout extends AbstractModel{
      * @param ConnectTimeout 回源建连超时时间，单位为秒，要求5~60之间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setConnectTimeout(Integer ConnectTimeout) {
+    public void setConnectTimeout(Long ConnectTimeout) {
         this.ConnectTimeout = ConnectTimeout;
     }
 
@@ -64,7 +64,7 @@ public class OriginPullTimeout extends AbstractModel{
      * @return ReceiveTimeout 回源接收超时时间，单位为秒，要求10 ~ 60之间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getReceiveTimeout() {
+    public Long getReceiveTimeout() {
         return this.ReceiveTimeout;
     }
 
@@ -74,7 +74,7 @@ public class OriginPullTimeout extends AbstractModel{
      * @param ReceiveTimeout 回源接收超时时间，单位为秒，要求10 ~ 60之间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setReceiveTimeout(Integer ReceiveTimeout) {
+    public void setReceiveTimeout(Long ReceiveTimeout) {
         this.ReceiveTimeout = ReceiveTimeout;
     }
 

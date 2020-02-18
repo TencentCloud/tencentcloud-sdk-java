@@ -27,7 +27,7 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 错误日志列表
@@ -47,7 +47,7 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
      * Get 本次调用返回了多少条数据 
      * @return TotalCount 本次调用返回了多少条数据
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
      * Set 本次调用返回了多少条数据
      * @param TotalCount 本次调用返回了多少条数据
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
