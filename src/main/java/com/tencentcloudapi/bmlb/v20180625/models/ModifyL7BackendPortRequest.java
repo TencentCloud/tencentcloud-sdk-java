@@ -62,21 +62,21 @@ public class ModifyL7BackendPortRequest extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 新的主机端口，可选值1~65535。
     */
     @SerializedName("NewPort")
     @Expose
-    private Long NewPort;
+    private Integer NewPort;
 
     /**
     * 绑定类型。0：物理机 1：虚拟机 2：半托管机器
     */
     @SerializedName("BindType")
     @Expose
-    private Long BindType;
+    private Integer BindType;
 
     /**
      * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
@@ -162,7 +162,7 @@ public class ModifyL7BackendPortRequest extends AbstractModel{
      * Get 已绑定的主机端口。 
      * @return Port 已绑定的主机端口。
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -170,7 +170,7 @@ public class ModifyL7BackendPortRequest extends AbstractModel{
      * Set 已绑定的主机端口。
      * @param Port 已绑定的主机端口。
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -178,7 +178,7 @@ public class ModifyL7BackendPortRequest extends AbstractModel{
      * Get 新的主机端口，可选值1~65535。 
      * @return NewPort 新的主机端口，可选值1~65535。
      */
-    public Long getNewPort() {
+    public Integer getNewPort() {
         return this.NewPort;
     }
 
@@ -186,7 +186,7 @@ public class ModifyL7BackendPortRequest extends AbstractModel{
      * Set 新的主机端口，可选值1~65535。
      * @param NewPort 新的主机端口，可选值1~65535。
      */
-    public void setNewPort(Long NewPort) {
+    public void setNewPort(Integer NewPort) {
         this.NewPort = NewPort;
     }
 
@@ -194,7 +194,7 @@ public class ModifyL7BackendPortRequest extends AbstractModel{
      * Get 绑定类型。0：物理机 1：虚拟机 2：半托管机器 
      * @return BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
-    public Long getBindType() {
+    public Integer getBindType() {
         return this.BindType;
     }
 
@@ -202,7 +202,7 @@ public class ModifyL7BackendPortRequest extends AbstractModel{
      * Set 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      * @param BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
-    public void setBindType(Long BindType) {
+    public void setBindType(Integer BindType) {
         this.BindType = BindType;
     }
 

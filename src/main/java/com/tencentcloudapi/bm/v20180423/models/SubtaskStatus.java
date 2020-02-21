@@ -41,7 +41,7 @@ public class SubtaskStatus extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Long TaskStatus;
+    private Integer TaskStatus;
 
     /**
      * Get 实例ID 
@@ -77,7 +77,7 @@ public class SubtaskStatus extends AbstractModel{
 6：部分未完成，部分失败<br>
 7：部分未完成，部分失败，部分成功
      */
-    public Long getTaskStatus() {
+    public Integer getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -99,7 +99,7 @@ public class SubtaskStatus extends AbstractModel{
 6：部分未完成，部分失败<br>
 7：部分未完成，部分失败，部分成功
      */
-    public void setTaskStatus(Long TaskStatus) {
+    public void setTaskStatus(Integer TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 

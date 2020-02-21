@@ -41,7 +41,7 @@ public class DescribeTaskStatusRequest extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
      * Get 模块名CommonMng 
@@ -79,7 +79,7 @@ public class DescribeTaskStatusRequest extends AbstractModel{
      * Get 任务ID 
      * @return TaskId 任务ID
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -87,7 +87,7 @@ public class DescribeTaskStatusRequest extends AbstractModel{
      * Set 任务ID
      * @param TaskId 任务ID
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 

@@ -27,14 +27,14 @@ public class InstanceTypeOptions extends AbstractModel{
     */
     @SerializedName("CPU")
     @Expose
-    private Long CPU;
+    private Integer CPU;
 
     /**
     * 内存值，单位GB。
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
@@ -47,7 +47,7 @@ public class InstanceTypeOptions extends AbstractModel{
      * Get CPU核数。 
      * @return CPU CPU核数。
      */
-    public Long getCPU() {
+    public Integer getCPU() {
         return this.CPU;
     }
 
@@ -55,7 +55,7 @@ public class InstanceTypeOptions extends AbstractModel{
      * Set CPU核数。
      * @param CPU CPU核数。
      */
-    public void setCPU(Long CPU) {
+    public void setCPU(Integer CPU) {
         this.CPU = CPU;
     }
 
@@ -63,7 +63,7 @@ public class InstanceTypeOptions extends AbstractModel{
      * Get 内存值，单位GB。 
      * @return Memory 内存值，单位GB。
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -71,7 +71,7 @@ public class InstanceTypeOptions extends AbstractModel{
      * Set 内存值，单位GB。
      * @param Memory 内存值，单位GB。
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 

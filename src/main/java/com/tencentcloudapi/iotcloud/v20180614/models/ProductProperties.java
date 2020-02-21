@@ -49,7 +49,7 @@ public class ProductProperties extends AbstractModel{
     */
     @SerializedName("ProductType")
     @Expose
-    private Long ProductType;
+    private Integer ProductType;
 
     /**
     * 数据格式，取值为json或者custom，默认值是json
@@ -98,7 +98,7 @@ public class ProductProperties extends AbstractModel{
     */
     @SerializedName("RegisterType")
     @Expose
-    private Long RegisterType;
+    private Integer RegisterType;
 
     /**
     * 动态注册产品秘钥
@@ -112,7 +112,7 @@ public class ProductProperties extends AbstractModel{
     */
     @SerializedName("RegisterLimit")
     @Expose
-    private Long RegisterLimit;
+    private Integer RegisterLimit;
 
     /**
      * Get 产品描述 
@@ -168,7 +168,7 @@ public class ProductProperties extends AbstractModel{
      * @return ProductType 产品类型，各个类型值代表的节点-类型如下：
 0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      */
-    public Long getProductType() {
+    public Integer getProductType() {
         return this.ProductType;
     }
 
@@ -178,7 +178,7 @@ public class ProductProperties extends AbstractModel{
      * @param ProductType 产品类型，各个类型值代表的节点-类型如下：
 0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      */
-    public void setProductType(Long ProductType) {
+    public void setProductType(Integer ProductType) {
         this.ProductType = ProductType;
     }
 
@@ -282,7 +282,7 @@ public class ProductProperties extends AbstractModel{
      * Get 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名 
      * @return RegisterType 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
      */
-    public Long getRegisterType() {
+    public Integer getRegisterType() {
         return this.RegisterType;
     }
 
@@ -290,7 +290,7 @@ public class ProductProperties extends AbstractModel{
      * Set 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
      * @param RegisterType 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
      */
-    public void setRegisterType(Long RegisterType) {
+    public void setRegisterType(Integer RegisterType) {
         this.RegisterType = RegisterType;
     }
 
@@ -314,7 +314,7 @@ public class ProductProperties extends AbstractModel{
      * Get RegisterType为2时，设备动态创建的限制数量 
      * @return RegisterLimit RegisterType为2时，设备动态创建的限制数量
      */
-    public Long getRegisterLimit() {
+    public Integer getRegisterLimit() {
         return this.RegisterLimit;
     }
 
@@ -322,7 +322,7 @@ public class ProductProperties extends AbstractModel{
      * Set RegisterType为2时，设备动态创建的限制数量
      * @param RegisterLimit RegisterType为2时，设备动态创建的限制数量
      */
-    public void setRegisterLimit(Long RegisterLimit) {
+    public void setRegisterLimit(Integer RegisterLimit) {
         this.RegisterLimit = RegisterLimit;
     }
 

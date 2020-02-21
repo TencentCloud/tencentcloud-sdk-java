@@ -41,14 +41,14 @@ public class DevicePriceInfo extends AbstractModel{
     */
     @SerializedName("IsElastic")
     @Expose
-    private Long IsElastic;
+    private Integer IsElastic;
 
     /**
     * 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
     */
     @SerializedName("CpmPayMode")
     @Expose
-    private Long CpmPayMode;
+    private Integer CpmPayMode;
 
     /**
     * Cpu信息描述
@@ -97,35 +97,35 @@ public class DevicePriceInfo extends AbstractModel{
     */
     @SerializedName("Price")
     @Expose
-    private Long Price;
+    private Integer Price;
 
     /**
     * 刊例单价
     */
     @SerializedName("NormalPrice")
     @Expose
-    private Long NormalPrice;
+    private Integer NormalPrice;
 
     /**
     * 原价
     */
     @SerializedName("TotalCost")
     @Expose
-    private Long TotalCost;
+    private Integer TotalCost;
 
     /**
     * 折扣价
     */
     @SerializedName("RealTotalCost")
     @Expose
-    private Long RealTotalCost;
+    private Integer RealTotalCost;
 
     /**
     * 计费时长
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Long TimeSpan;
+    private Integer TimeSpan;
 
     /**
     * 计费时长单位, m:按月计费; d:按天计费
@@ -139,7 +139,7 @@ public class DevicePriceInfo extends AbstractModel{
     */
     @SerializedName("GoodsCount")
     @Expose
-    private Long GoodsCount;
+    private Integer GoodsCount;
 
     /**
      * Get 物理机ID 
@@ -177,7 +177,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 是否是弹性机型，1：是，0：否 
      * @return IsElastic 是否是弹性机型，1：是，0：否
      */
-    public Long getIsElastic() {
+    public Integer getIsElastic() {
         return this.IsElastic;
     }
 
@@ -185,7 +185,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 是否是弹性机型，1：是，0：否
      * @param IsElastic 是否是弹性机型，1：是，0：否
      */
-    public void setIsElastic(Long IsElastic) {
+    public void setIsElastic(Integer IsElastic) {
         this.IsElastic = IsElastic;
     }
 
@@ -193,7 +193,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中 
      * @return CpmPayMode 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
      */
-    public Long getCpmPayMode() {
+    public Integer getCpmPayMode() {
         return this.CpmPayMode;
     }
 
@@ -201,7 +201,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
      * @param CpmPayMode 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
      */
-    public void setCpmPayMode(Long CpmPayMode) {
+    public void setCpmPayMode(Integer CpmPayMode) {
         this.CpmPayMode = CpmPayMode;
     }
 
@@ -305,7 +305,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 客户的单价 
      * @return Price 客户的单价
      */
-    public Long getPrice() {
+    public Integer getPrice() {
         return this.Price;
     }
 
@@ -313,7 +313,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 客户的单价
      * @param Price 客户的单价
      */
-    public void setPrice(Long Price) {
+    public void setPrice(Integer Price) {
         this.Price = Price;
     }
 
@@ -321,7 +321,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 刊例单价 
      * @return NormalPrice 刊例单价
      */
-    public Long getNormalPrice() {
+    public Integer getNormalPrice() {
         return this.NormalPrice;
     }
 
@@ -329,7 +329,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 刊例单价
      * @param NormalPrice 刊例单价
      */
-    public void setNormalPrice(Long NormalPrice) {
+    public void setNormalPrice(Integer NormalPrice) {
         this.NormalPrice = NormalPrice;
     }
 
@@ -337,7 +337,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 原价 
      * @return TotalCost 原价
      */
-    public Long getTotalCost() {
+    public Integer getTotalCost() {
         return this.TotalCost;
     }
 
@@ -345,7 +345,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 原价
      * @param TotalCost 原价
      */
-    public void setTotalCost(Long TotalCost) {
+    public void setTotalCost(Integer TotalCost) {
         this.TotalCost = TotalCost;
     }
 
@@ -353,7 +353,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 折扣价 
      * @return RealTotalCost 折扣价
      */
-    public Long getRealTotalCost() {
+    public Integer getRealTotalCost() {
         return this.RealTotalCost;
     }
 
@@ -361,7 +361,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 折扣价
      * @param RealTotalCost 折扣价
      */
-    public void setRealTotalCost(Long RealTotalCost) {
+    public void setRealTotalCost(Integer RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
@@ -369,7 +369,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 计费时长 
      * @return TimeSpan 计费时长
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -377,7 +377,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 计费时长
      * @param TimeSpan 计费时长
      */
-    public void setTimeSpan(Long TimeSpan) {
+    public void setTimeSpan(Integer TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -401,7 +401,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Get 商品数量 
      * @return GoodsCount 商品数量
      */
-    public Long getGoodsCount() {
+    public Integer getGoodsCount() {
         return this.GoodsCount;
     }
 
@@ -409,7 +409,7 @@ public class DevicePriceInfo extends AbstractModel{
      * Set 商品数量
      * @param GoodsCount 商品数量
      */
-    public void setGoodsCount(Long GoodsCount) {
+    public void setGoodsCount(Integer GoodsCount) {
         this.GoodsCount = GoodsCount;
     }
 

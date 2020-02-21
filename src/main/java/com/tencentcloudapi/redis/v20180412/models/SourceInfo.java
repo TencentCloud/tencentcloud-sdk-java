@@ -34,14 +34,14 @@ public class SourceInfo extends AbstractModel{
     */
     @SerializedName("Conn")
     @Expose
-    private Long Conn;
+    private Integer Conn;
 
     /**
     * 命令
     */
     @SerializedName("Cmd")
     @Expose
-    private Long Cmd;
+    private Integer Cmd;
 
     /**
      * Get 来源IP 
@@ -63,7 +63,7 @@ public class SourceInfo extends AbstractModel{
      * Get 连接数 
      * @return Conn 连接数
      */
-    public Long getConn() {
+    public Integer getConn() {
         return this.Conn;
     }
 
@@ -71,7 +71,7 @@ public class SourceInfo extends AbstractModel{
      * Set 连接数
      * @param Conn 连接数
      */
-    public void setConn(Long Conn) {
+    public void setConn(Integer Conn) {
         this.Conn = Conn;
     }
 
@@ -79,7 +79,7 @@ public class SourceInfo extends AbstractModel{
      * Get 命令 
      * @return Cmd 命令
      */
-    public Long getCmd() {
+    public Integer getCmd() {
         return this.Cmd;
     }
 
@@ -87,7 +87,7 @@ public class SourceInfo extends AbstractModel{
      * Set 命令
      * @param Cmd 命令
      */
-    public void setCmd(Long Cmd) {
+    public void setCmd(Integer Cmd) {
         this.Cmd = Cmd;
     }
 

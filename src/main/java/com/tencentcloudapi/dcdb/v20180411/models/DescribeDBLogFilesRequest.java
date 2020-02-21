@@ -41,7 +41,7 @@ public class DescribeDBLogFilesRequest extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
      * Get 实例 ID，形如：dcdbt-ow7t8lmc。 
@@ -79,7 +79,7 @@ public class DescribeDBLogFilesRequest extends AbstractModel{
      * Get 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。 
      * @return Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -87,7 +87,7 @@ public class DescribeDBLogFilesRequest extends AbstractModel{
      * Set 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      * @param Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 

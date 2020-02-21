@@ -27,7 +27,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Long ZoneId;
+    private Integer ZoneId;
 
     /**
     * 区域名称
@@ -41,20 +41,20 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
     */
     @SerializedName("TrafficTotalCount")
     @Expose
-    private Long TrafficTotalCount;
+    private Integer TrafficTotalCount;
 
     /**
     * 平均停留时间
     */
     @SerializedName("AvgStayTime")
     @Expose
-    private Long AvgStayTime;
+    private Integer AvgStayTime;
 
     /**
      * Get 区域ID 
      * @return ZoneId 区域ID
      */
-    public Long getZoneId() {
+    public Integer getZoneId() {
         return this.ZoneId;
     }
 
@@ -62,7 +62,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Set 区域ID
      * @param ZoneId 区域ID
      */
-    public void setZoneId(Long ZoneId) {
+    public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -86,7 +86,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Get 客流量 
      * @return TrafficTotalCount 客流量
      */
-    public Long getTrafficTotalCount() {
+    public Integer getTrafficTotalCount() {
         return this.TrafficTotalCount;
     }
 
@@ -94,7 +94,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Set 客流量
      * @param TrafficTotalCount 客流量
      */
-    public void setTrafficTotalCount(Long TrafficTotalCount) {
+    public void setTrafficTotalCount(Integer TrafficTotalCount) {
         this.TrafficTotalCount = TrafficTotalCount;
     }
 
@@ -102,7 +102,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Get 平均停留时间 
      * @return AvgStayTime 平均停留时间
      */
-    public Long getAvgStayTime() {
+    public Integer getAvgStayTime() {
         return this.AvgStayTime;
     }
 
@@ -110,7 +110,7 @@ public class ZoneTrafficInfoDetail extends AbstractModel{
      * Set 平均停留时间
      * @param AvgStayTime 平均停留时间
      */
-    public void setAvgStayTime(Long AvgStayTime) {
+    public void setAvgStayTime(Integer AvgStayTime) {
         this.AvgStayTime = AvgStayTime;
     }
 

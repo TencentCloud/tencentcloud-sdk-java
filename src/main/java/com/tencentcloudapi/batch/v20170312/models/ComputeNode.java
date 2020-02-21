@@ -48,14 +48,14 @@ public class ComputeNode extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Long Cpu;
+    private Integer Cpu;
 
     /**
     * 内存容量，单位GiB
     */
     @SerializedName("Mem")
     @Expose
-    private Long Mem;
+    private Integer Mem;
 
     /**
     * 资源创建完成时间
@@ -69,7 +69,7 @@ public class ComputeNode extends AbstractModel{
     */
     @SerializedName("TaskInstanceNumAvailable")
     @Expose
-    private Long TaskInstanceNumAvailable;
+    private Integer TaskInstanceNumAvailable;
 
     /**
     * Batch Agent 版本
@@ -151,7 +151,7 @@ public class ComputeNode extends AbstractModel{
      * Get CPU核数 
      * @return Cpu CPU核数
      */
-    public Long getCpu() {
+    public Integer getCpu() {
         return this.Cpu;
     }
 
@@ -159,7 +159,7 @@ public class ComputeNode extends AbstractModel{
      * Set CPU核数
      * @param Cpu CPU核数
      */
-    public void setCpu(Long Cpu) {
+    public void setCpu(Integer Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -167,7 +167,7 @@ public class ComputeNode extends AbstractModel{
      * Get 内存容量，单位GiB 
      * @return Mem 内存容量，单位GiB
      */
-    public Long getMem() {
+    public Integer getMem() {
         return this.Mem;
     }
 
@@ -175,7 +175,7 @@ public class ComputeNode extends AbstractModel{
      * Set 内存容量，单位GiB
      * @param Mem 内存容量，单位GiB
      */
-    public void setMem(Long Mem) {
+    public void setMem(Integer Mem) {
         this.Mem = Mem;
     }
 
@@ -199,7 +199,7 @@ public class ComputeNode extends AbstractModel{
      * Get 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。 
      * @return TaskInstanceNumAvailable 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
      */
-    public Long getTaskInstanceNumAvailable() {
+    public Integer getTaskInstanceNumAvailable() {
         return this.TaskInstanceNumAvailable;
     }
 
@@ -207,7 +207,7 @@ public class ComputeNode extends AbstractModel{
      * Set 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
      * @param TaskInstanceNumAvailable 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
      */
-    public void setTaskInstanceNumAvailable(Long TaskInstanceNumAvailable) {
+    public void setTaskInstanceNumAvailable(Integer TaskInstanceNumAvailable) {
         this.TaskInstanceNumAvailable = TaskInstanceNumAvailable;
     }
 

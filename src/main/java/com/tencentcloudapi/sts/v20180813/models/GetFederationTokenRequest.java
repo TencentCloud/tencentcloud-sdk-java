@@ -45,7 +45,7 @@ public class GetFederationTokenRequest extends AbstractModel{
     */
     @SerializedName("DurationSeconds")
     @Expose
-    private Long DurationSeconds;
+    private Integer DurationSeconds;
 
     /**
      * Get 您可以自定义调用方英文名称，由字母组成。 
@@ -99,7 +99,7 @@ public class GetFederationTokenRequest extends AbstractModel{
      * Get 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。 
      * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
-    public Long getDurationSeconds() {
+    public Integer getDurationSeconds() {
         return this.DurationSeconds;
     }
 
@@ -107,7 +107,7 @@ public class GetFederationTokenRequest extends AbstractModel{
      * Set 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
-    public void setDurationSeconds(Long DurationSeconds) {
+    public void setDurationSeconds(Integer DurationSeconds) {
         this.DurationSeconds = DurationSeconds;
     }
 

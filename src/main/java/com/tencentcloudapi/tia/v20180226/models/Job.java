@@ -97,14 +97,14 @@ public class Job extends AbstractModel{
     */
     @SerializedName("WorkerCount")
     @Expose
-    private Long WorkerCount;
+    private Integer WorkerCount;
 
     /**
     * （ScaleTier为Custom时）parameter server机器数量
     */
     @SerializedName("ParameterServerCount")
     @Expose
-    private Long ParameterServerCount;
+    private Integer ParameterServerCount;
 
     /**
     * 挂载的路径
@@ -153,7 +153,7 @@ public class Job extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 创建任务的Uin
@@ -347,7 +347,7 @@ public class Job extends AbstractModel{
      * Get （ScaleTier为Custom时）worker机器数量 
      * @return WorkerCount （ScaleTier为Custom时）worker机器数量
      */
-    public Long getWorkerCount() {
+    public Integer getWorkerCount() {
         return this.WorkerCount;
     }
 
@@ -355,7 +355,7 @@ public class Job extends AbstractModel{
      * Set （ScaleTier为Custom时）worker机器数量
      * @param WorkerCount （ScaleTier为Custom时）worker机器数量
      */
-    public void setWorkerCount(Long WorkerCount) {
+    public void setWorkerCount(Integer WorkerCount) {
         this.WorkerCount = WorkerCount;
     }
 
@@ -363,7 +363,7 @@ public class Job extends AbstractModel{
      * Get （ScaleTier为Custom时）parameter server机器数量 
      * @return ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
      */
-    public Long getParameterServerCount() {
+    public Integer getParameterServerCount() {
         return this.ParameterServerCount;
     }
 
@@ -371,7 +371,7 @@ public class Job extends AbstractModel{
      * Set （ScaleTier为Custom时）parameter server机器数量
      * @param ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
      */
-    public void setParameterServerCount(Long ParameterServerCount) {
+    public void setParameterServerCount(Integer ParameterServerCount) {
         this.ParameterServerCount = ParameterServerCount;
     }
 
@@ -475,7 +475,7 @@ public class Job extends AbstractModel{
      * Get 创建任务的AppId 
      * @return AppId 创建任务的AppId
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -483,7 +483,7 @@ public class Job extends AbstractModel{
      * Set 创建任务的AppId
      * @param AppId 创建任务的AppId
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 

@@ -27,7 +27,7 @@ public class DescribeDBImportRecordsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 返回的导入操作记录列表。
@@ -47,7 +47,7 @@ public class DescribeDBImportRecordsResponse extends AbstractModel{
      * Get 符合查询条件的导入任务操作日志总数。 
      * @return TotalCount 符合查询条件的导入任务操作日志总数。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBImportRecordsResponse extends AbstractModel{
      * Set 符合查询条件的导入任务操作日志总数。
      * @param TotalCount 符合查询条件的导入任务操作日志总数。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

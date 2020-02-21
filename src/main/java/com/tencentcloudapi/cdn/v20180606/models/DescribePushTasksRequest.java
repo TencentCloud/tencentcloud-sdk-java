@@ -56,14 +56,14 @@ TaskId 和起始时间必须指定一项
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页查询限制数目，默认为 20
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 指定地区查询预热纪录
@@ -157,7 +157,7 @@ TaskId 和起始时间必须指定一项
      * Get 分页查询偏移量，默认为 0 （第一页） 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -165,7 +165,7 @@ TaskId 和起始时间必须指定一项
      * Set 分页查询偏移量，默认为 0 （第一页）
      * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -173,7 +173,7 @@ TaskId 和起始时间必须指定一项
      * Get 分页查询限制数目，默认为 20 
      * @return Limit 分页查询限制数目，默认为 20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -181,7 +181,7 @@ TaskId 和起始时间必须指定一项
      * Set 分页查询限制数目，默认为 20
      * @param Limit 分页查询限制数目，默认为 20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

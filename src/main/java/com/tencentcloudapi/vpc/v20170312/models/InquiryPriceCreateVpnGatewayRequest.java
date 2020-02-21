@@ -27,7 +27,7 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Long InternetMaxBandwidthOut;
+    private Integer InternetMaxBandwidthOut;
 
     /**
     * VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
@@ -47,7 +47,7 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel{
      * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。 
      * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
-    public Long getInternetMaxBandwidthOut() {
+    public Integer getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -55,7 +55,7 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel{
      * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
-    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

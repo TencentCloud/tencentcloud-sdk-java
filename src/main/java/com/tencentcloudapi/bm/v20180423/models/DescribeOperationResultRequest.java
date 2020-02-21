@@ -27,13 +27,13 @@ public class DescribeOperationResultRequest extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
      * Get 异步任务ID 
      * @return TaskId 异步任务ID
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -41,7 +41,7 @@ public class DescribeOperationResultRequest extends AbstractModel{
      * Set 异步任务ID
      * @param TaskId 异步任务ID
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 

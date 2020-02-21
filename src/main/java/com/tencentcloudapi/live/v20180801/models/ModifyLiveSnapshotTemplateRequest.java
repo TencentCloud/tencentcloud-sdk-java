@@ -27,7 +27,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Long TemplateId;
+    private Integer TemplateId;
 
     /**
     * 模板名称。
@@ -51,35 +51,35 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     */
     @SerializedName("SnapshotInterval")
     @Expose
-    private Long SnapshotInterval;
+    private Integer SnapshotInterval;
 
     /**
     * 截图宽度。默认：0（原始宽）。
     */
     @SerializedName("Width")
     @Expose
-    private Long Width;
+    private Integer Width;
 
     /**
     * 截图高度。默认：0（原始高）。
     */
     @SerializedName("Height")
     @Expose
-    private Long Height;
+    private Integer Height;
 
     /**
     * 是否开启鉴黄，0：不开启，1：开启。
     */
     @SerializedName("PornFlag")
     @Expose
-    private Long PornFlag;
+    private Integer PornFlag;
 
     /**
     * Cos AppId。
     */
     @SerializedName("CosAppId")
     @Expose
-    private Long CosAppId;
+    private Integer CosAppId;
 
     /**
     * Cos Bucket名称。
@@ -99,7 +99,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
-    public Long getTemplateId() {
+    public Integer getTemplateId() {
         return this.TemplateId;
     }
 
@@ -107,7 +107,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Set 模板Id。
      * @param TemplateId 模板Id。
      */
-    public void setTemplateId(Long TemplateId) {
+    public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;
     }
 
@@ -157,7 +157,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * @return SnapshotInterval 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
      */
-    public Long getSnapshotInterval() {
+    public Integer getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
@@ -167,7 +167,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * @param SnapshotInterval 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
      */
-    public void setSnapshotInterval(Long SnapshotInterval) {
+    public void setSnapshotInterval(Integer SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
@@ -175,7 +175,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Get 截图宽度。默认：0（原始宽）。 
      * @return Width 截图宽度。默认：0（原始宽）。
      */
-    public Long getWidth() {
+    public Integer getWidth() {
         return this.Width;
     }
 
@@ -183,7 +183,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Set 截图宽度。默认：0（原始宽）。
      * @param Width 截图宽度。默认：0（原始宽）。
      */
-    public void setWidth(Long Width) {
+    public void setWidth(Integer Width) {
         this.Width = Width;
     }
 
@@ -191,7 +191,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Get 截图高度。默认：0（原始高）。 
      * @return Height 截图高度。默认：0（原始高）。
      */
-    public Long getHeight() {
+    public Integer getHeight() {
         return this.Height;
     }
 
@@ -199,7 +199,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Set 截图高度。默认：0（原始高）。
      * @param Height 截图高度。默认：0（原始高）。
      */
-    public void setHeight(Long Height) {
+    public void setHeight(Integer Height) {
         this.Height = Height;
     }
 
@@ -207,7 +207,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Get 是否开启鉴黄，0：不开启，1：开启。 
      * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。
      */
-    public Long getPornFlag() {
+    public Integer getPornFlag() {
         return this.PornFlag;
     }
 
@@ -215,7 +215,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Set 是否开启鉴黄，0：不开启，1：开启。
      * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。
      */
-    public void setPornFlag(Long PornFlag) {
+    public void setPornFlag(Integer PornFlag) {
         this.PornFlag = PornFlag;
     }
 
@@ -223,7 +223,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Get Cos AppId。 
      * @return CosAppId Cos AppId。
      */
-    public Long getCosAppId() {
+    public Integer getCosAppId() {
         return this.CosAppId;
     }
 
@@ -231,7 +231,7 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
      * Set Cos AppId。
      * @param CosAppId Cos AppId。
      */
-    public void setCosAppId(Long CosAppId) {
+    public void setCosAppId(Integer CosAppId) {
         this.CosAppId = CosAppId;
     }
 

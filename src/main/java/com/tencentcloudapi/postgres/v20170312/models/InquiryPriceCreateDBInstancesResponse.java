@@ -27,14 +27,14 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
     */
     @SerializedName("OriginalPrice")
     @Expose
-    private Long OriginalPrice;
+    private Integer OriginalPrice;
 
     /**
     * 折后价格，单位：分
     */
     @SerializedName("Price")
     @Expose
-    private Long Price;
+    private Integer Price;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Get 原始价格，单位：分 
      * @return OriginalPrice 原始价格，单位：分
      */
-    public Long getOriginalPrice() {
+    public Integer getOriginalPrice() {
         return this.OriginalPrice;
     }
 
@@ -55,7 +55,7 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Set 原始价格，单位：分
      * @param OriginalPrice 原始价格，单位：分
      */
-    public void setOriginalPrice(Long OriginalPrice) {
+    public void setOriginalPrice(Integer OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
@@ -63,7 +63,7 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Get 折后价格，单位：分 
      * @return Price 折后价格，单位：分
      */
-    public Long getPrice() {
+    public Integer getPrice() {
         return this.Price;
     }
 
@@ -71,7 +71,7 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
      * Set 折后价格，单位：分
      * @param Price 折后价格，单位：分
      */
-    public void setPrice(Long Price) {
+    public void setPrice(Integer Price) {
         this.Price = Price;
     }
 

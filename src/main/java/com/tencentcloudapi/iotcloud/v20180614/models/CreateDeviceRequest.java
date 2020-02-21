@@ -55,7 +55,7 @@ public class CreateDeviceRequest extends AbstractModel{
     */
     @SerializedName("Isp")
     @Expose
-    private Long Isp;
+    private Integer Isp;
 
     /**
     * IMEI，当产品是NB-IoT产品时，此字段必填
@@ -76,7 +76,7 @@ public class CreateDeviceRequest extends AbstractModel{
     */
     @SerializedName("LoraMoteType")
     @Expose
-    private Long LoraMoteType;
+    private Integer LoraMoteType;
 
     /**
     * 创建LoRa设备需要skey
@@ -160,7 +160,7 @@ public class CreateDeviceRequest extends AbstractModel{
      * Get 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通 
      * @return Isp 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      */
-    public Long getIsp() {
+    public Integer getIsp() {
         return this.Isp;
     }
 
@@ -168,7 +168,7 @@ public class CreateDeviceRequest extends AbstractModel{
      * Set 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      * @param Isp 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      */
-    public void setIsp(Long Isp) {
+    public void setIsp(Integer Isp) {
         this.Isp = Isp;
     }
 
@@ -208,7 +208,7 @@ public class CreateDeviceRequest extends AbstractModel{
      * Get LoRa设备的MoteType 
      * @return LoraMoteType LoRa设备的MoteType
      */
-    public Long getLoraMoteType() {
+    public Integer getLoraMoteType() {
         return this.LoraMoteType;
     }
 
@@ -216,7 +216,7 @@ public class CreateDeviceRequest extends AbstractModel{
      * Set LoRa设备的MoteType
      * @param LoraMoteType LoRa设备的MoteType
      */
-    public void setLoraMoteType(Long LoraMoteType) {
+    public void setLoraMoteType(Integer LoraMoteType) {
         this.LoraMoteType = LoraMoteType;
     }
 

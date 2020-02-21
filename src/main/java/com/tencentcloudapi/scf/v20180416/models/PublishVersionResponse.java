@@ -34,14 +34,14 @@ public class PublishVersionResponse extends AbstractModel{
     */
     @SerializedName("CodeSize")
     @Expose
-    private Long CodeSize;
+    private Integer CodeSize;
 
     /**
     * 最大可用内存
     */
     @SerializedName("MemorySize")
     @Expose
-    private Long MemorySize;
+    private Integer MemorySize;
 
     /**
     * 函数的描述
@@ -62,7 +62,7 @@ public class PublishVersionResponse extends AbstractModel{
     */
     @SerializedName("Timeout")
     @Expose
-    private Long Timeout;
+    private Integer Timeout;
 
     /**
     * 函数的运行环境
@@ -105,7 +105,7 @@ public class PublishVersionResponse extends AbstractModel{
      * Get 代码大小 
      * @return CodeSize 代码大小
      */
-    public Long getCodeSize() {
+    public Integer getCodeSize() {
         return this.CodeSize;
     }
 
@@ -113,7 +113,7 @@ public class PublishVersionResponse extends AbstractModel{
      * Set 代码大小
      * @param CodeSize 代码大小
      */
-    public void setCodeSize(Long CodeSize) {
+    public void setCodeSize(Integer CodeSize) {
         this.CodeSize = CodeSize;
     }
 
@@ -121,7 +121,7 @@ public class PublishVersionResponse extends AbstractModel{
      * Get 最大可用内存 
      * @return MemorySize 最大可用内存
      */
-    public Long getMemorySize() {
+    public Integer getMemorySize() {
         return this.MemorySize;
     }
 
@@ -129,7 +129,7 @@ public class PublishVersionResponse extends AbstractModel{
      * Set 最大可用内存
      * @param MemorySize 最大可用内存
      */
-    public void setMemorySize(Long MemorySize) {
+    public void setMemorySize(Integer MemorySize) {
         this.MemorySize = MemorySize;
     }
 
@@ -169,7 +169,7 @@ public class PublishVersionResponse extends AbstractModel{
      * Get 函数的超时时间 
      * @return Timeout 函数的超时时间
      */
-    public Long getTimeout() {
+    public Integer getTimeout() {
         return this.Timeout;
     }
 
@@ -177,7 +177,7 @@ public class PublishVersionResponse extends AbstractModel{
      * Set 函数的超时时间
      * @param Timeout 函数的超时时间
      */
-    public void setTimeout(Long Timeout) {
+    public void setTimeout(Integer Timeout) {
         this.Timeout = Timeout;
     }
 

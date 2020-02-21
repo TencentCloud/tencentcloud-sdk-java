@@ -27,7 +27,7 @@ public class ShieldPlanInfo extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 加固策略具体信息数组
@@ -40,7 +40,7 @@ public class ShieldPlanInfo extends AbstractModel{
      * Get 加固策略数量 
      * @return TotalCount 加固策略数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -48,7 +48,7 @@ public class ShieldPlanInfo extends AbstractModel{
      * Set 加固策略数量
      * @param TotalCount 加固策略数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

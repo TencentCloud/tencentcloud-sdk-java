@@ -27,14 +27,14 @@ public class DiskInfo extends AbstractModel{
     */
     @SerializedName("DiskTypeId")
     @Expose
-    private Long DiskTypeId;
+    private Integer DiskTypeId;
 
     /**
     * 磁盘的容量，单位为G
     */
     @SerializedName("Size")
     @Expose
-    private Long Size;
+    private Integer Size;
 
     /**
     * 磁盘信息描述
@@ -47,7 +47,7 @@ public class DiskInfo extends AbstractModel{
      * Get 磁盘ID 
      * @return DiskTypeId 磁盘ID
      */
-    public Long getDiskTypeId() {
+    public Integer getDiskTypeId() {
         return this.DiskTypeId;
     }
 
@@ -55,7 +55,7 @@ public class DiskInfo extends AbstractModel{
      * Set 磁盘ID
      * @param DiskTypeId 磁盘ID
      */
-    public void setDiskTypeId(Long DiskTypeId) {
+    public void setDiskTypeId(Integer DiskTypeId) {
         this.DiskTypeId = DiskTypeId;
     }
 
@@ -63,7 +63,7 @@ public class DiskInfo extends AbstractModel{
      * Get 磁盘的容量，单位为G 
      * @return Size 磁盘的容量，单位为G
      */
-    public Long getSize() {
+    public Integer getSize() {
         return this.Size;
     }
 
@@ -71,7 +71,7 @@ public class DiskInfo extends AbstractModel{
      * Set 磁盘的容量，单位为G
      * @param Size 磁盘的容量，单位为G
      */
-    public void setSize(Long Size) {
+    public void setSize(Integer Size) {
         this.Size = Size;
     }
 

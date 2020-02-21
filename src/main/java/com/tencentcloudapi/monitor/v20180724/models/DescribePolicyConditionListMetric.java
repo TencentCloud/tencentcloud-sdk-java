@@ -34,7 +34,7 @@ public class DescribePolicyConditionListMetric extends AbstractModel{
     */
     @SerializedName("MetricId")
     @Expose
-    private Long MetricId;
+    private Integer MetricId;
 
     /**
     * 指标名称
@@ -70,7 +70,7 @@ public class DescribePolicyConditionListMetric extends AbstractModel{
      * Get 指标id 
      * @return MetricId 指标id
      */
-    public Long getMetricId() {
+    public Integer getMetricId() {
         return this.MetricId;
     }
 
@@ -78,7 +78,7 @@ public class DescribePolicyConditionListMetric extends AbstractModel{
      * Set 指标id
      * @param MetricId 指标id
      */
-    public void setMetricId(Long MetricId) {
+    public void setMetricId(Integer MetricId) {
         this.MetricId = MetricId;
     }
 

@@ -27,7 +27,7 @@ public class ApplyUserCertResponse extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Long CertId;
+    private Integer CertId;
 
     /**
     * 证书DN
@@ -47,7 +47,7 @@ public class ApplyUserCertResponse extends AbstractModel{
      * Get 证书ID 
      * @return CertId 证书ID
      */
-    public Long getCertId() {
+    public Integer getCertId() {
         return this.CertId;
     }
 
@@ -55,7 +55,7 @@ public class ApplyUserCertResponse extends AbstractModel{
      * Set 证书ID
      * @param CertId 证书ID
      */
-    public void setCertId(Long CertId) {
+    public void setCertId(Integer CertId) {
         this.CertId = CertId;
     }
 

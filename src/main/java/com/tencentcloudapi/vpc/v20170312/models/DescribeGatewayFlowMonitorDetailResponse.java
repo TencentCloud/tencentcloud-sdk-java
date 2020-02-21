@@ -27,7 +27,7 @@ public class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 网关流量监控明细。
@@ -47,7 +47,7 @@ public class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel{
      * Get 符合条件的对象数。 
      * @return TotalCount 符合条件的对象数。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel{
      * Set 符合条件的对象数。
      * @param TotalCount 符合条件的对象数。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

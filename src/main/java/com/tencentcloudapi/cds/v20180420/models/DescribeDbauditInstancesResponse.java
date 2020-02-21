@@ -27,7 +27,7 @@ public class DescribeDbauditInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 数据安全审计实例信息列表
@@ -47,7 +47,7 @@ public class DescribeDbauditInstancesResponse extends AbstractModel{
      * Get 总实例数 
      * @return TotalCount 总实例数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDbauditInstancesResponse extends AbstractModel{
      * Set 总实例数
      * @param TotalCount 总实例数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

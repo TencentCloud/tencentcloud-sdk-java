@@ -34,7 +34,7 @@ public class DescribeShieldPlanInstanceRequest extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Long Pid;
+    private Integer Pid;
 
     /**
      * Get 资源id 
@@ -56,7 +56,7 @@ public class DescribeShieldPlanInstanceRequest extends AbstractModel{
      * Get 服务类别id 
      * @return Pid 服务类别id
      */
-    public Long getPid() {
+    public Integer getPid() {
         return this.Pid;
     }
 
@@ -64,7 +64,7 @@ public class DescribeShieldPlanInstanceRequest extends AbstractModel{
      * Set 服务类别id
      * @param Pid 服务类别id
      */
-    public void setPid(Long Pid) {
+    public void setPid(Integer Pid) {
         this.Pid = Pid;
     }
 

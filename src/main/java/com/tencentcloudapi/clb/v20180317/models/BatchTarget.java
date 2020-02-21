@@ -34,7 +34,7 @@ public class BatchTarget extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 子机ID
@@ -55,7 +55,7 @@ public class BatchTarget extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Long Weight;
+    private Integer Weight;
 
     /**
     * 七层规则ID
@@ -84,7 +84,7 @@ public class BatchTarget extends AbstractModel{
      * Get 绑定端口 
      * @return Port 绑定端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -92,7 +92,7 @@ public class BatchTarget extends AbstractModel{
      * Set 绑定端口
      * @param Port 绑定端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -132,7 +132,7 @@ public class BatchTarget extends AbstractModel{
      * Get 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。 
      * @return Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      */
-    public Long getWeight() {
+    public Integer getWeight() {
         return this.Weight;
     }
 
@@ -140,7 +140,7 @@ public class BatchTarget extends AbstractModel{
      * Set 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      * @param Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      */
-    public void setWeight(Long Weight) {
+    public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 

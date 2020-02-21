@@ -41,21 +41,21 @@ public class CreateScheduledActionRequest extends AbstractModel{
     */
     @SerializedName("MaxSize")
     @Expose
-    private Long MaxSize;
+    private Integer MaxSize;
 
     /**
     * 当定时任务触发时，设置的伸缩组最小实例数。
     */
     @SerializedName("MinSize")
     @Expose
-    private Long MinSize;
+    private Integer MinSize;
 
     /**
     * 当定时任务触发时，设置的伸缩组期望实例数。
     */
     @SerializedName("DesiredCapacity")
     @Expose
-    private Long DesiredCapacity;
+    private Integer DesiredCapacity;
 
     /**
     * 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
@@ -114,7 +114,7 @@ public class CreateScheduledActionRequest extends AbstractModel{
      * Get 当定时任务触发时，设置的伸缩组最大实例数。 
      * @return MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
      */
-    public Long getMaxSize() {
+    public Integer getMaxSize() {
         return this.MaxSize;
     }
 
@@ -122,7 +122,7 @@ public class CreateScheduledActionRequest extends AbstractModel{
      * Set 当定时任务触发时，设置的伸缩组最大实例数。
      * @param MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
      */
-    public void setMaxSize(Long MaxSize) {
+    public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;
     }
 
@@ -130,7 +130,7 @@ public class CreateScheduledActionRequest extends AbstractModel{
      * Get 当定时任务触发时，设置的伸缩组最小实例数。 
      * @return MinSize 当定时任务触发时，设置的伸缩组最小实例数。
      */
-    public Long getMinSize() {
+    public Integer getMinSize() {
         return this.MinSize;
     }
 
@@ -138,7 +138,7 @@ public class CreateScheduledActionRequest extends AbstractModel{
      * Set 当定时任务触发时，设置的伸缩组最小实例数。
      * @param MinSize 当定时任务触发时，设置的伸缩组最小实例数。
      */
-    public void setMinSize(Long MinSize) {
+    public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
     }
 
@@ -146,7 +146,7 @@ public class CreateScheduledActionRequest extends AbstractModel{
      * Get 当定时任务触发时，设置的伸缩组期望实例数。 
      * @return DesiredCapacity 当定时任务触发时，设置的伸缩组期望实例数。
      */
-    public Long getDesiredCapacity() {
+    public Integer getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
@@ -154,7 +154,7 @@ public class CreateScheduledActionRequest extends AbstractModel{
      * Set 当定时任务触发时，设置的伸缩组期望实例数。
      * @param DesiredCapacity 当定时任务触发时，设置的伸缩组期望实例数。
      */
-    public void setDesiredCapacity(Long DesiredCapacity) {
+    public void setDesiredCapacity(Integer DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 

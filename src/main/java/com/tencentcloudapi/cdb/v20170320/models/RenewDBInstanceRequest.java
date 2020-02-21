@@ -34,7 +34,7 @@ public class RenewDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Long TimeSpan;
+    private Integer TimeSpan;
 
     /**
      * Get 待续费的实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。 
@@ -56,7 +56,7 @@ public class RenewDBInstanceRequest extends AbstractModel{
      * Get 续费时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。 
      * @return TimeSpan 续费时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -64,7 +64,7 @@ public class RenewDBInstanceRequest extends AbstractModel{
      * Set 续费时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      * @param TimeSpan 续费时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      */
-    public void setTimeSpan(Long TimeSpan) {
+    public void setTimeSpan(Integer TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 

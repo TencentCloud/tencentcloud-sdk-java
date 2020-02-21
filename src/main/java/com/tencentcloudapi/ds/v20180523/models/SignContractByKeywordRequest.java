@@ -83,7 +83,7 @@ public class SignContractByKeywordRequest extends AbstractModel{
     */
     @SerializedName("CertType")
     @Expose
-    private Long CertType;
+    private Integer CertType;
 
     /**
     * 签名图片，base64编码
@@ -224,7 +224,7 @@ public class SignContractByKeywordRequest extends AbstractModel{
      * Get 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1 
      * @return CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
-    public Long getCertType() {
+    public Integer getCertType() {
         return this.CertType;
     }
 
@@ -232,7 +232,7 @@ public class SignContractByKeywordRequest extends AbstractModel{
      * Set 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      * @param CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
-    public void setCertType(Long CertType) {
+    public void setCertType(Integer CertType) {
         this.CertType = CertType;
     }
 

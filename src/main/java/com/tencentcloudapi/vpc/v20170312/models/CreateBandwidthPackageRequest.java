@@ -48,14 +48,14 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     */
     @SerializedName("BandwidthPackageCount")
     @Expose
-    private Long BandwidthPackageCount;
+    private Integer BandwidthPackageCount;
 
     /**
     * 带宽包限速大小。单位：Mbps，-1表示不限速。
     */
     @SerializedName("InternetMaxBandwidth")
     @Expose
-    private Long InternetMaxBandwidth;
+    private Integer InternetMaxBandwidth;
 
     /**
     * 需要关联的标签列表。
@@ -123,7 +123,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
      * Get 带宽包数量(非上移账户只能填1) 
      * @return BandwidthPackageCount 带宽包数量(非上移账户只能填1)
      */
-    public Long getBandwidthPackageCount() {
+    public Integer getBandwidthPackageCount() {
         return this.BandwidthPackageCount;
     }
 
@@ -131,7 +131,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
      * Set 带宽包数量(非上移账户只能填1)
      * @param BandwidthPackageCount 带宽包数量(非上移账户只能填1)
      */
-    public void setBandwidthPackageCount(Long BandwidthPackageCount) {
+    public void setBandwidthPackageCount(Integer BandwidthPackageCount) {
         this.BandwidthPackageCount = BandwidthPackageCount;
     }
 
@@ -139,7 +139,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
      * Get 带宽包限速大小。单位：Mbps，-1表示不限速。 
      * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
-    public Long getInternetMaxBandwidth() {
+    public Integer getInternetMaxBandwidth() {
         return this.InternetMaxBandwidth;
     }
 
@@ -147,7 +147,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
      * Set 带宽包限速大小。单位：Mbps，-1表示不限速。
      * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
-    public void setInternetMaxBandwidth(Long InternetMaxBandwidth) {
+    public void setInternetMaxBandwidth(Integer InternetMaxBandwidth) {
         this.InternetMaxBandwidth = InternetMaxBandwidth;
     }
 

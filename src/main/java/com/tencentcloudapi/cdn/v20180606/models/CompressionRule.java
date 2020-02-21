@@ -45,7 +45,7 @@ public class CompressionRule extends AbstractModel{
     */
     @SerializedName("MinLength")
     @Expose
-    private Long MinLength;
+    private Integer MinLength;
 
     /**
     * 触发压缩的文件长度最大值，单位为字节数
@@ -54,7 +54,7 @@ public class CompressionRule extends AbstractModel{
     */
     @SerializedName("MaxLength")
     @Expose
-    private Long MaxLength;
+    private Integer MaxLength;
 
     /**
     * 文件压缩算法
@@ -116,7 +116,7 @@ brotli：需要同时指定 GZIP 压缩才可启用
      * @return MinLength 触发压缩的文件长度最小值，单位为字节数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMinLength() {
+    public Integer getMinLength() {
         return this.MinLength;
     }
 
@@ -126,7 +126,7 @@ brotli：需要同时指定 GZIP 压缩才可启用
      * @param MinLength 触发压缩的文件长度最小值，单位为字节数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMinLength(Long MinLength) {
+    public void setMinLength(Integer MinLength) {
         this.MinLength = MinLength;
     }
 
@@ -138,7 +138,7 @@ brotli：需要同时指定 GZIP 压缩才可启用
 最大可设置为 30MB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMaxLength() {
+    public Integer getMaxLength() {
         return this.MaxLength;
     }
 
@@ -150,7 +150,7 @@ brotli：需要同时指定 GZIP 压缩才可启用
 最大可设置为 30MB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMaxLength(Long MaxLength) {
+    public void setMaxLength(Integer MaxLength) {
         this.MaxLength = MaxLength;
     }
 

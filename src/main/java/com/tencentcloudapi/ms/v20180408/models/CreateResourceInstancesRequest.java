@@ -27,7 +27,7 @@ public class CreateResourceInstancesRequest extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Long Pid;
+    private Integer Pid;
 
     /**
     * 时间单位，取值为d，m，y，分别表示天，月，年。
@@ -41,20 +41,20 @@ public class CreateResourceInstancesRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Long TimeSpan;
+    private Integer TimeSpan;
 
     /**
     * 资源数量。
     */
     @SerializedName("ResourceNum")
     @Expose
-    private Long ResourceNum;
+    private Integer ResourceNum;
 
     /**
      * Get 资源类型id。13624：加固专业版。 
      * @return Pid 资源类型id。13624：加固专业版。
      */
-    public Long getPid() {
+    public Integer getPid() {
         return this.Pid;
     }
 
@@ -62,7 +62,7 @@ public class CreateResourceInstancesRequest extends AbstractModel{
      * Set 资源类型id。13624：加固专业版。
      * @param Pid 资源类型id。13624：加固专业版。
      */
-    public void setPid(Long Pid) {
+    public void setPid(Integer Pid) {
         this.Pid = Pid;
     }
 
@@ -86,7 +86,7 @@ public class CreateResourceInstancesRequest extends AbstractModel{
      * Get 时间数量。 
      * @return TimeSpan 时间数量。
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -94,7 +94,7 @@ public class CreateResourceInstancesRequest extends AbstractModel{
      * Set 时间数量。
      * @param TimeSpan 时间数量。
      */
-    public void setTimeSpan(Long TimeSpan) {
+    public void setTimeSpan(Integer TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -102,7 +102,7 @@ public class CreateResourceInstancesRequest extends AbstractModel{
      * Get 资源数量。 
      * @return ResourceNum 资源数量。
      */
-    public Long getResourceNum() {
+    public Integer getResourceNum() {
         return this.ResourceNum;
     }
 
@@ -110,7 +110,7 @@ public class CreateResourceInstancesRequest extends AbstractModel{
      * Set 资源数量。
      * @param ResourceNum 资源数量。
      */
-    public void setResourceNum(Long ResourceNum) {
+    public void setResourceNum(Integer ResourceNum) {
         this.ResourceNum = ResourceNum;
     }
 

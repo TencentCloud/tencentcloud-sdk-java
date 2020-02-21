@@ -34,7 +34,7 @@ public class EduPaperOCRResponse extends AbstractModel{
     */
     @SerializedName("Angle")
     @Expose
-    private Long Angle;
+    private Integer Angle;
 
     /**
     * 结构化方式输出，具体内容请点击左侧链接。
@@ -70,7 +70,7 @@ public class EduPaperOCRResponse extends AbstractModel{
      * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。 
      * @return Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
      */
-    public Long getAngle() {
+    public Integer getAngle() {
         return this.Angle;
     }
 
@@ -78,7 +78,7 @@ public class EduPaperOCRResponse extends AbstractModel{
      * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
      * @param Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
      */
-    public void setAngle(Long Angle) {
+    public void setAngle(Integer Angle) {
         this.Angle = Angle;
     }
 

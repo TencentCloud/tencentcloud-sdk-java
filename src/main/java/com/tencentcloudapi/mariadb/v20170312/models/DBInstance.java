@@ -41,14 +41,14 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 实例所属项目 ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 实例所在地域名称，如 ap-shanghai
@@ -69,21 +69,21 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("VpcId")
     @Expose
-    private Long VpcId;
+    private Integer VpcId;
 
     /**
     * 子网 ID，基础网络时为 0
     */
     @SerializedName("SubnetId")
     @Expose
-    private Long SubnetId;
+    private Integer SubnetId;
 
     /**
     * 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 内网 IP 地址
@@ -97,7 +97,7 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Long Vport;
+    private Integer Vport;
 
     /**
     * 外网访问的域名，公网可解析
@@ -118,7 +118,7 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("WanPort")
     @Expose
-    private Long WanPort;
+    private Integer WanPort;
 
     /**
     * 实例创建时间，格式为 2006-01-02 15:04:05
@@ -139,7 +139,7 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
     * 实例到期时间，格式为 2006-01-02 15:04:05
@@ -167,14 +167,14 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例存储大小，单位 GB
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 字符串型的私有网络ID
@@ -202,14 +202,14 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("NodeCount")
     @Expose
-    private Long NodeCount;
+    private Integer NodeCount;
 
     /**
     * 是否临时实例，0为否，非0为是
     */
     @SerializedName("IsTmp")
     @Expose
-    private Long IsTmp;
+    private Integer IsTmp;
 
     /**
     * 独享集群ID，为空表示为普通实例
@@ -223,21 +223,21 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 产品类型 ID
     */
     @SerializedName("Pid")
     @Expose
-    private Long Pid;
+    private Integer Pid;
 
     /**
     * 最大 Qps 值
     */
     @SerializedName("Qps")
     @Expose
-    private Long Qps;
+    private Integer Qps;
 
     /**
     * 付费模式
@@ -253,7 +253,7 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("Locker")
     @Expose
-    private Long Locker;
+    private Integer Locker;
 
     /**
     * 实例目前运行状态描述
@@ -268,14 +268,14 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("WanStatus")
     @Expose
-    private Long WanStatus;
+    private Integer WanStatus;
 
     /**
     * 该实例是否支持审计。1-支持；0-不支持
     */
     @SerializedName("IsAuditSupported")
     @Expose
-    private Long IsAuditSupported;
+    private Integer IsAuditSupported;
 
     /**
     * 机器型号
@@ -289,7 +289,7 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("IsEncryptSupported")
     @Expose
-    private Long IsEncryptSupported;
+    private Integer IsEncryptSupported;
 
     /**
      * Get 实例 ID，唯一标识一个 TDSQL 实例 
@@ -327,7 +327,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例所属应用 ID 
      * @return AppId 实例所属应用 ID
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -335,7 +335,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例所属应用 ID
      * @param AppId 实例所属应用 ID
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
@@ -343,7 +343,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例所属项目 ID 
      * @return ProjectId 实例所属项目 ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -351,7 +351,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例所属项目 ID
      * @param ProjectId 实例所属项目 ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -391,7 +391,7 @@ public class DBInstance extends AbstractModel{
      * Get 私有网络 ID，基础网络时为 0 
      * @return VpcId 私有网络 ID，基础网络时为 0
      */
-    public Long getVpcId() {
+    public Integer getVpcId() {
         return this.VpcId;
     }
 
@@ -399,7 +399,7 @@ public class DBInstance extends AbstractModel{
      * Set 私有网络 ID，基础网络时为 0
      * @param VpcId 私有网络 ID，基础网络时为 0
      */
-    public void setVpcId(Long VpcId) {
+    public void setVpcId(Integer VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -407,7 +407,7 @@ public class DBInstance extends AbstractModel{
      * Get 子网 ID，基础网络时为 0 
      * @return SubnetId 子网 ID，基础网络时为 0
      */
-    public Long getSubnetId() {
+    public Integer getSubnetId() {
         return this.SubnetId;
     }
 
@@ -415,7 +415,7 @@ public class DBInstance extends AbstractModel{
      * Set 子网 ID，基础网络时为 0
      * @param SubnetId 子网 ID，基础网络时为 0
      */
-    public void setSubnetId(Long SubnetId) {
+    public void setSubnetId(Integer SubnetId) {
         this.SubnetId = SubnetId;
     }
 
@@ -423,7 +423,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除 
      * @return Status 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -431,7 +431,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
      * @param Status 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -455,7 +455,7 @@ public class DBInstance extends AbstractModel{
      * Get 内网端口 
      * @return Vport 内网端口
      */
-    public Long getVport() {
+    public Integer getVport() {
         return this.Vport;
     }
 
@@ -463,7 +463,7 @@ public class DBInstance extends AbstractModel{
      * Set 内网端口
      * @param Vport 内网端口
      */
-    public void setVport(Long Vport) {
+    public void setVport(Integer Vport) {
         this.Vport = Vport;
     }
 
@@ -503,7 +503,7 @@ public class DBInstance extends AbstractModel{
      * Get 外网端口 
      * @return WanPort 外网端口
      */
-    public Long getWanPort() {
+    public Integer getWanPort() {
         return this.WanPort;
     }
 
@@ -511,7 +511,7 @@ public class DBInstance extends AbstractModel{
      * Set 外网端口
      * @param WanPort 外网端口
      */
-    public void setWanPort(Long WanPort) {
+    public void setWanPort(Integer WanPort) {
         this.WanPort = WanPort;
     }
 
@@ -551,7 +551,7 @@ public class DBInstance extends AbstractModel{
      * Get 自动续费标志：0 否，1 是 
      * @return AutoRenewFlag 自动续费标志：0 否，1 是
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -559,7 +559,7 @@ public class DBInstance extends AbstractModel{
      * Set 自动续费标志：0 否，1 是
      * @param AutoRenewFlag 自动续费标志：0 否，1 是
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
@@ -615,7 +615,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例内存大小，单位 GB 
      * @return Memory 实例内存大小，单位 GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -623,7 +623,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例内存大小，单位 GB
      * @param Memory 实例内存大小，单位 GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -631,7 +631,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例存储大小，单位 GB 
      * @return Storage 实例存储大小，单位 GB
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -639,7 +639,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例存储大小，单位 GB
      * @param Storage 实例存储大小，单位 GB
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 
@@ -695,7 +695,7 @@ public class DBInstance extends AbstractModel{
      * Get 节点数，2为一主一从，3为一主二从 
      * @return NodeCount 节点数，2为一主一从，3为一主二从
      */
-    public Long getNodeCount() {
+    public Integer getNodeCount() {
         return this.NodeCount;
     }
 
@@ -703,7 +703,7 @@ public class DBInstance extends AbstractModel{
      * Set 节点数，2为一主一从，3为一主二从
      * @param NodeCount 节点数，2为一主一从，3为一主二从
      */
-    public void setNodeCount(Long NodeCount) {
+    public void setNodeCount(Integer NodeCount) {
         this.NodeCount = NodeCount;
     }
 
@@ -711,7 +711,7 @@ public class DBInstance extends AbstractModel{
      * Get 是否临时实例，0为否，非0为是 
      * @return IsTmp 是否临时实例，0为否，非0为是
      */
-    public Long getIsTmp() {
+    public Integer getIsTmp() {
         return this.IsTmp;
     }
 
@@ -719,7 +719,7 @@ public class DBInstance extends AbstractModel{
      * Set 是否临时实例，0为否，非0为是
      * @param IsTmp 是否临时实例，0为否，非0为是
      */
-    public void setIsTmp(Long IsTmp) {
+    public void setIsTmp(Integer IsTmp) {
         this.IsTmp = IsTmp;
     }
 
@@ -743,7 +743,7 @@ public class DBInstance extends AbstractModel{
      * Get 数字实例ID（过时字段，请勿依赖该值） 
      * @return Id 数字实例ID（过时字段，请勿依赖该值）
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -751,7 +751,7 @@ public class DBInstance extends AbstractModel{
      * Set 数字实例ID（过时字段，请勿依赖该值）
      * @param Id 数字实例ID（过时字段，请勿依赖该值）
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -759,7 +759,7 @@ public class DBInstance extends AbstractModel{
      * Get 产品类型 ID 
      * @return Pid 产品类型 ID
      */
-    public Long getPid() {
+    public Integer getPid() {
         return this.Pid;
     }
 
@@ -767,7 +767,7 @@ public class DBInstance extends AbstractModel{
      * Set 产品类型 ID
      * @param Pid 产品类型 ID
      */
-    public void setPid(Long Pid) {
+    public void setPid(Integer Pid) {
         this.Pid = Pid;
     }
 
@@ -775,7 +775,7 @@ public class DBInstance extends AbstractModel{
      * Get 最大 Qps 值 
      * @return Qps 最大 Qps 值
      */
-    public Long getQps() {
+    public Integer getQps() {
         return this.Qps;
     }
 
@@ -783,7 +783,7 @@ public class DBInstance extends AbstractModel{
      * Set 最大 Qps 值
      * @param Qps 最大 Qps 值
      */
-    public void setQps(Long Qps) {
+    public void setQps(Integer Qps) {
         this.Qps = Qps;
     }
 
@@ -813,7 +813,7 @@ public class DBInstance extends AbstractModel{
      * @return Locker 实例处于异步任务时的异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getLocker() {
+    public Integer getLocker() {
         return this.Locker;
     }
 
@@ -823,7 +823,7 @@ public class DBInstance extends AbstractModel{
      * @param Locker 实例处于异步任务时的异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLocker(Long Locker) {
+    public void setLocker(Integer Locker) {
         this.Locker = Locker;
     }
 
@@ -851,7 +851,7 @@ public class DBInstance extends AbstractModel{
      * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中 
      * @return WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
-    public Long getWanStatus() {
+    public Integer getWanStatus() {
         return this.WanStatus;
     }
 
@@ -859,7 +859,7 @@ public class DBInstance extends AbstractModel{
      * Set 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
-    public void setWanStatus(Long WanStatus) {
+    public void setWanStatus(Integer WanStatus) {
         this.WanStatus = WanStatus;
     }
 
@@ -867,7 +867,7 @@ public class DBInstance extends AbstractModel{
      * Get 该实例是否支持审计。1-支持；0-不支持 
      * @return IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
-    public Long getIsAuditSupported() {
+    public Integer getIsAuditSupported() {
         return this.IsAuditSupported;
     }
 
@@ -875,7 +875,7 @@ public class DBInstance extends AbstractModel{
      * Set 该实例是否支持审计。1-支持；0-不支持
      * @param IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
-    public void setIsAuditSupported(Long IsAuditSupported) {
+    public void setIsAuditSupported(Integer IsAuditSupported) {
         this.IsAuditSupported = IsAuditSupported;
     }
 
@@ -899,7 +899,7 @@ public class DBInstance extends AbstractModel{
      * Get 是否支持数据加密。1-支持；0-不支持 
      * @return IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      */
-    public Long getIsEncryptSupported() {
+    public Integer getIsEncryptSupported() {
         return this.IsEncryptSupported;
     }
 
@@ -907,7 +907,7 @@ public class DBInstance extends AbstractModel{
      * Set 是否支持数据加密。1-支持；0-不支持
      * @param IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      */
-    public void setIsEncryptSupported(Long IsEncryptSupported) {
+    public void setIsEncryptSupported(Integer IsEncryptSupported) {
         this.IsEncryptSupported = IsEncryptSupported;
     }
 

@@ -27,14 +27,14 @@ public class DescribeDBPriceResponse extends AbstractModel{
     */
     @SerializedName("Price")
     @Expose
-    private Long Price;
+    private Integer Price;
 
     /**
     * 实例原价，单位：分（人民币）。
     */
     @SerializedName("OriginalPrice")
     @Expose
-    private Long OriginalPrice;
+    private Integer OriginalPrice;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class DescribeDBPriceResponse extends AbstractModel{
      * Get 实例价格，单位：分（人民币）。 
      * @return Price 实例价格，单位：分（人民币）。
      */
-    public Long getPrice() {
+    public Integer getPrice() {
         return this.Price;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBPriceResponse extends AbstractModel{
      * Set 实例价格，单位：分（人民币）。
      * @param Price 实例价格，单位：分（人民币）。
      */
-    public void setPrice(Long Price) {
+    public void setPrice(Integer Price) {
         this.Price = Price;
     }
 
@@ -63,7 +63,7 @@ public class DescribeDBPriceResponse extends AbstractModel{
      * Get 实例原价，单位：分（人民币）。 
      * @return OriginalPrice 实例原价，单位：分（人民币）。
      */
-    public Long getOriginalPrice() {
+    public Integer getOriginalPrice() {
         return this.OriginalPrice;
     }
 
@@ -71,7 +71,7 @@ public class DescribeDBPriceResponse extends AbstractModel{
      * Set 实例原价，单位：分（人民币）。
      * @param OriginalPrice 实例原价，单位：分（人民币）。
      */
-    public void setOriginalPrice(Long OriginalPrice) {
+    public void setOriginalPrice(Integer OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 

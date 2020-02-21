@@ -27,7 +27,7 @@ public class SendSmsRequest extends AbstractModel{
     */
     @SerializedName("Sdkappid")
     @Expose
-    private Long Sdkappid;
+    private Integer Sdkappid;
 
     /**
     * 卡片ID
@@ -47,7 +47,7 @@ public class SendSmsRequest extends AbstractModel{
      * Get 应用ID 
      * @return Sdkappid 应用ID
      */
-    public Long getSdkappid() {
+    public Integer getSdkappid() {
         return this.Sdkappid;
     }
 
@@ -55,7 +55,7 @@ public class SendSmsRequest extends AbstractModel{
      * Set 应用ID
      * @param Sdkappid 应用ID
      */
-    public void setSdkappid(Long Sdkappid) {
+    public void setSdkappid(Integer Sdkappid) {
         this.Sdkappid = Sdkappid;
     }
 

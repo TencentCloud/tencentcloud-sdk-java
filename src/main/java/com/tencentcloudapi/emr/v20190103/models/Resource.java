@@ -36,7 +36,7 @@ public class Resource extends AbstractModel{
     */
     @SerializedName("StorageType")
     @Expose
-    private Long StorageType;
+    private Integer StorageType;
 
     /**
     * 磁盘类型
@@ -52,7 +52,7 @@ public class Resource extends AbstractModel{
     */
     @SerializedName("MemSize")
     @Expose
-    private Long MemSize;
+    private Integer MemSize;
 
     /**
     * CPU核数
@@ -60,7 +60,7 @@ public class Resource extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Long Cpu;
+    private Integer Cpu;
 
     /**
     * 数据盘容量
@@ -68,7 +68,7 @@ public class Resource extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Long DiskSize;
+    private Integer DiskSize;
 
     /**
     * 系统盘容量
@@ -76,7 +76,7 @@ public class Resource extends AbstractModel{
     */
     @SerializedName("RootSize")
     @Expose
-    private Long RootSize;
+    private Integer RootSize;
 
     /**
     * 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
@@ -112,7 +112,7 @@ public class Resource extends AbstractModel{
      * @return StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getStorageType() {
+    public Integer getStorageType() {
         return this.StorageType;
     }
 
@@ -122,7 +122,7 @@ public class Resource extends AbstractModel{
      * @param StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStorageType(Long StorageType) {
+    public void setStorageType(Integer StorageType) {
         this.StorageType = StorageType;
     }
 
@@ -152,7 +152,7 @@ public class Resource extends AbstractModel{
      * @return MemSize 内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMemSize() {
+    public Integer getMemSize() {
         return this.MemSize;
     }
 
@@ -162,7 +162,7 @@ public class Resource extends AbstractModel{
      * @param MemSize 内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMemSize(Long MemSize) {
+    public void setMemSize(Integer MemSize) {
         this.MemSize = MemSize;
     }
 
@@ -172,7 +172,7 @@ public class Resource extends AbstractModel{
      * @return Cpu CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCpu() {
+    public Integer getCpu() {
         return this.Cpu;
     }
 
@@ -182,7 +182,7 @@ public class Resource extends AbstractModel{
      * @param Cpu CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCpu(Long Cpu) {
+    public void setCpu(Integer Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -192,7 +192,7 @@ public class Resource extends AbstractModel{
      * @return DiskSize 数据盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDiskSize() {
+    public Integer getDiskSize() {
         return this.DiskSize;
     }
 
@@ -202,7 +202,7 @@ public class Resource extends AbstractModel{
      * @param DiskSize 数据盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDiskSize(Long DiskSize) {
+    public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -212,7 +212,7 @@ public class Resource extends AbstractModel{
      * @return RootSize 系统盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRootSize() {
+    public Integer getRootSize() {
         return this.RootSize;
     }
 
@@ -222,7 +222,7 @@ public class Resource extends AbstractModel{
      * @param RootSize 系统盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRootSize(Long RootSize) {
+    public void setRootSize(Integer RootSize) {
         this.RootSize = RootSize;
     }
 

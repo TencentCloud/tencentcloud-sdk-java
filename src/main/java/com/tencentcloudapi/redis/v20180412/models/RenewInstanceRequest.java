@@ -27,7 +27,7 @@ public class RenewInstanceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 实例ID
@@ -40,7 +40,7 @@ public class RenewInstanceRequest extends AbstractModel{
      * Get 购买时长，单位：月 
      * @return Period 购买时长，单位：月
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -48,7 +48,7 @@ public class RenewInstanceRequest extends AbstractModel{
      * Set 购买时长，单位：月
      * @param Period 购买时长，单位：月
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 

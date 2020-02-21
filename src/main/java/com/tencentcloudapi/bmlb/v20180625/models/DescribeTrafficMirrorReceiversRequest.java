@@ -41,28 +41,28 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
     */
     @SerializedName("Ports")
     @Expose
-    private Long [] Ports;
+    private Integer [] Ports;
 
     /**
     * 接收机实例权重数组。
     */
     @SerializedName("Weights")
     @Expose
-    private Long [] Weights;
+    private Integer [] Weights;
 
     /**
     * 分页的偏移量，也即从第几条记录开始查询
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 单次查询返回的条目数，默认值：500。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 搜索instance或者alias
@@ -114,7 +114,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Get 接收机接收端口数组。 
      * @return Ports 接收机接收端口数组。
      */
-    public Long [] getPorts() {
+    public Integer [] getPorts() {
         return this.Ports;
     }
 
@@ -122,7 +122,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Set 接收机接收端口数组。
      * @param Ports 接收机接收端口数组。
      */
-    public void setPorts(Long [] Ports) {
+    public void setPorts(Integer [] Ports) {
         this.Ports = Ports;
     }
 
@@ -130,7 +130,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Get 接收机实例权重数组。 
      * @return Weights 接收机实例权重数组。
      */
-    public Long [] getWeights() {
+    public Integer [] getWeights() {
         return this.Weights;
     }
 
@@ -138,7 +138,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Set 接收机实例权重数组。
      * @param Weights 接收机实例权重数组。
      */
-    public void setWeights(Long [] Weights) {
+    public void setWeights(Integer [] Weights) {
         this.Weights = Weights;
     }
 
@@ -146,7 +146,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Get 分页的偏移量，也即从第几条记录开始查询 
      * @return Offset 分页的偏移量，也即从第几条记录开始查询
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -154,7 +154,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Set 分页的偏移量，也即从第几条记录开始查询
      * @param Offset 分页的偏移量，也即从第几条记录开始查询
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -162,7 +162,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Get 单次查询返回的条目数，默认值：500。 
      * @return Limit 单次查询返回的条目数，默认值：500。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -170,7 +170,7 @@ public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
      * Set 单次查询返回的条目数，默认值：500。
      * @param Limit 单次查询返回的条目数，默认值：500。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

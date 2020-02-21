@@ -528,7 +528,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeBinlogs)用于查询云数据库实例的二进制数据。
+     *本接口(DescribeBinlogs)用于查询云数据库实例的 binlog 文件列表。
      * @param req DescribeBinlogsRequest
      * @return DescribeBinlogsResponse
      * @throws TencentCloudSDKException

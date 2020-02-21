@@ -55,7 +55,7 @@ public class PublishMessageRequest extends AbstractModel{
     */
     @SerializedName("Qos")
     @Expose
-    private Long Qos;
+    private Integer Qos;
 
     /**
      * Get 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128} 
@@ -125,7 +125,7 @@ public class PublishMessageRequest extends AbstractModel{
      * Get 服务质量等级，取值为0或1 
      * @return Qos 服务质量等级，取值为0或1
      */
-    public Long getQos() {
+    public Integer getQos() {
         return this.Qos;
     }
 
@@ -133,7 +133,7 @@ public class PublishMessageRequest extends AbstractModel{
      * Set 服务质量等级，取值为0或1
      * @param Qos 服务质量等级，取值为0或1
      */
-    public void setQos(Long Qos) {
+    public void setQos(Integer Qos) {
         this.Qos = Qos;
     }
 

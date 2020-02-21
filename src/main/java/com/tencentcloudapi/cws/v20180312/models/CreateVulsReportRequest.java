@@ -27,20 +27,20 @@ public class CreateVulsReportRequest extends AbstractModel{
     */
     @SerializedName("SiteId")
     @Expose
-    private Long SiteId;
+    private Integer SiteId;
 
     /**
     * 监控任务ID
     */
     @SerializedName("MonitorId")
     @Expose
-    private Long MonitorId;
+    private Integer MonitorId;
 
     /**
      * Get 站点ID 
      * @return SiteId 站点ID
      */
-    public Long getSiteId() {
+    public Integer getSiteId() {
         return this.SiteId;
     }
 
@@ -48,7 +48,7 @@ public class CreateVulsReportRequest extends AbstractModel{
      * Set 站点ID
      * @param SiteId 站点ID
      */
-    public void setSiteId(Long SiteId) {
+    public void setSiteId(Integer SiteId) {
         this.SiteId = SiteId;
     }
 
@@ -56,7 +56,7 @@ public class CreateVulsReportRequest extends AbstractModel{
      * Get 监控任务ID 
      * @return MonitorId 监控任务ID
      */
-    public Long getMonitorId() {
+    public Integer getMonitorId() {
         return this.MonitorId;
     }
 
@@ -64,7 +64,7 @@ public class CreateVulsReportRequest extends AbstractModel{
      * Set 监控任务ID
      * @param MonitorId 监控任务ID
      */
-    public void setMonitorId(Long MonitorId) {
+    public void setMonitorId(Integer MonitorId) {
         this.MonitorId = MonitorId;
     }
 

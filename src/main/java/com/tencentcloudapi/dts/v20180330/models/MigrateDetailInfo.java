@@ -27,14 +27,14 @@ public class MigrateDetailInfo extends AbstractModel{
     */
     @SerializedName("StepAll")
     @Expose
-    private Long StepAll;
+    private Integer StepAll;
 
     /**
     * 当前步骤
     */
     @SerializedName("StepNow")
     @Expose
-    private Long StepNow;
+    private Integer StepNow;
 
     /**
     * 总进度,如：
@@ -51,18 +51,18 @@ public class MigrateDetailInfo extends AbstractModel{
     private String CurrentStepProgress;
 
     /**
-    * 主从差距，MB
+    * 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
     */
     @SerializedName("MasterSlaveDistance")
     @Expose
-    private Long MasterSlaveDistance;
+    private Integer MasterSlaveDistance;
 
     /**
-    * 主从差距，秒
+    * 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
     */
     @SerializedName("SecondsBehindMaster")
     @Expose
-    private Long SecondsBehindMaster;
+    private Integer SecondsBehindMaster;
 
     /**
     * 步骤信息
@@ -75,7 +75,7 @@ public class MigrateDetailInfo extends AbstractModel{
      * Get 总步骤数 
      * @return StepAll 总步骤数
      */
-    public Long getStepAll() {
+    public Integer getStepAll() {
         return this.StepAll;
     }
 
@@ -83,7 +83,7 @@ public class MigrateDetailInfo extends AbstractModel{
      * Set 总步骤数
      * @param StepAll 总步骤数
      */
-    public void setStepAll(Long StepAll) {
+    public void setStepAll(Integer StepAll) {
         this.StepAll = StepAll;
     }
 
@@ -91,7 +91,7 @@ public class MigrateDetailInfo extends AbstractModel{
      * Get 当前步骤 
      * @return StepNow 当前步骤
      */
-    public Long getStepNow() {
+    public Integer getStepNow() {
         return this.StepNow;
     }
 
@@ -99,7 +99,7 @@ public class MigrateDetailInfo extends AbstractModel{
      * Set 当前步骤
      * @param StepNow 当前步骤
      */
-    public void setStepNow(Long StepNow) {
+    public void setStepNow(Integer StepNow) {
         this.StepNow = StepNow;
     }
 
@@ -136,34 +136,34 @@ public class MigrateDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 主从差距，MB 
-     * @return MasterSlaveDistance 主从差距，MB
+     * Get 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql 
+     * @return MasterSlaveDistance 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
      */
-    public Long getMasterSlaveDistance() {
+    public Integer getMasterSlaveDistance() {
         return this.MasterSlaveDistance;
     }
 
     /**
-     * Set 主从差距，MB
-     * @param MasterSlaveDistance 主从差距，MB
+     * Set 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
+     * @param MasterSlaveDistance 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
      */
-    public void setMasterSlaveDistance(Long MasterSlaveDistance) {
+    public void setMasterSlaveDistance(Integer MasterSlaveDistance) {
         this.MasterSlaveDistance = MasterSlaveDistance;
     }
 
     /**
-     * Get 主从差距，秒 
-     * @return SecondsBehindMaster 主从差距，秒
+     * Get 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql 
+     * @return SecondsBehindMaster 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
      */
-    public Long getSecondsBehindMaster() {
+    public Integer getSecondsBehindMaster() {
         return this.SecondsBehindMaster;
     }
 
     /**
-     * Set 主从差距，秒
-     * @param SecondsBehindMaster 主从差距，秒
+     * Set 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
+     * @param SecondsBehindMaster 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
      */
-    public void setSecondsBehindMaster(Long SecondsBehindMaster) {
+    public void setSecondsBehindMaster(Integer SecondsBehindMaster) {
         this.SecondsBehindMaster = SecondsBehindMaster;
     }
 

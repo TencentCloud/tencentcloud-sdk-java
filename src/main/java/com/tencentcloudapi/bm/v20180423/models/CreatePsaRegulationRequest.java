@@ -34,14 +34,14 @@ public class CreatePsaRegulationRequest extends AbstractModel{
     */
     @SerializedName("TaskTypeIds")
     @Expose
-    private Long [] TaskTypeIds;
+    private Integer [] TaskTypeIds;
 
     /**
     * 维修实例上限，默认为5
     */
     @SerializedName("RepairLimit")
     @Expose
-    private Long RepairLimit;
+    private Integer RepairLimit;
 
     /**
     * 规则备注
@@ -70,7 +70,7 @@ public class CreatePsaRegulationRequest extends AbstractModel{
      * Get 关联的故障类型ID列表 
      * @return TaskTypeIds 关联的故障类型ID列表
      */
-    public Long [] getTaskTypeIds() {
+    public Integer [] getTaskTypeIds() {
         return this.TaskTypeIds;
     }
 
@@ -78,7 +78,7 @@ public class CreatePsaRegulationRequest extends AbstractModel{
      * Set 关联的故障类型ID列表
      * @param TaskTypeIds 关联的故障类型ID列表
      */
-    public void setTaskTypeIds(Long [] TaskTypeIds) {
+    public void setTaskTypeIds(Integer [] TaskTypeIds) {
         this.TaskTypeIds = TaskTypeIds;
     }
 
@@ -86,7 +86,7 @@ public class CreatePsaRegulationRequest extends AbstractModel{
      * Get 维修实例上限，默认为5 
      * @return RepairLimit 维修实例上限，默认为5
      */
-    public Long getRepairLimit() {
+    public Integer getRepairLimit() {
         return this.RepairLimit;
     }
 
@@ -94,7 +94,7 @@ public class CreatePsaRegulationRequest extends AbstractModel{
      * Set 维修实例上限，默认为5
      * @param RepairLimit 维修实例上限，默认为5
      */
-    public void setRepairLimit(Long RepairLimit) {
+    public void setRepairLimit(Integer RepairLimit) {
         this.RepairLimit = RepairLimit;
     }
 

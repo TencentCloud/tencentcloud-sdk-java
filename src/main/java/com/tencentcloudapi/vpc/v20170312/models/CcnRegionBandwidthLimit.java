@@ -34,7 +34,7 @@ public class CcnRegionBandwidthLimit extends AbstractModel{
     */
     @SerializedName("BandwidthLimit")
     @Expose
-    private Long BandwidthLimit;
+    private Integer BandwidthLimit;
 
     /**
     * 是否黑石地域，默认`false`。
@@ -78,7 +78,7 @@ public class CcnRegionBandwidthLimit extends AbstractModel{
      * Get 出带宽上限，单位：Mbps 
      * @return BandwidthLimit 出带宽上限，单位：Mbps
      */
-    public Long getBandwidthLimit() {
+    public Integer getBandwidthLimit() {
         return this.BandwidthLimit;
     }
 
@@ -86,7 +86,7 @@ public class CcnRegionBandwidthLimit extends AbstractModel{
      * Set 出带宽上限，单位：Mbps
      * @param BandwidthLimit 出带宽上限，单位：Mbps
      */
-    public void setBandwidthLimit(Long BandwidthLimit) {
+    public void setBandwidthLimit(Integer BandwidthLimit) {
         this.BandwidthLimit = BandwidthLimit;
     }
 

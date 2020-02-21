@@ -41,7 +41,7 @@ public class ModifyLoadBalancerChargeModeListener extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
      * Get 监听器ID。 
@@ -79,7 +79,7 @@ public class ModifyLoadBalancerChargeModeListener extends AbstractModel{
      * Get 带宽。 
      * @return Bandwidth 带宽。
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -87,7 +87,7 @@ public class ModifyLoadBalancerChargeModeListener extends AbstractModel{
      * Set 带宽。
      * @param Bandwidth 带宽。
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

@@ -62,21 +62,21 @@ public class ParameterDetail extends AbstractModel{
     */
     @SerializedName("NeedReboot")
     @Expose
-    private Long NeedReboot;
+    private Integer NeedReboot;
 
     /**
     * 参数允许的最大值
     */
     @SerializedName("Max")
     @Expose
-    private Long Max;
+    private Integer Max;
 
     /**
     * 参数允许的最小值
     */
     @SerializedName("Min")
     @Expose
-    private Long Min;
+    private Integer Min;
 
     /**
     * 参数的可选枚举值。如果为非枚举参数，则为空
@@ -169,7 +169,7 @@ public class ParameterDetail extends AbstractModel{
      * Get 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启 
      * @return NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      */
-    public Long getNeedReboot() {
+    public Integer getNeedReboot() {
         return this.NeedReboot;
     }
 
@@ -177,7 +177,7 @@ public class ParameterDetail extends AbstractModel{
      * Set 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      * @param NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      */
-    public void setNeedReboot(Long NeedReboot) {
+    public void setNeedReboot(Integer NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
@@ -185,7 +185,7 @@ public class ParameterDetail extends AbstractModel{
      * Get 参数允许的最大值 
      * @return Max 参数允许的最大值
      */
-    public Long getMax() {
+    public Integer getMax() {
         return this.Max;
     }
 
@@ -193,7 +193,7 @@ public class ParameterDetail extends AbstractModel{
      * Set 参数允许的最大值
      * @param Max 参数允许的最大值
      */
-    public void setMax(Long Max) {
+    public void setMax(Integer Max) {
         this.Max = Max;
     }
 
@@ -201,7 +201,7 @@ public class ParameterDetail extends AbstractModel{
      * Get 参数允许的最小值 
      * @return Min 参数允许的最小值
      */
-    public Long getMin() {
+    public Integer getMin() {
         return this.Min;
     }
 
@@ -209,7 +209,7 @@ public class ParameterDetail extends AbstractModel{
      * Set 参数允许的最小值
      * @param Min 参数允许的最小值
      */
-    public void setMin(Long Min) {
+    public void setMin(Integer Min) {
         this.Min = Min;
     }
 

@@ -34,7 +34,7 @@ public class DetailDomain extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 加速域名。
@@ -63,7 +63,7 @@ public class DetailDomain extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
@@ -345,7 +345,7 @@ public class DetailDomain extends AbstractModel{
      * Get 腾讯云账号ID。 
      * @return AppId 腾讯云账号ID。
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -353,7 +353,7 @@ public class DetailDomain extends AbstractModel{
      * Set 腾讯云账号ID。
      * @param AppId 腾讯云账号ID。
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
@@ -413,7 +413,7 @@ public class DetailDomain extends AbstractModel{
      * Get 项目ID。 
      * @return ProjectId 项目ID。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -421,7 +421,7 @@ public class DetailDomain extends AbstractModel{
      * Set 项目ID。
      * @param ProjectId 项目ID。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

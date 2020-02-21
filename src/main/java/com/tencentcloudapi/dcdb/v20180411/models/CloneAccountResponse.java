@@ -27,7 +27,7 @@ public class CloneAccountResponse extends AbstractModel{
     */
     @SerializedName("FlowId")
     @Expose
-    private Long FlowId;
+    private Integer FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CloneAccountResponse extends AbstractModel{
      * Get 异步任务流程ID 
      * @return FlowId 异步任务流程ID
      */
-    public Long getFlowId() {
+    public Integer getFlowId() {
         return this.FlowId;
     }
 
@@ -48,7 +48,7 @@ public class CloneAccountResponse extends AbstractModel{
      * Set 异步任务流程ID
      * @param FlowId 异步任务流程ID
      */
-    public void setFlowId(Long FlowId) {
+    public void setFlowId(Integer FlowId) {
         this.FlowId = FlowId;
     }
 

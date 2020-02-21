@@ -27,7 +27,7 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
     */
     @SerializedName("AllCount")
     @Expose
-    private Long AllCount;
+    private Integer AllCount;
 
     /**
     * 域名详细信息列表
@@ -47,7 +47,7 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
      * Get 总记录数 
      * @return AllCount 总记录数
      */
-    public Long getAllCount() {
+    public Integer getAllCount() {
         return this.AllCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
      * Set 总记录数
      * @param AllCount 总记录数
      */
-    public void setAllCount(Long AllCount) {
+    public void setAllCount(Integer AllCount) {
         this.AllCount = AllCount;
     }
 

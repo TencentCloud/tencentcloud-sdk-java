@@ -34,21 +34,21 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 偏移量。
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 拉取数量限制。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 搜索条件，支持安全组id或者安全组名称。
@@ -77,7 +77,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      * Get 项目Id。 
      * @return ProjectId 项目Id。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -85,7 +85,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      * Set 项目Id。
      * @param ProjectId 项目Id。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -93,7 +93,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      * Get 偏移量。 
      * @return Offset 偏移量。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -101,7 +101,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      * Set 偏移量。
      * @param Offset 偏移量。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -109,7 +109,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      * Get 拉取数量限制。 
      * @return Limit 拉取数量限制。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -117,7 +117,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      * Set 拉取数量限制。
      * @param Limit 拉取数量限制。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

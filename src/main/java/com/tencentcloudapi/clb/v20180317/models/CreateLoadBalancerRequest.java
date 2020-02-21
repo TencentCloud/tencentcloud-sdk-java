@@ -35,7 +35,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("Forward")
     @Expose
-    private Long Forward;
+    private Integer Forward;
 
     /**
     * 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
@@ -64,7 +64,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
@@ -78,7 +78,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("Number")
     @Expose
-    private Long Number;
+    private Integer Number;
 
     /**
     * 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
@@ -140,7 +140,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1 
      * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      */
-    public Long getForward() {
+    public Integer getForward() {
         return this.Forward;
     }
 
@@ -148,7 +148,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      */
-    public void setForward(Long Forward) {
+    public void setForward(Integer Forward) {
         this.Forward = Forward;
     }
 
@@ -208,7 +208,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。 
      * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -216,7 +216,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -240,7 +240,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 创建负载均衡的个数，默认值 1。 
      * @return Number 创建负载均衡的个数，默认值 1。
      */
-    public Long getNumber() {
+    public Integer getNumber() {
         return this.Number;
     }
 
@@ -248,7 +248,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 创建负载均衡的个数，默认值 1。
      * @param Number 创建负载均衡的个数，默认值 1。
      */
-    public void setNumber(Long Number) {
+    public void setNumber(Integer Number) {
         this.Number = Number;
     }
 

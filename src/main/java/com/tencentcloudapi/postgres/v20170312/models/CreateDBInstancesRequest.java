@@ -41,21 +41,21 @@ public class CreateDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 一次性购买的实例数量。取值1-100
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Long InstanceCount;
+    private Integer InstanceCount;
 
     /**
     * 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
@@ -69,7 +69,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
@@ -83,7 +83,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Long AutoVoucher;
+    private Integer AutoVoucher;
 
     /**
     * 代金券ID列表，目前仅支持指定一张代金券。
@@ -111,7 +111,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
      * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
@@ -149,7 +149,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Get 实例容量大小，单位：GB。 
      * @return Storage 实例容量大小，单位：GB。
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -157,7 +157,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Set 实例容量大小，单位：GB。
      * @param Storage 实例容量大小，单位：GB。
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 
@@ -165,7 +165,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Get 一次性购买的实例数量。取值1-100 
      * @return InstanceCount 一次性购买的实例数量。取值1-100
      */
-    public Long getInstanceCount() {
+    public Integer getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -173,7 +173,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Set 一次性购买的实例数量。取值1-100
      * @param InstanceCount 一次性购买的实例数量。取值1-100
      */
-    public void setInstanceCount(Long InstanceCount) {
+    public void setInstanceCount(Integer InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
@@ -181,7 +181,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Get 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。 
      * @return Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -189,7 +189,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Set 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      * @param Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -213,7 +213,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Get 项目ID。 
      * @return ProjectId 项目ID。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -221,7 +221,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Set 项目ID。
      * @param ProjectId 项目ID。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -245,7 +245,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Get 是否自动使用代金券。1（是），0（否），默认不使用。 
      * @return AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      */
-    public Long getAutoVoucher() {
+    public Integer getAutoVoucher() {
         return this.AutoVoucher;
     }
 
@@ -253,7 +253,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Set 是否自动使用代金券。1（是），0（否），默认不使用。
      * @param AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      */
-    public void setAutoVoucher(Long AutoVoucher) {
+    public void setAutoVoucher(Integer AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
@@ -309,7 +309,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Get 续费标记：0-正常续费（默认）；1-自动续费； 
      * @return AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -317,7 +317,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
      * Set 续费标记：0-正常续费（默认）；1-自动续费；
      * @param AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 

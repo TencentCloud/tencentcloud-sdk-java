@@ -62,7 +62,7 @@ public class Trigger extends AbstractModel{
     */
     @SerializedName("Enable")
     @Expose
-    private Long Enable;
+    private Integer Enable;
 
     /**
     * 客户自定义参数
@@ -155,7 +155,7 @@ public class Trigger extends AbstractModel{
      * Get 使能开关 
      * @return Enable 使能开关
      */
-    public Long getEnable() {
+    public Integer getEnable() {
         return this.Enable;
     }
 
@@ -163,7 +163,7 @@ public class Trigger extends AbstractModel{
      * Set 使能开关
      * @param Enable 使能开关
      */
-    public void setEnable(Long Enable) {
+    public void setEnable(Integer Enable) {
         this.Enable = Enable;
     }
 

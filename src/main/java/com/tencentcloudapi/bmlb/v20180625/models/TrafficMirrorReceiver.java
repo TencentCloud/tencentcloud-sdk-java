@@ -34,14 +34,14 @@ public class TrafficMirrorReceiver extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 接收机权重。
     */
     @SerializedName("Weight")
     @Expose
-    private Long Weight;
+    private Integer Weight;
 
     /**
     * 流量镜像ID。
@@ -133,7 +133,7 @@ public class TrafficMirrorReceiver extends AbstractModel{
      * Get 接收机接收端口。 
      * @return Port 接收机接收端口。
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -141,7 +141,7 @@ public class TrafficMirrorReceiver extends AbstractModel{
      * Set 接收机接收端口。
      * @param Port 接收机接收端口。
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -149,7 +149,7 @@ public class TrafficMirrorReceiver extends AbstractModel{
      * Get 接收机权重。 
      * @return Weight 接收机权重。
      */
-    public Long getWeight() {
+    public Integer getWeight() {
         return this.Weight;
     }
 
@@ -157,7 +157,7 @@ public class TrafficMirrorReceiver extends AbstractModel{
      * Set 接收机权重。
      * @param Weight 接收机权重。
      */
-    public void setWeight(Long Weight) {
+    public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 

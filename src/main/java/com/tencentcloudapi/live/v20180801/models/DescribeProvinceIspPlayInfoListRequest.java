@@ -45,7 +45,7 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
     */
     @SerializedName("Granularity")
     @Expose
-    private Long Granularity;
+    private Integer Granularity;
 
     /**
     * 统计指标类型：
@@ -137,7 +137,7 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
      * @return Granularity 支持如下粒度：
 1：1分钟粒度（跨度不支持超过1天）
      */
-    public Long getGranularity() {
+    public Integer getGranularity() {
         return this.Granularity;
     }
 
@@ -147,7 +147,7 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
      * @param Granularity 支持如下粒度：
 1：1分钟粒度（跨度不支持超过1天）
      */
-    public void setGranularity(Long Granularity) {
+    public void setGranularity(Integer Granularity) {
         this.Granularity = Granularity;
     }
 

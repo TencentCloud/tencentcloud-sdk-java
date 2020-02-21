@@ -34,14 +34,14 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 显示的偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
      * Get 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤 
@@ -63,7 +63,7 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel{
      * Get 显示数量限制，默认20 
      * @return Limit 显示数量限制，默认20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -71,7 +71,7 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel{
      * Set 显示数量限制，默认20
      * @param Limit 显示数量限制，默认20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -79,7 +79,7 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel{
      * Get 显示的偏移量，默认为0 
      * @return Offset 显示的偏移量，默认为0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -87,7 +87,7 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel{
      * Set 显示的偏移量，默认为0
      * @param Offset 显示的偏移量，默认为0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 

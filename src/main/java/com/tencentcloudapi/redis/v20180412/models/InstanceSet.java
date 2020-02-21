@@ -41,49 +41,49 @@ public class InstanceSet extends AbstractModel{
     */
     @SerializedName("Appid")
     @Expose
-    private Long Appid;
+    private Integer Appid;
 
     /**
     * 项目Id
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
     */
     @SerializedName("RegionId")
     @Expose
-    private Long RegionId;
+    private Integer RegionId;
 
     /**
     * 区域id
     */
     @SerializedName("ZoneId")
     @Expose
-    private Long ZoneId;
+    private Integer ZoneId;
 
     /**
     * vpc网络id 如：75101
     */
     @SerializedName("VpcId")
     @Expose
-    private Long VpcId;
+    private Integer VpcId;
 
     /**
     * vpc网络下子网id 如：46315
     */
     @SerializedName("SubnetId")
     @Expose
-    private Long SubnetId;
+    private Integer SubnetId;
 
     /**
     * 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 实例vip
@@ -97,7 +97,7 @@ public class InstanceSet extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 实例创建时间
@@ -125,14 +125,14 @@ public class InstanceSet extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
     * 实例到期时间
@@ -174,7 +174,7 @@ public class InstanceSet extends AbstractModel{
     */
     @SerializedName("BillingMode")
     @Expose
-    private Long BillingMode;
+    private Integer BillingMode;
 
     /**
     * 实例运行状态描述：如”实例运行中“
@@ -195,7 +195,7 @@ public class InstanceSet extends AbstractModel{
     */
     @SerializedName("SubStatus")
     @Expose
-    private Long SubStatus;
+    private Integer SubStatus;
 
     /**
     * 反亲和性标签
@@ -216,28 +216,28 @@ public class InstanceSet extends AbstractModel{
     */
     @SerializedName("RedisShardSize")
     @Expose
-    private Long RedisShardSize;
+    private Integer RedisShardSize;
 
     /**
     * 分片数量
     */
     @SerializedName("RedisShardNum")
     @Expose
-    private Long RedisShardNum;
+    private Integer RedisShardNum;
 
     /**
     * 副本数量
     */
     @SerializedName("RedisReplicasNum")
     @Expose
-    private Long RedisReplicasNum;
+    private Integer RedisReplicasNum;
 
     /**
     * 计费Id
     */
     @SerializedName("PriceId")
     @Expose
-    private Long PriceId;
+    private Integer PriceId;
 
     /**
     * 隔离时间
@@ -251,7 +251,7 @@ public class InstanceSet extends AbstractModel{
     */
     @SerializedName("SlaveReadWeight")
     @Expose
-    private Long SlaveReadWeight;
+    private Integer SlaveReadWeight;
 
     /**
     * 实例关联的标签信息
@@ -313,7 +313,7 @@ public class InstanceSet extends AbstractModel{
      * Get 用户的Appid 
      * @return Appid 用户的Appid
      */
-    public Long getAppid() {
+    public Integer getAppid() {
         return this.Appid;
     }
 
@@ -321,7 +321,7 @@ public class InstanceSet extends AbstractModel{
      * Set 用户的Appid
      * @param Appid 用户的Appid
      */
-    public void setAppid(Long Appid) {
+    public void setAppid(Integer Appid) {
         this.Appid = Appid;
     }
 
@@ -329,7 +329,7 @@ public class InstanceSet extends AbstractModel{
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -337,7 +337,7 @@ public class InstanceSet extends AbstractModel{
      * Set 项目Id
      * @param ProjectId 项目Id
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -345,7 +345,7 @@ public class InstanceSet extends AbstractModel{
      * Get 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本 
      * @return RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
-    public Long getRegionId() {
+    public Integer getRegionId() {
         return this.RegionId;
     }
 
@@ -353,7 +353,7 @@ public class InstanceSet extends AbstractModel{
      * Set 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      * @param RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
-    public void setRegionId(Long RegionId) {
+    public void setRegionId(Integer RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -361,7 +361,7 @@ public class InstanceSet extends AbstractModel{
      * Get 区域id 
      * @return ZoneId 区域id
      */
-    public Long getZoneId() {
+    public Integer getZoneId() {
         return this.ZoneId;
     }
 
@@ -369,7 +369,7 @@ public class InstanceSet extends AbstractModel{
      * Set 区域id
      * @param ZoneId 区域id
      */
-    public void setZoneId(Long ZoneId) {
+    public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -377,7 +377,7 @@ public class InstanceSet extends AbstractModel{
      * Get vpc网络id 如：75101 
      * @return VpcId vpc网络id 如：75101
      */
-    public Long getVpcId() {
+    public Integer getVpcId() {
         return this.VpcId;
     }
 
@@ -385,7 +385,7 @@ public class InstanceSet extends AbstractModel{
      * Set vpc网络id 如：75101
      * @param VpcId vpc网络id 如：75101
      */
-    public void setVpcId(Long VpcId) {
+    public void setVpcId(Integer VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -393,7 +393,7 @@ public class InstanceSet extends AbstractModel{
      * Get vpc网络下子网id 如：46315 
      * @return SubnetId vpc网络下子网id 如：46315
      */
-    public Long getSubnetId() {
+    public Integer getSubnetId() {
         return this.SubnetId;
     }
 
@@ -401,7 +401,7 @@ public class InstanceSet extends AbstractModel{
      * Set vpc网络下子网id 如：46315
      * @param SubnetId vpc网络下子网id 如：46315
      */
-    public void setSubnetId(Long SubnetId) {
+    public void setSubnetId(Integer SubnetId) {
         this.SubnetId = SubnetId;
     }
 
@@ -409,7 +409,7 @@ public class InstanceSet extends AbstractModel{
      * Get 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除 
      * @return Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -417,7 +417,7 @@ public class InstanceSet extends AbstractModel{
      * Set 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      * @param Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -441,7 +441,7 @@ public class InstanceSet extends AbstractModel{
      * Get 实例端口号 
      * @return Port 实例端口号
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -449,7 +449,7 @@ public class InstanceSet extends AbstractModel{
      * Set 实例端口号
      * @param Port 实例端口号
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -505,7 +505,7 @@ public class InstanceSet extends AbstractModel{
      * Get 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版； 
      * @return Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -513,7 +513,7 @@ public class InstanceSet extends AbstractModel{
      * Set 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      * @param Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -521,7 +521,7 @@ public class InstanceSet extends AbstractModel{
      * Get 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费 
      * @return AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -529,7 +529,7 @@ public class InstanceSet extends AbstractModel{
      * Set 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
@@ -617,7 +617,7 @@ public class InstanceSet extends AbstractModel{
      * Get 计费模式：0-按量计费，1-包年包月 
      * @return BillingMode 计费模式：0-按量计费，1-包年包月
      */
-    public Long getBillingMode() {
+    public Integer getBillingMode() {
         return this.BillingMode;
     }
 
@@ -625,7 +625,7 @@ public class InstanceSet extends AbstractModel{
      * Set 计费模式：0-按量计费，1-包年包月
      * @param BillingMode 计费模式：0-按量计费，1-包年包月
      */
-    public void setBillingMode(Long BillingMode) {
+    public void setBillingMode(Integer BillingMode) {
         this.BillingMode = BillingMode;
     }
 
@@ -665,7 +665,7 @@ public class InstanceSet extends AbstractModel{
      * Get 流程中的实例，返回子状态 
      * @return SubStatus 流程中的实例，返回子状态
      */
-    public Long getSubStatus() {
+    public Integer getSubStatus() {
         return this.SubStatus;
     }
 
@@ -673,7 +673,7 @@ public class InstanceSet extends AbstractModel{
      * Set 流程中的实例，返回子状态
      * @param SubStatus 流程中的实例，返回子状态
      */
-    public void setSubStatus(Long SubStatus) {
+    public void setSubStatus(Integer SubStatus) {
         this.SubStatus = SubStatus;
     }
 
@@ -713,7 +713,7 @@ public class InstanceSet extends AbstractModel{
      * Get 分片大小 
      * @return RedisShardSize 分片大小
      */
-    public Long getRedisShardSize() {
+    public Integer getRedisShardSize() {
         return this.RedisShardSize;
     }
 
@@ -721,7 +721,7 @@ public class InstanceSet extends AbstractModel{
      * Set 分片大小
      * @param RedisShardSize 分片大小
      */
-    public void setRedisShardSize(Long RedisShardSize) {
+    public void setRedisShardSize(Integer RedisShardSize) {
         this.RedisShardSize = RedisShardSize;
     }
 
@@ -729,7 +729,7 @@ public class InstanceSet extends AbstractModel{
      * Get 分片数量 
      * @return RedisShardNum 分片数量
      */
-    public Long getRedisShardNum() {
+    public Integer getRedisShardNum() {
         return this.RedisShardNum;
     }
 
@@ -737,7 +737,7 @@ public class InstanceSet extends AbstractModel{
      * Set 分片数量
      * @param RedisShardNum 分片数量
      */
-    public void setRedisShardNum(Long RedisShardNum) {
+    public void setRedisShardNum(Integer RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
@@ -745,7 +745,7 @@ public class InstanceSet extends AbstractModel{
      * Get 副本数量 
      * @return RedisReplicasNum 副本数量
      */
-    public Long getRedisReplicasNum() {
+    public Integer getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
@@ -753,7 +753,7 @@ public class InstanceSet extends AbstractModel{
      * Set 副本数量
      * @param RedisReplicasNum 副本数量
      */
-    public void setRedisReplicasNum(Long RedisReplicasNum) {
+    public void setRedisReplicasNum(Integer RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
@@ -761,7 +761,7 @@ public class InstanceSet extends AbstractModel{
      * Get 计费Id 
      * @return PriceId 计费Id
      */
-    public Long getPriceId() {
+    public Integer getPriceId() {
         return this.PriceId;
     }
 
@@ -769,7 +769,7 @@ public class InstanceSet extends AbstractModel{
      * Set 计费Id
      * @param PriceId 计费Id
      */
-    public void setPriceId(Long PriceId) {
+    public void setPriceId(Integer PriceId) {
         this.PriceId = PriceId;
     }
 
@@ -793,7 +793,7 @@ public class InstanceSet extends AbstractModel{
      * Get 从节点读取权重 
      * @return SlaveReadWeight 从节点读取权重
      */
-    public Long getSlaveReadWeight() {
+    public Integer getSlaveReadWeight() {
         return this.SlaveReadWeight;
     }
 
@@ -801,7 +801,7 @@ public class InstanceSet extends AbstractModel{
      * Set 从节点读取权重
      * @param SlaveReadWeight 从节点读取权重
      */
-    public void setSlaveReadWeight(Long SlaveReadWeight) {
+    public void setSlaveReadWeight(Integer SlaveReadWeight) {
         this.SlaveReadWeight = SlaveReadWeight;
     }
 

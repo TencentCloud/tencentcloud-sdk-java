@@ -27,7 +27,7 @@ public class DescribeDBSwitchRecordsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 实例切换记录详情。
@@ -47,7 +47,7 @@ public class DescribeDBSwitchRecordsResponse extends AbstractModel{
      * Get 实例切换记录的总数。 
      * @return TotalCount 实例切换记录的总数。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBSwitchRecordsResponse extends AbstractModel{
      * Set 实例切换记录的总数。
      * @param TotalCount 实例切换记录的总数。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

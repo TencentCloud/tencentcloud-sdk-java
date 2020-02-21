@@ -69,7 +69,7 @@ public class Image extends AbstractModel{
     */
     @SerializedName("ImageSize")
     @Expose
-    private Long ImageSize;
+    private Integer ImageSize;
 
     /**
     * 镜像架构
@@ -119,7 +119,7 @@ IMPORTFAILED-导入失败
     */
     @SerializedName("SyncPercent")
     @Expose
-    private Long SyncPercent;
+    private Integer SyncPercent;
 
     /**
     * 镜像是否支持cloud-init
@@ -237,7 +237,7 @@ IMPORTFAILED-导入失败
      * Get 镜像大小 
      * @return ImageSize 镜像大小
      */
-    public Long getImageSize() {
+    public Integer getImageSize() {
         return this.ImageSize;
     }
 
@@ -245,7 +245,7 @@ IMPORTFAILED-导入失败
      * Set 镜像大小
      * @param ImageSize 镜像大小
      */
-    public void setImageSize(Long ImageSize) {
+    public void setImageSize(Integer ImageSize) {
         this.ImageSize = ImageSize;
     }
 
@@ -363,7 +363,7 @@ IMPORTFAILED-导入失败
      * @return SyncPercent 同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getSyncPercent() {
+    public Integer getSyncPercent() {
         return this.SyncPercent;
     }
 
@@ -373,7 +373,7 @@ IMPORTFAILED-导入失败
      * @param SyncPercent 同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSyncPercent(Long SyncPercent) {
+    public void setSyncPercent(Integer SyncPercent) {
         this.SyncPercent = SyncPercent;
     }
 

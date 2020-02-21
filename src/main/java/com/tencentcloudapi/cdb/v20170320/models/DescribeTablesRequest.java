@@ -41,14 +41,14 @@ public class DescribeTablesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 单次请求返回的数量，默认值为20，最大值为2000。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 匹配数据库表名的正则表达式，规则同 MySQL 官网
@@ -93,7 +93,7 @@ public class DescribeTablesRequest extends AbstractModel{
      * Get 记录偏移量，默认值为0。 
      * @return Offset 记录偏移量，默认值为0。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -101,7 +101,7 @@ public class DescribeTablesRequest extends AbstractModel{
      * Set 记录偏移量，默认值为0。
      * @param Offset 记录偏移量，默认值为0。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -109,7 +109,7 @@ public class DescribeTablesRequest extends AbstractModel{
      * Get 单次请求返回的数量，默认值为20，最大值为2000。 
      * @return Limit 单次请求返回的数量，默认值为20，最大值为2000。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -117,7 +117,7 @@ public class DescribeTablesRequest extends AbstractModel{
      * Set 单次请求返回的数量，默认值为20，最大值为2000。
      * @param Limit 单次请求返回的数量，默认值为20，最大值为2000。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

@@ -34,21 +34,21 @@ public class ModifyPersonTypeRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 顾客ID
     */
     @SerializedName("PersonId")
     @Expose
-    private Long PersonId;
+    private Integer PersonId;
 
     /**
     * 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
     */
     @SerializedName("PersonType")
     @Expose
-    private Long PersonType;
+    private Integer PersonType;
 
     /**
     * 身份子类型:
@@ -58,7 +58,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     */
     @SerializedName("PersonSubType")
     @Expose
-    private Long PersonSubType;
+    private Integer PersonSubType;
 
     /**
      * Get 集团ID 
@@ -80,7 +80,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 门店ID 
      * @return ShopId 门店ID
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -88,7 +88,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 门店ID
      * @param ShopId 门店ID
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -96,7 +96,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 顾客ID 
      * @return PersonId 顾客ID
      */
-    public Long getPersonId() {
+    public Integer getPersonId() {
         return this.PersonId;
     }
 
@@ -104,7 +104,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 顾客ID
      * @param PersonId 顾客ID
      */
-    public void setPersonId(Long PersonId) {
+    public void setPersonId(Integer PersonId) {
         this.PersonId = PersonId;
     }
 
@@ -112,7 +112,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Get 身份类型(0表示普通顾客，1 白名单，2 表示黑名单） 
      * @return PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
-    public Long getPersonType() {
+    public Integer getPersonType() {
         return this.PersonType;
     }
 
@@ -120,7 +120,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
      * Set 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      * @param PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
-    public void setPersonType(Long PersonType) {
+    public void setPersonType(Integer PersonType) {
         this.PersonType = PersonType;
     }
 
@@ -134,7 +134,7 @@ PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
-    public Long getPersonSubType() {
+    public Integer getPersonSubType() {
         return this.PersonSubType;
     }
 
@@ -148,7 +148,7 @@ PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
      */
-    public void setPersonSubType(Long PersonSubType) {
+    public void setPersonSubType(Integer PersonSubType) {
         this.PersonSubType = PersonSubType;
     }
 

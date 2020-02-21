@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dayu.v20180709.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7CCRuleResponse extends AbstractModel{
-
-    /**
-    * 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
-    */
-    @SerializedName("RuleConfig")
-    @Expose
-    private CCRuleConfig [] RuleConfig;
+public class DeleteLayerVersionResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateL7CCRuleResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组 
-     * @return RuleConfig 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
-     */
-    public CCRuleConfig [] getRuleConfig() {
-        return this.RuleConfig;
-    }
-
-    /**
-     * Set 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
-     * @param RuleConfig 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
-     */
-    public void setRuleConfig(CCRuleConfig [] RuleConfig) {
-        this.RuleConfig = RuleConfig;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class CreateL7CCRuleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RuleConfig.", this.RuleConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

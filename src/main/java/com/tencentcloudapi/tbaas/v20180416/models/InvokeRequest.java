@@ -90,7 +90,7 @@ public class InvokeRequest extends AbstractModel{
     */
     @SerializedName("AsyncFlag")
     @Expose
-    private Long AsyncFlag;
+    private Integer AsyncFlag;
 
     /**
      * Get 模块名，固定字段：transaction 
@@ -240,7 +240,7 @@ public class InvokeRequest extends AbstractModel{
      * Get 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时） 
      * @return AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
-    public Long getAsyncFlag() {
+    public Integer getAsyncFlag() {
         return this.AsyncFlag;
     }
 
@@ -248,7 +248,7 @@ public class InvokeRequest extends AbstractModel{
      * Set 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      * @param AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
-    public void setAsyncFlag(Long AsyncFlag) {
+    public void setAsyncFlag(Integer AsyncFlag) {
         this.AsyncFlag = AsyncFlag;
     }
 

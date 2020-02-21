@@ -27,20 +27,20 @@ public class Policy extends AbstractModel{
     */
     @SerializedName("DayOfWeek")
     @Expose
-    private Long [] DayOfWeek;
+    private Integer [] DayOfWeek;
 
     /**
     * 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
     */
     @SerializedName("Hour")
     @Expose
-    private Long [] Hour;
+    private Integer [] Hour;
 
     /**
      * Get 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。 
      * @return DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      */
-    public Long [] getDayOfWeek() {
+    public Integer [] getDayOfWeek() {
         return this.DayOfWeek;
     }
 
@@ -48,7 +48,7 @@ public class Policy extends AbstractModel{
      * Set 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      * @param DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      */
-    public void setDayOfWeek(Long [] DayOfWeek) {
+    public void setDayOfWeek(Integer [] DayOfWeek) {
         this.DayOfWeek = DayOfWeek;
     }
 
@@ -56,7 +56,7 @@ public class Policy extends AbstractModel{
      * Get 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。 
      * @return Hour 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
      */
-    public Long [] getHour() {
+    public Integer [] getHour() {
         return this.Hour;
     }
 
@@ -64,7 +64,7 @@ public class Policy extends AbstractModel{
      * Set 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
      * @param Hour 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
      */
-    public void setHour(Long [] Hour) {
+    public void setHour(Integer [] Hour) {
         this.Hour = Hour;
     }
 

@@ -48,7 +48,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     */
     @SerializedName("NetworkCard")
     @Expose
-    private Long NetworkCard;
+    private Integer NetworkCard;
 
     /**
     * 扩展属性。
@@ -63,14 +63,14 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Long Cpu;
+    private Integer Cpu;
 
     /**
     * 实例内存容量，单位：`GB`。
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例机型系列。
@@ -159,7 +159,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
      * Get 网卡类型，例如：25代表25G网卡 
      * @return NetworkCard 网卡类型，例如：25代表25G网卡
      */
-    public Long getNetworkCard() {
+    public Integer getNetworkCard() {
         return this.NetworkCard;
     }
 
@@ -167,7 +167,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
      * Set 网卡类型，例如：25代表25G网卡
      * @param NetworkCard 网卡类型，例如：25代表25G网卡
      */
-    public void setNetworkCard(Long NetworkCard) {
+    public void setNetworkCard(Integer NetworkCard) {
         this.NetworkCard = NetworkCard;
     }
 
@@ -195,7 +195,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
      * Get 实例的CPU核数，单位：核。 
      * @return Cpu 实例的CPU核数，单位：核。
      */
-    public Long getCpu() {
+    public Integer getCpu() {
         return this.Cpu;
     }
 
@@ -203,7 +203,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
      * Set 实例的CPU核数，单位：核。
      * @param Cpu 实例的CPU核数，单位：核。
      */
-    public void setCpu(Long Cpu) {
+    public void setCpu(Integer Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -211,7 +211,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
      * Get 实例内存容量，单位：`GB`。 
      * @return Memory 实例内存容量，单位：`GB`。
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -219,7 +219,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
      * Set 实例内存容量，单位：`GB`。
      * @param Memory 实例内存容量，单位：`GB`。
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 

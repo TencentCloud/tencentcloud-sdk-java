@@ -27,35 +27,35 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
     */
     @SerializedName("DomainStatus")
     @Expose
-    private Long DomainStatus;
+    private Integer DomainStatus;
 
     /**
     * 域名类型过滤。0-推流，1-播放
     */
     @SerializedName("DomainType")
     @Expose
-    private Long DomainType;
+    private Integer DomainType;
 
     /**
     * 分页大小，范围：10~100。默认10
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
     * 取第几页，范围：1~100000。默认1
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 0 普通直播 1慢直播 默认0
     */
     @SerializedName("IsDelayLive")
     @Expose
-    private Long IsDelayLive;
+    private Integer IsDelayLive;
 
     /**
     * 域名前缀
@@ -68,7 +68,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Get 域名状态过滤。0-停用，1-启用 
      * @return DomainStatus 域名状态过滤。0-停用，1-启用
      */
-    public Long getDomainStatus() {
+    public Integer getDomainStatus() {
         return this.DomainStatus;
     }
 
@@ -76,7 +76,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Set 域名状态过滤。0-停用，1-启用
      * @param DomainStatus 域名状态过滤。0-停用，1-启用
      */
-    public void setDomainStatus(Long DomainStatus) {
+    public void setDomainStatus(Integer DomainStatus) {
         this.DomainStatus = DomainStatus;
     }
 
@@ -84,7 +84,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Get 域名类型过滤。0-推流，1-播放 
      * @return DomainType 域名类型过滤。0-推流，1-播放
      */
-    public Long getDomainType() {
+    public Integer getDomainType() {
         return this.DomainType;
     }
 
@@ -92,7 +92,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Set 域名类型过滤。0-推流，1-播放
      * @param DomainType 域名类型过滤。0-推流，1-播放
      */
-    public void setDomainType(Long DomainType) {
+    public void setDomainType(Integer DomainType) {
         this.DomainType = DomainType;
     }
 
@@ -100,7 +100,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Get 分页大小，范围：10~100。默认10 
      * @return PageSize 分页大小，范围：10~100。默认10
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -108,7 +108,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Set 分页大小，范围：10~100。默认10
      * @param PageSize 分页大小，范围：10~100。默认10
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 
@@ -116,7 +116,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Get 取第几页，范围：1~100000。默认1 
      * @return PageNum 取第几页，范围：1~100000。默认1
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -124,7 +124,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Set 取第几页，范围：1~100000。默认1
      * @param PageNum 取第几页，范围：1~100000。默认1
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -132,7 +132,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Get 0 普通直播 1慢直播 默认0 
      * @return IsDelayLive 0 普通直播 1慢直播 默认0
      */
-    public Long getIsDelayLive() {
+    public Integer getIsDelayLive() {
         return this.IsDelayLive;
     }
 
@@ -140,7 +140,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
      * Set 0 普通直播 1慢直播 默认0
      * @param IsDelayLive 0 普通直播 1慢直播 默认0
      */
-    public void setIsDelayLive(Long IsDelayLive) {
+    public void setIsDelayLive(Integer IsDelayLive) {
         this.IsDelayLive = IsDelayLive;
     }
 

@@ -27,7 +27,7 @@ public class CreateLiveCertResponse extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Long CertId;
+    private Integer CertId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateLiveCertResponse extends AbstractModel{
      * Get 证书ID 
      * @return CertId 证书ID
      */
-    public Long getCertId() {
+    public Integer getCertId() {
         return this.CertId;
     }
 
@@ -48,7 +48,7 @@ public class CreateLiveCertResponse extends AbstractModel{
      * Set 证书ID
      * @param CertId 证书ID
      */
-    public void setCertId(Long CertId) {
+    public void setCertId(Integer CertId) {
         this.CertId = CertId;
     }
 

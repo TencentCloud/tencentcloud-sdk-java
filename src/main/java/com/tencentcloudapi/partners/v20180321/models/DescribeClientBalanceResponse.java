@@ -27,7 +27,7 @@ public class DescribeClientBalanceResponse extends AbstractModel{
     */
     @SerializedName("Balance")
     @Expose
-    private Long Balance;
+    private Integer Balance;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeClientBalanceResponse extends AbstractModel{
      * Get 账户余额，单位分 
      * @return Balance 账户余额，单位分
      */
-    public Long getBalance() {
+    public Integer getBalance() {
         return this.Balance;
     }
 
@@ -48,7 +48,7 @@ public class DescribeClientBalanceResponse extends AbstractModel{
      * Set 账户余额，单位分
      * @param Balance 账户余额，单位分
      */
-    public void setBalance(Long Balance) {
+    public void setBalance(Integer Balance) {
         this.Balance = Balance;
     }
 

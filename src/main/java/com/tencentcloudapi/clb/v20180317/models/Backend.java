@@ -41,14 +41,14 @@ public class Backend extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
     */
     @SerializedName("Weight")
     @Expose
-    private Long Weight;
+    private Integer Weight;
 
     /**
     * 后端服务的外网 IP
@@ -126,7 +126,7 @@ public class Backend extends AbstractModel{
      * Get 后端服务的监听端口 
      * @return Port 后端服务的监听端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -134,7 +134,7 @@ public class Backend extends AbstractModel{
      * Set 后端服务的监听端口
      * @param Port 后端服务的监听端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -142,7 +142,7 @@ public class Backend extends AbstractModel{
      * Get 后端服务的转发权重，取值范围：[0, 100]，默认为 10。 
      * @return Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
-    public Long getWeight() {
+    public Integer getWeight() {
         return this.Weight;
     }
 
@@ -150,7 +150,7 @@ public class Backend extends AbstractModel{
      * Set 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
-    public void setWeight(Long Weight) {
+    public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 

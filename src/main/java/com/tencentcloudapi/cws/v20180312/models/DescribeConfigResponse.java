@@ -34,7 +34,7 @@ public class DescribeConfigResponse extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 记录创建时间。
@@ -55,14 +55,14 @@ public class DescribeConfigResponse extends AbstractModel{
     */
     @SerializedName("Appid")
     @Expose
-    private Long Appid;
+    private Integer Appid;
 
     /**
     * 内容检测通知等级-1:通知,0-不通知
     */
     @SerializedName("ContentLevel")
     @Expose
-    private Long ContentLevel;
+    private Integer ContentLevel;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -91,7 +91,7 @@ public class DescribeConfigResponse extends AbstractModel{
      * Get 配置ID。 
      * @return Id 配置ID。
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -99,7 +99,7 @@ public class DescribeConfigResponse extends AbstractModel{
      * Set 配置ID。
      * @param Id 配置ID。
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -139,7 +139,7 @@ public class DescribeConfigResponse extends AbstractModel{
      * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
-    public Long getAppid() {
+    public Integer getAppid() {
         return this.Appid;
     }
 
@@ -147,7 +147,7 @@ public class DescribeConfigResponse extends AbstractModel{
      * Set 云用户appid。
      * @param Appid 云用户appid。
      */
-    public void setAppid(Long Appid) {
+    public void setAppid(Integer Appid) {
         this.Appid = Appid;
     }
 
@@ -155,7 +155,7 @@ public class DescribeConfigResponse extends AbstractModel{
      * Get 内容检测通知等级-1:通知,0-不通知 
      * @return ContentLevel 内容检测通知等级-1:通知,0-不通知
      */
-    public Long getContentLevel() {
+    public Integer getContentLevel() {
         return this.ContentLevel;
     }
 
@@ -163,7 +163,7 @@ public class DescribeConfigResponse extends AbstractModel{
      * Set 内容检测通知等级-1:通知,0-不通知
      * @param ContentLevel 内容检测通知等级-1:通知,0-不通知
      */
-    public void setContentLevel(Long ContentLevel) {
+    public void setContentLevel(Integer ContentLevel) {
         this.ContentLevel = ContentLevel;
     }
 

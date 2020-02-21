@@ -41,7 +41,7 @@ public class L7ListenerInfoRule extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 创建时间戳。
@@ -93,7 +93,7 @@ public class L7ListenerInfoRule extends AbstractModel{
      * Get 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。 
      * @return Status 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -101,7 +101,7 @@ public class L7ListenerInfoRule extends AbstractModel{
      * Set 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      * @param Status 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

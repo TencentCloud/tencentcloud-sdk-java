@@ -34,7 +34,7 @@ public class DescribeRenewalPriceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
      * Get 待续费的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
@@ -56,7 +56,7 @@ public class DescribeRenewalPriceRequest extends AbstractModel{
      * Get 续费时长，单位：月。不传则默认为1个月。 
      * @return Period 续费时长，单位：月。不传则默认为1个月。
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -64,7 +64,7 @@ public class DescribeRenewalPriceRequest extends AbstractModel{
      * Set 续费时长，单位：月。不传则默认为1个月。
      * @param Period 续费时长，单位：月。不传则默认为1个月。
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 

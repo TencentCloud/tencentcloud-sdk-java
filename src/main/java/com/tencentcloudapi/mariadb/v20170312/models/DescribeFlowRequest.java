@@ -27,13 +27,13 @@ public class DescribeFlowRequest extends AbstractModel{
     */
     @SerializedName("FlowId")
     @Expose
-    private Long FlowId;
+    private Integer FlowId;
 
     /**
      * Get 异步请求接口返回的任务流程号。 
      * @return FlowId 异步请求接口返回的任务流程号。
      */
-    public Long getFlowId() {
+    public Integer getFlowId() {
         return this.FlowId;
     }
 
@@ -41,7 +41,7 @@ public class DescribeFlowRequest extends AbstractModel{
      * Set 异步请求接口返回的任务流程号。
      * @param FlowId 异步请求接口返回的任务流程号。
      */
-    public void setFlowId(Long FlowId) {
+    public void setFlowId(Integer FlowId) {
         this.FlowId = FlowId;
     }
 

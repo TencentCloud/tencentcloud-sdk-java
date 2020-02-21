@@ -41,7 +41,7 @@ public class PublishAsDeviceRequest extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 消息内容
@@ -86,7 +86,7 @@ public class PublishAsDeviceRequest extends AbstractModel{
      * Get LoRa 设备端口 
      * @return Port LoRa 设备端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -94,7 +94,7 @@ public class PublishAsDeviceRequest extends AbstractModel{
      * Set LoRa 设备端口
      * @param Port LoRa 设备端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 

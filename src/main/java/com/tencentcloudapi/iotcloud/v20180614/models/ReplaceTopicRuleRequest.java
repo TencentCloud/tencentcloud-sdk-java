@@ -41,14 +41,14 @@ public class ReplaceTopicRuleRequest extends AbstractModel{
     */
     @SerializedName("ModifyType")
     @Expose
-    private Long ModifyType;
+    private Integer ModifyType;
 
     /**
     * action增删改变更填对应topicRulePayload里面第几个action
     */
     @SerializedName("ActionIndex")
     @Expose
-    private Long ActionIndex;
+    private Integer ActionIndex;
 
     /**
      * Get 规则名称 
@@ -86,7 +86,7 @@ public class ReplaceTopicRuleRequest extends AbstractModel{
      * Get 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为 
      * @return ModifyType 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
      */
-    public Long getModifyType() {
+    public Integer getModifyType() {
         return this.ModifyType;
     }
 
@@ -94,7 +94,7 @@ public class ReplaceTopicRuleRequest extends AbstractModel{
      * Set 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
      * @param ModifyType 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
      */
-    public void setModifyType(Long ModifyType) {
+    public void setModifyType(Integer ModifyType) {
         this.ModifyType = ModifyType;
     }
 
@@ -102,7 +102,7 @@ public class ReplaceTopicRuleRequest extends AbstractModel{
      * Get action增删改变更填对应topicRulePayload里面第几个action 
      * @return ActionIndex action增删改变更填对应topicRulePayload里面第几个action
      */
-    public Long getActionIndex() {
+    public Integer getActionIndex() {
         return this.ActionIndex;
     }
 
@@ -110,7 +110,7 @@ public class ReplaceTopicRuleRequest extends AbstractModel{
      * Set action增删改变更填对应topicRulePayload里面第几个action
      * @param ActionIndex action增删改变更填对应topicRulePayload里面第几个action
      */
-    public void setActionIndex(Long ActionIndex) {
+    public void setActionIndex(Integer ActionIndex) {
         this.ActionIndex = ActionIndex;
     }
 

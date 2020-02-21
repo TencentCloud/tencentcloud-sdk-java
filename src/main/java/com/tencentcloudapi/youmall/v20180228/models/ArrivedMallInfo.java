@@ -41,7 +41,7 @@ public class ArrivedMallInfo extends AbstractModel{
     */
     @SerializedName("StaySecond")
     @Expose
-    private Long StaySecond;
+    private Integer StaySecond;
 
     /**
     * 到场抓拍图片
@@ -100,7 +100,7 @@ public class ArrivedMallInfo extends AbstractModel{
      * Get 停留时间，秒 
      * @return StaySecond 停留时间，秒
      */
-    public Long getStaySecond() {
+    public Integer getStaySecond() {
         return this.StaySecond;
     }
 
@@ -108,7 +108,7 @@ public class ArrivedMallInfo extends AbstractModel{
      * Set 停留时间，秒
      * @param StaySecond 停留时间，秒
      */
-    public void setStaySecond(Long StaySecond) {
+    public void setStaySecond(Integer StaySecond) {
         this.StaySecond = StaySecond;
     }
 

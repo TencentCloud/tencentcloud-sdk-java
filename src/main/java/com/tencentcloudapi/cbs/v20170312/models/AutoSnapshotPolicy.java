@@ -62,7 +62,7 @@ public class AutoSnapshotPolicy extends AbstractModel{
     */
     @SerializedName("RetentionDays")
     @Expose
-    private Long RetentionDays;
+    private Integer RetentionDays;
 
     /**
     * 定期快照策略的创建时间。
@@ -176,7 +176,7 @@ public class AutoSnapshotPolicy extends AbstractModel{
      * Get 使用该定期快照策略创建出来的快照保留天数。 
      * @return RetentionDays 使用该定期快照策略创建出来的快照保留天数。
      */
-    public Long getRetentionDays() {
+    public Integer getRetentionDays() {
         return this.RetentionDays;
     }
 
@@ -184,7 +184,7 @@ public class AutoSnapshotPolicy extends AbstractModel{
      * Set 使用该定期快照策略创建出来的快照保留天数。
      * @param RetentionDays 使用该定期快照策略创建出来的快照保留天数。
      */
-    public void setRetentionDays(Long RetentionDays) {
+    public void setRetentionDays(Integer RetentionDays) {
         this.RetentionDays = RetentionDays;
     }
 

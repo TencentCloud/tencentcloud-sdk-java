@@ -48,14 +48,14 @@ public class TaskInfo extends AbstractModel{
     */
     @SerializedName("TaskTypeId")
     @Expose
-    private Long TaskTypeId;
+    private Integer TaskTypeId;
 
     /**
     * 任务状态id
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Long TaskStatus;
+    private Integer TaskStatus;
 
     /**
     * 创建时间
@@ -90,14 +90,14 @@ public class TaskInfo extends AbstractModel{
     */
     @SerializedName("DeviceStatus")
     @Expose
-    private Long DeviceStatus;
+    private Integer DeviceStatus;
 
     /**
     * 设备操作状态
     */
     @SerializedName("OperateStatus")
     @Expose
-    private Long OperateStatus;
+    private Integer OperateStatus;
 
     /**
     * 可用区
@@ -228,7 +228,7 @@ public class TaskInfo extends AbstractModel{
      * Get 故障类型id 
      * @return TaskTypeId 故障类型id
      */
-    public Long getTaskTypeId() {
+    public Integer getTaskTypeId() {
         return this.TaskTypeId;
     }
 
@@ -236,7 +236,7 @@ public class TaskInfo extends AbstractModel{
      * Set 故障类型id
      * @param TaskTypeId 故障类型id
      */
-    public void setTaskTypeId(Long TaskTypeId) {
+    public void setTaskTypeId(Integer TaskTypeId) {
         this.TaskTypeId = TaskTypeId;
     }
 
@@ -244,7 +244,7 @@ public class TaskInfo extends AbstractModel{
      * Get 任务状态id 
      * @return TaskStatus 任务状态id
      */
-    public Long getTaskStatus() {
+    public Integer getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -252,7 +252,7 @@ public class TaskInfo extends AbstractModel{
      * Set 任务状态id
      * @param TaskStatus 任务状态id
      */
-    public void setTaskStatus(Long TaskStatus) {
+    public void setTaskStatus(Integer TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -324,7 +324,7 @@ public class TaskInfo extends AbstractModel{
      * Get 设备状态 
      * @return DeviceStatus 设备状态
      */
-    public Long getDeviceStatus() {
+    public Integer getDeviceStatus() {
         return this.DeviceStatus;
     }
 
@@ -332,7 +332,7 @@ public class TaskInfo extends AbstractModel{
      * Set 设备状态
      * @param DeviceStatus 设备状态
      */
-    public void setDeviceStatus(Long DeviceStatus) {
+    public void setDeviceStatus(Integer DeviceStatus) {
         this.DeviceStatus = DeviceStatus;
     }
 
@@ -340,7 +340,7 @@ public class TaskInfo extends AbstractModel{
      * Get 设备操作状态 
      * @return OperateStatus 设备操作状态
      */
-    public Long getOperateStatus() {
+    public Integer getOperateStatus() {
         return this.OperateStatus;
     }
 
@@ -348,7 +348,7 @@ public class TaskInfo extends AbstractModel{
      * Set 设备操作状态
      * @param OperateStatus 设备操作状态
      */
-    public void setOperateStatus(Long OperateStatus) {
+    public void setOperateStatus(Integer OperateStatus) {
         this.OperateStatus = OperateStatus;
     }
 

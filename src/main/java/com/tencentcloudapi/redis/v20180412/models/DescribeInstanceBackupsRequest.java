@@ -34,14 +34,14 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 偏移量，取Limit整数倍
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
@@ -62,7 +62,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long [] Status;
+    private Integer [] Status;
 
     /**
      * Get 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。 
@@ -84,7 +84,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      * Get 实例列表大小，默认大小20 
      * @return Limit 实例列表大小，默认大小20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -92,7 +92,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      * Set 实例列表大小，默认大小20
      * @param Limit 实例列表大小，默认大小20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -100,7 +100,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      * Get 偏移量，取Limit整数倍 
      * @return Offset 偏移量，取Limit整数倍
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -108,7 +108,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      * Set 偏移量，取Limit整数倍
      * @param Offset 偏移量，取Limit整数倍
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -148,7 +148,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      * Get 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。 
      * @return Status 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      */
-    public Long [] getStatus() {
+    public Integer [] getStatus() {
         return this.Status;
     }
 
@@ -156,7 +156,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      * Set 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      * @param Status 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      */
-    public void setStatus(Long [] Status) {
+    public void setStatus(Integer [] Status) {
         this.Status = Status;
     }
 

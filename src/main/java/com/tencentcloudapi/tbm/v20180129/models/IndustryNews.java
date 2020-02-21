@@ -62,21 +62,21 @@ public class IndustryNews extends AbstractModel{
     */
     @SerializedName("Level")
     @Expose
-    private Long Level;
+    private Integer Level;
 
     /**
     * 热度值
     */
     @SerializedName("Hot")
     @Expose
-    private Long Hot;
+    private Integer Hot;
 
     /**
     * 报道标识
     */
     @SerializedName("Flag")
     @Expose
-    private Long Flag;
+    private Integer Flag;
 
     /**
     * 报道摘要
@@ -169,7 +169,7 @@ public class IndustryNews extends AbstractModel{
      * Get 报道来源等级 
      * @return Level 报道来源等级
      */
-    public Long getLevel() {
+    public Integer getLevel() {
         return this.Level;
     }
 
@@ -177,7 +177,7 @@ public class IndustryNews extends AbstractModel{
      * Set 报道来源等级
      * @param Level 报道来源等级
      */
-    public void setLevel(Long Level) {
+    public void setLevel(Integer Level) {
         this.Level = Level;
     }
 
@@ -185,7 +185,7 @@ public class IndustryNews extends AbstractModel{
      * Get 热度值 
      * @return Hot 热度值
      */
-    public Long getHot() {
+    public Integer getHot() {
         return this.Hot;
     }
 
@@ -193,7 +193,7 @@ public class IndustryNews extends AbstractModel{
      * Set 热度值
      * @param Hot 热度值
      */
-    public void setHot(Long Hot) {
+    public void setHot(Integer Hot) {
         this.Hot = Hot;
     }
 
@@ -201,7 +201,7 @@ public class IndustryNews extends AbstractModel{
      * Get 报道标识 
      * @return Flag 报道标识
      */
-    public Long getFlag() {
+    public Integer getFlag() {
         return this.Flag;
     }
 
@@ -209,7 +209,7 @@ public class IndustryNews extends AbstractModel{
      * Set 报道标识
      * @param Flag 报道标识
      */
-    public void setFlag(Long Flag) {
+    public void setFlag(Integer Flag) {
         this.Flag = Flag;
     }
 

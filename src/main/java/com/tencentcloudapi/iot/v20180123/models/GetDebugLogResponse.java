@@ -41,7 +41,7 @@ public class GetDebugLogResponse extends AbstractModel{
     */
     @SerializedName("ScrollTimeout")
     @Expose
-    private Long ScrollTimeout;
+    private Integer ScrollTimeout;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -86,7 +86,7 @@ public class GetDebugLogResponse extends AbstractModel{
      * Get 游标超时 
      * @return ScrollTimeout 游标超时
      */
-    public Long getScrollTimeout() {
+    public Integer getScrollTimeout() {
         return this.ScrollTimeout;
     }
 
@@ -94,7 +94,7 @@ public class GetDebugLogResponse extends AbstractModel{
      * Set 游标超时
      * @param ScrollTimeout 游标超时
      */
-    public void setScrollTimeout(Long ScrollTimeout) {
+    public void setScrollTimeout(Integer ScrollTimeout) {
         this.ScrollTimeout = ScrollTimeout;
     }
 

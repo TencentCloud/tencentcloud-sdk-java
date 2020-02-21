@@ -48,28 +48,28 @@ public class ShardInfo extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 分片磁盘规格，单位为MB
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 分片Oplog大小，单位为MB
     */
     @SerializedName("OplogSize")
     @Expose
-    private Long OplogSize;
+    private Integer OplogSize;
 
     /**
     * 分片从节点数
     */
     @SerializedName("SecondaryNum")
     @Expose
-    private Long SecondaryNum;
+    private Integer SecondaryNum;
 
     /**
     * 分片物理id
@@ -130,7 +130,7 @@ public class ShardInfo extends AbstractModel{
      * Get 分片内存规格，单位为MB 
      * @return Memory 分片内存规格，单位为MB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -138,7 +138,7 @@ public class ShardInfo extends AbstractModel{
      * Set 分片内存规格，单位为MB
      * @param Memory 分片内存规格，单位为MB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -146,7 +146,7 @@ public class ShardInfo extends AbstractModel{
      * Get 分片磁盘规格，单位为MB 
      * @return Volume 分片磁盘规格，单位为MB
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -154,7 +154,7 @@ public class ShardInfo extends AbstractModel{
      * Set 分片磁盘规格，单位为MB
      * @param Volume 分片磁盘规格，单位为MB
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -162,7 +162,7 @@ public class ShardInfo extends AbstractModel{
      * Get 分片Oplog大小，单位为MB 
      * @return OplogSize 分片Oplog大小，单位为MB
      */
-    public Long getOplogSize() {
+    public Integer getOplogSize() {
         return this.OplogSize;
     }
 
@@ -170,7 +170,7 @@ public class ShardInfo extends AbstractModel{
      * Set 分片Oplog大小，单位为MB
      * @param OplogSize 分片Oplog大小，单位为MB
      */
-    public void setOplogSize(Long OplogSize) {
+    public void setOplogSize(Integer OplogSize) {
         this.OplogSize = OplogSize;
     }
 
@@ -178,7 +178,7 @@ public class ShardInfo extends AbstractModel{
      * Get 分片从节点数 
      * @return SecondaryNum 分片从节点数
      */
-    public Long getSecondaryNum() {
+    public Integer getSecondaryNum() {
         return this.SecondaryNum;
     }
 
@@ -186,7 +186,7 @@ public class ShardInfo extends AbstractModel{
      * Set 分片从节点数
      * @param SecondaryNum 分片从节点数
      */
-    public void setSecondaryNum(Long SecondaryNum) {
+    public void setSecondaryNum(Integer SecondaryNum) {
         this.SecondaryNum = SecondaryNum;
     }
 

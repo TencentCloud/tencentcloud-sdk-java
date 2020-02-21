@@ -27,28 +27,28 @@ public class SpecConfigInfo extends AbstractModel{
     */
     @SerializedName("NodeCount")
     @Expose
-    private Long NodeCount;
+    private Integer NodeCount;
 
     /**
     * 内存大小，单位 GB
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 数据盘规格最小值，单位 GB
     */
     @SerializedName("MinStorage")
     @Expose
-    private Long MinStorage;
+    private Integer MinStorage;
 
     /**
     * 数据盘规格最大值，单位 GB
     */
     @SerializedName("MaxStorage")
     @Expose
-    private Long MaxStorage;
+    private Integer MaxStorage;
 
     /**
     * 推荐的使用场景
@@ -62,20 +62,20 @@ public class SpecConfigInfo extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Long Pid;
+    private Integer Pid;
 
     /**
     * 最大 Qps 值
     */
     @SerializedName("Qps")
     @Expose
-    private Long Qps;
+    private Integer Qps;
 
     /**
      * Get 节点个数，2 表示一主一从，3 表示一主二从 
      * @return NodeCount 节点个数，2 表示一主一从，3 表示一主二从
      */
-    public Long getNodeCount() {
+    public Integer getNodeCount() {
         return this.NodeCount;
     }
 
@@ -83,7 +83,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Set 节点个数，2 表示一主一从，3 表示一主二从
      * @param NodeCount 节点个数，2 表示一主一从，3 表示一主二从
      */
-    public void setNodeCount(Long NodeCount) {
+    public void setNodeCount(Integer NodeCount) {
         this.NodeCount = NodeCount;
     }
 
@@ -91,7 +91,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -99,7 +99,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -107,7 +107,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Get 数据盘规格最小值，单位 GB 
      * @return MinStorage 数据盘规格最小值，单位 GB
      */
-    public Long getMinStorage() {
+    public Integer getMinStorage() {
         return this.MinStorage;
     }
 
@@ -115,7 +115,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Set 数据盘规格最小值，单位 GB
      * @param MinStorage 数据盘规格最小值，单位 GB
      */
-    public void setMinStorage(Long MinStorage) {
+    public void setMinStorage(Integer MinStorage) {
         this.MinStorage = MinStorage;
     }
 
@@ -123,7 +123,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Get 数据盘规格最大值，单位 GB 
      * @return MaxStorage 数据盘规格最大值，单位 GB
      */
-    public Long getMaxStorage() {
+    public Integer getMaxStorage() {
         return this.MaxStorage;
     }
 
@@ -131,7 +131,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Set 数据盘规格最大值，单位 GB
      * @param MaxStorage 数据盘规格最大值，单位 GB
      */
-    public void setMaxStorage(Long MaxStorage) {
+    public void setMaxStorage(Integer MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
@@ -155,7 +155,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Get 产品类型 Id 
      * @return Pid 产品类型 Id
      */
-    public Long getPid() {
+    public Integer getPid() {
         return this.Pid;
     }
 
@@ -163,7 +163,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Set 产品类型 Id
      * @param Pid 产品类型 Id
      */
-    public void setPid(Long Pid) {
+    public void setPid(Integer Pid) {
         this.Pid = Pid;
     }
 
@@ -171,7 +171,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Get 最大 Qps 值 
      * @return Qps 最大 Qps 值
      */
-    public Long getQps() {
+    public Integer getQps() {
         return this.Qps;
     }
 
@@ -179,7 +179,7 @@ public class SpecConfigInfo extends AbstractModel{
      * Set 最大 Qps 值
      * @param Qps 最大 Qps 值
      */
-    public void setQps(Long Qps) {
+    public void setQps(Integer Qps) {
         this.Qps = Qps;
     }
 

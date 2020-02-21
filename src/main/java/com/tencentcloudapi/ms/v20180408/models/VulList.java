@@ -62,7 +62,7 @@ public class VulList extends AbstractModel{
     */
     @SerializedName("VulSrcType")
     @Expose
-    private Long VulSrcType;
+    private Integer VulSrcType;
 
     /**
     * 漏洞位置
@@ -76,7 +76,7 @@ public class VulList extends AbstractModel{
     */
     @SerializedName("RiskLevel")
     @Expose
-    private Long RiskLevel;
+    private Integer RiskLevel;
 
     /**
      * Get 漏洞id 
@@ -162,7 +162,7 @@ public class VulList extends AbstractModel{
      * Get 漏洞来源类别，0默认自身，1第三方插件 
      * @return VulSrcType 漏洞来源类别，0默认自身，1第三方插件
      */
-    public Long getVulSrcType() {
+    public Integer getVulSrcType() {
         return this.VulSrcType;
     }
 
@@ -170,7 +170,7 @@ public class VulList extends AbstractModel{
      * Set 漏洞来源类别，0默认自身，1第三方插件
      * @param VulSrcType 漏洞来源类别，0默认自身，1第三方插件
      */
-    public void setVulSrcType(Long VulSrcType) {
+    public void setVulSrcType(Integer VulSrcType) {
         this.VulSrcType = VulSrcType;
     }
 
@@ -194,7 +194,7 @@ public class VulList extends AbstractModel{
      * Get 风险级别：1 低风险 ；2中等风险；3 高风险 
      * @return RiskLevel 风险级别：1 低风险 ；2中等风险；3 高风险
      */
-    public Long getRiskLevel() {
+    public Integer getRiskLevel() {
         return this.RiskLevel;
     }
 
@@ -202,7 +202,7 @@ public class VulList extends AbstractModel{
      * Set 风险级别：1 低风险 ；2中等风险；3 高风险
      * @param RiskLevel 风险级别：1 低风险 ；2中等风险；3 高风险
      */
-    public void setRiskLevel(Long RiskLevel) {
+    public void setRiskLevel(Integer RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 

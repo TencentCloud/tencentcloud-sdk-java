@@ -27,7 +27,7 @@ public class DescribeLaunchConfigurationsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 启动配置详细信息列表。
@@ -47,7 +47,7 @@ public class DescribeLaunchConfigurationsResponse extends AbstractModel{
      * Get 符合条件的启动配置数量。 
      * @return TotalCount 符合条件的启动配置数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeLaunchConfigurationsResponse extends AbstractModel{
      * Set 符合条件的启动配置数量。
      * @param TotalCount 符合条件的启动配置数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

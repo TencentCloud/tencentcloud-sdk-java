@@ -27,7 +27,7 @@ public class Monitor extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 监控名称。
@@ -41,7 +41,7 @@ public class Monitor extends AbstractModel{
     */
     @SerializedName("MonitorStatus")
     @Expose
-    private Long MonitorStatus;
+    private Integer MonitorStatus;
 
     /**
     * 监测模式，normal-正常扫描；deep-深度扫描。
@@ -55,7 +55,7 @@ public class Monitor extends AbstractModel{
     */
     @SerializedName("Crontab")
     @Expose
-    private Long Crontab;
+    private Integer Crontab;
 
     /**
     * 指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
@@ -69,7 +69,7 @@ public class Monitor extends AbstractModel{
     */
     @SerializedName("RateLimit")
     @Expose
-    private Long RateLimit;
+    private Integer RateLimit;
 
     /**
     * 首次扫描开始时间。
@@ -83,7 +83,7 @@ public class Monitor extends AbstractModel{
     */
     @SerializedName("ScanStatus")
     @Expose
-    private Long ScanStatus;
+    private Integer ScanStatus;
 
     /**
     * 上一次扫描完成时间。
@@ -118,20 +118,20 @@ public class Monitor extends AbstractModel{
     */
     @SerializedName("Appid")
     @Expose
-    private Long Appid;
+    private Integer Appid;
 
     /**
     * 扫描状态：0-待检测；1-检测完成
     */
     @SerializedName("ContentScanStatus")
     @Expose
-    private Long ContentScanStatus;
+    private Integer ContentScanStatus;
 
     /**
      * Get 监控任务ID。 
      * @return Id 监控任务ID。
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -139,7 +139,7 @@ public class Monitor extends AbstractModel{
      * Set 监控任务ID。
      * @param Id 监控任务ID。
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -163,7 +163,7 @@ public class Monitor extends AbstractModel{
      * Get 监测状态：1-监测中；2-暂停监测。 
      * @return MonitorStatus 监测状态：1-监测中；2-暂停监测。
      */
-    public Long getMonitorStatus() {
+    public Integer getMonitorStatus() {
         return this.MonitorStatus;
     }
 
@@ -171,7 +171,7 @@ public class Monitor extends AbstractModel{
      * Set 监测状态：1-监测中；2-暂停监测。
      * @param MonitorStatus 监测状态：1-监测中；2-暂停监测。
      */
-    public void setMonitorStatus(Long MonitorStatus) {
+    public void setMonitorStatus(Integer MonitorStatus) {
         this.MonitorStatus = MonitorStatus;
     }
 
@@ -195,7 +195,7 @@ public class Monitor extends AbstractModel{
      * Get 扫描周期，单位小时，每X小时执行一次。 
      * @return Crontab 扫描周期，单位小时，每X小时执行一次。
      */
-    public Long getCrontab() {
+    public Integer getCrontab() {
         return this.Crontab;
     }
 
@@ -203,7 +203,7 @@ public class Monitor extends AbstractModel{
      * Set 扫描周期，单位小时，每X小时执行一次。
      * @param Crontab 扫描周期，单位小时，每X小时执行一次。
      */
-    public void setCrontab(Long Crontab) {
+    public void setCrontab(Integer Crontab) {
         this.Crontab = Crontab;
     }
 
@@ -227,7 +227,7 @@ public class Monitor extends AbstractModel{
      * Get 速率限制，每秒发送X个HTTP请求。 
      * @return RateLimit 速率限制，每秒发送X个HTTP请求。
      */
-    public Long getRateLimit() {
+    public Integer getRateLimit() {
         return this.RateLimit;
     }
 
@@ -235,7 +235,7 @@ public class Monitor extends AbstractModel{
      * Set 速率限制，每秒发送X个HTTP请求。
      * @param RateLimit 速率限制，每秒发送X个HTTP请求。
      */
-    public void setRateLimit(Long RateLimit) {
+    public void setRateLimit(Integer RateLimit) {
         this.RateLimit = RateLimit;
     }
 
@@ -259,7 +259,7 @@ public class Monitor extends AbstractModel{
      * Get 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。 
      * @return ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
-    public Long getScanStatus() {
+    public Integer getScanStatus() {
         return this.ScanStatus;
     }
 
@@ -267,7 +267,7 @@ public class Monitor extends AbstractModel{
      * Set 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      * @param ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
-    public void setScanStatus(Long ScanStatus) {
+    public void setScanStatus(Integer ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
@@ -339,7 +339,7 @@ public class Monitor extends AbstractModel{
      * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
-    public Long getAppid() {
+    public Integer getAppid() {
         return this.Appid;
     }
 
@@ -347,7 +347,7 @@ public class Monitor extends AbstractModel{
      * Set 云用户appid。
      * @param Appid 云用户appid。
      */
-    public void setAppid(Long Appid) {
+    public void setAppid(Integer Appid) {
         this.Appid = Appid;
     }
 
@@ -355,7 +355,7 @@ public class Monitor extends AbstractModel{
      * Get 扫描状态：0-待检测；1-检测完成 
      * @return ContentScanStatus 扫描状态：0-待检测；1-检测完成
      */
-    public Long getContentScanStatus() {
+    public Integer getContentScanStatus() {
         return this.ContentScanStatus;
     }
 
@@ -363,7 +363,7 @@ public class Monitor extends AbstractModel{
      * Set 扫描状态：0-待检测；1-检测完成
      * @param ContentScanStatus 扫描状态：0-待检测；1-检测完成
      */
-    public void setContentScanStatus(Long ContentScanStatus) {
+    public void setContentScanStatus(Integer ContentScanStatus) {
         this.ContentScanStatus = ContentScanStatus;
     }
 

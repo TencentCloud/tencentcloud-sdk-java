@@ -34,14 +34,14 @@ public class CameraPersonInfo extends AbstractModel{
     */
     @SerializedName("FaceId")
     @Expose
-    private Long FaceId;
+    private Integer FaceId;
 
     /**
     * 确定当次返回的哪个id有效，1-FaceId，2-TempId
     */
     @SerializedName("IdType")
     @Expose
-    private Long IdType;
+    private Integer IdType;
 
     /**
     * 当次抓拍到的人脸图片base编码
@@ -55,7 +55,7 @@ public class CameraPersonInfo extends AbstractModel{
     */
     @SerializedName("Time")
     @Expose
-    private Long Time;
+    private Integer Time;
 
     /**
     * 当前的person基本信息，图片以FacePic为准，结构体内未填
@@ -84,7 +84,7 @@ public class CameraPersonInfo extends AbstractModel{
      * Get 人脸face id 
      * @return FaceId 人脸face id
      */
-    public Long getFaceId() {
+    public Integer getFaceId() {
         return this.FaceId;
     }
 
@@ -92,7 +92,7 @@ public class CameraPersonInfo extends AbstractModel{
      * Set 人脸face id
      * @param FaceId 人脸face id
      */
-    public void setFaceId(Long FaceId) {
+    public void setFaceId(Integer FaceId) {
         this.FaceId = FaceId;
     }
 
@@ -100,7 +100,7 @@ public class CameraPersonInfo extends AbstractModel{
      * Get 确定当次返回的哪个id有效，1-FaceId，2-TempId 
      * @return IdType 确定当次返回的哪个id有效，1-FaceId，2-TempId
      */
-    public Long getIdType() {
+    public Integer getIdType() {
         return this.IdType;
     }
 
@@ -108,7 +108,7 @@ public class CameraPersonInfo extends AbstractModel{
      * Set 确定当次返回的哪个id有效，1-FaceId，2-TempId
      * @param IdType 确定当次返回的哪个id有效，1-FaceId，2-TempId
      */
-    public void setIdType(Long IdType) {
+    public void setIdType(Integer IdType) {
         this.IdType = IdType;
     }
 
@@ -132,7 +132,7 @@ public class CameraPersonInfo extends AbstractModel{
      * Get 当次抓拍时间戳 
      * @return Time 当次抓拍时间戳
      */
-    public Long getTime() {
+    public Integer getTime() {
         return this.Time;
     }
 
@@ -140,7 +140,7 @@ public class CameraPersonInfo extends AbstractModel{
      * Set 当次抓拍时间戳
      * @param Time 当次抓拍时间戳
      */
-    public void setTime(Long Time) {
+    public void setTime(Integer Time) {
         this.Time = Time;
     }
 

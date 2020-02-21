@@ -27,7 +27,7 @@ public class Conditions extends AbstractModel{
     */
     @SerializedName("TimeRange")
     @Expose
-    private Long TimeRange;
+    private Integer TimeRange;
 
     /**
     * 产品编码
@@ -41,14 +41,14 @@ public class Conditions extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 地域ID
     */
     @SerializedName("RegionId")
     @Expose
-    private Long RegionId;
+    private Integer RegionId;
 
     /**
     * 付费模式，可选prePay和postPay
@@ -83,14 +83,14 @@ public class Conditions extends AbstractModel{
     */
     @SerializedName("RegionIds")
     @Expose
-    private Long [] RegionIds;
+    private Integer [] RegionIds;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectIds")
     @Expose
-    private Long [] ProjectIds;
+    private Integer [] ProjectIds;
 
     /**
     * 付费模式，可选prePay和postPay
@@ -111,7 +111,7 @@ public class Conditions extends AbstractModel{
     */
     @SerializedName("HideFreeCost")
     @Expose
-    private Long HideFreeCost;
+    private Integer HideFreeCost;
 
     /**
     * 排序规则，可选desc和asc
@@ -153,13 +153,13 @@ public class Conditions extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long [] Status;
+    private Integer [] Status;
 
     /**
      * Get 只支持6和12两个值 
      * @return TimeRange 只支持6和12两个值
      */
-    public Long getTimeRange() {
+    public Integer getTimeRange() {
         return this.TimeRange;
     }
 
@@ -167,7 +167,7 @@ public class Conditions extends AbstractModel{
      * Set 只支持6和12两个值
      * @param TimeRange 只支持6和12两个值
      */
-    public void setTimeRange(Long TimeRange) {
+    public void setTimeRange(Integer TimeRange) {
         this.TimeRange = TimeRange;
     }
 
@@ -191,7 +191,7 @@ public class Conditions extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -199,7 +199,7 @@ public class Conditions extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -207,7 +207,7 @@ public class Conditions extends AbstractModel{
      * Get 地域ID 
      * @return RegionId 地域ID
      */
-    public Long getRegionId() {
+    public Integer getRegionId() {
         return this.RegionId;
     }
 
@@ -215,7 +215,7 @@ public class Conditions extends AbstractModel{
      * Set 地域ID
      * @param RegionId 地域ID
      */
-    public void setRegionId(Long RegionId) {
+    public void setRegionId(Integer RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -287,7 +287,7 @@ public class Conditions extends AbstractModel{
      * Get 地域ID 
      * @return RegionIds 地域ID
      */
-    public Long [] getRegionIds() {
+    public Integer [] getRegionIds() {
         return this.RegionIds;
     }
 
@@ -295,7 +295,7 @@ public class Conditions extends AbstractModel{
      * Set 地域ID
      * @param RegionIds 地域ID
      */
-    public void setRegionIds(Long [] RegionIds) {
+    public void setRegionIds(Integer [] RegionIds) {
         this.RegionIds = RegionIds;
     }
 
@@ -303,7 +303,7 @@ public class Conditions extends AbstractModel{
      * Get 项目ID 
      * @return ProjectIds 项目ID
      */
-    public Long [] getProjectIds() {
+    public Integer [] getProjectIds() {
         return this.ProjectIds;
     }
 
@@ -311,7 +311,7 @@ public class Conditions extends AbstractModel{
      * Set 项目ID
      * @param ProjectIds 项目ID
      */
-    public void setProjectIds(Long [] ProjectIds) {
+    public void setProjectIds(Integer [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
@@ -351,7 +351,7 @@ public class Conditions extends AbstractModel{
      * Get 是否隐藏0元流水 
      * @return HideFreeCost 是否隐藏0元流水
      */
-    public Long getHideFreeCost() {
+    public Integer getHideFreeCost() {
         return this.HideFreeCost;
     }
 
@@ -359,7 +359,7 @@ public class Conditions extends AbstractModel{
      * Set 是否隐藏0元流水
      * @param HideFreeCost 是否隐藏0元流水
      */
-    public void setHideFreeCost(Long HideFreeCost) {
+    public void setHideFreeCost(Integer HideFreeCost) {
         this.HideFreeCost = HideFreeCost;
     }
 
@@ -447,7 +447,7 @@ public class Conditions extends AbstractModel{
      * Get 状态 
      * @return Status 状态
      */
-    public Long [] getStatus() {
+    public Integer [] getStatus() {
         return this.Status;
     }
 
@@ -455,7 +455,7 @@ public class Conditions extends AbstractModel{
      * Set 状态
      * @param Status 状态
      */
-    public void setStatus(Long [] Status) {
+    public void setStatus(Integer [] Status) {
         this.Status = Status;
     }
 

@@ -41,21 +41,21 @@ public class MongoDBInstanceDetail extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Long PayMode;
+    private Integer PayMode;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 集群类型，可能的返回值：0-副本集实例，1-分片实例，
     */
     @SerializedName("ClusterType")
     @Expose
-    private Long ClusterType;
+    private Integer ClusterType;
 
     /**
     * 地域信息
@@ -76,7 +76,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
     */
     @SerializedName("NetType")
     @Expose
-    private Long NetType;
+    private Integer NetType;
 
     /**
     * 私有网络的ID
@@ -97,7 +97,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 实例IP
@@ -111,7 +111,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Long Vport;
+    private Integer Vport;
 
     /**
     * 实例创建时间
@@ -139,21 +139,21 @@ public class MongoDBInstanceDetail extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例磁盘规格，单位为MB
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 实例CPU核心数
     */
     @SerializedName("CpuNum")
     @Expose
-    private Long CpuNum;
+    private Integer CpuNum;
 
     /**
     * 实例机器类型
@@ -167,28 +167,28 @@ public class MongoDBInstanceDetail extends AbstractModel{
     */
     @SerializedName("SecondaryNum")
     @Expose
-    private Long SecondaryNum;
+    private Integer SecondaryNum;
 
     /**
     * 实例分片数
     */
     @SerializedName("ReplicationSetNum")
     @Expose
-    private Long ReplicationSetNum;
+    private Integer ReplicationSetNum;
 
     /**
     * 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
     * 已用容量，单位MB
     */
     @SerializedName("UsedVolume")
     @Expose
-    private Long UsedVolume;
+    private Integer UsedVolume;
 
     /**
     * 维护窗口起始时间
@@ -256,28 +256,28 @@ public class MongoDBInstanceDetail extends AbstractModel{
     */
     @SerializedName("InstanceVer")
     @Expose
-    private Long InstanceVer;
+    private Integer InstanceVer;
 
     /**
     * 实例标记
     */
     @SerializedName("ClusterVer")
     @Expose
-    private Long ClusterVer;
+    private Integer ClusterVer;
 
     /**
     * 协议信息，可能的返回值：1-mongodb，2-dynamodb
     */
     @SerializedName("Protocol")
     @Expose
-    private Long Protocol;
+    private Integer Protocol;
 
     /**
     * 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
     */
     @SerializedName("InstanceType")
     @Expose
-    private Long InstanceType;
+    private Integer InstanceType;
 
     /**
     * 实例状态描述
@@ -329,7 +329,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 付费类型，可能的返回值：1-包年包月；0-按量计费 
      * @return PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
      */
-    public Long getPayMode() {
+    public Integer getPayMode() {
         return this.PayMode;
     }
 
@@ -337,7 +337,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 付费类型，可能的返回值：1-包年包月；0-按量计费
      * @param PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
      */
-    public void setPayMode(Long PayMode) {
+    public void setPayMode(Integer PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -345,7 +345,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -353,7 +353,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -361,7 +361,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 集群类型，可能的返回值：0-副本集实例，1-分片实例， 
      * @return ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例，
      */
-    public Long getClusterType() {
+    public Integer getClusterType() {
         return this.ClusterType;
     }
 
@@ -369,7 +369,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 集群类型，可能的返回值：0-副本集实例，1-分片实例，
      * @param ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例，
      */
-    public void setClusterType(Long ClusterType) {
+    public void setClusterType(Integer ClusterType) {
         this.ClusterType = ClusterType;
     }
 
@@ -409,7 +409,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 网络类型，可能的返回值：0-基础网络，1-私有网络 
      * @return NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
      */
-    public Long getNetType() {
+    public Integer getNetType() {
         return this.NetType;
     }
 
@@ -417,7 +417,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 网络类型，可能的返回值：0-基础网络，1-私有网络
      * @param NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
      */
-    public void setNetType(Long NetType) {
+    public void setNetType(Integer NetType) {
         this.NetType = NetType;
     }
 
@@ -457,7 +457,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期 
      * @return Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -465,7 +465,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
      * @param Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -489,7 +489,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 端口号 
      * @return Vport 端口号
      */
-    public Long getVport() {
+    public Integer getVport() {
         return this.Vport;
     }
 
@@ -497,7 +497,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 端口号
      * @param Vport 端口号
      */
-    public void setVport(Long Vport) {
+    public void setVport(Integer Vport) {
         this.Vport = Vport;
     }
 
@@ -553,7 +553,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例内存规格，单位为MB 
      * @return Memory 实例内存规格，单位为MB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -561,7 +561,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例内存规格，单位为MB
      * @param Memory 实例内存规格，单位为MB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -569,7 +569,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例磁盘规格，单位为MB 
      * @return Volume 实例磁盘规格，单位为MB
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -577,7 +577,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例磁盘规格，单位为MB
      * @param Volume 实例磁盘规格，单位为MB
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -585,7 +585,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例CPU核心数 
      * @return CpuNum 实例CPU核心数
      */
-    public Long getCpuNum() {
+    public Integer getCpuNum() {
         return this.CpuNum;
     }
 
@@ -593,7 +593,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例CPU核心数
      * @param CpuNum 实例CPU核心数
      */
-    public void setCpuNum(Long CpuNum) {
+    public void setCpuNum(Integer CpuNum) {
         this.CpuNum = CpuNum;
     }
 
@@ -617,7 +617,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例从节点数 
      * @return SecondaryNum 实例从节点数
      */
-    public Long getSecondaryNum() {
+    public Integer getSecondaryNum() {
         return this.SecondaryNum;
     }
 
@@ -625,7 +625,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例从节点数
      * @param SecondaryNum 实例从节点数
      */
-    public void setSecondaryNum(Long SecondaryNum) {
+    public void setSecondaryNum(Integer SecondaryNum) {
         this.SecondaryNum = SecondaryNum;
     }
 
@@ -633,7 +633,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例分片数 
      * @return ReplicationSetNum 实例分片数
      */
-    public Long getReplicationSetNum() {
+    public Integer getReplicationSetNum() {
         return this.ReplicationSetNum;
     }
 
@@ -641,7 +641,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例分片数
      * @param ReplicationSetNum 实例分片数
      */
-    public void setReplicationSetNum(Long ReplicationSetNum) {
+    public void setReplicationSetNum(Integer ReplicationSetNum) {
         this.ReplicationSetNum = ReplicationSetNum;
     }
 
@@ -649,7 +649,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费 
      * @return AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -657,7 +657,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
      * @param AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
@@ -665,7 +665,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 已用容量，单位MB 
      * @return UsedVolume 已用容量，单位MB
      */
-    public Long getUsedVolume() {
+    public Integer getUsedVolume() {
         return this.UsedVolume;
     }
 
@@ -673,7 +673,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 已用容量，单位MB
      * @param UsedVolume 已用容量，单位MB
      */
-    public void setUsedVolume(Long UsedVolume) {
+    public void setUsedVolume(Integer UsedVolume) {
         this.UsedVolume = UsedVolume;
     }
 
@@ -829,7 +829,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例标记 
      * @return InstanceVer 实例标记
      */
-    public Long getInstanceVer() {
+    public Integer getInstanceVer() {
         return this.InstanceVer;
     }
 
@@ -837,7 +837,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例标记
      * @param InstanceVer 实例标记
      */
-    public void setInstanceVer(Long InstanceVer) {
+    public void setInstanceVer(Integer InstanceVer) {
         this.InstanceVer = InstanceVer;
     }
 
@@ -845,7 +845,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例标记 
      * @return ClusterVer 实例标记
      */
-    public Long getClusterVer() {
+    public Integer getClusterVer() {
         return this.ClusterVer;
     }
 
@@ -853,7 +853,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例标记
      * @param ClusterVer 实例标记
      */
-    public void setClusterVer(Long ClusterVer) {
+    public void setClusterVer(Integer ClusterVer) {
         this.ClusterVer = ClusterVer;
     }
 
@@ -861,7 +861,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 协议信息，可能的返回值：1-mongodb，2-dynamodb 
      * @return Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
      */
-    public Long getProtocol() {
+    public Integer getProtocol() {
         return this.Protocol;
     }
 
@@ -869,7 +869,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 协议信息，可能的返回值：1-mongodb，2-dynamodb
      * @param Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
      */
-    public void setProtocol(Long Protocol) {
+    public void setProtocol(Integer Protocol) {
         this.Protocol = Protocol;
     }
 
@@ -877,7 +877,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Get 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例 
      * @return InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      */
-    public Long getInstanceType() {
+    public Integer getInstanceType() {
         return this.InstanceType;
     }
 
@@ -885,7 +885,7 @@ public class MongoDBInstanceDetail extends AbstractModel{
      * Set 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      * @param InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      */
-    public void setInstanceType(Long InstanceType) {
+    public void setInstanceType(Integer InstanceType) {
         this.InstanceType = InstanceType;
     }
 

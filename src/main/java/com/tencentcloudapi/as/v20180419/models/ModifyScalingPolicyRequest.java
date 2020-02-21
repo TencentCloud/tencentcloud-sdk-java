@@ -48,14 +48,14 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
     */
     @SerializedName("AdjustmentValue")
     @Expose
-    private Long AdjustmentValue;
+    private Integer AdjustmentValue;
 
     /**
     * 冷却时间，单位为秒。
     */
     @SerializedName("Cooldown")
     @Expose
-    private Long Cooldown;
+    private Integer Cooldown;
 
     /**
     * 告警监控指标。
@@ -124,7 +124,7 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
      * Get 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。 
      * @return AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      */
-    public Long getAdjustmentValue() {
+    public Integer getAdjustmentValue() {
         return this.AdjustmentValue;
     }
 
@@ -132,7 +132,7 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
      * Set 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      * @param AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      */
-    public void setAdjustmentValue(Long AdjustmentValue) {
+    public void setAdjustmentValue(Integer AdjustmentValue) {
         this.AdjustmentValue = AdjustmentValue;
     }
 
@@ -140,7 +140,7 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
      * Get 冷却时间，单位为秒。 
      * @return Cooldown 冷却时间，单位为秒。
      */
-    public Long getCooldown() {
+    public Integer getCooldown() {
         return this.Cooldown;
     }
 
@@ -148,7 +148,7 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
      * Set 冷却时间，单位为秒。
      * @param Cooldown 冷却时间，单位为秒。
      */
-    public void setCooldown(Long Cooldown) {
+    public void setCooldown(Integer Cooldown) {
         this.Cooldown = Cooldown;
     }
 

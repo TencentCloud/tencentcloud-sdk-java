@@ -37,7 +37,7 @@ off：关闭
     */
     @SerializedName("BpsThreshold")
     @Expose
-    private Long BpsThreshold;
+    private Integer BpsThreshold;
 
     /**
     * 达到阈值后的操作
@@ -87,7 +87,7 @@ off：关闭
      * @return BpsThreshold 带宽封顶阈值，单位为bps
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getBpsThreshold() {
+    public Integer getBpsThreshold() {
         return this.BpsThreshold;
     }
 
@@ -97,7 +97,7 @@ off：关闭
      * @param BpsThreshold 带宽封顶阈值，单位为bps
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBpsThreshold(Long BpsThreshold) {
+    public void setBpsThreshold(Integer BpsThreshold) {
         this.BpsThreshold = BpsThreshold;
     }
 

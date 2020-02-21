@@ -27,7 +27,7 @@ public class DescribeLiveWatermarksResponse extends AbstractModel{
     */
     @SerializedName("TotalNum")
     @Expose
-    private Long TotalNum;
+    private Integer TotalNum;
 
     /**
     * 水印信息列表。
@@ -47,7 +47,7 @@ public class DescribeLiveWatermarksResponse extends AbstractModel{
      * Get 水印总个数。 
      * @return TotalNum 水印总个数。
      */
-    public Long getTotalNum() {
+    public Integer getTotalNum() {
         return this.TotalNum;
     }
 
@@ -55,7 +55,7 @@ public class DescribeLiveWatermarksResponse extends AbstractModel{
      * Set 水印总个数。
      * @param TotalNum 水印总个数。
      */
-    public void setTotalNum(Long TotalNum) {
+    public void setTotalNum(Integer TotalNum) {
         this.TotalNum = TotalNum;
     }
 

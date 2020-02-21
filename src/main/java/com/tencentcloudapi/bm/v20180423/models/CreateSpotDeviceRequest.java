@@ -41,7 +41,7 @@ public class CreateSpotDeviceRequest extends AbstractModel{
     */
     @SerializedName("OsTypeId")
     @Expose
-    private Long OsTypeId;
+    private Integer OsTypeId;
 
     /**
     * 私有网络ID
@@ -62,7 +62,7 @@ public class CreateSpotDeviceRequest extends AbstractModel{
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Long GoodsNum;
+    private Integer GoodsNum;
 
     /**
     * 出价策略。可取值为SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用户设置价格上限，需要传SpotPriceLimit参数， 如果市场价高于用户的指定价格，则购买不成功;  SpotAsPriceGo 是随市场价的策略。
@@ -121,7 +121,7 @@ public class CreateSpotDeviceRequest extends AbstractModel{
      * Get 操作系统类型ID 
      * @return OsTypeId 操作系统类型ID
      */
-    public Long getOsTypeId() {
+    public Integer getOsTypeId() {
         return this.OsTypeId;
     }
 
@@ -129,7 +129,7 @@ public class CreateSpotDeviceRequest extends AbstractModel{
      * Set 操作系统类型ID
      * @param OsTypeId 操作系统类型ID
      */
-    public void setOsTypeId(Long OsTypeId) {
+    public void setOsTypeId(Integer OsTypeId) {
         this.OsTypeId = OsTypeId;
     }
 
@@ -169,7 +169,7 @@ public class CreateSpotDeviceRequest extends AbstractModel{
      * Get 购买的计算单元个数 
      * @return GoodsNum 购买的计算单元个数
      */
-    public Long getGoodsNum() {
+    public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -177,7 +177,7 @@ public class CreateSpotDeviceRequest extends AbstractModel{
      * Set 购买的计算单元个数
      * @param GoodsNum 购买的计算单元个数
      */
-    public void setGoodsNum(Long GoodsNum) {
+    public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 

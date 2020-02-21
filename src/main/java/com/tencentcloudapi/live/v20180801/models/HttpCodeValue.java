@@ -34,7 +34,7 @@ public class HttpCodeValue extends AbstractModel{
     */
     @SerializedName("Numbers")
     @Expose
-    private Long Numbers;
+    private Integer Numbers;
 
     /**
     * 占比。
@@ -63,7 +63,7 @@ public class HttpCodeValue extends AbstractModel{
      * Get 次数。 
      * @return Numbers 次数。
      */
-    public Long getNumbers() {
+    public Integer getNumbers() {
         return this.Numbers;
     }
 
@@ -71,7 +71,7 @@ public class HttpCodeValue extends AbstractModel{
      * Set 次数。
      * @param Numbers 次数。
      */
-    public void setNumbers(Long Numbers) {
+    public void setNumbers(Integer Numbers) {
         this.Numbers = Numbers;
     }
 

@@ -34,7 +34,7 @@ public class StopLiveRecordRequest extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
      * Get 流名称。 
@@ -56,7 +56,7 @@ public class StopLiveRecordRequest extends AbstractModel{
      * Get 任务ID，全局唯一标识录制任务。 
      * @return TaskId 任务ID，全局唯一标识录制任务。
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -64,7 +64,7 @@ public class StopLiveRecordRequest extends AbstractModel{
      * Set 任务ID，全局唯一标识录制任务。
      * @param TaskId 任务ID，全局唯一标识录制任务。
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 

@@ -55,28 +55,28 @@ public class PushDataInfo extends AbstractModel{
     */
     @SerializedName("VideoFps")
     @Expose
-    private Long VideoFps;
+    private Integer VideoFps;
 
     /**
     * 推流视频码率，单位是bps。
     */
     @SerializedName("VideoSpeed")
     @Expose
-    private Long VideoSpeed;
+    private Integer VideoSpeed;
 
     /**
     * 推流音频帧率，单位是Hz。
     */
     @SerializedName("AudioFps")
     @Expose
-    private Long AudioFps;
+    private Integer AudioFps;
 
     /**
     * 推流音频码率，单位是bps。
     */
     @SerializedName("AudioSpeed")
     @Expose
-    private Long AudioSpeed;
+    private Integer AudioSpeed;
 
     /**
     * 推流域名。
@@ -120,7 +120,7 @@ public class PushDataInfo extends AbstractModel{
     */
     @SerializedName("AsampleRate")
     @Expose
-    private Long AsampleRate;
+    private Integer AsampleRate;
 
     /**
      * Get 流名称。 
@@ -190,7 +190,7 @@ public class PushDataInfo extends AbstractModel{
      * Get 推流视频帧率，单位是Hz。 
      * @return VideoFps 推流视频帧率，单位是Hz。
      */
-    public Long getVideoFps() {
+    public Integer getVideoFps() {
         return this.VideoFps;
     }
 
@@ -198,7 +198,7 @@ public class PushDataInfo extends AbstractModel{
      * Set 推流视频帧率，单位是Hz。
      * @param VideoFps 推流视频帧率，单位是Hz。
      */
-    public void setVideoFps(Long VideoFps) {
+    public void setVideoFps(Integer VideoFps) {
         this.VideoFps = VideoFps;
     }
 
@@ -206,7 +206,7 @@ public class PushDataInfo extends AbstractModel{
      * Get 推流视频码率，单位是bps。 
      * @return VideoSpeed 推流视频码率，单位是bps。
      */
-    public Long getVideoSpeed() {
+    public Integer getVideoSpeed() {
         return this.VideoSpeed;
     }
 
@@ -214,7 +214,7 @@ public class PushDataInfo extends AbstractModel{
      * Set 推流视频码率，单位是bps。
      * @param VideoSpeed 推流视频码率，单位是bps。
      */
-    public void setVideoSpeed(Long VideoSpeed) {
+    public void setVideoSpeed(Integer VideoSpeed) {
         this.VideoSpeed = VideoSpeed;
     }
 
@@ -222,7 +222,7 @@ public class PushDataInfo extends AbstractModel{
      * Get 推流音频帧率，单位是Hz。 
      * @return AudioFps 推流音频帧率，单位是Hz。
      */
-    public Long getAudioFps() {
+    public Integer getAudioFps() {
         return this.AudioFps;
     }
 
@@ -230,7 +230,7 @@ public class PushDataInfo extends AbstractModel{
      * Set 推流音频帧率，单位是Hz。
      * @param AudioFps 推流音频帧率，单位是Hz。
      */
-    public void setAudioFps(Long AudioFps) {
+    public void setAudioFps(Integer AudioFps) {
         this.AudioFps = AudioFps;
     }
 
@@ -238,7 +238,7 @@ public class PushDataInfo extends AbstractModel{
      * Get 推流音频码率，单位是bps。 
      * @return AudioSpeed 推流音频码率，单位是bps。
      */
-    public Long getAudioSpeed() {
+    public Integer getAudioSpeed() {
         return this.AudioSpeed;
     }
 
@@ -246,7 +246,7 @@ public class PushDataInfo extends AbstractModel{
      * Set 推流音频码率，单位是bps。
      * @param AudioSpeed 推流音频码率，单位是bps。
      */
-    public void setAudioSpeed(Long AudioSpeed) {
+    public void setAudioSpeed(Integer AudioSpeed) {
         this.AudioSpeed = AudioSpeed;
     }
 
@@ -342,7 +342,7 @@ public class PushDataInfo extends AbstractModel{
      * Get 采样率。 
      * @return AsampleRate 采样率。
      */
-    public Long getAsampleRate() {
+    public Integer getAsampleRate() {
         return this.AsampleRate;
     }
 
@@ -350,7 +350,7 @@ public class PushDataInfo extends AbstractModel{
      * Set 采样率。
      * @param AsampleRate 采样率。
      */
-    public void setAsampleRate(Long AsampleRate) {
+    public void setAsampleRate(Integer AsampleRate) {
         this.AsampleRate = AsampleRate;
     }
 

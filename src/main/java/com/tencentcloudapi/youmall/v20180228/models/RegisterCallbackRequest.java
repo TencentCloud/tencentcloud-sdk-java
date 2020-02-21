@@ -41,14 +41,14 @@ public class RegisterCallbackRequest extends AbstractModel{
     */
     @SerializedName("Time")
     @Expose
-    private Long Time;
+    private Integer Time;
 
     /**
     * 是否需要顾客图片，1-需要图片，其它-不需要图片
     */
     @SerializedName("NeedFacePic")
     @Expose
-    private Long NeedFacePic;
+    private Integer NeedFacePic;
 
     /**
      * Get 集团id，通过"指定身份标识获取客户门店列表"接口获取 
@@ -86,7 +86,7 @@ public class RegisterCallbackRequest extends AbstractModel{
      * Get 请求时间戳 
      * @return Time 请求时间戳
      */
-    public Long getTime() {
+    public Integer getTime() {
         return this.Time;
     }
 
@@ -94,7 +94,7 @@ public class RegisterCallbackRequest extends AbstractModel{
      * Set 请求时间戳
      * @param Time 请求时间戳
      */
-    public void setTime(Long Time) {
+    public void setTime(Integer Time) {
         this.Time = Time;
     }
 
@@ -102,7 +102,7 @@ public class RegisterCallbackRequest extends AbstractModel{
      * Get 是否需要顾客图片，1-需要图片，其它-不需要图片 
      * @return NeedFacePic 是否需要顾客图片，1-需要图片，其它-不需要图片
      */
-    public Long getNeedFacePic() {
+    public Integer getNeedFacePic() {
         return this.NeedFacePic;
     }
 
@@ -110,7 +110,7 @@ public class RegisterCallbackRequest extends AbstractModel{
      * Set 是否需要顾客图片，1-需要图片，其它-不需要图片
      * @param NeedFacePic 是否需要顾客图片，1-需要图片，其它-不需要图片
      */
-    public void setNeedFacePic(Long NeedFacePic) {
+    public void setNeedFacePic(Integer NeedFacePic) {
         this.NeedFacePic = NeedFacePic;
     }
 

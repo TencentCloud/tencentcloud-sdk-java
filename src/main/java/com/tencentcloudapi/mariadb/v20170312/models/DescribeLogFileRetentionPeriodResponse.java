@@ -34,7 +34,7 @@ public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
     */
     @SerializedName("Days")
     @Expose
-    private Long Days;
+    private Integer Days;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
      * Get 日志备份天数 
      * @return Days 日志备份天数
      */
-    public Long getDays() {
+    public Integer getDays() {
         return this.Days;
     }
 
@@ -71,7 +71,7 @@ public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
      * Set 日志备份天数
      * @param Days 日志备份天数
      */
-    public void setDays(Long Days) {
+    public void setDays(Integer Days) {
         this.Days = Days;
     }
 

@@ -58,7 +58,7 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 每页个数，范围是[1,1000]，
@@ -66,7 +66,7 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
     * 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
@@ -151,7 +151,7 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
 范围是[1,1000]，
 默认值是1。
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -163,7 +163,7 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
 范围是[1,1000]，
 默认值是1。
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -173,7 +173,7 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
      * @return PageSize 每页个数，范围是[1,1000]，
 默认值是20。
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -183,7 +183,7 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
      * @param PageSize 每页个数，范围是[1,1000]，
 默认值是20。
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 

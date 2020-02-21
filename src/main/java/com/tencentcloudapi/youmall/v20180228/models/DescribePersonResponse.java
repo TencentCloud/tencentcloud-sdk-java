@@ -27,7 +27,7 @@ public class DescribePersonResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 客户信息
@@ -47,7 +47,7 @@ public class DescribePersonResponse extends AbstractModel{
      * Get 总计客户数量 
      * @return TotalCount 总计客户数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribePersonResponse extends AbstractModel{
      * Set 总计客户数量
      * @param TotalCount 总计客户数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

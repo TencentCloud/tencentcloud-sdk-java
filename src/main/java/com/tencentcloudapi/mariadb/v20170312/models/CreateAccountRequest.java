@@ -55,7 +55,7 @@ public class CreateAccountRequest extends AbstractModel{
     */
     @SerializedName("ReadOnly")
     @Expose
-    private Long ReadOnly;
+    private Integer ReadOnly;
 
     /**
     * 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
@@ -69,7 +69,7 @@ public class CreateAccountRequest extends AbstractModel{
     */
     @SerializedName("DelayThresh")
     @Expose
-    private Long DelayThresh;
+    private Integer DelayThresh;
 
     /**
      * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
@@ -139,7 +139,7 @@ public class CreateAccountRequest extends AbstractModel{
      * Get 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。 
      * @return ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
-    public Long getReadOnly() {
+    public Integer getReadOnly() {
         return this.ReadOnly;
     }
 
@@ -147,7 +147,7 @@ public class CreateAccountRequest extends AbstractModel{
      * Set 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
-    public void setReadOnly(Long ReadOnly) {
+    public void setReadOnly(Integer ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
@@ -171,7 +171,7 @@ public class CreateAccountRequest extends AbstractModel{
      * Get 根据传入时间判断备机不可用 
      * @return DelayThresh 根据传入时间判断备机不可用
      */
-    public Long getDelayThresh() {
+    public Integer getDelayThresh() {
         return this.DelayThresh;
     }
 
@@ -179,7 +179,7 @@ public class CreateAccountRequest extends AbstractModel{
      * Set 根据传入时间判断备机不可用
      * @param DelayThresh 根据传入时间判断备机不可用
      */
-    public void setDelayThresh(Long DelayThresh) {
+    public void setDelayThresh(Integer DelayThresh) {
         this.DelayThresh = DelayThresh;
     }
 

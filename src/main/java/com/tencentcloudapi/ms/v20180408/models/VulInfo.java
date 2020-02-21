@@ -34,7 +34,7 @@ public class VulInfo extends AbstractModel{
     */
     @SerializedName("VulFileScore")
     @Expose
-    private Long VulFileScore;
+    private Integer VulFileScore;
 
     /**
      * Get 漏洞列表 
@@ -56,7 +56,7 @@ public class VulInfo extends AbstractModel{
      * Get 漏洞文件评分 
      * @return VulFileScore 漏洞文件评分
      */
-    public Long getVulFileScore() {
+    public Integer getVulFileScore() {
         return this.VulFileScore;
     }
 
@@ -64,7 +64,7 @@ public class VulInfo extends AbstractModel{
      * Set 漏洞文件评分
      * @param VulFileScore 漏洞文件评分
      */
-    public void setVulFileScore(Long VulFileScore) {
+    public void setVulFileScore(Integer VulFileScore) {
         this.VulFileScore = VulFileScore;
     }
 

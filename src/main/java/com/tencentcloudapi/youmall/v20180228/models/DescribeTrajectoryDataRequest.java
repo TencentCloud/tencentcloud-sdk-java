@@ -34,7 +34,7 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 开始日期，格式yyyy-MM-dd
@@ -55,14 +55,14 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 顾客性别顾虑，0是男，1是女，其它代表不分性别
     */
     @SerializedName("Gender")
     @Expose
-    private Long Gender;
+    private Integer Gender;
 
     /**
      * Get 集团ID 
@@ -84,7 +84,7 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
      * Get 店铺ID 
      * @return ShopId 店铺ID
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -92,7 +92,7 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
      * Set 店铺ID
      * @param ShopId 店铺ID
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -132,7 +132,7 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
      * Get 限制返回数据的最大条数，最大 400（负数代为 400） 
      * @return Limit 限制返回数据的最大条数，最大 400（负数代为 400）
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -140,7 +140,7 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
      * Set 限制返回数据的最大条数，最大 400（负数代为 400）
      * @param Limit 限制返回数据的最大条数，最大 400（负数代为 400）
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -148,7 +148,7 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
      * Get 顾客性别顾虑，0是男，1是女，其它代表不分性别 
      * @return Gender 顾客性别顾虑，0是男，1是女，其它代表不分性别
      */
-    public Long getGender() {
+    public Integer getGender() {
         return this.Gender;
     }
 
@@ -156,7 +156,7 @@ public class DescribeTrajectoryDataRequest extends AbstractModel{
      * Set 顾客性别顾虑，0是男，1是女，其它代表不分性别
      * @param Gender 顾客性别顾虑，0是男，1是女，其它代表不分性别
      */
-    public void setGender(Long Gender) {
+    public void setGender(Integer Gender) {
         this.Gender = Gender;
     }
 

@@ -27,21 +27,21 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("SecondaryNum")
     @Expose
-    private Long SecondaryNum;
+    private Integer SecondaryNum;
 
     /**
     * 实例内存大小，单位：GB
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例硬盘大小，单位：GB
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
@@ -62,7 +62,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Long GoodsNum;
+    private Integer GoodsNum;
 
     /**
     * 实例所属区域名称，格式如：ap-guangzhou-2
@@ -76,7 +76,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Long TimeSpan;
+    private Integer TimeSpan;
 
     /**
     * 实例密码
@@ -90,7 +90,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 安全组参数
@@ -117,7 +117,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 每个副本集内从节点个数 
      * @return SecondaryNum 每个副本集内从节点个数
      */
-    public Long getSecondaryNum() {
+    public Integer getSecondaryNum() {
         return this.SecondaryNum;
     }
 
@@ -125,7 +125,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 每个副本集内从节点个数
      * @param SecondaryNum 每个副本集内从节点个数
      */
-    public void setSecondaryNum(Long SecondaryNum) {
+    public void setSecondaryNum(Integer SecondaryNum) {
         this.SecondaryNum = SecondaryNum;
     }
 
@@ -133,7 +133,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 实例内存大小，单位：GB 
      * @return Memory 实例内存大小，单位：GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -141,7 +141,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 实例内存大小，单位：GB
      * @param Memory 实例内存大小，单位：GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -149,7 +149,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 实例硬盘大小，单位：GB 
      * @return Volume 实例硬盘大小，单位：GB
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -157,7 +157,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 实例硬盘大小，单位：GB
      * @param Volume 实例硬盘大小，单位：GB
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -197,7 +197,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 实例数量，默认值为1, 最小值1，最大值为10 
      * @return GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      */
-    public Long getGoodsNum() {
+    public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -205,7 +205,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 实例数量，默认值为1, 最小值1，最大值为10
      * @param GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      */
-    public void setGoodsNum(Long GoodsNum) {
+    public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -229,7 +229,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 时长，购买月数 
      * @return TimeSpan 时长，购买月数
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -237,7 +237,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 时长，购买月数
      * @param TimeSpan 时长，购买月数
      */
-    public void setTimeSpan(Long TimeSpan) {
+    public void setTimeSpan(Integer TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -261,7 +261,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 项目ID，不填为默认项目 
      * @return ProjectId 项目ID，不填为默认项目
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -269,7 +269,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 项目ID，不填为默认项目
      * @param ProjectId 项目ID，不填为默认项目
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

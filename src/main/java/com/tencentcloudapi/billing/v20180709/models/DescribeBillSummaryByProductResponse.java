@@ -27,7 +27,7 @@ public class DescribeBillSummaryByProductResponse extends AbstractModel{
     */
     @SerializedName("Ready")
     @Expose
-    private Long Ready;
+    private Integer Ready;
 
     /**
     * 总花费详情
@@ -56,7 +56,7 @@ public class DescribeBillSummaryByProductResponse extends AbstractModel{
      * Get 数据是否准备好，0未准备好，1准备好 
      * @return Ready 数据是否准备好，0未准备好，1准备好
      */
-    public Long getReady() {
+    public Integer getReady() {
         return this.Ready;
     }
 
@@ -64,7 +64,7 @@ public class DescribeBillSummaryByProductResponse extends AbstractModel{
      * Set 数据是否准备好，0未准备好，1准备好
      * @param Ready 数据是否准备好，0未准备好，1准备好
      */
-    public void setReady(Long Ready) {
+    public void setReady(Integer Ready) {
         this.Ready = Ready;
     }
 

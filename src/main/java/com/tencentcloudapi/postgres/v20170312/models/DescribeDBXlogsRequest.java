@@ -48,14 +48,14 @@ public class DescribeDBXlogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页返回，表示每页有多少条目。取值为1-100。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 实例ID，形如postgres-4wdeb0zv。 
@@ -109,7 +109,7 @@ public class DescribeDBXlogsRequest extends AbstractModel{
      * Get 分页返回，表示返回第几页的条目。从第0页开始计数。 
      * @return Offset 分页返回，表示返回第几页的条目。从第0页开始计数。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -117,7 +117,7 @@ public class DescribeDBXlogsRequest extends AbstractModel{
      * Set 分页返回，表示返回第几页的条目。从第0页开始计数。
      * @param Offset 分页返回，表示返回第几页的条目。从第0页开始计数。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -125,7 +125,7 @@ public class DescribeDBXlogsRequest extends AbstractModel{
      * Get 分页返回，表示每页有多少条目。取值为1-100。 
      * @return Limit 分页返回，表示每页有多少条目。取值为1-100。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -133,7 +133,7 @@ public class DescribeDBXlogsRequest extends AbstractModel{
      * Set 分页返回，表示每页有多少条目。取值为1-100。
      * @param Limit 分页返回，表示每页有多少条目。取值为1-100。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

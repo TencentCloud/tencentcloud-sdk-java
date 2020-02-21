@@ -27,7 +27,7 @@ public class CreateBindInstanceResponse extends AbstractModel{
     */
     @SerializedName("Progress")
     @Expose
-    private Long Progress;
+    private Integer Progress;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateBindInstanceResponse extends AbstractModel{
      * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public Long getProgress() {
+    public Integer getProgress() {
         return this.Progress;
     }
 
@@ -48,7 +48,7 @@ public class CreateBindInstanceResponse extends AbstractModel{
      * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public void setProgress(Long Progress) {
+    public void setProgress(Integer Progress) {
         this.Progress = Progress;
     }
 

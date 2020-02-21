@@ -34,14 +34,14 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 数量限制
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 排序字段，支持： RunBeginTime,RunEndTime,Status
@@ -55,7 +55,7 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Long Order;
+    private Integer Order;
 
     /**
     * 关键字搜索，可搜索ID或别名，支持模糊搜索
@@ -84,7 +84,7 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -92,7 +92,7 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -100,7 +100,7 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
      * Get 数量限制 
      * @return Limit 数量限制
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -108,7 +108,7 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
      * Set 数量限制
      * @param Limit 数量限制
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -132,7 +132,7 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
      * Get 排序方式，取值: 1倒序，0顺序；默认倒序 
      * @return Order 排序方式，取值: 1倒序，0顺序；默认倒序
      */
-    public Long getOrder() {
+    public Integer getOrder() {
         return this.Order;
     }
 
@@ -140,7 +140,7 @@ public class DescribeUserCmdTaskInfoRequest extends AbstractModel{
      * Set 排序方式，取值: 1倒序，0顺序；默认倒序
      * @param Order 排序方式，取值: 1倒序，0顺序；默认倒序
      */
-    public void setOrder(Long Order) {
+    public void setOrder(Integer Order) {
         this.Order = Order;
     }
 

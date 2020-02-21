@@ -41,7 +41,7 @@ public class Listener extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 监听器绑定的证书信息
@@ -73,7 +73,7 @@ public class Listener extends AbstractModel{
     */
     @SerializedName("SessionExpireTime")
     @Expose
-    private Long SessionExpireTime;
+    private Integer SessionExpireTime;
 
     /**
     * 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
@@ -81,7 +81,7 @@ public class Listener extends AbstractModel{
     */
     @SerializedName("SniSwitch")
     @Expose
-    private Long SniSwitch;
+    private Integer SniSwitch;
 
     /**
     * 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
@@ -113,7 +113,7 @@ public class Listener extends AbstractModel{
     */
     @SerializedName("EndPort")
     @Expose
-    private Long EndPort;
+    private Integer EndPort;
 
     /**
     * 后端服务器类型
@@ -167,7 +167,7 @@ public class Listener extends AbstractModel{
      * Get 监听器端口 
      * @return Port 监听器端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -175,7 +175,7 @@ public class Listener extends AbstractModel{
      * Set 监听器端口
      * @param Port 监听器端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -245,7 +245,7 @@ public class Listener extends AbstractModel{
      * @return SessionExpireTime 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getSessionExpireTime() {
+    public Integer getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
@@ -255,7 +255,7 @@ public class Listener extends AbstractModel{
      * @param SessionExpireTime 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSessionExpireTime(Long SessionExpireTime) {
+    public void setSessionExpireTime(Integer SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
@@ -265,7 +265,7 @@ public class Listener extends AbstractModel{
      * @return SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getSniSwitch() {
+    public Integer getSniSwitch() {
         return this.SniSwitch;
     }
 
@@ -275,7 +275,7 @@ public class Listener extends AbstractModel{
      * @param SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSniSwitch(Long SniSwitch) {
+    public void setSniSwitch(Integer SniSwitch) {
         this.SniSwitch = SniSwitch;
     }
 
@@ -345,7 +345,7 @@ public class Listener extends AbstractModel{
      * @return EndPort 端口段结束端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getEndPort() {
+    public Integer getEndPort() {
         return this.EndPort;
     }
 
@@ -355,7 +355,7 @@ public class Listener extends AbstractModel{
      * @param EndPort 端口段结束端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEndPort(Long EndPort) {
+    public void setEndPort(Integer EndPort) {
         this.EndPort = EndPort;
     }
 

@@ -27,20 +27,20 @@ public class AutoScalingGroupRange extends AbstractModel{
     */
     @SerializedName("MinSize")
     @Expose
-    private Long MinSize;
+    private Integer MinSize;
 
     /**
     * 伸缩组最大实例数
     */
     @SerializedName("MaxSize")
     @Expose
-    private Long MaxSize;
+    private Integer MaxSize;
 
     /**
      * Get 伸缩组最小实例数 
      * @return MinSize 伸缩组最小实例数
      */
-    public Long getMinSize() {
+    public Integer getMinSize() {
         return this.MinSize;
     }
 
@@ -48,7 +48,7 @@ public class AutoScalingGroupRange extends AbstractModel{
      * Set 伸缩组最小实例数
      * @param MinSize 伸缩组最小实例数
      */
-    public void setMinSize(Long MinSize) {
+    public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
     }
 
@@ -56,7 +56,7 @@ public class AutoScalingGroupRange extends AbstractModel{
      * Get 伸缩组最大实例数 
      * @return MaxSize 伸缩组最大实例数
      */
-    public Long getMaxSize() {
+    public Integer getMaxSize() {
         return this.MaxSize;
     }
 
@@ -64,7 +64,7 @@ public class AutoScalingGroupRange extends AbstractModel{
      * Set 伸缩组最大实例数
      * @param MaxSize 伸缩组最大实例数
      */
-    public void setMaxSize(Long MaxSize) {
+    public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;
     }
 

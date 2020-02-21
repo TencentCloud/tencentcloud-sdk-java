@@ -27,7 +27,7 @@ public class CallBackTemplateInfo extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Long TemplateId;
+    private Integer TemplateId;
 
     /**
     * 模板名称。
@@ -96,7 +96,7 @@ public class CallBackTemplateInfo extends AbstractModel{
      * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
-    public Long getTemplateId() {
+    public Integer getTemplateId() {
         return this.TemplateId;
     }
 
@@ -104,7 +104,7 @@ public class CallBackTemplateInfo extends AbstractModel{
      * Set 模板Id。
      * @param TemplateId 模板Id。
      */
-    public void setTemplateId(Long TemplateId) {
+    public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;
     }
 

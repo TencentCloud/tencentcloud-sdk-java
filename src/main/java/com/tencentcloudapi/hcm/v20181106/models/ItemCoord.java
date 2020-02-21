@@ -27,34 +27,34 @@ public class ItemCoord extends AbstractModel{
     */
     @SerializedName("Height")
     @Expose
-    private Long Height;
+    private Integer Height;
 
     /**
     * 算式宽度
     */
     @SerializedName("Width")
     @Expose
-    private Long Width;
+    private Integer Width;
 
     /**
     * 算式图的左上角横坐标
     */
     @SerializedName("X")
     @Expose
-    private Long X;
+    private Integer X;
 
     /**
     * 算式图的左上角纵坐标
     */
     @SerializedName("Y")
     @Expose
-    private Long Y;
+    private Integer Y;
 
     /**
      * Get 算式高度 
      * @return Height 算式高度
      */
-    public Long getHeight() {
+    public Integer getHeight() {
         return this.Height;
     }
 
@@ -62,7 +62,7 @@ public class ItemCoord extends AbstractModel{
      * Set 算式高度
      * @param Height 算式高度
      */
-    public void setHeight(Long Height) {
+    public void setHeight(Integer Height) {
         this.Height = Height;
     }
 
@@ -70,7 +70,7 @@ public class ItemCoord extends AbstractModel{
      * Get 算式宽度 
      * @return Width 算式宽度
      */
-    public Long getWidth() {
+    public Integer getWidth() {
         return this.Width;
     }
 
@@ -78,7 +78,7 @@ public class ItemCoord extends AbstractModel{
      * Set 算式宽度
      * @param Width 算式宽度
      */
-    public void setWidth(Long Width) {
+    public void setWidth(Integer Width) {
         this.Width = Width;
     }
 
@@ -86,7 +86,7 @@ public class ItemCoord extends AbstractModel{
      * Get 算式图的左上角横坐标 
      * @return X 算式图的左上角横坐标
      */
-    public Long getX() {
+    public Integer getX() {
         return this.X;
     }
 
@@ -94,7 +94,7 @@ public class ItemCoord extends AbstractModel{
      * Set 算式图的左上角横坐标
      * @param X 算式图的左上角横坐标
      */
-    public void setX(Long X) {
+    public void setX(Integer X) {
         this.X = X;
     }
 
@@ -102,7 +102,7 @@ public class ItemCoord extends AbstractModel{
      * Get 算式图的左上角纵坐标 
      * @return Y 算式图的左上角纵坐标
      */
-    public Long getY() {
+    public Integer getY() {
         return this.Y;
     }
 
@@ -110,7 +110,7 @@ public class ItemCoord extends AbstractModel{
      * Set 算式图的左上角纵坐标
      * @param Y 算式图的左上角纵坐标
      */
-    public void setY(Long Y) {
+    public void setY(Integer Y) {
         this.Y = Y;
     }
 

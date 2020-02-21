@@ -48,28 +48,28 @@ public class Topic extends AbstractModel{
     */
     @SerializedName("MsgLife")
     @Expose
-    private Long MsgLife;
+    private Integer MsgLife;
 
     /**
     * 消息最大大小
     */
     @SerializedName("MsgSize")
     @Expose
-    private Long MsgSize;
+    private Integer MsgSize;
 
     /**
     * 消息最大数量
     */
     @SerializedName("MsgCount")
     @Expose
-    private Long MsgCount;
+    private Integer MsgCount;
 
     /**
     * 已删除
     */
     @SerializedName("Deleted")
     @Expose
-    private Long Deleted;
+    private Integer Deleted;
 
     /**
     * Topic完整路径
@@ -144,7 +144,7 @@ public class Topic extends AbstractModel{
      * Get 消息最大生命周期 
      * @return MsgLife 消息最大生命周期
      */
-    public Long getMsgLife() {
+    public Integer getMsgLife() {
         return this.MsgLife;
     }
 
@@ -152,7 +152,7 @@ public class Topic extends AbstractModel{
      * Set 消息最大生命周期
      * @param MsgLife 消息最大生命周期
      */
-    public void setMsgLife(Long MsgLife) {
+    public void setMsgLife(Integer MsgLife) {
         this.MsgLife = MsgLife;
     }
 
@@ -160,7 +160,7 @@ public class Topic extends AbstractModel{
      * Get 消息最大大小 
      * @return MsgSize 消息最大大小
      */
-    public Long getMsgSize() {
+    public Integer getMsgSize() {
         return this.MsgSize;
     }
 
@@ -168,7 +168,7 @@ public class Topic extends AbstractModel{
      * Set 消息最大大小
      * @param MsgSize 消息最大大小
      */
-    public void setMsgSize(Long MsgSize) {
+    public void setMsgSize(Integer MsgSize) {
         this.MsgSize = MsgSize;
     }
 
@@ -176,7 +176,7 @@ public class Topic extends AbstractModel{
      * Get 消息最大数量 
      * @return MsgCount 消息最大数量
      */
-    public Long getMsgCount() {
+    public Integer getMsgCount() {
         return this.MsgCount;
     }
 
@@ -184,7 +184,7 @@ public class Topic extends AbstractModel{
      * Set 消息最大数量
      * @param MsgCount 消息最大数量
      */
-    public void setMsgCount(Long MsgCount) {
+    public void setMsgCount(Integer MsgCount) {
         this.MsgCount = MsgCount;
     }
 
@@ -192,7 +192,7 @@ public class Topic extends AbstractModel{
      * Get 已删除 
      * @return Deleted 已删除
      */
-    public Long getDeleted() {
+    public Integer getDeleted() {
         return this.Deleted;
     }
 
@@ -200,7 +200,7 @@ public class Topic extends AbstractModel{
      * Set 已删除
      * @param Deleted 已删除
      */
-    public void setDeleted(Long Deleted) {
+    public void setDeleted(Integer Deleted) {
         this.Deleted = Deleted;
     }
 

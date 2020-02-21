@@ -43,7 +43,7 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 每页个数，
@@ -52,7 +52,7 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
      * Get 推流域名。 
@@ -94,7 +94,7 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
 范围[1,10000]，
 默认值：1。
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -106,7 +106,7 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
 范围[1,10000]，
 默认值：1。
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -118,7 +118,7 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
 范围：[1,1000]，
 默认值： 200。
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -130,7 +130,7 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
 范围：[1,1000]，
 默认值： 200。
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 

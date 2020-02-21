@@ -36,7 +36,7 @@ public class LivePackageInfo extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Long Total;
+    private Integer Total;
 
     /**
     * 使用量。
@@ -45,7 +45,7 @@ public class LivePackageInfo extends AbstractModel{
     */
     @SerializedName("Used")
     @Expose
-    private Long Used;
+    private Integer Used;
 
     /**
     * 剩余量。
@@ -54,7 +54,7 @@ public class LivePackageInfo extends AbstractModel{
     */
     @SerializedName("Left")
     @Expose
-    private Long Left;
+    private Integer Left;
 
     /**
     * 购买时间。
@@ -78,7 +78,7 @@ public class LivePackageInfo extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 包状态，可选值：
@@ -88,7 +88,7 @@ public class LivePackageInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
      * Get 包ID。 
@@ -114,7 +114,7 @@ public class LivePackageInfo extends AbstractModel{
 注意：当为流量包时单位为字节；
 当为转码包时单位为分钟。
      */
-    public Long getTotal() {
+    public Integer getTotal() {
         return this.Total;
     }
 
@@ -126,7 +126,7 @@ public class LivePackageInfo extends AbstractModel{
 注意：当为流量包时单位为字节；
 当为转码包时单位为分钟。
      */
-    public void setTotal(Long Total) {
+    public void setTotal(Integer Total) {
         this.Total = Total;
     }
 
@@ -138,7 +138,7 @@ public class LivePackageInfo extends AbstractModel{
 注意：当为流量包时单位为字节；
 当为转码包时单位为分钟。
      */
-    public Long getUsed() {
+    public Integer getUsed() {
         return this.Used;
     }
 
@@ -150,7 +150,7 @@ public class LivePackageInfo extends AbstractModel{
 注意：当为流量包时单位为字节；
 当为转码包时单位为分钟。
      */
-    public void setUsed(Long Used) {
+    public void setUsed(Integer Used) {
         this.Used = Used;
     }
 
@@ -162,7 +162,7 @@ public class LivePackageInfo extends AbstractModel{
 注意：当为流量包时单位为字节；
 当为转码包时单位为分钟。
      */
-    public Long getLeft() {
+    public Integer getLeft() {
         return this.Left;
     }
 
@@ -174,7 +174,7 @@ public class LivePackageInfo extends AbstractModel{
 注意：当为流量包时单位为字节；
 当为转码包时单位为分钟。
      */
-    public void setLeft(Long Left) {
+    public void setLeft(Integer Left) {
         this.Left = Left;
     }
 
@@ -220,7 +220,7 @@ public class LivePackageInfo extends AbstractModel{
 1：普通转码包；
 2：极速高清包。
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -234,7 +234,7 @@ public class LivePackageInfo extends AbstractModel{
 1：普通转码包；
 2：极速高清包。
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -248,7 +248,7 @@ public class LivePackageInfo extends AbstractModel{
 1：使用中；
 2：已过期。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -262,7 +262,7 @@ public class LivePackageInfo extends AbstractModel{
 1：使用中；
 2：已过期。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

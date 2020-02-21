@@ -27,7 +27,7 @@ public class DescribeInstanceBackupsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 实例的备份数组
@@ -47,7 +47,7 @@ public class DescribeInstanceBackupsResponse extends AbstractModel{
      * Get 备份总数 
      * @return TotalCount 备份总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeInstanceBackupsResponse extends AbstractModel{
      * Set 备份总数
      * @param TotalCount 备份总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

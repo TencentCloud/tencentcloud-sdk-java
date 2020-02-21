@@ -34,7 +34,7 @@ public class CreateEipAclRequest extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
      * Get ACL 名称 
@@ -56,7 +56,7 @@ public class CreateEipAclRequest extends AbstractModel{
      * Get ACL 状态 0：无状态，1：有状态 
      * @return Status ACL 状态 0：无状态，1：有状态
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -64,7 +64,7 @@ public class CreateEipAclRequest extends AbstractModel{
      * Set ACL 状态 0：无状态，1：有状态
      * @param Status ACL 状态 0：无状态，1：有状态
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

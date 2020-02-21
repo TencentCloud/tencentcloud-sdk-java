@@ -27,7 +27,7 @@ public class InitDBInstancesResponse extends AbstractModel{
     */
     @SerializedName("FlowId")
     @Expose
-    private Long FlowId;
+    private Integer FlowId;
 
     /**
     * 透传入参。
@@ -47,7 +47,7 @@ public class InitDBInstancesResponse extends AbstractModel{
      * Get 异步任务ID，可通过 DescribeFlow 查询任务状态。 
      * @return FlowId 异步任务ID，可通过 DescribeFlow 查询任务状态。
      */
-    public Long getFlowId() {
+    public Integer getFlowId() {
         return this.FlowId;
     }
 
@@ -55,7 +55,7 @@ public class InitDBInstancesResponse extends AbstractModel{
      * Set 异步任务ID，可通过 DescribeFlow 查询任务状态。
      * @param FlowId 异步任务ID，可通过 DescribeFlow 查询任务状态。
      */
-    public void setFlowId(Long FlowId) {
+    public void setFlowId(Integer FlowId) {
         this.FlowId = FlowId;
     }
 

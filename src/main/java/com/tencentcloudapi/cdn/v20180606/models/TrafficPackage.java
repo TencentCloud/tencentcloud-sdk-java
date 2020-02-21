@@ -27,7 +27,7 @@ public class TrafficPackage extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 流量包类型
@@ -41,14 +41,14 @@ public class TrafficPackage extends AbstractModel{
     */
     @SerializedName("Bytes")
     @Expose
-    private Long Bytes;
+    private Integer Bytes;
 
     /**
     * 已消耗流量（单位为 Byte）
     */
     @SerializedName("BytesUsed")
     @Expose
-    private Long BytesUsed;
+    private Integer BytesUsed;
 
     /**
     * 流量包状态
@@ -106,7 +106,7 @@ disabled：未启用
      * Get 流量包 Id 
      * @return Id 流量包 Id
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -114,7 +114,7 @@ disabled：未启用
      * Set 流量包 Id
      * @param Id 流量包 Id
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -138,7 +138,7 @@ disabled：未启用
      * Get 流量包大小（单位为 Byte） 
      * @return Bytes 流量包大小（单位为 Byte）
      */
-    public Long getBytes() {
+    public Integer getBytes() {
         return this.Bytes;
     }
 
@@ -146,7 +146,7 @@ disabled：未启用
      * Set 流量包大小（单位为 Byte）
      * @param Bytes 流量包大小（单位为 Byte）
      */
-    public void setBytes(Long Bytes) {
+    public void setBytes(Integer Bytes) {
         this.Bytes = Bytes;
     }
 
@@ -154,7 +154,7 @@ disabled：未启用
      * Get 已消耗流量（单位为 Byte） 
      * @return BytesUsed 已消耗流量（单位为 Byte）
      */
-    public Long getBytesUsed() {
+    public Integer getBytesUsed() {
         return this.BytesUsed;
     }
 
@@ -162,7 +162,7 @@ disabled：未启用
      * Set 已消耗流量（单位为 Byte）
      * @param BytesUsed 已消耗流量（单位为 Byte）
      */
-    public void setBytesUsed(Long BytesUsed) {
+    public void setBytesUsed(Integer BytesUsed) {
         this.BytesUsed = BytesUsed;
     }
 

@@ -27,14 +27,14 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
     */
     @SerializedName("BinlogBackupVolume")
     @Expose
-    private Long BinlogBackupVolume;
+    private Integer BinlogBackupVolume;
 
     /**
     * 总的日志备份个数。
     */
     @SerializedName("BinlogBackupCount")
     @Expose
-    private Long BinlogBackupCount;
+    private Integer BinlogBackupCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
      * Get 总的日志备份容量（单位为字节）。 
      * @return BinlogBackupVolume 总的日志备份容量（单位为字节）。
      */
-    public Long getBinlogBackupVolume() {
+    public Integer getBinlogBackupVolume() {
         return this.BinlogBackupVolume;
     }
 
@@ -55,7 +55,7 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
      * Set 总的日志备份容量（单位为字节）。
      * @param BinlogBackupVolume 总的日志备份容量（单位为字节）。
      */
-    public void setBinlogBackupVolume(Long BinlogBackupVolume) {
+    public void setBinlogBackupVolume(Integer BinlogBackupVolume) {
         this.BinlogBackupVolume = BinlogBackupVolume;
     }
 
@@ -63,7 +63,7 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
      * Get 总的日志备份个数。 
      * @return BinlogBackupCount 总的日志备份个数。
      */
-    public Long getBinlogBackupCount() {
+    public Integer getBinlogBackupCount() {
         return this.BinlogBackupCount;
     }
 
@@ -71,7 +71,7 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
      * Set 总的日志备份个数。
      * @param BinlogBackupCount 总的日志备份个数。
      */
-    public void setBinlogBackupCount(Long BinlogBackupCount) {
+    public void setBinlogBackupCount(Integer BinlogBackupCount) {
         this.BinlogBackupCount = BinlogBackupCount;
     }
 

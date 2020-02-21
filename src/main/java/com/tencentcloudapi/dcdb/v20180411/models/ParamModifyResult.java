@@ -34,7 +34,7 @@ public class ParamModifyResult extends AbstractModel{
     */
     @SerializedName("Code")
     @Expose
-    private Long Code;
+    private Integer Code;
 
     /**
      * Get 修改参数名字 
@@ -56,7 +56,7 @@ public class ParamModifyResult extends AbstractModel{
      * Get 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法 
      * @return Code 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
      */
-    public Long getCode() {
+    public Integer getCode() {
         return this.Code;
     }
 
@@ -64,7 +64,7 @@ public class ParamModifyResult extends AbstractModel{
      * Set 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
      * @param Code 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
      */
-    public void setCode(Long Code) {
+    public void setCode(Integer Code) {
         this.Code = Code;
     }
 

@@ -27,7 +27,7 @@ public class VirusInfo extends AbstractModel{
     */
     @SerializedName("SafeType")
     @Expose
-    private Long SafeType;
+    private Integer SafeType;
 
     /**
     * 病毒名称， utf8编码，非病毒时值为空
@@ -47,7 +47,7 @@ public class VirusInfo extends AbstractModel{
      * Get 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件 
      * @return SafeType 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
      */
-    public Long getSafeType() {
+    public Integer getSafeType() {
         return this.SafeType;
     }
 
@@ -55,7 +55,7 @@ public class VirusInfo extends AbstractModel{
      * Set 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
      * @param SafeType 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
      */
-    public void setSafeType(Long SafeType) {
+    public void setSafeType(Integer SafeType) {
         this.SafeType = SafeType;
     }
 

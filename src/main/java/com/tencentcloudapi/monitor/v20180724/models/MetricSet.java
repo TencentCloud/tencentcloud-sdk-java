@@ -55,7 +55,7 @@ public class MetricSet extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long [] Period;
+    private Integer [] Period;
 
     /**
     * 统计周期内指标方式
@@ -146,7 +146,7 @@ public class MetricSet extends AbstractModel{
      * Get 指标支持的统计周期，单位是秒，如60、300 
      * @return Period 指标支持的统计周期，单位是秒，如60、300
      */
-    public Long [] getPeriod() {
+    public Integer [] getPeriod() {
         return this.Period;
     }
 
@@ -154,7 +154,7 @@ public class MetricSet extends AbstractModel{
      * Set 指标支持的统计周期，单位是秒，如60、300
      * @param Period 指标支持的统计周期，单位是秒，如60、300
      */
-    public void setPeriod(Long [] Period) {
+    public void setPeriod(Integer [] Period) {
         this.Period = Period;
     }
 

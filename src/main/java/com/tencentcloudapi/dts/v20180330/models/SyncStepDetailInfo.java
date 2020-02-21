@@ -27,7 +27,7 @@ public class SyncStepDetailInfo extends AbstractModel{
     */
     @SerializedName("StepNo")
     @Expose
-    private Long StepNo;
+    private Integer StepNo;
 
     /**
     * 步骤名
@@ -41,20 +41,20 @@ public class SyncStepDetailInfo extends AbstractModel{
     */
     @SerializedName("CanStop")
     @Expose
-    private Long CanStop;
+    private Integer CanStop;
 
     /**
     * 步骤号
     */
     @SerializedName("StepId")
     @Expose
-    private Long StepId;
+    private Integer StepId;
 
     /**
      * Get 步骤编号 
      * @return StepNo 步骤编号
      */
-    public Long getStepNo() {
+    public Integer getStepNo() {
         return this.StepNo;
     }
 
@@ -62,7 +62,7 @@ public class SyncStepDetailInfo extends AbstractModel{
      * Set 步骤编号
      * @param StepNo 步骤编号
      */
-    public void setStepNo(Long StepNo) {
+    public void setStepNo(Integer StepNo) {
         this.StepNo = StepNo;
     }
 
@@ -86,7 +86,7 @@ public class SyncStepDetailInfo extends AbstractModel{
      * Get 能否中止 
      * @return CanStop 能否中止
      */
-    public Long getCanStop() {
+    public Integer getCanStop() {
         return this.CanStop;
     }
 
@@ -94,7 +94,7 @@ public class SyncStepDetailInfo extends AbstractModel{
      * Set 能否中止
      * @param CanStop 能否中止
      */
-    public void setCanStop(Long CanStop) {
+    public void setCanStop(Integer CanStop) {
         this.CanStop = CanStop;
     }
 
@@ -102,7 +102,7 @@ public class SyncStepDetailInfo extends AbstractModel{
      * Get 步骤号 
      * @return StepId 步骤号
      */
-    public Long getStepId() {
+    public Integer getStepId() {
         return this.StepId;
     }
 
@@ -110,7 +110,7 @@ public class SyncStepDetailInfo extends AbstractModel{
      * Set 步骤号
      * @param StepId 步骤号
      */
-    public void setStepId(Long StepId) {
+    public void setStepId(Integer StepId) {
         this.StepId = StepId;
     }
 

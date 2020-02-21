@@ -62,7 +62,7 @@ Oversea：则查询国外数据。
     */
     @SerializedName("Granularity")
     @Expose
-    private Long Granularity;
+    private Integer Granularity;
 
     /**
      * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
@@ -152,7 +152,7 @@ Oversea：则查询国外数据。
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
      */
-    public Long getGranularity() {
+    public Integer getGranularity() {
         return this.Granularity;
     }
 
@@ -168,7 +168,7 @@ Oversea：则查询国外数据。
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
      */
-    public void setGranularity(Long Granularity) {
+    public void setGranularity(Integer Granularity) {
         this.Granularity = Granularity;
     }
 

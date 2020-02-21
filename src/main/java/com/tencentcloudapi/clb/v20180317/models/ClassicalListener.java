@@ -34,14 +34,14 @@ public class ClassicalListener extends AbstractModel{
     */
     @SerializedName("ListenerPort")
     @Expose
-    private Long ListenerPort;
+    private Integer ListenerPort;
 
     /**
     * 监听器后端转发端口
     */
     @SerializedName("InstancePort")
     @Expose
-    private Long InstancePort;
+    private Integer InstancePort;
 
     /**
     * 监听器名称
@@ -62,42 +62,42 @@ public class ClassicalListener extends AbstractModel{
     */
     @SerializedName("SessionExpire")
     @Expose
-    private Long SessionExpire;
+    private Integer SessionExpire;
 
     /**
     * 是否开启了健康检查：1（开启）、0（关闭）
     */
     @SerializedName("HealthSwitch")
     @Expose
-    private Long HealthSwitch;
+    private Integer HealthSwitch;
 
     /**
     * 响应超时时间
     */
     @SerializedName("TimeOut")
     @Expose
-    private Long TimeOut;
+    private Integer TimeOut;
 
     /**
     * 检查间隔
     */
     @SerializedName("IntervalTime")
     @Expose
-    private Long IntervalTime;
+    private Integer IntervalTime;
 
     /**
     * 健康阈值
     */
     @SerializedName("HealthNum")
     @Expose
-    private Long HealthNum;
+    private Integer HealthNum;
 
     /**
     * 不健康阈值
     */
     @SerializedName("UnhealthNum")
     @Expose
-    private Long UnhealthNum;
+    private Integer UnhealthNum;
 
     /**
     * 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
@@ -111,7 +111,7 @@ public class ClassicalListener extends AbstractModel{
     */
     @SerializedName("HttpCode")
     @Expose
-    private Long HttpCode;
+    private Integer HttpCode;
 
     /**
     * 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
@@ -146,7 +146,7 @@ public class ClassicalListener extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
      * Get 负载均衡监听器ID 
@@ -168,7 +168,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 负载均衡监听器端口 
      * @return ListenerPort 负载均衡监听器端口
      */
-    public Long getListenerPort() {
+    public Integer getListenerPort() {
         return this.ListenerPort;
     }
 
@@ -176,7 +176,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 负载均衡监听器端口
      * @param ListenerPort 负载均衡监听器端口
      */
-    public void setListenerPort(Long ListenerPort) {
+    public void setListenerPort(Integer ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
@@ -184,7 +184,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 监听器后端转发端口 
      * @return InstancePort 监听器后端转发端口
      */
-    public Long getInstancePort() {
+    public Integer getInstancePort() {
         return this.InstancePort;
     }
 
@@ -192,7 +192,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 监听器后端转发端口
      * @param InstancePort 监听器后端转发端口
      */
-    public void setInstancePort(Long InstancePort) {
+    public void setInstancePort(Integer InstancePort) {
         this.InstancePort = InstancePort;
     }
 
@@ -232,7 +232,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 会话保持时间 
      * @return SessionExpire 会话保持时间
      */
-    public Long getSessionExpire() {
+    public Integer getSessionExpire() {
         return this.SessionExpire;
     }
 
@@ -240,7 +240,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 会话保持时间
      * @param SessionExpire 会话保持时间
      */
-    public void setSessionExpire(Long SessionExpire) {
+    public void setSessionExpire(Integer SessionExpire) {
         this.SessionExpire = SessionExpire;
     }
 
@@ -248,7 +248,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 是否开启了健康检查：1（开启）、0（关闭） 
      * @return HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
      */
-    public Long getHealthSwitch() {
+    public Integer getHealthSwitch() {
         return this.HealthSwitch;
     }
 
@@ -256,7 +256,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 是否开启了健康检查：1（开启）、0（关闭）
      * @param HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
      */
-    public void setHealthSwitch(Long HealthSwitch) {
+    public void setHealthSwitch(Integer HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
@@ -264,7 +264,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 响应超时时间 
      * @return TimeOut 响应超时时间
      */
-    public Long getTimeOut() {
+    public Integer getTimeOut() {
         return this.TimeOut;
     }
 
@@ -272,7 +272,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 响应超时时间
      * @param TimeOut 响应超时时间
      */
-    public void setTimeOut(Long TimeOut) {
+    public void setTimeOut(Integer TimeOut) {
         this.TimeOut = TimeOut;
     }
 
@@ -280,7 +280,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 检查间隔 
      * @return IntervalTime 检查间隔
      */
-    public Long getIntervalTime() {
+    public Integer getIntervalTime() {
         return this.IntervalTime;
     }
 
@@ -288,7 +288,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 检查间隔
      * @param IntervalTime 检查间隔
      */
-    public void setIntervalTime(Long IntervalTime) {
+    public void setIntervalTime(Integer IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
@@ -296,7 +296,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 健康阈值 
      * @return HealthNum 健康阈值
      */
-    public Long getHealthNum() {
+    public Integer getHealthNum() {
         return this.HealthNum;
     }
 
@@ -304,7 +304,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 健康阈值
      * @param HealthNum 健康阈值
      */
-    public void setHealthNum(Long HealthNum) {
+    public void setHealthNum(Integer HealthNum) {
         this.HealthNum = HealthNum;
     }
 
@@ -312,7 +312,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 不健康阈值 
      * @return UnhealthNum 不健康阈值
      */
-    public Long getUnhealthNum() {
+    public Integer getUnhealthNum() {
         return this.UnhealthNum;
     }
 
@@ -320,7 +320,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 不健康阈值
      * @param UnhealthNum 不健康阈值
      */
-    public void setUnhealthNum(Long UnhealthNum) {
+    public void setUnhealthNum(Integer UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
@@ -344,7 +344,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释 
      * @return HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      */
-    public Long getHttpCode() {
+    public Integer getHttpCode() {
         return this.HttpCode;
     }
 
@@ -352,7 +352,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      * @param HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      */
-    public void setHttpCode(Long HttpCode) {
+    public void setHttpCode(Integer HttpCode) {
         this.HttpCode = HttpCode;
     }
 
@@ -424,7 +424,7 @@ public class ClassicalListener extends AbstractModel{
      * Get 监听器的状态，0 表示创建中，1 表示运行中 
      * @return Status 监听器的状态，0 表示创建中，1 表示运行中
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -432,7 +432,7 @@ public class ClassicalListener extends AbstractModel{
      * Set 监听器的状态，0 表示创建中，1 表示运行中
      * @param Status 监听器的状态，0 表示创建中，1 表示运行中
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

@@ -27,21 +27,21 @@ public class L4Backend extends AbstractModel{
     */
     @SerializedName("BindType")
     @Expose
-    private Long BindType;
+    private Integer BindType;
 
     /**
     * 主机端口。
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 权重。
     */
     @SerializedName("Weight")
     @Expose
-    private Long Weight;
+    private Integer Weight;
 
     /**
     * 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
@@ -83,13 +83,13 @@ public class L4Backend extends AbstractModel{
     */
     @SerializedName("ProbePort")
     @Expose
-    private Long ProbePort;
+    private Integer ProbePort;
 
     /**
      * Get 绑定类别（0代表黑石物理机，1代表虚拟机IP）。 
      * @return BindType 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      */
-    public Long getBindType() {
+    public Integer getBindType() {
         return this.BindType;
     }
 
@@ -97,7 +97,7 @@ public class L4Backend extends AbstractModel{
      * Set 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      * @param BindType 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      */
-    public void setBindType(Long BindType) {
+    public void setBindType(Integer BindType) {
         this.BindType = BindType;
     }
 
@@ -105,7 +105,7 @@ public class L4Backend extends AbstractModel{
      * Get 主机端口。 
      * @return Port 主机端口。
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -113,7 +113,7 @@ public class L4Backend extends AbstractModel{
      * Set 主机端口。
      * @param Port 主机端口。
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -121,7 +121,7 @@ public class L4Backend extends AbstractModel{
      * Get 权重。 
      * @return Weight 权重。
      */
-    public Long getWeight() {
+    public Integer getWeight() {
         return this.Weight;
     }
 
@@ -129,7 +129,7 @@ public class L4Backend extends AbstractModel{
      * Set 权重。
      * @param Weight 权重。
      */
-    public void setWeight(Long Weight) {
+    public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 
@@ -217,7 +217,7 @@ public class L4Backend extends AbstractModel{
      * Get 主机探测端口。 
      * @return ProbePort 主机探测端口。
      */
-    public Long getProbePort() {
+    public Integer getProbePort() {
         return this.ProbePort;
     }
 
@@ -225,7 +225,7 @@ public class L4Backend extends AbstractModel{
      * Set 主机探测端口。
      * @param ProbePort 主机探测端口。
      */
-    public void setProbePort(Long ProbePort) {
+    public void setProbePort(Integer ProbePort) {
         this.ProbePort = ProbePort;
     }
 

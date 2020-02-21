@@ -27,14 +27,14 @@ public class DescribeTaskInfoRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 数据条数
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 时间过滤下限
@@ -55,7 +55,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Long [] TaskStatus;
+    private Integer [] TaskStatus;
 
     /**
     * 排序字段，目前支持：CreateTime，AuthTime，EndTime
@@ -69,7 +69,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Long Order;
+    private Integer Order;
 
     /**
     * 任务ID过滤
@@ -97,13 +97,13 @@ public class DescribeTaskInfoRequest extends AbstractModel{
     */
     @SerializedName("TaskTypeIds")
     @Expose
-    private Long [] TaskTypeIds;
+    private Integer [] TaskTypeIds;
 
     /**
      * Get 开始位置 
      * @return Offset 开始位置
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -111,7 +111,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Set 开始位置
      * @param Offset 开始位置
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -119,7 +119,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Get 数据条数 
      * @return Limit 数据条数
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -127,7 +127,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Set 数据条数
      * @param Limit 数据条数
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -167,7 +167,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Get 任务状态ID过滤 
      * @return TaskStatus 任务状态ID过滤
      */
-    public Long [] getTaskStatus() {
+    public Integer [] getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -175,7 +175,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Set 任务状态ID过滤
      * @param TaskStatus 任务状态ID过滤
      */
-    public void setTaskStatus(Long [] TaskStatus) {
+    public void setTaskStatus(Integer [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -199,7 +199,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Get 排序方式 0:递增(默认) 1:递减 
      * @return Order 排序方式 0:递增(默认) 1:递减
      */
-    public Long getOrder() {
+    public Integer getOrder() {
         return this.Order;
     }
 
@@ -207,7 +207,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Set 排序方式 0:递增(默认) 1:递减
      * @param Order 排序方式 0:递增(默认) 1:递减
      */
-    public void setOrder(Long Order) {
+    public void setOrder(Integer Order) {
         this.Order = Order;
     }
 
@@ -263,7 +263,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Get 故障类型ID过滤 
      * @return TaskTypeIds 故障类型ID过滤
      */
-    public Long [] getTaskTypeIds() {
+    public Integer [] getTaskTypeIds() {
         return this.TaskTypeIds;
     }
 
@@ -271,7 +271,7 @@ public class DescribeTaskInfoRequest extends AbstractModel{
      * Set 故障类型ID过滤
      * @param TaskTypeIds 故障类型ID过滤
      */
-    public void setTaskTypeIds(Long [] TaskTypeIds) {
+    public void setTaskTypeIds(Integer [] TaskTypeIds) {
         this.TaskTypeIds = TaskTypeIds;
     }
 

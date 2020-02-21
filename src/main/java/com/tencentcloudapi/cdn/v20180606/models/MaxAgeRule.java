@@ -49,7 +49,7 @@ path 时填充绝对路径，如 /xxx/test.html
     */
     @SerializedName("MaxAgeTime")
     @Expose
-    private Long MaxAgeTime;
+    private Integer MaxAgeTime;
 
     /**
      * Get 规则类型：
@@ -119,7 +119,7 @@ path 时填充绝对路径，如 /xxx/test.html
      * Get MaxAge 时间设置，单位秒 
      * @return MaxAgeTime MaxAge 时间设置，单位秒
      */
-    public Long getMaxAgeTime() {
+    public Integer getMaxAgeTime() {
         return this.MaxAgeTime;
     }
 
@@ -127,7 +127,7 @@ path 时填充绝对路径，如 /xxx/test.html
      * Set MaxAge 时间设置，单位秒
      * @param MaxAgeTime MaxAge 时间设置，单位秒
      */
-    public void setMaxAgeTime(Long MaxAgeTime) {
+    public void setMaxAgeTime(Integer MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;
     }
 

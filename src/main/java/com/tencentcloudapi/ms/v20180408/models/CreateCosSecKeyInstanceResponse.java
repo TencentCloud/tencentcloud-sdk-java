@@ -27,7 +27,7 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
     */
     @SerializedName("CosAppid")
     @Expose
-    private Long CosAppid;
+    private Integer CosAppid;
 
     /**
     * COS密钥对应的存储桶名
@@ -48,7 +48,7 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
     */
     @SerializedName("ExpireTime")
     @Expose
-    private Long ExpireTime;
+    private Integer ExpireTime;
 
     /**
     * 密钥ID信息
@@ -89,7 +89,7 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
      * Get COS密钥对应的AppId 
      * @return CosAppid COS密钥对应的AppId
      */
-    public Long getCosAppid() {
+    public Integer getCosAppid() {
         return this.CosAppid;
     }
 
@@ -97,7 +97,7 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
      * Set COS密钥对应的AppId
      * @param CosAppid COS密钥对应的AppId
      */
-    public void setCosAppid(Long CosAppid) {
+    public void setCosAppid(Integer CosAppid) {
         this.CosAppid = CosAppid;
     }
 
@@ -137,7 +137,7 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
      * Get 密钥过期时间 
      * @return ExpireTime 密钥过期时间
      */
-    public Long getExpireTime() {
+    public Integer getExpireTime() {
         return this.ExpireTime;
     }
 
@@ -145,7 +145,7 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
      * Set 密钥过期时间
      * @param ExpireTime 密钥过期时间
      */
-    public void setExpireTime(Long ExpireTime) {
+    public void setExpireTime(Integer ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 

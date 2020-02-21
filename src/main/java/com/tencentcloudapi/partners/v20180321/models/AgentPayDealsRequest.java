@@ -34,7 +34,7 @@ public class AgentPayDealsRequest extends AbstractModel{
     */
     @SerializedName("AgentPay")
     @Expose
-    private Long AgentPay;
+    private Integer AgentPay;
 
     /**
     * 订单号数组
@@ -63,7 +63,7 @@ public class AgentPayDealsRequest extends AbstractModel{
      * Get 代付标志，1：代付；0：自付 
      * @return AgentPay 代付标志，1：代付；0：自付
      */
-    public Long getAgentPay() {
+    public Integer getAgentPay() {
         return this.AgentPay;
     }
 
@@ -71,7 +71,7 @@ public class AgentPayDealsRequest extends AbstractModel{
      * Set 代付标志，1：代付；0：自付
      * @param AgentPay 代付标志，1：代付；0：自付
      */
-    public void setAgentPay(Long AgentPay) {
+    public void setAgentPay(Integer AgentPay) {
         this.AgentPay = AgentPay;
     }
 

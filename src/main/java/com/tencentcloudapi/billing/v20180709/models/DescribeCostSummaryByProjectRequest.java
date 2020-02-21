@@ -48,21 +48,21 @@ public class DescribeCostSummaryByProjectRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 偏移量
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 是否需要返回记录数量，0不需要，1需要，默认不需要
     */
     @SerializedName("NeedRecordNum")
     @Expose
-    private Long NeedRecordNum;
+    private Integer NeedRecordNum;
 
     /**
      * Get 查询账单数据的用户UIN 
@@ -116,7 +116,7 @@ public class DescribeCostSummaryByProjectRequest extends AbstractModel{
      * Get 每次获取数据量 
      * @return Limit 每次获取数据量
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -124,7 +124,7 @@ public class DescribeCostSummaryByProjectRequest extends AbstractModel{
      * Set 每次获取数据量
      * @param Limit 每次获取数据量
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -132,7 +132,7 @@ public class DescribeCostSummaryByProjectRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -140,7 +140,7 @@ public class DescribeCostSummaryByProjectRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -148,7 +148,7 @@ public class DescribeCostSummaryByProjectRequest extends AbstractModel{
      * Get 是否需要返回记录数量，0不需要，1需要，默认不需要 
      * @return NeedRecordNum 是否需要返回记录数量，0不需要，1需要，默认不需要
      */
-    public Long getNeedRecordNum() {
+    public Integer getNeedRecordNum() {
         return this.NeedRecordNum;
     }
 
@@ -156,7 +156,7 @@ public class DescribeCostSummaryByProjectRequest extends AbstractModel{
      * Set 是否需要返回记录数量，0不需要，1需要，默认不需要
      * @param NeedRecordNum 是否需要返回记录数量，0不需要，1需要，默认不需要
      */
-    public void setNeedRecordNum(Long NeedRecordNum) {
+    public void setNeedRecordNum(Integer NeedRecordNum) {
         this.NeedRecordNum = NeedRecordNum;
     }
 

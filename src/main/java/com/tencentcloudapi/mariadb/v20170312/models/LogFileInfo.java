@@ -27,14 +27,14 @@ public class LogFileInfo extends AbstractModel{
     */
     @SerializedName("Mtime")
     @Expose
-    private Long Mtime;
+    private Integer Mtime;
 
     /**
     * 文件长度
     */
     @SerializedName("Length")
     @Expose
-    private Long Length;
+    private Integer Length;
 
     /**
     * 下载Log时用到的统一资源标识符
@@ -54,7 +54,7 @@ public class LogFileInfo extends AbstractModel{
      * Get Log最后修改时间 
      * @return Mtime Log最后修改时间
      */
-    public Long getMtime() {
+    public Integer getMtime() {
         return this.Mtime;
     }
 
@@ -62,7 +62,7 @@ public class LogFileInfo extends AbstractModel{
      * Set Log最后修改时间
      * @param Mtime Log最后修改时间
      */
-    public void setMtime(Long Mtime) {
+    public void setMtime(Integer Mtime) {
         this.Mtime = Mtime;
     }
 
@@ -70,7 +70,7 @@ public class LogFileInfo extends AbstractModel{
      * Get 文件长度 
      * @return Length 文件长度
      */
-    public Long getLength() {
+    public Integer getLength() {
         return this.Length;
     }
 
@@ -78,7 +78,7 @@ public class LogFileInfo extends AbstractModel{
      * Set 文件长度
      * @param Length 文件长度
      */
-    public void setLength(Long Length) {
+    public void setLength(Integer Length) {
         this.Length = Length;
     }
 

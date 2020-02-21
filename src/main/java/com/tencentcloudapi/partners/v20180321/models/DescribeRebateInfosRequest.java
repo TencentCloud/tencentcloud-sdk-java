@@ -34,14 +34,14 @@ public class DescribeRebateInfosRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 限制数目
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 返佣月份，如2018-02 
@@ -63,7 +63,7 @@ public class DescribeRebateInfosRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribeRebateInfosRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribeRebateInfosRequest extends AbstractModel{
      * Get 限制数目 
      * @return Limit 限制数目
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribeRebateInfosRequest extends AbstractModel{
      * Set 限制数目
      * @param Limit 限制数目
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

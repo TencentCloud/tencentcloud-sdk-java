@@ -27,21 +27,21 @@ public class ImportRecord extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 状态值
     */
     @SerializedName("Code")
     @Expose
-    private Long Code;
+    private Integer Code;
 
     /**
     * 执行时间
     */
     @SerializedName("CostTime")
     @Expose
-    private Long CostTime;
+    private Integer CostTime;
 
     /**
     * 实例ID
@@ -69,7 +69,7 @@ public class ImportRecord extends AbstractModel{
     */
     @SerializedName("Process")
     @Expose
-    private Long Process;
+    private Integer Process;
 
     /**
     * 任务创建时间
@@ -97,7 +97,7 @@ public class ImportRecord extends AbstractModel{
     */
     @SerializedName("JobId")
     @Expose
-    private Long JobId;
+    private Integer JobId;
 
     /**
     * 导入库表名
@@ -117,7 +117,7 @@ public class ImportRecord extends AbstractModel{
      * Get 状态值 
      * @return Status 状态值
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -125,7 +125,7 @@ public class ImportRecord extends AbstractModel{
      * Set 状态值
      * @param Status 状态值
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -133,7 +133,7 @@ public class ImportRecord extends AbstractModel{
      * Get 状态值 
      * @return Code 状态值
      */
-    public Long getCode() {
+    public Integer getCode() {
         return this.Code;
     }
 
@@ -141,7 +141,7 @@ public class ImportRecord extends AbstractModel{
      * Set 状态值
      * @param Code 状态值
      */
-    public void setCode(Long Code) {
+    public void setCode(Integer Code) {
         this.Code = Code;
     }
 
@@ -149,7 +149,7 @@ public class ImportRecord extends AbstractModel{
      * Get 执行时间 
      * @return CostTime 执行时间
      */
-    public Long getCostTime() {
+    public Integer getCostTime() {
         return this.CostTime;
     }
 
@@ -157,7 +157,7 @@ public class ImportRecord extends AbstractModel{
      * Set 执行时间
      * @param CostTime 执行时间
      */
-    public void setCostTime(Long CostTime) {
+    public void setCostTime(Integer CostTime) {
         this.CostTime = CostTime;
     }
 
@@ -213,7 +213,7 @@ public class ImportRecord extends AbstractModel{
      * Get 执行进度 
      * @return Process 执行进度
      */
-    public Long getProcess() {
+    public Integer getProcess() {
         return this.Process;
     }
 
@@ -221,7 +221,7 @@ public class ImportRecord extends AbstractModel{
      * Set 执行进度
      * @param Process 执行进度
      */
-    public void setProcess(Long Process) {
+    public void setProcess(Integer Process) {
         this.Process = Process;
     }
 
@@ -277,7 +277,7 @@ public class ImportRecord extends AbstractModel{
      * Get 任务ID 
      * @return JobId 任务ID
      */
-    public Long getJobId() {
+    public Integer getJobId() {
         return this.JobId;
     }
 
@@ -285,7 +285,7 @@ public class ImportRecord extends AbstractModel{
      * Set 任务ID
      * @param JobId 任务ID
      */
-    public void setJobId(Long JobId) {
+    public void setJobId(Integer JobId) {
         this.JobId = JobId;
     }
 

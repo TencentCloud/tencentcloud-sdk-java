@@ -48,7 +48,7 @@ public class CCN extends AbstractModel{
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Long InstanceCount;
+    private Integer InstanceCount;
 
     /**
     * 创建时间
@@ -139,7 +139,7 @@ public class CCN extends AbstractModel{
      * Get 关联实例数量 
      * @return InstanceCount 关联实例数量
      */
-    public Long getInstanceCount() {
+    public Integer getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -147,7 +147,7 @@ public class CCN extends AbstractModel{
      * Set 关联实例数量
      * @param InstanceCount 关联实例数量
      */
-    public void setInstanceCount(Long InstanceCount) {
+    public void setInstanceCount(Integer InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 

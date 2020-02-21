@@ -35,7 +35,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("NodeCount")
     @Expose
-    private Long NodeCount;
+    private Integer NodeCount;
 
     /**
     * 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -43,7 +43,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -51,21 +51,21 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 欲购买的时长，单位：月。
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 欲购买的数量，默认查询购买1个实例的价格。
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
     * 是否自动使用代金券进行支付，默认不使用。
@@ -100,7 +100,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
@@ -131,7 +131,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * @return NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public Long getNodeCount() {
+    public Integer getNodeCount() {
         return this.NodeCount;
     }
 
@@ -141,7 +141,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * @param NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public void setNodeCount(Long NodeCount) {
+    public void setNodeCount(Integer NodeCount) {
         this.NodeCount = NodeCount;
     }
 
@@ -151,7 +151,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * @return Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -161,7 +161,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * @param Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -171,7 +171,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * @return Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -181,7 +181,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * @param Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 
@@ -189,7 +189,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -197,7 +197,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -205,7 +205,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 欲购买的数量，默认查询购买1个实例的价格。 
      * @return Count 欲购买的数量，默认查询购买1个实例的价格。
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -213,7 +213,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 欲购买的数量，默认查询购买1个实例的价格。
      * @param Count 欲购买的数量，默认查询购买1个实例的价格。
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 
@@ -285,7 +285,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目 
      * @return ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -293,7 +293,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      * @param ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

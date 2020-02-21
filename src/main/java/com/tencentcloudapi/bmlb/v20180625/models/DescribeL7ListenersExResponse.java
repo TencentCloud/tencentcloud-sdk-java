@@ -27,7 +27,7 @@ public class DescribeL7ListenersExResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 符合条件的监听器。
@@ -47,7 +47,7 @@ public class DescribeL7ListenersExResponse extends AbstractModel{
      * Get 此指定VPC中负载均衡的总数。 
      * @return TotalCount 此指定VPC中负载均衡的总数。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeL7ListenersExResponse extends AbstractModel{
      * Set 此指定VPC中负载均衡的总数。
      * @param TotalCount 此指定VPC中负载均衡的总数。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

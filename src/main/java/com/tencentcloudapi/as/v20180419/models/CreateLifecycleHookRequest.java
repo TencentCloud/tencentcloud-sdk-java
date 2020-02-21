@@ -55,7 +55,7 @@ public class CreateLifecycleHookRequest extends AbstractModel{
     */
     @SerializedName("HeartbeatTimeout")
     @Expose
-    private Long HeartbeatTimeout;
+    private Integer HeartbeatTimeout;
 
     /**
     * 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
@@ -139,7 +139,7 @@ public class CreateLifecycleHookRequest extends AbstractModel{
      * Get 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒 
      * @return HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
      */
-    public Long getHeartbeatTimeout() {
+    public Integer getHeartbeatTimeout() {
         return this.HeartbeatTimeout;
     }
 
@@ -147,7 +147,7 @@ public class CreateLifecycleHookRequest extends AbstractModel{
      * Set 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
      * @param HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
      */
-    public void setHeartbeatTimeout(Long HeartbeatTimeout) {
+    public void setHeartbeatTimeout(Integer HeartbeatTimeout) {
         this.HeartbeatTimeout = HeartbeatTimeout;
     }
 

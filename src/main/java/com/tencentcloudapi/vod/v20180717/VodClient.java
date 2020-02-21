@@ -1404,6 +1404,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *上传 HLS 视频时，解析索引文件内容，返回待上传的分片文件列表。分片文件路径必须是当前目录或子目录的相对路径，不能是 URL，不能是绝对路径。
+     * @param req ParseStreamingManifestRequest
+     * @return ParseStreamingManifestResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseStreamingManifestResponse ParseStreamingManifest(ParseStreamingManifestRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ParseStreamingManifestResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ParseStreamingManifestResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ParseStreamingManifest"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对点播中的音视频媒体发起处理任务，功能包括：
 1. 视频转码（带水印）；
 2. 视频转动图；

@@ -62,14 +62,14 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数据长度，默认为20
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 模糊查找名称、域名、VIP
@@ -90,21 +90,21 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
     */
     @SerializedName("OrderType")
     @Expose
-    private Long OrderType;
+    private Integer OrderType;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
     */
     @SerializedName("Exclusive")
     @Expose
-    private Long Exclusive;
+    private Integer Exclusive;
 
     /**
     * 该负载均衡对应的tgw集群（fullnat,tunnel,dnat）
@@ -218,7 +218,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Get 数据偏移量，默认为0 
      * @return Offset 数据偏移量，默认为0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -226,7 +226,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Set 数据偏移量，默认为0
      * @param Offset 数据偏移量，默认为0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -234,7 +234,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Get 返回数据长度，默认为20 
      * @return Limit 返回数据长度，默认为20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -242,7 +242,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Set 返回数据长度，默认为20
      * @param Limit 返回数据长度，默认为20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -282,7 +282,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Get 1倒序，0顺序，默认顺序 
      * @return OrderType 1倒序，0顺序，默认顺序
      */
-    public Long getOrderType() {
+    public Integer getOrderType() {
         return this.OrderType;
     }
 
@@ -290,7 +290,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Set 1倒序，0顺序，默认顺序
      * @param OrderType 1倒序，0顺序，默认顺序
      */
-    public void setOrderType(Long OrderType) {
+    public void setOrderType(Integer OrderType) {
         this.OrderType = OrderType;
     }
 
@@ -298,7 +298,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -306,7 +306,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -314,7 +314,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Get 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾 
      * @return Exclusive 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      */
-    public Long getExclusive() {
+    public Integer getExclusive() {
         return this.Exclusive;
     }
 
@@ -322,7 +322,7 @@ public class DescribeLoadBalancersRequest extends AbstractModel{
      * Set 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      * @param Exclusive 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      */
-    public void setExclusive(Long Exclusive) {
+    public void setExclusive(Integer Exclusive) {
         this.Exclusive = Exclusive;
     }
 

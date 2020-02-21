@@ -34,14 +34,14 @@ public class DomainInfo extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 域名状态。0-停用，1-启用
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 添加时间
@@ -55,7 +55,7 @@ public class DomainInfo extends AbstractModel{
     */
     @SerializedName("BCName")
     @Expose
-    private Long BCName;
+    private Integer BCName;
 
     /**
     * cname对应的域名
@@ -70,7 +70,7 @@ public class DomainInfo extends AbstractModel{
     */
     @SerializedName("PlayType")
     @Expose
-    private Long PlayType;
+    private Integer PlayType;
 
     /**
     * 0：普通直播，
@@ -78,7 +78,7 @@ public class DomainInfo extends AbstractModel{
     */
     @SerializedName("IsDelayLive")
     @Expose
-    private Long IsDelayLive;
+    private Integer IsDelayLive;
 
     /**
     * 当前客户使用的cname信息
@@ -92,7 +92,7 @@ public class DomainInfo extends AbstractModel{
     */
     @SerializedName("RentTag")
     @Expose
-    private Long RentTag;
+    private Integer RentTag;
 
     /**
     * 租用域名过期时间
@@ -121,7 +121,7 @@ public class DomainInfo extends AbstractModel{
      * Get 域名类型。0-推流，1-播放 
      * @return Type 域名类型。0-推流，1-播放
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -129,7 +129,7 @@ public class DomainInfo extends AbstractModel{
      * Set 域名类型。0-推流，1-播放
      * @param Type 域名类型。0-推流，1-播放
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -137,7 +137,7 @@ public class DomainInfo extends AbstractModel{
      * Get 域名状态。0-停用，1-启用 
      * @return Status 域名状态。0-停用，1-启用
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -145,7 +145,7 @@ public class DomainInfo extends AbstractModel{
      * Set 域名状态。0-停用，1-启用
      * @param Status 域名状态。0-停用，1-启用
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -169,7 +169,7 @@ public class DomainInfo extends AbstractModel{
      * Get 是否有CName到固定规则域名。0-否，1-是 
      * @return BCName 是否有CName到固定规则域名。0-否，1-是
      */
-    public Long getBCName() {
+    public Integer getBCName() {
         return this.BCName;
     }
 
@@ -177,7 +177,7 @@ public class DomainInfo extends AbstractModel{
      * Set 是否有CName到固定规则域名。0-否，1-是
      * @param BCName 是否有CName到固定规则域名。0-否，1-是
      */
-    public void setBCName(Long BCName) {
+    public void setBCName(Integer BCName) {
         this.BCName = BCName;
     }
 
@@ -203,7 +203,7 @@ public class DomainInfo extends AbstractModel{
      * @return PlayType 播放区域，只在Type=1时该参数有意义。
 1-国内，2-全球，3-海外。
      */
-    public Long getPlayType() {
+    public Integer getPlayType() {
         return this.PlayType;
     }
 
@@ -213,7 +213,7 @@ public class DomainInfo extends AbstractModel{
      * @param PlayType 播放区域，只在Type=1时该参数有意义。
 1-国内，2-全球，3-海外。
      */
-    public void setPlayType(Long PlayType) {
+    public void setPlayType(Integer PlayType) {
         this.PlayType = PlayType;
     }
 
@@ -223,7 +223,7 @@ public class DomainInfo extends AbstractModel{
      * @return IsDelayLive 0：普通直播，
 1：慢直播。
      */
-    public Long getIsDelayLive() {
+    public Integer getIsDelayLive() {
         return this.IsDelayLive;
     }
 
@@ -233,7 +233,7 @@ public class DomainInfo extends AbstractModel{
      * @param IsDelayLive 0：普通直播，
 1：慢直播。
      */
-    public void setIsDelayLive(Long IsDelayLive) {
+    public void setIsDelayLive(Integer IsDelayLive) {
         this.IsDelayLive = IsDelayLive;
     }
 
@@ -257,7 +257,7 @@ public class DomainInfo extends AbstractModel{
      * Get 是否租用域名 
      * @return RentTag 是否租用域名
      */
-    public Long getRentTag() {
+    public Integer getRentTag() {
         return this.RentTag;
     }
 
@@ -265,7 +265,7 @@ public class DomainInfo extends AbstractModel{
      * Set 是否租用域名
      * @param RentTag 是否租用域名
      */
-    public void setRentTag(Long RentTag) {
+    public void setRentTag(Integer RentTag) {
         this.RentTag = RentTag;
     }
 

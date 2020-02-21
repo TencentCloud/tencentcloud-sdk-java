@@ -27,105 +27,105 @@ public class GetClusterSummaryResponse extends AbstractModel{
     */
     @SerializedName("TotalChannelCount")
     @Expose
-    private Long TotalChannelCount;
+    private Integer TotalChannelCount;
 
     /**
     * 当前组织创建的通道数量
     */
     @SerializedName("MyChannelCount")
     @Expose
-    private Long MyChannelCount;
+    private Integer MyChannelCount;
 
     /**
     * 当前组织加入的通道数量
     */
     @SerializedName("JoinChannelCount")
     @Expose
-    private Long JoinChannelCount;
+    private Integer JoinChannelCount;
 
     /**
     * 网络节点总数量
     */
     @SerializedName("TotalPeerCount")
     @Expose
-    private Long TotalPeerCount;
+    private Integer TotalPeerCount;
 
     /**
     * 当前组织创建的节点数量
     */
     @SerializedName("MyPeerCount")
     @Expose
-    private Long MyPeerCount;
+    private Integer MyPeerCount;
 
     /**
     * 其他组织创建的节点数量
     */
     @SerializedName("OrderCount")
     @Expose
-    private Long OrderCount;
+    private Integer OrderCount;
 
     /**
     * 网络组织总数量
     */
     @SerializedName("TotalGroupCount")
     @Expose
-    private Long TotalGroupCount;
+    private Integer TotalGroupCount;
 
     /**
     * 当前组织创建的组织数量
     */
     @SerializedName("MyGroupCount")
     @Expose
-    private Long MyGroupCount;
+    private Integer MyGroupCount;
 
     /**
     * 网络智能合约总数量
     */
     @SerializedName("TotalChaincodeCount")
     @Expose
-    private Long TotalChaincodeCount;
+    private Integer TotalChaincodeCount;
 
     /**
     * 最近7天发起的智能合约数量
     */
     @SerializedName("RecentChaincodeCount")
     @Expose
-    private Long RecentChaincodeCount;
+    private Integer RecentChaincodeCount;
 
     /**
     * 当前组织发起的智能合约数量
     */
     @SerializedName("MyChaincodeCount")
     @Expose
-    private Long MyChaincodeCount;
+    private Integer MyChaincodeCount;
 
     /**
     * 当前组织的证书总数量
     */
     @SerializedName("TotalCertCount")
     @Expose
-    private Long TotalCertCount;
+    private Integer TotalCertCount;
 
     /**
     * 颁发给当前组织的证书数量
     */
     @SerializedName("TlsCertCount")
     @Expose
-    private Long TlsCertCount;
+    private Integer TlsCertCount;
 
     /**
     * 网络背书节点证书数量
     */
     @SerializedName("PeerCertCount")
     @Expose
-    private Long PeerCertCount;
+    private Integer PeerCertCount;
 
     /**
     * 当前组织业务证书数量
     */
     @SerializedName("ClientCertCount")
     @Expose
-    private Long ClientCertCount;
+    private Integer ClientCertCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -138,7 +138,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 网络通道总数量 
      * @return TotalChannelCount 网络通道总数量
      */
-    public Long getTotalChannelCount() {
+    public Integer getTotalChannelCount() {
         return this.TotalChannelCount;
     }
 
@@ -146,7 +146,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 网络通道总数量
      * @param TotalChannelCount 网络通道总数量
      */
-    public void setTotalChannelCount(Long TotalChannelCount) {
+    public void setTotalChannelCount(Integer TotalChannelCount) {
         this.TotalChannelCount = TotalChannelCount;
     }
 
@@ -154,7 +154,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 当前组织创建的通道数量 
      * @return MyChannelCount 当前组织创建的通道数量
      */
-    public Long getMyChannelCount() {
+    public Integer getMyChannelCount() {
         return this.MyChannelCount;
     }
 
@@ -162,7 +162,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 当前组织创建的通道数量
      * @param MyChannelCount 当前组织创建的通道数量
      */
-    public void setMyChannelCount(Long MyChannelCount) {
+    public void setMyChannelCount(Integer MyChannelCount) {
         this.MyChannelCount = MyChannelCount;
     }
 
@@ -170,7 +170,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 当前组织加入的通道数量 
      * @return JoinChannelCount 当前组织加入的通道数量
      */
-    public Long getJoinChannelCount() {
+    public Integer getJoinChannelCount() {
         return this.JoinChannelCount;
     }
 
@@ -178,7 +178,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 当前组织加入的通道数量
      * @param JoinChannelCount 当前组织加入的通道数量
      */
-    public void setJoinChannelCount(Long JoinChannelCount) {
+    public void setJoinChannelCount(Integer JoinChannelCount) {
         this.JoinChannelCount = JoinChannelCount;
     }
 
@@ -186,7 +186,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 网络节点总数量 
      * @return TotalPeerCount 网络节点总数量
      */
-    public Long getTotalPeerCount() {
+    public Integer getTotalPeerCount() {
         return this.TotalPeerCount;
     }
 
@@ -194,7 +194,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 网络节点总数量
      * @param TotalPeerCount 网络节点总数量
      */
-    public void setTotalPeerCount(Long TotalPeerCount) {
+    public void setTotalPeerCount(Integer TotalPeerCount) {
         this.TotalPeerCount = TotalPeerCount;
     }
 
@@ -202,7 +202,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 当前组织创建的节点数量 
      * @return MyPeerCount 当前组织创建的节点数量
      */
-    public Long getMyPeerCount() {
+    public Integer getMyPeerCount() {
         return this.MyPeerCount;
     }
 
@@ -210,7 +210,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 当前组织创建的节点数量
      * @param MyPeerCount 当前组织创建的节点数量
      */
-    public void setMyPeerCount(Long MyPeerCount) {
+    public void setMyPeerCount(Integer MyPeerCount) {
         this.MyPeerCount = MyPeerCount;
     }
 
@@ -218,7 +218,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 其他组织创建的节点数量 
      * @return OrderCount 其他组织创建的节点数量
      */
-    public Long getOrderCount() {
+    public Integer getOrderCount() {
         return this.OrderCount;
     }
 
@@ -226,7 +226,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 其他组织创建的节点数量
      * @param OrderCount 其他组织创建的节点数量
      */
-    public void setOrderCount(Long OrderCount) {
+    public void setOrderCount(Integer OrderCount) {
         this.OrderCount = OrderCount;
     }
 
@@ -234,7 +234,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 网络组织总数量 
      * @return TotalGroupCount 网络组织总数量
      */
-    public Long getTotalGroupCount() {
+    public Integer getTotalGroupCount() {
         return this.TotalGroupCount;
     }
 
@@ -242,7 +242,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 网络组织总数量
      * @param TotalGroupCount 网络组织总数量
      */
-    public void setTotalGroupCount(Long TotalGroupCount) {
+    public void setTotalGroupCount(Integer TotalGroupCount) {
         this.TotalGroupCount = TotalGroupCount;
     }
 
@@ -250,7 +250,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 当前组织创建的组织数量 
      * @return MyGroupCount 当前组织创建的组织数量
      */
-    public Long getMyGroupCount() {
+    public Integer getMyGroupCount() {
         return this.MyGroupCount;
     }
 
@@ -258,7 +258,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 当前组织创建的组织数量
      * @param MyGroupCount 当前组织创建的组织数量
      */
-    public void setMyGroupCount(Long MyGroupCount) {
+    public void setMyGroupCount(Integer MyGroupCount) {
         this.MyGroupCount = MyGroupCount;
     }
 
@@ -266,7 +266,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 网络智能合约总数量 
      * @return TotalChaincodeCount 网络智能合约总数量
      */
-    public Long getTotalChaincodeCount() {
+    public Integer getTotalChaincodeCount() {
         return this.TotalChaincodeCount;
     }
 
@@ -274,7 +274,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 网络智能合约总数量
      * @param TotalChaincodeCount 网络智能合约总数量
      */
-    public void setTotalChaincodeCount(Long TotalChaincodeCount) {
+    public void setTotalChaincodeCount(Integer TotalChaincodeCount) {
         this.TotalChaincodeCount = TotalChaincodeCount;
     }
 
@@ -282,7 +282,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 最近7天发起的智能合约数量 
      * @return RecentChaincodeCount 最近7天发起的智能合约数量
      */
-    public Long getRecentChaincodeCount() {
+    public Integer getRecentChaincodeCount() {
         return this.RecentChaincodeCount;
     }
 
@@ -290,7 +290,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 最近7天发起的智能合约数量
      * @param RecentChaincodeCount 最近7天发起的智能合约数量
      */
-    public void setRecentChaincodeCount(Long RecentChaincodeCount) {
+    public void setRecentChaincodeCount(Integer RecentChaincodeCount) {
         this.RecentChaincodeCount = RecentChaincodeCount;
     }
 
@@ -298,7 +298,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 当前组织发起的智能合约数量 
      * @return MyChaincodeCount 当前组织发起的智能合约数量
      */
-    public Long getMyChaincodeCount() {
+    public Integer getMyChaincodeCount() {
         return this.MyChaincodeCount;
     }
 
@@ -306,7 +306,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 当前组织发起的智能合约数量
      * @param MyChaincodeCount 当前组织发起的智能合约数量
      */
-    public void setMyChaincodeCount(Long MyChaincodeCount) {
+    public void setMyChaincodeCount(Integer MyChaincodeCount) {
         this.MyChaincodeCount = MyChaincodeCount;
     }
 
@@ -314,7 +314,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 当前组织的证书总数量 
      * @return TotalCertCount 当前组织的证书总数量
      */
-    public Long getTotalCertCount() {
+    public Integer getTotalCertCount() {
         return this.TotalCertCount;
     }
 
@@ -322,7 +322,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 当前组织的证书总数量
      * @param TotalCertCount 当前组织的证书总数量
      */
-    public void setTotalCertCount(Long TotalCertCount) {
+    public void setTotalCertCount(Integer TotalCertCount) {
         this.TotalCertCount = TotalCertCount;
     }
 
@@ -330,7 +330,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 颁发给当前组织的证书数量 
      * @return TlsCertCount 颁发给当前组织的证书数量
      */
-    public Long getTlsCertCount() {
+    public Integer getTlsCertCount() {
         return this.TlsCertCount;
     }
 
@@ -338,7 +338,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 颁发给当前组织的证书数量
      * @param TlsCertCount 颁发给当前组织的证书数量
      */
-    public void setTlsCertCount(Long TlsCertCount) {
+    public void setTlsCertCount(Integer TlsCertCount) {
         this.TlsCertCount = TlsCertCount;
     }
 
@@ -346,7 +346,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 网络背书节点证书数量 
      * @return PeerCertCount 网络背书节点证书数量
      */
-    public Long getPeerCertCount() {
+    public Integer getPeerCertCount() {
         return this.PeerCertCount;
     }
 
@@ -354,7 +354,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 网络背书节点证书数量
      * @param PeerCertCount 网络背书节点证书数量
      */
-    public void setPeerCertCount(Long PeerCertCount) {
+    public void setPeerCertCount(Integer PeerCertCount) {
         this.PeerCertCount = PeerCertCount;
     }
 
@@ -362,7 +362,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Get 当前组织业务证书数量 
      * @return ClientCertCount 当前组织业务证书数量
      */
-    public Long getClientCertCount() {
+    public Integer getClientCertCount() {
         return this.ClientCertCount;
     }
 
@@ -370,7 +370,7 @@ public class GetClusterSummaryResponse extends AbstractModel{
      * Set 当前组织业务证书数量
      * @param ClientCertCount 当前组织业务证书数量
      */
-    public void setClientCertCount(Long ClientCertCount) {
+    public void setClientCertCount(Integer ClientCertCount) {
         this.ClientCertCount = ClientCertCount;
     }
 

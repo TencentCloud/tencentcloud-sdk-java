@@ -27,14 +27,14 @@ public class DescribeBillDetailRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 数量，最大值为100
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
@@ -70,7 +70,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
     */
     @SerializedName("NeedRecordNum")
     @Expose
-    private Long NeedRecordNum;
+    private Integer NeedRecordNum;
 
     /**
     * 查询指定产品信息
@@ -97,7 +97,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -105,7 +105,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -113,7 +113,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
      * Get 数量，最大值为100 
      * @return Limit 数量，最大值为100
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -121,7 +121,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
      * Set 数量，最大值为100
      * @param Limit 数量，最大值为100
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -195,7 +195,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
      * @return NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      */
-    public Long getNeedRecordNum() {
+    public Integer getNeedRecordNum() {
         return this.NeedRecordNum;
     }
 
@@ -205,7 +205,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
      * @param NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      */
-    public void setNeedRecordNum(Long NeedRecordNum) {
+    public void setNeedRecordNum(Integer NeedRecordNum) {
         this.NeedRecordNum = NeedRecordNum;
     }
 

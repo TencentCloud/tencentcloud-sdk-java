@@ -48,21 +48,21 @@ public class EipInfo extends AbstractModel{
     */
     @SerializedName("IspId")
     @Expose
-    private Long IspId;
+    private Integer IspId;
 
     /**
     * 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
     */
     @SerializedName("Arrears")
     @Expose
-    private Long Arrears;
+    private Integer Arrears;
 
     /**
     * EIP所绑定的服务器实例ID，未绑定则为空
@@ -104,14 +104,14 @@ public class EipInfo extends AbstractModel{
     */
     @SerializedName("FreeSecond")
     @Expose
-    private Long FreeSecond;
+    private Integer FreeSecond;
 
     /**
     * EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
@@ -125,7 +125,7 @@ public class EipInfo extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
     * 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
@@ -139,7 +139,7 @@ public class EipInfo extends AbstractModel{
     */
     @SerializedName("LatestBandwidth")
     @Expose
-    private Long LatestBandwidth;
+    private Integer LatestBandwidth;
 
     /**
     * 私有网络名称
@@ -153,7 +153,7 @@ public class EipInfo extends AbstractModel{
     */
     @SerializedName("NatId")
     @Expose
-    private Long NatId;
+    private Integer NatId;
 
     /**
     * EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空
@@ -181,7 +181,7 @@ public class EipInfo extends AbstractModel{
     */
     @SerializedName("Exclusive")
     @Expose
-    private Long Exclusive;
+    private Integer Exclusive;
 
     /**
     * 私有网络的cidr
@@ -270,7 +270,7 @@ public class EipInfo extends AbstractModel{
      * Get 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港 
      * @return IspId 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      */
-    public Long getIspId() {
+    public Integer getIspId() {
         return this.IspId;
     }
 
@@ -278,7 +278,7 @@ public class EipInfo extends AbstractModel{
      * Set 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      * @param IspId 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      */
-    public void setIspId(Long IspId) {
+    public void setIspId(Integer IspId) {
         this.IspId = IspId;
     }
 
@@ -286,7 +286,7 @@ public class EipInfo extends AbstractModel{
      * Get 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败 
      * @return Status 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -294,7 +294,7 @@ public class EipInfo extends AbstractModel{
      * Set 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
      * @param Status 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -302,7 +302,7 @@ public class EipInfo extends AbstractModel{
      * Get 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。 
      * @return Arrears 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
      */
-    public Long getArrears() {
+    public Integer getArrears() {
         return this.Arrears;
     }
 
@@ -310,7 +310,7 @@ public class EipInfo extends AbstractModel{
      * Set 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
      * @param Arrears 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
      */
-    public void setArrears(Long Arrears) {
+    public void setArrears(Integer Arrears) {
         this.Arrears = Arrears;
     }
 
@@ -398,7 +398,7 @@ public class EipInfo extends AbstractModel{
      * Get EIP未绑定服务器时长（单位：秒） 
      * @return FreeSecond EIP未绑定服务器时长（单位：秒）
      */
-    public Long getFreeSecond() {
+    public Integer getFreeSecond() {
         return this.FreeSecond;
     }
 
@@ -406,7 +406,7 @@ public class EipInfo extends AbstractModel{
      * Set EIP未绑定服务器时长（单位：秒）
      * @param FreeSecond EIP未绑定服务器时长（单位：秒）
      */
-    public void setFreeSecond(Long FreeSecond) {
+    public void setFreeSecond(Integer FreeSecond) {
         this.FreeSecond = FreeSecond;
     }
 
@@ -414,7 +414,7 @@ public class EipInfo extends AbstractModel{
      * Get EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias 
      * @return Type EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -422,7 +422,7 @@ public class EipInfo extends AbstractModel{
      * Set EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
      * @param Type EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -446,7 +446,7 @@ public class EipInfo extends AbstractModel{
      * Get EIP带宽计费模式下的带宽上限（单位：MB） 
      * @return Bandwidth EIP带宽计费模式下的带宽上限（单位：MB）
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -454,7 +454,7 @@ public class EipInfo extends AbstractModel{
      * Set EIP带宽计费模式下的带宽上限（单位：MB）
      * @param Bandwidth EIP带宽计费模式下的带宽上限（单位：MB）
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -478,7 +478,7 @@ public class EipInfo extends AbstractModel{
      * Get 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB） 
      * @return LatestBandwidth 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
      */
-    public Long getLatestBandwidth() {
+    public Integer getLatestBandwidth() {
         return this.LatestBandwidth;
     }
 
@@ -486,7 +486,7 @@ public class EipInfo extends AbstractModel{
      * Set 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
      * @param LatestBandwidth 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
      */
-    public void setLatestBandwidth(Long LatestBandwidth) {
+    public void setLatestBandwidth(Integer LatestBandwidth) {
         this.LatestBandwidth = LatestBandwidth;
     }
 
@@ -510,7 +510,7 @@ public class EipInfo extends AbstractModel{
      * Get EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空 
      * @return NatId EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
      */
-    public Long getNatId() {
+    public Integer getNatId() {
         return this.NatId;
     }
 
@@ -518,7 +518,7 @@ public class EipInfo extends AbstractModel{
      * Set EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
      * @param NatId EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
      */
-    public void setNatId(Long NatId) {
+    public void setNatId(Integer NatId) {
         this.NatId = NatId;
     }
 
@@ -574,7 +574,7 @@ public class EipInfo extends AbstractModel{
      * Get 是否为独占类型EIP 
      * @return Exclusive 是否为独占类型EIP
      */
-    public Long getExclusive() {
+    public Integer getExclusive() {
         return this.Exclusive;
     }
 
@@ -582,7 +582,7 @@ public class EipInfo extends AbstractModel{
      * Set 是否为独占类型EIP
      * @param Exclusive 是否为独占类型EIP
      */
-    public void setExclusive(Long Exclusive) {
+    public void setExclusive(Integer Exclusive) {
         this.Exclusive = Exclusive;
     }
 

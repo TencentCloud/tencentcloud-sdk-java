@@ -97,14 +97,14 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 每页行数，默认为10
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 过滤条件，参数不支持同时指定FlowLogIds和Filters。
@@ -279,7 +279,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
      * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -287,7 +287,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
      * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -295,7 +295,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
      * Get 每页行数，默认为10 
      * @return Limit 每页行数，默认为10
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -303,7 +303,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
      * Set 每页行数，默认为10
      * @param Limit 每页行数，默认为10
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

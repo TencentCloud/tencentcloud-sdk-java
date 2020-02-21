@@ -48,21 +48,21 @@ public class NewResourceSpec extends AbstractModel{
     */
     @SerializedName("MasterCount")
     @Expose
-    private Long MasterCount;
+    private Integer MasterCount;
 
     /**
     * Core节点数量
     */
     @SerializedName("CoreCount")
     @Expose
-    private Long CoreCount;
+    private Integer CoreCount;
 
     /**
     * Task节点数量
     */
     @SerializedName("TaskCount")
     @Expose
-    private Long TaskCount;
+    private Integer TaskCount;
 
     /**
     * 描述Common节点资源
@@ -76,7 +76,7 @@ public class NewResourceSpec extends AbstractModel{
     */
     @SerializedName("CommonCount")
     @Expose
-    private Long CommonCount;
+    private Integer CommonCount;
 
     /**
      * Get 描述Master节点资源 
@@ -130,7 +130,7 @@ public class NewResourceSpec extends AbstractModel{
      * Get Master节点数量 
      * @return MasterCount Master节点数量
      */
-    public Long getMasterCount() {
+    public Integer getMasterCount() {
         return this.MasterCount;
     }
 
@@ -138,7 +138,7 @@ public class NewResourceSpec extends AbstractModel{
      * Set Master节点数量
      * @param MasterCount Master节点数量
      */
-    public void setMasterCount(Long MasterCount) {
+    public void setMasterCount(Integer MasterCount) {
         this.MasterCount = MasterCount;
     }
 
@@ -146,7 +146,7 @@ public class NewResourceSpec extends AbstractModel{
      * Get Core节点数量 
      * @return CoreCount Core节点数量
      */
-    public Long getCoreCount() {
+    public Integer getCoreCount() {
         return this.CoreCount;
     }
 
@@ -154,7 +154,7 @@ public class NewResourceSpec extends AbstractModel{
      * Set Core节点数量
      * @param CoreCount Core节点数量
      */
-    public void setCoreCount(Long CoreCount) {
+    public void setCoreCount(Integer CoreCount) {
         this.CoreCount = CoreCount;
     }
 
@@ -162,7 +162,7 @@ public class NewResourceSpec extends AbstractModel{
      * Get Task节点数量 
      * @return TaskCount Task节点数量
      */
-    public Long getTaskCount() {
+    public Integer getTaskCount() {
         return this.TaskCount;
     }
 
@@ -170,7 +170,7 @@ public class NewResourceSpec extends AbstractModel{
      * Set Task节点数量
      * @param TaskCount Task节点数量
      */
-    public void setTaskCount(Long TaskCount) {
+    public void setTaskCount(Integer TaskCount) {
         this.TaskCount = TaskCount;
     }
 
@@ -194,7 +194,7 @@ public class NewResourceSpec extends AbstractModel{
      * Get Common节点数量 
      * @return CommonCount Common节点数量
      */
-    public Long getCommonCount() {
+    public Integer getCommonCount() {
         return this.CommonCount;
     }
 
@@ -202,7 +202,7 @@ public class NewResourceSpec extends AbstractModel{
      * Set Common节点数量
      * @param CommonCount Common节点数量
      */
-    public void setCommonCount(Long CommonCount) {
+    public void setCommonCount(Integer CommonCount) {
         this.CommonCount = CommonCount;
     }
 

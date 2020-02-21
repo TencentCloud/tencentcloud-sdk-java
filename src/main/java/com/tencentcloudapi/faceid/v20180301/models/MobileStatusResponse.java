@@ -53,7 +53,7 @@ public class MobileStatusResponse extends AbstractModel{
     */
     @SerializedName("StatusCode")
     @Expose
-    private Long StatusCode;
+    private Integer StatusCode;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -134,7 +134,7 @@ public class MobileStatusResponse extends AbstractModel{
 4：不在网
 99：未知状态
      */
-    public Long getStatusCode() {
+    public Integer getStatusCode() {
         return this.StatusCode;
     }
 
@@ -154,7 +154,7 @@ public class MobileStatusResponse extends AbstractModel{
 4：不在网
 99：未知状态
      */
-    public void setStatusCode(Long StatusCode) {
+    public void setStatusCode(Integer StatusCode) {
         this.StatusCode = StatusCode;
     }
 

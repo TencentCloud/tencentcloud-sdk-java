@@ -27,14 +27,14 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
     */
     @SerializedName("SyncMode")
     @Expose
-    private Long SyncMode;
+    private Integer SyncMode;
 
     /**
     * 是否有修改流程在执行中：1 是， 0 否。
     */
     @SerializedName("IsModifying")
     @Expose
-    private Long IsModifying;
+    private Integer IsModifying;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
      * Get 同步模式：0 异步，1 强同步， 2 强同步可退化 
      * @return SyncMode 同步模式：0 异步，1 强同步， 2 强同步可退化
      */
-    public Long getSyncMode() {
+    public Integer getSyncMode() {
         return this.SyncMode;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
      * Set 同步模式：0 异步，1 强同步， 2 强同步可退化
      * @param SyncMode 同步模式：0 异步，1 强同步， 2 强同步可退化
      */
-    public void setSyncMode(Long SyncMode) {
+    public void setSyncMode(Integer SyncMode) {
         this.SyncMode = SyncMode;
     }
 
@@ -63,7 +63,7 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
      * Get 是否有修改流程在执行中：1 是， 0 否。 
      * @return IsModifying 是否有修改流程在执行中：1 是， 0 否。
      */
-    public Long getIsModifying() {
+    public Integer getIsModifying() {
         return this.IsModifying;
     }
 
@@ -71,7 +71,7 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
      * Set 是否有修改流程在执行中：1 是， 0 否。
      * @param IsModifying 是否有修改流程在执行中：1 是， 0 否。
      */
-    public void setIsModifying(Long IsModifying) {
+    public void setIsModifying(Integer IsModifying) {
         this.IsModifying = IsModifying;
     }
 

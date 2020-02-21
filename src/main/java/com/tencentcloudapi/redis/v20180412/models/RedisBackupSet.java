@@ -48,7 +48,7 @@ public class RedisBackupSet extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 备份的备注信息
@@ -62,7 +62,7 @@ public class RedisBackupSet extends AbstractModel{
     */
     @SerializedName("Locked")
     @Expose
-    private Long Locked;
+    private Integer Locked;
 
     /**
      * Get 开始备份的时间 
@@ -116,7 +116,7 @@ public class RedisBackupSet extends AbstractModel{
      * Get 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功" 
      * @return Status 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -124,7 +124,7 @@ public class RedisBackupSet extends AbstractModel{
      * Set 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      * @param Status 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -148,7 +148,7 @@ public class RedisBackupSet extends AbstractModel{
      * Get 备份是否被锁定，0：未被锁定；1：已被锁定 
      * @return Locked 备份是否被锁定，0：未被锁定；1：已被锁定
      */
-    public Long getLocked() {
+    public Integer getLocked() {
         return this.Locked;
     }
 
@@ -156,7 +156,7 @@ public class RedisBackupSet extends AbstractModel{
      * Set 备份是否被锁定，0：未被锁定；1：已被锁定
      * @param Locked 备份是否被锁定，0：未被锁定；1：已被锁定
      */
-    public void setLocked(Long Locked) {
+    public void setLocked(Integer Locked) {
         this.Locked = Locked;
     }
 

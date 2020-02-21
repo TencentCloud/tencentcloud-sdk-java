@@ -34,7 +34,7 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel{
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
-    private Long MaxConcurrentConnection;
+    private Integer MaxConcurrentConnection;
 
     /**
      * Get NAT网关ID。 
@@ -56,7 +56,7 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel{
      * Get NAT网关并发连接上限，形如：1000000、3000000、10000000。 
      * @return MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
      */
-    public Long getMaxConcurrentConnection() {
+    public Integer getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
@@ -64,7 +64,7 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel{
      * Set NAT网关并发连接上限，形如：1000000、3000000、10000000。
      * @param MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
      */
-    public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
+    public void setMaxConcurrentConnection(Integer MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 

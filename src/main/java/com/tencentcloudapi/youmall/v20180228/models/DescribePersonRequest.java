@@ -34,14 +34,14 @@ public class DescribePersonRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 查询数量，默认20，最大查询数量100
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 卖场编码 
@@ -63,7 +63,7 @@ public class DescribePersonRequest extends AbstractModel{
      * Get 查询偏移 
      * @return Offset 查询偏移
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribePersonRequest extends AbstractModel{
      * Set 查询偏移
      * @param Offset 查询偏移
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribePersonRequest extends AbstractModel{
      * Get 查询数量，默认20，最大查询数量100 
      * @return Limit 查询数量，默认20，最大查询数量100
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribePersonRequest extends AbstractModel{
      * Set 查询数量，默认20，最大查询数量100
      * @param Limit 查询数量，默认20，最大查询数量100
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

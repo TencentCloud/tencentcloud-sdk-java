@@ -62,7 +62,7 @@ public class DBAccount extends AbstractModel{
     */
     @SerializedName("ReadOnly")
     @Expose
-    private Long ReadOnly;
+    private Integer ReadOnly;
 
     /**
     * 如果备机延迟超过本参数设置值，系统将认为备机发生故障
@@ -70,7 +70,7 @@ public class DBAccount extends AbstractModel{
     */
     @SerializedName("DelayThresh")
     @Expose
-    private Long DelayThresh;
+    private Integer DelayThresh;
 
     /**
      * Get 用户名 
@@ -156,7 +156,7 @@ public class DBAccount extends AbstractModel{
      * Get 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。 
      * @return ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
-    public Long getReadOnly() {
+    public Integer getReadOnly() {
         return this.ReadOnly;
     }
 
@@ -164,7 +164,7 @@ public class DBAccount extends AbstractModel{
      * Set 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
-    public void setReadOnly(Long ReadOnly) {
+    public void setReadOnly(Integer ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
@@ -174,7 +174,7 @@ public class DBAccount extends AbstractModel{
      * @return DelayThresh 如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
      */
-    public Long getDelayThresh() {
+    public Integer getDelayThresh() {
         return this.DelayThresh;
     }
 
@@ -184,7 +184,7 @@ public class DBAccount extends AbstractModel{
      * @param DelayThresh 如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
      */
-    public void setDelayThresh(Long DelayThresh) {
+    public void setDelayThresh(Integer DelayThresh) {
         this.DelayThresh = DelayThresh;
     }
 

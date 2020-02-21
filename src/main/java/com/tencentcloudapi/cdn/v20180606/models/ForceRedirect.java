@@ -49,7 +49,7 @@ https：强制 https 跳转
     */
     @SerializedName("RedirectStatusCode")
     @Expose
-    private Long RedirectStatusCode;
+    private Integer RedirectStatusCode;
 
     /**
      * Get 访问强制跳转配置开关
@@ -115,7 +115,7 @@ https：强制 https 跳转
 支持 301、302
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRedirectStatusCode() {
+    public Integer getRedirectStatusCode() {
         return this.RedirectStatusCode;
     }
 
@@ -127,7 +127,7 @@ https：强制 https 跳转
 支持 301、302
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRedirectStatusCode(Long RedirectStatusCode) {
+    public void setRedirectStatusCode(Integer RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;
     }
 

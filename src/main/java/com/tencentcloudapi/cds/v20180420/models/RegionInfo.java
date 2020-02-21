@@ -27,7 +27,7 @@ public class RegionInfo extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Long RegionId;
+    private Integer RegionId;
 
     /**
     * 地域名称
@@ -48,13 +48,13 @@ public class RegionInfo extends AbstractModel{
     */
     @SerializedName("RegionState")
     @Expose
-    private Long RegionState;
+    private Integer RegionState;
 
     /**
      * Get 地域ID 
      * @return RegionId 地域ID
      */
-    public Long getRegionId() {
+    public Integer getRegionId() {
         return this.RegionId;
     }
 
@@ -62,7 +62,7 @@ public class RegionInfo extends AbstractModel{
      * Set 地域ID
      * @param RegionId 地域ID
      */
-    public void setRegionId(Long RegionId) {
+    public void setRegionId(Integer RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -102,7 +102,7 @@ public class RegionInfo extends AbstractModel{
      * Get 地域可用状态 
      * @return RegionState 地域可用状态
      */
-    public Long getRegionState() {
+    public Integer getRegionState() {
         return this.RegionState;
     }
 
@@ -110,7 +110,7 @@ public class RegionInfo extends AbstractModel{
      * Set 地域可用状态
      * @param RegionState 地域可用状态
      */
-    public void setRegionState(Long RegionState) {
+    public void setRegionState(Integer RegionState) {
         this.RegionState = RegionState;
     }
 

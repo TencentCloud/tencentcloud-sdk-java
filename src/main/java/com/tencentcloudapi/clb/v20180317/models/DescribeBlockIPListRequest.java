@@ -34,14 +34,14 @@ public class DescribeBlockIPListRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回IP的最大个数，默认为 100000。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 负载均衡实例 ID。 
@@ -63,7 +63,7 @@ public class DescribeBlockIPListRequest extends AbstractModel{
      * Get 数据偏移量，默认为 0。 
      * @return Offset 数据偏移量，默认为 0。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribeBlockIPListRequest extends AbstractModel{
      * Set 数据偏移量，默认为 0。
      * @param Offset 数据偏移量，默认为 0。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribeBlockIPListRequest extends AbstractModel{
      * Get 返回IP的最大个数，默认为 100000。 
      * @return Limit 返回IP的最大个数，默认为 100000。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribeBlockIPListRequest extends AbstractModel{
      * Set 返回IP的最大个数，默认为 100000。
      * @param Limit 返回IP的最大个数，默认为 100000。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

@@ -30,7 +30,7 @@ public class RecordParam extends AbstractModel{
     */
     @SerializedName("RecordInterval")
     @Expose
-    private Long RecordInterval;
+    private Integer RecordInterval;
 
     /**
     * 录制存储时长。
@@ -39,14 +39,14 @@ public class RecordParam extends AbstractModel{
     */
     @SerializedName("StorageTime")
     @Expose
-    private Long StorageTime;
+    private Integer StorageTime;
 
     /**
     * 是否开启当前格式录制，0 否 1是。默认值0。
     */
     @SerializedName("Enable")
     @Expose
-    private Long Enable;
+    private Integer Enable;
 
     /**
      * Get 录制间隔。
@@ -58,7 +58,7 @@ public class RecordParam extends AbstractModel{
 取值范围:300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
-    public Long getRecordInterval() {
+    public Integer getRecordInterval() {
         return this.RecordInterval;
     }
 
@@ -72,7 +72,7 @@ public class RecordParam extends AbstractModel{
 取值范围:300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
-    public void setRecordInterval(Long RecordInterval) {
+    public void setRecordInterval(Integer RecordInterval) {
         this.RecordInterval = RecordInterval;
     }
 
@@ -84,7 +84,7 @@ public class RecordParam extends AbstractModel{
 单位秒，取值范围： 0-93312000。
 0表示永久存储。
      */
-    public Long getStorageTime() {
+    public Integer getStorageTime() {
         return this.StorageTime;
     }
 
@@ -96,7 +96,7 @@ public class RecordParam extends AbstractModel{
 单位秒，取值范围： 0-93312000。
 0表示永久存储。
      */
-    public void setStorageTime(Long StorageTime) {
+    public void setStorageTime(Integer StorageTime) {
         this.StorageTime = StorageTime;
     }
 
@@ -104,7 +104,7 @@ public class RecordParam extends AbstractModel{
      * Get 是否开启当前格式录制，0 否 1是。默认值0。 
      * @return Enable 是否开启当前格式录制，0 否 1是。默认值0。
      */
-    public Long getEnable() {
+    public Integer getEnable() {
         return this.Enable;
     }
 
@@ -112,7 +112,7 @@ public class RecordParam extends AbstractModel{
      * Set 是否开启当前格式录制，0 否 1是。默认值0。
      * @param Enable 是否开启当前格式录制，0 否 1是。默认值0。
      */
-    public void setEnable(Long Enable) {
+    public void setEnable(Integer Enable) {
         this.Enable = Enable;
     }
 

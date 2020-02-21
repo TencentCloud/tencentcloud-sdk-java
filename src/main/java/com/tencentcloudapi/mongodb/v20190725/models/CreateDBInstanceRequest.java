@@ -27,21 +27,21 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("NodeNum")
     @Expose
-    private Long NodeNum;
+    private Integer NodeNum;
 
     /**
     * 实例内存大小，单位：GB
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例硬盘大小，单位：GB
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
@@ -55,7 +55,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Long GoodsNum;
+    private Integer GoodsNum;
 
     /**
     * 实例所属区域名称，格式如：ap-guangzhou-2
@@ -69,7 +69,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 机器类型，HIO：高IO型；HIO10G：高IO万兆型
@@ -90,14 +90,14 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("ReplicateSetNum")
     @Expose
-    private Long ReplicateSetNum;
+    private Integer ReplicateSetNum;
 
     /**
     * 项目ID，不设置为默认项目
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
@@ -132,13 +132,13 @@ public class CreateDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
      * Get 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数 
      * @return NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
      */
-    public Long getNodeNum() {
+    public Integer getNodeNum() {
         return this.NodeNum;
     }
 
@@ -146,7 +146,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
      * @param NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
      */
-    public void setNodeNum(Long NodeNum) {
+    public void setNodeNum(Integer NodeNum) {
         this.NodeNum = NodeNum;
     }
 
@@ -154,7 +154,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 实例内存大小，单位：GB 
      * @return Memory 实例内存大小，单位：GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -162,7 +162,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 实例内存大小，单位：GB
      * @param Memory 实例内存大小，单位：GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -170,7 +170,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 实例硬盘大小，单位：GB 
      * @return Volume 实例硬盘大小，单位：GB
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -178,7 +178,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 实例硬盘大小，单位：GB
      * @param Volume 实例硬盘大小，单位：GB
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -202,7 +202,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 实例数量, 最小值1，最大值为10 
      * @return GoodsNum 实例数量, 最小值1，最大值为10
      */
-    public Long getGoodsNum() {
+    public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -210,7 +210,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 实例数量, 最小值1，最大值为10
      * @param GoodsNum 实例数量, 最小值1，最大值为10
      */
-    public void setGoodsNum(Long GoodsNum) {
+    public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -234,7 +234,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36] 
      * @return Period 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -242,7 +242,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      * @param Period 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -282,7 +282,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数 
      * @return ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
      */
-    public Long getReplicateSetNum() {
+    public Integer getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
@@ -290,7 +290,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
      * @param ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
      */
-    public void setReplicateSetNum(Long ReplicateSetNum) {
+    public void setReplicateSetNum(Integer ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
@@ -298,7 +298,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 项目ID，不设置为默认项目 
      * @return ProjectId 项目ID，不设置为默认项目
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -306,7 +306,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 项目ID，不设置为默认项目
      * @param ProjectId 项目ID，不设置为默认项目
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -378,7 +378,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Get 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费 
      * @return AutoRenewFlag 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -386,7 +386,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
      * Set 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      * @param AutoRenewFlag 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 

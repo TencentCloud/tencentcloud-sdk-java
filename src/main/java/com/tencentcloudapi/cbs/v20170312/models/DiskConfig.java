@@ -55,14 +55,14 @@ public class DiskConfig extends AbstractModel{
     */
     @SerializedName("MaxDiskSize")
     @Expose
-    private Long MaxDiskSize;
+    private Integer MaxDiskSize;
 
     /**
     * 最小可配置云盘大小，单位GB。
     */
     @SerializedName("MinDiskSize")
     @Expose
-    private Long MinDiskSize;
+    private Integer MinDiskSize;
 
     /**
     * 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
@@ -155,7 +155,7 @@ public class DiskConfig extends AbstractModel{
      * Get 最大可配置云盘大小，单位GB。 
      * @return MaxDiskSize 最大可配置云盘大小，单位GB。
      */
-    public Long getMaxDiskSize() {
+    public Integer getMaxDiskSize() {
         return this.MaxDiskSize;
     }
 
@@ -163,7 +163,7 @@ public class DiskConfig extends AbstractModel{
      * Set 最大可配置云盘大小，单位GB。
      * @param MaxDiskSize 最大可配置云盘大小，单位GB。
      */
-    public void setMaxDiskSize(Long MaxDiskSize) {
+    public void setMaxDiskSize(Integer MaxDiskSize) {
         this.MaxDiskSize = MaxDiskSize;
     }
 
@@ -171,7 +171,7 @@ public class DiskConfig extends AbstractModel{
      * Get 最小可配置云盘大小，单位GB。 
      * @return MinDiskSize 最小可配置云盘大小，单位GB。
      */
-    public Long getMinDiskSize() {
+    public Integer getMinDiskSize() {
         return this.MinDiskSize;
     }
 
@@ -179,7 +179,7 @@ public class DiskConfig extends AbstractModel{
      * Set 最小可配置云盘大小，单位GB。
      * @param MinDiskSize 最小可配置云盘大小，单位GB。
      */
-    public void setMinDiskSize(Long MinDiskSize) {
+    public void setMinDiskSize(Integer MinDiskSize) {
         this.MinDiskSize = MinDiskSize;
     }
 

@@ -134,6 +134,24 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *删除指定层的指定版本，被删除的版本无法再关联到函数上，但不会影响正在引用这个层的函数。
+     * @param req DeleteLayerVersionRequest
+     * @return DeleteLayerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLayerVersionResponse DeleteLayerVersion(DeleteLayerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLayerVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLayerVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLayerVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据传入的参数创建命名空间。
      * @param req DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -224,6 +242,24 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *获取层版本详细信息，包括用于下载层中文件的链接。
+     * @param req GetLayerVersionRequest
+     * @return GetLayerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLayerVersionResponse GetLayerVersion(GetLayerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLayerVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLayerVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetLayerVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于运行函数。
      * @param req InvokeRequest
      * @return InvokeResponse
@@ -260,6 +296,42 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *返回指定层的全部版本的信息
+     * @param req ListLayerVersionsRequest
+     * @return ListLayerVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLayerVersionsResponse ListLayerVersions(ListLayerVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLayerVersionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLayerVersionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListLayerVersions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *返回全部层的列表，其中包含了每个层最新版本的信息，可以通过适配运行时进行过滤。
+     * @param req ListLayersRequest
+     * @return ListLayersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLayersResponse ListLayers(ListLayersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLayersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLayersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListLayers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *列出命名空间列表
      * @param req ListNamespacesRequest
      * @return ListNamespacesResponse
@@ -289,6 +361,24 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListVersionByFunctionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListVersionByFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用给定的zip文件或cos对象创建一个层的新版本，每次使用相同的层的名称调用本接口，都会生成一个新版本。
+     * @param req PublishLayerVersionRequest
+     * @return PublishLayerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishLayerVersionResponse PublishLayerVersion(PublishLayerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishLayerVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishLayerVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PublishLayerVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

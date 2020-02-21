@@ -48,14 +48,14 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页查询限制数目，默认为 100，最大为 1000
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 指定区域下载日志
@@ -120,7 +120,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
      * Get 分页查询偏移量，默认为 0 （第一页） 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -128,7 +128,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
      * Set 分页查询偏移量，默认为 0 （第一页）
      * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -136,7 +136,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
      * Get 分页查询限制数目，默认为 100，最大为 1000 
      * @return Limit 分页查询限制数目，默认为 100，最大为 1000
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -144,7 +144,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
      * Set 分页查询限制数目，默认为 100，最大为 1000
      * @param Limit 分页查询限制数目，默认为 100，最大为 1000
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

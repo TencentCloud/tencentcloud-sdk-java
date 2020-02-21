@@ -27,7 +27,7 @@ public class PluginInfo extends AbstractModel{
     */
     @SerializedName("PluginType")
     @Expose
-    private Long PluginType;
+    private Integer PluginType;
 
     /**
     * 插件名称
@@ -47,7 +47,7 @@ public class PluginInfo extends AbstractModel{
      * Get 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告 
      * @return PluginType 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
      */
-    public Long getPluginType() {
+    public Integer getPluginType() {
         return this.PluginType;
     }
 
@@ -55,7 +55,7 @@ public class PluginInfo extends AbstractModel{
      * Set 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
      * @param PluginType 插件类型，分别为 1-通知栏广告，2-积分墙广告，3-banner广告，4- 悬浮窗图标广告，5-精品推荐列表广告, 6-插播广告
      */
-    public void setPluginType(Long PluginType) {
+    public void setPluginType(Integer PluginType) {
         this.PluginType = PluginType;
     }
 

@@ -27,7 +27,7 @@ public class ModifyDeviceAutoRenewFlagRequest extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
     * 需要修改的设备ID列表
@@ -40,7 +40,7 @@ public class ModifyDeviceAutoRenewFlagRequest extends AbstractModel{
      * Get 自动续费标志位。0: 不自动续费; 1: 自动续费 
      * @return AutoRenewFlag 自动续费标志位。0: 不自动续费; 1: 自动续费
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -48,7 +48,7 @@ public class ModifyDeviceAutoRenewFlagRequest extends AbstractModel{
      * Set 自动续费标志位。0: 不自动续费; 1: 自动续费
      * @param AutoRenewFlag 自动续费标志位。0: 不自动续费; 1: 自动续费
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 

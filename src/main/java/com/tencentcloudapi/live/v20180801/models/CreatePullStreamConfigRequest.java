@@ -24,6 +24,10 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 
     /**
     * 源Url。目前可支持直播流及点播文件。
+注意：
+1. 多个点播url之间使用空格拼接。
+2. 目前上限支持10个url。
+3. 支持拉流文件格式：flv，rtmp，hls，mp4。
     */
     @SerializedName("FromUrl")
     @Expose
@@ -31,6 +35,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 
     /**
     * 目的Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp协议。
     */
     @SerializedName("ToUrl")
     @Expose
@@ -45,7 +50,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     */
     @SerializedName("AreaId")
     @Expose
-    private Long AreaId;
+    private Integer AreaId;
 
     /**
     * 选择完成转拉推服务使用的运营商网络：
@@ -57,7 +62,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     */
     @SerializedName("IspId")
     @Expose
-    private Long IspId;
+    private Integer IspId;
 
     /**
     * 开始时间。
@@ -83,8 +88,16 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get 源Url。目前可支持直播流及点播文件。 
+     * Get 源Url。目前可支持直播流及点播文件。
+注意：
+1. 多个点播url之间使用空格拼接。
+2. 目前上限支持10个url。
+3. 支持拉流文件格式：flv，rtmp，hls，mp4。 
      * @return FromUrl 源Url。目前可支持直播流及点播文件。
+注意：
+1. 多个点播url之间使用空格拼接。
+2. 目前上限支持10个url。
+3. 支持拉流文件格式：flv，rtmp，hls，mp4。
      */
     public String getFromUrl() {
         return this.FromUrl;
@@ -92,15 +105,25 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 
     /**
      * Set 源Url。目前可支持直播流及点播文件。
+注意：
+1. 多个点播url之间使用空格拼接。
+2. 目前上限支持10个url。
+3. 支持拉流文件格式：flv，rtmp，hls，mp4。
      * @param FromUrl 源Url。目前可支持直播流及点播文件。
+注意：
+1. 多个点播url之间使用空格拼接。
+2. 目前上限支持10个url。
+3. 支持拉流文件格式：flv，rtmp，hls，mp4。
      */
     public void setFromUrl(String FromUrl) {
         this.FromUrl = FromUrl;
     }
 
     /**
-     * Get 目的Url，目前限制该目标地址为腾讯域名。 
+     * Get 目的Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp协议。 
      * @return ToUrl 目的Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp协议。
      */
     public String getToUrl() {
         return this.ToUrl;
@@ -108,7 +131,9 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 
     /**
      * Set 目的Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp协议。
      * @param ToUrl 目的Url，目前限制该目标地址为腾讯域名。
+仅支持：rtmp协议。
      */
     public void setToUrl(String ToUrl) {
         this.ToUrl = ToUrl;
@@ -126,7 +151,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 3-天津，
 4-中国香港。
      */
-    public Long getAreaId() {
+    public Integer getAreaId() {
         return this.AreaId;
     }
 
@@ -142,7 +167,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 3-天津，
 4-中国香港。
      */
-    public void setAreaId(Long AreaId) {
+    public void setAreaId(Integer AreaId) {
         this.AreaId = AreaId;
     }
 
@@ -160,7 +185,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 4-其他。
 注：AreaId为4的时候,IspId只能为其他。
      */
-    public Long getIspId() {
+    public Integer getIspId() {
         return this.IspId;
     }
 
@@ -178,7 +203,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 4-其他。
 注：AreaId为4的时候,IspId只能为其他。
      */
-    public void setIspId(Long IspId) {
+    public void setIspId(Integer IspId) {
         this.IspId = IspId;
     }
 

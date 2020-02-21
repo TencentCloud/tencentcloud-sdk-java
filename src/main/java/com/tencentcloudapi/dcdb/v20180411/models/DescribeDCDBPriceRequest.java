@@ -34,14 +34,14 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
     * 欲购买的时长，单位：月。
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 单个分片节点个数大小，可以通过 DescribeShardSpec
@@ -49,7 +49,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     */
     @SerializedName("ShardNodeCount")
     @Expose
-    private Long ShardNodeCount;
+    private Integer ShardNodeCount;
 
     /**
     * 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -57,7 +57,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     */
     @SerializedName("ShardMemory")
     @Expose
-    private Long ShardMemory;
+    private Integer ShardMemory;
 
     /**
     * 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
@@ -65,14 +65,14 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
     */
     @SerializedName("ShardStorage")
     @Expose
-    private Long ShardStorage;
+    private Integer ShardStorage;
 
     /**
     * 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
     */
     @SerializedName("ShardCount")
     @Expose
-    private Long ShardCount;
+    private Integer ShardCount;
 
     /**
     * 付费类型。postpaid：按量付费   prepaid：预付费
@@ -101,7 +101,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * Get 欲购买实例的数量，目前支持购买1-10个实例 
      * @return Count 欲购买实例的数量，目前支持购买1-10个实例
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -109,7 +109,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * Set 欲购买实例的数量，目前支持购买1-10个实例
      * @param Count 欲购买实例的数量，目前支持购买1-10个实例
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 
@@ -117,7 +117,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -125,7 +125,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -135,7 +135,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * @return ShardNodeCount 单个分片节点个数大小，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public Long getShardNodeCount() {
+    public Integer getShardNodeCount() {
         return this.ShardNodeCount;
     }
 
@@ -145,7 +145,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * @param ShardNodeCount 单个分片节点个数大小，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public void setShardNodeCount(Long ShardNodeCount) {
+    public void setShardNodeCount(Integer ShardNodeCount) {
         this.ShardNodeCount = ShardNodeCount;
     }
 
@@ -155,7 +155,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * @return ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public Long getShardMemory() {
+    public Integer getShardMemory() {
         return this.ShardMemory;
     }
 
@@ -165,7 +165,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * @param ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public void setShardMemory(Long ShardMemory) {
+    public void setShardMemory(Integer ShardMemory) {
         this.ShardMemory = ShardMemory;
     }
 
@@ -175,7 +175,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * @return ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public Long getShardStorage() {
+    public Integer getShardStorage() {
         return this.ShardStorage;
     }
 
@@ -185,7 +185,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * @param ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
-    public void setShardStorage(Long ShardStorage) {
+    public void setShardStorage(Integer ShardStorage) {
         this.ShardStorage = ShardStorage;
     }
 
@@ -193,7 +193,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * Get 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。 
      * @return ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
-    public Long getShardCount() {
+    public Integer getShardCount() {
         return this.ShardCount;
     }
 
@@ -201,7 +201,7 @@ public class DescribeDCDBPriceRequest extends AbstractModel{
      * Set 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      * @param ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
-    public void setShardCount(Long ShardCount) {
+    public void setShardCount(Integer ShardCount) {
         this.ShardCount = ShardCount;
     }
 

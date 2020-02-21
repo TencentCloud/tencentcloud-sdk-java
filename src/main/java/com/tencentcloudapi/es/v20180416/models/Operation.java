@@ -27,7 +27,7 @@ public class Operation extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 操作开始时间
@@ -75,7 +75,7 @@ public class Operation extends AbstractModel{
      * Get 操作唯一id 
      * @return Id 操作唯一id
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -83,7 +83,7 @@ public class Operation extends AbstractModel{
      * Set 操作唯一id
      * @param Id 操作唯一id
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 

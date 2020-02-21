@@ -48,7 +48,7 @@ public class AddDelayLiveStreamRequest extends AbstractModel{
     */
     @SerializedName("DelayTime")
     @Expose
-    private Long DelayTime;
+    private Integer DelayTime;
 
     /**
     * 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
@@ -112,7 +112,7 @@ public class AddDelayLiveStreamRequest extends AbstractModel{
      * Get 延播时间，单位：秒，上限：600秒。 
      * @return DelayTime 延播时间，单位：秒，上限：600秒。
      */
-    public Long getDelayTime() {
+    public Integer getDelayTime() {
         return this.DelayTime;
     }
 
@@ -120,7 +120,7 @@ public class AddDelayLiveStreamRequest extends AbstractModel{
      * Set 延播时间，单位：秒，上限：600秒。
      * @param DelayTime 延播时间，单位：秒，上限：600秒。
      */
-    public void setDelayTime(Long DelayTime) {
+    public void setDelayTime(Integer DelayTime) {
         this.DelayTime = DelayTime;
     }
 

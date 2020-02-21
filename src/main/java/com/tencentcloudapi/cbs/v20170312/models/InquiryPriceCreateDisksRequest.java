@@ -34,7 +34,7 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Long DiskSize;
+    private Integer DiskSize;
 
     /**
     * 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
@@ -55,14 +55,14 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
     */
     @SerializedName("DiskCount")
     @Expose
-    private Long DiskCount;
+    private Integer DiskCount;
 
     /**
     * 云盘所属项目ID。
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
      * Get 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。 
@@ -84,7 +84,7 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      * Get 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。 
      * @return DiskSize 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
-    public Long getDiskSize() {
+    public Integer getDiskSize() {
         return this.DiskSize;
     }
 
@@ -92,7 +92,7 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      * Set 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      * @param DiskSize 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
-    public void setDiskSize(Long DiskSize) {
+    public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -132,7 +132,7 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      * Get 购买云盘的数量。不填则默认为1。 
      * @return DiskCount 购买云盘的数量。不填则默认为1。
      */
-    public Long getDiskCount() {
+    public Integer getDiskCount() {
         return this.DiskCount;
     }
 
@@ -140,7 +140,7 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      * Set 购买云盘的数量。不填则默认为1。
      * @param DiskCount 购买云盘的数量。不填则默认为1。
      */
-    public void setDiskCount(Long DiskCount) {
+    public void setDiskCount(Integer DiskCount) {
         this.DiskCount = DiskCount;
     }
 
@@ -148,7 +148,7 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      * Get 云盘所属项目ID。 
      * @return ProjectId 云盘所属项目ID。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -156,7 +156,7 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel{
      * Set 云盘所属项目ID。
      * @param ProjectId 云盘所属项目ID。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

@@ -27,7 +27,7 @@ public class DescribeClassicLinkInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 私有网络和基础网络互通设备。
@@ -47,7 +47,7 @@ public class DescribeClassicLinkInstancesResponse extends AbstractModel{
      * Get 符合条件的实例数量。 
      * @return TotalCount 符合条件的实例数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeClassicLinkInstancesResponse extends AbstractModel{
      * Set 符合条件的实例数量。
      * @param TotalCount 符合条件的实例数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

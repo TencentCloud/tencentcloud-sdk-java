@@ -27,7 +27,7 @@ public class DescribeDBZoneConfigResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 可售卖地域配置详情
@@ -47,7 +47,7 @@ public class DescribeDBZoneConfigResponse extends AbstractModel{
      * Get 可售卖地域配置数量 
      * @return TotalCount 可售卖地域配置数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBZoneConfigResponse extends AbstractModel{
      * Set 可售卖地域配置数量
      * @param TotalCount 可售卖地域配置数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

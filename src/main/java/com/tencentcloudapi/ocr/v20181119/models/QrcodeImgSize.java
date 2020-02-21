@@ -27,20 +27,20 @@ public class QrcodeImgSize extends AbstractModel{
     */
     @SerializedName("Wide")
     @Expose
-    private Long Wide;
+    private Integer Wide;
 
     /**
     * 高
     */
     @SerializedName("High")
     @Expose
-    private Long High;
+    private Integer High;
 
     /**
      * Get 宽 
      * @return Wide 宽
      */
-    public Long getWide() {
+    public Integer getWide() {
         return this.Wide;
     }
 
@@ -48,7 +48,7 @@ public class QrcodeImgSize extends AbstractModel{
      * Set 宽
      * @param Wide 宽
      */
-    public void setWide(Long Wide) {
+    public void setWide(Integer Wide) {
         this.Wide = Wide;
     }
 
@@ -56,7 +56,7 @@ public class QrcodeImgSize extends AbstractModel{
      * Get 高 
      * @return High 高
      */
-    public Long getHigh() {
+    public Integer getHigh() {
         return this.High;
     }
 
@@ -64,7 +64,7 @@ public class QrcodeImgSize extends AbstractModel{
      * Set 高
      * @param High 高
      */
-    public void setHigh(Long High) {
+    public void setHigh(Integer High) {
         this.High = High;
     }
 

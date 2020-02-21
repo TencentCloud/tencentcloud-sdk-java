@@ -27,7 +27,7 @@ public class CpuInfo extends AbstractModel{
     */
     @SerializedName("CpuId")
     @Expose
-    private Long CpuId;
+    private Integer CpuId;
 
     /**
     * CPU型号描述
@@ -41,20 +41,20 @@ public class CpuInfo extends AbstractModel{
     */
     @SerializedName("Series")
     @Expose
-    private Long Series;
+    private Integer Series;
 
     /**
     * 支持的RAID方式，0：有RAID卡，1：没有RAID卡
     */
     @SerializedName("ContainRaidCard")
     @Expose
-    private Long [] ContainRaidCard;
+    private Integer [] ContainRaidCard;
 
     /**
      * Get CPU的ID 
      * @return CpuId CPU的ID
      */
-    public Long getCpuId() {
+    public Integer getCpuId() {
         return this.CpuId;
     }
 
@@ -62,7 +62,7 @@ public class CpuInfo extends AbstractModel{
      * Set CPU的ID
      * @param CpuId CPU的ID
      */
-    public void setCpuId(Long CpuId) {
+    public void setCpuId(Integer CpuId) {
         this.CpuId = CpuId;
     }
 
@@ -86,7 +86,7 @@ public class CpuInfo extends AbstractModel{
      * Get 机型序列 
      * @return Series 机型序列
      */
-    public Long getSeries() {
+    public Integer getSeries() {
         return this.Series;
     }
 
@@ -94,7 +94,7 @@ public class CpuInfo extends AbstractModel{
      * Set 机型序列
      * @param Series 机型序列
      */
-    public void setSeries(Long Series) {
+    public void setSeries(Integer Series) {
         this.Series = Series;
     }
 
@@ -102,7 +102,7 @@ public class CpuInfo extends AbstractModel{
      * Get 支持的RAID方式，0：有RAID卡，1：没有RAID卡 
      * @return ContainRaidCard 支持的RAID方式，0：有RAID卡，1：没有RAID卡
      */
-    public Long [] getContainRaidCard() {
+    public Integer [] getContainRaidCard() {
         return this.ContainRaidCard;
     }
 
@@ -110,7 +110,7 @@ public class CpuInfo extends AbstractModel{
      * Set 支持的RAID方式，0：有RAID卡，1：没有RAID卡
      * @param ContainRaidCard 支持的RAID方式，0：有RAID卡，1：没有RAID卡
      */
-    public void setContainRaidCard(Long [] ContainRaidCard) {
+    public void setContainRaidCard(Integer [] ContainRaidCard) {
         this.ContainRaidCard = ContainRaidCard;
     }
 

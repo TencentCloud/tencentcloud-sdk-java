@@ -27,7 +27,7 @@ public class DescribeDBInstanceGTIDResponse extends AbstractModel{
     */
     @SerializedName("IsGTIDOpen")
     @Expose
-    private Long IsGTIDOpen;
+    private Integer IsGTIDOpen;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeDBInstanceGTIDResponse extends AbstractModel{
      * Get GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。 
      * @return IsGTIDOpen GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
      */
-    public Long getIsGTIDOpen() {
+    public Integer getIsGTIDOpen() {
         return this.IsGTIDOpen;
     }
 
@@ -48,7 +48,7 @@ public class DescribeDBInstanceGTIDResponse extends AbstractModel{
      * Set GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
      * @param IsGTIDOpen GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
      */
-    public void setIsGTIDOpen(Long IsGTIDOpen) {
+    public void setIsGTIDOpen(Integer IsGTIDOpen) {
         this.IsGTIDOpen = IsGTIDOpen;
     }
 

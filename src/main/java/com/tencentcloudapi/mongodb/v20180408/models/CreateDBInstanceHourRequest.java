@@ -27,28 +27,28 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例硬盘大小，单位：GB
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10
     */
     @SerializedName("ReplicateSetNum")
     @Expose
-    private Long ReplicateSetNum;
+    private Integer ReplicateSetNum;
 
     /**
     * 每个副本集内从节点个数，目前只支持从节点数为2
     */
     @SerializedName("SecondaryNum")
     @Expose
-    private Long SecondaryNum;
+    private Integer SecondaryNum;
 
     /**
     * MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
@@ -69,7 +69,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Long GoodsNum;
+    private Integer GoodsNum;
 
     /**
     * 可用区信息，格式如：ap-guangzhou-2
@@ -97,7 +97,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("Encrypt")
     @Expose
-    private Long Encrypt;
+    private Integer Encrypt;
 
     /**
     * 私有网络ID，如果不传则默认选择基础网络
@@ -118,7 +118,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 安全组参数
@@ -131,7 +131,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 实例内存大小，单位：GB 
      * @return Memory 实例内存大小，单位：GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -139,7 +139,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 实例内存大小，单位：GB
      * @param Memory 实例内存大小，单位：GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -147,7 +147,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 实例硬盘大小，单位：GB 
      * @return Volume 实例硬盘大小，单位：GB
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -155,7 +155,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 实例硬盘大小，单位：GB
      * @param Volume 实例硬盘大小，单位：GB
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -163,7 +163,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10 
      * @return ReplicateSetNum 副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10
      */
-    public Long getReplicateSetNum() {
+    public Integer getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
@@ -171,7 +171,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10
      * @param ReplicateSetNum 副本集个数，1为单副本集实例，大于1为分片集群实例，最大不超过10
      */
-    public void setReplicateSetNum(Long ReplicateSetNum) {
+    public void setReplicateSetNum(Integer ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
@@ -179,7 +179,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 每个副本集内从节点个数，目前只支持从节点数为2 
      * @return SecondaryNum 每个副本集内从节点个数，目前只支持从节点数为2
      */
-    public Long getSecondaryNum() {
+    public Integer getSecondaryNum() {
         return this.SecondaryNum;
     }
 
@@ -187,7 +187,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 每个副本集内从节点个数，目前只支持从节点数为2
      * @param SecondaryNum 每个副本集内从节点个数，目前只支持从节点数为2
      */
-    public void setSecondaryNum(Long SecondaryNum) {
+    public void setSecondaryNum(Integer SecondaryNum) {
         this.SecondaryNum = SecondaryNum;
     }
 
@@ -227,7 +227,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 实例数量，默认值为1, 最小值1，最大值为10 
      * @return GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      */
-    public Long getGoodsNum() {
+    public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -235,7 +235,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 实例数量，默认值为1, 最小值1，最大值为10
      * @param GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      */
-    public void setGoodsNum(Long GoodsNum) {
+    public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -291,7 +291,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 数据是否加密，当且仅当引擎版本为MONGO_3_ROCKS，可以选择加密 
      * @return Encrypt 数据是否加密，当且仅当引擎版本为MONGO_3_ROCKS，可以选择加密
      */
-    public Long getEncrypt() {
+    public Integer getEncrypt() {
         return this.Encrypt;
     }
 
@@ -299,7 +299,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 数据是否加密，当且仅当引擎版本为MONGO_3_ROCKS，可以选择加密
      * @param Encrypt 数据是否加密，当且仅当引擎版本为MONGO_3_ROCKS，可以选择加密
      */
-    public void setEncrypt(Long Encrypt) {
+    public void setEncrypt(Integer Encrypt) {
         this.Encrypt = Encrypt;
     }
 
@@ -339,7 +339,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Get 项目ID，不填为默认项目 
      * @return ProjectId 项目ID，不填为默认项目
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -347,7 +347,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      * Set 项目ID，不填为默认项目
      * @param ProjectId 项目ID，不填为默认项目
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

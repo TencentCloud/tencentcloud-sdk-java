@@ -48,7 +48,7 @@ public class ServiceInfo extends AbstractModel{
     */
     @SerializedName("PlanId")
     @Expose
-    private Long PlanId;
+    private Integer PlanId;
 
     /**
      * Get 服务版本，基础版basic，专业版professional，企业版enterprise。 
@@ -102,7 +102,7 @@ public class ServiceInfo extends AbstractModel{
      * Get 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。 
      * @return PlanId 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
      */
-    public Long getPlanId() {
+    public Integer getPlanId() {
         return this.PlanId;
     }
 
@@ -110,7 +110,7 @@ public class ServiceInfo extends AbstractModel{
      * Set 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
      * @param PlanId 加固策略编号，如果不传则使用系统默认加固策略。如果指定的plan不存在会返回错误。
      */
-    public void setPlanId(Long PlanId) {
+    public void setPlanId(Integer PlanId) {
         this.PlanId = PlanId;
     }
 

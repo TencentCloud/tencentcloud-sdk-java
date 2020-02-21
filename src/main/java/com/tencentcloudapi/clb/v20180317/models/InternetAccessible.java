@@ -37,7 +37,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Long InternetMaxBandwidthOut;
+    private Integer InternetMaxBandwidthOut;
 
     /**
     * 带宽包的类型，如SINGLEISP
@@ -77,7 +77,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
      * @return InternetMaxBandwidthOut 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getInternetMaxBandwidthOut() {
+    public Integer getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -87,7 +87,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
      * @param InternetMaxBandwidthOut 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

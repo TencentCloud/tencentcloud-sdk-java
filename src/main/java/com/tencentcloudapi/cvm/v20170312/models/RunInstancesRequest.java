@@ -91,7 +91,7 @@ public class RunInstancesRequest extends AbstractModel{
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Long InstanceCount;
+    private Integer InstanceCount;
 
     /**
     * 实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>购买多台实例，如果指定模式串`{R:x}`，表示生成数字`[x, x+n-1]`，其中`n`表示购买实例的数量，例如`server_{R:3}`，购买1台时，实例显示名称为`server_3`；购买2台时，实例显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。</li><li>购买多台实例，如果不指定模式串，则在实例显示名称添加后缀`1、2...n`，其中`n`表示购买实例的数量，例如`server_`，购买2台时，实例显示名称分别为`server_1`，`server_2`。
@@ -333,7 +333,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * Get 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。 
      * @return InstanceCount 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
      */
-    public Long getInstanceCount() {
+    public Integer getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -341,7 +341,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * Set 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
      * @param InstanceCount 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
      */
-    public void setInstanceCount(Long InstanceCount) {
+    public void setInstanceCount(Integer InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 

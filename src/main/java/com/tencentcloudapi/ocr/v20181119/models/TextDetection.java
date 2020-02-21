@@ -34,7 +34,7 @@ public class TextDetection extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Long Confidence;
+    private Integer Confidence;
 
     /**
     * 文本行坐标，以四个顶点坐标表示
@@ -72,7 +72,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
      * Get 置信度 0 ~100 
      * @return Confidence 置信度 0 ~100
      */
-    public Long getConfidence() {
+    public Integer getConfidence() {
         return this.Confidence;
     }
 
@@ -80,7 +80,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
      * Set 置信度 0 ~100
      * @param Confidence 置信度 0 ~100
      */
-    public void setConfidence(Long Confidence) {
+    public void setConfidence(Integer Confidence) {
         this.Confidence = Confidence;
     }
 

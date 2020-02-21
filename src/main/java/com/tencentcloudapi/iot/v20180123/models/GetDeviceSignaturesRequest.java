@@ -41,7 +41,7 @@ public class GetDeviceSignaturesRequest extends AbstractModel{
     */
     @SerializedName("Expire")
     @Expose
-    private Long Expire;
+    private Integer Expire;
 
     /**
      * Get 产品ID 
@@ -79,7 +79,7 @@ public class GetDeviceSignaturesRequest extends AbstractModel{
      * Get 过期时间 
      * @return Expire 过期时间
      */
-    public Long getExpire() {
+    public Integer getExpire() {
         return this.Expire;
     }
 
@@ -87,7 +87,7 @@ public class GetDeviceSignaturesRequest extends AbstractModel{
      * Set 过期时间
      * @param Expire 过期时间
      */
-    public void setExpire(Long Expire) {
+    public void setExpire(Integer Expire) {
         this.Expire = Expire;
     }
 

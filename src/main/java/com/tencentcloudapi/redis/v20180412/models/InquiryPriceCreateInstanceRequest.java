@@ -27,56 +27,56 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Long ZoneId;
+    private Integer ZoneId;
 
     /**
     * 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
     */
     @SerializedName("TypeId")
     @Expose
-    private Long TypeId;
+    private Integer TypeId;
 
     /**
     * 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
     */
     @SerializedName("MemSize")
     @Expose
-    private Long MemSize;
+    private Integer MemSize;
 
     /**
     * 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Long GoodsNum;
+    private Integer GoodsNum;
 
     /**
     * 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 付费方式:0-按量计费，1-包年包月。
     */
     @SerializedName("BillingMode")
     @Expose
-    private Long BillingMode;
+    private Integer BillingMode;
 
     /**
     * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
     */
     @SerializedName("RedisShardNum")
     @Expose
-    private Long RedisShardNum;
+    private Integer RedisShardNum;
 
     /**
     * 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
     */
     @SerializedName("RedisReplicasNum")
     @Expose
-    private Long RedisReplicasNum;
+    private Integer RedisReplicasNum;
 
     /**
     * 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
@@ -89,7 +89,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 实例所属的可用区id 
      * @return ZoneId 实例所属的可用区id
      */
-    public Long getZoneId() {
+    public Integer getZoneId() {
         return this.ZoneId;
     }
 
@@ -97,7 +97,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 实例所属的可用区id
      * @param ZoneId 实例所属的可用区id
      */
-    public void setZoneId(Long ZoneId) {
+    public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -105,7 +105,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版， 
      * @return TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
-    public Long getTypeId() {
+    public Integer getTypeId() {
         return this.TypeId;
     }
 
@@ -113,7 +113,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      * @param TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
-    public void setTypeId(Long TypeId) {
+    public void setTypeId(Integer TypeId) {
         this.TypeId = TypeId;
     }
 
@@ -121,7 +121,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准 
      * @return MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      */
-    public Long getMemSize() {
+    public Integer getMemSize() {
         return this.MemSize;
     }
 
@@ -129,7 +129,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      * @param MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      */
-    public void setMemSize(Long MemSize) {
+    public void setMemSize(Integer MemSize) {
         this.MemSize = MemSize;
     }
 
@@ -137,7 +137,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准 
      * @return GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      */
-    public Long getGoodsNum() {
+    public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -145,7 +145,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      * @param GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      */
-    public void setGoodsNum(Long GoodsNum) {
+    public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -153,7 +153,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36] 
      * @return Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -161,7 +161,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      * @param Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -169,7 +169,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 付费方式:0-按量计费，1-包年包月。 
      * @return BillingMode 付费方式:0-按量计费，1-包年包月。
      */
-    public Long getBillingMode() {
+    public Integer getBillingMode() {
         return this.BillingMode;
     }
 
@@ -177,7 +177,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 付费方式:0-按量计费，1-包年包月。
      * @param BillingMode 付费方式:0-按量计费，1-包年包月。
      */
-    public void setBillingMode(Long BillingMode) {
+    public void setBillingMode(Integer BillingMode) {
         this.BillingMode = BillingMode;
     }
 
@@ -185,7 +185,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写 
      * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
-    public Long getRedisShardNum() {
+    public Integer getRedisShardNum() {
         return this.RedisShardNum;
     }
 
@@ -193,7 +193,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
-    public void setRedisShardNum(Long RedisShardNum) {
+    public void setRedisShardNum(Integer RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
@@ -201,7 +201,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public Long getRedisReplicasNum() {
+    public Integer getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
@@ -209,7 +209,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public void setRedisReplicasNum(Long RedisReplicasNum) {
+    public void setRedisReplicasNum(Integer RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 

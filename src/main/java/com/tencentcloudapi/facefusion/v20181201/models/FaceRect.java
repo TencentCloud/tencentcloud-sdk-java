@@ -27,34 +27,34 @@ public class FaceRect extends AbstractModel{
     */
     @SerializedName("X")
     @Expose
-    private Long X;
+    private Integer X;
 
     /**
     * 人脸框左上角纵坐标。
     */
     @SerializedName("Y")
     @Expose
-    private Long Y;
+    private Integer Y;
 
     /**
     * 人脸框宽度。
     */
     @SerializedName("Width")
     @Expose
-    private Long Width;
+    private Integer Width;
 
     /**
     * 人脸框高度。
     */
     @SerializedName("Height")
     @Expose
-    private Long Height;
+    private Integer Height;
 
     /**
      * Get 人脸框左上角横坐标。 
      * @return X 人脸框左上角横坐标。
      */
-    public Long getX() {
+    public Integer getX() {
         return this.X;
     }
 
@@ -62,7 +62,7 @@ public class FaceRect extends AbstractModel{
      * Set 人脸框左上角横坐标。
      * @param X 人脸框左上角横坐标。
      */
-    public void setX(Long X) {
+    public void setX(Integer X) {
         this.X = X;
     }
 
@@ -70,7 +70,7 @@ public class FaceRect extends AbstractModel{
      * Get 人脸框左上角纵坐标。 
      * @return Y 人脸框左上角纵坐标。
      */
-    public Long getY() {
+    public Integer getY() {
         return this.Y;
     }
 
@@ -78,7 +78,7 @@ public class FaceRect extends AbstractModel{
      * Set 人脸框左上角纵坐标。
      * @param Y 人脸框左上角纵坐标。
      */
-    public void setY(Long Y) {
+    public void setY(Integer Y) {
         this.Y = Y;
     }
 
@@ -86,7 +86,7 @@ public class FaceRect extends AbstractModel{
      * Get 人脸框宽度。 
      * @return Width 人脸框宽度。
      */
-    public Long getWidth() {
+    public Integer getWidth() {
         return this.Width;
     }
 
@@ -94,7 +94,7 @@ public class FaceRect extends AbstractModel{
      * Set 人脸框宽度。
      * @param Width 人脸框宽度。
      */
-    public void setWidth(Long Width) {
+    public void setWidth(Integer Width) {
         this.Width = Width;
     }
 
@@ -102,7 +102,7 @@ public class FaceRect extends AbstractModel{
      * Get 人脸框高度。 
      * @return Height 人脸框高度。
      */
-    public Long getHeight() {
+    public Integer getHeight() {
         return this.Height;
     }
 
@@ -110,7 +110,7 @@ public class FaceRect extends AbstractModel{
      * Set 人脸框高度。
      * @param Height 人脸框高度。
      */
-    public void setHeight(Long Height) {
+    public void setHeight(Integer Height) {
         this.Height = Height;
     }
 

@@ -27,7 +27,7 @@ public class DescribeAutoSnapshotPoliciesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 定期快照策略列表。
@@ -47,7 +47,7 @@ public class DescribeAutoSnapshotPoliciesResponse extends AbstractModel{
      * Get 有效的定期快照策略数量。 
      * @return TotalCount 有效的定期快照策略数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeAutoSnapshotPoliciesResponse extends AbstractModel{
      * Set 有效的定期快照策略数量。
      * @param TotalCount 有效的定期快照策略数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

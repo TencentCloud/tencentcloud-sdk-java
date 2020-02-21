@@ -27,13 +27,13 @@ public class DeleteSitesRequest extends AbstractModel{
     */
     @SerializedName("SiteIds")
     @Expose
-    private Long [] SiteIds;
+    private Integer [] SiteIds;
 
     /**
      * Get 站点ID列表 
      * @return SiteIds 站点ID列表
      */
-    public Long [] getSiteIds() {
+    public Integer [] getSiteIds() {
         return this.SiteIds;
     }
 
@@ -41,7 +41,7 @@ public class DeleteSitesRequest extends AbstractModel{
      * Set 站点ID列表
      * @param SiteIds 站点ID列表
      */
-    public void setSiteIds(Long [] SiteIds) {
+    public void setSiteIds(Integer [] SiteIds) {
         this.SiteIds = SiteIds;
     }
 

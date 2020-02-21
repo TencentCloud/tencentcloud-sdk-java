@@ -55,14 +55,14 @@ public class CreateFunctionRequest extends AbstractModel{
     */
     @SerializedName("MemorySize")
     @Expose
-    private Long MemorySize;
+    private Integer MemorySize;
 
     /**
     * 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
     */
     @SerializedName("Timeout")
     @Expose
-    private Long Timeout;
+    private Integer Timeout;
 
     /**
     * 函数的环境变量
@@ -126,6 +126,20 @@ public class CreateFunctionRequest extends AbstractModel{
     @SerializedName("CodeSource")
     @Expose
     private String CodeSource;
+
+    /**
+    * 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+    */
+    @SerializedName("Layers")
+    @Expose
+    private LayerVersionSimple [] Layers;
+
+    /**
+    * 死信队列参数
+    */
+    @SerializedName("DeadLetterConfig")
+    @Expose
+    private DeadLetterConfig DeadLetterConfig;
 
     /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
@@ -195,7 +209,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Get 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯 
      * @return MemorySize 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      */
-    public Long getMemorySize() {
+    public Integer getMemorySize() {
         return this.MemorySize;
     }
 
@@ -203,7 +217,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Set 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      * @param MemorySize 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      */
-    public void setMemorySize(Long MemorySize) {
+    public void setMemorySize(Integer MemorySize) {
         this.MemorySize = MemorySize;
     }
 
@@ -211,7 +225,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Get 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒 
      * @return Timeout 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      */
-    public Long getTimeout() {
+    public Integer getTimeout() {
         return this.Timeout;
     }
 
@@ -219,7 +233,7 @@ public class CreateFunctionRequest extends AbstractModel{
      * Set 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      * @param Timeout 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      */
-    public void setTimeout(Long Timeout) {
+    public void setTimeout(Integer Timeout) {
         this.Timeout = Timeout;
     }
 
@@ -368,6 +382,38 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。 
+     * @return Layers 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+     */
+    public LayerVersionSimple [] getLayers() {
+        return this.Layers;
+    }
+
+    /**
+     * Set 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+     * @param Layers 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+     */
+    public void setLayers(LayerVersionSimple [] Layers) {
+        this.Layers = Layers;
+    }
+
+    /**
+     * Get 死信队列参数 
+     * @return DeadLetterConfig 死信队列参数
+     */
+    public DeadLetterConfig getDeadLetterConfig() {
+        return this.DeadLetterConfig;
+    }
+
+    /**
+     * Set 死信队列参数
+     * @param DeadLetterConfig 死信队列参数
+     */
+    public void setDeadLetterConfig(DeadLetterConfig DeadLetterConfig) {
+        this.DeadLetterConfig = DeadLetterConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +432,8 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CodeSource", this.CodeSource);
+        this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
+        this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
 
     }
 }

@@ -48,14 +48,14 @@ public class DescribeInstanceOperationsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页大小
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 集群实例ID 
@@ -109,7 +109,7 @@ public class DescribeInstanceOperationsRequest extends AbstractModel{
      * Get 分页起始值 
      * @return Offset 分页起始值
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -117,7 +117,7 @@ public class DescribeInstanceOperationsRequest extends AbstractModel{
      * Set 分页起始值
      * @param Offset 分页起始值
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -125,7 +125,7 @@ public class DescribeInstanceOperationsRequest extends AbstractModel{
      * Get 分页大小 
      * @return Limit 分页大小
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -133,7 +133,7 @@ public class DescribeInstanceOperationsRequest extends AbstractModel{
      * Set 分页大小
      * @param Limit 分页大小
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

@@ -27,7 +27,7 @@ public class DescribeInstanceOperationsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 操作记录
@@ -47,7 +47,7 @@ public class DescribeInstanceOperationsResponse extends AbstractModel{
      * Get 操作记录总数 
      * @return TotalCount 操作记录总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeInstanceOperationsResponse extends AbstractModel{
      * Set 操作记录总数
      * @param TotalCount 操作记录总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

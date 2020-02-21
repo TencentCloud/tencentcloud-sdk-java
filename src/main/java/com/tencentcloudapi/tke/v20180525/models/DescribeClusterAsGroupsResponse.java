@@ -27,7 +27,7 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 集群关联的伸缩组列表
@@ -47,7 +47,7 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
      * Get 集群关联的伸缩组总数 
      * @return TotalCount 集群关联的伸缩组总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
      * Set 集群关联的伸缩组总数
      * @param TotalCount 集群关联的伸缩组总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

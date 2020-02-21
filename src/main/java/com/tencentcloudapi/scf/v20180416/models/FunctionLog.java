@@ -55,14 +55,14 @@ public class FunctionLog extends AbstractModel{
     */
     @SerializedName("RetCode")
     @Expose
-    private Long RetCode;
+    private Integer RetCode;
 
     /**
     * 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
     */
     @SerializedName("InvokeFinished")
     @Expose
-    private Long InvokeFinished;
+    private Integer InvokeFinished;
 
     /**
     * 函数执行耗时，单位为 ms
@@ -76,14 +76,14 @@ public class FunctionLog extends AbstractModel{
     */
     @SerializedName("BillDuration")
     @Expose
-    private Long BillDuration;
+    private Integer BillDuration;
 
     /**
     * 函数执行时消耗实际内存大小，单位为 Byte
     */
     @SerializedName("MemUsage")
     @Expose
-    private Long MemUsage;
+    private Integer MemUsage;
 
     /**
     * 函数执行过程中的日志输出
@@ -174,7 +174,7 @@ public class FunctionLog extends AbstractModel{
      * Get 函数执行结果，如果是 0 表示执行成功，其他值表示失败 
      * @return RetCode 函数执行结果，如果是 0 表示执行成功，其他值表示失败
      */
-    public Long getRetCode() {
+    public Integer getRetCode() {
         return this.RetCode;
     }
 
@@ -182,7 +182,7 @@ public class FunctionLog extends AbstractModel{
      * Set 函数执行结果，如果是 0 表示执行成功，其他值表示失败
      * @param RetCode 函数执行结果，如果是 0 表示执行成功，其他值表示失败
      */
-    public void setRetCode(Long RetCode) {
+    public void setRetCode(Integer RetCode) {
         this.RetCode = RetCode;
     }
 
@@ -190,7 +190,7 @@ public class FunctionLog extends AbstractModel{
      * Get 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常 
      * @return InvokeFinished 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
      */
-    public Long getInvokeFinished() {
+    public Integer getInvokeFinished() {
         return this.InvokeFinished;
     }
 
@@ -198,7 +198,7 @@ public class FunctionLog extends AbstractModel{
      * Set 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
      * @param InvokeFinished 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
      */
-    public void setInvokeFinished(Long InvokeFinished) {
+    public void setInvokeFinished(Integer InvokeFinished) {
         this.InvokeFinished = InvokeFinished;
     }
 
@@ -222,7 +222,7 @@ public class FunctionLog extends AbstractModel{
      * Get 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms 
      * @return BillDuration 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
      */
-    public Long getBillDuration() {
+    public Integer getBillDuration() {
         return this.BillDuration;
     }
 
@@ -230,7 +230,7 @@ public class FunctionLog extends AbstractModel{
      * Set 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
      * @param BillDuration 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
      */
-    public void setBillDuration(Long BillDuration) {
+    public void setBillDuration(Integer BillDuration) {
         this.BillDuration = BillDuration;
     }
 
@@ -238,7 +238,7 @@ public class FunctionLog extends AbstractModel{
      * Get 函数执行时消耗实际内存大小，单位为 Byte 
      * @return MemUsage 函数执行时消耗实际内存大小，单位为 Byte
      */
-    public Long getMemUsage() {
+    public Integer getMemUsage() {
         return this.MemUsage;
     }
 
@@ -246,7 +246,7 @@ public class FunctionLog extends AbstractModel{
      * Set 函数执行时消耗实际内存大小，单位为 Byte
      * @param MemUsage 函数执行时消耗实际内存大小，单位为 Byte
      */
-    public void setMemUsage(Long MemUsage) {
+    public void setMemUsage(Integer MemUsage) {
         this.MemUsage = MemUsage;
     }
 

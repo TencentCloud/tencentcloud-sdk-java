@@ -111,7 +111,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。若不指定该参数，则默认不绑定安全组。
@@ -160,7 +160,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     */
     @SerializedName("InstanceNameSettings")
     @Expose
-    private InstanceNameSettings [] InstanceNameSettings;
+    private InstanceNameSettings InstanceNameSettings;
 
     /**
     * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
@@ -377,7 +377,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
      * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。 
      * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -385,7 +385,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
      * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。
      * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的`projectId`字段来获取。不填为默认项目。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -489,7 +489,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
      * Get 云服务器实例名（InstanceName）的相关设置。 
      * @return InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
      */
-    public InstanceNameSettings [] getInstanceNameSettings() {
+    public InstanceNameSettings getInstanceNameSettings() {
         return this.InstanceNameSettings;
     }
 
@@ -497,7 +497,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
      * Set 云服务器实例名（InstanceName）的相关设置。
      * @param InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
      */
-    public void setInstanceNameSettings(InstanceNameSettings [] InstanceNameSettings) {
+    public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
         this.InstanceNameSettings = InstanceNameSettings;
     }
 
@@ -539,7 +539,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
-        this.setParamArrayObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+        this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
 
     }

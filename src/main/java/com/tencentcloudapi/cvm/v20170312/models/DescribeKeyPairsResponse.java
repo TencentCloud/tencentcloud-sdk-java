@@ -27,7 +27,7 @@ public class DescribeKeyPairsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 密钥对详细信息列表。
@@ -47,7 +47,7 @@ public class DescribeKeyPairsResponse extends AbstractModel{
      * Get 符合条件的密钥对数量。 
      * @return TotalCount 符合条件的密钥对数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeKeyPairsResponse extends AbstractModel{
      * Set 符合条件的密钥对数量。
      * @param TotalCount 符合条件的密钥对数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

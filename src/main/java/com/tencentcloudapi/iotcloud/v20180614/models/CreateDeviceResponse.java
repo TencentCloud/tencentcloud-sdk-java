@@ -62,7 +62,7 @@ public class CreateDeviceResponse extends AbstractModel{
     */
     @SerializedName("LoraMoteType")
     @Expose
-    private Long LoraMoteType;
+    private Integer LoraMoteType;
 
     /**
     * LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
@@ -169,7 +169,7 @@ public class CreateDeviceResponse extends AbstractModel{
      * Get LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段 
      * @return LoraMoteType LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
      */
-    public Long getLoraMoteType() {
+    public Integer getLoraMoteType() {
         return this.LoraMoteType;
     }
 
@@ -177,7 +177,7 @@ public class CreateDeviceResponse extends AbstractModel{
      * Set LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
      * @param LoraMoteType LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
      */
-    public void setLoraMoteType(Long LoraMoteType) {
+    public void setLoraMoteType(Integer LoraMoteType) {
         this.LoraMoteType = LoraMoteType;
     }
 

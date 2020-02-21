@@ -41,14 +41,14 @@ public class DescribeMultiDevicesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页大小，每页返回的设备个数
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID 
@@ -86,7 +86,7 @@ public class DescribeMultiDevicesRequest extends AbstractModel{
      * Get 分页偏移 
      * @return Offset 分页偏移
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -94,7 +94,7 @@ public class DescribeMultiDevicesRequest extends AbstractModel{
      * Set 分页偏移
      * @param Offset 分页偏移
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -102,7 +102,7 @@ public class DescribeMultiDevicesRequest extends AbstractModel{
      * Get 分页大小，每页返回的设备个数 
      * @return Limit 分页大小，每页返回的设备个数
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -110,7 +110,7 @@ public class DescribeMultiDevicesRequest extends AbstractModel{
      * Set 分页大小，每页返回的设备个数
      * @param Limit 分页大小，每页返回的设备个数
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

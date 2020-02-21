@@ -34,28 +34,28 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
     */
     @SerializedName("InPkg")
     @Expose
-    private Long InPkg;
+    private Integer InPkg;
 
     /**
     * 出包量。
     */
     @SerializedName("OutPkg")
     @Expose
-    private Long OutPkg;
+    private Integer OutPkg;
 
     /**
     * 入带宽，单位：`Byte`。
     */
     @SerializedName("InTraffic")
     @Expose
-    private Long InTraffic;
+    private Integer InTraffic;
 
     /**
     * 出带宽，单位：`Byte`。
     */
     @SerializedName("OutTraffic")
     @Expose
-    private Long OutTraffic;
+    private Integer OutTraffic;
 
     /**
      * Get 来源`IP`。 
@@ -77,7 +77,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Get 入包量。 
      * @return InPkg 入包量。
      */
-    public Long getInPkg() {
+    public Integer getInPkg() {
         return this.InPkg;
     }
 
@@ -85,7 +85,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Set 入包量。
      * @param InPkg 入包量。
      */
-    public void setInPkg(Long InPkg) {
+    public void setInPkg(Integer InPkg) {
         this.InPkg = InPkg;
     }
 
@@ -93,7 +93,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Get 出包量。 
      * @return OutPkg 出包量。
      */
-    public Long getOutPkg() {
+    public Integer getOutPkg() {
         return this.OutPkg;
     }
 
@@ -101,7 +101,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Set 出包量。
      * @param OutPkg 出包量。
      */
-    public void setOutPkg(Long OutPkg) {
+    public void setOutPkg(Integer OutPkg) {
         this.OutPkg = OutPkg;
     }
 
@@ -109,7 +109,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Get 入带宽，单位：`Byte`。 
      * @return InTraffic 入带宽，单位：`Byte`。
      */
-    public Long getInTraffic() {
+    public Integer getInTraffic() {
         return this.InTraffic;
     }
 
@@ -117,7 +117,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Set 入带宽，单位：`Byte`。
      * @param InTraffic 入带宽，单位：`Byte`。
      */
-    public void setInTraffic(Long InTraffic) {
+    public void setInTraffic(Integer InTraffic) {
         this.InTraffic = InTraffic;
     }
 
@@ -125,7 +125,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Get 出带宽，单位：`Byte`。 
      * @return OutTraffic 出带宽，单位：`Byte`。
      */
-    public Long getOutTraffic() {
+    public Integer getOutTraffic() {
         return this.OutTraffic;
     }
 
@@ -133,7 +133,7 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
      * Set 出带宽，单位：`Byte`。
      * @param OutTraffic 出带宽，单位：`Byte`。
      */
-    public void setOutTraffic(Long OutTraffic) {
+    public void setOutTraffic(Integer OutTraffic) {
         this.OutTraffic = OutTraffic;
     }
 

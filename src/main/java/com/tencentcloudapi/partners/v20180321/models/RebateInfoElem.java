@@ -41,21 +41,21 @@ public class RebateInfoElem extends AbstractModel{
     */
     @SerializedName("Amt")
     @Expose
-    private Long Amt;
+    private Integer Amt;
 
     /**
     * 月度业绩，单位分
     */
     @SerializedName("MonthSales")
     @Expose
-    private Long MonthSales;
+    private Integer MonthSales;
 
     /**
     * 季度业绩，单位分
     */
     @SerializedName("QuarterSales")
     @Expose
-    private Long QuarterSales;
+    private Integer QuarterSales;
 
     /**
     * NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
@@ -100,7 +100,7 @@ public class RebateInfoElem extends AbstractModel{
      * Get 返佣金额，单位分 
      * @return Amt 返佣金额，单位分
      */
-    public Long getAmt() {
+    public Integer getAmt() {
         return this.Amt;
     }
 
@@ -108,7 +108,7 @@ public class RebateInfoElem extends AbstractModel{
      * Set 返佣金额，单位分
      * @param Amt 返佣金额，单位分
      */
-    public void setAmt(Long Amt) {
+    public void setAmt(Integer Amt) {
         this.Amt = Amt;
     }
 
@@ -116,7 +116,7 @@ public class RebateInfoElem extends AbstractModel{
      * Get 月度业绩，单位分 
      * @return MonthSales 月度业绩，单位分
      */
-    public Long getMonthSales() {
+    public Integer getMonthSales() {
         return this.MonthSales;
     }
 
@@ -124,7 +124,7 @@ public class RebateInfoElem extends AbstractModel{
      * Set 月度业绩，单位分
      * @param MonthSales 月度业绩，单位分
      */
-    public void setMonthSales(Long MonthSales) {
+    public void setMonthSales(Integer MonthSales) {
         this.MonthSales = MonthSales;
     }
 
@@ -132,7 +132,7 @@ public class RebateInfoElem extends AbstractModel{
      * Get 季度业绩，单位分 
      * @return QuarterSales 季度业绩，单位分
      */
-    public Long getQuarterSales() {
+    public Integer getQuarterSales() {
         return this.QuarterSales;
     }
 
@@ -140,7 +140,7 @@ public class RebateInfoElem extends AbstractModel{
      * Set 季度业绩，单位分
      * @param QuarterSales 季度业绩，单位分
      */
-    public void setQuarterSales(Long QuarterSales) {
+    public void setQuarterSales(Integer QuarterSales) {
         this.QuarterSales = QuarterSales;
     }
 

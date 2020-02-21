@@ -27,13 +27,13 @@ public class DealGoodsPriceElem extends AbstractModel{
     */
     @SerializedName("RealTotalCost")
     @Expose
-    private Long RealTotalCost;
+    private Integer RealTotalCost;
 
     /**
      * Get 实付金额 
      * @return RealTotalCost 实付金额
      */
-    public Long getRealTotalCost() {
+    public Integer getRealTotalCost() {
         return this.RealTotalCost;
     }
 
@@ -41,7 +41,7 @@ public class DealGoodsPriceElem extends AbstractModel{
      * Set 实付金额
      * @param RealTotalCost 实付金额
      */
-    public void setRealTotalCost(Long RealTotalCost) {
+    public void setRealTotalCost(Integer RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 

@@ -27,7 +27,7 @@ public class StartAnalyseResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 成功时返回success，失败时返回具体的失败原因
@@ -54,7 +54,7 @@ public class StartAnalyseResponse extends AbstractModel{
      * Get 接口调用状态，1表示成功，非1表示失败 
      * @return Status 接口调用状态，1表示成功，非1表示失败
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -62,7 +62,7 @@ public class StartAnalyseResponse extends AbstractModel{
      * Set 接口调用状态，1表示成功，非1表示失败
      * @param Status 接口调用状态，1表示成功，非1表示失败
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

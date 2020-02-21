@@ -27,7 +27,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse extends AbstractMo
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 云盘绑定的定期快照列表。
@@ -47,7 +47,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse extends AbstractMo
      * Get 云盘绑定的定期快照数量。 
      * @return TotalCount 云盘绑定的定期快照数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse extends AbstractMo
      * Set 云盘绑定的定期快照数量。
      * @param TotalCount 云盘绑定的定期快照数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

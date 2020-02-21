@@ -34,7 +34,7 @@ public class DataHistoryEntry extends AbstractModel{
     */
     @SerializedName("Timestamp")
     @Expose
-    private Long Timestamp;
+    private Integer Timestamp;
 
     /**
     * 设备名称
@@ -70,7 +70,7 @@ public class DataHistoryEntry extends AbstractModel{
      * Get 时间戳 
      * @return Timestamp 时间戳
      */
-    public Long getTimestamp() {
+    public Integer getTimestamp() {
         return this.Timestamp;
     }
 
@@ -78,7 +78,7 @@ public class DataHistoryEntry extends AbstractModel{
      * Set 时间戳
      * @param Timestamp 时间戳
      */
-    public void setTimestamp(Long Timestamp) {
+    public void setTimestamp(Integer Timestamp) {
         this.Timestamp = Timestamp;
     }
 

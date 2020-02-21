@@ -48,14 +48,14 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
     */
     @SerializedName("TotalRequest")
     @Expose
-    private Long TotalRequest;
+    private Integer TotalRequest;
 
     /**
     * 实时总连接数。
     */
     @SerializedName("TotalOnline")
     @Expose
-    private Long TotalOnline;
+    private Integer TotalOnline;
 
     /**
     * 分域名的数据情况。
@@ -123,7 +123,7 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
      * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
-    public Long getTotalRequest() {
+    public Integer getTotalRequest() {
         return this.TotalRequest;
     }
 
@@ -131,7 +131,7 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
      * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
-    public void setTotalRequest(Long TotalRequest) {
+    public void setTotalRequest(Integer TotalRequest) {
         this.TotalRequest = TotalRequest;
     }
 
@@ -139,7 +139,7 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
      * Get 实时总连接数。 
      * @return TotalOnline 实时总连接数。
      */
-    public Long getTotalOnline() {
+    public Integer getTotalOnline() {
         return this.TotalOnline;
     }
 
@@ -147,7 +147,7 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
      * Set 实时总连接数。
      * @param TotalOnline 实时总连接数。
      */
-    public void setTotalOnline(Long TotalOnline) {
+    public void setTotalOnline(Integer TotalOnline) {
         this.TotalOnline = TotalOnline;
     }
 

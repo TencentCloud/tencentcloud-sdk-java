@@ -48,7 +48,7 @@ public class LogInfo extends AbstractModel{
     */
     @SerializedName("FileSize")
     @Expose
-    private Long FileSize;
+    private Integer FileSize;
 
     /**
      * Get 日志名称。 
@@ -102,7 +102,7 @@ public class LogInfo extends AbstractModel{
      * Get 文件大小 
      * @return FileSize 文件大小
      */
-    public Long getFileSize() {
+    public Integer getFileSize() {
         return this.FileSize;
     }
 
@@ -110,7 +110,7 @@ public class LogInfo extends AbstractModel{
      * Set 文件大小
      * @param FileSize 文件大小
      */
-    public void setFileSize(Long FileSize) {
+    public void setFileSize(Integer FileSize) {
         this.FileSize = FileSize;
     }
 

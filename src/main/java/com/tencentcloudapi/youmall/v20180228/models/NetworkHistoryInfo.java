@@ -27,7 +27,7 @@ public class NetworkHistoryInfo extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
     * 集团id
@@ -41,7 +41,7 @@ public class NetworkHistoryInfo extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 店铺省份
@@ -75,7 +75,7 @@ public class NetworkHistoryInfo extends AbstractModel{
      * Get 总数 
      * @return Count 总数
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -83,7 +83,7 @@ public class NetworkHistoryInfo extends AbstractModel{
      * Set 总数
      * @param Count 总数
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 
@@ -107,7 +107,7 @@ public class NetworkHistoryInfo extends AbstractModel{
      * Get 店铺id 
      * @return ShopId 店铺id
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -115,7 +115,7 @@ public class NetworkHistoryInfo extends AbstractModel{
      * Set 店铺id
      * @param ShopId 店铺id
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 

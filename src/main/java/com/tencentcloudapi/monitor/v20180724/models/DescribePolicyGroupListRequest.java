@@ -34,14 +34,14 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 分页参数，起始位置
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
      * Get 固定值，为"monitor" 
@@ -63,7 +63,7 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
      * Get 分页参数，最大返回个数 
      * @return Limit 分页参数，最大返回个数
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -71,7 +71,7 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
      * Set 分页参数，最大返回个数
      * @param Limit 分页参数，最大返回个数
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -79,7 +79,7 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
      * Get 分页参数，起始位置 
      * @return Offset 分页参数，起始位置
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -87,7 +87,7 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
      * Set 分页参数，起始位置
      * @param Offset 分页参数，起始位置
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 

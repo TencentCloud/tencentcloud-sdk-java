@@ -41,14 +41,14 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
     */
     @SerializedName("DefaultCooldown")
     @Expose
-    private Long DefaultCooldown;
+    private Integer DefaultCooldown;
 
     /**
     * 期望实例数，大小介于最小实例数和最大实例数之间
     */
     @SerializedName("DesiredCapacity")
     @Expose
-    private Long DesiredCapacity;
+    private Integer DesiredCapacity;
 
     /**
     * 启动配置ID
@@ -62,21 +62,21 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
     */
     @SerializedName("MaxSize")
     @Expose
-    private Long MaxSize;
+    private Integer MaxSize;
 
     /**
     * 最小实例数，取值范围为0-2000。
     */
     @SerializedName("MinSize")
     @Expose
-    private Long MinSize;
+    private Integer MinSize;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 子网ID列表
@@ -142,7 +142,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
-    private Long Ipv6AddressCount;
+    private Integer Ipv6AddressCount;
 
     /**
     * 多可用区/子网策略，取值包括 PRIORITY 和 EQUALITY。
@@ -195,7 +195,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Get 默认冷却时间，单位秒，默认值为300 
      * @return DefaultCooldown 默认冷却时间，单位秒，默认值为300
      */
-    public Long getDefaultCooldown() {
+    public Integer getDefaultCooldown() {
         return this.DefaultCooldown;
     }
 
@@ -203,7 +203,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Set 默认冷却时间，单位秒，默认值为300
      * @param DefaultCooldown 默认冷却时间，单位秒，默认值为300
      */
-    public void setDefaultCooldown(Long DefaultCooldown) {
+    public void setDefaultCooldown(Integer DefaultCooldown) {
         this.DefaultCooldown = DefaultCooldown;
     }
 
@@ -211,7 +211,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Get 期望实例数，大小介于最小实例数和最大实例数之间 
      * @return DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
      */
-    public Long getDesiredCapacity() {
+    public Integer getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
@@ -219,7 +219,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Set 期望实例数，大小介于最小实例数和最大实例数之间
      * @param DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
      */
-    public void setDesiredCapacity(Long DesiredCapacity) {
+    public void setDesiredCapacity(Integer DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 
@@ -243,7 +243,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Get 最大实例数，取值范围为0-2000。 
      * @return MaxSize 最大实例数，取值范围为0-2000。
      */
-    public Long getMaxSize() {
+    public Integer getMaxSize() {
         return this.MaxSize;
     }
 
@@ -251,7 +251,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Set 最大实例数，取值范围为0-2000。
      * @param MaxSize 最大实例数，取值范围为0-2000。
      */
-    public void setMaxSize(Long MaxSize) {
+    public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;
     }
 
@@ -259,7 +259,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Get 最小实例数，取值范围为0-2000。 
      * @return MinSize 最小实例数，取值范围为0-2000。
      */
-    public Long getMinSize() {
+    public Integer getMinSize() {
         return this.MinSize;
     }
 
@@ -267,7 +267,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Set 最小实例数，取值范围为0-2000。
      * @param MinSize 最小实例数，取值范围为0-2000。
      */
-    public void setMinSize(Long MinSize) {
+    public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
     }
 
@@ -275,7 +275,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -283,7 +283,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -443,7 +443,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Get 实例具有IPv6地址数量的配置，取值包括0、1。 
      * @return Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。
      */
-    public Long getIpv6AddressCount() {
+    public Integer getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
@@ -451,7 +451,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel{
      * Set 实例具有IPv6地址数量的配置，取值包括0、1。
      * @param Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。
      */
-    public void setIpv6AddressCount(Long Ipv6AddressCount) {
+    public void setIpv6AddressCount(Integer Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 

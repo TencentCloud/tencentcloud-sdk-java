@@ -27,14 +27,14 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数量
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 过滤条件：
@@ -72,7 +72,7 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -80,7 +80,7 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -88,7 +88,7 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
      * Get 返回数量 
      * @return Limit 返回数量
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -96,7 +96,7 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
      * Set 返回数量
      * @param Limit 返回数量
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

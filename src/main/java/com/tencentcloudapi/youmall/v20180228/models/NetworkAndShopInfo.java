@@ -34,7 +34,7 @@ public class NetworkAndShopInfo extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 店铺省份
@@ -111,7 +111,7 @@ public class NetworkAndShopInfo extends AbstractModel{
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Long UpdateTime;
+    private Integer UpdateTime;
 
     /**
     * 上报网络状态设备
@@ -140,7 +140,7 @@ public class NetworkAndShopInfo extends AbstractModel{
      * Get 店铺id 
      * @return ShopId 店铺id
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -148,7 +148,7 @@ public class NetworkAndShopInfo extends AbstractModel{
      * Set 店铺id
      * @param ShopId 店铺id
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -316,7 +316,7 @@ public class NetworkAndShopInfo extends AbstractModel{
      * Get 更新时间戳 
      * @return UpdateTime 更新时间戳
      */
-    public Long getUpdateTime() {
+    public Integer getUpdateTime() {
         return this.UpdateTime;
     }
 
@@ -324,7 +324,7 @@ public class NetworkAndShopInfo extends AbstractModel{
      * Set 更新时间戳
      * @param UpdateTime 更新时间戳
      */
-    public void setUpdateTime(Long UpdateTime) {
+    public void setUpdateTime(Integer UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 

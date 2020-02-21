@@ -34,7 +34,7 @@ public class RenewDCDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 是否自动使用代金券进行支付，默认不使用。
@@ -70,7 +70,7 @@ public class RenewDCDBInstanceRequest extends AbstractModel{
      * Get 续费时长，单位：月。 
      * @return Period 续费时长，单位：月。
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -78,7 +78,7 @@ public class RenewDCDBInstanceRequest extends AbstractModel{
      * Set 续费时长，单位：月。
      * @param Period 续费时长，单位：月。
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 

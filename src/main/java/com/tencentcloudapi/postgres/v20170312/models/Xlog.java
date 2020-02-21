@@ -27,7 +27,7 @@ public class Xlog extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 文件生成的开始时间
@@ -61,7 +61,7 @@ public class Xlog extends AbstractModel{
      * Get 备份文件唯一标识 
      * @return Id 备份文件唯一标识
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -69,7 +69,7 @@ public class Xlog extends AbstractModel{
      * Set 备份文件唯一标识
      * @param Id 备份文件唯一标识
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 

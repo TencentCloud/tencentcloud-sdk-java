@@ -27,7 +27,7 @@ public class DescribeVulsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 漏洞信息列表。
@@ -47,7 +47,7 @@ public class DescribeVulsResponse extends AbstractModel{
      * Get 漏洞数量。 
      * @return TotalCount 漏洞数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeVulsResponse extends AbstractModel{
      * Set 漏洞数量。
      * @param TotalCount 漏洞数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

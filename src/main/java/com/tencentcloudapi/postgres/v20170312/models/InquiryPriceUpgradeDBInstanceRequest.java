@@ -27,14 +27,14 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 实例的内存大小，单位GB
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例ID，形如postgres-hez4fh0v
@@ -54,7 +54,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
      * Get 实例的磁盘大小，单位GB 
      * @return Storage 实例的磁盘大小，单位GB
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -62,7 +62,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
      * Set 实例的磁盘大小，单位GB
      * @param Storage 实例的磁盘大小，单位GB
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 
@@ -70,7 +70,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
      * Get 实例的内存大小，单位GB 
      * @return Memory 实例的内存大小，单位GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -78,7 +78,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
      * Set 实例的内存大小，单位GB
      * @param Memory 实例的内存大小，单位GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 

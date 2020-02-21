@@ -34,7 +34,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Long TimeSpan;
+    private Integer TimeSpan;
 
     /**
     * 询价资源描述
@@ -55,14 +55,14 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Long PayMode;
+    private Integer PayMode;
 
     /**
     * 是否支持HA， 1 支持，0 不支持
     */
     @SerializedName("SupportHA")
     @Expose
-    private Long SupportHA;
+    private Integer SupportHA;
 
     /**
     * 软件列表
@@ -105,7 +105,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 时间长度 
      * @return TimeSpan 时间长度
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -113,7 +113,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 时间长度
      * @param TimeSpan 时间长度
      */
-    public void setTimeSpan(Long TimeSpan) {
+    public void setTimeSpan(Integer TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -153,7 +153,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 计费类型 
      * @return PayMode 计费类型
      */
-    public Long getPayMode() {
+    public Integer getPayMode() {
         return this.PayMode;
     }
 
@@ -161,7 +161,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 计费类型
      * @param PayMode 计费类型
      */
-    public void setPayMode(Long PayMode) {
+    public void setPayMode(Integer PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -169,7 +169,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Get 是否支持HA， 1 支持，0 不支持 
      * @return SupportHA 是否支持HA， 1 支持，0 不支持
      */
-    public Long getSupportHA() {
+    public Integer getSupportHA() {
         return this.SupportHA;
     }
 
@@ -177,7 +177,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
      * Set 是否支持HA， 1 支持，0 不支持
      * @param SupportHA 是否支持HA， 1 支持，0 不支持
      */
-    public void setSupportHA(Long SupportHA) {
+    public void setSupportHA(Integer SupportHA) {
         this.SupportHA = SupportHA;
     }
 

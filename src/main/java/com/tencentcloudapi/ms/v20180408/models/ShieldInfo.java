@@ -27,14 +27,14 @@ public class ShieldInfo extends AbstractModel{
     */
     @SerializedName("ShieldCode")
     @Expose
-    private Long ShieldCode;
+    private Integer ShieldCode;
 
     /**
     * 加固后app的大小
     */
     @SerializedName("ShieldSize")
     @Expose
-    private Long ShieldSize;
+    private Integer ShieldSize;
 
     /**
     * 加固后app的md5
@@ -55,7 +55,7 @@ public class ShieldInfo extends AbstractModel{
     */
     @SerializedName("TaskTime")
     @Expose
-    private Long TaskTime;
+    private Integer TaskTime;
 
     /**
     * 任务唯一标识
@@ -75,7 +75,7 @@ public class ShieldInfo extends AbstractModel{
      * Get 加固结果的返回码 
      * @return ShieldCode 加固结果的返回码
      */
-    public Long getShieldCode() {
+    public Integer getShieldCode() {
         return this.ShieldCode;
     }
 
@@ -83,7 +83,7 @@ public class ShieldInfo extends AbstractModel{
      * Set 加固结果的返回码
      * @param ShieldCode 加固结果的返回码
      */
-    public void setShieldCode(Long ShieldCode) {
+    public void setShieldCode(Integer ShieldCode) {
         this.ShieldCode = ShieldCode;
     }
 
@@ -91,7 +91,7 @@ public class ShieldInfo extends AbstractModel{
      * Get 加固后app的大小 
      * @return ShieldSize 加固后app的大小
      */
-    public Long getShieldSize() {
+    public Integer getShieldSize() {
         return this.ShieldSize;
     }
 
@@ -99,7 +99,7 @@ public class ShieldInfo extends AbstractModel{
      * Set 加固后app的大小
      * @param ShieldSize 加固后app的大小
      */
-    public void setShieldSize(Long ShieldSize) {
+    public void setShieldSize(Integer ShieldSize) {
         this.ShieldSize = ShieldSize;
     }
 
@@ -139,7 +139,7 @@ public class ShieldInfo extends AbstractModel{
      * Get 加固的提交时间 
      * @return TaskTime 加固的提交时间
      */
-    public Long getTaskTime() {
+    public Integer getTaskTime() {
         return this.TaskTime;
     }
 
@@ -147,7 +147,7 @@ public class ShieldInfo extends AbstractModel{
      * Set 加固的提交时间
      * @param TaskTime 加固的提交时间
      */
-    public void setTaskTime(Long TaskTime) {
+    public void setTaskTime(Integer TaskTime) {
         this.TaskTime = TaskTime;
     }
 

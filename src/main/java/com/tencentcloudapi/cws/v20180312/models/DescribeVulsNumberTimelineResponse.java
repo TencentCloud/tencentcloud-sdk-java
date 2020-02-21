@@ -27,7 +27,7 @@ public class DescribeVulsNumberTimelineResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 用户漏洞数随时间变化统计数据。
@@ -47,7 +47,7 @@ public class DescribeVulsNumberTimelineResponse extends AbstractModel{
      * Get 统计数据记录数量。 
      * @return TotalCount 统计数据记录数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeVulsNumberTimelineResponse extends AbstractModel{
      * Set 统计数据记录数量。
      * @param TotalCount 统计数据记录数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

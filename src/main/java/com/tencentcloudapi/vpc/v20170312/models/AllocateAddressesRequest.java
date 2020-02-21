@@ -27,7 +27,7 @@ public class AllocateAddressesRequest extends AbstractModel{
     */
     @SerializedName("AddressCount")
     @Expose
-    private Long AddressCount;
+    private Integer AddressCount;
 
     /**
     * EIP线路类型。默认值：BGP。
@@ -59,7 +59,7 @@ public class AllocateAddressesRequest extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Long InternetMaxBandwidthOut;
+    private Integer InternetMaxBandwidthOut;
 
     /**
     * EIP类型。默认值：EIP。
@@ -91,7 +91,7 @@ AnycastEIP是否用于绑定负载均衡。
      * Get EIP数量。默认值：1。 
      * @return AddressCount EIP数量。默认值：1。
      */
-    public Long getAddressCount() {
+    public Integer getAddressCount() {
         return this.AddressCount;
     }
 
@@ -99,7 +99,7 @@ AnycastEIP是否用于绑定负载均衡。
      * Set EIP数量。默认值：1。
      * @param AddressCount EIP数量。默认值：1。
      */
-    public void setAddressCount(Long AddressCount) {
+    public void setAddressCount(Integer AddressCount) {
         this.AddressCount = AddressCount;
     }
 
@@ -175,7 +175,7 @@ AnycastEIP是否用于绑定负载均衡。
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
 <li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
      */
-    public Long getInternetMaxBandwidthOut() {
+    public Integer getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -191,7 +191,7 @@ AnycastEIP是否用于绑定负载均衡。
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
 <li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
      */
-    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

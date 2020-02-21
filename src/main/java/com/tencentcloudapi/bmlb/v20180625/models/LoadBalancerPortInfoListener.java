@@ -48,28 +48,28 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
     */
     @SerializedName("LoadBalancerPort")
     @Expose
-    private Long LoadBalancerPort;
+    private Integer LoadBalancerPort;
 
     /**
     * 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
     * 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 与监听器绑定的主机端口。
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
      * Get 负载均衡监听器ID。 
@@ -123,7 +123,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Get 监听器的监听端口。 
      * @return LoadBalancerPort 监听器的监听端口。
      */
-    public Long getLoadBalancerPort() {
+    public Integer getLoadBalancerPort() {
         return this.LoadBalancerPort;
     }
 
@@ -131,7 +131,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Set 监听器的监听端口。
      * @param LoadBalancerPort 监听器的监听端口。
      */
-    public void setLoadBalancerPort(Long LoadBalancerPort) {
+    public void setLoadBalancerPort(Integer LoadBalancerPort) {
         this.LoadBalancerPort = LoadBalancerPort;
     }
 
@@ -139,7 +139,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Get 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。 
      * @return Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -147,7 +147,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Set 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      * @param Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -155,7 +155,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Get 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -163,7 +163,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Set 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -171,7 +171,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Get 与监听器绑定的主机端口。 
      * @return Port 与监听器绑定的主机端口。
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -179,7 +179,7 @@ public class LoadBalancerPortInfoListener extends AbstractModel{
      * Set 与监听器绑定的主机端口。
      * @param Port 与监听器绑定的主机端口。
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 

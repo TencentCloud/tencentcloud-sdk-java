@@ -34,14 +34,14 @@ public class ListModelsRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 分页参数，分页起始位置
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
@@ -70,7 +70,7 @@ public class ListModelsRequest extends AbstractModel{
      * Get 分页参数，返回数量上限 
      * @return Limit 分页参数，返回数量上限
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -78,7 +78,7 @@ public class ListModelsRequest extends AbstractModel{
      * Set 分页参数，返回数量上限
      * @param Limit 分页参数，返回数量上限
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -86,7 +86,7 @@ public class ListModelsRequest extends AbstractModel{
      * Get 分页参数，分页起始位置 
      * @return Offset 分页参数，分页起始位置
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -94,7 +94,7 @@ public class ListModelsRequest extends AbstractModel{
      * Set 分页参数，分页起始位置
      * @param Offset 分页参数，分页起始位置
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 

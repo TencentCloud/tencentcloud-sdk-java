@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class VpcConfig extends AbstractModel{
 
     /**
-    * 私有网络 的 id
+    * 私有网络 的 Id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网的 id
+    * 子网的 Id
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get 私有网络 的 id 
-     * @return VpcId 私有网络 的 id
+     * Get 私有网络 的 Id 
+     * @return VpcId 私有网络 的 Id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络 的 id
-     * @param VpcId 私有网络 的 id
+     * Set 私有网络 的 Id
+     * @param VpcId 私有网络 的 Id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网的 id 
-     * @return SubnetId 子网的 id
+     * Get 子网的 Id 
+     * @return SubnetId 子网的 Id
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网的 id
-     * @param SubnetId 子网的 id
+     * Set 子网的 Id
+     * @param SubnetId 子网的 Id
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

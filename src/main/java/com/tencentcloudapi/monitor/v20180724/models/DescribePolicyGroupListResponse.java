@@ -35,7 +35,7 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Long Total;
+    private Integer Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -68,7 +68,7 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
      * Get 策略组总数 
      * @return Total 策略组总数
      */
-    public Long getTotal() {
+    public Integer getTotal() {
         return this.Total;
     }
 
@@ -76,7 +76,7 @@ public class DescribePolicyGroupListResponse extends AbstractModel{
      * Set 策略组总数
      * @param Total 策略组总数
      */
-    public void setTotal(Long Total) {
+    public void setTotal(Integer Total) {
         this.Total = Total;
     }
 

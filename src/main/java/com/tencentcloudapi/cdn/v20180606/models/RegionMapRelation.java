@@ -27,20 +27,20 @@ public class RegionMapRelation extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Long RegionId;
+    private Integer RegionId;
 
     /**
     * 子区域ID列表
     */
     @SerializedName("SubRegionIdList")
     @Expose
-    private Long [] SubRegionIdList;
+    private Integer [] SubRegionIdList;
 
     /**
      * Get 区域ID。 
      * @return RegionId 区域ID。
      */
-    public Long getRegionId() {
+    public Integer getRegionId() {
         return this.RegionId;
     }
 
@@ -48,7 +48,7 @@ public class RegionMapRelation extends AbstractModel{
      * Set 区域ID。
      * @param RegionId 区域ID。
      */
-    public void setRegionId(Long RegionId) {
+    public void setRegionId(Integer RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -56,7 +56,7 @@ public class RegionMapRelation extends AbstractModel{
      * Get 子区域ID列表 
      * @return SubRegionIdList 子区域ID列表
      */
-    public Long [] getSubRegionIdList() {
+    public Integer [] getSubRegionIdList() {
         return this.SubRegionIdList;
     }
 
@@ -64,7 +64,7 @@ public class RegionMapRelation extends AbstractModel{
      * Set 子区域ID列表
      * @param SubRegionIdList 子区域ID列表
      */
-    public void setSubRegionIdList(Long [] SubRegionIdList) {
+    public void setSubRegionIdList(Integer [] SubRegionIdList) {
         this.SubRegionIdList = SubRegionIdList;
     }
 

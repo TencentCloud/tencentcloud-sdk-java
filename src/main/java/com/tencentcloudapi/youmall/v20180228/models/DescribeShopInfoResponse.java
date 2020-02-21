@@ -27,7 +27,7 @@ public class DescribeShopInfoResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 门店列表信息
@@ -47,7 +47,7 @@ public class DescribeShopInfoResponse extends AbstractModel{
      * Get 门店总数 
      * @return TotalCount 门店总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeShopInfoResponse extends AbstractModel{
      * Set 门店总数
      * @param TotalCount 门店总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

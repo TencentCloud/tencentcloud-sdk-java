@@ -55,7 +55,7 @@ public class ModifyIp6RuleRequest extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Long Vport;
+    private Integer Vport;
 
     /**
      * Get IPV6转换实例唯一ID，形如ip6-xxxxxxxx 
@@ -125,7 +125,7 @@ public class ModifyIp6RuleRequest extends AbstractModel{
      * Get IPV6转换规则修改后的IPV4端口号 
      * @return Vport IPV6转换规则修改后的IPV4端口号
      */
-    public Long getVport() {
+    public Integer getVport() {
         return this.Vport;
     }
 
@@ -133,7 +133,7 @@ public class ModifyIp6RuleRequest extends AbstractModel{
      * Set IPV6转换规则修改后的IPV4端口号
      * @param Vport IPV6转换规则修改后的IPV4端口号
      */
-    public void setVport(Long Vport) {
+    public void setVport(Integer Vport) {
         this.Vport = Vport;
     }
 

@@ -121,7 +121,7 @@ REJECTED:拒绝
     */
     @SerializedName("Vlan")
     @Expose
-    private Long Vlan;
+    private Integer Vlan;
 
     /**
     * TencentAddress，腾讯侧互联 IP
@@ -156,7 +156,7 @@ REJECTED:拒绝
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
      * Get 专线通道ID 
@@ -394,7 +394,7 @@ REJECTED:拒绝
      * Get 专线通道的Vlan 
      * @return Vlan 专线通道的Vlan
      */
-    public Long getVlan() {
+    public Integer getVlan() {
         return this.Vlan;
     }
 
@@ -402,7 +402,7 @@ REJECTED:拒绝
      * Set 专线通道的Vlan
      * @param Vlan 专线通道的Vlan
      */
-    public void setVlan(Long Vlan) {
+    public void setVlan(Integer Vlan) {
         this.Vlan = Vlan;
     }
 
@@ -474,7 +474,7 @@ REJECTED:拒绝
      * Get 专线通道带宽值 
      * @return Bandwidth 专线通道带宽值
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -482,7 +482,7 @@ REJECTED:拒绝
      * Set 专线通道带宽值
      * @param Bandwidth 专线通道带宽值
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

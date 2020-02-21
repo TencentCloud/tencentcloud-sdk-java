@@ -51,7 +51,7 @@ media：流媒体点播加速
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * IP 黑白名单配置
@@ -297,7 +297,7 @@ media：流媒体点播加速
      * Get 项目 ID，默认为 0，代表【默认项目】 
      * @return ProjectId 项目 ID，默认为 0，代表【默认项目】
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -305,7 +305,7 @@ media：流媒体点播加速
      * Set 项目 ID，默认为 0，代表【默认项目】
      * @param ProjectId 项目 ID，默认为 0，代表【默认项目】
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

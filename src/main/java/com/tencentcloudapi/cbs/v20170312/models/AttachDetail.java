@@ -34,14 +34,14 @@ public class AttachDetail extends AbstractModel{
     */
     @SerializedName("AttachedDiskCount")
     @Expose
-    private Long AttachedDiskCount;
+    private Integer AttachedDiskCount;
 
     /**
     * 实例最大可挂载数据盘的数量。
     */
     @SerializedName("MaxAttachCount")
     @Expose
-    private Long MaxAttachCount;
+    private Integer MaxAttachCount;
 
     /**
      * Get 实例ID。 
@@ -63,7 +63,7 @@ public class AttachDetail extends AbstractModel{
      * Get 实例已挂载数据盘的数量。 
      * @return AttachedDiskCount 实例已挂载数据盘的数量。
      */
-    public Long getAttachedDiskCount() {
+    public Integer getAttachedDiskCount() {
         return this.AttachedDiskCount;
     }
 
@@ -71,7 +71,7 @@ public class AttachDetail extends AbstractModel{
      * Set 实例已挂载数据盘的数量。
      * @param AttachedDiskCount 实例已挂载数据盘的数量。
      */
-    public void setAttachedDiskCount(Long AttachedDiskCount) {
+    public void setAttachedDiskCount(Integer AttachedDiskCount) {
         this.AttachedDiskCount = AttachedDiskCount;
     }
 
@@ -79,7 +79,7 @@ public class AttachDetail extends AbstractModel{
      * Get 实例最大可挂载数据盘的数量。 
      * @return MaxAttachCount 实例最大可挂载数据盘的数量。
      */
-    public Long getMaxAttachCount() {
+    public Integer getMaxAttachCount() {
         return this.MaxAttachCount;
     }
 
@@ -87,7 +87,7 @@ public class AttachDetail extends AbstractModel{
      * Set 实例最大可挂载数据盘的数量。
      * @param MaxAttachCount 实例最大可挂载数据盘的数量。
      */
-    public void setMaxAttachCount(Long MaxAttachCount) {
+    public void setMaxAttachCount(Integer MaxAttachCount) {
         this.MaxAttachCount = MaxAttachCount;
     }
 

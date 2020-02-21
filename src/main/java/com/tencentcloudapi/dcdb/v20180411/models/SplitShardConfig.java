@@ -34,21 +34,21 @@ public class SplitShardConfig extends AbstractModel{
     */
     @SerializedName("SplitRate")
     @Expose
-    private Long SplitRate;
+    private Integer SplitRate;
 
     /**
     * 分片内存大小，单位 GB
     */
     @SerializedName("ShardMemory")
     @Expose
-    private Long ShardMemory;
+    private Integer ShardMemory;
 
     /**
     * 分片存储大小，单位 GB
     */
     @SerializedName("ShardStorage")
     @Expose
-    private Long ShardStorage;
+    private Integer ShardStorage;
 
     /**
      * Get 分片ID数组 
@@ -70,7 +70,7 @@ public class SplitShardConfig extends AbstractModel{
      * Get 数据切分比例 
      * @return SplitRate 数据切分比例
      */
-    public Long getSplitRate() {
+    public Integer getSplitRate() {
         return this.SplitRate;
     }
 
@@ -78,7 +78,7 @@ public class SplitShardConfig extends AbstractModel{
      * Set 数据切分比例
      * @param SplitRate 数据切分比例
      */
-    public void setSplitRate(Long SplitRate) {
+    public void setSplitRate(Integer SplitRate) {
         this.SplitRate = SplitRate;
     }
 
@@ -86,7 +86,7 @@ public class SplitShardConfig extends AbstractModel{
      * Get 分片内存大小，单位 GB 
      * @return ShardMemory 分片内存大小，单位 GB
      */
-    public Long getShardMemory() {
+    public Integer getShardMemory() {
         return this.ShardMemory;
     }
 
@@ -94,7 +94,7 @@ public class SplitShardConfig extends AbstractModel{
      * Set 分片内存大小，单位 GB
      * @param ShardMemory 分片内存大小，单位 GB
      */
-    public void setShardMemory(Long ShardMemory) {
+    public void setShardMemory(Integer ShardMemory) {
         this.ShardMemory = ShardMemory;
     }
 
@@ -102,7 +102,7 @@ public class SplitShardConfig extends AbstractModel{
      * Get 分片存储大小，单位 GB 
      * @return ShardStorage 分片存储大小，单位 GB
      */
-    public Long getShardStorage() {
+    public Integer getShardStorage() {
         return this.ShardStorage;
     }
 
@@ -110,7 +110,7 @@ public class SplitShardConfig extends AbstractModel{
      * Set 分片存储大小，单位 GB
      * @param ShardStorage 分片存储大小，单位 GB
      */
-    public void setShardStorage(Long ShardStorage) {
+    public void setShardStorage(Integer ShardStorage) {
         this.ShardStorage = ShardStorage;
     }
 

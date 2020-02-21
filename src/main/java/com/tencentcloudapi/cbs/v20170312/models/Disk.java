@@ -76,7 +76,7 @@ public class Disk extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Long DiskSize;
+    private Integer DiskSize;
 
     /**
     * 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
@@ -132,7 +132,7 @@ public class Disk extends AbstractModel{
     */
     @SerializedName("RollbackPercent")
     @Expose
-    private Long RollbackPercent;
+    private Integer RollbackPercent;
 
     /**
     * 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
@@ -179,7 +179,7 @@ public class Disk extends AbstractModel{
     */
     @SerializedName("ReturnFailCode")
     @Expose
-    private Long ReturnFailCode;
+    private Integer ReturnFailCode;
 
     /**
     * 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
@@ -211,7 +211,7 @@ public class Disk extends AbstractModel{
     */
     @SerializedName("DifferDaysOfDeadline")
     @Expose
-    private Long DifferDaysOfDeadline;
+    private Integer DifferDaysOfDeadline;
 
     /**
     * 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
@@ -227,7 +227,7 @@ public class Disk extends AbstractModel{
     */
     @SerializedName("MigratePercent")
     @Expose
-    private Long MigratePercent;
+    private Integer MigratePercent;
 
     /**
     * 云盘是否为共享型云盘。
@@ -248,14 +248,14 @@ public class Disk extends AbstractModel{
     */
     @SerializedName("SnapshotCount")
     @Expose
-    private Long SnapshotCount;
+    private Integer SnapshotCount;
 
     /**
     * 云盘拥有的快照总容量，单位为MB。
     */
     @SerializedName("SnapshotSize")
     @Expose
-    private Long SnapshotSize;
+    private Integer SnapshotSize;
 
     /**
      * Get 云硬盘ID。 
@@ -373,7 +373,7 @@ public class Disk extends AbstractModel{
      * Get 云硬盘大小，单位GB。 
      * @return DiskSize 云硬盘大小，单位GB。
      */
-    public Long getDiskSize() {
+    public Integer getDiskSize() {
         return this.DiskSize;
     }
 
@@ -381,7 +381,7 @@ public class Disk extends AbstractModel{
      * Set 云硬盘大小，单位GB。
      * @param DiskSize 云硬盘大小，单位GB。
      */
-    public void setDiskSize(Long DiskSize) {
+    public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -501,7 +501,7 @@ public class Disk extends AbstractModel{
      * Get 云盘快照回滚的进度。 
      * @return RollbackPercent 云盘快照回滚的进度。
      */
-    public Long getRollbackPercent() {
+    public Integer getRollbackPercent() {
         return this.RollbackPercent;
     }
 
@@ -509,7 +509,7 @@ public class Disk extends AbstractModel{
      * Set 云盘快照回滚的进度。
      * @param RollbackPercent 云盘快照回滚的进度。
      */
-    public void setRollbackPercent(Long RollbackPercent) {
+    public void setRollbackPercent(Integer RollbackPercent) {
         this.RollbackPercent = RollbackPercent;
     }
 
@@ -615,7 +615,7 @@ public class Disk extends AbstractModel{
      * @return ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getReturnFailCode() {
+    public Integer getReturnFailCode() {
         return this.ReturnFailCode;
     }
 
@@ -625,7 +625,7 @@ public class Disk extends AbstractModel{
      * @param ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setReturnFailCode(Long ReturnFailCode) {
+    public void setReturnFailCode(Integer ReturnFailCode) {
         this.ReturnFailCode = ReturnFailCode;
     }
 
@@ -695,7 +695,7 @@ public class Disk extends AbstractModel{
      * @return DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDifferDaysOfDeadline() {
+    public Integer getDifferDaysOfDeadline() {
         return this.DifferDaysOfDeadline;
     }
 
@@ -705,7 +705,7 @@ public class Disk extends AbstractModel{
      * @param DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDifferDaysOfDeadline(Long DifferDaysOfDeadline) {
+    public void setDifferDaysOfDeadline(Integer DifferDaysOfDeadline) {
         this.DifferDaysOfDeadline = DifferDaysOfDeadline;
     }
 
@@ -735,7 +735,7 @@ public class Disk extends AbstractModel{
      * @return MigratePercent 云盘类型变更的迁移进度，取值0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMigratePercent() {
+    public Integer getMigratePercent() {
         return this.MigratePercent;
     }
 
@@ -745,7 +745,7 @@ public class Disk extends AbstractModel{
      * @param MigratePercent 云盘类型变更的迁移进度，取值0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMigratePercent(Long MigratePercent) {
+    public void setMigratePercent(Integer MigratePercent) {
         this.MigratePercent = MigratePercent;
     }
 
@@ -785,7 +785,7 @@ public class Disk extends AbstractModel{
      * Get 云盘拥有的快照总数。 
      * @return SnapshotCount 云盘拥有的快照总数。
      */
-    public Long getSnapshotCount() {
+    public Integer getSnapshotCount() {
         return this.SnapshotCount;
     }
 
@@ -793,7 +793,7 @@ public class Disk extends AbstractModel{
      * Set 云盘拥有的快照总数。
      * @param SnapshotCount 云盘拥有的快照总数。
      */
-    public void setSnapshotCount(Long SnapshotCount) {
+    public void setSnapshotCount(Integer SnapshotCount) {
         this.SnapshotCount = SnapshotCount;
     }
 
@@ -801,7 +801,7 @@ public class Disk extends AbstractModel{
      * Get 云盘拥有的快照总容量，单位为MB。 
      * @return SnapshotSize 云盘拥有的快照总容量，单位为MB。
      */
-    public Long getSnapshotSize() {
+    public Integer getSnapshotSize() {
         return this.SnapshotSize;
     }
 
@@ -809,7 +809,7 @@ public class Disk extends AbstractModel{
      * Set 云盘拥有的快照总容量，单位为MB。
      * @param SnapshotSize 云盘拥有的快照总容量，单位为MB。
      */
-    public void setSnapshotSize(Long SnapshotSize) {
+    public void setSnapshotSize(Integer SnapshotSize) {
         this.SnapshotSize = SnapshotSize;
     }
 

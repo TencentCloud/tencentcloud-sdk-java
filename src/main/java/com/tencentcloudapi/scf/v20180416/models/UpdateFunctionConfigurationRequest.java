@@ -41,14 +41,14 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     */
     @SerializedName("MemorySize")
     @Expose
-    private Long MemorySize;
+    private Integer MemorySize;
 
     /**
     * 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
     */
     @SerializedName("Timeout")
     @Expose
-    private Long Timeout;
+    private Integer Timeout;
 
     /**
     * 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
@@ -114,6 +114,27 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String L5Enable;
 
     /**
+    * 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
+    */
+    @SerializedName("Layers")
+    @Expose
+    private LayerVersionSimple [] Layers;
+
+    /**
+    * 函数关联的死信队列信息
+    */
+    @SerializedName("DeadLetterConfig")
+    @Expose
+    private DeadLetterConfig DeadLetterConfig;
+
+    /**
+    * 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
+    */
+    @SerializedName("OnsEnable")
+    @Expose
+    private String OnsEnable;
+
+    /**
      * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
@@ -149,7 +170,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Get 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M 
      * @return MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      */
-    public Long getMemorySize() {
+    public Integer getMemorySize() {
         return this.MemorySize;
     }
 
@@ -157,7 +178,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Set 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      * @param MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      */
-    public void setMemorySize(Long MemorySize) {
+    public void setMemorySize(Integer MemorySize) {
         this.MemorySize = MemorySize;
     }
 
@@ -165,7 +186,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Get 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒 
      * @return Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      */
-    public Long getTimeout() {
+    public Integer getTimeout() {
         return this.Timeout;
     }
 
@@ -173,7 +194,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
      * Set 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      * @param Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      */
-    public void setTimeout(Long Timeout) {
+    public void setTimeout(Integer Timeout) {
         this.Timeout = Timeout;
     }
 
@@ -322,6 +343,54 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。 
+     * @return Layers 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
+     */
+    public LayerVersionSimple [] getLayers() {
+        return this.Layers;
+    }
+
+    /**
+     * Set 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
+     * @param Layers 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
+     */
+    public void setLayers(LayerVersionSimple [] Layers) {
+        this.Layers = Layers;
+    }
+
+    /**
+     * Get 函数关联的死信队列信息 
+     * @return DeadLetterConfig 函数关联的死信队列信息
+     */
+    public DeadLetterConfig getDeadLetterConfig() {
+        return this.DeadLetterConfig;
+    }
+
+    /**
+     * Set 函数关联的死信队列信息
+     * @param DeadLetterConfig 函数关联的死信队列信息
+     */
+    public void setDeadLetterConfig(DeadLetterConfig DeadLetterConfig) {
+        this.DeadLetterConfig = DeadLetterConfig;
+    }
+
+    /**
+     * Get 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭 
+     * @return OnsEnable 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
+     */
+    public String getOnsEnable() {
+        return this.OnsEnable;
+    }
+
+    /**
+     * Set 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
+     * @param OnsEnable 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
+     */
+    public void setOnsEnable(String OnsEnable) {
+        this.OnsEnable = OnsEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +407,9 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);
         this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
+        this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
+        this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+        this.setParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
 
     }
 }

@@ -34,7 +34,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 临时id
@@ -48,7 +48,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
     */
     @SerializedName("CameraId")
     @Expose
-    private Long CameraId;
+    private Integer CameraId;
 
     /**
     * pos机id
@@ -62,7 +62,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
     */
     @SerializedName("PictureExpires")
     @Expose
-    private Long PictureExpires;
+    private Integer PictureExpires;
 
     /**
      * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
@@ -84,7 +84,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
      * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -92,7 +92,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
      * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -116,7 +116,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
      * Get 摄像头id 
      * @return CameraId 摄像头id
      */
-    public Long getCameraId() {
+    public Integer getCameraId() {
         return this.CameraId;
     }
 
@@ -124,7 +124,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
      * Set 摄像头id
      * @param CameraId 摄像头id
      */
-    public void setCameraId(Long CameraId) {
+    public void setCameraId(Integer CameraId) {
         this.CameraId = CameraId;
     }
 
@@ -148,7 +148,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
      * Get 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天） 
      * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
-    public Long getPictureExpires() {
+    public Integer getPictureExpires() {
         return this.PictureExpires;
     }
 
@@ -156,7 +156,7 @@ public class DescribeFaceIdByTempIdRequest extends AbstractModel{
      * Set 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      * @param PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
-    public void setPictureExpires(Long PictureExpires) {
+    public void setPictureExpires(Integer PictureExpires) {
         this.PictureExpires = PictureExpires;
     }
 

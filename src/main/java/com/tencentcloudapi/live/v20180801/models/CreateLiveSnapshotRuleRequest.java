@@ -34,7 +34,7 @@ public class CreateLiveSnapshotRuleRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Long TemplateId;
+    private Integer TemplateId;
 
     /**
     * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
@@ -71,7 +71,7 @@ public class CreateLiveSnapshotRuleRequest extends AbstractModel{
      * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
-    public Long getTemplateId() {
+    public Integer getTemplateId() {
         return this.TemplateId;
     }
 
@@ -79,7 +79,7 @@ public class CreateLiveSnapshotRuleRequest extends AbstractModel{
      * Set 模板Id。
      * @param TemplateId 模板Id。
      */
-    public void setTemplateId(Long TemplateId) {
+    public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;
     }
 

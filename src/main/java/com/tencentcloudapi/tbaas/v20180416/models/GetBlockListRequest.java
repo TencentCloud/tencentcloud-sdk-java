@@ -41,14 +41,14 @@ public class GetBlockListRequest extends AbstractModel{
     */
     @SerializedName("ChannelId")
     @Expose
-    private Long ChannelId;
+    private Integer ChannelId;
 
     /**
     * 组织ID，固定字段：0
     */
     @SerializedName("GroupId")
     @Expose
-    private Long GroupId;
+    private Integer GroupId;
 
     /**
     * 需要查询的通道名称，可在通道详情或列表中获取
@@ -76,14 +76,14 @@ public class GetBlockListRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 需要获取的交易数量
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 模块名称，固定字段：block 
@@ -121,7 +121,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Get 通道ID，固定字段：0 
      * @return ChannelId 通道ID，固定字段：0
      */
-    public Long getChannelId() {
+    public Integer getChannelId() {
         return this.ChannelId;
     }
 
@@ -129,7 +129,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Set 通道ID，固定字段：0
      * @param ChannelId 通道ID，固定字段：0
      */
-    public void setChannelId(Long ChannelId) {
+    public void setChannelId(Integer ChannelId) {
         this.ChannelId = ChannelId;
     }
 
@@ -137,7 +137,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Get 组织ID，固定字段：0 
      * @return GroupId 组织ID，固定字段：0
      */
-    public Long getGroupId() {
+    public Integer getGroupId() {
         return this.GroupId;
     }
 
@@ -145,7 +145,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Set 组织ID，固定字段：0
      * @param GroupId 组织ID，固定字段：0
      */
-    public void setGroupId(Long GroupId) {
+    public void setGroupId(Integer GroupId) {
         this.GroupId = GroupId;
     }
 
@@ -201,7 +201,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Get 需要获取的起始交易偏移 
      * @return Offset 需要获取的起始交易偏移
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -209,7 +209,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Set 需要获取的起始交易偏移
      * @param Offset 需要获取的起始交易偏移
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -217,7 +217,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Get 需要获取的交易数量 
      * @return Limit 需要获取的交易数量
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -225,7 +225,7 @@ public class GetBlockListRequest extends AbstractModel{
      * Set 需要获取的交易数量
      * @param Limit 需要获取的交易数量
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

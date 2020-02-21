@@ -36,7 +36,7 @@ public class PriceResource extends AbstractModel{
     */
     @SerializedName("StorageType")
     @Expose
-    private Long StorageType;
+    private Integer StorageType;
 
     /**
     * 硬盘类型
@@ -52,7 +52,7 @@ public class PriceResource extends AbstractModel{
     */
     @SerializedName("RootSize")
     @Expose
-    private Long RootSize;
+    private Integer RootSize;
 
     /**
     * 内存大小
@@ -60,7 +60,7 @@ public class PriceResource extends AbstractModel{
     */
     @SerializedName("MemSize")
     @Expose
-    private Long MemSize;
+    private Integer MemSize;
 
     /**
     * 核心数量
@@ -68,7 +68,7 @@ public class PriceResource extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Long Cpu;
+    private Integer Cpu;
 
     /**
     * 硬盘大小
@@ -76,7 +76,7 @@ public class PriceResource extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Long DiskSize;
+    private Integer DiskSize;
 
     /**
     * 云盘列表
@@ -92,7 +92,7 @@ public class PriceResource extends AbstractModel{
     */
     @SerializedName("DiskCnt")
     @Expose
-    private Long DiskCnt;
+    private Integer DiskCnt;
 
     /**
      * Get 需要的规格
@@ -120,7 +120,7 @@ public class PriceResource extends AbstractModel{
      * @return StorageType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getStorageType() {
+    public Integer getStorageType() {
         return this.StorageType;
     }
 
@@ -130,7 +130,7 @@ public class PriceResource extends AbstractModel{
      * @param StorageType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStorageType(Long StorageType) {
+    public void setStorageType(Integer StorageType) {
         this.StorageType = StorageType;
     }
 
@@ -160,7 +160,7 @@ public class PriceResource extends AbstractModel{
      * @return RootSize 系统盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRootSize() {
+    public Integer getRootSize() {
         return this.RootSize;
     }
 
@@ -170,7 +170,7 @@ public class PriceResource extends AbstractModel{
      * @param RootSize 系统盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRootSize(Long RootSize) {
+    public void setRootSize(Integer RootSize) {
         this.RootSize = RootSize;
     }
 
@@ -180,7 +180,7 @@ public class PriceResource extends AbstractModel{
      * @return MemSize 内存大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMemSize() {
+    public Integer getMemSize() {
         return this.MemSize;
     }
 
@@ -190,7 +190,7 @@ public class PriceResource extends AbstractModel{
      * @param MemSize 内存大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMemSize(Long MemSize) {
+    public void setMemSize(Integer MemSize) {
         this.MemSize = MemSize;
     }
 
@@ -200,7 +200,7 @@ public class PriceResource extends AbstractModel{
      * @return Cpu 核心数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCpu() {
+    public Integer getCpu() {
         return this.Cpu;
     }
 
@@ -210,7 +210,7 @@ public class PriceResource extends AbstractModel{
      * @param Cpu 核心数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCpu(Long Cpu) {
+    public void setCpu(Integer Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -220,7 +220,7 @@ public class PriceResource extends AbstractModel{
      * @return DiskSize 硬盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDiskSize() {
+    public Integer getDiskSize() {
         return this.DiskSize;
     }
 
@@ -230,7 +230,7 @@ public class PriceResource extends AbstractModel{
      * @param DiskSize 硬盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDiskSize(Long DiskSize) {
+    public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -260,7 +260,7 @@ public class PriceResource extends AbstractModel{
      * @return DiskCnt 磁盘数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDiskCnt() {
+    public Integer getDiskCnt() {
         return this.DiskCnt;
     }
 
@@ -270,7 +270,7 @@ public class PriceResource extends AbstractModel{
      * @param DiskCnt 磁盘数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDiskCnt(Long DiskCnt) {
+    public void setDiskCnt(Integer DiskCnt) {
         this.DiskCnt = DiskCnt;
     }
 

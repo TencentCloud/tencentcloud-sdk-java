@@ -55,7 +55,7 @@ public class ContainerState extends AbstractModel{
     */
     @SerializedName("ExitCode")
     @Expose
-    private Long ExitCode;
+    private Integer ExitCode;
 
     /**
      * Get 容器运行开始时间 
@@ -125,7 +125,7 @@ public class ContainerState extends AbstractModel{
      * Get 容器运行退出码 
      * @return ExitCode 容器运行退出码
      */
-    public Long getExitCode() {
+    public Integer getExitCode() {
         return this.ExitCode;
     }
 
@@ -133,7 +133,7 @@ public class ContainerState extends AbstractModel{
      * Set 容器运行退出码
      * @param ExitCode 容器运行退出码
      */
-    public void setExitCode(Long ExitCode) {
+    public void setExitCode(Integer ExitCode) {
         this.ExitCode = ExitCode;
     }
 

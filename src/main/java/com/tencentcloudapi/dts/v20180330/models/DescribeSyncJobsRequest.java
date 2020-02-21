@@ -55,14 +55,14 @@ public class DescribeSyncJobsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回实例数量，默认20，有效区间[1,100]
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 灾备同步任务ID 
@@ -132,7 +132,7 @@ public class DescribeSyncJobsRequest extends AbstractModel{
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -140,7 +140,7 @@ public class DescribeSyncJobsRequest extends AbstractModel{
      * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -148,7 +148,7 @@ public class DescribeSyncJobsRequest extends AbstractModel{
      * Get 返回实例数量，默认20，有效区间[1,100] 
      * @return Limit 返回实例数量，默认20，有效区间[1,100]
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -156,7 +156,7 @@ public class DescribeSyncJobsRequest extends AbstractModel{
      * Set 返回实例数量，默认20，有效区间[1,100]
      * @param Limit 返回实例数量，默认20，有效区间[1,100]
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

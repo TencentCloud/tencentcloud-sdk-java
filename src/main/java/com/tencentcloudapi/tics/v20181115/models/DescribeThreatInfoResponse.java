@@ -27,7 +27,7 @@ public class DescribeThreatInfoResponse extends AbstractModel{
     */
     @SerializedName("ReturnCode")
     @Expose
-    private Long ReturnCode;
+    private Integer ReturnCode;
 
     /**
     * 判定结果，如：black、white、grey
@@ -41,7 +41,7 @@ public class DescribeThreatInfoResponse extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Long Confidence;
+    private Integer Confidence;
 
     /**
     * 威胁类型。
@@ -104,7 +104,7 @@ expired = 过期
      * Get 是否有数据，0代表有数据，1代表没有数据 
      * @return ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
-    public Long getReturnCode() {
+    public Integer getReturnCode() {
         return this.ReturnCode;
     }
 
@@ -112,7 +112,7 @@ expired = 过期
      * Set 是否有数据，0代表有数据，1代表没有数据
      * @param ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
-    public void setReturnCode(Long ReturnCode) {
+    public void setReturnCode(Integer ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
@@ -136,7 +136,7 @@ expired = 过期
      * Get 置信度，取值0-100 
      * @return Confidence 置信度，取值0-100
      */
-    public Long getConfidence() {
+    public Integer getConfidence() {
         return this.Confidence;
     }
 
@@ -144,7 +144,7 @@ expired = 过期
      * Set 置信度，取值0-100
      * @param Confidence 置信度，取值0-100
      */
-    public void setConfidence(Long Confidence) {
+    public void setConfidence(Integer Confidence) {
         this.Confidence = Confidence;
     }
 

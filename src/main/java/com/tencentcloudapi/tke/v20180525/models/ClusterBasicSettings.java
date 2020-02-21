@@ -62,7 +62,7 @@ public class ClusterBasicSettings extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
@@ -169,7 +169,7 @@ public class ClusterBasicSettings extends AbstractModel{
      * Get 集群内新增资源所属项目ID。 
      * @return ProjectId 集群内新增资源所属项目ID。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -177,7 +177,7 @@ public class ClusterBasicSettings extends AbstractModel{
      * Set 集群内新增资源所属项目ID。
      * @param ProjectId 集群内新增资源所属项目ID。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

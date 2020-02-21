@@ -48,7 +48,7 @@ public class DCDBShardInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 状态中文描述
@@ -83,7 +83,7 @@ public class DCDBShardInfo extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 地域
@@ -104,14 +104,14 @@ public class DCDBShardInfo extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 存储大小，单位 GB
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 到期时间
@@ -125,7 +125,7 @@ public class DCDBShardInfo extends AbstractModel{
     */
     @SerializedName("NodeCount")
     @Expose
-    private Long NodeCount;
+    private Integer NodeCount;
 
     /**
     * 存储使用率，单位为 %
@@ -146,14 +146,14 @@ public class DCDBShardInfo extends AbstractModel{
     */
     @SerializedName("ShardId")
     @Expose
-    private Long ShardId;
+    private Integer ShardId;
 
     /**
     * 产品ProductID
     */
     @SerializedName("Pid")
     @Expose
-    private Long Pid;
+    private Integer Pid;
 
     /**
     * Proxy版本
@@ -238,7 +238,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Get 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化 
      * @return Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -246,7 +246,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Set 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
      * @param Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -318,7 +318,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -326,7 +326,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -366,7 +366,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -374,7 +374,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -382,7 +382,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Get 存储大小，单位 GB 
      * @return Storage 存储大小，单位 GB
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -390,7 +390,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Set 存储大小，单位 GB
      * @param Storage 存储大小，单位 GB
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 
@@ -414,7 +414,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Get 节点数，2 为一主一从， 3 为一主二从 
      * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
-    public Long getNodeCount() {
+    public Integer getNodeCount() {
         return this.NodeCount;
     }
 
@@ -422,7 +422,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Set 节点数，2 为一主一从， 3 为一主二从
      * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
-    public void setNodeCount(Long NodeCount) {
+    public void setNodeCount(Integer NodeCount) {
         this.NodeCount = NodeCount;
     }
 
@@ -462,7 +462,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Get 数字分片Id（过时字段，请勿依赖该值） 
      * @return ShardId 数字分片Id（过时字段，请勿依赖该值）
      */
-    public Long getShardId() {
+    public Integer getShardId() {
         return this.ShardId;
     }
 
@@ -470,7 +470,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Set 数字分片Id（过时字段，请勿依赖该值）
      * @param ShardId 数字分片Id（过时字段，请勿依赖该值）
      */
-    public void setShardId(Long ShardId) {
+    public void setShardId(Integer ShardId) {
         this.ShardId = ShardId;
     }
 
@@ -478,7 +478,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Get 产品ProductID 
      * @return Pid 产品ProductID
      */
-    public Long getPid() {
+    public Integer getPid() {
         return this.Pid;
     }
 
@@ -486,7 +486,7 @@ public class DCDBShardInfo extends AbstractModel{
      * Set 产品ProductID
      * @param Pid 产品ProductID
      */
-    public void setPid(Long Pid) {
+    public void setPid(Integer Pid) {
         this.Pid = Pid;
     }
 

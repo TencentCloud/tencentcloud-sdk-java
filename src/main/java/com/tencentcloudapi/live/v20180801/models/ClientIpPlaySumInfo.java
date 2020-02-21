@@ -48,14 +48,14 @@ public class ClientIpPlaySumInfo extends AbstractModel{
     */
     @SerializedName("TotalRequest")
     @Expose
-    private Long TotalRequest;
+    private Integer TotalRequest;
 
     /**
     * 总失败请求数。
     */
     @SerializedName("TotalFailedRequest")
     @Expose
-    private Long TotalFailedRequest;
+    private Integer TotalFailedRequest;
 
     /**
     * 客户端所在国家。
@@ -116,7 +116,7 @@ public class ClientIpPlaySumInfo extends AbstractModel{
      * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
-    public Long getTotalRequest() {
+    public Integer getTotalRequest() {
         return this.TotalRequest;
     }
 
@@ -124,7 +124,7 @@ public class ClientIpPlaySumInfo extends AbstractModel{
      * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
-    public void setTotalRequest(Long TotalRequest) {
+    public void setTotalRequest(Integer TotalRequest) {
         this.TotalRequest = TotalRequest;
     }
 
@@ -132,7 +132,7 @@ public class ClientIpPlaySumInfo extends AbstractModel{
      * Get 总失败请求数。 
      * @return TotalFailedRequest 总失败请求数。
      */
-    public Long getTotalFailedRequest() {
+    public Integer getTotalFailedRequest() {
         return this.TotalFailedRequest;
     }
 
@@ -140,7 +140,7 @@ public class ClientIpPlaySumInfo extends AbstractModel{
      * Set 总失败请求数。
      * @param TotalFailedRequest 总失败请求数。
      */
-    public void setTotalFailedRequest(Long TotalFailedRequest) {
+    public void setTotalFailedRequest(Integer TotalFailedRequest) {
         this.TotalFailedRequest = TotalFailedRequest;
     }
 

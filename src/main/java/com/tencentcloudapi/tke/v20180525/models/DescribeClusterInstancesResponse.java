@@ -27,7 +27,7 @@ public class DescribeClusterInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 集群中实例列表
@@ -47,7 +47,7 @@ public class DescribeClusterInstancesResponse extends AbstractModel{
      * Get 集群中实例总数 
      * @return TotalCount 集群中实例总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeClusterInstancesResponse extends AbstractModel{
      * Set 集群中实例总数
      * @param TotalCount 集群中实例总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

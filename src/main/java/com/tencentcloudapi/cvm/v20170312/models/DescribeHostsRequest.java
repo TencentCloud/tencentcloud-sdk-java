@@ -39,14 +39,14 @@ public class DescribeHostsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 过滤条件。
@@ -88,7 +88,7 @@ public class DescribeHostsRequest extends AbstractModel{
      * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -96,7 +96,7 @@ public class DescribeHostsRequest extends AbstractModel{
      * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -104,7 +104,7 @@ public class DescribeHostsRequest extends AbstractModel{
      * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -112,7 +112,7 @@ public class DescribeHostsRequest extends AbstractModel{
      * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

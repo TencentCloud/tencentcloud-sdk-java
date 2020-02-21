@@ -34,7 +34,7 @@ public class SuccessTaskInfo extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
     * 黑石自定义脚本运行任务ID
@@ -63,7 +63,7 @@ public class SuccessTaskInfo extends AbstractModel{
      * Get 黑石异步任务ID 
      * @return TaskId 黑石异步任务ID
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -71,7 +71,7 @@ public class SuccessTaskInfo extends AbstractModel{
      * Set 黑石异步任务ID
      * @param TaskId 黑石异步任务ID
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 

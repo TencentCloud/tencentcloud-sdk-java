@@ -34,14 +34,14 @@ public class Quota extends AbstractModel{
     */
     @SerializedName("QuotaCurrent")
     @Expose
-    private Long QuotaCurrent;
+    private Integer QuotaCurrent;
 
     /**
     * 配额数量
     */
     @SerializedName("QuotaLimit")
     @Expose
-    private Long QuotaLimit;
+    private Integer QuotaLimit;
 
     /**
      * Get 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。 
@@ -63,7 +63,7 @@ public class Quota extends AbstractModel{
      * Get 当前数量 
      * @return QuotaCurrent 当前数量
      */
-    public Long getQuotaCurrent() {
+    public Integer getQuotaCurrent() {
         return this.QuotaCurrent;
     }
 
@@ -71,7 +71,7 @@ public class Quota extends AbstractModel{
      * Set 当前数量
      * @param QuotaCurrent 当前数量
      */
-    public void setQuotaCurrent(Long QuotaCurrent) {
+    public void setQuotaCurrent(Integer QuotaCurrent) {
         this.QuotaCurrent = QuotaCurrent;
     }
 
@@ -79,7 +79,7 @@ public class Quota extends AbstractModel{
      * Get 配额数量 
      * @return QuotaLimit 配额数量
      */
-    public Long getQuotaLimit() {
+    public Integer getQuotaLimit() {
         return this.QuotaLimit;
     }
 
@@ -87,7 +87,7 @@ public class Quota extends AbstractModel{
      * Set 配额数量
      * @param QuotaLimit 配额数量
      */
-    public void setQuotaLimit(Long QuotaLimit) {
+    public void setQuotaLimit(Integer QuotaLimit) {
         this.QuotaLimit = QuotaLimit;
     }
 

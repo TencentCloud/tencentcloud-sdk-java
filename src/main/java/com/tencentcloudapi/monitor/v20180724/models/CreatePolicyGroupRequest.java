@@ -48,21 +48,21 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 模版策略组Id, 通过模版创建时才需要传
     */
     @SerializedName("ConditionTempGroupId")
     @Expose
-    private Long ConditionTempGroupId;
+    private Integer ConditionTempGroupId;
 
     /**
     * 是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0
     */
     @SerializedName("IsShielded")
     @Expose
-    private Long IsShielded;
+    private Integer IsShielded;
 
     /**
     * 策略组的备注信息
@@ -76,7 +76,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     */
     @SerializedName("InsertTime")
     @Expose
-    private Long InsertTime;
+    private Integer InsertTime;
 
     /**
     * 策略组中的阈值告警规则
@@ -97,7 +97,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     */
     @SerializedName("BackEndCall")
     @Expose
-    private Long BackEndCall;
+    private Integer BackEndCall;
 
     /**
      * Get 组策略名称 
@@ -151,7 +151,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Get 策略组所属项目Id，会进行鉴权操作 
      * @return ProjectId 策略组所属项目Id，会进行鉴权操作
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -159,7 +159,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Set 策略组所属项目Id，会进行鉴权操作
      * @param ProjectId 策略组所属项目Id，会进行鉴权操作
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -167,7 +167,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Get 模版策略组Id, 通过模版创建时才需要传 
      * @return ConditionTempGroupId 模版策略组Id, 通过模版创建时才需要传
      */
-    public Long getConditionTempGroupId() {
+    public Integer getConditionTempGroupId() {
         return this.ConditionTempGroupId;
     }
 
@@ -175,7 +175,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Set 模版策略组Id, 通过模版创建时才需要传
      * @param ConditionTempGroupId 模版策略组Id, 通过模版创建时才需要传
      */
-    public void setConditionTempGroupId(Long ConditionTempGroupId) {
+    public void setConditionTempGroupId(Integer ConditionTempGroupId) {
         this.ConditionTempGroupId = ConditionTempGroupId;
     }
 
@@ -183,7 +183,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Get 是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0 
      * @return IsShielded 是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0
      */
-    public Long getIsShielded() {
+    public Integer getIsShielded() {
         return this.IsShielded;
     }
 
@@ -191,7 +191,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Set 是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0
      * @param IsShielded 是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0
      */
-    public void setIsShielded(Long IsShielded) {
+    public void setIsShielded(Integer IsShielded) {
         this.IsShielded = IsShielded;
     }
 
@@ -215,7 +215,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Get 插入时间，戳格式为Unix时间戳，不填则按后台处理时间填充 
      * @return InsertTime 插入时间，戳格式为Unix时间戳，不填则按后台处理时间填充
      */
-    public Long getInsertTime() {
+    public Integer getInsertTime() {
         return this.InsertTime;
     }
 
@@ -223,7 +223,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Set 插入时间，戳格式为Unix时间戳，不填则按后台处理时间填充
      * @param InsertTime 插入时间，戳格式为Unix时间戳，不填则按后台处理时间填充
      */
-    public void setInsertTime(Long InsertTime) {
+    public void setInsertTime(Integer InsertTime) {
         this.InsertTime = InsertTime;
     }
 
@@ -263,7 +263,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Get 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段 
      * @return BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
      */
-    public Long getBackEndCall() {
+    public Integer getBackEndCall() {
         return this.BackEndCall;
     }
 
@@ -271,7 +271,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
      * Set 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
      * @param BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
      */
-    public void setBackEndCall(Long BackEndCall) {
+    public void setBackEndCall(Integer BackEndCall) {
         this.BackEndCall = BackEndCall;
     }
 

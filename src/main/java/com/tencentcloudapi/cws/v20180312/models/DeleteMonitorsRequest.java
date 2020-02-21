@@ -27,13 +27,13 @@ public class DeleteMonitorsRequest extends AbstractModel{
     */
     @SerializedName("MonitorIds")
     @Expose
-    private Long [] MonitorIds;
+    private Integer [] MonitorIds;
 
     /**
      * Get 监控任务ID列表 
      * @return MonitorIds 监控任务ID列表
      */
-    public Long [] getMonitorIds() {
+    public Integer [] getMonitorIds() {
         return this.MonitorIds;
     }
 
@@ -41,7 +41,7 @@ public class DeleteMonitorsRequest extends AbstractModel{
      * Set 监控任务ID列表
      * @param MonitorIds 监控任务ID列表
      */
-    public void setMonitorIds(Long [] MonitorIds) {
+    public void setMonitorIds(Integer [] MonitorIds) {
         this.MonitorIds = MonitorIds;
     }
 

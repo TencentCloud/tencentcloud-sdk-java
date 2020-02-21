@@ -27,7 +27,7 @@ public class CreateShieldInstanceResponse extends AbstractModel{
     */
     @SerializedName("Progress")
     @Expose
-    private Long Progress;
+    private Integer Progress;
 
     /**
     * 任务唯一标识
@@ -47,7 +47,7 @@ public class CreateShieldInstanceResponse extends AbstractModel{
      * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public Long getProgress() {
+    public Integer getProgress() {
         return this.Progress;
     }
 
@@ -55,7 +55,7 @@ public class CreateShieldInstanceResponse extends AbstractModel{
      * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public void setProgress(Long Progress) {
+    public void setProgress(Integer Progress) {
         this.Progress = Progress;
     }
 

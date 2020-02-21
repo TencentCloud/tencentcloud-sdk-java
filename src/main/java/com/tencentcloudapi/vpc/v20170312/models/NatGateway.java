@@ -57,14 +57,14 @@ public class NatGateway extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Long InternetMaxBandwidthOut;
+    private Integer InternetMaxBandwidthOut;
 
     /**
     * 网关并发连接上限。
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
-    private Long MaxConcurrentConnection;
+    private Integer MaxConcurrentConnection;
 
     /**
     * 绑定NAT网关的公网IP对象数组。
@@ -177,7 +177,7 @@ public class NatGateway extends AbstractModel{
      * Get 网关最大外网出带宽(单位:Mbps)。 
      * @return InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
      */
-    public Long getInternetMaxBandwidthOut() {
+    public Integer getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -185,7 +185,7 @@ public class NatGateway extends AbstractModel{
      * Set 网关最大外网出带宽(单位:Mbps)。
      * @param InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
      */
-    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
@@ -193,7 +193,7 @@ public class NatGateway extends AbstractModel{
      * Get 网关并发连接上限。 
      * @return MaxConcurrentConnection 网关并发连接上限。
      */
-    public Long getMaxConcurrentConnection() {
+    public Integer getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
@@ -201,7 +201,7 @@ public class NatGateway extends AbstractModel{
      * Set 网关并发连接上限。
      * @param MaxConcurrentConnection 网关并发连接上限。
      */
-    public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
+    public void setMaxConcurrentConnection(Integer MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 

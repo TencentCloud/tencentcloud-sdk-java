@@ -34,35 +34,35 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     */
     @SerializedName("CVM")
     @Expose
-    private Long CVM;
+    private Integer CVM;
 
     /**
     * 数据库实例数。
     */
     @SerializedName("CDB")
     @Expose
-    private Long CDB;
+    private Integer CDB;
 
     /**
     * 弹性网卡实例数。
     */
     @SerializedName("ENI")
     @Expose
-    private Long ENI;
+    private Integer ENI;
 
     /**
     * 被安全组引用数。
     */
     @SerializedName("SG")
     @Expose
-    private Long SG;
+    private Integer SG;
 
     /**
     * 负载均衡实例数。
     */
     @SerializedName("CLB")
     @Expose
-    private Long CLB;
+    private Integer CLB;
 
     /**
     * 全量实例的绑定统计。
@@ -91,7 +91,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Get 云服务器实例数。 
      * @return CVM 云服务器实例数。
      */
-    public Long getCVM() {
+    public Integer getCVM() {
         return this.CVM;
     }
 
@@ -99,7 +99,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Set 云服务器实例数。
      * @param CVM 云服务器实例数。
      */
-    public void setCVM(Long CVM) {
+    public void setCVM(Integer CVM) {
         this.CVM = CVM;
     }
 
@@ -107,7 +107,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Get 数据库实例数。 
      * @return CDB 数据库实例数。
      */
-    public Long getCDB() {
+    public Integer getCDB() {
         return this.CDB;
     }
 
@@ -115,7 +115,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Set 数据库实例数。
      * @param CDB 数据库实例数。
      */
-    public void setCDB(Long CDB) {
+    public void setCDB(Integer CDB) {
         this.CDB = CDB;
     }
 
@@ -123,7 +123,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Get 弹性网卡实例数。 
      * @return ENI 弹性网卡实例数。
      */
-    public Long getENI() {
+    public Integer getENI() {
         return this.ENI;
     }
 
@@ -131,7 +131,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Set 弹性网卡实例数。
      * @param ENI 弹性网卡实例数。
      */
-    public void setENI(Long ENI) {
+    public void setENI(Integer ENI) {
         this.ENI = ENI;
     }
 
@@ -139,7 +139,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Get 被安全组引用数。 
      * @return SG 被安全组引用数。
      */
-    public Long getSG() {
+    public Integer getSG() {
         return this.SG;
     }
 
@@ -147,7 +147,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Set 被安全组引用数。
      * @param SG 被安全组引用数。
      */
-    public void setSG(Long SG) {
+    public void setSG(Integer SG) {
         this.SG = SG;
     }
 
@@ -155,7 +155,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Get 负载均衡实例数。 
      * @return CLB 负载均衡实例数。
      */
-    public Long getCLB() {
+    public Integer getCLB() {
         return this.CLB;
     }
 
@@ -163,7 +163,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
      * Set 负载均衡实例数。
      * @param CLB 负载均衡实例数。
      */
-    public void setCLB(Long CLB) {
+    public void setCLB(Integer CLB) {
         this.CLB = CLB;
     }
 

@@ -27,14 +27,14 @@ public class ResourceServiceInfo extends AbstractModel{
     */
     @SerializedName("CreateTime")
     @Expose
-    private Long CreateTime;
+    private Integer CreateTime;
 
     /**
     * 到期时间戳
     */
     @SerializedName("ExpireTime")
     @Expose
-    private Long ExpireTime;
+    private Integer ExpireTime;
 
     /**
     * 资源名称，如应用加固，源码混淆
@@ -47,7 +47,7 @@ public class ResourceServiceInfo extends AbstractModel{
      * Get 创建时间戳 
      * @return CreateTime 创建时间戳
      */
-    public Long getCreateTime() {
+    public Integer getCreateTime() {
         return this.CreateTime;
     }
 
@@ -55,7 +55,7 @@ public class ResourceServiceInfo extends AbstractModel{
      * Set 创建时间戳
      * @param CreateTime 创建时间戳
      */
-    public void setCreateTime(Long CreateTime) {
+    public void setCreateTime(Integer CreateTime) {
         this.CreateTime = CreateTime;
     }
 
@@ -63,7 +63,7 @@ public class ResourceServiceInfo extends AbstractModel{
      * Get 到期时间戳 
      * @return ExpireTime 到期时间戳
      */
-    public Long getExpireTime() {
+    public Integer getExpireTime() {
         return this.ExpireTime;
     }
 
@@ -71,7 +71,7 @@ public class ResourceServiceInfo extends AbstractModel{
      * Set 到期时间戳
      * @param ExpireTime 到期时间戳
      */
-    public void setExpireTime(Long ExpireTime) {
+    public void setExpireTime(Integer ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 

@@ -48,7 +48,7 @@ public class RoInstanceInfo extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Long Weight;
+    private Integer Weight;
 
     /**
     * RO实例所在区域名称，如ap-shanghai
@@ -76,14 +76,14 @@ public class RoInstanceInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
     */
     @SerializedName("InstanceType")
     @Expose
-    private Long InstanceType;
+    private Integer InstanceType;
 
     /**
     * RO实例名称
@@ -97,35 +97,35 @@ public class RoInstanceInfo extends AbstractModel{
     */
     @SerializedName("HourFeeStatus")
     @Expose
-    private Long HourFeeStatus;
+    private Integer HourFeeStatus;
 
     /**
     * RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Long TaskStatus;
+    private Integer TaskStatus;
 
     /**
     * RO实例内存大小，单位：MB
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * RO实例硬盘大小，单位：GB
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 每次查询数量
     */
     @SerializedName("Qps")
     @Expose
-    private Long Qps;
+    private Integer Qps;
 
     /**
     * RO实例的内网IP地址
@@ -139,21 +139,21 @@ public class RoInstanceInfo extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Long Vport;
+    private Integer Vport;
 
     /**
     * RO实例所在私有网络ID
     */
     @SerializedName("VpcId")
     @Expose
-    private Long VpcId;
+    private Integer VpcId;
 
     /**
     * RO实例所在私有网络子网ID
     */
     @SerializedName("SubnetId")
     @Expose
-    private Long SubnetId;
+    private Integer SubnetId;
 
     /**
     * RO实例规格描述，目前可取值 CUSTOM
@@ -181,7 +181,7 @@ public class RoInstanceInfo extends AbstractModel{
     */
     @SerializedName("PayType")
     @Expose
-    private Long PayType;
+    private Integer PayType;
 
     /**
      * Get RO组对应的主实例的ID 
@@ -235,7 +235,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例在RO组内的权重 
      * @return Weight RO实例在RO组内的权重
      */
-    public Long getWeight() {
+    public Integer getWeight() {
         return this.Weight;
     }
 
@@ -243,7 +243,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例在RO组内的权重
      * @param Weight RO实例在RO组内的权重
      */
-    public void setWeight(Long Weight) {
+    public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 
@@ -299,7 +299,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中 
      * @return Status RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -307,7 +307,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
      * @param Status RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -315,7 +315,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例 
      * @return InstanceType 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
      */
-    public Long getInstanceType() {
+    public Integer getInstanceType() {
         return this.InstanceType;
     }
 
@@ -323,7 +323,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
      * @param InstanceType 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
      */
-    public void setInstanceType(Long InstanceType) {
+    public void setInstanceType(Integer InstanceType) {
         this.InstanceType = InstanceType;
     }
 
@@ -347,7 +347,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get 按量计费状态，可能的取值：1-正常，2-欠费 
      * @return HourFeeStatus 按量计费状态，可能的取值：1-正常，2-欠费
      */
-    public Long getHourFeeStatus() {
+    public Integer getHourFeeStatus() {
         return this.HourFeeStatus;
     }
 
@@ -355,7 +355,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set 按量计费状态，可能的取值：1-正常，2-欠费
      * @param HourFeeStatus 按量计费状态，可能的取值：1-正常，2-欠费
      */
-    public void setHourFeeStatus(Long HourFeeStatus) {
+    public void setHourFeeStatus(Integer HourFeeStatus) {
         this.HourFeeStatus = HourFeeStatus;
     }
 
@@ -363,7 +363,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中 
      * @return TaskStatus RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
      */
-    public Long getTaskStatus() {
+    public Integer getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -371,7 +371,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
      * @param TaskStatus RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
      */
-    public void setTaskStatus(Long TaskStatus) {
+    public void setTaskStatus(Integer TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -379,7 +379,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例内存大小，单位：MB 
      * @return Memory RO实例内存大小，单位：MB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -387,7 +387,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例内存大小，单位：MB
      * @param Memory RO实例内存大小，单位：MB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -395,7 +395,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例硬盘大小，单位：GB 
      * @return Volume RO实例硬盘大小，单位：GB
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -403,7 +403,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例硬盘大小，单位：GB
      * @param Volume RO实例硬盘大小，单位：GB
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -411,7 +411,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get 每次查询数量 
      * @return Qps 每次查询数量
      */
-    public Long getQps() {
+    public Integer getQps() {
         return this.Qps;
     }
 
@@ -419,7 +419,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set 每次查询数量
      * @param Qps 每次查询数量
      */
-    public void setQps(Long Qps) {
+    public void setQps(Integer Qps) {
         this.Qps = Qps;
     }
 
@@ -443,7 +443,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例访问端口 
      * @return Vport RO实例访问端口
      */
-    public Long getVport() {
+    public Integer getVport() {
         return this.Vport;
     }
 
@@ -451,7 +451,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例访问端口
      * @param Vport RO实例访问端口
      */
-    public void setVport(Long Vport) {
+    public void setVport(Integer Vport) {
         this.Vport = Vport;
     }
 
@@ -459,7 +459,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例所在私有网络ID 
      * @return VpcId RO实例所在私有网络ID
      */
-    public Long getVpcId() {
+    public Integer getVpcId() {
         return this.VpcId;
     }
 
@@ -467,7 +467,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例所在私有网络ID
      * @param VpcId RO实例所在私有网络ID
      */
-    public void setVpcId(Long VpcId) {
+    public void setVpcId(Integer VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -475,7 +475,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例所在私有网络子网ID 
      * @return SubnetId RO实例所在私有网络子网ID
      */
-    public Long getSubnetId() {
+    public Integer getSubnetId() {
         return this.SubnetId;
     }
 
@@ -483,7 +483,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例所在私有网络子网ID
      * @param SubnetId RO实例所在私有网络子网ID
      */
-    public void setSubnetId(Long SubnetId) {
+    public void setSubnetId(Integer SubnetId) {
         this.SubnetId = SubnetId;
     }
 
@@ -539,7 +539,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Get RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结 
      * @return PayType RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      */
-    public Long getPayType() {
+    public Integer getPayType() {
         return this.PayType;
     }
 
@@ -547,7 +547,7 @@ public class RoInstanceInfo extends AbstractModel{
      * Set RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      * @param PayType RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      */
-    public void setPayType(Long PayType) {
+    public void setPayType(Integer PayType) {
         this.PayType = PayType;
     }
 

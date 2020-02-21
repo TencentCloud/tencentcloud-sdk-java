@@ -37,16 +37,14 @@ public class DescribeItemsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+    * （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
     */
     @SerializedName("CategoryId")
     @Expose
     private String CategoryId;
 
     /**
-    * （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+    * （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
     */
     @SerializedName("CategoryCode")
     @Expose
@@ -85,40 +83,32 @@ public class DescribeItemsRequest extends AbstractModel{
     }
 
     /**
-     * Get （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109 
-     * @return CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+     * Get （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。 
+     * @return CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     public String getCategoryId() {
         return this.CategoryId;
     }
 
     /**
-     * Set （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
-     * @param CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+     * Set （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+     * @param CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     public void setCategoryId(String CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109 
-     * @return CategoryCode （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+     * Get （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。 
+     * @return CategoryCode （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     public String getCategoryCode() {
         return this.CategoryCode;
     }
 
     /**
-     * Set （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
-     * @param CategoryCode （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-链接地址：https://cloud.tencent.com/document/product/1155/40109
+     * Set （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
+     * @param CategoryCode （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
      */
     public void setCategoryCode(String CategoryCode) {
         this.CategoryCode = CategoryCode;

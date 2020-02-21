@@ -34,7 +34,7 @@ public class SourceCommand extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
      * Get 命令 
@@ -56,7 +56,7 @@ public class SourceCommand extends AbstractModel{
      * Get 执行次数 
      * @return Count 执行次数
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -64,7 +64,7 @@ public class SourceCommand extends AbstractModel{
      * Set 执行次数
      * @param Count 执行次数
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 

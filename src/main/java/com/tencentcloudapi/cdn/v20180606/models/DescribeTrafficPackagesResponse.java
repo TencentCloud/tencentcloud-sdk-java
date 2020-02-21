@@ -27,7 +27,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 流量包详情
@@ -41,14 +41,14 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
     */
     @SerializedName("ExpiringCount")
     @Expose
-    private Long ExpiringCount;
+    private Integer ExpiringCount;
 
     /**
     * 有效流量包个数
     */
     @SerializedName("EnabledCount")
     @Expose
-    private Long EnabledCount;
+    private Integer EnabledCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,7 +61,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
      * Get 流量包总个数 
      * @return TotalCount 流量包总个数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -69,7 +69,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
      * Set 流量包总个数
      * @param TotalCount 流量包总个数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 
@@ -93,7 +93,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
      * Get 即将过期的流量包个数（7天内） 
      * @return ExpiringCount 即将过期的流量包个数（7天内）
      */
-    public Long getExpiringCount() {
+    public Integer getExpiringCount() {
         return this.ExpiringCount;
     }
 
@@ -101,7 +101,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
      * Set 即将过期的流量包个数（7天内）
      * @param ExpiringCount 即将过期的流量包个数（7天内）
      */
-    public void setExpiringCount(Long ExpiringCount) {
+    public void setExpiringCount(Integer ExpiringCount) {
         this.ExpiringCount = ExpiringCount;
     }
 
@@ -109,7 +109,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
      * Get 有效流量包个数 
      * @return EnabledCount 有效流量包个数
      */
-    public Long getEnabledCount() {
+    public Integer getEnabledCount() {
         return this.EnabledCount;
     }
 
@@ -117,7 +117,7 @@ public class DescribeTrafficPackagesResponse extends AbstractModel{
      * Set 有效流量包个数
      * @param EnabledCount 有效流量包个数
      */
-    public void setEnabledCount(Long EnabledCount) {
+    public void setEnabledCount(Integer EnabledCount) {
         this.EnabledCount = EnabledCount;
     }
 

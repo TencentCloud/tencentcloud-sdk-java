@@ -41,7 +41,7 @@ public class RegionSellConf extends AbstractModel{
     */
     @SerializedName("IsDefaultRegion")
     @Expose
-    private Long IsDefaultRegion;
+    private Integer IsDefaultRegion;
 
     /**
     * 地域名称
@@ -93,7 +93,7 @@ public class RegionSellConf extends AbstractModel{
      * Get 是否为默认地域 
      * @return IsDefaultRegion 是否为默认地域
      */
-    public Long getIsDefaultRegion() {
+    public Integer getIsDefaultRegion() {
         return this.IsDefaultRegion;
     }
 
@@ -101,7 +101,7 @@ public class RegionSellConf extends AbstractModel{
      * Set 是否为默认地域
      * @param IsDefaultRegion 是否为默认地域
      */
-    public void setIsDefaultRegion(Long IsDefaultRegion) {
+    public void setIsDefaultRegion(Integer IsDefaultRegion) {
         this.IsDefaultRegion = IsDefaultRegion;
     }
 

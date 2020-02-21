@@ -34,14 +34,14 @@ public class DescribeDBSwitchRecordsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页大小，默认值为 50，最小值为 1，最大值为 2000。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
@@ -63,7 +63,7 @@ public class DescribeDBSwitchRecordsRequest extends AbstractModel{
      * Get 分页偏移量。 
      * @return Offset 分页偏移量。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribeDBSwitchRecordsRequest extends AbstractModel{
      * Set 分页偏移量。
      * @param Offset 分页偏移量。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribeDBSwitchRecordsRequest extends AbstractModel{
      * Get 分页大小，默认值为 50，最小值为 1，最大值为 2000。 
      * @return Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribeDBSwitchRecordsRequest extends AbstractModel{
      * Set 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      * @param Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

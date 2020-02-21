@@ -27,28 +27,28 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
     */
     @SerializedName("TotalNum")
     @Expose
-    private Long TotalNum;
+    private Integer TotalNum;
 
     /**
     * 总页数。
     */
     @SerializedName("TotalPage")
     @Expose
-    private Long TotalPage;
+    private Integer TotalPage;
 
     /**
     * 分页的页码。
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 每页显示的条数。
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
     * 正在推送流的信息列表。
@@ -68,7 +68,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Get 符合条件的总个数。 
      * @return TotalNum 符合条件的总个数。
      */
-    public Long getTotalNum() {
+    public Integer getTotalNum() {
         return this.TotalNum;
     }
 
@@ -76,7 +76,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Set 符合条件的总个数。
      * @param TotalNum 符合条件的总个数。
      */
-    public void setTotalNum(Long TotalNum) {
+    public void setTotalNum(Integer TotalNum) {
         this.TotalNum = TotalNum;
     }
 
@@ -84,7 +84,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Get 总页数。 
      * @return TotalPage 总页数。
      */
-    public Long getTotalPage() {
+    public Integer getTotalPage() {
         return this.TotalPage;
     }
 
@@ -92,7 +92,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Set 总页数。
      * @param TotalPage 总页数。
      */
-    public void setTotalPage(Long TotalPage) {
+    public void setTotalPage(Integer TotalPage) {
         this.TotalPage = TotalPage;
     }
 
@@ -100,7 +100,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Get 分页的页码。 
      * @return PageNum 分页的页码。
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -108,7 +108,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Set 分页的页码。
      * @param PageNum 分页的页码。
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -116,7 +116,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Get 每页显示的条数。 
      * @return PageSize 每页显示的条数。
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -124,7 +124,7 @@ public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
      * Set 每页显示的条数。
      * @param PageSize 每页显示的条数。
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 

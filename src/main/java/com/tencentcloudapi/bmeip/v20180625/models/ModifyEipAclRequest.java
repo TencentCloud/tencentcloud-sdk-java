@@ -41,7 +41,7 @@ public class ModifyEipAclRequest extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 规则类型（in/out）。in：入站规则 out：出站规则
@@ -93,7 +93,7 @@ public class ModifyEipAclRequest extends AbstractModel{
      * Get ACL 状态。0：无状态 1：有状态 
      * @return Status ACL 状态。0：无状态 1：有状态
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -101,7 +101,7 @@ public class ModifyEipAclRequest extends AbstractModel{
      * Set ACL 状态。0：无状态 1：有状态
      * @param Status ACL 状态。0：无状态 1：有状态
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

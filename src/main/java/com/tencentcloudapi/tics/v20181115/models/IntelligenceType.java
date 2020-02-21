@@ -41,7 +41,7 @@ public class IntelligenceType extends AbstractModel{
     */
     @SerializedName("Time")
     @Expose
-    private Long Time;
+    private Integer Time;
 
     /**
      * Get 来源 
@@ -79,7 +79,7 @@ public class IntelligenceType extends AbstractModel{
      * Get 时间 
      * @return Time 时间
      */
-    public Long getTime() {
+    public Integer getTime() {
         return this.Time;
     }
 
@@ -87,7 +87,7 @@ public class IntelligenceType extends AbstractModel{
      * Set 时间
      * @param Time 时间
      */
-    public void setTime(Long Time) {
+    public void setTime(Integer Time) {
         this.Time = Time;
     }
 

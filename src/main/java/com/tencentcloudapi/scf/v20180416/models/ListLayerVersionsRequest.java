@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcConfig extends AbstractModel{
+public class ListLayerVersionsRequest extends AbstractModel{
 
     /**
-    * VpcId
+    * 层名称
     */
-    @SerializedName("VpcId")
+    @SerializedName("LayerName")
     @Expose
-    private String VpcId;
+    private String LayerName;
 
     /**
-    * SubnetId 子网ID
+    * 适配的运行时
     */
-    @SerializedName("SubnetId")
+    @SerializedName("CompatibleRuntime")
     @Expose
-    private String SubnetId;
+    private String [] CompatibleRuntime;
 
     /**
-     * Get VpcId 
-     * @return VpcId VpcId
+     * Get 层名称 
+     * @return LayerName 层名称
      */
-    public String getVpcId() {
-        return this.VpcId;
+    public String getLayerName() {
+        return this.LayerName;
     }
 
     /**
-     * Set VpcId
-     * @param VpcId VpcId
+     * Set 层名称
+     * @param LayerName 层名称
      */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
+    public void setLayerName(String LayerName) {
+        this.LayerName = LayerName;
     }
 
     /**
-     * Get SubnetId 子网ID 
-     * @return SubnetId SubnetId 子网ID
+     * Get 适配的运行时 
+     * @return CompatibleRuntime 适配的运行时
      */
-    public String getSubnetId() {
-        return this.SubnetId;
+    public String [] getCompatibleRuntime() {
+        return this.CompatibleRuntime;
     }
 
     /**
-     * Set SubnetId 子网ID
-     * @param SubnetId SubnetId 子网ID
+     * Set 适配的运行时
+     * @param CompatibleRuntime 适配的运行时
      */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
+    public void setCompatibleRuntime(String [] CompatibleRuntime) {
+        this.CompatibleRuntime = CompatibleRuntime;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "LayerName", this.LayerName);
+        this.setParamArraySimple(map, prefix + "CompatibleRuntime.", this.CompatibleRuntime);
 
     }
 }

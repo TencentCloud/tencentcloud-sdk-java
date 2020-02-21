@@ -34,14 +34,14 @@ public class ClassicalHealth extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 负载均衡的监听端口
     */
     @SerializedName("ListenerPort")
     @Expose
-    private Long ListenerPort;
+    private Integer ListenerPort;
 
     /**
     * 转发协议
@@ -55,7 +55,7 @@ public class ClassicalHealth extends AbstractModel{
     */
     @SerializedName("HealthStatus")
     @Expose
-    private Long HealthStatus;
+    private Integer HealthStatus;
 
     /**
      * Get 后端服务的内网 IP 
@@ -77,7 +77,7 @@ public class ClassicalHealth extends AbstractModel{
      * Get 后端服务的端口 
      * @return Port 后端服务的端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -85,7 +85,7 @@ public class ClassicalHealth extends AbstractModel{
      * Set 后端服务的端口
      * @param Port 后端服务的端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -93,7 +93,7 @@ public class ClassicalHealth extends AbstractModel{
      * Get 负载均衡的监听端口 
      * @return ListenerPort 负载均衡的监听端口
      */
-    public Long getListenerPort() {
+    public Integer getListenerPort() {
         return this.ListenerPort;
     }
 
@@ -101,7 +101,7 @@ public class ClassicalHealth extends AbstractModel{
      * Set 负载均衡的监听端口
      * @param ListenerPort 负载均衡的监听端口
      */
-    public void setListenerPort(Long ListenerPort) {
+    public void setListenerPort(Integer ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
@@ -125,7 +125,7 @@ public class ClassicalHealth extends AbstractModel{
      * Get 健康检查结果，1 表示健康，0 表示不健康 
      * @return HealthStatus 健康检查结果，1 表示健康，0 表示不健康
      */
-    public Long getHealthStatus() {
+    public Integer getHealthStatus() {
         return this.HealthStatus;
     }
 
@@ -133,7 +133,7 @@ public class ClassicalHealth extends AbstractModel{
      * Set 健康检查结果，1 表示健康，0 表示不健康
      * @param HealthStatus 健康检查结果，1 表示健康，0 表示不健康
      */
-    public void setHealthStatus(Long HealthStatus) {
+    public void setHealthStatus(Integer HealthStatus) {
         this.HealthStatus = HealthStatus;
     }
 

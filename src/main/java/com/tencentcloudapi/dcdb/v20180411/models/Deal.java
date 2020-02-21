@@ -41,14 +41,14 @@ public class Deal extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
     * 关联的流程 Id，可用于查询流程执行状态
     */
     @SerializedName("FlowId")
     @Expose
-    private Long FlowId;
+    private Integer FlowId;
 
     /**
     * 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
@@ -63,7 +63,7 @@ public class Deal extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Long PayMode;
+    private Integer PayMode;
 
     /**
      * Get 订单号 
@@ -101,7 +101,7 @@ public class Deal extends AbstractModel{
      * Get 商品数量 
      * @return Count 商品数量
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -109,7 +109,7 @@ public class Deal extends AbstractModel{
      * Set 商品数量
      * @param Count 商品数量
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 
@@ -117,7 +117,7 @@ public class Deal extends AbstractModel{
      * Get 关联的流程 Id，可用于查询流程执行状态 
      * @return FlowId 关联的流程 Id，可用于查询流程执行状态
      */
-    public Long getFlowId() {
+    public Integer getFlowId() {
         return this.FlowId;
     }
 
@@ -125,7 +125,7 @@ public class Deal extends AbstractModel{
      * Set 关联的流程 Id，可用于查询流程执行状态
      * @param FlowId 关联的流程 Id，可用于查询流程执行状态
      */
-    public void setFlowId(Long FlowId) {
+    public void setFlowId(Integer FlowId) {
         this.FlowId = FlowId;
     }
 
@@ -153,7 +153,7 @@ public class Deal extends AbstractModel{
      * Get 付费模式，0后付费/1预付费 
      * @return PayMode 付费模式，0后付费/1预付费
      */
-    public Long getPayMode() {
+    public Integer getPayMode() {
         return this.PayMode;
     }
 
@@ -161,7 +161,7 @@ public class Deal extends AbstractModel{
      * Set 付费模式，0后付费/1预付费
      * @param PayMode 付费模式，0后付费/1预付费
      */
-    public void setPayMode(Long PayMode) {
+    public void setPayMode(Integer PayMode) {
         this.PayMode = PayMode;
     }
 

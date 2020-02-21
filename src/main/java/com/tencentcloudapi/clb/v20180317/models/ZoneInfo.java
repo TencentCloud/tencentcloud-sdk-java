@@ -28,7 +28,7 @@ public class ZoneInfo extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Long ZoneId;
+    private Integer ZoneId;
 
     /**
     * 可用区字符串形式的唯一ID，如：ap-guangzhou-1
@@ -52,7 +52,7 @@ public class ZoneInfo extends AbstractModel{
      * @return ZoneId 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getZoneId() {
+    public Integer getZoneId() {
         return this.ZoneId;
     }
 
@@ -62,7 +62,7 @@ public class ZoneInfo extends AbstractModel{
      * @param ZoneId 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setZoneId(Long ZoneId) {
+    public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;
     }
 

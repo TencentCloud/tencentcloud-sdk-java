@@ -76,14 +76,14 @@ public class Cluster extends AbstractModel{
     */
     @SerializedName("ClusterNodeNum")
     @Expose
-    private Long ClusterNodeNum;
+    private Integer ClusterNodeNum;
 
     /**
     * 集群所属的项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 标签描述列表。
@@ -224,7 +224,7 @@ public class Cluster extends AbstractModel{
      * Get 集群当前node数量 
      * @return ClusterNodeNum 集群当前node数量
      */
-    public Long getClusterNodeNum() {
+    public Integer getClusterNodeNum() {
         return this.ClusterNodeNum;
     }
 
@@ -232,7 +232,7 @@ public class Cluster extends AbstractModel{
      * Set 集群当前node数量
      * @param ClusterNodeNum 集群当前node数量
      */
-    public void setClusterNodeNum(Long ClusterNodeNum) {
+    public void setClusterNodeNum(Integer ClusterNodeNum) {
         this.ClusterNodeNum = ClusterNodeNum;
     }
 
@@ -240,7 +240,7 @@ public class Cluster extends AbstractModel{
      * Get 集群所属的项目ID 
      * @return ProjectId 集群所属的项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -248,7 +248,7 @@ public class Cluster extends AbstractModel{
      * Set 集群所属的项目ID
      * @param ProjectId 集群所属的项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

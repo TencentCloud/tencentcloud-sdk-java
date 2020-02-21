@@ -27,14 +27,14 @@ public class DescribeCostDetailRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 偏移量
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
@@ -56,7 +56,7 @@ public class DescribeCostDetailRequest extends AbstractModel{
     */
     @SerializedName("NeedRecordNum")
     @Expose
-    private Long NeedRecordNum;
+    private Integer NeedRecordNum;
 
     /**
     * 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
@@ -90,7 +90,7 @@ public class DescribeCostDetailRequest extends AbstractModel{
      * Get 数量，最大值为100 
      * @return Limit 数量，最大值为100
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -98,7 +98,7 @@ public class DescribeCostDetailRequest extends AbstractModel{
      * Set 数量，最大值为100
      * @param Limit 数量，最大值为100
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -106,7 +106,7 @@ public class DescribeCostDetailRequest extends AbstractModel{
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -114,7 +114,7 @@ public class DescribeCostDetailRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -156,7 +156,7 @@ public class DescribeCostDetailRequest extends AbstractModel{
      * @return NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      */
-    public Long getNeedRecordNum() {
+    public Integer getNeedRecordNum() {
         return this.NeedRecordNum;
     }
 
@@ -166,7 +166,7 @@ public class DescribeCostDetailRequest extends AbstractModel{
      * @param NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      */
-    public void setNeedRecordNum(Long NeedRecordNum) {
+    public void setNeedRecordNum(Integer NeedRecordNum) {
         this.NeedRecordNum = NeedRecordNum;
     }
 

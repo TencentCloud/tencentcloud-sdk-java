@@ -27,14 +27,14 @@ public class Site extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 监控任务ID，为0时表示未加入监控任务。
     */
     @SerializedName("MonitorId")
     @Expose
-    private Long MonitorId;
+    private Integer MonitorId;
 
     /**
     * 站点url。
@@ -55,28 +55,28 @@ public class Site extends AbstractModel{
     */
     @SerializedName("VerifyStatus")
     @Expose
-    private Long VerifyStatus;
+    private Integer VerifyStatus;
 
     /**
     * 监测状态：0-未监测；1-监测中；2-暂停监测。
     */
     @SerializedName("MonitorStatus")
     @Expose
-    private Long MonitorStatus;
+    private Integer MonitorStatus;
 
     /**
     * 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
     */
     @SerializedName("ScanStatus")
     @Expose
-    private Long ScanStatus;
+    private Integer ScanStatus;
 
     /**
     * 最近一次的AIScanner的扫描任务id，注意取消的情况。
     */
     @SerializedName("LastScanTaskId")
     @Expose
-    private Long LastScanTaskId;
+    private Integer LastScanTaskId;
 
     /**
     * 最近一次扫描开始时间。
@@ -104,7 +104,7 @@ public class Site extends AbstractModel{
     */
     @SerializedName("LastScanPageCount")
     @Expose
-    private Long LastScanPageCount;
+    private Integer LastScanPageCount;
 
     /**
     * normal-正常扫描；deep-深度扫描。
@@ -118,28 +118,28 @@ public class Site extends AbstractModel{
     */
     @SerializedName("LastScanVulsHighNum")
     @Expose
-    private Long LastScanVulsHighNum;
+    private Integer LastScanVulsHighNum;
 
     /**
     * 最近一次扫描中风险漏洞数量。
     */
     @SerializedName("LastScanVulsMiddleNum")
     @Expose
-    private Long LastScanVulsMiddleNum;
+    private Integer LastScanVulsMiddleNum;
 
     /**
     * 最近一次扫描低风险漏洞数量。
     */
     @SerializedName("LastScanVulsLowNum")
     @Expose
-    private Long LastScanVulsLowNum;
+    private Integer LastScanVulsLowNum;
 
     /**
     * 最近一次扫描提示信息数量。
     */
     @SerializedName("LastScanVulsNoticeNum")
     @Expose
-    private Long LastScanVulsNoticeNum;
+    private Integer LastScanVulsNoticeNum;
 
     /**
     * 记录添加时间。
@@ -160,35 +160,35 @@ public class Site extends AbstractModel{
     */
     @SerializedName("LastScanRateLimit")
     @Expose
-    private Long LastScanRateLimit;
+    private Integer LastScanRateLimit;
 
     /**
     * 最近一次扫描漏洞总数量。
     */
     @SerializedName("LastScanVulsNum")
     @Expose
-    private Long LastScanVulsNum;
+    private Integer LastScanVulsNum;
 
     /**
     * 最近一次扫描提示总数量
     */
     @SerializedName("LastScanNoticeNum")
     @Expose
-    private Long LastScanNoticeNum;
+    private Integer LastScanNoticeNum;
 
     /**
     * 扫描进度，百分比整数
     */
     @SerializedName("Progress")
     @Expose
-    private Long Progress;
+    private Integer Progress;
 
     /**
     * 云用户appid。
     */
     @SerializedName("Appid")
     @Expose
-    private Long Appid;
+    private Integer Appid;
 
     /**
     * 云用户标识。
@@ -202,7 +202,7 @@ public class Site extends AbstractModel{
     */
     @SerializedName("NeedLogin")
     @Expose
-    private Long NeedLogin;
+    private Integer NeedLogin;
 
     /**
     * 登录后的cookie。
@@ -216,7 +216,7 @@ public class Site extends AbstractModel{
     */
     @SerializedName("LoginCookieValid")
     @Expose
-    private Long LoginCookieValid;
+    private Integer LoginCookieValid;
 
     /**
     * 用于测试cookie是否有效的URL。
@@ -251,20 +251,20 @@ public class Site extends AbstractModel{
     */
     @SerializedName("ContentStatus")
     @Expose
-    private Long ContentStatus;
+    private Integer ContentStatus;
 
     /**
     * 最近一次扫描内容检测数量
     */
     @SerializedName("LastScanContentNum")
     @Expose
-    private Long LastScanContentNum;
+    private Integer LastScanContentNum;
 
     /**
      * Get 站点ID。 
      * @return Id 站点ID。
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -272,7 +272,7 @@ public class Site extends AbstractModel{
      * Set 站点ID。
      * @param Id 站点ID。
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -280,7 +280,7 @@ public class Site extends AbstractModel{
      * Get 监控任务ID，为0时表示未加入监控任务。 
      * @return MonitorId 监控任务ID，为0时表示未加入监控任务。
      */
-    public Long getMonitorId() {
+    public Integer getMonitorId() {
         return this.MonitorId;
     }
 
@@ -288,7 +288,7 @@ public class Site extends AbstractModel{
      * Set 监控任务ID，为0时表示未加入监控任务。
      * @param MonitorId 监控任务ID，为0时表示未加入监控任务。
      */
-    public void setMonitorId(Long MonitorId) {
+    public void setMonitorId(Integer MonitorId) {
         this.MonitorId = MonitorId;
     }
 
@@ -328,7 +328,7 @@ public class Site extends AbstractModel{
      * Get 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。 
      * @return VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
-    public Long getVerifyStatus() {
+    public Integer getVerifyStatus() {
         return this.VerifyStatus;
     }
 
@@ -336,7 +336,7 @@ public class Site extends AbstractModel{
      * Set 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      * @param VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
-    public void setVerifyStatus(Long VerifyStatus) {
+    public void setVerifyStatus(Integer VerifyStatus) {
         this.VerifyStatus = VerifyStatus;
     }
 
@@ -344,7 +344,7 @@ public class Site extends AbstractModel{
      * Get 监测状态：0-未监测；1-监测中；2-暂停监测。 
      * @return MonitorStatus 监测状态：0-未监测；1-监测中；2-暂停监测。
      */
-    public Long getMonitorStatus() {
+    public Integer getMonitorStatus() {
         return this.MonitorStatus;
     }
 
@@ -352,7 +352,7 @@ public class Site extends AbstractModel{
      * Set 监测状态：0-未监测；1-监测中；2-暂停监测。
      * @param MonitorStatus 监测状态：0-未监测；1-监测中；2-暂停监测。
      */
-    public void setMonitorStatus(Long MonitorStatus) {
+    public void setMonitorStatus(Integer MonitorStatus) {
         this.MonitorStatus = MonitorStatus;
     }
 
@@ -360,7 +360,7 @@ public class Site extends AbstractModel{
      * Get 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。 
      * @return ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
-    public Long getScanStatus() {
+    public Integer getScanStatus() {
         return this.ScanStatus;
     }
 
@@ -368,7 +368,7 @@ public class Site extends AbstractModel{
      * Set 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      * @param ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
-    public void setScanStatus(Long ScanStatus) {
+    public void setScanStatus(Integer ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
@@ -376,7 +376,7 @@ public class Site extends AbstractModel{
      * Get 最近一次的AIScanner的扫描任务id，注意取消的情况。 
      * @return LastScanTaskId 最近一次的AIScanner的扫描任务id，注意取消的情况。
      */
-    public Long getLastScanTaskId() {
+    public Integer getLastScanTaskId() {
         return this.LastScanTaskId;
     }
 
@@ -384,7 +384,7 @@ public class Site extends AbstractModel{
      * Set 最近一次的AIScanner的扫描任务id，注意取消的情况。
      * @param LastScanTaskId 最近一次的AIScanner的扫描任务id，注意取消的情况。
      */
-    public void setLastScanTaskId(Long LastScanTaskId) {
+    public void setLastScanTaskId(Integer LastScanTaskId) {
         this.LastScanTaskId = LastScanTaskId;
     }
 
@@ -440,7 +440,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描扫描的页面数。 
      * @return LastScanPageCount 最近一次扫描扫描的页面数。
      */
-    public Long getLastScanPageCount() {
+    public Integer getLastScanPageCount() {
         return this.LastScanPageCount;
     }
 
@@ -448,7 +448,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描扫描的页面数。
      * @param LastScanPageCount 最近一次扫描扫描的页面数。
      */
-    public void setLastScanPageCount(Long LastScanPageCount) {
+    public void setLastScanPageCount(Integer LastScanPageCount) {
         this.LastScanPageCount = LastScanPageCount;
     }
 
@@ -472,7 +472,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描高风险漏洞数量。 
      * @return LastScanVulsHighNum 最近一次扫描高风险漏洞数量。
      */
-    public Long getLastScanVulsHighNum() {
+    public Integer getLastScanVulsHighNum() {
         return this.LastScanVulsHighNum;
     }
 
@@ -480,7 +480,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描高风险漏洞数量。
      * @param LastScanVulsHighNum 最近一次扫描高风险漏洞数量。
      */
-    public void setLastScanVulsHighNum(Long LastScanVulsHighNum) {
+    public void setLastScanVulsHighNum(Integer LastScanVulsHighNum) {
         this.LastScanVulsHighNum = LastScanVulsHighNum;
     }
 
@@ -488,7 +488,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描中风险漏洞数量。 
      * @return LastScanVulsMiddleNum 最近一次扫描中风险漏洞数量。
      */
-    public Long getLastScanVulsMiddleNum() {
+    public Integer getLastScanVulsMiddleNum() {
         return this.LastScanVulsMiddleNum;
     }
 
@@ -496,7 +496,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描中风险漏洞数量。
      * @param LastScanVulsMiddleNum 最近一次扫描中风险漏洞数量。
      */
-    public void setLastScanVulsMiddleNum(Long LastScanVulsMiddleNum) {
+    public void setLastScanVulsMiddleNum(Integer LastScanVulsMiddleNum) {
         this.LastScanVulsMiddleNum = LastScanVulsMiddleNum;
     }
 
@@ -504,7 +504,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描低风险漏洞数量。 
      * @return LastScanVulsLowNum 最近一次扫描低风险漏洞数量。
      */
-    public Long getLastScanVulsLowNum() {
+    public Integer getLastScanVulsLowNum() {
         return this.LastScanVulsLowNum;
     }
 
@@ -512,7 +512,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描低风险漏洞数量。
      * @param LastScanVulsLowNum 最近一次扫描低风险漏洞数量。
      */
-    public void setLastScanVulsLowNum(Long LastScanVulsLowNum) {
+    public void setLastScanVulsLowNum(Integer LastScanVulsLowNum) {
         this.LastScanVulsLowNum = LastScanVulsLowNum;
     }
 
@@ -520,7 +520,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描提示信息数量。 
      * @return LastScanVulsNoticeNum 最近一次扫描提示信息数量。
      */
-    public Long getLastScanVulsNoticeNum() {
+    public Integer getLastScanVulsNoticeNum() {
         return this.LastScanVulsNoticeNum;
     }
 
@@ -528,7 +528,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描提示信息数量。
      * @param LastScanVulsNoticeNum 最近一次扫描提示信息数量。
      */
-    public void setLastScanVulsNoticeNum(Long LastScanVulsNoticeNum) {
+    public void setLastScanVulsNoticeNum(Integer LastScanVulsNoticeNum) {
         this.LastScanVulsNoticeNum = LastScanVulsNoticeNum;
     }
 
@@ -568,7 +568,7 @@ public class Site extends AbstractModel{
      * Get 速率限制，每秒发送X个HTTP请求。 
      * @return LastScanRateLimit 速率限制，每秒发送X个HTTP请求。
      */
-    public Long getLastScanRateLimit() {
+    public Integer getLastScanRateLimit() {
         return this.LastScanRateLimit;
     }
 
@@ -576,7 +576,7 @@ public class Site extends AbstractModel{
      * Set 速率限制，每秒发送X个HTTP请求。
      * @param LastScanRateLimit 速率限制，每秒发送X个HTTP请求。
      */
-    public void setLastScanRateLimit(Long LastScanRateLimit) {
+    public void setLastScanRateLimit(Integer LastScanRateLimit) {
         this.LastScanRateLimit = LastScanRateLimit;
     }
 
@@ -584,7 +584,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描漏洞总数量。 
      * @return LastScanVulsNum 最近一次扫描漏洞总数量。
      */
-    public Long getLastScanVulsNum() {
+    public Integer getLastScanVulsNum() {
         return this.LastScanVulsNum;
     }
 
@@ -592,7 +592,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描漏洞总数量。
      * @param LastScanVulsNum 最近一次扫描漏洞总数量。
      */
-    public void setLastScanVulsNum(Long LastScanVulsNum) {
+    public void setLastScanVulsNum(Integer LastScanVulsNum) {
         this.LastScanVulsNum = LastScanVulsNum;
     }
 
@@ -600,7 +600,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描提示总数量 
      * @return LastScanNoticeNum 最近一次扫描提示总数量
      */
-    public Long getLastScanNoticeNum() {
+    public Integer getLastScanNoticeNum() {
         return this.LastScanNoticeNum;
     }
 
@@ -608,7 +608,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描提示总数量
      * @param LastScanNoticeNum 最近一次扫描提示总数量
      */
-    public void setLastScanNoticeNum(Long LastScanNoticeNum) {
+    public void setLastScanNoticeNum(Integer LastScanNoticeNum) {
         this.LastScanNoticeNum = LastScanNoticeNum;
     }
 
@@ -616,7 +616,7 @@ public class Site extends AbstractModel{
      * Get 扫描进度，百分比整数 
      * @return Progress 扫描进度，百分比整数
      */
-    public Long getProgress() {
+    public Integer getProgress() {
         return this.Progress;
     }
 
@@ -624,7 +624,7 @@ public class Site extends AbstractModel{
      * Set 扫描进度，百分比整数
      * @param Progress 扫描进度，百分比整数
      */
-    public void setProgress(Long Progress) {
+    public void setProgress(Integer Progress) {
         this.Progress = Progress;
     }
 
@@ -632,7 +632,7 @@ public class Site extends AbstractModel{
      * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
-    public Long getAppid() {
+    public Integer getAppid() {
         return this.Appid;
     }
 
@@ -640,7 +640,7 @@ public class Site extends AbstractModel{
      * Set 云用户appid。
      * @param Appid 云用户appid。
      */
-    public void setAppid(Long Appid) {
+    public void setAppid(Integer Appid) {
         this.Appid = Appid;
     }
 
@@ -664,7 +664,7 @@ public class Site extends AbstractModel{
      * Get 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。 
      * @return NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
      */
-    public Long getNeedLogin() {
+    public Integer getNeedLogin() {
         return this.NeedLogin;
     }
 
@@ -672,7 +672,7 @@ public class Site extends AbstractModel{
      * Set 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
      * @param NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
      */
-    public void setNeedLogin(Long NeedLogin) {
+    public void setNeedLogin(Integer NeedLogin) {
         this.NeedLogin = NeedLogin;
     }
 
@@ -696,7 +696,7 @@ public class Site extends AbstractModel{
      * Get 登录后的cookie是否有效：0-无效；1-有效。 
      * @return LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
      */
-    public Long getLoginCookieValid() {
+    public Integer getLoginCookieValid() {
         return this.LoginCookieValid;
     }
 
@@ -704,7 +704,7 @@ public class Site extends AbstractModel{
      * Set 登录后的cookie是否有效：0-无效；1-有效。
      * @param LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
      */
-    public void setLoginCookieValid(Long LoginCookieValid) {
+    public void setLoginCookieValid(Integer LoginCookieValid) {
         this.LoginCookieValid = LoginCookieValid;
     }
 
@@ -776,7 +776,7 @@ public class Site extends AbstractModel{
      * Get 内容检测状态：0-未检测；1-已检测； 
      * @return ContentStatus 内容检测状态：0-未检测；1-已检测；
      */
-    public Long getContentStatus() {
+    public Integer getContentStatus() {
         return this.ContentStatus;
     }
 
@@ -784,7 +784,7 @@ public class Site extends AbstractModel{
      * Set 内容检测状态：0-未检测；1-已检测；
      * @param ContentStatus 内容检测状态：0-未检测；1-已检测；
      */
-    public void setContentStatus(Long ContentStatus) {
+    public void setContentStatus(Integer ContentStatus) {
         this.ContentStatus = ContentStatus;
     }
 
@@ -792,7 +792,7 @@ public class Site extends AbstractModel{
      * Get 最近一次扫描内容检测数量 
      * @return LastScanContentNum 最近一次扫描内容检测数量
      */
-    public Long getLastScanContentNum() {
+    public Integer getLastScanContentNum() {
         return this.LastScanContentNum;
     }
 
@@ -800,7 +800,7 @@ public class Site extends AbstractModel{
      * Set 最近一次扫描内容检测数量
      * @param LastScanContentNum 最近一次扫描内容检测数量
      */
-    public void setLastScanContentNum(Long LastScanContentNum) {
+    public void setLastScanContentNum(Integer LastScanContentNum) {
         this.LastScanContentNum = LastScanContentNum;
     }
 

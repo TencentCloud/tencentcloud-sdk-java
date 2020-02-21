@@ -27,7 +27,7 @@ public class Block extends AbstractModel{
     */
     @SerializedName("BlockNum")
     @Expose
-    private Long BlockNum;
+    private Integer BlockNum;
 
     /**
     * 区块Hash数值
@@ -41,7 +41,7 @@ public class Block extends AbstractModel{
     */
     @SerializedName("BlockId")
     @Expose
-    private Long BlockId;
+    private Integer BlockId;
 
     /**
     * 前一个区块Hash（未使用）,与区块Hash数值一致
@@ -55,13 +55,13 @@ public class Block extends AbstractModel{
     */
     @SerializedName("TxCount")
     @Expose
-    private Long TxCount;
+    private Integer TxCount;
 
     /**
      * Get 区块编号 
      * @return BlockNum 区块编号
      */
-    public Long getBlockNum() {
+    public Integer getBlockNum() {
         return this.BlockNum;
     }
 
@@ -69,7 +69,7 @@ public class Block extends AbstractModel{
      * Set 区块编号
      * @param BlockNum 区块编号
      */
-    public void setBlockNum(Long BlockNum) {
+    public void setBlockNum(Integer BlockNum) {
         this.BlockNum = BlockNum;
     }
 
@@ -93,7 +93,7 @@ public class Block extends AbstractModel{
      * Get 区块ID，与区块编号一致 
      * @return BlockId 区块ID，与区块编号一致
      */
-    public Long getBlockId() {
+    public Integer getBlockId() {
         return this.BlockId;
     }
 
@@ -101,7 +101,7 @@ public class Block extends AbstractModel{
      * Set 区块ID，与区块编号一致
      * @param BlockId 区块ID，与区块编号一致
      */
-    public void setBlockId(Long BlockId) {
+    public void setBlockId(Integer BlockId) {
         this.BlockId = BlockId;
     }
 
@@ -125,7 +125,7 @@ public class Block extends AbstractModel{
      * Get 区块内的交易数量 
      * @return TxCount 区块内的交易数量
      */
-    public Long getTxCount() {
+    public Integer getTxCount() {
         return this.TxCount;
     }
 
@@ -133,7 +133,7 @@ public class Block extends AbstractModel{
      * Set 区块内的交易数量
      * @param TxCount 区块内的交易数量
      */
-    public void setTxCount(Long TxCount) {
+    public void setTxCount(Integer TxCount) {
         this.TxCount = TxCount;
     }
 

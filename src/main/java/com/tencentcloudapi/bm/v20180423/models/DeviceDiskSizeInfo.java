@@ -34,7 +34,7 @@ public class DeviceDiskSizeInfo extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Long DiskSize;
+    private Integer DiskSize;
 
     /**
      * Get 硬盘名称 
@@ -56,7 +56,7 @@ public class DeviceDiskSizeInfo extends AbstractModel{
      * Get 硬盘大小（单位GiB） 
      * @return DiskSize 硬盘大小（单位GiB）
      */
-    public Long getDiskSize() {
+    public Integer getDiskSize() {
         return this.DiskSize;
     }
 
@@ -64,7 +64,7 @@ public class DeviceDiskSizeInfo extends AbstractModel{
      * Set 硬盘大小（单位GiB）
      * @param DiskSize 硬盘大小（单位GiB）
      */
-    public void setDiskSize(Long DiskSize) {
+    public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 

@@ -62,7 +62,7 @@ public class AppSetInfo extends AbstractModel{
     */
     @SerializedName("AppSize")
     @Expose
-    private Long AppSize;
+    private Integer AppSize;
 
     /**
     * 加固服务版本
@@ -76,7 +76,7 @@ public class AppSetInfo extends AbstractModel{
     */
     @SerializedName("ShieldCode")
     @Expose
-    private Long ShieldCode;
+    private Integer ShieldCode;
 
     /**
     * 加固后的APP下载地址
@@ -90,7 +90,7 @@ public class AppSetInfo extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Long TaskStatus;
+    private Integer TaskStatus;
 
     /**
     * 请求的客户端ip
@@ -104,7 +104,7 @@ public class AppSetInfo extends AbstractModel{
     */
     @SerializedName("TaskTime")
     @Expose
-    private Long TaskTime;
+    private Integer TaskTime;
 
     /**
     * app的图标url
@@ -125,7 +125,7 @@ public class AppSetInfo extends AbstractModel{
     */
     @SerializedName("ShieldSize")
     @Expose
-    private Long ShieldSize;
+    private Integer ShieldSize;
 
     /**
      * Get 任务唯一标识 
@@ -211,7 +211,7 @@ public class AppSetInfo extends AbstractModel{
      * Get app的大小 
      * @return AppSize app的大小
      */
-    public Long getAppSize() {
+    public Integer getAppSize() {
         return this.AppSize;
     }
 
@@ -219,7 +219,7 @@ public class AppSetInfo extends AbstractModel{
      * Set app的大小
      * @param AppSize app的大小
      */
-    public void setAppSize(Long AppSize) {
+    public void setAppSize(Integer AppSize) {
         this.AppSize = AppSize;
     }
 
@@ -243,7 +243,7 @@ public class AppSetInfo extends AbstractModel{
      * Get 加固结果返回码 
      * @return ShieldCode 加固结果返回码
      */
-    public Long getShieldCode() {
+    public Integer getShieldCode() {
         return this.ShieldCode;
     }
 
@@ -251,7 +251,7 @@ public class AppSetInfo extends AbstractModel{
      * Set 加固结果返回码
      * @param ShieldCode 加固结果返回码
      */
-    public void setShieldCode(Long ShieldCode) {
+    public void setShieldCode(Integer ShieldCode) {
         this.ShieldCode = ShieldCode;
     }
 
@@ -275,7 +275,7 @@ public class AppSetInfo extends AbstractModel{
      * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public Long getTaskStatus() {
+    public Integer getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -283,7 +283,7 @@ public class AppSetInfo extends AbstractModel{
      * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public void setTaskStatus(Long TaskStatus) {
+    public void setTaskStatus(Integer TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -307,7 +307,7 @@ public class AppSetInfo extends AbstractModel{
      * Get 提交加固时间 
      * @return TaskTime 提交加固时间
      */
-    public Long getTaskTime() {
+    public Integer getTaskTime() {
         return this.TaskTime;
     }
 
@@ -315,7 +315,7 @@ public class AppSetInfo extends AbstractModel{
      * Set 提交加固时间
      * @param TaskTime 提交加固时间
      */
-    public void setTaskTime(Long TaskTime) {
+    public void setTaskTime(Integer TaskTime) {
         this.TaskTime = TaskTime;
     }
 
@@ -355,7 +355,7 @@ public class AppSetInfo extends AbstractModel{
      * Get 加固后app的大小 
      * @return ShieldSize 加固后app的大小
      */
-    public Long getShieldSize() {
+    public Integer getShieldSize() {
         return this.ShieldSize;
     }
 
@@ -363,7 +363,7 @@ public class AppSetInfo extends AbstractModel{
      * Set 加固后app的大小
      * @param ShieldSize 加固后app的大小
      */
-    public void setShieldSize(Long ShieldSize) {
+    public void setShieldSize(Integer ShieldSize) {
         this.ShieldSize = ShieldSize;
     }
 

@@ -27,7 +27,7 @@ public class TaskDetail extends AbstractModel{
     */
     @SerializedName("Code")
     @Expose
-    private Long Code;
+    private Integer Code;
 
     /**
     * 错误信息。
@@ -41,14 +41,14 @@ public class TaskDetail extends AbstractModel{
     */
     @SerializedName("JobId")
     @Expose
-    private Long JobId;
+    private Integer JobId;
 
     /**
     * 实例任务进度。
     */
     @SerializedName("Progress")
     @Expose
-    private Long Progress;
+    private Integer Progress;
 
     /**
     * 实例任务状态，可能的值包括：
@@ -117,7 +117,7 @@ public class TaskDetail extends AbstractModel{
      * Get 错误码。 
      * @return Code 错误码。
      */
-    public Long getCode() {
+    public Integer getCode() {
         return this.Code;
     }
 
@@ -125,7 +125,7 @@ public class TaskDetail extends AbstractModel{
      * Set 错误码。
      * @param Code 错误码。
      */
-    public void setCode(Long Code) {
+    public void setCode(Integer Code) {
         this.Code = Code;
     }
 
@@ -149,7 +149,7 @@ public class TaskDetail extends AbstractModel{
      * Get 实例任务 ID。 
      * @return JobId 实例任务 ID。
      */
-    public Long getJobId() {
+    public Integer getJobId() {
         return this.JobId;
     }
 
@@ -157,7 +157,7 @@ public class TaskDetail extends AbstractModel{
      * Set 实例任务 ID。
      * @param JobId 实例任务 ID。
      */
-    public void setJobId(Long JobId) {
+    public void setJobId(Integer JobId) {
         this.JobId = JobId;
     }
 
@@ -165,7 +165,7 @@ public class TaskDetail extends AbstractModel{
      * Get 实例任务进度。 
      * @return Progress 实例任务进度。
      */
-    public Long getProgress() {
+    public Integer getProgress() {
         return this.Progress;
     }
 
@@ -173,7 +173,7 @@ public class TaskDetail extends AbstractModel{
      * Set 实例任务进度。
      * @param Progress 实例任务进度。
      */
-    public void setProgress(Long Progress) {
+    public void setProgress(Integer Progress) {
         this.Progress = Progress;
     }
 

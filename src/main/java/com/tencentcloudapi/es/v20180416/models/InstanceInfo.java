@@ -55,7 +55,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 用户UIN
@@ -83,7 +83,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
@@ -97,7 +97,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("ChargePeriod")
     @Expose
-    private Long ChargePeriod;
+    private Integer ChargePeriod;
 
     /**
     * 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
@@ -118,21 +118,21 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("NodeNum")
     @Expose
-    private Long NodeNum;
+    private Integer NodeNum;
 
     /**
     * 节点CPU核数
     */
     @SerializedName("CpuNum")
     @Expose
-    private Long CpuNum;
+    private Integer CpuNum;
 
     /**
     * 节点内存大小，单位GB
     */
     @SerializedName("MemSize")
     @Expose
-    private Long MemSize;
+    private Integer MemSize;
 
     /**
     * 节点磁盘类型
@@ -146,7 +146,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Long DiskSize;
+    private Integer DiskSize;
 
     /**
     * ES域名
@@ -167,7 +167,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("EsPort")
     @Expose
-    private Long EsPort;
+    private Integer EsPort;
 
     /**
     * Kibana访问url
@@ -223,7 +223,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("InstanceType")
     @Expose
-    private Long InstanceType;
+    private Integer InstanceType;
 
     /**
     * Ik分词器配置
@@ -289,7 +289,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("WarmNodeNum")
     @Expose
-    private Long WarmNodeNum;
+    private Integer WarmNodeNum;
 
     /**
     * 冷节点CPU核数
@@ -297,7 +297,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("WarmCpuNum")
     @Expose
-    private Long WarmCpuNum;
+    private Integer WarmCpuNum;
 
     /**
     * 冷节点内存内存大小，单位GB
@@ -305,7 +305,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("WarmMemSize")
     @Expose
-    private Long WarmMemSize;
+    private Integer WarmMemSize;
 
     /**
     * 冷节点磁盘类型
@@ -321,7 +321,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("WarmDiskSize")
     @Expose
-    private Long WarmDiskSize;
+    private Integer WarmDiskSize;
 
     /**
     * 集群节点信息列表
@@ -353,7 +353,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("DeployMode")
     @Expose
-    private Long DeployMode;
+    private Integer DeployMode;
 
     /**
     * ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
@@ -400,7 +400,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("SecurityType")
     @Expose
-    private Long SecurityType;
+    private Integer SecurityType;
 
     /**
      * Get 实例ID 
@@ -470,7 +470,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 用户ID 
      * @return AppId 用户ID
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -478,7 +478,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 用户ID
      * @param AppId 用户ID
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
@@ -534,7 +534,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁 
      * @return Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -542,7 +542,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
      * @param Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -566,7 +566,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 包年包月购买时长,单位:月 
      * @return ChargePeriod 包年包月购买时长,单位:月
      */
-    public Long getChargePeriod() {
+    public Integer getChargePeriod() {
         return this.ChargePeriod;
     }
 
@@ -574,7 +574,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 包年包月购买时长,单位:月
      * @param ChargePeriod 包年包月购买时长,单位:月
      */
-    public void setChargePeriod(Long ChargePeriod) {
+    public void setChargePeriod(Integer ChargePeriod) {
         this.ChargePeriod = ChargePeriod;
     }
 
@@ -614,7 +614,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 节点个数 
      * @return NodeNum 节点个数
      */
-    public Long getNodeNum() {
+    public Integer getNodeNum() {
         return this.NodeNum;
     }
 
@@ -622,7 +622,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 节点个数
      * @param NodeNum 节点个数
      */
-    public void setNodeNum(Long NodeNum) {
+    public void setNodeNum(Integer NodeNum) {
         this.NodeNum = NodeNum;
     }
 
@@ -630,7 +630,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 节点CPU核数 
      * @return CpuNum 节点CPU核数
      */
-    public Long getCpuNum() {
+    public Integer getCpuNum() {
         return this.CpuNum;
     }
 
@@ -638,7 +638,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 节点CPU核数
      * @param CpuNum 节点CPU核数
      */
-    public void setCpuNum(Long CpuNum) {
+    public void setCpuNum(Integer CpuNum) {
         this.CpuNum = CpuNum;
     }
 
@@ -646,7 +646,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 节点内存大小，单位GB 
      * @return MemSize 节点内存大小，单位GB
      */
-    public Long getMemSize() {
+    public Integer getMemSize() {
         return this.MemSize;
     }
 
@@ -654,7 +654,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 节点内存大小，单位GB
      * @param MemSize 节点内存大小，单位GB
      */
-    public void setMemSize(Long MemSize) {
+    public void setMemSize(Integer MemSize) {
         this.MemSize = MemSize;
     }
 
@@ -678,7 +678,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 节点磁盘大小，单位GB 
      * @return DiskSize 节点磁盘大小，单位GB
      */
-    public Long getDiskSize() {
+    public Integer getDiskSize() {
         return this.DiskSize;
     }
 
@@ -686,7 +686,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 节点磁盘大小，单位GB
      * @param DiskSize 节点磁盘大小，单位GB
      */
-    public void setDiskSize(Long DiskSize) {
+    public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -726,7 +726,7 @@ public class InstanceInfo extends AbstractModel{
      * Get ES端口 
      * @return EsPort ES端口
      */
-    public Long getEsPort() {
+    public Integer getEsPort() {
         return this.EsPort;
     }
 
@@ -734,7 +734,7 @@ public class InstanceInfo extends AbstractModel{
      * Set ES端口
      * @param EsPort ES端口
      */
-    public void setEsPort(Long EsPort) {
+    public void setEsPort(Integer EsPort) {
         this.EsPort = EsPort;
     }
 
@@ -854,7 +854,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 实例类型（实例类型标识，当前只有1,2两种） 
      * @return InstanceType 实例类型（实例类型标识，当前只有1,2两种）
      */
-    public Long getInstanceType() {
+    public Integer getInstanceType() {
         return this.InstanceType;
     }
 
@@ -862,7 +862,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 实例类型（实例类型标识，当前只有1,2两种）
      * @param InstanceType 实例类型（实例类型标识，当前只有1,2两种）
      */
-    public void setInstanceType(Long InstanceType) {
+    public void setInstanceType(Integer InstanceType) {
         this.InstanceType = InstanceType;
     }
 
@@ -1008,7 +1008,7 @@ public class InstanceInfo extends AbstractModel{
      * @return WarmNodeNum 冷节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getWarmNodeNum() {
+    public Integer getWarmNodeNum() {
         return this.WarmNodeNum;
     }
 
@@ -1018,7 +1018,7 @@ public class InstanceInfo extends AbstractModel{
      * @param WarmNodeNum 冷节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWarmNodeNum(Long WarmNodeNum) {
+    public void setWarmNodeNum(Integer WarmNodeNum) {
         this.WarmNodeNum = WarmNodeNum;
     }
 
@@ -1028,7 +1028,7 @@ public class InstanceInfo extends AbstractModel{
      * @return WarmCpuNum 冷节点CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getWarmCpuNum() {
+    public Integer getWarmCpuNum() {
         return this.WarmCpuNum;
     }
 
@@ -1038,7 +1038,7 @@ public class InstanceInfo extends AbstractModel{
      * @param WarmCpuNum 冷节点CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWarmCpuNum(Long WarmCpuNum) {
+    public void setWarmCpuNum(Integer WarmCpuNum) {
         this.WarmCpuNum = WarmCpuNum;
     }
 
@@ -1048,7 +1048,7 @@ public class InstanceInfo extends AbstractModel{
      * @return WarmMemSize 冷节点内存内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getWarmMemSize() {
+    public Integer getWarmMemSize() {
         return this.WarmMemSize;
     }
 
@@ -1058,7 +1058,7 @@ public class InstanceInfo extends AbstractModel{
      * @param WarmMemSize 冷节点内存内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWarmMemSize(Long WarmMemSize) {
+    public void setWarmMemSize(Integer WarmMemSize) {
         this.WarmMemSize = WarmMemSize;
     }
 
@@ -1088,7 +1088,7 @@ public class InstanceInfo extends AbstractModel{
      * @return WarmDiskSize 冷节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getWarmDiskSize() {
+    public Integer getWarmDiskSize() {
         return this.WarmDiskSize;
     }
 
@@ -1098,7 +1098,7 @@ public class InstanceInfo extends AbstractModel{
      * @param WarmDiskSize 冷节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWarmDiskSize(Long WarmDiskSize) {
+    public void setWarmDiskSize(Integer WarmDiskSize) {
         this.WarmDiskSize = WarmDiskSize;
     }
 
@@ -1168,7 +1168,7 @@ public class InstanceInfo extends AbstractModel{
      * @return DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDeployMode() {
+    public Integer getDeployMode() {
         return this.DeployMode;
     }
 
@@ -1178,7 +1178,7 @@ public class InstanceInfo extends AbstractModel{
      * @param DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDeployMode(Long DeployMode) {
+    public void setDeployMode(Integer DeployMode) {
         this.DeployMode = DeployMode;
     }
 
@@ -1284,7 +1284,7 @@ public class InstanceInfo extends AbstractModel{
      * @return SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getSecurityType() {
+    public Integer getSecurityType() {
         return this.SecurityType;
     }
 
@@ -1294,7 +1294,7 @@ public class InstanceInfo extends AbstractModel{
      * @param SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSecurityType(Long SecurityType) {
+    public void setSecurityType(Integer SecurityType) {
         this.SecurityType = SecurityType;
     }
 

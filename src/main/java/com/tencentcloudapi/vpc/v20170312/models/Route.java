@@ -58,7 +58,7 @@ CCN：云联网。
     */
     @SerializedName("RouteId")
     @Expose
-    private Long RouteId;
+    private Integer RouteId;
 
     /**
     * 路由策略描述。
@@ -177,7 +177,7 @@ CCN：云联网。
      * Get 路由策略ID。 
      * @return RouteId 路由策略ID。
      */
-    public Long getRouteId() {
+    public Integer getRouteId() {
         return this.RouteId;
     }
 
@@ -185,7 +185,7 @@ CCN：云联网。
      * Set 路由策略ID。
      * @param RouteId 路由策略ID。
      */
-    public void setRouteId(Long RouteId) {
+    public void setRouteId(Integer RouteId) {
         this.RouteId = RouteId;
     }
 

@@ -41,28 +41,28 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     */
     @SerializedName("XPosition")
     @Expose
-    private Long XPosition;
+    private Integer XPosition;
 
     /**
     * 显示位置,Y轴偏移。
     */
     @SerializedName("YPosition")
     @Expose
-    private Long YPosition;
+    private Integer YPosition;
 
     /**
     * 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
     */
     @SerializedName("Width")
     @Expose
-    private Long Width;
+    private Integer Width;
 
     /**
     * 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
     */
     @SerializedName("Height")
     @Expose
-    private Long Height;
+    private Integer Height;
 
     /**
      * Get 水印图片url。 
@@ -100,7 +100,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Get 显示位置,X轴偏移。 
      * @return XPosition 显示位置,X轴偏移。
      */
-    public Long getXPosition() {
+    public Integer getXPosition() {
         return this.XPosition;
     }
 
@@ -108,7 +108,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Set 显示位置,X轴偏移。
      * @param XPosition 显示位置,X轴偏移。
      */
-    public void setXPosition(Long XPosition) {
+    public void setXPosition(Integer XPosition) {
         this.XPosition = XPosition;
     }
 
@@ -116,7 +116,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Get 显示位置,Y轴偏移。 
      * @return YPosition 显示位置,Y轴偏移。
      */
-    public Long getYPosition() {
+    public Integer getYPosition() {
         return this.YPosition;
     }
 
@@ -124,7 +124,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Set 显示位置,Y轴偏移。
      * @param YPosition 显示位置,Y轴偏移。
      */
-    public void setYPosition(Long YPosition) {
+    public void setYPosition(Integer YPosition) {
         this.YPosition = YPosition;
     }
 
@@ -132,7 +132,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Get 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。 
      * @return Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
-    public Long getWidth() {
+    public Integer getWidth() {
         return this.Width;
     }
 
@@ -140,7 +140,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Set 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      * @param Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
-    public void setWidth(Long Width) {
+    public void setWidth(Integer Width) {
         this.Width = Width;
     }
 
@@ -148,7 +148,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Get 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。 
      * @return Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
-    public Long getHeight() {
+    public Integer getHeight() {
         return this.Height;
     }
 
@@ -156,7 +156,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
      * Set 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      * @param Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
-    public void setHeight(Long Height) {
+    public void setHeight(Integer Height) {
         this.Height = Height;
     }
 

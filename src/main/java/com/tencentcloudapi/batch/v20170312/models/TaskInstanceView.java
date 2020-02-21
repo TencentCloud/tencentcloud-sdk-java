@@ -27,7 +27,7 @@ public class TaskInstanceView extends AbstractModel{
     */
     @SerializedName("TaskInstanceIndex")
     @Expose
-    private Long TaskInstanceIndex;
+    private Integer TaskInstanceIndex;
 
     /**
     * 任务实例状态
@@ -42,7 +42,7 @@ public class TaskInstanceView extends AbstractModel{
     */
     @SerializedName("ExitCode")
     @Expose
-    private Long ExitCode;
+    private Integer ExitCode;
 
     /**
     * 任务实例状态原因，任务实例失败时，会记录失败原因
@@ -108,7 +108,7 @@ public class TaskInstanceView extends AbstractModel{
      * Get 任务实例索引 
      * @return TaskInstanceIndex 任务实例索引
      */
-    public Long getTaskInstanceIndex() {
+    public Integer getTaskInstanceIndex() {
         return this.TaskInstanceIndex;
     }
 
@@ -116,7 +116,7 @@ public class TaskInstanceView extends AbstractModel{
      * Set 任务实例索引
      * @param TaskInstanceIndex 任务实例索引
      */
-    public void setTaskInstanceIndex(Long TaskInstanceIndex) {
+    public void setTaskInstanceIndex(Integer TaskInstanceIndex) {
         this.TaskInstanceIndex = TaskInstanceIndex;
     }
 
@@ -142,7 +142,7 @@ public class TaskInstanceView extends AbstractModel{
      * @return ExitCode 应用程序执行结束的exit code
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getExitCode() {
+    public Integer getExitCode() {
         return this.ExitCode;
     }
 
@@ -152,7 +152,7 @@ public class TaskInstanceView extends AbstractModel{
      * @param ExitCode 应用程序执行结束的exit code
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setExitCode(Long ExitCode) {
+    public void setExitCode(Integer ExitCode) {
         this.ExitCode = ExitCode;
     }
 

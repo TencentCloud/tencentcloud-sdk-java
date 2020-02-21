@@ -34,7 +34,7 @@ public class TargetHealth extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
@@ -77,7 +77,7 @@ public class TargetHealth extends AbstractModel{
      * Get Target绑定的端口 
      * @return Port Target绑定的端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -85,7 +85,7 @@ public class TargetHealth extends AbstractModel{
      * Set Target绑定的端口
      * @param Port Target绑定的端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 

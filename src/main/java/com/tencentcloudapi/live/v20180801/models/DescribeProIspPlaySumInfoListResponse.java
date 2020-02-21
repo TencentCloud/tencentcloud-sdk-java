@@ -34,7 +34,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     */
     @SerializedName("TotalRequest")
     @Expose
-    private Long TotalRequest;
+    private Integer TotalRequest;
 
     /**
     * 统计的类型。
@@ -48,28 +48,28 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
     * 页号。
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 总记录数。
     */
     @SerializedName("TotalNum")
     @Expose
-    private Long TotalNum;
+    private Integer TotalNum;
 
     /**
     * 总页数。
     */
     @SerializedName("TotalPage")
     @Expose
-    private Long TotalPage;
+    private Integer TotalPage;
 
     /**
     * 省份，运营商，国家或地区汇总数据列表。
@@ -112,7 +112,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
-    public Long getTotalRequest() {
+    public Integer getTotalRequest() {
         return this.TotalRequest;
     }
 
@@ -120,7 +120,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
-    public void setTotalRequest(Long TotalRequest) {
+    public void setTotalRequest(Integer TotalRequest) {
         this.TotalRequest = TotalRequest;
     }
 
@@ -144,7 +144,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Get 每页的记录数。 
      * @return PageSize 每页的记录数。
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -152,7 +152,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Set 每页的记录数。
      * @param PageSize 每页的记录数。
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 
@@ -160,7 +160,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Get 页号。 
      * @return PageNum 页号。
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -168,7 +168,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Set 页号。
      * @param PageNum 页号。
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -176,7 +176,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Get 总记录数。 
      * @return TotalNum 总记录数。
      */
-    public Long getTotalNum() {
+    public Integer getTotalNum() {
         return this.TotalNum;
     }
 
@@ -184,7 +184,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Set 总记录数。
      * @param TotalNum 总记录数。
      */
-    public void setTotalNum(Long TotalNum) {
+    public void setTotalNum(Integer TotalNum) {
         this.TotalNum = TotalNum;
     }
 
@@ -192,7 +192,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Get 总页数。 
      * @return TotalPage 总页数。
      */
-    public Long getTotalPage() {
+    public Integer getTotalPage() {
         return this.TotalPage;
     }
 
@@ -200,7 +200,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
      * Set 总页数。
      * @param TotalPage 总页数。
      */
-    public void setTotalPage(Long TotalPage) {
+    public void setTotalPage(Integer TotalPage) {
         this.TotalPage = TotalPage;
     }
 

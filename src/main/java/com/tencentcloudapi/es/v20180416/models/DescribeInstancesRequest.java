@@ -48,28 +48,28 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页大小，默认值20
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
     */
     @SerializedName("OrderByKey")
     @Expose
-    private Long OrderByKey;
+    private Integer OrderByKey;
 
     /**
     * 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
     */
     @SerializedName("OrderByType")
     @Expose
-    private Long OrderByType;
+    private Integer OrderByType;
 
     /**
     * 节点标签信息列表
@@ -137,7 +137,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 分页起始值, 默认值0 
      * @return Offset 分页起始值, 默认值0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -145,7 +145,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 分页起始值, 默认值0
      * @param Offset 分页起始值, 默认值0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -153,7 +153,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 分页大小，默认值20 
      * @return Limit 分页大小，默认值20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -161,7 +161,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 分页大小，默认值20
      * @param Limit 分页大小，默认值20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -169,7 +169,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序 
      * @return OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      */
-    public Long getOrderByKey() {
+    public Integer getOrderByKey() {
         return this.OrderByKey;
     }
 
@@ -177,7 +177,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      * @param OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      */
-    public void setOrderByKey(Long OrderByKey) {
+    public void setOrderByKey(Integer OrderByKey) {
         this.OrderByKey = OrderByKey;
     }
 
@@ -185,7 +185,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序 
      * @return OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
-    public Long getOrderByType() {
+    public Integer getOrderByType() {
         return this.OrderByType;
     }
 
@@ -193,7 +193,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      * @param OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
-    public void setOrderByType(Long OrderByType) {
+    public void setOrderByType(Integer OrderByType) {
         this.OrderByType = OrderByType;
     }
 

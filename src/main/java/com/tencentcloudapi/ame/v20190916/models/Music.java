@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Music extends AbstractModel{
 
     /**
-    * 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+    * 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
     */
     @SerializedName("Url")
     @Expose
@@ -60,16 +60,24 @@ Unit :ms
     private Long AuditionEnd;
 
     /**
-     * Get 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。 
-     * @return Url 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+    * 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
+    */
+    @SerializedName("FullUrl")
+    @Expose
+    private String FullUrl;
+
+    /**
+     * Get 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。 
+     * @return Url 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
-     * @param Url 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+     * Set 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
+     * @param Url 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -148,6 +156,26 @@ Unit :ms
     }
 
     /**
+     * Get 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。 
+     * @return FullUrl 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
+     */
+    public String getFullUrl() {
+        return this.FullUrl;
+    }
+
+    /**
+     * Set 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
+     * @param FullUrl 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+如果添加过多个域名只返回第一个添加域名的播放全路径。
+     */
+    public void setFullUrl(String FullUrl) {
+        this.FullUrl = FullUrl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -156,6 +184,7 @@ Unit :ms
         this.setParamSimple(map, prefix + "FileExtension", this.FileExtension);
         this.setParamSimple(map, prefix + "AuditionBegin", this.AuditionBegin);
         this.setParamSimple(map, prefix + "AuditionEnd", this.AuditionEnd);
+        this.setParamSimple(map, prefix + "FullUrl", this.FullUrl);
 
     }
 }

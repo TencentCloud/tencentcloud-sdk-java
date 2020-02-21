@@ -28,7 +28,7 @@ public class DescribePolicyConditionListConfigManualContinueTime extends Abstrac
     */
     @SerializedName("Default")
     @Expose
-    private Long Default;
+    private Integer Default;
 
     /**
     * 可选持续时间，单位：秒
@@ -36,7 +36,7 @@ public class DescribePolicyConditionListConfigManualContinueTime extends Abstrac
     */
     @SerializedName("Keys")
     @Expose
-    private Long [] Keys;
+    private Integer [] Keys;
 
     /**
     * 是否必须
@@ -51,7 +51,7 @@ public class DescribePolicyConditionListConfigManualContinueTime extends Abstrac
      * @return Default 默认持续时间，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDefault() {
+    public Integer getDefault() {
         return this.Default;
     }
 
@@ -61,7 +61,7 @@ public class DescribePolicyConditionListConfigManualContinueTime extends Abstrac
      * @param Default 默认持续时间，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDefault(Long Default) {
+    public void setDefault(Integer Default) {
         this.Default = Default;
     }
 
@@ -71,7 +71,7 @@ public class DescribePolicyConditionListConfigManualContinueTime extends Abstrac
      * @return Keys 可选持续时间，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long [] getKeys() {
+    public Integer [] getKeys() {
         return this.Keys;
     }
 
@@ -81,7 +81,7 @@ public class DescribePolicyConditionListConfigManualContinueTime extends Abstrac
      * @param Keys 可选持续时间，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKeys(Long [] Keys) {
+    public void setKeys(Integer [] Keys) {
         this.Keys = Keys;
     }
 

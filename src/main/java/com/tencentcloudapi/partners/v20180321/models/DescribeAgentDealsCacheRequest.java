@@ -27,14 +27,14 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 限制数目
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 下单时间范围起始点
@@ -55,14 +55,14 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Long Order;
+    private Integer Order;
 
     /**
     * 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 下单人账号ID列表
@@ -83,13 +83,13 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
     */
     @SerializedName("PayerMode")
     @Expose
-    private Long PayerMode;
+    private Integer PayerMode;
 
     /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -97,7 +97,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -105,7 +105,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Get 限制数目 
      * @return Limit 限制数目
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -113,7 +113,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Set 限制数目
      * @param Limit 限制数目
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -153,7 +153,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Get 0:下单时间降序；其他：下单时间升序 
      * @return Order 0:下单时间降序；其他：下单时间升序
      */
-    public Long getOrder() {
+    public Integer getOrder() {
         return this.Order;
     }
 
@@ -161,7 +161,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Set 0:下单时间降序；其他：下单时间升序
      * @param Order 0:下单时间降序；其他：下单时间升序
      */
-    public void setOrder(Long Order) {
+    public void setOrder(Integer Order) {
         this.Order = Order;
     }
 
@@ -169,7 +169,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Get 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中) 
      * @return Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -177,7 +177,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Set 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      * @param Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -217,7 +217,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Get 支付方式，0：自付；1：代付 
      * @return PayerMode 支付方式，0：自付；1：代付
      */
-    public Long getPayerMode() {
+    public Integer getPayerMode() {
         return this.PayerMode;
     }
 
@@ -225,7 +225,7 @@ public class DescribeAgentDealsCacheRequest extends AbstractModel{
      * Set 支付方式，0：自付；1：代付
      * @param PayerMode 支付方式，0：自付；1：代付
      */
-    public void setPayerMode(Long PayerMode) {
+    public void setPayerMode(Integer PayerMode) {
         this.PayerMode = PayerMode;
     }
 

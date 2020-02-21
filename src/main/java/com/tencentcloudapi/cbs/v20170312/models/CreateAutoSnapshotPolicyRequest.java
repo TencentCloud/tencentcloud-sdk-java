@@ -55,7 +55,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     */
     @SerializedName("RetentionDays")
     @Expose
-    private Long RetentionDays;
+    private Integer RetentionDays;
 
     /**
     * 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
@@ -132,7 +132,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
      * Get 通过该定期快照策略创建的快照保留天数，默认保留7天。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。 
      * @return RetentionDays 通过该定期快照策略创建的快照保留天数，默认保留7天。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
      */
-    public Long getRetentionDays() {
+    public Integer getRetentionDays() {
         return this.RetentionDays;
     }
 
@@ -140,7 +140,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
      * Set 通过该定期快照策略创建的快照保留天数，默认保留7天。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
      * @param RetentionDays 通过该定期快照策略创建的快照保留天数，默认保留7天。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
      */
-    public void setRetentionDays(Long RetentionDays) {
+    public void setRetentionDays(Integer RetentionDays) {
         this.RetentionDays = RetentionDays;
     }
 

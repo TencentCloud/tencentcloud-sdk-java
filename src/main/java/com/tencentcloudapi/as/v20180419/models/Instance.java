@@ -117,7 +117,7 @@ public class Instance extends AbstractModel{
     */
     @SerializedName("VersionNumber")
     @Expose
-    private Long VersionNumber;
+    private Integer VersionNumber;
 
     /**
     * 伸缩组名称
@@ -358,7 +358,7 @@ public class Instance extends AbstractModel{
      * Get 版本号 
      * @return VersionNumber 版本号
      */
-    public Long getVersionNumber() {
+    public Integer getVersionNumber() {
         return this.VersionNumber;
     }
 
@@ -366,7 +366,7 @@ public class Instance extends AbstractModel{
      * Set 版本号
      * @param VersionNumber 版本号
      */
-    public void setVersionNumber(Long VersionNumber) {
+    public void setVersionNumber(Integer VersionNumber) {
         this.VersionNumber = VersionNumber;
     }
 

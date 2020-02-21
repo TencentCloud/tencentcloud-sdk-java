@@ -41,7 +41,7 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
      * Get 目标组的ID 
@@ -79,7 +79,7 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel{
      * Get 目标组的新默认端口 
      * @return Port 目标组的新默认端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -87,7 +87,7 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel{
      * Set 目标组的新默认端口
      * @param Port 目标组的新默认端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 

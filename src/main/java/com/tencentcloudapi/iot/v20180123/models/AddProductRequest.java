@@ -55,7 +55,7 @@ public class AddProductRequest extends AbstractModel{
     */
     @SerializedName("AuthType")
     @Expose
-    private Long AuthType;
+    private Integer AuthType;
 
     /**
     * 通信方式（other/wifi/cellular/nb-iot）
@@ -139,7 +139,7 @@ public class AddProductRequest extends AbstractModel{
      * Get 设备认证方式（1：动态令牌，2：签名直连鉴权） 
      * @return AuthType 设备认证方式（1：动态令牌，2：签名直连鉴权）
      */
-    public Long getAuthType() {
+    public Integer getAuthType() {
         return this.AuthType;
     }
 
@@ -147,7 +147,7 @@ public class AddProductRequest extends AbstractModel{
      * Set 设备认证方式（1：动态令牌，2：签名直连鉴权）
      * @param AuthType 设备认证方式（1：动态令牌，2：签名直连鉴权）
      */
-    public void setAuthType(Long AuthType) {
+    public void setAuthType(Integer AuthType) {
         this.AuthType = AuthType;
     }
 

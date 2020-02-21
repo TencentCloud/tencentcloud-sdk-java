@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifySmsSignRequest extends AbstractModel{
 
     /**
-    * 待修改的签名Id。
+    * 待修改的签名 ID。
     */
     @SerializedName("SignId")
     @Expose
@@ -51,7 +51,7 @@ public class ModifySmsSignRequest extends AbstractModel{
     private Long SignType;
 
     /**
-    * 证明类型。其中：
+    * 证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -66,16 +66,16 @@ public class ModifySmsSignRequest extends AbstractModel{
     private Long DocumentType;
 
     /**
-    * 是否国际短信。其中：
+    * 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
     */
     @SerializedName("International")
     @Expose
     private Long International;
 
     /**
-    * 签名用途。其中：
+    * 签名用途：
 0：自用。
 1：他用。
     */
@@ -107,16 +107,16 @@ public class ModifySmsSignRequest extends AbstractModel{
     private String Remark;
 
     /**
-     * Get 待修改的签名Id。 
-     * @return SignId 待修改的签名Id。
+     * Get 待修改的签名 ID。 
+     * @return SignId 待修改的签名 ID。
      */
     public Long getSignId() {
         return this.SignId;
     }
 
     /**
-     * Set 待修改的签名Id。
-     * @param SignId 待修改的签名Id。
+     * Set 待修改的签名 ID。
+     * @param SignId 待修改的签名 ID。
      */
     public void setSignId(Long SignId) {
         this.SignId = SignId;
@@ -183,7 +183,7 @@ public class ModifySmsSignRequest extends AbstractModel{
     }
 
     /**
-     * Get 证明类型。其中：
+     * Get 证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -192,7 +192,7 @@ public class ModifySmsSignRequest extends AbstractModel{
 5：网站备案后台截图(个人开发网站)。
 6：小程序设置页面截图(个人认证小程序)。
 7：商标注册书。 
-     * @return DocumentType 证明类型。其中：
+     * @return DocumentType 证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -207,7 +207,7 @@ public class ModifySmsSignRequest extends AbstractModel{
     }
 
     /**
-     * Set 证明类型。其中：
+     * Set 证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -216,7 +216,7 @@ public class ModifySmsSignRequest extends AbstractModel{
 5：网站备案后台截图(个人开发网站)。
 6：小程序设置页面截图(个人认证小程序)。
 7：商标注册书。
-     * @param DocumentType 证明类型。其中：
+     * @param DocumentType 证明类型：
 0：三证合一。
 1：企业营业执照。
 2：组织机构代码证书。
@@ -231,34 +231,34 @@ public class ModifySmsSignRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否国际短信。其中：
+     * Get 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。 
-     * @return International 是否国际短信。其中：
+1：表示国际/港澳台短信。 
+     * @return International 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
      */
     public Long getInternational() {
         return this.International;
     }
 
     /**
-     * Set 是否国际短信。其中：
+     * Set 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
-     * @param International 是否国际短信。其中：
+1：表示国际/港澳台短信。
+     * @param International 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
      */
     public void setInternational(Long International) {
         this.International = International;
     }
 
     /**
-     * Get 签名用途。其中：
+     * Get 签名用途：
 0：自用。
 1：他用。 
-     * @return UsedMethod 签名用途。其中：
+     * @return UsedMethod 签名用途：
 0：自用。
 1：他用。
      */
@@ -267,10 +267,10 @@ public class ModifySmsSignRequest extends AbstractModel{
     }
 
     /**
-     * Set 签名用途。其中：
+     * Set 签名用途：
 0：自用。
 1：他用。
-     * @param UsedMethod 签名用途。其中：
+     * @param UsedMethod 签名用途：
 0：自用。
 1：他用。
      */

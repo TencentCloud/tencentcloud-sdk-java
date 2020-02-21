@@ -28,7 +28,7 @@ public class TaskInfoDetail extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
     * 开始时间
@@ -68,7 +68,7 @@ public class TaskInfoDetail extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 任务进度
@@ -92,7 +92,7 @@ public class TaskInfoDetail extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private Long Result;
+    private Integer Result;
 
     /**
      * Get 任务Id
@@ -100,7 +100,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @return TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -110,7 +110,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @param TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 
@@ -200,7 +200,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @return ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -210,7 +210,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @param ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -260,7 +260,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @return Result 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getResult() {
+    public Integer getResult() {
         return this.Result;
     }
 
@@ -270,7 +270,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @param Result 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(Long Result) {
+    public void setResult(Integer Result) {
         this.Result = Result;
     }
 

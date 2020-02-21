@@ -36,7 +36,7 @@ public class DescribePurgeTasksResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -71,7 +71,7 @@ public class DescribePurgeTasksResponse extends AbstractModel{
      * @return TotalCount 任务总数，用于分页
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -81,7 +81,7 @@ public class DescribePurgeTasksResponse extends AbstractModel{
      * @param TotalCount 任务总数，用于分页
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

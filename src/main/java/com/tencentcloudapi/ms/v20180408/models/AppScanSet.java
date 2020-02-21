@@ -62,28 +62,28 @@ public class AppScanSet extends AbstractModel{
     */
     @SerializedName("AppSize")
     @Expose
-    private Long AppSize;
+    private Integer AppSize;
 
     /**
     * 扫描结果返回码
     */
     @SerializedName("ScanCode")
     @Expose
-    private Long ScanCode;
+    private Integer ScanCode;
 
     /**
     * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Long TaskStatus;
+    private Integer TaskStatus;
 
     /**
     * 提交扫描时间
     */
     @SerializedName("TaskTime")
     @Expose
-    private Long TaskTime;
+    private Integer TaskTime;
 
     /**
     * app的图标url
@@ -104,14 +104,14 @@ public class AppScanSet extends AbstractModel{
     */
     @SerializedName("SafeType")
     @Expose
-    private Long SafeType;
+    private Integer SafeType;
 
     /**
     * 漏洞个数
     */
     @SerializedName("VulCount")
     @Expose
-    private Long VulCount;
+    private Integer VulCount;
 
     /**
      * Get 任务唯一标识 
@@ -197,7 +197,7 @@ public class AppScanSet extends AbstractModel{
      * Get app的大小 
      * @return AppSize app的大小
      */
-    public Long getAppSize() {
+    public Integer getAppSize() {
         return this.AppSize;
     }
 
@@ -205,7 +205,7 @@ public class AppScanSet extends AbstractModel{
      * Set app的大小
      * @param AppSize app的大小
      */
-    public void setAppSize(Long AppSize) {
+    public void setAppSize(Integer AppSize) {
         this.AppSize = AppSize;
     }
 
@@ -213,7 +213,7 @@ public class AppScanSet extends AbstractModel{
      * Get 扫描结果返回码 
      * @return ScanCode 扫描结果返回码
      */
-    public Long getScanCode() {
+    public Integer getScanCode() {
         return this.ScanCode;
     }
 
@@ -221,7 +221,7 @@ public class AppScanSet extends AbstractModel{
      * Set 扫描结果返回码
      * @param ScanCode 扫描结果返回码
      */
-    public void setScanCode(Long ScanCode) {
+    public void setScanCode(Integer ScanCode) {
         this.ScanCode = ScanCode;
     }
 
@@ -229,7 +229,7 @@ public class AppScanSet extends AbstractModel{
      * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public Long getTaskStatus() {
+    public Integer getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -237,7 +237,7 @@ public class AppScanSet extends AbstractModel{
      * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public void setTaskStatus(Long TaskStatus) {
+    public void setTaskStatus(Integer TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -245,7 +245,7 @@ public class AppScanSet extends AbstractModel{
      * Get 提交扫描时间 
      * @return TaskTime 提交扫描时间
      */
-    public Long getTaskTime() {
+    public Integer getTaskTime() {
         return this.TaskTime;
     }
 
@@ -253,7 +253,7 @@ public class AppScanSet extends AbstractModel{
      * Set 提交扫描时间
      * @param TaskTime 提交扫描时间
      */
-    public void setTaskTime(Long TaskTime) {
+    public void setTaskTime(Integer TaskTime) {
         this.TaskTime = TaskTime;
     }
 
@@ -293,7 +293,7 @@ public class AppScanSet extends AbstractModel{
      * Get 安全类型:1-安全软件，2-风险软件，3病毒软件 
      * @return SafeType 安全类型:1-安全软件，2-风险软件，3病毒软件
      */
-    public Long getSafeType() {
+    public Integer getSafeType() {
         return this.SafeType;
     }
 
@@ -301,7 +301,7 @@ public class AppScanSet extends AbstractModel{
      * Set 安全类型:1-安全软件，2-风险软件，3病毒软件
      * @param SafeType 安全类型:1-安全软件，2-风险软件，3病毒软件
      */
-    public void setSafeType(Long SafeType) {
+    public void setSafeType(Integer SafeType) {
         this.SafeType = SafeType;
     }
 
@@ -309,7 +309,7 @@ public class AppScanSet extends AbstractModel{
      * Get 漏洞个数 
      * @return VulCount 漏洞个数
      */
-    public Long getVulCount() {
+    public Integer getVulCount() {
         return this.VulCount;
     }
 
@@ -317,7 +317,7 @@ public class AppScanSet extends AbstractModel{
      * Set 漏洞个数
      * @param VulCount 漏洞个数
      */
-    public void setVulCount(Long VulCount) {
+    public void setVulCount(Integer VulCount) {
         this.VulCount = VulCount;
     }
 

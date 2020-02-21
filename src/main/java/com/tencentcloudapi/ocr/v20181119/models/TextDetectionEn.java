@@ -34,7 +34,7 @@ public class TextDetectionEn extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Long Confidence;
+    private Integer Confidence;
 
     /**
     * 文本行坐标，以四个顶点坐标表示
@@ -71,7 +71,7 @@ public class TextDetectionEn extends AbstractModel{
      * Get 置信度 0 ~100 
      * @return Confidence 置信度 0 ~100
      */
-    public Long getConfidence() {
+    public Integer getConfidence() {
         return this.Confidence;
     }
 
@@ -79,7 +79,7 @@ public class TextDetectionEn extends AbstractModel{
      * Set 置信度 0 ~100
      * @param Confidence 置信度 0 ~100
      */
-    public void setConfidence(Long Confidence) {
+    public void setConfidence(Integer Confidence) {
         this.Confidence = Confidence;
     }
 

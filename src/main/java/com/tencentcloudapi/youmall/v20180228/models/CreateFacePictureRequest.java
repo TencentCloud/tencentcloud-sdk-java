@@ -34,7 +34,7 @@ public class CreateFacePictureRequest extends AbstractModel{
     */
     @SerializedName("PersonType")
     @Expose
-    private Long PersonType;
+    private Integer PersonType;
 
     /**
     * 图片BASE编码
@@ -55,7 +55,7 @@ public class CreateFacePictureRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
@@ -84,7 +84,7 @@ public class CreateFacePictureRequest extends AbstractModel{
      * Get 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单） 
      * @return PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
-    public Long getPersonType() {
+    public Integer getPersonType() {
         return this.PersonType;
     }
 
@@ -92,7 +92,7 @@ public class CreateFacePictureRequest extends AbstractModel{
      * Set 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      * @param PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
-    public void setPersonType(Long PersonType) {
+    public void setPersonType(Integer PersonType) {
         this.PersonType = PersonType;
     }
 
@@ -132,7 +132,7 @@ public class CreateFacePictureRequest extends AbstractModel{
      * Get 店铺ID，如果不填表示操作集团身份库 
      * @return ShopId 店铺ID，如果不填表示操作集团身份库
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -140,7 +140,7 @@ public class CreateFacePictureRequest extends AbstractModel{
      * Set 店铺ID，如果不填表示操作集团身份库
      * @param ShopId 店铺ID，如果不填表示操作集团身份库
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 

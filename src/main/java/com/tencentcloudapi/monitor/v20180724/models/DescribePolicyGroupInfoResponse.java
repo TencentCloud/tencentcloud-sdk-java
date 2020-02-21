@@ -34,14 +34,14 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 是否为默认策略，0表示非默认策略，1表示默认策略
     */
     @SerializedName("IsDefault")
     @Expose
-    private Long IsDefault;
+    private Integer IsDefault;
 
     /**
     * 策略类型
@@ -166,7 +166,7 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
      * Get 策略组所属的项目id 
      * @return ProjectId 策略组所属的项目id
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -174,7 +174,7 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
      * Set 策略组所属的项目id
      * @param ProjectId 策略组所属的项目id
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -182,7 +182,7 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
      * Get 是否为默认策略，0表示非默认策略，1表示默认策略 
      * @return IsDefault 是否为默认策略，0表示非默认策略，1表示默认策略
      */
-    public Long getIsDefault() {
+    public Integer getIsDefault() {
         return this.IsDefault;
     }
 
@@ -190,7 +190,7 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
      * Set 是否为默认策略，0表示非默认策略，1表示默认策略
      * @param IsDefault 是否为默认策略，0表示非默认策略，1表示默认策略
      */
-    public void setIsDefault(Long IsDefault) {
+    public void setIsDefault(Integer IsDefault) {
         this.IsDefault = IsDefault;
     }
 

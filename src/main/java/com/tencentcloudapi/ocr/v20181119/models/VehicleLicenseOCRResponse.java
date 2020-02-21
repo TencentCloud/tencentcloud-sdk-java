@@ -47,7 +47,7 @@ public class VehicleLicenseOCRResponse extends AbstractModel{
     */
     @SerializedName("RecognizeWarnCode")
     @Expose
-    private Long [] RecognizeWarnCode;
+    private Integer [] RecognizeWarnCode;
 
     /**
     * 告警码说明
@@ -116,7 +116,7 @@ public class VehicleLicenseOCRResponse extends AbstractModel{
 -9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
 注：告警码可以同时存在多个
      */
-    public Long [] getRecognizeWarnCode() {
+    public Integer [] getRecognizeWarnCode() {
         return this.RecognizeWarnCode;
     }
 
@@ -132,7 +132,7 @@ public class VehicleLicenseOCRResponse extends AbstractModel{
 -9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
 注：告警码可以同时存在多个
      */
-    public void setRecognizeWarnCode(Long [] RecognizeWarnCode) {
+    public void setRecognizeWarnCode(Integer [] RecognizeWarnCode) {
         this.RecognizeWarnCode = RecognizeWarnCode;
     }
 

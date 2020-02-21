@@ -53,14 +53,14 @@ public class ModifyPullStreamConfigRequest extends AbstractModel{
     */
     @SerializedName("AreaId")
     @Expose
-    private Long AreaId;
+    private Integer AreaId;
 
     /**
     * 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
     */
     @SerializedName("IspId")
     @Expose
-    private Long IspId;
+    private Integer IspId;
 
     /**
     * 开始时间。
@@ -148,7 +148,7 @@ public class ModifyPullStreamConfigRequest extends AbstractModel{
 4-中国香港。
 如有改动，需同时传入IspId。
      */
-    public Long getAreaId() {
+    public Integer getAreaId() {
         return this.AreaId;
     }
 
@@ -166,7 +166,7 @@ public class ModifyPullStreamConfigRequest extends AbstractModel{
 4-中国香港。
 如有改动，需同时传入IspId。
      */
-    public void setAreaId(Long AreaId) {
+    public void setAreaId(Integer AreaId) {
         this.AreaId = AreaId;
     }
 
@@ -174,7 +174,7 @@ public class ModifyPullStreamConfigRequest extends AbstractModel{
      * Get 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。 
      * @return IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      */
-    public Long getIspId() {
+    public Integer getIspId() {
         return this.IspId;
     }
 
@@ -182,7 +182,7 @@ public class ModifyPullStreamConfigRequest extends AbstractModel{
      * Set 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      * @param IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      */
-    public void setIspId(Long IspId) {
+    public void setIspId(Integer IspId) {
         this.IspId = IspId;
     }
 

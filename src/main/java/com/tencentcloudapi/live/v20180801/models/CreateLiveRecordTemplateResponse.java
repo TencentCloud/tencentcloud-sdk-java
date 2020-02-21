@@ -27,7 +27,7 @@ public class CreateLiveRecordTemplateResponse extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Long TemplateId;
+    private Integer TemplateId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateLiveRecordTemplateResponse extends AbstractModel{
      * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
-    public Long getTemplateId() {
+    public Integer getTemplateId() {
         return this.TemplateId;
     }
 
@@ -48,7 +48,7 @@ public class CreateLiveRecordTemplateResponse extends AbstractModel{
      * Set 模板Id。
      * @param TemplateId 模板Id。
      */
-    public void setTemplateId(Long TemplateId) {
+    public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;
     }
 

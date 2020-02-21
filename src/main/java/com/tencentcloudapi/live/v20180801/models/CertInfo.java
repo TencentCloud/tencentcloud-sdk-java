@@ -27,7 +27,7 @@ public class CertInfo extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Long CertId;
+    private Integer CertId;
 
     /**
     * 证书名称。
@@ -64,7 +64,7 @@ public class CertInfo extends AbstractModel{
     */
     @SerializedName("CertType")
     @Expose
-    private Long CertType;
+    private Integer CertType;
 
     /**
     * 证书过期时间，UTC格式。
@@ -84,7 +84,7 @@ public class CertInfo extends AbstractModel{
      * Get 证书Id。 
      * @return CertId 证书Id。
      */
-    public Long getCertId() {
+    public Integer getCertId() {
         return this.CertId;
     }
 
@@ -92,7 +92,7 @@ public class CertInfo extends AbstractModel{
      * Set 证书Id。
      * @param CertId 证书Id。
      */
-    public void setCertId(Long CertId) {
+    public void setCertId(Integer CertId) {
         this.CertId = CertId;
     }
 
@@ -168,7 +168,7 @@ public class CertInfo extends AbstractModel{
 0：腾讯云托管证书
 1：用户添加证书。
      */
-    public Long getCertType() {
+    public Integer getCertType() {
         return this.CertType;
     }
 
@@ -180,7 +180,7 @@ public class CertInfo extends AbstractModel{
 0：腾讯云托管证书
 1：用户添加证书。
      */
-    public void setCertType(Long CertType) {
+    public void setCertType(Integer CertType) {
         this.CertType = CertType;
     }
 

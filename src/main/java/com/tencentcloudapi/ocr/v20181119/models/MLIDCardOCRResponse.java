@@ -57,7 +57,7 @@ public class MLIDCardOCRResponse extends AbstractModel{
     */
     @SerializedName("Warn")
     @Expose
-    private Long [] Warn;
+    private Integer [] Warn;
 
     /**
     * 证件图片
@@ -160,7 +160,7 @@ public class MLIDCardOCRResponse extends AbstractModel{
 -9103	证照翻拍告警
 -9102	证照复印件告警
      */
-    public Long [] getWarn() {
+    public Integer [] getWarn() {
         return this.Warn;
     }
 
@@ -172,7 +172,7 @@ public class MLIDCardOCRResponse extends AbstractModel{
 -9103	证照翻拍告警
 -9102	证照复印件告警
      */
-    public void setWarn(Long [] Warn) {
+    public void setWarn(Integer [] Warn) {
         this.Warn = Warn;
     }
 

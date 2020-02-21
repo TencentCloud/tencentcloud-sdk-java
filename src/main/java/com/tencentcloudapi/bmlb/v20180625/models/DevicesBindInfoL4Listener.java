@@ -41,7 +41,7 @@ public class DevicesBindInfoL4Listener extends AbstractModel{
     */
     @SerializedName("LoadBalancerPort")
     @Expose
-    private Long LoadBalancerPort;
+    private Integer LoadBalancerPort;
 
     /**
     * 该转发路径所绑定的主机列表。
@@ -86,7 +86,7 @@ public class DevicesBindInfoL4Listener extends AbstractModel{
      * Get 七层监听器的监听端口。 
      * @return LoadBalancerPort 七层监听器的监听端口。
      */
-    public Long getLoadBalancerPort() {
+    public Integer getLoadBalancerPort() {
         return this.LoadBalancerPort;
     }
 
@@ -94,7 +94,7 @@ public class DevicesBindInfoL4Listener extends AbstractModel{
      * Set 七层监听器的监听端口。
      * @param LoadBalancerPort 七层监听器的监听端口。
      */
-    public void setLoadBalancerPort(Long LoadBalancerPort) {
+    public void setLoadBalancerPort(Integer LoadBalancerPort) {
         this.LoadBalancerPort = LoadBalancerPort;
     }
 

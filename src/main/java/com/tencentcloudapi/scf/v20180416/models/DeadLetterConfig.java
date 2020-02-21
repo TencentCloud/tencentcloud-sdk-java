@@ -13,67 +13,91 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tiia.v20190529.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Candidate extends AbstractModel{
+public class DeadLetterConfig extends AbstractModel{
 
     /**
-    * 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
+    * 死信队列模式
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 死信队列名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 相似度，0-100之间。
+    * 死信队列主题模式的标签形式
     */
-    @SerializedName("Confidence")
+    @SerializedName("FilterType")
     @Expose
-    private Long Confidence;
+    private String FilterType;
 
     /**
-     * Get 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。 
-     * @return Name 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
+     * Get 死信队列模式 
+     * @return Type 死信队列模式
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 死信队列模式
+     * @param Type 死信队列模式
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 死信队列名称 
+     * @return Name 死信队列名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
-     * @param Name 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
+     * Set 死信队列名称
+     * @param Name 死信队列名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 相似度，0-100之间。 
-     * @return Confidence 相似度，0-100之间。
+     * Get 死信队列主题模式的标签形式 
+     * @return FilterType 死信队列主题模式的标签形式
      */
-    public Long getConfidence() {
-        return this.Confidence;
+    public String getFilterType() {
+        return this.FilterType;
     }
 
     /**
-     * Set 相似度，0-100之间。
-     * @param Confidence 相似度，0-100之间。
+     * Set 死信队列主题模式的标签形式
+     * @param FilterType 死信队列主题模式的标签形式
      */
-    public void setConfidence(Long Confidence) {
-        this.Confidence = Confidence;
+    public void setFilterType(String FilterType) {
+        this.FilterType = FilterType;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "FilterType", this.FilterType);
 
     }
 }

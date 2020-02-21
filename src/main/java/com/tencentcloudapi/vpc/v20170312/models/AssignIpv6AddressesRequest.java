@@ -41,7 +41,7 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
-    private Long Ipv6AddressCount;
+    private Integer Ipv6AddressCount;
 
     /**
      * Get 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。 
@@ -79,7 +79,7 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
      * Get 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。 
      * @return Ipv6AddressCount 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
      */
-    public Long getIpv6AddressCount() {
+    public Integer getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
@@ -87,7 +87,7 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
      * Set 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
      * @param Ipv6AddressCount 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
      */
-    public void setIpv6AddressCount(Long Ipv6AddressCount) {
+    public void setIpv6AddressCount(Integer Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 

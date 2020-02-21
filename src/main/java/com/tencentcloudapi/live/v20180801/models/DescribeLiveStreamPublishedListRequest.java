@@ -61,7 +61,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 分页大小。
@@ -71,7 +71,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
     * 流名称，支持模糊匹配。
@@ -170,7 +170,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
      * @return PageNum 取得第几页。
 默认值：1。
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -180,7 +180,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
      * @param PageNum 取得第几页。
 默认值：1。
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -194,7 +194,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 取值范围：1~100 之前的任意整数。
 默认值：10。
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -208,7 +208,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 取值范围：1~100 之前的任意整数。
 默认值：10。
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 

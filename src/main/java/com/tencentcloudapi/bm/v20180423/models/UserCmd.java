@@ -34,14 +34,14 @@ public class UserCmd extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 脚本自增ID
     */
     @SerializedName("AutoId")
     @Expose
-    private Long AutoId;
+    private Integer AutoId;
 
     /**
     * 脚本ID
@@ -98,7 +98,7 @@ public class UserCmd extends AbstractModel{
      * Get AppId 
      * @return AppId AppId
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -106,7 +106,7 @@ public class UserCmd extends AbstractModel{
      * Set AppId
      * @param AppId AppId
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
@@ -114,7 +114,7 @@ public class UserCmd extends AbstractModel{
      * Get 脚本自增ID 
      * @return AutoId 脚本自增ID
      */
-    public Long getAutoId() {
+    public Integer getAutoId() {
         return this.AutoId;
     }
 
@@ -122,7 +122,7 @@ public class UserCmd extends AbstractModel{
      * Set 脚本自增ID
      * @param AutoId 脚本自增ID
      */
-    public void setAutoId(Long AutoId) {
+    public void setAutoId(Integer AutoId) {
         this.AutoId = AutoId;
     }
 

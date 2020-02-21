@@ -41,7 +41,7 @@ public class ShardInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 创建时间
@@ -55,35 +55,35 @@ public class ShardInfo extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 存储大小，单位 GB
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 分片数字ID
     */
     @SerializedName("ShardId")
     @Expose
-    private Long ShardId;
+    private Integer ShardId;
 
     /**
     * 节点数，2 为一主一从， 3 为一主二从
     */
     @SerializedName("NodeCount")
     @Expose
-    private Long NodeCount;
+    private Integer NodeCount;
 
     /**
     * 产品类型 Id（过时字段，请勿依赖该值）
     */
     @SerializedName("Pid")
     @Expose
-    private Long Pid;
+    private Integer Pid;
 
     /**
      * Get 分片ID 
@@ -121,7 +121,7 @@ public class ShardInfo extends AbstractModel{
      * Get 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除 
      * @return Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -129,7 +129,7 @@ public class ShardInfo extends AbstractModel{
      * Set 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      * @param Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -153,7 +153,7 @@ public class ShardInfo extends AbstractModel{
      * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -161,7 +161,7 @@ public class ShardInfo extends AbstractModel{
      * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -169,7 +169,7 @@ public class ShardInfo extends AbstractModel{
      * Get 存储大小，单位 GB 
      * @return Storage 存储大小，单位 GB
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -177,7 +177,7 @@ public class ShardInfo extends AbstractModel{
      * Set 存储大小，单位 GB
      * @param Storage 存储大小，单位 GB
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 
@@ -185,7 +185,7 @@ public class ShardInfo extends AbstractModel{
      * Get 分片数字ID 
      * @return ShardId 分片数字ID
      */
-    public Long getShardId() {
+    public Integer getShardId() {
         return this.ShardId;
     }
 
@@ -193,7 +193,7 @@ public class ShardInfo extends AbstractModel{
      * Set 分片数字ID
      * @param ShardId 分片数字ID
      */
-    public void setShardId(Long ShardId) {
+    public void setShardId(Integer ShardId) {
         this.ShardId = ShardId;
     }
 
@@ -201,7 +201,7 @@ public class ShardInfo extends AbstractModel{
      * Get 节点数，2 为一主一从， 3 为一主二从 
      * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
-    public Long getNodeCount() {
+    public Integer getNodeCount() {
         return this.NodeCount;
     }
 
@@ -209,7 +209,7 @@ public class ShardInfo extends AbstractModel{
      * Set 节点数，2 为一主一从， 3 为一主二从
      * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
-    public void setNodeCount(Long NodeCount) {
+    public void setNodeCount(Integer NodeCount) {
         this.NodeCount = NodeCount;
     }
 
@@ -217,7 +217,7 @@ public class ShardInfo extends AbstractModel{
      * Get 产品类型 Id（过时字段，请勿依赖该值） 
      * @return Pid 产品类型 Id（过时字段，请勿依赖该值）
      */
-    public Long getPid() {
+    public Integer getPid() {
         return this.Pid;
     }
 
@@ -225,7 +225,7 @@ public class ShardInfo extends AbstractModel{
      * Set 产品类型 Id（过时字段，请勿依赖该值）
      * @param Pid 产品类型 Id（过时字段，请勿依赖该值）
      */
-    public void setPid(Long Pid) {
+    public void setPid(Integer Pid) {
         this.Pid = Pid;
     }
 

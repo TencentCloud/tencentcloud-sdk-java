@@ -41,14 +41,14 @@ public class ClusterCIDRSettings extends AbstractModel{
     */
     @SerializedName("MaxNodePodNum")
     @Expose
-    private Long MaxNodePodNum;
+    private Integer MaxNodePodNum;
 
     /**
     * 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
     */
     @SerializedName("MaxClusterServiceNum")
     @Expose
-    private Long MaxClusterServiceNum;
+    private Integer MaxClusterServiceNum;
 
     /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。 
@@ -86,7 +86,7 @@ public class ClusterCIDRSettings extends AbstractModel{
      * Get 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。 
      * @return MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
      */
-    public Long getMaxNodePodNum() {
+    public Integer getMaxNodePodNum() {
         return this.MaxNodePodNum;
     }
 
@@ -94,7 +94,7 @@ public class ClusterCIDRSettings extends AbstractModel{
      * Set 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
      * @param MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
      */
-    public void setMaxNodePodNum(Long MaxNodePodNum) {
+    public void setMaxNodePodNum(Integer MaxNodePodNum) {
         this.MaxNodePodNum = MaxNodePodNum;
     }
 
@@ -102,7 +102,7 @@ public class ClusterCIDRSettings extends AbstractModel{
      * Get 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。 
      * @return MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
      */
-    public Long getMaxClusterServiceNum() {
+    public Integer getMaxClusterServiceNum() {
         return this.MaxClusterServiceNum;
     }
 
@@ -110,7 +110,7 @@ public class ClusterCIDRSettings extends AbstractModel{
      * Set 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
      * @param MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
      */
-    public void setMaxClusterServiceNum(Long MaxClusterServiceNum) {
+    public void setMaxClusterServiceNum(Integer MaxClusterServiceNum) {
         this.MaxClusterServiceNum = MaxClusterServiceNum;
     }
 

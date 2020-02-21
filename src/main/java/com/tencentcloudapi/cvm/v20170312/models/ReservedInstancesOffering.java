@@ -44,7 +44,7 @@ public class ReservedInstancesOffering extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Long Duration;
+    private Integer Duration;
 
     /**
     * 预留实例计费的购买价格。形如：4000.0。
@@ -140,7 +140,7 @@ public class ReservedInstancesOffering extends AbstractModel{
      * @return Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒
      */
-    public Long getDuration() {
+    public Integer getDuration() {
         return this.Duration;
     }
 
@@ -150,7 +150,7 @@ public class ReservedInstancesOffering extends AbstractModel{
      * @param Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒
      */
-    public void setDuration(Long Duration) {
+    public void setDuration(Integer Duration) {
         this.Duration = Duration;
     }
 

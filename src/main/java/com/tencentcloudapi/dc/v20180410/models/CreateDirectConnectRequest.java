@@ -70,7 +70,7 @@ public class CreateDirectConnectRequest extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
     * 冗余物理专线的ID。
@@ -84,7 +84,7 @@ public class CreateDirectConnectRequest extends AbstractModel{
     */
     @SerializedName("Vlan")
     @Expose
-    private Long Vlan;
+    private Integer Vlan;
 
     /**
     * 物理专线调试腾讯侧互联 IP。默认自动分配。
@@ -239,7 +239,7 @@ public class CreateDirectConnectRequest extends AbstractModel{
      * Get 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。 
      * @return Bandwidth 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -247,7 +247,7 @@ public class CreateDirectConnectRequest extends AbstractModel{
      * Set 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
      * @param Bandwidth 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -271,7 +271,7 @@ public class CreateDirectConnectRequest extends AbstractModel{
      * Get 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。 
      * @return Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
      */
-    public Long getVlan() {
+    public Integer getVlan() {
         return this.Vlan;
     }
 
@@ -279,7 +279,7 @@ public class CreateDirectConnectRequest extends AbstractModel{
      * Set 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
      * @param Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
      */
-    public void setVlan(Long Vlan) {
+    public void setVlan(Integer Vlan) {
         this.Vlan = Vlan;
     }
 

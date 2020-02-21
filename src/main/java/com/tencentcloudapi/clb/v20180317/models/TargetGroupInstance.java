@@ -34,21 +34,21 @@ public class TargetGroupInstance extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 目标组实例的权重
     */
     @SerializedName("Weight")
     @Expose
-    private Long Weight;
+    private Integer Weight;
 
     /**
     * 目标组实例的新端口
     */
     @SerializedName("NewPort")
     @Expose
-    private Long NewPort;
+    private Integer NewPort;
 
     /**
      * Get 目标组实例的内网IP 
@@ -70,7 +70,7 @@ public class TargetGroupInstance extends AbstractModel{
      * Get 目标组实例的端口 
      * @return Port 目标组实例的端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -78,7 +78,7 @@ public class TargetGroupInstance extends AbstractModel{
      * Set 目标组实例的端口
      * @param Port 目标组实例的端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -86,7 +86,7 @@ public class TargetGroupInstance extends AbstractModel{
      * Get 目标组实例的权重 
      * @return Weight 目标组实例的权重
      */
-    public Long getWeight() {
+    public Integer getWeight() {
         return this.Weight;
     }
 
@@ -94,7 +94,7 @@ public class TargetGroupInstance extends AbstractModel{
      * Set 目标组实例的权重
      * @param Weight 目标组实例的权重
      */
-    public void setWeight(Long Weight) {
+    public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 
@@ -102,7 +102,7 @@ public class TargetGroupInstance extends AbstractModel{
      * Get 目标组实例的新端口 
      * @return NewPort 目标组实例的新端口
      */
-    public Long getNewPort() {
+    public Integer getNewPort() {
         return this.NewPort;
     }
 
@@ -110,7 +110,7 @@ public class TargetGroupInstance extends AbstractModel{
      * Set 目标组实例的新端口
      * @param NewPort 目标组实例的新端口
      */
-    public void setNewPort(Long NewPort) {
+    public void setNewPort(Integer NewPort) {
         this.NewPort = NewPort;
     }
 

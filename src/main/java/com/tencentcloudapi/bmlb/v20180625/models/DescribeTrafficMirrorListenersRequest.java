@@ -34,14 +34,14 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 单次查询返回的条目数，默认值：500。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 待搜索的负载均衡Id。
@@ -90,7 +90,7 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
     */
     @SerializedName("SearchLoadBalancerPorts")
     @Expose
-    private Long [] SearchLoadBalancerPorts;
+    private Integer [] SearchLoadBalancerPorts;
 
     /**
      * Get 流量镜像实例ID。 
@@ -112,7 +112,7 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
      * Get 分页的偏移量，也即从第几条记录开始查询 
      * @return Offset 分页的偏移量，也即从第几条记录开始查询
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -120,7 +120,7 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
      * Set 分页的偏移量，也即从第几条记录开始查询
      * @param Offset 分页的偏移量，也即从第几条记录开始查询
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -128,7 +128,7 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
      * Get 单次查询返回的条目数，默认值：500。 
      * @return Limit 单次查询返回的条目数，默认值：500。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -136,7 +136,7 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
      * Set 单次查询返回的条目数，默认值：500。
      * @param Limit 单次查询返回的条目数，默认值：500。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -240,7 +240,7 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
      * Get 待搜索的端口。 
      * @return SearchLoadBalancerPorts 待搜索的端口。
      */
-    public Long [] getSearchLoadBalancerPorts() {
+    public Integer [] getSearchLoadBalancerPorts() {
         return this.SearchLoadBalancerPorts;
     }
 
@@ -248,7 +248,7 @@ public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
      * Set 待搜索的端口。
      * @param SearchLoadBalancerPorts 待搜索的端口。
      */
-    public void setSearchLoadBalancerPorts(Long [] SearchLoadBalancerPorts) {
+    public void setSearchLoadBalancerPorts(Integer [] SearchLoadBalancerPorts) {
         this.SearchLoadBalancerPorts = SearchLoadBalancerPorts;
     }
 

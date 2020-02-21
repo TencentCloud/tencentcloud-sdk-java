@@ -34,7 +34,7 @@ public class ModifyDBInstancesProjectRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
      * Get 待修改的实例ID列表。实例 ID 形如：dcdbt-ow728lmc。 
@@ -56,7 +56,7 @@ public class ModifyDBInstancesProjectRequest extends AbstractModel{
      * Get 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。 
      * @return ProjectId 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -64,7 +64,7 @@ public class ModifyDBInstancesProjectRequest extends AbstractModel{
      * Set 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
      * @param ProjectId 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

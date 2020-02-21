@@ -27,7 +27,7 @@ public class BindHostedResponse extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class BindHostedResponse extends AbstractModel{
      * Get 异步任务ID，可以通过EipBmQueryTask查询任务状态 
      * @return TaskId 异步任务ID，可以通过EipBmQueryTask查询任务状态
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -48,7 +48,7 @@ public class BindHostedResponse extends AbstractModel{
      * Set 异步任务ID，可以通过EipBmQueryTask查询任务状态
      * @param TaskId 异步任务ID，可以通过EipBmQueryTask查询任务状态
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 

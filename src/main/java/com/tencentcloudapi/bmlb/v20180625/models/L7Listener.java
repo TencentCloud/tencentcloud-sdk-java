@@ -48,14 +48,14 @@ public class L7Listener extends AbstractModel{
     */
     @SerializedName("LoadBalancerPort")
     @Expose
-    private Long LoadBalancerPort;
+    private Integer LoadBalancerPort;
 
     /**
     * 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
     * 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
@@ -69,7 +69,7 @@ public class L7Listener extends AbstractModel{
     */
     @SerializedName("SslMode")
     @Expose
-    private Long SslMode;
+    private Integer SslMode;
 
     /**
     * 七层监听器关联的服务端证书ID。
@@ -90,7 +90,7 @@ public class L7Listener extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 创建时间戳。
@@ -104,7 +104,7 @@ public class L7Listener extends AbstractModel{
     */
     @SerializedName("ForwardProtocol")
     @Expose
-    private Long ForwardProtocol;
+    private Integer ForwardProtocol;
 
     /**
      * Get 七层监听器实例ID。 
@@ -158,7 +158,7 @@ public class L7Listener extends AbstractModel{
      * Get 七层监听器的监听端口。 
      * @return LoadBalancerPort 七层监听器的监听端口。
      */
-    public Long getLoadBalancerPort() {
+    public Integer getLoadBalancerPort() {
         return this.LoadBalancerPort;
     }
 
@@ -166,7 +166,7 @@ public class L7Listener extends AbstractModel{
      * Set 七层监听器的监听端口。
      * @param LoadBalancerPort 七层监听器的监听端口。
      */
-    public void setLoadBalancerPort(Long LoadBalancerPort) {
+    public void setLoadBalancerPort(Integer LoadBalancerPort) {
         this.LoadBalancerPort = LoadBalancerPort;
     }
 
@@ -174,7 +174,7 @@ public class L7Listener extends AbstractModel{
      * Get 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。 
      * @return Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -182,7 +182,7 @@ public class L7Listener extends AbstractModel{
      * Set 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      * @param Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -206,7 +206,7 @@ public class L7Listener extends AbstractModel{
      * Get 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。 
      * @return SslMode 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public Long getSslMode() {
+    public Integer getSslMode() {
         return this.SslMode;
     }
 
@@ -214,7 +214,7 @@ public class L7Listener extends AbstractModel{
      * Set 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      * @param SslMode 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public void setSslMode(Long SslMode) {
+    public void setSslMode(Integer SslMode) {
         this.SslMode = SslMode;
     }
 
@@ -254,7 +254,7 @@ public class L7Listener extends AbstractModel{
      * Get 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -262,7 +262,7 @@ public class L7Listener extends AbstractModel{
      * Set 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -286,7 +286,7 @@ public class L7Listener extends AbstractModel{
      * Get https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。 
      * @return ForwardProtocol https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
      */
-    public Long getForwardProtocol() {
+    public Integer getForwardProtocol() {
         return this.ForwardProtocol;
     }
 
@@ -294,7 +294,7 @@ public class L7Listener extends AbstractModel{
      * Set https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
      * @param ForwardProtocol https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
      */
-    public void setForwardProtocol(Long ForwardProtocol) {
+    public void setForwardProtocol(Integer ForwardProtocol) {
         this.ForwardProtocol = ForwardProtocol;
     }
 

@@ -34,14 +34,14 @@ public class Comment extends AbstractModel{
     */
     @SerializedName("NegCommentCount")
     @Expose
-    private Long NegCommentCount;
+    private Integer NegCommentCount;
 
     /**
     * 好评的个数
     */
     @SerializedName("PosCommentCount")
     @Expose
-    private Long PosCommentCount;
+    private Integer PosCommentCount;
 
     /**
      * Get 评论的日期 
@@ -63,7 +63,7 @@ public class Comment extends AbstractModel{
      * Get 差评的个数 
      * @return NegCommentCount 差评的个数
      */
-    public Long getNegCommentCount() {
+    public Integer getNegCommentCount() {
         return this.NegCommentCount;
     }
 
@@ -71,7 +71,7 @@ public class Comment extends AbstractModel{
      * Set 差评的个数
      * @param NegCommentCount 差评的个数
      */
-    public void setNegCommentCount(Long NegCommentCount) {
+    public void setNegCommentCount(Integer NegCommentCount) {
         this.NegCommentCount = NegCommentCount;
     }
 
@@ -79,7 +79,7 @@ public class Comment extends AbstractModel{
      * Get 好评的个数 
      * @return PosCommentCount 好评的个数
      */
-    public Long getPosCommentCount() {
+    public Integer getPosCommentCount() {
         return this.PosCommentCount;
     }
 
@@ -87,7 +87,7 @@ public class Comment extends AbstractModel{
      * Set 好评的个数
      * @param PosCommentCount 好评的个数
      */
-    public void setPosCommentCount(Long PosCommentCount) {
+    public void setPosCommentCount(Integer PosCommentCount) {
         this.PosCommentCount = PosCommentCount;
     }
 

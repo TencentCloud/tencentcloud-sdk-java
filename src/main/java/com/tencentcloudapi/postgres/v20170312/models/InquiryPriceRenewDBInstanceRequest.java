@@ -34,7 +34,7 @@ public class InquiryPriceRenewDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
      * Get 实例ID 
@@ -56,7 +56,7 @@ public class InquiryPriceRenewDBInstanceRequest extends AbstractModel{
      * Get 续费周期，按月计算，最大不超过48 
      * @return Period 续费周期，按月计算，最大不超过48
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -64,7 +64,7 @@ public class InquiryPriceRenewDBInstanceRequest extends AbstractModel{
      * Set 续费周期，按月计算，最大不超过48
      * @param Period 续费周期，按月计算，最大不超过48
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 

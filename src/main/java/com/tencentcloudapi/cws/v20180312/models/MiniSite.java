@@ -27,7 +27,7 @@ public class MiniSite extends AbstractModel{
     */
     @SerializedName("SiteId")
     @Expose
-    private Long SiteId;
+    private Integer SiteId;
 
     /**
     * 站点Url。
@@ -40,7 +40,7 @@ public class MiniSite extends AbstractModel{
      * Get 站点ID。 
      * @return SiteId 站点ID。
      */
-    public Long getSiteId() {
+    public Integer getSiteId() {
         return this.SiteId;
     }
 
@@ -48,7 +48,7 @@ public class MiniSite extends AbstractModel{
      * Set 站点ID。
      * @param SiteId 站点ID。
      */
-    public void setSiteId(Long SiteId) {
+    public void setSiteId(Integer SiteId) {
         this.SiteId = SiteId;
     }
 

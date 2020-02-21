@@ -34,14 +34,14 @@ public class DescribeCameraPersonResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 摄像机id
     */
     @SerializedName("CameraId")
     @Expose
-    private Long CameraId;
+    private Integer CameraId;
 
     /**
     * pos机id
@@ -84,7 +84,7 @@ public class DescribeCameraPersonResponse extends AbstractModel{
      * Get 店铺id 
      * @return ShopId 店铺id
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -92,7 +92,7 @@ public class DescribeCameraPersonResponse extends AbstractModel{
      * Set 店铺id
      * @param ShopId 店铺id
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -100,7 +100,7 @@ public class DescribeCameraPersonResponse extends AbstractModel{
      * Get 摄像机id 
      * @return CameraId 摄像机id
      */
-    public Long getCameraId() {
+    public Integer getCameraId() {
         return this.CameraId;
     }
 
@@ -108,7 +108,7 @@ public class DescribeCameraPersonResponse extends AbstractModel{
      * Set 摄像机id
      * @param CameraId 摄像机id
      */
-    public void setCameraId(Long CameraId) {
+    public void setCameraId(Integer CameraId) {
         this.CameraId = CameraId;
     }
 

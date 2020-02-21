@@ -41,7 +41,7 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 私有网络ID
@@ -83,21 +83,21 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("DBInstanceMemory")
     @Expose
-    private Long DBInstanceMemory;
+    private Integer DBInstanceMemory;
 
     /**
     * 实例分配的存储空间大小，单位：GB
     */
     @SerializedName("DBInstanceStorage")
     @Expose
-    private Long DBInstanceStorage;
+    private Integer DBInstanceStorage;
 
     /**
     * 实例分配的CPU数量，单位：个
     */
     @SerializedName("DBInstanceCpu")
     @Expose
-    private Long DBInstanceCpu;
+    private Integer DBInstanceCpu;
 
     /**
     * 售卖规格ID
@@ -174,7 +174,7 @@ public class DBInstance extends AbstractModel{
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Long AutoRenew;
+    private Integer AutoRenew;
 
     /**
     * 实例网络连接信息
@@ -226,7 +226,7 @@ public class DBInstance extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -234,7 +234,7 @@ public class DBInstance extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -322,7 +322,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例分配的内存大小，单位：GB 
      * @return DBInstanceMemory 实例分配的内存大小，单位：GB
      */
-    public Long getDBInstanceMemory() {
+    public Integer getDBInstanceMemory() {
         return this.DBInstanceMemory;
     }
 
@@ -330,7 +330,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例分配的内存大小，单位：GB
      * @param DBInstanceMemory 实例分配的内存大小，单位：GB
      */
-    public void setDBInstanceMemory(Long DBInstanceMemory) {
+    public void setDBInstanceMemory(Integer DBInstanceMemory) {
         this.DBInstanceMemory = DBInstanceMemory;
     }
 
@@ -338,7 +338,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例分配的存储空间大小，单位：GB 
      * @return DBInstanceStorage 实例分配的存储空间大小，单位：GB
      */
-    public Long getDBInstanceStorage() {
+    public Integer getDBInstanceStorage() {
         return this.DBInstanceStorage;
     }
 
@@ -346,7 +346,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例分配的存储空间大小，单位：GB
      * @param DBInstanceStorage 实例分配的存储空间大小，单位：GB
      */
-    public void setDBInstanceStorage(Long DBInstanceStorage) {
+    public void setDBInstanceStorage(Integer DBInstanceStorage) {
         this.DBInstanceStorage = DBInstanceStorage;
     }
 
@@ -354,7 +354,7 @@ public class DBInstance extends AbstractModel{
      * Get 实例分配的CPU数量，单位：个 
      * @return DBInstanceCpu 实例分配的CPU数量，单位：个
      */
-    public Long getDBInstanceCpu() {
+    public Integer getDBInstanceCpu() {
         return this.DBInstanceCpu;
     }
 
@@ -362,7 +362,7 @@ public class DBInstance extends AbstractModel{
      * Set 实例分配的CPU数量，单位：个
      * @param DBInstanceCpu 实例分配的CPU数量，单位：个
      */
-    public void setDBInstanceCpu(Long DBInstanceCpu) {
+    public void setDBInstanceCpu(Integer DBInstanceCpu) {
         this.DBInstanceCpu = DBInstanceCpu;
     }
 
@@ -530,7 +530,7 @@ public class DBInstance extends AbstractModel{
      * Get 是否自动续费，1：自动续费，0：不自动续费 
      * @return AutoRenew 是否自动续费，1：自动续费，0：不自动续费
      */
-    public Long getAutoRenew() {
+    public Integer getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -538,7 +538,7 @@ public class DBInstance extends AbstractModel{
      * Set 是否自动续费，1：自动续费，0：不自动续费
      * @param AutoRenew 是否自动续费，1：自动续费，0：不自动续费
      */
-    public void setAutoRenew(Long AutoRenew) {
+    public void setAutoRenew(Integer AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 

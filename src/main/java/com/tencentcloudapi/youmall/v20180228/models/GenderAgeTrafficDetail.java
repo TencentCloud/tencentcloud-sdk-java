@@ -27,7 +27,7 @@ public class GenderAgeTrafficDetail extends AbstractModel{
     */
     @SerializedName("Gender")
     @Expose
-    private Long Gender;
+    private Integer Gender;
 
     /**
     * 年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
@@ -41,13 +41,13 @@ public class GenderAgeTrafficDetail extends AbstractModel{
     */
     @SerializedName("TrafficCount")
     @Expose
-    private Long TrafficCount;
+    private Integer TrafficCount;
 
     /**
      * Get 性别: 0男1女 
      * @return Gender 性别: 0男1女
      */
-    public Long getGender() {
+    public Integer getGender() {
         return this.Gender;
     }
 
@@ -55,7 +55,7 @@ public class GenderAgeTrafficDetail extends AbstractModel{
      * Set 性别: 0男1女
      * @param Gender 性别: 0男1女
      */
-    public void setGender(Long Gender) {
+    public void setGender(Integer Gender) {
         this.Gender = Gender;
     }
 
@@ -79,7 +79,7 @@ public class GenderAgeTrafficDetail extends AbstractModel{
      * Get 客流量 
      * @return TrafficCount 客流量
      */
-    public Long getTrafficCount() {
+    public Integer getTrafficCount() {
         return this.TrafficCount;
     }
 
@@ -87,7 +87,7 @@ public class GenderAgeTrafficDetail extends AbstractModel{
      * Set 客流量
      * @param TrafficCount 客流量
      */
-    public void setTrafficCount(Long TrafficCount) {
+    public void setTrafficCount(Integer TrafficCount) {
         this.TrafficCount = TrafficCount;
     }
 

@@ -34,21 +34,21 @@ public class DescribeDBPriceRequest extends AbstractModel{
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Long GoodsNum;
+    private Integer GoodsNum;
 
     /**
     * 实例内存大小，单位：MB。
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 实例硬盘大小，单位：GB。
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。
@@ -62,7 +62,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
@@ -76,7 +76,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
     */
     @SerializedName("ProtectMode")
     @Expose
-    private Long ProtectMode;
+    private Integer ProtectMode;
 
     /**
      * Get 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。 
@@ -98,7 +98,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
-    public Long getGoodsNum() {
+    public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -106,7 +106,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Set 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
-    public void setGoodsNum(Long GoodsNum) {
+    public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -114,7 +114,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Get 实例内存大小，单位：MB。 
      * @return Memory 实例内存大小，单位：MB。
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -122,7 +122,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Set 实例内存大小，单位：MB。
      * @param Memory 实例内存大小，单位：MB。
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -130,7 +130,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Get 实例硬盘大小，单位：GB。 
      * @return Volume 实例硬盘大小，单位：GB。
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -138,7 +138,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Set 实例硬盘大小，单位：GB。
      * @param Volume 实例硬盘大小，单位：GB。
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -162,7 +162,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Get 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。 
      * @return Period 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -170,7 +170,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Set 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      * @param Period 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -194,7 +194,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Get 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。 
      * @return ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
-    public Long getProtectMode() {
+    public Integer getProtectMode() {
         return this.ProtectMode;
     }
 
@@ -202,7 +202,7 @@ public class DescribeDBPriceRequest extends AbstractModel{
      * Set 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      * @param ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
-    public void setProtectMode(Long ProtectMode) {
+    public void setProtectMode(Integer ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 

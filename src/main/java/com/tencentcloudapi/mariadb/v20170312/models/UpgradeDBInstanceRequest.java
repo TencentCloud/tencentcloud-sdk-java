@@ -35,7 +35,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -43,7 +43,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 是否自动使用代金券进行支付，默认不使用。
@@ -81,7 +81,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * @return Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -91,7 +91,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * @param Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -101,7 +101,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * @return Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -111,7 +111,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * @param Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 

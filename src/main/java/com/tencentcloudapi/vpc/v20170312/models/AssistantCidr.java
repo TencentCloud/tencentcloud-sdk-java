@@ -41,7 +41,7 @@ public class AssistantCidr extends AbstractModel{
     */
     @SerializedName("AssistantType")
     @Expose
-    private Long AssistantType;
+    private Integer AssistantType;
 
     /**
     * 辅助CIDR拆分的子网。
@@ -87,7 +87,7 @@ public class AssistantCidr extends AbstractModel{
      * Get 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。 
      * @return AssistantType 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
      */
-    public Long getAssistantType() {
+    public Integer getAssistantType() {
         return this.AssistantType;
     }
 
@@ -95,7 +95,7 @@ public class AssistantCidr extends AbstractModel{
      * Set 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
      * @param AssistantType 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
      */
-    public void setAssistantType(Long AssistantType) {
+    public void setAssistantType(Integer AssistantType) {
         this.AssistantType = AssistantType;
     }
 

@@ -48,7 +48,7 @@ public class StringData extends AbstractModel{
     */
     @SerializedName("Range")
     @Expose
-    private Long [] Range;
+    private Integer [] Range;
 
     /**
      * Get 名称 
@@ -102,7 +102,7 @@ public class StringData extends AbstractModel{
      * Get 长度范围 
      * @return Range 长度范围
      */
-    public Long [] getRange() {
+    public Integer [] getRange() {
         return this.Range;
     }
 
@@ -110,7 +110,7 @@ public class StringData extends AbstractModel{
      * Set 长度范围
      * @param Range 长度范围
      */
-    public void setRange(Long [] Range) {
+    public void setRange(Integer [] Range) {
         this.Range = Range;
     }
 

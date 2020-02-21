@@ -41,14 +41,14 @@ public class OperationCountLimit extends AbstractModel{
     */
     @SerializedName("CurrentCount")
     @Expose
-    private Long CurrentCount;
+    private Integer CurrentCount;
 
     /**
     * 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
     */
     @SerializedName("LimitCount")
     @Expose
-    private Long LimitCount;
+    private Integer LimitCount;
 
     /**
      * Get 实例操作。 
@@ -86,7 +86,7 @@ public class OperationCountLimit extends AbstractModel{
      * Get 当前已使用次数，如果返回值为-1表示该操作无次数限制。 
      * @return CurrentCount 当前已使用次数，如果返回值为-1表示该操作无次数限制。
      */
-    public Long getCurrentCount() {
+    public Integer getCurrentCount() {
         return this.CurrentCount;
     }
 
@@ -94,7 +94,7 @@ public class OperationCountLimit extends AbstractModel{
      * Set 当前已使用次数，如果返回值为-1表示该操作无次数限制。
      * @param CurrentCount 当前已使用次数，如果返回值为-1表示该操作无次数限制。
      */
-    public void setCurrentCount(Long CurrentCount) {
+    public void setCurrentCount(Integer CurrentCount) {
         this.CurrentCount = CurrentCount;
     }
 
@@ -102,7 +102,7 @@ public class OperationCountLimit extends AbstractModel{
      * Get 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。 
      * @return LimitCount 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
      */
-    public Long getLimitCount() {
+    public Integer getLimitCount() {
         return this.LimitCount;
     }
 
@@ -110,7 +110,7 @@ public class OperationCountLimit extends AbstractModel{
      * Set 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
      * @param LimitCount 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
      */
-    public void setLimitCount(Long LimitCount) {
+    public void setLimitCount(Integer LimitCount) {
         this.LimitCount = LimitCount;
     }
 

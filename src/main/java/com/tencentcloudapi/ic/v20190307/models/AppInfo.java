@@ -70,7 +70,7 @@ public class AppInfo extends AbstractModel{
     */
     @SerializedName("BizType")
     @Expose
-    private Long BizType;
+    private Integer BizType;
 
     /**
     * 用户Uin
@@ -183,7 +183,7 @@ public class AppInfo extends AbstractModel{
      * Get 应用类型 
      * @return BizType 应用类型
      */
-    public Long getBizType() {
+    public Integer getBizType() {
         return this.BizType;
     }
 
@@ -191,7 +191,7 @@ public class AppInfo extends AbstractModel{
      * Set 应用类型
      * @param BizType 应用类型
      */
-    public void setBizType(Long BizType) {
+    public void setBizType(Integer BizType) {
         this.BizType = BizType;
     }
 

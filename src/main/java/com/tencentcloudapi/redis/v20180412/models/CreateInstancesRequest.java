@@ -27,42 +27,42 @@ public class CreateInstancesRequest extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Long ZoneId;
+    private Integer ZoneId;
 
     /**
     * 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
     */
     @SerializedName("TypeId")
     @Expose
-    private Long TypeId;
+    private Integer TypeId;
 
     /**
     * 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
     */
     @SerializedName("MemSize")
     @Expose
-    private Long MemSize;
+    private Integer MemSize;
 
     /**
     * 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Long GoodsNum;
+    private Integer GoodsNum;
 
     /**
     * 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 付费方式:0-按量计费，1-包年包月。
     */
     @SerializedName("BillingMode")
     @Expose
-    private Long BillingMode;
+    private Integer BillingMode;
 
     /**
     * 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
@@ -90,14 +90,14 @@ public class CreateInstancesRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Long AutoRenew;
+    private Integer AutoRenew;
 
     /**
     * 安全组id数组
@@ -111,21 +111,21 @@ public class CreateInstancesRequest extends AbstractModel{
     */
     @SerializedName("VPort")
     @Expose
-    private Long VPort;
+    private Integer VPort;
 
     /**
     * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
     */
     @SerializedName("RedisShardNum")
     @Expose
-    private Long RedisShardNum;
+    private Integer RedisShardNum;
 
     /**
     * 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
     */
     @SerializedName("RedisReplicasNum")
     @Expose
-    private Long RedisReplicasNum;
+    private Integer RedisReplicasNum;
 
     /**
     * 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
@@ -152,7 +152,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 实例所属的可用区ID 
      * @return ZoneId 实例所属的可用区ID
      */
-    public Long getZoneId() {
+    public Integer getZoneId() {
         return this.ZoneId;
     }
 
@@ -160,7 +160,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 实例所属的可用区ID
      * @param ZoneId 实例所属的可用区ID
      */
-    public void setZoneId(Long ZoneId) {
+    public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -168,7 +168,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版， 
      * @return TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
-    public Long getTypeId() {
+    public Integer getTypeId() {
         return this.TypeId;
     }
 
@@ -176,7 +176,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      * @param TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
-    public void setTypeId(Long TypeId) {
+    public void setTypeId(Integer TypeId) {
         this.TypeId = TypeId;
     }
 
@@ -184,7 +184,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准 
      * @return MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      */
-    public Long getMemSize() {
+    public Integer getMemSize() {
         return this.MemSize;
     }
 
@@ -192,7 +192,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      * @param MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      */
-    public void setMemSize(Long MemSize) {
+    public void setMemSize(Integer MemSize) {
         this.MemSize = MemSize;
     }
 
@@ -200,7 +200,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准 
      * @return GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      */
-    public Long getGoodsNum() {
+    public Integer getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -208,7 +208,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      * @param GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      */
-    public void setGoodsNum(Long GoodsNum) {
+    public void setGoodsNum(Integer GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -216,7 +216,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36] 
      * @return Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -224,7 +224,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      * @param Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -232,7 +232,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 付费方式:0-按量计费，1-包年包月。 
      * @return BillingMode 付费方式:0-按量计费，1-包年包月。
      */
-    public Long getBillingMode() {
+    public Integer getBillingMode() {
         return this.BillingMode;
     }
 
@@ -240,7 +240,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 付费方式:0-按量计费，1-包年包月。
      * @param BillingMode 付费方式:0-按量计费，1-包年包月。
      */
-    public void setBillingMode(Long BillingMode) {
+    public void setBillingMode(Integer BillingMode) {
         this.BillingMode = BillingMode;
     }
 
@@ -296,7 +296,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准 
      * @return ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -304,7 +304,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
      * @param ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -312,7 +312,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
      * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
-    public Long getAutoRenew() {
+    public Integer getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -320,7 +320,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
-    public void setAutoRenew(Long AutoRenew) {
+    public void setAutoRenew(Integer AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
@@ -344,7 +344,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 用户自定义的端口 不填则默认为6379，范围[1024,65535] 
      * @return VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]
      */
-    public Long getVPort() {
+    public Integer getVPort() {
         return this.VPort;
     }
 
@@ -352,7 +352,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 用户自定义的端口 不填则默认为6379，范围[1024,65535]
      * @param VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]
      */
-    public void setVPort(Long VPort) {
+    public void setVPort(Integer VPort) {
         this.VPort = VPort;
     }
 
@@ -360,7 +360,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写 
      * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
-    public Long getRedisShardNum() {
+    public Integer getRedisShardNum() {
         return this.RedisShardNum;
     }
 
@@ -368,7 +368,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
-    public void setRedisShardNum(Long RedisShardNum) {
+    public void setRedisShardNum(Integer RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
@@ -376,7 +376,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Get 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public Long getRedisReplicasNum() {
+    public Integer getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
@@ -384,7 +384,7 @@ public class CreateInstancesRequest extends AbstractModel{
      * Set 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public void setRedisReplicasNum(Long RedisReplicasNum) {
+    public void setRedisReplicasNum(Integer RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 

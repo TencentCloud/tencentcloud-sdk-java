@@ -48,42 +48,42 @@ public class DescribeTaskResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 任务创建时间，Unix 时间戳
     */
     @SerializedName("CreateTime")
     @Expose
-    private Long CreateTime;
+    private Integer CreateTime;
 
     /**
     * 最后任务更新时间，Unix 时间戳
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Long UpdateTime;
+    private Integer UpdateTime;
 
     /**
     * 任务完成时间，Unix 时间戳
     */
     @SerializedName("DoneTime")
     @Expose
-    private Long DoneTime;
+    private Integer DoneTime;
 
     /**
     * 被调度时间，Unix 时间戳
     */
     @SerializedName("ScheduleTime")
     @Expose
-    private Long ScheduleTime;
+    private Integer ScheduleTime;
 
     /**
     * 返回的错误码
     */
     @SerializedName("RetCode")
     @Expose
-    private Long RetCode;
+    private Integer RetCode;
 
     /**
     * 返回的错误信息
@@ -97,21 +97,21 @@ public class DescribeTaskResponse extends AbstractModel{
     */
     @SerializedName("Percent")
     @Expose
-    private Long Percent;
+    private Integer Percent;
 
     /**
     * 匹配到的需执行任务的设备数目
     */
     @SerializedName("AllDeviceCnt")
     @Expose
-    private Long AllDeviceCnt;
+    private Integer AllDeviceCnt;
 
     /**
     * 已完成任务的设备数目
     */
     @SerializedName("DoneDeviceCnt")
     @Expose
-    private Long DoneDeviceCnt;
+    private Integer DoneDeviceCnt;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -172,7 +172,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消 
      * @return Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -180,7 +180,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      * @param Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -188,7 +188,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 任务创建时间，Unix 时间戳 
      * @return CreateTime 任务创建时间，Unix 时间戳
      */
-    public Long getCreateTime() {
+    public Integer getCreateTime() {
         return this.CreateTime;
     }
 
@@ -196,7 +196,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 任务创建时间，Unix 时间戳
      * @param CreateTime 任务创建时间，Unix 时间戳
      */
-    public void setCreateTime(Long CreateTime) {
+    public void setCreateTime(Integer CreateTime) {
         this.CreateTime = CreateTime;
     }
 
@@ -204,7 +204,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 最后任务更新时间，Unix 时间戳 
      * @return UpdateTime 最后任务更新时间，Unix 时间戳
      */
-    public Long getUpdateTime() {
+    public Integer getUpdateTime() {
         return this.UpdateTime;
     }
 
@@ -212,7 +212,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 最后任务更新时间，Unix 时间戳
      * @param UpdateTime 最后任务更新时间，Unix 时间戳
      */
-    public void setUpdateTime(Long UpdateTime) {
+    public void setUpdateTime(Integer UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
@@ -220,7 +220,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 任务完成时间，Unix 时间戳 
      * @return DoneTime 任务完成时间，Unix 时间戳
      */
-    public Long getDoneTime() {
+    public Integer getDoneTime() {
         return this.DoneTime;
     }
 
@@ -228,7 +228,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 任务完成时间，Unix 时间戳
      * @param DoneTime 任务完成时间，Unix 时间戳
      */
-    public void setDoneTime(Long DoneTime) {
+    public void setDoneTime(Integer DoneTime) {
         this.DoneTime = DoneTime;
     }
 
@@ -236,7 +236,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 被调度时间，Unix 时间戳 
      * @return ScheduleTime 被调度时间，Unix 时间戳
      */
-    public Long getScheduleTime() {
+    public Integer getScheduleTime() {
         return this.ScheduleTime;
     }
 
@@ -244,7 +244,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 被调度时间，Unix 时间戳
      * @param ScheduleTime 被调度时间，Unix 时间戳
      */
-    public void setScheduleTime(Long ScheduleTime) {
+    public void setScheduleTime(Integer ScheduleTime) {
         this.ScheduleTime = ScheduleTime;
     }
 
@@ -252,7 +252,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 返回的错误码 
      * @return RetCode 返回的错误码
      */
-    public Long getRetCode() {
+    public Integer getRetCode() {
         return this.RetCode;
     }
 
@@ -260,7 +260,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 返回的错误码
      * @param RetCode 返回的错误码
      */
-    public void setRetCode(Long RetCode) {
+    public void setRetCode(Integer RetCode) {
         this.RetCode = RetCode;
     }
 
@@ -284,7 +284,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 完成任务的设备比例 
      * @return Percent 完成任务的设备比例
      */
-    public Long getPercent() {
+    public Integer getPercent() {
         return this.Percent;
     }
 
@@ -292,7 +292,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 完成任务的设备比例
      * @param Percent 完成任务的设备比例
      */
-    public void setPercent(Long Percent) {
+    public void setPercent(Integer Percent) {
         this.Percent = Percent;
     }
 
@@ -300,7 +300,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 匹配到的需执行任务的设备数目 
      * @return AllDeviceCnt 匹配到的需执行任务的设备数目
      */
-    public Long getAllDeviceCnt() {
+    public Integer getAllDeviceCnt() {
         return this.AllDeviceCnt;
     }
 
@@ -308,7 +308,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 匹配到的需执行任务的设备数目
      * @param AllDeviceCnt 匹配到的需执行任务的设备数目
      */
-    public void setAllDeviceCnt(Long AllDeviceCnt) {
+    public void setAllDeviceCnt(Integer AllDeviceCnt) {
         this.AllDeviceCnt = AllDeviceCnt;
     }
 
@@ -316,7 +316,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 已完成任务的设备数目 
      * @return DoneDeviceCnt 已完成任务的设备数目
      */
-    public Long getDoneDeviceCnt() {
+    public Integer getDoneDeviceCnt() {
         return this.DoneDeviceCnt;
     }
 
@@ -324,7 +324,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 已完成任务的设备数目
      * @param DoneDeviceCnt 已完成任务的设备数目
      */
-    public void setDoneDeviceCnt(Long DoneDeviceCnt) {
+    public void setDoneDeviceCnt(Integer DoneDeviceCnt) {
         this.DoneDeviceCnt = DoneDeviceCnt;
     }
 

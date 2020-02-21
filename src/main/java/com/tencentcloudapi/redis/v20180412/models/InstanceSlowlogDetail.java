@@ -27,7 +27,7 @@ public class InstanceSlowlogDetail extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Long Duration;
+    private Integer Duration;
 
     /**
     * 客户端地址
@@ -61,7 +61,7 @@ public class InstanceSlowlogDetail extends AbstractModel{
      * Get 慢查询耗时 
      * @return Duration 慢查询耗时
      */
-    public Long getDuration() {
+    public Integer getDuration() {
         return this.Duration;
     }
 
@@ -69,7 +69,7 @@ public class InstanceSlowlogDetail extends AbstractModel{
      * Set 慢查询耗时
      * @param Duration 慢查询耗时
      */
-    public void setDuration(Long Duration) {
+    public void setDuration(Integer Duration) {
         this.Duration = Duration;
     }
 

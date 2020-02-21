@@ -34,14 +34,14 @@ public class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractMo
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 区域ID
     */
     @SerializedName("ZoneId")
     @Expose
-    private Long ZoneId;
+    private Integer ZoneId;
 
     /**
     * 开始日期，格式yyyy-MM-dd
@@ -77,7 +77,7 @@ public class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractMo
      * Get 店铺ID 
      * @return ShopId 店铺ID
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -85,7 +85,7 @@ public class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractMo
      * Set 店铺ID
      * @param ShopId 店铺ID
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -93,7 +93,7 @@ public class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractMo
      * Get 区域ID 
      * @return ZoneId 区域ID
      */
-    public Long getZoneId() {
+    public Integer getZoneId() {
         return this.ZoneId;
     }
 
@@ -101,7 +101,7 @@ public class DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest extends AbstractMo
      * Set 区域ID
      * @param ZoneId 区域ID
      */
-    public void setZoneId(Long ZoneId) {
+    public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;
     }
 

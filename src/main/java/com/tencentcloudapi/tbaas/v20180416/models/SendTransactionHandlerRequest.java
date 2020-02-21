@@ -48,7 +48,7 @@ public class SendTransactionHandlerRequest extends AbstractModel{
     */
     @SerializedName("ContractId")
     @Expose
-    private Long ContractId;
+    private Integer ContractId;
 
     /**
     * 合约方法名
@@ -116,7 +116,7 @@ public class SendTransactionHandlerRequest extends AbstractModel{
      * Get 合约编号 
      * @return ContractId 合约编号
      */
-    public Long getContractId() {
+    public Integer getContractId() {
         return this.ContractId;
     }
 
@@ -124,7 +124,7 @@ public class SendTransactionHandlerRequest extends AbstractModel{
      * Set 合约编号
      * @param ContractId 合约编号
      */
-    public void setContractId(Long ContractId) {
+    public void setContractId(Integer ContractId) {
         this.ContractId = ContractId;
     }
 

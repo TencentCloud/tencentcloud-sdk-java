@@ -27,7 +27,7 @@ public class DescribeProjectSecurityGroupRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 安全组Id
@@ -40,7 +40,7 @@ public class DescribeProjectSecurityGroupRequest extends AbstractModel{
      * Get 0:默认项目；-1 所有项目; >0: 特定项目 
      * @return ProjectId 0:默认项目；-1 所有项目; >0: 特定项目
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -48,7 +48,7 @@ public class DescribeProjectSecurityGroupRequest extends AbstractModel{
      * Set 0:默认项目；-1 所有项目; >0: 特定项目
      * @param ProjectId 0:默认项目；-1 所有项目; >0: 特定项目
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

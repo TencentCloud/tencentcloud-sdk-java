@@ -27,7 +27,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Long TimeSpan;
+    private Integer TimeSpan;
 
     /**
     * 资源ID列表
@@ -48,7 +48,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Long PayMode;
+    private Integer PayMode;
 
     /**
     * 时间单位，默认为m
@@ -68,7 +68,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
      * Get 时间长度 
      * @return TimeSpan 时间长度
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -76,7 +76,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
      * Set 时间长度
      * @param TimeSpan 时间长度
      */
-    public void setTimeSpan(Long TimeSpan) {
+    public void setTimeSpan(Integer TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -116,7 +116,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
      * Get 计费模式，0表示按量，1表示包年报月，此处只能为包年包月 
      * @return PayMode 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
      */
-    public Long getPayMode() {
+    public Integer getPayMode() {
         return this.PayMode;
     }
 
@@ -124,7 +124,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
      * Set 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
      * @param PayMode 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
      */
-    public void setPayMode(Long PayMode) {
+    public void setPayMode(Integer PayMode) {
         this.PayMode = PayMode;
     }
 

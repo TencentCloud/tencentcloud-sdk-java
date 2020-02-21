@@ -41,7 +41,7 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Long InternetMaxBandwidthOut;
+    private Integer InternetMaxBandwidthOut;
 
     /**
      * Get NAT网关的ID，形如：`nat-df45454`。 
@@ -79,7 +79,7 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel{
      * Get NAT网关最大外网出带宽(单位:Mbps)。 
      * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
      */
-    public Long getInternetMaxBandwidthOut() {
+    public Integer getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -87,7 +87,7 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel{
      * Set NAT网关最大外网出带宽(单位:Mbps)。
      * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
      */
-    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

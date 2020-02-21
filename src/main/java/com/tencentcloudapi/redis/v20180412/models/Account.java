@@ -68,7 +68,7 @@ public class Account extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
      * Get 实例ID
@@ -176,7 +176,7 @@ public class Account extends AbstractModel{
      * @return Status 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -186,7 +186,7 @@ public class Account extends AbstractModel{
      * @param Status 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

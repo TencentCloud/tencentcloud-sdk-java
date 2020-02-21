@@ -27,35 +27,35 @@ public class DescribeEipQuotaResponse extends AbstractModel{
     */
     @SerializedName("EipNumQuota")
     @Expose
-    private Long EipNumQuota;
+    private Integer EipNumQuota;
 
     /**
     * 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
     */
     @SerializedName("CurrentEipNum")
     @Expose
-    private Long CurrentEipNum;
+    private Integer CurrentEipNum;
 
     /**
     * 当天申请EIP次数
     */
     @SerializedName("DailyApplyCount")
     @Expose
-    private Long DailyApplyCount;
+    private Integer DailyApplyCount;
 
     /**
     * 每日申请EIP的次数限制
     */
     @SerializedName("DailyApplyQuota")
     @Expose
-    private Long DailyApplyQuota;
+    private Integer DailyApplyQuota;
 
     /**
     * BatchApplyMax
     */
     @SerializedName("BatchApplyMax")
     @Expose
-    private Long BatchApplyMax;
+    private Integer BatchApplyMax;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -68,7 +68,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Get 能拥有的EIP个数的总配额，默认是100个 
      * @return EipNumQuota 能拥有的EIP个数的总配额，默认是100个
      */
-    public Long getEipNumQuota() {
+    public Integer getEipNumQuota() {
         return this.EipNumQuota;
     }
 
@@ -76,7 +76,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Set 能拥有的EIP个数的总配额，默认是100个
      * @param EipNumQuota 能拥有的EIP个数的总配额，默认是100个
      */
-    public void setEipNumQuota(Long EipNumQuota) {
+    public void setEipNumQuota(Integer EipNumQuota) {
         this.EipNumQuota = EipNumQuota;
     }
 
@@ -84,7 +84,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Get 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和 
      * @return CurrentEipNum 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
      */
-    public Long getCurrentEipNum() {
+    public Integer getCurrentEipNum() {
         return this.CurrentEipNum;
     }
 
@@ -92,7 +92,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Set 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
      * @param CurrentEipNum 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
      */
-    public void setCurrentEipNum(Long CurrentEipNum) {
+    public void setCurrentEipNum(Integer CurrentEipNum) {
         this.CurrentEipNum = CurrentEipNum;
     }
 
@@ -100,7 +100,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Get 当天申请EIP次数 
      * @return DailyApplyCount 当天申请EIP次数
      */
-    public Long getDailyApplyCount() {
+    public Integer getDailyApplyCount() {
         return this.DailyApplyCount;
     }
 
@@ -108,7 +108,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Set 当天申请EIP次数
      * @param DailyApplyCount 当天申请EIP次数
      */
-    public void setDailyApplyCount(Long DailyApplyCount) {
+    public void setDailyApplyCount(Integer DailyApplyCount) {
         this.DailyApplyCount = DailyApplyCount;
     }
 
@@ -116,7 +116,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Get 每日申请EIP的次数限制 
      * @return DailyApplyQuota 每日申请EIP的次数限制
      */
-    public Long getDailyApplyQuota() {
+    public Integer getDailyApplyQuota() {
         return this.DailyApplyQuota;
     }
 
@@ -124,7 +124,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Set 每日申请EIP的次数限制
      * @param DailyApplyQuota 每日申请EIP的次数限制
      */
-    public void setDailyApplyQuota(Long DailyApplyQuota) {
+    public void setDailyApplyQuota(Integer DailyApplyQuota) {
         this.DailyApplyQuota = DailyApplyQuota;
     }
 
@@ -132,7 +132,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Get BatchApplyMax 
      * @return BatchApplyMax BatchApplyMax
      */
-    public Long getBatchApplyMax() {
+    public Integer getBatchApplyMax() {
         return this.BatchApplyMax;
     }
 
@@ -140,7 +140,7 @@ public class DescribeEipQuotaResponse extends AbstractModel{
      * Set BatchApplyMax
      * @param BatchApplyMax BatchApplyMax
      */
-    public void setBatchApplyMax(Long BatchApplyMax) {
+    public void setBatchApplyMax(Integer BatchApplyMax) {
         this.BatchApplyMax = BatchApplyMax;
     }
 

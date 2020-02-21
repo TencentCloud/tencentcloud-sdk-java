@@ -27,7 +27,7 @@ public class DescribeAgentBillsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 业务明细列表
@@ -47,7 +47,7 @@ public class DescribeAgentBillsResponse extends AbstractModel{
      * Get 符合查询条件列表总数量 
      * @return TotalCount 符合查询条件列表总数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeAgentBillsResponse extends AbstractModel{
      * Set 符合查询条件列表总数量
      * @param TotalCount 符合查询条件列表总数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

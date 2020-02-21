@@ -27,14 +27,14 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 升级后的实例磁盘大小，单位GB
     */
     @SerializedName("Storage")
     @Expose
-    private Long Storage;
+    private Integer Storage;
 
     /**
     * 实例ID，形如postgres-lnp6j617
@@ -48,7 +48,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Long AutoVoucher;
+    private Integer AutoVoucher;
 
     /**
     * 代金券ID列表，目前仅支持指定一张代金券
@@ -61,7 +61,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Get 升级后的实例内存大小，单位GB 
      * @return Memory 升级后的实例内存大小，单位GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -69,7 +69,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Set 升级后的实例内存大小，单位GB
      * @param Memory 升级后的实例内存大小，单位GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -77,7 +77,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Get 升级后的实例磁盘大小，单位GB 
      * @return Storage 升级后的实例磁盘大小，单位GB
      */
-    public Long getStorage() {
+    public Integer getStorage() {
         return this.Storage;
     }
 
@@ -85,7 +85,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Set 升级后的实例磁盘大小，单位GB
      * @param Storage 升级后的实例磁盘大小，单位GB
      */
-    public void setStorage(Long Storage) {
+    public void setStorage(Integer Storage) {
         this.Storage = Storage;
     }
 
@@ -109,7 +109,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Get 是否自动使用代金券,1是,0否，默认不使用 
      * @return AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
      */
-    public Long getAutoVoucher() {
+    public Integer getAutoVoucher() {
         return this.AutoVoucher;
     }
 
@@ -117,7 +117,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Set 是否自动使用代金券,1是,0否，默认不使用
      * @param AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
      */
-    public void setAutoVoucher(Long AutoVoucher) {
+    public void setAutoVoucher(Integer AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 

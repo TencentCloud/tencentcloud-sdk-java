@@ -34,14 +34,14 @@ public class DescribeUserBaseInfoInstanceResponse extends AbstractModel{
     */
     @SerializedName("UserAppid")
     @Expose
-    private Long UserAppid;
+    private Integer UserAppid;
 
     /**
     * 系统时间戳
     */
     @SerializedName("TimeStamp")
     @Expose
-    private Long TimeStamp;
+    private Integer TimeStamp;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -70,7 +70,7 @@ public class DescribeUserBaseInfoInstanceResponse extends AbstractModel{
      * Get 用户APPID信息 
      * @return UserAppid 用户APPID信息
      */
-    public Long getUserAppid() {
+    public Integer getUserAppid() {
         return this.UserAppid;
     }
 
@@ -78,7 +78,7 @@ public class DescribeUserBaseInfoInstanceResponse extends AbstractModel{
      * Set 用户APPID信息
      * @param UserAppid 用户APPID信息
      */
-    public void setUserAppid(Long UserAppid) {
+    public void setUserAppid(Integer UserAppid) {
         this.UserAppid = UserAppid;
     }
 
@@ -86,7 +86,7 @@ public class DescribeUserBaseInfoInstanceResponse extends AbstractModel{
      * Get 系统时间戳 
      * @return TimeStamp 系统时间戳
      */
-    public Long getTimeStamp() {
+    public Integer getTimeStamp() {
         return this.TimeStamp;
     }
 
@@ -94,7 +94,7 @@ public class DescribeUserBaseInfoInstanceResponse extends AbstractModel{
      * Set 系统时间戳
      * @param TimeStamp 系统时间戳
      */
-    public void setTimeStamp(Long TimeStamp) {
+    public void setTimeStamp(Integer TimeStamp) {
         this.TimeStamp = TimeStamp;
     }
 

@@ -48,7 +48,7 @@ public class AuditApplyClientResponse extends AbstractModel{
     */
     @SerializedName("AgentTime")
     @Expose
-    private Long AgentTime;
+    private Integer AgentTime;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -109,7 +109,7 @@ public class AuditApplyClientResponse extends AbstractModel{
      * Get 关联时间对应的时间戳 
      * @return AgentTime 关联时间对应的时间戳
      */
-    public Long getAgentTime() {
+    public Integer getAgentTime() {
         return this.AgentTime;
     }
 
@@ -117,7 +117,7 @@ public class AuditApplyClientResponse extends AbstractModel{
      * Set 关联时间对应的时间戳
      * @param AgentTime 关联时间对应的时间戳
      */
-    public void setAgentTime(Long AgentTime) {
+    public void setAgentTime(Integer AgentTime) {
         this.AgentTime = AgentTime;
     }
 

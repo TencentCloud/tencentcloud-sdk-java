@@ -27,7 +27,7 @@ public class DescribeComputeEnvCreateInfosResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 计算环境创建信息列表
@@ -47,7 +47,7 @@ public class DescribeComputeEnvCreateInfosResponse extends AbstractModel{
      * Get 计算环境数量 
      * @return TotalCount 计算环境数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeComputeEnvCreateInfosResponse extends AbstractModel{
      * Set 计算环境数量
      * @param TotalCount 计算环境数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

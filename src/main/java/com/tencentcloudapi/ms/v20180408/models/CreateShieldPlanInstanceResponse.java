@@ -27,14 +27,14 @@ public class CreateShieldPlanInstanceResponse extends AbstractModel{
     */
     @SerializedName("PlanId")
     @Expose
-    private Long PlanId;
+    private Integer PlanId;
 
     /**
     * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
     */
     @SerializedName("Progress")
     @Expose
-    private Long Progress;
+    private Integer Progress;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class CreateShieldPlanInstanceResponse extends AbstractModel{
      * Get 策略id 
      * @return PlanId 策略id
      */
-    public Long getPlanId() {
+    public Integer getPlanId() {
         return this.PlanId;
     }
 
@@ -55,7 +55,7 @@ public class CreateShieldPlanInstanceResponse extends AbstractModel{
      * Set 策略id
      * @param PlanId 策略id
      */
-    public void setPlanId(Long PlanId) {
+    public void setPlanId(Integer PlanId) {
         this.PlanId = PlanId;
     }
 
@@ -63,7 +63,7 @@ public class CreateShieldPlanInstanceResponse extends AbstractModel{
      * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public Long getProgress() {
+    public Integer getProgress() {
         return this.Progress;
     }
 
@@ -71,7 +71,7 @@ public class CreateShieldPlanInstanceResponse extends AbstractModel{
      * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public void setProgress(Long Progress) {
+    public void setProgress(Integer Progress) {
         this.Progress = Progress;
     }
 

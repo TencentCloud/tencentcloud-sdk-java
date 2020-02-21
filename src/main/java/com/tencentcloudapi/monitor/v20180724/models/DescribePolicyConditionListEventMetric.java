@@ -27,7 +27,7 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
     */
     @SerializedName("EventId")
     @Expose
-    private Long EventId;
+    private Integer EventId;
 
     /**
     * 事件名称
@@ -48,13 +48,13 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
      * Get 事件id 
      * @return EventId 事件id
      */
-    public Long getEventId() {
+    public Integer getEventId() {
         return this.EventId;
     }
 
@@ -62,7 +62,7 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
      * Set 事件id
      * @param EventId 事件id
      */
-    public void setEventId(Long EventId) {
+    public void setEventId(Integer EventId) {
         this.EventId = EventId;
     }
 
@@ -102,7 +102,7 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
      * Get 事件类型，预留字段，当前固定取值为2 
      * @return Type 事件类型，预留字段，当前固定取值为2
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -110,7 +110,7 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
      * Set 事件类型，预留字段，当前固定取值为2
      * @param Type 事件类型，预留字段，当前固定取值为2
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 

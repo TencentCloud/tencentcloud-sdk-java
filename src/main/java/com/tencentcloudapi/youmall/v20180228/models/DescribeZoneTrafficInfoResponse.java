@@ -34,14 +34,14 @@ public class DescribeZoneTrafficInfoResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 查询结果总数
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 区域客流信息列表
@@ -77,7 +77,7 @@ public class DescribeZoneTrafficInfoResponse extends AbstractModel{
      * Get 门店ID 
      * @return ShopId 门店ID
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -85,7 +85,7 @@ public class DescribeZoneTrafficInfoResponse extends AbstractModel{
      * Set 门店ID
      * @param ShopId 门店ID
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -93,7 +93,7 @@ public class DescribeZoneTrafficInfoResponse extends AbstractModel{
      * Get 查询结果总数 
      * @return TotalCount 查询结果总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -101,7 +101,7 @@ public class DescribeZoneTrafficInfoResponse extends AbstractModel{
      * Set 查询结果总数
      * @param TotalCount 查询结果总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

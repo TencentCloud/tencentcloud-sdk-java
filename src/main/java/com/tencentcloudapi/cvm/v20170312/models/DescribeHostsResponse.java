@@ -27,7 +27,7 @@ public class DescribeHostsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * cdh实例详细信息列表
@@ -47,7 +47,7 @@ public class DescribeHostsResponse extends AbstractModel{
      * Get 符合查询条件的cdh实例总数 
      * @return TotalCount 符合查询条件的cdh实例总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeHostsResponse extends AbstractModel{
      * Set 符合查询条件的cdh实例总数
      * @param TotalCount 符合查询条件的cdh实例总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

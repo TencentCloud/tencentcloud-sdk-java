@@ -41,7 +41,7 @@ public class Task extends AbstractModel{
     */
     @SerializedName("TaskInstanceNum")
     @Expose
-    private Long TaskInstanceNum;
+    private Integer TaskInstanceNum;
 
     /**
     * 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
@@ -118,21 +118,21 @@ public class Task extends AbstractModel{
     */
     @SerializedName("MaxRetryCount")
     @Expose
-    private Long MaxRetryCount;
+    private Integer MaxRetryCount;
 
     /**
     * 任务启动后的超时时间，单位秒，默认为86400秒
     */
     @SerializedName("Timeout")
     @Expose
-    private Long Timeout;
+    private Integer Timeout;
 
     /**
     * 任务最大并发数限制，默认没有限制。
     */
     @SerializedName("MaxConcurrentNum")
     @Expose
-    private Long MaxConcurrentNum;
+    private Integer MaxConcurrentNum;
 
     /**
     * 任务完成后，重启计算节点。适用于指定计算环境执行任务。
@@ -146,7 +146,7 @@ public class Task extends AbstractModel{
     */
     @SerializedName("ResourceMaxRetryCount")
     @Expose
-    private Long ResourceMaxRetryCount;
+    private Integer ResourceMaxRetryCount;
 
     /**
      * Get 应用程序信息 
@@ -184,7 +184,7 @@ public class Task extends AbstractModel{
      * Get 任务实例运行个数 
      * @return TaskInstanceNum 任务实例运行个数
      */
-    public Long getTaskInstanceNum() {
+    public Integer getTaskInstanceNum() {
         return this.TaskInstanceNum;
     }
 
@@ -192,7 +192,7 @@ public class Task extends AbstractModel{
      * Set 任务实例运行个数
      * @param TaskInstanceNum 任务实例运行个数
      */
-    public void setTaskInstanceNum(Long TaskInstanceNum) {
+    public void setTaskInstanceNum(Integer TaskInstanceNum) {
         this.TaskInstanceNum = TaskInstanceNum;
     }
 
@@ -360,7 +360,7 @@ public class Task extends AbstractModel{
      * Get 任务失败后的最大重试次数，默认为0 
      * @return MaxRetryCount 任务失败后的最大重试次数，默认为0
      */
-    public Long getMaxRetryCount() {
+    public Integer getMaxRetryCount() {
         return this.MaxRetryCount;
     }
 
@@ -368,7 +368,7 @@ public class Task extends AbstractModel{
      * Set 任务失败后的最大重试次数，默认为0
      * @param MaxRetryCount 任务失败后的最大重试次数，默认为0
      */
-    public void setMaxRetryCount(Long MaxRetryCount) {
+    public void setMaxRetryCount(Integer MaxRetryCount) {
         this.MaxRetryCount = MaxRetryCount;
     }
 
@@ -376,7 +376,7 @@ public class Task extends AbstractModel{
      * Get 任务启动后的超时时间，单位秒，默认为86400秒 
      * @return Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      */
-    public Long getTimeout() {
+    public Integer getTimeout() {
         return this.Timeout;
     }
 
@@ -384,7 +384,7 @@ public class Task extends AbstractModel{
      * Set 任务启动后的超时时间，单位秒，默认为86400秒
      * @param Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      */
-    public void setTimeout(Long Timeout) {
+    public void setTimeout(Integer Timeout) {
         this.Timeout = Timeout;
     }
 
@@ -392,7 +392,7 @@ public class Task extends AbstractModel{
      * Get 任务最大并发数限制，默认没有限制。 
      * @return MaxConcurrentNum 任务最大并发数限制，默认没有限制。
      */
-    public Long getMaxConcurrentNum() {
+    public Integer getMaxConcurrentNum() {
         return this.MaxConcurrentNum;
     }
 
@@ -400,7 +400,7 @@ public class Task extends AbstractModel{
      * Set 任务最大并发数限制，默认没有限制。
      * @param MaxConcurrentNum 任务最大并发数限制，默认没有限制。
      */
-    public void setMaxConcurrentNum(Long MaxConcurrentNum) {
+    public void setMaxConcurrentNum(Integer MaxConcurrentNum) {
         this.MaxConcurrentNum = MaxConcurrentNum;
     }
 
@@ -424,7 +424,7 @@ public class Task extends AbstractModel{
      * Get 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。 
      * @return ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
      */
-    public Long getResourceMaxRetryCount() {
+    public Integer getResourceMaxRetryCount() {
         return this.ResourceMaxRetryCount;
     }
 
@@ -432,7 +432,7 @@ public class Task extends AbstractModel{
      * Set 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
      * @param ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
      */
-    public void setResourceMaxRetryCount(Long ResourceMaxRetryCount) {
+    public void setResourceMaxRetryCount(Integer ResourceMaxRetryCount) {
         this.ResourceMaxRetryCount = ResourceMaxRetryCount;
     }
 

@@ -28,7 +28,7 @@ public class ErrorPageRule extends AbstractModel{
     */
     @SerializedName("StatusCode")
     @Expose
-    private Long StatusCode;
+    private Integer StatusCode;
 
     /**
     * 重定向状态码设置
@@ -36,7 +36,7 @@ public class ErrorPageRule extends AbstractModel{
     */
     @SerializedName("RedirectCode")
     @Expose
-    private Long RedirectCode;
+    private Integer RedirectCode;
 
     /**
     * 重定向 URL
@@ -52,7 +52,7 @@ public class ErrorPageRule extends AbstractModel{
      * @return StatusCode 状态码
 支持 400、403、404、500
      */
-    public Long getStatusCode() {
+    public Integer getStatusCode() {
         return this.StatusCode;
     }
 
@@ -62,7 +62,7 @@ public class ErrorPageRule extends AbstractModel{
      * @param StatusCode 状态码
 支持 400、403、404、500
      */
-    public void setStatusCode(Long StatusCode) {
+    public void setStatusCode(Integer StatusCode) {
         this.StatusCode = StatusCode;
     }
 
@@ -72,7 +72,7 @@ public class ErrorPageRule extends AbstractModel{
      * @return RedirectCode 重定向状态码设置
 支持 301 或 302
      */
-    public Long getRedirectCode() {
+    public Integer getRedirectCode() {
         return this.RedirectCode;
     }
 
@@ -82,7 +82,7 @@ public class ErrorPageRule extends AbstractModel{
      * @param RedirectCode 重定向状态码设置
 支持 301 或 302
      */
-    public void setRedirectCode(Long RedirectCode) {
+    public void setRedirectCode(Integer RedirectCode) {
         this.RedirectCode = RedirectCode;
     }
 

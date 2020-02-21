@@ -34,7 +34,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse exte
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse exte
      * Get 符合条件的NAT网关端口转发规则对象数目。 
      * @return TotalCount 符合条件的NAT网关端口转发规则对象数目。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -71,7 +71,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse exte
      * Set 符合条件的NAT网关端口转发规则对象数目。
      * @param TotalCount 符合条件的NAT网关端口转发规则对象数目。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

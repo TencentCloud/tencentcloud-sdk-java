@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SensitiveWordsRecognitionRequest extends AbstractModel{
+public class GetLayerVersionRequest extends AbstractModel{
 
     /**
-    * 待识别的文本（仅支持UTF-8格式，不超过2000字）
+    * 层名称
     */
-    @SerializedName("Text")
+    @SerializedName("LayerName")
     @Expose
-    private String Text;
+    private String LayerName;
 
     /**
-     * Get 待识别的文本（仅支持UTF-8格式，不超过2000字） 
-     * @return Text 待识别的文本（仅支持UTF-8格式，不超过2000字）
+    * 版本号
+    */
+    @SerializedName("LayerVersion")
+    @Expose
+    private Integer LayerVersion;
+
+    /**
+     * Get 层名称 
+     * @return LayerName 层名称
      */
-    public String getText() {
-        return this.Text;
+    public String getLayerName() {
+        return this.LayerName;
     }
 
     /**
-     * Set 待识别的文本（仅支持UTF-8格式，不超过2000字）
-     * @param Text 待识别的文本（仅支持UTF-8格式，不超过2000字）
+     * Set 层名称
+     * @param LayerName 层名称
      */
-    public void setText(String Text) {
-        this.Text = Text;
+    public void setLayerName(String LayerName) {
+        this.LayerName = LayerName;
+    }
+
+    /**
+     * Get 版本号 
+     * @return LayerVersion 版本号
+     */
+    public Integer getLayerVersion() {
+        return this.LayerVersion;
+    }
+
+    /**
+     * Set 版本号
+     * @param LayerVersion 版本号
+     */
+    public void setLayerVersion(Integer LayerVersion) {
+        this.LayerVersion = LayerVersion;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "LayerName", this.LayerName);
+        this.setParamSimple(map, prefix + "LayerVersion", this.LayerVersion);
 
     }
 }

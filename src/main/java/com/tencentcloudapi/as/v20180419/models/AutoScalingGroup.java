@@ -55,14 +55,14 @@ public class AutoScalingGroup extends AbstractModel{
     */
     @SerializedName("DefaultCooldown")
     @Expose
-    private Long DefaultCooldown;
+    private Integer DefaultCooldown;
 
     /**
     * 期望实例数
     */
     @SerializedName("DesiredCapacity")
     @Expose
-    private Long DesiredCapacity;
+    private Integer DesiredCapacity;
 
     /**
     * 启用状态，取值包括`ENABLED`和`DISABLED`
@@ -83,14 +83,14 @@ public class AutoScalingGroup extends AbstractModel{
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Long InstanceCount;
+    private Integer InstanceCount;
 
     /**
     * 状态为`IN_SERVICE`实例的数量
     */
     @SerializedName("InServiceInstanceCount")
     @Expose
-    private Long InServiceInstanceCount;
+    private Integer InServiceInstanceCount;
 
     /**
     * 启动配置ID
@@ -118,21 +118,21 @@ public class AutoScalingGroup extends AbstractModel{
     */
     @SerializedName("MaxSize")
     @Expose
-    private Long MaxSize;
+    private Integer MaxSize;
 
     /**
     * 最小实例数
     */
     @SerializedName("MinSize")
     @Expose
-    private Long MinSize;
+    private Integer MinSize;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 子网ID列表
@@ -195,7 +195,7 @@ public class AutoScalingGroup extends AbstractModel{
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
-    private Long Ipv6AddressCount;
+    private Integer Ipv6AddressCount;
 
     /**
     * 多可用区/子网策略。
@@ -274,7 +274,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 默认冷却时间，单位秒 
      * @return DefaultCooldown 默认冷却时间，单位秒
      */
-    public Long getDefaultCooldown() {
+    public Integer getDefaultCooldown() {
         return this.DefaultCooldown;
     }
 
@@ -282,7 +282,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 默认冷却时间，单位秒
      * @param DefaultCooldown 默认冷却时间，单位秒
      */
-    public void setDefaultCooldown(Long DefaultCooldown) {
+    public void setDefaultCooldown(Integer DefaultCooldown) {
         this.DefaultCooldown = DefaultCooldown;
     }
 
@@ -290,7 +290,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 期望实例数 
      * @return DesiredCapacity 期望实例数
      */
-    public Long getDesiredCapacity() {
+    public Integer getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
@@ -298,7 +298,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 期望实例数
      * @param DesiredCapacity 期望实例数
      */
-    public void setDesiredCapacity(Long DesiredCapacity) {
+    public void setDesiredCapacity(Integer DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 
@@ -338,7 +338,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 实例数量 
      * @return InstanceCount 实例数量
      */
-    public Long getInstanceCount() {
+    public Integer getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -346,7 +346,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 实例数量
      * @param InstanceCount 实例数量
      */
-    public void setInstanceCount(Long InstanceCount) {
+    public void setInstanceCount(Integer InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
@@ -354,7 +354,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 状态为`IN_SERVICE`实例的数量 
      * @return InServiceInstanceCount 状态为`IN_SERVICE`实例的数量
      */
-    public Long getInServiceInstanceCount() {
+    public Integer getInServiceInstanceCount() {
         return this.InServiceInstanceCount;
     }
 
@@ -362,7 +362,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 状态为`IN_SERVICE`实例的数量
      * @param InServiceInstanceCount 状态为`IN_SERVICE`实例的数量
      */
-    public void setInServiceInstanceCount(Long InServiceInstanceCount) {
+    public void setInServiceInstanceCount(Integer InServiceInstanceCount) {
         this.InServiceInstanceCount = InServiceInstanceCount;
     }
 
@@ -418,7 +418,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 最大实例数 
      * @return MaxSize 最大实例数
      */
-    public Long getMaxSize() {
+    public Integer getMaxSize() {
         return this.MaxSize;
     }
 
@@ -426,7 +426,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 最大实例数
      * @param MaxSize 最大实例数
      */
-    public void setMaxSize(Long MaxSize) {
+    public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;
     }
 
@@ -434,7 +434,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 最小实例数 
      * @return MinSize 最小实例数
      */
-    public Long getMinSize() {
+    public Integer getMinSize() {
         return this.MinSize;
     }
 
@@ -442,7 +442,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 最小实例数
      * @param MinSize 最小实例数
      */
-    public void setMinSize(Long MinSize) {
+    public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
     }
 
@@ -450,7 +450,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -458,7 +458,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -594,7 +594,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Get 实例具有IPv6地址数量的配置 
      * @return Ipv6AddressCount 实例具有IPv6地址数量的配置
      */
-    public Long getIpv6AddressCount() {
+    public Integer getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
@@ -602,7 +602,7 @@ public class AutoScalingGroup extends AbstractModel{
      * Set 实例具有IPv6地址数量的配置
      * @param Ipv6AddressCount 实例具有IPv6地址数量的配置
      */
-    public void setIpv6AddressCount(Long Ipv6AddressCount) {
+    public void setIpv6AddressCount(Integer Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 

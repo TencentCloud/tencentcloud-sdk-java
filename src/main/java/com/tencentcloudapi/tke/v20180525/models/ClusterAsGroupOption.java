@@ -44,7 +44,7 @@ public class ClusterAsGroupOption extends AbstractModel{
     */
     @SerializedName("MaxEmptyBulkDelete")
     @Expose
-    private Long MaxEmptyBulkDelete;
+    private Integer MaxEmptyBulkDelete;
 
     /**
     * 集群扩容后多少分钟开始判断缩容（默认为10分钟）
@@ -52,7 +52,7 @@ public class ClusterAsGroupOption extends AbstractModel{
     */
     @SerializedName("ScaleDownDelay")
     @Expose
-    private Long ScaleDownDelay;
+    private Integer ScaleDownDelay;
 
     /**
     * 节点连续空闲多少分钟后被缩容（默认为 10分钟）
@@ -60,7 +60,7 @@ public class ClusterAsGroupOption extends AbstractModel{
     */
     @SerializedName("ScaleDownUnneededTime")
     @Expose
-    private Long ScaleDownUnneededTime;
+    private Integer ScaleDownUnneededTime;
 
     /**
     * 节点资源使用量低于多少(百分比)时认为空闲(默认: 50(百分比))
@@ -68,7 +68,7 @@ public class ClusterAsGroupOption extends AbstractModel{
     */
     @SerializedName("ScaleDownUtilizationThreshold")
     @Expose
-    private Long ScaleDownUtilizationThreshold;
+    private Integer ScaleDownUtilizationThreshold;
 
     /**
     * 含有本地存储Pod的节点是否不缩容(默认： FALSE)
@@ -140,7 +140,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @return MaxEmptyBulkDelete 最大并发缩容数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMaxEmptyBulkDelete() {
+    public Integer getMaxEmptyBulkDelete() {
         return this.MaxEmptyBulkDelete;
     }
 
@@ -150,7 +150,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @param MaxEmptyBulkDelete 最大并发缩容数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMaxEmptyBulkDelete(Long MaxEmptyBulkDelete) {
+    public void setMaxEmptyBulkDelete(Integer MaxEmptyBulkDelete) {
         this.MaxEmptyBulkDelete = MaxEmptyBulkDelete;
     }
 
@@ -160,7 +160,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @return ScaleDownDelay 集群扩容后多少分钟开始判断缩容（默认为10分钟）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getScaleDownDelay() {
+    public Integer getScaleDownDelay() {
         return this.ScaleDownDelay;
     }
 
@@ -170,7 +170,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @param ScaleDownDelay 集群扩容后多少分钟开始判断缩容（默认为10分钟）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setScaleDownDelay(Long ScaleDownDelay) {
+    public void setScaleDownDelay(Integer ScaleDownDelay) {
         this.ScaleDownDelay = ScaleDownDelay;
     }
 
@@ -180,7 +180,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @return ScaleDownUnneededTime 节点连续空闲多少分钟后被缩容（默认为 10分钟）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getScaleDownUnneededTime() {
+    public Integer getScaleDownUnneededTime() {
         return this.ScaleDownUnneededTime;
     }
 
@@ -190,7 +190,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @param ScaleDownUnneededTime 节点连续空闲多少分钟后被缩容（默认为 10分钟）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setScaleDownUnneededTime(Long ScaleDownUnneededTime) {
+    public void setScaleDownUnneededTime(Integer ScaleDownUnneededTime) {
         this.ScaleDownUnneededTime = ScaleDownUnneededTime;
     }
 
@@ -200,7 +200,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @return ScaleDownUtilizationThreshold 节点资源使用量低于多少(百分比)时认为空闲(默认: 50(百分比))
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getScaleDownUtilizationThreshold() {
+    public Integer getScaleDownUtilizationThreshold() {
         return this.ScaleDownUtilizationThreshold;
     }
 
@@ -210,7 +210,7 @@ public class ClusterAsGroupOption extends AbstractModel{
      * @param ScaleDownUtilizationThreshold 节点资源使用量低于多少(百分比)时认为空闲(默认: 50(百分比))
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setScaleDownUtilizationThreshold(Long ScaleDownUtilizationThreshold) {
+    public void setScaleDownUtilizationThreshold(Integer ScaleDownUtilizationThreshold) {
         this.ScaleDownUtilizationThreshold = ScaleDownUtilizationThreshold;
     }
 

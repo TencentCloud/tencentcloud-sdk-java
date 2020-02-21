@@ -62,7 +62,7 @@ public class PreExecuteFileSettings extends AbstractModel{
     */
     @SerializedName("RunOrder")
     @Expose
-    private Long RunOrder;
+    private Integer RunOrder;
 
     /**
     * resourceAfter 或 clusterAfter
@@ -190,7 +190,7 @@ public class PreExecuteFileSettings extends AbstractModel{
      * Get 执行顺序 
      * @return RunOrder 执行顺序
      */
-    public Long getRunOrder() {
+    public Integer getRunOrder() {
         return this.RunOrder;
     }
 
@@ -198,7 +198,7 @@ public class PreExecuteFileSettings extends AbstractModel{
      * Set 执行顺序
      * @param RunOrder 执行顺序
      */
-    public void setRunOrder(Long RunOrder) {
+    public void setRunOrder(Integer RunOrder) {
         this.RunOrder = RunOrder;
     }
 

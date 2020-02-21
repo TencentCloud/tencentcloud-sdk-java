@@ -83,21 +83,21 @@ public class AgentAuditedClient extends AbstractModel{
     */
     @SerializedName("LastMonthAmt")
     @Expose
-    private Long LastMonthAmt;
+    private Integer LastMonthAmt;
 
     /**
     * 本月消费金额
     */
     @SerializedName("ThisMonthAmt")
     @Expose
-    private Long ThisMonthAmt;
+    private Integer ThisMonthAmt;
 
     /**
     * 是否欠费,0：不欠费；1：欠费
     */
     @SerializedName("HasOverdueBill")
     @Expose
-    private Long HasOverdueBill;
+    private Integer HasOverdueBill;
 
     /**
     * 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
@@ -269,7 +269,7 @@ public class AgentAuditedClient extends AbstractModel{
      * Get 上月消费金额 
      * @return LastMonthAmt 上月消费金额
      */
-    public Long getLastMonthAmt() {
+    public Integer getLastMonthAmt() {
         return this.LastMonthAmt;
     }
 
@@ -277,7 +277,7 @@ public class AgentAuditedClient extends AbstractModel{
      * Set 上月消费金额
      * @param LastMonthAmt 上月消费金额
      */
-    public void setLastMonthAmt(Long LastMonthAmt) {
+    public void setLastMonthAmt(Integer LastMonthAmt) {
         this.LastMonthAmt = LastMonthAmt;
     }
 
@@ -285,7 +285,7 @@ public class AgentAuditedClient extends AbstractModel{
      * Get 本月消费金额 
      * @return ThisMonthAmt 本月消费金额
      */
-    public Long getThisMonthAmt() {
+    public Integer getThisMonthAmt() {
         return this.ThisMonthAmt;
     }
 
@@ -293,7 +293,7 @@ public class AgentAuditedClient extends AbstractModel{
      * Set 本月消费金额
      * @param ThisMonthAmt 本月消费金额
      */
-    public void setThisMonthAmt(Long ThisMonthAmt) {
+    public void setThisMonthAmt(Integer ThisMonthAmt) {
         this.ThisMonthAmt = ThisMonthAmt;
     }
 
@@ -301,7 +301,7 @@ public class AgentAuditedClient extends AbstractModel{
      * Get 是否欠费,0：不欠费；1：欠费 
      * @return HasOverdueBill 是否欠费,0：不欠费；1：欠费
      */
-    public Long getHasOverdueBill() {
+    public Integer getHasOverdueBill() {
         return this.HasOverdueBill;
     }
 
@@ -309,7 +309,7 @@ public class AgentAuditedClient extends AbstractModel{
      * Set 是否欠费,0：不欠费；1：欠费
      * @param HasOverdueBill 是否欠费,0：不欠费；1：欠费
      */
-    public void setHasOverdueBill(Long HasOverdueBill) {
+    public void setHasOverdueBill(Integer HasOverdueBill) {
         this.HasOverdueBill = HasOverdueBill;
     }
 

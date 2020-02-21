@@ -27,7 +27,7 @@ public class DescribeTaskListResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 任务详细信息
@@ -47,7 +47,7 @@ public class DescribeTaskListResponse extends AbstractModel{
      * Get 任务总数 
      * @return TotalCount 任务总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeTaskListResponse extends AbstractModel{
      * Set 任务总数
      * @param TotalCount 任务总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

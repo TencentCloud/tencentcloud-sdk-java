@@ -27,14 +27,14 @@ public class CreateFacePictureResponse extends AbstractModel{
     */
     @SerializedName("PersonId")
     @Expose
-    private Long PersonId;
+    private Integer PersonId;
 
     /**
     * 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 图片url
@@ -54,7 +54,7 @@ public class CreateFacePictureResponse extends AbstractModel{
      * Get 人物ID 
      * @return PersonId 人物ID
      */
-    public Long getPersonId() {
+    public Integer getPersonId() {
         return this.PersonId;
     }
 
@@ -62,7 +62,7 @@ public class CreateFacePictureResponse extends AbstractModel{
      * Set 人物ID
      * @param PersonId 人物ID
      */
-    public void setPersonId(Long PersonId) {
+    public void setPersonId(Integer PersonId) {
         this.PersonId = PersonId;
     }
 
@@ -70,7 +70,7 @@ public class CreateFacePictureResponse extends AbstractModel{
      * Get 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误 
      * @return Status 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -78,7 +78,7 @@ public class CreateFacePictureResponse extends AbstractModel{
      * Set 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
      * @param Status 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

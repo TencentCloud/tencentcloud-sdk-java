@@ -27,7 +27,7 @@ public class TaskInstanceLog extends AbstractModel{
     */
     @SerializedName("TaskInstanceIndex")
     @Expose
-    private Long TaskInstanceIndex;
+    private Integer TaskInstanceIndex;
 
     /**
     * 标准输出日志（Base64编码）
@@ -81,7 +81,7 @@ public class TaskInstanceLog extends AbstractModel{
      * Get 任务实例 
      * @return TaskInstanceIndex 任务实例
      */
-    public Long getTaskInstanceIndex() {
+    public Integer getTaskInstanceIndex() {
         return this.TaskInstanceIndex;
     }
 
@@ -89,7 +89,7 @@ public class TaskInstanceLog extends AbstractModel{
      * Set 任务实例
      * @param TaskInstanceIndex 任务实例
      */
-    public void setTaskInstanceIndex(Long TaskInstanceIndex) {
+    public void setTaskInstanceIndex(Integer TaskInstanceIndex) {
         this.TaskInstanceIndex = TaskInstanceIndex;
     }
 

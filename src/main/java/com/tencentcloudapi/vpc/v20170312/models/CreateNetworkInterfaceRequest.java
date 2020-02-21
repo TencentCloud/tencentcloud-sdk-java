@@ -55,7 +55,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
-    private Long SecondaryPrivateIpAddressCount;
+    private Integer SecondaryPrivateIpAddressCount;
 
     /**
     * 指定绑定的安全组，例如：['sg-1dd51d']。
@@ -146,7 +146,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
      * Get 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。 
      * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
-    public Long getSecondaryPrivateIpAddressCount() {
+    public Integer getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
@@ -154,7 +154,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
      * Set 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
-    public void setSecondaryPrivateIpAddressCount(Long SecondaryPrivateIpAddressCount) {
+    public void setSecondaryPrivateIpAddressCount(Integer SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;
     }
 

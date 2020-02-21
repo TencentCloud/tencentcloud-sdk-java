@@ -34,14 +34,14 @@ public class ModifyLiveDomainCertRequest extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Long CertId;
+    private Integer CertId;
 
     /**
     * 状态，0：关闭  1：打开。
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
      * Get 播放域名。 
@@ -63,7 +63,7 @@ public class ModifyLiveDomainCertRequest extends AbstractModel{
      * Get 证书Id。 
      * @return CertId 证书Id。
      */
-    public Long getCertId() {
+    public Integer getCertId() {
         return this.CertId;
     }
 
@@ -71,7 +71,7 @@ public class ModifyLiveDomainCertRequest extends AbstractModel{
      * Set 证书Id。
      * @param CertId 证书Id。
      */
-    public void setCertId(Long CertId) {
+    public void setCertId(Integer CertId) {
         this.CertId = CertId;
     }
 
@@ -79,7 +79,7 @@ public class ModifyLiveDomainCertRequest extends AbstractModel{
      * Get 状态，0：关闭  1：打开。 
      * @return Status 状态，0：关闭  1：打开。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -87,7 +87,7 @@ public class ModifyLiveDomainCertRequest extends AbstractModel{
      * Set 状态，0：关闭  1：打开。
      * @param Status 状态，0：关闭  1：打开。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

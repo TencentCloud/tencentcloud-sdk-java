@@ -34,7 +34,7 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel{
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Long AutoRenew;
+    private Integer AutoRenew;
 
     /**
      * Get 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
@@ -56,7 +56,7 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel{
      * Get 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。 
      * @return AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
-    public Long getAutoRenew() {
+    public Integer getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -64,7 +64,7 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel{
      * Set 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      * @param AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
-    public void setAutoRenew(Long AutoRenew) {
+    public void setAutoRenew(Integer AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 

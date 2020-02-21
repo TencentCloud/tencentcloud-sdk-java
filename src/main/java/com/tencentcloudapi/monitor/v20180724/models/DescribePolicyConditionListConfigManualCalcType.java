@@ -28,7 +28,7 @@ public class DescribePolicyConditionListConfigManualCalcType extends AbstractMod
     */
     @SerializedName("Keys")
     @Expose
-    private Long [] Keys;
+    private Integer [] Keys;
 
     /**
     * 是否必须
@@ -43,7 +43,7 @@ public class DescribePolicyConditionListConfigManualCalcType extends AbstractMod
      * @return Keys CalcType 取值
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long [] getKeys() {
+    public Integer [] getKeys() {
         return this.Keys;
     }
 
@@ -53,7 +53,7 @@ public class DescribePolicyConditionListConfigManualCalcType extends AbstractMod
      * @param Keys CalcType 取值
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKeys(Long [] Keys) {
+    public void setKeys(Integer [] Keys) {
         this.Keys = Keys;
     }
 

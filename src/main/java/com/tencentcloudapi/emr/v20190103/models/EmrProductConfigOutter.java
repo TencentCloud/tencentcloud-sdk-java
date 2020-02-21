@@ -36,7 +36,7 @@ public class EmrProductConfigOutter extends AbstractModel{
     */
     @SerializedName("MasterNodeSize")
     @Expose
-    private Long MasterNodeSize;
+    private Integer MasterNodeSize;
 
     /**
     * Core节点个数
@@ -44,7 +44,7 @@ public class EmrProductConfigOutter extends AbstractModel{
     */
     @SerializedName("CoreNodeSize")
     @Expose
-    private Long CoreNodeSize;
+    private Integer CoreNodeSize;
 
     /**
     * Task节点个数
@@ -52,7 +52,7 @@ public class EmrProductConfigOutter extends AbstractModel{
     */
     @SerializedName("TaskNodeSize")
     @Expose
-    private Long TaskNodeSize;
+    private Integer TaskNodeSize;
 
     /**
     * Common节点个数
@@ -60,7 +60,7 @@ public class EmrProductConfigOutter extends AbstractModel{
     */
     @SerializedName("ComNodeSize")
     @Expose
-    private Long ComNodeSize;
+    private Integer ComNodeSize;
 
     /**
     * Master节点资源
@@ -108,7 +108,7 @@ public class EmrProductConfigOutter extends AbstractModel{
     */
     @SerializedName("ChargeType")
     @Expose
-    private Long ChargeType;
+    private Integer ChargeType;
 
     /**
      * Get 软件信息
@@ -136,7 +136,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @return MasterNodeSize Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMasterNodeSize() {
+    public Integer getMasterNodeSize() {
         return this.MasterNodeSize;
     }
 
@@ -146,7 +146,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @param MasterNodeSize Master节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMasterNodeSize(Long MasterNodeSize) {
+    public void setMasterNodeSize(Integer MasterNodeSize) {
         this.MasterNodeSize = MasterNodeSize;
     }
 
@@ -156,7 +156,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @return CoreNodeSize Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCoreNodeSize() {
+    public Integer getCoreNodeSize() {
         return this.CoreNodeSize;
     }
 
@@ -166,7 +166,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @param CoreNodeSize Core节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCoreNodeSize(Long CoreNodeSize) {
+    public void setCoreNodeSize(Integer CoreNodeSize) {
         this.CoreNodeSize = CoreNodeSize;
     }
 
@@ -176,7 +176,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @return TaskNodeSize Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTaskNodeSize() {
+    public Integer getTaskNodeSize() {
         return this.TaskNodeSize;
     }
 
@@ -186,7 +186,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @param TaskNodeSize Task节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskNodeSize(Long TaskNodeSize) {
+    public void setTaskNodeSize(Integer TaskNodeSize) {
         this.TaskNodeSize = TaskNodeSize;
     }
 
@@ -196,7 +196,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @return ComNodeSize Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getComNodeSize() {
+    public Integer getComNodeSize() {
         return this.ComNodeSize;
     }
 
@@ -206,7 +206,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @param ComNodeSize Common节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setComNodeSize(Long ComNodeSize) {
+    public void setComNodeSize(Integer ComNodeSize) {
         this.ComNodeSize = ComNodeSize;
     }
 
@@ -316,7 +316,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @return ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getChargeType() {
+    public Integer getChargeType() {
         return this.ChargeType;
     }
 
@@ -326,7 +326,7 @@ public class EmrProductConfigOutter extends AbstractModel{
      * @param ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setChargeType(Long ChargeType) {
+    public void setChargeType(Integer ChargeType) {
         this.ChargeType = ChargeType;
     }
 

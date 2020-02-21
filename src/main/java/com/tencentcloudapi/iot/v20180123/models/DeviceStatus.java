@@ -55,7 +55,7 @@ public class DeviceStatus extends AbstractModel{
     */
     @SerializedName("OnlineTimes")
     @Expose
-    private Long OnlineTimes;
+    private Integer OnlineTimes;
 
     /**
      * Get 设备名称 
@@ -125,7 +125,7 @@ public class DeviceStatus extends AbstractModel{
      * Get 上线次数 
      * @return OnlineTimes 上线次数
      */
-    public Long getOnlineTimes() {
+    public Integer getOnlineTimes() {
         return this.OnlineTimes;
     }
 
@@ -133,7 +133,7 @@ public class DeviceStatus extends AbstractModel{
      * Set 上线次数
      * @param OnlineTimes 上线次数
      */
-    public void setOnlineTimes(Long OnlineTimes) {
+    public void setOnlineTimes(Integer OnlineTimes) {
         this.OnlineTimes = OnlineTimes;
     }
 

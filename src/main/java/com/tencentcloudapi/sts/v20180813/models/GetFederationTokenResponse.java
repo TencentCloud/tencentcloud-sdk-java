@@ -34,7 +34,7 @@ public class GetFederationTokenResponse extends AbstractModel{
     */
     @SerializedName("ExpiredTime")
     @Expose
-    private Long ExpiredTime;
+    private Integer ExpiredTime;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class GetFederationTokenResponse extends AbstractModel{
      * Get 临时证书有效的时间，返回 Unix 时间戳，精确到秒 
      * @return ExpiredTime 临时证书有效的时间，返回 Unix 时间戳，精确到秒
      */
-    public Long getExpiredTime() {
+    public Integer getExpiredTime() {
         return this.ExpiredTime;
     }
 
@@ -71,7 +71,7 @@ public class GetFederationTokenResponse extends AbstractModel{
      * Set 临时证书有效的时间，返回 Unix 时间戳，精确到秒
      * @param ExpiredTime 临时证书有效的时间，返回 Unix 时间戳，精确到秒
      */
-    public void setExpiredTime(Long ExpiredTime) {
+    public void setExpiredTime(Integer ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 

@@ -34,7 +34,7 @@ public class DescribePolicyGroupInfoCallback extends AbstractModel{
     */
     @SerializedName("ValidFlag")
     @Expose
-    private Long ValidFlag;
+    private Integer ValidFlag;
 
     /**
     * 用户回调接口验证码
@@ -63,7 +63,7 @@ public class DescribePolicyGroupInfoCallback extends AbstractModel{
      * Get 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证 
      * @return ValidFlag 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
      */
-    public Long getValidFlag() {
+    public Integer getValidFlag() {
         return this.ValidFlag;
     }
 
@@ -71,7 +71,7 @@ public class DescribePolicyGroupInfoCallback extends AbstractModel{
      * Set 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
      * @param ValidFlag 用户回调接口状态，0表示未验证，1表示已验证，2表示存在url但没有通过验证
      */
-    public void setValidFlag(Long ValidFlag) {
+    public void setValidFlag(Integer ValidFlag) {
         this.ValidFlag = ValidFlag;
     }
 

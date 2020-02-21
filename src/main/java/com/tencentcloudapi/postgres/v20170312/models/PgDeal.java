@@ -41,21 +41,21 @@ public class PgDeal extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
     * 付费模式。1-预付费；0-后付费
     */
     @SerializedName("PayMode")
     @Expose
-    private Long PayMode;
+    private Integer PayMode;
 
     /**
     * 异步任务流程ID
     */
     @SerializedName("FlowId")
     @Expose
-    private Long FlowId;
+    private Integer FlowId;
 
     /**
     * 实例ID数组
@@ -100,7 +100,7 @@ public class PgDeal extends AbstractModel{
      * Get 订单涉及多少个实例 
      * @return Count 订单涉及多少个实例
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -108,7 +108,7 @@ public class PgDeal extends AbstractModel{
      * Set 订单涉及多少个实例
      * @param Count 订单涉及多少个实例
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 
@@ -116,7 +116,7 @@ public class PgDeal extends AbstractModel{
      * Get 付费模式。1-预付费；0-后付费 
      * @return PayMode 付费模式。1-预付费；0-后付费
      */
-    public Long getPayMode() {
+    public Integer getPayMode() {
         return this.PayMode;
     }
 
@@ -124,7 +124,7 @@ public class PgDeal extends AbstractModel{
      * Set 付费模式。1-预付费；0-后付费
      * @param PayMode 付费模式。1-预付费；0-后付费
      */
-    public void setPayMode(Long PayMode) {
+    public void setPayMode(Integer PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -132,7 +132,7 @@ public class PgDeal extends AbstractModel{
      * Get 异步任务流程ID 
      * @return FlowId 异步任务流程ID
      */
-    public Long getFlowId() {
+    public Integer getFlowId() {
         return this.FlowId;
     }
 
@@ -140,7 +140,7 @@ public class PgDeal extends AbstractModel{
      * Set 异步任务流程ID
      * @param FlowId 异步任务流程ID
      */
-    public void setFlowId(Long FlowId) {
+    public void setFlowId(Integer FlowId) {
         this.FlowId = FlowId;
     }
 

@@ -97,14 +97,14 @@ public class CreateJobRequest extends AbstractModel{
     */
     @SerializedName("WorkerCount")
     @Expose
-    private Long WorkerCount;
+    private Integer WorkerCount;
 
     /**
     * Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
     */
     @SerializedName("ParameterServerCount")
     @Expose
-    private Long ParameterServerCount;
+    private Integer ParameterServerCount;
 
     /**
     * 启动 debug 模式，默认为 false
@@ -284,7 +284,7 @@ public class CreateJobRequest extends AbstractModel{
      * Get Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return WorkerCount Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
-    public Long getWorkerCount() {
+    public Integer getWorkerCount() {
         return this.WorkerCount;
     }
 
@@ -292,7 +292,7 @@ public class CreateJobRequest extends AbstractModel{
      * Set Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param WorkerCount Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
-    public void setWorkerCount(Long WorkerCount) {
+    public void setWorkerCount(Integer WorkerCount) {
         this.WorkerCount = WorkerCount;
     }
 
@@ -300,7 +300,7 @@ public class CreateJobRequest extends AbstractModel{
      * Get Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return ParameterServerCount Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
-    public Long getParameterServerCount() {
+    public Integer getParameterServerCount() {
         return this.ParameterServerCount;
     }
 
@@ -308,7 +308,7 @@ public class CreateJobRequest extends AbstractModel{
      * Set Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param ParameterServerCount Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
-    public void setParameterServerCount(Long ParameterServerCount) {
+    public void setParameterServerCount(Integer ParameterServerCount) {
         this.ParameterServerCount = ParameterServerCount;
     }
 

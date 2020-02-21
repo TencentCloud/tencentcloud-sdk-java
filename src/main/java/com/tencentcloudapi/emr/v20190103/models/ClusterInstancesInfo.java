@@ -28,7 +28,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 集群ID
@@ -60,7 +60,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Long RegionId;
+    private Integer RegionId;
 
     /**
     * 地区ID
@@ -68,7 +68,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Long ZoneId;
+    private Integer ZoneId;
 
     /**
     * 用户APPID
@@ -76,7 +76,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 用户UIN
@@ -92,7 +92,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 集群VPCID
@@ -100,7 +100,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("VpcId")
     @Expose
-    private Long VpcId;
+    private Integer VpcId;
 
     /**
     * 子网ID
@@ -108,7 +108,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("SubnetId")
     @Expose
-    private Long SubnetId;
+    private Integer SubnetId;
 
     /**
     * 状态
@@ -116,7 +116,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 添加时间
@@ -164,7 +164,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("ChargeType")
     @Expose
-    private Long ChargeType;
+    private Integer ChargeType;
 
     /**
     * 交易版本
@@ -172,7 +172,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("TradeVersion")
     @Expose
-    private Long TradeVersion;
+    private Integer TradeVersion;
 
     /**
     * 资源订单ID
@@ -180,7 +180,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("ResourceOrderId")
     @Expose
-    private Long ResourceOrderId;
+    private Integer ResourceOrderId;
 
     /**
     * 是否计费集群
@@ -188,7 +188,7 @@ public class ClusterInstancesInfo extends AbstractModel{
     */
     @SerializedName("IsTradeCluster")
     @Expose
-    private Long IsTradeCluster;
+    private Integer IsTradeCluster;
 
     /**
     * 集群错误状态告警信息
@@ -204,7 +204,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return Id ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -214,7 +214,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param Id ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -284,7 +284,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRegionId() {
+    public Integer getRegionId() {
         return this.RegionId;
     }
 
@@ -294,7 +294,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRegionId(Long RegionId) {
+    public void setRegionId(Integer RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -304,7 +304,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return ZoneId 地区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getZoneId() {
+    public Integer getZoneId() {
         return this.ZoneId;
     }
 
@@ -314,7 +314,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param ZoneId 地区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setZoneId(Long ZoneId) {
+    public void setZoneId(Integer ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -324,7 +324,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -334,7 +334,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
@@ -364,7 +364,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -374,7 +374,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -384,7 +384,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return VpcId 集群VPCID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getVpcId() {
+    public Integer getVpcId() {
         return this.VpcId;
     }
 
@@ -394,7 +394,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param VpcId 集群VPCID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setVpcId(Long VpcId) {
+    public void setVpcId(Integer VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -404,7 +404,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getSubnetId() {
+    public Integer getSubnetId() {
         return this.SubnetId;
     }
 
@@ -414,7 +414,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSubnetId(Long SubnetId) {
+    public void setSubnetId(Integer SubnetId) {
         this.SubnetId = SubnetId;
     }
 
@@ -424,7 +424,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -434,7 +434,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -544,7 +544,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getChargeType() {
+    public Integer getChargeType() {
         return this.ChargeType;
     }
 
@@ -554,7 +554,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setChargeType(Long ChargeType) {
+    public void setChargeType(Integer ChargeType) {
         this.ChargeType = ChargeType;
     }
 
@@ -564,7 +564,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return TradeVersion 交易版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTradeVersion() {
+    public Integer getTradeVersion() {
         return this.TradeVersion;
     }
 
@@ -574,7 +574,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param TradeVersion 交易版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTradeVersion(Long TradeVersion) {
+    public void setTradeVersion(Integer TradeVersion) {
         this.TradeVersion = TradeVersion;
     }
 
@@ -584,7 +584,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return ResourceOrderId 资源订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getResourceOrderId() {
+    public Integer getResourceOrderId() {
         return this.ResourceOrderId;
     }
 
@@ -594,7 +594,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param ResourceOrderId 资源订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResourceOrderId(Long ResourceOrderId) {
+    public void setResourceOrderId(Integer ResourceOrderId) {
         this.ResourceOrderId = ResourceOrderId;
     }
 
@@ -604,7 +604,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @return IsTradeCluster 是否计费集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getIsTradeCluster() {
+    public Integer getIsTradeCluster() {
         return this.IsTradeCluster;
     }
 
@@ -614,7 +614,7 @@ public class ClusterInstancesInfo extends AbstractModel{
      * @param IsTradeCluster 是否计费集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIsTradeCluster(Long IsTradeCluster) {
+    public void setIsTradeCluster(Integer IsTradeCluster) {
         this.IsTradeCluster = IsTradeCluster;
     }
 

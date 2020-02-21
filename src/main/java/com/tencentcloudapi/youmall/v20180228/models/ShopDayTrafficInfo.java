@@ -34,7 +34,7 @@ public class ShopDayTrafficInfo extends AbstractModel{
     */
     @SerializedName("DayTrafficTotalCount")
     @Expose
-    private Long DayTrafficTotalCount;
+    private Integer DayTrafficTotalCount;
 
     /**
     * 性别年龄分组下的客流信息
@@ -63,7 +63,7 @@ public class ShopDayTrafficInfo extends AbstractModel{
      * Get 客流量 
      * @return DayTrafficTotalCount 客流量
      */
-    public Long getDayTrafficTotalCount() {
+    public Integer getDayTrafficTotalCount() {
         return this.DayTrafficTotalCount;
     }
 
@@ -71,7 +71,7 @@ public class ShopDayTrafficInfo extends AbstractModel{
      * Set 客流量
      * @param DayTrafficTotalCount 客流量
      */
-    public void setDayTrafficTotalCount(Long DayTrafficTotalCount) {
+    public void setDayTrafficTotalCount(Integer DayTrafficTotalCount) {
         this.DayTrafficTotalCount = DayTrafficTotalCount;
     }
 

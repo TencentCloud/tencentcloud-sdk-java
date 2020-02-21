@@ -27,7 +27,7 @@ public class DescribeInstanceParamRecordsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 参数修改记录。
@@ -47,7 +47,7 @@ public class DescribeInstanceParamRecordsResponse extends AbstractModel{
      * Get 符合条件的记录数。 
      * @return TotalCount 符合条件的记录数。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeInstanceParamRecordsResponse extends AbstractModel{
      * Set 符合条件的记录数。
      * @param TotalCount 符合条件的记录数。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

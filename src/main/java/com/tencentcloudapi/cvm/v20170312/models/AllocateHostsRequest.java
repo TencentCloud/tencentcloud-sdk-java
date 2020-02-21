@@ -62,7 +62,7 @@ public class AllocateHostsRequest extends AbstractModel{
     */
     @SerializedName("HostCount")
     @Expose
-    private Long HostCount;
+    private Integer HostCount;
 
     /**
     * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
@@ -155,7 +155,7 @@ public class AllocateHostsRequest extends AbstractModel{
      * Get 购买CDH实例数量。 
      * @return HostCount 购买CDH实例数量。
      */
-    public Long getHostCount() {
+    public Integer getHostCount() {
         return this.HostCount;
     }
 
@@ -163,7 +163,7 @@ public class AllocateHostsRequest extends AbstractModel{
      * Set 购买CDH实例数量。
      * @param HostCount 购买CDH实例数量。
      */
-    public void setHostCount(Long HostCount) {
+    public void setHostCount(Integer HostCount) {
         this.HostCount = HostCount;
     }
 

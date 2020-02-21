@@ -97,7 +97,7 @@ public class SyncJobInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 迁移库表
@@ -291,7 +291,7 @@ public class SyncJobInfo extends AbstractModel{
      * Get 任务状态 
      * @return Status 任务状态
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -299,7 +299,7 @@ public class SyncJobInfo extends AbstractModel{
      * Set 任务状态
      * @param Status 任务状态
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

@@ -27,14 +27,14 @@ public class DescribeCustomImagesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 数量限制
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 排序字段，仅支持CreateTime
@@ -48,7 +48,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Long Order;
+    private Integer Order;
 
     /**
     * 按ImageId查找指定镜像信息，ImageId字段存在时其他字段失效
@@ -75,13 +75,13 @@ public class DescribeCustomImagesRequest extends AbstractModel{
     */
     @SerializedName("ImageStatus")
     @Expose
-    private Long [] ImageStatus;
+    private Integer [] ImageStatus;
 
     /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -89,7 +89,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -97,7 +97,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
      * Get 数量限制 
      * @return Limit 数量限制
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -105,7 +105,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
      * Set 数量限制
      * @param Limit 数量限制
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -129,7 +129,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
      * Get 排序方式 0:递增(默认) 1:递减 
      * @return Order 排序方式 0:递增(默认) 1:递减
      */
-    public Long getOrder() {
+    public Integer getOrder() {
         return this.Order;
     }
 
@@ -137,7 +137,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
      * Set 排序方式 0:递增(默认) 1:递减
      * @param Order 排序方式 0:递增(默认) 1:递减
      */
-    public void setOrder(Long Order) {
+    public void setOrder(Integer Order) {
         this.Order = Order;
     }
 
@@ -189,7 +189,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
 <li>4：删除中</li>
 </ul>
      */
-    public Long [] getImageStatus() {
+    public Integer [] getImageStatus() {
         return this.ImageStatus;
     }
 
@@ -209,7 +209,7 @@ public class DescribeCustomImagesRequest extends AbstractModel{
 <li>4：删除中</li>
 </ul>
      */
-    public void setImageStatus(Long [] ImageStatus) {
+    public void setImageStatus(Integer [] ImageStatus) {
         this.ImageStatus = ImageStatus;
     }
 

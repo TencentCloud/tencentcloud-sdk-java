@@ -34,63 +34,63 @@ public class BackupSummaryItem extends AbstractModel{
     */
     @SerializedName("AutoBackupCount")
     @Expose
-    private Long AutoBackupCount;
+    private Integer AutoBackupCount;
 
     /**
     * 该实例自动数据备份的容量。
     */
     @SerializedName("AutoBackupVolume")
     @Expose
-    private Long AutoBackupVolume;
+    private Integer AutoBackupVolume;
 
     /**
     * 该实例手动数据备份的个数。
     */
     @SerializedName("ManualBackupCount")
     @Expose
-    private Long ManualBackupCount;
+    private Integer ManualBackupCount;
 
     /**
     * 该实例手动数据备份的容量。
     */
     @SerializedName("ManualBackupVolume")
     @Expose
-    private Long ManualBackupVolume;
+    private Integer ManualBackupVolume;
 
     /**
     * 该实例总的数据备份（包含自动备份和手动备份）个数。
     */
     @SerializedName("DataBackupCount")
     @Expose
-    private Long DataBackupCount;
+    private Integer DataBackupCount;
 
     /**
     * 该实例总的数据备份容量。
     */
     @SerializedName("DataBackupVolume")
     @Expose
-    private Long DataBackupVolume;
+    private Integer DataBackupVolume;
 
     /**
     * 该实例日志备份的个数。
     */
     @SerializedName("BinlogBackupCount")
     @Expose
-    private Long BinlogBackupCount;
+    private Integer BinlogBackupCount;
 
     /**
     * 该实例日志备份的容量。
     */
     @SerializedName("BinlogBackupVolume")
     @Expose
-    private Long BinlogBackupVolume;
+    private Integer BinlogBackupVolume;
 
     /**
     * 该实例的总备份（包含数据备份和日志备份）占用容量。
     */
     @SerializedName("BackupVolume")
     @Expose
-    private Long BackupVolume;
+    private Integer BackupVolume;
 
     /**
      * Get 实例ID。 
@@ -112,7 +112,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例自动数据备份的个数。 
      * @return AutoBackupCount 该实例自动数据备份的个数。
      */
-    public Long getAutoBackupCount() {
+    public Integer getAutoBackupCount() {
         return this.AutoBackupCount;
     }
 
@@ -120,7 +120,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例自动数据备份的个数。
      * @param AutoBackupCount 该实例自动数据备份的个数。
      */
-    public void setAutoBackupCount(Long AutoBackupCount) {
+    public void setAutoBackupCount(Integer AutoBackupCount) {
         this.AutoBackupCount = AutoBackupCount;
     }
 
@@ -128,7 +128,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例自动数据备份的容量。 
      * @return AutoBackupVolume 该实例自动数据备份的容量。
      */
-    public Long getAutoBackupVolume() {
+    public Integer getAutoBackupVolume() {
         return this.AutoBackupVolume;
     }
 
@@ -136,7 +136,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例自动数据备份的容量。
      * @param AutoBackupVolume 该实例自动数据备份的容量。
      */
-    public void setAutoBackupVolume(Long AutoBackupVolume) {
+    public void setAutoBackupVolume(Integer AutoBackupVolume) {
         this.AutoBackupVolume = AutoBackupVolume;
     }
 
@@ -144,7 +144,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例手动数据备份的个数。 
      * @return ManualBackupCount 该实例手动数据备份的个数。
      */
-    public Long getManualBackupCount() {
+    public Integer getManualBackupCount() {
         return this.ManualBackupCount;
     }
 
@@ -152,7 +152,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例手动数据备份的个数。
      * @param ManualBackupCount 该实例手动数据备份的个数。
      */
-    public void setManualBackupCount(Long ManualBackupCount) {
+    public void setManualBackupCount(Integer ManualBackupCount) {
         this.ManualBackupCount = ManualBackupCount;
     }
 
@@ -160,7 +160,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例手动数据备份的容量。 
      * @return ManualBackupVolume 该实例手动数据备份的容量。
      */
-    public Long getManualBackupVolume() {
+    public Integer getManualBackupVolume() {
         return this.ManualBackupVolume;
     }
 
@@ -168,7 +168,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例手动数据备份的容量。
      * @param ManualBackupVolume 该实例手动数据备份的容量。
      */
-    public void setManualBackupVolume(Long ManualBackupVolume) {
+    public void setManualBackupVolume(Integer ManualBackupVolume) {
         this.ManualBackupVolume = ManualBackupVolume;
     }
 
@@ -176,7 +176,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例总的数据备份（包含自动备份和手动备份）个数。 
      * @return DataBackupCount 该实例总的数据备份（包含自动备份和手动备份）个数。
      */
-    public Long getDataBackupCount() {
+    public Integer getDataBackupCount() {
         return this.DataBackupCount;
     }
 
@@ -184,7 +184,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例总的数据备份（包含自动备份和手动备份）个数。
      * @param DataBackupCount 该实例总的数据备份（包含自动备份和手动备份）个数。
      */
-    public void setDataBackupCount(Long DataBackupCount) {
+    public void setDataBackupCount(Integer DataBackupCount) {
         this.DataBackupCount = DataBackupCount;
     }
 
@@ -192,7 +192,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例总的数据备份容量。 
      * @return DataBackupVolume 该实例总的数据备份容量。
      */
-    public Long getDataBackupVolume() {
+    public Integer getDataBackupVolume() {
         return this.DataBackupVolume;
     }
 
@@ -200,7 +200,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例总的数据备份容量。
      * @param DataBackupVolume 该实例总的数据备份容量。
      */
-    public void setDataBackupVolume(Long DataBackupVolume) {
+    public void setDataBackupVolume(Integer DataBackupVolume) {
         this.DataBackupVolume = DataBackupVolume;
     }
 
@@ -208,7 +208,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例日志备份的个数。 
      * @return BinlogBackupCount 该实例日志备份的个数。
      */
-    public Long getBinlogBackupCount() {
+    public Integer getBinlogBackupCount() {
         return this.BinlogBackupCount;
     }
 
@@ -216,7 +216,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例日志备份的个数。
      * @param BinlogBackupCount 该实例日志备份的个数。
      */
-    public void setBinlogBackupCount(Long BinlogBackupCount) {
+    public void setBinlogBackupCount(Integer BinlogBackupCount) {
         this.BinlogBackupCount = BinlogBackupCount;
     }
 
@@ -224,7 +224,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例日志备份的容量。 
      * @return BinlogBackupVolume 该实例日志备份的容量。
      */
-    public Long getBinlogBackupVolume() {
+    public Integer getBinlogBackupVolume() {
         return this.BinlogBackupVolume;
     }
 
@@ -232,7 +232,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例日志备份的容量。
      * @param BinlogBackupVolume 该实例日志备份的容量。
      */
-    public void setBinlogBackupVolume(Long BinlogBackupVolume) {
+    public void setBinlogBackupVolume(Integer BinlogBackupVolume) {
         this.BinlogBackupVolume = BinlogBackupVolume;
     }
 
@@ -240,7 +240,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Get 该实例的总备份（包含数据备份和日志备份）占用容量。 
      * @return BackupVolume 该实例的总备份（包含数据备份和日志备份）占用容量。
      */
-    public Long getBackupVolume() {
+    public Integer getBackupVolume() {
         return this.BackupVolume;
     }
 
@@ -248,7 +248,7 @@ public class BackupSummaryItem extends AbstractModel{
      * Set 该实例的总备份（包含数据备份和日志备份）占用容量。
      * @param BackupVolume 该实例的总备份（包含数据备份和日志备份）占用容量。
      */
-    public void setBackupVolume(Long BackupVolume) {
+    public void setBackupVolume(Integer BackupVolume) {
         this.BackupVolume = BackupVolume;
     }
 

@@ -27,7 +27,7 @@ public class ZoneSellConf extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 可用区中文名称
@@ -62,7 +62,7 @@ public class ZoneSellConf extends AbstractModel{
     */
     @SerializedName("HourInstanceSaleMaxNum")
     @Expose
-    private Long HourInstanceSaleMaxNum;
+    private Integer HourInstanceSaleMaxNum;
 
     /**
     * 是否为默认可用区
@@ -124,7 +124,7 @@ public class ZoneSellConf extends AbstractModel{
      * Get 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示 
      * @return Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -132,7 +132,7 @@ public class ZoneSellConf extends AbstractModel{
      * Set 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      * @param Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -204,7 +204,7 @@ public class ZoneSellConf extends AbstractModel{
      * Get 小时计费实例最大售卖数量 
      * @return HourInstanceSaleMaxNum 小时计费实例最大售卖数量
      */
-    public Long getHourInstanceSaleMaxNum() {
+    public Integer getHourInstanceSaleMaxNum() {
         return this.HourInstanceSaleMaxNum;
     }
 
@@ -212,7 +212,7 @@ public class ZoneSellConf extends AbstractModel{
      * Set 小时计费实例最大售卖数量
      * @param HourInstanceSaleMaxNum 小时计费实例最大售卖数量
      */
-    public void setHourInstanceSaleMaxNum(Long HourInstanceSaleMaxNum) {
+    public void setHourInstanceSaleMaxNum(Integer HourInstanceSaleMaxNum) {
         this.HourInstanceSaleMaxNum = HourInstanceSaleMaxNum;
     }
 

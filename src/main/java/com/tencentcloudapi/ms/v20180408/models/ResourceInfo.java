@@ -34,28 +34,28 @@ public class ResourceInfo extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Long Pid;
+    private Integer Pid;
 
     /**
     * 购买时间戳
     */
     @SerializedName("CreateTime")
     @Expose
-    private Long CreateTime;
+    private Integer CreateTime;
 
     /**
     * 到期时间戳
     */
     @SerializedName("ExpireTime")
     @Expose
-    private Long ExpireTime;
+    private Integer ExpireTime;
 
     /**
     * 0-未绑定，1-已绑定
     */
     @SerializedName("IsBind")
     @Expose
-    private Long IsBind;
+    private Integer IsBind;
 
     /**
     * 用户绑定app的基本信息
@@ -91,7 +91,7 @@ public class ResourceInfo extends AbstractModel{
      * Get 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736 
      * @return Pid 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
      */
-    public Long getPid() {
+    public Integer getPid() {
         return this.Pid;
     }
 
@@ -99,7 +99,7 @@ public class ResourceInfo extends AbstractModel{
      * Set 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
      * @param Pid 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
      */
-    public void setPid(Long Pid) {
+    public void setPid(Integer Pid) {
         this.Pid = Pid;
     }
 
@@ -107,7 +107,7 @@ public class ResourceInfo extends AbstractModel{
      * Get 购买时间戳 
      * @return CreateTime 购买时间戳
      */
-    public Long getCreateTime() {
+    public Integer getCreateTime() {
         return this.CreateTime;
     }
 
@@ -115,7 +115,7 @@ public class ResourceInfo extends AbstractModel{
      * Set 购买时间戳
      * @param CreateTime 购买时间戳
      */
-    public void setCreateTime(Long CreateTime) {
+    public void setCreateTime(Integer CreateTime) {
         this.CreateTime = CreateTime;
     }
 
@@ -123,7 +123,7 @@ public class ResourceInfo extends AbstractModel{
      * Get 到期时间戳 
      * @return ExpireTime 到期时间戳
      */
-    public Long getExpireTime() {
+    public Integer getExpireTime() {
         return this.ExpireTime;
     }
 
@@ -131,7 +131,7 @@ public class ResourceInfo extends AbstractModel{
      * Set 到期时间戳
      * @param ExpireTime 到期时间戳
      */
-    public void setExpireTime(Long ExpireTime) {
+    public void setExpireTime(Integer ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
@@ -139,7 +139,7 @@ public class ResourceInfo extends AbstractModel{
      * Get 0-未绑定，1-已绑定 
      * @return IsBind 0-未绑定，1-已绑定
      */
-    public Long getIsBind() {
+    public Integer getIsBind() {
         return this.IsBind;
     }
 
@@ -147,7 +147,7 @@ public class ResourceInfo extends AbstractModel{
      * Set 0-未绑定，1-已绑定
      * @param IsBind 0-未绑定，1-已绑定
      */
-    public void setIsBind(Long IsBind) {
+    public void setIsBind(Integer IsBind) {
         this.IsBind = IsBind;
     }
 

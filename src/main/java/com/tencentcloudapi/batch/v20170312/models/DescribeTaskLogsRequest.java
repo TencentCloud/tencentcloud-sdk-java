@@ -41,21 +41,21 @@ public class DescribeTaskLogsRequest extends AbstractModel{
     */
     @SerializedName("TaskInstanceIndexes")
     @Expose
-    private Long [] TaskInstanceIndexes;
+    private Integer [] TaskInstanceIndexes;
 
     /**
     * 起始任务实例
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 最大任务实例数
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 作业ID 
@@ -93,7 +93,7 @@ public class DescribeTaskLogsRequest extends AbstractModel{
      * Get 任务实例集合 
      * @return TaskInstanceIndexes 任务实例集合
      */
-    public Long [] getTaskInstanceIndexes() {
+    public Integer [] getTaskInstanceIndexes() {
         return this.TaskInstanceIndexes;
     }
 
@@ -101,7 +101,7 @@ public class DescribeTaskLogsRequest extends AbstractModel{
      * Set 任务实例集合
      * @param TaskInstanceIndexes 任务实例集合
      */
-    public void setTaskInstanceIndexes(Long [] TaskInstanceIndexes) {
+    public void setTaskInstanceIndexes(Integer [] TaskInstanceIndexes) {
         this.TaskInstanceIndexes = TaskInstanceIndexes;
     }
 
@@ -109,7 +109,7 @@ public class DescribeTaskLogsRequest extends AbstractModel{
      * Get 起始任务实例 
      * @return Offset 起始任务实例
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -117,7 +117,7 @@ public class DescribeTaskLogsRequest extends AbstractModel{
      * Set 起始任务实例
      * @param Offset 起始任务实例
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -125,7 +125,7 @@ public class DescribeTaskLogsRequest extends AbstractModel{
      * Get 最大任务实例数 
      * @return Limit 最大任务实例数
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -133,7 +133,7 @@ public class DescribeTaskLogsRequest extends AbstractModel{
      * Set 最大任务实例数
      * @param Limit 最大任务实例数
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

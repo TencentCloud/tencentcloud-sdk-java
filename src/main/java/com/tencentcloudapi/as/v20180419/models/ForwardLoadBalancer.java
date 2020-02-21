@@ -51,6 +51,13 @@ public class ForwardLoadBalancer extends AbstractModel{
     private String LocationId;
 
     /**
+    * 负载均衡实例所属地域，默认取AS服务所在地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 负载均衡器ID 
      * @return LoadBalancerId 负载均衡器ID
      */
@@ -115,6 +122,22 @@ public class ForwardLoadBalancer extends AbstractModel{
     }
 
     /**
+     * Get 负载均衡实例所属地域，默认取AS服务所在地域 
+     * @return Region 负载均衡实例所属地域，默认取AS服务所在地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 负载均衡实例所属地域，默认取AS服务所在地域
+     * @param Region 负载均衡实例所属地域，默认取AS服务所在地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ForwardLoadBalancer extends AbstractModel{
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamArrayObj(map, prefix + "TargetAttributes.", this.TargetAttributes);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

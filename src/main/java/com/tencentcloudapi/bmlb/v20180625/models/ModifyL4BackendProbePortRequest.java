@@ -48,21 +48,21 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 新的探测端口，可选值1~65535。
     */
     @SerializedName("ProbePort")
     @Expose
-    private Long ProbePort;
+    private Integer ProbePort;
 
     /**
     * 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
     */
     @SerializedName("BindType")
     @Expose
-    private Long BindType;
+    private Integer BindType;
 
     /**
      * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
@@ -116,7 +116,7 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
      * Get 已绑定的主机端口。 
      * @return Port 已绑定的主机端口。
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -124,7 +124,7 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
      * Set 已绑定的主机端口。
      * @param Port 已绑定的主机端口。
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -132,7 +132,7 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
      * Get 新的探测端口，可选值1~65535。 
      * @return ProbePort 新的探测端口，可选值1~65535。
      */
-    public Long getProbePort() {
+    public Integer getProbePort() {
         return this.ProbePort;
     }
 
@@ -140,7 +140,7 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
      * Set 新的探测端口，可选值1~65535。
      * @param ProbePort 新的探测端口，可选值1~65535。
      */
-    public void setProbePort(Long ProbePort) {
+    public void setProbePort(Integer ProbePort) {
         this.ProbePort = ProbePort;
     }
 
@@ -148,7 +148,7 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
      * Get 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器 
      * @return BindType 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
      */
-    public Long getBindType() {
+    public Integer getBindType() {
         return this.BindType;
     }
 
@@ -156,7 +156,7 @@ public class ModifyL4BackendProbePortRequest extends AbstractModel{
      * Set 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
      * @param BindType 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
      */
-    public void setBindType(Long BindType) {
+    public void setBindType(Integer BindType) {
         this.BindType = BindType;
     }
 

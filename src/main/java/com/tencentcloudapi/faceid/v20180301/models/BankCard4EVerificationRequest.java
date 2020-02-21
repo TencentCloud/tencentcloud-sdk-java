@@ -56,7 +56,7 @@ public class BankCard4EVerificationRequest extends AbstractModel{
     */
     @SerializedName("CertType")
     @Expose
-    private Long CertType;
+    private Integer CertType;
 
     /**
      * Get 姓名 
@@ -128,7 +128,7 @@ public class BankCard4EVerificationRequest extends AbstractModel{
      * @return CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
      */
-    public Long getCertType() {
+    public Integer getCertType() {
         return this.CertType;
     }
 
@@ -138,7 +138,7 @@ public class BankCard4EVerificationRequest extends AbstractModel{
      * @param CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
      */
-    public void setCertType(Long CertType) {
+    public void setCertType(Integer CertType) {
         this.CertType = CertType;
     }
 

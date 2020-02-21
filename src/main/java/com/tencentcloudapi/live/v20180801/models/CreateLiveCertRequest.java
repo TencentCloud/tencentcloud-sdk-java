@@ -29,7 +29,7 @@ public class CreateLiveCertRequest extends AbstractModel{
     */
     @SerializedName("CertType")
     @Expose
-    private Long CertType;
+    private Integer CertType;
 
     /**
     * 证书名称。
@@ -74,7 +74,7 @@ public class CreateLiveCertRequest extends AbstractModel{
 注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
 当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
      */
-    public Long getCertType() {
+    public Integer getCertType() {
         return this.CertType;
     }
 
@@ -86,7 +86,7 @@ public class CreateLiveCertRequest extends AbstractModel{
 注意：当证书类型为0时，HttpsCrt和HttpsKey必选；
 当证书类型为1时，优先使用CloudCertId对应证书，若CloudCertId为空则使用HttpsCrt和HttpsKey。
      */
-    public void setCertType(Long CertType) {
+    public void setCertType(Integer CertType) {
         this.CertType = CertType;
     }
 

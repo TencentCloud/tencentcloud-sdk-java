@@ -34,21 +34,21 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 升级后的硬盘大小，单位：GB
     */
     @SerializedName("Volume")
     @Expose
-    private Long Volume;
+    private Integer Volume;
 
     /**
     * 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
     */
     @SerializedName("OplogSize")
     @Expose
-    private Long OplogSize;
+    private Integer OplogSize;
 
     /**
      * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
@@ -70,7 +70,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Get 升级后的内存大小，单位：GB 
      * @return Memory 升级后的内存大小，单位：GB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -78,7 +78,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Set 升级后的内存大小，单位：GB
      * @param Memory 升级后的内存大小，单位：GB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -86,7 +86,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Get 升级后的硬盘大小，单位：GB 
      * @return Volume 升级后的硬盘大小，单位：GB
      */
-    public Long getVolume() {
+    public Integer getVolume() {
         return this.Volume;
     }
 
@@ -94,7 +94,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Set 升级后的硬盘大小，单位：GB
      * @param Volume 升级后的硬盘大小，单位：GB
      */
-    public void setVolume(Long Volume) {
+    public void setVolume(Integer Volume) {
         this.Volume = Volume;
     }
 
@@ -102,7 +102,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Get 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90% 
      * @return OplogSize 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
      */
-    public Long getOplogSize() {
+    public Integer getOplogSize() {
         return this.OplogSize;
     }
 
@@ -110,7 +110,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
      * Set 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
      * @param OplogSize 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
      */
-    public void setOplogSize(Long OplogSize) {
+    public void setOplogSize(Integer OplogSize) {
         this.OplogSize = OplogSize;
     }
 

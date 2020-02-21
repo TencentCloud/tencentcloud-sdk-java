@@ -27,7 +27,7 @@ public class DescribeSnapshotsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 快照的详情列表。
@@ -47,7 +47,7 @@ public class DescribeSnapshotsResponse extends AbstractModel{
      * Get 快照的数量。 
      * @return TotalCount 快照的数量。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeSnapshotsResponse extends AbstractModel{
      * Set 快照的数量。
      * @param TotalCount 快照的数量。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

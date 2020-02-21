@@ -27,14 +27,14 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
     */
     @SerializedName("InstanceTypes")
     @Expose
-    private Long [] InstanceTypes;
+    private Integer [] InstanceTypes;
 
     /**
     * 实例的内网 IP 地址。
@@ -48,21 +48,21 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long [] Status;
+    private Integer [] Status;
 
     /**
     * 偏移量，默认值为 0。
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 单次请求返回的数量，默认值为 20，最大值为 2000。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
@@ -76,7 +76,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("PayTypes")
     @Expose
-    private Long [] PayTypes;
+    private Integer [] PayTypes;
 
     /**
     * 实例名称。
@@ -90,7 +90,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Long [] TaskStatus;
+    private Integer [] TaskStatus;
 
     /**
     * 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
@@ -104,28 +104,28 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("VpcIds")
     @Expose
-    private Long [] VpcIds;
+    private Integer [] VpcIds;
 
     /**
     * 可用区的 ID。
     */
     @SerializedName("ZoneIds")
     @Expose
-    private Long [] ZoneIds;
+    private Integer [] ZoneIds;
 
     /**
     * 子网 ID。
     */
     @SerializedName("SubnetIds")
     @Expose
-    private Long [] SubnetIds;
+    private Integer [] SubnetIds;
 
     /**
     * 是否锁定标记。
     */
     @SerializedName("CdbErrors")
     @Expose
-    private Long [] CdbErrors;
+    private Integer [] CdbErrors;
 
     /**
     * 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
@@ -146,14 +146,14 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("WithSecurityGroup")
     @Expose
-    private Long WithSecurityGroup;
+    private Integer WithSecurityGroup;
 
     /**
     * 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
     */
     @SerializedName("WithExCluster")
     @Expose
-    private Long WithExCluster;
+    private Integer WithExCluster;
 
     /**
     * 独享集群 ID。
@@ -174,28 +174,28 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("InitFlag")
     @Expose
-    private Long InitFlag;
+    private Integer InitFlag;
 
     /**
     * 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
     */
     @SerializedName("WithDr")
     @Expose
-    private Long WithDr;
+    private Integer WithDr;
 
     /**
     * 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
     */
     @SerializedName("WithRo")
     @Expose
-    private Long WithRo;
+    private Integer WithRo;
 
     /**
     * 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
     */
     @SerializedName("WithMaster")
     @Expose
-    private Long WithMaster;
+    private Integer WithMaster;
 
     /**
     * 置放群组ID列表。
@@ -208,7 +208,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。 
      * @return ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -216,7 +216,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      * @param ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -224,7 +224,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。 
      * @return InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      */
-    public Long [] getInstanceTypes() {
+    public Integer [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
@@ -232,7 +232,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      * @param InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      */
-    public void setInstanceTypes(Long [] InstanceTypes) {
+    public void setInstanceTypes(Integer [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
@@ -256,7 +256,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机） 
      * @return Status 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
      */
-    public Long [] getStatus() {
+    public Integer [] getStatus() {
         return this.Status;
     }
 
@@ -264,7 +264,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
      * @param Status 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
      */
-    public void setStatus(Long [] Status) {
+    public void setStatus(Integer [] Status) {
         this.Status = Status;
     }
 
@@ -272,7 +272,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 偏移量，默认值为 0。 
      * @return Offset 偏移量，默认值为 0。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -280,7 +280,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 偏移量，默认值为 0。
      * @param Offset 偏移量，默认值为 0。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -288,7 +288,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 单次请求返回的数量，默认值为 20，最大值为 2000。 
      * @return Limit 单次请求返回的数量，默认值为 20，最大值为 2000。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -296,7 +296,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 单次请求返回的数量，默认值为 20，最大值为 2000。
      * @param Limit 单次请求返回的数量，默认值为 20，最大值为 2000。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -320,7 +320,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 付费类型，可取值：0 - 包年包月，1 - 小时计费。 
      * @return PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
      */
-    public Long [] getPayTypes() {
+    public Integer [] getPayTypes() {
         return this.PayTypes;
     }
 
@@ -328,7 +328,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 付费类型，可取值：0 - 包年包月，1 - 小时计费。
      * @param PayTypes 付费类型，可取值：0 - 包年包月，1 - 小时计费。
      */
-    public void setPayTypes(Long [] PayTypes) {
+    public void setPayTypes(Integer [] PayTypes) {
         this.PayTypes = PayTypes;
     }
 
@@ -352,7 +352,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成 
      * @return TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
      */
-    public Long [] getTaskStatus() {
+    public Integer [] getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -360,7 +360,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
      * @param TaskStatus 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
      */
-    public void setTaskStatus(Long [] TaskStatus) {
+    public void setTaskStatus(Integer [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -384,7 +384,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 私有网络的 ID。 
      * @return VpcIds 私有网络的 ID。
      */
-    public Long [] getVpcIds() {
+    public Integer [] getVpcIds() {
         return this.VpcIds;
     }
 
@@ -392,7 +392,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 私有网络的 ID。
      * @param VpcIds 私有网络的 ID。
      */
-    public void setVpcIds(Long [] VpcIds) {
+    public void setVpcIds(Integer [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
@@ -400,7 +400,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 可用区的 ID。 
      * @return ZoneIds 可用区的 ID。
      */
-    public Long [] getZoneIds() {
+    public Integer [] getZoneIds() {
         return this.ZoneIds;
     }
 
@@ -408,7 +408,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 可用区的 ID。
      * @param ZoneIds 可用区的 ID。
      */
-    public void setZoneIds(Long [] ZoneIds) {
+    public void setZoneIds(Integer [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
@@ -416,7 +416,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 子网 ID。 
      * @return SubnetIds 子网 ID。
      */
-    public Long [] getSubnetIds() {
+    public Integer [] getSubnetIds() {
         return this.SubnetIds;
     }
 
@@ -424,7 +424,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 子网 ID。
      * @param SubnetIds 子网 ID。
      */
-    public void setSubnetIds(Long [] SubnetIds) {
+    public void setSubnetIds(Integer [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
@@ -432,7 +432,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 是否锁定标记。 
      * @return CdbErrors 是否锁定标记。
      */
-    public Long [] getCdbErrors() {
+    public Integer [] getCdbErrors() {
         return this.CdbErrors;
     }
 
@@ -440,7 +440,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 是否锁定标记。
      * @param CdbErrors 是否锁定标记。
      */
-    public void setCdbErrors(Long [] CdbErrors) {
+    public void setCdbErrors(Integer [] CdbErrors) {
         this.CdbErrors = CdbErrors;
     }
 
@@ -480,7 +480,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 是否以安全组 ID 为过滤条件。 
      * @return WithSecurityGroup 是否以安全组 ID 为过滤条件。
      */
-    public Long getWithSecurityGroup() {
+    public Integer getWithSecurityGroup() {
         return this.WithSecurityGroup;
     }
 
@@ -488,7 +488,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 是否以安全组 ID 为过滤条件。
      * @param WithSecurityGroup 是否以安全组 ID 为过滤条件。
      */
-    public void setWithSecurityGroup(Long WithSecurityGroup) {
+    public void setWithSecurityGroup(Integer WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;
     }
 
@@ -496,7 +496,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。 
      * @return WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
      */
-    public Long getWithExCluster() {
+    public Integer getWithExCluster() {
         return this.WithExCluster;
     }
 
@@ -504,7 +504,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
      * @param WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
      */
-    public void setWithExCluster(Long WithExCluster) {
+    public void setWithExCluster(Integer WithExCluster) {
         this.WithExCluster = WithExCluster;
     }
 
@@ -544,7 +544,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 初始化标记，可取值：0 - 未初始化，1 - 初始化。 
      * @return InitFlag 初始化标记，可取值：0 - 未初始化，1 - 初始化。
      */
-    public Long getInitFlag() {
+    public Integer getInitFlag() {
         return this.InitFlag;
     }
 
@@ -552,7 +552,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 初始化标记，可取值：0 - 未初始化，1 - 初始化。
      * @param InitFlag 初始化标记，可取值：0 - 未初始化，1 - 初始化。
      */
-    public void setInitFlag(Long InitFlag) {
+    public void setInitFlag(Integer InitFlag) {
         this.InitFlag = InitFlag;
     }
 
@@ -560,7 +560,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。 
      * @return WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
      */
-    public Long getWithDr() {
+    public Integer getWithDr() {
         return this.WithDr;
     }
 
@@ -568,7 +568,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
      * @param WithDr 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
      */
-    public void setWithDr(Long WithDr) {
+    public void setWithDr(Integer WithDr) {
         this.WithDr = WithDr;
     }
 
@@ -576,7 +576,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。 
      * @return WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
-    public Long getWithRo() {
+    public Integer getWithRo() {
         return this.WithRo;
     }
 
@@ -584,7 +584,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      * @param WithRo 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
-    public void setWithRo(Long WithRo) {
+    public void setWithRo(Integer WithRo) {
         this.WithRo = WithRo;
     }
 
@@ -592,7 +592,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。 
      * @return WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
-    public Long getWithMaster() {
+    public Integer getWithMaster() {
         return this.WithMaster;
     }
 
@@ -600,7 +600,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      * @param WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      */
-    public void setWithMaster(Long WithMaster) {
+    public void setWithMaster(Integer WithMaster) {
         this.WithMaster = WithMaster;
     }
 

@@ -48,21 +48,21 @@ public class DescribeSlowLogRequest extends AbstractModel{
     */
     @SerializedName("SlowMS")
     @Expose
-    private Long SlowMS;
+    private Integer SlowMS;
 
     /**
     * 偏移量，最小值为0，最大值为10000，默认值为0。
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页大小，最小值为1，最大值为100，默认值为20。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
@@ -116,7 +116,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Get 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。 
      * @return SlowMS 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      */
-    public Long getSlowMS() {
+    public Integer getSlowMS() {
         return this.SlowMS;
     }
 
@@ -124,7 +124,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Set 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      * @param SlowMS 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      */
-    public void setSlowMS(Long SlowMS) {
+    public void setSlowMS(Integer SlowMS) {
         this.SlowMS = SlowMS;
     }
 
@@ -132,7 +132,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Get 偏移量，最小值为0，最大值为10000，默认值为0。 
      * @return Offset 偏移量，最小值为0，最大值为10000，默认值为0。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -140,7 +140,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Set 偏移量，最小值为0，最大值为10000，默认值为0。
      * @param Offset 偏移量，最小值为0，最大值为10000，默认值为0。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -148,7 +148,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Get 分页大小，最小值为1，最大值为100，默认值为20。 
      * @return Limit 分页大小，最小值为1，最大值为100，默认值为20。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -156,7 +156,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Set 分页大小，最小值为1，最大值为100，默认值为20。
      * @param Limit 分页大小，最小值为1，最大值为100，默认值为20。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

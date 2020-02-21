@@ -58,14 +58,14 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 每页个数，范围是[1,1000]，默认值是20。
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
     * 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
@@ -161,7 +161,7 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
      * Get 页号，范围是[1,1000]，默认值是1。 
      * @return PageNum 页号，范围是[1,1000]，默认值是1。
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -169,7 +169,7 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
      * Set 页号，范围是[1,1000]，默认值是1。
      * @param PageNum 页号，范围是[1,1000]，默认值是1。
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -177,7 +177,7 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
      * Get 每页个数，范围是[1,1000]，默认值是20。 
      * @return PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -185,7 +185,7 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
      * Set 每页个数，范围是[1,1000]，默认值是20。
      * @param PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 

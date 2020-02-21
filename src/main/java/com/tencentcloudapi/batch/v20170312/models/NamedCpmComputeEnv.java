@@ -41,7 +41,7 @@ public class NamedCpmComputeEnv extends AbstractModel{
     */
     @SerializedName("DesiredComputeNodeCount")
     @Expose
-    private Long DesiredComputeNodeCount;
+    private Integer DesiredComputeNodeCount;
 
     /**
     * 计算环境描述
@@ -121,7 +121,7 @@ public class NamedCpmComputeEnv extends AbstractModel{
      * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
-    public Long getDesiredComputeNodeCount() {
+    public Integer getDesiredComputeNodeCount() {
         return this.DesiredComputeNodeCount;
     }
 
@@ -129,7 +129,7 @@ public class NamedCpmComputeEnv extends AbstractModel{
      * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
-    public void setDesiredComputeNodeCount(Long DesiredComputeNodeCount) {
+    public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
         this.DesiredComputeNodeCount = DesiredComputeNodeCount;
     }
 

@@ -27,14 +27,14 @@ public class ListNamespacesRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 数据的偏移量，默认值为 0
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
@@ -54,7 +54,7 @@ public class ListNamespacesRequest extends AbstractModel{
      * Get 返回数据长度，默认值为 20 
      * @return Limit 返回数据长度，默认值为 20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -62,7 +62,7 @@ public class ListNamespacesRequest extends AbstractModel{
      * Set 返回数据长度，默认值为 20
      * @param Limit 返回数据长度，默认值为 20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -70,7 +70,7 @@ public class ListNamespacesRequest extends AbstractModel{
      * Get 数据的偏移量，默认值为 0 
      * @return Offset 数据的偏移量，默认值为 0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -78,7 +78,7 @@ public class ListNamespacesRequest extends AbstractModel{
      * Set 数据的偏移量，默认值为 0
      * @param Offset 数据的偏移量，默认值为 0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 

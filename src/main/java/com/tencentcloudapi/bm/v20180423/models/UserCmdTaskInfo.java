@@ -27,7 +27,7 @@ public class UserCmdTaskInfo extends AbstractModel{
     */
     @SerializedName("AutoId")
     @Expose
-    private Long AutoId;
+    private Integer AutoId;
 
     /**
     * 任务ID
@@ -55,7 +55,7 @@ public class UserCmdTaskInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 设备别名
@@ -146,20 +146,20 @@ public class UserCmdTaskInfo extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 用户执行脚本结束退出的返回值，没有返回值为-1
     */
     @SerializedName("LastShellExit")
     @Expose
-    private Long LastShellExit;
+    private Integer LastShellExit;
 
     /**
      * Get 自动编号，可忽略 
      * @return AutoId 自动编号，可忽略
      */
-    public Long getAutoId() {
+    public Integer getAutoId() {
         return this.AutoId;
     }
 
@@ -167,7 +167,7 @@ public class UserCmdTaskInfo extends AbstractModel{
      * Set 自动编号，可忽略
      * @param AutoId 自动编号，可忽略
      */
-    public void setAutoId(Long AutoId) {
+    public void setAutoId(Integer AutoId) {
         this.AutoId = AutoId;
     }
 
@@ -223,7 +223,7 @@ public class UserCmdTaskInfo extends AbstractModel{
      * Get 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码 
      * @return Status 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -231,7 +231,7 @@ public class UserCmdTaskInfo extends AbstractModel{
      * Set 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
      * @param Status 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -431,7 +431,7 @@ public class UserCmdTaskInfo extends AbstractModel{
      * Get 用户AppId 
      * @return AppId 用户AppId
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -439,7 +439,7 @@ public class UserCmdTaskInfo extends AbstractModel{
      * Set 用户AppId
      * @param AppId 用户AppId
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
@@ -447,7 +447,7 @@ public class UserCmdTaskInfo extends AbstractModel{
      * Get 用户执行脚本结束退出的返回值，没有返回值为-1 
      * @return LastShellExit 用户执行脚本结束退出的返回值，没有返回值为-1
      */
-    public Long getLastShellExit() {
+    public Integer getLastShellExit() {
         return this.LastShellExit;
     }
 
@@ -455,7 +455,7 @@ public class UserCmdTaskInfo extends AbstractModel{
      * Set 用户执行脚本结束退出的返回值，没有返回值为-1
      * @param LastShellExit 用户执行脚本结束退出的返回值，没有返回值为-1
      */
-    public void setLastShellExit(Long LastShellExit) {
+    public void setLastShellExit(Integer LastShellExit) {
         this.LastShellExit = LastShellExit;
     }
 

@@ -34,7 +34,7 @@ public class ModifyLiveCertRequest extends AbstractModel{
     */
     @SerializedName("CertType")
     @Expose
-    private Long CertType;
+    private Integer CertType;
 
     /**
     * 证书名称。
@@ -84,7 +84,7 @@ public class ModifyLiveCertRequest extends AbstractModel{
      * Get 证书类型。0-用户添加证书；1-腾讯云托管证书。 
      * @return CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
      */
-    public Long getCertType() {
+    public Integer getCertType() {
         return this.CertType;
     }
 
@@ -92,7 +92,7 @@ public class ModifyLiveCertRequest extends AbstractModel{
      * Set 证书类型。0-用户添加证书；1-腾讯云托管证书。
      * @param CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
      */
-    public void setCertType(Long CertType) {
+    public void setCertType(Integer CertType) {
         this.CertType = CertType;
     }
 

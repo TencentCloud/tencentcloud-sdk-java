@@ -27,7 +27,7 @@ public class GetTransListHandlerResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 当前群组编号
@@ -54,7 +54,7 @@ public class GetTransListHandlerResponse extends AbstractModel{
      * Get 总记录数 
      * @return TotalCount 总记录数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -62,7 +62,7 @@ public class GetTransListHandlerResponse extends AbstractModel{
      * Set 总记录数
      * @param TotalCount 总记录数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

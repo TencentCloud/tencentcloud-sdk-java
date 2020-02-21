@@ -41,7 +41,7 @@ public class DescribeDevicePriceInfoRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Long TimeSpan;
+    private Integer TimeSpan;
 
     /**
      * Get 需要查询的实例列表 
@@ -79,7 +79,7 @@ public class DescribeDevicePriceInfoRequest extends AbstractModel{
      * Get 购买时长 
      * @return TimeSpan 购买时长
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -87,7 +87,7 @@ public class DescribeDevicePriceInfoRequest extends AbstractModel{
      * Set 购买时长
      * @param TimeSpan 购买时长
      */
-    public void setTimeSpan(Long TimeSpan) {
+    public void setTimeSpan(Integer TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 

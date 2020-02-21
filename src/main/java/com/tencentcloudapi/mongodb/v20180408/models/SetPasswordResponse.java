@@ -27,7 +27,7 @@ public class SetPasswordResponse extends AbstractModel{
     */
     @SerializedName("FlowId")
     @Expose
-    private Long FlowId;
+    private Integer FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class SetPasswordResponse extends AbstractModel{
      * Get 返回的异步任务ID 
      * @return FlowId 返回的异步任务ID
      */
-    public Long getFlowId() {
+    public Integer getFlowId() {
         return this.FlowId;
     }
 
@@ -48,7 +48,7 @@ public class SetPasswordResponse extends AbstractModel{
      * Set 返回的异步任务ID
      * @param FlowId 返回的异步任务ID
      */
-    public void setFlowId(Long FlowId) {
+    public void setFlowId(Integer FlowId) {
         this.FlowId = FlowId;
     }
 

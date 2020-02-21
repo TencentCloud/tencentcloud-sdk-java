@@ -49,7 +49,7 @@ public class TargetGroupInfo extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 目标组的创建时间
@@ -127,7 +127,7 @@ public class TargetGroupInfo extends AbstractModel{
      * @return Port 目标组的默认端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -137,7 +137,7 @@ public class TargetGroupInfo extends AbstractModel{
      * @param Port 目标组的默认端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 

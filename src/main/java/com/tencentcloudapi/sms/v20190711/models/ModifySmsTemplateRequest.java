@@ -51,7 +51,9 @@ public class ModifySmsTemplateRequest extends AbstractModel{
     private Long SmsType;
 
     /**
-    * 0表示国内短信，1表示国际/港澳台短信，默认为0。
+    * 是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
     */
     @SerializedName("International")
     @Expose
@@ -129,16 +131,24 @@ public class ModifySmsTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 0表示国内短信，1表示国际/港澳台短信，默认为0。 
-     * @return International 0表示国内短信，1表示国际/港澳台短信，默认为0。
+     * Get 是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。 
+     * @return International 是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
      */
     public Long getInternational() {
         return this.International;
     }
 
     /**
-     * Set 0表示国内短信，1表示国际/港澳台短信，默认为0。
-     * @param International 0表示国内短信，1表示国际/港澳台短信，默认为0。
+     * Set 是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
+     * @param International 是否国际/港澳台短信：
+0：表示国内短信。
+1：表示国际/港澳台短信。
      */
     public void setInternational(Long International) {
         this.International = International;

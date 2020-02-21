@@ -65,14 +65,14 @@ public class CardInfo extends AbstractModel{
     */
     @SerializedName("Teleoperator")
     @Expose
-    private Long Teleoperator;
+    private Integer Teleoperator;
 
     /**
     * 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
     */
     @SerializedName("CardStatus")
     @Expose
-    private Long CardStatus;
+    private Integer CardStatus;
 
     /**
     * 网络状态
@@ -80,7 +80,7 @@ public class CardInfo extends AbstractModel{
     */
     @SerializedName("NetworkStatus")
     @Expose
-    private Long NetworkStatus;
+    private Integer NetworkStatus;
 
     /**
     * 激活时间
@@ -95,7 +95,7 @@ public class CardInfo extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 套餐类型
@@ -165,7 +165,7 @@ public class CardInfo extends AbstractModel{
     */
     @SerializedName("PreorderCnt")
     @Expose
-    private Long PreorderCnt;
+    private Integer PreorderCnt;
 
     /**
     * 激活被回调标志
@@ -173,7 +173,7 @@ public class CardInfo extends AbstractModel{
     */
     @SerializedName("IsActivated")
     @Expose
-    private Long IsActivated;
+    private Integer IsActivated;
 
     /**
     * 订单ID
@@ -189,7 +189,7 @@ public class CardInfo extends AbstractModel{
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Long AutoRenew;
+    private Integer AutoRenew;
 
     /**
     * 备注
@@ -205,21 +205,21 @@ public class CardInfo extends AbstractModel{
     */
     @SerializedName("AllowArrears")
     @Expose
-    private Long AllowArrears;
+    private Integer AllowArrears;
 
     /**
     * 是否开通短信0:未开短信 1:开通短信
     */
     @SerializedName("NeedSms")
     @Expose
-    private Long NeedSms;
+    private Integer NeedSms;
 
     /**
     * 服务
     */
     @SerializedName("Provider")
     @Expose
-    private Long Provider;
+    private Integer Provider;
 
     /**
      * Get 卡片ID 
@@ -317,7 +317,7 @@ public class CardInfo extends AbstractModel{
      * Get 运营商编号 
      * @return Teleoperator 运营商编号
      */
-    public Long getTeleoperator() {
+    public Integer getTeleoperator() {
         return this.Teleoperator;
     }
 
@@ -325,7 +325,7 @@ public class CardInfo extends AbstractModel{
      * Set 运营商编号
      * @param Teleoperator 运营商编号
      */
-    public void setTeleoperator(Long Teleoperator) {
+    public void setTeleoperator(Integer Teleoperator) {
         this.Teleoperator = Teleoperator;
     }
 
@@ -333,7 +333,7 @@ public class CardInfo extends AbstractModel{
      * Get 卡片状态 1:未激活 2：激活 3：停卡 5：销卡 
      * @return CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      */
-    public Long getCardStatus() {
+    public Integer getCardStatus() {
         return this.CardStatus;
     }
 
@@ -341,7 +341,7 @@ public class CardInfo extends AbstractModel{
      * Set 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      * @param CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      */
-    public void setCardStatus(Long CardStatus) {
+    public void setCardStatus(Integer CardStatus) {
         this.CardStatus = CardStatus;
     }
 
@@ -351,7 +351,7 @@ public class CardInfo extends AbstractModel{
      * @return NetworkStatus 网络状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getNetworkStatus() {
+    public Integer getNetworkStatus() {
         return this.NetworkStatus;
     }
 
@@ -361,7 +361,7 @@ public class CardInfo extends AbstractModel{
      * @param NetworkStatus 网络状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setNetworkStatus(Long NetworkStatus) {
+    public void setNetworkStatus(Integer NetworkStatus) {
         this.NetworkStatus = NetworkStatus;
     }
 
@@ -389,7 +389,7 @@ public class CardInfo extends AbstractModel{
      * Get 资费类型，1 单卡，2 流量池 
      * @return Type 资费类型，1 单卡，2 流量池
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -397,7 +397,7 @@ public class CardInfo extends AbstractModel{
      * Set 资费类型，1 单卡，2 流量池
      * @param Type 资费类型，1 单卡，2 流量池
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -559,7 +559,7 @@ public class CardInfo extends AbstractModel{
      * @return PreorderCnt 套餐周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getPreorderCnt() {
+    public Integer getPreorderCnt() {
         return this.PreorderCnt;
     }
 
@@ -569,7 +569,7 @@ public class CardInfo extends AbstractModel{
      * @param PreorderCnt 套餐周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPreorderCnt(Long PreorderCnt) {
+    public void setPreorderCnt(Integer PreorderCnt) {
         this.PreorderCnt = PreorderCnt;
     }
 
@@ -579,7 +579,7 @@ public class CardInfo extends AbstractModel{
      * @return IsActivated 激活被回调标志
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getIsActivated() {
+    public Integer getIsActivated() {
         return this.IsActivated;
     }
 
@@ -589,7 +589,7 @@ public class CardInfo extends AbstractModel{
      * @param IsActivated 激活被回调标志
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIsActivated(Long IsActivated) {
+    public void setIsActivated(Integer IsActivated) {
         this.IsActivated = IsActivated;
     }
 
@@ -619,7 +619,7 @@ public class CardInfo extends AbstractModel{
      * @return AutoRenew 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getAutoRenew() {
+    public Integer getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -629,7 +629,7 @@ public class CardInfo extends AbstractModel{
      * @param AutoRenew 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAutoRenew(Long AutoRenew) {
+    public void setAutoRenew(Integer AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
@@ -659,7 +659,7 @@ public class CardInfo extends AbstractModel{
      * @return AllowArrears 0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getAllowArrears() {
+    public Integer getAllowArrears() {
         return this.AllowArrears;
     }
 
@@ -669,7 +669,7 @@ public class CardInfo extends AbstractModel{
      * @param AllowArrears 0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAllowArrears(Long AllowArrears) {
+    public void setAllowArrears(Integer AllowArrears) {
         this.AllowArrears = AllowArrears;
     }
 
@@ -677,7 +677,7 @@ public class CardInfo extends AbstractModel{
      * Get 是否开通短信0:未开短信 1:开通短信 
      * @return NeedSms 是否开通短信0:未开短信 1:开通短信
      */
-    public Long getNeedSms() {
+    public Integer getNeedSms() {
         return this.NeedSms;
     }
 
@@ -685,7 +685,7 @@ public class CardInfo extends AbstractModel{
      * Set 是否开通短信0:未开短信 1:开通短信
      * @param NeedSms 是否开通短信0:未开短信 1:开通短信
      */
-    public void setNeedSms(Long NeedSms) {
+    public void setNeedSms(Integer NeedSms) {
         this.NeedSms = NeedSms;
     }
 
@@ -693,7 +693,7 @@ public class CardInfo extends AbstractModel{
      * Get 服务 
      * @return Provider 服务
      */
-    public Long getProvider() {
+    public Integer getProvider() {
         return this.Provider;
     }
 
@@ -701,7 +701,7 @@ public class CardInfo extends AbstractModel{
      * Set 服务
      * @param Provider 服务
      */
-    public void setProvider(Long Provider) {
+    public void setProvider(Integer Provider) {
         this.Provider = Provider;
     }
 

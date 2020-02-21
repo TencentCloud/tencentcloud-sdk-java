@@ -48,7 +48,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("ProjectIds")
     @Expose
-    private Long [] ProjectIds;
+    private Integer [] ProjectIds;
 
     /**
     * 是否根据 VPC 网络来搜索
@@ -90,14 +90,14 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数量，默认为 20，最大值为 100。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 按 OriginSerialId 查询
@@ -118,7 +118,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("ExclusterType")
     @Expose
-    private Long ExclusterType;
+    private Integer ExclusterType;
 
     /**
     * 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
@@ -179,7 +179,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 按项目 ID 查询 
      * @return ProjectIds 按项目 ID 查询
      */
-    public Long [] getProjectIds() {
+    public Integer [] getProjectIds() {
         return this.ProjectIds;
     }
 
@@ -187,7 +187,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 按项目 ID 查询
      * @param ProjectIds 按项目 ID 查询
      */
-    public void setProjectIds(Long [] ProjectIds) {
+    public void setProjectIds(Integer [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
@@ -275,7 +275,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 偏移量，默认为 0 
      * @return Offset 偏移量，默认为 0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -283,7 +283,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 偏移量，默认为 0
      * @param Offset 偏移量，默认为 0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -291,7 +291,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 返回数量，默认为 20，最大值为 100。 
      * @return Limit 返回数量，默认为 20，最大值为 100。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -299,7 +299,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 返回数量，默认为 20，最大值为 100。
      * @param Limit 返回数量，默认为 20，最大值为 100。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -339,7 +339,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部 
      * @return ExclusterType 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
      */
-    public Long getExclusterType() {
+    public Integer getExclusterType() {
         return this.ExclusterType;
     }
 
@@ -347,7 +347,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
      * @param ExclusterType 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
      */
-    public void setExclusterType(Long ExclusterType) {
+    public void setExclusterType(Integer ExclusterType) {
         this.ExclusterType = ExclusterType;
     }
 

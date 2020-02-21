@@ -34,7 +34,7 @@ public class DescribeDeviceMonitorInfoRequest extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
      * Get 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。 
@@ -56,7 +56,7 @@ public class DescribeDeviceMonitorInfoRequest extends AbstractModel{
      * Get 返回当天最近Count个5分钟粒度的监控数据。最小值1，最大值288，不传该参数默认返回当天所有5分钟粒度监控数据。 
      * @return Count 返回当天最近Count个5分钟粒度的监控数据。最小值1，最大值288，不传该参数默认返回当天所有5分钟粒度监控数据。
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -64,7 +64,7 @@ public class DescribeDeviceMonitorInfoRequest extends AbstractModel{
      * Set 返回当天最近Count个5分钟粒度的监控数据。最小值1，最大值288，不传该参数默认返回当天所有5分钟粒度监控数据。
      * @param Count 返回当天最近Count个5分钟粒度的监控数据。最小值1，最大值288，不传该参数默认返回当天所有5分钟粒度监控数据。
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 

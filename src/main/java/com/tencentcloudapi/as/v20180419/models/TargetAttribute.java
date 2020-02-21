@@ -27,20 +27,20 @@ public class TargetAttribute extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 权重
     */
     @SerializedName("Weight")
     @Expose
-    private Long Weight;
+    private Integer Weight;
 
     /**
      * Get 端口 
      * @return Port 端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -48,7 +48,7 @@ public class TargetAttribute extends AbstractModel{
      * Set 端口
      * @param Port 端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 
@@ -56,7 +56,7 @@ public class TargetAttribute extends AbstractModel{
      * Get 权重 
      * @return Weight 权重
      */
-    public Long getWeight() {
+    public Integer getWeight() {
         return this.Weight;
     }
 
@@ -64,7 +64,7 @@ public class TargetAttribute extends AbstractModel{
      * Set 权重
      * @param Weight 权重
      */
-    public void setWeight(Long Weight) {
+    public void setWeight(Integer Weight) {
         this.Weight = Weight;
     }
 

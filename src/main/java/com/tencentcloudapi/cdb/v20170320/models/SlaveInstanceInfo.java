@@ -27,7 +27,7 @@ public class SlaveInstanceInfo extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Long Vport;
+    private Integer Vport;
 
     /**
     * 地域信息
@@ -54,7 +54,7 @@ public class SlaveInstanceInfo extends AbstractModel{
      * Get 端口号 
      * @return Vport 端口号
      */
-    public Long getVport() {
+    public Integer getVport() {
         return this.Vport;
     }
 
@@ -62,7 +62,7 @@ public class SlaveInstanceInfo extends AbstractModel{
      * Set 端口号
      * @param Vport 端口号
      */
-    public void setVport(Long Vport) {
+    public void setVport(Integer Vport) {
         this.Vport = Vport;
     }
 

@@ -34,21 +34,21 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
     */
     @SerializedName("MemSize")
     @Expose
-    private Long MemSize;
+    private Integer MemSize;
 
     /**
     * 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
     */
     @SerializedName("RedisShardNum")
     @Expose
-    private Long RedisShardNum;
+    private Integer RedisShardNum;
 
     /**
     * 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
     */
     @SerializedName("RedisReplicasNum")
     @Expose
-    private Long RedisReplicasNum;
+    private Integer RedisReplicasNum;
 
     /**
      * Get 实例Id 
@@ -70,7 +70,7 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
      * Get 分片大小 单位 MB 
      * @return MemSize 分片大小 单位 MB
      */
-    public Long getMemSize() {
+    public Integer getMemSize() {
         return this.MemSize;
     }
 
@@ -78,7 +78,7 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
      * Set 分片大小 单位 MB
      * @param MemSize 分片大小 单位 MB
      */
-    public void setMemSize(Long MemSize) {
+    public void setMemSize(Integer MemSize) {
         this.MemSize = MemSize;
     }
 
@@ -86,7 +86,7 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
      * Get 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public Long getRedisShardNum() {
+    public Integer getRedisShardNum() {
         return this.RedisShardNum;
     }
 
@@ -94,7 +94,7 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
      * Set 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public void setRedisShardNum(Long RedisShardNum) {
+    public void setRedisShardNum(Integer RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
@@ -102,7 +102,7 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
      * Get 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public Long getRedisReplicasNum() {
+    public Integer getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
@@ -110,7 +110,7 @@ public class InquiryPriceUpgradeInstanceRequest extends AbstractModel{
      * Set 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
-    public void setRedisReplicasNum(Long RedisReplicasNum) {
+    public void setRedisReplicasNum(Integer RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 

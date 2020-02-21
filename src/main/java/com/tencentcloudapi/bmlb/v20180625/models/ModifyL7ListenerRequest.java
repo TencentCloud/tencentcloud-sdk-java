@@ -48,7 +48,7 @@ public class ModifyL7ListenerRequest extends AbstractModel{
     */
     @SerializedName("SslMode")
     @Expose
-    private Long SslMode;
+    private Integer SslMode;
 
     /**
     * 服务端证书ID。
@@ -104,7 +104,7 @@ public class ModifyL7ListenerRequest extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
      * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
@@ -158,7 +158,7 @@ public class ModifyL7ListenerRequest extends AbstractModel{
      * Get 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。 
      * @return SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public Long getSslMode() {
+    public Integer getSslMode() {
         return this.SslMode;
     }
 
@@ -166,7 +166,7 @@ public class ModifyL7ListenerRequest extends AbstractModel{
      * Set 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      * @param SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public void setSslMode(Long SslMode) {
+    public void setSslMode(Integer SslMode) {
         this.SslMode = SslMode;
     }
 
@@ -286,7 +286,7 @@ public class ModifyL7ListenerRequest extends AbstractModel{
      * Get 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。 
      * @return Bandwidth 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -294,7 +294,7 @@ public class ModifyL7ListenerRequest extends AbstractModel{
      * Set 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
      * @param Bandwidth 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

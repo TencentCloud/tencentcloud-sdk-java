@@ -83,7 +83,7 @@ public class InstanceIntegerParam extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
      * Get 参数名 
@@ -217,7 +217,7 @@ public class InstanceIntegerParam extends AbstractModel{
      * Get 参数状态, 1: 修改中， 2：修改完成 
      * @return Status 参数状态, 1: 修改中， 2：修改完成
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -225,7 +225,7 @@ public class InstanceIntegerParam extends AbstractModel{
      * Set 参数状态, 1: 修改中， 2：修改完成
      * @param Status 参数状态, 1: 修改中， 2：修改完成
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

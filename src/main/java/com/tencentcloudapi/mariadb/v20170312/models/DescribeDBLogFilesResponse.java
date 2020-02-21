@@ -34,14 +34,14 @@ public class DescribeDBLogFilesResponse extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 请求日志总数
     */
     @SerializedName("Total")
     @Expose
-    private Long Total;
+    private Integer Total;
 
     /**
     * 包含uri、length、mtime（修改时间）等信息
@@ -91,7 +91,7 @@ public class DescribeDBLogFilesResponse extends AbstractModel{
      * Get 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。 
      * @return Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -99,7 +99,7 @@ public class DescribeDBLogFilesResponse extends AbstractModel{
      * Set 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      * @param Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -107,7 +107,7 @@ public class DescribeDBLogFilesResponse extends AbstractModel{
      * Get 请求日志总数 
      * @return Total 请求日志总数
      */
-    public Long getTotal() {
+    public Integer getTotal() {
         return this.Total;
     }
 
@@ -115,7 +115,7 @@ public class DescribeDBLogFilesResponse extends AbstractModel{
      * Set 请求日志总数
      * @param Total 请求日志总数
      */
-    public void setTotal(Long Total) {
+    public void setTotal(Integer Total) {
         this.Total = Total;
     }
 

@@ -27,7 +27,7 @@ public class ClearInstanceResponse extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class ClearInstanceResponse extends AbstractModel{
      * Get 任务ID 
      * @return TaskId 任务ID
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -48,7 +48,7 @@ public class ClearInstanceResponse extends AbstractModel{
      * Set 任务ID
      * @param TaskId 任务ID
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 

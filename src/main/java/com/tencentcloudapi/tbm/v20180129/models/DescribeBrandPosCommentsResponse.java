@@ -34,7 +34,7 @@ public class DescribeBrandPosCommentsResponse extends AbstractModel{
     */
     @SerializedName("TotalComments")
     @Expose
-    private Long TotalComments;
+    private Integer TotalComments;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeBrandPosCommentsResponse extends AbstractModel{
      * Get 总的好评个数 
      * @return TotalComments 总的好评个数
      */
-    public Long getTotalComments() {
+    public Integer getTotalComments() {
         return this.TotalComments;
     }
 
@@ -71,7 +71,7 @@ public class DescribeBrandPosCommentsResponse extends AbstractModel{
      * Set 总的好评个数
      * @param TotalComments 总的好评个数
      */
-    public void setTotalComments(Long TotalComments) {
+    public void setTotalComments(Integer TotalComments) {
         this.TotalComments = TotalComments;
     }
 

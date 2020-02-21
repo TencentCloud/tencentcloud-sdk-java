@@ -73,7 +73,7 @@ UTC格式时间，
     */
     @SerializedName("Duration")
     @Expose
-    private Long Duration;
+    private Integer Duration;
 
     /**
     * 主播IP。
@@ -205,7 +205,7 @@ UTC格式时间，
      * Get 推流持续时长，单位：秒。 
      * @return Duration 推流持续时长，单位：秒。
      */
-    public Long getDuration() {
+    public Integer getDuration() {
         return this.Duration;
     }
 
@@ -213,7 +213,7 @@ UTC格式时间，
      * Set 推流持续时长，单位：秒。
      * @param Duration 推流持续时长，单位：秒。
      */
-    public void setDuration(Long Duration) {
+    public void setDuration(Integer Duration) {
         this.Duration = Duration;
     }
 

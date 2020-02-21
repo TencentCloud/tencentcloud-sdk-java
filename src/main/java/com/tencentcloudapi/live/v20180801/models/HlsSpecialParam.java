@@ -27,13 +27,13 @@ public class HlsSpecialParam extends AbstractModel{
     */
     @SerializedName("FlowContinueDuration")
     @Expose
-    private Long FlowContinueDuration;
+    private Integer FlowContinueDuration;
 
     /**
      * Get HLS续流超时时间。 
      * @return FlowContinueDuration HLS续流超时时间。
      */
-    public Long getFlowContinueDuration() {
+    public Integer getFlowContinueDuration() {
         return this.FlowContinueDuration;
     }
 
@@ -41,7 +41,7 @@ public class HlsSpecialParam extends AbstractModel{
      * Set HLS续流超时时间。
      * @param FlowContinueDuration HLS续流超时时间。
      */
-    public void setFlowContinueDuration(Long FlowContinueDuration) {
+    public void setFlowContinueDuration(Integer FlowContinueDuration) {
         this.FlowContinueDuration = FlowContinueDuration;
     }
 

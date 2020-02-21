@@ -89,7 +89,7 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
     */
     @SerializedName("Project")
     @Expose
-    private Long Project;
+    private Integer Project;
 
     /**
     * 多域名查询时，默认（false)返回所有域名汇总排序结果
@@ -314,7 +314,7 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
      * @return Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      */
-    public Long getProject() {
+    public Integer getProject() {
         return this.Project;
     }
 
@@ -324,7 +324,7 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
      * @param Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      */
-    public void setProject(Long Project) {
+    public void setProject(Integer Project) {
         this.Project = Project;
     }
 

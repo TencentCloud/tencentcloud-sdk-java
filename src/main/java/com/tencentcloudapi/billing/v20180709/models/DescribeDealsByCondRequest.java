@@ -41,14 +41,14 @@ public class DescribeDealsByCondRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 第多少页，从0开始，默认是0
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 订单状态,默认为4（成功的订单）
@@ -67,7 +67,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 订单号
@@ -112,7 +112,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
      * Get 一页多少条数据，默认是20条，最大不超过1000 
      * @return Limit 一页多少条数据，默认是20条，最大不超过1000
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -120,7 +120,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
      * Set 一页多少条数据，默认是20条，最大不超过1000
      * @param Limit 一页多少条数据，默认是20条，最大不超过1000
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -128,7 +128,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
      * Get 第多少页，从0开始，默认是0 
      * @return Offset 第多少页，从0开始，默认是0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -136,7 +136,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
      * Set 第多少页，从0开始，默认是0
      * @param Offset 第多少页，从0开始，默认是0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -168,7 +168,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
 11：代付拒绝
 12：支付中
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -200,7 +200,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
 11：代付拒绝
 12：支付中
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

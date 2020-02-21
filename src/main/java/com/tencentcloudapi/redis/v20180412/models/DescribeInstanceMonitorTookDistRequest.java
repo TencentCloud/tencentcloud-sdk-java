@@ -41,7 +41,7 @@ public class DescribeInstanceMonitorTookDistRequest extends AbstractModel{
     */
     @SerializedName("SpanType")
     @Expose
-    private Long SpanType;
+    private Integer SpanType;
 
     /**
      * Get 实例Id 
@@ -79,7 +79,7 @@ public class DescribeInstanceMonitorTookDistRequest extends AbstractModel{
      * Get 请求类型：1——string类型，2——所有类型 
      * @return SpanType 请求类型：1——string类型，2——所有类型
      */
-    public Long getSpanType() {
+    public Integer getSpanType() {
         return this.SpanType;
     }
 
@@ -87,7 +87,7 @@ public class DescribeInstanceMonitorTookDistRequest extends AbstractModel{
      * Set 请求类型：1——string类型，2——所有类型
      * @param SpanType 请求类型：1——string类型，2——所有类型
      */
-    public void setSpanType(Long SpanType) {
+    public void setSpanType(Integer SpanType) {
         this.SpanType = SpanType;
     }
 

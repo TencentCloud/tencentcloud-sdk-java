@@ -34,14 +34,14 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回的结果条数
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 查询的起始时间，形如2016-07-23 14:55:20
@@ -83,7 +83,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
     */
     @SerializedName("Slave")
     @Expose
-    private Long Slave;
+    private Integer Slave;
 
     /**
      * Get 实例 ID，形如：tdsql-ow728lmc。 
@@ -105,7 +105,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
      * Get 从结果的第几条数据开始返回 
      * @return Offset 从结果的第几条数据开始返回
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -113,7 +113,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
      * Set 从结果的第几条数据开始返回
      * @param Offset 从结果的第几条数据开始返回
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -121,7 +121,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
      * Get 返回的结果条数 
      * @return Limit 返回的结果条数
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -129,7 +129,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
      * Set 返回的结果条数
      * @param Limit 返回的结果条数
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -217,7 +217,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
      * Get 是否查询从机的慢查询，0-主机; 1-从机 
      * @return Slave 是否查询从机的慢查询，0-主机; 1-从机
      */
-    public Long getSlave() {
+    public Integer getSlave() {
         return this.Slave;
     }
 
@@ -225,7 +225,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
      * Set 是否查询从机的慢查询，0-主机; 1-从机
      * @param Slave 是否查询从机的慢查询，0-主机; 1-从机
      */
-    public void setSlave(Long Slave) {
+    public void setSlave(Integer Slave) {
         this.Slave = Slave;
     }
 

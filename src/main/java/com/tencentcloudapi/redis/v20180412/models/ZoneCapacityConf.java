@@ -69,7 +69,7 @@ public class ZoneCapacityConf extends AbstractModel{
     */
     @SerializedName("OldZoneId")
     @Expose
-    private Long OldZoneId;
+    private Integer OldZoneId;
 
     /**
      * Get 可用区ID：如ap-guangzhou-3 
@@ -171,7 +171,7 @@ public class ZoneCapacityConf extends AbstractModel{
      * Get 可用区ID：如100003 
      * @return OldZoneId 可用区ID：如100003
      */
-    public Long getOldZoneId() {
+    public Integer getOldZoneId() {
         return this.OldZoneId;
     }
 
@@ -179,7 +179,7 @@ public class ZoneCapacityConf extends AbstractModel{
      * Set 可用区ID：如100003
      * @param OldZoneId 可用区ID：如100003
      */
-    public void setOldZoneId(Long OldZoneId) {
+    public void setOldZoneId(Integer OldZoneId) {
         this.OldZoneId = OldZoneId;
     }
 

@@ -41,14 +41,14 @@ public class LocalDiskType extends AbstractModel{
     */
     @SerializedName("MinSize")
     @Expose
-    private Long MinSize;
+    private Integer MinSize;
 
     /**
     * 本地磁盘最大值。
     */
     @SerializedName("MaxSize")
     @Expose
-    private Long MaxSize;
+    private Integer MaxSize;
 
     /**
     * 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
@@ -93,7 +93,7 @@ public class LocalDiskType extends AbstractModel{
      * Get 本地磁盘最小值。 
      * @return MinSize 本地磁盘最小值。
      */
-    public Long getMinSize() {
+    public Integer getMinSize() {
         return this.MinSize;
     }
 
@@ -101,7 +101,7 @@ public class LocalDiskType extends AbstractModel{
      * Set 本地磁盘最小值。
      * @param MinSize 本地磁盘最小值。
      */
-    public void setMinSize(Long MinSize) {
+    public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
     }
 
@@ -109,7 +109,7 @@ public class LocalDiskType extends AbstractModel{
      * Get 本地磁盘最大值。 
      * @return MaxSize 本地磁盘最大值。
      */
-    public Long getMaxSize() {
+    public Integer getMaxSize() {
         return this.MaxSize;
     }
 
@@ -117,7 +117,7 @@ public class LocalDiskType extends AbstractModel{
      * Set 本地磁盘最大值。
      * @param MaxSize 本地磁盘最大值。
      */
-    public void setMaxSize(Long MaxSize) {
+    public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;
     }
 

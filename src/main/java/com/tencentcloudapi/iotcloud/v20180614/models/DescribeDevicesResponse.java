@@ -27,7 +27,7 @@ public class DescribeDevicesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 设备详细信息列表
@@ -47,7 +47,7 @@ public class DescribeDevicesResponse extends AbstractModel{
      * Get 设备总数 
      * @return TotalCount 设备总数
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDevicesResponse extends AbstractModel{
      * Set 设备总数
      * @param TotalCount 设备总数
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

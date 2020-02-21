@@ -34,14 +34,14 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 顾客face id
     */
     @SerializedName("PersonId")
     @Expose
-    private Long PersonId;
+    private Integer PersonId;
 
     /**
     * 顾客底图url
@@ -55,7 +55,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
     */
     @SerializedName("PersonType")
     @Expose
-    private Long PersonType;
+    private Integer PersonType;
 
     /**
     * 顾客首次进店时间
@@ -69,7 +69,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
     */
     @SerializedName("VisitTimes")
     @Expose
-    private Long VisitTimes;
+    private Integer VisitTimes;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -98,7 +98,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Get 店铺id 
      * @return ShopId 店铺id
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -106,7 +106,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Set 店铺id
      * @param ShopId 店铺id
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -114,7 +114,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Get 顾客face id 
      * @return PersonId 顾客face id
      */
-    public Long getPersonId() {
+    public Integer getPersonId() {
         return this.PersonId;
     }
 
@@ -122,7 +122,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Set 顾客face id
      * @param PersonId 顾客face id
      */
-    public void setPersonId(Long PersonId) {
+    public void setPersonId(Integer PersonId) {
         this.PersonId = PersonId;
     }
 
@@ -146,7 +146,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Get 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单） 
      * @return PersonType 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
-    public Long getPersonType() {
+    public Integer getPersonType() {
         return this.PersonType;
     }
 
@@ -154,7 +154,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Set 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      * @param PersonType 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
-    public void setPersonType(Long PersonType) {
+    public void setPersonType(Integer PersonType) {
         this.PersonType = PersonType;
     }
 
@@ -178,7 +178,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Get 顾客历史到访次数 
      * @return VisitTimes 顾客历史到访次数
      */
-    public Long getVisitTimes() {
+    public Integer getVisitTimes() {
         return this.VisitTimes;
     }
 
@@ -186,7 +186,7 @@ public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
      * Set 顾客历史到访次数
      * @param VisitTimes 顾客历史到访次数
      */
-    public void setVisitTimes(Long VisitTimes) {
+    public void setVisitTimes(Integer VisitTimes) {
         this.VisitTimes = VisitTimes;
     }
 

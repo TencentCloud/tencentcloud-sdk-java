@@ -27,34 +27,34 @@ public class ItemCoord extends AbstractModel{
     */
     @SerializedName("X")
     @Expose
-    private Long X;
+    private Integer X;
 
     /**
     * 左上角y
     */
     @SerializedName("Y")
     @Expose
-    private Long Y;
+    private Integer Y;
 
     /**
     * 宽width
     */
     @SerializedName("Width")
     @Expose
-    private Long Width;
+    private Integer Width;
 
     /**
     * 高height
     */
     @SerializedName("Height")
     @Expose
-    private Long Height;
+    private Integer Height;
 
     /**
      * Get 左上角x 
      * @return X 左上角x
      */
-    public Long getX() {
+    public Integer getX() {
         return this.X;
     }
 
@@ -62,7 +62,7 @@ public class ItemCoord extends AbstractModel{
      * Set 左上角x
      * @param X 左上角x
      */
-    public void setX(Long X) {
+    public void setX(Integer X) {
         this.X = X;
     }
 
@@ -70,7 +70,7 @@ public class ItemCoord extends AbstractModel{
      * Get 左上角y 
      * @return Y 左上角y
      */
-    public Long getY() {
+    public Integer getY() {
         return this.Y;
     }
 
@@ -78,7 +78,7 @@ public class ItemCoord extends AbstractModel{
      * Set 左上角y
      * @param Y 左上角y
      */
-    public void setY(Long Y) {
+    public void setY(Integer Y) {
         this.Y = Y;
     }
 
@@ -86,7 +86,7 @@ public class ItemCoord extends AbstractModel{
      * Get 宽width 
      * @return Width 宽width
      */
-    public Long getWidth() {
+    public Integer getWidth() {
         return this.Width;
     }
 
@@ -94,7 +94,7 @@ public class ItemCoord extends AbstractModel{
      * Set 宽width
      * @param Width 宽width
      */
-    public void setWidth(Long Width) {
+    public void setWidth(Integer Width) {
         this.Width = Width;
     }
 
@@ -102,7 +102,7 @@ public class ItemCoord extends AbstractModel{
      * Get 高height 
      * @return Height 高height
      */
-    public Long getHeight() {
+    public Integer getHeight() {
         return this.Height;
     }
 
@@ -110,7 +110,7 @@ public class ItemCoord extends AbstractModel{
      * Set 高height
      * @param Height 高height
      */
-    public void setHeight(Long Height) {
+    public void setHeight(Integer Height) {
         this.Height = Height;
     }
 

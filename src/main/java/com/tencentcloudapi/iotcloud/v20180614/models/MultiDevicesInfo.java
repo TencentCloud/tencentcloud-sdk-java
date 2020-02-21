@@ -55,7 +55,7 @@ public class MultiDevicesInfo extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private Long Result;
+    private Integer Result;
 
     /**
     * 错误信息
@@ -132,7 +132,7 @@ public class MultiDevicesInfo extends AbstractModel{
      * Get 错误码 
      * @return Result 错误码
      */
-    public Long getResult() {
+    public Integer getResult() {
         return this.Result;
     }
 
@@ -140,7 +140,7 @@ public class MultiDevicesInfo extends AbstractModel{
      * Set 错误码
      * @param Result 错误码
      */
-    public void setResult(Long Result) {
+    public void setResult(Integer Result) {
         this.Result = Result;
     }
 

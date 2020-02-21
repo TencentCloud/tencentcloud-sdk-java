@@ -34,7 +34,7 @@ public class CreateEipAclResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * ACL 实例名称
@@ -77,7 +77,7 @@ public class CreateEipAclResponse extends AbstractModel{
      * Get ACL 实例状态 
      * @return Status ACL 实例状态
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -85,7 +85,7 @@ public class CreateEipAclResponse extends AbstractModel{
      * Set ACL 实例状态
      * @param Status ACL 实例状态
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

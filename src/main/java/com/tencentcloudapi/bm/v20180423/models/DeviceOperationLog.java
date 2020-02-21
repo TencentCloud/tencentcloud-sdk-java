@@ -27,7 +27,7 @@ public class DeviceOperationLog extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 设备ID
@@ -41,7 +41,7 @@ public class DeviceOperationLog extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
     * 操作任务名称
@@ -76,7 +76,7 @@ public class DeviceOperationLog extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 操作者
@@ -96,7 +96,7 @@ public class DeviceOperationLog extends AbstractModel{
      * Get 日志的ID 
      * @return Id 日志的ID
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -104,7 +104,7 @@ public class DeviceOperationLog extends AbstractModel{
      * Set 日志的ID
      * @param Id 日志的ID
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -128,7 +128,7 @@ public class DeviceOperationLog extends AbstractModel{
      * Get 日志对应的操作任务ID 
      * @return TaskId 日志对应的操作任务ID
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -136,7 +136,7 @@ public class DeviceOperationLog extends AbstractModel{
      * Set 日志对应的操作任务ID
      * @param TaskId 日志对应的操作任务ID
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 
@@ -208,7 +208,7 @@ public class DeviceOperationLog extends AbstractModel{
      * Get 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。 
      * @return Status 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -216,7 +216,7 @@ public class DeviceOperationLog extends AbstractModel{
      * Set 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
      * @param Status 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

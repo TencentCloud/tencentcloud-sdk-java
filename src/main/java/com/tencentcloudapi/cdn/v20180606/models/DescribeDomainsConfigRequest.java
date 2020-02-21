@@ -27,14 +27,14 @@ public class DescribeDomainsConfigRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页查询限制数目，默认为 100，最大可设置为 1000
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 查询条件过滤器，复杂类型
@@ -54,7 +54,7 @@ public class DescribeDomainsConfigRequest extends AbstractModel{
      * Get 分页查询偏移量，默认为 0 （第一页） 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -62,7 +62,7 @@ public class DescribeDomainsConfigRequest extends AbstractModel{
      * Set 分页查询偏移量，默认为 0 （第一页）
      * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -70,7 +70,7 @@ public class DescribeDomainsConfigRequest extends AbstractModel{
      * Get 分页查询限制数目，默认为 100，最大可设置为 1000 
      * @return Limit 分页查询限制数目，默认为 100，最大可设置为 1000
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -78,7 +78,7 @@ public class DescribeDomainsConfigRequest extends AbstractModel{
      * Set 分页查询限制数目，默认为 100，最大可设置为 1000
      * @param Limit 分页查询限制数目，默认为 100，最大可设置为 1000
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

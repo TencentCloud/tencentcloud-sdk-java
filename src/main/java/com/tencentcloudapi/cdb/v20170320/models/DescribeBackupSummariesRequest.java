@@ -34,14 +34,14 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页查询数据的条目限制，默认值为20。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
@@ -77,7 +77,7 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
      * Get 分页查询数据的偏移量。 
      * @return Offset 分页查询数据的偏移量。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -85,7 +85,7 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
      * Set 分页查询数据的偏移量。
      * @param Offset 分页查询数据的偏移量。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -93,7 +93,7 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
      * Get 分页查询数据的条目限制，默认值为20。 
      * @return Limit 分页查询数据的条目限制，默认值为20。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -101,7 +101,7 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
      * Set 分页查询数据的条目限制，默认值为20。
      * @param Limit 分页查询数据的条目限制，默认值为20。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

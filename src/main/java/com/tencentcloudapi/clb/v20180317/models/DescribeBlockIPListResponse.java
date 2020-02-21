@@ -27,7 +27,7 @@ public class DescribeBlockIPListResponse extends AbstractModel{
     */
     @SerializedName("BlockedIPCount")
     @Expose
-    private Long BlockedIPCount;
+    private Integer BlockedIPCount;
 
     /**
     * 获取用户真实IP的字段
@@ -54,7 +54,7 @@ public class DescribeBlockIPListResponse extends AbstractModel{
      * Get 返回的IP的数量 
      * @return BlockedIPCount 返回的IP的数量
      */
-    public Long getBlockedIPCount() {
+    public Integer getBlockedIPCount() {
         return this.BlockedIPCount;
     }
 
@@ -62,7 +62,7 @@ public class DescribeBlockIPListResponse extends AbstractModel{
      * Set 返回的IP的数量
      * @param BlockedIPCount 返回的IP的数量
      */
-    public void setBlockedIPCount(Long BlockedIPCount) {
+    public void setBlockedIPCount(Integer BlockedIPCount) {
         this.BlockedIPCount = BlockedIPCount;
     }
 

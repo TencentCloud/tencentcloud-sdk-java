@@ -34,7 +34,7 @@ public class BcosBlockObj extends AbstractModel{
     */
     @SerializedName("BlockNumber")
     @Expose
-    private Long BlockNumber;
+    private Integer BlockNumber;
 
     /**
     * 区块时间戳
@@ -55,7 +55,7 @@ public class BcosBlockObj extends AbstractModel{
     */
     @SerializedName("SealerIndex")
     @Expose
-    private Long SealerIndex;
+    private Integer SealerIndex;
 
     /**
     * 记录保存时间
@@ -69,7 +69,7 @@ public class BcosBlockObj extends AbstractModel{
     */
     @SerializedName("TransCount")
     @Expose
-    private Long TransCount;
+    private Integer TransCount;
 
     /**
     * 记录修改时间
@@ -98,7 +98,7 @@ public class BcosBlockObj extends AbstractModel{
      * Get 区块高度 
      * @return BlockNumber 区块高度
      */
-    public Long getBlockNumber() {
+    public Integer getBlockNumber() {
         return this.BlockNumber;
     }
 
@@ -106,7 +106,7 @@ public class BcosBlockObj extends AbstractModel{
      * Set 区块高度
      * @param BlockNumber 区块高度
      */
-    public void setBlockNumber(Long BlockNumber) {
+    public void setBlockNumber(Integer BlockNumber) {
         this.BlockNumber = BlockNumber;
     }
 
@@ -146,7 +146,7 @@ public class BcosBlockObj extends AbstractModel{
      * Get 打包节点索引 
      * @return SealerIndex 打包节点索引
      */
-    public Long getSealerIndex() {
+    public Integer getSealerIndex() {
         return this.SealerIndex;
     }
 
@@ -154,7 +154,7 @@ public class BcosBlockObj extends AbstractModel{
      * Set 打包节点索引
      * @param SealerIndex 打包节点索引
      */
-    public void setSealerIndex(Long SealerIndex) {
+    public void setSealerIndex(Integer SealerIndex) {
         this.SealerIndex = SealerIndex;
     }
 
@@ -178,7 +178,7 @@ public class BcosBlockObj extends AbstractModel{
      * Get 交易数量 
      * @return TransCount 交易数量
      */
-    public Long getTransCount() {
+    public Integer getTransCount() {
         return this.TransCount;
     }
 
@@ -186,7 +186,7 @@ public class BcosBlockObj extends AbstractModel{
      * Set 交易数量
      * @param TransCount 交易数量
      */
-    public void setTransCount(Long TransCount) {
+    public void setTransCount(Integer TransCount) {
         this.TransCount = TransCount;
     }
 

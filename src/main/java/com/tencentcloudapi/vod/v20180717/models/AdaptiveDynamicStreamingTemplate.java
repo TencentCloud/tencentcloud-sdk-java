@@ -87,6 +87,21 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     private AudioTrackTemplateInfo [] AudioTrackTemplateSet;
 
     /**
+    * 自适应转码格式，取值范围：
+<li>HLS。</li>
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
+    * 自适应转码输入流参数信息，最多输入10路流。
+    */
+    @SerializedName("StreamInfos")
+    @Expose
+    private AdaptiveStreamTemplate [] StreamInfos;
+
+    /**
     * 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -279,6 +294,42 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     }
 
     /**
+     * Get 自适应转码格式，取值范围：
+<li>HLS。</li> 
+     * @return Format 自适应转码格式，取值范围：
+<li>HLS。</li>
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 自适应转码格式，取值范围：
+<li>HLS。</li>
+     * @param Format 自适应转码格式，取值范围：
+<li>HLS。</li>
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
+    /**
+     * Get 自适应转码输入流参数信息，最多输入10路流。 
+     * @return StreamInfos 自适应转码输入流参数信息，最多输入10路流。
+     */
+    public AdaptiveStreamTemplate [] getStreamInfos() {
+        return this.StreamInfos;
+    }
+
+    /**
+     * Set 自适应转码输入流参数信息，最多输入10路流。
+     * @param StreamInfos 自适应转码输入流参数信息，最多输入10路流。
+     */
+    public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
+        this.StreamInfos = StreamInfos;
+    }
+
+    /**
      * Get 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li> 
@@ -370,6 +421,8 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
         this.setParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
+        this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

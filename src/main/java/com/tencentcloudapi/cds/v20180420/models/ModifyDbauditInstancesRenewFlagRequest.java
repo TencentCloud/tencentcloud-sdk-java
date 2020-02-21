@@ -34,7 +34,7 @@ public class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
      * Get 实例ID 
@@ -56,7 +56,7 @@ public class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel{
      * Get 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费 
      * @return AutoRenewFlag 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -64,7 +64,7 @@ public class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel{
      * Set 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
      * @param AutoRenewFlag 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 

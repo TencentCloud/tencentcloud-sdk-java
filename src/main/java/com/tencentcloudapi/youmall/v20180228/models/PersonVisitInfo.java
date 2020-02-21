@@ -27,21 +27,21 @@ public class PersonVisitInfo extends AbstractModel{
     */
     @SerializedName("PersonId")
     @Expose
-    private Long PersonId;
+    private Integer PersonId;
 
     /**
     * 用户到访ID
     */
     @SerializedName("VisitId")
     @Expose
-    private Long VisitId;
+    private Integer VisitId;
 
     /**
     * 到访时间：Unix时间戳
     */
     @SerializedName("InTime")
     @Expose
-    private Long InTime;
+    private Integer InTime;
 
     /**
     * 抓拍到的头像Base64内容，已弃用，返回默认空值
@@ -55,21 +55,21 @@ public class PersonVisitInfo extends AbstractModel{
     */
     @SerializedName("MaskType")
     @Expose
-    private Long MaskType;
+    private Integer MaskType;
 
     /**
     * 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
     */
     @SerializedName("GlassType")
     @Expose
-    private Long GlassType;
+    private Integer GlassType;
 
     /**
     * 发型：0 短发,  1长发
     */
     @SerializedName("HairType")
     @Expose
-    private Long HairType;
+    private Integer HairType;
 
     /**
     * 抓拍到的头像Url，在有效期内可以访问下载
@@ -89,7 +89,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Get 用户ID 
      * @return PersonId 用户ID
      */
-    public Long getPersonId() {
+    public Integer getPersonId() {
         return this.PersonId;
     }
 
@@ -97,7 +97,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Set 用户ID
      * @param PersonId 用户ID
      */
-    public void setPersonId(Long PersonId) {
+    public void setPersonId(Integer PersonId) {
         this.PersonId = PersonId;
     }
 
@@ -105,7 +105,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Get 用户到访ID 
      * @return VisitId 用户到访ID
      */
-    public Long getVisitId() {
+    public Integer getVisitId() {
         return this.VisitId;
     }
 
@@ -113,7 +113,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Set 用户到访ID
      * @param VisitId 用户到访ID
      */
-    public void setVisitId(Long VisitId) {
+    public void setVisitId(Integer VisitId) {
         this.VisitId = VisitId;
     }
 
@@ -121,7 +121,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Get 到访时间：Unix时间戳 
      * @return InTime 到访时间：Unix时间戳
      */
-    public Long getInTime() {
+    public Integer getInTime() {
         return this.InTime;
     }
 
@@ -129,7 +129,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Set 到访时间：Unix时间戳
      * @param InTime 到访时间：Unix时间戳
      */
-    public void setInTime(Long InTime) {
+    public void setInTime(Integer InTime) {
         this.InTime = InTime;
     }
 
@@ -153,7 +153,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Get 口罩类型：0不戴口罩，1戴口罩 
      * @return MaskType 口罩类型：0不戴口罩，1戴口罩
      */
-    public Long getMaskType() {
+    public Integer getMaskType() {
         return this.MaskType;
     }
 
@@ -161,7 +161,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Set 口罩类型：0不戴口罩，1戴口罩
      * @param MaskType 口罩类型：0不戴口罩，1戴口罩
      */
-    public void setMaskType(Long MaskType) {
+    public void setMaskType(Integer MaskType) {
         this.MaskType = MaskType;
     }
 
@@ -169,7 +169,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Get 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜 
      * @return GlassType 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      */
-    public Long getGlassType() {
+    public Integer getGlassType() {
         return this.GlassType;
     }
 
@@ -177,7 +177,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Set 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      * @param GlassType 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      */
-    public void setGlassType(Long GlassType) {
+    public void setGlassType(Integer GlassType) {
         this.GlassType = GlassType;
     }
 
@@ -185,7 +185,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Get 发型：0 短发,  1长发 
      * @return HairType 发型：0 短发,  1长发
      */
-    public Long getHairType() {
+    public Integer getHairType() {
         return this.HairType;
     }
 
@@ -193,7 +193,7 @@ public class PersonVisitInfo extends AbstractModel{
      * Set 发型：0 短发,  1长发
      * @param HairType 发型：0 短发,  1长发
      */
-    public void setHairType(Long HairType) {
+    public void setHairType(Integer HairType) {
         this.HairType = HairType;
     }
 

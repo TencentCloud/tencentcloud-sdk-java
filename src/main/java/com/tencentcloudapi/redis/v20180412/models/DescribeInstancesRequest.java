@@ -27,14 +27,14 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 偏移量，取Limit整数倍
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 实例Id，如：crs-6ubhgouj
@@ -55,7 +55,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("OrderType")
     @Expose
-    private Long OrderType;
+    private Integer OrderType;
 
     /**
     * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
@@ -76,7 +76,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("ProjectIds")
     @Expose
-    private Long [] ProjectIds;
+    private Integer [] ProjectIds;
 
     /**
     * 查找实例的ID。
@@ -111,21 +111,21 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("RegionIds")
     @Expose
-    private Long [] RegionIds;
+    private Integer [] RegionIds;
 
     /**
     * 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
     */
     @SerializedName("Status")
     @Expose
-    private Long [] Status;
+    private Integer [] Status;
 
     /**
     * 类型版本：1-单机版,2-主从版,3-集群版
     */
     @SerializedName("TypeVersion")
     @Expose
-    private Long TypeVersion;
+    private Integer TypeVersion;
 
     /**
     * 引擎信息：Redis-2.8，Redis-4.0，CKV
@@ -139,7 +139,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Long [] AutoRenew;
+    private Integer [] AutoRenew;
 
     /**
     * 计费模式：postpaid-按量计费；prepaid-包年包月
@@ -153,7 +153,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 搜索关键词：支持实例Id、实例名称、完整IP
@@ -167,13 +167,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     */
     @SerializedName("TypeList")
     @Expose
-    private Long [] TypeList;
+    private Integer [] TypeList;
 
     /**
      * Get 实例列表的大小，参数默认值20 
      * @return Limit 实例列表的大小，参数默认值20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -181,7 +181,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 实例列表的大小，参数默认值20
      * @param Limit 实例列表的大小，参数默认值20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -189,7 +189,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 偏移量，取Limit整数倍 
      * @return Offset 偏移量，取Limit整数倍
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -197,7 +197,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 偏移量，取Limit整数倍
      * @param Offset 偏移量，取Limit整数倍
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -237,7 +237,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 1倒序，0顺序，默认倒序 
      * @return OrderType 1倒序，0顺序，默认倒序
      */
-    public Long getOrderType() {
+    public Integer getOrderType() {
         return this.OrderType;
     }
 
@@ -245,7 +245,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 1倒序，0顺序，默认倒序
      * @param OrderType 1倒序，0顺序，默认倒序
      */
-    public void setOrderType(Long OrderType) {
+    public void setOrderType(Integer OrderType) {
         this.OrderType = OrderType;
     }
 
@@ -285,7 +285,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 项目ID 组成的数组，数组下标从0开始 
      * @return ProjectIds 项目ID 组成的数组，数组下标从0开始
      */
-    public Long [] getProjectIds() {
+    public Integer [] getProjectIds() {
         return this.ProjectIds;
     }
 
@@ -293,7 +293,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 项目ID 组成的数组，数组下标从0开始
      * @param ProjectIds 项目ID 组成的数组，数组下标从0开始
      */
-    public void setProjectIds(Long [] ProjectIds) {
+    public void setProjectIds(Integer [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
@@ -365,7 +365,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 地域ID，已经弃用，可通过公共参数Region查询对应地域 
      * @return RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
      */
-    public Long [] getRegionIds() {
+    public Integer [] getRegionIds() {
         return this.RegionIds;
     }
 
@@ -373,7 +373,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 地域ID，已经弃用，可通过公共参数Region查询对应地域
      * @param RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
      */
-    public void setRegionIds(Long [] RegionIds) {
+    public void setRegionIds(Integer [] RegionIds) {
         this.RegionIds = RegionIds;
     }
 
@@ -381,7 +381,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除 
      * @return Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
      */
-    public Long [] getStatus() {
+    public Integer [] getStatus() {
         return this.Status;
     }
 
@@ -389,7 +389,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
      * @param Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
      */
-    public void setStatus(Long [] Status) {
+    public void setStatus(Integer [] Status) {
         this.Status = Status;
     }
 
@@ -397,7 +397,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 类型版本：1-单机版,2-主从版,3-集群版 
      * @return TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
      */
-    public Long getTypeVersion() {
+    public Integer getTypeVersion() {
         return this.TypeVersion;
     }
 
@@ -405,7 +405,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 类型版本：1-单机版,2-主从版,3-集群版
      * @param TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
      */
-    public void setTypeVersion(Long TypeVersion) {
+    public void setTypeVersion(Integer TypeVersion) {
         this.TypeVersion = TypeVersion;
     }
 
@@ -429,7 +429,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
      * @return AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
-    public Long [] getAutoRenew() {
+    public Integer [] getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -437,7 +437,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
-    public void setAutoRenew(Long [] AutoRenew) {
+    public void setAutoRenew(Integer [] AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
@@ -461,7 +461,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版 
      * @return Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -469,7 +469,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
      * @param Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -493,7 +493,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Get 内部参数，用户可忽略 
      * @return TypeList 内部参数，用户可忽略
      */
-    public Long [] getTypeList() {
+    public Integer [] getTypeList() {
         return this.TypeList;
     }
 
@@ -501,7 +501,7 @@ public class DescribeInstancesRequest extends AbstractModel{
      * Set 内部参数，用户可忽略
      * @param TypeList 内部参数，用户可忽略
      */
-    public void setTypeList(Long [] TypeList) {
+    public void setTypeList(Integer [] TypeList) {
         this.TypeList = TypeList;
     }
 

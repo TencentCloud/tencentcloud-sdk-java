@@ -41,7 +41,7 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
     */
     @SerializedName("PublicPort")
     @Expose
-    private Long PublicPort;
+    private Integer PublicPort;
 
     /**
     * 内网地址。
@@ -55,7 +55,7 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
     */
     @SerializedName("PrivatePort")
     @Expose
-    private Long PrivatePort;
+    private Integer PrivatePort;
 
     /**
     * NAT网关转发规则描述。
@@ -100,7 +100,7 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
      * Get 公网端口。 
      * @return PublicPort 公网端口。
      */
-    public Long getPublicPort() {
+    public Integer getPublicPort() {
         return this.PublicPort;
     }
 
@@ -108,7 +108,7 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
      * Set 公网端口。
      * @param PublicPort 公网端口。
      */
-    public void setPublicPort(Long PublicPort) {
+    public void setPublicPort(Integer PublicPort) {
         this.PublicPort = PublicPort;
     }
 
@@ -132,7 +132,7 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
      * Get 内网端口。 
      * @return PrivatePort 内网端口。
      */
-    public Long getPrivatePort() {
+    public Integer getPrivatePort() {
         return this.PrivatePort;
     }
 
@@ -140,7 +140,7 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
      * Set 内网端口。
      * @param PrivatePort 内网端口。
      */
-    public void setPrivatePort(Long PrivatePort) {
+    public void setPrivatePort(Integer PrivatePort) {
         this.PrivatePort = PrivatePort;
     }
 

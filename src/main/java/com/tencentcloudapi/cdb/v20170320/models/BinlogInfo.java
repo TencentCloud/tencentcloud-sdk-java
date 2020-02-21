@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BinlogInfo extends AbstractModel{
 
     /**
-    * 备份文件名
+    * binlog 日志备份文件名
     */
     @SerializedName("Name")
     @Expose
@@ -34,10 +34,10 @@ public class BinlogInfo extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Long Size;
+    private Integer Size;
 
     /**
-    * 备份快照时间，时间格式：2016-03-17 02:10:37
+    * 文件存储时间，时间格式：2016-03-17 02:10:37
     */
     @SerializedName("Date")
     @Expose
@@ -65,16 +65,30 @@ public class BinlogInfo extends AbstractModel{
     private String Type;
 
     /**
-     * Get 备份文件名 
-     * @return Name 备份文件名
+    * binlog 文件起始时间
+    */
+    @SerializedName("BinlogStartTime")
+    @Expose
+    private String BinlogStartTime;
+
+    /**
+    * binlog 文件截止时间
+    */
+    @SerializedName("BinlogFinishTime")
+    @Expose
+    private String BinlogFinishTime;
+
+    /**
+     * Get binlog 日志备份文件名 
+     * @return Name binlog 日志备份文件名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 备份文件名
-     * @param Name 备份文件名
+     * Set binlog 日志备份文件名
+     * @param Name binlog 日志备份文件名
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -84,7 +98,7 @@ public class BinlogInfo extends AbstractModel{
      * Get 备份文件大小，单位：Byte 
      * @return Size 备份文件大小，单位：Byte
      */
-    public Long getSize() {
+    public Integer getSize() {
         return this.Size;
     }
 
@@ -92,21 +106,21 @@ public class BinlogInfo extends AbstractModel{
      * Set 备份文件大小，单位：Byte
      * @param Size 备份文件大小，单位：Byte
      */
-    public void setSize(Long Size) {
+    public void setSize(Integer Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 备份快照时间，时间格式：2016-03-17 02:10:37 
-     * @return Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * Get 文件存储时间，时间格式：2016-03-17 02:10:37 
+     * @return Date 文件存储时间，时间格式：2016-03-17 02:10:37
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 备份快照时间，时间格式：2016-03-17 02:10:37
-     * @param Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * Set 文件存储时间，时间格式：2016-03-17 02:10:37
+     * @param Date 文件存储时间，时间格式：2016-03-17 02:10:37
      */
     public void setDate(String Date) {
         this.Date = Date;
@@ -161,6 +175,38 @@ public class BinlogInfo extends AbstractModel{
     }
 
     /**
+     * Get binlog 文件起始时间 
+     * @return BinlogStartTime binlog 文件起始时间
+     */
+    public String getBinlogStartTime() {
+        return this.BinlogStartTime;
+    }
+
+    /**
+     * Set binlog 文件起始时间
+     * @param BinlogStartTime binlog 文件起始时间
+     */
+    public void setBinlogStartTime(String BinlogStartTime) {
+        this.BinlogStartTime = BinlogStartTime;
+    }
+
+    /**
+     * Get binlog 文件截止时间 
+     * @return BinlogFinishTime binlog 文件截止时间
+     */
+    public String getBinlogFinishTime() {
+        return this.BinlogFinishTime;
+    }
+
+    /**
+     * Set binlog 文件截止时间
+     * @param BinlogFinishTime binlog 文件截止时间
+     */
+    public void setBinlogFinishTime(String BinlogFinishTime) {
+        this.BinlogFinishTime = BinlogFinishTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +216,8 @@ public class BinlogInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IntranetUrl", this.IntranetUrl);
         this.setParamSimple(map, prefix + "InternetUrl", this.InternetUrl);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "BinlogStartTime", this.BinlogStartTime);
+        this.setParamSimple(map, prefix + "BinlogFinishTime", this.BinlogFinishTime);
 
     }
 }

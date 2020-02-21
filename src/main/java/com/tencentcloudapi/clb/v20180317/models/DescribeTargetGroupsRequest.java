@@ -34,14 +34,14 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 显示的偏移起始量
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName
@@ -70,7 +70,7 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
      * Get 显示条数限制，默认为20 
      * @return Limit 显示条数限制，默认为20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -78,7 +78,7 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
      * Set 显示条数限制，默认为20
      * @param Limit 显示条数限制，默认为20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -86,7 +86,7 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
      * Get 显示的偏移起始量 
      * @return Offset 显示的偏移起始量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -94,7 +94,7 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
      * Set 显示的偏移起始量
      * @param Offset 显示的偏移起始量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 

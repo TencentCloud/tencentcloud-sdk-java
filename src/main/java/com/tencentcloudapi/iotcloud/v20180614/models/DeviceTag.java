@@ -34,7 +34,7 @@ public class DeviceTag extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 属性的值
@@ -63,7 +63,7 @@ public class DeviceTag extends AbstractModel{
      * Get 属性值的类型，1 int，2 string 
      * @return Type 属性值的类型，1 int，2 string
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -71,7 +71,7 @@ public class DeviceTag extends AbstractModel{
      * Set 属性值的类型，1 int，2 string
      * @param Type 属性值的类型，1 int，2 string
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 

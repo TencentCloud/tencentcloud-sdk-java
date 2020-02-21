@@ -48,7 +48,7 @@ public class InstanceParamHistory extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 修改时间
@@ -109,7 +109,7 @@ public class InstanceParamHistory extends AbstractModel{
      * Get 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败 
      * @return Status 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -117,7 +117,7 @@ public class InstanceParamHistory extends AbstractModel{
      * Set 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
      * @param Status 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

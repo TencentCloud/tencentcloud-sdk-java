@@ -27,14 +27,14 @@ public class DescribeDevicesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数量
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
@@ -97,7 +97,7 @@ public class DescribeDevicesRequest extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Long AutoRenewFlag;
+    private Integer AutoRenewFlag;
 
     /**
     * 私有网络唯一ID
@@ -132,7 +132,7 @@ public class DescribeDevicesRequest extends AbstractModel{
     */
     @SerializedName("IsLuckyDevice")
     @Expose
-    private Long IsLuckyDevice;
+    private Integer IsLuckyDevice;
 
     /**
     * 排序字段
@@ -146,13 +146,13 @@ public class DescribeDevicesRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Long Order;
+    private Integer Order;
 
     /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -160,7 +160,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Set 偏移量
      * @param Offset 偏移量
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -168,7 +168,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Get 返回数量 
      * @return Limit 返回数量
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -176,7 +176,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Set 返回数量
      * @param Limit 返回数量
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -312,7 +312,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Get 自动续费标志 0:不自动续费，1:自动续费 
      * @return AutoRenewFlag 自动续费标志 0:不自动续费，1:自动续费
      */
-    public Long getAutoRenewFlag() {
+    public Integer getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -320,7 +320,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Set 自动续费标志 0:不自动续费，1:自动续费
      * @param AutoRenewFlag 自动续费标志 0:不自动续费，1:自动续费
      */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
+    public void setAutoRenewFlag(Integer AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
@@ -392,7 +392,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Get 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。 
      * @return IsLuckyDevice 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
      */
-    public Long getIsLuckyDevice() {
+    public Integer getIsLuckyDevice() {
         return this.IsLuckyDevice;
     }
 
@@ -400,7 +400,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Set 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
      * @param IsLuckyDevice 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
      */
-    public void setIsLuckyDevice(Long IsLuckyDevice) {
+    public void setIsLuckyDevice(Integer IsLuckyDevice) {
         this.IsLuckyDevice = IsLuckyDevice;
     }
 
@@ -424,7 +424,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Get 排序方式，取值：0:增序(默认)，1:降序 
      * @return Order 排序方式，取值：0:增序(默认)，1:降序
      */
-    public Long getOrder() {
+    public Integer getOrder() {
         return this.Order;
     }
 
@@ -432,7 +432,7 @@ public class DescribeDevicesRequest extends AbstractModel{
      * Set 排序方式，取值：0:增序(默认)，1:降序
      * @param Order 排序方式，取值：0:增序(默认)，1:降序
      */
-    public void setOrder(Long Order) {
+    public void setOrder(Integer Order) {
         this.Order = Order;
     }
 

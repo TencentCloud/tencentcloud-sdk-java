@@ -27,7 +27,7 @@ public class GetMonitorDataResponse extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 指标名
@@ -68,7 +68,7 @@ public class GetMonitorDataResponse extends AbstractModel{
      * Get 统计周期 
      * @return Period 统计周期
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -76,7 +76,7 @@ public class GetMonitorDataResponse extends AbstractModel{
      * Set 统计周期
      * @param Period 统计周期
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 

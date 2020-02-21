@@ -90,7 +90,7 @@ public class Model extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Long AppId;
+    private Integer AppId;
 
     /**
     * 机型
@@ -111,7 +111,7 @@ public class Model extends AbstractModel{
     */
     @SerializedName("Replicas")
     @Expose
-    private Long Replicas;
+    private Integer Replicas;
 
     /**
     * 模型Id
@@ -282,7 +282,7 @@ public class Model extends AbstractModel{
      * Get 编号 
      * @return AppId 编号
      */
-    public Long getAppId() {
+    public Integer getAppId() {
         return this.AppId;
     }
 
@@ -290,7 +290,7 @@ public class Model extends AbstractModel{
      * Set 编号
      * @param AppId 编号
      */
-    public void setAppId(Long AppId) {
+    public void setAppId(Integer AppId) {
         this.AppId = AppId;
     }
 
@@ -330,7 +330,7 @@ public class Model extends AbstractModel{
      * Get 部署副本数量 
      * @return Replicas 部署副本数量
      */
-    public Long getReplicas() {
+    public Integer getReplicas() {
         return this.Replicas;
     }
 
@@ -338,7 +338,7 @@ public class Model extends AbstractModel{
      * Set 部署副本数量
      * @param Replicas 部署副本数量
      */
-    public void setReplicas(Long Replicas) {
+    public void setReplicas(Integer Replicas) {
         this.Replicas = Replicas;
     }
 

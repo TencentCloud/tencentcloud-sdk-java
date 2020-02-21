@@ -48,7 +48,7 @@ public class TransactionItem extends AbstractModel{
     */
     @SerializedName("BlockId")
     @Expose
-    private Long BlockId;
+    private Integer BlockId;
 
     /**
     * 交易类型（普通交易和配置交易）
@@ -69,7 +69,7 @@ public class TransactionItem extends AbstractModel{
     */
     @SerializedName("BlockHeight")
     @Expose
-    private Long BlockHeight;
+    private Integer BlockHeight;
 
     /**
     * 交易状态
@@ -130,7 +130,7 @@ public class TransactionItem extends AbstractModel{
      * Get 交易所在区块号 
      * @return BlockId 交易所在区块号
      */
-    public Long getBlockId() {
+    public Integer getBlockId() {
         return this.BlockId;
     }
 
@@ -138,7 +138,7 @@ public class TransactionItem extends AbstractModel{
      * Set 交易所在区块号
      * @param BlockId 交易所在区块号
      */
-    public void setBlockId(Long BlockId) {
+    public void setBlockId(Integer BlockId) {
         this.BlockId = BlockId;
     }
 
@@ -178,7 +178,7 @@ public class TransactionItem extends AbstractModel{
      * Get 交易所在区块高度 
      * @return BlockHeight 交易所在区块高度
      */
-    public Long getBlockHeight() {
+    public Integer getBlockHeight() {
         return this.BlockHeight;
     }
 
@@ -186,7 +186,7 @@ public class TransactionItem extends AbstractModel{
      * Set 交易所在区块高度
      * @param BlockHeight 交易所在区块高度
      */
-    public void setBlockHeight(Long BlockHeight) {
+    public void setBlockHeight(Integer BlockHeight) {
         this.BlockHeight = BlockHeight;
     }
 

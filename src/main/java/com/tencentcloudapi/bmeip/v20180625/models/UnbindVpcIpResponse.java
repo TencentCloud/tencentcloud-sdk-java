@@ -27,7 +27,7 @@ public class UnbindVpcIpResponse extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private Integer TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class UnbindVpcIpResponse extends AbstractModel{
      * Get 绑定黑石物理机异步任务ID，可以通过查询EIP任务状态查询任务状态 
      * @return TaskId 绑定黑石物理机异步任务ID，可以通过查询EIP任务状态查询任务状态
      */
-    public Long getTaskId() {
+    public Integer getTaskId() {
         return this.TaskId;
     }
 
@@ -48,7 +48,7 @@ public class UnbindVpcIpResponse extends AbstractModel{
      * Set 绑定黑石物理机异步任务ID，可以通过查询EIP任务状态查询任务状态
      * @param TaskId 绑定黑石物理机异步任务ID，可以通过查询EIP任务状态查询任务状态
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(Integer TaskId) {
         this.TaskId = TaskId;
     }
 

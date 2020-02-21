@@ -27,7 +27,7 @@ public class DescribeNetworkInfoRequest extends AbstractModel{
     */
     @SerializedName("Time")
     @Expose
-    private Long Time;
+    private Integer Time;
 
     /**
     * 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -41,13 +41,13 @@ public class DescribeNetworkInfoRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
      * Get 请求时间戳 
      * @return Time 请求时间戳
      */
-    public Long getTime() {
+    public Integer getTime() {
         return this.Time;
     }
 
@@ -55,7 +55,7 @@ public class DescribeNetworkInfoRequest extends AbstractModel{
      * Set 请求时间戳
      * @param Time 请求时间戳
      */
-    public void setTime(Long Time) {
+    public void setTime(Integer Time) {
         this.Time = Time;
     }
 
@@ -79,7 +79,7 @@ public class DescribeNetworkInfoRequest extends AbstractModel{
      * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -87,7 +87,7 @@ public class DescribeNetworkInfoRequest extends AbstractModel{
      * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 

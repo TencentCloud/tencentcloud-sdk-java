@@ -34,7 +34,7 @@ public class ModifyDBInstanceProjectRequest extends AbstractModel{
     */
     @SerializedName("NewProjectId")
     @Expose
-    private Long NewProjectId;
+    private Integer NewProjectId;
 
     /**
      * Get 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
@@ -56,7 +56,7 @@ public class ModifyDBInstanceProjectRequest extends AbstractModel{
      * Get 项目的 ID。 
      * @return NewProjectId 项目的 ID。
      */
-    public Long getNewProjectId() {
+    public Integer getNewProjectId() {
         return this.NewProjectId;
     }
 
@@ -64,7 +64,7 @@ public class ModifyDBInstanceProjectRequest extends AbstractModel{
      * Set 项目的 ID。
      * @param NewProjectId 项目的 ID。
      */
-    public void setNewProjectId(Long NewProjectId) {
+    public void setNewProjectId(Integer NewProjectId) {
         this.NewProjectId = NewProjectId;
     }
 

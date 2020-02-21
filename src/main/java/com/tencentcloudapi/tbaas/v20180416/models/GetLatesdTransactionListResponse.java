@@ -27,7 +27,7 @@ public class GetLatesdTransactionListResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 交易列表
@@ -47,7 +47,7 @@ public class GetLatesdTransactionListResponse extends AbstractModel{
      * Get 交易总数量 
      * @return TotalCount 交易总数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class GetLatesdTransactionListResponse extends AbstractModel{
      * Set 交易总数量
      * @param TotalCount 交易总数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

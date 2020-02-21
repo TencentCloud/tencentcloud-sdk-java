@@ -28,7 +28,7 @@ public class Compatibility extends AbstractModel{
     */
     @SerializedName("Code")
     @Expose
-    private Long Code;
+    private Integer Code;
 
     /**
      * Get 兼容标志状态码。
@@ -36,7 +36,7 @@ public class Compatibility extends AbstractModel{
      * @return Code 兼容标志状态码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCode() {
+    public Integer getCode() {
         return this.Code;
     }
 
@@ -46,7 +46,7 @@ public class Compatibility extends AbstractModel{
      * @param Code 兼容标志状态码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCode(Long Code) {
+    public void setCode(Integer Code) {
         this.Code = Code;
     }
 

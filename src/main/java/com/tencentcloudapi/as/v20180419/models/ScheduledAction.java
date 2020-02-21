@@ -69,21 +69,21 @@ public class ScheduledAction extends AbstractModel{
     */
     @SerializedName("MaxSize")
     @Expose
-    private Long MaxSize;
+    private Integer MaxSize;
 
     /**
     * 定时任务设置的期望实例数。
     */
     @SerializedName("DesiredCapacity")
     @Expose
-    private Long DesiredCapacity;
+    private Integer DesiredCapacity;
 
     /**
     * 定时任务设置的最小实例数。
     */
     @SerializedName("MinSize")
     @Expose
-    private Long MinSize;
+    private Integer MinSize;
 
     /**
     * 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
@@ -192,7 +192,7 @@ public class ScheduledAction extends AbstractModel{
      * Get 定时任务设置的最大实例数。 
      * @return MaxSize 定时任务设置的最大实例数。
      */
-    public Long getMaxSize() {
+    public Integer getMaxSize() {
         return this.MaxSize;
     }
 
@@ -200,7 +200,7 @@ public class ScheduledAction extends AbstractModel{
      * Set 定时任务设置的最大实例数。
      * @param MaxSize 定时任务设置的最大实例数。
      */
-    public void setMaxSize(Long MaxSize) {
+    public void setMaxSize(Integer MaxSize) {
         this.MaxSize = MaxSize;
     }
 
@@ -208,7 +208,7 @@ public class ScheduledAction extends AbstractModel{
      * Get 定时任务设置的期望实例数。 
      * @return DesiredCapacity 定时任务设置的期望实例数。
      */
-    public Long getDesiredCapacity() {
+    public Integer getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
@@ -216,7 +216,7 @@ public class ScheduledAction extends AbstractModel{
      * Set 定时任务设置的期望实例数。
      * @param DesiredCapacity 定时任务设置的期望实例数。
      */
-    public void setDesiredCapacity(Long DesiredCapacity) {
+    public void setDesiredCapacity(Integer DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 
@@ -224,7 +224,7 @@ public class ScheduledAction extends AbstractModel{
      * Get 定时任务设置的最小实例数。 
      * @return MinSize 定时任务设置的最小实例数。
      */
-    public Long getMinSize() {
+    public Integer getMinSize() {
         return this.MinSize;
     }
 
@@ -232,7 +232,7 @@ public class ScheduledAction extends AbstractModel{
      * Set 定时任务设置的最小实例数。
      * @param MinSize 定时任务设置的最小实例数。
      */
-    public void setMinSize(Long MinSize) {
+    public void setMinSize(Integer MinSize) {
         this.MinSize = MinSize;
     }
 

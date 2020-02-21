@@ -41,7 +41,7 @@ public class UpdateDeviceAvailableStateRequest extends AbstractModel{
     */
     @SerializedName("EnableState")
     @Expose
-    private Long EnableState;
+    private Integer EnableState;
 
     /**
      * Get 设备所属产品id 
@@ -79,7 +79,7 @@ public class UpdateDeviceAvailableStateRequest extends AbstractModel{
      * Get 要设置的设备状态，1为启用，0为禁用 
      * @return EnableState 要设置的设备状态，1为启用，0为禁用
      */
-    public Long getEnableState() {
+    public Integer getEnableState() {
         return this.EnableState;
     }
 
@@ -87,7 +87,7 @@ public class UpdateDeviceAvailableStateRequest extends AbstractModel{
      * Set 要设置的设备状态，1为启用，0为禁用
      * @param EnableState 要设置的设备状态，1为启用，0为禁用
      */
-    public void setEnableState(Long EnableState) {
+    public void setEnableState(Integer EnableState) {
         this.EnableState = EnableState;
     }
 

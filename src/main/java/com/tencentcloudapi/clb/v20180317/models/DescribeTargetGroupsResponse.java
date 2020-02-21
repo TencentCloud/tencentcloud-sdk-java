@@ -27,7 +27,7 @@ public class DescribeTargetGroupsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 显示的目标组信息集合
@@ -47,7 +47,7 @@ public class DescribeTargetGroupsResponse extends AbstractModel{
      * Get 显示的结果数量 
      * @return TotalCount 显示的结果数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeTargetGroupsResponse extends AbstractModel{
      * Set 显示的结果数量
      * @param TotalCount 显示的结果数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

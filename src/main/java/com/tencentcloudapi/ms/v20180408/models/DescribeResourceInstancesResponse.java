@@ -27,7 +27,7 @@ public class DescribeResourceInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 符合要求的资源数组
@@ -47,7 +47,7 @@ public class DescribeResourceInstancesResponse extends AbstractModel{
      * Get 符合要求的资源数量 
      * @return TotalCount 符合要求的资源数量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeResourceInstancesResponse extends AbstractModel{
      * Set 符合要求的资源数量
      * @param TotalCount 符合要求的资源数量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

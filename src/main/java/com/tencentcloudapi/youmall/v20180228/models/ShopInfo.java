@@ -34,7 +34,7 @@ public class ShopInfo extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 门店名称
@@ -91,7 +91,7 @@ public class ShopInfo extends AbstractModel{
      * Get 门店ID 
      * @return ShopId 门店ID
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -99,7 +99,7 @@ public class ShopInfo extends AbstractModel{
      * Set 门店ID
      * @param ShopId 门店ID
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 

@@ -48,7 +48,7 @@ public class GetClusterSummaryRequest extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Long GroupId;
+    private Integer GroupId;
 
     /**
     * 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
@@ -109,7 +109,7 @@ public class GetClusterSummaryRequest extends AbstractModel{
      * Get 组织ID，固定字段：0 
      * @return GroupId 组织ID，固定字段：0
      */
-    public Long getGroupId() {
+    public Integer getGroupId() {
         return this.GroupId;
     }
 
@@ -117,7 +117,7 @@ public class GetClusterSummaryRequest extends AbstractModel{
      * Set 组织ID，固定字段：0
      * @param GroupId 组织ID，固定字段：0
      */
-    public void setGroupId(Long GroupId) {
+    public void setGroupId(Integer GroupId) {
         this.GroupId = GroupId;
     }
 

@@ -27,7 +27,7 @@ public class RecordTemplateInfo extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Long TemplateId;
+    private Integer TemplateId;
 
     /**
     * 模板名称。
@@ -77,7 +77,7 @@ public class RecordTemplateInfo extends AbstractModel{
     */
     @SerializedName("IsDelayLive")
     @Expose
-    private Long IsDelayLive;
+    private Integer IsDelayLive;
 
     /**
     * HLS录制定制参数
@@ -97,7 +97,7 @@ public class RecordTemplateInfo extends AbstractModel{
      * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
-    public Long getTemplateId() {
+    public Integer getTemplateId() {
         return this.TemplateId;
     }
 
@@ -105,7 +105,7 @@ public class RecordTemplateInfo extends AbstractModel{
      * Set 模板Id。
      * @param TemplateId 模板Id。
      */
-    public void setTemplateId(Long TemplateId) {
+    public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;
     }
 
@@ -211,7 +211,7 @@ public class RecordTemplateInfo extends AbstractModel{
      * @return IsDelayLive 0：普通直播，
 1：慢直播。
      */
-    public Long getIsDelayLive() {
+    public Integer getIsDelayLive() {
         return this.IsDelayLive;
     }
 
@@ -221,7 +221,7 @@ public class RecordTemplateInfo extends AbstractModel{
      * @param IsDelayLive 0：普通直播，
 1：慢直播。
      */
-    public void setIsDelayLive(Long IsDelayLive) {
+    public void setIsDelayLive(Integer IsDelayLive) {
         this.IsDelayLive = IsDelayLive;
     }
 

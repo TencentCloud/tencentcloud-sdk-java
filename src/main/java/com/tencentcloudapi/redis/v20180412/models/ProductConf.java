@@ -27,7 +27,7 @@ public class ProductConf extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
@@ -41,14 +41,14 @@ public class ProductConf extends AbstractModel{
     */
     @SerializedName("MinBuyNum")
     @Expose
-    private Long MinBuyNum;
+    private Integer MinBuyNum;
 
     /**
     * 购买时的最大数量
     */
     @SerializedName("MaxBuyNum")
     @Expose
-    private Long MaxBuyNum;
+    private Integer MaxBuyNum;
 
     /**
     * 产品是否售罄
@@ -117,7 +117,7 @@ public class ProductConf extends AbstractModel{
      * Get 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版 
      * @return Type 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -125,7 +125,7 @@ public class ProductConf extends AbstractModel{
      * Set 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
      * @param Type 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -149,7 +149,7 @@ public class ProductConf extends AbstractModel{
      * Get 购买时的最小数量 
      * @return MinBuyNum 购买时的最小数量
      */
-    public Long getMinBuyNum() {
+    public Integer getMinBuyNum() {
         return this.MinBuyNum;
     }
 
@@ -157,7 +157,7 @@ public class ProductConf extends AbstractModel{
      * Set 购买时的最小数量
      * @param MinBuyNum 购买时的最小数量
      */
-    public void setMinBuyNum(Long MinBuyNum) {
+    public void setMinBuyNum(Integer MinBuyNum) {
         this.MinBuyNum = MinBuyNum;
     }
 
@@ -165,7 +165,7 @@ public class ProductConf extends AbstractModel{
      * Get 购买时的最大数量 
      * @return MaxBuyNum 购买时的最大数量
      */
-    public Long getMaxBuyNum() {
+    public Integer getMaxBuyNum() {
         return this.MaxBuyNum;
     }
 
@@ -173,7 +173,7 @@ public class ProductConf extends AbstractModel{
      * Set 购买时的最大数量
      * @param MaxBuyNum 购买时的最大数量
      */
-    public void setMaxBuyNum(Long MaxBuyNum) {
+    public void setMaxBuyNum(Integer MaxBuyNum) {
         this.MaxBuyNum = MaxBuyNum;
     }
 

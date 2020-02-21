@@ -27,7 +27,7 @@ public class DBBackup extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 文件生成的开始时间
@@ -48,35 +48,35 @@ public class DBBackup extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Long Size;
+    private Integer Size;
 
     /**
     * 策略（0-实例备份；1-多库备份）
     */
     @SerializedName("Strategy")
     @Expose
-    private Long Strategy;
+    private Integer Strategy;
 
     /**
     * 类型（0-定时）
     */
     @SerializedName("Way")
     @Expose
-    private Long Way;
+    private Integer Way;
 
     /**
     * 备份方式（1-完整）
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 状态（1-创建中；2-成功；3-失败）
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * DB列表
@@ -103,7 +103,7 @@ public class DBBackup extends AbstractModel{
      * Get 备份文件唯一标识 
      * @return Id 备份文件唯一标识
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -111,7 +111,7 @@ public class DBBackup extends AbstractModel{
      * Set 备份文件唯一标识
      * @param Id 备份文件唯一标识
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
@@ -151,7 +151,7 @@ public class DBBackup extends AbstractModel{
      * Get 文件大小(K) 
      * @return Size 文件大小(K)
      */
-    public Long getSize() {
+    public Integer getSize() {
         return this.Size;
     }
 
@@ -159,7 +159,7 @@ public class DBBackup extends AbstractModel{
      * Set 文件大小(K)
      * @param Size 文件大小(K)
      */
-    public void setSize(Long Size) {
+    public void setSize(Integer Size) {
         this.Size = Size;
     }
 
@@ -167,7 +167,7 @@ public class DBBackup extends AbstractModel{
      * Get 策略（0-实例备份；1-多库备份） 
      * @return Strategy 策略（0-实例备份；1-多库备份）
      */
-    public Long getStrategy() {
+    public Integer getStrategy() {
         return this.Strategy;
     }
 
@@ -175,7 +175,7 @@ public class DBBackup extends AbstractModel{
      * Set 策略（0-实例备份；1-多库备份）
      * @param Strategy 策略（0-实例备份；1-多库备份）
      */
-    public void setStrategy(Long Strategy) {
+    public void setStrategy(Integer Strategy) {
         this.Strategy = Strategy;
     }
 
@@ -183,7 +183,7 @@ public class DBBackup extends AbstractModel{
      * Get 类型（0-定时） 
      * @return Way 类型（0-定时）
      */
-    public Long getWay() {
+    public Integer getWay() {
         return this.Way;
     }
 
@@ -191,7 +191,7 @@ public class DBBackup extends AbstractModel{
      * Set 类型（0-定时）
      * @param Way 类型（0-定时）
      */
-    public void setWay(Long Way) {
+    public void setWay(Integer Way) {
         this.Way = Way;
     }
 
@@ -199,7 +199,7 @@ public class DBBackup extends AbstractModel{
      * Get 备份方式（1-完整） 
      * @return Type 备份方式（1-完整）
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -207,7 +207,7 @@ public class DBBackup extends AbstractModel{
      * Set 备份方式（1-完整）
      * @param Type 备份方式（1-完整）
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -215,7 +215,7 @@ public class DBBackup extends AbstractModel{
      * Get 状态（1-创建中；2-成功；3-失败） 
      * @return Status 状态（1-创建中；2-成功；3-失败）
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -223,7 +223,7 @@ public class DBBackup extends AbstractModel{
      * Set 状态（1-创建中；2-成功；3-失败）
      * @param Status 状态（1-创建中；2-成功；3-失败）
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

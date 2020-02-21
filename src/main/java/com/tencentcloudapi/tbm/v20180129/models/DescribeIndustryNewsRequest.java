@@ -55,14 +55,14 @@ public class DescribeIndustryNewsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 查询条数上限，默认20
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 行业ID 
@@ -132,7 +132,7 @@ public class DescribeIndustryNewsRequest extends AbstractModel{
      * Get 查询偏移，默认从0开始 
      * @return Offset 查询偏移，默认从0开始
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -140,7 +140,7 @@ public class DescribeIndustryNewsRequest extends AbstractModel{
      * Set 查询偏移，默认从0开始
      * @param Offset 查询偏移，默认从0开始
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -148,7 +148,7 @@ public class DescribeIndustryNewsRequest extends AbstractModel{
      * Get 查询条数上限，默认20 
      * @return Limit 查询条数上限，默认20
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -156,7 +156,7 @@ public class DescribeIndustryNewsRequest extends AbstractModel{
      * Set 查询条数上限，默认20
      * @param Limit 查询条数上限，默认20
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

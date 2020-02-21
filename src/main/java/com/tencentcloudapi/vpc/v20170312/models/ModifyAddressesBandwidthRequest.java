@@ -34,7 +34,7 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Long InternetMaxBandwidthOut;
+    private Integer InternetMaxBandwidthOut;
 
     /**
     * 包月带宽起始时间
@@ -70,7 +70,7 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
      * Get 调整带宽目标值 
      * @return InternetMaxBandwidthOut 调整带宽目标值
      */
-    public Long getInternetMaxBandwidthOut() {
+    public Integer getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -78,7 +78,7 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
      * Set 调整带宽目标值
      * @param InternetMaxBandwidthOut 调整带宽目标值
      */
-    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

@@ -81,7 +81,7 @@ CCN：云联网
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
     * BGP ：BGP路由
@@ -113,7 +113,7 @@ STATIC：静态
     */
     @SerializedName("Vlan")
     @Expose
-    private Long Vlan;
+    private Integer Vlan;
 
     /**
     * TencentAddress，腾讯侧互联 IP
@@ -263,7 +263,7 @@ CCN：云联网
      * @return Bandwidth 专线带宽，单位：Mbps
 默认是物理专线带宽值
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -273,7 +273,7 @@ CCN：云联网
      * @param Bandwidth 专线带宽，单位：Mbps
 默认是物理专线带宽值
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -341,7 +341,7 @@ STATIC：静态
 0：不开启子接口
 默认值是非0
      */
-    public Long getVlan() {
+    public Integer getVlan() {
         return this.Vlan;
     }
 
@@ -353,7 +353,7 @@ STATIC：静态
 0：不开启子接口
 默认值是非0
      */
-    public void setVlan(Long Vlan) {
+    public void setVlan(Integer Vlan) {
         this.Vlan = Vlan;
     }
 

@@ -41,7 +41,7 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     */
     @SerializedName("DstPort")
     @Expose
-    private Long DstPort;
+    private Integer DstPort;
 
     /**
     * 私有网络统一 ID。
@@ -93,7 +93,7 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
      * Get 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。 
      * @return DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      */
-    public Long getDstPort() {
+    public Integer getDstPort() {
         return this.DstPort;
     }
 
@@ -101,7 +101,7 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
      * Set 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      * @param DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      */
-    public void setDstPort(Long DstPort) {
+    public void setDstPort(Integer DstPort) {
         this.DstPort = DstPort;
     }
 

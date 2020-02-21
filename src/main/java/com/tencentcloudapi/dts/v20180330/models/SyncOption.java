@@ -27,34 +27,34 @@ public class SyncOption extends AbstractModel{
     */
     @SerializedName("SyncObject")
     @Expose
-    private Long SyncObject;
+    private Integer SyncObject;
 
     /**
     * 同步开始设置，1-立即开始
     */
     @SerializedName("RunMode")
     @Expose
-    private Long RunMode;
+    private Integer RunMode;
 
     /**
     * 同步模式， 3-全量且增量同步
     */
     @SerializedName("SyncType")
     @Expose
-    private Long SyncType;
+    private Integer SyncType;
 
     /**
     * 数据一致性检测， 1-无需配置
     */
     @SerializedName("ConsistencyType")
     @Expose
-    private Long ConsistencyType;
+    private Integer ConsistencyType;
 
     /**
      * Get 同步对象，1-整个实例，2-指定库表 
      * @return SyncObject 同步对象，1-整个实例，2-指定库表
      */
-    public Long getSyncObject() {
+    public Integer getSyncObject() {
         return this.SyncObject;
     }
 
@@ -62,7 +62,7 @@ public class SyncOption extends AbstractModel{
      * Set 同步对象，1-整个实例，2-指定库表
      * @param SyncObject 同步对象，1-整个实例，2-指定库表
      */
-    public void setSyncObject(Long SyncObject) {
+    public void setSyncObject(Integer SyncObject) {
         this.SyncObject = SyncObject;
     }
 
@@ -70,7 +70,7 @@ public class SyncOption extends AbstractModel{
      * Get 同步开始设置，1-立即开始 
      * @return RunMode 同步开始设置，1-立即开始
      */
-    public Long getRunMode() {
+    public Integer getRunMode() {
         return this.RunMode;
     }
 
@@ -78,7 +78,7 @@ public class SyncOption extends AbstractModel{
      * Set 同步开始设置，1-立即开始
      * @param RunMode 同步开始设置，1-立即开始
      */
-    public void setRunMode(Long RunMode) {
+    public void setRunMode(Integer RunMode) {
         this.RunMode = RunMode;
     }
 
@@ -86,7 +86,7 @@ public class SyncOption extends AbstractModel{
      * Get 同步模式， 3-全量且增量同步 
      * @return SyncType 同步模式， 3-全量且增量同步
      */
-    public Long getSyncType() {
+    public Integer getSyncType() {
         return this.SyncType;
     }
 
@@ -94,7 +94,7 @@ public class SyncOption extends AbstractModel{
      * Set 同步模式， 3-全量且增量同步
      * @param SyncType 同步模式， 3-全量且增量同步
      */
-    public void setSyncType(Long SyncType) {
+    public void setSyncType(Integer SyncType) {
         this.SyncType = SyncType;
     }
 
@@ -102,7 +102,7 @@ public class SyncOption extends AbstractModel{
      * Get 数据一致性检测， 1-无需配置 
      * @return ConsistencyType 数据一致性检测， 1-无需配置
      */
-    public Long getConsistencyType() {
+    public Integer getConsistencyType() {
         return this.ConsistencyType;
     }
 
@@ -110,7 +110,7 @@ public class SyncOption extends AbstractModel{
      * Set 数据一致性检测， 1-无需配置
      * @param ConsistencyType 数据一致性检测， 1-无需配置
      */
-    public void setConsistencyType(Long ConsistencyType) {
+    public void setConsistencyType(Integer ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
     }
 

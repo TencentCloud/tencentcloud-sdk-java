@@ -51,7 +51,7 @@ process：预热中
     */
     @SerializedName("Percent")
     @Expose
-    private Long Percent;
+    private Integer Percent;
 
     /**
     * 预热任务提交时间
@@ -142,7 +142,7 @@ process：预热中
      * Get 预热进度百分比 
      * @return Percent 预热进度百分比
      */
-    public Long getPercent() {
+    public Integer getPercent() {
         return this.Percent;
     }
 
@@ -150,7 +150,7 @@ process：预热中
      * Set 预热进度百分比
      * @param Percent 预热进度百分比
      */
-    public void setPercent(Long Percent) {
+    public void setPercent(Integer Percent) {
         this.Percent = Percent;
     }
 

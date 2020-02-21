@@ -34,7 +34,7 @@ public class AgentTransferMoneyRequest extends AbstractModel{
     */
     @SerializedName("Amount")
     @Expose
-    private Long Amount;
+    private Integer Amount;
 
     /**
      * Get 客户账号ID 
@@ -56,7 +56,7 @@ public class AgentTransferMoneyRequest extends AbstractModel{
      * Get 转账金额，单位分 
      * @return Amount 转账金额，单位分
      */
-    public Long getAmount() {
+    public Integer getAmount() {
         return this.Amount;
     }
 
@@ -64,7 +64,7 @@ public class AgentTransferMoneyRequest extends AbstractModel{
      * Set 转账金额，单位分
      * @param Amount 转账金额，单位分
      */
-    public void setAmount(Long Amount) {
+    public void setAmount(Integer Amount) {
         this.Amount = Amount;
     }
 

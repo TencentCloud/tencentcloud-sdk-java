@@ -27,7 +27,7 @@ public class DescribeSlowLogsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 符合查询条件的慢查询日志详情。
@@ -47,7 +47,7 @@ public class DescribeSlowLogsResponse extends AbstractModel{
      * Get 符合查询条件的慢查询日志总数。 
      * @return TotalCount 符合查询条件的慢查询日志总数。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeSlowLogsResponse extends AbstractModel{
      * Set 符合查询条件的慢查询日志总数。
      * @param TotalCount 符合查询条件的慢查询日志总数。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

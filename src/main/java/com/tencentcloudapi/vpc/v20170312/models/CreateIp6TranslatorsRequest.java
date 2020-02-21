@@ -34,7 +34,7 @@ public class CreateIp6TranslatorsRequest extends AbstractModel{
     */
     @SerializedName("Ip6TranslatorCount")
     @Expose
-    private Long Ip6TranslatorCount;
+    private Integer Ip6TranslatorCount;
 
     /**
     * 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
@@ -63,7 +63,7 @@ public class CreateIp6TranslatorsRequest extends AbstractModel{
      * Get 创建转换实例数量，默认是1个 
      * @return Ip6TranslatorCount 创建转换实例数量，默认是1个
      */
-    public Long getIp6TranslatorCount() {
+    public Integer getIp6TranslatorCount() {
         return this.Ip6TranslatorCount;
     }
 
@@ -71,7 +71,7 @@ public class CreateIp6TranslatorsRequest extends AbstractModel{
      * Set 创建转换实例数量，默认是1个
      * @param Ip6TranslatorCount 创建转换实例数量，默认是1个
      */
-    public void setIp6TranslatorCount(Long Ip6TranslatorCount) {
+    public void setIp6TranslatorCount(Integer Ip6TranslatorCount) {
         this.Ip6TranslatorCount = Ip6TranslatorCount;
     }
 

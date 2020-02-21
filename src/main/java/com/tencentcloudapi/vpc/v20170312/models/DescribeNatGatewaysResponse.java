@@ -34,7 +34,7 @@ public class DescribeNatGatewaysResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeNatGatewaysResponse extends AbstractModel{
      * Get 符合条件的NAT网关对象个数。 
      * @return TotalCount 符合条件的NAT网关对象个数。
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -71,7 +71,7 @@ public class DescribeNatGatewaysResponse extends AbstractModel{
      * Set 符合条件的NAT网关对象个数。
      * @param TotalCount 符合条件的NAT网关对象个数。
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

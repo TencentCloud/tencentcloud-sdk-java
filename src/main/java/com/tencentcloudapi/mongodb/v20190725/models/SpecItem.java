@@ -34,56 +34,56 @@ public class SpecItem extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 规格有效标志，取值：0-停止售卖，1-开放售卖
     */
     @SerializedName("Cpu")
     @Expose
-    private Long Cpu;
+    private Integer Cpu;
 
     /**
     * 内存规格，单位为MB
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 默认磁盘规格，单位MB
     */
     @SerializedName("DefaultStorage")
     @Expose
-    private Long DefaultStorage;
+    private Integer DefaultStorage;
 
     /**
     * 最大磁盘规格，单位MB
     */
     @SerializedName("MaxStorage")
     @Expose
-    private Long MaxStorage;
+    private Integer MaxStorage;
 
     /**
     * 最小磁盘规格，单位MB
     */
     @SerializedName("MinStorage")
     @Expose
-    private Long MinStorage;
+    private Integer MinStorage;
 
     /**
     * 可承载qps信息
     */
     @SerializedName("Qps")
     @Expose
-    private Long Qps;
+    private Integer Qps;
 
     /**
     * 连接数限制
     */
     @SerializedName("Conns")
     @Expose
-    private Long Conns;
+    private Integer Conns;
 
     /**
     * 实例mongodb版本信息
@@ -97,7 +97,7 @@ public class SpecItem extends AbstractModel{
     */
     @SerializedName("MongoVersionValue")
     @Expose
-    private Long MongoVersionValue;
+    private Integer MongoVersionValue;
 
     /**
     * 实例mongodb版本号（短）
@@ -118,49 +118,49 @@ public class SpecItem extends AbstractModel{
     */
     @SerializedName("ClusterType")
     @Expose
-    private Long ClusterType;
+    private Integer ClusterType;
 
     /**
     * 最小副本集从节点数
     */
     @SerializedName("MinNodeNum")
     @Expose
-    private Long MinNodeNum;
+    private Integer MinNodeNum;
 
     /**
     * 最大副本集从节点数
     */
     @SerializedName("MaxNodeNum")
     @Expose
-    private Long MaxNodeNum;
+    private Integer MaxNodeNum;
 
     /**
     * 最小分片数
     */
     @SerializedName("MinReplicateSetNum")
     @Expose
-    private Long MinReplicateSetNum;
+    private Integer MinReplicateSetNum;
 
     /**
     * 最大分片数
     */
     @SerializedName("MaxReplicateSetNum")
     @Expose
-    private Long MaxReplicateSetNum;
+    private Integer MaxReplicateSetNum;
 
     /**
     * 最小分片从节点数
     */
     @SerializedName("MinReplicateSetNodeNum")
     @Expose
-    private Long MinReplicateSetNodeNum;
+    private Integer MinReplicateSetNodeNum;
 
     /**
     * 最大分片从节点数
     */
     @SerializedName("MaxReplicateSetNodeNum")
     @Expose
-    private Long MaxReplicateSetNodeNum;
+    private Integer MaxReplicateSetNodeNum;
 
     /**
     * 机器类型，取值：0-HIO，4-HIO10G
@@ -189,7 +189,7 @@ public class SpecItem extends AbstractModel{
      * Get 规格有效标志，取值：0-停止售卖，1-开放售卖 
      * @return Status 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -197,7 +197,7 @@ public class SpecItem extends AbstractModel{
      * Set 规格有效标志，取值：0-停止售卖，1-开放售卖
      * @param Status 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -205,7 +205,7 @@ public class SpecItem extends AbstractModel{
      * Get 规格有效标志，取值：0-停止售卖，1-开放售卖 
      * @return Cpu 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
-    public Long getCpu() {
+    public Integer getCpu() {
         return this.Cpu;
     }
 
@@ -213,7 +213,7 @@ public class SpecItem extends AbstractModel{
      * Set 规格有效标志，取值：0-停止售卖，1-开放售卖
      * @param Cpu 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
-    public void setCpu(Long Cpu) {
+    public void setCpu(Integer Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -221,7 +221,7 @@ public class SpecItem extends AbstractModel{
      * Get 内存规格，单位为MB 
      * @return Memory 内存规格，单位为MB
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -229,7 +229,7 @@ public class SpecItem extends AbstractModel{
      * Set 内存规格，单位为MB
      * @param Memory 内存规格，单位为MB
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -237,7 +237,7 @@ public class SpecItem extends AbstractModel{
      * Get 默认磁盘规格，单位MB 
      * @return DefaultStorage 默认磁盘规格，单位MB
      */
-    public Long getDefaultStorage() {
+    public Integer getDefaultStorage() {
         return this.DefaultStorage;
     }
 
@@ -245,7 +245,7 @@ public class SpecItem extends AbstractModel{
      * Set 默认磁盘规格，单位MB
      * @param DefaultStorage 默认磁盘规格，单位MB
      */
-    public void setDefaultStorage(Long DefaultStorage) {
+    public void setDefaultStorage(Integer DefaultStorage) {
         this.DefaultStorage = DefaultStorage;
     }
 
@@ -253,7 +253,7 @@ public class SpecItem extends AbstractModel{
      * Get 最大磁盘规格，单位MB 
      * @return MaxStorage 最大磁盘规格，单位MB
      */
-    public Long getMaxStorage() {
+    public Integer getMaxStorage() {
         return this.MaxStorage;
     }
 
@@ -261,7 +261,7 @@ public class SpecItem extends AbstractModel{
      * Set 最大磁盘规格，单位MB
      * @param MaxStorage 最大磁盘规格，单位MB
      */
-    public void setMaxStorage(Long MaxStorage) {
+    public void setMaxStorage(Integer MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
@@ -269,7 +269,7 @@ public class SpecItem extends AbstractModel{
      * Get 最小磁盘规格，单位MB 
      * @return MinStorage 最小磁盘规格，单位MB
      */
-    public Long getMinStorage() {
+    public Integer getMinStorage() {
         return this.MinStorage;
     }
 
@@ -277,7 +277,7 @@ public class SpecItem extends AbstractModel{
      * Set 最小磁盘规格，单位MB
      * @param MinStorage 最小磁盘规格，单位MB
      */
-    public void setMinStorage(Long MinStorage) {
+    public void setMinStorage(Integer MinStorage) {
         this.MinStorage = MinStorage;
     }
 
@@ -285,7 +285,7 @@ public class SpecItem extends AbstractModel{
      * Get 可承载qps信息 
      * @return Qps 可承载qps信息
      */
-    public Long getQps() {
+    public Integer getQps() {
         return this.Qps;
     }
 
@@ -293,7 +293,7 @@ public class SpecItem extends AbstractModel{
      * Set 可承载qps信息
      * @param Qps 可承载qps信息
      */
-    public void setQps(Long Qps) {
+    public void setQps(Integer Qps) {
         this.Qps = Qps;
     }
 
@@ -301,7 +301,7 @@ public class SpecItem extends AbstractModel{
      * Get 连接数限制 
      * @return Conns 连接数限制
      */
-    public Long getConns() {
+    public Integer getConns() {
         return this.Conns;
     }
 
@@ -309,7 +309,7 @@ public class SpecItem extends AbstractModel{
      * Set 连接数限制
      * @param Conns 连接数限制
      */
-    public void setConns(Long Conns) {
+    public void setConns(Integer Conns) {
         this.Conns = Conns;
     }
 
@@ -333,7 +333,7 @@ public class SpecItem extends AbstractModel{
      * Get 实例mongodb版本号 
      * @return MongoVersionValue 实例mongodb版本号
      */
-    public Long getMongoVersionValue() {
+    public Integer getMongoVersionValue() {
         return this.MongoVersionValue;
     }
 
@@ -341,7 +341,7 @@ public class SpecItem extends AbstractModel{
      * Set 实例mongodb版本号
      * @param MongoVersionValue 实例mongodb版本号
      */
-    public void setMongoVersionValue(Long MongoVersionValue) {
+    public void setMongoVersionValue(Integer MongoVersionValue) {
         this.MongoVersionValue = MongoVersionValue;
     }
 
@@ -381,7 +381,7 @@ public class SpecItem extends AbstractModel{
      * Get 集群类型，取值：1-分片集群，0-副本集集群 
      * @return ClusterType 集群类型，取值：1-分片集群，0-副本集集群
      */
-    public Long getClusterType() {
+    public Integer getClusterType() {
         return this.ClusterType;
     }
 
@@ -389,7 +389,7 @@ public class SpecItem extends AbstractModel{
      * Set 集群类型，取值：1-分片集群，0-副本集集群
      * @param ClusterType 集群类型，取值：1-分片集群，0-副本集集群
      */
-    public void setClusterType(Long ClusterType) {
+    public void setClusterType(Integer ClusterType) {
         this.ClusterType = ClusterType;
     }
 
@@ -397,7 +397,7 @@ public class SpecItem extends AbstractModel{
      * Get 最小副本集从节点数 
      * @return MinNodeNum 最小副本集从节点数
      */
-    public Long getMinNodeNum() {
+    public Integer getMinNodeNum() {
         return this.MinNodeNum;
     }
 
@@ -405,7 +405,7 @@ public class SpecItem extends AbstractModel{
      * Set 最小副本集从节点数
      * @param MinNodeNum 最小副本集从节点数
      */
-    public void setMinNodeNum(Long MinNodeNum) {
+    public void setMinNodeNum(Integer MinNodeNum) {
         this.MinNodeNum = MinNodeNum;
     }
 
@@ -413,7 +413,7 @@ public class SpecItem extends AbstractModel{
      * Get 最大副本集从节点数 
      * @return MaxNodeNum 最大副本集从节点数
      */
-    public Long getMaxNodeNum() {
+    public Integer getMaxNodeNum() {
         return this.MaxNodeNum;
     }
 
@@ -421,7 +421,7 @@ public class SpecItem extends AbstractModel{
      * Set 最大副本集从节点数
      * @param MaxNodeNum 最大副本集从节点数
      */
-    public void setMaxNodeNum(Long MaxNodeNum) {
+    public void setMaxNodeNum(Integer MaxNodeNum) {
         this.MaxNodeNum = MaxNodeNum;
     }
 
@@ -429,7 +429,7 @@ public class SpecItem extends AbstractModel{
      * Get 最小分片数 
      * @return MinReplicateSetNum 最小分片数
      */
-    public Long getMinReplicateSetNum() {
+    public Integer getMinReplicateSetNum() {
         return this.MinReplicateSetNum;
     }
 
@@ -437,7 +437,7 @@ public class SpecItem extends AbstractModel{
      * Set 最小分片数
      * @param MinReplicateSetNum 最小分片数
      */
-    public void setMinReplicateSetNum(Long MinReplicateSetNum) {
+    public void setMinReplicateSetNum(Integer MinReplicateSetNum) {
         this.MinReplicateSetNum = MinReplicateSetNum;
     }
 
@@ -445,7 +445,7 @@ public class SpecItem extends AbstractModel{
      * Get 最大分片数 
      * @return MaxReplicateSetNum 最大分片数
      */
-    public Long getMaxReplicateSetNum() {
+    public Integer getMaxReplicateSetNum() {
         return this.MaxReplicateSetNum;
     }
 
@@ -453,7 +453,7 @@ public class SpecItem extends AbstractModel{
      * Set 最大分片数
      * @param MaxReplicateSetNum 最大分片数
      */
-    public void setMaxReplicateSetNum(Long MaxReplicateSetNum) {
+    public void setMaxReplicateSetNum(Integer MaxReplicateSetNum) {
         this.MaxReplicateSetNum = MaxReplicateSetNum;
     }
 
@@ -461,7 +461,7 @@ public class SpecItem extends AbstractModel{
      * Get 最小分片从节点数 
      * @return MinReplicateSetNodeNum 最小分片从节点数
      */
-    public Long getMinReplicateSetNodeNum() {
+    public Integer getMinReplicateSetNodeNum() {
         return this.MinReplicateSetNodeNum;
     }
 
@@ -469,7 +469,7 @@ public class SpecItem extends AbstractModel{
      * Set 最小分片从节点数
      * @param MinReplicateSetNodeNum 最小分片从节点数
      */
-    public void setMinReplicateSetNodeNum(Long MinReplicateSetNodeNum) {
+    public void setMinReplicateSetNodeNum(Integer MinReplicateSetNodeNum) {
         this.MinReplicateSetNodeNum = MinReplicateSetNodeNum;
     }
 
@@ -477,7 +477,7 @@ public class SpecItem extends AbstractModel{
      * Get 最大分片从节点数 
      * @return MaxReplicateSetNodeNum 最大分片从节点数
      */
-    public Long getMaxReplicateSetNodeNum() {
+    public Integer getMaxReplicateSetNodeNum() {
         return this.MaxReplicateSetNodeNum;
     }
 
@@ -485,7 +485,7 @@ public class SpecItem extends AbstractModel{
      * Set 最大分片从节点数
      * @param MaxReplicateSetNodeNum 最大分片从节点数
      */
-    public void setMaxReplicateSetNodeNum(Long MaxReplicateSetNodeNum) {
+    public void setMaxReplicateSetNodeNum(Integer MaxReplicateSetNodeNum) {
         this.MaxReplicateSetNodeNum = MaxReplicateSetNodeNum;
     }
 

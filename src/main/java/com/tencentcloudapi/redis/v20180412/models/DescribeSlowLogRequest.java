@@ -48,21 +48,21 @@ public class DescribeSlowLogRequest extends AbstractModel{
     */
     @SerializedName("MinQueryTime")
     @Expose
-    private Long MinQueryTime;
+    private Integer MinQueryTime;
 
     /**
     * 页面大小
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 偏移量，取Limit整数倍
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
      * Get 实例Id 
@@ -116,7 +116,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Get 慢查询阈值（单位：微秒） 
      * @return MinQueryTime 慢查询阈值（单位：微秒）
      */
-    public Long getMinQueryTime() {
+    public Integer getMinQueryTime() {
         return this.MinQueryTime;
     }
 
@@ -124,7 +124,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Set 慢查询阈值（单位：微秒）
      * @param MinQueryTime 慢查询阈值（单位：微秒）
      */
-    public void setMinQueryTime(Long MinQueryTime) {
+    public void setMinQueryTime(Integer MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
@@ -132,7 +132,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Get 页面大小 
      * @return Limit 页面大小
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -140,7 +140,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Set 页面大小
      * @param Limit 页面大小
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -148,7 +148,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Get 偏移量，取Limit整数倍 
      * @return Offset 偏移量，取Limit整数倍
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -156,7 +156,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
      * Set 偏移量，取Limit整数倍
      * @param Offset 偏移量，取Limit整数倍
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 

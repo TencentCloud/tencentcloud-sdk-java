@@ -27,7 +27,7 @@ public class DescribeDeployGroupListResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Long Total;
+    private Integer Total;
 
     /**
     * 返回列表。
@@ -48,7 +48,7 @@ public class DescribeDeployGroupListResponse extends AbstractModel{
      * Get 符合条件的记录总数。 
      * @return Total 符合条件的记录总数。
      */
-    public Long getTotal() {
+    public Integer getTotal() {
         return this.Total;
     }
 
@@ -56,7 +56,7 @@ public class DescribeDeployGroupListResponse extends AbstractModel{
      * Set 符合条件的记录总数。
      * @param Total 符合条件的记录总数。
      */
-    public void setTotal(Long Total) {
+    public void setTotal(Integer Total) {
         this.Total = Total;
     }
 

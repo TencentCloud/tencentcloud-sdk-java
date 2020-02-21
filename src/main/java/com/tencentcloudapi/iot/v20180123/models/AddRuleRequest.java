@@ -55,7 +55,7 @@ public class AddRuleRequest extends AbstractModel{
     */
     @SerializedName("DataType")
     @Expose
-    private Long DataType;
+    private Integer DataType;
 
     /**
      * Get 名称 
@@ -125,7 +125,7 @@ public class AddRuleRequest extends AbstractModel{
      * Get 数据类型（0：文本，1：二进制） 
      * @return DataType 数据类型（0：文本，1：二进制）
      */
-    public Long getDataType() {
+    public Integer getDataType() {
         return this.DataType;
     }
 
@@ -133,7 +133,7 @@ public class AddRuleRequest extends AbstractModel{
      * Set 数据类型（0：文本，1：二进制）
      * @param DataType 数据类型（0：文本，1：二进制）
      */
-    public void setDataType(Long DataType) {
+    public void setDataType(Integer DataType) {
         this.DataType = DataType;
     }
 

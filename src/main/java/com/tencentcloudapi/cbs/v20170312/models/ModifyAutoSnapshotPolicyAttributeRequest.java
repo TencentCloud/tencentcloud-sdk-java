@@ -62,7 +62,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
     */
     @SerializedName("RetentionDays")
     @Expose
-    private Long RetentionDays;
+    private Integer RetentionDays;
 
     /**
      * Get 定期快照策略ID。 
@@ -148,7 +148,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
      * Get 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。 
      * @return RetentionDays 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
      */
-    public Long getRetentionDays() {
+    public Integer getRetentionDays() {
         return this.RetentionDays;
     }
 
@@ -156,7 +156,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
      * Set 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
      * @param RetentionDays 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
      */
-    public void setRetentionDays(Long RetentionDays) {
+    public void setRetentionDays(Integer RetentionDays) {
         this.RetentionDays = RetentionDays;
     }
 

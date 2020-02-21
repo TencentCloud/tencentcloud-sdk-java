@@ -55,21 +55,21 @@ public class DescribeEipsRequest extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long [] Status;
+    private Integer [] Status;
 
     /**
     * 偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回EIP数量，默认 20, 最大值 100
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt
@@ -83,7 +83,7 @@ public class DescribeEipsRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Long Order;
+    private Integer Order;
 
     /**
     * 计费模式,流量：flow，带宽：bandwidth
@@ -104,14 +104,14 @@ public class DescribeEipsRequest extends AbstractModel{
     */
     @SerializedName("BindTypes")
     @Expose
-    private Long [] BindTypes;
+    private Integer [] BindTypes;
 
     /**
     * 独占标志，0：共享，1：独占
     */
     @SerializedName("ExclusiveTag")
     @Expose
-    private Long ExclusiveTag;
+    private Integer ExclusiveTag;
 
     /**
     * EIP ACL实例ID
@@ -125,7 +125,7 @@ public class DescribeEipsRequest extends AbstractModel{
     */
     @SerializedName("BindAcl")
     @Expose
-    private Long BindAcl;
+    private Integer BindAcl;
 
     /**
      * Get EIP实例ID列表 
@@ -195,7 +195,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Get 状态列表, 默认所有 
      * @return Status 状态列表, 默认所有
      */
-    public Long [] getStatus() {
+    public Integer [] getStatus() {
         return this.Status;
     }
 
@@ -203,7 +203,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Set 状态列表, 默认所有
      * @param Status 状态列表, 默认所有
      */
-    public void setStatus(Long [] Status) {
+    public void setStatus(Integer [] Status) {
         this.Status = Status;
     }
 
@@ -211,7 +211,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -219,7 +219,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -227,7 +227,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Get 返回EIP数量，默认 20, 最大值 100 
      * @return Limit 返回EIP数量，默认 20, 最大值 100
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -235,7 +235,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Set 返回EIP数量，默认 20, 最大值 100
      * @param Limit 返回EIP数量，默认 20, 最大值 100
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -259,7 +259,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Get 排序方式 0:递增 1:递减(默认) 
      * @return Order 排序方式 0:递增 1:递减(默认)
      */
-    public Long getOrder() {
+    public Integer getOrder() {
         return this.Order;
     }
 
@@ -267,7 +267,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Set 排序方式 0:递增 1:递减(默认)
      * @param Order 排序方式 0:递增 1:递减(默认)
      */
-    public void setOrder(Long Order) {
+    public void setOrder(Integer Order) {
         this.Order = Order;
     }
 
@@ -307,7 +307,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Get 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器 
      * @return BindTypes 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
      */
-    public Long [] getBindTypes() {
+    public Integer [] getBindTypes() {
         return this.BindTypes;
     }
 
@@ -315,7 +315,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Set 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
      * @param BindTypes 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
      */
-    public void setBindTypes(Long [] BindTypes) {
+    public void setBindTypes(Integer [] BindTypes) {
         this.BindTypes = BindTypes;
     }
 
@@ -323,7 +323,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Get 独占标志，0：共享，1：独占 
      * @return ExclusiveTag 独占标志，0：共享，1：独占
      */
-    public Long getExclusiveTag() {
+    public Integer getExclusiveTag() {
         return this.ExclusiveTag;
     }
 
@@ -331,7 +331,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Set 独占标志，0：共享，1：独占
      * @param ExclusiveTag 独占标志，0：共享，1：独占
      */
-    public void setExclusiveTag(Long ExclusiveTag) {
+    public void setExclusiveTag(Integer ExclusiveTag) {
         this.ExclusiveTag = ExclusiveTag;
     }
 
@@ -355,7 +355,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Get 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定 
      * @return BindAcl 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      */
-    public Long getBindAcl() {
+    public Integer getBindAcl() {
         return this.BindAcl;
     }
 
@@ -363,7 +363,7 @@ public class DescribeEipsRequest extends AbstractModel{
      * Set 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      * @param BindAcl 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      */
-    public void setBindAcl(Long BindAcl) {
+    public void setBindAcl(Integer BindAcl) {
         this.BindAcl = BindAcl;
     }
 

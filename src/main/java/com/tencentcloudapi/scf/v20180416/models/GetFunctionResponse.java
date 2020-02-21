@@ -62,14 +62,14 @@ public class GetFunctionResponse extends AbstractModel{
     */
     @SerializedName("CodeSize")
     @Expose
-    private Long CodeSize;
+    private Integer CodeSize;
 
     /**
     * 函数的超时时间
     */
     @SerializedName("Timeout")
     @Expose
-    private Long Timeout;
+    private Integer Timeout;
 
     /**
     * 函数的版本
@@ -83,7 +83,7 @@ public class GetFunctionResponse extends AbstractModel{
     */
     @SerializedName("MemorySize")
     @Expose
-    private Long MemorySize;
+    private Integer MemorySize;
 
     /**
     * 函数的运行环境
@@ -139,7 +139,7 @@ public class GetFunctionResponse extends AbstractModel{
     */
     @SerializedName("ErrNo")
     @Expose
-    private Long ErrNo;
+    private Integer ErrNo;
 
     /**
     * 函数的命名空间
@@ -233,6 +233,43 @@ public class GetFunctionResponse extends AbstractModel{
     private String L5Enable;
 
     /**
+    * 函数关联的Layer版本信息
+    */
+    @SerializedName("Layers")
+    @Expose
+    private LayerVersionInfo [] Layers;
+
+    /**
+    * 函数关联的死信队列信息
+    */
+    @SerializedName("DeadLetterConfig")
+    @Expose
+    private DeadLetterConfig DeadLetterConfig;
+
+    /**
+    * 函数创建回见
+    */
+    @SerializedName("AddTime")
+    @Expose
+    private String AddTime;
+
+    /**
+    * 公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicNetConfig")
+    @Expose
+    private PublicNetConfigOut PublicNetConfig;
+
+    /**
+    * 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OnsEnable")
+    @Expose
+    private String OnsEnable;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -323,7 +360,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 函数代码大小 
      * @return CodeSize 函数代码大小
      */
-    public Long getCodeSize() {
+    public Integer getCodeSize() {
         return this.CodeSize;
     }
 
@@ -331,7 +368,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 函数代码大小
      * @param CodeSize 函数代码大小
      */
-    public void setCodeSize(Long CodeSize) {
+    public void setCodeSize(Integer CodeSize) {
         this.CodeSize = CodeSize;
     }
 
@@ -339,7 +376,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 函数的超时时间 
      * @return Timeout 函数的超时时间
      */
-    public Long getTimeout() {
+    public Integer getTimeout() {
         return this.Timeout;
     }
 
@@ -347,7 +384,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 函数的超时时间
      * @param Timeout 函数的超时时间
      */
-    public void setTimeout(Long Timeout) {
+    public void setTimeout(Integer Timeout) {
         this.Timeout = Timeout;
     }
 
@@ -371,7 +408,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 函数的最大可用内存 
      * @return MemorySize 函数的最大可用内存
      */
-    public Long getMemorySize() {
+    public Integer getMemorySize() {
         return this.MemorySize;
     }
 
@@ -379,7 +416,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 函数的最大可用内存
      * @param MemorySize 函数的最大可用内存
      */
-    public void setMemorySize(Long MemorySize) {
+    public void setMemorySize(Integer MemorySize) {
         this.MemorySize = MemorySize;
     }
 
@@ -499,7 +536,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Get 代码错误码 
      * @return ErrNo 代码错误码
      */
-    public Long getErrNo() {
+    public Integer getErrNo() {
         return this.ErrNo;
     }
 
@@ -507,7 +544,7 @@ public class GetFunctionResponse extends AbstractModel{
      * Set 代码错误码
      * @param ErrNo 代码错误码
      */
-    public void setErrNo(Long ErrNo) {
+    public void setErrNo(Integer ErrNo) {
         this.ErrNo = ErrNo;
     }
 
@@ -720,6 +757,94 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
+     * Get 函数关联的Layer版本信息 
+     * @return Layers 函数关联的Layer版本信息
+     */
+    public LayerVersionInfo [] getLayers() {
+        return this.Layers;
+    }
+
+    /**
+     * Set 函数关联的Layer版本信息
+     * @param Layers 函数关联的Layer版本信息
+     */
+    public void setLayers(LayerVersionInfo [] Layers) {
+        this.Layers = Layers;
+    }
+
+    /**
+     * Get 函数关联的死信队列信息 
+     * @return DeadLetterConfig 函数关联的死信队列信息
+     */
+    public DeadLetterConfig getDeadLetterConfig() {
+        return this.DeadLetterConfig;
+    }
+
+    /**
+     * Set 函数关联的死信队列信息
+     * @param DeadLetterConfig 函数关联的死信队列信息
+     */
+    public void setDeadLetterConfig(DeadLetterConfig DeadLetterConfig) {
+        this.DeadLetterConfig = DeadLetterConfig;
+    }
+
+    /**
+     * Get 函数创建回见 
+     * @return AddTime 函数创建回见
+     */
+    public String getAddTime() {
+        return this.AddTime;
+    }
+
+    /**
+     * Set 函数创建回见
+     * @param AddTime 函数创建回见
+     */
+    public void setAddTime(String AddTime) {
+        this.AddTime = AddTime;
+    }
+
+    /**
+     * Get 公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicNetConfig 公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PublicNetConfigOut getPublicNetConfig() {
+        return this.PublicNetConfig;
+    }
+
+    /**
+     * Set 公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicNetConfig 公网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicNetConfig(PublicNetConfigOut PublicNetConfig) {
+        this.PublicNetConfig = PublicNetConfig;
+    }
+
+    /**
+     * Get 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OnsEnable 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOnsEnable() {
+        return this.OnsEnable;
+    }
+
+    /**
+     * Set 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OnsEnable 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOnsEnable(String OnsEnable) {
+        this.OnsEnable = OnsEnable;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -769,6 +894,11 @@ public class GetFunctionResponse extends AbstractModel{
         this.setParamObj(map, prefix + "AccessInfo.", this.AccessInfo);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
+        this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
+        this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+        this.setParamSimple(map, prefix + "AddTime", this.AddTime);
+        this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+        this.setParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

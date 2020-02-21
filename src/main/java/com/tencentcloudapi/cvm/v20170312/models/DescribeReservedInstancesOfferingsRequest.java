@@ -34,14 +34,14 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 以最大有效期作为过滤参数。
@@ -50,7 +50,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
     */
     @SerializedName("MaxDuration")
     @Expose
-    private Long MaxDuration;
+    private Integer MaxDuration;
 
     /**
     * 以最小有效期作为过滤参数。
@@ -59,7 +59,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
     */
     @SerializedName("MinDuration")
     @Expose
-    private Long MinDuration;
+    private Integer MinDuration;
 
     /**
     * <li><strong>zone</strong></li>
@@ -100,7 +100,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
      * Get 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -108,7 +108,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
      * Set 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -116,7 +116,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
      * Get 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -124,7 +124,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
      * Set 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -136,7 +136,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
 计量单位: 秒
 默认为 94608000。
      */
-    public Long getMaxDuration() {
+    public Integer getMaxDuration() {
         return this.MaxDuration;
     }
 
@@ -148,7 +148,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
 计量单位: 秒
 默认为 94608000。
      */
-    public void setMaxDuration(Long MaxDuration) {
+    public void setMaxDuration(Integer MaxDuration) {
         this.MaxDuration = MaxDuration;
     }
 
@@ -160,7 +160,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
 计量单位: 秒
 默认为 2592000。
      */
-    public Long getMinDuration() {
+    public Integer getMinDuration() {
         return this.MinDuration;
     }
 
@@ -172,7 +172,7 @@ public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
 计量单位: 秒
 默认为 2592000。
      */
-    public void setMinDuration(Long MinDuration) {
+    public void setMinDuration(Integer MinDuration) {
         this.MinDuration = MinDuration;
     }
 

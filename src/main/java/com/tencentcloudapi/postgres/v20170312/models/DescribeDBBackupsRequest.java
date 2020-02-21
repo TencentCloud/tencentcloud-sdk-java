@@ -34,7 +34,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Long Type;
+    private Integer Type;
 
     /**
     * 查询开始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
@@ -55,14 +55,14 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 返回结果中的第几页，从第0页开始。默认为0。
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
      * Get 实例ID，形如postgres-4wdeb0zv。 
@@ -84,7 +84,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
      * Get 备份方式（1-全量）。目前只支持全量，取值为1。 
      * @return Type 备份方式（1-全量）。目前只支持全量，取值为1。
      */
-    public Long getType() {
+    public Integer getType() {
         return this.Type;
     }
 
@@ -92,7 +92,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
      * Set 备份方式（1-全量）。目前只支持全量，取值为1。
      * @param Type 备份方式（1-全量）。目前只支持全量，取值为1。
      */
-    public void setType(Long Type) {
+    public void setType(Integer Type) {
         this.Type = Type;
     }
 
@@ -132,7 +132,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
      * Get 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。 
      * @return Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -140,7 +140,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
      * Set 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
      * @param Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -148,7 +148,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
      * Get 返回结果中的第几页，从第0页开始。默认为0。 
      * @return Offset 返回结果中的第几页，从第0页开始。默认为0。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -156,7 +156,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
      * Set 返回结果中的第几页，从第0页开始。默认为0。
      * @param Offset 返回结果中的第几页，从第0页开始。默认为0。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 

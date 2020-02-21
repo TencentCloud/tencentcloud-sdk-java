@@ -48,21 +48,21 @@ public class SpeechTranslateRequest extends AbstractModel{
     */
     @SerializedName("AudioFormat")
     @Expose
-    private Long AudioFormat;
+    private Integer AudioFormat;
 
     /**
     * 语音分片的序号，从0开始
     */
     @SerializedName("Seq")
     @Expose
-    private Long Seq;
+    private Integer Seq;
 
     /**
     * 是否最后一片语音分片，0-否，1-是
     */
     @SerializedName("IsEnd")
     @Expose
-    private Long IsEnd;
+    private Integer IsEnd;
 
     /**
     * 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
@@ -76,7 +76,7 @@ public class SpeechTranslateRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 识别模式，该参数已废弃
@@ -137,7 +137,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Get pcm : 146   amr : 33554432   mp3 : 83886080 
      * @return AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
      */
-    public Long getAudioFormat() {
+    public Integer getAudioFormat() {
         return this.AudioFormat;
     }
 
@@ -145,7 +145,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Set pcm : 146   amr : 33554432   mp3 : 83886080
      * @param AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
      */
-    public void setAudioFormat(Long AudioFormat) {
+    public void setAudioFormat(Integer AudioFormat) {
         this.AudioFormat = AudioFormat;
     }
 
@@ -153,7 +153,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Get 语音分片的序号，从0开始 
      * @return Seq 语音分片的序号，从0开始
      */
-    public Long getSeq() {
+    public Integer getSeq() {
         return this.Seq;
     }
 
@@ -161,7 +161,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Set 语音分片的序号，从0开始
      * @param Seq 语音分片的序号，从0开始
      */
-    public void setSeq(Long Seq) {
+    public void setSeq(Integer Seq) {
         this.Seq = Seq;
     }
 
@@ -169,7 +169,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Get 是否最后一片语音分片，0-否，1-是 
      * @return IsEnd 是否最后一片语音分片，0-否，1-是
      */
-    public Long getIsEnd() {
+    public Integer getIsEnd() {
         return this.IsEnd;
     }
 
@@ -177,7 +177,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Set 是否最后一片语音分片，0-否，1-是
      * @param IsEnd 是否最后一片语音分片，0-否，1-是
      */
-    public void setIsEnd(Long IsEnd) {
+    public void setIsEnd(Integer IsEnd) {
         this.IsEnd = IsEnd;
     }
 
@@ -201,7 +201,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Get 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0 
      * @return ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -209,7 +209,7 @@ public class SpeechTranslateRequest extends AbstractModel{
      * Set 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 

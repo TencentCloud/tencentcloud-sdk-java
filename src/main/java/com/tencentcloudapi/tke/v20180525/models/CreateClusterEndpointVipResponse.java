@@ -27,7 +27,7 @@ public class CreateClusterEndpointVipResponse extends AbstractModel{
     */
     @SerializedName("RequestFlowId")
     @Expose
-    private Long RequestFlowId;
+    private Integer RequestFlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateClusterEndpointVipResponse extends AbstractModel{
      * Get 请求任务的FlowId 
      * @return RequestFlowId 请求任务的FlowId
      */
-    public Long getRequestFlowId() {
+    public Integer getRequestFlowId() {
         return this.RequestFlowId;
     }
 
@@ -48,7 +48,7 @@ public class CreateClusterEndpointVipResponse extends AbstractModel{
      * Set 请求任务的FlowId
      * @param RequestFlowId 请求任务的FlowId
      */
-    public void setRequestFlowId(Long RequestFlowId) {
+    public void setRequestFlowId(Integer RequestFlowId) {
         this.RequestFlowId = RequestFlowId;
     }
 

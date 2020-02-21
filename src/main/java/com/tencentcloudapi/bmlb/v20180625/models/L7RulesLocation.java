@@ -41,14 +41,14 @@ public class L7RulesLocation extends AbstractModel{
     */
     @SerializedName("SessionExpire")
     @Expose
-    private Long SessionExpire;
+    private Integer SessionExpire;
 
     /**
     * 是否开启健康检查。
     */
     @SerializedName("HealthSwitch")
     @Expose
-    private Long HealthSwitch;
+    private Integer HealthSwitch;
 
     /**
     * 健康检查检查路径。
@@ -69,28 +69,28 @@ public class L7RulesLocation extends AbstractModel{
     */
     @SerializedName("IntervalTime")
     @Expose
-    private Long IntervalTime;
+    private Integer IntervalTime;
 
     /**
     * 健康检查健康阈值。
     */
     @SerializedName("HealthNum")
     @Expose
-    private Long HealthNum;
+    private Integer HealthNum;
 
     /**
     * 健康检查不健康阈值。
     */
     @SerializedName("UnhealthNum")
     @Expose
-    private Long UnhealthNum;
+    private Integer UnhealthNum;
 
     /**
     * 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
     */
     @SerializedName("HttpCodes")
     @Expose
-    private Long [] HttpCodes;
+    private Integer [] HttpCodes;
 
     /**
     * 均衡方式。
@@ -104,7 +104,7 @@ public class L7RulesLocation extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 创建时间戳。
@@ -149,7 +149,7 @@ public class L7RulesLocation extends AbstractModel{
      * Get 会话保持时间。 
      * @return SessionExpire 会话保持时间。
      */
-    public Long getSessionExpire() {
+    public Integer getSessionExpire() {
         return this.SessionExpire;
     }
 
@@ -157,7 +157,7 @@ public class L7RulesLocation extends AbstractModel{
      * Set 会话保持时间。
      * @param SessionExpire 会话保持时间。
      */
-    public void setSessionExpire(Long SessionExpire) {
+    public void setSessionExpire(Integer SessionExpire) {
         this.SessionExpire = SessionExpire;
     }
 
@@ -165,7 +165,7 @@ public class L7RulesLocation extends AbstractModel{
      * Get 是否开启健康检查。 
      * @return HealthSwitch 是否开启健康检查。
      */
-    public Long getHealthSwitch() {
+    public Integer getHealthSwitch() {
         return this.HealthSwitch;
     }
 
@@ -173,7 +173,7 @@ public class L7RulesLocation extends AbstractModel{
      * Set 是否开启健康检查。
      * @param HealthSwitch 是否开启健康检查。
      */
-    public void setHealthSwitch(Long HealthSwitch) {
+    public void setHealthSwitch(Integer HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
@@ -213,7 +213,7 @@ public class L7RulesLocation extends AbstractModel{
      * Get 健康检查检查间隔时间。 
      * @return IntervalTime 健康检查检查间隔时间。
      */
-    public Long getIntervalTime() {
+    public Integer getIntervalTime() {
         return this.IntervalTime;
     }
 
@@ -221,7 +221,7 @@ public class L7RulesLocation extends AbstractModel{
      * Set 健康检查检查间隔时间。
      * @param IntervalTime 健康检查检查间隔时间。
      */
-    public void setIntervalTime(Long IntervalTime) {
+    public void setIntervalTime(Integer IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
@@ -229,7 +229,7 @@ public class L7RulesLocation extends AbstractModel{
      * Get 健康检查健康阈值。 
      * @return HealthNum 健康检查健康阈值。
      */
-    public Long getHealthNum() {
+    public Integer getHealthNum() {
         return this.HealthNum;
     }
 
@@ -237,7 +237,7 @@ public class L7RulesLocation extends AbstractModel{
      * Set 健康检查健康阈值。
      * @param HealthNum 健康检查健康阈值。
      */
-    public void setHealthNum(Long HealthNum) {
+    public void setHealthNum(Integer HealthNum) {
         this.HealthNum = HealthNum;
     }
 
@@ -245,7 +245,7 @@ public class L7RulesLocation extends AbstractModel{
      * Get 健康检查不健康阈值。 
      * @return UnhealthNum 健康检查不健康阈值。
      */
-    public Long getUnhealthNum() {
+    public Integer getUnhealthNum() {
         return this.UnhealthNum;
     }
 
@@ -253,7 +253,7 @@ public class L7RulesLocation extends AbstractModel{
      * Set 健康检查不健康阈值。
      * @param UnhealthNum 健康检查不健康阈值。
      */
-    public void setUnhealthNum(Long UnhealthNum) {
+    public void setUnhealthNum(Integer UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
@@ -261,7 +261,7 @@ public class L7RulesLocation extends AbstractModel{
      * Get 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。 
      * @return HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
-    public Long [] getHttpCodes() {
+    public Integer [] getHttpCodes() {
         return this.HttpCodes;
     }
 
@@ -269,7 +269,7 @@ public class L7RulesLocation extends AbstractModel{
      * Set 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      * @param HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
-    public void setHttpCodes(Long [] HttpCodes) {
+    public void setHttpCodes(Integer [] HttpCodes) {
         this.HttpCodes = HttpCodes;
     }
 
@@ -293,7 +293,7 @@ public class L7RulesLocation extends AbstractModel{
      * Get 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -301,7 +301,7 @@ public class L7RulesLocation extends AbstractModel{
      * Set 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

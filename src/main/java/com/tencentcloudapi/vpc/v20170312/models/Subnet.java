@@ -90,7 +90,7 @@ public class Subnet extends AbstractModel{
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
-    private Long AvailableIpAddressCount;
+    private Integer AvailableIpAddressCount;
 
     /**
     * 子网的 `IPv6` `CIDR`。
@@ -261,7 +261,7 @@ public class Subnet extends AbstractModel{
      * Get 可用`IP`数。 
      * @return AvailableIpAddressCount 可用`IP`数。
      */
-    public Long getAvailableIpAddressCount() {
+    public Integer getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
     }
 
@@ -269,7 +269,7 @@ public class Subnet extends AbstractModel{
      * Set 可用`IP`数。
      * @param AvailableIpAddressCount 可用`IP`数。
      */
-    public void setAvailableIpAddressCount(Long AvailableIpAddressCount) {
+    public void setAvailableIpAddressCount(Integer AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
     }
 

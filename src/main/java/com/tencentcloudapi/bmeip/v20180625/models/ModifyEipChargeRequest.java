@@ -41,7 +41,7 @@ public class ModifyEipChargeRequest extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
      * Get EIP计费方式，flow-流量计费；bandwidth-带宽计费 
@@ -79,7 +79,7 @@ public class ModifyEipChargeRequest extends AbstractModel{
      * Get 带宽设定值（只在带宽计费时生效） 
      * @return Bandwidth 带宽设定值（只在带宽计费时生效）
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -87,7 +87,7 @@ public class ModifyEipChargeRequest extends AbstractModel{
      * Set 带宽设定值（只在带宽计费时生效）
      * @param Bandwidth 带宽设定值（只在带宽计费时生效）
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

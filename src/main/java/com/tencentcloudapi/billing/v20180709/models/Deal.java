@@ -34,7 +34,7 @@ public class Deal extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 支付者
@@ -62,28 +62,28 @@ public class Deal extends AbstractModel{
     */
     @SerializedName("RealTotalCost")
     @Expose
-    private Long RealTotalCost;
+    private Integer RealTotalCost;
 
     /**
     * 代金券抵扣金额（分）
     */
     @SerializedName("VoucherDecline")
     @Expose
-    private Long VoucherDecline;
+    private Integer VoucherDecline;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 产品分类ID
     */
     @SerializedName("GoodsCategoryId")
     @Expose
-    private Long GoodsCategoryId;
+    private Integer GoodsCategoryId;
 
     /**
     * 产品详情
@@ -169,7 +169,7 @@ public class Deal extends AbstractModel{
      * Get 订单状态 
      * @return Status 订单状态
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -177,7 +177,7 @@ public class Deal extends AbstractModel{
      * Set 订单状态
      * @param Status 订单状态
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 
@@ -233,7 +233,7 @@ public class Deal extends AbstractModel{
      * Get 实际支付金额（分） 
      * @return RealTotalCost 实际支付金额（分）
      */
-    public Long getRealTotalCost() {
+    public Integer getRealTotalCost() {
         return this.RealTotalCost;
     }
 
@@ -241,7 +241,7 @@ public class Deal extends AbstractModel{
      * Set 实际支付金额（分）
      * @param RealTotalCost 实际支付金额（分）
      */
-    public void setRealTotalCost(Long RealTotalCost) {
+    public void setRealTotalCost(Integer RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
@@ -249,7 +249,7 @@ public class Deal extends AbstractModel{
      * Get 代金券抵扣金额（分） 
      * @return VoucherDecline 代金券抵扣金额（分）
      */
-    public Long getVoucherDecline() {
+    public Integer getVoucherDecline() {
         return this.VoucherDecline;
     }
 
@@ -257,7 +257,7 @@ public class Deal extends AbstractModel{
      * Set 代金券抵扣金额（分）
      * @param VoucherDecline 代金券抵扣金额（分）
      */
-    public void setVoucherDecline(Long VoucherDecline) {
+    public void setVoucherDecline(Integer VoucherDecline) {
         this.VoucherDecline = VoucherDecline;
     }
 
@@ -265,7 +265,7 @@ public class Deal extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -273,7 +273,7 @@ public class Deal extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -281,7 +281,7 @@ public class Deal extends AbstractModel{
      * Get 产品分类ID 
      * @return GoodsCategoryId 产品分类ID
      */
-    public Long getGoodsCategoryId() {
+    public Integer getGoodsCategoryId() {
         return this.GoodsCategoryId;
     }
 
@@ -289,7 +289,7 @@ public class Deal extends AbstractModel{
      * Set 产品分类ID
      * @param GoodsCategoryId 产品分类ID
      */
-    public void setGoodsCategoryId(Long GoodsCategoryId) {
+    public void setGoodsCategoryId(Integer GoodsCategoryId) {
         this.GoodsCategoryId = GoodsCategoryId;
     }
 

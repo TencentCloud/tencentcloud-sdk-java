@@ -27,7 +27,7 @@ public class ScanFileResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 接口调用描述信息，成功返回"success"，失败返回"invalid request"
@@ -54,7 +54,7 @@ public class ScanFileResponse extends AbstractModel{
      * Get 接口调用状态，成功返回200，失败返回400 
      * @return Status 接口调用状态，成功返回200，失败返回400
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -62,7 +62,7 @@ public class ScanFileResponse extends AbstractModel{
      * Set 接口调用状态，成功返回200，失败返回400
      * @param Status 接口调用状态，成功返回200，失败返回400
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

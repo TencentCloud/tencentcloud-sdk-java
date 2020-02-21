@@ -97,7 +97,7 @@ public class IKEOptionsSpecification extends AbstractModel{
     */
     @SerializedName("IKESaLifetimeSeconds")
     @Expose
-    private Long IKESaLifetimeSeconds;
+    private Integer IKESaLifetimeSeconds;
 
     /**
     * IKE版本
@@ -270,7 +270,7 @@ public class IKEOptionsSpecification extends AbstractModel{
      * Get IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800 
      * @return IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
      */
-    public Long getIKESaLifetimeSeconds() {
+    public Integer getIKESaLifetimeSeconds() {
         return this.IKESaLifetimeSeconds;
     }
 
@@ -278,7 +278,7 @@ public class IKEOptionsSpecification extends AbstractModel{
      * Set IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
      * @param IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
      */
-    public void setIKESaLifetimeSeconds(Long IKESaLifetimeSeconds) {
+    public void setIKESaLifetimeSeconds(Integer IKESaLifetimeSeconds) {
         this.IKESaLifetimeSeconds = IKESaLifetimeSeconds;
     }
 

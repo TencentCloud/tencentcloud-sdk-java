@@ -34,14 +34,14 @@ public class DescribeSqlLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 拉取数量（0-10000，为0时拉取总数信息）。
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
@@ -63,7 +63,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Get SQL日志偏移。 
      * @return Offset SQL日志偏移。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Set SQL日志偏移。
      * @param Offset SQL日志偏移。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Get 拉取数量（0-10000，为0时拉取总数信息）。 
      * @return Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Set 拉取数量（0-10000，为0时拉取总数信息）。
      * @param Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

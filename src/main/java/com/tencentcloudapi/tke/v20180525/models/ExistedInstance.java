@@ -103,7 +103,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     */
     @SerializedName("CPU")
     @Expose
-    private Long CPU;
+    private Integer CPU;
 
     /**
     * 实例内存容量，单位：GB。
@@ -111,7 +111,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * 操作系统名称。
@@ -327,7 +327,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @return CPU 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCPU() {
+    public Integer getCPU() {
         return this.CPU;
     }
 
@@ -337,7 +337,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param CPU 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCPU(Long CPU) {
+    public void setCPU(Integer CPU) {
         this.CPU = CPU;
     }
 
@@ -347,7 +347,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @return Memory 实例内存容量，单位：GB。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -357,7 +357,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param Memory 实例内存容量，单位：GB。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 

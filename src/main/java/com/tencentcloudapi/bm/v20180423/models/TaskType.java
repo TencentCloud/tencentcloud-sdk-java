@@ -27,7 +27,7 @@ public class TaskType extends AbstractModel{
     */
     @SerializedName("TypeId")
     @Expose
-    private Long TypeId;
+    private Integer TypeId;
 
     /**
     * 故障类中文名
@@ -47,7 +47,7 @@ public class TaskType extends AbstractModel{
      * Get 故障类ID 
      * @return TypeId 故障类ID
      */
-    public Long getTypeId() {
+    public Integer getTypeId() {
         return this.TypeId;
     }
 
@@ -55,7 +55,7 @@ public class TaskType extends AbstractModel{
      * Set 故障类ID
      * @param TypeId 故障类ID
      */
-    public void setTypeId(Long TypeId) {
+    public void setTypeId(Integer TypeId) {
         this.TypeId = TypeId;
     }
 

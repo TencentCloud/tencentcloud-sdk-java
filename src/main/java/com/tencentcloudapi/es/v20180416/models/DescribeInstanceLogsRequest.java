@@ -38,7 +38,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
     */
     @SerializedName("LogType")
     @Expose
-    private Long LogType;
+    private Integer LogType;
 
     /**
     * 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
@@ -66,14 +66,14 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页大小，默认值为100，最大值100
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 时间排序方式，默认值为0
@@ -82,7 +82,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
     */
     @SerializedName("OrderByType")
     @Expose
-    private Long OrderByType;
+    private Integer OrderByType;
 
     /**
      * Get 集群实例ID 
@@ -112,7 +112,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
 <li>3, 索引慢日志</li>
 <li>4, GC日志</li>
      */
-    public Long getLogType() {
+    public Integer getLogType() {
         return this.LogType;
     }
 
@@ -128,7 +128,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
 <li>3, 索引慢日志</li>
 <li>4, GC日志</li>
      */
-    public void setLogType(Long LogType) {
+    public void setLogType(Integer LogType) {
         this.LogType = LogType;
     }
 
@@ -184,7 +184,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
      * Get 分页起始值, 默认值为0 
      * @return Offset 分页起始值, 默认值为0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -192,7 +192,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
      * Set 分页起始值, 默认值为0
      * @param Offset 分页起始值, 默认值为0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -200,7 +200,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
      * Get 分页大小，默认值为100，最大值100 
      * @return Limit 分页大小，默认值为100，最大值100
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -208,7 +208,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
      * Set 分页大小，默认值为100，最大值100
      * @param Limit 分页大小，默认值为100，最大值100
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -220,7 +220,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
 <li>0, 降序</li>
 <li>1, 升序</li>
      */
-    public Long getOrderByType() {
+    public Integer getOrderByType() {
         return this.OrderByType;
     }
 
@@ -232,7 +232,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
 <li>0, 降序</li>
 <li>1, 升序</li>
      */
-    public void setOrderByType(Long OrderByType) {
+    public void setOrderByType(Integer OrderByType) {
         this.OrderByType = OrderByType;
     }
 

@@ -27,14 +27,14 @@ public class UpdateInstanceSettings extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
     * CPU核数
     */
     @SerializedName("CPUCores")
     @Expose
-    private Long CPUCores;
+    private Integer CPUCores;
 
     /**
     * 机器资源ID（EMR测资源标识）
@@ -47,7 +47,7 @@ public class UpdateInstanceSettings extends AbstractModel{
      * Get 内存容量，单位为G 
      * @return Memory 内存容量，单位为G
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -55,7 +55,7 @@ public class UpdateInstanceSettings extends AbstractModel{
      * Set 内存容量，单位为G
      * @param Memory 内存容量，单位为G
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 
@@ -63,7 +63,7 @@ public class UpdateInstanceSettings extends AbstractModel{
      * Get CPU核数 
      * @return CPUCores CPU核数
      */
-    public Long getCPUCores() {
+    public Integer getCPUCores() {
         return this.CPUCores;
     }
 
@@ -71,7 +71,7 @@ public class UpdateInstanceSettings extends AbstractModel{
      * Set CPU核数
      * @param CPUCores CPU核数
      */
-    public void setCPUCores(Long CPUCores) {
+    public void setCPUCores(Integer CPUCores) {
         this.CPUCores = CPUCores;
     }
 

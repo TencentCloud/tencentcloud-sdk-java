@@ -34,42 +34,42 @@ public class DescribePersonInfoRequest extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Long ShopId;
+    private Integer ShopId;
 
     /**
     * 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
     */
     @SerializedName("StartPersonId")
     @Expose
-    private Long StartPersonId;
+    private Integer StartPersonId;
 
     /**
     * 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * Limit:每页的数据项，最大100，超过100会被强制指定为100
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
     */
     @SerializedName("PictureExpires")
     @Expose
-    private Long PictureExpires;
+    private Integer PictureExpires;
 
     /**
     * 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
     */
     @SerializedName("PersonType")
     @Expose
-    private Long PersonType;
+    private Integer PersonType;
 
     /**
      * Get 公司ID 
@@ -91,7 +91,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Get 门店ID 
      * @return ShopId 门店ID
      */
-    public Long getShopId() {
+    public Integer getShopId() {
         return this.ShopId;
     }
 
@@ -99,7 +99,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Set 门店ID
      * @param ShopId 门店ID
      */
-    public void setShopId(Long ShopId) {
+    public void setShopId(Integer ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -107,7 +107,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Get 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId 
      * @return StartPersonId 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
      */
-    public Long getStartPersonId() {
+    public Integer getStartPersonId() {
         return this.StartPersonId;
     }
 
@@ -115,7 +115,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Set 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
      * @param StartPersonId 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
      */
-    public void setStartPersonId(Long StartPersonId) {
+    public void setStartPersonId(Integer StartPersonId) {
         this.StartPersonId = StartPersonId;
     }
 
@@ -123,7 +123,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Get 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit 
      * @return Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -131,7 +131,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Set 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -139,7 +139,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Get Limit:每页的数据项，最大100，超过100会被强制指定为100 
      * @return Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -147,7 +147,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Set Limit:每页的数据项，最大100，超过100会被强制指定为100
      * @param Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -155,7 +155,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Get 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天） 
      * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
-    public Long getPictureExpires() {
+    public Integer getPictureExpires() {
         return this.PictureExpires;
     }
 
@@ -163,7 +163,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Set 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      * @param PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
-    public void setPictureExpires(Long PictureExpires) {
+    public void setPictureExpires(Integer PictureExpires) {
         this.PictureExpires = PictureExpires;
     }
 
@@ -171,7 +171,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Get 身份类型(0表示普通顾客，1 白名单，2 表示黑名单） 
      * @return PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
-    public Long getPersonType() {
+    public Integer getPersonType() {
         return this.PersonType;
     }
 
@@ -179,7 +179,7 @@ public class DescribePersonInfoRequest extends AbstractModel{
      * Set 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      * @param PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
-    public void setPersonType(Long PersonType) {
+    public void setPersonType(Integer PersonType) {
         this.PersonType = PersonType;
     }
 

@@ -41,7 +41,7 @@ public class ListenerBackend extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
@@ -95,7 +95,7 @@ public class ListenerBackend extends AbstractModel{
      * Get 监听器的端口 
      * @return Port 监听器的端口
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -103,7 +103,7 @@ public class ListenerBackend extends AbstractModel{
      * Set 监听器的端口
      * @param Port 监听器的端口
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 

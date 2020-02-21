@@ -69,7 +69,7 @@ public class BackupInfo extends AbstractModel{
     */
     @SerializedName("BackupId")
     @Expose
-    private Long BackupId;
+    private Integer BackupId;
 
     /**
     * 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
@@ -213,7 +213,7 @@ public class BackupInfo extends AbstractModel{
      * Get 备份子任务的ID，删除备份文件时使用 
      * @return BackupId 备份子任务的ID，删除备份文件时使用
      */
-    public Long getBackupId() {
+    public Integer getBackupId() {
         return this.BackupId;
     }
 
@@ -221,7 +221,7 @@ public class BackupInfo extends AbstractModel{
      * Set 备份子任务的ID，删除备份文件时使用
      * @param BackupId 备份子任务的ID，删除备份文件时使用
      */
-    public void setBackupId(Long BackupId) {
+    public void setBackupId(Integer BackupId) {
         this.BackupId = BackupId;
     }
 

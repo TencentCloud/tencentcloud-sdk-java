@@ -41,7 +41,7 @@ public class PutMonitorDataRequest extends AbstractModel{
     */
     @SerializedName("AnnounceTimestamp")
     @Expose
-    private Long AnnounceTimestamp;
+    private Integer AnnounceTimestamp;
 
     /**
     * 上报时自行指定的 IP 或 产品实例ID
@@ -86,7 +86,7 @@ public class PutMonitorDataRequest extends AbstractModel{
      * Get 上报时自行指定的时间戳 
      * @return AnnounceTimestamp 上报时自行指定的时间戳
      */
-    public Long getAnnounceTimestamp() {
+    public Integer getAnnounceTimestamp() {
         return this.AnnounceTimestamp;
     }
 
@@ -94,7 +94,7 @@ public class PutMonitorDataRequest extends AbstractModel{
      * Set 上报时自行指定的时间戳
      * @param AnnounceTimestamp 上报时自行指定的时间戳
      */
-    public void setAnnounceTimestamp(Long AnnounceTimestamp) {
+    public void setAnnounceTimestamp(Integer AnnounceTimestamp) {
         this.AnnounceTimestamp = AnnounceTimestamp;
     }
 

@@ -27,14 +27,14 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     */
     @SerializedName("EniQuantity")
     @Expose
-    private Long EniQuantity;
+    private Integer EniQuantity;
 
     /**
     * 每个弹性网卡可以分配的IP配额
     */
     @SerializedName("EniPrivateIpAddressQuantity")
     @Expose
-    private Long EniPrivateIpAddressQuantity;
+    private Integer EniPrivateIpAddressQuantity;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
      * Get 弹性网卡配额 
      * @return EniQuantity 弹性网卡配额
      */
-    public Long getEniQuantity() {
+    public Integer getEniQuantity() {
         return this.EniQuantity;
     }
 
@@ -55,7 +55,7 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
      * Set 弹性网卡配额
      * @param EniQuantity 弹性网卡配额
      */
-    public void setEniQuantity(Long EniQuantity) {
+    public void setEniQuantity(Integer EniQuantity) {
         this.EniQuantity = EniQuantity;
     }
 
@@ -63,7 +63,7 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
      * Get 每个弹性网卡可以分配的IP配额 
      * @return EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
      */
-    public Long getEniPrivateIpAddressQuantity() {
+    public Integer getEniPrivateIpAddressQuantity() {
         return this.EniPrivateIpAddressQuantity;
     }
 
@@ -71,7 +71,7 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
      * Set 每个弹性网卡可以分配的IP配额
      * @param EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
      */
-    public void setEniPrivateIpAddressQuantity(Long EniPrivateIpAddressQuantity) {
+    public void setEniPrivateIpAddressQuantity(Integer EniPrivateIpAddressQuantity) {
         this.EniPrivateIpAddressQuantity = EniPrivateIpAddressQuantity;
     }
 

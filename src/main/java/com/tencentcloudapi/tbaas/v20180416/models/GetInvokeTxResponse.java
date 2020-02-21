@@ -27,7 +27,7 @@ public class GetInvokeTxResponse extends AbstractModel{
     */
     @SerializedName("TxValidationCode")
     @Expose
-    private Long TxValidationCode;
+    private Integer TxValidationCode;
 
     /**
     * 交易执行消息
@@ -41,7 +41,7 @@ public class GetInvokeTxResponse extends AbstractModel{
     */
     @SerializedName("BlockId")
     @Expose
-    private Long BlockId;
+    private Integer BlockId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,7 +54,7 @@ public class GetInvokeTxResponse extends AbstractModel{
      * Get 交易执行状态码 
      * @return TxValidationCode 交易执行状态码
      */
-    public Long getTxValidationCode() {
+    public Integer getTxValidationCode() {
         return this.TxValidationCode;
     }
 
@@ -62,7 +62,7 @@ public class GetInvokeTxResponse extends AbstractModel{
      * Set 交易执行状态码
      * @param TxValidationCode 交易执行状态码
      */
-    public void setTxValidationCode(Long TxValidationCode) {
+    public void setTxValidationCode(Integer TxValidationCode) {
         this.TxValidationCode = TxValidationCode;
     }
 
@@ -86,7 +86,7 @@ public class GetInvokeTxResponse extends AbstractModel{
      * Get 交易所在区块ID 
      * @return BlockId 交易所在区块ID
      */
-    public Long getBlockId() {
+    public Integer getBlockId() {
         return this.BlockId;
     }
 
@@ -94,7 +94,7 @@ public class GetInvokeTxResponse extends AbstractModel{
      * Set 交易所在区块ID
      * @param BlockId 交易所在区块ID
      */
-    public void setBlockId(Long BlockId) {
+    public void setBlockId(Integer BlockId) {
         this.BlockId = BlockId;
     }
 

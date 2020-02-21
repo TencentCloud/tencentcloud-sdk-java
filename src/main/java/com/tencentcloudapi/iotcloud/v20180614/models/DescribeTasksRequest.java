@@ -27,20 +27,20 @@ public class DescribeTasksRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 分页的大小，数值范围 1-250
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 偏移l量，从0开始 
      * @return Offset 偏移l量，从0开始
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -48,7 +48,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Set 偏移l量，从0开始
      * @param Offset 偏移l量，从0开始
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -56,7 +56,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Get 分页的大小，数值范围 1-250 
      * @return Limit 分页的大小，数值范围 1-250
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -64,7 +64,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Set 分页的大小，数值范围 1-250
      * @param Limit 分页的大小，数值范围 1-250
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

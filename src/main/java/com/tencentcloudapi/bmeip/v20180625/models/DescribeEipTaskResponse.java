@@ -27,7 +27,7 @@ public class DescribeEipTaskResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeEipTaskResponse extends AbstractModel{
      * Get 当前任务状态码：0-成功，1-失败，2-进行中 
      * @return Status 当前任务状态码：0-成功，1-失败，2-进行中
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -48,7 +48,7 @@ public class DescribeEipTaskResponse extends AbstractModel{
      * Set 当前任务状态码：0-成功，1-失败，2-进行中
      * @param Status 当前任务状态码：0-成功，1-失败，2-进行中
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

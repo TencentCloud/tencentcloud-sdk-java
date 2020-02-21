@@ -41,7 +41,7 @@ public class TextArithmetic extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Long Confidence;
+    private Integer Confidence;
 
     /**
     * 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
@@ -119,7 +119,7 @@ public class TextArithmetic extends AbstractModel{
      * Get 保留字段，暂不支持 
      * @return Confidence 保留字段，暂不支持
      */
-    public Long getConfidence() {
+    public Integer getConfidence() {
         return this.Confidence;
     }
 
@@ -127,7 +127,7 @@ public class TextArithmetic extends AbstractModel{
      * Set 保留字段，暂不支持
      * @param Confidence 保留字段，暂不支持
      */
-    public void setConfidence(Long Confidence) {
+    public void setConfidence(Integer Confidence) {
         this.Confidence = Confidence;
     }
 

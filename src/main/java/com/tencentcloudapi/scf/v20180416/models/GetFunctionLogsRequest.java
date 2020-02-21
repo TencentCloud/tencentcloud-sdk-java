@@ -34,14 +34,14 @@ public class GetFunctionLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数据的长度，Offset+Limit不能大于10000
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
     * 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
@@ -58,7 +58,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
     private String OrderBy;
 
     /**
-    * 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+    * 日志过滤条件。可用来区分正确和错误日志，filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，不传，则返回所有日志
     */
     @SerializedName("Filter")
     @Expose
@@ -126,7 +126,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Get 数据的偏移量，Offset+Limit不能大于10000 
      * @return Offset 数据的偏移量，Offset+Limit不能大于10000
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -134,7 +134,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Set 数据的偏移量，Offset+Limit不能大于10000
      * @param Offset 数据的偏移量，Offset+Limit不能大于10000
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -142,7 +142,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Get 返回数据的长度，Offset+Limit不能大于10000 
      * @return Limit 返回数据的长度，Offset+Limit不能大于10000
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -150,7 +150,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Set 返回数据的长度，Offset+Limit不能大于10000
      * @param Limit 返回数据的长度，Offset+Limit不能大于10000
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 
@@ -187,16 +187,16 @@ public class GetFunctionLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志 
-     * @return Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+     * Get 日志过滤条件。可用来区分正确和错误日志，filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，不传，则返回所有日志 
+     * @return Filter 日志过滤条件。可用来区分正确和错误日志，filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，不传，则返回所有日志
      */
     public LogFilter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
-     * @param Filter 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+     * Set 日志过滤条件。可用来区分正确和错误日志，filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，不传，则返回所有日志
+     * @param Filter 日志过滤条件。可用来区分正确和错误日志，filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，不传，则返回所有日志
      */
     public void setFilter(LogFilter Filter) {
         this.Filter = Filter;

@@ -48,14 +48,14 @@ public class DisasterRecoverGroup extends AbstractModel{
     */
     @SerializedName("CvmQuotaTotal")
     @Expose
-    private Long CvmQuotaTotal;
+    private Integer CvmQuotaTotal;
 
     /**
     * 分散置放群组内云服务器当前数量。
     */
     @SerializedName("CurrentNum")
     @Expose
-    private Long CurrentNum;
+    private Integer CurrentNum;
 
     /**
     * 分散置放群组内，云服务器id列表。
@@ -125,7 +125,7 @@ public class DisasterRecoverGroup extends AbstractModel{
      * Get 分散置放群组内最大容纳云服务器数量。 
      * @return CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      */
-    public Long getCvmQuotaTotal() {
+    public Integer getCvmQuotaTotal() {
         return this.CvmQuotaTotal;
     }
 
@@ -133,7 +133,7 @@ public class DisasterRecoverGroup extends AbstractModel{
      * Set 分散置放群组内最大容纳云服务器数量。
      * @param CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      */
-    public void setCvmQuotaTotal(Long CvmQuotaTotal) {
+    public void setCvmQuotaTotal(Integer CvmQuotaTotal) {
         this.CvmQuotaTotal = CvmQuotaTotal;
     }
 
@@ -141,7 +141,7 @@ public class DisasterRecoverGroup extends AbstractModel{
      * Get 分散置放群组内云服务器当前数量。 
      * @return CurrentNum 分散置放群组内云服务器当前数量。
      */
-    public Long getCurrentNum() {
+    public Integer getCurrentNum() {
         return this.CurrentNum;
     }
 
@@ -149,7 +149,7 @@ public class DisasterRecoverGroup extends AbstractModel{
      * Set 分散置放群组内云服务器当前数量。
      * @param CurrentNum 分散置放群组内云服务器当前数量。
      */
-    public void setCurrentNum(Long CurrentNum) {
+    public void setCurrentNum(Integer CurrentNum) {
         this.CurrentNum = CurrentNum;
     }
 

@@ -48,7 +48,7 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Long TemplateId;
+    private Integer TemplateId;
 
     /**
      * Get 播放域名。 
@@ -102,7 +102,7 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
      * Get 指定已有的模板Id。 
      * @return TemplateId 指定已有的模板Id。
      */
-    public Long getTemplateId() {
+    public Integer getTemplateId() {
         return this.TemplateId;
     }
 
@@ -110,7 +110,7 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
      * Set 指定已有的模板Id。
      * @param TemplateId 指定已有的模板Id。
      */
-    public void setTemplateId(Long TemplateId) {
+    public void setTemplateId(Integer TemplateId) {
         this.TemplateId = TemplateId;
     }
 

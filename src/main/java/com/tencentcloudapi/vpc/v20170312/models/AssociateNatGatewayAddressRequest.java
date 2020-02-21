@@ -34,7 +34,7 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     */
     @SerializedName("AddressCount")
     @Expose
-    private Long AddressCount;
+    private Integer AddressCount;
 
     /**
     * 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
@@ -70,7 +70,7 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
      * Get 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。 
      * @return AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
      */
-    public Long getAddressCount() {
+    public Integer getAddressCount() {
         return this.AddressCount;
     }
 
@@ -78,7 +78,7 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
      * Set 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
      * @param AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
      */
-    public void setAddressCount(Long AddressCount) {
+    public void setAddressCount(Integer AddressCount) {
         this.AddressCount = AddressCount;
     }
 

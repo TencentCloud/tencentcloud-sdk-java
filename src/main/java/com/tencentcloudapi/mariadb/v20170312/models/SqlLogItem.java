@@ -27,7 +27,7 @@ public class SqlLogItem extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 执行本条sql的用户。
@@ -62,41 +62,41 @@ public class SqlLogItem extends AbstractModel{
     */
     @SerializedName("SelectRowNum")
     @Expose
-    private Long SelectRowNum;
+    private Integer SelectRowNum;
 
     /**
     * 影响行数。
     */
     @SerializedName("AffectRowNum")
     @Expose
-    private Long AffectRowNum;
+    private Integer AffectRowNum;
 
     /**
     * Sql执行时间戳。
     */
     @SerializedName("Timestamp")
     @Expose
-    private Long Timestamp;
+    private Integer Timestamp;
 
     /**
     * Sql耗时，单位为毫秒。
     */
     @SerializedName("TimeCostMs")
     @Expose
-    private Long TimeCostMs;
+    private Integer TimeCostMs;
 
     /**
     * Sql返回码，0为成功。
     */
     @SerializedName("ResultCode")
     @Expose
-    private Long ResultCode;
+    private Integer ResultCode;
 
     /**
      * Get 本条日志在消息队列中的偏移量。 
      * @return Offset 本条日志在消息队列中的偏移量。
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -104,7 +104,7 @@ public class SqlLogItem extends AbstractModel{
      * Set 本条日志在消息队列中的偏移量。
      * @param Offset 本条日志在消息队列中的偏移量。
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -176,7 +176,7 @@ public class SqlLogItem extends AbstractModel{
      * Get 返回的数据行数。 
      * @return SelectRowNum 返回的数据行数。
      */
-    public Long getSelectRowNum() {
+    public Integer getSelectRowNum() {
         return this.SelectRowNum;
     }
 
@@ -184,7 +184,7 @@ public class SqlLogItem extends AbstractModel{
      * Set 返回的数据行数。
      * @param SelectRowNum 返回的数据行数。
      */
-    public void setSelectRowNum(Long SelectRowNum) {
+    public void setSelectRowNum(Integer SelectRowNum) {
         this.SelectRowNum = SelectRowNum;
     }
 
@@ -192,7 +192,7 @@ public class SqlLogItem extends AbstractModel{
      * Get 影响行数。 
      * @return AffectRowNum 影响行数。
      */
-    public Long getAffectRowNum() {
+    public Integer getAffectRowNum() {
         return this.AffectRowNum;
     }
 
@@ -200,7 +200,7 @@ public class SqlLogItem extends AbstractModel{
      * Set 影响行数。
      * @param AffectRowNum 影响行数。
      */
-    public void setAffectRowNum(Long AffectRowNum) {
+    public void setAffectRowNum(Integer AffectRowNum) {
         this.AffectRowNum = AffectRowNum;
     }
 
@@ -208,7 +208,7 @@ public class SqlLogItem extends AbstractModel{
      * Get Sql执行时间戳。 
      * @return Timestamp Sql执行时间戳。
      */
-    public Long getTimestamp() {
+    public Integer getTimestamp() {
         return this.Timestamp;
     }
 
@@ -216,7 +216,7 @@ public class SqlLogItem extends AbstractModel{
      * Set Sql执行时间戳。
      * @param Timestamp Sql执行时间戳。
      */
-    public void setTimestamp(Long Timestamp) {
+    public void setTimestamp(Integer Timestamp) {
         this.Timestamp = Timestamp;
     }
 
@@ -224,7 +224,7 @@ public class SqlLogItem extends AbstractModel{
      * Get Sql耗时，单位为毫秒。 
      * @return TimeCostMs Sql耗时，单位为毫秒。
      */
-    public Long getTimeCostMs() {
+    public Integer getTimeCostMs() {
         return this.TimeCostMs;
     }
 
@@ -232,7 +232,7 @@ public class SqlLogItem extends AbstractModel{
      * Set Sql耗时，单位为毫秒。
      * @param TimeCostMs Sql耗时，单位为毫秒。
      */
-    public void setTimeCostMs(Long TimeCostMs) {
+    public void setTimeCostMs(Integer TimeCostMs) {
         this.TimeCostMs = TimeCostMs;
     }
 
@@ -240,7 +240,7 @@ public class SqlLogItem extends AbstractModel{
      * Get Sql返回码，0为成功。 
      * @return ResultCode Sql返回码，0为成功。
      */
-    public Long getResultCode() {
+    public Integer getResultCode() {
         return this.ResultCode;
     }
 
@@ -248,7 +248,7 @@ public class SqlLogItem extends AbstractModel{
      * Set Sql返回码，0为成功。
      * @param ResultCode Sql返回码，0为成功。
      */
-    public void setResultCode(Long ResultCode) {
+    public void setResultCode(Integer ResultCode) {
         this.ResultCode = ResultCode;
     }
 

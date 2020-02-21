@@ -27,27 +27,27 @@ public class ConsistencyParams extends AbstractModel{
     */
     @SerializedName("SelectRowsPerTable")
     @Expose
-    private Long SelectRowsPerTable;
+    private Integer SelectRowsPerTable;
 
     /**
     * 数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
     */
     @SerializedName("TablesSelectAll")
     @Expose
-    private Long TablesSelectAll;
+    private Integer TablesSelectAll;
 
     /**
     * 数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
     */
     @SerializedName("TablesSelectCount")
     @Expose
-    private Long TablesSelectCount;
+    private Integer TablesSelectCount;
 
     /**
      * Get 数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100] 
      * @return SelectRowsPerTable 数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]
      */
-    public Long getSelectRowsPerTable() {
+    public Integer getSelectRowsPerTable() {
         return this.SelectRowsPerTable;
     }
 
@@ -55,7 +55,7 @@ public class ConsistencyParams extends AbstractModel{
      * Set 数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]
      * @param SelectRowsPerTable 数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]
      */
-    public void setSelectRowsPerTable(Long SelectRowsPerTable) {
+    public void setSelectRowsPerTable(Integer SelectRowsPerTable) {
         this.SelectRowsPerTable = SelectRowsPerTable;
     }
 
@@ -63,7 +63,7 @@ public class ConsistencyParams extends AbstractModel{
      * Get 数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100] 
      * @return TablesSelectAll 数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
      */
-    public Long getTablesSelectAll() {
+    public Integer getTablesSelectAll() {
         return this.TablesSelectAll;
     }
 
@@ -71,7 +71,7 @@ public class ConsistencyParams extends AbstractModel{
      * Set 数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
      * @param TablesSelectAll 数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
      */
-    public void setTablesSelectAll(Long TablesSelectAll) {
+    public void setTablesSelectAll(Integer TablesSelectAll) {
         this.TablesSelectAll = TablesSelectAll;
     }
 
@@ -79,7 +79,7 @@ public class ConsistencyParams extends AbstractModel{
      * Get 数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100] 
      * @return TablesSelectCount 数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
      */
-    public Long getTablesSelectCount() {
+    public Integer getTablesSelectCount() {
         return this.TablesSelectCount;
     }
 
@@ -87,7 +87,7 @@ public class ConsistencyParams extends AbstractModel{
      * Set 数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
      * @param TablesSelectCount 数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
      */
-    public void setTablesSelectCount(Long TablesSelectCount) {
+    public void setTablesSelectCount(Integer TablesSelectCount) {
         this.TablesSelectCount = TablesSelectCount;
     }
 

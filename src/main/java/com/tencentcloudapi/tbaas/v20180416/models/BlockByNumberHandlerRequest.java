@@ -48,7 +48,7 @@ public class BlockByNumberHandlerRequest extends AbstractModel{
     */
     @SerializedName("BlockNumber")
     @Expose
-    private Long BlockNumber;
+    private Integer BlockNumber;
 
     /**
      * Get 模块名，固定字段：block 
@@ -102,7 +102,7 @@ public class BlockByNumberHandlerRequest extends AbstractModel{
      * Get 区块高度 
      * @return BlockNumber 区块高度
      */
-    public Long getBlockNumber() {
+    public Integer getBlockNumber() {
         return this.BlockNumber;
     }
 
@@ -110,7 +110,7 @@ public class BlockByNumberHandlerRequest extends AbstractModel{
      * Set 区块高度
      * @param BlockNumber 区块高度
      */
-    public void setBlockNumber(Long BlockNumber) {
+    public void setBlockNumber(Integer BlockNumber) {
         this.BlockNumber = BlockNumber;
     }
 

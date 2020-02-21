@@ -85,7 +85,7 @@ public class CreateLiveRecordRequest extends AbstractModel{
     */
     @SerializedName("Highlight")
     @Expose
-    private Long Highlight;
+    private Integer Highlight;
 
     /**
     * 开启A+B=C混流C流录制标志。
@@ -95,7 +95,7 @@ public class CreateLiveRecordRequest extends AbstractModel{
     */
     @SerializedName("MixStream")
     @Expose
-    private Long MixStream;
+    private Integer MixStream;
 
     /**
     * 录制流参数。当前支持以下参数：
@@ -257,7 +257,7 @@ eg. record_interval=3600&storage_time=2592000
 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
 1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
      */
-    public Long getHighlight() {
+    public Integer getHighlight() {
         return this.Highlight;
     }
 
@@ -269,7 +269,7 @@ eg. record_interval=3600&storage_time=2592000
 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
 1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
      */
-    public void setHighlight(Long Highlight) {
+    public void setHighlight(Integer Highlight) {
         this.Highlight = Highlight;
     }
 
@@ -283,7 +283,7 @@ eg. record_interval=3600&storage_time=2592000
 1：开启A+B=C混流C流录制。
 在定时录制模式或实时视频录制模式下，该参数均有效。
      */
-    public Long getMixStream() {
+    public Integer getMixStream() {
         return this.MixStream;
     }
 
@@ -297,7 +297,7 @@ eg. record_interval=3600&storage_time=2592000
 1：开启A+B=C混流C流录制。
 在定时录制模式或实时视频录制模式下，该参数均有效。
      */
-    public void setMixStream(Long MixStream) {
+    public void setMixStream(Integer MixStream) {
         this.MixStream = MixStream;
     }
 

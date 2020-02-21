@@ -48,7 +48,7 @@ public class ModifyTargetPortRequest extends AbstractModel{
     */
     @SerializedName("NewPort")
     @Expose
-    private Long NewPort;
+    private Integer NewPort;
 
     /**
     * 转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
@@ -123,7 +123,7 @@ public class ModifyTargetPortRequest extends AbstractModel{
      * Get 后端服务绑定到监听器或转发规则的新端口 
      * @return NewPort 后端服务绑定到监听器或转发规则的新端口
      */
-    public Long getNewPort() {
+    public Integer getNewPort() {
         return this.NewPort;
     }
 
@@ -131,7 +131,7 @@ public class ModifyTargetPortRequest extends AbstractModel{
      * Set 后端服务绑定到监听器或转发规则的新端口
      * @param NewPort 后端服务绑定到监听器或转发规则的新端口
      */
-    public void setNewPort(Long NewPort) {
+    public void setNewPort(Integer NewPort) {
         this.NewPort = NewPort;
     }
 

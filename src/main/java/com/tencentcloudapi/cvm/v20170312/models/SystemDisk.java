@@ -41,7 +41,7 @@ public class SystemDisk extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Long DiskSize;
+    private Integer DiskSize;
 
     /**
      * Get 系统盘类型。系统盘类型限制详见[实例规格](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><br>默认取值：CLOUD_BASIC。 
@@ -79,7 +79,7 @@ public class SystemDisk extends AbstractModel{
      * Get 系统盘大小，单位：GB。默认值为 50 
      * @return DiskSize 系统盘大小，单位：GB。默认值为 50
      */
-    public Long getDiskSize() {
+    public Integer getDiskSize() {
         return this.DiskSize;
     }
 
@@ -87,7 +87,7 @@ public class SystemDisk extends AbstractModel{
      * Set 系统盘大小，单位：GB。默认值为 50
      * @param DiskSize 系统盘大小，单位：GB。默认值为 50
      */
-    public void setDiskSize(Long DiskSize) {
+    public void setDiskSize(Integer DiskSize) {
         this.DiskSize = DiskSize;
     }
 

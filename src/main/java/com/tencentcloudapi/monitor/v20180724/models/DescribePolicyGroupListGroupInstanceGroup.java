@@ -27,7 +27,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
     */
     @SerializedName("InstanceGroupId")
     @Expose
-    private Long InstanceGroupId;
+    private Integer InstanceGroupId;
 
     /**
     * 策略类型视图名称
@@ -55,27 +55,27 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
     */
     @SerializedName("InstanceSum")
     @Expose
-    private Long InstanceSum;
+    private Integer InstanceSum;
 
     /**
     * 更新时间
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Long UpdateTime;
+    private Integer UpdateTime;
 
     /**
     * 创建时间
     */
     @SerializedName("InsertTime")
     @Expose
-    private Long InsertTime;
+    private Integer InsertTime;
 
     /**
      * Get 实例分组名称id 
      * @return InstanceGroupId 实例分组名称id
      */
-    public Long getInstanceGroupId() {
+    public Integer getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
@@ -83,7 +83,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
      * Set 实例分组名称id
      * @param InstanceGroupId 实例分组名称id
      */
-    public void setInstanceGroupId(Long InstanceGroupId) {
+    public void setInstanceGroupId(Integer InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
@@ -139,7 +139,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
      * Get 实例数量 
      * @return InstanceSum 实例数量
      */
-    public Long getInstanceSum() {
+    public Integer getInstanceSum() {
         return this.InstanceSum;
     }
 
@@ -147,7 +147,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
      * Set 实例数量
      * @param InstanceSum 实例数量
      */
-    public void setInstanceSum(Long InstanceSum) {
+    public void setInstanceSum(Integer InstanceSum) {
         this.InstanceSum = InstanceSum;
     }
 
@@ -155,7 +155,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
      * Get 更新时间 
      * @return UpdateTime 更新时间
      */
-    public Long getUpdateTime() {
+    public Integer getUpdateTime() {
         return this.UpdateTime;
     }
 
@@ -163,7 +163,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
      * Set 更新时间
      * @param UpdateTime 更新时间
      */
-    public void setUpdateTime(Long UpdateTime) {
+    public void setUpdateTime(Integer UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
@@ -171,7 +171,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
      * Get 创建时间 
      * @return InsertTime 创建时间
      */
-    public Long getInsertTime() {
+    public Integer getInsertTime() {
         return this.InsertTime;
     }
 
@@ -179,7 +179,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
      * Set 创建时间
      * @param InsertTime 创建时间
      */
-    public void setInsertTime(Long InsertTime) {
+    public void setInsertTime(Integer InsertTime) {
         this.InsertTime = InsertTime;
     }
 

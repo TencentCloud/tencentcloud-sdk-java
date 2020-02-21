@@ -27,14 +27,14 @@ public class DevicePartition extends AbstractModel{
     */
     @SerializedName("SystemDiskSize")
     @Expose
-    private Long SystemDiskSize;
+    private Integer SystemDiskSize;
 
     /**
     * 数据盘大小
     */
     @SerializedName("DataDiskSize")
     @Expose
-    private Long DataDiskSize;
+    private Integer DataDiskSize;
 
     /**
     * 是否兼容Uefi
@@ -48,28 +48,28 @@ public class DevicePartition extends AbstractModel{
     */
     @SerializedName("SysRootSpace")
     @Expose
-    private Long SysRootSpace;
+    private Integer SysRootSpace;
 
     /**
     * Swaporuefi分区大小
     */
     @SerializedName("SysSwaporuefiSpace")
     @Expose
-    private Long SysSwaporuefiSpace;
+    private Integer SysSwaporuefiSpace;
 
     /**
     * Usrlocal分区大小
     */
     @SerializedName("SysUsrlocalSpace")
     @Expose
-    private Long SysUsrlocalSpace;
+    private Integer SysUsrlocalSpace;
 
     /**
     * data分区大小
     */
     @SerializedName("SysDataSpace")
     @Expose
-    private Long SysDataSpace;
+    private Integer SysDataSpace;
 
     /**
     * 硬盘大小详情
@@ -82,7 +82,7 @@ public class DevicePartition extends AbstractModel{
      * Get 系统盘大小 
      * @return SystemDiskSize 系统盘大小
      */
-    public Long getSystemDiskSize() {
+    public Integer getSystemDiskSize() {
         return this.SystemDiskSize;
     }
 
@@ -90,7 +90,7 @@ public class DevicePartition extends AbstractModel{
      * Set 系统盘大小
      * @param SystemDiskSize 系统盘大小
      */
-    public void setSystemDiskSize(Long SystemDiskSize) {
+    public void setSystemDiskSize(Integer SystemDiskSize) {
         this.SystemDiskSize = SystemDiskSize;
     }
 
@@ -98,7 +98,7 @@ public class DevicePartition extends AbstractModel{
      * Get 数据盘大小 
      * @return DataDiskSize 数据盘大小
      */
-    public Long getDataDiskSize() {
+    public Integer getDataDiskSize() {
         return this.DataDiskSize;
     }
 
@@ -106,7 +106,7 @@ public class DevicePartition extends AbstractModel{
      * Set 数据盘大小
      * @param DataDiskSize 数据盘大小
      */
-    public void setDataDiskSize(Long DataDiskSize) {
+    public void setDataDiskSize(Integer DataDiskSize) {
         this.DataDiskSize = DataDiskSize;
     }
 
@@ -130,7 +130,7 @@ public class DevicePartition extends AbstractModel{
      * Get root分区大小 
      * @return SysRootSpace root分区大小
      */
-    public Long getSysRootSpace() {
+    public Integer getSysRootSpace() {
         return this.SysRootSpace;
     }
 
@@ -138,7 +138,7 @@ public class DevicePartition extends AbstractModel{
      * Set root分区大小
      * @param SysRootSpace root分区大小
      */
-    public void setSysRootSpace(Long SysRootSpace) {
+    public void setSysRootSpace(Integer SysRootSpace) {
         this.SysRootSpace = SysRootSpace;
     }
 
@@ -146,7 +146,7 @@ public class DevicePartition extends AbstractModel{
      * Get Swaporuefi分区大小 
      * @return SysSwaporuefiSpace Swaporuefi分区大小
      */
-    public Long getSysSwaporuefiSpace() {
+    public Integer getSysSwaporuefiSpace() {
         return this.SysSwaporuefiSpace;
     }
 
@@ -154,7 +154,7 @@ public class DevicePartition extends AbstractModel{
      * Set Swaporuefi分区大小
      * @param SysSwaporuefiSpace Swaporuefi分区大小
      */
-    public void setSysSwaporuefiSpace(Long SysSwaporuefiSpace) {
+    public void setSysSwaporuefiSpace(Integer SysSwaporuefiSpace) {
         this.SysSwaporuefiSpace = SysSwaporuefiSpace;
     }
 
@@ -162,7 +162,7 @@ public class DevicePartition extends AbstractModel{
      * Get Usrlocal分区大小 
      * @return SysUsrlocalSpace Usrlocal分区大小
      */
-    public Long getSysUsrlocalSpace() {
+    public Integer getSysUsrlocalSpace() {
         return this.SysUsrlocalSpace;
     }
 
@@ -170,7 +170,7 @@ public class DevicePartition extends AbstractModel{
      * Set Usrlocal分区大小
      * @param SysUsrlocalSpace Usrlocal分区大小
      */
-    public void setSysUsrlocalSpace(Long SysUsrlocalSpace) {
+    public void setSysUsrlocalSpace(Integer SysUsrlocalSpace) {
         this.SysUsrlocalSpace = SysUsrlocalSpace;
     }
 
@@ -178,7 +178,7 @@ public class DevicePartition extends AbstractModel{
      * Get data分区大小 
      * @return SysDataSpace data分区大小
      */
-    public Long getSysDataSpace() {
+    public Integer getSysDataSpace() {
         return this.SysDataSpace;
     }
 
@@ -186,7 +186,7 @@ public class DevicePartition extends AbstractModel{
      * Set data分区大小
      * @param SysDataSpace data分区大小
      */
-    public void setSysDataSpace(Long SysDataSpace) {
+    public void setSysDataSpace(Integer SysDataSpace) {
         this.SysDataSpace = SysDataSpace;
     }
 

@@ -41,21 +41,21 @@ public class MetricAlarm extends AbstractModel{
     */
     @SerializedName("Threshold")
     @Expose
-    private Long Threshold;
+    private Integer Threshold;
 
     /**
     * 时间周期，单位：秒，取值枚举值为60、300。
     */
     @SerializedName("Period")
     @Expose
-    private Long Period;
+    private Integer Period;
 
     /**
     * 重复次数。取值范围 [1, 10]
     */
     @SerializedName("ContinuousTime")
     @Expose
-    private Long ContinuousTime;
+    private Integer ContinuousTime;
 
     /**
     * 统计类型，可选字段如下：<br><li>AVERAGE：平均值</li><li>MAXIMUM：最大值<li>MINIMUM：最小值</li><br> 默认取值：AVERAGE
@@ -100,7 +100,7 @@ public class MetricAlarm extends AbstractModel{
      * Get 告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，单位：%</li><li>MEM_UTILIZATION：[1, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li> 
      * @return Threshold 告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，单位：%</li><li>MEM_UTILIZATION：[1, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li>
      */
-    public Long getThreshold() {
+    public Integer getThreshold() {
         return this.Threshold;
     }
 
@@ -108,7 +108,7 @@ public class MetricAlarm extends AbstractModel{
      * Set 告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，单位：%</li><li>MEM_UTILIZATION：[1, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li>
      * @param Threshold 告警阈值：<br><li>CPU_UTILIZATION：[1, 100]，单位：%</li><li>MEM_UTILIZATION：[1, 100]，单位：%</li><li>LAN_TRAFFIC_OUT：>0，单位：Mbps </li><li>LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>WAN_TRAFFIC_IN：>0，单位：Mbps</li>
      */
-    public void setThreshold(Long Threshold) {
+    public void setThreshold(Integer Threshold) {
         this.Threshold = Threshold;
     }
 
@@ -116,7 +116,7 @@ public class MetricAlarm extends AbstractModel{
      * Get 时间周期，单位：秒，取值枚举值为60、300。 
      * @return Period 时间周期，单位：秒，取值枚举值为60、300。
      */
-    public Long getPeriod() {
+    public Integer getPeriod() {
         return this.Period;
     }
 
@@ -124,7 +124,7 @@ public class MetricAlarm extends AbstractModel{
      * Set 时间周期，单位：秒，取值枚举值为60、300。
      * @param Period 时间周期，单位：秒，取值枚举值为60、300。
      */
-    public void setPeriod(Long Period) {
+    public void setPeriod(Integer Period) {
         this.Period = Period;
     }
 
@@ -132,7 +132,7 @@ public class MetricAlarm extends AbstractModel{
      * Get 重复次数。取值范围 [1, 10] 
      * @return ContinuousTime 重复次数。取值范围 [1, 10]
      */
-    public Long getContinuousTime() {
+    public Integer getContinuousTime() {
         return this.ContinuousTime;
     }
 
@@ -140,7 +140,7 @@ public class MetricAlarm extends AbstractModel{
      * Set 重复次数。取值范围 [1, 10]
      * @param ContinuousTime 重复次数。取值范围 [1, 10]
      */
-    public void setContinuousTime(Long ContinuousTime) {
+    public void setContinuousTime(Integer ContinuousTime) {
         this.ContinuousTime = ContinuousTime;
     }
 

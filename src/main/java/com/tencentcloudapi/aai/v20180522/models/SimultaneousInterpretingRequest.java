@@ -27,14 +27,14 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Long ProjectId;
+    private Integer ProjectId;
 
     /**
     * 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
     */
     @SerializedName("SubServiceType")
     @Expose
-    private Long SubServiceType;
+    private Integer SubServiceType;
 
     /**
     * 识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。
@@ -55,7 +55,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
     */
     @SerializedName("DataLen")
     @Expose
-    private Long DataLen;
+    private Integer DataLen;
 
     /**
     * 声音id，标识一句话。
@@ -69,21 +69,21 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
     */
     @SerializedName("IsEnd")
     @Expose
-    private Long IsEnd;
+    private Integer IsEnd;
 
     /**
     * 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
     */
     @SerializedName("VoiceFormat")
     @Expose
-    private Long VoiceFormat;
+    private Integer VoiceFormat;
 
     /**
     * 是否需要翻译结果，1表示需要翻译，0是不需要。
     */
     @SerializedName("OpenTranslate")
     @Expose
-    private Long OpenTranslate;
+    private Integer OpenTranslate;
 
     /**
     * 如果需要翻译，表示源语言类型，可取值：zh，en。
@@ -104,13 +104,13 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
     */
     @SerializedName("Seq")
     @Expose
-    private Long Seq;
+    private Integer Seq;
 
     /**
      * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
-    public Long getProjectId() {
+    public Integer getProjectId() {
         return this.ProjectId;
     }
 
@@ -118,7 +118,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Set 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
-    public void setProjectId(Long ProjectId) {
+    public void setProjectId(Integer ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -126,7 +126,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Get 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。 
      * @return SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
      */
-    public Long getSubServiceType() {
+    public Integer getSubServiceType() {
         return this.SubServiceType;
     }
 
@@ -134,7 +134,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Set 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
      * @param SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
      */
-    public void setSubServiceType(Long SubServiceType) {
+    public void setSubServiceType(Integer SubServiceType) {
         this.SubServiceType = SubServiceType;
     }
 
@@ -174,7 +174,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Get 数据长度。 
      * @return DataLen 数据长度。
      */
-    public Long getDataLen() {
+    public Integer getDataLen() {
         return this.DataLen;
     }
 
@@ -182,7 +182,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Set 数据长度。
      * @param DataLen 数据长度。
      */
-    public void setDataLen(Long DataLen) {
+    public void setDataLen(Integer DataLen) {
         this.DataLen = DataLen;
     }
 
@@ -206,7 +206,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Get 是否是一句话的结束。 
      * @return IsEnd 是否是一句话的结束。
      */
-    public Long getIsEnd() {
+    public Integer getIsEnd() {
         return this.IsEnd;
     }
 
@@ -214,7 +214,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Set 是否是一句话的结束。
      * @param IsEnd 是否是一句话的结束。
      */
-    public void setIsEnd(Long IsEnd) {
+    public void setIsEnd(Integer IsEnd) {
         this.IsEnd = IsEnd;
     }
 
@@ -222,7 +222,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Get 声音编码的格式1:pcm，4:speex，6:silk，默认为1。 
      * @return VoiceFormat 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
      */
-    public Long getVoiceFormat() {
+    public Integer getVoiceFormat() {
         return this.VoiceFormat;
     }
 
@@ -230,7 +230,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Set 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
      * @param VoiceFormat 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
      */
-    public void setVoiceFormat(Long VoiceFormat) {
+    public void setVoiceFormat(Integer VoiceFormat) {
         this.VoiceFormat = VoiceFormat;
     }
 
@@ -238,7 +238,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Get 是否需要翻译结果，1表示需要翻译，0是不需要。 
      * @return OpenTranslate 是否需要翻译结果，1表示需要翻译，0是不需要。
      */
-    public Long getOpenTranslate() {
+    public Integer getOpenTranslate() {
         return this.OpenTranslate;
     }
 
@@ -246,7 +246,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Set 是否需要翻译结果，1表示需要翻译，0是不需要。
      * @param OpenTranslate 是否需要翻译结果，1表示需要翻译，0是不需要。
      */
-    public void setOpenTranslate(Long OpenTranslate) {
+    public void setOpenTranslate(Integer OpenTranslate) {
         this.OpenTranslate = OpenTranslate;
     }
 
@@ -286,7 +286,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Get 表明当前语音分片的索引，从0开始 
      * @return Seq 表明当前语音分片的索引，从0开始
      */
-    public Long getSeq() {
+    public Integer getSeq() {
         return this.Seq;
     }
 
@@ -294,7 +294,7 @@ public class SimultaneousInterpretingRequest extends AbstractModel{
      * Set 表明当前语音分片的索引，从0开始
      * @param Seq 表明当前语音分片的索引，从0开始
      */
-    public void setSeq(Long Seq) {
+    public void setSeq(Integer Seq) {
         this.Seq = Seq;
     }
 

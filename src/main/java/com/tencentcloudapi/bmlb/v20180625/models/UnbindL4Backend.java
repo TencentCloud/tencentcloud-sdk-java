@@ -27,7 +27,7 @@ public class UnbindL4Backend extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Long Port;
+    private Integer Port;
 
     /**
     * 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
@@ -40,7 +40,7 @@ public class UnbindL4Backend extends AbstractModel{
      * Get 待解绑的主机端口，可选值1~65535。 
      * @return Port 待解绑的主机端口，可选值1~65535。
      */
-    public Long getPort() {
+    public Integer getPort() {
         return this.Port;
     }
 
@@ -48,7 +48,7 @@ public class UnbindL4Backend extends AbstractModel{
      * Set 待解绑的主机端口，可选值1~65535。
      * @param Port 待解绑的主机端口，可选值1~65535。
      */
-    public void setPort(Long Port) {
+    public void setPort(Integer Port) {
         this.Port = Port;
     }
 

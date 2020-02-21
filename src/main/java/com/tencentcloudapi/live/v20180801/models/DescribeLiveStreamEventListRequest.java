@@ -69,7 +69,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     */
     @SerializedName("PageNum")
     @Expose
-    private Long PageNum;
+    private Integer PageNum;
 
     /**
     * 分页大小。
@@ -80,7 +80,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     */
     @SerializedName("PageSize")
     @Expose
-    private Long PageSize;
+    private Integer PageSize;
 
     /**
     * 是否过滤，默认不过滤。
@@ -89,7 +89,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     */
     @SerializedName("IsFilter")
     @Expose
-    private Long IsFilter;
+    private Integer IsFilter;
 
     /**
     * 是否精确查询，默认模糊匹配。
@@ -99,7 +99,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     */
     @SerializedName("IsStrict")
     @Expose
-    private Long IsStrict;
+    private Integer IsStrict;
 
     /**
     * 是否按结束时间正序显示，默认逆序。
@@ -108,7 +108,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
     */
     @SerializedName("IsAsc")
     @Expose
-    private Long IsAsc;
+    private Integer IsAsc;
 
     /**
      * Get 起始时间。 
@@ -218,7 +218,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 默认值：1。
 注： 目前只支持10000条内的查询。
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return this.PageNum;
     }
 
@@ -230,7 +230,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 默认值：1。
 注： 目前只支持10000条内的查询。
      */
-    public void setPageNum(Long PageNum) {
+    public void setPageNum(Integer PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -246,7 +246,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 默认值：10。
 注： 目前只支持10000条内的查询。
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.PageSize;
     }
 
@@ -262,7 +262,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 默认值：10。
 注： 目前只支持10000条内的查询。
      */
-    public void setPageSize(Long PageSize) {
+    public void setPageSize(Integer PageSize) {
         this.PageSize = PageSize;
     }
 
@@ -274,7 +274,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 0：不进行任何过滤。
 1：过滤掉开播失败的，只返回开播成功的。
      */
-    public Long getIsFilter() {
+    public Integer getIsFilter() {
         return this.IsFilter;
     }
 
@@ -286,7 +286,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 0：不进行任何过滤。
 1：过滤掉开播失败的，只返回开播成功的。
      */
-    public void setIsFilter(Long IsFilter) {
+    public void setIsFilter(Integer IsFilter) {
         this.IsFilter = IsFilter;
     }
 
@@ -300,7 +300,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 1：精确查询。
 注：使用StreamName时该参数生效。
      */
-    public Long getIsStrict() {
+    public Integer getIsStrict() {
         return this.IsStrict;
     }
 
@@ -314,7 +314,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 1：精确查询。
 注：使用StreamName时该参数生效。
      */
-    public void setIsStrict(Long IsStrict) {
+    public void setIsStrict(Integer IsStrict) {
         this.IsStrict = IsStrict;
     }
 
@@ -326,7 +326,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 0：逆序。
 1：正序。
      */
-    public Long getIsAsc() {
+    public Integer getIsAsc() {
         return this.IsAsc;
     }
 
@@ -338,7 +338,7 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
 0：逆序。
 1：正序。
      */
-    public void setIsAsc(Long IsAsc) {
+    public void setIsAsc(Integer IsAsc) {
         this.IsAsc = IsAsc;
     }
 

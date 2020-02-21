@@ -27,7 +27,7 @@ public class DescribeBrandExposureResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Long TotalCount;
+    private Integer TotalCount;
 
     /**
     * 按天计算的统计数据
@@ -47,7 +47,7 @@ public class DescribeBrandExposureResponse extends AbstractModel{
      * Get 累计曝光量 
      * @return TotalCount 累计曝光量
      */
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeBrandExposureResponse extends AbstractModel{
      * Set 累计曝光量
      * @param TotalCount 累计曝光量
      */
-    public void setTotalCount(Long TotalCount) {
+    public void setTotalCount(Integer TotalCount) {
         this.TotalCount = TotalCount;
     }
 

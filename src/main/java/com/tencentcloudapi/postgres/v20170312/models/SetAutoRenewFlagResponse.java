@@ -27,7 +27,7 @@ public class SetAutoRenewFlagResponse extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Long Count;
+    private Integer Count;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class SetAutoRenewFlagResponse extends AbstractModel{
      * Get 设置成功的实例个数 
      * @return Count 设置成功的实例个数
      */
-    public Long getCount() {
+    public Integer getCount() {
         return this.Count;
     }
 
@@ -48,7 +48,7 @@ public class SetAutoRenewFlagResponse extends AbstractModel{
      * Set 设置成功的实例个数
      * @param Count 设置成功的实例个数
      */
-    public void setCount(Long Count) {
+    public void setCount(Integer Count) {
         this.Count = Count;
     }
 

@@ -34,7 +34,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
     */
     @SerializedName("Enable")
     @Expose
-    private Long Enable;
+    private Integer Enable;
 
     /**
     * 鉴权key。
@@ -48,7 +48,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
     */
     @SerializedName("AuthDelta")
     @Expose
-    private Long AuthDelta;
+    private Integer AuthDelta;
 
     /**
     * 鉴权BackKey。
@@ -77,7 +77,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
      * Get 是否启用，0：关闭，1：启用。 
      * @return Enable 是否启用，0：关闭，1：启用。
      */
-    public Long getEnable() {
+    public Integer getEnable() {
         return this.Enable;
     }
 
@@ -85,7 +85,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
      * Set 是否启用，0：关闭，1：启用。
      * @param Enable 是否启用，0：关闭，1：启用。
      */
-    public void setEnable(Long Enable) {
+    public void setEnable(Integer Enable) {
         this.Enable = Enable;
     }
 
@@ -109,7 +109,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
      * Get 有效时间，单位：秒。 
      * @return AuthDelta 有效时间，单位：秒。
      */
-    public Long getAuthDelta() {
+    public Integer getAuthDelta() {
         return this.AuthDelta;
     }
 
@@ -117,7 +117,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
      * Set 有效时间，单位：秒。
      * @param AuthDelta 有效时间，单位：秒。
      */
-    public void setAuthDelta(Long AuthDelta) {
+    public void setAuthDelta(Integer AuthDelta) {
         this.AuthDelta = AuthDelta;
     }
 

@@ -41,28 +41,28 @@ public class PsaRegulation extends AbstractModel{
     */
     @SerializedName("TagCount")
     @Expose
-    private Long TagCount;
+    private Integer TagCount;
 
     /**
     * 关联实例数量
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Long InstanceCount;
+    private Integer InstanceCount;
 
     /**
     * 故障实例数量
     */
     @SerializedName("RepairCount")
     @Expose
-    private Long RepairCount;
+    private Integer RepairCount;
 
     /**
     * 故障实例上限
     */
     @SerializedName("RepairLimit")
     @Expose
-    private Long RepairLimit;
+    private Integer RepairLimit;
 
     /**
     * 创建时间
@@ -90,7 +90,7 @@ public class PsaRegulation extends AbstractModel{
     */
     @SerializedName("TaskTypeIds")
     @Expose
-    private Long [] TaskTypeIds;
+    private Integer [] TaskTypeIds;
 
     /**
      * Get 规则ID 
@@ -128,7 +128,7 @@ public class PsaRegulation extends AbstractModel{
      * Get 关联标签数量 
      * @return TagCount 关联标签数量
      */
-    public Long getTagCount() {
+    public Integer getTagCount() {
         return this.TagCount;
     }
 
@@ -136,7 +136,7 @@ public class PsaRegulation extends AbstractModel{
      * Set 关联标签数量
      * @param TagCount 关联标签数量
      */
-    public void setTagCount(Long TagCount) {
+    public void setTagCount(Integer TagCount) {
         this.TagCount = TagCount;
     }
 
@@ -144,7 +144,7 @@ public class PsaRegulation extends AbstractModel{
      * Get 关联实例数量 
      * @return InstanceCount 关联实例数量
      */
-    public Long getInstanceCount() {
+    public Integer getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -152,7 +152,7 @@ public class PsaRegulation extends AbstractModel{
      * Set 关联实例数量
      * @param InstanceCount 关联实例数量
      */
-    public void setInstanceCount(Long InstanceCount) {
+    public void setInstanceCount(Integer InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
@@ -160,7 +160,7 @@ public class PsaRegulation extends AbstractModel{
      * Get 故障实例数量 
      * @return RepairCount 故障实例数量
      */
-    public Long getRepairCount() {
+    public Integer getRepairCount() {
         return this.RepairCount;
     }
 
@@ -168,7 +168,7 @@ public class PsaRegulation extends AbstractModel{
      * Set 故障实例数量
      * @param RepairCount 故障实例数量
      */
-    public void setRepairCount(Long RepairCount) {
+    public void setRepairCount(Integer RepairCount) {
         this.RepairCount = RepairCount;
     }
 
@@ -176,7 +176,7 @@ public class PsaRegulation extends AbstractModel{
      * Get 故障实例上限 
      * @return RepairLimit 故障实例上限
      */
-    public Long getRepairLimit() {
+    public Integer getRepairLimit() {
         return this.RepairLimit;
     }
 
@@ -184,7 +184,7 @@ public class PsaRegulation extends AbstractModel{
      * Set 故障实例上限
      * @param RepairLimit 故障实例上限
      */
-    public void setRepairLimit(Long RepairLimit) {
+    public void setRepairLimit(Integer RepairLimit) {
         this.RepairLimit = RepairLimit;
     }
 
@@ -240,7 +240,7 @@ public class PsaRegulation extends AbstractModel{
      * Get 关联故障类型id 
      * @return TaskTypeIds 关联故障类型id
      */
-    public Long [] getTaskTypeIds() {
+    public Integer [] getTaskTypeIds() {
         return this.TaskTypeIds;
     }
 
@@ -248,7 +248,7 @@ public class PsaRegulation extends AbstractModel{
      * Set 关联故障类型id
      * @param TaskTypeIds 关联故障类型id
      */
-    public void setTaskTypeIds(Long [] TaskTypeIds) {
+    public void setTaskTypeIds(Integer [] TaskTypeIds) {
         this.TaskTypeIds = TaskTypeIds;
     }
 

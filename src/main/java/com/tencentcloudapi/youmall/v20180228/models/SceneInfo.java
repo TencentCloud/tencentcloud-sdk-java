@@ -34,28 +34,28 @@ public class SceneInfo extends AbstractModel{
     */
     @SerializedName("HeadX")
     @Expose
-    private Long HeadX;
+    private Integer HeadX;
 
     /**
     * 抓拍头像左上角Y坐标在场景图中的像素点位置
     */
     @SerializedName("HeadY")
     @Expose
-    private Long HeadY;
+    private Integer HeadY;
 
     /**
     * 抓拍头像在场景图中占有的像素宽度
     */
     @SerializedName("HeadWidth")
     @Expose
-    private Long HeadWidth;
+    private Integer HeadWidth;
 
     /**
     * 抓拍头像在场景图中占有的像素高度
     */
     @SerializedName("HeadHeight")
     @Expose
-    private Long HeadHeight;
+    private Integer HeadHeight;
 
     /**
      * Get 场景图 
@@ -77,7 +77,7 @@ public class SceneInfo extends AbstractModel{
      * Get 抓拍头像左上角X坐标在场景图中的像素点位置 
      * @return HeadX 抓拍头像左上角X坐标在场景图中的像素点位置
      */
-    public Long getHeadX() {
+    public Integer getHeadX() {
         return this.HeadX;
     }
 
@@ -85,7 +85,7 @@ public class SceneInfo extends AbstractModel{
      * Set 抓拍头像左上角X坐标在场景图中的像素点位置
      * @param HeadX 抓拍头像左上角X坐标在场景图中的像素点位置
      */
-    public void setHeadX(Long HeadX) {
+    public void setHeadX(Integer HeadX) {
         this.HeadX = HeadX;
     }
 
@@ -93,7 +93,7 @@ public class SceneInfo extends AbstractModel{
      * Get 抓拍头像左上角Y坐标在场景图中的像素点位置 
      * @return HeadY 抓拍头像左上角Y坐标在场景图中的像素点位置
      */
-    public Long getHeadY() {
+    public Integer getHeadY() {
         return this.HeadY;
     }
 
@@ -101,7 +101,7 @@ public class SceneInfo extends AbstractModel{
      * Set 抓拍头像左上角Y坐标在场景图中的像素点位置
      * @param HeadY 抓拍头像左上角Y坐标在场景图中的像素点位置
      */
-    public void setHeadY(Long HeadY) {
+    public void setHeadY(Integer HeadY) {
         this.HeadY = HeadY;
     }
 
@@ -109,7 +109,7 @@ public class SceneInfo extends AbstractModel{
      * Get 抓拍头像在场景图中占有的像素宽度 
      * @return HeadWidth 抓拍头像在场景图中占有的像素宽度
      */
-    public Long getHeadWidth() {
+    public Integer getHeadWidth() {
         return this.HeadWidth;
     }
 
@@ -117,7 +117,7 @@ public class SceneInfo extends AbstractModel{
      * Set 抓拍头像在场景图中占有的像素宽度
      * @param HeadWidth 抓拍头像在场景图中占有的像素宽度
      */
-    public void setHeadWidth(Long HeadWidth) {
+    public void setHeadWidth(Integer HeadWidth) {
         this.HeadWidth = HeadWidth;
     }
 
@@ -125,7 +125,7 @@ public class SceneInfo extends AbstractModel{
      * Get 抓拍头像在场景图中占有的像素高度 
      * @return HeadHeight 抓拍头像在场景图中占有的像素高度
      */
-    public Long getHeadHeight() {
+    public Integer getHeadHeight() {
         return this.HeadHeight;
     }
 
@@ -133,7 +133,7 @@ public class SceneInfo extends AbstractModel{
      * Set 抓拍头像在场景图中占有的像素高度
      * @param HeadHeight 抓拍头像在场景图中占有的像素高度
      */
-    public void setHeadHeight(Long HeadHeight) {
+    public void setHeadHeight(Integer HeadHeight) {
         this.HeadHeight = HeadHeight;
     }
 

@@ -55,7 +55,7 @@ public class AssumeRoleWithSAMLRequest extends AbstractModel{
     */
     @SerializedName("DurationSeconds")
     @Expose
-    private Long DurationSeconds;
+    private Integer DurationSeconds;
 
     /**
      * Get base64 编码的 SAML 断言信息 
@@ -125,7 +125,7 @@ public class AssumeRoleWithSAMLRequest extends AbstractModel{
      * Get 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒 
      * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
      */
-    public Long getDurationSeconds() {
+    public Integer getDurationSeconds() {
         return this.DurationSeconds;
     }
 
@@ -133,7 +133,7 @@ public class AssumeRoleWithSAMLRequest extends AbstractModel{
      * Set 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
      * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
      */
-    public void setDurationSeconds(Long DurationSeconds) {
+    public void setDurationSeconds(Integer DurationSeconds) {
         this.DurationSeconds = DurationSeconds;
     }
 

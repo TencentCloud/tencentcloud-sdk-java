@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SensitiveWordsRecognitionResponse extends AbstractModel{
+public class PublishLayerVersionResponse extends AbstractModel{
 
     /**
-    * 敏感词数组
+    * 本次创建的层的版本号
     */
-    @SerializedName("SensitiveWords")
+    @SerializedName("LayerVersion")
     @Expose
-    private String [] SensitiveWords;
+    private Integer LayerVersion;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class SensitiveWordsRecognitionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 敏感词数组 
-     * @return SensitiveWords 敏感词数组
+     * Get 本次创建的层的版本号 
+     * @return LayerVersion 本次创建的层的版本号
      */
-    public String [] getSensitiveWords() {
-        return this.SensitiveWords;
+    public Integer getLayerVersion() {
+        return this.LayerVersion;
     }
 
     /**
-     * Set 敏感词数组
-     * @param SensitiveWords 敏感词数组
+     * Set 本次创建的层的版本号
+     * @param LayerVersion 本次创建的层的版本号
      */
-    public void setSensitiveWords(String [] SensitiveWords) {
-        this.SensitiveWords = SensitiveWords;
+    public void setLayerVersion(Integer LayerVersion) {
+        this.LayerVersion = LayerVersion;
     }
 
     /**
@@ -72,7 +72,7 @@ public class SensitiveWordsRecognitionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SensitiveWords.", this.SensitiveWords);
+        this.setParamSimple(map, prefix + "LayerVersion", this.LayerVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -55,7 +55,7 @@ public class LifecycleHook extends AbstractModel{
     */
     @SerializedName("HeartbeatTimeout")
     @Expose
-    private Long HeartbeatTimeout;
+    private Integer HeartbeatTimeout;
 
     /**
     * 生命周期挂钩适用场景
@@ -153,7 +153,7 @@ public class LifecycleHook extends AbstractModel{
      * Get 生命周期挂钩等待超时时间 
      * @return HeartbeatTimeout 生命周期挂钩等待超时时间
      */
-    public Long getHeartbeatTimeout() {
+    public Integer getHeartbeatTimeout() {
         return this.HeartbeatTimeout;
     }
 
@@ -161,7 +161,7 @@ public class LifecycleHook extends AbstractModel{
      * Set 生命周期挂钩等待超时时间
      * @param HeartbeatTimeout 生命周期挂钩等待超时时间
      */
-    public void setHeartbeatTimeout(Long HeartbeatTimeout) {
+    public void setHeartbeatTimeout(Integer HeartbeatTimeout) {
         this.HeartbeatTimeout = HeartbeatTimeout;
     }
 

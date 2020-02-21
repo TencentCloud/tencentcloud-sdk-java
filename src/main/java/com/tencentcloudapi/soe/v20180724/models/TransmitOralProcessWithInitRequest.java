@@ -27,28 +27,28 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
     */
     @SerializedName("SeqId")
     @Expose
-    private Long SeqId;
+    private Integer SeqId;
 
     /**
     * 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
     */
     @SerializedName("IsEnd")
     @Expose
-    private Long IsEnd;
+    private Integer IsEnd;
 
     /**
     * 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
     */
     @SerializedName("VoiceFileType")
     @Expose
-    private Long VoiceFileType;
+    private Integer VoiceFileType;
 
     /**
     * 语音编码类型	1:pcm。
     */
     @SerializedName("VoiceEncodeType")
     @Expose
-    private Long VoiceEncodeType;
+    private Integer VoiceEncodeType;
 
     /**
     * 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
@@ -76,14 +76,14 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
     */
     @SerializedName("WorkMode")
     @Expose
-    private Long WorkMode;
+    private Integer WorkMode;
 
     /**
     * 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息，4：单词纠错模式：能够对单词和句子中的读错读音进行纠正，给出参考正确读音。
     */
     @SerializedName("EvalMode")
     @Expose
-    private Long EvalMode;
+    private Integer EvalMode;
 
     /**
     * 评价苛刻指数，取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数，1.0为小年龄段，4.0为最高年龄段
@@ -104,48 +104,48 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
     */
     @SerializedName("StorageMode")
     @Expose
-    private Long StorageMode;
+    private Integer StorageMode;
 
     /**
     * 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
     */
     @SerializedName("SentenceInfoEnabled")
     @Expose
-    private Long SentenceInfoEnabled;
+    private Integer SentenceInfoEnabled;
 
     /**
     * 评估语言，0：英文，1：中文。
     */
     @SerializedName("ServerType")
     @Expose
-    private Long ServerType;
+    private Integer ServerType;
 
     /**
     * 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
     */
     @SerializedName("IsAsync")
     @Expose
-    private Long IsAsync;
+    private Integer IsAsync;
 
     /**
     * 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
     */
     @SerializedName("IsQuery")
     @Expose
-    private Long IsQuery;
+    private Integer IsQuery;
 
     /**
     * 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
     */
     @SerializedName("TextMode")
     @Expose
-    private Long TextMode;
+    private Integer TextMode;
 
     /**
      * Get 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。 
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      */
-    public Long getSeqId() {
+    public Integer getSeqId() {
         return this.SeqId;
     }
 
@@ -153,7 +153,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      * @param SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      */
-    public void setSeqId(Long SeqId) {
+    public void setSeqId(Integer SeqId) {
         this.SeqId = SeqId;
     }
 
@@ -161,7 +161,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。 
      * @return IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
-    public Long getIsEnd() {
+    public Integer getIsEnd() {
         return this.IsEnd;
     }
 
@@ -169,7 +169,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      * @param IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
-    public void setIsEnd(Long IsEnd) {
+    public void setIsEnd(Integer IsEnd) {
         this.IsEnd = IsEnd;
     }
 
@@ -177,7 +177,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。 
      * @return VoiceFileType 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      */
-    public Long getVoiceFileType() {
+    public Integer getVoiceFileType() {
         return this.VoiceFileType;
     }
 
@@ -185,7 +185,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      * @param VoiceFileType 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      */
-    public void setVoiceFileType(Long VoiceFileType) {
+    public void setVoiceFileType(Integer VoiceFileType) {
         this.VoiceFileType = VoiceFileType;
     }
 
@@ -193,7 +193,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 语音编码类型	1:pcm。 
      * @return VoiceEncodeType 语音编码类型	1:pcm。
      */
-    public Long getVoiceEncodeType() {
+    public Integer getVoiceEncodeType() {
         return this.VoiceEncodeType;
     }
 
@@ -201,7 +201,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 语音编码类型	1:pcm。
      * @param VoiceEncodeType 语音编码类型	1:pcm。
      */
-    public void setVoiceEncodeType(Long VoiceEncodeType) {
+    public void setVoiceEncodeType(Integer VoiceEncodeType) {
         this.VoiceEncodeType = VoiceEncodeType;
     }
 
@@ -257,7 +257,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 语音输入模式，0：流式分片，1：非流式一次性评估 
      * @return WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
      */
-    public Long getWorkMode() {
+    public Integer getWorkMode() {
         return this.WorkMode;
     }
 
@@ -265,7 +265,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 语音输入模式，0：流式分片，1：非流式一次性评估
      * @param WorkMode 语音输入模式，0：流式分片，1：非流式一次性评估
      */
-    public void setWorkMode(Long WorkMode) {
+    public void setWorkMode(Integer WorkMode) {
         this.WorkMode = WorkMode;
     }
 
@@ -273,7 +273,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息，4：单词纠错模式：能够对单词和句子中的读错读音进行纠正，给出参考正确读音。 
      * @return EvalMode 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息，4：单词纠错模式：能够对单词和句子中的读错读音进行纠正，给出参考正确读音。
      */
-    public Long getEvalMode() {
+    public Integer getEvalMode() {
         return this.EvalMode;
     }
 
@@ -281,7 +281,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息，4：单词纠错模式：能够对单词和句子中的读错读音进行纠正，给出参考正确读音。
      * @param EvalMode 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息，4：单词纠错模式：能够对单词和句子中的读错读音进行纠正，给出参考正确读音。
      */
-    public void setEvalMode(Long EvalMode) {
+    public void setEvalMode(Integer EvalMode) {
         this.EvalMode = EvalMode;
     }
 
@@ -321,7 +321,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。 
      * @return StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
      */
-    public Long getStorageMode() {
+    public Integer getStorageMode() {
         return this.StorageMode;
     }
 
@@ -329,7 +329,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
      * @param StorageMode 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
      */
-    public void setStorageMode(Long StorageMode) {
+    public void setStorageMode(Integer StorageMode) {
         this.StorageMode = StorageMode;
     }
 
@@ -337,7 +337,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。 
      * @return SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      */
-    public Long getSentenceInfoEnabled() {
+    public Integer getSentenceInfoEnabled() {
         return this.SentenceInfoEnabled;
     }
 
@@ -345,7 +345,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      * @param SentenceInfoEnabled 输出断句中间结果标识，0：不输出，1：输出，通过设置该参数，可以在评估过程中的分片传输请求中，返回已经评估断句的中间结果，中间结果可用于客户端 UI 更新，输出结果为TransmitOralProcess请求返回结果 SentenceInfoSet 字段。
      */
-    public void setSentenceInfoEnabled(Long SentenceInfoEnabled) {
+    public void setSentenceInfoEnabled(Integer SentenceInfoEnabled) {
         this.SentenceInfoEnabled = SentenceInfoEnabled;
     }
 
@@ -353,7 +353,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 评估语言，0：英文，1：中文。 
      * @return ServerType 评估语言，0：英文，1：中文。
      */
-    public Long getServerType() {
+    public Integer getServerType() {
         return this.ServerType;
     }
 
@@ -361,7 +361,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 评估语言，0：英文，1：中文。
      * @param ServerType 评估语言，0：英文，1：中文。
      */
-    public void setServerType(Long ServerType) {
+    public void setServerType(Integer ServerType) {
         this.ServerType = ServerType;
     }
 
@@ -369,7 +369,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。 
      * @return IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
-    public Long getIsAsync() {
+    public Integer getIsAsync() {
         return this.IsAsync;
     }
 
@@ -377,7 +377,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      * @param IsAsync 异步模式标识，0：同步模式，1：异步模式，可选值参考[服务模式](https://cloud.tencent.com/document/product/884/33697)。
      */
-    public void setIsAsync(Long IsAsync) {
+    public void setIsAsync(Integer IsAsync) {
         this.IsAsync = IsAsync;
     }
 
@@ -385,7 +385,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。 
      * @return IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
      */
-    public Long getIsQuery() {
+    public Integer getIsQuery() {
         return this.IsQuery;
     }
 
@@ -393,7 +393,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
      * @param IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
      */
-    public void setIsQuery(Long IsQuery) {
+    public void setIsQuery(Integer IsQuery) {
         this.IsQuery = IsQuery;
     }
 
@@ -401,7 +401,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Get 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。 
      * @return TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
      */
-    public Long getTextMode() {
+    public Integer getTextMode() {
         return this.TextMode;
     }
 
@@ -409,7 +409,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
      * Set 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
      * @param TextMode 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
      */
-    public void setTextMode(Long TextMode) {
+    public void setTextMode(Integer TextMode) {
         this.TextMode = TextMode;
     }
 

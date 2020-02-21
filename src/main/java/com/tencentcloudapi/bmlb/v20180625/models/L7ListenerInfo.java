@@ -48,14 +48,14 @@ public class L7ListenerInfo extends AbstractModel{
     */
     @SerializedName("LoadBalancerPort")
     @Expose
-    private Long LoadBalancerPort;
+    private Integer LoadBalancerPort;
 
     /**
     * 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Long Bandwidth;
+    private Integer Bandwidth;
 
     /**
     * 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
@@ -69,7 +69,7 @@ public class L7ListenerInfo extends AbstractModel{
     */
     @SerializedName("SslMode")
     @Expose
-    private Long SslMode;
+    private Integer SslMode;
 
     /**
     * 七层监听器关联的服务端证书ID。
@@ -90,7 +90,7 @@ public class L7ListenerInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Long Status;
+    private Integer Status;
 
     /**
     * 创建时间戳。
@@ -158,7 +158,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Get 七层监听器的监听端口。 
      * @return LoadBalancerPort 七层监听器的监听端口。
      */
-    public Long getLoadBalancerPort() {
+    public Integer getLoadBalancerPort() {
         return this.LoadBalancerPort;
     }
 
@@ -166,7 +166,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Set 七层监听器的监听端口。
      * @param LoadBalancerPort 七层监听器的监听端口。
      */
-    public void setLoadBalancerPort(Long LoadBalancerPort) {
+    public void setLoadBalancerPort(Integer LoadBalancerPort) {
         this.LoadBalancerPort = LoadBalancerPort;
     }
 
@@ -174,7 +174,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Get 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。 
      * @return Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
-    public Long getBandwidth() {
+    public Integer getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -182,7 +182,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Set 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      * @param Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
-    public void setBandwidth(Long Bandwidth) {
+    public void setBandwidth(Integer Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -206,7 +206,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Get 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。 
      * @return SslMode 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public Long getSslMode() {
+    public Integer getSslMode() {
         return this.SslMode;
     }
 
@@ -214,7 +214,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Set 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      * @param SslMode 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
-    public void setSslMode(Long SslMode) {
+    public void setSslMode(Integer SslMode) {
         this.SslMode = SslMode;
     }
 
@@ -254,7 +254,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Get 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。 
      * @return Status 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.Status;
     }
 
@@ -262,7 +262,7 @@ public class L7ListenerInfo extends AbstractModel{
      * Set 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      * @param Status 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      */
-    public void setStatus(Long Status) {
+    public void setStatus(Integer Status) {
         this.Status = Status;
     }
 

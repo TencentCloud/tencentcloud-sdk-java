@@ -27,14 +27,14 @@ public class DescribeVulsRequest extends AbstractModel{
     */
     @SerializedName("SiteId")
     @Expose
-    private Long SiteId;
+    private Integer SiteId;
 
     /**
     * 监控任务ID
     */
     @SerializedName("MonitorId")
     @Expose
-    private Long MonitorId;
+    private Integer MonitorId;
 
     /**
     * 过滤条件
@@ -48,20 +48,20 @@ public class DescribeVulsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Long Offset;
+    private Integer Offset;
 
     /**
     * 返回数量，默认为10，最大值为100
     */
     @SerializedName("Limit")
     @Expose
-    private Long Limit;
+    private Integer Limit;
 
     /**
      * Get 站点ID 
      * @return SiteId 站点ID
      */
-    public Long getSiteId() {
+    public Integer getSiteId() {
         return this.SiteId;
     }
 
@@ -69,7 +69,7 @@ public class DescribeVulsRequest extends AbstractModel{
      * Set 站点ID
      * @param SiteId 站点ID
      */
-    public void setSiteId(Long SiteId) {
+    public void setSiteId(Integer SiteId) {
         this.SiteId = SiteId;
     }
 
@@ -77,7 +77,7 @@ public class DescribeVulsRequest extends AbstractModel{
      * Get 监控任务ID 
      * @return MonitorId 监控任务ID
      */
-    public Long getMonitorId() {
+    public Integer getMonitorId() {
         return this.MonitorId;
     }
 
@@ -85,7 +85,7 @@ public class DescribeVulsRequest extends AbstractModel{
      * Set 监控任务ID
      * @param MonitorId 监控任务ID
      */
-    public void setMonitorId(Long MonitorId) {
+    public void setMonitorId(Integer MonitorId) {
         this.MonitorId = MonitorId;
     }
 
@@ -109,7 +109,7 @@ public class DescribeVulsRequest extends AbstractModel{
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
-    public Long getOffset() {
+    public Integer getOffset() {
         return this.Offset;
     }
 
@@ -117,7 +117,7 @@ public class DescribeVulsRequest extends AbstractModel{
      * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
-    public void setOffset(Long Offset) {
+    public void setOffset(Integer Offset) {
         this.Offset = Offset;
     }
 
@@ -125,7 +125,7 @@ public class DescribeVulsRequest extends AbstractModel{
      * Get 返回数量，默认为10，最大值为100 
      * @return Limit 返回数量，默认为10，最大值为100
      */
-    public Long getLimit() {
+    public Integer getLimit() {
         return this.Limit;
     }
 
@@ -133,7 +133,7 @@ public class DescribeVulsRequest extends AbstractModel{
      * Set 返回数量，默认为10，最大值为100
      * @param Limit 返回数量，默认为10，最大值为100
      */
-    public void setLimit(Long Limit) {
+    public void setLimit(Integer Limit) {
         this.Limit = Limit;
     }
 

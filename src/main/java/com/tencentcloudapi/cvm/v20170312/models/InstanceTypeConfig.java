@@ -48,21 +48,21 @@ public class InstanceTypeConfig extends AbstractModel{
     */
     @SerializedName("GPU")
     @Expose
-    private Long GPU;
+    private Integer GPU;
 
     /**
     * CPU核数，单位：核。
     */
     @SerializedName("CPU")
     @Expose
-    private Long CPU;
+    private Integer CPU;
 
     /**
     * 内存容量，单位：`GB`。
     */
     @SerializedName("Memory")
     @Expose
-    private Long Memory;
+    private Integer Memory;
 
     /**
      * Get 可用区。 
@@ -116,7 +116,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Get GPU核数，单位：核。 
      * @return GPU GPU核数，单位：核。
      */
-    public Long getGPU() {
+    public Integer getGPU() {
         return this.GPU;
     }
 
@@ -124,7 +124,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Set GPU核数，单位：核。
      * @param GPU GPU核数，单位：核。
      */
-    public void setGPU(Long GPU) {
+    public void setGPU(Integer GPU) {
         this.GPU = GPU;
     }
 
@@ -132,7 +132,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Get CPU核数，单位：核。 
      * @return CPU CPU核数，单位：核。
      */
-    public Long getCPU() {
+    public Integer getCPU() {
         return this.CPU;
     }
 
@@ -140,7 +140,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Set CPU核数，单位：核。
      * @param CPU CPU核数，单位：核。
      */
-    public void setCPU(Long CPU) {
+    public void setCPU(Integer CPU) {
         this.CPU = CPU;
     }
 
@@ -148,7 +148,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Get 内存容量，单位：`GB`。 
      * @return Memory 内存容量，单位：`GB`。
      */
-    public Long getMemory() {
+    public Integer getMemory() {
         return this.Memory;
     }
 
@@ -156,7 +156,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Set 内存容量，单位：`GB`。
      * @param Memory 内存容量，单位：`GB`。
      */
-    public void setMemory(Long Memory) {
+    public void setMemory(Integer Memory) {
         this.Memory = Memory;
     }
 

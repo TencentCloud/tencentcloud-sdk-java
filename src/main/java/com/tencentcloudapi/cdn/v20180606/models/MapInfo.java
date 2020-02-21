@@ -27,7 +27,7 @@ public class MapInfo extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 对象名称
@@ -40,7 +40,7 @@ public class MapInfo extends AbstractModel{
      * Get 对象 Id 
      * @return Id 对象 Id
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -48,7 +48,7 @@ public class MapInfo extends AbstractModel{
      * Set 对象 Id
      * @param Id 对象 Id
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 

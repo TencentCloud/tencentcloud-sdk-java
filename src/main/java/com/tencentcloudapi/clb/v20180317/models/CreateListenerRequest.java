@@ -34,7 +34,7 @@ public class CreateListenerRequest extends AbstractModel{
     */
     @SerializedName("Ports")
     @Expose
-    private Long [] Ports;
+    private Integer [] Ports;
 
     /**
     * 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
@@ -69,7 +69,7 @@ public class CreateListenerRequest extends AbstractModel{
     */
     @SerializedName("SessionExpireTime")
     @Expose
-    private Long SessionExpireTime;
+    private Integer SessionExpireTime;
 
     /**
     * 监听器转发的方式。可选值：WRR、LEAST_CONN
@@ -84,7 +84,7 @@ public class CreateListenerRequest extends AbstractModel{
     */
     @SerializedName("SniSwitch")
     @Expose
-    private Long SniSwitch;
+    private Integer SniSwitch;
 
     /**
      * Get 负载均衡实例 ID 
@@ -106,7 +106,7 @@ public class CreateListenerRequest extends AbstractModel{
      * Get 要将监听器创建到哪些端口，每个端口对应一个新的监听器 
      * @return Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      */
-    public Long [] getPorts() {
+    public Integer [] getPorts() {
         return this.Ports;
     }
 
@@ -114,7 +114,7 @@ public class CreateListenerRequest extends AbstractModel{
      * Set 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      * @param Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      */
-    public void setPorts(Long [] Ports) {
+    public void setPorts(Integer [] Ports) {
         this.Ports = Ports;
     }
 
@@ -186,7 +186,7 @@ public class CreateListenerRequest extends AbstractModel{
      * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。 
      * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
-    public Long getSessionExpireTime() {
+    public Integer getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
@@ -194,7 +194,7 @@ public class CreateListenerRequest extends AbstractModel{
      * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
-    public void setSessionExpireTime(Long SessionExpireTime) {
+    public void setSessionExpireTime(Integer SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
@@ -222,7 +222,7 @@ public class CreateListenerRequest extends AbstractModel{
      * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。 
      * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。
      */
-    public Long getSniSwitch() {
+    public Integer getSniSwitch() {
         return this.SniSwitch;
     }
 
@@ -230,7 +230,7 @@ public class CreateListenerRequest extends AbstractModel{
      * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。
      * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。
      */
-    public void setSniSwitch(Long SniSwitch) {
+    public void setSniSwitch(Integer SniSwitch) {
         this.SniSwitch = SniSwitch;
     }
 

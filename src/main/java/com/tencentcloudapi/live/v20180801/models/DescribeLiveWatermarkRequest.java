@@ -27,13 +27,13 @@ public class DescribeLiveWatermarkRequest extends AbstractModel{
     */
     @SerializedName("WatermarkId")
     @Expose
-    private Long WatermarkId;
+    private Integer WatermarkId;
 
     /**
      * Get 水印ID。 
      * @return WatermarkId 水印ID。
      */
-    public Long getWatermarkId() {
+    public Integer getWatermarkId() {
         return this.WatermarkId;
     }
 
@@ -41,7 +41,7 @@ public class DescribeLiveWatermarkRequest extends AbstractModel{
      * Set 水印ID。
      * @param WatermarkId 水印ID。
      */
-    public void setWatermarkId(Long WatermarkId) {
+    public void setWatermarkId(Integer WatermarkId) {
         this.WatermarkId = WatermarkId;
     }
 

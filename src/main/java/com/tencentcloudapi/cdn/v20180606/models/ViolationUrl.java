@@ -27,7 +27,7 @@ public class ViolationUrl extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Long Id;
+    private Integer Id;
 
     /**
     * 违规资源原始访问 URL
@@ -73,7 +73,7 @@ complain：申诉进行中
      * Get ID 
      * @return Id ID
      */
-    public Long getId() {
+    public Integer getId() {
         return this.Id;
     }
 
@@ -81,7 +81,7 @@ complain：申诉进行中
      * Set ID
      * @param Id ID
      */
-    public void setId(Long Id) {
+    public void setId(Integer Id) {
         this.Id = Id;
     }
 
