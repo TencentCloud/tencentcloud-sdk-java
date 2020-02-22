@@ -27,7 +27,7 @@ public class BigKeyInfo extends AbstractModel{
     */
     @SerializedName("DB")
     @Expose
-    private Integer DB;
+    private Long DB;
 
     /**
     * 大Key
@@ -48,20 +48,20 @@ public class BigKeyInfo extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 数据时间戳
     */
     @SerializedName("Updatetime")
     @Expose
-    private Integer Updatetime;
+    private Long Updatetime;
 
     /**
      * Get 所属的database 
      * @return DB 所属的database
      */
-    public Integer getDB() {
+    public Long getDB() {
         return this.DB;
     }
 
@@ -69,7 +69,7 @@ public class BigKeyInfo extends AbstractModel{
      * Set 所属的database
      * @param DB 所属的database
      */
-    public void setDB(Integer DB) {
+    public void setDB(Long DB) {
         this.DB = DB;
     }
 
@@ -109,7 +109,7 @@ public class BigKeyInfo extends AbstractModel{
      * Get 大小 
      * @return Size 大小
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -117,7 +117,7 @@ public class BigKeyInfo extends AbstractModel{
      * Set 大小
      * @param Size 大小
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 
@@ -125,7 +125,7 @@ public class BigKeyInfo extends AbstractModel{
      * Get 数据时间戳 
      * @return Updatetime 数据时间戳
      */
-    public Integer getUpdatetime() {
+    public Long getUpdatetime() {
         return this.Updatetime;
     }
 
@@ -133,7 +133,7 @@ public class BigKeyInfo extends AbstractModel{
      * Set 数据时间戳
      * @param Updatetime 数据时间戳
      */
-    public void setUpdatetime(Integer Updatetime) {
+    public void setUpdatetime(Long Updatetime) {
         this.Updatetime = Updatetime;
     }
 

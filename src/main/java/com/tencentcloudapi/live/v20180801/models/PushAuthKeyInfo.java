@@ -34,7 +34,7 @@ public class PushAuthKeyInfo extends AbstractModel{
     */
     @SerializedName("Enable")
     @Expose
-    private Integer Enable;
+    private Long Enable;
 
     /**
     * 主鉴权key。
@@ -55,7 +55,7 @@ public class PushAuthKeyInfo extends AbstractModel{
     */
     @SerializedName("AuthDelta")
     @Expose
-    private Integer AuthDelta;
+    private Long AuthDelta;
 
     /**
      * Get 域名。 
@@ -77,7 +77,7 @@ public class PushAuthKeyInfo extends AbstractModel{
      * Get 是否启用，0：关闭，1：启用。 
      * @return Enable 是否启用，0：关闭，1：启用。
      */
-    public Integer getEnable() {
+    public Long getEnable() {
         return this.Enable;
     }
 
@@ -85,7 +85,7 @@ public class PushAuthKeyInfo extends AbstractModel{
      * Set 是否启用，0：关闭，1：启用。
      * @param Enable 是否启用，0：关闭，1：启用。
      */
-    public void setEnable(Integer Enable) {
+    public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
@@ -125,7 +125,7 @@ public class PushAuthKeyInfo extends AbstractModel{
      * Get 有效时间，单位：秒。 
      * @return AuthDelta 有效时间，单位：秒。
      */
-    public Integer getAuthDelta() {
+    public Long getAuthDelta() {
         return this.AuthDelta;
     }
 
@@ -133,7 +133,7 @@ public class PushAuthKeyInfo extends AbstractModel{
      * Set 有效时间，单位：秒。
      * @param AuthDelta 有效时间，单位：秒。
      */
-    public void setAuthDelta(Integer AuthDelta) {
+    public void setAuthDelta(Long AuthDelta) {
         this.AuthDelta = AuthDelta;
     }
 

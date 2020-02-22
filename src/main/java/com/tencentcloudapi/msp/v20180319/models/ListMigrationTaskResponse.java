@@ -27,7 +27,7 @@ public class ListMigrationTaskResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 迁移任务列表
@@ -47,7 +47,7 @@ public class ListMigrationTaskResponse extends AbstractModel{
      * Get 记录总条数 
      * @return TotalCount 记录总条数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class ListMigrationTaskResponse extends AbstractModel{
      * Set 记录总条数
      * @param TotalCount 记录总条数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -51,14 +51,14 @@ public class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页个数，范围：[1,1000]，默认值是20。
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
     * 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
@@ -145,7 +145,7 @@ public class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel{
      * Get 页数，范围[1,1000]，默认值是1。 
      * @return PageNum 页数，范围[1,1000]，默认值是1。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -153,7 +153,7 @@ public class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel{
      * Set 页数，范围[1,1000]，默认值是1。
      * @param PageNum 页数，范围[1,1000]，默认值是1。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -161,7 +161,7 @@ public class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel{
      * Get 每页个数，范围：[1,1000]，默认值是20。 
      * @return PageSize 每页个数，范围：[1,1000]，默认值是20。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -169,7 +169,7 @@ public class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel{
      * Set 每页个数，范围：[1,1000]，默认值是20。
      * @param PageSize 每页个数，范围：[1,1000]，默认值是20。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 

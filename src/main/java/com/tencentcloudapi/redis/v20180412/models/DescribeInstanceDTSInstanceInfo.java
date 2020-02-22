@@ -28,7 +28,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
     * 实例ID
@@ -44,7 +44,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
     */
     @SerializedName("SetId")
     @Expose
-    private Integer SetId;
+    private Long SetId;
 
     /**
     * 可用区ID
@@ -52,7 +52,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 实例类型
@@ -60,7 +60,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Integer Type;
+    private Long Type;
 
     /**
     * 实例名称
@@ -84,7 +84,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 地域ID
@@ -92,7 +92,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @return RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -102,7 +102,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @param RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -132,7 +132,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @return SetId 仓库ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getSetId() {
+    public Long getSetId() {
         return this.SetId;
     }
 
@@ -142,7 +142,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @param SetId 仓库ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSetId(Integer SetId) {
+    public void setSetId(Long SetId) {
         this.SetId = SetId;
     }
 
@@ -152,7 +152,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @return ZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -162,7 +162,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @param ZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -172,7 +172,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @return Type 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getType() {
+    public Long getType() {
         return this.Type;
     }
 
@@ -182,7 +182,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @param Type 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setType(Integer Type) {
+    public void setType(Long Type) {
         this.Type = Type;
     }
 
@@ -232,7 +232,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @return Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -242,7 +242,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
      * @param Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

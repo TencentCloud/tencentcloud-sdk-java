@@ -27,7 +27,7 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 区域名称
@@ -41,20 +41,20 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
     */
     @SerializedName("FlowCount")
     @Expose
-    private Integer FlowCount;
+    private Long FlowCount;
 
     /**
     * 平均停留时长
     */
     @SerializedName("AvrStayTime")
     @Expose
-    private Integer AvrStayTime;
+    private Long AvrStayTime;
 
     /**
      * Get 区域id 
      * @return ZoneId 区域id
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -62,7 +62,7 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
      * Set 区域id
      * @param ZoneId 区域id
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -86,7 +86,7 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
      * Get 人流量 
      * @return FlowCount 人流量
      */
-    public Integer getFlowCount() {
+    public Long getFlowCount() {
         return this.FlowCount;
     }
 
@@ -94,7 +94,7 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
      * Set 人流量
      * @param FlowCount 人流量
      */
-    public void setFlowCount(Integer FlowCount) {
+    public void setFlowCount(Long FlowCount) {
         this.FlowCount = FlowCount;
     }
 
@@ -102,7 +102,7 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
      * Get 平均停留时长 
      * @return AvrStayTime 平均停留时长
      */
-    public Integer getAvrStayTime() {
+    public Long getAvrStayTime() {
         return this.AvrStayTime;
     }
 
@@ -110,7 +110,7 @@ public class ZoneFlowAndAvrStayTime extends AbstractModel{
      * Set 平均停留时长
      * @param AvrStayTime 平均停留时长
      */
-    public void setAvrStayTime(Integer AvrStayTime) {
+    public void setAvrStayTime(Long AvrStayTime) {
         this.AvrStayTime = AvrStayTime;
     }
 

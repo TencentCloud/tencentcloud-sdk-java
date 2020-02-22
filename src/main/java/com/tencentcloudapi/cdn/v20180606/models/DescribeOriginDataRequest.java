@@ -71,7 +71,7 @@ statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单�
     */
     @SerializedName("Project")
     @Expose
-    private Integer Project;
+    private Long Project;
 
     /**
     * 时间粒度，支持以下几种模式：
@@ -231,7 +231,7 @@ statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单�
      * @return Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      */
-    public Integer getProject() {
+    public Long getProject() {
         return this.Project;
     }
 
@@ -241,7 +241,7 @@ statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单�
      * @param Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      */
-    public void setProject(Integer Project) {
+    public void setProject(Long Project) {
         this.Project = Project;
     }
 

@@ -27,7 +27,7 @@ public class DescribeZonesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 可用区信息集合。
@@ -47,7 +47,7 @@ public class DescribeZonesResponse extends AbstractModel{
      * Get 返回的结果数量。 
      * @return TotalCount 返回的结果数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeZonesResponse extends AbstractModel{
      * Set 返回的结果数量。
      * @param TotalCount 返回的结果数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -34,28 +34,28 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
     */
     @SerializedName("TotalNum")
     @Expose
-    private Integer TotalNum;
+    private Long TotalNum;
 
     /**
     * 总页数。
     */
     @SerializedName("TotalPage")
     @Expose
-    private Integer TotalPage;
+    private Long TotalPage;
 
     /**
     * 当前数据所处页码。
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页个数。
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,7 +84,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Get 总数量。 
      * @return TotalNum 总数量。
      */
-    public Integer getTotalNum() {
+    public Long getTotalNum() {
         return this.TotalNum;
     }
 
@@ -92,7 +92,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Set 总数量。
      * @param TotalNum 总数量。
      */
-    public void setTotalNum(Integer TotalNum) {
+    public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
@@ -100,7 +100,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Get 总页数。 
      * @return TotalPage 总页数。
      */
-    public Integer getTotalPage() {
+    public Long getTotalPage() {
         return this.TotalPage;
     }
 
@@ -108,7 +108,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Set 总页数。
      * @param TotalPage 总页数。
      */
-    public void setTotalPage(Integer TotalPage) {
+    public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;
     }
 
@@ -116,7 +116,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Get 当前数据所处页码。 
      * @return PageNum 当前数据所处页码。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -124,7 +124,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Set 当前数据所处页码。
      * @param PageNum 当前数据所处页码。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -132,7 +132,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Get 每页个数。 
      * @return PageSize 每页个数。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -140,7 +140,7 @@ public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
      * Set 每页个数。
      * @param PageSize 每页个数。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 

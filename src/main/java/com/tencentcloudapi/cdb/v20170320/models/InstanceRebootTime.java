@@ -34,7 +34,7 @@ public class InstanceRebootTime extends AbstractModel{
     */
     @SerializedName("TimeInSeconds")
     @Expose
-    private Integer TimeInSeconds;
+    private Long TimeInSeconds;
 
     /**
      * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同 
@@ -56,7 +56,7 @@ public class InstanceRebootTime extends AbstractModel{
      * Get 预期重启时间 
      * @return TimeInSeconds 预期重启时间
      */
-    public Integer getTimeInSeconds() {
+    public Long getTimeInSeconds() {
         return this.TimeInSeconds;
     }
 
@@ -64,7 +64,7 @@ public class InstanceRebootTime extends AbstractModel{
      * Set 预期重启时间
      * @param TimeInSeconds 预期重启时间
      */
-    public void setTimeInSeconds(Integer TimeInSeconds) {
+    public void setTimeInSeconds(Long TimeInSeconds) {
         this.TimeInSeconds = TimeInSeconds;
     }
 

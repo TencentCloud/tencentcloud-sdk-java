@@ -27,7 +27,7 @@ public class HealthCheck extends AbstractModel{
     */
     @SerializedName("HealthSwitch")
     @Expose
-    private Integer HealthSwitch;
+    private Long HealthSwitch;
 
     /**
     * 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
@@ -35,7 +35,7 @@ public class HealthCheck extends AbstractModel{
     */
     @SerializedName("TimeOut")
     @Expose
-    private Integer TimeOut;
+    private Long TimeOut;
 
     /**
     * 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
@@ -43,7 +43,7 @@ public class HealthCheck extends AbstractModel{
     */
     @SerializedName("IntervalTime")
     @Expose
-    private Integer IntervalTime;
+    private Long IntervalTime;
 
     /**
     * 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
@@ -51,7 +51,7 @@ public class HealthCheck extends AbstractModel{
     */
     @SerializedName("HealthNum")
     @Expose
-    private Integer HealthNum;
+    private Long HealthNum;
 
     /**
     * 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
@@ -59,7 +59,7 @@ public class HealthCheck extends AbstractModel{
     */
     @SerializedName("UnHealthNum")
     @Expose
-    private Integer UnHealthNum;
+    private Long UnHealthNum;
 
     /**
     * 健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
@@ -68,7 +68,7 @@ public class HealthCheck extends AbstractModel{
     */
     @SerializedName("HttpCode")
     @Expose
-    private Integer HttpCode;
+    private Long HttpCode;
 
     /**
     * 健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
@@ -100,7 +100,7 @@ public class HealthCheck extends AbstractModel{
     */
     @SerializedName("CheckPort")
     @Expose
-    private Integer CheckPort;
+    private Long CheckPort;
 
     /**
     * 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
@@ -146,7 +146,7 @@ public class HealthCheck extends AbstractModel{
      * Get 是否开启健康检查：1（开启）、0（关闭）。 
      * @return HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      */
-    public Integer getHealthSwitch() {
+    public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
@@ -154,7 +154,7 @@ public class HealthCheck extends AbstractModel{
      * Set 是否开启健康检查：1（开启）、0（关闭）。
      * @param HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      */
-    public void setHealthSwitch(Integer HealthSwitch) {
+    public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
@@ -164,7 +164,7 @@ public class HealthCheck extends AbstractModel{
      * @return TimeOut 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTimeOut() {
+    public Long getTimeOut() {
         return this.TimeOut;
     }
 
@@ -174,7 +174,7 @@ public class HealthCheck extends AbstractModel{
      * @param TimeOut 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTimeOut(Integer TimeOut) {
+    public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
@@ -184,7 +184,7 @@ public class HealthCheck extends AbstractModel{
      * @return IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getIntervalTime() {
+    public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
@@ -194,7 +194,7 @@ public class HealthCheck extends AbstractModel{
      * @param IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIntervalTime(Integer IntervalTime) {
+    public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
@@ -204,7 +204,7 @@ public class HealthCheck extends AbstractModel{
      * @return HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getHealthNum() {
+    public Long getHealthNum() {
         return this.HealthNum;
     }
 
@@ -214,7 +214,7 @@ public class HealthCheck extends AbstractModel{
      * @param HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHealthNum(Integer HealthNum) {
+    public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
@@ -224,7 +224,7 @@ public class HealthCheck extends AbstractModel{
      * @return UnHealthNum 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getUnHealthNum() {
+    public Long getUnHealthNum() {
         return this.UnHealthNum;
     }
 
@@ -234,7 +234,7 @@ public class HealthCheck extends AbstractModel{
      * @param UnHealthNum 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnHealthNum(Integer UnHealthNum) {
+    public void setUnHealthNum(Long UnHealthNum) {
         this.UnHealthNum = UnHealthNum;
     }
 
@@ -246,7 +246,7 @@ public class HealthCheck extends AbstractModel{
 1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getHttpCode() {
+    public Long getHttpCode() {
         return this.HttpCode;
     }
 
@@ -258,7 +258,7 @@ public class HealthCheck extends AbstractModel{
 1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHttpCode(Integer HttpCode) {
+    public void setHttpCode(Long HttpCode) {
         this.HttpCode = HttpCode;
     }
 
@@ -328,7 +328,7 @@ public class HealthCheck extends AbstractModel{
      * @return CheckPort 自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getCheckPort() {
+    public Long getCheckPort() {
         return this.CheckPort;
     }
 
@@ -338,7 +338,7 @@ public class HealthCheck extends AbstractModel{
      * @param CheckPort 自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCheckPort(Integer CheckPort) {
+    public void setCheckPort(Long CheckPort) {
         this.CheckPort = CheckPort;
     }
 

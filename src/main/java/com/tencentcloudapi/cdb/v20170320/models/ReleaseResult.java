@@ -34,7 +34,7 @@ public class ReleaseResult extends AbstractModel{
     */
     @SerializedName("Code")
     @Expose
-    private Integer Code;
+    private Long Code;
 
     /**
     * 实例解隔离操作的错误信息。
@@ -63,7 +63,7 @@ public class ReleaseResult extends AbstractModel{
      * Get 实例解隔离操作的结果值。返回值为0表示成功。 
      * @return Code 实例解隔离操作的结果值。返回值为0表示成功。
      */
-    public Integer getCode() {
+    public Long getCode() {
         return this.Code;
     }
 
@@ -71,7 +71,7 @@ public class ReleaseResult extends AbstractModel{
      * Set 实例解隔离操作的结果值。返回值为0表示成功。
      * @param Code 实例解隔离操作的结果值。返回值为0表示成功。
      */
-    public void setCode(Integer Code) {
+    public void setCode(Long Code) {
         this.Code = Code;
     }
 

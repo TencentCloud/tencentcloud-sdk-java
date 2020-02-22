@@ -41,7 +41,7 @@ public class DescribeMultiDevicesResponse extends AbstractModel{
     */
     @SerializedName("TotalDevNum")
     @Expose
-    private Integer TotalDevNum;
+    private Long TotalDevNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -86,7 +86,7 @@ public class DescribeMultiDevicesResponse extends AbstractModel{
      * Get 该任务创建设备的总数 
      * @return TotalDevNum 该任务创建设备的总数
      */
-    public Integer getTotalDevNum() {
+    public Long getTotalDevNum() {
         return this.TotalDevNum;
     }
 
@@ -94,7 +94,7 @@ public class DescribeMultiDevicesResponse extends AbstractModel{
      * Set 该任务创建设备的总数
      * @param TotalDevNum 该任务创建设备的总数
      */
-    public void setTotalDevNum(Integer TotalDevNum) {
+    public void setTotalDevNum(Long TotalDevNum) {
         this.TotalDevNum = TotalDevNum;
     }
 

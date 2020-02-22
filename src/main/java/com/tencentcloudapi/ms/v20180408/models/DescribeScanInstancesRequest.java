@@ -34,14 +34,14 @@ public class DescribeScanInstancesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 数量限制，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
@@ -84,7 +84,7 @@ public class DescribeScanInstancesRequest extends AbstractModel{
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -92,7 +92,7 @@ public class DescribeScanInstancesRequest extends AbstractModel{
      * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -100,7 +100,7 @@ public class DescribeScanInstancesRequest extends AbstractModel{
      * Get 数量限制，默认为20，最大值为100。 
      * @return Limit 数量限制，默认为20，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -108,7 +108,7 @@ public class DescribeScanInstancesRequest extends AbstractModel{
      * Set 数量限制，默认为20，最大值为100。
      * @param Limit 数量限制，默认为20，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

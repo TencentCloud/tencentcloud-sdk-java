@@ -27,7 +27,7 @@ public class SentenceInfo extends AbstractModel{
     */
     @SerializedName("SentenceId")
     @Expose
-    private Integer SentenceId;
+    private Long SentenceId;
 
     /**
     * 详细发音评估结果
@@ -68,7 +68,7 @@ public class SentenceInfo extends AbstractModel{
      * Get 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1. 
      * @return SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      */
-    public Integer getSentenceId() {
+    public Long getSentenceId() {
         return this.SentenceId;
     }
 
@@ -76,7 +76,7 @@ public class SentenceInfo extends AbstractModel{
      * Set 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      * @param SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      */
-    public void setSentenceId(Integer SentenceId) {
+    public void setSentenceId(Long SentenceId) {
         this.SentenceId = SentenceId;
     }
 

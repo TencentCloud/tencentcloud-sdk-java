@@ -27,7 +27,7 @@ public class DescribeBlockIPTaskResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeBlockIPTaskResponse extends AbstractModel{
      * Get 1 running，2 fail，6 succ 
      * @return Status 1 running，2 fail，6 succ
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -48,7 +48,7 @@ public class DescribeBlockIPTaskResponse extends AbstractModel{
      * Set 1 running，2 fail，6 succ
      * @param Status 1 running，2 fail，6 succ
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

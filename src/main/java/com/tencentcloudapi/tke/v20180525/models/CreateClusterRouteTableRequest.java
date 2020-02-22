@@ -48,7 +48,7 @@ public class CreateClusterRouteTableRequest extends AbstractModel{
     */
     @SerializedName("IgnoreClusterCidrConflict")
     @Expose
-    private Integer IgnoreClusterCidrConflict;
+    private Long IgnoreClusterCidrConflict;
 
     /**
      * Get 路由表名称 
@@ -102,7 +102,7 @@ public class CreateClusterRouteTableRequest extends AbstractModel{
      * Get 是否忽略CIDR冲突 
      * @return IgnoreClusterCidrConflict 是否忽略CIDR冲突
      */
-    public Integer getIgnoreClusterCidrConflict() {
+    public Long getIgnoreClusterCidrConflict() {
         return this.IgnoreClusterCidrConflict;
     }
 
@@ -110,7 +110,7 @@ public class CreateClusterRouteTableRequest extends AbstractModel{
      * Set 是否忽略CIDR冲突
      * @param IgnoreClusterCidrConflict 是否忽略CIDR冲突
      */
-    public void setIgnoreClusterCidrConflict(Integer IgnoreClusterCidrConflict) {
+    public void setIgnoreClusterCidrConflict(Long IgnoreClusterCidrConflict) {
         this.IgnoreClusterCidrConflict = IgnoreClusterCidrConflict;
     }
 

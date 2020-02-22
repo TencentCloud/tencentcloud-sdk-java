@@ -48,14 +48,14 @@ public class DomainDetailInfo extends AbstractModel{
     */
     @SerializedName("Online")
     @Expose
-    private Integer Online;
+    private Long Online;
 
     /**
     * 请求数。
     */
     @SerializedName("Request")
     @Expose
-    private Integer Request;
+    private Long Request;
 
     /**
      * Get 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。 
@@ -109,7 +109,7 @@ public class DomainDetailInfo extends AbstractModel{
      * Get 人数。 
      * @return Online 人数。
      */
-    public Integer getOnline() {
+    public Long getOnline() {
         return this.Online;
     }
 
@@ -117,7 +117,7 @@ public class DomainDetailInfo extends AbstractModel{
      * Set 人数。
      * @param Online 人数。
      */
-    public void setOnline(Integer Online) {
+    public void setOnline(Long Online) {
         this.Online = Online;
     }
 
@@ -125,7 +125,7 @@ public class DomainDetailInfo extends AbstractModel{
      * Get 请求数。 
      * @return Request 请求数。
      */
-    public Integer getRequest() {
+    public Long getRequest() {
         return this.Request;
     }
 
@@ -133,7 +133,7 @@ public class DomainDetailInfo extends AbstractModel{
      * Set 请求数。
      * @param Request 请求数。
      */
-    public void setRequest(Integer Request) {
+    public void setRequest(Long Request) {
         this.Request = Request;
     }
 

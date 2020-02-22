@@ -41,7 +41,7 @@ public class DescribeTaskOperationLogRequest extends AbstractModel{
     */
     @SerializedName("Order")
     @Expose
-    private Integer Order;
+    private Long Order;
 
     /**
      * Get 维修任务ID 
@@ -79,7 +79,7 @@ public class DescribeTaskOperationLogRequest extends AbstractModel{
      * Get 排序方式 0:递增(默认) 1:递减 
      * @return Order 排序方式 0:递增(默认) 1:递减
      */
-    public Integer getOrder() {
+    public Long getOrder() {
         return this.Order;
     }
 
@@ -87,7 +87,7 @@ public class DescribeTaskOperationLogRequest extends AbstractModel{
      * Set 排序方式 0:递增(默认) 1:递减
      * @param Order 排序方式 0:递增(默认) 1:递减
      */
-    public void setOrder(Integer Order) {
+    public void setOrder(Long Order) {
         this.Order = Order;
     }
 

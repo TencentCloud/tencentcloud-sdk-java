@@ -41,7 +41,7 @@ public class HotKeyInfo extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
      * Get 热Key 
@@ -79,7 +79,7 @@ public class HotKeyInfo extends AbstractModel{
      * Get 数量 
      * @return Count 数量
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -87,7 +87,7 @@ public class HotKeyInfo extends AbstractModel{
      * Set 数量
      * @param Count 数量
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 

@@ -41,14 +41,14 @@ public class DescribeDBSlowLogsResponse extends AbstractModel{
     */
     @SerializedName("QueryCount")
     @Expose
-    private Integer QueryCount;
+    private Long QueryCount;
 
     /**
     * 总记录数
     */
     @SerializedName("Total")
     @Expose
-    private Integer Total;
+    private Long Total;
 
     /**
     * 所有语句查询时间总和
@@ -100,7 +100,7 @@ public class DescribeDBSlowLogsResponse extends AbstractModel{
      * Get 所有语句查询总次数 
      * @return QueryCount 所有语句查询总次数
      */
-    public Integer getQueryCount() {
+    public Long getQueryCount() {
         return this.QueryCount;
     }
 
@@ -108,7 +108,7 @@ public class DescribeDBSlowLogsResponse extends AbstractModel{
      * Set 所有语句查询总次数
      * @param QueryCount 所有语句查询总次数
      */
-    public void setQueryCount(Integer QueryCount) {
+    public void setQueryCount(Long QueryCount) {
         this.QueryCount = QueryCount;
     }
 
@@ -116,7 +116,7 @@ public class DescribeDBSlowLogsResponse extends AbstractModel{
      * Get 总记录数 
      * @return Total 总记录数
      */
-    public Integer getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -124,7 +124,7 @@ public class DescribeDBSlowLogsResponse extends AbstractModel{
      * Set 总记录数
      * @param Total 总记录数
      */
-    public void setTotal(Integer Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 

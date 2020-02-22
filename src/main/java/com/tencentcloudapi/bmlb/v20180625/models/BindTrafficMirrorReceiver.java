@@ -27,7 +27,7 @@ public class BindTrafficMirrorReceiver extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 待绑定的主机实例ID。
@@ -41,13 +41,13 @@ public class BindTrafficMirrorReceiver extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
      * Get 待绑定的主机端口，可选值1~65535。 
      * @return Port 待绑定的主机端口，可选值1~65535。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -55,7 +55,7 @@ public class BindTrafficMirrorReceiver extends AbstractModel{
      * Set 待绑定的主机端口，可选值1~65535。
      * @param Port 待绑定的主机端口，可选值1~65535。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
@@ -79,7 +79,7 @@ public class BindTrafficMirrorReceiver extends AbstractModel{
      * Get 待绑定的主机权重，可选值0~100。 
      * @return Weight 待绑定的主机权重，可选值0~100。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -87,7 +87,7 @@ public class BindTrafficMirrorReceiver extends AbstractModel{
      * Set 待绑定的主机权重，可选值0~100。
      * @param Weight 待绑定的主机权重，可选值0~100。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 

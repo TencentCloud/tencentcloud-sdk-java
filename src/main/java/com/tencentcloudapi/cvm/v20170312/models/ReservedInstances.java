@@ -65,14 +65,14 @@ public class ReservedInstances extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Integer Duration;
+    private Long Duration;
 
     /**
     * 已购买的预留实例计费个数。形如：10。
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Integer InstanceCount;
+    private Long InstanceCount;
 
     /**
     * 描述预留实例计费的平台描述（即操作系统）。形如：linux。
@@ -200,7 +200,7 @@ public class ReservedInstances extends AbstractModel{
      * @return Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒。
      */
-    public Integer getDuration() {
+    public Long getDuration() {
         return this.Duration;
     }
 
@@ -210,7 +210,7 @@ public class ReservedInstances extends AbstractModel{
      * @param Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒。
      */
-    public void setDuration(Integer Duration) {
+    public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
@@ -218,7 +218,7 @@ public class ReservedInstances extends AbstractModel{
      * Get 已购买的预留实例计费个数。形如：10。 
      * @return InstanceCount 已购买的预留实例计费个数。形如：10。
      */
-    public Integer getInstanceCount() {
+    public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -226,7 +226,7 @@ public class ReservedInstances extends AbstractModel{
      * Set 已购买的预留实例计费个数。形如：10。
      * @param InstanceCount 已购买的预留实例计费个数。形如：10。
      */
-    public void setInstanceCount(Integer InstanceCount) {
+    public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 

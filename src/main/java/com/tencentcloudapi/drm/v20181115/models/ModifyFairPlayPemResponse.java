@@ -28,7 +28,7 @@ public class ModifyFairPlayPemResponse extends AbstractModel{
     */
     @SerializedName("FairPlayPemId")
     @Expose
-    private Integer FairPlayPemId;
+    private Long FairPlayPemId;
 
     /**
     * 私钥的优先级，优先级数值越高，优先级越高。
@@ -36,7 +36,7 @@ public class ModifyFairPlayPemResponse extends AbstractModel{
     */
     @SerializedName("Priority")
     @Expose
-    private Integer Priority;
+    private Long Priority;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,7 +51,7 @@ public class ModifyFairPlayPemResponse extends AbstractModel{
      * @return FairPlayPemId 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getFairPlayPemId() {
+    public Long getFairPlayPemId() {
         return this.FairPlayPemId;
     }
 
@@ -61,7 +61,7 @@ public class ModifyFairPlayPemResponse extends AbstractModel{
      * @param FairPlayPemId 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFairPlayPemId(Integer FairPlayPemId) {
+    public void setFairPlayPemId(Long FairPlayPemId) {
         this.FairPlayPemId = FairPlayPemId;
     }
 
@@ -71,7 +71,7 @@ public class ModifyFairPlayPemResponse extends AbstractModel{
      * @return Priority 私钥的优先级，优先级数值越高，优先级越高。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getPriority() {
+    public Long getPriority() {
         return this.Priority;
     }
 
@@ -81,7 +81,7 @@ public class ModifyFairPlayPemResponse extends AbstractModel{
      * @param Priority 私钥的优先级，优先级数值越高，优先级越高。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPriority(Integer Priority) {
+    public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 

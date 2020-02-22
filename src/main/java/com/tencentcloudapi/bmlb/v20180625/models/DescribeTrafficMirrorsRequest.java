@@ -48,14 +48,14 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 单次查询返回的条目数，默认值：500。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 流量镜像实例ID的数组，支持批量查询 
@@ -109,7 +109,7 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
      * Get 分页的偏移量，也即从第几条记录开始查询 
      * @return Offset 分页的偏移量，也即从第几条记录开始查询
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -117,7 +117,7 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
      * Set 分页的偏移量，也即从第几条记录开始查询
      * @param Offset 分页的偏移量，也即从第几条记录开始查询
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -125,7 +125,7 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
      * Get 单次查询返回的条目数，默认值：500。 
      * @return Limit 单次查询返回的条目数，默认值：500。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -133,7 +133,7 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
      * Set 单次查询返回的条目数，默认值：500。
      * @param Limit 单次查询返回的条目数，默认值：500。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

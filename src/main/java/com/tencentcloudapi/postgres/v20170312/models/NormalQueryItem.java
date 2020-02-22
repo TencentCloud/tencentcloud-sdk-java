@@ -34,14 +34,14 @@ public class NormalQueryItem extends AbstractModel{
     */
     @SerializedName("Calls")
     @Expose
-    private Integer Calls;
+    private Long Calls;
 
     /**
     * 粒度点
     */
     @SerializedName("CallsGrids")
     @Expose
-    private Integer [] CallsGrids;
+    private Long [] CallsGrids;
 
     /**
     * 花费总时间
@@ -55,7 +55,7 @@ public class NormalQueryItem extends AbstractModel{
     */
     @SerializedName("Rows")
     @Expose
-    private Integer Rows;
+    private Long Rows;
 
     /**
     * 花费最小时间
@@ -90,28 +90,28 @@ public class NormalQueryItem extends AbstractModel{
     */
     @SerializedName("SharedReadBlks")
     @Expose
-    private Integer SharedReadBlks;
+    private Long SharedReadBlks;
 
     /**
     * 写共享内存块数
     */
     @SerializedName("SharedWriteBlks")
     @Expose
-    private Integer SharedWriteBlks;
+    private Long SharedWriteBlks;
 
     /**
     * 读io总耗时
     */
     @SerializedName("ReadCostTime")
     @Expose
-    private Integer ReadCostTime;
+    private Long ReadCostTime;
 
     /**
     * 写io总耗时
     */
     @SerializedName("WriteCostTime")
     @Expose
-    private Integer WriteCostTime;
+    private Long WriteCostTime;
 
     /**
     * 数据库名字
@@ -147,7 +147,7 @@ public class NormalQueryItem extends AbstractModel{
      * Get 调用次数 
      * @return Calls 调用次数
      */
-    public Integer getCalls() {
+    public Long getCalls() {
         return this.Calls;
     }
 
@@ -155,7 +155,7 @@ public class NormalQueryItem extends AbstractModel{
      * Set 调用次数
      * @param Calls 调用次数
      */
-    public void setCalls(Integer Calls) {
+    public void setCalls(Long Calls) {
         this.Calls = Calls;
     }
 
@@ -163,7 +163,7 @@ public class NormalQueryItem extends AbstractModel{
      * Get 粒度点 
      * @return CallsGrids 粒度点
      */
-    public Integer [] getCallsGrids() {
+    public Long [] getCallsGrids() {
         return this.CallsGrids;
     }
 
@@ -171,7 +171,7 @@ public class NormalQueryItem extends AbstractModel{
      * Set 粒度点
      * @param CallsGrids 粒度点
      */
-    public void setCallsGrids(Integer [] CallsGrids) {
+    public void setCallsGrids(Long [] CallsGrids) {
         this.CallsGrids = CallsGrids;
     }
 
@@ -195,7 +195,7 @@ public class NormalQueryItem extends AbstractModel{
      * Get 影响的行数 
      * @return Rows 影响的行数
      */
-    public Integer getRows() {
+    public Long getRows() {
         return this.Rows;
     }
 
@@ -203,7 +203,7 @@ public class NormalQueryItem extends AbstractModel{
      * Set 影响的行数
      * @param Rows 影响的行数
      */
-    public void setRows(Integer Rows) {
+    public void setRows(Long Rows) {
         this.Rows = Rows;
     }
 
@@ -275,7 +275,7 @@ public class NormalQueryItem extends AbstractModel{
      * Get 读共享内存块数 
      * @return SharedReadBlks 读共享内存块数
      */
-    public Integer getSharedReadBlks() {
+    public Long getSharedReadBlks() {
         return this.SharedReadBlks;
     }
 
@@ -283,7 +283,7 @@ public class NormalQueryItem extends AbstractModel{
      * Set 读共享内存块数
      * @param SharedReadBlks 读共享内存块数
      */
-    public void setSharedReadBlks(Integer SharedReadBlks) {
+    public void setSharedReadBlks(Long SharedReadBlks) {
         this.SharedReadBlks = SharedReadBlks;
     }
 
@@ -291,7 +291,7 @@ public class NormalQueryItem extends AbstractModel{
      * Get 写共享内存块数 
      * @return SharedWriteBlks 写共享内存块数
      */
-    public Integer getSharedWriteBlks() {
+    public Long getSharedWriteBlks() {
         return this.SharedWriteBlks;
     }
 
@@ -299,7 +299,7 @@ public class NormalQueryItem extends AbstractModel{
      * Set 写共享内存块数
      * @param SharedWriteBlks 写共享内存块数
      */
-    public void setSharedWriteBlks(Integer SharedWriteBlks) {
+    public void setSharedWriteBlks(Long SharedWriteBlks) {
         this.SharedWriteBlks = SharedWriteBlks;
     }
 
@@ -307,7 +307,7 @@ public class NormalQueryItem extends AbstractModel{
      * Get 读io总耗时 
      * @return ReadCostTime 读io总耗时
      */
-    public Integer getReadCostTime() {
+    public Long getReadCostTime() {
         return this.ReadCostTime;
     }
 
@@ -315,7 +315,7 @@ public class NormalQueryItem extends AbstractModel{
      * Set 读io总耗时
      * @param ReadCostTime 读io总耗时
      */
-    public void setReadCostTime(Integer ReadCostTime) {
+    public void setReadCostTime(Long ReadCostTime) {
         this.ReadCostTime = ReadCostTime;
     }
 
@@ -323,7 +323,7 @@ public class NormalQueryItem extends AbstractModel{
      * Get 写io总耗时 
      * @return WriteCostTime 写io总耗时
      */
-    public Integer getWriteCostTime() {
+    public Long getWriteCostTime() {
         return this.WriteCostTime;
     }
 
@@ -331,7 +331,7 @@ public class NormalQueryItem extends AbstractModel{
      * Set 写io总耗时
      * @param WriteCostTime 写io总耗时
      */
-    public void setWriteCostTime(Integer WriteCostTime) {
+    public void setWriteCostTime(Long WriteCostTime) {
         this.WriteCostTime = WriteCostTime;
     }
 

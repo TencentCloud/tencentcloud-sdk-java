@@ -27,7 +27,7 @@ public class DescribeInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 实例详细信息列表
@@ -47,7 +47,7 @@ public class DescribeInstancesResponse extends AbstractModel{
      * Get 实例数 
      * @return TotalCount 实例数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeInstancesResponse extends AbstractModel{
      * Set 实例数
      * @param TotalCount 实例数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

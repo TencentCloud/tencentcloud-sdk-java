@@ -66,7 +66,7 @@ Area 字段为 overseas 时暂不支持1分钟粒度数据查询
     */
     @SerializedName("Project")
     @Expose
-    private Integer Project;
+    private Long Project;
 
     /**
     * 指定加速区域查询计费数据：
@@ -85,7 +85,7 @@ overseas：中国境外
     */
     @SerializedName("District")
     @Expose
-    private Integer District;
+    private Long District;
 
     /**
     * 计费统计类型
@@ -207,7 +207,7 @@ Area 字段为 overseas 时暂不支持1分钟粒度数据查询
      * @return Project 指定项目 ID 查询，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 若 Domain 参数填充了具体域名信息，则返回该域名的计费数据，而非指定项目计费数据
      */
-    public Integer getProject() {
+    public Long getProject() {
         return this.Project;
     }
 
@@ -217,7 +217,7 @@ Area 字段为 overseas 时暂不支持1分钟粒度数据查询
      * @param Project 指定项目 ID 查询，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 若 Domain 参数填充了具体域名信息，则返回该域名的计费数据，而非指定项目计费数据
      */
-    public void setProject(Integer Project) {
+    public void setProject(Long Project) {
         this.Project = Project;
     }
 
@@ -257,7 +257,7 @@ overseas：中国境外
 省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 不填充时，查询所有国家/地区
      */
-    public Integer getDistrict() {
+    public Long getDistrict() {
         return this.District;
     }
 
@@ -269,7 +269,7 @@ overseas：中国境外
 省份、国家/地区编码可以查看 [省份编码映射](https://cloud.tencent.com/document/product/228/6316#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 不填充时，查询所有国家/地区
      */
-    public void setDistrict(Integer District) {
+    public void setDistrict(Long District) {
         this.District = District;
     }
 

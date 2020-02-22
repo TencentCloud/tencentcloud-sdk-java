@@ -34,7 +34,7 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Integer InternetMaxBandwidthOut;
+    private Long InternetMaxBandwidthOut;
 
     /**
     * 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
@@ -63,7 +63,7 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel{
      * Get 带宽，单位Mbps。默认是1Mbps 
      * @return InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
      */
-    public Integer getInternetMaxBandwidthOut() {
+    public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -71,7 +71,7 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel{
      * Set 带宽，单位Mbps。默认是1Mbps
      * @param InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
      */
-    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

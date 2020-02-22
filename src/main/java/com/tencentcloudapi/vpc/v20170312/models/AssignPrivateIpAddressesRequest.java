@@ -41,7 +41,7 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
-    private Integer SecondaryPrivateIpAddressCount;
+    private Long SecondaryPrivateIpAddressCount;
 
     /**
      * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
@@ -79,7 +79,7 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
      * Get 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。 
      * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
      */
-    public Integer getSecondaryPrivateIpAddressCount() {
+    public Long getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
@@ -87,7 +87,7 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
      * Set 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
      * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
      */
-    public void setSecondaryPrivateIpAddressCount(Integer SecondaryPrivateIpAddressCount) {
+    public void setSecondaryPrivateIpAddressCount(Long SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;
     }
 

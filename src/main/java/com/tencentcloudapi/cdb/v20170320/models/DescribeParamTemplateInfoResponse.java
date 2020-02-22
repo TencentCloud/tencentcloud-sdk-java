@@ -27,7 +27,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
     * 参数模板名称。
@@ -48,7 +48,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 参数详情
@@ -68,7 +68,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
      * Get 参数模板 ID。 
      * @return TemplateId 参数模板 ID。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -76,7 +76,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
      * Set 参数模板 ID。
      * @param TemplateId 参数模板 ID。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
@@ -116,7 +116,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
      * Get 参数模板中的参数数量 
      * @return TotalCount 参数模板中的参数数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -124,7 +124,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
      * Set 参数模板中的参数数量
      * @param TotalCount 参数模板中的参数数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

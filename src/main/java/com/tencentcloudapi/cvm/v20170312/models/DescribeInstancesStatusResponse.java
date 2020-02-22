@@ -27,7 +27,7 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * [实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。
@@ -47,7 +47,7 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
      * Get 符合条件的实例状态数量。 
      * @return TotalCount 符合条件的实例状态数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
      * Set 符合条件的实例状态数量。
      * @param TotalCount 符合条件的实例状态数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

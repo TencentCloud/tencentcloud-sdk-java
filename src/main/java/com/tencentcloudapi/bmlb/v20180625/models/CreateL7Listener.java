@@ -27,7 +27,7 @@ public class CreateL7Listener extends AbstractModel{
     */
     @SerializedName("LoadBalancerPort")
     @Expose
-    private Integer LoadBalancerPort;
+    private Long LoadBalancerPort;
 
     /**
     * 七层监听器协议类型，可选值：http,https。
@@ -48,7 +48,7 @@ public class CreateL7Listener extends AbstractModel{
     */
     @SerializedName("SslMode")
     @Expose
-    private Integer SslMode;
+    private Long SslMode;
 
     /**
     * 服务端证书ID。当创建的是https类型的监听器时，此值必选。
@@ -104,13 +104,13 @@ public class CreateL7Listener extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
      * Get 七层监听器端口，可选值1~65535。 
      * @return LoadBalancerPort 七层监听器端口，可选值1~65535。
      */
-    public Integer getLoadBalancerPort() {
+    public Long getLoadBalancerPort() {
         return this.LoadBalancerPort;
     }
 
@@ -118,7 +118,7 @@ public class CreateL7Listener extends AbstractModel{
      * Set 七层监听器端口，可选值1~65535。
      * @param LoadBalancerPort 七层监听器端口，可选值1~65535。
      */
-    public void setLoadBalancerPort(Integer LoadBalancerPort) {
+    public void setLoadBalancerPort(Long LoadBalancerPort) {
         this.LoadBalancerPort = LoadBalancerPort;
     }
 
@@ -158,7 +158,7 @@ public class CreateL7Listener extends AbstractModel{
      * Get 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。当创建的是https类型的监听器时，此值必选。 
      * @return SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。当创建的是https类型的监听器时，此值必选。
      */
-    public Integer getSslMode() {
+    public Long getSslMode() {
         return this.SslMode;
     }
 
@@ -166,7 +166,7 @@ public class CreateL7Listener extends AbstractModel{
      * Set 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。当创建的是https类型的监听器时，此值必选。
      * @param SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。当创建的是https类型的监听器时，此值必选。
      */
-    public void setSslMode(Integer SslMode) {
+    public void setSslMode(Long SslMode) {
         this.SslMode = SslMode;
     }
 
@@ -286,7 +286,7 @@ public class CreateL7Listener extends AbstractModel{
      * Get 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。 
      * @return Bandwidth 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -294,7 +294,7 @@ public class CreateL7Listener extends AbstractModel{
      * Set 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      * @param Bandwidth 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

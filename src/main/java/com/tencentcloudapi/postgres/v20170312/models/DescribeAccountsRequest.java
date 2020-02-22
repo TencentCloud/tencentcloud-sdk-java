@@ -34,14 +34,14 @@ public class DescribeAccountsRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 分页返回，返回第几页的用户数据。页码从0开始计数
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
@@ -77,7 +77,7 @@ public class DescribeAccountsRequest extends AbstractModel{
      * Get 分页返回，每页最大返回数目，默认20，取值范围为1-100 
      * @return Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -85,7 +85,7 @@ public class DescribeAccountsRequest extends AbstractModel{
      * Set 分页返回，每页最大返回数目，默认20，取值范围为1-100
      * @param Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -93,7 +93,7 @@ public class DescribeAccountsRequest extends AbstractModel{
      * Get 分页返回，返回第几页的用户数据。页码从0开始计数 
      * @return Offset 分页返回，返回第几页的用户数据。页码从0开始计数
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -101,7 +101,7 @@ public class DescribeAccountsRequest extends AbstractModel{
      * Set 分页返回，返回第几页的用户数据。页码从0开始计数
      * @param Offset 分页返回，返回第几页的用户数据。页码从0开始计数
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 

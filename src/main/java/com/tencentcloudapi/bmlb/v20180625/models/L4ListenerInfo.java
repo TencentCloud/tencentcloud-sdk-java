@@ -48,14 +48,14 @@ public class L4ListenerInfo extends AbstractModel{
     */
     @SerializedName("LoadBalancerPort")
     @Expose
-    private Integer LoadBalancerPort;
+    private Long LoadBalancerPort;
 
     /**
     * 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
     * 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
@@ -69,49 +69,49 @@ public class L4ListenerInfo extends AbstractModel{
     */
     @SerializedName("SessionExpire")
     @Expose
-    private Integer SessionExpire;
+    private Long SessionExpire;
 
     /**
     * 是否开启了检查：1（开启）、0（关闭）。
     */
     @SerializedName("HealthSwitch")
     @Expose
-    private Integer HealthSwitch;
+    private Long HealthSwitch;
 
     /**
     * 响应超时时间，单位：秒。
     */
     @SerializedName("TimeOut")
     @Expose
-    private Integer TimeOut;
+    private Long TimeOut;
 
     /**
     * 检查间隔，单位：秒。
     */
     @SerializedName("IntervalTime")
     @Expose
-    private Integer IntervalTime;
+    private Long IntervalTime;
 
     /**
     * 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
     */
     @SerializedName("HealthNum")
     @Expose
-    private Integer HealthNum;
+    private Long HealthNum;
 
     /**
     * 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
     */
     @SerializedName("UnhealthNum")
     @Expose
-    private Integer UnhealthNum;
+    private Long UnhealthNum;
 
     /**
     * 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 创建时间戳。
@@ -125,7 +125,7 @@ public class L4ListenerInfo extends AbstractModel{
     */
     @SerializedName("CustomHealthSwitch")
     @Expose
-    private Integer CustomHealthSwitch;
+    private Long CustomHealthSwitch;
 
     /**
     * 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
@@ -139,7 +139,7 @@ public class L4ListenerInfo extends AbstractModel{
     */
     @SerializedName("LineSeparatorType")
     @Expose
-    private Integer LineSeparatorType;
+    private Long LineSeparatorType;
 
     /**
     * 自定义探测请求内容。
@@ -160,7 +160,7 @@ public class L4ListenerInfo extends AbstractModel{
     */
     @SerializedName("ToaFlag")
     @Expose
-    private Integer ToaFlag;
+    private Long ToaFlag;
 
     /**
     * 转发后端服务器调度类型。
@@ -221,7 +221,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 负载均衡监听器的监听接口，可选值1~65535。 
      * @return LoadBalancerPort 负载均衡监听器的监听接口，可选值1~65535。
      */
-    public Integer getLoadBalancerPort() {
+    public Long getLoadBalancerPort() {
         return this.LoadBalancerPort;
     }
 
@@ -229,7 +229,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 负载均衡监听器的监听接口，可选值1~65535。
      * @param LoadBalancerPort 负载均衡监听器的监听接口，可选值1~65535。
      */
-    public void setLoadBalancerPort(Integer LoadBalancerPort) {
+    public void setLoadBalancerPort(Long LoadBalancerPort) {
         this.LoadBalancerPort = LoadBalancerPort;
     }
 
@@ -237,7 +237,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。 
      * @return Bandwidth 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -245,7 +245,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      * @param Bandwidth 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -269,7 +269,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 会话保持时间。单位：秒 
      * @return SessionExpire 会话保持时间。单位：秒
      */
-    public Integer getSessionExpire() {
+    public Long getSessionExpire() {
         return this.SessionExpire;
     }
 
@@ -277,7 +277,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 会话保持时间。单位：秒
      * @param SessionExpire 会话保持时间。单位：秒
      */
-    public void setSessionExpire(Integer SessionExpire) {
+    public void setSessionExpire(Long SessionExpire) {
         this.SessionExpire = SessionExpire;
     }
 
@@ -285,7 +285,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 是否开启了检查：1（开启）、0（关闭）。 
      * @return HealthSwitch 是否开启了检查：1（开启）、0（关闭）。
      */
-    public Integer getHealthSwitch() {
+    public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
@@ -293,7 +293,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 是否开启了检查：1（开启）、0（关闭）。
      * @param HealthSwitch 是否开启了检查：1（开启）、0（关闭）。
      */
-    public void setHealthSwitch(Integer HealthSwitch) {
+    public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
@@ -301,7 +301,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 响应超时时间，单位：秒。 
      * @return TimeOut 响应超时时间，单位：秒。
      */
-    public Integer getTimeOut() {
+    public Long getTimeOut() {
         return this.TimeOut;
     }
 
@@ -309,7 +309,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 响应超时时间，单位：秒。
      * @param TimeOut 响应超时时间，单位：秒。
      */
-    public void setTimeOut(Integer TimeOut) {
+    public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
@@ -317,7 +317,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 检查间隔，单位：秒。 
      * @return IntervalTime 检查间隔，单位：秒。
      */
-    public Integer getIntervalTime() {
+    public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
@@ -325,7 +325,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 检查间隔，单位：秒。
      * @param IntervalTime 检查间隔，单位：秒。
      */
-    public void setIntervalTime(Integer IntervalTime) {
+    public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
@@ -333,7 +333,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。 
      * @return HealthNum 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
-    public Integer getHealthNum() {
+    public Long getHealthNum() {
         return this.HealthNum;
     }
 
@@ -341,7 +341,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      * @param HealthNum 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
-    public void setHealthNum(Integer HealthNum) {
+    public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
@@ -349,7 +349,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。 
      * @return UnhealthNum 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
-    public Integer getUnhealthNum() {
+    public Long getUnhealthNum() {
         return this.UnhealthNum;
     }
 
@@ -357,7 +357,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
      * @param UnhealthNum 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
-    public void setUnhealthNum(Integer UnhealthNum) {
+    public void setUnhealthNum(Long UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
@@ -365,7 +365,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -373,7 +373,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -397,7 +397,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效） 
      * @return CustomHealthSwitch 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
      */
-    public Integer getCustomHealthSwitch() {
+    public Long getCustomHealthSwitch() {
         return this.CustomHealthSwitch;
     }
 
@@ -405,7 +405,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
      * @param CustomHealthSwitch 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
      */
-    public void setCustomHealthSwitch(Integer CustomHealthSwitch) {
+    public void setCustomHealthSwitch(Long CustomHealthSwitch) {
         this.CustomHealthSwitch = CustomHealthSwitch;
     }
 
@@ -429,7 +429,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。 
      * @return LineSeparatorType 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
      */
-    public Integer getLineSeparatorType() {
+    public Long getLineSeparatorType() {
         return this.LineSeparatorType;
     }
 
@@ -437,7 +437,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
      * @param LineSeparatorType 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
      */
-    public void setLineSeparatorType(Integer LineSeparatorType) {
+    public void setLineSeparatorType(Long LineSeparatorType) {
         this.LineSeparatorType = LineSeparatorType;
     }
 
@@ -477,7 +477,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Get 是否开启toa：1（开启）、0（关闭）。 
      * @return ToaFlag 是否开启toa：1（开启）、0（关闭）。
      */
-    public Integer getToaFlag() {
+    public Long getToaFlag() {
         return this.ToaFlag;
     }
 
@@ -485,7 +485,7 @@ public class L4ListenerInfo extends AbstractModel{
      * Set 是否开启toa：1（开启）、0（关闭）。
      * @param ToaFlag 是否开启toa：1（开启）、0（关闭）。
      */
-    public void setToaFlag(Integer ToaFlag) {
+    public void setToaFlag(Long ToaFlag) {
         this.ToaFlag = ToaFlag;
     }
 

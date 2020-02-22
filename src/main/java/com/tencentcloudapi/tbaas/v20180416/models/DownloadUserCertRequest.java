@@ -41,7 +41,7 @@ public class DownloadUserCertRequest extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Integer CertId;
+    private Long CertId;
 
     /**
     * 证书DN，可以在证书详情页面获取
@@ -100,7 +100,7 @@ public class DownloadUserCertRequest extends AbstractModel{
      * Get 证书ID，可以在证书详情页面获取 
      * @return CertId 证书ID，可以在证书详情页面获取
      */
-    public Integer getCertId() {
+    public Long getCertId() {
         return this.CertId;
     }
 
@@ -108,7 +108,7 @@ public class DownloadUserCertRequest extends AbstractModel{
      * Set 证书ID，可以在证书详情页面获取
      * @param CertId 证书ID，可以在证书详情页面获取
      */
-    public void setCertId(Integer CertId) {
+    public void setCertId(Long CertId) {
         this.CertId = CertId;
     }
 

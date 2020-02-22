@@ -36,7 +36,7 @@ public class AddLiveDomainRequest extends AbstractModel{
     */
     @SerializedName("DomainType")
     @Expose
-    private Integer DomainType;
+    private Long DomainType;
 
     /**
     * 拉流域名类型：
@@ -47,7 +47,7 @@ public class AddLiveDomainRequest extends AbstractModel{
     */
     @SerializedName("PlayType")
     @Expose
-    private Integer PlayType;
+    private Long PlayType;
 
     /**
     * 是否是慢直播：
@@ -57,7 +57,7 @@ public class AddLiveDomainRequest extends AbstractModel{
     */
     @SerializedName("IsDelayLive")
     @Expose
-    private Integer IsDelayLive;
+    private Long IsDelayLive;
 
     /**
      * Get 域名名称。 
@@ -83,7 +83,7 @@ public class AddLiveDomainRequest extends AbstractModel{
 0：推流域名，
 1：播放域名。
      */
-    public Integer getDomainType() {
+    public Long getDomainType() {
         return this.DomainType;
     }
 
@@ -95,7 +95,7 @@ public class AddLiveDomainRequest extends AbstractModel{
 0：推流域名，
 1：播放域名。
      */
-    public void setDomainType(Integer DomainType) {
+    public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;
     }
 
@@ -111,7 +111,7 @@ public class AddLiveDomainRequest extends AbstractModel{
 3：境外。
 默认值：1。
      */
-    public Integer getPlayType() {
+    public Long getPlayType() {
         return this.PlayType;
     }
 
@@ -127,7 +127,7 @@ public class AddLiveDomainRequest extends AbstractModel{
 3：境外。
 默认值：1。
      */
-    public void setPlayType(Integer PlayType) {
+    public void setPlayType(Long PlayType) {
         this.PlayType = PlayType;
     }
 
@@ -141,7 +141,7 @@ public class AddLiveDomainRequest extends AbstractModel{
 1 ：慢直播 。
 默认值： 0。
      */
-    public Integer getIsDelayLive() {
+    public Long getIsDelayLive() {
         return this.IsDelayLive;
     }
 
@@ -155,7 +155,7 @@ public class AddLiveDomainRequest extends AbstractModel{
 1 ：慢直播 。
 默认值： 0。
      */
-    public void setIsDelayLive(Integer IsDelayLive) {
+    public void setIsDelayLive(Long IsDelayLive) {
         this.IsDelayLive = IsDelayLive;
     }
 

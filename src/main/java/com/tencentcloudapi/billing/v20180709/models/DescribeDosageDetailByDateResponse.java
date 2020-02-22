@@ -44,7 +44,7 @@ public class DescribeDosageDetailByDateResponse extends AbstractModel{
     */
     @SerializedName("RetCode")
     @Expose
-    private Integer RetCode;
+    private Long RetCode;
 
     /**
     * 错误信息
@@ -107,7 +107,7 @@ public class DescribeDosageDetailByDateResponse extends AbstractModel{
      * @return RetCode 错误码
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getRetCode() {
+    public Long getRetCode() {
         return this.RetCode;
     }
 
@@ -117,7 +117,7 @@ public class DescribeDosageDetailByDateResponse extends AbstractModel{
      * @param RetCode 错误码
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRetCode(Integer RetCode) {
+    public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;
     }
 

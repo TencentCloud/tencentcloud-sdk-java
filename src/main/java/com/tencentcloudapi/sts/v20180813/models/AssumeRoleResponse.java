@@ -34,7 +34,7 @@ public class AssumeRoleResponse extends AbstractModel{
     */
     @SerializedName("ExpiredTime")
     @Expose
-    private Integer ExpiredTime;
+    private Long ExpiredTime;
 
     /**
     * 证书无效的时间，以 iso8601 格式的 UTC 时间表示
@@ -70,7 +70,7 @@ public class AssumeRoleResponse extends AbstractModel{
      * Get 证书无效的时间，返回 Unix 时间戳，精确到秒 
      * @return ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
      */
-    public Integer getExpiredTime() {
+    public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
@@ -78,7 +78,7 @@ public class AssumeRoleResponse extends AbstractModel{
      * Set 证书无效的时间，返回 Unix 时间戳，精确到秒
      * @param ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
      */
-    public void setExpiredTime(Integer ExpiredTime) {
+    public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 

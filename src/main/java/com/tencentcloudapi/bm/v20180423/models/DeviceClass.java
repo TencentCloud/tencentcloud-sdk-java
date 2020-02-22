@@ -55,7 +55,7 @@ public class DeviceClass extends AbstractModel{
     */
     @SerializedName("HaveRaidCard")
     @Expose
-    private Integer HaveRaidCard;
+    private Long HaveRaidCard;
 
     /**
     * 网卡描述
@@ -83,21 +83,21 @@ public class DeviceClass extends AbstractModel{
     */
     @SerializedName("UnitPrice")
     @Expose
-    private Integer UnitPrice;
+    private Long UnitPrice;
 
     /**
     * 实际价格
     */
     @SerializedName("RealPrice")
     @Expose
-    private Integer RealPrice;
+    private Long RealPrice;
 
     /**
     * 官网刊例价格
     */
     @SerializedName("NormalPrice")
     @Expose
-    private Integer NormalPrice;
+    private Long NormalPrice;
 
     /**
     * 设备使用场景类型
@@ -111,7 +111,7 @@ public class DeviceClass extends AbstractModel{
     */
     @SerializedName("Series")
     @Expose
-    private Integer Series;
+    private Long Series;
 
     /**
      * Get 机型ID 
@@ -181,7 +181,7 @@ public class DeviceClass extends AbstractModel{
      * Get 是否支持RAID. 0:不支持; 1:支持 
      * @return HaveRaidCard 是否支持RAID. 0:不支持; 1:支持
      */
-    public Integer getHaveRaidCard() {
+    public Long getHaveRaidCard() {
         return this.HaveRaidCard;
     }
 
@@ -189,7 +189,7 @@ public class DeviceClass extends AbstractModel{
      * Set 是否支持RAID. 0:不支持; 1:支持
      * @param HaveRaidCard 是否支持RAID. 0:不支持; 1:支持
      */
-    public void setHaveRaidCard(Integer HaveRaidCard) {
+    public void setHaveRaidCard(Long HaveRaidCard) {
         this.HaveRaidCard = HaveRaidCard;
     }
 
@@ -245,7 +245,7 @@ public class DeviceClass extends AbstractModel{
      * Get 用户刊例价格 
      * @return UnitPrice 用户刊例价格
      */
-    public Integer getUnitPrice() {
+    public Long getUnitPrice() {
         return this.UnitPrice;
     }
 
@@ -253,7 +253,7 @@ public class DeviceClass extends AbstractModel{
      * Set 用户刊例价格
      * @param UnitPrice 用户刊例价格
      */
-    public void setUnitPrice(Integer UnitPrice) {
+    public void setUnitPrice(Long UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
@@ -261,7 +261,7 @@ public class DeviceClass extends AbstractModel{
      * Get 实际价格 
      * @return RealPrice 实际价格
      */
-    public Integer getRealPrice() {
+    public Long getRealPrice() {
         return this.RealPrice;
     }
 
@@ -269,7 +269,7 @@ public class DeviceClass extends AbstractModel{
      * Set 实际价格
      * @param RealPrice 实际价格
      */
-    public void setRealPrice(Integer RealPrice) {
+    public void setRealPrice(Long RealPrice) {
         this.RealPrice = RealPrice;
     }
 
@@ -277,7 +277,7 @@ public class DeviceClass extends AbstractModel{
      * Get 官网刊例价格 
      * @return NormalPrice 官网刊例价格
      */
-    public Integer getNormalPrice() {
+    public Long getNormalPrice() {
         return this.NormalPrice;
     }
 
@@ -285,7 +285,7 @@ public class DeviceClass extends AbstractModel{
      * Set 官网刊例价格
      * @param NormalPrice 官网刊例价格
      */
-    public void setNormalPrice(Integer NormalPrice) {
+    public void setNormalPrice(Long NormalPrice) {
         this.NormalPrice = NormalPrice;
     }
 
@@ -309,7 +309,7 @@ public class DeviceClass extends AbstractModel{
      * Get 机型系列 
      * @return Series 机型系列
      */
-    public Integer getSeries() {
+    public Long getSeries() {
         return this.Series;
     }
 
@@ -317,7 +317,7 @@ public class DeviceClass extends AbstractModel{
      * Set 机型系列
      * @param Series 机型系列
      */
-    public void setSeries(Integer Series) {
+    public void setSeries(Long Series) {
         this.Series = Series;
     }
 

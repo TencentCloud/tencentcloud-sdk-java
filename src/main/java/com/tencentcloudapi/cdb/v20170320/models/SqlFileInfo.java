@@ -48,14 +48,14 @@ public class SqlFileInfo extends AbstractModel{
     */
     @SerializedName("FileSize")
     @Expose
-    private Integer FileSize;
+    private Long FileSize;
 
     /**
     * 上传是否完成标志，可选值：0 - 未完成，1 - 已完成
     */
     @SerializedName("IsUploadFinished")
     @Expose
-    private Integer IsUploadFinished;
+    private Long IsUploadFinished;
 
     /**
     * 文件ID
@@ -116,7 +116,7 @@ public class SqlFileInfo extends AbstractModel{
      * Get 文件大小，单位为Bytes 
      * @return FileSize 文件大小，单位为Bytes
      */
-    public Integer getFileSize() {
+    public Long getFileSize() {
         return this.FileSize;
     }
 
@@ -124,7 +124,7 @@ public class SqlFileInfo extends AbstractModel{
      * Set 文件大小，单位为Bytes
      * @param FileSize 文件大小，单位为Bytes
      */
-    public void setFileSize(Integer FileSize) {
+    public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
@@ -132,7 +132,7 @@ public class SqlFileInfo extends AbstractModel{
      * Get 上传是否完成标志，可选值：0 - 未完成，1 - 已完成 
      * @return IsUploadFinished 上传是否完成标志，可选值：0 - 未完成，1 - 已完成
      */
-    public Integer getIsUploadFinished() {
+    public Long getIsUploadFinished() {
         return this.IsUploadFinished;
     }
 
@@ -140,7 +140,7 @@ public class SqlFileInfo extends AbstractModel{
      * Set 上传是否完成标志，可选值：0 - 未完成，1 - 已完成
      * @param IsUploadFinished 上传是否完成标志，可选值：0 - 未完成，1 - 已完成
      */
-    public void setIsUploadFinished(Integer IsUploadFinished) {
+    public void setIsUploadFinished(Long IsUploadFinished) {
         this.IsUploadFinished = IsUploadFinished;
     }
 

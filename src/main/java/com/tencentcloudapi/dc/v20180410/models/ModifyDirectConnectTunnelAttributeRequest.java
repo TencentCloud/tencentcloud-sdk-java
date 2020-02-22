@@ -69,7 +69,7 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
      * Get 专用通道ID 
@@ -171,7 +171,7 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
      * Get 专用通道带宽值，单位为M。 
      * @return Bandwidth 专用通道带宽值，单位为M。
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -179,7 +179,7 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
      * Set 专用通道带宽值，单位为M。
      * @param Bandwidth 专用通道带宽值，单位为M。
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

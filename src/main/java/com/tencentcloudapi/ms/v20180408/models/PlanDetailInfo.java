@@ -27,14 +27,14 @@ public class PlanDetailInfo extends AbstractModel{
     */
     @SerializedName("IsDefault")
     @Expose
-    private Integer IsDefault;
+    private Long IsDefault;
 
     /**
     * 策略id
     */
     @SerializedName("PlanId")
     @Expose
-    private Integer PlanId;
+    private Long PlanId;
 
     /**
     * 策略名称
@@ -54,7 +54,7 @@ public class PlanDetailInfo extends AbstractModel{
      * Get 默认策略，1为默认，0为非默认 
      * @return IsDefault 默认策略，1为默认，0为非默认
      */
-    public Integer getIsDefault() {
+    public Long getIsDefault() {
         return this.IsDefault;
     }
 
@@ -62,7 +62,7 @@ public class PlanDetailInfo extends AbstractModel{
      * Set 默认策略，1为默认，0为非默认
      * @param IsDefault 默认策略，1为默认，0为非默认
      */
-    public void setIsDefault(Integer IsDefault) {
+    public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
@@ -70,7 +70,7 @@ public class PlanDetailInfo extends AbstractModel{
      * Get 策略id 
      * @return PlanId 策略id
      */
-    public Integer getPlanId() {
+    public Long getPlanId() {
         return this.PlanId;
     }
 
@@ -78,7 +78,7 @@ public class PlanDetailInfo extends AbstractModel{
      * Set 策略id
      * @param PlanId 策略id
      */
-    public void setPlanId(Integer PlanId) {
+    public void setPlanId(Long PlanId) {
         this.PlanId = PlanId;
     }
 

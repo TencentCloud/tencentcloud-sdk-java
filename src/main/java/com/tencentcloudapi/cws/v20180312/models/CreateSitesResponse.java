@@ -27,7 +27,7 @@ public class CreateSitesResponse extends AbstractModel{
     */
     @SerializedName("Number")
     @Expose
-    private Integer Number;
+    private Long Number;
 
     /**
     * 站点数组
@@ -47,7 +47,7 @@ public class CreateSitesResponse extends AbstractModel{
      * Get 新增站点数。 
      * @return Number 新增站点数。
      */
-    public Integer getNumber() {
+    public Long getNumber() {
         return this.Number;
     }
 
@@ -55,7 +55,7 @@ public class CreateSitesResponse extends AbstractModel{
      * Set 新增站点数。
      * @param Number 新增站点数。
      */
-    public void setNumber(Integer Number) {
+    public void setNumber(Long Number) {
         this.Number = Number;
     }
 

@@ -41,21 +41,21 @@ public class DescribeTaskListRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，取Limit整数倍（自动向下取整）
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 项目Id
     */
     @SerializedName("ProjectIds")
     @Expose
-    private Integer [] ProjectIds;
+    private Long [] ProjectIds;
 
     /**
     * 任务类型
@@ -83,7 +83,7 @@ public class DescribeTaskListRequest extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Integer [] TaskStatus;
+    private Long [] TaskStatus;
 
     /**
      * Get 实例Id 
@@ -121,7 +121,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Get 分页大小 
      * @return Limit 分页大小
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -129,7 +129,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Set 分页大小
      * @param Limit 分页大小
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -137,7 +137,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Get 偏移量，取Limit整数倍（自动向下取整） 
      * @return Offset 偏移量，取Limit整数倍（自动向下取整）
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -145,7 +145,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Set 偏移量，取Limit整数倍（自动向下取整）
      * @param Offset 偏移量，取Limit整数倍（自动向下取整）
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -153,7 +153,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Get 项目Id 
      * @return ProjectIds 项目Id
      */
-    public Integer [] getProjectIds() {
+    public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
@@ -161,7 +161,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Set 项目Id
      * @param ProjectIds 项目Id
      */
-    public void setProjectIds(Integer [] ProjectIds) {
+    public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
@@ -217,7 +217,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Get 任务状态 
      * @return TaskStatus 任务状态
      */
-    public Integer [] getTaskStatus() {
+    public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -225,7 +225,7 @@ public class DescribeTaskListRequest extends AbstractModel{
      * Set 任务状态
      * @param TaskStatus 任务状态
      */
-    public void setTaskStatus(Integer [] TaskStatus) {
+    public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 

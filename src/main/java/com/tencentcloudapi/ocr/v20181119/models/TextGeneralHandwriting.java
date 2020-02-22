@@ -34,7 +34,7 @@ public class TextGeneralHandwriting extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Integer Confidence;
+    private Long Confidence;
 
     /**
     * 文本行坐标，以四个顶点坐标表示
@@ -72,7 +72,7 @@ public class TextGeneralHandwriting extends AbstractModel{
      * Get 置信度 0 - 100 
      * @return Confidence 置信度 0 - 100
      */
-    public Integer getConfidence() {
+    public Long getConfidence() {
         return this.Confidence;
     }
 
@@ -80,7 +80,7 @@ public class TextGeneralHandwriting extends AbstractModel{
      * Set 置信度 0 - 100
      * @param Confidence 置信度 0 - 100
      */
-    public void setConfidence(Integer Confidence) {
+    public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 

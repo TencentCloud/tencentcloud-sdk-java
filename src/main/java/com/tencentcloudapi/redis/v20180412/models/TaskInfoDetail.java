@@ -28,7 +28,7 @@ public class TaskInfoDetail extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
     * 开始时间
@@ -68,7 +68,7 @@ public class TaskInfoDetail extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 任务进度
@@ -92,7 +92,7 @@ public class TaskInfoDetail extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private Integer Result;
+    private Long Result;
 
     /**
      * Get 任务Id
@@ -100,7 +100,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @return TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -110,7 +110,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @param TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
@@ -200,7 +200,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @return ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -210,7 +210,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @param ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -260,7 +260,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @return Result 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getResult() {
+    public Long getResult() {
         return this.Result;
     }
 
@@ -270,7 +270,7 @@ public class TaskInfoDetail extends AbstractModel{
      * @param Result 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(Integer Result) {
+    public void setResult(Long Result) {
         this.Result = Result;
     }
 

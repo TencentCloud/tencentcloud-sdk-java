@@ -35,7 +35,7 @@ public class DescribePriceRequest extends AbstractModel{
     */
     @SerializedName("NodeCount")
     @Expose
-    private Integer NodeCount;
+    private Long NodeCount;
 
     /**
     * 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -43,7 +43,7 @@ public class DescribePriceRequest extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
@@ -51,21 +51,21 @@ public class DescribePriceRequest extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 欲购买的时长，单位：月。
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 欲购买的数量，默认查询购买1个实例的价格。
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
      * Get 欲新购实例的可用区ID。 
@@ -89,7 +89,7 @@ public class DescribePriceRequest extends AbstractModel{
      * @return NodeCount 实例节点个数，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public Integer getNodeCount() {
+    public Long getNodeCount() {
         return this.NodeCount;
     }
 
@@ -99,7 +99,7 @@ public class DescribePriceRequest extends AbstractModel{
      * @param NodeCount 实例节点个数，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public void setNodeCount(Integer NodeCount) {
+    public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
@@ -109,7 +109,7 @@ public class DescribePriceRequest extends AbstractModel{
      * @return Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -119,7 +119,7 @@ public class DescribePriceRequest extends AbstractModel{
      * @param Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -129,7 +129,7 @@ public class DescribePriceRequest extends AbstractModel{
      * @return Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
@@ -139,7 +139,7 @@ public class DescribePriceRequest extends AbstractModel{
      * @param Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
@@ -147,7 +147,7 @@ public class DescribePriceRequest extends AbstractModel{
      * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -155,7 +155,7 @@ public class DescribePriceRequest extends AbstractModel{
      * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
@@ -163,7 +163,7 @@ public class DescribePriceRequest extends AbstractModel{
      * Get 欲购买的数量，默认查询购买1个实例的价格。 
      * @return Count 欲购买的数量，默认查询购买1个实例的价格。
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -171,7 +171,7 @@ public class DescribePriceRequest extends AbstractModel{
      * Set 欲购买的数量，默认查询购买1个实例的价格。
      * @param Count 欲购买的数量，默认查询购买1个实例的价格。
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 

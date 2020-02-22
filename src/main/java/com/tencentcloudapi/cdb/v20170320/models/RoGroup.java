@@ -48,21 +48,21 @@ public class RoGroup extends AbstractModel{
     */
     @SerializedName("RoOfflineDelay")
     @Expose
-    private Integer RoOfflineDelay;
+    private Long RoOfflineDelay;
 
     /**
     * 延迟阈值。
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
-    private Integer RoMaxDelayTime;
+    private Long RoMaxDelayTime;
 
     /**
     * 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
     */
     @SerializedName("MinRoInGroup")
     @Expose
-    private Integer MinRoInGroup;
+    private Long MinRoInGroup;
 
     /**
     * 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
@@ -76,7 +76,7 @@ public class RoGroup extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
     * 只读组中的只读实例详情。
@@ -97,7 +97,7 @@ public class RoGroup extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Integer Vport;
+    private Long Vport;
 
     /**
     * 私有网络 ID。
@@ -183,7 +183,7 @@ public class RoGroup extends AbstractModel{
      * Get 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。 
      * @return RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
      */
-    public Integer getRoOfflineDelay() {
+    public Long getRoOfflineDelay() {
         return this.RoOfflineDelay;
     }
 
@@ -191,7 +191,7 @@ public class RoGroup extends AbstractModel{
      * Set 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
      * @param RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
      */
-    public void setRoOfflineDelay(Integer RoOfflineDelay) {
+    public void setRoOfflineDelay(Long RoOfflineDelay) {
         this.RoOfflineDelay = RoOfflineDelay;
     }
 
@@ -199,7 +199,7 @@ public class RoGroup extends AbstractModel{
      * Get 延迟阈值。 
      * @return RoMaxDelayTime 延迟阈值。
      */
-    public Integer getRoMaxDelayTime() {
+    public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
@@ -207,7 +207,7 @@ public class RoGroup extends AbstractModel{
      * Set 延迟阈值。
      * @param RoMaxDelayTime 延迟阈值。
      */
-    public void setRoMaxDelayTime(Integer RoMaxDelayTime) {
+    public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
     }
 
@@ -215,7 +215,7 @@ public class RoGroup extends AbstractModel{
      * Get 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。 
      * @return MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
      */
-    public Integer getMinRoInGroup() {
+    public Long getMinRoInGroup() {
         return this.MinRoInGroup;
     }
 
@@ -223,7 +223,7 @@ public class RoGroup extends AbstractModel{
      * Set 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
      * @param MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
      */
-    public void setMinRoInGroup(Integer MinRoInGroup) {
+    public void setMinRoInGroup(Long MinRoInGroup) {
         this.MinRoInGroup = MinRoInGroup;
     }
 
@@ -247,7 +247,7 @@ public class RoGroup extends AbstractModel{
      * Get 权重值。 
      * @return Weight 权重值。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -255,7 +255,7 @@ public class RoGroup extends AbstractModel{
      * Set 权重值。
      * @param Weight 权重值。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
@@ -295,7 +295,7 @@ public class RoGroup extends AbstractModel{
      * Get 只读组的内网端口号。 
      * @return Vport 只读组的内网端口号。
      */
-    public Integer getVport() {
+    public Long getVport() {
         return this.Vport;
     }
 
@@ -303,7 +303,7 @@ public class RoGroup extends AbstractModel{
      * Set 只读组的内网端口号。
      * @param Vport 只读组的内网端口号。
      */
-    public void setVport(Integer Vport) {
+    public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 

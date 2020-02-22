@@ -27,14 +27,14 @@ public class HostResource extends AbstractModel{
     */
     @SerializedName("CpuTotal")
     @Expose
-    private Integer CpuTotal;
+    private Long CpuTotal;
 
     /**
     * cdh实例可用cpu核数
     */
     @SerializedName("CpuAvailable")
     @Expose
-    private Integer CpuAvailable;
+    private Long CpuAvailable;
 
     /**
     * cdh实例总内存大小（单位为:GiB）
@@ -55,14 +55,14 @@ public class HostResource extends AbstractModel{
     */
     @SerializedName("DiskTotal")
     @Expose
-    private Integer DiskTotal;
+    private Long DiskTotal;
 
     /**
     * cdh实例可用磁盘大小（单位为:GiB）
     */
     @SerializedName("DiskAvailable")
     @Expose
-    private Integer DiskAvailable;
+    private Long DiskAvailable;
 
     /**
     * cdh实例磁盘类型
@@ -75,7 +75,7 @@ public class HostResource extends AbstractModel{
      * Get cdh实例总cpu核数 
      * @return CpuTotal cdh实例总cpu核数
      */
-    public Integer getCpuTotal() {
+    public Long getCpuTotal() {
         return this.CpuTotal;
     }
 
@@ -83,7 +83,7 @@ public class HostResource extends AbstractModel{
      * Set cdh实例总cpu核数
      * @param CpuTotal cdh实例总cpu核数
      */
-    public void setCpuTotal(Integer CpuTotal) {
+    public void setCpuTotal(Long CpuTotal) {
         this.CpuTotal = CpuTotal;
     }
 
@@ -91,7 +91,7 @@ public class HostResource extends AbstractModel{
      * Get cdh实例可用cpu核数 
      * @return CpuAvailable cdh实例可用cpu核数
      */
-    public Integer getCpuAvailable() {
+    public Long getCpuAvailable() {
         return this.CpuAvailable;
     }
 
@@ -99,7 +99,7 @@ public class HostResource extends AbstractModel{
      * Set cdh实例可用cpu核数
      * @param CpuAvailable cdh实例可用cpu核数
      */
-    public void setCpuAvailable(Integer CpuAvailable) {
+    public void setCpuAvailable(Long CpuAvailable) {
         this.CpuAvailable = CpuAvailable;
     }
 
@@ -139,7 +139,7 @@ public class HostResource extends AbstractModel{
      * Get cdh实例总磁盘大小（单位为:GiB） 
      * @return DiskTotal cdh实例总磁盘大小（单位为:GiB）
      */
-    public Integer getDiskTotal() {
+    public Long getDiskTotal() {
         return this.DiskTotal;
     }
 
@@ -147,7 +147,7 @@ public class HostResource extends AbstractModel{
      * Set cdh实例总磁盘大小（单位为:GiB）
      * @param DiskTotal cdh实例总磁盘大小（单位为:GiB）
      */
-    public void setDiskTotal(Integer DiskTotal) {
+    public void setDiskTotal(Long DiskTotal) {
         this.DiskTotal = DiskTotal;
     }
 
@@ -155,7 +155,7 @@ public class HostResource extends AbstractModel{
      * Get cdh实例可用磁盘大小（单位为:GiB） 
      * @return DiskAvailable cdh实例可用磁盘大小（单位为:GiB）
      */
-    public Integer getDiskAvailable() {
+    public Long getDiskAvailable() {
         return this.DiskAvailable;
     }
 
@@ -163,7 +163,7 @@ public class HostResource extends AbstractModel{
      * Set cdh实例可用磁盘大小（单位为:GiB）
      * @param DiskAvailable cdh实例可用磁盘大小（单位为:GiB）
      */
-    public void setDiskAvailable(Integer DiskAvailable) {
+    public void setDiskAvailable(Long DiskAvailable) {
         this.DiskAvailable = DiskAvailable;
     }
 

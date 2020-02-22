@@ -27,7 +27,7 @@ public class DescribeLoadBalancersResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 返回的负载均衡实例数组。
@@ -47,7 +47,7 @@ public class DescribeLoadBalancersResponse extends AbstractModel{
      * Get 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。 
      * @return TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeLoadBalancersResponse extends AbstractModel{
      * Set 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      * @param TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

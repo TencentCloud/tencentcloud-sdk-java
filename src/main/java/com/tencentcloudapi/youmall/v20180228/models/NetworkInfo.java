@@ -76,7 +76,7 @@ public class NetworkInfo extends AbstractModel{
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Integer UpdateTime;
+    private Long UpdateTime;
 
     /**
     * 上报网络状态设备
@@ -201,7 +201,7 @@ public class NetworkInfo extends AbstractModel{
      * Get 更新时间戳 
      * @return UpdateTime 更新时间戳
      */
-    public Integer getUpdateTime() {
+    public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
@@ -209,7 +209,7 @@ public class NetworkInfo extends AbstractModel{
      * Set 更新时间戳
      * @param UpdateTime 更新时间戳
      */
-    public void setUpdateTime(Integer UpdateTime) {
+    public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 

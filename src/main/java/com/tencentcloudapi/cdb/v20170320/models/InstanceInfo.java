@@ -27,7 +27,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("WanStatus")
     @Expose
-    private Integer WanStatus;
+    private Long WanStatus;
 
     /**
     * 可用区信息
@@ -41,7 +41,7 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("InitFlag")
     @Expose
-    private Integer InitFlag;
+    private Long InitFlag;
 
     /**
     * 只读vip信息。单独开通只读实例访问的只读实例才有该字段
@@ -56,21 +56,21 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 私有网络ID，例如：51102
     */
     @SerializedName("VpcId")
     @Expose
-    private Integer VpcId;
+    private Long VpcId;
 
     /**
     * 备机信息
@@ -92,21 +92,21 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("Volume")
     @Expose
-    private Integer Volume;
+    private Long Volume;
 
     /**
     * 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
     */
     @SerializedName("AutoRenew")
     @Expose
-    private Integer AutoRenew;
+    private Long AutoRenew;
 
     /**
     * 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
     */
     @SerializedName("ProtectMode")
     @Expose
-    private Integer ProtectMode;
+    private Long ProtectMode;
 
     /**
     * 只读组详细信息
@@ -121,21 +121,21 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("SubnetId")
     @Expose
-    private Integer SubnetId;
+    private Long SubnetId;
 
     /**
     * 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
     */
     @SerializedName("InstanceType")
     @Expose
-    private Integer InstanceType;
+    private Long InstanceType;
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 地域信息
@@ -156,14 +156,14 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("DeployMode")
     @Expose
-    private Integer DeployMode;
+    private Long DeployMode;
 
     /**
     * 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Integer TaskStatus;
+    private Long TaskStatus;
 
     /**
     * 主实例详细信息
@@ -214,14 +214,14 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("WanPort")
     @Expose
-    private Integer WanPort;
+    private Long WanPort;
 
     /**
     * 付费类型，可能的返回值：0-包年包月；1-按量计费
     */
     @SerializedName("PayType")
     @Expose
-    private Integer PayType;
+    private Long PayType;
 
     /**
     * 实例创建时间
@@ -242,14 +242,14 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Integer Vport;
+    private Long Vport;
 
     /**
     * 是否锁定标记
     */
     @SerializedName("CdbError")
     @Expose
-    private Integer CdbError;
+    private Long CdbError;
 
     /**
     * 私有网络描述符，例如：“vpc-5v8wn9mg”
@@ -277,14 +277,14 @@ public class InstanceInfo extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Integer Cpu;
+    private Long Cpu;
 
     /**
     * 每秒查询数量
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
     * 可用区中文名称
@@ -313,7 +313,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
-    public Integer getWanStatus() {
+    public Long getWanStatus() {
         return this.WanStatus;
     }
 
@@ -321,7 +321,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
-    public void setWanStatus(Integer WanStatus) {
+    public void setWanStatus(Long WanStatus) {
         this.WanStatus = WanStatus;
     }
 
@@ -345,7 +345,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 初始化标志，可能的返回值为：0-未初始化；1-已初始化 
      * @return InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      */
-    public Integer getInitFlag() {
+    public Long getInitFlag() {
         return this.InitFlag;
     }
 
@@ -353,7 +353,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      * @param InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      */
-    public void setInitFlag(Integer InitFlag) {
+    public void setInitFlag(Long InitFlag) {
         this.InitFlag = InitFlag;
     }
 
@@ -381,7 +381,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 内存容量，单位为MB 
      * @return Memory 内存容量，单位为MB
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -389,7 +389,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 内存容量，单位为MB
      * @param Memory 内存容量，单位为MB
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -397,7 +397,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离 
      * @return Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -405,7 +405,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      * @param Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -413,7 +413,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 私有网络ID，例如：51102 
      * @return VpcId 私有网络ID，例如：51102
      */
-    public Integer getVpcId() {
+    public Long getVpcId() {
         return this.VpcId;
     }
 
@@ -421,7 +421,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 私有网络ID，例如：51102
      * @param VpcId 私有网络ID，例如：51102
      */
-    public void setVpcId(Integer VpcId) {
+    public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
@@ -465,7 +465,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 硬盘容量，单位为GB 
      * @return Volume 硬盘容量，单位为GB
      */
-    public Integer getVolume() {
+    public Long getVolume() {
         return this.Volume;
     }
 
@@ -473,7 +473,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 硬盘容量，单位为GB
      * @param Volume 硬盘容量，单位为GB
      */
-    public void setVolume(Integer Volume) {
+    public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
@@ -481,7 +481,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费 
      * @return AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      */
-    public Integer getAutoRenew() {
+    public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
@@ -489,7 +489,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      * @param AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      */
-    public void setAutoRenew(Integer AutoRenew) {
+    public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
@@ -497,7 +497,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制 
      * @return ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      */
-    public Integer getProtectMode() {
+    public Long getProtectMode() {
         return this.ProtectMode;
     }
 
@@ -505,7 +505,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      * @param ProtectMode 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
      */
-    public void setProtectMode(Integer ProtectMode) {
+    public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
@@ -533,7 +533,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 子网ID，例如：2333 
      * @return SubnetId 子网ID，例如：2333
      */
-    public Integer getSubnetId() {
+    public Long getSubnetId() {
         return this.SubnetId;
     }
 
@@ -541,7 +541,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 子网ID，例如：2333
      * @param SubnetId 子网ID，例如：2333
      */
-    public void setSubnetId(Integer SubnetId) {
+    public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
@@ -549,7 +549,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例 
      * @return InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      */
-    public Integer getInstanceType() {
+    public Long getInstanceType() {
         return this.InstanceType;
     }
 
@@ -557,7 +557,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      * @param InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      */
-    public void setInstanceType(Integer InstanceType) {
+    public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
@@ -565,7 +565,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -573,7 +573,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -613,7 +613,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区 
      * @return DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      */
-    public Integer getDeployMode() {
+    public Long getDeployMode() {
         return this.DeployMode;
     }
 
@@ -621,7 +621,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      * @param DeployMode 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
      */
-    public void setDeployMode(Integer DeployMode) {
+    public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
@@ -629,7 +629,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成 
      * @return TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      */
-    public Integer getTaskStatus() {
+    public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -637,7 +637,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      * @param TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      */
-    public void setTaskStatus(Integer TaskStatus) {
+    public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -749,7 +749,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 外网端口号 
      * @return WanPort 外网端口号
      */
-    public Integer getWanPort() {
+    public Long getWanPort() {
         return this.WanPort;
     }
 
@@ -757,7 +757,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 外网端口号
      * @param WanPort 外网端口号
      */
-    public void setWanPort(Integer WanPort) {
+    public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
@@ -765,7 +765,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 付费类型，可能的返回值：0-包年包月；1-按量计费 
      * @return PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
      */
-    public Integer getPayType() {
+    public Long getPayType() {
         return this.PayType;
     }
 
@@ -773,7 +773,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 付费类型，可能的返回值：0-包年包月；1-按量计费
      * @param PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
      */
-    public void setPayType(Integer PayType) {
+    public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
@@ -813,7 +813,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 端口号 
      * @return Vport 端口号
      */
-    public Integer getVport() {
+    public Long getVport() {
         return this.Vport;
     }
 
@@ -821,7 +821,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 端口号
      * @param Vport 端口号
      */
-    public void setVport(Integer Vport) {
+    public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
@@ -829,7 +829,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 是否锁定标记 
      * @return CdbError 是否锁定标记
      */
-    public Integer getCdbError() {
+    public Long getCdbError() {
         return this.CdbError;
     }
 
@@ -837,7 +837,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 是否锁定标记
      * @param CdbError 是否锁定标记
      */
-    public void setCdbError(Integer CdbError) {
+    public void setCdbError(Long CdbError) {
         this.CdbError = CdbError;
     }
 
@@ -893,7 +893,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 核心数 
      * @return Cpu 核心数
      */
-    public Integer getCpu() {
+    public Long getCpu() {
         return this.Cpu;
     }
 
@@ -901,7 +901,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 核心数
      * @param Cpu 核心数
      */
-    public void setCpu(Integer Cpu) {
+    public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -909,7 +909,7 @@ public class InstanceInfo extends AbstractModel{
      * Get 每秒查询数量 
      * @return Qps 每秒查询数量
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -917,7 +917,7 @@ public class InstanceInfo extends AbstractModel{
      * Set 每秒查询数量
      * @param Qps 每秒查询数量
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 

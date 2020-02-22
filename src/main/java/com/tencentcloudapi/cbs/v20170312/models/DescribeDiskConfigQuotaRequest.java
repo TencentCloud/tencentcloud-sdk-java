@@ -69,14 +69,14 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     */
     @SerializedName("CPU")
     @Expose
-    private Integer CPU;
+    private Long CPU;
 
     /**
     * 实例内存大小。
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
      * Get 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。 
@@ -178,7 +178,7 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
      * Get 实例CPU核数。 
      * @return CPU 实例CPU核数。
      */
-    public Integer getCPU() {
+    public Long getCPU() {
         return this.CPU;
     }
 
@@ -186,7 +186,7 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
      * Set 实例CPU核数。
      * @param CPU 实例CPU核数。
      */
-    public void setCPU(Integer CPU) {
+    public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
@@ -194,7 +194,7 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
      * Get 实例内存大小。 
      * @return Memory 实例内存大小。
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -202,7 +202,7 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
      * Set 实例内存大小。
      * @param Memory 实例内存大小。
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 

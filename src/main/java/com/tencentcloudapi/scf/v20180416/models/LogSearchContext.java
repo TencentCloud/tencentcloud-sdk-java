@@ -34,7 +34,7 @@ public class LogSearchContext extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 日志关键词
@@ -70,7 +70,7 @@ public class LogSearchContext extends AbstractModel{
      * Get 日志条数 
      * @return Limit 日志条数
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -78,7 +78,7 @@ public class LogSearchContext extends AbstractModel{
      * Set 日志条数
      * @param Limit 日志条数
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

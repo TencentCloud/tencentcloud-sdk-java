@@ -90,49 +90,49 @@ public class PushQualityData extends AbstractModel{
     */
     @SerializedName("VideoFps")
     @Expose
-    private Integer VideoFps;
+    private Long VideoFps;
 
     /**
     * 视频码率，单位是bps。
     */
     @SerializedName("VideoRate")
     @Expose
-    private Integer VideoRate;
+    private Long VideoRate;
 
     /**
     * 音频帧率。
     */
     @SerializedName("AudioFps")
     @Expose
-    private Integer AudioFps;
+    private Long AudioFps;
 
     /**
     * 音频码率，单位是bps。
     */
     @SerializedName("AudioRate")
     @Expose
-    private Integer AudioRate;
+    private Long AudioRate;
 
     /**
     * 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
     */
     @SerializedName("LocalTs")
     @Expose
-    private Integer LocalTs;
+    private Long LocalTs;
 
     /**
     * 视频流逝时间，单位是ms。
     */
     @SerializedName("VideoTs")
     @Expose
-    private Integer VideoTs;
+    private Long VideoTs;
 
     /**
     * 音频流逝时间，单位是ms。
     */
     @SerializedName("AudioTs")
     @Expose
-    private Integer AudioTs;
+    private Long AudioTs;
 
     /**
      * Get 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
@@ -282,7 +282,7 @@ public class PushQualityData extends AbstractModel{
      * Get 视频帧率。 
      * @return VideoFps 视频帧率。
      */
-    public Integer getVideoFps() {
+    public Long getVideoFps() {
         return this.VideoFps;
     }
 
@@ -290,7 +290,7 @@ public class PushQualityData extends AbstractModel{
      * Set 视频帧率。
      * @param VideoFps 视频帧率。
      */
-    public void setVideoFps(Integer VideoFps) {
+    public void setVideoFps(Long VideoFps) {
         this.VideoFps = VideoFps;
     }
 
@@ -298,7 +298,7 @@ public class PushQualityData extends AbstractModel{
      * Get 视频码率，单位是bps。 
      * @return VideoRate 视频码率，单位是bps。
      */
-    public Integer getVideoRate() {
+    public Long getVideoRate() {
         return this.VideoRate;
     }
 
@@ -306,7 +306,7 @@ public class PushQualityData extends AbstractModel{
      * Set 视频码率，单位是bps。
      * @param VideoRate 视频码率，单位是bps。
      */
-    public void setVideoRate(Integer VideoRate) {
+    public void setVideoRate(Long VideoRate) {
         this.VideoRate = VideoRate;
     }
 
@@ -314,7 +314,7 @@ public class PushQualityData extends AbstractModel{
      * Get 音频帧率。 
      * @return AudioFps 音频帧率。
      */
-    public Integer getAudioFps() {
+    public Long getAudioFps() {
         return this.AudioFps;
     }
 
@@ -322,7 +322,7 @@ public class PushQualityData extends AbstractModel{
      * Set 音频帧率。
      * @param AudioFps 音频帧率。
      */
-    public void setAudioFps(Integer AudioFps) {
+    public void setAudioFps(Long AudioFps) {
         this.AudioFps = AudioFps;
     }
 
@@ -330,7 +330,7 @@ public class PushQualityData extends AbstractModel{
      * Get 音频码率，单位是bps。 
      * @return AudioRate 音频码率，单位是bps。
      */
-    public Integer getAudioRate() {
+    public Long getAudioRate() {
         return this.AudioRate;
     }
 
@@ -338,7 +338,7 @@ public class PushQualityData extends AbstractModel{
      * Set 音频码率，单位是bps。
      * @param AudioRate 音频码率，单位是bps。
      */
-    public void setAudioRate(Integer AudioRate) {
+    public void setAudioRate(Long AudioRate) {
         this.AudioRate = AudioRate;
     }
 
@@ -346,7 +346,7 @@ public class PushQualityData extends AbstractModel{
      * Get 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。 
      * @return LocalTs 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      */
-    public Integer getLocalTs() {
+    public Long getLocalTs() {
         return this.LocalTs;
     }
 
@@ -354,7 +354,7 @@ public class PushQualityData extends AbstractModel{
      * Set 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      * @param LocalTs 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      */
-    public void setLocalTs(Integer LocalTs) {
+    public void setLocalTs(Long LocalTs) {
         this.LocalTs = LocalTs;
     }
 
@@ -362,7 +362,7 @@ public class PushQualityData extends AbstractModel{
      * Get 视频流逝时间，单位是ms。 
      * @return VideoTs 视频流逝时间，单位是ms。
      */
-    public Integer getVideoTs() {
+    public Long getVideoTs() {
         return this.VideoTs;
     }
 
@@ -370,7 +370,7 @@ public class PushQualityData extends AbstractModel{
      * Set 视频流逝时间，单位是ms。
      * @param VideoTs 视频流逝时间，单位是ms。
      */
-    public void setVideoTs(Integer VideoTs) {
+    public void setVideoTs(Long VideoTs) {
         this.VideoTs = VideoTs;
     }
 
@@ -378,7 +378,7 @@ public class PushQualityData extends AbstractModel{
      * Get 音频流逝时间，单位是ms。 
      * @return AudioTs 音频流逝时间，单位是ms。
      */
-    public Integer getAudioTs() {
+    public Long getAudioTs() {
         return this.AudioTs;
     }
 
@@ -386,7 +386,7 @@ public class PushQualityData extends AbstractModel{
      * Set 音频流逝时间，单位是ms。
      * @param AudioTs 音频流逝时间，单位是ms。
      */
-    public void setAudioTs(Integer AudioTs) {
+    public void setAudioTs(Long AudioTs) {
         this.AudioTs = AudioTs;
     }
 

@@ -27,14 +27,14 @@ public class ShieldInfo extends AbstractModel{
     */
     @SerializedName("ShieldCode")
     @Expose
-    private Integer ShieldCode;
+    private Long ShieldCode;
 
     /**
     * 加固后app的大小
     */
     @SerializedName("ShieldSize")
     @Expose
-    private Integer ShieldSize;
+    private Long ShieldSize;
 
     /**
     * 加固后app的md5
@@ -55,7 +55,7 @@ public class ShieldInfo extends AbstractModel{
     */
     @SerializedName("TaskTime")
     @Expose
-    private Integer TaskTime;
+    private Long TaskTime;
 
     /**
     * 任务唯一标识
@@ -75,7 +75,7 @@ public class ShieldInfo extends AbstractModel{
      * Get 加固结果的返回码 
      * @return ShieldCode 加固结果的返回码
      */
-    public Integer getShieldCode() {
+    public Long getShieldCode() {
         return this.ShieldCode;
     }
 
@@ -83,7 +83,7 @@ public class ShieldInfo extends AbstractModel{
      * Set 加固结果的返回码
      * @param ShieldCode 加固结果的返回码
      */
-    public void setShieldCode(Integer ShieldCode) {
+    public void setShieldCode(Long ShieldCode) {
         this.ShieldCode = ShieldCode;
     }
 
@@ -91,7 +91,7 @@ public class ShieldInfo extends AbstractModel{
      * Get 加固后app的大小 
      * @return ShieldSize 加固后app的大小
      */
-    public Integer getShieldSize() {
+    public Long getShieldSize() {
         return this.ShieldSize;
     }
 
@@ -99,7 +99,7 @@ public class ShieldInfo extends AbstractModel{
      * Set 加固后app的大小
      * @param ShieldSize 加固后app的大小
      */
-    public void setShieldSize(Integer ShieldSize) {
+    public void setShieldSize(Long ShieldSize) {
         this.ShieldSize = ShieldSize;
     }
 
@@ -139,7 +139,7 @@ public class ShieldInfo extends AbstractModel{
      * Get 加固的提交时间 
      * @return TaskTime 加固的提交时间
      */
-    public Integer getTaskTime() {
+    public Long getTaskTime() {
         return this.TaskTime;
     }
 
@@ -147,7 +147,7 @@ public class ShieldInfo extends AbstractModel{
      * Set 加固的提交时间
      * @param TaskTime 加固的提交时间
      */
-    public void setTaskTime(Integer TaskTime) {
+    public void setTaskTime(Long TaskTime) {
         this.TaskTime = TaskTime;
     }
 

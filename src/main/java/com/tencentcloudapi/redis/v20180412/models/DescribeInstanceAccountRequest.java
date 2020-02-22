@@ -34,14 +34,14 @@ public class DescribeInstanceAccountRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 分页偏移量
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
      * Get 实例ID 
@@ -63,7 +63,7 @@ public class DescribeInstanceAccountRequest extends AbstractModel{
      * Get 分页大小 
      * @return Limit 分页大小
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -71,7 +71,7 @@ public class DescribeInstanceAccountRequest extends AbstractModel{
      * Set 分页大小
      * @param Limit 分页大小
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -79,7 +79,7 @@ public class DescribeInstanceAccountRequest extends AbstractModel{
      * Get 分页偏移量 
      * @return Offset 分页偏移量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -87,7 +87,7 @@ public class DescribeInstanceAccountRequest extends AbstractModel{
      * Set 分页偏移量
      * @param Offset 分页偏移量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 

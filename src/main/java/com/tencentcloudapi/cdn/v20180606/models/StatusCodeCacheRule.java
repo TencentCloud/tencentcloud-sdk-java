@@ -35,7 +35,7 @@ public class StatusCodeCacheRule extends AbstractModel{
     */
     @SerializedName("CacheTime")
     @Expose
-    private Integer CacheTime;
+    private Long CacheTime;
 
     /**
      * Get http 状态码
@@ -61,7 +61,7 @@ public class StatusCodeCacheRule extends AbstractModel{
      * Get 状态码缓存过期时间，单位秒 
      * @return CacheTime 状态码缓存过期时间，单位秒
      */
-    public Integer getCacheTime() {
+    public Long getCacheTime() {
         return this.CacheTime;
     }
 
@@ -69,7 +69,7 @@ public class StatusCodeCacheRule extends AbstractModel{
      * Set 状态码缓存过期时间，单位秒
      * @param CacheTime 状态码缓存过期时间，单位秒
      */
-    public void setCacheTime(Integer CacheTime) {
+    public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;
     }
 

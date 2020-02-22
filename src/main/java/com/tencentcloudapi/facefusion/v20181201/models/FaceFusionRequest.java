@@ -55,7 +55,7 @@ public class FaceFusionRequest extends AbstractModel{
     */
     @SerializedName("PornDetect")
     @Expose
-    private Integer PornDetect;
+    private Long PornDetect;
 
     /**
     * 0表示不需要鉴政，1表示需要鉴政。默认值为0。
@@ -63,7 +63,7 @@ public class FaceFusionRequest extends AbstractModel{
     */
     @SerializedName("CelebrityIdentify")
     @Expose
-    private Integer CelebrityIdentify;
+    private Long CelebrityIdentify;
 
     /**
      * Get 活动 ID，请在人脸融合控制台查看。 
@@ -133,7 +133,7 @@ public class FaceFusionRequest extends AbstractModel{
      * Get 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。 
      * @return PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      */
-    public Integer getPornDetect() {
+    public Long getPornDetect() {
         return this.PornDetect;
     }
 
@@ -141,7 +141,7 @@ public class FaceFusionRequest extends AbstractModel{
      * Set 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      * @param PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      */
-    public void setPornDetect(Integer PornDetect) {
+    public void setPornDetect(Long PornDetect) {
         this.PornDetect = PornDetect;
     }
 
@@ -151,7 +151,7 @@ public class FaceFusionRequest extends AbstractModel{
      * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
-    public Integer getCelebrityIdentify() {
+    public Long getCelebrityIdentify() {
         return this.CelebrityIdentify;
     }
 
@@ -161,7 +161,7 @@ public class FaceFusionRequest extends AbstractModel{
      * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
-    public void setCelebrityIdentify(Integer CelebrityIdentify) {
+    public void setCelebrityIdentify(Long CelebrityIdentify) {
         this.CelebrityIdentify = CelebrityIdentify;
     }
 

@@ -83,7 +83,7 @@ public class AgentBillElem extends AbstractModel{
     */
     @SerializedName("Amt")
     @Expose
-    private Integer Amt;
+    private Long Amt;
 
     /**
     * agentpay：代付；selfpay：自付
@@ -248,7 +248,7 @@ public class AgentBillElem extends AbstractModel{
      * Get 支付金额，单位分 
      * @return Amt 支付金额，单位分
      */
-    public Integer getAmt() {
+    public Long getAmt() {
         return this.Amt;
     }
 
@@ -256,7 +256,7 @@ public class AgentBillElem extends AbstractModel{
      * Set 支付金额，单位分
      * @param Amt 支付金额，单位分
      */
-    public void setAmt(Integer Amt) {
+    public void setAmt(Long Amt) {
         this.Amt = Amt;
     }
 

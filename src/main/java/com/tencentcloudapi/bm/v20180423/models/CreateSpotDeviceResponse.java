@@ -34,7 +34,7 @@ public class CreateSpotDeviceResponse extends AbstractModel{
     */
     @SerializedName("FlowId")
     @Expose
-    private Integer FlowId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class CreateSpotDeviceResponse extends AbstractModel{
      * Get 任务ID 
      * @return FlowId 任务ID
      */
-    public Integer getFlowId() {
+    public Long getFlowId() {
         return this.FlowId;
     }
 
@@ -71,7 +71,7 @@ public class CreateSpotDeviceResponse extends AbstractModel{
      * Set 任务ID
      * @param FlowId 任务ID
      */
-    public void setFlowId(Integer FlowId) {
+    public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 

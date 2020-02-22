@@ -27,13 +27,13 @@ public class DescribeEipTaskRequest extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
      * Get EIP查询任务ID 
      * @return TaskId EIP查询任务ID
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -41,7 +41,7 @@ public class DescribeEipTaskRequest extends AbstractModel{
      * Set EIP查询任务ID
      * @param TaskId EIP查询任务ID
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 

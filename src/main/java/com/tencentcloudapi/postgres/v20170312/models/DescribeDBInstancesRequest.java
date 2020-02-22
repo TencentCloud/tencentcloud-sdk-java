@@ -34,14 +34,14 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 分页序号，从0开始。
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
      * Get 过滤条件，目前支持：db-instance-id、db-instance-name两种。 
@@ -63,7 +63,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 每页显示数量，默认返回10条。 
      * @return Limit 每页显示数量，默认返回10条。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -71,7 +71,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 每页显示数量，默认返回10条。
      * @param Limit 每页显示数量，默认返回10条。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -79,7 +79,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 分页序号，从0开始。 
      * @return Offset 分页序号，从0开始。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -87,7 +87,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 分页序号，从0开始。
      * @param Offset 分页序号，从0开始。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 

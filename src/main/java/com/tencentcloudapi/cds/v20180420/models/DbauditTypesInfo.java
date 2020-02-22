@@ -41,35 +41,35 @@ public class DbauditTypesInfo extends AbstractModel{
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
     * 最大实例数
     */
     @SerializedName("MaxInstances")
     @Expose
-    private Integer MaxInstances;
+    private Long MaxInstances;
 
     /**
     * 入库速率（每小时）
     */
     @SerializedName("InsertSpeed")
     @Expose
-    private Integer InsertSpeed;
+    private Long InsertSpeed;
 
     /**
     * 最大在线存储量，单位：条
     */
     @SerializedName("OnlineStorageCapacity")
     @Expose
-    private Integer OnlineStorageCapacity;
+    private Long OnlineStorageCapacity;
 
     /**
     * 最大归档存储量，单位：条
     */
     @SerializedName("ArchivingStorageCapacity")
     @Expose
-    private Integer ArchivingStorageCapacity;
+    private Long ArchivingStorageCapacity;
 
     /**
      * Get 规格描述 
@@ -107,7 +107,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Get 最大吞吐量 
      * @return Qps 最大吞吐量
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -115,7 +115,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Set 最大吞吐量
      * @param Qps 最大吞吐量
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
@@ -123,7 +123,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Get 最大实例数 
      * @return MaxInstances 最大实例数
      */
-    public Integer getMaxInstances() {
+    public Long getMaxInstances() {
         return this.MaxInstances;
     }
 
@@ -131,7 +131,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Set 最大实例数
      * @param MaxInstances 最大实例数
      */
-    public void setMaxInstances(Integer MaxInstances) {
+    public void setMaxInstances(Long MaxInstances) {
         this.MaxInstances = MaxInstances;
     }
 
@@ -139,7 +139,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Get 入库速率（每小时） 
      * @return InsertSpeed 入库速率（每小时）
      */
-    public Integer getInsertSpeed() {
+    public Long getInsertSpeed() {
         return this.InsertSpeed;
     }
 
@@ -147,7 +147,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Set 入库速率（每小时）
      * @param InsertSpeed 入库速率（每小时）
      */
-    public void setInsertSpeed(Integer InsertSpeed) {
+    public void setInsertSpeed(Long InsertSpeed) {
         this.InsertSpeed = InsertSpeed;
     }
 
@@ -155,7 +155,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Get 最大在线存储量，单位：条 
      * @return OnlineStorageCapacity 最大在线存储量，单位：条
      */
-    public Integer getOnlineStorageCapacity() {
+    public Long getOnlineStorageCapacity() {
         return this.OnlineStorageCapacity;
     }
 
@@ -163,7 +163,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Set 最大在线存储量，单位：条
      * @param OnlineStorageCapacity 最大在线存储量，单位：条
      */
-    public void setOnlineStorageCapacity(Integer OnlineStorageCapacity) {
+    public void setOnlineStorageCapacity(Long OnlineStorageCapacity) {
         this.OnlineStorageCapacity = OnlineStorageCapacity;
     }
 
@@ -171,7 +171,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Get 最大归档存储量，单位：条 
      * @return ArchivingStorageCapacity 最大归档存储量，单位：条
      */
-    public Integer getArchivingStorageCapacity() {
+    public Long getArchivingStorageCapacity() {
         return this.ArchivingStorageCapacity;
     }
 
@@ -179,7 +179,7 @@ public class DbauditTypesInfo extends AbstractModel{
      * Set 最大归档存储量，单位：条
      * @param ArchivingStorageCapacity 最大归档存储量，单位：条
      */
-    public void setArchivingStorageCapacity(Integer ArchivingStorageCapacity) {
+    public void setArchivingStorageCapacity(Long ArchivingStorageCapacity) {
         this.ArchivingStorageCapacity = ArchivingStorageCapacity;
     }
 

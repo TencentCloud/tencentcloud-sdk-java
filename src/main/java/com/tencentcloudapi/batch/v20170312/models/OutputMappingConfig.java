@@ -34,14 +34,14 @@ public class OutputMappingConfig extends AbstractModel{
     */
     @SerializedName("WorkerNum")
     @Expose
-    private Integer WorkerNum;
+    private Long WorkerNum;
 
     /**
     * worker分块大小，单位MB
     */
     @SerializedName("WorkerPartSize")
     @Expose
-    private Integer WorkerPartSize;
+    private Long WorkerPartSize;
 
     /**
      * Get 存储类型，仅支持COS 
@@ -63,7 +63,7 @@ public class OutputMappingConfig extends AbstractModel{
      * Get 并行worker数量 
      * @return WorkerNum 并行worker数量
      */
-    public Integer getWorkerNum() {
+    public Long getWorkerNum() {
         return this.WorkerNum;
     }
 
@@ -71,7 +71,7 @@ public class OutputMappingConfig extends AbstractModel{
      * Set 并行worker数量
      * @param WorkerNum 并行worker数量
      */
-    public void setWorkerNum(Integer WorkerNum) {
+    public void setWorkerNum(Long WorkerNum) {
         this.WorkerNum = WorkerNum;
     }
 
@@ -79,7 +79,7 @@ public class OutputMappingConfig extends AbstractModel{
      * Get worker分块大小，单位MB 
      * @return WorkerPartSize worker分块大小，单位MB
      */
-    public Integer getWorkerPartSize() {
+    public Long getWorkerPartSize() {
         return this.WorkerPartSize;
     }
 
@@ -87,7 +87,7 @@ public class OutputMappingConfig extends AbstractModel{
      * Set worker分块大小，单位MB
      * @param WorkerPartSize worker分块大小，单位MB
      */
-    public void setWorkerPartSize(Integer WorkerPartSize) {
+    public void setWorkerPartSize(Long WorkerPartSize) {
         this.WorkerPartSize = WorkerPartSize;
     }
 

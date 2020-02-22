@@ -34,7 +34,7 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
     */
     @SerializedName("PersonId")
     @Expose
-    private Integer PersonId;
+    private Long PersonId;
 
     /**
     * 图片BASE编码
@@ -55,14 +55,14 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
     */
     @SerializedName("PersonType")
     @Expose
-    private Integer PersonType;
+    private Long PersonType;
 
     /**
     * 店铺ID，如果不填表示操作集团身份库
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
      * Get 集团ID 
@@ -84,7 +84,7 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
      * Get 需要修改的顾客id 
      * @return PersonId 需要修改的顾客id
      */
-    public Integer getPersonId() {
+    public Long getPersonId() {
         return this.PersonId;
     }
 
@@ -92,7 +92,7 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
      * Set 需要修改的顾客id
      * @param PersonId 需要修改的顾客id
      */
-    public void setPersonId(Integer PersonId) {
+    public void setPersonId(Long PersonId) {
         this.PersonId = PersonId;
     }
 
@@ -132,7 +132,7 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
      * Get 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单） 
      * @return PersonType 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
-    public Integer getPersonType() {
+    public Long getPersonType() {
         return this.PersonType;
     }
 
@@ -140,7 +140,7 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
      * Set 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      * @param PersonType 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
-    public void setPersonType(Integer PersonType) {
+    public void setPersonType(Long PersonType) {
         this.PersonType = PersonType;
     }
 
@@ -148,7 +148,7 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
      * Get 店铺ID，如果不填表示操作集团身份库 
      * @return ShopId 店铺ID，如果不填表示操作集团身份库
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -156,7 +156,7 @@ public class ModifyPersonFeatureInfoRequest extends AbstractModel{
      * Set 店铺ID，如果不填表示操作集团身份库
      * @param ShopId 店铺ID，如果不填表示操作集团身份库
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 

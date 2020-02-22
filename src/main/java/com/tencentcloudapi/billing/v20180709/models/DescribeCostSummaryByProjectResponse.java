@@ -27,7 +27,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel{
     */
     @SerializedName("Ready")
     @Expose
-    private Integer Ready;
+    private Long Ready;
 
     /**
     * 消耗详情
@@ -48,7 +48,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel{
     */
     @SerializedName("RecordNum")
     @Expose
-    private Integer RecordNum;
+    private Long RecordNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,7 +61,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel{
      * Get 数据是否准备好，0未准备好，1准备好 
      * @return Ready 数据是否准备好，0未准备好，1准备好
      */
-    public Integer getReady() {
+    public Long getReady() {
         return this.Ready;
     }
 
@@ -69,7 +69,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel{
      * Set 数据是否准备好，0未准备好，1准备好
      * @param Ready 数据是否准备好，0未准备好，1准备好
      */
-    public void setReady(Integer Ready) {
+    public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
@@ -109,7 +109,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel{
      * Get 记录数量，NeedRecordNum为0是返回null 
      * @return RecordNum 记录数量，NeedRecordNum为0是返回null
      */
-    public Integer getRecordNum() {
+    public Long getRecordNum() {
         return this.RecordNum;
     }
 
@@ -117,7 +117,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel{
      * Set 记录数量，NeedRecordNum为0是返回null
      * @param RecordNum 记录数量，NeedRecordNum为0是返回null
      */
-    public void setRecordNum(Integer RecordNum) {
+    public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;
     }
 

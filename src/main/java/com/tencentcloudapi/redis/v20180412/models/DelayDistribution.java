@@ -27,20 +27,20 @@ public class DelayDistribution extends AbstractModel{
     */
     @SerializedName("Ladder")
     @Expose
-    private Integer Ladder;
+    private Long Ladder;
 
     /**
     * 大小
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
      * Get 分布阶梯 
      * @return Ladder 分布阶梯
      */
-    public Integer getLadder() {
+    public Long getLadder() {
         return this.Ladder;
     }
 
@@ -48,7 +48,7 @@ public class DelayDistribution extends AbstractModel{
      * Set 分布阶梯
      * @param Ladder 分布阶梯
      */
-    public void setLadder(Integer Ladder) {
+    public void setLadder(Long Ladder) {
         this.Ladder = Ladder;
     }
 
@@ -56,7 +56,7 @@ public class DelayDistribution extends AbstractModel{
      * Get 大小 
      * @return Size 大小
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -64,7 +64,7 @@ public class DelayDistribution extends AbstractModel{
      * Set 大小
      * @param Size 大小
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 

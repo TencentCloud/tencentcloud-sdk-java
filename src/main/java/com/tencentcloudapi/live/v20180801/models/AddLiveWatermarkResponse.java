@@ -27,7 +27,7 @@ public class AddLiveWatermarkResponse extends AbstractModel{
     */
     @SerializedName("WatermarkId")
     @Expose
-    private Integer WatermarkId;
+    private Long WatermarkId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class AddLiveWatermarkResponse extends AbstractModel{
      * Get 水印ID。 
      * @return WatermarkId 水印ID。
      */
-    public Integer getWatermarkId() {
+    public Long getWatermarkId() {
         return this.WatermarkId;
     }
 
@@ -48,7 +48,7 @@ public class AddLiveWatermarkResponse extends AbstractModel{
      * Set 水印ID。
      * @param WatermarkId 水印ID。
      */
-    public void setWatermarkId(Integer WatermarkId) {
+    public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;
     }
 

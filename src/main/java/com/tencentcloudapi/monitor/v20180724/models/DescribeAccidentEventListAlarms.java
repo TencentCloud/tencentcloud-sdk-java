@@ -44,7 +44,7 @@ public class DescribeAccidentEventListAlarms extends AbstractModel{
     */
     @SerializedName("BusinessID")
     @Expose
-    private Integer BusinessID;
+    private Long BusinessID;
 
     /**
     * 事件状态的ID，0表示已恢复，1表示未恢复
@@ -52,7 +52,7 @@ public class DescribeAccidentEventListAlarms extends AbstractModel{
     */
     @SerializedName("EventStatus")
     @Expose
-    private Integer EventStatus;
+    private Long EventStatus;
 
     /**
     * 影响的对象
@@ -132,7 +132,7 @@ public class DescribeAccidentEventListAlarms extends AbstractModel{
      * @return BusinessID 事件分类的ID，1表示服务问题，2表示其他订阅
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getBusinessID() {
+    public Long getBusinessID() {
         return this.BusinessID;
     }
 
@@ -142,7 +142,7 @@ public class DescribeAccidentEventListAlarms extends AbstractModel{
      * @param BusinessID 事件分类的ID，1表示服务问题，2表示其他订阅
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBusinessID(Integer BusinessID) {
+    public void setBusinessID(Long BusinessID) {
         this.BusinessID = BusinessID;
     }
 
@@ -152,7 +152,7 @@ public class DescribeAccidentEventListAlarms extends AbstractModel{
      * @return EventStatus 事件状态的ID，0表示已恢复，1表示未恢复
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getEventStatus() {
+    public Long getEventStatus() {
         return this.EventStatus;
     }
 
@@ -162,7 +162,7 @@ public class DescribeAccidentEventListAlarms extends AbstractModel{
      * @param EventStatus 事件状态的ID，0表示已恢复，1表示未恢复
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEventStatus(Integer EventStatus) {
+    public void setEventStatus(Long EventStatus) {
         this.EventStatus = EventStatus;
     }
 

@@ -36,7 +36,7 @@ public class ImportKeyPairRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 密钥对的公钥内容，`OpenSSH RSA` 格式。
@@ -69,7 +69,7 @@ public class ImportKeyPairRequest extends AbstractModel{
 
 如果是默认项目，直接填0就可以。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -81,7 +81,7 @@ public class ImportKeyPairRequest extends AbstractModel{
 
 如果是默认项目，直接填0就可以。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

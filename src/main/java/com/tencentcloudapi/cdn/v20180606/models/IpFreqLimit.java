@@ -38,7 +38,7 @@ off：关闭
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
      * Get IP 限频配置开关
@@ -72,7 +72,7 @@ off：关闭
 超出限制的请求会直接返回 514
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -84,7 +84,7 @@ off：关闭
 超出限制的请求会直接返回 514
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 

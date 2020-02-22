@@ -37,7 +37,7 @@ public class QuestionObj extends AbstractModel{
     */
     @SerializedName("QuestionTextType")
     @Expose
-    private Integer QuestionTextType;
+    private Long QuestionTextType;
 
     /**
     * 题干
@@ -86,7 +86,7 @@ public class QuestionObj extends AbstractModel{
 2: "填空题"
 3: "解答题"
      */
-    public Integer getQuestionTextType() {
+    public Long getQuestionTextType() {
         return this.QuestionTextType;
     }
 
@@ -100,7 +100,7 @@ public class QuestionObj extends AbstractModel{
 2: "填空题"
 3: "解答题"
      */
-    public void setQuestionTextType(Integer QuestionTextType) {
+    public void setQuestionTextType(Long QuestionTextType) {
         this.QuestionTextType = QuestionTextType;
     }
 

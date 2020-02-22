@@ -34,7 +34,7 @@ public class DeleteLiveDomainRequest extends AbstractModel{
     */
     @SerializedName("DomainType")
     @Expose
-    private Integer DomainType;
+    private Long DomainType;
 
     /**
      * Get 要删除的域名 
@@ -56,7 +56,7 @@ public class DeleteLiveDomainRequest extends AbstractModel{
      * Get 类型。0-推流，1-播放 
      * @return DomainType 类型。0-推流，1-播放
      */
-    public Integer getDomainType() {
+    public Long getDomainType() {
         return this.DomainType;
     }
 
@@ -64,7 +64,7 @@ public class DeleteLiveDomainRequest extends AbstractModel{
      * Set 类型。0-推流，1-播放
      * @param DomainType 类型。0-推流，1-播放
      */
-    public void setDomainType(Integer DomainType) {
+    public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;
     }
 

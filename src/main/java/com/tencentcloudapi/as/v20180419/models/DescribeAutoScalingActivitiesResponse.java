@@ -27,7 +27,7 @@ public class DescribeAutoScalingActivitiesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 符合条件的伸缩活动信息集合。
@@ -47,7 +47,7 @@ public class DescribeAutoScalingActivitiesResponse extends AbstractModel{
      * Get 符合条件的伸缩活动数量。 
      * @return TotalCount 符合条件的伸缩活动数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeAutoScalingActivitiesResponse extends AbstractModel{
      * Set 符合条件的伸缩活动数量。
      * @param TotalCount 符合条件的伸缩活动数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

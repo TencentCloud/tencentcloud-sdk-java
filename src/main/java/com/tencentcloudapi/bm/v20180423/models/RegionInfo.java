@@ -34,7 +34,7 @@ public class RegionInfo extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
     * 地域描述
@@ -70,7 +70,7 @@ public class RegionInfo extends AbstractModel{
      * Get 地域整型ID 
      * @return RegionId 地域整型ID
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -78,7 +78,7 @@ public class RegionInfo extends AbstractModel{
      * Set 地域整型ID
      * @param RegionId 地域整型ID
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 

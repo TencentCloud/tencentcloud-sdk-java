@@ -28,7 +28,7 @@ public class FairPlayPemDigestInfo extends AbstractModel{
     */
     @SerializedName("FairPlayPemId")
     @Expose
-    private Integer FairPlayPemId;
+    private Long FairPlayPemId;
 
     /**
     * 私钥的优先级。
@@ -36,7 +36,7 @@ public class FairPlayPemDigestInfo extends AbstractModel{
     */
     @SerializedName("Priority")
     @Expose
-    private Integer Priority;
+    private Long Priority;
 
     /**
     * 私钥的md5 信息。
@@ -68,7 +68,7 @@ public class FairPlayPemDigestInfo extends AbstractModel{
      * @return FairPlayPemId fairplay 私钥pem id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getFairPlayPemId() {
+    public Long getFairPlayPemId() {
         return this.FairPlayPemId;
     }
 
@@ -78,7 +78,7 @@ public class FairPlayPemDigestInfo extends AbstractModel{
      * @param FairPlayPemId fairplay 私钥pem id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFairPlayPemId(Integer FairPlayPemId) {
+    public void setFairPlayPemId(Long FairPlayPemId) {
         this.FairPlayPemId = FairPlayPemId;
     }
 
@@ -88,7 +88,7 @@ public class FairPlayPemDigestInfo extends AbstractModel{
      * @return Priority 私钥的优先级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getPriority() {
+    public Long getPriority() {
         return this.Priority;
     }
 
@@ -98,7 +98,7 @@ public class FairPlayPemDigestInfo extends AbstractModel{
      * @param Priority 私钥的优先级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPriority(Integer Priority) {
+    public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 

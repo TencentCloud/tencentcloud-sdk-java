@@ -48,7 +48,7 @@ public class CertDetailLoadBalancer extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
      * Get 黑石负载均衡实例ID。 
@@ -102,7 +102,7 @@ public class CertDetailLoadBalancer extends AbstractModel{
      * Get 该黑石负载均衡所在的regionId。 
      * @return RegionId 该黑石负载均衡所在的regionId。
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -110,7 +110,7 @@ public class CertDetailLoadBalancer extends AbstractModel{
      * Set 该黑石负载均衡所在的regionId。
      * @param RegionId 该黑石负载均衡所在的regionId。
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 

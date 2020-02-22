@@ -55,28 +55,28 @@ public class TrafficMirror extends AbstractModel{
     */
     @SerializedName("HealthSwitch")
     @Expose
-    private Integer HealthSwitch;
+    private Long HealthSwitch;
 
     /**
     * 健康阈值。
     */
     @SerializedName("HealthNum")
     @Expose
-    private Integer HealthNum;
+    private Long HealthNum;
 
     /**
     * 不健康阈值。
     */
     @SerializedName("UnhealthNum")
     @Expose
-    private Integer UnhealthNum;
+    private Long UnhealthNum;
 
     /**
     * 检查间隔。
     */
     @SerializedName("IntervalTime")
     @Expose
-    private Integer IntervalTime;
+    private Long IntervalTime;
 
     /**
     * 检查域名。
@@ -97,7 +97,7 @@ public class TrafficMirror extends AbstractModel{
     */
     @SerializedName("HttpCodes")
     @Expose
-    private Integer [] HttpCodes;
+    private Long [] HttpCodes;
 
     /**
     * 创建时间。
@@ -188,7 +188,7 @@ public class TrafficMirror extends AbstractModel{
      * Get 是否开始对接收机的健康检查。0：关闭，非0：开启。 
      * @return HealthSwitch 是否开始对接收机的健康检查。0：关闭，非0：开启。
      */
-    public Integer getHealthSwitch() {
+    public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
@@ -196,7 +196,7 @@ public class TrafficMirror extends AbstractModel{
      * Set 是否开始对接收机的健康检查。0：关闭，非0：开启。
      * @param HealthSwitch 是否开始对接收机的健康检查。0：关闭，非0：开启。
      */
-    public void setHealthSwitch(Integer HealthSwitch) {
+    public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
@@ -204,7 +204,7 @@ public class TrafficMirror extends AbstractModel{
      * Get 健康阈值。 
      * @return HealthNum 健康阈值。
      */
-    public Integer getHealthNum() {
+    public Long getHealthNum() {
         return this.HealthNum;
     }
 
@@ -212,7 +212,7 @@ public class TrafficMirror extends AbstractModel{
      * Set 健康阈值。
      * @param HealthNum 健康阈值。
      */
-    public void setHealthNum(Integer HealthNum) {
+    public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
@@ -220,7 +220,7 @@ public class TrafficMirror extends AbstractModel{
      * Get 不健康阈值。 
      * @return UnhealthNum 不健康阈值。
      */
-    public Integer getUnhealthNum() {
+    public Long getUnhealthNum() {
         return this.UnhealthNum;
     }
 
@@ -228,7 +228,7 @@ public class TrafficMirror extends AbstractModel{
      * Set 不健康阈值。
      * @param UnhealthNum 不健康阈值。
      */
-    public void setUnhealthNum(Integer UnhealthNum) {
+    public void setUnhealthNum(Long UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
@@ -236,7 +236,7 @@ public class TrafficMirror extends AbstractModel{
      * Get 检查间隔。 
      * @return IntervalTime 检查间隔。
      */
-    public Integer getIntervalTime() {
+    public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
@@ -244,7 +244,7 @@ public class TrafficMirror extends AbstractModel{
      * Set 检查间隔。
      * @param IntervalTime 检查间隔。
      */
-    public void setIntervalTime(Integer IntervalTime) {
+    public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
@@ -284,7 +284,7 @@ public class TrafficMirror extends AbstractModel{
      * Get 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。 
      * @return HttpCodes 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
      */
-    public Integer [] getHttpCodes() {
+    public Long [] getHttpCodes() {
         return this.HttpCodes;
     }
 
@@ -292,7 +292,7 @@ public class TrafficMirror extends AbstractModel{
      * Set 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
      * @param HttpCodes 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
      */
-    public void setHttpCodes(Integer [] HttpCodes) {
+    public void setHttpCodes(Long [] HttpCodes) {
         this.HttpCodes = HttpCodes;
     }
 

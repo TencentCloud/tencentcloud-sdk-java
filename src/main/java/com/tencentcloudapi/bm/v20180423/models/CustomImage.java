@@ -41,7 +41,7 @@ public class CustomImage extends AbstractModel{
     */
     @SerializedName("ImageStatus")
     @Expose
-    private Integer ImageStatus;
+    private Long ImageStatus;
 
     /**
     * 镜像OS名
@@ -62,14 +62,14 @@ public class CustomImage extends AbstractModel{
     */
     @SerializedName("OsBit")
     @Expose
-    private Integer OsBit;
+    private Long OsBit;
 
     /**
     * 镜像大小(M)
     */
     @SerializedName("ImageSize")
     @Expose
-    private Integer ImageSize;
+    private Long ImageSize;
 
     /**
     * 创建时间
@@ -104,7 +104,7 @@ public class CustomImage extends AbstractModel{
     */
     @SerializedName("OsTypeId")
     @Expose
-    private Integer OsTypeId;
+    private Long OsTypeId;
 
     /**
      * Get 镜像ID 
@@ -142,7 +142,7 @@ public class CustomImage extends AbstractModel{
      * Get 镜像状态码 
      * @return ImageStatus 镜像状态码
      */
-    public Integer getImageStatus() {
+    public Long getImageStatus() {
         return this.ImageStatus;
     }
 
@@ -150,7 +150,7 @@ public class CustomImage extends AbstractModel{
      * Set 镜像状态码
      * @param ImageStatus 镜像状态码
      */
-    public void setImageStatus(Integer ImageStatus) {
+    public void setImageStatus(Long ImageStatus) {
         this.ImageStatus = ImageStatus;
     }
 
@@ -190,7 +190,7 @@ public class CustomImage extends AbstractModel{
      * Get OS是64还是32位 
      * @return OsBit OS是64还是32位
      */
-    public Integer getOsBit() {
+    public Long getOsBit() {
         return this.OsBit;
     }
 
@@ -198,7 +198,7 @@ public class CustomImage extends AbstractModel{
      * Set OS是64还是32位
      * @param OsBit OS是64还是32位
      */
-    public void setOsBit(Integer OsBit) {
+    public void setOsBit(Long OsBit) {
         this.OsBit = OsBit;
     }
 
@@ -206,7 +206,7 @@ public class CustomImage extends AbstractModel{
      * Get 镜像大小(M) 
      * @return ImageSize 镜像大小(M)
      */
-    public Integer getImageSize() {
+    public Long getImageSize() {
         return this.ImageSize;
     }
 
@@ -214,7 +214,7 @@ public class CustomImage extends AbstractModel{
      * Set 镜像大小(M)
      * @param ImageSize 镜像大小(M)
      */
-    public void setImageSize(Integer ImageSize) {
+    public void setImageSize(Long ImageSize) {
         this.ImageSize = ImageSize;
     }
 
@@ -286,7 +286,7 @@ public class CustomImage extends AbstractModel{
      * Get 原始镜像id 
      * @return OsTypeId 原始镜像id
      */
-    public Integer getOsTypeId() {
+    public Long getOsTypeId() {
         return this.OsTypeId;
     }
 
@@ -294,7 +294,7 @@ public class CustomImage extends AbstractModel{
      * Set 原始镜像id
      * @param OsTypeId 原始镜像id
      */
-    public void setOsTypeId(Integer OsTypeId) {
+    public void setOsTypeId(Long OsTypeId) {
         this.OsTypeId = OsTypeId;
     }
 

@@ -69,7 +69,7 @@ public class GetLayerVersionResponse extends AbstractModel{
     */
     @SerializedName("LayerVersion")
     @Expose
-    private Integer LayerVersion;
+    private Long LayerVersion;
 
     /**
     * 层名称
@@ -196,7 +196,7 @@ Deleted 已删除
      * Get 版本号 
      * @return LayerVersion 版本号
      */
-    public Integer getLayerVersion() {
+    public Long getLayerVersion() {
         return this.LayerVersion;
     }
 
@@ -204,7 +204,7 @@ Deleted 已删除
      * Set 版本号
      * @param LayerVersion 版本号
      */
-    public void setLayerVersion(Integer LayerVersion) {
+    public void setLayerVersion(Long LayerVersion) {
         this.LayerVersion = LayerVersion;
     }
 

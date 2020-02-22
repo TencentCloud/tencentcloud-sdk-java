@@ -42,7 +42,7 @@ public class TextToVoiceRequest extends AbstractModel{
     */
     @SerializedName("ModelType")
     @Expose
-    private Integer ModelType;
+    private Long ModelType;
 
     /**
     * 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
@@ -64,28 +64,28 @@ public class TextToVoiceRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
     */
     @SerializedName("VoiceType")
     @Expose
-    private Integer VoiceType;
+    private Long VoiceType;
 
     /**
     * 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
     */
     @SerializedName("PrimaryLanguage")
     @Expose
-    private Integer PrimaryLanguage;
+    private Long PrimaryLanguage;
 
     /**
     * 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
     */
     @SerializedName("SampleRate")
     @Expose
-    private Integer SampleRate;
+    private Long SampleRate;
 
     /**
     * 返回音频格式，可取值：wav（默认），mp3
@@ -134,7 +134,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Get 模型类型，1-默认模型。 
      * @return ModelType 模型类型，1-默认模型。
      */
-    public Integer getModelType() {
+    public Long getModelType() {
         return this.ModelType;
     }
 
@@ -142,7 +142,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Set 模型类型，1-默认模型。
      * @param ModelType 模型类型，1-默认模型。
      */
-    public void setModelType(Integer ModelType) {
+    public void setModelType(Long ModelType) {
         this.ModelType = ModelType;
     }
 
@@ -186,7 +186,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Get 项目id，用户自定义，默认为0。 
      * @return ProjectId 项目id，用户自定义，默认为0。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -194,7 +194,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Set 项目id，用户自定义，默认为0。
      * @param ProjectId 项目id，用户自定义，默认为0。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -202,7 +202,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Get 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li> 
      * @return VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
-    public Integer getVoiceType() {
+    public Long getVoiceType() {
         return this.VoiceType;
     }
 
@@ -210,7 +210,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Set 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      * @param VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
-    public void setVoiceType(Integer VoiceType) {
+    public void setVoiceType(Long VoiceType) {
         this.VoiceType = VoiceType;
     }
 
@@ -218,7 +218,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Get 主语言类型：<li>1-中文（默认）</li><li>2-英文</li> 
      * @return PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      */
-    public Integer getPrimaryLanguage() {
+    public Long getPrimaryLanguage() {
         return this.PrimaryLanguage;
     }
 
@@ -226,7 +226,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Set 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      */
-    public void setPrimaryLanguage(Integer PrimaryLanguage) {
+    public void setPrimaryLanguage(Long PrimaryLanguage) {
         this.PrimaryLanguage = PrimaryLanguage;
     }
 
@@ -234,7 +234,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Get 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li> 
      * @return SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      */
-    public Integer getSampleRate() {
+    public Long getSampleRate() {
         return this.SampleRate;
     }
 
@@ -242,7 +242,7 @@ public class TextToVoiceRequest extends AbstractModel{
      * Set 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      */
-    public void setSampleRate(Integer SampleRate) {
+    public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 

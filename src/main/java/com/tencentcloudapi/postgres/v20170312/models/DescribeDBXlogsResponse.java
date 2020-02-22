@@ -27,7 +27,7 @@ public class DescribeDBXlogsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * Xlog列表
@@ -47,7 +47,7 @@ public class DescribeDBXlogsResponse extends AbstractModel{
      * Get 表示此次返回结果有多少条数据。 
      * @return TotalCount 表示此次返回结果有多少条数据。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBXlogsResponse extends AbstractModel{
      * Set 表示此次返回结果有多少条数据。
      * @param TotalCount 表示此次返回结果有多少条数据。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

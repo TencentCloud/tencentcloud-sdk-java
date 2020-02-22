@@ -34,14 +34,14 @@ public class TrajectorySunData extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 该动线平均停留时间（秒）
     */
     @SerializedName("AvgStayTime")
     @Expose
-    private Integer AvgStayTime;
+    private Long AvgStayTime;
 
     /**
      * Get 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID 
@@ -63,7 +63,7 @@ public class TrajectorySunData extends AbstractModel{
      * Get 该动线出现次数 
      * @return Count 该动线出现次数
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -71,7 +71,7 @@ public class TrajectorySunData extends AbstractModel{
      * Set 该动线出现次数
      * @param Count 该动线出现次数
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
@@ -79,7 +79,7 @@ public class TrajectorySunData extends AbstractModel{
      * Get 该动线平均停留时间（秒） 
      * @return AvgStayTime 该动线平均停留时间（秒）
      */
-    public Integer getAvgStayTime() {
+    public Long getAvgStayTime() {
         return this.AvgStayTime;
     }
 
@@ -87,7 +87,7 @@ public class TrajectorySunData extends AbstractModel{
      * Set 该动线平均停留时间（秒）
      * @param AvgStayTime 该动线平均停留时间（秒）
      */
-    public void setAvgStayTime(Integer AvgStayTime) {
+    public void setAvgStayTime(Long AvgStayTime) {
         this.AvgStayTime = AvgStayTime;
     }
 

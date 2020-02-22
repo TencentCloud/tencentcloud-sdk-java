@@ -27,20 +27,20 @@ public class ListMigrationProjectRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回条数，默认值为500
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 记录起始数，默认值为0 
      * @return Offset 记录起始数，默认值为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -48,7 +48,7 @@ public class ListMigrationProjectRequest extends AbstractModel{
      * Set 记录起始数，默认值为0
      * @param Offset 记录起始数，默认值为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -56,7 +56,7 @@ public class ListMigrationProjectRequest extends AbstractModel{
      * Get 返回条数，默认值为500 
      * @return Limit 返回条数，默认值为500
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -64,7 +64,7 @@ public class ListMigrationProjectRequest extends AbstractModel{
      * Set 返回条数，默认值为500
      * @param Limit 返回条数，默认值为500
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

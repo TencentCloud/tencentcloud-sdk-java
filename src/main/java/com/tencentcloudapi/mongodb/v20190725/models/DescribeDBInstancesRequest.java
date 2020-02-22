@@ -34,21 +34,21 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("InstanceType")
     @Expose
-    private Integer InstanceType;
+    private Long InstanceType;
 
     /**
     * 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
     */
     @SerializedName("ClusterType")
     @Expose
-    private Integer ClusterType;
+    private Long ClusterType;
 
     /**
     * 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
     */
     @SerializedName("Status")
     @Expose
-    private Integer [] Status;
+    private Long [] Status;
 
     /**
     * 私有网络的ID，基础网络则不传该参数
@@ -69,21 +69,21 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
     * 单次请求返回的数量，最小值为1，最大值为100，默认值为20
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，默认值为0
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
@@ -104,7 +104,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("ProjectIds")
     @Expose
-    private Integer [] ProjectIds;
+    private Long [] ProjectIds;
 
     /**
     * 搜索关键词，支持实例Id、实例名称、完整IP
@@ -133,7 +133,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例 
      * @return InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
      */
-    public Integer getInstanceType() {
+    public Long getInstanceType() {
         return this.InstanceType;
     }
 
@@ -141,7 +141,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
      * @param InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
      */
-    public void setInstanceType(Integer InstanceType) {
+    public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
@@ -149,7 +149,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例 
      * @return ClusterType 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
      */
-    public Integer getClusterType() {
+    public Long getClusterType() {
         return this.ClusterType;
     }
 
@@ -157,7 +157,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
      * @param ClusterType 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
      */
-    public void setClusterType(Integer ClusterType) {
+    public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
@@ -165,7 +165,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期 
      * @return Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
      */
-    public Integer [] getStatus() {
+    public Long [] getStatus() {
         return this.Status;
     }
 
@@ -173,7 +173,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
      * @param Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
      */
-    public void setStatus(Integer [] Status) {
+    public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
@@ -213,7 +213,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月 
      * @return PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
@@ -221,7 +221,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
      * @param PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -229,7 +229,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 单次请求返回的数量，最小值为1，最大值为100，默认值为20 
      * @return Limit 单次请求返回的数量，最小值为1，最大值为100，默认值为20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -237,7 +237,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 单次请求返回的数量，最小值为1，最大值为100，默认值为20
      * @param Limit 单次请求返回的数量，最小值为1，最大值为100，默认值为20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -245,7 +245,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 偏移量，默认值为0 
      * @return Offset 偏移量，默认值为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -253,7 +253,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 偏移量，默认值为0
      * @param Offset 偏移量，默认值为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -293,7 +293,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get 项目 ID 
      * @return ProjectIds 项目 ID
      */
-    public Integer [] getProjectIds() {
+    public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
@@ -301,7 +301,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set 项目 ID
      * @param ProjectIds 项目 ID
      */
-    public void setProjectIds(Integer [] ProjectIds) {
+    public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 

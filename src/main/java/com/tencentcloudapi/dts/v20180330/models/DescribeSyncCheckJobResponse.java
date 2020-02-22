@@ -34,7 +34,7 @@ public class DescribeSyncCheckJobResponse extends AbstractModel{
     */
     @SerializedName("ErrorCode")
     @Expose
-    private Integer ErrorCode;
+    private Long ErrorCode;
 
     /**
     * 提示信息
@@ -55,7 +55,7 @@ public class DescribeSyncCheckJobResponse extends AbstractModel{
     */
     @SerializedName("CheckFlag")
     @Expose
-    private Integer CheckFlag;
+    private Long CheckFlag;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,7 +84,7 @@ public class DescribeSyncCheckJobResponse extends AbstractModel{
      * Get 任务校验结果代码 
      * @return ErrorCode 任务校验结果代码
      */
-    public Integer getErrorCode() {
+    public Long getErrorCode() {
         return this.ErrorCode;
     }
 
@@ -92,7 +92,7 @@ public class DescribeSyncCheckJobResponse extends AbstractModel{
      * Set 任务校验结果代码
      * @param ErrorCode 任务校验结果代码
      */
-    public void setErrorCode(Integer ErrorCode) {
+    public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
@@ -132,7 +132,7 @@ public class DescribeSyncCheckJobResponse extends AbstractModel{
      * Get 校验标志：0（尚未校验成功） ， 1（校验成功） 
      * @return CheckFlag 校验标志：0（尚未校验成功） ， 1（校验成功）
      */
-    public Integer getCheckFlag() {
+    public Long getCheckFlag() {
         return this.CheckFlag;
     }
 
@@ -140,7 +140,7 @@ public class DescribeSyncCheckJobResponse extends AbstractModel{
      * Set 校验标志：0（尚未校验成功） ， 1（校验成功）
      * @param CheckFlag 校验标志：0（尚未校验成功） ， 1（校验成功）
      */
-    public void setCheckFlag(Integer CheckFlag) {
+    public void setCheckFlag(Long CheckFlag) {
         this.CheckFlag = CheckFlag;
     }
 

@@ -55,7 +55,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
     */
     @SerializedName("CpuId")
     @Expose
-    private Integer CpuId;
+    private Long CpuId;
 
     /**
     * 硬盘类型，自定义机型时需传入
@@ -69,28 +69,28 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
     * 硬盘数量，自定义机型时需传入
     */
     @SerializedName("DiskNum")
     @Expose
-    private Integer DiskNum;
+    private Long DiskNum;
 
     /**
     * 内存总大小，自定义机型时需传入
     */
     @SerializedName("Mem")
     @Expose
-    private Integer Mem;
+    private Long Mem;
 
     /**
     * 是否支持raid，自定义机型时需传入
     */
     @SerializedName("HaveRaidCard")
     @Expose
-    private Integer HaveRaidCard;
+    private Long HaveRaidCard;
 
     /**
      * Get 可用区 
@@ -160,7 +160,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Get CpuId，自定义机型时需传入 
      * @return CpuId CpuId，自定义机型时需传入
      */
-    public Integer getCpuId() {
+    public Long getCpuId() {
         return this.CpuId;
     }
 
@@ -168,7 +168,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Set CpuId，自定义机型时需传入
      * @param CpuId CpuId，自定义机型时需传入
      */
-    public void setCpuId(Integer CpuId) {
+    public void setCpuId(Long CpuId) {
         this.CpuId = CpuId;
     }
 
@@ -192,7 +192,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Get 单块硬盘大小，自定义机型时需传入 
      * @return DiskSize 单块硬盘大小，自定义机型时需传入
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -200,7 +200,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Set 单块硬盘大小，自定义机型时需传入
      * @param DiskSize 单块硬盘大小，自定义机型时需传入
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -208,7 +208,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Get 硬盘数量，自定义机型时需传入 
      * @return DiskNum 硬盘数量，自定义机型时需传入
      */
-    public Integer getDiskNum() {
+    public Long getDiskNum() {
         return this.DiskNum;
     }
 
@@ -216,7 +216,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Set 硬盘数量，自定义机型时需传入
      * @param DiskNum 硬盘数量，自定义机型时需传入
      */
-    public void setDiskNum(Integer DiskNum) {
+    public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;
     }
 
@@ -224,7 +224,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Get 内存总大小，自定义机型时需传入 
      * @return Mem 内存总大小，自定义机型时需传入
      */
-    public Integer getMem() {
+    public Long getMem() {
         return this.Mem;
     }
 
@@ -232,7 +232,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Set 内存总大小，自定义机型时需传入
      * @param Mem 内存总大小，自定义机型时需传入
      */
-    public void setMem(Integer Mem) {
+    public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
@@ -240,7 +240,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Get 是否支持raid，自定义机型时需传入 
      * @return HaveRaidCard 是否支持raid，自定义机型时需传入
      */
-    public Integer getHaveRaidCard() {
+    public Long getHaveRaidCard() {
         return this.HaveRaidCard;
     }
 
@@ -248,7 +248,7 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
      * Set 是否支持raid，自定义机型时需传入
      * @param HaveRaidCard 是否支持raid，自定义机型时需传入
      */
-    public void setHaveRaidCard(Integer HaveRaidCard) {
+    public void setHaveRaidCard(Long HaveRaidCard) {
         this.HaveRaidCard = HaveRaidCard;
     }
 

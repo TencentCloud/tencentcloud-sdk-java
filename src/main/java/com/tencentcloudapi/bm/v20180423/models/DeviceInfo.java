@@ -48,7 +48,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("DeviceStatus")
     @Expose
-    private Integer DeviceStatus;
+    private Long DeviceStatus;
 
     /**
     * 设备操作状态ID，取值：
@@ -56,21 +56,21 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("OperateStatus")
     @Expose
-    private Integer OperateStatus;
+    private Long OperateStatus;
 
     /**
     * 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
     */
     @SerializedName("OsTypeId")
     @Expose
-    private Integer OsTypeId;
+    private Long OsTypeId;
 
     /**
     * RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
     */
     @SerializedName("RaidId")
     @Expose
-    private Integer RaidId;
+    private Long RaidId;
 
     /**
     * 设备别名
@@ -84,7 +84,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * 可用区
@@ -126,7 +126,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("AutoRenewFlag")
     @Expose
-    private Integer AutoRenewFlag;
+    private Long AutoRenewFlag;
 
     /**
     * 设备类型
@@ -147,7 +147,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("CpmPayMode")
     @Expose
-    private Integer CpmPayMode;
+    private Long CpmPayMode;
 
     /**
     * 带外IP
@@ -189,7 +189,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("IsLuckyDevice")
     @Expose
-    private Integer IsLuckyDevice;
+    private Long IsLuckyDevice;
 
     /**
      * Get 设备唯一ID 
@@ -243,7 +243,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li> 
      * @return DeviceStatus 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      */
-    public Integer getDeviceStatus() {
+    public Long getDeviceStatus() {
         return this.DeviceStatus;
     }
 
@@ -251,7 +251,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      * @param DeviceStatus 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      */
-    public void setDeviceStatus(Integer DeviceStatus) {
+    public void setDeviceStatus(Long DeviceStatus) {
         this.DeviceStatus = DeviceStatus;
     }
 
@@ -261,7 +261,7 @@ public class DeviceInfo extends AbstractModel{
      * @return OperateStatus 设备操作状态ID，取值：
 <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
      */
-    public Integer getOperateStatus() {
+    public Long getOperateStatus() {
         return this.OperateStatus;
     }
 
@@ -271,7 +271,7 @@ public class DeviceInfo extends AbstractModel{
      * @param OperateStatus 设备操作状态ID，取值：
 <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
      */
-    public void setOperateStatus(Integer OperateStatus) {
+    public void setOperateStatus(Long OperateStatus) {
         this.OperateStatus = OperateStatus;
     }
 
@@ -279,7 +279,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902) 
      * @return OsTypeId 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      */
-    public Integer getOsTypeId() {
+    public Long getOsTypeId() {
         return this.OsTypeId;
     }
 
@@ -287,7 +287,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      * @param OsTypeId 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      */
-    public void setOsTypeId(Integer OsTypeId) {
+    public void setOsTypeId(Long OsTypeId) {
         this.OsTypeId = OsTypeId;
     }
 
@@ -295,7 +295,7 @@ public class DeviceInfo extends AbstractModel{
      * Get RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910) 
      * @return RaidId RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      */
-    public Integer getRaidId() {
+    public Long getRaidId() {
         return this.RaidId;
     }
 
@@ -303,7 +303,7 @@ public class DeviceInfo extends AbstractModel{
      * Set RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      * @param RaidId RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      */
-    public void setRaidId(Integer RaidId) {
+    public void setRaidId(Long RaidId) {
         this.RaidId = RaidId;
     }
 
@@ -327,7 +327,7 @@ public class DeviceInfo extends AbstractModel{
      * Get AppId 
      * @return AppId AppId
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
@@ -335,7 +335,7 @@ public class DeviceInfo extends AbstractModel{
      * Set AppId
      * @param AppId AppId
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
@@ -423,7 +423,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 自动续费标识。0: 不自动续费; 1:自动续费 
      * @return AutoRenewFlag 自动续费标识。0: 不自动续费; 1:自动续费
      */
-    public Integer getAutoRenewFlag() {
+    public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
@@ -431,7 +431,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 自动续费标识。0: 不自动续费; 1:自动续费
      * @param AutoRenewFlag 自动续费标识。0: 不自动续费; 1:自动续费
      */
-    public void setAutoRenewFlag(Integer AutoRenewFlag) {
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
@@ -471,7 +471,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中 
      * @return CpmPayMode 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
      */
-    public Integer getCpmPayMode() {
+    public Long getCpmPayMode() {
         return this.CpmPayMode;
     }
 
@@ -479,7 +479,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
      * @param CpmPayMode 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
      */
-    public void setCpmPayMode(Integer CpmPayMode) {
+    public void setCpmPayMode(Long CpmPayMode) {
         this.CpmPayMode = CpmPayMode;
     }
 
@@ -567,7 +567,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备 
      * @return IsLuckyDevice 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
      */
-    public Integer getIsLuckyDevice() {
+    public Long getIsLuckyDevice() {
         return this.IsLuckyDevice;
     }
 
@@ -575,7 +575,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
      * @param IsLuckyDevice 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
      */
-    public void setIsLuckyDevice(Integer IsLuckyDevice) {
+    public void setIsLuckyDevice(Long IsLuckyDevice) {
         this.IsLuckyDevice = IsLuckyDevice;
     }
 

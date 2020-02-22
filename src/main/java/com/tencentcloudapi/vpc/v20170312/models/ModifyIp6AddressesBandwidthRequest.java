@@ -27,7 +27,7 @@ public class ModifyIp6AddressesBandwidthRequest extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Integer InternetMaxBandwidthOut;
+    private Long InternetMaxBandwidthOut;
 
     /**
     * IPV6地址。Ip6Addresses和Ip6AddressId必须且只能传一个
@@ -47,7 +47,7 @@ public class ModifyIp6AddressesBandwidthRequest extends AbstractModel{
      * Get 修改的目标带宽，单位Mbps 
      * @return InternetMaxBandwidthOut 修改的目标带宽，单位Mbps
      */
-    public Integer getInternetMaxBandwidthOut() {
+    public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -55,7 +55,7 @@ public class ModifyIp6AddressesBandwidthRequest extends AbstractModel{
      * Set 修改的目标带宽，单位Mbps
      * @param InternetMaxBandwidthOut 修改的目标带宽，单位Mbps
      */
-    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

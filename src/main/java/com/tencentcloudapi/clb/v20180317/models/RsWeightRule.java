@@ -62,7 +62,7 @@ public class RsWeightRule extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
      * Get 负载均衡监听器 ID 
@@ -148,7 +148,7 @@ public class RsWeightRule extends AbstractModel{
      * Get 后端服务新的转发权重，取值范围：0~100。 
      * @return Weight 后端服务新的转发权重，取值范围：0~100。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -156,7 +156,7 @@ public class RsWeightRule extends AbstractModel{
      * Set 后端服务新的转发权重，取值范围：0~100。
      * @param Weight 后端服务新的转发权重，取值范围：0~100。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 

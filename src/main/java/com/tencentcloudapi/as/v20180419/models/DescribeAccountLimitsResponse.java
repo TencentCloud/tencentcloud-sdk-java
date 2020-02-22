@@ -27,28 +27,28 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
     */
     @SerializedName("MaxNumberOfLaunchConfigurations")
     @Expose
-    private Integer MaxNumberOfLaunchConfigurations;
+    private Long MaxNumberOfLaunchConfigurations;
 
     /**
     * 用户账户启动配置的当前数量
     */
     @SerializedName("NumberOfLaunchConfigurations")
     @Expose
-    private Integer NumberOfLaunchConfigurations;
+    private Long NumberOfLaunchConfigurations;
 
     /**
     * 用户账户被允许创建的伸缩组最大数量
     */
     @SerializedName("MaxNumberOfAutoScalingGroups")
     @Expose
-    private Integer MaxNumberOfAutoScalingGroups;
+    private Long MaxNumberOfAutoScalingGroups;
 
     /**
     * 用户账户伸缩组的当前数量
     */
     @SerializedName("NumberOfAutoScalingGroups")
     @Expose
-    private Integer NumberOfAutoScalingGroups;
+    private Long NumberOfAutoScalingGroups;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,7 +61,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Get 用户账户被允许创建的启动配置最大数量 
      * @return MaxNumberOfLaunchConfigurations 用户账户被允许创建的启动配置最大数量
      */
-    public Integer getMaxNumberOfLaunchConfigurations() {
+    public Long getMaxNumberOfLaunchConfigurations() {
         return this.MaxNumberOfLaunchConfigurations;
     }
 
@@ -69,7 +69,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Set 用户账户被允许创建的启动配置最大数量
      * @param MaxNumberOfLaunchConfigurations 用户账户被允许创建的启动配置最大数量
      */
-    public void setMaxNumberOfLaunchConfigurations(Integer MaxNumberOfLaunchConfigurations) {
+    public void setMaxNumberOfLaunchConfigurations(Long MaxNumberOfLaunchConfigurations) {
         this.MaxNumberOfLaunchConfigurations = MaxNumberOfLaunchConfigurations;
     }
 
@@ -77,7 +77,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Get 用户账户启动配置的当前数量 
      * @return NumberOfLaunchConfigurations 用户账户启动配置的当前数量
      */
-    public Integer getNumberOfLaunchConfigurations() {
+    public Long getNumberOfLaunchConfigurations() {
         return this.NumberOfLaunchConfigurations;
     }
 
@@ -85,7 +85,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Set 用户账户启动配置的当前数量
      * @param NumberOfLaunchConfigurations 用户账户启动配置的当前数量
      */
-    public void setNumberOfLaunchConfigurations(Integer NumberOfLaunchConfigurations) {
+    public void setNumberOfLaunchConfigurations(Long NumberOfLaunchConfigurations) {
         this.NumberOfLaunchConfigurations = NumberOfLaunchConfigurations;
     }
 
@@ -93,7 +93,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Get 用户账户被允许创建的伸缩组最大数量 
      * @return MaxNumberOfAutoScalingGroups 用户账户被允许创建的伸缩组最大数量
      */
-    public Integer getMaxNumberOfAutoScalingGroups() {
+    public Long getMaxNumberOfAutoScalingGroups() {
         return this.MaxNumberOfAutoScalingGroups;
     }
 
@@ -101,7 +101,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Set 用户账户被允许创建的伸缩组最大数量
      * @param MaxNumberOfAutoScalingGroups 用户账户被允许创建的伸缩组最大数量
      */
-    public void setMaxNumberOfAutoScalingGroups(Integer MaxNumberOfAutoScalingGroups) {
+    public void setMaxNumberOfAutoScalingGroups(Long MaxNumberOfAutoScalingGroups) {
         this.MaxNumberOfAutoScalingGroups = MaxNumberOfAutoScalingGroups;
     }
 
@@ -109,7 +109,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Get 用户账户伸缩组的当前数量 
      * @return NumberOfAutoScalingGroups 用户账户伸缩组的当前数量
      */
-    public Integer getNumberOfAutoScalingGroups() {
+    public Long getNumberOfAutoScalingGroups() {
         return this.NumberOfAutoScalingGroups;
     }
 
@@ -117,7 +117,7 @@ public class DescribeAccountLimitsResponse extends AbstractModel{
      * Set 用户账户伸缩组的当前数量
      * @param NumberOfAutoScalingGroups 用户账户伸缩组的当前数量
      */
-    public void setNumberOfAutoScalingGroups(Integer NumberOfAutoScalingGroups) {
+    public void setNumberOfAutoScalingGroups(Long NumberOfAutoScalingGroups) {
         this.NumberOfAutoScalingGroups = NumberOfAutoScalingGroups;
     }
 

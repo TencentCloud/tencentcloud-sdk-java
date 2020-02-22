@@ -27,7 +27,7 @@ public class DescribeCcnAttachedInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 关联实例列表。
@@ -47,7 +47,7 @@ public class DescribeCcnAttachedInstancesResponse extends AbstractModel{
      * Get 符合条件的对象数。 
      * @return TotalCount 符合条件的对象数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeCcnAttachedInstancesResponse extends AbstractModel{
      * Set 符合条件的对象数。
      * @param TotalCount 符合条件的对象数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

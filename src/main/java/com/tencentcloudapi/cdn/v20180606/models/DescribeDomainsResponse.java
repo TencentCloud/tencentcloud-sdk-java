@@ -35,7 +35,7 @@ public class DescribeDomainsResponse extends AbstractModel{
     */
     @SerializedName("TotalNumber")
     @Expose
-    private Integer TotalNumber;
+    private Long TotalNumber;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,7 +66,7 @@ public class DescribeDomainsResponse extends AbstractModel{
      * @return TotalNumber 符合查询条件的域名总数
 用于分页查询
      */
-    public Integer getTotalNumber() {
+    public Long getTotalNumber() {
         return this.TotalNumber;
     }
 
@@ -76,7 +76,7 @@ public class DescribeDomainsResponse extends AbstractModel{
      * @param TotalNumber 符合查询条件的域名总数
 用于分页查询
      */
-    public void setTotalNumber(Integer TotalNumber) {
+    public void setTotalNumber(Long TotalNumber) {
         this.TotalNumber = TotalNumber;
     }
 

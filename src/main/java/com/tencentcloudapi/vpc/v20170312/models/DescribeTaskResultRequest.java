@@ -27,7 +27,7 @@ public class DescribeTaskResultRequest extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
     * 计费订单号
@@ -40,7 +40,7 @@ public class DescribeTaskResultRequest extends AbstractModel{
      * Get 异步任务ID 
      * @return TaskId 异步任务ID
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -48,7 +48,7 @@ public class DescribeTaskResultRequest extends AbstractModel{
      * Set 异步任务ID
      * @param TaskId 异步任务ID
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 

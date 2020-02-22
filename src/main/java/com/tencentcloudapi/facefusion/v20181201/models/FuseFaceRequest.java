@@ -56,7 +56,7 @@ public class FuseFaceRequest extends AbstractModel{
     */
     @SerializedName("FuseProfileDegree")
     @Expose
-    private Integer FuseProfileDegree;
+    private Long FuseProfileDegree;
 
     /**
     * 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
@@ -64,7 +64,7 @@ public class FuseFaceRequest extends AbstractModel{
     */
     @SerializedName("FuseFaceDegree")
     @Expose
-    private Integer FuseFaceDegree;
+    private Long FuseFaceDegree;
 
     /**
     * 0表示不需要鉴政，1表示需要鉴政。默认值为0。
@@ -72,7 +72,7 @@ public class FuseFaceRequest extends AbstractModel{
     */
     @SerializedName("CelebrityIdentify")
     @Expose
-    private Integer CelebrityIdentify;
+    private Long CelebrityIdentify;
 
     /**
      * Get 活动 ID，请在人脸融合控制台查看。 
@@ -144,7 +144,7 @@ public class FuseFaceRequest extends AbstractModel{
      * @return FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。
      */
-    public Integer getFuseProfileDegree() {
+    public Long getFuseProfileDegree() {
         return this.FuseProfileDegree;
     }
 
@@ -154,7 +154,7 @@ public class FuseFaceRequest extends AbstractModel{
      * @param FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。
      */
-    public void setFuseProfileDegree(Integer FuseProfileDegree) {
+    public void setFuseProfileDegree(Long FuseProfileDegree) {
         this.FuseProfileDegree = FuseProfileDegree;
     }
 
@@ -164,7 +164,7 @@ public class FuseFaceRequest extends AbstractModel{
      * @return FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中五官参数数值。
      */
-    public Integer getFuseFaceDegree() {
+    public Long getFuseFaceDegree() {
         return this.FuseFaceDegree;
     }
 
@@ -174,7 +174,7 @@ public class FuseFaceRequest extends AbstractModel{
      * @param FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中五官参数数值。
      */
-    public void setFuseFaceDegree(Integer FuseFaceDegree) {
+    public void setFuseFaceDegree(Long FuseFaceDegree) {
         this.FuseFaceDegree = FuseFaceDegree;
     }
 
@@ -184,7 +184,7 @@ public class FuseFaceRequest extends AbstractModel{
      * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
-    public Integer getCelebrityIdentify() {
+    public Long getCelebrityIdentify() {
         return this.CelebrityIdentify;
     }
 
@@ -194,7 +194,7 @@ public class FuseFaceRequest extends AbstractModel{
      * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
-    public void setCelebrityIdentify(Integer CelebrityIdentify) {
+    public void setCelebrityIdentify(Long CelebrityIdentify) {
         this.CelebrityIdentify = CelebrityIdentify;
     }
 

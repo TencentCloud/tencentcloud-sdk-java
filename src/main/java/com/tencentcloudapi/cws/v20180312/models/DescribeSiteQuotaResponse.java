@@ -27,21 +27,21 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Integer Total;
+    private Long Total;
 
     /**
     * 已使用的扫描次数。
     */
     @SerializedName("Used")
     @Expose
-    private Integer Used;
+    private Long Used;
 
     /**
     * 剩余可用的扫描次数。
     */
     @SerializedName("Available")
     @Expose
-    private Integer Available;
+    private Long Available;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,7 +54,7 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
      * Get 已购买的扫描次数。 
      * @return Total 已购买的扫描次数。
      */
-    public Integer getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -62,7 +62,7 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
      * Set 已购买的扫描次数。
      * @param Total 已购买的扫描次数。
      */
-    public void setTotal(Integer Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 
@@ -70,7 +70,7 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
      * Get 已使用的扫描次数。 
      * @return Used 已使用的扫描次数。
      */
-    public Integer getUsed() {
+    public Long getUsed() {
         return this.Used;
     }
 
@@ -78,7 +78,7 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
      * Set 已使用的扫描次数。
      * @param Used 已使用的扫描次数。
      */
-    public void setUsed(Integer Used) {
+    public void setUsed(Long Used) {
         this.Used = Used;
     }
 
@@ -86,7 +86,7 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
      * Get 剩余可用的扫描次数。 
      * @return Available 剩余可用的扫描次数。
      */
-    public Integer getAvailable() {
+    public Long getAvailable() {
         return this.Available;
     }
 
@@ -94,7 +94,7 @@ public class DescribeSiteQuotaResponse extends AbstractModel{
      * Set 剩余可用的扫描次数。
      * @param Available 剩余可用的扫描次数。
      */
-    public void setAvailable(Integer Available) {
+    public void setAvailable(Long Available) {
         this.Available = Available;
     }
 

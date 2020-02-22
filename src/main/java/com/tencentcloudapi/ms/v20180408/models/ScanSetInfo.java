@@ -27,7 +27,7 @@ public class ScanSetInfo extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Integer TaskStatus;
+    private Long TaskStatus;
 
     /**
     * app信息
@@ -62,14 +62,14 @@ public class ScanSetInfo extends AbstractModel{
     */
     @SerializedName("TaskTime")
     @Expose
-    private Integer TaskTime;
+    private Long TaskTime;
 
     /**
     * 状态码，成功返回0，失败返回错误码
     */
     @SerializedName("StatusCode")
     @Expose
-    private Integer StatusCode;
+    private Long StatusCode;
 
     /**
     * 状态描述
@@ -103,7 +103,7 @@ public class ScanSetInfo extends AbstractModel{
      * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public Integer getTaskStatus() {
+    public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -111,7 +111,7 @@ public class ScanSetInfo extends AbstractModel{
      * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public void setTaskStatus(Integer TaskStatus) {
+    public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
@@ -183,7 +183,7 @@ public class ScanSetInfo extends AbstractModel{
      * Get 提交扫描的时间 
      * @return TaskTime 提交扫描的时间
      */
-    public Integer getTaskTime() {
+    public Long getTaskTime() {
         return this.TaskTime;
     }
 
@@ -191,7 +191,7 @@ public class ScanSetInfo extends AbstractModel{
      * Set 提交扫描的时间
      * @param TaskTime 提交扫描的时间
      */
-    public void setTaskTime(Integer TaskTime) {
+    public void setTaskTime(Long TaskTime) {
         this.TaskTime = TaskTime;
     }
 
@@ -199,7 +199,7 @@ public class ScanSetInfo extends AbstractModel{
      * Get 状态码，成功返回0，失败返回错误码 
      * @return StatusCode 状态码，成功返回0，失败返回错误码
      */
-    public Integer getStatusCode() {
+    public Long getStatusCode() {
         return this.StatusCode;
     }
 
@@ -207,7 +207,7 @@ public class ScanSetInfo extends AbstractModel{
      * Set 状态码，成功返回0，失败返回错误码
      * @param StatusCode 状态码，成功返回0，失败返回错误码
      */
-    public void setStatusCode(Integer StatusCode) {
+    public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 

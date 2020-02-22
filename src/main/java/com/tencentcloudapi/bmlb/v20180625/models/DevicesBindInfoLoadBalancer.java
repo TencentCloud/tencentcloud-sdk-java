@@ -34,14 +34,14 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * 负载均衡所属的项目ID。
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 黑石私有网络唯一ID。
@@ -69,7 +69,7 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
     */
     @SerializedName("Exclusive")
     @Expose
-    private Integer Exclusive;
+    private Long Exclusive;
 
     /**
     * 具有该绑定关系的四层监听器列表。
@@ -105,7 +105,7 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
      * Get 开发商AppId。 
      * @return AppId 开发商AppId。
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
@@ -113,7 +113,7 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
      * Set 开发商AppId。
      * @param AppId 开发商AppId。
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
@@ -121,7 +121,7 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
      * Get 负载均衡所属的项目ID。 
      * @return ProjectId 负载均衡所属的项目ID。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -129,7 +129,7 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
      * Set 负载均衡所属的项目ID。
      * @param ProjectId 负载均衡所属的项目ID。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -185,7 +185,7 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
      * Get 是否独占TGW集群。 
      * @return Exclusive 是否独占TGW集群。
      */
-    public Integer getExclusive() {
+    public Long getExclusive() {
         return this.Exclusive;
     }
 
@@ -193,7 +193,7 @@ public class DevicesBindInfoLoadBalancer extends AbstractModel{
      * Set 是否独占TGW集群。
      * @param Exclusive 是否独占TGW集群。
      */
-    public void setExclusive(Integer Exclusive) {
+    public void setExclusive(Long Exclusive) {
         this.Exclusive = Exclusive;
     }
 

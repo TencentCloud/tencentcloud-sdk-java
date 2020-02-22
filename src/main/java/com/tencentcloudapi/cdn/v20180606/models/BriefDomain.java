@@ -34,7 +34,7 @@ public class BriefDomain extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * CDN加速域名。
@@ -62,7 +62,7 @@ public class BriefDomain extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
@@ -133,7 +133,7 @@ public class BriefDomain extends AbstractModel{
      * Get 腾讯云账号ID。 
      * @return AppId 腾讯云账号ID。
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
@@ -141,7 +141,7 @@ public class BriefDomain extends AbstractModel{
      * Set 腾讯云账号ID。
      * @param AppId 腾讯云账号ID。
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
@@ -197,7 +197,7 @@ public class BriefDomain extends AbstractModel{
      * Get 项目ID。 
      * @return ProjectId 项目ID。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -205,7 +205,7 @@ public class BriefDomain extends AbstractModel{
      * Set 项目ID。
      * @param ProjectId 项目ID。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

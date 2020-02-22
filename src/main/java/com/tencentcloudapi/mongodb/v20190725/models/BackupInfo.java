@@ -34,7 +34,7 @@ public class BackupInfo extends AbstractModel{
     */
     @SerializedName("BackupType")
     @Expose
-    private Integer BackupType;
+    private Long BackupType;
 
     /**
     * 备份名称
@@ -57,7 +57,7 @@ public class BackupInfo extends AbstractModel{
     */
     @SerializedName("BackupSize")
     @Expose
-    private Integer BackupSize;
+    private Long BackupSize;
 
     /**
     * 备份开始时间
@@ -80,14 +80,14 @@ public class BackupInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 备份方法，0-逻辑备份，1-物理备份
     */
     @SerializedName("BackupMethod")
     @Expose
-    private Integer BackupMethod;
+    private Long BackupMethod;
 
     /**
      * Get 实例ID 
@@ -109,7 +109,7 @@ public class BackupInfo extends AbstractModel{
      * Get 备份方式，0-自动备份，1-手动备份 
      * @return BackupType 备份方式，0-自动备份，1-手动备份
      */
-    public Integer getBackupType() {
+    public Long getBackupType() {
         return this.BackupType;
     }
 
@@ -117,7 +117,7 @@ public class BackupInfo extends AbstractModel{
      * Set 备份方式，0-自动备份，1-手动备份
      * @param BackupType 备份方式，0-自动备份，1-手动备份
      */
-    public void setBackupType(Integer BackupType) {
+    public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
@@ -163,7 +163,7 @@ public class BackupInfo extends AbstractModel{
      * @return BackupSize 备份文件大小，单位KB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getBackupSize() {
+    public Long getBackupSize() {
         return this.BackupSize;
     }
 
@@ -173,7 +173,7 @@ public class BackupInfo extends AbstractModel{
      * @param BackupSize 备份文件大小，单位KB
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBackupSize(Integer BackupSize) {
+    public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
@@ -221,7 +221,7 @@ public class BackupInfo extends AbstractModel{
      * Get 备份状态，1-备份中，2-备份成功 
      * @return Status 备份状态，1-备份中，2-备份成功
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -229,7 +229,7 @@ public class BackupInfo extends AbstractModel{
      * Set 备份状态，1-备份中，2-备份成功
      * @param Status 备份状态，1-备份中，2-备份成功
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -237,7 +237,7 @@ public class BackupInfo extends AbstractModel{
      * Get 备份方法，0-逻辑备份，1-物理备份 
      * @return BackupMethod 备份方法，0-逻辑备份，1-物理备份
      */
-    public Integer getBackupMethod() {
+    public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
@@ -245,7 +245,7 @@ public class BackupInfo extends AbstractModel{
      * Set 备份方法，0-逻辑备份，1-物理备份
      * @param BackupMethod 备份方法，0-逻辑备份，1-物理备份
      */
-    public void setBackupMethod(Integer BackupMethod) {
+    public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 

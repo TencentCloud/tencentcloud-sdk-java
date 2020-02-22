@@ -34,14 +34,14 @@ public class ExpandShardConfig extends AbstractModel{
     */
     @SerializedName("ShardMemory")
     @Expose
-    private Integer ShardMemory;
+    private Long ShardMemory;
 
     /**
     * 分片存储大小，单位 GB
     */
     @SerializedName("ShardStorage")
     @Expose
-    private Integer ShardStorage;
+    private Long ShardStorage;
 
     /**
      * Get 分片ID数组 
@@ -63,7 +63,7 @@ public class ExpandShardConfig extends AbstractModel{
      * Get 分片内存大小，单位 GB 
      * @return ShardMemory 分片内存大小，单位 GB
      */
-    public Integer getShardMemory() {
+    public Long getShardMemory() {
         return this.ShardMemory;
     }
 
@@ -71,7 +71,7 @@ public class ExpandShardConfig extends AbstractModel{
      * Set 分片内存大小，单位 GB
      * @param ShardMemory 分片内存大小，单位 GB
      */
-    public void setShardMemory(Integer ShardMemory) {
+    public void setShardMemory(Long ShardMemory) {
         this.ShardMemory = ShardMemory;
     }
 
@@ -79,7 +79,7 @@ public class ExpandShardConfig extends AbstractModel{
      * Get 分片存储大小，单位 GB 
      * @return ShardStorage 分片存储大小，单位 GB
      */
-    public Integer getShardStorage() {
+    public Long getShardStorage() {
         return this.ShardStorage;
     }
 
@@ -87,7 +87,7 @@ public class ExpandShardConfig extends AbstractModel{
      * Set 分片存储大小，单位 GB
      * @param ShardStorage 分片存储大小，单位 GB
      */
-    public void setShardStorage(Integer ShardStorage) {
+    public void setShardStorage(Long ShardStorage) {
         this.ShardStorage = ShardStorage;
     }
 

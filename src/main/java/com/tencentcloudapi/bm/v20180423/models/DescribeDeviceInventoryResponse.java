@@ -27,7 +27,7 @@ public class DescribeDeviceInventoryResponse extends AbstractModel{
     */
     @SerializedName("DeviceCount")
     @Expose
-    private Integer DeviceCount;
+    private Long DeviceCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeDeviceInventoryResponse extends AbstractModel{
      * Get 库存设备数量 
      * @return DeviceCount 库存设备数量
      */
-    public Integer getDeviceCount() {
+    public Long getDeviceCount() {
         return this.DeviceCount;
     }
 
@@ -48,7 +48,7 @@ public class DescribeDeviceInventoryResponse extends AbstractModel{
      * Set 库存设备数量
      * @param DeviceCount 库存设备数量
      */
-    public void setDeviceCount(Integer DeviceCount) {
+    public void setDeviceCount(Long DeviceCount) {
         this.DeviceCount = DeviceCount;
     }
 

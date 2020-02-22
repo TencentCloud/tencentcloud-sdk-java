@@ -27,7 +27,7 @@ public class InstanceRollbackRangeTime extends AbstractModel{
     */
     @SerializedName("Code")
     @Expose
-    private Integer Code;
+    private Long Code;
 
     /**
     * 查询数据库错误信息
@@ -54,7 +54,7 @@ public class InstanceRollbackRangeTime extends AbstractModel{
      * Get 查询数据库错误码 
      * @return Code 查询数据库错误码
      */
-    public Integer getCode() {
+    public Long getCode() {
         return this.Code;
     }
 
@@ -62,7 +62,7 @@ public class InstanceRollbackRangeTime extends AbstractModel{
      * Set 查询数据库错误码
      * @param Code 查询数据库错误码
      */
-    public void setCode(Integer Code) {
+    public void setCode(Long Code) {
         this.Code = Code;
     }
 

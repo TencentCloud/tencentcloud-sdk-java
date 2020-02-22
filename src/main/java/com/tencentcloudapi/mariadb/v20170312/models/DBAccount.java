@@ -62,7 +62,7 @@ public class DBAccount extends AbstractModel{
     */
     @SerializedName("ReadOnly")
     @Expose
-    private Integer ReadOnly;
+    private Long ReadOnly;
 
     /**
     * 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
@@ -70,7 +70,7 @@ public class DBAccount extends AbstractModel{
     */
     @SerializedName("DelayThresh")
     @Expose
-    private Integer DelayThresh;
+    private Long DelayThresh;
 
     /**
      * Get 用户名 
@@ -156,7 +156,7 @@ public class DBAccount extends AbstractModel{
      * Get 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。 
      * @return ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
-    public Integer getReadOnly() {
+    public Long getReadOnly() {
         return this.ReadOnly;
     }
 
@@ -164,7 +164,7 @@ public class DBAccount extends AbstractModel{
      * Set 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
-    public void setReadOnly(Integer ReadOnly) {
+    public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
@@ -174,7 +174,7 @@ public class DBAccount extends AbstractModel{
      * @return DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getDelayThresh() {
+    public Long getDelayThresh() {
         return this.DelayThresh;
     }
 
@@ -184,7 +184,7 @@ public class DBAccount extends AbstractModel{
      * @param DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDelayThresh(Integer DelayThresh) {
+    public void setDelayThresh(Long DelayThresh) {
         this.DelayThresh = DelayThresh;
     }
 

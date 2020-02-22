@@ -27,7 +27,7 @@ public class RestartDBInstancesResponse extends AbstractModel{
     */
     @SerializedName("FlowId")
     @Expose
-    private Integer FlowId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class RestartDBInstancesResponse extends AbstractModel{
      * Get 异步任务ID 
      * @return FlowId 异步任务ID
      */
-    public Integer getFlowId() {
+    public Long getFlowId() {
         return this.FlowId;
     }
 
@@ -48,7 +48,7 @@ public class RestartDBInstancesResponse extends AbstractModel{
      * Set 异步任务ID
      * @param FlowId 异步任务ID
      */
-    public void setFlowId(Integer FlowId) {
+    public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 

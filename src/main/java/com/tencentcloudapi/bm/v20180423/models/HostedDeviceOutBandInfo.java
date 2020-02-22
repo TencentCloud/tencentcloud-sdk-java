@@ -48,7 +48,7 @@ public class HostedDeviceOutBandInfo extends AbstractModel{
     */
     @SerializedName("VpnPort")
     @Expose
-    private Integer VpnPort;
+    private Long VpnPort;
 
     /**
      * Get 物理机ID 
@@ -102,7 +102,7 @@ public class HostedDeviceOutBandInfo extends AbstractModel{
      * Get VPN的端口 
      * @return VpnPort VPN的端口
      */
-    public Integer getVpnPort() {
+    public Long getVpnPort() {
         return this.VpnPort;
     }
 
@@ -110,7 +110,7 @@ public class HostedDeviceOutBandInfo extends AbstractModel{
      * Set VPN的端口
      * @param VpnPort VPN的端口
      */
-    public void setVpnPort(Integer VpnPort) {
+    public void setVpnPort(Long VpnPort) {
         this.VpnPort = VpnPort;
     }
 

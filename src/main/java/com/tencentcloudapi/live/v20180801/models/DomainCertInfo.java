@@ -27,7 +27,7 @@ public class DomainCertInfo extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Integer CertId;
+    private Long CertId;
 
     /**
     * 证书名称。
@@ -64,7 +64,7 @@ public class DomainCertInfo extends AbstractModel{
     */
     @SerializedName("CertType")
     @Expose
-    private Integer CertType;
+    private Long CertType;
 
     /**
     * 证书过期时间，UTC格式。
@@ -85,13 +85,13 @@ public class DomainCertInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 证书Id。 
      * @return CertId 证书Id。
      */
-    public Integer getCertId() {
+    public Long getCertId() {
         return this.CertId;
     }
 
@@ -99,7 +99,7 @@ public class DomainCertInfo extends AbstractModel{
      * Set 证书Id。
      * @param CertId 证书Id。
      */
-    public void setCertId(Integer CertId) {
+    public void setCertId(Long CertId) {
         this.CertId = CertId;
     }
 
@@ -175,7 +175,7 @@ public class DomainCertInfo extends AbstractModel{
 0：用户添加证书，
 1：腾讯云托管证书。
      */
-    public Integer getCertType() {
+    public Long getCertType() {
         return this.CertType;
     }
 
@@ -187,7 +187,7 @@ public class DomainCertInfo extends AbstractModel{
 0：用户添加证书，
 1：腾讯云托管证书。
      */
-    public void setCertType(Integer CertType) {
+    public void setCertType(Long CertType) {
         this.CertType = CertType;
     }
 
@@ -227,7 +227,7 @@ public class DomainCertInfo extends AbstractModel{
      * Get 证书状态 
      * @return Status 证书状态
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -235,7 +235,7 @@ public class DomainCertInfo extends AbstractModel{
      * Set 证书状态
      * @param Status 证书状态
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

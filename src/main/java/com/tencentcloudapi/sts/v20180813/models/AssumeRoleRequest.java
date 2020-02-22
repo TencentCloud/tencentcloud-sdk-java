@@ -41,7 +41,7 @@ public class AssumeRoleRequest extends AbstractModel{
     */
     @SerializedName("DurationSeconds")
     @Expose
-    private Integer DurationSeconds;
+    private Long DurationSeconds;
 
     /**
     * 策略描述
@@ -90,7 +90,7 @@ public class AssumeRoleRequest extends AbstractModel{
      * Get 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒 
      * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
-    public Integer getDurationSeconds() {
+    public Long getDurationSeconds() {
         return this.DurationSeconds;
     }
 
@@ -98,7 +98,7 @@ public class AssumeRoleRequest extends AbstractModel{
      * Set 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
-    public void setDurationSeconds(Integer DurationSeconds) {
+    public void setDurationSeconds(Long DurationSeconds) {
         this.DurationSeconds = DurationSeconds;
     }
 

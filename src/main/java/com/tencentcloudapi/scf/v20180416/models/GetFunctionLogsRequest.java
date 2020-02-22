@@ -34,14 +34,14 @@ public class GetFunctionLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数据的长度，Offset+Limit不能大于10000
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
@@ -126,7 +126,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Get 数据的偏移量，Offset+Limit不能大于10000 
      * @return Offset 数据的偏移量，Offset+Limit不能大于10000
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -134,7 +134,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Set 数据的偏移量，Offset+Limit不能大于10000
      * @param Offset 数据的偏移量，Offset+Limit不能大于10000
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -142,7 +142,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Get 返回数据的长度，Offset+Limit不能大于10000 
      * @return Limit 返回数据的长度，Offset+Limit不能大于10000
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -150,7 +150,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
      * Set 返回数据的长度，Offset+Limit不能大于10000
      * @param Limit 返回数据的长度，Offset+Limit不能大于10000
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

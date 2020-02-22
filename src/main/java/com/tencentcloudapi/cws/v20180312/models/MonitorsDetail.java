@@ -41,7 +41,7 @@ public class MonitorsDetail extends AbstractModel{
     */
     @SerializedName("SiteNumber")
     @Expose
-    private Integer SiteNumber;
+    private Long SiteNumber;
 
     /**
     * 监控任务包含的受漏洞威胁的站点列表。
@@ -55,56 +55,56 @@ public class MonitorsDetail extends AbstractModel{
     */
     @SerializedName("ImpactSiteNumber")
     @Expose
-    private Integer ImpactSiteNumber;
+    private Long ImpactSiteNumber;
 
     /**
     * 高风险漏洞数量。
     */
     @SerializedName("VulsHighNumber")
     @Expose
-    private Integer VulsHighNumber;
+    private Long VulsHighNumber;
 
     /**
     * 中风险漏洞数量。
     */
     @SerializedName("VulsMiddleNumber")
     @Expose
-    private Integer VulsMiddleNumber;
+    private Long VulsMiddleNumber;
 
     /**
     * 低风险漏洞数量。
     */
     @SerializedName("VulsLowNumber")
     @Expose
-    private Integer VulsLowNumber;
+    private Long VulsLowNumber;
 
     /**
     * 提示数量。
     */
     @SerializedName("VulsNoticeNumber")
     @Expose
-    private Integer VulsNoticeNumber;
+    private Long VulsNoticeNumber;
 
     /**
     * 监控任务包含的站点列表的平均扫描进度。
     */
     @SerializedName("Progress")
     @Expose
-    private Integer Progress;
+    private Long Progress;
 
     /**
     * 扫描页面总数。
     */
     @SerializedName("PageCount")
     @Expose
-    private Integer PageCount;
+    private Long PageCount;
 
     /**
     * 内容检测数量。
     */
     @SerializedName("ContentNumber")
     @Expose
-    private Integer ContentNumber;
+    private Long ContentNumber;
 
     /**
      * Get 监控任务基础信息。 
@@ -142,7 +142,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 监控任务包含的站点列表数量。 
      * @return SiteNumber 监控任务包含的站点列表数量。
      */
-    public Integer getSiteNumber() {
+    public Long getSiteNumber() {
         return this.SiteNumber;
     }
 
@@ -150,7 +150,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 监控任务包含的站点列表数量。
      * @param SiteNumber 监控任务包含的站点列表数量。
      */
-    public void setSiteNumber(Integer SiteNumber) {
+    public void setSiteNumber(Long SiteNumber) {
         this.SiteNumber = SiteNumber;
     }
 
@@ -174,7 +174,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 监控任务包含的受漏洞威胁的站点列表数量。 
      * @return ImpactSiteNumber 监控任务包含的受漏洞威胁的站点列表数量。
      */
-    public Integer getImpactSiteNumber() {
+    public Long getImpactSiteNumber() {
         return this.ImpactSiteNumber;
     }
 
@@ -182,7 +182,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 监控任务包含的受漏洞威胁的站点列表数量。
      * @param ImpactSiteNumber 监控任务包含的受漏洞威胁的站点列表数量。
      */
-    public void setImpactSiteNumber(Integer ImpactSiteNumber) {
+    public void setImpactSiteNumber(Long ImpactSiteNumber) {
         this.ImpactSiteNumber = ImpactSiteNumber;
     }
 
@@ -190,7 +190,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 高风险漏洞数量。 
      * @return VulsHighNumber 高风险漏洞数量。
      */
-    public Integer getVulsHighNumber() {
+    public Long getVulsHighNumber() {
         return this.VulsHighNumber;
     }
 
@@ -198,7 +198,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 高风险漏洞数量。
      * @param VulsHighNumber 高风险漏洞数量。
      */
-    public void setVulsHighNumber(Integer VulsHighNumber) {
+    public void setVulsHighNumber(Long VulsHighNumber) {
         this.VulsHighNumber = VulsHighNumber;
     }
 
@@ -206,7 +206,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 中风险漏洞数量。 
      * @return VulsMiddleNumber 中风险漏洞数量。
      */
-    public Integer getVulsMiddleNumber() {
+    public Long getVulsMiddleNumber() {
         return this.VulsMiddleNumber;
     }
 
@@ -214,7 +214,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 中风险漏洞数量。
      * @param VulsMiddleNumber 中风险漏洞数量。
      */
-    public void setVulsMiddleNumber(Integer VulsMiddleNumber) {
+    public void setVulsMiddleNumber(Long VulsMiddleNumber) {
         this.VulsMiddleNumber = VulsMiddleNumber;
     }
 
@@ -222,7 +222,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 低风险漏洞数量。 
      * @return VulsLowNumber 低风险漏洞数量。
      */
-    public Integer getVulsLowNumber() {
+    public Long getVulsLowNumber() {
         return this.VulsLowNumber;
     }
 
@@ -230,7 +230,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 低风险漏洞数量。
      * @param VulsLowNumber 低风险漏洞数量。
      */
-    public void setVulsLowNumber(Integer VulsLowNumber) {
+    public void setVulsLowNumber(Long VulsLowNumber) {
         this.VulsLowNumber = VulsLowNumber;
     }
 
@@ -238,7 +238,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 提示数量。 
      * @return VulsNoticeNumber 提示数量。
      */
-    public Integer getVulsNoticeNumber() {
+    public Long getVulsNoticeNumber() {
         return this.VulsNoticeNumber;
     }
 
@@ -246,7 +246,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 提示数量。
      * @param VulsNoticeNumber 提示数量。
      */
-    public void setVulsNoticeNumber(Integer VulsNoticeNumber) {
+    public void setVulsNoticeNumber(Long VulsNoticeNumber) {
         this.VulsNoticeNumber = VulsNoticeNumber;
     }
 
@@ -254,7 +254,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 监控任务包含的站点列表的平均扫描进度。 
      * @return Progress 监控任务包含的站点列表的平均扫描进度。
      */
-    public Integer getProgress() {
+    public Long getProgress() {
         return this.Progress;
     }
 
@@ -262,7 +262,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 监控任务包含的站点列表的平均扫描进度。
      * @param Progress 监控任务包含的站点列表的平均扫描进度。
      */
-    public void setProgress(Integer Progress) {
+    public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
@@ -270,7 +270,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 扫描页面总数。 
      * @return PageCount 扫描页面总数。
      */
-    public Integer getPageCount() {
+    public Long getPageCount() {
         return this.PageCount;
     }
 
@@ -278,7 +278,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 扫描页面总数。
      * @param PageCount 扫描页面总数。
      */
-    public void setPageCount(Integer PageCount) {
+    public void setPageCount(Long PageCount) {
         this.PageCount = PageCount;
     }
 
@@ -286,7 +286,7 @@ public class MonitorsDetail extends AbstractModel{
      * Get 内容检测数量。 
      * @return ContentNumber 内容检测数量。
      */
-    public Integer getContentNumber() {
+    public Long getContentNumber() {
         return this.ContentNumber;
     }
 
@@ -294,7 +294,7 @@ public class MonitorsDetail extends AbstractModel{
      * Set 内容检测数量。
      * @param ContentNumber 内容检测数量。
      */
-    public void setContentNumber(Integer ContentNumber) {
+    public void setContentNumber(Long ContentNumber) {
         this.ContentNumber = ContentNumber;
     }
 

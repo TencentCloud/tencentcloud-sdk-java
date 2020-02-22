@@ -34,14 +34,14 @@ public class ApiKey extends AbstractModel{
     */
     @SerializedName("CreateTime")
     @Expose
-    private Integer CreateTime;
+    private Long CreateTime;
 
     /**
     * 状态(2:有效, 3:禁用, 4:已删除)
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 密钥ID 
@@ -63,7 +63,7 @@ public class ApiKey extends AbstractModel{
      * Get 创建时间(时间戳) 
      * @return CreateTime 创建时间(时间戳)
      */
-    public Integer getCreateTime() {
+    public Long getCreateTime() {
         return this.CreateTime;
     }
 
@@ -71,7 +71,7 @@ public class ApiKey extends AbstractModel{
      * Set 创建时间(时间戳)
      * @param CreateTime 创建时间(时间戳)
      */
-    public void setCreateTime(Integer CreateTime) {
+    public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
@@ -79,7 +79,7 @@ public class ApiKey extends AbstractModel{
      * Get 状态(2:有效, 3:禁用, 4:已删除) 
      * @return Status 状态(2:有效, 3:禁用, 4:已删除)
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -87,7 +87,7 @@ public class ApiKey extends AbstractModel{
      * Set 状态(2:有效, 3:禁用, 4:已删除)
      * @param Status 状态(2:有效, 3:禁用, 4:已删除)
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

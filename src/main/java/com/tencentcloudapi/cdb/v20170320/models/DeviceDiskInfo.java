@@ -27,34 +27,34 @@ public class DeviceDiskInfo extends AbstractModel{
     */
     @SerializedName("IoRatioPerSec")
     @Expose
-    private Integer [] IoRatioPerSec;
+    private Long [] IoRatioPerSec;
 
     /**
     * 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
     */
     @SerializedName("IoWaitTime")
     @Expose
-    private Integer [] IoWaitTime;
+    private Long [] IoWaitTime;
 
     /**
     * 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
     */
     @SerializedName("Read")
     @Expose
-    private Integer [] Read;
+    private Long [] Read;
 
     /**
     * 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
     */
     @SerializedName("Write")
     @Expose
-    private Integer [] Write;
+    private Long [] Write;
 
     /**
      * Get 平均每秒有百分之几的时间用于IO操作 
      * @return IoRatioPerSec 平均每秒有百分之几的时间用于IO操作
      */
-    public Integer [] getIoRatioPerSec() {
+    public Long [] getIoRatioPerSec() {
         return this.IoRatioPerSec;
     }
 
@@ -62,7 +62,7 @@ public class DeviceDiskInfo extends AbstractModel{
      * Set 平均每秒有百分之几的时间用于IO操作
      * @param IoRatioPerSec 平均每秒有百分之几的时间用于IO操作
      */
-    public void setIoRatioPerSec(Integer [] IoRatioPerSec) {
+    public void setIoRatioPerSec(Long [] IoRatioPerSec) {
         this.IoRatioPerSec = IoRatioPerSec;
     }
 
@@ -70,7 +70,7 @@ public class DeviceDiskInfo extends AbstractModel{
      * Get 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒 
      * @return IoWaitTime 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
      */
-    public Integer [] getIoWaitTime() {
+    public Long [] getIoWaitTime() {
         return this.IoWaitTime;
     }
 
@@ -78,7 +78,7 @@ public class DeviceDiskInfo extends AbstractModel{
      * Set 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
      * @param IoWaitTime 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
      */
-    public void setIoWaitTime(Integer [] IoWaitTime) {
+    public void setIoWaitTime(Long [] IoWaitTime) {
         this.IoWaitTime = IoWaitTime;
     }
 
@@ -86,7 +86,7 @@ public class DeviceDiskInfo extends AbstractModel{
      * Get 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次 
      * @return Read 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
      */
-    public Integer [] getRead() {
+    public Long [] getRead() {
         return this.Read;
     }
 
@@ -94,7 +94,7 @@ public class DeviceDiskInfo extends AbstractModel{
      * Set 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
      * @param Read 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
      */
-    public void setRead(Integer [] Read) {
+    public void setRead(Long [] Read) {
         this.Read = Read;
     }
 
@@ -102,7 +102,7 @@ public class DeviceDiskInfo extends AbstractModel{
      * Get 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次 
      * @return Write 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
      */
-    public Integer [] getWrite() {
+    public Long [] getWrite() {
         return this.Write;
     }
 
@@ -110,7 +110,7 @@ public class DeviceDiskInfo extends AbstractModel{
      * Set 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
      * @param Write 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
      */
-    public void setWrite(Integer [] Write) {
+    public void setWrite(Long [] Write) {
         this.Write = Write;
     }
 

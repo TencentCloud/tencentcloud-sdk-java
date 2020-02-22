@@ -27,55 +27,55 @@ public class ComputeNodeMetrics extends AbstractModel{
     */
     @SerializedName("SubmittedCount")
     @Expose
-    private Integer SubmittedCount;
+    private Long SubmittedCount;
 
     /**
     * 创建中的计算节点数量
     */
     @SerializedName("CreatingCount")
     @Expose
-    private Integer CreatingCount;
+    private Long CreatingCount;
 
     /**
     * 创建失败的计算节点数量
     */
     @SerializedName("CreationFailedCount")
     @Expose
-    private Integer CreationFailedCount;
+    private Long CreationFailedCount;
 
     /**
     * 完成创建的计算节点数量
     */
     @SerializedName("CreatedCount")
     @Expose
-    private Integer CreatedCount;
+    private Long CreatedCount;
 
     /**
     * 运行中的计算节点数量
     */
     @SerializedName("RunningCount")
     @Expose
-    private Integer RunningCount;
+    private Long RunningCount;
 
     /**
     * 销毁中的计算节点数量
     */
     @SerializedName("DeletingCount")
     @Expose
-    private Integer DeletingCount;
+    private Long DeletingCount;
 
     /**
     * 异常的计算节点数量
     */
     @SerializedName("AbnormalCount")
     @Expose
-    private Integer AbnormalCount;
+    private Long AbnormalCount;
 
     /**
      * Get 已经完成提交的计算节点数量 
      * @return SubmittedCount 已经完成提交的计算节点数量
      */
-    public Integer getSubmittedCount() {
+    public Long getSubmittedCount() {
         return this.SubmittedCount;
     }
 
@@ -83,7 +83,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Set 已经完成提交的计算节点数量
      * @param SubmittedCount 已经完成提交的计算节点数量
      */
-    public void setSubmittedCount(Integer SubmittedCount) {
+    public void setSubmittedCount(Long SubmittedCount) {
         this.SubmittedCount = SubmittedCount;
     }
 
@@ -91,7 +91,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Get 创建中的计算节点数量 
      * @return CreatingCount 创建中的计算节点数量
      */
-    public Integer getCreatingCount() {
+    public Long getCreatingCount() {
         return this.CreatingCount;
     }
 
@@ -99,7 +99,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Set 创建中的计算节点数量
      * @param CreatingCount 创建中的计算节点数量
      */
-    public void setCreatingCount(Integer CreatingCount) {
+    public void setCreatingCount(Long CreatingCount) {
         this.CreatingCount = CreatingCount;
     }
 
@@ -107,7 +107,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Get 创建失败的计算节点数量 
      * @return CreationFailedCount 创建失败的计算节点数量
      */
-    public Integer getCreationFailedCount() {
+    public Long getCreationFailedCount() {
         return this.CreationFailedCount;
     }
 
@@ -115,7 +115,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Set 创建失败的计算节点数量
      * @param CreationFailedCount 创建失败的计算节点数量
      */
-    public void setCreationFailedCount(Integer CreationFailedCount) {
+    public void setCreationFailedCount(Long CreationFailedCount) {
         this.CreationFailedCount = CreationFailedCount;
     }
 
@@ -123,7 +123,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Get 完成创建的计算节点数量 
      * @return CreatedCount 完成创建的计算节点数量
      */
-    public Integer getCreatedCount() {
+    public Long getCreatedCount() {
         return this.CreatedCount;
     }
 
@@ -131,7 +131,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Set 完成创建的计算节点数量
      * @param CreatedCount 完成创建的计算节点数量
      */
-    public void setCreatedCount(Integer CreatedCount) {
+    public void setCreatedCount(Long CreatedCount) {
         this.CreatedCount = CreatedCount;
     }
 
@@ -139,7 +139,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Get 运行中的计算节点数量 
      * @return RunningCount 运行中的计算节点数量
      */
-    public Integer getRunningCount() {
+    public Long getRunningCount() {
         return this.RunningCount;
     }
 
@@ -147,7 +147,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Set 运行中的计算节点数量
      * @param RunningCount 运行中的计算节点数量
      */
-    public void setRunningCount(Integer RunningCount) {
+    public void setRunningCount(Long RunningCount) {
         this.RunningCount = RunningCount;
     }
 
@@ -155,7 +155,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Get 销毁中的计算节点数量 
      * @return DeletingCount 销毁中的计算节点数量
      */
-    public Integer getDeletingCount() {
+    public Long getDeletingCount() {
         return this.DeletingCount;
     }
 
@@ -163,7 +163,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Set 销毁中的计算节点数量
      * @param DeletingCount 销毁中的计算节点数量
      */
-    public void setDeletingCount(Integer DeletingCount) {
+    public void setDeletingCount(Long DeletingCount) {
         this.DeletingCount = DeletingCount;
     }
 
@@ -171,7 +171,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Get 异常的计算节点数量 
      * @return AbnormalCount 异常的计算节点数量
      */
-    public Integer getAbnormalCount() {
+    public Long getAbnormalCount() {
         return this.AbnormalCount;
     }
 
@@ -179,7 +179,7 @@ public class ComputeNodeMetrics extends AbstractModel{
      * Set 异常的计算节点数量
      * @param AbnormalCount 异常的计算节点数量
      */
-    public void setAbnormalCount(Integer AbnormalCount) {
+    public void setAbnormalCount(Long AbnormalCount) {
         this.AbnormalCount = AbnormalCount;
     }
 

@@ -55,14 +55,14 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回实例数量，默认20，有效区间[1,100]
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 数据迁移任务ID 
@@ -132,7 +132,7 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -140,7 +140,7 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
      * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -148,7 +148,7 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
      * Get 返回实例数量，默认20，有效区间[1,100] 
      * @return Limit 返回实例数量，默认20，有效区间[1,100]
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -156,7 +156,7 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
      * Set 返回实例数量，默认20，有效区间[1,100]
      * @param Limit 返回实例数量，默认20，有效区间[1,100]
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

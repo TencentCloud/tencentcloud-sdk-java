@@ -27,7 +27,7 @@ public class CreateRoutesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 路由表对象。
@@ -47,7 +47,7 @@ public class CreateRoutesResponse extends AbstractModel{
      * Get 新增的实例个数。 
      * @return TotalCount 新增的实例个数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class CreateRoutesResponse extends AbstractModel{
      * Set 新增的实例个数。
      * @param TotalCount 新增的实例个数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -34,21 +34,21 @@ public class DeviceStatData extends AbstractModel{
     */
     @SerializedName("DeviceOnline")
     @Expose
-    private Integer DeviceOnline;
+    private Long DeviceOnline;
 
     /**
     * 激活设备数
     */
     @SerializedName("DeviceActive")
     @Expose
-    private Integer DeviceActive;
+    private Long DeviceActive;
 
     /**
     * 设备总数
     */
     @SerializedName("DeviceTotal")
     @Expose
-    private Integer DeviceTotal;
+    private Long DeviceTotal;
 
     /**
      * Get 时间点 
@@ -70,7 +70,7 @@ public class DeviceStatData extends AbstractModel{
      * Get 在线设备数 
      * @return DeviceOnline 在线设备数
      */
-    public Integer getDeviceOnline() {
+    public Long getDeviceOnline() {
         return this.DeviceOnline;
     }
 
@@ -78,7 +78,7 @@ public class DeviceStatData extends AbstractModel{
      * Set 在线设备数
      * @param DeviceOnline 在线设备数
      */
-    public void setDeviceOnline(Integer DeviceOnline) {
+    public void setDeviceOnline(Long DeviceOnline) {
         this.DeviceOnline = DeviceOnline;
     }
 
@@ -86,7 +86,7 @@ public class DeviceStatData extends AbstractModel{
      * Get 激活设备数 
      * @return DeviceActive 激活设备数
      */
-    public Integer getDeviceActive() {
+    public Long getDeviceActive() {
         return this.DeviceActive;
     }
 
@@ -94,7 +94,7 @@ public class DeviceStatData extends AbstractModel{
      * Set 激活设备数
      * @param DeviceActive 激活设备数
      */
-    public void setDeviceActive(Integer DeviceActive) {
+    public void setDeviceActive(Long DeviceActive) {
         this.DeviceActive = DeviceActive;
     }
 
@@ -102,7 +102,7 @@ public class DeviceStatData extends AbstractModel{
      * Get 设备总数 
      * @return DeviceTotal 设备总数
      */
-    public Integer getDeviceTotal() {
+    public Long getDeviceTotal() {
         return this.DeviceTotal;
     }
 
@@ -110,7 +110,7 @@ public class DeviceStatData extends AbstractModel{
      * Set 设备总数
      * @param DeviceTotal 设备总数
      */
-    public void setDeviceTotal(Integer DeviceTotal) {
+    public void setDeviceTotal(Long DeviceTotal) {
         this.DeviceTotal = DeviceTotal;
     }
 

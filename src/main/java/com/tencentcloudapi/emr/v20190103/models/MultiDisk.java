@@ -34,14 +34,14 @@ public class MultiDisk extends AbstractModel{
     */
     @SerializedName("Volume")
     @Expose
-    private Integer Volume;
+    private Long Volume;
 
     /**
     * 该类型云盘个数
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
      * Get 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种 
@@ -63,7 +63,7 @@ public class MultiDisk extends AbstractModel{
      * Get 云盘大小 
      * @return Volume 云盘大小
      */
-    public Integer getVolume() {
+    public Long getVolume() {
         return this.Volume;
     }
 
@@ -71,7 +71,7 @@ public class MultiDisk extends AbstractModel{
      * Set 云盘大小
      * @param Volume 云盘大小
      */
-    public void setVolume(Integer Volume) {
+    public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
@@ -79,7 +79,7 @@ public class MultiDisk extends AbstractModel{
      * Get 该类型云盘个数 
      * @return Count 该类型云盘个数
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -87,7 +87,7 @@ public class MultiDisk extends AbstractModel{
      * Set 该类型云盘个数
      * @param Count 该类型云盘个数
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 

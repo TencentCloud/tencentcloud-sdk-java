@@ -27,7 +27,7 @@ public class NetworkLastInfo extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 网络状态
@@ -40,7 +40,7 @@ public class NetworkLastInfo extends AbstractModel{
      * Get 总数 
      * @return Count 总数
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -48,7 +48,7 @@ public class NetworkLastInfo extends AbstractModel{
      * Set 总数
      * @param Count 总数
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 

@@ -27,7 +27,7 @@ public class ModifySiteAttributeRequest extends AbstractModel{
     */
     @SerializedName("SiteId")
     @Expose
-    private Integer SiteId;
+    private Long SiteId;
 
     /**
     * 站点名称
@@ -41,7 +41,7 @@ public class ModifySiteAttributeRequest extends AbstractModel{
     */
     @SerializedName("NeedLogin")
     @Expose
-    private Integer NeedLogin;
+    private Long NeedLogin;
 
     /**
     * 登录后的cookie
@@ -75,7 +75,7 @@ public class ModifySiteAttributeRequest extends AbstractModel{
      * Get 站点ID 
      * @return SiteId 站点ID
      */
-    public Integer getSiteId() {
+    public Long getSiteId() {
         return this.SiteId;
     }
 
@@ -83,7 +83,7 @@ public class ModifySiteAttributeRequest extends AbstractModel{
      * Set 站点ID
      * @param SiteId 站点ID
      */
-    public void setSiteId(Integer SiteId) {
+    public void setSiteId(Long SiteId) {
         this.SiteId = SiteId;
     }
 
@@ -107,7 +107,7 @@ public class ModifySiteAttributeRequest extends AbstractModel{
      * Get 网站是否需要登录扫描：0-未知；-1-不需要；1-需要 
      * @return NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
      */
-    public Integer getNeedLogin() {
+    public Long getNeedLogin() {
         return this.NeedLogin;
     }
 
@@ -115,7 +115,7 @@ public class ModifySiteAttributeRequest extends AbstractModel{
      * Set 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
      * @param NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
      */
-    public void setNeedLogin(Integer NeedLogin) {
+    public void setNeedLogin(Long NeedLogin) {
         this.NeedLogin = NeedLogin;
     }
 

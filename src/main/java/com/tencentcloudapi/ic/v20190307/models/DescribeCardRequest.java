@@ -27,7 +27,7 @@ public class DescribeCardRequest extends AbstractModel{
     */
     @SerializedName("Sdkappid")
     @Expose
-    private Integer Sdkappid;
+    private Long Sdkappid;
 
     /**
     * 卡片ID
@@ -40,7 +40,7 @@ public class DescribeCardRequest extends AbstractModel{
      * Get 应用ID 
      * @return Sdkappid 应用ID
      */
-    public Integer getSdkappid() {
+    public Long getSdkappid() {
         return this.Sdkappid;
     }
 
@@ -48,7 +48,7 @@ public class DescribeCardRequest extends AbstractModel{
      * Set 应用ID
      * @param Sdkappid 应用ID
      */
-    public void setSdkappid(Integer Sdkappid) {
+    public void setSdkappid(Long Sdkappid) {
         this.Sdkappid = Sdkappid;
     }
 

@@ -27,7 +27,7 @@ public class DescribeMigrateJobsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 任务详情数组
@@ -47,7 +47,7 @@ public class DescribeMigrateJobsResponse extends AbstractModel{
      * Get 任务数目 
      * @return TotalCount 任务数目
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeMigrateJobsResponse extends AbstractModel{
      * Set 任务数目
      * @param TotalCount 任务数目
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

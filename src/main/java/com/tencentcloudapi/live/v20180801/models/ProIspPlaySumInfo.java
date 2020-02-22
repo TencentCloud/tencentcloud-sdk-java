@@ -41,7 +41,7 @@ public class ProIspPlaySumInfo extends AbstractModel{
     */
     @SerializedName("TotalRequest")
     @Expose
-    private Integer TotalRequest;
+    private Long TotalRequest;
 
     /**
     * 平均下载流量，单位：MB/s
@@ -86,7 +86,7 @@ public class ProIspPlaySumInfo extends AbstractModel{
      * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
-    public Integer getTotalRequest() {
+    public Long getTotalRequest() {
         return this.TotalRequest;
     }
 
@@ -94,7 +94,7 @@ public class ProIspPlaySumInfo extends AbstractModel{
      * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
-    public void setTotalRequest(Integer TotalRequest) {
+    public void setTotalRequest(Long TotalRequest) {
         this.TotalRequest = TotalRequest;
     }
 

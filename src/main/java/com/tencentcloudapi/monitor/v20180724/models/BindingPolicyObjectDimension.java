@@ -34,7 +34,7 @@ public class BindingPolicyObjectDimension extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
     * 维度信息
@@ -70,7 +70,7 @@ public class BindingPolicyObjectDimension extends AbstractModel{
      * Get 地域ID 
      * @return RegionId 地域ID
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -78,7 +78,7 @@ public class BindingPolicyObjectDimension extends AbstractModel{
      * Set 地域ID
      * @param RegionId 地域ID
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 

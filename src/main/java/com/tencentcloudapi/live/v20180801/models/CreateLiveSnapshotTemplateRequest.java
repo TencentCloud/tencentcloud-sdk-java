@@ -35,7 +35,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     */
     @SerializedName("CosAppId")
     @Expose
-    private Integer CosAppId;
+    private Long CosAppId;
 
     /**
     * Cos Bucket名称。
@@ -65,28 +65,28 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     */
     @SerializedName("SnapshotInterval")
     @Expose
-    private Integer SnapshotInterval;
+    private Long SnapshotInterval;
 
     /**
     * 截图宽度。默认：0（原始宽）。
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 截图高度。默认：0（原始高）。
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 是否开启鉴黄，0：不开启，1：开启。默认：0。
     */
     @SerializedName("PornFlag")
     @Expose
-    private Integer PornFlag;
+    private Long PornFlag;
 
     /**
      * Get 模板名称，非空的字符串。
@@ -112,7 +112,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Get Cos AppId。 
      * @return CosAppId Cos AppId。
      */
-    public Integer getCosAppId() {
+    public Long getCosAppId() {
         return this.CosAppId;
     }
 
@@ -120,7 +120,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Set Cos AppId。
      * @param CosAppId Cos AppId。
      */
-    public void setCosAppId(Integer CosAppId) {
+    public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
     }
 
@@ -182,7 +182,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * @return SnapshotInterval 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
      */
-    public Integer getSnapshotInterval() {
+    public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
@@ -192,7 +192,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * @param SnapshotInterval 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
      */
-    public void setSnapshotInterval(Integer SnapshotInterval) {
+    public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
@@ -200,7 +200,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Get 截图宽度。默认：0（原始宽）。 
      * @return Width 截图宽度。默认：0（原始宽）。
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -208,7 +208,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Set 截图宽度。默认：0（原始宽）。
      * @param Width 截图宽度。默认：0（原始宽）。
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -216,7 +216,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Get 截图高度。默认：0（原始高）。 
      * @return Height 截图高度。默认：0（原始高）。
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -224,7 +224,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Set 截图高度。默认：0（原始高）。
      * @param Height 截图高度。默认：0（原始高）。
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -232,7 +232,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Get 是否开启鉴黄，0：不开启，1：开启。默认：0。 
      * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
-    public Integer getPornFlag() {
+    public Long getPornFlag() {
         return this.PornFlag;
     }
 
@@ -240,7 +240,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
      * Set 是否开启鉴黄，0：不开启，1：开启。默认：0。
      * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
-    public void setPornFlag(Integer PornFlag) {
+    public void setPornFlag(Long PornFlag) {
         this.PornFlag = PornFlag;
     }
 

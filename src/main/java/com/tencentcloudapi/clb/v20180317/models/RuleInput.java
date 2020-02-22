@@ -41,7 +41,7 @@ public class RuleInput extends AbstractModel{
     */
     @SerializedName("SessionExpireTime")
     @Expose
-    private Integer SessionExpireTime;
+    private Long SessionExpireTime;
 
     /**
     * 健康检查信息
@@ -143,7 +143,7 @@ public class RuleInput extends AbstractModel{
      * Get 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。 
      * @return SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      */
-    public Integer getSessionExpireTime() {
+    public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
@@ -151,7 +151,7 @@ public class RuleInput extends AbstractModel{
      * Set 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      * @param SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      */
-    public void setSessionExpireTime(Integer SessionExpireTime) {
+    public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 

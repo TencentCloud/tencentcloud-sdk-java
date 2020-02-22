@@ -50,7 +50,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     */
     @SerializedName("AreaId")
     @Expose
-    private Integer AreaId;
+    private Long AreaId;
 
     /**
     * 选择完成转拉推服务使用的运营商网络：
@@ -62,7 +62,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     */
     @SerializedName("IspId")
     @Expose
-    private Integer IspId;
+    private Long IspId;
 
     /**
     * 开始时间。
@@ -151,7 +151,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 3-天津，
 4-中国香港。
      */
-    public Integer getAreaId() {
+    public Long getAreaId() {
         return this.AreaId;
     }
 
@@ -167,7 +167,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 3-天津，
 4-中国香港。
      */
-    public void setAreaId(Integer AreaId) {
+    public void setAreaId(Long AreaId) {
         this.AreaId = AreaId;
     }
 
@@ -185,7 +185,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 4-其他。
 注：AreaId为4的时候,IspId只能为其他。
      */
-    public Integer getIspId() {
+    public Long getIspId() {
         return this.IspId;
     }
 
@@ -203,7 +203,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
 4-其他。
 注：AreaId为4的时候,IspId只能为其他。
      */
-    public void setIspId(Integer IspId) {
+    public void setIspId(Long IspId) {
         this.IspId = IspId;
     }
 

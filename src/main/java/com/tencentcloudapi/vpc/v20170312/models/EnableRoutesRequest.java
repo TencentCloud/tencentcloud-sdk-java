@@ -34,7 +34,7 @@ public class EnableRoutesRequest extends AbstractModel{
     */
     @SerializedName("RouteIds")
     @Expose
-    private Integer [] RouteIds;
+    private Long [] RouteIds;
 
     /**
      * Get 路由表唯一ID。 
@@ -56,7 +56,7 @@ public class EnableRoutesRequest extends AbstractModel{
      * Get 路由策略唯一ID。 
      * @return RouteIds 路由策略唯一ID。
      */
-    public Integer [] getRouteIds() {
+    public Long [] getRouteIds() {
         return this.RouteIds;
     }
 
@@ -64,7 +64,7 @@ public class EnableRoutesRequest extends AbstractModel{
      * Set 路由策略唯一ID。
      * @param RouteIds 路由策略唯一ID。
      */
-    public void setRouteIds(Integer [] RouteIds) {
+    public void setRouteIds(Long [] RouteIds) {
         this.RouteIds = RouteIds;
     }
 

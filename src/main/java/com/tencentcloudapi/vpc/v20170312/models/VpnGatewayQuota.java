@@ -27,7 +27,7 @@ public class VpnGatewayQuota extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
     * 配额中文名称
@@ -47,7 +47,7 @@ public class VpnGatewayQuota extends AbstractModel{
      * Get 带宽配额 
      * @return Bandwidth 带宽配额
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -55,7 +55,7 @@ public class VpnGatewayQuota extends AbstractModel{
      * Set 带宽配额
      * @param Bandwidth 带宽配额
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

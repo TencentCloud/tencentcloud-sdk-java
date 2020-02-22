@@ -34,35 +34,35 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 总人数
     */
     @SerializedName("TotalPerson")
     @Expose
-    private Integer TotalPerson;
+    private Long TotalPerson;
 
     /**
     * 总动迹数目
     */
     @SerializedName("TotalTrajectory")
     @Expose
-    private Integer TotalTrajectory;
+    private Long TotalTrajectory;
 
     /**
     * 返回动迹中的总人数
     */
     @SerializedName("Person")
     @Expose
-    private Integer Person;
+    private Long Person;
 
     /**
     * 返回动迹的数目
     */
     @SerializedName("Trajectory")
     @Expose
-    private Integer Trajectory;
+    private Long Trajectory;
 
     /**
     * 返回动迹的具体信息
@@ -98,7 +98,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Get 店铺ID 
      * @return ShopId 店铺ID
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -106,7 +106,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Set 店铺ID
      * @param ShopId 店铺ID
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -114,7 +114,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Get 总人数 
      * @return TotalPerson 总人数
      */
-    public Integer getTotalPerson() {
+    public Long getTotalPerson() {
         return this.TotalPerson;
     }
 
@@ -122,7 +122,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Set 总人数
      * @param TotalPerson 总人数
      */
-    public void setTotalPerson(Integer TotalPerson) {
+    public void setTotalPerson(Long TotalPerson) {
         this.TotalPerson = TotalPerson;
     }
 
@@ -130,7 +130,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Get 总动迹数目 
      * @return TotalTrajectory 总动迹数目
      */
-    public Integer getTotalTrajectory() {
+    public Long getTotalTrajectory() {
         return this.TotalTrajectory;
     }
 
@@ -138,7 +138,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Set 总动迹数目
      * @param TotalTrajectory 总动迹数目
      */
-    public void setTotalTrajectory(Integer TotalTrajectory) {
+    public void setTotalTrajectory(Long TotalTrajectory) {
         this.TotalTrajectory = TotalTrajectory;
     }
 
@@ -146,7 +146,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Get 返回动迹中的总人数 
      * @return Person 返回动迹中的总人数
      */
-    public Integer getPerson() {
+    public Long getPerson() {
         return this.Person;
     }
 
@@ -154,7 +154,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Set 返回动迹中的总人数
      * @param Person 返回动迹中的总人数
      */
-    public void setPerson(Integer Person) {
+    public void setPerson(Long Person) {
         this.Person = Person;
     }
 
@@ -162,7 +162,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Get 返回动迹的数目 
      * @return Trajectory 返回动迹的数目
      */
-    public Integer getTrajectory() {
+    public Long getTrajectory() {
         return this.Trajectory;
     }
 
@@ -170,7 +170,7 @@ public class DescribeTrajectoryDataResponse extends AbstractModel{
      * Set 返回动迹的数目
      * @param Trajectory 返回动迹的数目
      */
-    public void setTrajectory(Integer Trajectory) {
+    public void setTrajectory(Long Trajectory) {
         this.Trajectory = Trajectory;
     }
 

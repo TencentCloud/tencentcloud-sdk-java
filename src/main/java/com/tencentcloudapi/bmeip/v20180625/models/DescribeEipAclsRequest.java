@@ -41,14 +41,14 @@ public class DescribeEipAclsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 分页参数。每一页的 EIPACL 列表数目
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get ACL 名称，支持模糊查找 
@@ -86,7 +86,7 @@ public class DescribeEipAclsRequest extends AbstractModel{
      * Get 分页参数。偏移量，默认为 0 
      * @return Offset 分页参数。偏移量，默认为 0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -94,7 +94,7 @@ public class DescribeEipAclsRequest extends AbstractModel{
      * Set 分页参数。偏移量，默认为 0
      * @param Offset 分页参数。偏移量，默认为 0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -102,7 +102,7 @@ public class DescribeEipAclsRequest extends AbstractModel{
      * Get 分页参数。每一页的 EIPACL 列表数目 
      * @return Limit 分页参数。每一页的 EIPACL 列表数目
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -110,7 +110,7 @@ public class DescribeEipAclsRequest extends AbstractModel{
      * Set 分页参数。每一页的 EIPACL 列表数目
      * @param Limit 分页参数。每一页的 EIPACL 列表数目
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

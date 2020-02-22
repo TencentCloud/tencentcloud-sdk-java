@@ -34,14 +34,14 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("Online")
     @Expose
-    private Integer Online;
+    private Long Online;
 
     /**
     * 设备登录时间
     */
     @SerializedName("LoginTime")
     @Expose
-    private Integer LoginTime;
+    private Long LoginTime;
 
     /**
     * 设备版本
@@ -76,7 +76,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("DeviceType")
     @Expose
-    private Integer DeviceType;
+    private Long DeviceType;
 
     /**
     * IMEI
@@ -90,7 +90,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("Isp")
     @Expose
-    private Integer Isp;
+    private Long Isp;
 
     /**
     * NB IOT运营商处的DeviceID
@@ -111,7 +111,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("LastUpdateTime")
     @Expose
-    private Integer LastUpdateTime;
+    private Long LastUpdateTime;
 
     /**
     * LoRa设备的dev eui
@@ -125,7 +125,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("LoraMoteType")
     @Expose
-    private Integer LoraMoteType;
+    private Long LoraMoteType;
 
     /**
     * 首次上线时间
@@ -133,7 +133,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("FirstOnlineTime")
     @Expose
-    private Integer FirstOnlineTime;
+    private Long FirstOnlineTime;
 
     /**
     * 最近下线时间
@@ -141,7 +141,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("LastOfflineTime")
     @Expose
-    private Integer LastOfflineTime;
+    private Long LastOfflineTime;
 
     /**
     * 设备创建时间
@@ -149,7 +149,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("CreateTime")
     @Expose
-    private Integer CreateTime;
+    private Long CreateTime;
 
     /**
     * 设备日志级别
@@ -157,7 +157,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("LogLevel")
     @Expose
-    private Integer LogLevel;
+    private Long LogLevel;
 
     /**
     * 设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
@@ -165,7 +165,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("CertState")
     @Expose
-    private Integer CertState;
+    private Long CertState;
 
     /**
     * 设备可用状态，0禁用，1启用
@@ -173,7 +173,7 @@ public class DeviceInfo extends AbstractModel{
     */
     @SerializedName("EnableState")
     @Expose
-    private Integer EnableState;
+    private Long EnableState;
 
     /**
     * 设备标签
@@ -203,7 +203,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 设备是否在线，0不在线，1在线 
      * @return Online 设备是否在线，0不在线，1在线
      */
-    public Integer getOnline() {
+    public Long getOnline() {
         return this.Online;
     }
 
@@ -211,7 +211,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 设备是否在线，0不在线，1在线
      * @param Online 设备是否在线，0不在线，1在线
      */
-    public void setOnline(Integer Online) {
+    public void setOnline(Long Online) {
         this.Online = Online;
     }
 
@@ -219,7 +219,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 设备登录时间 
      * @return LoginTime 设备登录时间
      */
-    public Integer getLoginTime() {
+    public Long getLoginTime() {
         return this.LoginTime;
     }
 
@@ -227,7 +227,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 设备登录时间
      * @param LoginTime 设备登录时间
      */
-    public void setLoginTime(Integer LoginTime) {
+    public void setLoginTime(Long LoginTime) {
         this.LoginTime = LoginTime;
     }
 
@@ -299,7 +299,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 设备类型 
      * @return DeviceType 设备类型
      */
-    public Integer getDeviceType() {
+    public Long getDeviceType() {
         return this.DeviceType;
     }
 
@@ -307,7 +307,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 设备类型
      * @param DeviceType 设备类型
      */
-    public void setDeviceType(Integer DeviceType) {
+    public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;
     }
 
@@ -331,7 +331,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 运营商类型 
      * @return Isp 运营商类型
      */
-    public Integer getIsp() {
+    public Long getIsp() {
         return this.Isp;
     }
 
@@ -339,7 +339,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 运营商类型
      * @param Isp 运营商类型
      */
-    public void setIsp(Integer Isp) {
+    public void setIsp(Long Isp) {
         this.Isp = Isp;
     }
 
@@ -379,7 +379,7 @@ public class DeviceInfo extends AbstractModel{
      * Get 设备最后更新时间 
      * @return LastUpdateTime 设备最后更新时间
      */
-    public Integer getLastUpdateTime() {
+    public Long getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
@@ -387,7 +387,7 @@ public class DeviceInfo extends AbstractModel{
      * Set 设备最后更新时间
      * @param LastUpdateTime 设备最后更新时间
      */
-    public void setLastUpdateTime(Integer LastUpdateTime) {
+    public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
@@ -411,7 +411,7 @@ public class DeviceInfo extends AbstractModel{
      * Get LoRa设备的Mote type 
      * @return LoraMoteType LoRa设备的Mote type
      */
-    public Integer getLoraMoteType() {
+    public Long getLoraMoteType() {
         return this.LoraMoteType;
     }
 
@@ -419,7 +419,7 @@ public class DeviceInfo extends AbstractModel{
      * Set LoRa设备的Mote type
      * @param LoraMoteType LoRa设备的Mote type
      */
-    public void setLoraMoteType(Integer LoraMoteType) {
+    public void setLoraMoteType(Long LoraMoteType) {
         this.LoraMoteType = LoraMoteType;
     }
 
@@ -429,7 +429,7 @@ public class DeviceInfo extends AbstractModel{
      * @return FirstOnlineTime 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getFirstOnlineTime() {
+    public Long getFirstOnlineTime() {
         return this.FirstOnlineTime;
     }
 
@@ -439,7 +439,7 @@ public class DeviceInfo extends AbstractModel{
      * @param FirstOnlineTime 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFirstOnlineTime(Integer FirstOnlineTime) {
+    public void setFirstOnlineTime(Long FirstOnlineTime) {
         this.FirstOnlineTime = FirstOnlineTime;
     }
 
@@ -449,7 +449,7 @@ public class DeviceInfo extends AbstractModel{
      * @return LastOfflineTime 最近下线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getLastOfflineTime() {
+    public Long getLastOfflineTime() {
         return this.LastOfflineTime;
     }
 
@@ -459,7 +459,7 @@ public class DeviceInfo extends AbstractModel{
      * @param LastOfflineTime 最近下线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLastOfflineTime(Integer LastOfflineTime) {
+    public void setLastOfflineTime(Long LastOfflineTime) {
         this.LastOfflineTime = LastOfflineTime;
     }
 
@@ -469,7 +469,7 @@ public class DeviceInfo extends AbstractModel{
      * @return CreateTime 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getCreateTime() {
+    public Long getCreateTime() {
         return this.CreateTime;
     }
 
@@ -479,7 +479,7 @@ public class DeviceInfo extends AbstractModel{
      * @param CreateTime 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCreateTime(Integer CreateTime) {
+    public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
@@ -489,7 +489,7 @@ public class DeviceInfo extends AbstractModel{
      * @return LogLevel 设备日志级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getLogLevel() {
+    public Long getLogLevel() {
         return this.LogLevel;
     }
 
@@ -499,7 +499,7 @@ public class DeviceInfo extends AbstractModel{
      * @param LogLevel 设备日志级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLogLevel(Integer LogLevel) {
+    public void setLogLevel(Long LogLevel) {
         this.LogLevel = LogLevel;
     }
 
@@ -509,7 +509,7 @@ public class DeviceInfo extends AbstractModel{
      * @return CertState 设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getCertState() {
+    public Long getCertState() {
         return this.CertState;
     }
 
@@ -519,7 +519,7 @@ public class DeviceInfo extends AbstractModel{
      * @param CertState 设备证书获取状态, 1 已获取过设备密钥，0 未获取过设备密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCertState(Integer CertState) {
+    public void setCertState(Long CertState) {
         this.CertState = CertState;
     }
 
@@ -529,7 +529,7 @@ public class DeviceInfo extends AbstractModel{
      * @return EnableState 设备可用状态，0禁用，1启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getEnableState() {
+    public Long getEnableState() {
         return this.EnableState;
     }
 
@@ -539,7 +539,7 @@ public class DeviceInfo extends AbstractModel{
      * @param EnableState 设备可用状态，0禁用，1启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEnableState(Integer EnableState) {
+    public void setEnableState(Long EnableState) {
         this.EnableState = EnableState;
     }
 

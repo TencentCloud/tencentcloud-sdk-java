@@ -48,7 +48,7 @@ public class DebugLogEntry extends AbstractModel{
     */
     @SerializedName("Timestamp")
     @Expose
-    private Integer Timestamp;
+    private Long Timestamp;
 
     /**
     * success/fail
@@ -130,7 +130,7 @@ public class DebugLogEntry extends AbstractModel{
      * Get 时间戳 
      * @return Timestamp 时间戳
      */
-    public Integer getTimestamp() {
+    public Long getTimestamp() {
         return this.Timestamp;
     }
 
@@ -138,7 +138,7 @@ public class DebugLogEntry extends AbstractModel{
      * Set 时间戳
      * @param Timestamp 时间戳
      */
-    public void setTimestamp(Integer Timestamp) {
+    public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 

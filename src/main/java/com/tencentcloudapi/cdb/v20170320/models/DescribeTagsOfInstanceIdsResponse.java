@@ -27,14 +27,14 @@ public class DescribeTagsOfInstanceIdsResponse extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 分页大小。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 实例标签信息。
@@ -54,7 +54,7 @@ public class DescribeTagsOfInstanceIdsResponse extends AbstractModel{
      * Get 分页偏移量。 
      * @return Offset 分页偏移量。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -62,7 +62,7 @@ public class DescribeTagsOfInstanceIdsResponse extends AbstractModel{
      * Set 分页偏移量。
      * @param Offset 分页偏移量。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -70,7 +70,7 @@ public class DescribeTagsOfInstanceIdsResponse extends AbstractModel{
      * Get 分页大小。 
      * @return Limit 分页大小。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -78,7 +78,7 @@ public class DescribeTagsOfInstanceIdsResponse extends AbstractModel{
      * Set 分页大小。
      * @param Limit 分页大小。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

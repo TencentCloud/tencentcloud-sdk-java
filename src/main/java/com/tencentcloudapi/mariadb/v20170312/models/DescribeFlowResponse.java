@@ -27,7 +27,7 @@ public class DescribeFlowResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeFlowResponse extends AbstractModel{
      * Get 流程状态，0：成功，1：失败，2：运行中 
      * @return Status 流程状态，0：成功，1：失败，2：运行中
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -48,7 +48,7 @@ public class DescribeFlowResponse extends AbstractModel{
      * Set 流程状态，0：成功，1：失败，2：运行中
      * @param Status 流程状态，0：成功，1：失败，2：运行中
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

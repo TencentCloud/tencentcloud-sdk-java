@@ -34,14 +34,14 @@ public class ListLayersRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * Limit
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 查询key，模糊匹配名称
@@ -70,7 +70,7 @@ public class ListLayersRequest extends AbstractModel{
      * Get Offset 
      * @return Offset Offset
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -78,7 +78,7 @@ public class ListLayersRequest extends AbstractModel{
      * Set Offset
      * @param Offset Offset
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -86,7 +86,7 @@ public class ListLayersRequest extends AbstractModel{
      * Get Limit 
      * @return Limit Limit
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -94,7 +94,7 @@ public class ListLayersRequest extends AbstractModel{
      * Set Limit
      * @param Limit Limit
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

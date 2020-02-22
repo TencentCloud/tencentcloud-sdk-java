@@ -34,14 +34,14 @@ public class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 区域ID
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 区域名称
@@ -84,7 +84,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel{
      * Get 店铺id 
      * @return ShopId 店铺id
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -92,7 +92,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel{
      * Set 店铺id
      * @param ShopId 店铺id
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -100,7 +100,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel{
      * Get 区域ID 
      * @return ZoneId 区域ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -108,7 +108,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel{
      * Set 区域ID
      * @param ZoneId 区域ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 

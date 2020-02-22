@@ -55,7 +55,7 @@ public class Task extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 项目名称
@@ -160,7 +160,7 @@ public class Task extends AbstractModel{
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -168,7 +168,7 @@ public class Task extends AbstractModel{
      * Set 项目Id
      * @param ProjectId 项目Id
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

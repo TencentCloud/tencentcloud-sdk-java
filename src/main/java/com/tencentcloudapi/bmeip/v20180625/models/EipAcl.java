@@ -55,7 +55,7 @@ public class EipAcl extends AbstractModel{
     */
     @SerializedName("EipNum")
     @Expose
-    private Integer EipNum;
+    private Long EipNum;
 
     /**
     * 出站规则
@@ -139,7 +139,7 @@ public class EipAcl extends AbstractModel{
      * Get EIPACL 已关联的 eip 数目 
      * @return EipNum EIPACL 已关联的 eip 数目
      */
-    public Integer getEipNum() {
+    public Long getEipNum() {
         return this.EipNum;
     }
 
@@ -147,7 +147,7 @@ public class EipAcl extends AbstractModel{
      * Set EIPACL 已关联的 eip 数目
      * @param EipNum EIPACL 已关联的 eip 数目
      */
-    public void setEipNum(Integer EipNum) {
+    public void setEipNum(Long EipNum) {
         this.EipNum = EipNum;
     }
 

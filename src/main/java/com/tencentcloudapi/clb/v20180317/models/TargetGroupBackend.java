@@ -48,14 +48,14 @@ public class TargetGroupBackend extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
     * 后端服务的外网 IP
@@ -149,7 +149,7 @@ public class TargetGroupBackend extends AbstractModel{
      * Get 后端服务的监听端口 
      * @return Port 后端服务的监听端口
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -157,7 +157,7 @@ public class TargetGroupBackend extends AbstractModel{
      * Set 后端服务的监听端口
      * @param Port 后端服务的监听端口
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
@@ -165,7 +165,7 @@ public class TargetGroupBackend extends AbstractModel{
      * Get 后端服务的转发权重，取值范围：[0, 100]，默认为 10。 
      * @return Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -173,7 +173,7 @@ public class TargetGroupBackend extends AbstractModel{
      * Set 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 

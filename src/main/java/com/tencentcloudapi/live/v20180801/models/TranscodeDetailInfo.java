@@ -51,7 +51,7 @@ public class TranscodeDetailInfo extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Integer Duration;
+    private Long Duration;
 
     /**
     * 编码方式，带模块，
@@ -70,7 +70,7 @@ topspeed_H265 =》极速高清-H265。
     */
     @SerializedName("Bitrate")
     @Expose
-    private Integer Bitrate;
+    private Long Bitrate;
 
     /**
     * 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
@@ -148,7 +148,7 @@ topspeed_H265 =》极速高清-H265。
      * @return Duration 转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
      */
-    public Integer getDuration() {
+    public Long getDuration() {
         return this.Duration;
     }
 
@@ -158,7 +158,7 @@ topspeed_H265 =》极速高清-H265。
      * @param Duration 转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
      */
-    public void setDuration(Integer Duration) {
+    public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
@@ -202,7 +202,7 @@ topspeed_H265 =》极速高清-H265。
      * Get 码率。 
      * @return Bitrate 码率。
      */
-    public Integer getBitrate() {
+    public Long getBitrate() {
         return this.Bitrate;
     }
 
@@ -210,7 +210,7 @@ topspeed_H265 =》极速高清-H265。
      * Set 码率。
      * @param Bitrate 码率。
      */
-    public void setBitrate(Integer Bitrate) {
+    public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 

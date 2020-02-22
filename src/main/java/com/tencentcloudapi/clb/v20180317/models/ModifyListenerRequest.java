@@ -48,7 +48,7 @@ public class ModifyListenerRequest extends AbstractModel{
     */
     @SerializedName("SessionExpireTime")
     @Expose
-    private Integer SessionExpireTime;
+    private Long SessionExpireTime;
 
     /**
     * 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
@@ -77,7 +77,7 @@ public class ModifyListenerRequest extends AbstractModel{
     */
     @SerializedName("SniSwitch")
     @Expose
-    private Integer SniSwitch;
+    private Long SniSwitch;
 
     /**
      * Get 负载均衡实例 ID 
@@ -131,7 +131,7 @@ public class ModifyListenerRequest extends AbstractModel{
      * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。 
      * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
-    public Integer getSessionExpireTime() {
+    public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
@@ -139,7 +139,7 @@ public class ModifyListenerRequest extends AbstractModel{
      * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
-    public void setSessionExpireTime(Integer SessionExpireTime) {
+    public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
@@ -199,7 +199,7 @@ public class ModifyListenerRequest extends AbstractModel{
      * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI 
      * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
      */
-    public Integer getSniSwitch() {
+    public Long getSniSwitch() {
         return this.SniSwitch;
     }
 
@@ -207,7 +207,7 @@ public class ModifyListenerRequest extends AbstractModel{
      * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
      * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
      */
-    public void setSniSwitch(Integer SniSwitch) {
+    public void setSniSwitch(Long SniSwitch) {
         this.SniSwitch = SniSwitch;
     }
 

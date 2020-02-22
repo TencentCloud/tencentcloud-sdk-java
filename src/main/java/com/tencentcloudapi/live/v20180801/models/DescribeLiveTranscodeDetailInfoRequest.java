@@ -51,7 +51,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页个数，默认20，
@@ -59,7 +59,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
     * 起始天时间，北京时间，
@@ -141,7 +141,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
      * @return PageNum 页数，默认1，
 不超过100页。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -151,7 +151,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
      * @param PageNum 页数，默认1，
 不超过100页。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -161,7 +161,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
      * @return PageSize 每页个数，默认20，
 范围：[10,1000]。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -171,7 +171,7 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
      * @param PageSize 每页个数，默认20，
 范围：[10,1000]。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 

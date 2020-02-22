@@ -27,7 +27,7 @@ public class LaunchConfiguration extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 启动配置ID。
@@ -164,7 +164,7 @@ public class LaunchConfiguration extends AbstractModel{
     */
     @SerializedName("VersionNumber")
     @Expose
-    private Integer VersionNumber;
+    private Long VersionNumber;
 
     /**
     * 更新时间。
@@ -212,7 +212,7 @@ public class LaunchConfiguration extends AbstractModel{
      * Get 实例所属项目ID。 
      * @return ProjectId 实例所属项目ID。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -220,7 +220,7 @@ public class LaunchConfiguration extends AbstractModel{
      * Set 实例所属项目ID。
      * @param ProjectId 实例所属项目ID。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -532,7 +532,7 @@ public class LaunchConfiguration extends AbstractModel{
      * Get 版本号。 
      * @return VersionNumber 版本号。
      */
-    public Integer getVersionNumber() {
+    public Long getVersionNumber() {
         return this.VersionNumber;
     }
 
@@ -540,7 +540,7 @@ public class LaunchConfiguration extends AbstractModel{
      * Set 版本号。
      * @param VersionNumber 版本号。
      */
-    public void setVersionNumber(Integer VersionNumber) {
+    public void setVersionNumber(Long VersionNumber) {
         this.VersionNumber = VersionNumber;
     }
 

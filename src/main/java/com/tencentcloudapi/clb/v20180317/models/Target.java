@@ -28,7 +28,7 @@ public class Target extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
@@ -52,7 +52,7 @@ public class Target extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
     * 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
@@ -68,7 +68,7 @@ public class Target extends AbstractModel{
      * @return Port 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -78,7 +78,7 @@ public class Target extends AbstractModel{
      * @param Port 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
@@ -130,7 +130,7 @@ public class Target extends AbstractModel{
      * Get 后端服务的转发权重，取值范围：[0, 100]，默认为 10。 
      * @return Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -138,7 +138,7 @@ public class Target extends AbstractModel{
      * Set 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 

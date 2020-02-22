@@ -27,13 +27,13 @@ public class DescribeRegionsRequest extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
      * Get 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆 
      * @return RegionId 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -41,7 +41,7 @@ public class DescribeRegionsRequest extends AbstractModel{
      * Set 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      * @param RegionId 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 

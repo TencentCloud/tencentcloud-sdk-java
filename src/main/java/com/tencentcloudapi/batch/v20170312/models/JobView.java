@@ -48,7 +48,7 @@ public class JobView extends AbstractModel{
     */
     @SerializedName("Priority")
     @Expose
-    private Integer Priority;
+    private Long Priority;
 
     /**
     * 位置信息
@@ -132,7 +132,7 @@ public class JobView extends AbstractModel{
      * Get 作业优先级 
      * @return Priority 作业优先级
      */
-    public Integer getPriority() {
+    public Long getPriority() {
         return this.Priority;
     }
 
@@ -140,7 +140,7 @@ public class JobView extends AbstractModel{
      * Set 作业优先级
      * @param Priority 作业优先级
      */
-    public void setPriority(Integer Priority) {
+    public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 

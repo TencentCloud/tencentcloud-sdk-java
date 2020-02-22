@@ -27,21 +27,21 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
     */
     @SerializedName("ArticleCount")
     @Expose
-    private Integer ArticleCount;
+    private Long ArticleCount;
 
     /**
     * 来源统计总数
     */
     @SerializedName("FromCount")
     @Expose
-    private Integer FromCount;
+    private Long FromCount;
 
     /**
     * 疑似负面报道总数
     */
     @SerializedName("AdverseCount")
     @Expose
-    private Integer AdverseCount;
+    private Long AdverseCount;
 
     /**
     * 文章列表详情
@@ -61,7 +61,7 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
      * Get 文章总数 
      * @return ArticleCount 文章总数
      */
-    public Integer getArticleCount() {
+    public Long getArticleCount() {
         return this.ArticleCount;
     }
 
@@ -69,7 +69,7 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
      * Set 文章总数
      * @param ArticleCount 文章总数
      */
-    public void setArticleCount(Integer ArticleCount) {
+    public void setArticleCount(Long ArticleCount) {
         this.ArticleCount = ArticleCount;
     }
 
@@ -77,7 +77,7 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
      * Get 来源统计总数 
      * @return FromCount 来源统计总数
      */
-    public Integer getFromCount() {
+    public Long getFromCount() {
         return this.FromCount;
     }
 
@@ -85,7 +85,7 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
      * Set 来源统计总数
      * @param FromCount 来源统计总数
      */
-    public void setFromCount(Integer FromCount) {
+    public void setFromCount(Long FromCount) {
         this.FromCount = FromCount;
     }
 
@@ -93,7 +93,7 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
      * Get 疑似负面报道总数 
      * @return AdverseCount 疑似负面报道总数
      */
-    public Integer getAdverseCount() {
+    public Long getAdverseCount() {
         return this.AdverseCount;
     }
 
@@ -101,7 +101,7 @@ public class DescribeBrandSocialOpinionResponse extends AbstractModel{
      * Set 疑似负面报道总数
      * @param AdverseCount 疑似负面报道总数
      */
-    public void setAdverseCount(Integer AdverseCount) {
+    public void setAdverseCount(Long AdverseCount) {
         this.AdverseCount = AdverseCount;
     }
 

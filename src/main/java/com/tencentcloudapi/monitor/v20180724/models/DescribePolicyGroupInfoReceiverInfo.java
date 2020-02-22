@@ -27,28 +27,28 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
     */
     @SerializedName("ReceiverGroupList")
     @Expose
-    private Integer [] ReceiverGroupList;
+    private Long [] ReceiverGroupList;
 
     /**
     * 告警接收人id列表
     */
     @SerializedName("ReceiverUserList")
     @Expose
-    private Integer [] ReceiverUserList;
+    private Long [] ReceiverUserList;
 
     /**
     * 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
     */
     @SerializedName("StartTime")
     @Expose
-    private Integer StartTime;
+    private Long StartTime;
 
     /**
     * 告警时间段结束时间。含义同StartTime
     */
     @SerializedName("EndTime")
     @Expose
-    private Integer EndTime;
+    private Long EndTime;
 
     /**
     * 接收类型。“group”(接收组)或“user”(接收人)
@@ -70,35 +70,35 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
     */
     @SerializedName("UidList")
     @Expose
-    private Integer [] UidList;
+    private Long [] UidList;
 
     /**
     * 电话告警轮数
     */
     @SerializedName("RoundNumber")
     @Expose
-    private Integer RoundNumber;
+    private Long RoundNumber;
 
     /**
     * 电话告警每轮间隔（秒）
     */
     @SerializedName("RoundInterval")
     @Expose
-    private Integer RoundInterval;
+    private Long RoundInterval;
 
     /**
     * 电话告警对个人间隔（秒）
     */
     @SerializedName("PersonInterval")
     @Expose
-    private Integer PersonInterval;
+    private Long PersonInterval;
 
     /**
     * 是否需要电话告警触达提示。0不需要，1需要
     */
     @SerializedName("NeedSendNotice")
     @Expose
-    private Integer NeedSendNotice;
+    private Long NeedSendNotice;
 
     /**
     * 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
@@ -118,7 +118,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 告警接收组id列表 
      * @return ReceiverGroupList 告警接收组id列表
      */
-    public Integer [] getReceiverGroupList() {
+    public Long [] getReceiverGroupList() {
         return this.ReceiverGroupList;
     }
 
@@ -126,7 +126,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 告警接收组id列表
      * @param ReceiverGroupList 告警接收组id列表
      */
-    public void setReceiverGroupList(Integer [] ReceiverGroupList) {
+    public void setReceiverGroupList(Long [] ReceiverGroupList) {
         this.ReceiverGroupList = ReceiverGroupList;
     }
 
@@ -134,7 +134,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 告警接收人id列表 
      * @return ReceiverUserList 告警接收人id列表
      */
-    public Integer [] getReceiverUserList() {
+    public Long [] getReceiverUserList() {
         return this.ReceiverUserList;
     }
 
@@ -142,7 +142,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 告警接收人id列表
      * @param ReceiverUserList 告警接收人id列表
      */
-    public void setReceiverUserList(Integer [] ReceiverUserList) {
+    public void setReceiverUserList(Long [] ReceiverUserList) {
         this.ReceiverUserList = ReceiverUserList;
     }
 
@@ -150,7 +150,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0" 
      * @return StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return this.StartTime;
     }
 
@@ -158,7 +158,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      * @param StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      */
-    public void setStartTime(Integer StartTime) {
+    public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
@@ -166,7 +166,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 告警时间段结束时间。含义同StartTime 
      * @return EndTime 告警时间段结束时间。含义同StartTime
      */
-    public Integer getEndTime() {
+    public Long getEndTime() {
         return this.EndTime;
     }
 
@@ -174,7 +174,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 告警时间段结束时间。含义同StartTime
      * @param EndTime 告警时间段结束时间。含义同StartTime
      */
-    public void setEndTime(Integer EndTime) {
+    public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
@@ -216,7 +216,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * @return UidList 电话告警接收者uid
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getUidList() {
+    public Long [] getUidList() {
         return this.UidList;
     }
 
@@ -226,7 +226,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * @param UidList 电话告警接收者uid
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUidList(Integer [] UidList) {
+    public void setUidList(Long [] UidList) {
         this.UidList = UidList;
     }
 
@@ -234,7 +234,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 电话告警轮数 
      * @return RoundNumber 电话告警轮数
      */
-    public Integer getRoundNumber() {
+    public Long getRoundNumber() {
         return this.RoundNumber;
     }
 
@@ -242,7 +242,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 电话告警轮数
      * @param RoundNumber 电话告警轮数
      */
-    public void setRoundNumber(Integer RoundNumber) {
+    public void setRoundNumber(Long RoundNumber) {
         this.RoundNumber = RoundNumber;
     }
 
@@ -250,7 +250,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 电话告警每轮间隔（秒） 
      * @return RoundInterval 电话告警每轮间隔（秒）
      */
-    public Integer getRoundInterval() {
+    public Long getRoundInterval() {
         return this.RoundInterval;
     }
 
@@ -258,7 +258,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 电话告警每轮间隔（秒）
      * @param RoundInterval 电话告警每轮间隔（秒）
      */
-    public void setRoundInterval(Integer RoundInterval) {
+    public void setRoundInterval(Long RoundInterval) {
         this.RoundInterval = RoundInterval;
     }
 
@@ -266,7 +266,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 电话告警对个人间隔（秒） 
      * @return PersonInterval 电话告警对个人间隔（秒）
      */
-    public Integer getPersonInterval() {
+    public Long getPersonInterval() {
         return this.PersonInterval;
     }
 
@@ -274,7 +274,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 电话告警对个人间隔（秒）
      * @param PersonInterval 电话告警对个人间隔（秒）
      */
-    public void setPersonInterval(Integer PersonInterval) {
+    public void setPersonInterval(Long PersonInterval) {
         this.PersonInterval = PersonInterval;
     }
 
@@ -282,7 +282,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Get 是否需要电话告警触达提示。0不需要，1需要 
      * @return NeedSendNotice 是否需要电话告警触达提示。0不需要，1需要
      */
-    public Integer getNeedSendNotice() {
+    public Long getNeedSendNotice() {
         return this.NeedSendNotice;
     }
 
@@ -290,7 +290,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
      * Set 是否需要电话告警触达提示。0不需要，1需要
      * @param NeedSendNotice 是否需要电话告警触达提示。0不需要，1需要
      */
-    public void setNeedSendNotice(Integer NeedSendNotice) {
+    public void setNeedSendNotice(Long NeedSendNotice) {
         this.NeedSendNotice = NeedSendNotice;
     }
 

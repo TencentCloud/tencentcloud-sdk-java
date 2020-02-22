@@ -27,56 +27,56 @@ public class PlanInfo extends AbstractModel{
     */
     @SerializedName("ApkSizeOpt")
     @Expose
-    private Integer ApkSizeOpt;
+    private Long ApkSizeOpt;
 
     /**
     * Dex加固，0关闭，1开启
     */
     @SerializedName("Dex")
     @Expose
-    private Integer Dex;
+    private Long Dex;
 
     /**
     * So加固，0关闭，1开启
     */
     @SerializedName("So")
     @Expose
-    private Integer So;
+    private Long So;
 
     /**
     * 数据收集，0关闭，1开启
     */
     @SerializedName("Bugly")
     @Expose
-    private Integer Bugly;
+    private Long Bugly;
 
     /**
     * 防止重打包，0关闭，1开启
     */
     @SerializedName("AntiRepack")
     @Expose
-    private Integer AntiRepack;
+    private Long AntiRepack;
 
     /**
     * Dex分离，0关闭，1开启
     */
     @SerializedName("SeperateDex")
     @Expose
-    private Integer SeperateDex;
+    private Long SeperateDex;
 
     /**
     * 内存保护，0关闭，1开启
     */
     @SerializedName("Db")
     @Expose
-    private Integer Db;
+    private Long Db;
 
     /**
     * Dex签名校验，0关闭，1开启
     */
     @SerializedName("DexSig")
     @Expose
-    private Integer DexSig;
+    private Long DexSig;
 
     /**
     * So文件信息
@@ -90,7 +90,7 @@ public class PlanInfo extends AbstractModel{
     */
     @SerializedName("AntiVMP")
     @Expose
-    private Integer AntiVMP;
+    private Long AntiVMP;
 
     /**
     * 保护so的强度，
@@ -104,41 +104,41 @@ public class PlanInfo extends AbstractModel{
     */
     @SerializedName("AntiLogLeak")
     @Expose
-    private Integer AntiLogLeak;
+    private Long AntiLogLeak;
 
     /**
     * root检测，0关闭，1开启
     */
     @SerializedName("AntiQemuRoot")
     @Expose
-    private Integer AntiQemuRoot;
+    private Long AntiQemuRoot;
 
     /**
     * 资源防篡改，0关闭，1开启
     */
     @SerializedName("AntiAssets")
     @Expose
-    private Integer AntiAssets;
+    private Long AntiAssets;
 
     /**
     * 防止截屏，0关闭，1开启
     */
     @SerializedName("AntiScreenshot")
     @Expose
-    private Integer AntiScreenshot;
+    private Long AntiScreenshot;
 
     /**
     * SSL证书防窃取，0关闭，1开启
     */
     @SerializedName("AntiSSL")
     @Expose
-    private Integer AntiSSL;
+    private Long AntiSSL;
 
     /**
      * Get apk大小优化，0关闭，1开启 
      * @return ApkSizeOpt apk大小优化，0关闭，1开启
      */
-    public Integer getApkSizeOpt() {
+    public Long getApkSizeOpt() {
         return this.ApkSizeOpt;
     }
 
@@ -146,7 +146,7 @@ public class PlanInfo extends AbstractModel{
      * Set apk大小优化，0关闭，1开启
      * @param ApkSizeOpt apk大小优化，0关闭，1开启
      */
-    public void setApkSizeOpt(Integer ApkSizeOpt) {
+    public void setApkSizeOpt(Long ApkSizeOpt) {
         this.ApkSizeOpt = ApkSizeOpt;
     }
 
@@ -154,7 +154,7 @@ public class PlanInfo extends AbstractModel{
      * Get Dex加固，0关闭，1开启 
      * @return Dex Dex加固，0关闭，1开启
      */
-    public Integer getDex() {
+    public Long getDex() {
         return this.Dex;
     }
 
@@ -162,7 +162,7 @@ public class PlanInfo extends AbstractModel{
      * Set Dex加固，0关闭，1开启
      * @param Dex Dex加固，0关闭，1开启
      */
-    public void setDex(Integer Dex) {
+    public void setDex(Long Dex) {
         this.Dex = Dex;
     }
 
@@ -170,7 +170,7 @@ public class PlanInfo extends AbstractModel{
      * Get So加固，0关闭，1开启 
      * @return So So加固，0关闭，1开启
      */
-    public Integer getSo() {
+    public Long getSo() {
         return this.So;
     }
 
@@ -178,7 +178,7 @@ public class PlanInfo extends AbstractModel{
      * Set So加固，0关闭，1开启
      * @param So So加固，0关闭，1开启
      */
-    public void setSo(Integer So) {
+    public void setSo(Long So) {
         this.So = So;
     }
 
@@ -186,7 +186,7 @@ public class PlanInfo extends AbstractModel{
      * Get 数据收集，0关闭，1开启 
      * @return Bugly 数据收集，0关闭，1开启
      */
-    public Integer getBugly() {
+    public Long getBugly() {
         return this.Bugly;
     }
 
@@ -194,7 +194,7 @@ public class PlanInfo extends AbstractModel{
      * Set 数据收集，0关闭，1开启
      * @param Bugly 数据收集，0关闭，1开启
      */
-    public void setBugly(Integer Bugly) {
+    public void setBugly(Long Bugly) {
         this.Bugly = Bugly;
     }
 
@@ -202,7 +202,7 @@ public class PlanInfo extends AbstractModel{
      * Get 防止重打包，0关闭，1开启 
      * @return AntiRepack 防止重打包，0关闭，1开启
      */
-    public Integer getAntiRepack() {
+    public Long getAntiRepack() {
         return this.AntiRepack;
     }
 
@@ -210,7 +210,7 @@ public class PlanInfo extends AbstractModel{
      * Set 防止重打包，0关闭，1开启
      * @param AntiRepack 防止重打包，0关闭，1开启
      */
-    public void setAntiRepack(Integer AntiRepack) {
+    public void setAntiRepack(Long AntiRepack) {
         this.AntiRepack = AntiRepack;
     }
 
@@ -218,7 +218,7 @@ public class PlanInfo extends AbstractModel{
      * Get Dex分离，0关闭，1开启 
      * @return SeperateDex Dex分离，0关闭，1开启
      */
-    public Integer getSeperateDex() {
+    public Long getSeperateDex() {
         return this.SeperateDex;
     }
 
@@ -226,7 +226,7 @@ public class PlanInfo extends AbstractModel{
      * Set Dex分离，0关闭，1开启
      * @param SeperateDex Dex分离，0关闭，1开启
      */
-    public void setSeperateDex(Integer SeperateDex) {
+    public void setSeperateDex(Long SeperateDex) {
         this.SeperateDex = SeperateDex;
     }
 
@@ -234,7 +234,7 @@ public class PlanInfo extends AbstractModel{
      * Get 内存保护，0关闭，1开启 
      * @return Db 内存保护，0关闭，1开启
      */
-    public Integer getDb() {
+    public Long getDb() {
         return this.Db;
     }
 
@@ -242,7 +242,7 @@ public class PlanInfo extends AbstractModel{
      * Set 内存保护，0关闭，1开启
      * @param Db 内存保护，0关闭，1开启
      */
-    public void setDb(Integer Db) {
+    public void setDb(Long Db) {
         this.Db = Db;
     }
 
@@ -250,7 +250,7 @@ public class PlanInfo extends AbstractModel{
      * Get Dex签名校验，0关闭，1开启 
      * @return DexSig Dex签名校验，0关闭，1开启
      */
-    public Integer getDexSig() {
+    public Long getDexSig() {
         return this.DexSig;
     }
 
@@ -258,7 +258,7 @@ public class PlanInfo extends AbstractModel{
      * Set Dex签名校验，0关闭，1开启
      * @param DexSig Dex签名校验，0关闭，1开启
      */
-    public void setDexSig(Integer DexSig) {
+    public void setDexSig(Long DexSig) {
         this.DexSig = DexSig;
     }
 
@@ -282,7 +282,7 @@ public class PlanInfo extends AbstractModel{
      * Get vmp，0关闭，1开启 
      * @return AntiVMP vmp，0关闭，1开启
      */
-    public Integer getAntiVMP() {
+    public Long getAntiVMP() {
         return this.AntiVMP;
     }
 
@@ -290,7 +290,7 @@ public class PlanInfo extends AbstractModel{
      * Set vmp，0关闭，1开启
      * @param AntiVMP vmp，0关闭，1开启
      */
-    public void setAntiVMP(Integer AntiVMP) {
+    public void setAntiVMP(Long AntiVMP) {
         this.AntiVMP = AntiVMP;
     }
 
@@ -314,7 +314,7 @@ public class PlanInfo extends AbstractModel{
      * Get 防日志泄漏，0关闭，1开启 
      * @return AntiLogLeak 防日志泄漏，0关闭，1开启
      */
-    public Integer getAntiLogLeak() {
+    public Long getAntiLogLeak() {
         return this.AntiLogLeak;
     }
 
@@ -322,7 +322,7 @@ public class PlanInfo extends AbstractModel{
      * Set 防日志泄漏，0关闭，1开启
      * @param AntiLogLeak 防日志泄漏，0关闭，1开启
      */
-    public void setAntiLogLeak(Integer AntiLogLeak) {
+    public void setAntiLogLeak(Long AntiLogLeak) {
         this.AntiLogLeak = AntiLogLeak;
     }
 
@@ -330,7 +330,7 @@ public class PlanInfo extends AbstractModel{
      * Get root检测，0关闭，1开启 
      * @return AntiQemuRoot root检测，0关闭，1开启
      */
-    public Integer getAntiQemuRoot() {
+    public Long getAntiQemuRoot() {
         return this.AntiQemuRoot;
     }
 
@@ -338,7 +338,7 @@ public class PlanInfo extends AbstractModel{
      * Set root检测，0关闭，1开启
      * @param AntiQemuRoot root检测，0关闭，1开启
      */
-    public void setAntiQemuRoot(Integer AntiQemuRoot) {
+    public void setAntiQemuRoot(Long AntiQemuRoot) {
         this.AntiQemuRoot = AntiQemuRoot;
     }
 
@@ -346,7 +346,7 @@ public class PlanInfo extends AbstractModel{
      * Get 资源防篡改，0关闭，1开启 
      * @return AntiAssets 资源防篡改，0关闭，1开启
      */
-    public Integer getAntiAssets() {
+    public Long getAntiAssets() {
         return this.AntiAssets;
     }
 
@@ -354,7 +354,7 @@ public class PlanInfo extends AbstractModel{
      * Set 资源防篡改，0关闭，1开启
      * @param AntiAssets 资源防篡改，0关闭，1开启
      */
-    public void setAntiAssets(Integer AntiAssets) {
+    public void setAntiAssets(Long AntiAssets) {
         this.AntiAssets = AntiAssets;
     }
 
@@ -362,7 +362,7 @@ public class PlanInfo extends AbstractModel{
      * Get 防止截屏，0关闭，1开启 
      * @return AntiScreenshot 防止截屏，0关闭，1开启
      */
-    public Integer getAntiScreenshot() {
+    public Long getAntiScreenshot() {
         return this.AntiScreenshot;
     }
 
@@ -370,7 +370,7 @@ public class PlanInfo extends AbstractModel{
      * Set 防止截屏，0关闭，1开启
      * @param AntiScreenshot 防止截屏，0关闭，1开启
      */
-    public void setAntiScreenshot(Integer AntiScreenshot) {
+    public void setAntiScreenshot(Long AntiScreenshot) {
         this.AntiScreenshot = AntiScreenshot;
     }
 
@@ -378,7 +378,7 @@ public class PlanInfo extends AbstractModel{
      * Get SSL证书防窃取，0关闭，1开启 
      * @return AntiSSL SSL证书防窃取，0关闭，1开启
      */
-    public Integer getAntiSSL() {
+    public Long getAntiSSL() {
         return this.AntiSSL;
     }
 
@@ -386,7 +386,7 @@ public class PlanInfo extends AbstractModel{
      * Set SSL证书防窃取，0关闭，1开启
      * @param AntiSSL SSL证书防窃取，0关闭，1开启
      */
-    public void setAntiSSL(Integer AntiSSL) {
+    public void setAntiSSL(Long AntiSSL) {
         this.AntiSSL = AntiSSL;
     }
 

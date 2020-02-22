@@ -41,42 +41,42 @@ public class CreateL7Rule extends AbstractModel{
     */
     @SerializedName("SessionExpire")
     @Expose
-    private Integer SessionExpire;
+    private Long SessionExpire;
 
     /**
     * 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
     */
     @SerializedName("HealthSwitch")
     @Expose
-    private Integer HealthSwitch;
+    private Long HealthSwitch;
 
     /**
     * 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
     */
     @SerializedName("IntervalTime")
     @Expose
-    private Integer IntervalTime;
+    private Long IntervalTime;
 
     /**
     * 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
     */
     @SerializedName("HealthNum")
     @Expose
-    private Integer HealthNum;
+    private Long HealthNum;
 
     /**
     * 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
     */
     @SerializedName("UnhealthNum")
     @Expose
-    private Integer UnhealthNum;
+    private Long UnhealthNum;
 
     /**
     * 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
     */
     @SerializedName("HttpCodes")
     @Expose
-    private Integer [] HttpCodes;
+    private Long [] HttpCodes;
 
     /**
     * 健康检查检查路径。
@@ -135,7 +135,7 @@ public class CreateL7Rule extends AbstractModel{
      * Get 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。 
      * @return SessionExpire 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
      */
-    public Integer getSessionExpire() {
+    public Long getSessionExpire() {
         return this.SessionExpire;
     }
 
@@ -143,7 +143,7 @@ public class CreateL7Rule extends AbstractModel{
      * Set 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
      * @param SessionExpire 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
      */
-    public void setSessionExpire(Integer SessionExpire) {
+    public void setSessionExpire(Long SessionExpire) {
         this.SessionExpire = SessionExpire;
     }
 
@@ -151,7 +151,7 @@ public class CreateL7Rule extends AbstractModel{
      * Get 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。 
      * @return HealthSwitch 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
      */
-    public Integer getHealthSwitch() {
+    public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
@@ -159,7 +159,7 @@ public class CreateL7Rule extends AbstractModel{
      * Set 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
      * @param HealthSwitch 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
      */
-    public void setHealthSwitch(Integer HealthSwitch) {
+    public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
@@ -167,7 +167,7 @@ public class CreateL7Rule extends AbstractModel{
      * Get 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。 
      * @return IntervalTime 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
      */
-    public Integer getIntervalTime() {
+    public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
@@ -175,7 +175,7 @@ public class CreateL7Rule extends AbstractModel{
      * Set 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
      * @param IntervalTime 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
      */
-    public void setIntervalTime(Integer IntervalTime) {
+    public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
@@ -183,7 +183,7 @@ public class CreateL7Rule extends AbstractModel{
      * Get 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。 
      * @return HealthNum 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
-    public Integer getHealthNum() {
+    public Long getHealthNum() {
         return this.HealthNum;
     }
 
@@ -191,7 +191,7 @@ public class CreateL7Rule extends AbstractModel{
      * Set 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      * @param HealthNum 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
-    public void setHealthNum(Integer HealthNum) {
+    public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
@@ -199,7 +199,7 @@ public class CreateL7Rule extends AbstractModel{
      * Get 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。 
      * @return UnhealthNum 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
-    public Integer getUnhealthNum() {
+    public Long getUnhealthNum() {
         return this.UnhealthNum;
     }
 
@@ -207,7 +207,7 @@ public class CreateL7Rule extends AbstractModel{
      * Set 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
      * @param UnhealthNum 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
-    public void setUnhealthNum(Integer UnhealthNum) {
+    public void setUnhealthNum(Long UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
@@ -215,7 +215,7 @@ public class CreateL7Rule extends AbstractModel{
      * Get 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。 
      * @return HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
-    public Integer [] getHttpCodes() {
+    public Long [] getHttpCodes() {
         return this.HttpCodes;
     }
 
@@ -223,7 +223,7 @@ public class CreateL7Rule extends AbstractModel{
      * Set 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      * @param HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
-    public void setHttpCodes(Integer [] HttpCodes) {
+    public void setHttpCodes(Long [] HttpCodes) {
         this.HttpCodes = HttpCodes;
     }
 

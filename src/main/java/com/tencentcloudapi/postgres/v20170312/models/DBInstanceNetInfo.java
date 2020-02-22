@@ -41,7 +41,7 @@ public class DBInstanceNetInfo extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 网络类型，1、inner（内网地址）；2、public（外网地址）
@@ -93,7 +93,7 @@ public class DBInstanceNetInfo extends AbstractModel{
      * Get 连接Port地址 
      * @return Port 连接Port地址
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -101,7 +101,7 @@ public class DBInstanceNetInfo extends AbstractModel{
      * Set 连接Port地址
      * @param Port 连接Port地址
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

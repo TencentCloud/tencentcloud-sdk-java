@@ -34,14 +34,14 @@ public class DescribePersonInfoResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 总数
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 用户信息
@@ -77,7 +77,7 @@ public class DescribePersonInfoResponse extends AbstractModel{
      * Get 门店ID 
      * @return ShopId 门店ID
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -85,7 +85,7 @@ public class DescribePersonInfoResponse extends AbstractModel{
      * Set 门店ID
      * @param ShopId 门店ID
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -93,7 +93,7 @@ public class DescribePersonInfoResponse extends AbstractModel{
      * Get 总数 
      * @return TotalCount 总数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -101,7 +101,7 @@ public class DescribePersonInfoResponse extends AbstractModel{
      * Set 总数
      * @param TotalCount 总数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

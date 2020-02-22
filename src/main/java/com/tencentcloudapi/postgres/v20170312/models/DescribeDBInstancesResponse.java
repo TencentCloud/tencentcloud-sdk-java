@@ -27,7 +27,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 实例详细信息集合。
@@ -47,7 +47,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
      * Get 查询到的实例数量。 
      * @return TotalCount 查询到的实例数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
      * Set 查询到的实例数量。
      * @param TotalCount 查询到的实例数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

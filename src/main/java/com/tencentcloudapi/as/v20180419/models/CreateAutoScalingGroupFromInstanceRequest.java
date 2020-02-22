@@ -41,21 +41,21 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     */
     @SerializedName("MinSize")
     @Expose
-    private Integer MinSize;
+    private Long MinSize;
 
     /**
     * 最小实例数，取值范围为0-2000。
     */
     @SerializedName("MaxSize")
     @Expose
-    private Integer MaxSize;
+    private Long MaxSize;
 
     /**
     * 期望实例数，大小介于最小实例数和最大实例数之间。
     */
     @SerializedName("DesiredCapacity")
     @Expose
-    private Integer DesiredCapacity;
+    private Long DesiredCapacity;
 
     /**
     * 是否继承实例标签，默认值为False
@@ -100,7 +100,7 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
      * Get 最大实例数，取值范围为0-2000。 
      * @return MinSize 最大实例数，取值范围为0-2000。
      */
-    public Integer getMinSize() {
+    public Long getMinSize() {
         return this.MinSize;
     }
 
@@ -108,7 +108,7 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
      * Set 最大实例数，取值范围为0-2000。
      * @param MinSize 最大实例数，取值范围为0-2000。
      */
-    public void setMinSize(Integer MinSize) {
+    public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
@@ -116,7 +116,7 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
      * Get 最小实例数，取值范围为0-2000。 
      * @return MaxSize 最小实例数，取值范围为0-2000。
      */
-    public Integer getMaxSize() {
+    public Long getMaxSize() {
         return this.MaxSize;
     }
 
@@ -124,7 +124,7 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
      * Set 最小实例数，取值范围为0-2000。
      * @param MaxSize 最小实例数，取值范围为0-2000。
      */
-    public void setMaxSize(Integer MaxSize) {
+    public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
@@ -132,7 +132,7 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
      * Get 期望实例数，大小介于最小实例数和最大实例数之间。 
      * @return DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。
      */
-    public Integer getDesiredCapacity() {
+    public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
@@ -140,7 +140,7 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
      * Set 期望实例数，大小介于最小实例数和最大实例数之间。
      * @param DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。
      */
-    public void setDesiredCapacity(Integer DesiredCapacity) {
+    public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 

@@ -35,14 +35,14 @@ public class DescribeClustersRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 最大输出条数，默认20，最大为100
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 过滤条件,当前只支持按照单个条件ClusterName进行过滤
@@ -75,7 +75,7 @@ public class DescribeClustersRequest extends AbstractModel{
      * Get 偏移量,默认0 
      * @return Offset 偏移量,默认0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -83,7 +83,7 @@ public class DescribeClustersRequest extends AbstractModel{
      * Set 偏移量,默认0
      * @param Offset 偏移量,默认0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -91,7 +91,7 @@ public class DescribeClustersRequest extends AbstractModel{
      * Get 最大输出条数，默认20，最大为100 
      * @return Limit 最大输出条数，默认20，最大为100
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -99,7 +99,7 @@ public class DescribeClustersRequest extends AbstractModel{
      * Set 最大输出条数，默认20，最大为100
      * @param Limit 最大输出条数，默认20，最大为100
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

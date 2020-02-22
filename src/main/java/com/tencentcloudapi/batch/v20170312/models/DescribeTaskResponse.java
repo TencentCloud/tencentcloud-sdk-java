@@ -62,7 +62,7 @@ public class DescribeTaskResponse extends AbstractModel{
     */
     @SerializedName("TaskInstanceTotalCount")
     @Expose
-    private Integer TaskInstanceTotalCount;
+    private Long TaskInstanceTotalCount;
 
     /**
     * 任务实例信息
@@ -169,7 +169,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Get 任务实例总数 
      * @return TaskInstanceTotalCount 任务实例总数
      */
-    public Integer getTaskInstanceTotalCount() {
+    public Long getTaskInstanceTotalCount() {
         return this.TaskInstanceTotalCount;
     }
 
@@ -177,7 +177,7 @@ public class DescribeTaskResponse extends AbstractModel{
      * Set 任务实例总数
      * @param TaskInstanceTotalCount 任务实例总数
      */
-    public void setTaskInstanceTotalCount(Integer TaskInstanceTotalCount) {
+    public void setTaskInstanceTotalCount(Long TaskInstanceTotalCount) {
         this.TaskInstanceTotalCount = TaskInstanceTotalCount;
     }
 

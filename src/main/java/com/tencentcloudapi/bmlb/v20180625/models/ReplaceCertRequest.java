@@ -55,7 +55,7 @@ public class ReplaceCertRequest extends AbstractModel{
     */
     @SerializedName("DeleteOld")
     @Expose
-    private Integer DeleteOld;
+    private Long DeleteOld;
 
     /**
      * Get 要被替换的证书ID 
@@ -125,7 +125,7 @@ public class ReplaceCertRequest extends AbstractModel{
      * Get 是否删除旧证书，0 表示不删除，1 表示删除 
      * @return DeleteOld 是否删除旧证书，0 表示不删除，1 表示删除
      */
-    public Integer getDeleteOld() {
+    public Long getDeleteOld() {
         return this.DeleteOld;
     }
 
@@ -133,7 +133,7 @@ public class ReplaceCertRequest extends AbstractModel{
      * Set 是否删除旧证书，0 表示不删除，1 表示删除
      * @param DeleteOld 是否删除旧证书，0 表示不删除，1 表示删除
      */
-    public void setDeleteOld(Integer DeleteOld) {
+    public void setDeleteOld(Long DeleteOld) {
         this.DeleteOld = DeleteOld;
     }
 

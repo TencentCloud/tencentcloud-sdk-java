@@ -49,7 +49,7 @@ FailedOperation.UnKnowError：表示识别失败；
     */
     @SerializedName("Type")
     @Expose
-    private Integer Type;
+    private Long Type;
 
     /**
     * 识别出的图片在混贴票据图片中的位置信息。
@@ -128,7 +128,7 @@ FailedOperation.UnKnowError：表示识别失败；
 12：购车发票
 13：过路过桥费发票
      */
-    public Integer getType() {
+    public Long getType() {
         return this.Type;
     }
 
@@ -160,7 +160,7 @@ FailedOperation.UnKnowError：表示识别失败；
 12：购车发票
 13：过路过桥费发票
      */
-    public void setType(Integer Type) {
+    public void setType(Long Type) {
         this.Type = Type;
     }
 

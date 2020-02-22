@@ -41,14 +41,14 @@ public class SwitchInstanceVipRequest extends AbstractModel{
     */
     @SerializedName("TimeDelay")
     @Expose
-    private Integer TimeDelay;
+    private Long TimeDelay;
 
     /**
     * 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
     */
     @SerializedName("ForceSwitch")
     @Expose
-    private Integer ForceSwitch;
+    private Long ForceSwitch;
 
     /**
     * now: 立即切换，syncComplete：等待同步完成后切换
@@ -93,7 +93,7 @@ public class SwitchInstanceVipRequest extends AbstractModel{
      * Get 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。 
      * @return TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      */
-    public Integer getTimeDelay() {
+    public Long getTimeDelay() {
         return this.TimeDelay;
     }
 
@@ -101,7 +101,7 @@ public class SwitchInstanceVipRequest extends AbstractModel{
      * Set 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      * @param TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      */
-    public void setTimeDelay(Integer TimeDelay) {
+    public void setTimeDelay(Long TimeDelay) {
         this.TimeDelay = TimeDelay;
     }
 
@@ -109,7 +109,7 @@ public class SwitchInstanceVipRequest extends AbstractModel{
      * Get 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换 
      * @return ForceSwitch 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
      */
-    public Integer getForceSwitch() {
+    public Long getForceSwitch() {
         return this.ForceSwitch;
     }
 
@@ -117,7 +117,7 @@ public class SwitchInstanceVipRequest extends AbstractModel{
      * Set 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
      * @param ForceSwitch 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
      */
-    public void setForceSwitch(Integer ForceSwitch) {
+    public void setForceSwitch(Long ForceSwitch) {
         this.ForceSwitch = ForceSwitch;
     }
 

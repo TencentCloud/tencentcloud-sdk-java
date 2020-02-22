@@ -34,7 +34,7 @@ public class RoWeightValue extends AbstractModel{
     */
     @SerializedName("Weight")
     @Expose
-    private Integer Weight;
+    private Long Weight;
 
     /**
      * Get RO 实例 ID。 
@@ -56,7 +56,7 @@ public class RoWeightValue extends AbstractModel{
      * Get 权重值。取值范围为 [0, 100]。 
      * @return Weight 权重值。取值范围为 [0, 100]。
      */
-    public Integer getWeight() {
+    public Long getWeight() {
         return this.Weight;
     }
 
@@ -64,7 +64,7 @@ public class RoWeightValue extends AbstractModel{
      * Set 权重值。取值范围为 [0, 100]。
      * @param Weight 权重值。取值范围为 [0, 100]。
      */
-    public void setWeight(Integer Weight) {
+    public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 

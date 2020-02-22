@@ -27,20 +27,20 @@ public class ZoneHourFlow extends AbstractModel{
     */
     @SerializedName("Hour")
     @Expose
-    private Integer Hour;
+    private Long Hour;
 
     /**
     * 客流量
     */
     @SerializedName("FlowCount")
     @Expose
-    private Integer FlowCount;
+    private Long FlowCount;
 
     /**
      * Get 分时 0~23 
      * @return Hour 分时 0~23
      */
-    public Integer getHour() {
+    public Long getHour() {
         return this.Hour;
     }
 
@@ -48,7 +48,7 @@ public class ZoneHourFlow extends AbstractModel{
      * Set 分时 0~23
      * @param Hour 分时 0~23
      */
-    public void setHour(Integer Hour) {
+    public void setHour(Long Hour) {
         this.Hour = Hour;
     }
 
@@ -56,7 +56,7 @@ public class ZoneHourFlow extends AbstractModel{
      * Get 客流量 
      * @return FlowCount 客流量
      */
-    public Integer getFlowCount() {
+    public Long getFlowCount() {
         return this.FlowCount;
     }
 
@@ -64,7 +64,7 @@ public class ZoneHourFlow extends AbstractModel{
      * Set 客流量
      * @param FlowCount 客流量
      */
-    public void setFlowCount(Integer FlowCount) {
+    public void setFlowCount(Long FlowCount) {
         this.FlowCount = FlowCount;
     }
 

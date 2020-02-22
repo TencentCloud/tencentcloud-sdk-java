@@ -48,42 +48,42 @@ public class SpecItemInfo extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Integer Cpu;
+    private Long Cpu;
 
     /**
     * 内存大小，单位：MB
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 该规格所支持最大存储容量，单位：GB
     */
     @SerializedName("MaxStorage")
     @Expose
-    private Integer MaxStorage;
+    private Long MaxStorage;
 
     /**
     * 该规格所支持最小存储容量，单位：GB
     */
     @SerializedName("MinStorage")
     @Expose
-    private Integer MinStorage;
+    private Long MinStorage;
 
     /**
     * 该规格的预估QPS
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
     * 该规格对应的计费ID
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
     * 机器类型
@@ -144,7 +144,7 @@ public class SpecItemInfo extends AbstractModel{
      * Get CPU核数 
      * @return Cpu CPU核数
      */
-    public Integer getCpu() {
+    public Long getCpu() {
         return this.Cpu;
     }
 
@@ -152,7 +152,7 @@ public class SpecItemInfo extends AbstractModel{
      * Set CPU核数
      * @param Cpu CPU核数
      */
-    public void setCpu(Integer Cpu) {
+    public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -160,7 +160,7 @@ public class SpecItemInfo extends AbstractModel{
      * Get 内存大小，单位：MB 
      * @return Memory 内存大小，单位：MB
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
@@ -168,7 +168,7 @@ public class SpecItemInfo extends AbstractModel{
      * Set 内存大小，单位：MB
      * @param Memory 内存大小，单位：MB
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
@@ -176,7 +176,7 @@ public class SpecItemInfo extends AbstractModel{
      * Get 该规格所支持最大存储容量，单位：GB 
      * @return MaxStorage 该规格所支持最大存储容量，单位：GB
      */
-    public Integer getMaxStorage() {
+    public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
@@ -184,7 +184,7 @@ public class SpecItemInfo extends AbstractModel{
      * Set 该规格所支持最大存储容量，单位：GB
      * @param MaxStorage 该规格所支持最大存储容量，单位：GB
      */
-    public void setMaxStorage(Integer MaxStorage) {
+    public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
@@ -192,7 +192,7 @@ public class SpecItemInfo extends AbstractModel{
      * Get 该规格所支持最小存储容量，单位：GB 
      * @return MinStorage 该规格所支持最小存储容量，单位：GB
      */
-    public Integer getMinStorage() {
+    public Long getMinStorage() {
         return this.MinStorage;
     }
 
@@ -200,7 +200,7 @@ public class SpecItemInfo extends AbstractModel{
      * Set 该规格所支持最小存储容量，单位：GB
      * @param MinStorage 该规格所支持最小存储容量，单位：GB
      */
-    public void setMinStorage(Integer MinStorage) {
+    public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
@@ -208,7 +208,7 @@ public class SpecItemInfo extends AbstractModel{
      * Get 该规格的预估QPS 
      * @return Qps 该规格的预估QPS
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -216,7 +216,7 @@ public class SpecItemInfo extends AbstractModel{
      * Set 该规格的预估QPS
      * @param Qps 该规格的预估QPS
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
@@ -224,7 +224,7 @@ public class SpecItemInfo extends AbstractModel{
      * Get 该规格对应的计费ID 
      * @return Pid 该规格对应的计费ID
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
@@ -232,7 +232,7 @@ public class SpecItemInfo extends AbstractModel{
      * Set 该规格对应的计费ID
      * @param Pid 该规格对应的计费ID
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 

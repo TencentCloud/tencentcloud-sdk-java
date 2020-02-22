@@ -34,7 +34,7 @@ public class CreateCosSecKeyInstanceRequest extends AbstractModel{
     */
     @SerializedName("Duration")
     @Expose
-    private Integer Duration;
+    private Long Duration;
 
     /**
      * Get 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。 
@@ -56,7 +56,7 @@ public class CreateCosSecKeyInstanceRequest extends AbstractModel{
      * Get 密钥有效时间，默认为1小时。 
      * @return Duration 密钥有效时间，默认为1小时。
      */
-    public Integer getDuration() {
+    public Long getDuration() {
         return this.Duration;
     }
 
@@ -64,7 +64,7 @@ public class CreateCosSecKeyInstanceRequest extends AbstractModel{
      * Set 密钥有效时间，默认为1小时。
      * @param Duration 密钥有效时间，默认为1小时。
      */
-    public void setDuration(Integer Duration) {
+    public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 

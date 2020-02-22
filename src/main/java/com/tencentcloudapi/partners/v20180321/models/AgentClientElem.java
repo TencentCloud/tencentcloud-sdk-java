@@ -41,7 +41,7 @@ public class AgentClientElem extends AbstractModel{
     */
     @SerializedName("ApplyTime")
     @Expose
-    private Integer ApplyTime;
+    private Long ApplyTime;
 
     /**
     * 代客类型，可能值为a/b/c
@@ -69,14 +69,14 @@ public class AgentClientElem extends AbstractModel{
     */
     @SerializedName("HasOverdueBill")
     @Expose
-    private Integer HasOverdueBill;
+    private Long HasOverdueBill;
 
     /**
     * 1:待代理商审核;2:待腾讯云审核
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 代理商账号ID 
@@ -114,7 +114,7 @@ public class AgentClientElem extends AbstractModel{
      * Get 代客申请时间戳 
      * @return ApplyTime 代客申请时间戳
      */
-    public Integer getApplyTime() {
+    public Long getApplyTime() {
         return this.ApplyTime;
     }
 
@@ -122,7 +122,7 @@ public class AgentClientElem extends AbstractModel{
      * Set 代客申请时间戳
      * @param ApplyTime 代客申请时间戳
      */
-    public void setApplyTime(Integer ApplyTime) {
+    public void setApplyTime(Long ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
@@ -178,7 +178,7 @@ public class AgentClientElem extends AbstractModel{
      * Get 0表示不欠费，1表示欠费 
      * @return HasOverdueBill 0表示不欠费，1表示欠费
      */
-    public Integer getHasOverdueBill() {
+    public Long getHasOverdueBill() {
         return this.HasOverdueBill;
     }
 
@@ -186,7 +186,7 @@ public class AgentClientElem extends AbstractModel{
      * Set 0表示不欠费，1表示欠费
      * @param HasOverdueBill 0表示不欠费，1表示欠费
      */
-    public void setHasOverdueBill(Integer HasOverdueBill) {
+    public void setHasOverdueBill(Long HasOverdueBill) {
         this.HasOverdueBill = HasOverdueBill;
     }
 
@@ -194,7 +194,7 @@ public class AgentClientElem extends AbstractModel{
      * Get 1:待代理商审核;2:待腾讯云审核 
      * @return Status 1:待代理商审核;2:待腾讯云审核
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -202,7 +202,7 @@ public class AgentClientElem extends AbstractModel{
      * Set 1:待代理商审核;2:待腾讯云审核
      * @param Status 1:待代理商审核;2:待腾讯云审核
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

@@ -27,7 +27,7 @@ public class PublishLayerVersionResponse extends AbstractModel{
     */
     @SerializedName("LayerVersion")
     @Expose
-    private Integer LayerVersion;
+    private Long LayerVersion;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class PublishLayerVersionResponse extends AbstractModel{
      * Get 本次创建的层的版本号 
      * @return LayerVersion 本次创建的层的版本号
      */
-    public Integer getLayerVersion() {
+    public Long getLayerVersion() {
         return this.LayerVersion;
     }
 
@@ -48,7 +48,7 @@ public class PublishLayerVersionResponse extends AbstractModel{
      * Set 本次创建的层的版本号
      * @param LayerVersion 本次创建的层的版本号
      */
-    public void setLayerVersion(Integer LayerVersion) {
+    public void setLayerVersion(Long LayerVersion) {
         this.LayerVersion = LayerVersion;
     }
 

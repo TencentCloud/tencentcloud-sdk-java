@@ -34,14 +34,14 @@ public class DescribeDatabasesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 单次请求数量，默认值为20，最小值为1，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 匹配数据库库名的正则表达式，规则同 MySQL 官网
@@ -70,7 +70,7 @@ public class DescribeDatabasesRequest extends AbstractModel{
      * Get 偏移量，最小值为0。 
      * @return Offset 偏移量，最小值为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -78,7 +78,7 @@ public class DescribeDatabasesRequest extends AbstractModel{
      * Set 偏移量，最小值为0。
      * @param Offset 偏移量，最小值为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -86,7 +86,7 @@ public class DescribeDatabasesRequest extends AbstractModel{
      * Get 单次请求数量，默认值为20，最小值为1，最大值为100。 
      * @return Limit 单次请求数量，默认值为20，最小值为1，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -94,7 +94,7 @@ public class DescribeDatabasesRequest extends AbstractModel{
      * Set 单次请求数量，默认值为20，最小值为1，最大值为100。
      * @param Limit 单次请求数量，默认值为20，最小值为1，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

@@ -34,7 +34,7 @@ public class NetworkInterfaceAttachment extends AbstractModel{
     */
     @SerializedName("DeviceIndex")
     @Expose
-    private Integer DeviceIndex;
+    private Long DeviceIndex;
 
     /**
     * 云主机所有者账户信息。
@@ -70,7 +70,7 @@ public class NetworkInterfaceAttachment extends AbstractModel{
      * Get 网卡在云主机实例内的序号。 
      * @return DeviceIndex 网卡在云主机实例内的序号。
      */
-    public Integer getDeviceIndex() {
+    public Long getDeviceIndex() {
         return this.DeviceIndex;
     }
 
@@ -78,7 +78,7 @@ public class NetworkInterfaceAttachment extends AbstractModel{
      * Set 网卡在云主机实例内的序号。
      * @param DeviceIndex 网卡在云主机实例内的序号。
      */
-    public void setDeviceIndex(Integer DeviceIndex) {
+    public void setDeviceIndex(Long DeviceIndex) {
         this.DeviceIndex = DeviceIndex;
     }
 

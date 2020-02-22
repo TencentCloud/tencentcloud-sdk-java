@@ -41,14 +41,14 @@ public class InstanceClusterShard extends AbstractModel{
     */
     @SerializedName("Role")
     @Expose
-    private Integer Role;
+    private Long Role;
 
     /**
     * Key数量
     */
     @SerializedName("Keys")
     @Expose
-    private Integer Keys;
+    private Long Keys;
 
     /**
     * slot信息
@@ -62,7 +62,7 @@ public class InstanceClusterShard extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 容量倾斜率
@@ -83,7 +83,7 @@ public class InstanceClusterShard extends AbstractModel{
     */
     @SerializedName("Connected")
     @Expose
-    private Integer Connected;
+    private Long Connected;
 
     /**
      * Get 分片节点名称 
@@ -121,7 +121,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Get 角色 
      * @return Role 角色
      */
-    public Integer getRole() {
+    public Long getRole() {
         return this.Role;
     }
 
@@ -129,7 +129,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Set 角色
      * @param Role 角色
      */
-    public void setRole(Integer Role) {
+    public void setRole(Long Role) {
         this.Role = Role;
     }
 
@@ -137,7 +137,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Get Key数量 
      * @return Keys Key数量
      */
-    public Integer getKeys() {
+    public Long getKeys() {
         return this.Keys;
     }
 
@@ -145,7 +145,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Set Key数量
      * @param Keys Key数量
      */
-    public void setKeys(Integer Keys) {
+    public void setKeys(Long Keys) {
         this.Keys = Keys;
     }
 
@@ -169,7 +169,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Get 使用容量 
      * @return Storage 使用容量
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
@@ -177,7 +177,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Set 使用容量
      * @param Storage 使用容量
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
@@ -217,7 +217,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Get 服务状态：0-down；1-on 
      * @return Connected 服务状态：0-down；1-on
      */
-    public Integer getConnected() {
+    public Long getConnected() {
         return this.Connected;
     }
 
@@ -225,7 +225,7 @@ public class InstanceClusterShard extends AbstractModel{
      * Set 服务状态：0-down；1-on
      * @param Connected 服务状态：0-down；1-on
      */
-    public void setConnected(Integer Connected) {
+    public void setConnected(Long Connected) {
         this.Connected = Connected;
     }
 

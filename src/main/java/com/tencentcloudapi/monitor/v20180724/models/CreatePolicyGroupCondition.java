@@ -27,28 +27,28 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     */
     @SerializedName("MetricId")
     @Expose
-    private Integer MetricId;
+    private Long MetricId;
 
     /**
     * 告警发送收敛类型。0连续告警，1指数告警
     */
     @SerializedName("AlarmNotifyType")
     @Expose
-    private Integer AlarmNotifyType;
+    private Long AlarmNotifyType;
 
     /**
     * 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
-    private Integer AlarmNotifyPeriod;
+    private Long AlarmNotifyPeriod;
 
     /**
     * 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
     */
     @SerializedName("CalcType")
     @Expose
-    private Integer CalcType;
+    private Long CalcType;
 
     /**
     * 比较的值，如果指标不必须CalcValue可不填
@@ -62,27 +62,27 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     */
     @SerializedName("CalcPeriod")
     @Expose
-    private Integer CalcPeriod;
+    private Long CalcPeriod;
 
     /**
     * 持续几个检测周期触发规则会告警
     */
     @SerializedName("ContinuePeriod")
     @Expose
-    private Integer ContinuePeriod;
+    private Long ContinuePeriod;
 
     /**
     * 如果通过模版创建，需要传入模版中该指标的对应RuleId
     */
     @SerializedName("RuleId")
     @Expose
-    private Integer RuleId;
+    private Long RuleId;
 
     /**
      * Get 指标Id 
      * @return MetricId 指标Id
      */
-    public Integer getMetricId() {
+    public Long getMetricId() {
         return this.MetricId;
     }
 
@@ -90,7 +90,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Set 指标Id
      * @param MetricId 指标Id
      */
-    public void setMetricId(Integer MetricId) {
+    public void setMetricId(Long MetricId) {
         this.MetricId = MetricId;
     }
 
@@ -98,7 +98,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Get 告警发送收敛类型。0连续告警，1指数告警 
      * @return AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      */
-    public Integer getAlarmNotifyType() {
+    public Long getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
 
@@ -106,7 +106,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Set 告警发送收敛类型。0连续告警，1指数告警
      * @param AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      */
-    public void setAlarmNotifyType(Integer AlarmNotifyType) {
+    public void setAlarmNotifyType(Long AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
 
@@ -114,7 +114,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Get 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次 
      * @return AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      */
-    public Integer getAlarmNotifyPeriod() {
+    public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
@@ -122,7 +122,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Set 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      * @param AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
      */
-    public void setAlarmNotifyPeriod(Integer AlarmNotifyPeriod) {
+    public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
@@ -130,7 +130,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Get 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。 
      * @return CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
      */
-    public Integer getCalcType() {
+    public Long getCalcType() {
         return this.CalcType;
     }
 
@@ -138,7 +138,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Set 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
      * @param CalcType 比较类型，1表示大于，2表示大于等于，3表示小于，4表示小于等于，5表示相等，6表示不相等。如果指标有配置默认比较类型值可以不填。
      */
-    public void setCalcType(Integer CalcType) {
+    public void setCalcType(Long CalcType) {
         this.CalcType = CalcType;
     }
 
@@ -162,7 +162,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Get 数据聚合周期(单位秒)，若指标有默认值可不填 
      * @return CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
      */
-    public Integer getCalcPeriod() {
+    public Long getCalcPeriod() {
         return this.CalcPeriod;
     }
 
@@ -170,7 +170,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Set 数据聚合周期(单位秒)，若指标有默认值可不填
      * @param CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
      */
-    public void setCalcPeriod(Integer CalcPeriod) {
+    public void setCalcPeriod(Long CalcPeriod) {
         this.CalcPeriod = CalcPeriod;
     }
 
@@ -178,7 +178,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Get 持续几个检测周期触发规则会告警 
      * @return ContinuePeriod 持续几个检测周期触发规则会告警
      */
-    public Integer getContinuePeriod() {
+    public Long getContinuePeriod() {
         return this.ContinuePeriod;
     }
 
@@ -186,7 +186,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Set 持续几个检测周期触发规则会告警
      * @param ContinuePeriod 持续几个检测周期触发规则会告警
      */
-    public void setContinuePeriod(Integer ContinuePeriod) {
+    public void setContinuePeriod(Long ContinuePeriod) {
         this.ContinuePeriod = ContinuePeriod;
     }
 
@@ -194,7 +194,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Get 如果通过模版创建，需要传入模版中该指标的对应RuleId 
      * @return RuleId 如果通过模版创建，需要传入模版中该指标的对应RuleId
      */
-    public Integer getRuleId() {
+    public Long getRuleId() {
         return this.RuleId;
     }
 
@@ -202,7 +202,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
      * Set 如果通过模版创建，需要传入模版中该指标的对应RuleId
      * @param RuleId 如果通过模版创建，需要传入模版中该指标的对应RuleId
      */
-    public void setRuleId(Integer RuleId) {
+    public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 

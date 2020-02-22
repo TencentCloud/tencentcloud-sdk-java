@@ -27,7 +27,7 @@ public class ModifyBackupTimeResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class ModifyBackupTimeResponse extends AbstractModel{
      * Get 设置的状态，0 表示成功 
      * @return Status 设置的状态，0 表示成功
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -48,7 +48,7 @@ public class ModifyBackupTimeResponse extends AbstractModel{
      * Set 设置的状态，0 表示成功
      * @param Status 设置的状态，0 表示成功
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

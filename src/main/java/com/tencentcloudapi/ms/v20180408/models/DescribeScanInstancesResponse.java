@@ -27,7 +27,7 @@ public class DescribeScanInstancesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。
@@ -47,7 +47,7 @@ public class DescribeScanInstancesResponse extends AbstractModel{
      * Get 符合要求的app数量 
      * @return TotalCount 符合要求的app数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeScanInstancesResponse extends AbstractModel{
      * Set 符合要求的app数量
      * @param TotalCount 符合要求的app数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

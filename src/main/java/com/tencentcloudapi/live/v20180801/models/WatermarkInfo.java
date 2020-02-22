@@ -27,7 +27,7 @@ public class WatermarkInfo extends AbstractModel{
     */
     @SerializedName("WatermarkId")
     @Expose
-    private Integer WatermarkId;
+    private Long WatermarkId;
 
     /**
     * 水印图片url。
@@ -41,14 +41,14 @@ public class WatermarkInfo extends AbstractModel{
     */
     @SerializedName("XPosition")
     @Expose
-    private Integer XPosition;
+    private Long XPosition;
 
     /**
     * 显示位置，Y轴偏移。
     */
     @SerializedName("YPosition")
     @Expose
-    private Integer YPosition;
+    private Long YPosition;
 
     /**
     * 水印名称。
@@ -62,7 +62,7 @@ public class WatermarkInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 添加时间。
@@ -76,20 +76,20 @@ public class WatermarkInfo extends AbstractModel{
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 水印高
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
      * Get 水印ID。 
      * @return WatermarkId 水印ID。
      */
-    public Integer getWatermarkId() {
+    public Long getWatermarkId() {
         return this.WatermarkId;
     }
 
@@ -97,7 +97,7 @@ public class WatermarkInfo extends AbstractModel{
      * Set 水印ID。
      * @param WatermarkId 水印ID。
      */
-    public void setWatermarkId(Integer WatermarkId) {
+    public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;
     }
 
@@ -121,7 +121,7 @@ public class WatermarkInfo extends AbstractModel{
      * Get 显示位置，X轴偏移。 
      * @return XPosition 显示位置，X轴偏移。
      */
-    public Integer getXPosition() {
+    public Long getXPosition() {
         return this.XPosition;
     }
 
@@ -129,7 +129,7 @@ public class WatermarkInfo extends AbstractModel{
      * Set 显示位置，X轴偏移。
      * @param XPosition 显示位置，X轴偏移。
      */
-    public void setXPosition(Integer XPosition) {
+    public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;
     }
 
@@ -137,7 +137,7 @@ public class WatermarkInfo extends AbstractModel{
      * Get 显示位置，Y轴偏移。 
      * @return YPosition 显示位置，Y轴偏移。
      */
-    public Integer getYPosition() {
+    public Long getYPosition() {
         return this.YPosition;
     }
 
@@ -145,7 +145,7 @@ public class WatermarkInfo extends AbstractModel{
      * Set 显示位置，Y轴偏移。
      * @param YPosition 显示位置，Y轴偏移。
      */
-    public void setYPosition(Integer YPosition) {
+    public void setYPosition(Long YPosition) {
         this.YPosition = YPosition;
     }
 
@@ -169,7 +169,7 @@ public class WatermarkInfo extends AbstractModel{
      * Get 当前状态。0：未使用，1:使用中。 
      * @return Status 当前状态。0：未使用，1:使用中。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -177,7 +177,7 @@ public class WatermarkInfo extends AbstractModel{
      * Set 当前状态。0：未使用，1:使用中。
      * @param Status 当前状态。0：未使用，1:使用中。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -201,7 +201,7 @@ public class WatermarkInfo extends AbstractModel{
      * Get 水印宽 
      * @return Width 水印宽
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -209,7 +209,7 @@ public class WatermarkInfo extends AbstractModel{
      * Set 水印宽
      * @param Width 水印宽
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -217,7 +217,7 @@ public class WatermarkInfo extends AbstractModel{
      * Get 水印高 
      * @return Height 水印高
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -225,7 +225,7 @@ public class WatermarkInfo extends AbstractModel{
      * Set 水印高
      * @param Height 水印高
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 

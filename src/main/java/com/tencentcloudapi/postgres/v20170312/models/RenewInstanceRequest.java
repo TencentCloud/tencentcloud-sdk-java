@@ -34,14 +34,14 @@ public class RenewInstanceRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 是否自动使用代金券,1是,0否，默认不使用
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Integer AutoVoucher;
+    private Long AutoVoucher;
 
     /**
     * 代金券ID列表，目前仅支持指定一张代金券
@@ -70,7 +70,7 @@ public class RenewInstanceRequest extends AbstractModel{
      * Get 续费多少个月 
      * @return Period 续费多少个月
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -78,7 +78,7 @@ public class RenewInstanceRequest extends AbstractModel{
      * Set 续费多少个月
      * @param Period 续费多少个月
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
@@ -86,7 +86,7 @@ public class RenewInstanceRequest extends AbstractModel{
      * Get 是否自动使用代金券,1是,0否，默认不使用 
      * @return AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
      */
-    public Integer getAutoVoucher() {
+    public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
@@ -94,7 +94,7 @@ public class RenewInstanceRequest extends AbstractModel{
      * Set 是否自动使用代金券,1是,0否，默认不使用
      * @param AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
      */
-    public void setAutoVoucher(Integer AutoVoucher) {
+    public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 

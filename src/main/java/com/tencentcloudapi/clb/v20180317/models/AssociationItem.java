@@ -56,7 +56,7 @@ public class AssociationItem extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 关联到的转发规则域名
@@ -160,7 +160,7 @@ public class AssociationItem extends AbstractModel{
      * Get 关联到的监听器端口 
      * @return Port 关联到的监听器端口
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -168,7 +168,7 @@ public class AssociationItem extends AbstractModel{
      * Set 关联到的监听器端口
      * @param Port 关联到的监听器端口
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

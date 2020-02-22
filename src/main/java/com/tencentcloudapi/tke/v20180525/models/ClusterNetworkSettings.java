@@ -41,14 +41,14 @@ public class ClusterNetworkSettings extends AbstractModel{
     */
     @SerializedName("MaxNodePodNum")
     @Expose
-    private Integer MaxNodePodNum;
+    private Long MaxNodePodNum;
 
     /**
     * 集群最大的service数量(默认为256)
     */
     @SerializedName("MaxClusterServiceNum")
     @Expose
-    private Integer MaxClusterServiceNum;
+    private Long MaxClusterServiceNum;
 
     /**
     * 是否启用IPVS(默认不开启)
@@ -107,7 +107,7 @@ public class ClusterNetworkSettings extends AbstractModel{
      * Get 集群中每个Node上最大的Pod数量(默认为256) 
      * @return MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
      */
-    public Integer getMaxNodePodNum() {
+    public Long getMaxNodePodNum() {
         return this.MaxNodePodNum;
     }
 
@@ -115,7 +115,7 @@ public class ClusterNetworkSettings extends AbstractModel{
      * Set 集群中每个Node上最大的Pod数量(默认为256)
      * @param MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
      */
-    public void setMaxNodePodNum(Integer MaxNodePodNum) {
+    public void setMaxNodePodNum(Long MaxNodePodNum) {
         this.MaxNodePodNum = MaxNodePodNum;
     }
 
@@ -123,7 +123,7 @@ public class ClusterNetworkSettings extends AbstractModel{
      * Get 集群最大的service数量(默认为256) 
      * @return MaxClusterServiceNum 集群最大的service数量(默认为256)
      */
-    public Integer getMaxClusterServiceNum() {
+    public Long getMaxClusterServiceNum() {
         return this.MaxClusterServiceNum;
     }
 
@@ -131,7 +131,7 @@ public class ClusterNetworkSettings extends AbstractModel{
      * Set 集群最大的service数量(默认为256)
      * @param MaxClusterServiceNum 集群最大的service数量(默认为256)
      */
-    public void setMaxClusterServiceNum(Integer MaxClusterServiceNum) {
+    public void setMaxClusterServiceNum(Long MaxClusterServiceNum) {
         this.MaxClusterServiceNum = MaxClusterServiceNum;
     }
 

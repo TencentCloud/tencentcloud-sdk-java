@@ -37,7 +37,7 @@ public class CreateKeyPairRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
      * Get 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。 
@@ -65,7 +65,7 @@ public class CreateKeyPairRequest extends AbstractModel{
 <li>通过项目列表查询项目ID。
 <li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -79,7 +79,7 @@ public class CreateKeyPairRequest extends AbstractModel{
 <li>通过项目列表查询项目ID。
 <li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

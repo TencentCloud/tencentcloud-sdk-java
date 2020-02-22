@@ -27,7 +27,7 @@ public class DescribeTasksResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 此页任务对象的数组，按创建时间排序
@@ -47,7 +47,7 @@ public class DescribeTasksResponse extends AbstractModel{
      * Get 用户一个月内创建的任务总数 
      * @return TotalCount 用户一个月内创建的任务总数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeTasksResponse extends AbstractModel{
      * Set 用户一个月内创建的任务总数
      * @param TotalCount 用户一个月内创建的任务总数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

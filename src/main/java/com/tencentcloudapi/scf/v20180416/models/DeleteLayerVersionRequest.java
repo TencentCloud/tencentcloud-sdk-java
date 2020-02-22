@@ -34,7 +34,7 @@ public class DeleteLayerVersionRequest extends AbstractModel{
     */
     @SerializedName("LayerVersion")
     @Expose
-    private Integer LayerVersion;
+    private Long LayerVersion;
 
     /**
      * Get 层名称 
@@ -56,7 +56,7 @@ public class DeleteLayerVersionRequest extends AbstractModel{
      * Get 版本号 
      * @return LayerVersion 版本号
      */
-    public Integer getLayerVersion() {
+    public Long getLayerVersion() {
         return this.LayerVersion;
     }
 
@@ -64,7 +64,7 @@ public class DeleteLayerVersionRequest extends AbstractModel{
      * Set 版本号
      * @param LayerVersion 版本号
      */
-    public void setLayerVersion(Integer LayerVersion) {
+    public void setLayerVersion(Long LayerVersion) {
         this.LayerVersion = LayerVersion;
     }
 

@@ -27,7 +27,7 @@ public class ScanFileHashResponse extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
@@ -56,7 +56,7 @@ virus_state文状件态：0文件不存在、1白、2黑、3未知、4感染性�
      * Get 接口调用状态，成功返回200，失败返回400 
      * @return Status 接口调用状态，成功返回200，失败返回400
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -64,7 +64,7 @@ virus_state文状件态：0文件不存在、1白、2黑、3未知、4感染性�
      * Set 接口调用状态，成功返回200，失败返回400
      * @param Status 接口调用状态，成功返回200，失败返回400
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

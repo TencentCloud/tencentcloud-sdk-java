@@ -45,7 +45,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel{
     */
     @SerializedName("Granularity")
     @Expose
-    private Integer Granularity;
+    private Long Granularity;
 
     /**
     * 是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
@@ -118,7 +118,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel{
      * @return Granularity 查询粒度：
 1-1分钟粒度。
      */
-    public Integer getGranularity() {
+    public Long getGranularity() {
         return this.Granularity;
     }
 
@@ -128,7 +128,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel{
      * @param Granularity 查询粒度：
 1-1分钟粒度。
      */
-    public void setGranularity(Integer Granularity) {
+    public void setGranularity(Long Granularity) {
         this.Granularity = Granularity;
     }
 

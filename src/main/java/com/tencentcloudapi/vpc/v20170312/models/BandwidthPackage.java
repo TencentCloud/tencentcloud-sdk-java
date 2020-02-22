@@ -76,7 +76,7 @@ public class BandwidthPackage extends AbstractModel{
     */
     @SerializedName("Bandwidth")
     @Expose
-    private Integer Bandwidth;
+    private Long Bandwidth;
 
     /**
      * Get 带宽包唯一标识Id 
@@ -194,7 +194,7 @@ public class BandwidthPackage extends AbstractModel{
      * Get 带宽包限速大小。单位：Mbps，-1表示不限速。 
      * @return Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return this.Bandwidth;
     }
 
@@ -202,7 +202,7 @@ public class BandwidthPackage extends AbstractModel{
      * Set 带宽包限速大小。单位：Mbps，-1表示不限速。
      * @param Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
-    public void setBandwidth(Integer Bandwidth) {
+    public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 

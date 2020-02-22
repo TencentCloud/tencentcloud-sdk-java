@@ -46,14 +46,14 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。 
@@ -111,7 +111,7 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
      * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
      * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -119,7 +119,7 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
      * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -127,7 +127,7 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
      * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -135,7 +135,7 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
      * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

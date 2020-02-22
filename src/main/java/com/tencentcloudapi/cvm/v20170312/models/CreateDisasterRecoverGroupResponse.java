@@ -48,14 +48,14 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel{
     */
     @SerializedName("CvmQuotaTotal")
     @Expose
-    private Integer CvmQuotaTotal;
+    private Long CvmQuotaTotal;
 
     /**
     * 置放群组内已有的云服务器数量。
     */
     @SerializedName("CurrentNum")
     @Expose
-    private Integer CurrentNum;
+    private Long CurrentNum;
 
     /**
     * 置放群组创建时间。
@@ -123,7 +123,7 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel{
      * Get 置放群组内可容纳的云服务器数量。 
      * @return CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      */
-    public Integer getCvmQuotaTotal() {
+    public Long getCvmQuotaTotal() {
         return this.CvmQuotaTotal;
     }
 
@@ -131,7 +131,7 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel{
      * Set 置放群组内可容纳的云服务器数量。
      * @param CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      */
-    public void setCvmQuotaTotal(Integer CvmQuotaTotal) {
+    public void setCvmQuotaTotal(Long CvmQuotaTotal) {
         this.CvmQuotaTotal = CvmQuotaTotal;
     }
 
@@ -139,7 +139,7 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel{
      * Get 置放群组内已有的云服务器数量。 
      * @return CurrentNum 置放群组内已有的云服务器数量。
      */
-    public Integer getCurrentNum() {
+    public Long getCurrentNum() {
         return this.CurrentNum;
     }
 
@@ -147,7 +147,7 @@ public class CreateDisasterRecoverGroupResponse extends AbstractModel{
      * Set 置放群组内已有的云服务器数量。
      * @param CurrentNum 置放群组内已有的云服务器数量。
      */
-    public void setCurrentNum(Integer CurrentNum) {
+    public void setCurrentNum(Long CurrentNum) {
         this.CurrentNum = CurrentNum;
     }
 

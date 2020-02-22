@@ -34,21 +34,21 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     */
     @SerializedName("TotalCodeAll")
     @Expose
-    private Integer TotalCodeAll;
+    private Long TotalCodeAll;
 
     /**
     * 状态码为4开头的总次数。
     */
     @SerializedName("TotalCode4xx")
     @Expose
-    private Integer TotalCode4xx;
+    private Long TotalCode4xx;
 
     /**
     * 状态码为5开头的总次数。
     */
     @SerializedName("TotalCode5xx")
     @Expose
-    private Integer TotalCode5xx;
+    private Long TotalCode5xx;
 
     /**
     * 各状态码的总次数。
@@ -62,42 +62,42 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页大小。
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
     * 总页数。
     */
     @SerializedName("TotalPage")
     @Expose
-    private Integer TotalPage;
+    private Long TotalPage;
 
     /**
     * 总记录数。
     */
     @SerializedName("TotalNum")
     @Expose
-    private Integer TotalNum;
+    private Long TotalNum;
 
     /**
     * 状态码为2开头的总次数。
     */
     @SerializedName("TotalCode2xx")
     @Expose
-    private Integer TotalCode2xx;
+    private Long TotalCode2xx;
 
     /**
     * 状态码为3开头的总次数。
     */
     @SerializedName("TotalCode3xx")
     @Expose
-    private Integer TotalCode3xx;
+    private Long TotalCode3xx;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -126,7 +126,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 所有状态码的加和的次数。 
      * @return TotalCodeAll 所有状态码的加和的次数。
      */
-    public Integer getTotalCodeAll() {
+    public Long getTotalCodeAll() {
         return this.TotalCodeAll;
     }
 
@@ -134,7 +134,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 所有状态码的加和的次数。
      * @param TotalCodeAll 所有状态码的加和的次数。
      */
-    public void setTotalCodeAll(Integer TotalCodeAll) {
+    public void setTotalCodeAll(Long TotalCodeAll) {
         this.TotalCodeAll = TotalCodeAll;
     }
 
@@ -142,7 +142,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 状态码为4开头的总次数。 
      * @return TotalCode4xx 状态码为4开头的总次数。
      */
-    public Integer getTotalCode4xx() {
+    public Long getTotalCode4xx() {
         return this.TotalCode4xx;
     }
 
@@ -150,7 +150,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 状态码为4开头的总次数。
      * @param TotalCode4xx 状态码为4开头的总次数。
      */
-    public void setTotalCode4xx(Integer TotalCode4xx) {
+    public void setTotalCode4xx(Long TotalCode4xx) {
         this.TotalCode4xx = TotalCode4xx;
     }
 
@@ -158,7 +158,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 状态码为5开头的总次数。 
      * @return TotalCode5xx 状态码为5开头的总次数。
      */
-    public Integer getTotalCode5xx() {
+    public Long getTotalCode5xx() {
         return this.TotalCode5xx;
     }
 
@@ -166,7 +166,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 状态码为5开头的总次数。
      * @param TotalCode5xx 状态码为5开头的总次数。
      */
-    public void setTotalCode5xx(Integer TotalCode5xx) {
+    public void setTotalCode5xx(Long TotalCode5xx) {
         this.TotalCode5xx = TotalCode5xx;
     }
 
@@ -190,7 +190,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 页号。 
      * @return PageNum 页号。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -198,7 +198,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 页号。
      * @param PageNum 页号。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -206,7 +206,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 每页大小。 
      * @return PageSize 每页大小。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -214,7 +214,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 每页大小。
      * @param PageSize 每页大小。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
@@ -222,7 +222,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 总页数。 
      * @return TotalPage 总页数。
      */
-    public Integer getTotalPage() {
+    public Long getTotalPage() {
         return this.TotalPage;
     }
 
@@ -230,7 +230,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 总页数。
      * @param TotalPage 总页数。
      */
-    public void setTotalPage(Integer TotalPage) {
+    public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;
     }
 
@@ -238,7 +238,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 总记录数。 
      * @return TotalNum 总记录数。
      */
-    public Integer getTotalNum() {
+    public Long getTotalNum() {
         return this.TotalNum;
     }
 
@@ -246,7 +246,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 总记录数。
      * @param TotalNum 总记录数。
      */
-    public void setTotalNum(Integer TotalNum) {
+    public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
@@ -254,7 +254,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 状态码为2开头的总次数。 
      * @return TotalCode2xx 状态码为2开头的总次数。
      */
-    public Integer getTotalCode2xx() {
+    public Long getTotalCode2xx() {
         return this.TotalCode2xx;
     }
 
@@ -262,7 +262,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 状态码为2开头的总次数。
      * @param TotalCode2xx 状态码为2开头的总次数。
      */
-    public void setTotalCode2xx(Integer TotalCode2xx) {
+    public void setTotalCode2xx(Long TotalCode2xx) {
         this.TotalCode2xx = TotalCode2xx;
     }
 
@@ -270,7 +270,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Get 状态码为3开头的总次数。 
      * @return TotalCode3xx 状态码为3开头的总次数。
      */
-    public Integer getTotalCode3xx() {
+    public Long getTotalCode3xx() {
         return this.TotalCode3xx;
     }
 
@@ -278,7 +278,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
      * Set 状态码为3开头的总次数。
      * @param TotalCode3xx 状态码为3开头的总次数。
      */
-    public void setTotalCode3xx(Integer TotalCode3xx) {
+    public void setTotalCode3xx(Long TotalCode3xx) {
         this.TotalCode3xx = TotalCode3xx;
     }
 

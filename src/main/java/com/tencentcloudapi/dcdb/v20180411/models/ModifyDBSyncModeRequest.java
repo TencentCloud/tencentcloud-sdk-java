@@ -34,7 +34,7 @@ public class ModifyDBSyncModeRequest extends AbstractModel{
     */
     @SerializedName("SyncMode")
     @Expose
-    private Integer SyncMode;
+    private Long SyncMode;
 
     /**
      * Get 待修改同步模式的实例ID。形如：dcdbt-ow728lmc。 
@@ -56,7 +56,7 @@ public class ModifyDBSyncModeRequest extends AbstractModel{
      * Get 同步模式：0 异步，1 强同步， 2 强同步可退化 
      * @return SyncMode 同步模式：0 异步，1 强同步， 2 强同步可退化
      */
-    public Integer getSyncMode() {
+    public Long getSyncMode() {
         return this.SyncMode;
     }
 
@@ -64,7 +64,7 @@ public class ModifyDBSyncModeRequest extends AbstractModel{
      * Set 同步模式：0 异步，1 强同步， 2 强同步可退化
      * @param SyncMode 同步模式：0 异步，1 强同步， 2 强同步可退化
      */
-    public void setSyncMode(Integer SyncMode) {
+    public void setSyncMode(Long SyncMode) {
         this.SyncMode = SyncMode;
     }
 

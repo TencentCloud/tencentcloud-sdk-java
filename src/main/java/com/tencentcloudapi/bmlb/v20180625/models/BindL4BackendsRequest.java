@@ -48,7 +48,7 @@ public class BindL4BackendsRequest extends AbstractModel{
     */
     @SerializedName("BindType")
     @Expose
-    private Integer BindType;
+    private Long BindType;
 
     /**
      * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
@@ -102,7 +102,7 @@ public class BindL4BackendsRequest extends AbstractModel{
      * Get 绑定类型。0：物理机 1：虚拟机 2：半托管机器 
      * @return BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
-    public Integer getBindType() {
+    public Long getBindType() {
         return this.BindType;
     }
 
@@ -110,7 +110,7 @@ public class BindL4BackendsRequest extends AbstractModel{
      * Set 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      * @param BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
-    public void setBindType(Integer BindType) {
+    public void setBindType(Long BindType) {
         this.BindType = BindType;
     }
 

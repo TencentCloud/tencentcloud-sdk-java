@@ -48,7 +48,7 @@ public class AppDetailInfo extends AbstractModel{
     */
     @SerializedName("AppSize")
     @Expose
-    private Integer AppSize;
+    private Long AppSize;
 
     /**
     * app的md5
@@ -123,7 +123,7 @@ public class AppDetailInfo extends AbstractModel{
      * Get app的大小 
      * @return AppSize app的大小
      */
-    public Integer getAppSize() {
+    public Long getAppSize() {
         return this.AppSize;
     }
 
@@ -131,7 +131,7 @@ public class AppDetailInfo extends AbstractModel{
      * Set app的大小
      * @param AppSize app的大小
      */
-    public void setAppSize(Integer AppSize) {
+    public void setAppSize(Long AppSize) {
         this.AppSize = AppSize;
     }
 

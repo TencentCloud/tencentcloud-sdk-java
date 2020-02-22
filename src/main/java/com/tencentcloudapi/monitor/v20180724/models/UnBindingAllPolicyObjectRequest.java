@@ -34,7 +34,7 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
      * Get 固定值，为"monitor" 
@@ -56,7 +56,7 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
      * Get 策略组id 
      * @return GroupId 策略组id
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -64,7 +64,7 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
      * Set 策略组id
      * @param GroupId 策略组id
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 

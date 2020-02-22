@@ -41,7 +41,7 @@ public class TerminateTaskInstanceRequest extends AbstractModel{
     */
     @SerializedName("TaskInstanceIndex")
     @Expose
-    private Integer TaskInstanceIndex;
+    private Long TaskInstanceIndex;
 
     /**
      * Get 作业ID 
@@ -79,7 +79,7 @@ public class TerminateTaskInstanceRequest extends AbstractModel{
      * Get 任务实例索引 
      * @return TaskInstanceIndex 任务实例索引
      */
-    public Integer getTaskInstanceIndex() {
+    public Long getTaskInstanceIndex() {
         return this.TaskInstanceIndex;
     }
 
@@ -87,7 +87,7 @@ public class TerminateTaskInstanceRequest extends AbstractModel{
      * Set 任务实例索引
      * @param TaskInstanceIndex 任务实例索引
      */
-    public void setTaskInstanceIndex(Integer TaskInstanceIndex) {
+    public void setTaskInstanceIndex(Long TaskInstanceIndex) {
         this.TaskInstanceIndex = TaskInstanceIndex;
     }
 

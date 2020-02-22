@@ -48,7 +48,7 @@ public class CreatePersonalAccountRequest extends AbstractModel{
     */
     @SerializedName("IdentType")
     @Expose
-    private Integer IdentType;
+    private Long IdentType;
 
     /**
     * 个人用户证件号码
@@ -116,7 +116,7 @@ public class CreatePersonalAccountRequest extends AbstractModel{
      * Get 个人用户证件类型，0代表身份证，详情请见常见问题 
      * @return IdentType 个人用户证件类型，0代表身份证，详情请见常见问题
      */
-    public Integer getIdentType() {
+    public Long getIdentType() {
         return this.IdentType;
     }
 
@@ -124,7 +124,7 @@ public class CreatePersonalAccountRequest extends AbstractModel{
      * Set 个人用户证件类型，0代表身份证，详情请见常见问题
      * @param IdentType 个人用户证件类型，0代表身份证，详情请见常见问题
      */
-    public void setIdentType(Integer IdentType) {
+    public void setIdentType(Long IdentType) {
         this.IdentType = IdentType;
     }
 

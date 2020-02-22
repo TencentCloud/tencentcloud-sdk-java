@@ -34,7 +34,7 @@ public class ZoneInfo extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 可用区描述
@@ -63,7 +63,7 @@ public class ZoneInfo extends AbstractModel{
      * Get 可用区整型ID 
      * @return ZoneId 可用区整型ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -71,7 +71,7 @@ public class ZoneInfo extends AbstractModel{
      * Set 可用区整型ID
      * @param ZoneId 可用区整型ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 

@@ -27,14 +27,14 @@ public class InstanceTypeConfig extends AbstractModel{
     */
     @SerializedName("Mem")
     @Expose
-    private Integer Mem;
+    private Long Mem;
 
     /**
     * CPU核数，单位：核。
     */
     @SerializedName("Cpu")
     @Expose
-    private Integer Cpu;
+    private Long Cpu;
 
     /**
     * 实例机型。
@@ -61,7 +61,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Get 内存容量，单位：`GB`。 
      * @return Mem 内存容量，单位：`GB`。
      */
-    public Integer getMem() {
+    public Long getMem() {
         return this.Mem;
     }
 
@@ -69,7 +69,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Set 内存容量，单位：`GB`。
      * @param Mem 内存容量，单位：`GB`。
      */
-    public void setMem(Integer Mem) {
+    public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
@@ -77,7 +77,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Get CPU核数，单位：核。 
      * @return Cpu CPU核数，单位：核。
      */
-    public Integer getCpu() {
+    public Long getCpu() {
         return this.Cpu;
     }
 
@@ -85,7 +85,7 @@ public class InstanceTypeConfig extends AbstractModel{
      * Set CPU核数，单位：核。
      * @param Cpu CPU核数，单位：核。
      */
-    public void setCpu(Integer Cpu) {
+    public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 

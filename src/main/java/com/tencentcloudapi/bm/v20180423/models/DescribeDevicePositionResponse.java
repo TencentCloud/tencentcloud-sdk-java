@@ -27,7 +27,7 @@ public class DescribeDevicePositionResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 设备所在机架信息
@@ -47,7 +47,7 @@ public class DescribeDevicePositionResponse extends AbstractModel{
      * Get 返回数量 
      * @return TotalCount 返回数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeDevicePositionResponse extends AbstractModel{
      * Set 返回数量
      * @param TotalCount 返回数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

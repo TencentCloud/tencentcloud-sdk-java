@@ -34,7 +34,7 @@ public class GenderPortrait extends AbstractModel{
     */
     @SerializedName("Percent")
     @Expose
-    private Integer Percent;
+    private Long Percent;
 
     /**
      * Get 性别 
@@ -56,7 +56,7 @@ public class GenderPortrait extends AbstractModel{
      * Get 百分比 
      * @return Percent 百分比
      */
-    public Integer getPercent() {
+    public Long getPercent() {
         return this.Percent;
     }
 
@@ -64,7 +64,7 @@ public class GenderPortrait extends AbstractModel{
      * Set 百分比
      * @param Percent 百分比
      */
-    public void setPercent(Integer Percent) {
+    public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 

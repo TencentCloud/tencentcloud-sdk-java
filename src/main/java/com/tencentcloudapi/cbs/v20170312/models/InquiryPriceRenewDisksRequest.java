@@ -48,7 +48,7 @@ public class InquiryPriceRenewDisksRequest extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
      * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
@@ -102,7 +102,7 @@ public class InquiryPriceRenewDisksRequest extends AbstractModel{
      * Get 云盘所属项目ID。 如传入则仅用于鉴权。 
      * @return ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -110,7 +110,7 @@ public class InquiryPriceRenewDisksRequest extends AbstractModel{
      * Set 云盘所属项目ID。 如传入则仅用于鉴权。
      * @param ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

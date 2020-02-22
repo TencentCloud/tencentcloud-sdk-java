@@ -27,28 +27,28 @@ public class PersonTracePoint extends AbstractModel{
     */
     @SerializedName("MallAreaId")
     @Expose
-    private Integer MallAreaId;
+    private Long MallAreaId;
 
     /**
     * 门店编码
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 卖场区域类型
     */
     @SerializedName("MallAreaType")
     @Expose
-    private Integer MallAreaType;
+    private Long MallAreaType;
 
     /**
     * 轨迹事件
     */
     @SerializedName("TraceEventType")
     @Expose
-    private Integer TraceEventType;
+    private Long TraceEventType;
 
     /**
     * 轨迹事件发生时间点
@@ -69,20 +69,20 @@ public class PersonTracePoint extends AbstractModel{
     */
     @SerializedName("ShoppingBagType")
     @Expose
-    private Integer ShoppingBagType;
+    private Long ShoppingBagType;
 
     /**
     * 购物袋数量
     */
     @SerializedName("ShoppingBagCount")
     @Expose
-    private Integer ShoppingBagCount;
+    private Long ShoppingBagCount;
 
     /**
      * Get 卖场区域编码 
      * @return MallAreaId 卖场区域编码
      */
-    public Integer getMallAreaId() {
+    public Long getMallAreaId() {
         return this.MallAreaId;
     }
 
@@ -90,7 +90,7 @@ public class PersonTracePoint extends AbstractModel{
      * Set 卖场区域编码
      * @param MallAreaId 卖场区域编码
      */
-    public void setMallAreaId(Integer MallAreaId) {
+    public void setMallAreaId(Long MallAreaId) {
         this.MallAreaId = MallAreaId;
     }
 
@@ -98,7 +98,7 @@ public class PersonTracePoint extends AbstractModel{
      * Get 门店编码 
      * @return ShopId 门店编码
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -106,7 +106,7 @@ public class PersonTracePoint extends AbstractModel{
      * Set 门店编码
      * @param ShopId 门店编码
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -114,7 +114,7 @@ public class PersonTracePoint extends AbstractModel{
      * Get 卖场区域类型 
      * @return MallAreaType 卖场区域类型
      */
-    public Integer getMallAreaType() {
+    public Long getMallAreaType() {
         return this.MallAreaType;
     }
 
@@ -122,7 +122,7 @@ public class PersonTracePoint extends AbstractModel{
      * Set 卖场区域类型
      * @param MallAreaType 卖场区域类型
      */
-    public void setMallAreaType(Integer MallAreaType) {
+    public void setMallAreaType(Long MallAreaType) {
         this.MallAreaType = MallAreaType;
     }
 
@@ -130,7 +130,7 @@ public class PersonTracePoint extends AbstractModel{
      * Get 轨迹事件 
      * @return TraceEventType 轨迹事件
      */
-    public Integer getTraceEventType() {
+    public Long getTraceEventType() {
         return this.TraceEventType;
     }
 
@@ -138,7 +138,7 @@ public class PersonTracePoint extends AbstractModel{
      * Set 轨迹事件
      * @param TraceEventType 轨迹事件
      */
-    public void setTraceEventType(Integer TraceEventType) {
+    public void setTraceEventType(Long TraceEventType) {
         this.TraceEventType = TraceEventType;
     }
 
@@ -178,7 +178,7 @@ public class PersonTracePoint extends AbstractModel{
      * Get 购物袋类型 
      * @return ShoppingBagType 购物袋类型
      */
-    public Integer getShoppingBagType() {
+    public Long getShoppingBagType() {
         return this.ShoppingBagType;
     }
 
@@ -186,7 +186,7 @@ public class PersonTracePoint extends AbstractModel{
      * Set 购物袋类型
      * @param ShoppingBagType 购物袋类型
      */
-    public void setShoppingBagType(Integer ShoppingBagType) {
+    public void setShoppingBagType(Long ShoppingBagType) {
         this.ShoppingBagType = ShoppingBagType;
     }
 
@@ -194,7 +194,7 @@ public class PersonTracePoint extends AbstractModel{
      * Get 购物袋数量 
      * @return ShoppingBagCount 购物袋数量
      */
-    public Integer getShoppingBagCount() {
+    public Long getShoppingBagCount() {
         return this.ShoppingBagCount;
     }
 
@@ -202,7 +202,7 @@ public class PersonTracePoint extends AbstractModel{
      * Set 购物袋数量
      * @param ShoppingBagCount 购物袋数量
      */
-    public void setShoppingBagCount(Integer ShoppingBagCount) {
+    public void setShoppingBagCount(Long ShoppingBagCount) {
         this.ShoppingBagCount = ShoppingBagCount;
     }
 

@@ -34,14 +34,14 @@ public class DescribeSqlLogsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 拉取数量（0-10000，为0时拉取总数信息）。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
@@ -63,7 +63,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Get SQL日志偏移。 
      * @return Offset SQL日志偏移。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -71,7 +71,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Set SQL日志偏移。
      * @param Offset SQL日志偏移。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -79,7 +79,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Get 拉取数量（0-10000，为0时拉取总数信息）。 
      * @return Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -87,7 +87,7 @@ public class DescribeSqlLogsRequest extends AbstractModel{
      * Set 拉取数量（0-10000，为0时拉取总数信息）。
      * @param Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

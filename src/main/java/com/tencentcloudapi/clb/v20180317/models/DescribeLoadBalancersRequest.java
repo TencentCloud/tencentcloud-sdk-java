@@ -42,7 +42,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("Forward")
     @Expose
-    private Integer Forward;
+    private Long Forward;
 
     /**
     * 负载均衡实例的名称。
@@ -84,14 +84,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回负载均衡实例的数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
@@ -105,7 +105,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("OrderType")
     @Expose
-    private Integer OrderType;
+    private Long OrderType;
 
     /**
     * 搜索字段，模糊匹配名称、域名、VIP。
@@ -119,14 +119,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
     */
     @SerializedName("WithRs")
     @Expose
-    private Integer WithRs;
+    private Long WithRs;
 
     /**
     * 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
@@ -190,7 +190,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。 
      * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      */
-    public Integer getForward() {
+    public Long getForward() {
         return this.Forward;
     }
 
@@ -198,7 +198,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      */
-    public void setForward(Integer Forward) {
+    public void setForward(Long Forward) {
         this.Forward = Forward;
     }
 
@@ -286,7 +286,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 数据偏移量，默认为 0。 
      * @return Offset 数据偏移量，默认为 0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -294,7 +294,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 数据偏移量，默认为 0。
      * @param Offset 数据偏移量，默认为 0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -302,7 +302,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 返回负载均衡实例的数量，默认为20，最大值为100。 
      * @return Limit 返回负载均衡实例的数量，默认为20，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -310,7 +310,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 返回负载均衡实例的数量，默认为20，最大值为100。
      * @param Limit 返回负载均衡实例的数量，默认为20，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -334,7 +334,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 1：倒序，0：顺序，默认按照创建时间倒序。 
      * @return OrderType 1：倒序，0：顺序，默认按照创建时间倒序。
      */
-    public Integer getOrderType() {
+    public Long getOrderType() {
         return this.OrderType;
     }
 
@@ -342,7 +342,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 1：倒序，0：顺序，默认按照创建时间倒序。
      * @param OrderType 1：倒序，0：顺序，默认按照创建时间倒序。
      */
-    public void setOrderType(Integer OrderType) {
+    public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
@@ -366,7 +366,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。 
      * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -374,7 +374,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
@@ -382,7 +382,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Get 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。 
      * @return WithRs 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      */
-    public Integer getWithRs() {
+    public Long getWithRs() {
         return this.WithRs;
     }
 
@@ -390,7 +390,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * Set 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      * @param WithRs 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      */
-    public void setWithRs(Integer WithRs) {
+    public void setWithRs(Long WithRs) {
         this.WithRs = WithRs;
     }
 

@@ -27,7 +27,7 @@ public class OsInfo extends AbstractModel{
     */
     @SerializedName("OsTypeId")
     @Expose
-    private Integer OsTypeId;
+    private Long OsTypeId;
 
     /**
     * 操作系统名称。
@@ -69,13 +69,13 @@ public class OsInfo extends AbstractModel{
     */
     @SerializedName("MaxPartitionSize")
     @Expose
-    private Integer MaxPartitionSize;
+    private Long MaxPartitionSize;
 
     /**
      * Get 操作系统ID。 
      * @return OsTypeId 操作系统ID。
      */
-    public Integer getOsTypeId() {
+    public Long getOsTypeId() {
         return this.OsTypeId;
     }
 
@@ -83,7 +83,7 @@ public class OsInfo extends AbstractModel{
      * Set 操作系统ID。
      * @param OsTypeId 操作系统ID。
      */
-    public void setOsTypeId(Integer OsTypeId) {
+    public void setOsTypeId(Long OsTypeId) {
         this.OsTypeId = OsTypeId;
     }
 
@@ -171,7 +171,7 @@ public class OsInfo extends AbstractModel{
      * Get 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T。 
      * @return MaxPartitionSize 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T。
      */
-    public Integer getMaxPartitionSize() {
+    public Long getMaxPartitionSize() {
         return this.MaxPartitionSize;
     }
 
@@ -179,7 +179,7 @@ public class OsInfo extends AbstractModel{
      * Set 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T。
      * @param MaxPartitionSize 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T。
      */
-    public void setMaxPartitionSize(Integer MaxPartitionSize) {
+    public void setMaxPartitionSize(Long MaxPartitionSize) {
         this.MaxPartitionSize = MaxPartitionSize;
     }
 

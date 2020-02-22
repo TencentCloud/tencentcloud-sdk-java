@@ -43,7 +43,7 @@ DATA_DISK：数据盘。
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
      * Get 快照Id。 
@@ -89,7 +89,7 @@ DATA_DISK：数据盘。
      * Get 创建此快照的云硬盘大小，单位GB。 
      * @return DiskSize 创建此快照的云硬盘大小，单位GB。
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -97,7 +97,7 @@ DATA_DISK：数据盘。
      * Set 创建此快照的云硬盘大小，单位GB。
      * @param DiskSize 创建此快照的云硬盘大小，单位GB。
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 

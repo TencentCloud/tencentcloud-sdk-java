@@ -42,7 +42,7 @@ public class UpdateInstanceRequest extends AbstractModel{
     */
     @SerializedName("NodeNum")
     @Expose
-    private Integer NodeNum;
+    private Long NodeNum;
 
     /**
     * 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
@@ -71,7 +71,7 @@ public class UpdateInstanceRequest extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
     * 已废弃请使用NodeInfoList
@@ -87,7 +87,7 @@ public class UpdateInstanceRequest extends AbstractModel{
     */
     @SerializedName("MasterNodeNum")
     @Expose
-    private Integer MasterNodeNum;
+    private Long MasterNodeNum;
 
     /**
     * 已废弃请使用NodeInfoList
@@ -103,7 +103,7 @@ public class UpdateInstanceRequest extends AbstractModel{
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
-    private Integer MasterNodeDiskSize;
+    private Long MasterNodeDiskSize;
 
     /**
     * 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
@@ -192,7 +192,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @return NodeNum 已废弃请使用NodeInfoList
 节点个数（2-50个）
      */
-    public Integer getNodeNum() {
+    public Long getNodeNum() {
         return this.NodeNum;
     }
 
@@ -202,7 +202,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @param NodeNum 已废弃请使用NodeInfoList
 节点个数（2-50个）
      */
-    public void setNodeNum(Integer NodeNum) {
+    public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
@@ -260,7 +260,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @return DiskSize 已废弃请使用NodeInfoList
 磁盘大小（单位GB）
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -270,7 +270,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @param DiskSize 已废弃请使用NodeInfoList
 磁盘大小（单位GB）
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -300,7 +300,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @return MasterNodeNum 已废弃请使用NodeInfoList
 专用主节点个数（只支持3个或5个）
      */
-    public Integer getMasterNodeNum() {
+    public Long getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
@@ -310,7 +310,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @param MasterNodeNum 已废弃请使用NodeInfoList
 专用主节点个数（只支持3个或5个）
      */
-    public void setMasterNodeNum(Integer MasterNodeNum) {
+    public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
@@ -340,7 +340,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @return MasterNodeDiskSize 已废弃请使用NodeInfoList
 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
-    public Integer getMasterNodeDiskSize() {
+    public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
@@ -350,7 +350,7 @@ public class UpdateInstanceRequest extends AbstractModel{
      * @param MasterNodeDiskSize 已废弃请使用NodeInfoList
 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
-    public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
+    public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
     }
 

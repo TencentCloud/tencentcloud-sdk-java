@@ -34,7 +34,7 @@ public class DescribeMigrateCheckJobResponse extends AbstractModel{
     */
     @SerializedName("ErrorCode")
     @Expose
-    private Integer ErrorCode;
+    private Long ErrorCode;
 
     /**
     * 任务的错误信息
@@ -55,7 +55,7 @@ public class DescribeMigrateCheckJobResponse extends AbstractModel{
     */
     @SerializedName("CheckFlag")
     @Expose
-    private Integer CheckFlag;
+    private Long CheckFlag;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,7 +84,7 @@ public class DescribeMigrateCheckJobResponse extends AbstractModel{
      * Get 任务的错误码 
      * @return ErrorCode 任务的错误码
      */
-    public Integer getErrorCode() {
+    public Long getErrorCode() {
         return this.ErrorCode;
     }
 
@@ -92,7 +92,7 @@ public class DescribeMigrateCheckJobResponse extends AbstractModel{
      * Set 任务的错误码
      * @param ErrorCode 任务的错误码
      */
-    public void setErrorCode(Integer ErrorCode) {
+    public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
@@ -132,7 +132,7 @@ public class DescribeMigrateCheckJobResponse extends AbstractModel{
      * Get 校验是否通过,0-未通过，1-校验通过, 3-未校验 
      * @return CheckFlag 校验是否通过,0-未通过，1-校验通过, 3-未校验
      */
-    public Integer getCheckFlag() {
+    public Long getCheckFlag() {
         return this.CheckFlag;
     }
 
@@ -140,7 +140,7 @@ public class DescribeMigrateCheckJobResponse extends AbstractModel{
      * Set 校验是否通过,0-未通过，1-校验通过, 3-未校验
      * @param CheckFlag 校验是否通过,0-未通过，1-校验通过, 3-未校验
      */
-    public void setCheckFlag(Integer CheckFlag) {
+    public void setCheckFlag(Long CheckFlag) {
         this.CheckFlag = CheckFlag;
     }
 

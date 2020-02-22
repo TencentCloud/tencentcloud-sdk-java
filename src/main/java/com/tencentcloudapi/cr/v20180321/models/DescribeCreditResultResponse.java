@@ -50,14 +50,14 @@ public class DescribeCreditResultResponse extends AbstractModel{
     */
     @SerializedName("RingDuration")
     @Expose
-    private Integer RingDuration;
+    private Long RingDuration;
 
     /**
     * 接通时长
     */
     @SerializedName("AnswerDuration")
     @Expose
-    private Integer AnswerDuration;
+    private Long AnswerDuration;
 
     /**
     * JSON格式的扩展信息字段，ResultCode为NON时才有。
@@ -134,7 +134,7 @@ public class DescribeCreditResultResponse extends AbstractModel{
      * Get 振铃时长 
      * @return RingDuration 振铃时长
      */
-    public Integer getRingDuration() {
+    public Long getRingDuration() {
         return this.RingDuration;
     }
 
@@ -142,7 +142,7 @@ public class DescribeCreditResultResponse extends AbstractModel{
      * Set 振铃时长
      * @param RingDuration 振铃时长
      */
-    public void setRingDuration(Integer RingDuration) {
+    public void setRingDuration(Long RingDuration) {
         this.RingDuration = RingDuration;
     }
 
@@ -150,7 +150,7 @@ public class DescribeCreditResultResponse extends AbstractModel{
      * Get 接通时长 
      * @return AnswerDuration 接通时长
      */
-    public Integer getAnswerDuration() {
+    public Long getAnswerDuration() {
         return this.AnswerDuration;
     }
 
@@ -158,7 +158,7 @@ public class DescribeCreditResultResponse extends AbstractModel{
      * Set 接通时长
      * @param AnswerDuration 接通时长
      */
-    public void setAnswerDuration(Integer AnswerDuration) {
+    public void setAnswerDuration(Long AnswerDuration) {
         this.AnswerDuration = AnswerDuration;
     }
 

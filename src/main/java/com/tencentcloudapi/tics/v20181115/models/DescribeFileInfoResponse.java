@@ -27,7 +27,7 @@ public class DescribeFileInfoResponse extends AbstractModel{
     */
     @SerializedName("ReturnCode")
     @Expose
-    private Integer ReturnCode;
+    private Long ReturnCode;
 
     /**
     * 判定结果，如：black、white、grey
@@ -41,7 +41,7 @@ public class DescribeFileInfoResponse extends AbstractModel{
     */
     @SerializedName("Confidence")
     @Expose
-    private Integer Confidence;
+    private Long Confidence;
 
     /**
     * 文件类型，文件hash
@@ -84,7 +84,7 @@ public class DescribeFileInfoResponse extends AbstractModel{
      * Get 是否有数据，0代表有数据，1代表没有数据 
      * @return ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
-    public Integer getReturnCode() {
+    public Long getReturnCode() {
         return this.ReturnCode;
     }
 
@@ -92,7 +92,7 @@ public class DescribeFileInfoResponse extends AbstractModel{
      * Set 是否有数据，0代表有数据，1代表没有数据
      * @param ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
-    public void setReturnCode(Integer ReturnCode) {
+    public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
@@ -116,7 +116,7 @@ public class DescribeFileInfoResponse extends AbstractModel{
      * Get 置信度，取值0-100 
      * @return Confidence 置信度，取值0-100
      */
-    public Integer getConfidence() {
+    public Long getConfidence() {
         return this.Confidence;
     }
 
@@ -124,7 +124,7 @@ public class DescribeFileInfoResponse extends AbstractModel{
      * Set 置信度，取值0-100
      * @param Confidence 置信度，取值0-100
      */
-    public void setConfidence(Integer Confidence) {
+    public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 

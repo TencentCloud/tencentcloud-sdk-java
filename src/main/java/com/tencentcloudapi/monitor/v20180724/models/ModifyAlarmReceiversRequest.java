@@ -27,7 +27,7 @@ public class ModifyAlarmReceiversRequest extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 必填。固定为“monitor”
@@ -47,7 +47,7 @@ public class ModifyAlarmReceiversRequest extends AbstractModel{
      * Get 需要修改接收人的策略组Id 
      * @return GroupId 需要修改接收人的策略组Id
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -55,7 +55,7 @@ public class ModifyAlarmReceiversRequest extends AbstractModel{
      * Set 需要修改接收人的策略组Id
      * @param GroupId 需要修改接收人的策略组Id
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 

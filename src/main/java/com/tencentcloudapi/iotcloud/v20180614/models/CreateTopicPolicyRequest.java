@@ -41,7 +41,7 @@ public class CreateTopicPolicyRequest extends AbstractModel{
     */
     @SerializedName("Privilege")
     @Expose
-    private Integer Privilege;
+    private Long Privilege;
 
     /**
     * 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的ID和设备信息。
@@ -86,7 +86,7 @@ public class CreateTopicPolicyRequest extends AbstractModel{
      * Get Topic权限，1发布，2订阅，3订阅和发布 
      * @return Privilege Topic权限，1发布，2订阅，3订阅和发布
      */
-    public Integer getPrivilege() {
+    public Long getPrivilege() {
         return this.Privilege;
     }
 
@@ -94,7 +94,7 @@ public class CreateTopicPolicyRequest extends AbstractModel{
      * Set Topic权限，1发布，2订阅，3订阅和发布
      * @param Privilege Topic权限，1发布，2订阅，3订阅和发布
      */
-    public void setPrivilege(Integer Privilege) {
+    public void setPrivilege(Long Privilege) {
         this.Privilege = Privilege;
     }
 

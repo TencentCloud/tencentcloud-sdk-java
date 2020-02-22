@@ -27,7 +27,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 必填。固定值"monitor"
@@ -41,7 +41,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     */
     @SerializedName("InstanceGroupId")
     @Expose
-    private Integer InstanceGroupId;
+    private Long InstanceGroupId;
 
     /**
     * 需要绑定的对象维度信息
@@ -54,7 +54,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      * Get 策略分组Id 
      * @return GroupId 策略分组Id
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -62,7 +62,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      * Set 策略分组Id
      * @param GroupId 策略分组Id
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
@@ -86,7 +86,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      * Get 实例分组ID 
      * @return InstanceGroupId 实例分组ID
      */
-    public Integer getInstanceGroupId() {
+    public Long getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
@@ -94,7 +94,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      * Set 实例分组ID
      * @param InstanceGroupId 实例分组ID
      */
-    public void setInstanceGroupId(Integer InstanceGroupId) {
+    public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 

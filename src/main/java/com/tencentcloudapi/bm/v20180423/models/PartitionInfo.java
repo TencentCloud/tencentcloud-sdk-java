@@ -34,7 +34,7 @@ public class PartitionInfo extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
      * Get 分区名称 
@@ -56,7 +56,7 @@ public class PartitionInfo extends AbstractModel{
      * Get 分区大小 
      * @return Size 分区大小
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -64,7 +64,7 @@ public class PartitionInfo extends AbstractModel{
      * Set 分区大小
      * @param Size 分区大小
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 

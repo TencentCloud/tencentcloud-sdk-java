@@ -27,42 +27,42 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     */
     @SerializedName("DataBackupVolume")
     @Expose
-    private Integer DataBackupVolume;
+    private Long DataBackupVolume;
 
     /**
     * 当前地域的数据备份总个数。
     */
     @SerializedName("DataBackupCount")
     @Expose
-    private Integer DataBackupCount;
+    private Long DataBackupCount;
 
     /**
     * 当前地域的自动备份总容量。
     */
     @SerializedName("AutoBackupVolume")
     @Expose
-    private Integer AutoBackupVolume;
+    private Long AutoBackupVolume;
 
     /**
     * 当前地域的自动备份总个数。
     */
     @SerializedName("AutoBackupCount")
     @Expose
-    private Integer AutoBackupCount;
+    private Long AutoBackupCount;
 
     /**
     * 当前地域的手动备份总容量。
     */
     @SerializedName("ManualBackupVolume")
     @Expose
-    private Integer ManualBackupVolume;
+    private Long ManualBackupVolume;
 
     /**
     * 当前地域的手动备份总个数。
     */
     @SerializedName("ManualBackupCount")
     @Expose
-    private Integer ManualBackupCount;
+    private Long ManualBackupCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -75,7 +75,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Get 当前地域的数据备份总容量（包含自动备份和手动备份，单位为字节）。 
      * @return DataBackupVolume 当前地域的数据备份总容量（包含自动备份和手动备份，单位为字节）。
      */
-    public Integer getDataBackupVolume() {
+    public Long getDataBackupVolume() {
         return this.DataBackupVolume;
     }
 
@@ -83,7 +83,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Set 当前地域的数据备份总容量（包含自动备份和手动备份，单位为字节）。
      * @param DataBackupVolume 当前地域的数据备份总容量（包含自动备份和手动备份，单位为字节）。
      */
-    public void setDataBackupVolume(Integer DataBackupVolume) {
+    public void setDataBackupVolume(Long DataBackupVolume) {
         this.DataBackupVolume = DataBackupVolume;
     }
 
@@ -91,7 +91,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Get 当前地域的数据备份总个数。 
      * @return DataBackupCount 当前地域的数据备份总个数。
      */
-    public Integer getDataBackupCount() {
+    public Long getDataBackupCount() {
         return this.DataBackupCount;
     }
 
@@ -99,7 +99,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Set 当前地域的数据备份总个数。
      * @param DataBackupCount 当前地域的数据备份总个数。
      */
-    public void setDataBackupCount(Integer DataBackupCount) {
+    public void setDataBackupCount(Long DataBackupCount) {
         this.DataBackupCount = DataBackupCount;
     }
 
@@ -107,7 +107,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Get 当前地域的自动备份总容量。 
      * @return AutoBackupVolume 当前地域的自动备份总容量。
      */
-    public Integer getAutoBackupVolume() {
+    public Long getAutoBackupVolume() {
         return this.AutoBackupVolume;
     }
 
@@ -115,7 +115,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Set 当前地域的自动备份总容量。
      * @param AutoBackupVolume 当前地域的自动备份总容量。
      */
-    public void setAutoBackupVolume(Integer AutoBackupVolume) {
+    public void setAutoBackupVolume(Long AutoBackupVolume) {
         this.AutoBackupVolume = AutoBackupVolume;
     }
 
@@ -123,7 +123,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Get 当前地域的自动备份总个数。 
      * @return AutoBackupCount 当前地域的自动备份总个数。
      */
-    public Integer getAutoBackupCount() {
+    public Long getAutoBackupCount() {
         return this.AutoBackupCount;
     }
 
@@ -131,7 +131,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Set 当前地域的自动备份总个数。
      * @param AutoBackupCount 当前地域的自动备份总个数。
      */
-    public void setAutoBackupCount(Integer AutoBackupCount) {
+    public void setAutoBackupCount(Long AutoBackupCount) {
         this.AutoBackupCount = AutoBackupCount;
     }
 
@@ -139,7 +139,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Get 当前地域的手动备份总容量。 
      * @return ManualBackupVolume 当前地域的手动备份总容量。
      */
-    public Integer getManualBackupVolume() {
+    public Long getManualBackupVolume() {
         return this.ManualBackupVolume;
     }
 
@@ -147,7 +147,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Set 当前地域的手动备份总容量。
      * @param ManualBackupVolume 当前地域的手动备份总容量。
      */
-    public void setManualBackupVolume(Integer ManualBackupVolume) {
+    public void setManualBackupVolume(Long ManualBackupVolume) {
         this.ManualBackupVolume = ManualBackupVolume;
     }
 
@@ -155,7 +155,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Get 当前地域的手动备份总个数。 
      * @return ManualBackupCount 当前地域的手动备份总个数。
      */
-    public Integer getManualBackupCount() {
+    public Long getManualBackupCount() {
         return this.ManualBackupCount;
     }
 
@@ -163,7 +163,7 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
      * Set 当前地域的手动备份总个数。
      * @param ManualBackupCount 当前地域的手动备份总个数。
      */
-    public void setManualBackupCount(Integer ManualBackupCount) {
+    public void setManualBackupCount(Long ManualBackupCount) {
         this.ManualBackupCount = ManualBackupCount;
     }
 

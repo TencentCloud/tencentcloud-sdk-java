@@ -34,7 +34,7 @@ public class DescribeMultiDevTaskResponse extends AbstractModel{
     */
     @SerializedName("TaskStatus")
     @Expose
-    private Integer TaskStatus;
+    private Long TaskStatus;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeMultiDevTaskResponse extends AbstractModel{
      * Get 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成 
      * @return TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      */
-    public Integer getTaskStatus() {
+    public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
@@ -71,7 +71,7 @@ public class DescribeMultiDevTaskResponse extends AbstractModel{
      * Set 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      * @param TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      */
-    public void setTaskStatus(Integer TaskStatus) {
+    public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 

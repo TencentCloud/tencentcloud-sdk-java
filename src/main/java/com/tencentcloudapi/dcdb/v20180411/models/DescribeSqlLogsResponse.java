@@ -27,35 +27,35 @@ public class DescribeSqlLogsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 消息队列中的sql日志起始偏移。
     */
     @SerializedName("StartOffset")
     @Expose
-    private Integer StartOffset;
+    private Long StartOffset;
 
     /**
     * 消息队列中的sql日志结束偏移。
     */
     @SerializedName("EndOffset")
     @Expose
-    private Integer EndOffset;
+    private Long EndOffset;
 
     /**
     * 返回的第一条sql日志的偏移。
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回的sql日志数量。
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * Sql日志列表。
@@ -75,7 +75,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Get 当前消息队列中的sql日志条目数。 
      * @return TotalCount 当前消息队列中的sql日志条目数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -83,7 +83,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Set 当前消息队列中的sql日志条目数。
      * @param TotalCount 当前消息队列中的sql日志条目数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
@@ -91,7 +91,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Get 消息队列中的sql日志起始偏移。 
      * @return StartOffset 消息队列中的sql日志起始偏移。
      */
-    public Integer getStartOffset() {
+    public Long getStartOffset() {
         return this.StartOffset;
     }
 
@@ -99,7 +99,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Set 消息队列中的sql日志起始偏移。
      * @param StartOffset 消息队列中的sql日志起始偏移。
      */
-    public void setStartOffset(Integer StartOffset) {
+    public void setStartOffset(Long StartOffset) {
         this.StartOffset = StartOffset;
     }
 
@@ -107,7 +107,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Get 消息队列中的sql日志结束偏移。 
      * @return EndOffset 消息队列中的sql日志结束偏移。
      */
-    public Integer getEndOffset() {
+    public Long getEndOffset() {
         return this.EndOffset;
     }
 
@@ -115,7 +115,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Set 消息队列中的sql日志结束偏移。
      * @param EndOffset 消息队列中的sql日志结束偏移。
      */
-    public void setEndOffset(Integer EndOffset) {
+    public void setEndOffset(Long EndOffset) {
         this.EndOffset = EndOffset;
     }
 
@@ -123,7 +123,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Get 返回的第一条sql日志的偏移。 
      * @return Offset 返回的第一条sql日志的偏移。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -131,7 +131,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Set 返回的第一条sql日志的偏移。
      * @param Offset 返回的第一条sql日志的偏移。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -139,7 +139,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Get 返回的sql日志数量。 
      * @return Count 返回的sql日志数量。
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
@@ -147,7 +147,7 @@ public class DescribeSqlLogsResponse extends AbstractModel{
      * Set 返回的sql日志数量。
      * @param Count 返回的sql日志数量。
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 

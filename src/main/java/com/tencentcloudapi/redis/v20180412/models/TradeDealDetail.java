@@ -41,14 +41,14 @@ public class TradeDealDetail extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 订单关联的实例数
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Integer GoodsNum;
+    private Long GoodsNum;
 
     /**
     * 创建用户uin
@@ -83,7 +83,7 @@ public class TradeDealDetail extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 订单状态描述
@@ -97,7 +97,7 @@ public class TradeDealDetail extends AbstractModel{
     */
     @SerializedName("Price")
     @Expose
-    private Integer Price;
+    private Long Price;
 
     /**
     * 实例ID
@@ -142,7 +142,7 @@ public class TradeDealDetail extends AbstractModel{
      * Get 可用区id 
      * @return ZoneId 可用区id
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -150,7 +150,7 @@ public class TradeDealDetail extends AbstractModel{
      * Set 可用区id
      * @param ZoneId 可用区id
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -158,7 +158,7 @@ public class TradeDealDetail extends AbstractModel{
      * Get 订单关联的实例数 
      * @return GoodsNum 订单关联的实例数
      */
-    public Integer getGoodsNum() {
+    public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
@@ -166,7 +166,7 @@ public class TradeDealDetail extends AbstractModel{
      * Set 订单关联的实例数
      * @param GoodsNum 订单关联的实例数
      */
-    public void setGoodsNum(Integer GoodsNum) {
+    public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
@@ -238,7 +238,7 @@ public class TradeDealDetail extends AbstractModel{
      * Get 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中 
      * @return Status 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -246,7 +246,7 @@ public class TradeDealDetail extends AbstractModel{
      * Set 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
      * @param Status 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -270,7 +270,7 @@ public class TradeDealDetail extends AbstractModel{
      * Get 订单实际总价，单位：分 
      * @return Price 订单实际总价，单位：分
      */
-    public Integer getPrice() {
+    public Long getPrice() {
         return this.Price;
     }
 
@@ -278,7 +278,7 @@ public class TradeDealDetail extends AbstractModel{
      * Set 订单实际总价，单位：分
      * @param Price 订单实际总价，单位：分
      */
-    public void setPrice(Integer Price) {
+    public void setPrice(Long Price) {
         this.Price = Price;
     }
 

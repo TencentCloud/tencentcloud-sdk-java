@@ -34,7 +34,7 @@ public class DescribeInstanceMonitorHotKeyRequest extends AbstractModel{
     */
     @SerializedName("SpanType")
     @Expose
-    private Integer SpanType;
+    private Long SpanType;
 
     /**
      * Get 实例Id 
@@ -56,7 +56,7 @@ public class DescribeInstanceMonitorHotKeyRequest extends AbstractModel{
      * Get 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时 
      * @return SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
-    public Integer getSpanType() {
+    public Long getSpanType() {
         return this.SpanType;
     }
 
@@ -64,7 +64,7 @@ public class DescribeInstanceMonitorHotKeyRequest extends AbstractModel{
      * Set 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      * @param SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
-    public void setSpanType(Integer SpanType) {
+    public void setSpanType(Long SpanType) {
         this.SpanType = SpanType;
     }
 

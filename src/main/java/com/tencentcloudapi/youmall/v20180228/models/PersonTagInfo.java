@@ -27,27 +27,27 @@ public class PersonTagInfo extends AbstractModel{
     */
     @SerializedName("OldType")
     @Expose
-    private Integer OldType;
+    private Long OldType;
 
     /**
     * 顾客新类型
     */
     @SerializedName("NewType")
     @Expose
-    private Integer NewType;
+    private Long NewType;
 
     /**
     * 顾客face id
     */
     @SerializedName("PersonId")
     @Expose
-    private Integer PersonId;
+    private Long PersonId;
 
     /**
      * Get 顾客原类型 
      * @return OldType 顾客原类型
      */
-    public Integer getOldType() {
+    public Long getOldType() {
         return this.OldType;
     }
 
@@ -55,7 +55,7 @@ public class PersonTagInfo extends AbstractModel{
      * Set 顾客原类型
      * @param OldType 顾客原类型
      */
-    public void setOldType(Integer OldType) {
+    public void setOldType(Long OldType) {
         this.OldType = OldType;
     }
 
@@ -63,7 +63,7 @@ public class PersonTagInfo extends AbstractModel{
      * Get 顾客新类型 
      * @return NewType 顾客新类型
      */
-    public Integer getNewType() {
+    public Long getNewType() {
         return this.NewType;
     }
 
@@ -71,7 +71,7 @@ public class PersonTagInfo extends AbstractModel{
      * Set 顾客新类型
      * @param NewType 顾客新类型
      */
-    public void setNewType(Integer NewType) {
+    public void setNewType(Long NewType) {
         this.NewType = NewType;
     }
 
@@ -79,7 +79,7 @@ public class PersonTagInfo extends AbstractModel{
      * Get 顾客face id 
      * @return PersonId 顾客face id
      */
-    public Integer getPersonId() {
+    public Long getPersonId() {
         return this.PersonId;
     }
 
@@ -87,7 +87,7 @@ public class PersonTagInfo extends AbstractModel{
      * Set 顾客face id
      * @param PersonId 顾客face id
      */
-    public void setPersonId(Integer PersonId) {
+    public void setPersonId(Long PersonId) {
         this.PersonId = PersonId;
     }
 

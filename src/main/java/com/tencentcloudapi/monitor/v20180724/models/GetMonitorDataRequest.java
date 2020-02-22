@@ -48,7 +48,7 @@ public class GetMonitorDataRequest extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 起始时间，如2018-09-22T19:51:23+08:00
@@ -116,7 +116,7 @@ public class GetMonitorDataRequest extends AbstractModel{
      * Get 监控统计周期。默认为取值为300，单位为s 
      * @return Period 监控统计周期。默认为取值为300，单位为s
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -124,7 +124,7 @@ public class GetMonitorDataRequest extends AbstractModel{
      * Set 监控统计周期。默认为取值为300，单位为s
      * @param Period 监控统计周期。默认为取值为300，单位为s
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 

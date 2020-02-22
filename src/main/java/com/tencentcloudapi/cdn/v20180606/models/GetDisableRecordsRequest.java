@@ -57,14 +57,14 @@ enable：当前为可用状态，已解禁，可正常访问
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 分页查询限制数目，默认为20。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 开始时间，如：2018-12-12 10:24:00。 
@@ -142,7 +142,7 @@ enable：当前为可用状态，已解禁，可正常访问
      * Get 分页查询偏移量，默认为 0 （第一页）。 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -150,7 +150,7 @@ enable：当前为可用状态，已解禁，可正常访问
      * Set 分页查询偏移量，默认为 0 （第一页）。
      * @param Offset 分页查询偏移量，默认为 0 （第一页）。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -158,7 +158,7 @@ enable：当前为可用状态，已解禁，可正常访问
      * Get 分页查询限制数目，默认为20。 
      * @return Limit 分页查询限制数目，默认为20。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -166,7 +166,7 @@ enable：当前为可用状态，已解禁，可正常访问
      * Set 分页查询限制数目，默认为20。
      * @param Limit 分页查询限制数目，默认为20。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

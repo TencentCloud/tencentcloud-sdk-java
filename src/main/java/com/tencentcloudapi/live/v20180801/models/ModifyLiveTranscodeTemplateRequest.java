@@ -27,7 +27,7 @@ public class ModifyLiveTranscodeTemplateRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
     * 视频编码：
@@ -50,7 +50,7 @@ aac/mp3。
     */
     @SerializedName("AudioBitrate")
     @Expose
-    private Integer AudioBitrate;
+    private Long AudioBitrate;
 
     /**
     * 模板描述。
@@ -64,56 +64,56 @@ aac/mp3。
     */
     @SerializedName("VideoBitrate")
     @Expose
-    private Integer VideoBitrate;
+    private Long VideoBitrate;
 
     /**
     * 宽。0-3000
     */
     @SerializedName("Width")
     @Expose
-    private Integer Width;
+    private Long Width;
 
     /**
     * 是否保留视频，0：否，1：是。默认1。
     */
     @SerializedName("NeedVideo")
     @Expose
-    private Integer NeedVideo;
+    private Long NeedVideo;
 
     /**
     * 是否保留音频，0：否，1：是。默认1。
     */
     @SerializedName("NeedAudio")
     @Expose
-    private Integer NeedAudio;
+    private Long NeedAudio;
 
     /**
     * 高。0-3000
     */
     @SerializedName("Height")
     @Expose
-    private Integer Height;
+    private Long Height;
 
     /**
     * 帧率。0-200
     */
     @SerializedName("Fps")
     @Expose
-    private Integer Fps;
+    private Long Fps;
 
     /**
     * 关键帧间隔，单位：秒。0-50
     */
     @SerializedName("Gop")
     @Expose
-    private Integer Gop;
+    private Long Gop;
 
     /**
     * 旋转角度。0 90 180 270
     */
     @SerializedName("Rotate")
     @Expose
-    private Integer Rotate;
+    private Long Rotate;
 
     /**
     * 编码质量：
@@ -128,21 +128,21 @@ baseline/main/high。
     */
     @SerializedName("BitrateToOrig")
     @Expose
-    private Integer BitrateToOrig;
+    private Long BitrateToOrig;
 
     /**
     * 是否不超过原始高。0：否，1：是。默认0。
     */
     @SerializedName("HeightToOrig")
     @Expose
-    private Integer HeightToOrig;
+    private Long HeightToOrig;
 
     /**
     * 是否不超过原始帧率。0：否，1：是。默认0。
     */
     @SerializedName("FpsToOrig")
     @Expose
-    private Integer FpsToOrig;
+    private Long FpsToOrig;
 
     /**
     * 急速高清相比VideoBitrate少多少码率，0.1到0.5
@@ -155,7 +155,7 @@ baseline/main/high。
      * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -163,7 +163,7 @@ baseline/main/high。
      * Set 模板Id。
      * @param TemplateId 模板Id。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
@@ -211,7 +211,7 @@ aac/mp3。
      * Get 音频码率，默认0。0-500 
      * @return AudioBitrate 音频码率，默认0。0-500
      */
-    public Integer getAudioBitrate() {
+    public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
@@ -219,7 +219,7 @@ aac/mp3。
      * Set 音频码率，默认0。0-500
      * @param AudioBitrate 音频码率，默认0。0-500
      */
-    public void setAudioBitrate(Integer AudioBitrate) {
+    public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
     }
 
@@ -243,7 +243,7 @@ aac/mp3。
      * Get 视频码率。100-8000 
      * @return VideoBitrate 视频码率。100-8000
      */
-    public Integer getVideoBitrate() {
+    public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
@@ -251,7 +251,7 @@ aac/mp3。
      * Set 视频码率。100-8000
      * @param VideoBitrate 视频码率。100-8000
      */
-    public void setVideoBitrate(Integer VideoBitrate) {
+    public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
@@ -259,7 +259,7 @@ aac/mp3。
      * Get 宽。0-3000 
      * @return Width 宽。0-3000
      */
-    public Integer getWidth() {
+    public Long getWidth() {
         return this.Width;
     }
 
@@ -267,7 +267,7 @@ aac/mp3。
      * Set 宽。0-3000
      * @param Width 宽。0-3000
      */
-    public void setWidth(Integer Width) {
+    public void setWidth(Long Width) {
         this.Width = Width;
     }
 
@@ -275,7 +275,7 @@ aac/mp3。
      * Get 是否保留视频，0：否，1：是。默认1。 
      * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
      */
-    public Integer getNeedVideo() {
+    public Long getNeedVideo() {
         return this.NeedVideo;
     }
 
@@ -283,7 +283,7 @@ aac/mp3。
      * Set 是否保留视频，0：否，1：是。默认1。
      * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
      */
-    public void setNeedVideo(Integer NeedVideo) {
+    public void setNeedVideo(Long NeedVideo) {
         this.NeedVideo = NeedVideo;
     }
 
@@ -291,7 +291,7 @@ aac/mp3。
      * Get 是否保留音频，0：否，1：是。默认1。 
      * @return NeedAudio 是否保留音频，0：否，1：是。默认1。
      */
-    public Integer getNeedAudio() {
+    public Long getNeedAudio() {
         return this.NeedAudio;
     }
 
@@ -299,7 +299,7 @@ aac/mp3。
      * Set 是否保留音频，0：否，1：是。默认1。
      * @param NeedAudio 是否保留音频，0：否，1：是。默认1。
      */
-    public void setNeedAudio(Integer NeedAudio) {
+    public void setNeedAudio(Long NeedAudio) {
         this.NeedAudio = NeedAudio;
     }
 
@@ -307,7 +307,7 @@ aac/mp3。
      * Get 高。0-3000 
      * @return Height 高。0-3000
      */
-    public Integer getHeight() {
+    public Long getHeight() {
         return this.Height;
     }
 
@@ -315,7 +315,7 @@ aac/mp3。
      * Set 高。0-3000
      * @param Height 高。0-3000
      */
-    public void setHeight(Integer Height) {
+    public void setHeight(Long Height) {
         this.Height = Height;
     }
 
@@ -323,7 +323,7 @@ aac/mp3。
      * Get 帧率。0-200 
      * @return Fps 帧率。0-200
      */
-    public Integer getFps() {
+    public Long getFps() {
         return this.Fps;
     }
 
@@ -331,7 +331,7 @@ aac/mp3。
      * Set 帧率。0-200
      * @param Fps 帧率。0-200
      */
-    public void setFps(Integer Fps) {
+    public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
@@ -339,7 +339,7 @@ aac/mp3。
      * Get 关键帧间隔，单位：秒。0-50 
      * @return Gop 关键帧间隔，单位：秒。0-50
      */
-    public Integer getGop() {
+    public Long getGop() {
         return this.Gop;
     }
 
@@ -347,7 +347,7 @@ aac/mp3。
      * Set 关键帧间隔，单位：秒。0-50
      * @param Gop 关键帧间隔，单位：秒。0-50
      */
-    public void setGop(Integer Gop) {
+    public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
@@ -355,7 +355,7 @@ aac/mp3。
      * Get 旋转角度。0 90 180 270 
      * @return Rotate 旋转角度。0 90 180 270
      */
-    public Integer getRotate() {
+    public Long getRotate() {
         return this.Rotate;
     }
 
@@ -363,7 +363,7 @@ aac/mp3。
      * Set 旋转角度。0 90 180 270
      * @param Rotate 旋转角度。0 90 180 270
      */
-    public void setRotate(Integer Rotate) {
+    public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
@@ -391,7 +391,7 @@ baseline/main/high。
      * Get 是否不超过原始码率。0：否，1：是。默认0。 
      * @return BitrateToOrig 是否不超过原始码率。0：否，1：是。默认0。
      */
-    public Integer getBitrateToOrig() {
+    public Long getBitrateToOrig() {
         return this.BitrateToOrig;
     }
 
@@ -399,7 +399,7 @@ baseline/main/high。
      * Set 是否不超过原始码率。0：否，1：是。默认0。
      * @param BitrateToOrig 是否不超过原始码率。0：否，1：是。默认0。
      */
-    public void setBitrateToOrig(Integer BitrateToOrig) {
+    public void setBitrateToOrig(Long BitrateToOrig) {
         this.BitrateToOrig = BitrateToOrig;
     }
 
@@ -407,7 +407,7 @@ baseline/main/high。
      * Get 是否不超过原始高。0：否，1：是。默认0。 
      * @return HeightToOrig 是否不超过原始高。0：否，1：是。默认0。
      */
-    public Integer getHeightToOrig() {
+    public Long getHeightToOrig() {
         return this.HeightToOrig;
     }
 
@@ -415,7 +415,7 @@ baseline/main/high。
      * Set 是否不超过原始高。0：否，1：是。默认0。
      * @param HeightToOrig 是否不超过原始高。0：否，1：是。默认0。
      */
-    public void setHeightToOrig(Integer HeightToOrig) {
+    public void setHeightToOrig(Long HeightToOrig) {
         this.HeightToOrig = HeightToOrig;
     }
 
@@ -423,7 +423,7 @@ baseline/main/high。
      * Get 是否不超过原始帧率。0：否，1：是。默认0。 
      * @return FpsToOrig 是否不超过原始帧率。0：否，1：是。默认0。
      */
-    public Integer getFpsToOrig() {
+    public Long getFpsToOrig() {
         return this.FpsToOrig;
     }
 
@@ -431,7 +431,7 @@ baseline/main/high。
      * Set 是否不超过原始帧率。0：否，1：是。默认0。
      * @param FpsToOrig 是否不超过原始帧率。0：否，1：是。默认0。
      */
-    public void setFpsToOrig(Integer FpsToOrig) {
+    public void setFpsToOrig(Long FpsToOrig) {
         this.FpsToOrig = FpsToOrig;
     }
 

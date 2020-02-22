@@ -62,7 +62,7 @@ public class CreateModelRequest extends AbstractModel{
     */
     @SerializedName("Replicas")
     @Expose
-    private Integer Replicas;
+    private Long Replicas;
 
     /**
     * 暴露外网或内网，默认暴露外网，`集群模式` 选填
@@ -169,7 +169,7 @@ public class CreateModelRequest extends AbstractModel{
      * Get 要部署的模型副本数目，`集群模式` 选填 
      * @return Replicas 要部署的模型副本数目，`集群模式` 选填
      */
-    public Integer getReplicas() {
+    public Long getReplicas() {
         return this.Replicas;
     }
 
@@ -177,7 +177,7 @@ public class CreateModelRequest extends AbstractModel{
      * Set 要部署的模型副本数目，`集群模式` 选填
      * @param Replicas 要部署的模型副本数目，`集群模式` 选填
      */
-    public void setReplicas(Integer Replicas) {
+    public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 

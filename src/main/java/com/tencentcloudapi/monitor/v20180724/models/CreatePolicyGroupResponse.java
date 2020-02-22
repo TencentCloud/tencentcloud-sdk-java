@@ -27,7 +27,7 @@ public class CreatePolicyGroupResponse extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreatePolicyGroupResponse extends AbstractModel{
      * Get 创建成功的策略组Id 
      * @return GroupId 创建成功的策略组Id
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -48,7 +48,7 @@ public class CreatePolicyGroupResponse extends AbstractModel{
      * Set 创建成功的策略组Id
      * @param GroupId 创建成功的策略组Id
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 

@@ -34,28 +34,28 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     */
     @SerializedName("StartTime")
     @Expose
-    private Integer StartTime;
+    private Long StartTime;
 
     /**
     * 结束时间，默认当前时间戳
     */
     @SerializedName("EndTime")
     @Expose
-    private Integer EndTime;
+    private Long EndTime;
 
     /**
     * 每页返回的数量，默认20
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 页偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 根据UpdateTime排序的规则，取值asc或desc
@@ -76,21 +76,21 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     */
     @SerializedName("AccidentType")
     @Expose
-    private Integer [] AccidentType;
+    private Long [] AccidentType;
 
     /**
     * 根据事件过滤，1表示云服务器存储问题，2表示云服务器网络连接问题，3表示云服务器运行异常，202表示运营商网络抖动
     */
     @SerializedName("AccidentEvent")
     @Expose
-    private Integer [] AccidentEvent;
+    private Long [] AccidentEvent;
 
     /**
     * 根据事件状态过滤，0表示已恢复，1表示未恢复
     */
     @SerializedName("AccidentStatus")
     @Expose
-    private Integer [] AccidentStatus;
+    private Long [] AccidentStatus;
 
     /**
     * 根据事件地域过滤，gz表示广州，sh表示上海等
@@ -126,7 +126,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Get 起始时间，默认一天前的时间戳 
      * @return StartTime 起始时间，默认一天前的时间戳
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return this.StartTime;
     }
 
@@ -134,7 +134,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Set 起始时间，默认一天前的时间戳
      * @param StartTime 起始时间，默认一天前的时间戳
      */
-    public void setStartTime(Integer StartTime) {
+    public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
@@ -142,7 +142,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Get 结束时间，默认当前时间戳 
      * @return EndTime 结束时间，默认当前时间戳
      */
-    public Integer getEndTime() {
+    public Long getEndTime() {
         return this.EndTime;
     }
 
@@ -150,7 +150,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Set 结束时间，默认当前时间戳
      * @param EndTime 结束时间，默认当前时间戳
      */
-    public void setEndTime(Integer EndTime) {
+    public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
@@ -158,7 +158,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Get 每页返回的数量，默认20 
      * @return Limit 每页返回的数量，默认20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -166,7 +166,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Set 每页返回的数量，默认20
      * @param Limit 每页返回的数量，默认20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -174,7 +174,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Get 页偏移量，默认0 
      * @return Offset 页偏移量，默认0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -182,7 +182,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Set 页偏移量，默认0
      * @param Offset 页偏移量，默认0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -222,7 +222,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Get 根据事件类型过滤，1表示服务问题，2表示其他订阅 
      * @return AccidentType 根据事件类型过滤，1表示服务问题，2表示其他订阅
      */
-    public Integer [] getAccidentType() {
+    public Long [] getAccidentType() {
         return this.AccidentType;
     }
 
@@ -230,7 +230,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Set 根据事件类型过滤，1表示服务问题，2表示其他订阅
      * @param AccidentType 根据事件类型过滤，1表示服务问题，2表示其他订阅
      */
-    public void setAccidentType(Integer [] AccidentType) {
+    public void setAccidentType(Long [] AccidentType) {
         this.AccidentType = AccidentType;
     }
 
@@ -238,7 +238,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Get 根据事件过滤，1表示云服务器存储问题，2表示云服务器网络连接问题，3表示云服务器运行异常，202表示运营商网络抖动 
      * @return AccidentEvent 根据事件过滤，1表示云服务器存储问题，2表示云服务器网络连接问题，3表示云服务器运行异常，202表示运营商网络抖动
      */
-    public Integer [] getAccidentEvent() {
+    public Long [] getAccidentEvent() {
         return this.AccidentEvent;
     }
 
@@ -246,7 +246,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Set 根据事件过滤，1表示云服务器存储问题，2表示云服务器网络连接问题，3表示云服务器运行异常，202表示运营商网络抖动
      * @param AccidentEvent 根据事件过滤，1表示云服务器存储问题，2表示云服务器网络连接问题，3表示云服务器运行异常，202表示运营商网络抖动
      */
-    public void setAccidentEvent(Integer [] AccidentEvent) {
+    public void setAccidentEvent(Long [] AccidentEvent) {
         this.AccidentEvent = AccidentEvent;
     }
 
@@ -254,7 +254,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Get 根据事件状态过滤，0表示已恢复，1表示未恢复 
      * @return AccidentStatus 根据事件状态过滤，0表示已恢复，1表示未恢复
      */
-    public Integer [] getAccidentStatus() {
+    public Long [] getAccidentStatus() {
         return this.AccidentStatus;
     }
 
@@ -262,7 +262,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
      * Set 根据事件状态过滤，0表示已恢复，1表示未恢复
      * @param AccidentStatus 根据事件状态过滤，0表示已恢复，1表示未恢复
      */
-    public void setAccidentStatus(Integer [] AccidentStatus) {
+    public void setAccidentStatus(Long [] AccidentStatus) {
         this.AccidentStatus = AccidentStatus;
     }
 

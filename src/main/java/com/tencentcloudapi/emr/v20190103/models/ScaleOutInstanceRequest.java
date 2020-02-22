@@ -34,7 +34,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Integer TimeSpan;
+    private Long TimeSpan;
 
     /**
     * 扩容实例ID
@@ -48,7 +48,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
     * Token
@@ -69,21 +69,21 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     */
     @SerializedName("TaskCount")
     @Expose
-    private Integer TaskCount;
+    private Long TaskCount;
 
     /**
     * 扩容Core节点数量
     */
     @SerializedName("CoreCount")
     @Expose
-    private Integer CoreCount;
+    private Long CoreCount;
 
     /**
     * 扩容时不需要安装的进程
     */
     @SerializedName("UnNecessaryNodeList")
     @Expose
-    private Integer [] UnNecessaryNodeList;
+    private Long [] UnNecessaryNodeList;
 
     /**
      * Get 时间单位 
@@ -105,7 +105,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Get 时间长度 
      * @return TimeSpan 时间长度
      */
-    public Integer getTimeSpan() {
+    public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -113,7 +113,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Set 时间长度
      * @param TimeSpan 时间长度
      */
-    public void setTimeSpan(Integer TimeSpan) {
+    public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -137,7 +137,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Get 付费类型 
      * @return PayMode 付费类型
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
@@ -145,7 +145,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Set 付费类型
      * @param PayMode 付费类型
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -185,7 +185,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Get 扩容Task节点数量 
      * @return TaskCount 扩容Task节点数量
      */
-    public Integer getTaskCount() {
+    public Long getTaskCount() {
         return this.TaskCount;
     }
 
@@ -193,7 +193,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Set 扩容Task节点数量
      * @param TaskCount 扩容Task节点数量
      */
-    public void setTaskCount(Integer TaskCount) {
+    public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
@@ -201,7 +201,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Get 扩容Core节点数量 
      * @return CoreCount 扩容Core节点数量
      */
-    public Integer getCoreCount() {
+    public Long getCoreCount() {
         return this.CoreCount;
     }
 
@@ -209,7 +209,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Set 扩容Core节点数量
      * @param CoreCount 扩容Core节点数量
      */
-    public void setCoreCount(Integer CoreCount) {
+    public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
@@ -217,7 +217,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Get 扩容时不需要安装的进程 
      * @return UnNecessaryNodeList 扩容时不需要安装的进程
      */
-    public Integer [] getUnNecessaryNodeList() {
+    public Long [] getUnNecessaryNodeList() {
         return this.UnNecessaryNodeList;
     }
 
@@ -225,7 +225,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
      * Set 扩容时不需要安装的进程
      * @param UnNecessaryNodeList 扩容时不需要安装的进程
      */
-    public void setUnNecessaryNodeList(Integer [] UnNecessaryNodeList) {
+    public void setUnNecessaryNodeList(Long [] UnNecessaryNodeList) {
         this.UnNecessaryNodeList = UnNecessaryNodeList;
     }
 

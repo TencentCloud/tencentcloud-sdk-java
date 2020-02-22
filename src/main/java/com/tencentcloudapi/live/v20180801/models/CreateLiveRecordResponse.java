@@ -27,7 +27,7 @@ public class CreateLiveRecordResponse extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class CreateLiveRecordResponse extends AbstractModel{
      * Get 任务ID，全局唯一标识录制任务。 
      * @return TaskId 任务ID，全局唯一标识录制任务。
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -48,7 +48,7 @@ public class CreateLiveRecordResponse extends AbstractModel{
      * Set 任务ID，全局唯一标识录制任务。
      * @param TaskId 任务ID，全局唯一标识录制任务。
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 

@@ -48,28 +48,28 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
     */
     @SerializedName("Code2xx")
     @Expose
-    private Integer Code2xx;
+    private Long Code2xx;
 
     /**
     * 错误码为3开头的次数。
     */
     @SerializedName("Code3xx")
     @Expose
-    private Integer Code3xx;
+    private Long Code3xx;
 
     /**
     * 错误码为4开头的次数。
     */
     @SerializedName("Code4xx")
     @Expose
-    private Integer Code4xx;
+    private Long Code4xx;
 
     /**
     * 错误码为5开头的次数。
     */
     @SerializedName("Code5xx")
     @Expose
-    private Integer Code5xx;
+    private Long Code5xx;
 
     /**
      * Get 国家或地区。 
@@ -123,7 +123,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Get 错误码为2开头的次数。 
      * @return Code2xx 错误码为2开头的次数。
      */
-    public Integer getCode2xx() {
+    public Long getCode2xx() {
         return this.Code2xx;
     }
 
@@ -131,7 +131,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Set 错误码为2开头的次数。
      * @param Code2xx 错误码为2开头的次数。
      */
-    public void setCode2xx(Integer Code2xx) {
+    public void setCode2xx(Long Code2xx) {
         this.Code2xx = Code2xx;
     }
 
@@ -139,7 +139,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Get 错误码为3开头的次数。 
      * @return Code3xx 错误码为3开头的次数。
      */
-    public Integer getCode3xx() {
+    public Long getCode3xx() {
         return this.Code3xx;
     }
 
@@ -147,7 +147,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Set 错误码为3开头的次数。
      * @param Code3xx 错误码为3开头的次数。
      */
-    public void setCode3xx(Integer Code3xx) {
+    public void setCode3xx(Long Code3xx) {
         this.Code3xx = Code3xx;
     }
 
@@ -155,7 +155,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Get 错误码为4开头的次数。 
      * @return Code4xx 错误码为4开头的次数。
      */
-    public Integer getCode4xx() {
+    public Long getCode4xx() {
         return this.Code4xx;
     }
 
@@ -163,7 +163,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Set 错误码为4开头的次数。
      * @param Code4xx 错误码为4开头的次数。
      */
-    public void setCode4xx(Integer Code4xx) {
+    public void setCode4xx(Long Code4xx) {
         this.Code4xx = Code4xx;
     }
 
@@ -171,7 +171,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Get 错误码为5开头的次数。 
      * @return Code5xx 错误码为5开头的次数。
      */
-    public Integer getCode5xx() {
+    public Long getCode5xx() {
         return this.Code5xx;
     }
 
@@ -179,7 +179,7 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
      * Set 错误码为5开头的次数。
      * @param Code5xx 错误码为5开头的次数。
      */
-    public void setCode5xx(Integer Code5xx) {
+    public void setCode5xx(Long Code5xx) {
         this.Code5xx = Code5xx;
     }
 

@@ -27,7 +27,7 @@ public class BindLiveDomainCertRequest extends AbstractModel{
     */
     @SerializedName("CertId")
     @Expose
-    private Integer CertId;
+    private Long CertId;
 
     /**
     * 播放域名。
@@ -41,13 +41,13 @@ public class BindLiveDomainCertRequest extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
      * Get 证书Id。使用添加证书接口获取证书Id。 
      * @return CertId 证书Id。使用添加证书接口获取证书Id。
      */
-    public Integer getCertId() {
+    public Long getCertId() {
         return this.CertId;
     }
 
@@ -55,7 +55,7 @@ public class BindLiveDomainCertRequest extends AbstractModel{
      * Set 证书Id。使用添加证书接口获取证书Id。
      * @param CertId 证书Id。使用添加证书接口获取证书Id。
      */
-    public void setCertId(Integer CertId) {
+    public void setCertId(Long CertId) {
         this.CertId = CertId;
     }
 
@@ -79,7 +79,7 @@ public class BindLiveDomainCertRequest extends AbstractModel{
      * Get 状态，0： 关闭  1：打开。 
      * @return Status 状态，0： 关闭  1：打开。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -87,7 +87,7 @@ public class BindLiveDomainCertRequest extends AbstractModel{
      * Set 状态，0： 关闭  1：打开。
      * @param Status 状态，0： 关闭  1：打开。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 

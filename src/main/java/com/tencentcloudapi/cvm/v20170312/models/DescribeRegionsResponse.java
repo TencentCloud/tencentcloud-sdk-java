@@ -27,7 +27,7 @@ public class DescribeRegionsResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 地域列表信息
@@ -47,7 +47,7 @@ public class DescribeRegionsResponse extends AbstractModel{
      * Get 地域数量 
      * @return TotalCount 地域数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeRegionsResponse extends AbstractModel{
      * Set 地域数量
      * @param TotalCount 地域数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

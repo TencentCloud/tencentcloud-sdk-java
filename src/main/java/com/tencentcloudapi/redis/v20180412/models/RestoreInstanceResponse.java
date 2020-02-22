@@ -27,7 +27,7 @@ public class RestoreInstanceResponse extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class RestoreInstanceResponse extends AbstractModel{
      * Get 任务ID，可通过 DescribeTaskInfo 接口查询任务执行状态 
      * @return TaskId 任务ID，可通过 DescribeTaskInfo 接口查询任务执行状态
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -48,7 +48,7 @@ public class RestoreInstanceResponse extends AbstractModel{
      * Set 任务ID，可通过 DescribeTaskInfo 接口查询任务执行状态
      * @param TaskId 任务ID，可通过 DescribeTaskInfo 接口查询任务执行状态
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 

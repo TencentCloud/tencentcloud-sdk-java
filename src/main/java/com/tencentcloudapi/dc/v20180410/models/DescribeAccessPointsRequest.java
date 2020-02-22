@@ -36,14 +36,14 @@ public class DescribeAccessPointsRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 接入点所在的地域。使用DescribeRegions查询
@@ -73,7 +73,7 @@ public class DescribeAccessPointsRequest extends AbstractModel{
      * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -81,7 +81,7 @@ public class DescribeAccessPointsRequest extends AbstractModel{
      * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -89,7 +89,7 @@ public class DescribeAccessPointsRequest extends AbstractModel{
      * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -97,7 +97,7 @@ public class DescribeAccessPointsRequest extends AbstractModel{
      * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

@@ -41,7 +41,7 @@ public class Product extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * 产品名称
@@ -69,21 +69,21 @@ public class Product extends AbstractModel{
     */
     @SerializedName("Standard")
     @Expose
-    private Integer Standard;
+    private Long Standard;
 
     /**
     * 鉴权类型（0：直连，1：Token）
     */
     @SerializedName("AuthType")
     @Expose
-    private Integer AuthType;
+    private Long AuthType;
 
     /**
     * 删除（0未删除）
     */
     @SerializedName("Deleted")
     @Expose
-    private Integer Deleted;
+    private Long Deleted;
 
     /**
     * 备注
@@ -146,7 +146,7 @@ public class Product extends AbstractModel{
     */
     @SerializedName("Qps")
     @Expose
-    private Integer Qps;
+    private Long Qps;
 
     /**
     * 地域
@@ -205,7 +205,7 @@ public class Product extends AbstractModel{
      * Get AppId 
      * @return AppId AppId
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
@@ -213,7 +213,7 @@ public class Product extends AbstractModel{
      * Set AppId
      * @param AppId AppId
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
@@ -269,7 +269,7 @@ public class Product extends AbstractModel{
      * Get 产品规格 
      * @return Standard 产品规格
      */
-    public Integer getStandard() {
+    public Long getStandard() {
         return this.Standard;
     }
 
@@ -277,7 +277,7 @@ public class Product extends AbstractModel{
      * Set 产品规格
      * @param Standard 产品规格
      */
-    public void setStandard(Integer Standard) {
+    public void setStandard(Long Standard) {
         this.Standard = Standard;
     }
 
@@ -285,7 +285,7 @@ public class Product extends AbstractModel{
      * Get 鉴权类型（0：直连，1：Token） 
      * @return AuthType 鉴权类型（0：直连，1：Token）
      */
-    public Integer getAuthType() {
+    public Long getAuthType() {
         return this.AuthType;
     }
 
@@ -293,7 +293,7 @@ public class Product extends AbstractModel{
      * Set 鉴权类型（0：直连，1：Token）
      * @param AuthType 鉴权类型（0：直连，1：Token）
      */
-    public void setAuthType(Integer AuthType) {
+    public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
     }
 
@@ -301,7 +301,7 @@ public class Product extends AbstractModel{
      * Get 删除（0未删除） 
      * @return Deleted 删除（0未删除）
      */
-    public Integer getDeleted() {
+    public Long getDeleted() {
         return this.Deleted;
     }
 
@@ -309,7 +309,7 @@ public class Product extends AbstractModel{
      * Set 删除（0未删除）
      * @param Deleted 删除（0未删除）
      */
-    public void setDeleted(Integer Deleted) {
+    public void setDeleted(Long Deleted) {
         this.Deleted = Deleted;
     }
 
@@ -445,7 +445,7 @@ public class Product extends AbstractModel{
      * Get qps 
      * @return Qps qps
      */
-    public Integer getQps() {
+    public Long getQps() {
         return this.Qps;
     }
 
@@ -453,7 +453,7 @@ public class Product extends AbstractModel{
      * Set qps
      * @param Qps qps
      */
-    public void setQps(Integer Qps) {
+    public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 

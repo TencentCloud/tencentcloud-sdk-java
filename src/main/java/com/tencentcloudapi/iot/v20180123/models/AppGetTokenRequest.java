@@ -41,7 +41,7 @@ public class AppGetTokenRequest extends AbstractModel{
     */
     @SerializedName("Expire")
     @Expose
-    private Integer Expire;
+    private Long Expire;
 
     /**
      * Get 用户名 
@@ -79,7 +79,7 @@ public class AppGetTokenRequest extends AbstractModel{
      * Get TTL 
      * @return Expire TTL
      */
-    public Integer getExpire() {
+    public Long getExpire() {
         return this.Expire;
     }
 
@@ -87,7 +87,7 @@ public class AppGetTokenRequest extends AbstractModel{
      * Set TTL
      * @param Expire TTL
      */
-    public void setExpire(Integer Expire) {
+    public void setExpire(Long Expire) {
         this.Expire = Expire;
     }
 

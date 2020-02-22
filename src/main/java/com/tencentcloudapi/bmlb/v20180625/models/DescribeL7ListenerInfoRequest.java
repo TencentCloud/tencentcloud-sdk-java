@@ -48,7 +48,7 @@ public class DescribeL7ListenerInfoRequest extends AbstractModel{
     */
     @SerializedName("IfGetBackendInfo")
     @Expose
-    private Integer IfGetBackendInfo;
+    private Long IfGetBackendInfo;
 
     /**
      * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
@@ -102,7 +102,7 @@ public class DescribeL7ListenerInfoRequest extends AbstractModel{
      * Get 是否获取转发规则下的主机信息。默认为0，不获取。 
      * @return IfGetBackendInfo 是否获取转发规则下的主机信息。默认为0，不获取。
      */
-    public Integer getIfGetBackendInfo() {
+    public Long getIfGetBackendInfo() {
         return this.IfGetBackendInfo;
     }
 
@@ -110,7 +110,7 @@ public class DescribeL7ListenerInfoRequest extends AbstractModel{
      * Set 是否获取转发规则下的主机信息。默认为0，不获取。
      * @param IfGetBackendInfo 是否获取转发规则下的主机信息。默认为0，不获取。
      */
-    public void setIfGetBackendInfo(Integer IfGetBackendInfo) {
+    public void setIfGetBackendInfo(Long IfGetBackendInfo) {
         this.IfGetBackendInfo = IfGetBackendInfo;
     }
 

@@ -27,7 +27,7 @@ public class DescribeBillSummaryByRegionResponse extends AbstractModel{
     */
     @SerializedName("Ready")
     @Expose
-    private Integer Ready;
+    private Long Ready;
 
     /**
     * 各地域花费分布详情
@@ -48,7 +48,7 @@ public class DescribeBillSummaryByRegionResponse extends AbstractModel{
      * Get 数据是否准备好，0未准备好，1准备好 
      * @return Ready 数据是否准备好，0未准备好，1准备好
      */
-    public Integer getReady() {
+    public Long getReady() {
         return this.Ready;
     }
 
@@ -56,7 +56,7 @@ public class DescribeBillSummaryByRegionResponse extends AbstractModel{
      * Set 数据是否准备好，0未准备好，1准备好
      * @param Ready 数据是否准备好，0未准备好，1准备好
      */
-    public void setReady(Integer Ready) {
+    public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 

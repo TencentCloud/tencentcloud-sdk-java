@@ -41,14 +41,14 @@ public class DescribeTargetGroupListRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 显示条数限制，默认为20
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
      * Get 目标组ID数组 
@@ -86,7 +86,7 @@ public class DescribeTargetGroupListRequest extends AbstractModel{
      * Get 显示的偏移起始量 
      * @return Offset 显示的偏移起始量
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -94,7 +94,7 @@ public class DescribeTargetGroupListRequest extends AbstractModel{
      * Set 显示的偏移起始量
      * @param Offset 显示的偏移起始量
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -102,7 +102,7 @@ public class DescribeTargetGroupListRequest extends AbstractModel{
      * Get 显示条数限制，默认为20 
      * @return Limit 显示条数限制，默认为20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -110,7 +110,7 @@ public class DescribeTargetGroupListRequest extends AbstractModel{
      * Set 显示条数限制，默认为20
      * @param Limit 显示条数限制，默认为20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 

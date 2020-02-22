@@ -41,21 +41,21 @@ public class CreateNatGatewayRequest extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Integer InternetMaxBandwidthOut;
+    private Long InternetMaxBandwidthOut;
 
     /**
     * NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
-    private Integer MaxConcurrentConnection;
+    private Long MaxConcurrentConnection;
 
     /**
     * 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
     */
     @SerializedName("AddressCount")
     @Expose
-    private Integer AddressCount;
+    private Long AddressCount;
 
     /**
     * 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
@@ -107,7 +107,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
      * Get NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。 
      * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
      */
-    public Integer getInternetMaxBandwidthOut() {
+    public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -115,7 +115,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
      * Set NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
      * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
      */
-    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
@@ -123,7 +123,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
      * Get NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。 
      * @return MaxConcurrentConnection NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
      */
-    public Integer getMaxConcurrentConnection() {
+    public Long getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
@@ -131,7 +131,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
      * Set NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
      * @param MaxConcurrentConnection NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
      */
-    public void setMaxConcurrentConnection(Integer MaxConcurrentConnection) {
+    public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 
@@ -139,7 +139,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
      * Get 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。 
      * @return AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
      */
-    public Integer getAddressCount() {
+    public Long getAddressCount() {
         return this.AddressCount;
     }
 
@@ -147,7 +147,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
      * Set 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
      * @param AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
      */
-    public void setAddressCount(Integer AddressCount) {
+    public void setAddressCount(Long AddressCount) {
         this.AddressCount = AddressCount;
     }
 

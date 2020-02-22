@@ -27,14 +27,14 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
     */
     @SerializedName("PageNum")
     @Expose
-    private Integer PageNum;
+    private Long PageNum;
 
     /**
     * 每页个数，范围是[1,1000]，默认值是20。
     */
     @SerializedName("PageSize")
     @Expose
-    private Integer PageSize;
+    private Long PageSize;
 
     /**
     * 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
@@ -48,14 +48,14 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
     */
     @SerializedName("TotalNum")
     @Expose
-    private Integer TotalNum;
+    private Long TotalNum;
 
     /**
     * 记录总页数。
     */
     @SerializedName("TotalPage")
     @Expose
-    private Integer TotalPage;
+    private Long TotalPage;
 
     /**
     * 数据内容。
@@ -75,7 +75,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Get 页号，范围是[1,1000]，默认值是1。 
      * @return PageNum 页号，范围是[1,1000]，默认值是1。
      */
-    public Integer getPageNum() {
+    public Long getPageNum() {
         return this.PageNum;
     }
 
@@ -83,7 +83,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Set 页号，范围是[1,1000]，默认值是1。
      * @param PageNum 页号，范围是[1,1000]，默认值是1。
      */
-    public void setPageNum(Integer PageNum) {
+    public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
@@ -91,7 +91,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Get 每页个数，范围是[1,1000]，默认值是20。 
      * @return PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -99,7 +99,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Set 每页个数，范围是[1,1000]，默认值是20。
      * @param PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
-    public void setPageSize(Integer PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
@@ -123,7 +123,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Get 记录总数。 
      * @return TotalNum 记录总数。
      */
-    public Integer getTotalNum() {
+    public Long getTotalNum() {
         return this.TotalNum;
     }
 
@@ -131,7 +131,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Set 记录总数。
      * @param TotalNum 记录总数。
      */
-    public void setTotalNum(Integer TotalNum) {
+    public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
@@ -139,7 +139,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Get 记录总页数。 
      * @return TotalPage 记录总页数。
      */
-    public Integer getTotalPage() {
+    public Long getTotalPage() {
         return this.TotalPage;
     }
 
@@ -147,7 +147,7 @@ public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
      * Set 记录总页数。
      * @param TotalPage 记录总页数。
      */
-    public void setTotalPage(Integer TotalPage) {
+    public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;
     }
 

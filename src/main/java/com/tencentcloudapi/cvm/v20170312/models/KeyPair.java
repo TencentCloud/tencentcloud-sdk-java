@@ -41,7 +41,7 @@ public class KeyPair extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 密钥对描述信息。
@@ -114,7 +114,7 @@ public class KeyPair extends AbstractModel{
      * Get 密钥对所属的项目`ID`。 
      * @return ProjectId 密钥对所属的项目`ID`。
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -122,7 +122,7 @@ public class KeyPair extends AbstractModel{
      * Set 密钥对所属的项目`ID`。
      * @param ProjectId 密钥对所属的项目`ID`。
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

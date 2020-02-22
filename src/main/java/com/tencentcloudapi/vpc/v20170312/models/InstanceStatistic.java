@@ -34,7 +34,7 @@ public class InstanceStatistic extends AbstractModel{
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Integer InstanceCount;
+    private Long InstanceCount;
 
     /**
      * Get 实例的类型 
@@ -56,7 +56,7 @@ public class InstanceStatistic extends AbstractModel{
      * Get 实例的个数 
      * @return InstanceCount 实例的个数
      */
-    public Integer getInstanceCount() {
+    public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -64,7 +64,7 @@ public class InstanceStatistic extends AbstractModel{
      * Set 实例的个数
      * @param InstanceCount 实例的个数
      */
-    public void setInstanceCount(Integer InstanceCount) {
+    public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 

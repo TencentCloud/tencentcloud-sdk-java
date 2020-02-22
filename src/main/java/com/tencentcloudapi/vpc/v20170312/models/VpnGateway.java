@@ -83,7 +83,7 @@ public class VpnGateway extends AbstractModel{
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
-    private Integer InternetMaxBandwidthOut;
+    private Long InternetMaxBandwidthOut;
 
     /**
     * 创建时间。
@@ -273,7 +273,7 @@ public class VpnGateway extends AbstractModel{
      * Get 网关出带宽。 
      * @return InternetMaxBandwidthOut 网关出带宽。
      */
-    public Integer getInternetMaxBandwidthOut() {
+    public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
@@ -281,7 +281,7 @@ public class VpnGateway extends AbstractModel{
      * Set 网关出带宽。
      * @param InternetMaxBandwidthOut 网关出带宽。
      */
-    public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 

@@ -49,7 +49,7 @@ public class ListenerHealth extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 监听器的转发规则列表
@@ -115,7 +115,7 @@ public class ListenerHealth extends AbstractModel{
      * Get 监听器的端口 
      * @return Port 监听器的端口
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -123,7 +123,7 @@ public class ListenerHealth extends AbstractModel{
      * Set 监听器的端口
      * @param Port 监听器的端口
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

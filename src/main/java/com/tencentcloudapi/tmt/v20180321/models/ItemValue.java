@@ -41,28 +41,28 @@ public class ItemValue extends AbstractModel{
     */
     @SerializedName("X")
     @Expose
-    private Integer X;
+    private Long X;
 
     /**
     * Y坐标
     */
     @SerializedName("Y")
     @Expose
-    private Integer Y;
+    private Long Y;
 
     /**
     * 宽度
     */
     @SerializedName("W")
     @Expose
-    private Integer W;
+    private Long W;
 
     /**
     * 高度
     */
     @SerializedName("H")
     @Expose
-    private Integer H;
+    private Long H;
 
     /**
      * Get 识别出的源文 
@@ -100,7 +100,7 @@ public class ItemValue extends AbstractModel{
      * Get X坐标 
      * @return X X坐标
      */
-    public Integer getX() {
+    public Long getX() {
         return this.X;
     }
 
@@ -108,7 +108,7 @@ public class ItemValue extends AbstractModel{
      * Set X坐标
      * @param X X坐标
      */
-    public void setX(Integer X) {
+    public void setX(Long X) {
         this.X = X;
     }
 
@@ -116,7 +116,7 @@ public class ItemValue extends AbstractModel{
      * Get Y坐标 
      * @return Y Y坐标
      */
-    public Integer getY() {
+    public Long getY() {
         return this.Y;
     }
 
@@ -124,7 +124,7 @@ public class ItemValue extends AbstractModel{
      * Set Y坐标
      * @param Y Y坐标
      */
-    public void setY(Integer Y) {
+    public void setY(Long Y) {
         this.Y = Y;
     }
 
@@ -132,7 +132,7 @@ public class ItemValue extends AbstractModel{
      * Get 宽度 
      * @return W 宽度
      */
-    public Integer getW() {
+    public Long getW() {
         return this.W;
     }
 
@@ -140,7 +140,7 @@ public class ItemValue extends AbstractModel{
      * Set 宽度
      * @param W 宽度
      */
-    public void setW(Integer W) {
+    public void setW(Long W) {
         this.W = W;
     }
 
@@ -148,7 +148,7 @@ public class ItemValue extends AbstractModel{
      * Get 高度 
      * @return H 高度
      */
-    public Integer getH() {
+    public Long getH() {
         return this.H;
     }
 
@@ -156,7 +156,7 @@ public class ItemValue extends AbstractModel{
      * Set 高度
      * @param H 高度
      */
-    public void setH(Integer H) {
+    public void setH(Long H) {
         this.H = H;
     }
 

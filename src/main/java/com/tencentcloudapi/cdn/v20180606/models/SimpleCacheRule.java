@@ -52,7 +52,7 @@ index 时填充 /
     */
     @SerializedName("CacheTime")
     @Expose
-    private Integer CacheTime;
+    private Long CacheTime;
 
     /**
      * Get 规则类型：
@@ -132,7 +132,7 @@ index 时填充 /
      * @return CacheTime 缓存过期时间设置
 单位为秒，最大可设置为 365 天
      */
-    public Integer getCacheTime() {
+    public Long getCacheTime() {
         return this.CacheTime;
     }
 
@@ -142,7 +142,7 @@ index 时填充 /
      * @param CacheTime 缓存过期时间设置
 单位为秒，最大可设置为 365 天
      */
-    public void setCacheTime(Integer CacheTime) {
+    public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;
     }
 

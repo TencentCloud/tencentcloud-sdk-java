@@ -27,14 +27,14 @@ public class WordRsp extends AbstractModel{
     */
     @SerializedName("MemBeginTime")
     @Expose
-    private Integer MemBeginTime;
+    private Long MemBeginTime;
 
     /**
     * 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
     */
     @SerializedName("MemEndTime")
     @Expose
-    private Integer MemEndTime;
+    private Long MemEndTime;
 
     /**
     * 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
@@ -62,7 +62,7 @@ public class WordRsp extends AbstractModel{
     */
     @SerializedName("MatchTag")
     @Expose
-    private Integer MatchTag;
+    private Long MatchTag;
 
     /**
     * 音节评估详情
@@ -82,7 +82,7 @@ public class WordRsp extends AbstractModel{
      * Get 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。 
      * @return MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
-    public Integer getMemBeginTime() {
+    public Long getMemBeginTime() {
         return this.MemBeginTime;
     }
 
@@ -90,7 +90,7 @@ public class WordRsp extends AbstractModel{
      * Set 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      * @param MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
-    public void setMemBeginTime(Integer MemBeginTime) {
+    public void setMemBeginTime(Long MemBeginTime) {
         this.MemBeginTime = MemBeginTime;
     }
 
@@ -98,7 +98,7 @@ public class WordRsp extends AbstractModel{
      * Get 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。 
      * @return MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      */
-    public Integer getMemEndTime() {
+    public Long getMemEndTime() {
         return this.MemEndTime;
     }
 
@@ -106,7 +106,7 @@ public class WordRsp extends AbstractModel{
      * Set 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      * @param MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      */
-    public void setMemEndTime(Integer MemEndTime) {
+    public void setMemEndTime(Long MemEndTime) {
         this.MemEndTime = MemEndTime;
     }
 
@@ -162,7 +162,7 @@ public class WordRsp extends AbstractModel{
      * Get 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。 
      * @return MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
-    public Integer getMatchTag() {
+    public Long getMatchTag() {
         return this.MatchTag;
     }
 
@@ -170,7 +170,7 @@ public class WordRsp extends AbstractModel{
      * Set 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      * @param MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
-    public void setMatchTag(Integer MatchTag) {
+    public void setMatchTag(Long MatchTag) {
         this.MatchTag = MatchTag;
     }
 

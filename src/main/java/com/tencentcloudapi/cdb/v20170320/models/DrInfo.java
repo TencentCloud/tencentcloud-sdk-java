@@ -27,7 +27,7 @@ public class DrInfo extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 可用区信息
@@ -55,7 +55,7 @@ public class DrInfo extends AbstractModel{
     */
     @SerializedName("SyncStatus")
     @Expose
-    private Integer SyncStatus;
+    private Long SyncStatus;
 
     /**
     * 实例名称
@@ -69,13 +69,13 @@ public class DrInfo extends AbstractModel{
     */
     @SerializedName("InstanceType")
     @Expose
-    private Integer InstanceType;
+    private Long InstanceType;
 
     /**
      * Get 灾备实例状态 
      * @return Status 灾备实例状态
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -83,7 +83,7 @@ public class DrInfo extends AbstractModel{
      * Set 灾备实例状态
      * @param Status 灾备实例状态
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -139,7 +139,7 @@ public class DrInfo extends AbstractModel{
      * Get 实例同步状态 
      * @return SyncStatus 实例同步状态
      */
-    public Integer getSyncStatus() {
+    public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
@@ -147,7 +147,7 @@ public class DrInfo extends AbstractModel{
      * Set 实例同步状态
      * @param SyncStatus 实例同步状态
      */
-    public void setSyncStatus(Integer SyncStatus) {
+    public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;
     }
 
@@ -171,7 +171,7 @@ public class DrInfo extends AbstractModel{
      * Get 实例类型 
      * @return InstanceType 实例类型
      */
-    public Integer getInstanceType() {
+    public Long getInstanceType() {
         return this.InstanceType;
     }
 
@@ -179,7 +179,7 @@ public class DrInfo extends AbstractModel{
      * Set 实例类型
      * @param InstanceType 实例类型
      */
-    public void setInstanceType(Integer InstanceType) {
+    public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 

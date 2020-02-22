@@ -27,7 +27,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
     */
     @SerializedName("MonitorId")
     @Expose
-    private Integer MonitorId;
+    private Long MonitorId;
 
     /**
     * 站点的url列表
@@ -55,14 +55,14 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
     */
     @SerializedName("Crontab")
     @Expose
-    private Integer Crontab;
+    private Long Crontab;
 
     /**
     * 扫描速率限制，每秒发送X个HTTP请求
     */
     @SerializedName("RateLimit")
     @Expose
-    private Integer RateLimit;
+    private Long RateLimit;
 
     /**
     * 首次扫描开始时间
@@ -76,13 +76,13 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
     */
     @SerializedName("MonitorStatus")
     @Expose
-    private Integer MonitorStatus;
+    private Long MonitorStatus;
 
     /**
      * Get 监测任务ID 
      * @return MonitorId 监测任务ID
      */
-    public Integer getMonitorId() {
+    public Long getMonitorId() {
         return this.MonitorId;
     }
 
@@ -90,7 +90,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
      * Set 监测任务ID
      * @param MonitorId 监测任务ID
      */
-    public void setMonitorId(Integer MonitorId) {
+    public void setMonitorId(Long MonitorId) {
         this.MonitorId = MonitorId;
     }
 
@@ -146,7 +146,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
      * Get 扫描周期，单位小时，每X小时执行一次 
      * @return Crontab 扫描周期，单位小时，每X小时执行一次
      */
-    public Integer getCrontab() {
+    public Long getCrontab() {
         return this.Crontab;
     }
 
@@ -154,7 +154,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
      * Set 扫描周期，单位小时，每X小时执行一次
      * @param Crontab 扫描周期，单位小时，每X小时执行一次
      */
-    public void setCrontab(Integer Crontab) {
+    public void setCrontab(Long Crontab) {
         this.Crontab = Crontab;
     }
 
@@ -162,7 +162,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
      * Get 扫描速率限制，每秒发送X个HTTP请求 
      * @return RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
-    public Integer getRateLimit() {
+    public Long getRateLimit() {
         return this.RateLimit;
     }
 
@@ -170,7 +170,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
      * Set 扫描速率限制，每秒发送X个HTTP请求
      * @param RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
-    public void setRateLimit(Integer RateLimit) {
+    public void setRateLimit(Long RateLimit) {
         this.RateLimit = RateLimit;
     }
 
@@ -194,7 +194,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
      * Get 监测状态：1-监测中；2-暂停监测 
      * @return MonitorStatus 监测状态：1-监测中；2-暂停监测
      */
-    public Integer getMonitorStatus() {
+    public Long getMonitorStatus() {
         return this.MonitorStatus;
     }
 
@@ -202,7 +202,7 @@ public class ModifyMonitorAttributeRequest extends AbstractModel{
      * Set 监测状态：1-监测中；2-暂停监测
      * @param MonitorStatus 监测状态：1-监测中；2-暂停监测
      */
-    public void setMonitorStatus(Integer MonitorStatus) {
+    public void setMonitorStatus(Long MonitorStatus) {
         this.MonitorStatus = MonitorStatus;
     }
 

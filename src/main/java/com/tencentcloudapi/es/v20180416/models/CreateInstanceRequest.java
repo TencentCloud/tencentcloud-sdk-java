@@ -70,7 +70,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("NodeNum")
     @Expose
-    private Integer NodeNum;
+    private Long NodeNum;
 
     /**
     * 计费类型<li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li>默认值POSTPAID_BY_HOUR
@@ -84,7 +84,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("ChargePeriod")
     @Expose
-    private Integer ChargePeriod;
+    private Long ChargePeriod;
 
     /**
     * 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费
@@ -115,7 +115,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("DiskSize")
     @Expose
-    private Integer DiskSize;
+    private Long DiskSize;
 
     /**
     * 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
@@ -129,7 +129,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Integer AutoVoucher;
+    private Long AutoVoucher;
 
     /**
     * 代金券ID列表（目前仅支持指定一张代金券）
@@ -152,7 +152,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("MasterNodeNum")
     @Expose
-    private Integer MasterNodeNum;
+    private Long MasterNodeNum;
 
     /**
     * 已废弃请使用NodeInfoList
@@ -168,7 +168,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
-    private Integer MasterNodeDiskSize;
+    private Long MasterNodeDiskSize;
 
     /**
     * 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
@@ -182,7 +182,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("DeployMode")
     @Expose
-    private Integer DeployMode;
+    private Long DeployMode;
 
     /**
     * 多可用区部署时可用区的详细信息(DeployMode为1时必传)
@@ -217,7 +217,7 @@ public class CreateInstanceRequest extends AbstractModel{
     */
     @SerializedName("BasicSecurityType")
     @Expose
-    private Integer BasicSecurityType;
+    private Long BasicSecurityType;
 
     /**
      * Get 可用区 
@@ -321,7 +321,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @return NodeNum 已废弃请使用NodeInfoList
 节点数量（2-50个）
      */
-    public Integer getNodeNum() {
+    public Long getNodeNum() {
         return this.NodeNum;
     }
 
@@ -331,7 +331,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @param NodeNum 已废弃请使用NodeInfoList
 节点数量（2-50个）
      */
-    public void setNodeNum(Integer NodeNum) {
+    public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
@@ -355,7 +355,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 包年包月购买时长（单位由参数TimeUnit决定） 
      * @return ChargePeriod 包年包月购买时长（单位由参数TimeUnit决定）
      */
-    public Integer getChargePeriod() {
+    public Long getChargePeriod() {
         return this.ChargePeriod;
     }
 
@@ -363,7 +363,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 包年包月购买时长（单位由参数TimeUnit决定）
      * @param ChargePeriod 包年包月购买时长（单位由参数TimeUnit决定）
      */
-    public void setChargePeriod(Integer ChargePeriod) {
+    public void setChargePeriod(Long ChargePeriod) {
         this.ChargePeriod = ChargePeriod;
     }
 
@@ -429,7 +429,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @return DiskSize 已废弃请使用NodeInfoList
 节点磁盘容量（单位GB）
      */
-    public Integer getDiskSize() {
+    public Long getDiskSize() {
         return this.DiskSize;
     }
 
@@ -439,7 +439,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @param DiskSize 已废弃请使用NodeInfoList
 节点磁盘容量（单位GB）
      */
-    public void setDiskSize(Integer DiskSize) {
+    public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
@@ -463,7 +463,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0 
      * @return AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      */
-    public Integer getAutoVoucher() {
+    public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
@@ -471,7 +471,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      * @param AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      */
-    public void setAutoVoucher(Integer AutoVoucher) {
+    public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
@@ -517,7 +517,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @return MasterNodeNum 已废弃请使用NodeInfoList
 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
      */
-    public Integer getMasterNodeNum() {
+    public Long getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
@@ -527,7 +527,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @param MasterNodeNum 已废弃请使用NodeInfoList
 专用主节点个数（只支持3个和5个，EnableDedicatedMaster为true时该值必传）
      */
-    public void setMasterNodeNum(Integer MasterNodeNum) {
+    public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
@@ -557,7 +557,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @return MasterNodeDiskSize 已废弃请使用NodeInfoList
 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
      */
-    public Integer getMasterNodeDiskSize() {
+    public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
@@ -567,7 +567,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * @param MasterNodeDiskSize 已废弃请使用NodeInfoList
 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
      */
-    public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
+    public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
     }
 
@@ -591,7 +591,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0 
      * @return DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
      */
-    public Integer getDeployMode() {
+    public Long getDeployMode() {
         return this.DeployMode;
     }
 
@@ -599,7 +599,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
      * @param DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
      */
-    public void setDeployMode(Integer DeployMode) {
+    public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
@@ -671,7 +671,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Get 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li> 
      * @return BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
-    public Integer getBasicSecurityType() {
+    public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
@@ -679,7 +679,7 @@ public class CreateInstanceRequest extends AbstractModel{
      * Set 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      * @param BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      */
-    public void setBasicSecurityType(Integer BasicSecurityType) {
+    public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;
     }
 

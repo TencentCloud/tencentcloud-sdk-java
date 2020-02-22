@@ -34,7 +34,7 @@ public class DescribeZoneFlowAndStayTimeResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 各区域人流数目和停留时长
@@ -70,7 +70,7 @@ public class DescribeZoneFlowAndStayTimeResponse extends AbstractModel{
      * Get 店铺id 
      * @return ShopId 店铺id
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -78,7 +78,7 @@ public class DescribeZoneFlowAndStayTimeResponse extends AbstractModel{
      * Set 店铺id
      * @param ShopId 店铺id
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 

@@ -35,14 +35,14 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
     */
     @SerializedName("Total")
     @Expose
-    private Integer Total;
+    private Long Total;
 
     /**
     * 未屏蔽的对象实例数
     */
     @SerializedName("NoShieldedSum")
     @Expose
-    private Integer NoShieldedSum;
+    private Long NoShieldedSum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -75,7 +75,7 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
      * Get 绑定的对象实例总数 
      * @return Total 绑定的对象实例总数
      */
-    public Integer getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -83,7 +83,7 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
      * Set 绑定的对象实例总数
      * @param Total 绑定的对象实例总数
      */
-    public void setTotal(Integer Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 
@@ -91,7 +91,7 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
      * Get 未屏蔽的对象实例数 
      * @return NoShieldedSum 未屏蔽的对象实例数
      */
-    public Integer getNoShieldedSum() {
+    public Long getNoShieldedSum() {
         return this.NoShieldedSum;
     }
 
@@ -99,7 +99,7 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
      * Set 未屏蔽的对象实例数
      * @param NoShieldedSum 未屏蔽的对象实例数
      */
-    public void setNoShieldedSum(Integer NoShieldedSum) {
+    public void setNoShieldedSum(Long NoShieldedSum) {
         this.NoShieldedSum = NoShieldedSum;
     }
 

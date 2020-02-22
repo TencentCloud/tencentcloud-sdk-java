@@ -48,7 +48,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("ProjectIds")
     @Expose
-    private Integer [] ProjectIds;
+    private Long [] ProjectIds;
 
     /**
     * 是否根据 VPC 网络来搜索
@@ -90,21 +90,21 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 返回数量，默认为 10，最大值为 100。
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 1非独享集群，2独享集群， 0全部
     */
     @SerializedName("ExclusterType")
     @Expose
-    private Integer ExclusterType;
+    private Long ExclusterType;
 
     /**
     * 标识是否使用ExclusterType字段, false不使用，true使用
@@ -172,7 +172,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Get 按项目 ID 查询 
      * @return ProjectIds 按项目 ID 查询
      */
-    public Integer [] getProjectIds() {
+    public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
@@ -180,7 +180,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Set 按项目 ID 查询
      * @param ProjectIds 按项目 ID 查询
      */
-    public void setProjectIds(Integer [] ProjectIds) {
+    public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
@@ -268,7 +268,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Get 偏移量，默认为 0 
      * @return Offset 偏移量，默认为 0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
@@ -276,7 +276,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Set 偏移量，默认为 0
      * @param Offset 偏移量，默认为 0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
@@ -284,7 +284,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Get 返回数量，默认为 10，最大值为 100。 
      * @return Limit 返回数量，默认为 10，最大值为 100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
@@ -292,7 +292,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Set 返回数量，默认为 10，最大值为 100。
      * @param Limit 返回数量，默认为 10，最大值为 100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
@@ -300,7 +300,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Get 1非独享集群，2独享集群， 0全部 
      * @return ExclusterType 1非独享集群，2独享集群， 0全部
      */
-    public Integer getExclusterType() {
+    public Long getExclusterType() {
         return this.ExclusterType;
     }
 
@@ -308,7 +308,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
      * Set 1非独享集群，2独享集群， 0全部
      * @param ExclusterType 1非独享集群，2独享集群， 0全部
      */
-    public void setExclusterType(Integer ExclusterType) {
+    public void setExclusterType(Long ExclusterType) {
         this.ExclusterType = ExclusterType;
     }
 

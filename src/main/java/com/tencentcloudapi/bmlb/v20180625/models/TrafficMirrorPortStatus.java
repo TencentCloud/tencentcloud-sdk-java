@@ -27,7 +27,7 @@ public class TrafficMirrorPortStatus extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 状态。
@@ -40,7 +40,7 @@ public class TrafficMirrorPortStatus extends AbstractModel{
      * Get 接收机端口。 
      * @return Port 接收机端口。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -48,7 +48,7 @@ public class TrafficMirrorPortStatus extends AbstractModel{
      * Set 接收机端口。
      * @param Port 接收机端口。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

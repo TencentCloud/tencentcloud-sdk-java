@@ -34,14 +34,14 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 摄像机id
     */
     @SerializedName("CameraId")
     @Expose
-    private Integer CameraId;
+    private Long CameraId;
 
     /**
     * pos机id
@@ -62,7 +62,7 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
     */
     @SerializedName("FaceId")
     @Expose
-    private Integer FaceId;
+    private Long FaceId;
 
     /**
     * 顾客属性信息
@@ -98,7 +98,7 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
      * Get 店铺id 
      * @return ShopId 店铺id
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -106,7 +106,7 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
      * Set 店铺id
      * @param ShopId 店铺id
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 
@@ -114,7 +114,7 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
      * Get 摄像机id 
      * @return CameraId 摄像机id
      */
-    public Integer getCameraId() {
+    public Long getCameraId() {
         return this.CameraId;
     }
 
@@ -122,7 +122,7 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
      * Set 摄像机id
      * @param CameraId 摄像机id
      */
-    public void setCameraId(Integer CameraId) {
+    public void setCameraId(Long CameraId) {
         this.CameraId = CameraId;
     }
 
@@ -162,7 +162,7 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
      * Get 临时id对应的face id 
      * @return FaceId 临时id对应的face id
      */
-    public Integer getFaceId() {
+    public Long getFaceId() {
         return this.FaceId;
     }
 
@@ -170,7 +170,7 @@ public class DescribeFaceIdByTempIdResponse extends AbstractModel{
      * Set 临时id对应的face id
      * @param FaceId 临时id对应的face id
      */
-    public void setFaceId(Integer FaceId) {
+    public void setFaceId(Long FaceId) {
         this.FaceId = FaceId;
     }
 

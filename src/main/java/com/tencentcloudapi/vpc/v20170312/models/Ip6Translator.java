@@ -69,7 +69,7 @@ public class Ip6Translator extends AbstractModel{
     */
     @SerializedName("Ip6RuleCount")
     @Expose
-    private Integer Ip6RuleCount;
+    private Long Ip6RuleCount;
 
     /**
     * IPV6转换规则信息
@@ -178,7 +178,7 @@ public class Ip6Translator extends AbstractModel{
      * Get 绑定的IPV6转换规则数量 
      * @return Ip6RuleCount 绑定的IPV6转换规则数量
      */
-    public Integer getIp6RuleCount() {
+    public Long getIp6RuleCount() {
         return this.Ip6RuleCount;
     }
 
@@ -186,7 +186,7 @@ public class Ip6Translator extends AbstractModel{
      * Set 绑定的IPV6转换规则数量
      * @param Ip6RuleCount 绑定的IPV6转换规则数量
      */
-    public void setIp6RuleCount(Integer Ip6RuleCount) {
+    public void setIp6RuleCount(Long Ip6RuleCount) {
         this.Ip6RuleCount = Ip6RuleCount;
     }
 

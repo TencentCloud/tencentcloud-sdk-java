@@ -48,14 +48,14 @@ public class DayStreamPlayInfo extends AbstractModel{
     */
     @SerializedName("Request")
     @Expose
-    private Integer Request;
+    private Long Request;
 
     /**
     * 在线人数。
     */
     @SerializedName("Online")
     @Expose
-    private Integer Online;
+    private Long Online;
 
     /**
      * Get 数据时间点，格式：yyyy-mm-dd HH:MM:SS。 
@@ -109,7 +109,7 @@ public class DayStreamPlayInfo extends AbstractModel{
      * Get 请求数。 
      * @return Request 请求数。
      */
-    public Integer getRequest() {
+    public Long getRequest() {
         return this.Request;
     }
 
@@ -117,7 +117,7 @@ public class DayStreamPlayInfo extends AbstractModel{
      * Set 请求数。
      * @param Request 请求数。
      */
-    public void setRequest(Integer Request) {
+    public void setRequest(Long Request) {
         this.Request = Request;
     }
 
@@ -125,7 +125,7 @@ public class DayStreamPlayInfo extends AbstractModel{
      * Get 在线人数。 
      * @return Online 在线人数。
      */
-    public Integer getOnline() {
+    public Long getOnline() {
         return this.Online;
     }
 
@@ -133,7 +133,7 @@ public class DayStreamPlayInfo extends AbstractModel{
      * Set 在线人数。
      * @param Online 在线人数。
      */
-    public void setOnline(Integer Online) {
+    public void setOnline(Long Online) {
         this.Online = Online;
     }
 

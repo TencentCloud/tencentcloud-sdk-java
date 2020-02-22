@@ -69,7 +69,7 @@ public class ComputeEnvView extends AbstractModel{
     */
     @SerializedName("DesiredComputeNodeCount")
     @Expose
-    private Integer DesiredComputeNodeCount;
+    private Long DesiredComputeNodeCount;
 
     /**
     * 计算环境资源类型，当前为CVM和CPM（黑石）
@@ -185,7 +185,7 @@ public class ComputeEnvView extends AbstractModel{
      * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
-    public Integer getDesiredComputeNodeCount() {
+    public Long getDesiredComputeNodeCount() {
         return this.DesiredComputeNodeCount;
     }
 
@@ -193,7 +193,7 @@ public class ComputeEnvView extends AbstractModel{
      * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
-    public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
+    public void setDesiredComputeNodeCount(Long DesiredComputeNodeCount) {
         this.DesiredComputeNodeCount = DesiredComputeNodeCount;
     }
 

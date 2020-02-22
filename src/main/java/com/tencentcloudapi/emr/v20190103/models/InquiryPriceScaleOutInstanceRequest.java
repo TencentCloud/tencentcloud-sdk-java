@@ -34,21 +34,21 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Integer TimeSpan;
+    private Long TimeSpan;
 
     /**
     * Zone ID
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 计费类型
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
     * 实例ID
@@ -62,14 +62,14 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     */
     @SerializedName("CoreCount")
     @Expose
-    private Integer CoreCount;
+    private Long CoreCount;
 
     /**
     * 扩容Task节点个数
     */
     @SerializedName("TaskCount")
     @Expose
-    private Integer TaskCount;
+    private Long TaskCount;
 
     /**
     * 货币种类
@@ -98,7 +98,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Get 时间长度。按量用例长度为3600。 
      * @return TimeSpan 时间长度。按量用例长度为3600。
      */
-    public Integer getTimeSpan() {
+    public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -106,7 +106,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Set 时间长度。按量用例长度为3600。
      * @param TimeSpan 时间长度。按量用例长度为3600。
      */
-    public void setTimeSpan(Integer TimeSpan) {
+    public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
@@ -114,7 +114,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Get Zone ID 
      * @return ZoneId Zone ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
@@ -122,7 +122,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Set Zone ID
      * @param ZoneId Zone ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
@@ -130,7 +130,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Get 计费类型 
      * @return PayMode 计费类型
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
@@ -138,7 +138,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Set 计费类型
      * @param PayMode 计费类型
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
@@ -162,7 +162,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Get 扩容Core节点个数 
      * @return CoreCount 扩容Core节点个数
      */
-    public Integer getCoreCount() {
+    public Long getCoreCount() {
         return this.CoreCount;
     }
 
@@ -170,7 +170,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Set 扩容Core节点个数
      * @param CoreCount 扩容Core节点个数
      */
-    public void setCoreCount(Integer CoreCount) {
+    public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
@@ -178,7 +178,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Get 扩容Task节点个数 
      * @return TaskCount 扩容Task节点个数
      */
-    public Integer getTaskCount() {
+    public Long getTaskCount() {
         return this.TaskCount;
     }
 
@@ -186,7 +186,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
      * Set 扩容Task节点个数
      * @param TaskCount 扩容Task节点个数
      */
-    public void setTaskCount(Integer TaskCount) {
+    public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 

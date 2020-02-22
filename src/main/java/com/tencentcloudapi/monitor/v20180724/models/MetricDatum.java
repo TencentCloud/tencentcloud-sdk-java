@@ -34,7 +34,7 @@ public class MetricDatum extends AbstractModel{
     */
     @SerializedName("Value")
     @Expose
-    private Integer Value;
+    private Long Value;
 
     /**
      * Get 指标名称 
@@ -56,7 +56,7 @@ public class MetricDatum extends AbstractModel{
      * Get 指标的值 
      * @return Value 指标的值
      */
-    public Integer getValue() {
+    public Long getValue() {
         return this.Value;
     }
 
@@ -64,7 +64,7 @@ public class MetricDatum extends AbstractModel{
      * Set 指标的值
      * @param Value 指标的值
      */
-    public void setValue(Integer Value) {
+    public void setValue(Long Value) {
         this.Value = Value;
     }
 

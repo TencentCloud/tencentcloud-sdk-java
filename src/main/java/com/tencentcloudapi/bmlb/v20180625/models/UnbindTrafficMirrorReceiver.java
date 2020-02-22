@@ -27,7 +27,7 @@ public class UnbindTrafficMirrorReceiver extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 待解绑的主机实例ID。
@@ -40,7 +40,7 @@ public class UnbindTrafficMirrorReceiver extends AbstractModel{
      * Get 待解绑的主机端口，可选值1~65535。 
      * @return Port 待解绑的主机端口，可选值1~65535。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
@@ -48,7 +48,7 @@ public class UnbindTrafficMirrorReceiver extends AbstractModel{
      * Set 待解绑的主机端口，可选值1~65535。
      * @param Port 待解绑的主机端口，可选值1~65535。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 

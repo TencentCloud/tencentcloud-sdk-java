@@ -34,7 +34,7 @@ public class CreateScanInstancesResponse extends AbstractModel{
     */
     @SerializedName("Progress")
     @Expose
-    private Integer Progress;
+    private Long Progress;
 
     /**
     * 提交成功的app的md5集合
@@ -48,14 +48,14 @@ public class CreateScanInstancesResponse extends AbstractModel{
     */
     @SerializedName("LimitCount")
     @Expose
-    private Integer LimitCount;
+    private Long LimitCount;
 
     /**
     * 到期时间
     */
     @SerializedName("LimitTime")
     @Expose
-    private Integer LimitTime;
+    private Long LimitTime;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,7 +84,7 @@ public class CreateScanInstancesResponse extends AbstractModel{
      * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public Integer getProgress() {
+    public Long getProgress() {
         return this.Progress;
     }
 
@@ -92,7 +92,7 @@ public class CreateScanInstancesResponse extends AbstractModel{
      * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
-    public void setProgress(Integer Progress) {
+    public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
@@ -116,7 +116,7 @@ public class CreateScanInstancesResponse extends AbstractModel{
      * Get 剩余可用次数 
      * @return LimitCount 剩余可用次数
      */
-    public Integer getLimitCount() {
+    public Long getLimitCount() {
         return this.LimitCount;
     }
 
@@ -124,7 +124,7 @@ public class CreateScanInstancesResponse extends AbstractModel{
      * Set 剩余可用次数
      * @param LimitCount 剩余可用次数
      */
-    public void setLimitCount(Integer LimitCount) {
+    public void setLimitCount(Long LimitCount) {
         this.LimitCount = LimitCount;
     }
 
@@ -132,7 +132,7 @@ public class CreateScanInstancesResponse extends AbstractModel{
      * Get 到期时间 
      * @return LimitTime 到期时间
      */
-    public Integer getLimitTime() {
+    public Long getLimitTime() {
         return this.LimitTime;
     }
 
@@ -140,7 +140,7 @@ public class CreateScanInstancesResponse extends AbstractModel{
      * Set 到期时间
      * @param LimitTime 到期时间
      */
-    public void setLimitTime(Integer LimitTime) {
+    public void setLimitTime(Long LimitTime) {
         this.LimitTime = LimitTime;
     }
 

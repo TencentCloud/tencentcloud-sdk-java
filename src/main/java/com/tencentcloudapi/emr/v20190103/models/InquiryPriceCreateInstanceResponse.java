@@ -52,7 +52,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
     */
     @SerializedName("TimeSpan")
     @Expose
-    private Integer TimeSpan;
+    private Long TimeSpan;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -127,7 +127,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
      * @return TimeSpan 时间数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTimeSpan() {
+    public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
@@ -137,7 +137,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
      * @param TimeSpan 时间数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTimeSpan(Integer TimeSpan) {
+    public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 

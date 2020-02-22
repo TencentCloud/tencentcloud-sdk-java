@@ -55,21 +55,21 @@ public class PersonCoordinate extends AbstractModel{
     */
     @SerializedName("MallAreaType")
     @Expose
-    private Integer MallAreaType;
+    private Long MallAreaType;
 
     /**
     * 坐标编号
     */
     @SerializedName("PosId")
     @Expose
-    private Integer PosId;
+    private Long PosId;
 
     /**
     * 门店编号
     */
     @SerializedName("ShopId")
     @Expose
-    private Integer ShopId;
+    private Long ShopId;
 
     /**
     * 事件
@@ -146,7 +146,7 @@ public class PersonCoordinate extends AbstractModel{
      * Get 卖场区域类型 
      * @return MallAreaType 卖场区域类型
      */
-    public Integer getMallAreaType() {
+    public Long getMallAreaType() {
         return this.MallAreaType;
     }
 
@@ -154,7 +154,7 @@ public class PersonCoordinate extends AbstractModel{
      * Set 卖场区域类型
      * @param MallAreaType 卖场区域类型
      */
-    public void setMallAreaType(Integer MallAreaType) {
+    public void setMallAreaType(Long MallAreaType) {
         this.MallAreaType = MallAreaType;
     }
 
@@ -162,7 +162,7 @@ public class PersonCoordinate extends AbstractModel{
      * Get 坐标编号 
      * @return PosId 坐标编号
      */
-    public Integer getPosId() {
+    public Long getPosId() {
         return this.PosId;
     }
 
@@ -170,7 +170,7 @@ public class PersonCoordinate extends AbstractModel{
      * Set 坐标编号
      * @param PosId 坐标编号
      */
-    public void setPosId(Integer PosId) {
+    public void setPosId(Long PosId) {
         this.PosId = PosId;
     }
 
@@ -178,7 +178,7 @@ public class PersonCoordinate extends AbstractModel{
      * Get 门店编号 
      * @return ShopId 门店编号
      */
-    public Integer getShopId() {
+    public Long getShopId() {
         return this.ShopId;
     }
 
@@ -186,7 +186,7 @@ public class PersonCoordinate extends AbstractModel{
      * Set 门店编号
      * @param ShopId 门店编号
      */
-    public void setShopId(Integer ShopId) {
+    public void setShopId(Long ShopId) {
         this.ShopId = ShopId;
     }
 

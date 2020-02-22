@@ -51,7 +51,7 @@ public class DescribeIpVisitRequest extends AbstractModel{
     */
     @SerializedName("Project")
     @Expose
-    private Integer Project;
+    private Long Project;
 
     /**
     * 时间粒度，支持以下几种模式：
@@ -124,7 +124,7 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
      * @return Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      */
-    public Integer getProject() {
+    public Long getProject() {
         return this.Project;
     }
 
@@ -134,7 +134,7 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
      * @param Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      */
-    public void setProject(Integer Project) {
+    public void setProject(Long Project) {
         this.Project = Project;
     }
 

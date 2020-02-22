@@ -34,7 +34,7 @@ public class UserCmdTask extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 脚本名称
@@ -55,21 +55,21 @@ public class UserCmdTask extends AbstractModel{
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Integer InstanceCount;
+    private Long InstanceCount;
 
     /**
     * 运行成功数量
     */
     @SerializedName("SuccessCount")
     @Expose
-    private Integer SuccessCount;
+    private Long SuccessCount;
 
     /**
     * 运行失败数量
     */
     @SerializedName("FailureCount")
     @Expose
-    private Integer FailureCount;
+    private Long FailureCount;
 
     /**
     * 执行开始时间
@@ -105,7 +105,7 @@ public class UserCmdTask extends AbstractModel{
      * Get 任务状态ID，取值: -1(进行中) 0(结束) 
      * @return Status 任务状态ID，取值: -1(进行中) 0(结束)
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
@@ -113,7 +113,7 @@ public class UserCmdTask extends AbstractModel{
      * Set 任务状态ID，取值: -1(进行中) 0(结束)
      * @param Status 任务状态ID，取值: -1(进行中) 0(结束)
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
@@ -153,7 +153,7 @@ public class UserCmdTask extends AbstractModel{
      * Get 运行实例数量 
      * @return InstanceCount 运行实例数量
      */
-    public Integer getInstanceCount() {
+    public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -161,7 +161,7 @@ public class UserCmdTask extends AbstractModel{
      * Set 运行实例数量
      * @param InstanceCount 运行实例数量
      */
-    public void setInstanceCount(Integer InstanceCount) {
+    public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
@@ -169,7 +169,7 @@ public class UserCmdTask extends AbstractModel{
      * Get 运行成功数量 
      * @return SuccessCount 运行成功数量
      */
-    public Integer getSuccessCount() {
+    public Long getSuccessCount() {
         return this.SuccessCount;
     }
 
@@ -177,7 +177,7 @@ public class UserCmdTask extends AbstractModel{
      * Set 运行成功数量
      * @param SuccessCount 运行成功数量
      */
-    public void setSuccessCount(Integer SuccessCount) {
+    public void setSuccessCount(Long SuccessCount) {
         this.SuccessCount = SuccessCount;
     }
 
@@ -185,7 +185,7 @@ public class UserCmdTask extends AbstractModel{
      * Get 运行失败数量 
      * @return FailureCount 运行失败数量
      */
-    public Integer getFailureCount() {
+    public Long getFailureCount() {
         return this.FailureCount;
     }
 
@@ -193,7 +193,7 @@ public class UserCmdTask extends AbstractModel{
      * Set 运行失败数量
      * @param FailureCount 运行失败数量
      */
-    public void setFailureCount(Integer FailureCount) {
+    public void setFailureCount(Long FailureCount) {
         this.FailureCount = FailureCount;
     }
 

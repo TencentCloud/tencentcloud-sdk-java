@@ -35,7 +35,7 @@ public class DescribeListenersResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,7 +66,7 @@ public class DescribeListenersResponse extends AbstractModel{
      * @return TotalCount 总的监听器个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -76,7 +76,7 @@ public class DescribeListenersResponse extends AbstractModel{
      * @param TotalCount 总的监听器个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

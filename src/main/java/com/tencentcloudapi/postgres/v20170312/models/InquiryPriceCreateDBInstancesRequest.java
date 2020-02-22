@@ -41,28 +41,28 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Integer InstanceCount;
+    private Long InstanceCount;
 
     /**
     * 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
     * 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
@@ -107,7 +107,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Get 存储容量大小，单位：GB。 
      * @return Storage 存储容量大小，单位：GB。
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
@@ -115,7 +115,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Set 存储容量大小，单位：GB。
      * @param Storage 存储容量大小，单位：GB。
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
@@ -123,7 +123,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Get 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。 
      * @return InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      */
-    public Integer getInstanceCount() {
+    public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -131,7 +131,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Set 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      * @param InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      */
-    public void setInstanceCount(Integer InstanceCount) {
+    public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
@@ -139,7 +139,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Get 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。 
      * @return Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
@@ -147,7 +147,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Set 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      * @param Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
@@ -155,7 +155,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Get 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。 
      * @return Pid 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
@@ -163,7 +163,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      * Set 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      * @param Pid 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 

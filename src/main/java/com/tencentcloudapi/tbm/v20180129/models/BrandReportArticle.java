@@ -55,21 +55,21 @@ public class BrandReportArticle extends AbstractModel{
     */
     @SerializedName("Flag")
     @Expose
-    private Integer Flag;
+    private Long Flag;
 
     /**
     * 文章热度值
     */
     @SerializedName("Hot")
     @Expose
-    private Integer Hot;
+    private Long Hot;
 
     /**
     * 文章来源等级
     */
     @SerializedName("Level")
     @Expose
-    private Integer Level;
+    private Long Level;
 
     /**
     * 文章摘要
@@ -153,7 +153,7 @@ public class BrandReportArticle extends AbstractModel{
      * Get 文章标识 
      * @return Flag 文章标识
      */
-    public Integer getFlag() {
+    public Long getFlag() {
         return this.Flag;
     }
 
@@ -161,7 +161,7 @@ public class BrandReportArticle extends AbstractModel{
      * Set 文章标识
      * @param Flag 文章标识
      */
-    public void setFlag(Integer Flag) {
+    public void setFlag(Long Flag) {
         this.Flag = Flag;
     }
 
@@ -169,7 +169,7 @@ public class BrandReportArticle extends AbstractModel{
      * Get 文章热度值 
      * @return Hot 文章热度值
      */
-    public Integer getHot() {
+    public Long getHot() {
         return this.Hot;
     }
 
@@ -177,7 +177,7 @@ public class BrandReportArticle extends AbstractModel{
      * Set 文章热度值
      * @param Hot 文章热度值
      */
-    public void setHot(Integer Hot) {
+    public void setHot(Long Hot) {
         this.Hot = Hot;
     }
 
@@ -185,7 +185,7 @@ public class BrandReportArticle extends AbstractModel{
      * Get 文章来源等级 
      * @return Level 文章来源等级
      */
-    public Integer getLevel() {
+    public Long getLevel() {
         return this.Level;
     }
 
@@ -193,7 +193,7 @@ public class BrandReportArticle extends AbstractModel{
      * Set 文章来源等级
      * @param Level 文章来源等级
      */
-    public void setLevel(Integer Level) {
+    public void setLevel(Long Level) {
         this.Level = Level;
     }
 

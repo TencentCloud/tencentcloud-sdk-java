@@ -27,7 +27,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     */
     @SerializedName("GroupId")
     @Expose
-    private Integer GroupId;
+    private Long GroupId;
 
     /**
     * 策略组名称
@@ -62,35 +62,35 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Integer UpdateTime;
+    private Long UpdateTime;
 
     /**
     * 创建时间
     */
     @SerializedName("InsertTime")
     @Expose
-    private Integer InsertTime;
+    private Long InsertTime;
 
     /**
     * 策略组绑定的实例数
     */
     @SerializedName("UseSum")
     @Expose
-    private Integer UseSum;
+    private Long UseSum;
 
     /**
     * 策略组绑定的未屏蔽实例数
     */
     @SerializedName("NoShieldedSum")
     @Expose
-    private Integer NoShieldedSum;
+    private Long NoShieldedSum;
 
     /**
     * 是否为默认策略，0表示非默认策略，1表示默认策略
     */
     @SerializedName("IsDefault")
     @Expose
-    private Integer IsDefault;
+    private Long IsDefault;
 
     /**
     * 是否可以设置成默认策略
@@ -104,7 +104,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     */
     @SerializedName("ParentGroupId")
     @Expose
-    private Integer ParentGroupId;
+    private Long ParentGroupId;
 
     /**
     * 策略组备注
@@ -118,7 +118,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 阈值规则列表
@@ -164,7 +164,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 策略组id 
      * @return GroupId 策略组id
      */
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return this.GroupId;
     }
 
@@ -172,7 +172,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 策略组id
      * @param GroupId 策略组id
      */
-    public void setGroupId(Integer GroupId) {
+    public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
@@ -244,7 +244,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 最后修改时间 
      * @return UpdateTime 最后修改时间
      */
-    public Integer getUpdateTime() {
+    public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
@@ -252,7 +252,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 最后修改时间
      * @param UpdateTime 最后修改时间
      */
-    public void setUpdateTime(Integer UpdateTime) {
+    public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
@@ -260,7 +260,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 创建时间 
      * @return InsertTime 创建时间
      */
-    public Integer getInsertTime() {
+    public Long getInsertTime() {
         return this.InsertTime;
     }
 
@@ -268,7 +268,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 创建时间
      * @param InsertTime 创建时间
      */
-    public void setInsertTime(Integer InsertTime) {
+    public void setInsertTime(Long InsertTime) {
         this.InsertTime = InsertTime;
     }
 
@@ -276,7 +276,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 策略组绑定的实例数 
      * @return UseSum 策略组绑定的实例数
      */
-    public Integer getUseSum() {
+    public Long getUseSum() {
         return this.UseSum;
     }
 
@@ -284,7 +284,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 策略组绑定的实例数
      * @param UseSum 策略组绑定的实例数
      */
-    public void setUseSum(Integer UseSum) {
+    public void setUseSum(Long UseSum) {
         this.UseSum = UseSum;
     }
 
@@ -292,7 +292,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 策略组绑定的未屏蔽实例数 
      * @return NoShieldedSum 策略组绑定的未屏蔽实例数
      */
-    public Integer getNoShieldedSum() {
+    public Long getNoShieldedSum() {
         return this.NoShieldedSum;
     }
 
@@ -300,7 +300,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 策略组绑定的未屏蔽实例数
      * @param NoShieldedSum 策略组绑定的未屏蔽实例数
      */
-    public void setNoShieldedSum(Integer NoShieldedSum) {
+    public void setNoShieldedSum(Long NoShieldedSum) {
         this.NoShieldedSum = NoShieldedSum;
     }
 
@@ -308,7 +308,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 是否为默认策略，0表示非默认策略，1表示默认策略 
      * @return IsDefault 是否为默认策略，0表示非默认策略，1表示默认策略
      */
-    public Integer getIsDefault() {
+    public Long getIsDefault() {
         return this.IsDefault;
     }
 
@@ -316,7 +316,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 是否为默认策略，0表示非默认策略，1表示默认策略
      * @param IsDefault 是否为默认策略，0表示非默认策略，1表示默认策略
      */
-    public void setIsDefault(Integer IsDefault) {
+    public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
@@ -340,7 +340,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 父策略组id 
      * @return ParentGroupId 父策略组id
      */
-    public Integer getParentGroupId() {
+    public Long getParentGroupId() {
         return this.ParentGroupId;
     }
 
@@ -348,7 +348,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 父策略组id
      * @param ParentGroupId 父策略组id
      */
-    public void setParentGroupId(Integer ParentGroupId) {
+    public void setParentGroupId(Long ParentGroupId) {
         this.ParentGroupId = ParentGroupId;
     }
 
@@ -372,7 +372,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Get 策略组所属项目id 
      * @return ProjectId 策略组所属项目id
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
@@ -380,7 +380,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
      * Set 策略组所属项目id
      * @param ProjectId 策略组所属项目id
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 

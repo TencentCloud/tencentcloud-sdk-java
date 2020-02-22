@@ -27,7 +27,7 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
     */
     @SerializedName("InstanceCount")
     @Expose
-    private Integer InstanceCount;
+    private Long InstanceCount;
 
     /**
     * 预留实例计费配置ID
@@ -54,7 +54,7 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
      * Get 购买预留实例计费数量 
      * @return InstanceCount 购买预留实例计费数量
      */
-    public Integer getInstanceCount() {
+    public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
@@ -62,7 +62,7 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
      * Set 购买预留实例计费数量
      * @param InstanceCount 购买预留实例计费数量
      */
-    public void setInstanceCount(Integer InstanceCount) {
+    public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 

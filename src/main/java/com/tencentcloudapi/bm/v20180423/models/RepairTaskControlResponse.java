@@ -28,7 +28,7 @@ public class RepairTaskControlResponse extends AbstractModel{
     */
     @SerializedName("TaskId")
     @Expose
-    private Integer TaskId;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +43,7 @@ public class RepairTaskControlResponse extends AbstractModel{
      * @return TaskId 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
 此字段可作为DescriptionOperationResult查询异步任务状态接口的入参，查询异步任务执行结果。
      */
-    public Integer getTaskId() {
+    public Long getTaskId() {
         return this.TaskId;
     }
 
@@ -53,7 +53,7 @@ public class RepairTaskControlResponse extends AbstractModel{
      * @param TaskId 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
 此字段可作为DescriptionOperationResult查询异步任务状态接口的入参，查询异步任务执行结果。
      */
-    public void setTaskId(Integer TaskId) {
+    public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 

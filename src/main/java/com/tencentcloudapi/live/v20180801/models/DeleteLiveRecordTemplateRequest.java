@@ -27,13 +27,13 @@ public class DeleteLiveRecordTemplateRequest extends AbstractModel{
     */
     @SerializedName("TemplateId")
     @Expose
-    private Integer TemplateId;
+    private Long TemplateId;
 
     /**
      * Get 模板ID。 
      * @return TemplateId 模板ID。
      */
-    public Integer getTemplateId() {
+    public Long getTemplateId() {
         return this.TemplateId;
     }
 
@@ -41,7 +41,7 @@ public class DeleteLiveRecordTemplateRequest extends AbstractModel{
      * Set 模板ID。
      * @param TemplateId 模板ID。
      */
-    public void setTemplateId(Integer TemplateId) {
+    public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 

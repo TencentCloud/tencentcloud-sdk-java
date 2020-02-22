@@ -27,7 +27,7 @@ public class DescribeParamTemplatesResponse extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 参数模板详情。
@@ -47,7 +47,7 @@ public class DescribeParamTemplatesResponse extends AbstractModel{
      * Get 该用户的参数模板数量。 
      * @return TotalCount 该用户的参数模板数量。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
@@ -55,7 +55,7 @@ public class DescribeParamTemplatesResponse extends AbstractModel{
      * Set 该用户的参数模板数量。
      * @param TotalCount 该用户的参数模板数量。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 

@@ -91,7 +91,7 @@ public class DescribeComputeEnvCreateInfoResponse extends AbstractModel{
     */
     @SerializedName("DesiredComputeNodeCount")
     @Expose
-    private Integer DesiredComputeNodeCount;
+    private Long DesiredComputeNodeCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -252,7 +252,7 @@ public class DescribeComputeEnvCreateInfoResponse extends AbstractModel{
      * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
-    public Integer getDesiredComputeNodeCount() {
+    public Long getDesiredComputeNodeCount() {
         return this.DesiredComputeNodeCount;
     }
 
@@ -260,7 +260,7 @@ public class DescribeComputeEnvCreateInfoResponse extends AbstractModel{
      * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
-    public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
+    public void setDesiredComputeNodeCount(Long DesiredComputeNodeCount) {
         this.DesiredComputeNodeCount = DesiredComputeNodeCount;
     }
 
