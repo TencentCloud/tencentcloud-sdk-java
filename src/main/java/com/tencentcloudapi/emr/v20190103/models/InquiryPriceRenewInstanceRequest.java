@@ -23,138 +23,148 @@ import java.util.HashMap;
 public class InquiryPriceRenewInstanceRequest extends AbstractModel{
 
     /**
-    * 时间长度
+    * 实例续费的时长。需要结合TimeUnit一起使用。
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 资源ID列表
+    * 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 位置信息
+    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
+    * 实例计费模式。此处只支持取值为1，表示包年包月。
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 时间单位，默认为m
+    * 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 货币种类
+    * 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-     * Get 时间长度 
-     * @return TimeSpan 时间长度
+     * Get 实例续费的时长。需要结合TimeUnit一起使用。 
+     * @return TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 时间长度
-     * @param TimeSpan 时间长度
+     * Set 实例续费的时长。需要结合TimeUnit一起使用。
+     * @param TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 资源ID列表 
-     * @return ResourceIds 资源ID列表
+     * Get 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。 
+     * @return ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源ID列表
-     * @param ResourceIds 资源ID列表
+     * Set 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
+     * @param ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 位置信息 
-     * @return Placement 位置信息
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
+     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 位置信息
-     * @param Placement 位置信息
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get 计费模式，0表示按量，1表示包年报月，此处只能为包年包月 
-     * @return PayMode 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
+     * Get 实例计费模式。此处只支持取值为1，表示包年包月。 
+     * @return PayMode 实例计费模式。此处只支持取值为1，表示包年包月。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
-     * @param PayMode 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
+     * Set 实例计费模式。此处只支持取值为1，表示包年包月。
+     * @param PayMode 实例计费模式。此处只支持取值为1，表示包年包月。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 时间单位，默认为m 
-     * @return TimeUnit 时间单位，默认为m
+     * Get 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li> 
+     * @return TimeUnit 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时间单位，默认为m
-     * @param TimeUnit 时间单位，默认为m
+     * Set 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
+     * @param TimeUnit 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 货币种类 
-     * @return Currency 货币种类
+     * Get 货币种类。取值范围：
+<li>CNY：表示人民币。</li> 
+     * @return Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 货币种类
-     * @param Currency 货币种类
+     * Set 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
+     * @param Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

@@ -804,6 +804,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口返回查询时间范围内每天使用的视频处理用量信息。
+   1. 可以查询最近365天内的视频处理统计数据。
+   2. 查询时间跨度不超过90天。
+     * @param req DescribeMediaProcessUsageDataRequest
+     * @return DescribeMediaProcessUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(DescribeMediaProcessUsageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaProcessUsageDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessUsageDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaProcessUsageData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
      * @param req DescribePersonSamplesRequest
      * @return DescribePersonSamplesResponse
@@ -890,6 +910,46 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSnapshotByTimeOffsetTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询存储空间使用情况和文件数量。
+     * @param req DescribeStorageDataRequest
+     * @return DescribeStorageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageDataResponse DescribeStorageData(DescribeStorageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStorageDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStorageDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStorageData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口返回查询时间范围内使用的点播存储空间，单位：字节。
+   1. 可以查询最近365天内的存储空间数据；
+   2. 查询时间跨度不超过90天；
+   3. 分钟粒度查询跨度不超过5天；
+   4. 小时粒度查询跨度不超过10天。
+     * @param req DescribeStorageDetailsRequest
+     * @return DescribeStorageDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageDetailsResponse DescribeStorageDetails(DescribeStorageDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStorageDetailsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStorageDetailsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStorageDetails"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

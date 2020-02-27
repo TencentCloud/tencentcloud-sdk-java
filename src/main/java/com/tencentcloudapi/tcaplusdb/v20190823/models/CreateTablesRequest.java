@@ -23,71 +23,71 @@ import java.util.HashMap;
 public class CreateTablesRequest extends AbstractModel{
 
     /**
-    * 待创建表所属应用实例ID
+    * 待创建表格所属集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
-    * 用户选定的建表IDL文件列表
+    * 用户选定的建表格IDL文件列表
     */
     @SerializedName("IdlFiles")
     @Expose
     private IdlFileInfo [] IdlFiles;
 
     /**
-    * 待创建表信息列表
+    * 待创建表格信息列表
     */
     @SerializedName("SelectedTables")
     @Expose
-    private SelectedTableInfo [] SelectedTables;
+    private SelectedTableInfoNew [] SelectedTables;
 
     /**
-     * Get 待创建表所属应用实例ID 
-     * @return ApplicationId 待创建表所属应用实例ID
+     * Get 待创建表格所属集群ID 
+     * @return ClusterId 待创建表格所属集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 待创建表所属应用实例ID
-     * @param ApplicationId 待创建表所属应用实例ID
+     * Set 待创建表格所属集群ID
+     * @param ClusterId 待创建表格所属集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 用户选定的建表IDL文件列表 
-     * @return IdlFiles 用户选定的建表IDL文件列表
+     * Get 用户选定的建表格IDL文件列表 
+     * @return IdlFiles 用户选定的建表格IDL文件列表
      */
     public IdlFileInfo [] getIdlFiles() {
         return this.IdlFiles;
     }
 
     /**
-     * Set 用户选定的建表IDL文件列表
-     * @param IdlFiles 用户选定的建表IDL文件列表
+     * Set 用户选定的建表格IDL文件列表
+     * @param IdlFiles 用户选定的建表格IDL文件列表
      */
     public void setIdlFiles(IdlFileInfo [] IdlFiles) {
         this.IdlFiles = IdlFiles;
     }
 
     /**
-     * Get 待创建表信息列表 
-     * @return SelectedTables 待创建表信息列表
+     * Get 待创建表格信息列表 
+     * @return SelectedTables 待创建表格信息列表
      */
-    public SelectedTableInfo [] getSelectedTables() {
+    public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
     /**
-     * Set 待创建表信息列表
-     * @param SelectedTables 待创建表信息列表
+     * Set 待创建表格信息列表
+     * @param SelectedTables 待创建表格信息列表
      */
-    public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
+    public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;
     }
 
@@ -95,7 +95,7 @@ public class CreateTablesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
         this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
 

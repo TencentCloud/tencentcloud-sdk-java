@@ -34,7 +34,7 @@ public class DescribeTasksResponse extends AbstractModel{
     */
     @SerializedName("TaskInfos")
     @Expose
-    private TaskInfo [] TaskInfos;
+    private TaskInfoNew [] TaskInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeTasksResponse extends AbstractModel{
      * Get 查询到的任务详情列表 
      * @return TaskInfos 查询到的任务详情列表
      */
-    public TaskInfo [] getTaskInfos() {
+    public TaskInfoNew [] getTaskInfos() {
         return this.TaskInfos;
     }
 
@@ -71,7 +71,7 @@ public class DescribeTasksResponse extends AbstractModel{
      * Set 查询到的任务详情列表
      * @param TaskInfos 查询到的任务详情列表
      */
-    public void setTaskInfos(TaskInfo [] TaskInfos) {
+    public void setTaskInfos(TaskInfoNew [] TaskInfos) {
         this.TaskInfos = TaskInfos;
     }
 

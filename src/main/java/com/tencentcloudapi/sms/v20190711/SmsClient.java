@@ -38,7 +38,8 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *添加短信签名
+     *添加短信签名，申请之前请先认证参阅 [腾讯云短信签名审核标准](https://cloud.tencent.com/document/product/382/39022)。
+>⚠️注意：个人认证用户不支持使用 API 申请短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台申请短信签名，具体操作请参阅 [创建短信签名](https://cloud.tencent.com/document/product/382/36136#Sign)。
      * @param req AddSmsSignRequest
      * @return AddSmsSignResponse
      * @throws TencentCloudSDKException
@@ -56,7 +57,8 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *添加短信模板
+     *添加短信模版，申请之前请先认证参阅 [腾讯云短信正文模版审核标准](https://cloud.tencent.com/document/product/382/39023)。
+>⚠️注意：个人认证用户不支持使用 API 申请短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台申请短信正文模版，具体操作请参阅 [创建短信正文模版](https://cloud.tencent.com/document/product/382/36136#Template)。
      * @param req AddSmsTemplateRequest
      * @return AddSmsTemplateResponse
      * @throws TencentCloudSDKException
@@ -92,7 +94,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *删除短信签名
+     *>⚠️注意：个人认证用户不支持使用 API 删除短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，请登录控制台删除短信签名，具体操作请参阅 [短信签名操作](https://cloud.tencent.com/document/product/382/36136#Sign) 中查看删除短信签名须知。
      * @param req DeleteSmsSignRequest
      * @return DeleteSmsSignResponse
      * @throws TencentCloudSDKException
@@ -110,7 +112,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *删除短信模板
+     *>⚠️注意：个人认证用户不支持使用 API 删除短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，请登录控制台删除短信正文模版，具体操作请参阅 [短信正文模版操作](https://cloud.tencent.com/document/product/382/36136#Template) 中查看删除短信正文模版须知。
      * @param req DeleteSmsTemplateRequest
      * @return DeleteSmsTemplateResponse
      * @throws TencentCloudSDKException
@@ -128,7 +130,45 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *修改短信签名
+     *>⚠️注意：个人认证用户不支持使用 API 查询短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)。
+     * @param req DescribeSmsSignListRequest
+     * @return DescribeSmsSignListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmsSignListResponse DescribeSmsSignList(DescribeSmsSignListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSmsSignListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSmsSignListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSmsSignList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *>⚠️注意：个人认证用户不支持使用 API 查询短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)。
+     * @param req DescribeSmsTemplateListRequest
+     * @return DescribeSmsTemplateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmsTemplateListResponse DescribeSmsTemplateList(DescribeSmsTemplateListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSmsTemplateListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSmsTemplateListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSmsTemplateList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改短信签名，修改之前请先认证参阅 [腾讯云短信签名审核标准](https://cloud.tencent.com/document/product/382/39022)。
+>- ⚠️注意：个人认证用户不支持使用 API 修改短信签名，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台修改短信签名。
+>- 修改短信签名，仅当签名为待审核或已拒绝状态时，才能进行修改，已审核通过的签名不支持修改。
      * @param req ModifySmsSignRequest
      * @return ModifySmsSignResponse
      * @throws TencentCloudSDKException
@@ -146,7 +186,9 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *修改短信模板
+     *修改短信正文模版，修改之前请先认真参阅 [腾讯云短信正文模版审核标准](https://cloud.tencent.com/document/product/382/39023)。
+>- ⚠️注意：个人认证用户不支持使用 API 修改短信正文模版，请参阅了解 [实名认证基本介绍](https://cloud.tencent.com/document/product/378/3629)，如果为个人认证请登录控制台申请短信正文模版。
+>- 修改短信签名，仅当正文模版为待审核或已拒绝状态时，才能进行修改，已审核通过的正文模版不支持修改。
      * @param req ModifySmsTemplateRequest
      * @return ModifySmsTemplateResponse
      * @throws TencentCloudSDKException

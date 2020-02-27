@@ -30,14 +30,14 @@ public class DescribeDBsRequest extends AbstractModel{
     private String [] InstanceIdSet;
 
     /**
-    * 每页记录数，最大为100，默认20
+    * 分页返回，每页返回的数目，取值为1-100，默认值为20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 页编号，从第0页开始
+    * 分页返回，页编号，默认值为第0页
     */
     @SerializedName("Offset")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeDBsRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页记录数，最大为100，默认20 
-     * @return Limit 每页记录数，最大为100，默认20
+     * Get 分页返回，每页返回的数目，取值为1-100，默认值为20 
+     * @return Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页记录数，最大为100，默认20
-     * @param Limit 每页记录数，最大为100，默认20
+     * Set 分页返回，每页返回的数目，取值为1-100，默认值为20
+     * @param Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 页编号，从第0页开始 
-     * @return Offset 页编号，从第0页开始
+     * Get 分页返回，页编号，默认值为第0页 
+     * @return Offset 分页返回，页编号，默认值为第0页
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页编号，从第0页开始
-     * @param Offset 页编号，从第0页开始
+     * Set 分页返回，页编号，默认值为第0页
+     * @param Offset 分页返回，页编号，默认值为第0页
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

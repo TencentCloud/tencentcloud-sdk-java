@@ -34,7 +34,7 @@ public class ModifyTablesResponse extends AbstractModel{
     */
     @SerializedName("TableResults")
     @Expose
-    private TableResult [] TableResults;
+    private TableResultNew [] TableResults;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class ModifyTablesResponse extends AbstractModel{
      * Get 修改表结果列表 
      * @return TableResults 修改表结果列表
      */
-    public TableResult [] getTableResults() {
+    public TableResultNew [] getTableResults() {
         return this.TableResults;
     }
 
@@ -71,7 +71,7 @@ public class ModifyTablesResponse extends AbstractModel{
      * Set 修改表结果列表
      * @param TableResults 修改表结果列表
      */
-    public void setTableResults(TableResult [] TableResults) {
+    public void setTableResults(TableResultNew [] TableResults) {
         this.TableResults = TableResults;
     }
 

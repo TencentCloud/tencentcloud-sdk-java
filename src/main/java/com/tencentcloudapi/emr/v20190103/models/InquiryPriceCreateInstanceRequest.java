@@ -23,210 +23,372 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceRequest extends AbstractModel{
 
     /**
-    * 时间单位
+    * 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 时间长度
+    * 购买实例的时长。需要结合TimeUnit一起使用。
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 询价资源描述
+    * 询价的节点规格。
     */
     @SerializedName("ResourceSpec")
     @Expose
     private NewResourceSpec ResourceSpec;
 
     /**
-    * 货币种类
+    * 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * 计费类型
+    * 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 是否支持HA， 1 支持，0 不支持
+    * 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
     */
     @SerializedName("SupportHA")
     @Expose
     private Long SupportHA;
 
     /**
-    * 软件列表
+    * 部署的组件列表。
     */
     @SerializedName("Software")
     @Expose
     private String [] Software;
 
     /**
-    * 位置信息
+    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * VPC信息
+    * 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
     */
     @SerializedName("VPCSettings")
     @Expose
     private VPCSettings VPCSettings;
 
     /**
-     * Get 时间单位 
-     * @return TimeUnit 时间单位
+    * hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
+    * EMR-MetaDB实例
+    */
+    @SerializedName("UnifyMetaInstanceId")
+    @Expose
+    private String UnifyMetaInstanceId;
+
+    /**
+    * 自定义MetaDB信息
+    */
+    @SerializedName("MetaDBInfo")
+    @Expose
+    private CustomMetaInfo MetaDBInfo;
+
+    /**
+    * 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private Long ProductId;
+
+    /**
+     * Get 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
+     * @return TimeUnit 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时间单位
-     * @param TimeUnit 时间单位
+     * Set 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param TimeUnit 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 时间长度 
-     * @return TimeSpan 时间长度
+     * Get 购买实例的时长。需要结合TimeUnit一起使用。 
+     * @return TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 时间长度
-     * @param TimeSpan 时间长度
+     * Set 购买实例的时长。需要结合TimeUnit一起使用。
+     * @param TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 询价资源描述 
-     * @return ResourceSpec 询价资源描述
+     * Get 询价的节点规格。 
+     * @return ResourceSpec 询价的节点规格。
      */
     public NewResourceSpec getResourceSpec() {
         return this.ResourceSpec;
     }
 
     /**
-     * Set 询价资源描述
-     * @param ResourceSpec 询价资源描述
+     * Set 询价的节点规格。
+     * @param ResourceSpec 询价的节点规格。
      */
     public void setResourceSpec(NewResourceSpec ResourceSpec) {
         this.ResourceSpec = ResourceSpec;
     }
 
     /**
-     * Get 货币种类 
-     * @return Currency 货币种类
+     * Get 货币种类。取值范围：
+<li>CNY：表示人民币。</li> 
+     * @return Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 货币种类
-     * @param Currency 货币种类
+     * Set 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
+     * @param Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get 计费类型 
-     * @return PayMode 计费类型
+     * Get 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li> 
+     * @return PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费类型
-     * @param PayMode 计费类型
+     * Set 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+     * @param PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 是否支持HA， 1 支持，0 不支持 
-     * @return SupportHA 是否支持HA， 1 支持，0 不支持
+     * Get 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li> 
+     * @return SupportHA 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
      */
     public Long getSupportHA() {
         return this.SupportHA;
     }
 
     /**
-     * Set 是否支持HA， 1 支持，0 不支持
-     * @param SupportHA 是否支持HA， 1 支持，0 不支持
+     * Set 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+     * @param SupportHA 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
      */
     public void setSupportHA(Long SupportHA) {
         this.SupportHA = SupportHA;
     }
 
     /**
-     * Get 软件列表 
-     * @return Software 软件列表
+     * Get 部署的组件列表。 
+     * @return Software 部署的组件列表。
      */
     public String [] getSoftware() {
         return this.Software;
     }
 
     /**
-     * Set 软件列表
-     * @param Software 软件列表
+     * Set 部署的组件列表。
+     * @param Software 部署的组件列表。
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
     }
 
     /**
-     * Get 位置信息 
-     * @return Placement 位置信息
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
+     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 位置信息
-     * @param Placement 位置信息
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get VPC信息 
-     * @return VPCSettings VPC信息
+     * Get 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。 
+     * @return VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      */
     public VPCSettings getVPCSettings() {
         return this.VPCSettings;
     }
 
     /**
-     * Set VPC信息
-     * @param VPCSettings VPC信息
+     * Set 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * @param VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      */
     public void setVPCSettings(VPCSettings VPCSettings) {
         this.VPCSettings = VPCSettings;
+    }
+
+    /**
+     * Get hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li> 
+     * @return MetaType hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     * @param MetaType hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
+    /**
+     * Get EMR-MetaDB实例 
+     * @return UnifyMetaInstanceId EMR-MetaDB实例
+     */
+    public String getUnifyMetaInstanceId() {
+        return this.UnifyMetaInstanceId;
+    }
+
+    /**
+     * Set EMR-MetaDB实例
+     * @param UnifyMetaInstanceId EMR-MetaDB实例
+     */
+    public void setUnifyMetaInstanceId(String UnifyMetaInstanceId) {
+        this.UnifyMetaInstanceId = UnifyMetaInstanceId;
+    }
+
+    /**
+     * Get 自定义MetaDB信息 
+     * @return MetaDBInfo 自定义MetaDB信息
+     */
+    public CustomMetaInfo getMetaDBInfo() {
+        return this.MetaDBInfo;
+    }
+
+    /**
+     * Set 自定义MetaDB信息
+     * @param MetaDBInfo 自定义MetaDB信息
+     */
+    public void setMetaDBInfo(CustomMetaInfo MetaDBInfo) {
+        this.MetaDBInfo = MetaDBInfo;
+    }
+
+    /**
+     * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li> 
+     * @return ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+     */
+    public Long getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+     * @param ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+     */
+    public void setProductId(Long ProductId) {
+        this.ProductId = ProductId;
     }
 
     /**
@@ -242,6 +404,10 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Software.", this.Software);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
+        this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

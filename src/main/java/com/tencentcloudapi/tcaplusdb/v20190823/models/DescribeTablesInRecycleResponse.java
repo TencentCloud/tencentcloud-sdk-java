@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class DescribeTablesInRecycleResponse extends AbstractModel{
 
     /**
-    * 表数量
+    * 表格数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 表详情结果列表
+    * 表格详情结果列表
     */
     @SerializedName("TableInfos")
     @Expose
-    private TableInfo [] TableInfos;
+    private TableInfoNew [] TableInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,34 +44,34 @@ public class DescribeTablesInRecycleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 表数量 
-     * @return TotalCount 表数量
+     * Get 表格数量 
+     * @return TotalCount 表格数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 表数量
-     * @param TotalCount 表数量
+     * Set 表格数量
+     * @param TotalCount 表格数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 表详情结果列表 
-     * @return TableInfos 表详情结果列表
+     * Get 表格详情结果列表 
+     * @return TableInfos 表格详情结果列表
      */
-    public TableInfo [] getTableInfos() {
+    public TableInfoNew [] getTableInfos() {
         return this.TableInfos;
     }
 
     /**
-     * Set 表详情结果列表
-     * @param TableInfos 表详情结果列表
+     * Set 表格详情结果列表
+     * @param TableInfos 表格详情结果列表
      */
-    public void setTableInfos(TableInfo [] TableInfos) {
+    public void setTableInfos(TableInfoNew [] TableInfos) {
         this.TableInfos = TableInfos;
     }
 

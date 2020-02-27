@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TaskAlarm extends AbstractModel{
 
     /**
-    * 任务Id
+    * 任务ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -58,7 +58,7 @@ public class TaskAlarm extends AbstractModel{
     private Long Status;
 
     /**
-    * 拨测任务的Url
+    * 拨测任务的URL
     */
     @SerializedName("CgiUrl")
     @Expose
@@ -93,16 +93,16 @@ public class TaskAlarm extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
@@ -173,16 +173,16 @@ public class TaskAlarm extends AbstractModel{
     }
 
     /**
-     * Get 拨测任务的Url 
-     * @return CgiUrl 拨测任务的Url
+     * Get 拨测任务的URL 
+     * @return CgiUrl 拨测任务的URL
      */
     public String getCgiUrl() {
         return this.CgiUrl;
     }
 
     /**
-     * Set 拨测任务的Url
-     * @param CgiUrl 拨测任务的Url
+     * Set 拨测任务的URL
+     * @param CgiUrl 拨测任务的URL
      */
     public void setCgiUrl(String CgiUrl) {
         this.CgiUrl = CgiUrl;

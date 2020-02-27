@@ -23,14 +23,17 @@ import java.util.HashMap;
 public class CdnIpHistory extends AbstractModel{
 
     /**
-    * 上下线状态。online 为上线，offline 为下线。
+    * 操作类型
+online：节点上线
+offline：节点下线
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 操作时间。当该值为 null 时表示无历史状态变更记录。
+    * 操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Datetime")
@@ -38,25 +41,35 @@ public class CdnIpHistory extends AbstractModel{
     private String Datetime;
 
     /**
-     * Get 上下线状态。online 为上线，offline 为下线。 
-     * @return Status 上下线状态。online 为上线，offline 为下线。
+     * Get 操作类型
+online：节点上线
+offline：节点下线 
+     * @return Status 操作类型
+online：节点上线
+offline：节点下线
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 上下线状态。online 为上线，offline 为下线。
-     * @param Status 上下线状态。online 为上线，offline 为下线。
+     * Set 操作类型
+online：节点上线
+offline：节点下线
+     * @param Status 操作类型
+online：节点上线
+offline：节点下线
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 操作时间。当该值为 null 时表示无历史状态变更记录。
+     * Get 操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Datetime 操作时间。当该值为 null 时表示无历史状态变更记录。
+     * @return Datetime 操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatetime() {
@@ -64,9 +77,11 @@ public class CdnIpHistory extends AbstractModel{
     }
 
     /**
-     * Set 操作时间。当该值为 null 时表示无历史状态变更记录。
+     * Set 操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Datetime 操作时间。当该值为 null 时表示无历史状态变更记录。
+     * @param Datetime 操作类型对应的操作时间
+当该值为 null 时表示无历史状态变更记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatetime(String Datetime) {

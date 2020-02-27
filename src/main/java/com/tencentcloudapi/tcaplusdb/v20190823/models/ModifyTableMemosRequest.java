@@ -23,40 +23,40 @@ import java.util.HashMap;
 public class ModifyTableMemosRequest extends AbstractModel{
 
     /**
-    * 表所属应用实例ID
+    * 表所属集群实例ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
     * 选定表详情列表
     */
     @SerializedName("TableMemos")
     @Expose
-    private SelectedTableInfo [] TableMemos;
+    private SelectedTableInfoNew [] TableMemos;
 
     /**
-     * Get 表所属应用实例ID 
-     * @return ApplicationId 表所属应用实例ID
+     * Get 表所属集群实例ID 
+     * @return ClusterId 表所属集群实例ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 表所属应用实例ID
-     * @param ApplicationId 表所属应用实例ID
+     * Set 表所属集群实例ID
+     * @param ClusterId 表所属集群实例ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
      * Get 选定表详情列表 
      * @return TableMemos 选定表详情列表
      */
-    public SelectedTableInfo [] getTableMemos() {
+    public SelectedTableInfoNew [] getTableMemos() {
         return this.TableMemos;
     }
 
@@ -64,7 +64,7 @@ public class ModifyTableMemosRequest extends AbstractModel{
      * Set 选定表详情列表
      * @param TableMemos 选定表详情列表
      */
-    public void setTableMemos(SelectedTableInfo [] TableMemos) {
+    public void setTableMemos(SelectedTableInfoNew [] TableMemos) {
         this.TableMemos = TableMemos;
     }
 
@@ -72,7 +72,7 @@ public class ModifyTableMemosRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "TableMemos.", this.TableMemos);
 
     }

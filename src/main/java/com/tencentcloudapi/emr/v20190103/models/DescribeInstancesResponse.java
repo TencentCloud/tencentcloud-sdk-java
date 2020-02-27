@@ -23,19 +23,27 @@ import java.util.HashMap;
 public class DescribeInstancesResponse extends AbstractModel{
 
     /**
-    * 实例数量
+    * 符合条件的实例总数。
     */
     @SerializedName("TotalCnt")
     @Expose
     private Long TotalCnt;
 
     /**
-    * 集群实例信息列表
+    * EMR实例详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterList")
     @Expose
     private ClusterInstancesInfo [] ClusterList;
+
+    /**
+    * 实例关联的标签键列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,25 +53,25 @@ public class DescribeInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例数量 
-     * @return TotalCnt 实例数量
+     * Get 符合条件的实例总数。 
+     * @return TotalCnt 符合条件的实例总数。
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
     }
 
     /**
-     * Set 实例数量
-     * @param TotalCnt 实例数量
+     * Set 符合条件的实例总数。
+     * @param TotalCnt 符合条件的实例总数。
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;
     }
 
     /**
-     * Get 集群实例信息列表
+     * Get EMR实例详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterList 集群实例信息列表
+     * @return ClusterList EMR实例详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterInstancesInfo [] getClusterList() {
@@ -71,13 +79,33 @@ public class DescribeInstancesResponse extends AbstractModel{
     }
 
     /**
-     * Set 集群实例信息列表
+     * Set EMR实例详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterList 集群实例信息列表
+     * @param ClusterList EMR实例详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterList(ClusterInstancesInfo [] ClusterList) {
         this.ClusterList = ClusterList;
+    }
+
+    /**
+     * Get 实例关联的标签键列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagKeys 实例关联的标签键列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set 实例关联的标签键列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagKeys 实例关联的标签键列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
     }
 
     /**
@@ -102,6 +130,7 @@ public class DescribeInstancesResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
         this.setParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquiryPriceRenewInstanceResponse extends AbstractModel{
 
     /**
-    * 刊例价
+    * 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
@@ -31,7 +31,7 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     private Float OriginalCost;
 
     /**
-    * 折扣价格
+    * 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
@@ -39,7 +39,8 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     private Float DiscountCost;
 
     /**
-    * 时间单位，"s","m"
+    * 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
@@ -47,7 +48,7 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     private String TimeUnit;
 
     /**
-    * 时间数量
+    * 实例续费的时长。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
@@ -62,9 +63,9 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 刊例价
+     * Get 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCost 刊例价
+     * @return OriginalCost 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalCost() {
@@ -72,9 +73,9 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 刊例价
+     * Set 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCost 刊例价
+     * @param OriginalCost 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(Float OriginalCost) {
@@ -82,9 +83,9 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 折扣价格
+     * Get 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiscountCost 折扣价格
+     * @return DiscountCost 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountCost() {
@@ -92,9 +93,9 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 折扣价格
+     * Set 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiscountCost 折扣价格
+     * @param DiscountCost 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(Float DiscountCost) {
@@ -102,9 +103,11 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 时间单位，"s","m"
+     * Get 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeUnit 时间单位，"s","m"
+     * @return TimeUnit 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
@@ -112,9 +115,11 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 时间单位，"s","m"
+     * Set 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeUnit 时间单位，"s","m"
+     * @param TimeUnit 实例续费的时间单位。取值范围：
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
@@ -122,9 +127,9 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 时间数量
+     * Get 实例续费的时长。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeSpan 时间数量
+     * @return TimeSpan 实例续费的时长。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
@@ -132,9 +137,9 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 时间数量
+     * Set 实例续费的时长。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeSpan 时间数量
+     * @param TimeSpan 实例续费的时长。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {

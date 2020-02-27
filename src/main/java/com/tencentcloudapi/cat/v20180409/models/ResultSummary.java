@@ -30,7 +30,7 @@ public class ResultSummary extends AbstractModel{
     private String LogTime;
 
     /**
-    * 任务Id
+    * 任务ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -67,16 +67,16 @@ public class ResultSummary extends AbstractModel{
     }
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

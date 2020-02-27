@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class CreateTablesResponse extends AbstractModel{
 
     /**
-    * 批量创建表结果数量
+    * 批量创建表格结果数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 批量创建表结果列表
+    * 批量创建表格结果列表
     */
     @SerializedName("TableResults")
     @Expose
-    private TableResult [] TableResults;
+    private TableResultNew [] TableResults;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,34 +44,34 @@ public class CreateTablesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量创建表结果数量 
-     * @return TotalCount 批量创建表结果数量
+     * Get 批量创建表格结果数量 
+     * @return TotalCount 批量创建表格结果数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 批量创建表结果数量
-     * @param TotalCount 批量创建表结果数量
+     * Set 批量创建表格结果数量
+     * @param TotalCount 批量创建表格结果数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 批量创建表结果列表 
-     * @return TableResults 批量创建表结果列表
+     * Get 批量创建表格结果列表 
+     * @return TableResults 批量创建表格结果列表
      */
-    public TableResult [] getTableResults() {
+    public TableResultNew [] getTableResults() {
         return this.TableResults;
     }
 
     /**
-     * Set 批量创建表结果列表
-     * @param TableResults 批量创建表结果列表
+     * Set 批量创建表格结果列表
+     * @param TableResults 批量创建表格结果列表
      */
-    public void setTableResults(TableResult [] TableResults) {
+    public void setTableResults(TableResultNew [] TableResults) {
         this.TableResults = TableResults;
     }
 

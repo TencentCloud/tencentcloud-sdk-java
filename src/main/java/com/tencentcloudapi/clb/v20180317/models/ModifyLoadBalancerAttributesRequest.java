@@ -58,6 +58,13 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private Boolean LoadBalancerPassToTarget;
 
     /**
+    * 是否开启SnatPro
+    */
+    @SerializedName("SnatPro")
+    @Expose
+    private Boolean SnatPro;
+
+    /**
      * Get 负载均衡的唯一ID 
      * @return LoadBalancerId 负载均衡的唯一ID
      */
@@ -138,6 +145,22 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启SnatPro 
+     * @return SnatPro 是否开启SnatPro
+     */
+    public Boolean getSnatPro() {
+        return this.SnatPro;
+    }
+
+    /**
+     * Set 是否开启SnatPro
+     * @param SnatPro 是否开启SnatPro
+     */
+    public void setSnatPro(Boolean SnatPro) {
+        this.SnatPro = SnatPro;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
         this.setParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
 
     }
 }

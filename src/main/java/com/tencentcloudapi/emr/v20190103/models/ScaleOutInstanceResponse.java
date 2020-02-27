@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ScaleOutInstanceResponse extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 订单号
+    * 订单号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
@@ -38,12 +38,28 @@ public class ScaleOutInstanceResponse extends AbstractModel{
     private String [] DealNames;
 
     /**
-    * token
+    * 客户端Token。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+    * 扩容流程ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
+
+    /**
+    * 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillId")
+    @Expose
+    private String BillId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,25 +69,25 @@ public class ScaleOutInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订单号
+     * Get 订单号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealNames 订单号
+     * @return DealNames 订单号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
@@ -79,9 +95,9 @@ public class ScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 订单号
+     * Set 订单号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealNames 订单号
+     * @param DealNames 订单号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {
@@ -89,9 +105,9 @@ public class ScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get token
+     * Get 客户端Token。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClientToken token
+     * @return ClientToken 客户端Token。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientToken() {
@@ -99,13 +115,53 @@ public class ScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set token
+     * Set 客户端Token。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientToken token
+     * @param ClientToken 客户端Token。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get 扩容流程ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowId 扩容流程ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 扩容流程ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowId 扩容流程ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
+     * Get 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillId 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillId() {
+        return this.BillId;
+    }
+
+    /**
+     * Set 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillId 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillId(String BillId) {
+        this.BillId = BillId;
     }
 
     /**
@@ -131,6 +187,8 @@ public class ScaleOutInstanceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "BillId", this.BillId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

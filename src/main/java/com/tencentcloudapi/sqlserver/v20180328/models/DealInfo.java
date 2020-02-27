@@ -37,7 +37,7 @@ public class DealInfo extends AbstractModel{
     private Long Count;
 
     /**
-    * 关联的流程 Id，可用于查询流程执行状态
+    * 关联的流程 ID，可用于查询流程执行状态
     */
     @SerializedName("FlowId")
     @Expose
@@ -97,16 +97,16 @@ public class DealInfo extends AbstractModel{
     }
 
     /**
-     * Get 关联的流程 Id，可用于查询流程执行状态 
-     * @return FlowId 关联的流程 Id，可用于查询流程执行状态
+     * Get 关联的流程 ID，可用于查询流程执行状态 
+     * @return FlowId 关联的流程 ID，可用于查询流程执行状态
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 关联的流程 Id，可用于查询流程执行状态
-     * @param FlowId 关联的流程 Id，可用于查询流程执行状态
+     * Set 关联的流程 ID，可用于查询流程执行状态
+     * @param FlowId 关联的流程 ID，可用于查询流程执行状态
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

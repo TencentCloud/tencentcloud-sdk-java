@@ -51,6 +51,13 @@ public class AccountCreateInfo extends AbstractModel{
     private String Remark;
 
     /**
+    * 是否为管理员账户，默认为否
+    */
+    @SerializedName("IsAdmin")
+    @Expose
+    private Boolean IsAdmin;
+
+    /**
      * Get 实例用户名 
      * @return UserName 实例用户名
      */
@@ -115,6 +122,22 @@ public class AccountCreateInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否为管理员账户，默认为否 
+     * @return IsAdmin 是否为管理员账户，默认为否
+     */
+    public Boolean getIsAdmin() {
+        return this.IsAdmin;
+    }
+
+    /**
+     * Set 是否为管理员账户，默认为否
+     * @param IsAdmin 是否为管理员账户，默认为否
+     */
+    public void setIsAdmin(Boolean IsAdmin) {
+        this.IsAdmin = IsAdmin;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class AccountCreateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
 
     }
 }

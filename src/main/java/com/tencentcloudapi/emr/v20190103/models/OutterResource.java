@@ -47,7 +47,7 @@ public class OutterResource extends AbstractModel{
     private Long StorageType;
 
     /**
-    * 盘类型
+    * 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
@@ -85,6 +85,14 @@ public class OutterResource extends AbstractModel{
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
+
+    /**
+    * 规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
 
     /**
      * Get 规格
@@ -147,9 +155,9 @@ public class OutterResource extends AbstractModel{
     }
 
     /**
-     * Get 盘类型
+     * Get 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskType 盘类型
+     * @return DiskType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
@@ -157,9 +165,9 @@ public class OutterResource extends AbstractModel{
     }
 
     /**
-     * Set 盘类型
+     * Set 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskType 盘类型
+     * @param DiskType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
@@ -247,6 +255,26 @@ public class OutterResource extends AbstractModel{
     }
 
     /**
+     * Get 规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +286,7 @@ public class OutterResource extends AbstractModel{
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -23,463 +23,711 @@ import java.util.HashMap;
 public class CreateInstanceRequest extends AbstractModel{
 
     /**
-    * 产品ID
+    * 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
     */
     @SerializedName("ProductId")
     @Expose
     private Long ProductId;
 
     /**
-    * VPC设置参数
+    * 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
     */
     @SerializedName("VPCSettings")
     @Expose
     private VPCSettings VPCSettings;
 
     /**
-    * 软件列表
+    * 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
     */
     @SerializedName("Software")
     @Expose
     private String [] Software;
 
     /**
-    * 资源描述
+    * 节点资源的规格。
     */
     @SerializedName("ResourceSpec")
     @Expose
     private NewResourceSpec ResourceSpec;
 
     /**
-    * 支持HA
+    * 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
     */
     @SerializedName("SupportHA")
     @Expose
     private Long SupportHA;
 
     /**
-    * 实例名称
+    * 实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 计费类型
+    * 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 集群位置信息
+    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * 时间长度
+    * 购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 时间单位
+    * 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 登录配置
+    * 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
 
     /**
-    * COS设置参数
+    * 开启COS访问需要设置的参数。
     */
     @SerializedName("COSSettings")
     @Expose
     private COSSettings COSSettings;
 
     /**
-    * 安全组ID
+    * 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
     */
     @SerializedName("SgId")
     @Expose
     private String SgId;
 
     /**
-    * 预执行脚本设置
+    * 引导操作脚本设置。
     */
     @SerializedName("PreExecutedFileSettings")
     @Expose
     private PreExecuteFileSettings [] PreExecutedFileSettings;
 
     /**
-    * 自动续费
+    * 包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 客户端Token
+    * 客户端Token。
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+    * 是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
     */
     @SerializedName("NeedMasterWan")
     @Expose
     private String NeedMasterWan;
 
     /**
-    * 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+    * 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
     */
     @SerializedName("RemoteLoginAtCreate")
     @Expose
     private Long RemoteLoginAtCreate;
 
     /**
-    * 是否开启安全集群，0表示不开启，非0表示开启
+    * 是否开启安全集群。0表示不开启，非0表示开启。
     */
     @SerializedName("CheckSecurity")
     @Expose
     private Long CheckSecurity;
 
     /**
-    * 访问外部文件系统
+    * 访问外部文件系统。
     */
     @SerializedName("ExtendFsField")
     @Expose
     private String ExtendFsField;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 分散置放群组ID列表，当前只支持指定一个。
+    */
+    @SerializedName("DisasterRecoverGroupIds")
+    @Expose
+    private String [] DisasterRecoverGroupIds;
+
+    /**
+    * 集群维度CBS加密盘，默认0表示不加密，1表示加密
+    */
+    @SerializedName("CbsEncrypt")
+    @Expose
+    private Long CbsEncrypt;
+
+    /**
+    * hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
+    * EMR-MetaDB实例
+    */
+    @SerializedName("UnifyMetaInstanceId")
+    @Expose
+    private String UnifyMetaInstanceId;
+
+    /**
+    * 自定义MetaDB信息
+    */
+    @SerializedName("MetaDBInfo")
+    @Expose
+    private CustomMetaInfo MetaDBInfo;
+
+    /**
+     * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li> 
+     * @return ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
      */
     public Long getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
+     * @param ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+<li>1：表示EMR-V1.3.1。</li>
+<li>2：表示EMR-V2.0.1。</li>
+<li>4：表示EMR-V2.1.0。</li>
+<li>7：表示EMR-V3.0.0。</li>
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get VPC设置参数 
-     * @return VPCSettings VPC设置参数
+     * Get 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。 
+     * @return VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      */
     public VPCSettings getVPCSettings() {
         return this.VPCSettings;
     }
 
     /**
-     * Set VPC设置参数
-     * @param VPCSettings VPC设置参数
+     * Set 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * @param VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      */
     public void setVPCSettings(VPCSettings VPCSettings) {
         this.VPCSettings = VPCSettings;
     }
 
     /**
-     * Get 软件列表 
-     * @return Software 软件列表
+     * Get 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。 
+     * @return Software 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
      */
     public String [] getSoftware() {
         return this.Software;
     }
 
     /**
-     * Set 软件列表
-     * @param Software 软件列表
+     * Set 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
+     * @param Software 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
     }
 
     /**
-     * Get 资源描述 
-     * @return ResourceSpec 资源描述
+     * Get 节点资源的规格。 
+     * @return ResourceSpec 节点资源的规格。
      */
     public NewResourceSpec getResourceSpec() {
         return this.ResourceSpec;
     }
 
     /**
-     * Set 资源描述
-     * @param ResourceSpec 资源描述
+     * Set 节点资源的规格。
+     * @param ResourceSpec 节点资源的规格。
      */
     public void setResourceSpec(NewResourceSpec ResourceSpec) {
         this.ResourceSpec = ResourceSpec;
     }
 
     /**
-     * Get 支持HA 
-     * @return SupportHA 支持HA
+     * Get 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li> 
+     * @return SupportHA 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
      */
     public Long getSupportHA() {
         return this.SupportHA;
     }
 
     /**
-     * Set 支持HA
-     * @param SupportHA 支持HA
+     * Set 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
+     * @param SupportHA 是否开启节点高可用。取值范围：
+<li>0：表示不开启节点高可用。</li>
+<li>1：表示开启节点高可用。</li>
      */
     public void setSupportHA(Long SupportHA) {
         this.SupportHA = SupportHA;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li> 
+     * @return InstanceName 实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
+     * @param InstanceName 实例名称。
+<li>长度限制为6-36个字符。</li>
+<li>只允许包含中文、字母、数字、-、_。</li>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 计费类型 
-     * @return PayMode 计费类型
+     * Get 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li> 
+     * @return PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费类型
-     * @param PayMode 计费类型
+     * Set 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+     * @param PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 集群位置信息 
-     * @return Placement 集群位置信息
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
+     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 集群位置信息
-     * @param Placement 集群位置信息
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get 时间长度 
-     * @return TimeSpan 时间长度
+     * Get 购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li> 
+     * @return TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 时间长度
-     * @param TimeSpan 时间长度
+     * Set 购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @param TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时间单位 
-     * @return TimeUnit 时间单位
+     * Get 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
+     * @return TimeUnit 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时间单位
-     * @param TimeUnit 时间单位
+     * Set 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param TimeUnit 购买实例的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 登录配置 
-     * @return LoginSettings 登录配置
+     * Get 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li> 
+     * @return LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 登录配置
-     * @param LoginSettings 登录配置
+     * Set 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * @param LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get COS设置参数 
-     * @return COSSettings COS设置参数
+     * Get 开启COS访问需要设置的参数。 
+     * @return COSSettings 开启COS访问需要设置的参数。
      */
     public COSSettings getCOSSettings() {
         return this.COSSettings;
     }
 
     /**
-     * Set COS设置参数
-     * @param COSSettings COS设置参数
+     * Set 开启COS访问需要设置的参数。
+     * @param COSSettings 开启COS访问需要设置的参数。
      */
     public void setCOSSettings(COSSettings COSSettings) {
         this.COSSettings = COSSettings;
     }
 
     /**
-     * Get 安全组ID 
-     * @return SgId 安全组ID
+     * Get 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。 
+     * @return SgId 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
      */
     public String getSgId() {
         return this.SgId;
     }
 
     /**
-     * Set 安全组ID
-     * @param SgId 安全组ID
+     * Set 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+     * @param SgId 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
      */
     public void setSgId(String SgId) {
         this.SgId = SgId;
     }
 
     /**
-     * Get 预执行脚本设置 
-     * @return PreExecutedFileSettings 预执行脚本设置
+     * Get 引导操作脚本设置。 
+     * @return PreExecutedFileSettings 引导操作脚本设置。
      */
     public PreExecuteFileSettings [] getPreExecutedFileSettings() {
         return this.PreExecutedFileSettings;
     }
 
     /**
-     * Set 预执行脚本设置
-     * @param PreExecutedFileSettings 预执行脚本设置
+     * Set 引导操作脚本设置。
+     * @param PreExecutedFileSettings 引导操作脚本设置。
      */
     public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
         this.PreExecutedFileSettings = PreExecutedFileSettings;
     }
 
     /**
-     * Get 自动续费 
-     * @return AutoRenew 自动续费
+     * Get 包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li> 
+     * @return AutoRenew 包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 自动续费
-     * @param AutoRenew 自动续费
+     * Set 包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
+     * @param AutoRenew 包年包月实例是否自动续费。取值范围：
+<li>0：表示不自动续费。</li>
+<li>1：表示自动续费。</li>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 客户端Token 
-     * @return ClientToken 客户端Token
+     * Get 客户端Token。 
+     * @return ClientToken 客户端Token。
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端Token
-     * @param ClientToken 客户端Token
+     * Set 客户端Token。
+     * @param ClientToken 客户端Token。
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN 
-     * @return NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * Get 是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。 
+     * @return NeedMasterWan 是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
      */
     public String getNeedMasterWan() {
         return this.NeedMasterWan;
     }
 
     /**
-     * Set 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
-     * @param NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * Set 是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+     * @param NeedMasterWan 是否开启集群Master节点公网。取值范围：
+<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
      */
     public void setNeedMasterWan(String NeedMasterWan) {
         this.NeedMasterWan = NeedMasterWan;
     }
 
     /**
-     * Get 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效 
-     * @return RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * Get 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。 
+     * @return RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
      */
     public Long getRemoteLoginAtCreate() {
         return this.RemoteLoginAtCreate;
     }
 
     /**
-     * Set 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
-     * @param RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * Set 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
+     * @param RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
      */
     public void setRemoteLoginAtCreate(Long RemoteLoginAtCreate) {
         this.RemoteLoginAtCreate = RemoteLoginAtCreate;
     }
 
     /**
-     * Get 是否开启安全集群，0表示不开启，非0表示开启 
-     * @return CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
+     * Get 是否开启安全集群。0表示不开启，非0表示开启。 
+     * @return CheckSecurity 是否开启安全集群。0表示不开启，非0表示开启。
      */
     public Long getCheckSecurity() {
         return this.CheckSecurity;
     }
 
     /**
-     * Set 是否开启安全集群，0表示不开启，非0表示开启
-     * @param CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
+     * Set 是否开启安全集群。0表示不开启，非0表示开启。
+     * @param CheckSecurity 是否开启安全集群。0表示不开启，非0表示开启。
      */
     public void setCheckSecurity(Long CheckSecurity) {
         this.CheckSecurity = CheckSecurity;
     }
 
     /**
-     * Get 访问外部文件系统 
-     * @return ExtendFsField 访问外部文件系统
+     * Get 访问外部文件系统。 
+     * @return ExtendFsField 访问外部文件系统。
      */
     public String getExtendFsField() {
         return this.ExtendFsField;
     }
 
     /**
-     * Set 访问外部文件系统
-     * @param ExtendFsField 访问外部文件系统
+     * Set 访问外部文件系统。
+     * @param ExtendFsField 访问外部文件系统。
      */
     public void setExtendFsField(String ExtendFsField) {
         this.ExtendFsField = ExtendFsField;
+    }
+
+    /**
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。 
+     * @return Tags 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     * @param Tags 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 分散置放群组ID列表，当前只支持指定一个。 
+     * @return DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
+     */
+    public String [] getDisasterRecoverGroupIds() {
+        return this.DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set 分散置放群组ID列表，当前只支持指定一个。
+     * @param DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
+     */
+    public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
+        this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Get 集群维度CBS加密盘，默认0表示不加密，1表示加密 
+     * @return CbsEncrypt 集群维度CBS加密盘，默认0表示不加密，1表示加密
+     */
+    public Long getCbsEncrypt() {
+        return this.CbsEncrypt;
+    }
+
+    /**
+     * Set 集群维度CBS加密盘，默认0表示不加密，1表示加密
+     * @param CbsEncrypt 集群维度CBS加密盘，默认0表示不加密，1表示加密
+     */
+    public void setCbsEncrypt(Long CbsEncrypt) {
+        this.CbsEncrypt = CbsEncrypt;
+    }
+
+    /**
+     * Get hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li> 
+     * @return MetaType hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     * @param MetaType hive共享元数据库类型。取值范围：
+<li>EMR_NEW_META：表示集群默认创建</li>
+<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
+    /**
+     * Get EMR-MetaDB实例 
+     * @return UnifyMetaInstanceId EMR-MetaDB实例
+     */
+    public String getUnifyMetaInstanceId() {
+        return this.UnifyMetaInstanceId;
+    }
+
+    /**
+     * Set EMR-MetaDB实例
+     * @param UnifyMetaInstanceId EMR-MetaDB实例
+     */
+    public void setUnifyMetaInstanceId(String UnifyMetaInstanceId) {
+        this.UnifyMetaInstanceId = UnifyMetaInstanceId;
+    }
+
+    /**
+     * Get 自定义MetaDB信息 
+     * @return MetaDBInfo 自定义MetaDB信息
+     */
+    public CustomMetaInfo getMetaDBInfo() {
+        return this.MetaDBInfo;
+    }
+
+    /**
+     * Set 自定义MetaDB信息
+     * @param MetaDBInfo 自定义MetaDB信息
+     */
+    public void setMetaDBInfo(CustomMetaInfo MetaDBInfo) {
+        this.MetaDBInfo = MetaDBInfo;
     }
 
     /**
@@ -506,6 +754,12 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RemoteLoginAtCreate", this.RemoteLoginAtCreate);
         this.setParamSimple(map, prefix + "CheckSecurity", this.CheckSecurity);
         this.setParamSimple(map, prefix + "ExtendFsField", this.ExtendFsField);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+        this.setParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
+        this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
 
     }
 }

@@ -37,7 +37,7 @@ public class DescribeAccountsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 分页返回，从第几页开始返回。从第0页开始，默认第0页
+    * 分页返回，页编号，默认值为第0页
     */
     @SerializedName("Offset")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeAccountsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页返回，从第几页开始返回。从第0页开始，默认第0页 
-     * @return Offset 分页返回，从第几页开始返回。从第0页开始，默认第0页
+     * Get 分页返回，页编号，默认值为第0页 
+     * @return Offset 分页返回，页编号，默认值为第0页
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页返回，从第几页开始返回。从第0页开始，默认第0页
-     * @param Offset 分页返回，从第几页开始返回。从第0页开始，默认第0页
+     * Set 分页返回，页编号，默认值为第0页
+     * @param Offset 分页返回，页编号，默认值为第0页
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

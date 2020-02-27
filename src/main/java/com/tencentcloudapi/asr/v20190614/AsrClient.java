@@ -124,6 +124,24 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *用户通过本接口进行热词表的下载，获得词表权重文件形式的 base64 值，文件形式为通过 “|” 分割的词和权重，即 word|weight 的形式。
+     * @param req DownloadAsrVocabRequest
+     * @return DownloadAsrVocabResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadAsrVocabResponse DownloadAsrVocab(DownloadAsrVocabRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadAsrVocabResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadAsrVocabResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DownloadAsrVocab"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户根据词表的ID可以获取对应的热词表信息
      * @param req GetAsrVocabRequest
      * @return GetAsrVocabResponse
@@ -135,6 +153,24 @@ public class AsrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetAsrVocabResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetAsrVocab"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过该接口，可获得所有的热词表及其信息。
+     * @param req GetAsrVocabListRequest
+     * @return GetAsrVocabListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAsrVocabListResponse GetAsrVocabList(GetAsrVocabListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAsrVocabListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAsrVocabListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetAsrVocabList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -158,6 +194,24 @@ public class AsrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SentenceRecognitionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SentenceRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过该接口可以设置热词表的默认状态。初始状态为0，用户可设置状态为1，即为默认状态。默认状态表示用户在请求识别时，如不设置热词表ID，则默认使用状态为1的热词表。
+     * @param req SetVocabStateRequest
+     * @return SetVocabStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetVocabStateResponse SetVocabState(SetVocabStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetVocabStateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetVocabStateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetVocabState"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

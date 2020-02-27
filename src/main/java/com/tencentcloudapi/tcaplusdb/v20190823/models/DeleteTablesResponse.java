@@ -34,7 +34,7 @@ public class DeleteTablesResponse extends AbstractModel{
     */
     @SerializedName("TableResults")
     @Expose
-    private TableResult [] TableResults;
+    private TableResultNew [] TableResults;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DeleteTablesResponse extends AbstractModel{
      * Get 删除表结果详情列表 
      * @return TableResults 删除表结果详情列表
      */
-    public TableResult [] getTableResults() {
+    public TableResultNew [] getTableResults() {
         return this.TableResults;
     }
 
@@ -71,7 +71,7 @@ public class DeleteTablesResponse extends AbstractModel{
      * Set 删除表结果详情列表
      * @param TableResults 删除表结果详情列表
      */
-    public void setTableResults(TableResult [] TableResults) {
+    public void setTableResults(TableResultNew [] TableResults) {
         this.TableResults = TableResults;
     }
 

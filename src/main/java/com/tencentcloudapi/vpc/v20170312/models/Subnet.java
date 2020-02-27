@@ -114,6 +114,20 @@ public class Subnet extends AbstractModel{
     private Boolean IsRemoteVpcSnat;
 
     /**
+    * 子网`IP`总数。
+    */
+    @SerializedName("TotalIpAddressCount")
+    @Expose
+    private Long TotalIpAddressCount;
+
+    /**
+    * 标签键值对。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `VPC`实例`ID`。 
      * @return VpcId `VPC`实例`ID`。
      */
@@ -322,6 +336,38 @@ public class Subnet extends AbstractModel{
     }
 
     /**
+     * Get 子网`IP`总数。 
+     * @return TotalIpAddressCount 子网`IP`总数。
+     */
+    public Long getTotalIpAddressCount() {
+        return this.TotalIpAddressCount;
+    }
+
+    /**
+     * Set 子网`IP`总数。
+     * @param TotalIpAddressCount 子网`IP`总数。
+     */
+    public void setTotalIpAddressCount(Long TotalIpAddressCount) {
+        this.TotalIpAddressCount = TotalIpAddressCount;
+    }
+
+    /**
+     * Get 标签键值对。 
+     * @return TagSet 标签键值对。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。
+     * @param TagSet 标签键值对。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +384,8 @@ public class Subnet extends AbstractModel{
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
         this.setParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
+        this.setParamSimple(map, prefix + "TotalIpAddressCount", this.TotalIpAddressCount);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

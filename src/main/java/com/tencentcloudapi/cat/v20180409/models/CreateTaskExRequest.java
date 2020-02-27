@@ -30,7 +30,7 @@ public class CreateTaskExRequest extends AbstractModel{
     private String CatTypeName;
 
     /**
-    * 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+    * 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
     */
     @SerializedName("Url")
     @Expose
@@ -51,7 +51,7 @@ public class CreateTaskExRequest extends AbstractModel{
     private String TaskName;
 
     /**
-    * 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+    * 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
     */
     @SerializedName("AgentGroupId")
     @Expose
@@ -72,21 +72,21 @@ public class CreateTaskExRequest extends AbstractModel{
     private Long IsHeader;
 
     /**
-    * url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+    * URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
     */
     @SerializedName("SslVer")
     @Expose
     private String SslVer;
 
     /**
-    * POST 请求数据。空字符串表示非POST请求
+    * POST请求数据。空字符串表示非POST请求
     */
     @SerializedName("PostData")
     @Expose
     private String PostData;
 
     /**
-    * 用户agent 信息
+    * 用户Agent信息
     */
     @SerializedName("UserAgent")
     @Expose
@@ -107,28 +107,28 @@ public class CreateTaskExRequest extends AbstractModel{
     private Long CheckType;
 
     /**
-    * 需要设置的cookie信息
+    * 需要设置的Cookie信息
     */
     @SerializedName("Cookie")
     @Expose
     private String Cookie;
 
     /**
-    * 任务号。用于验证且修改任务时传入原任务号
+    * 任务ID，用于验证且修改任务时传入原任务ID
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+    * 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 登陆服务器的密码
+    * 登录服务器的密码
     */
     @SerializedName("PassWord")
     @Expose
@@ -142,7 +142,7 @@ public class CreateTaskExRequest extends AbstractModel{
     private Long ReqDataType;
 
     /**
-    * 发起tcp, udp请求的协议请求数据
+    * 发起TCP, UDP请求的协议请求数据
     */
     @SerializedName("ReqData")
     @Expose
@@ -156,21 +156,21 @@ public class CreateTaskExRequest extends AbstractModel{
     private Long RespDataType;
 
     /**
-    * 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+    * 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
     */
     @SerializedName("RespData")
     @Expose
     private String RespData;
 
     /**
-    * 目的dns服务器  可以为空字符串
+    * 目的DNS服务器  可以为空字符串
     */
     @SerializedName("DnsSvr")
     @Expose
     private String DnsSvr;
 
     /**
-    * 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+    * 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
     */
     @SerializedName("DnsCheckIp")
     @Expose
@@ -184,14 +184,14 @@ public class CreateTaskExRequest extends AbstractModel{
     private String DnsQueryType;
 
     /**
-    * 是否使用安全链接ssl  0 不使用，1 使用
+    * 是否使用安全链接SSL， 0 不使用，1 使用
     */
     @SerializedName("UseSecConn")
     @Expose
     private Long UseSecConn;
 
     /**
-    * ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+    * FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
     */
     @SerializedName("NeedAuth")
     @Expose
@@ -242,16 +242,16 @@ public class CreateTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip) 
-     * @return Url 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+     * Get 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP) 
+     * @return Url 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
-     * @param Url 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+     * Set 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
+     * @param Url 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -290,16 +290,16 @@ public class CreateTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填 
-     * @return AgentGroupId 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+     * Get 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填 
+     * @return AgentGroupId 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
      */
     public Long getAgentGroupId() {
         return this.AgentGroupId;
     }
 
     /**
-     * Set 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
-     * @param AgentGroupId 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+     * Set 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+     * @param AgentGroupId 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
      */
     public void setAgentGroupId(Long AgentGroupId) {
         this.AgentGroupId = AgentGroupId;
@@ -338,48 +338,48 @@ public class CreateTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一 
-     * @return SslVer url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * Get URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一 
+     * @return SslVer URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
      */
     public String getSslVer() {
         return this.SslVer;
     }
 
     /**
-     * Set url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
-     * @param SslVer url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * Set URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * @param SslVer URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
      */
     public void setSslVer(String SslVer) {
         this.SslVer = SslVer;
     }
 
     /**
-     * Get POST 请求数据。空字符串表示非POST请求 
-     * @return PostData POST 请求数据。空字符串表示非POST请求
+     * Get POST请求数据。空字符串表示非POST请求 
+     * @return PostData POST请求数据。空字符串表示非POST请求
      */
     public String getPostData() {
         return this.PostData;
     }
 
     /**
-     * Set POST 请求数据。空字符串表示非POST请求
-     * @param PostData POST 请求数据。空字符串表示非POST请求
+     * Set POST请求数据。空字符串表示非POST请求
+     * @param PostData POST请求数据。空字符串表示非POST请求
      */
     public void setPostData(String PostData) {
         this.PostData = PostData;
     }
 
     /**
-     * Get 用户agent 信息 
-     * @return UserAgent 用户agent 信息
+     * Get 用户Agent信息 
+     * @return UserAgent 用户Agent信息
      */
     public String getUserAgent() {
         return this.UserAgent;
     }
 
     /**
-     * Set 用户agent 信息
-     * @param UserAgent 用户agent 信息
+     * Set 用户Agent信息
+     * @param UserAgent 用户Agent信息
      */
     public void setUserAgent(String UserAgent) {
         this.UserAgent = UserAgent;
@@ -418,64 +418,64 @@ public class CreateTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要设置的cookie信息 
-     * @return Cookie 需要设置的cookie信息
+     * Get 需要设置的Cookie信息 
+     * @return Cookie 需要设置的Cookie信息
      */
     public String getCookie() {
         return this.Cookie;
     }
 
     /**
-     * Set 需要设置的cookie信息
-     * @param Cookie 需要设置的cookie信息
+     * Set 需要设置的Cookie信息
+     * @param Cookie 需要设置的Cookie信息
      */
     public void setCookie(String Cookie) {
         this.Cookie = Cookie;
     }
 
     /**
-     * Get 任务号。用于验证且修改任务时传入原任务号 
-     * @return TaskId 任务号。用于验证且修改任务时传入原任务号
+     * Get 任务ID，用于验证且修改任务时传入原任务ID 
+     * @return TaskId 任务ID，用于验证且修改任务时传入原任务ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务号。用于验证且修改任务时传入原任务号
-     * @param TaskId 任务号。用于验证且修改任务时传入原任务号
+     * Set 任务ID，用于验证且修改任务时传入原任务ID
+     * @param TaskId 任务ID，用于验证且修改任务时传入原任务ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。 
-     * @return UserName 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+     * Get 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测 
+     * @return UserName 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
-     * @param UserName 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+     * Set 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
+     * @param UserName 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 登陆服务器的密码 
-     * @return PassWord 登陆服务器的密码
+     * Get 登录服务器的密码 
+     * @return PassWord 登录服务器的密码
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set 登陆服务器的密码
-     * @param PassWord 登陆服务器的密码
+     * Set 登录服务器的密码
+     * @param PassWord 登录服务器的密码
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
@@ -498,16 +498,16 @@ public class CreateTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 发起tcp, udp请求的协议请求数据 
-     * @return ReqData 发起tcp, udp请求的协议请求数据
+     * Get 发起TCP, UDP请求的协议请求数据 
+     * @return ReqData 发起TCP, UDP请求的协议请求数据
      */
     public String getReqData() {
         return this.ReqData;
     }
 
     /**
-     * Set 发起tcp, udp请求的协议请求数据
-     * @param ReqData 发起tcp, udp请求的协议请求数据
+     * Set 发起TCP, UDP请求的协议请求数据
+     * @param ReqData 发起TCP, UDP请求的协议请求数据
      */
     public void setReqData(String ReqData) {
         this.ReqData = ReqData;
@@ -530,48 +530,48 @@ public class CreateTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过 
-     * @return RespData 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * Get 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过 
+     * @return RespData 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
      */
     public String getRespData() {
         return this.RespData;
     }
 
     /**
-     * Set 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
-     * @param RespData 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * Set 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * @param RespData 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
      */
     public void setRespData(String RespData) {
         this.RespData = RespData;
     }
 
     /**
-     * Get 目的dns服务器  可以为空字符串 
-     * @return DnsSvr 目的dns服务器  可以为空字符串
+     * Get 目的DNS服务器  可以为空字符串 
+     * @return DnsSvr 目的DNS服务器  可以为空字符串
      */
     public String getDnsSvr() {
         return this.DnsSvr;
     }
 
     /**
-     * Set 目的dns服务器  可以为空字符串
-     * @param DnsSvr 目的dns服务器  可以为空字符串
+     * Set 目的DNS服务器  可以为空字符串
+     * @param DnsSvr 目的DNS服务器  可以为空字符串
      */
     public void setDnsSvr(String DnsSvr) {
         this.DnsSvr = DnsSvr;
     }
 
     /**
-     * Get 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验 
-     * @return DnsCheckIp 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+     * Get 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验 
+     * @return DnsCheckIp 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
      */
     public String getDnsCheckIp() {
         return this.DnsCheckIp;
     }
 
     /**
-     * Set 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
-     * @param DnsCheckIp 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+     * Set 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
+     * @param DnsCheckIp 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
      */
     public void setDnsCheckIp(String DnsCheckIp) {
         this.DnsCheckIp = DnsCheckIp;
@@ -594,32 +594,32 @@ public class CreateTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否使用安全链接ssl  0 不使用，1 使用 
-     * @return UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
+     * Get 是否使用安全链接SSL， 0 不使用，1 使用 
+     * @return UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public Long getUseSecConn() {
         return this.UseSecConn;
     }
 
     /**
-     * Set 是否使用安全链接ssl  0 不使用，1 使用
-     * @param UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
+     * Set 是否使用安全链接SSL， 0 不使用，1 使用
+     * @param UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public void setUseSecConn(Long UseSecConn) {
         this.UseSecConn = UseSecConn;
     }
 
     /**
-     * Get ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证 
-     * @return NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * Get FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证 
+     * @return NeedAuth FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
      */
     public Long getNeedAuth() {
         return this.NeedAuth;
     }
 
     /**
-     * Set ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
-     * @param NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * Set FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
+     * @param NeedAuth FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
      */
     public void setNeedAuth(Long NeedAuth) {
         this.NeedAuth = NeedAuth;

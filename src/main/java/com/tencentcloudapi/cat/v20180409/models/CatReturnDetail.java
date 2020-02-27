@@ -51,7 +51,7 @@ public class CatReturnDetail extends AbstractModel{
     private String MapKey;
 
     /**
-    * 拨测目标的ip
+    * 拨测目标的IP
     */
     @SerializedName("ServerIp")
     @Expose
@@ -143,16 +143,16 @@ public class CatReturnDetail extends AbstractModel{
     }
 
     /**
-     * Get 拨测目标的ip 
-     * @return ServerIp 拨测目标的ip
+     * Get 拨测目标的IP 
+     * @return ServerIp 拨测目标的IP
      */
     public String getServerIp() {
         return this.ServerIp;
     }
 
     /**
-     * Set 拨测目标的ip
-     * @param ServerIp 拨测目标的ip
+     * Set 拨测目标的IP
+     * @param ServerIp 拨测目标的IP
      */
     public void setServerIp(String ServerIp) {
         this.ServerIp = ServerIp;

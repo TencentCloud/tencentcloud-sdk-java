@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeLiveDomainsResponse extends AbstractModel{
 
     /**
-    * 总记录数
+    * 总记录数。
     */
     @SerializedName("AllCount")
     @Expose
     private Long AllCount;
 
     /**
-    * 域名详细信息列表
+    * 域名详细信息列表。
     */
     @SerializedName("DomainList")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeLiveDomainsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总记录数 
-     * @return AllCount 总记录数
+     * Get 总记录数。 
+     * @return AllCount 总记录数。
      */
     public Long getAllCount() {
         return this.AllCount;
     }
 
     /**
-     * Set 总记录数
-     * @param AllCount 总记录数
+     * Set 总记录数。
+     * @param AllCount 总记录数。
      */
     public void setAllCount(Long AllCount) {
         this.AllCount = AllCount;
     }
 
     /**
-     * Get 域名详细信息列表 
-     * @return DomainList 域名详细信息列表
+     * Get 域名详细信息列表。 
+     * @return DomainList 域名详细信息列表。
      */
     public DomainInfo [] getDomainList() {
         return this.DomainList;
     }
 
     /**
-     * Set 域名详细信息列表
-     * @param DomainList 域名详细信息列表
+     * Set 域名详细信息列表。
+     * @param DomainList 域名详细信息列表。
      */
     public void setDomainList(DomainInfo [] DomainList) {
         this.DomainList = DomainList;

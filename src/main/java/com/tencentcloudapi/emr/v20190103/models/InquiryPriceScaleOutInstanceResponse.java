@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
 
     /**
-    * 刊例价
+    * 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
@@ -31,7 +31,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private String OriginalCost;
 
     /**
-    * 折扣价格
+    * 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
@@ -39,7 +39,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private String DiscountCost;
 
     /**
-    * 单位
+    * 扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
@@ -47,7 +49,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private String Unit;
 
     /**
-    * 询价配置
+    * 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceSpec")
@@ -62,9 +64,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 刊例价
+     * Get 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCost 刊例价
+     * @return OriginalCost 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCost() {
@@ -72,9 +74,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 刊例价
+     * Set 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCost 刊例价
+     * @param OriginalCost 原价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(String OriginalCost) {
@@ -82,9 +84,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 折扣价格
+     * Get 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiscountCost 折扣价格
+     * @return DiscountCost 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountCost() {
@@ -92,9 +94,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 折扣价格
+     * Set 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiscountCost 折扣价格
+     * @param DiscountCost 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(String DiscountCost) {
@@ -102,9 +104,13 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 单位
+     * Get 扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Unit 单位
+     * @return Unit 扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
@@ -112,9 +118,13 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 单位
+     * Set 扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Unit 单位
+     * @param Unit 扩容的时间单位。取值范围：
+<li>s：表示秒。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
@@ -122,9 +132,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 询价配置
+     * Get 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PriceSpec 询价配置
+     * @return PriceSpec 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PriceResource getPriceSpec() {
@@ -132,9 +142,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 询价配置
+     * Set 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PriceSpec 询价配置
+     * @param PriceSpec 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceSpec(PriceResource PriceSpec) {

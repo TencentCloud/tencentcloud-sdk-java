@@ -88,6 +88,13 @@ public class CCN extends AbstractModel{
     private String BandwidthLimitType;
 
     /**
+    * 标签键值对。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
@@ -240,6 +247,22 @@ public class CCN extends AbstractModel{
     }
 
     /**
+     * Get 标签键值对。 
+     * @return TagSet 标签键值对。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。
+     * @param TagSet 标签键值对。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +275,7 @@ public class CCN extends AbstractModel{
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

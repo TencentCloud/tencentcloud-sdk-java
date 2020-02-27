@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
 
     /**
-    * 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
+    * 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+    * 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
     */
     @SerializedName("Price")
     @Expose
@@ -44,32 +44,32 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元 
-     * @return OriginalPrice 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
+     * Get 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元 
+     * @return OriginalPrice 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
-     * @param OriginalPrice 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
+     * Set 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
+     * @param OriginalPrice 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元 
-     * @return Price 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+     * Get 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元 
+     * @return Price 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
-     * @param Price 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+     * Set 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
+     * @param Price 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
      */
     public void setPrice(Long Price) {
         this.Price = Price;

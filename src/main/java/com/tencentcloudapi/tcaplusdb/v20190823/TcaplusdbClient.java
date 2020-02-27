@@ -56,7 +56,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *选中目标表，上传并校验改表文件，返回是否允许修改表结构
+     *选中目标表格，上传并校验改表文件，返回是否允许修改表格结构的结果。
      * @param req CompareIdlFilesRequest
      * @return CompareIdlFilesResponse
      * @throws TencentCloudSDKException
@@ -74,17 +74,17 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *本接口用于创建TcaplusDB应用
-     * @param req CreateAppRequest
-     * @return CreateAppResponse
+     *用户创建备份任务
+     * @param req CreateBackupRequest
+     * @return CreateBackupResponse
      * @throws TencentCloudSDKException
      */
-    public CreateAppResponse CreateApp(CreateAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAppResponse> rsp = null;
+    public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAppResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateApp"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateBackup"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -92,7 +92,43 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *根据选择的IDL文件列表，批量创建表
+     *本接口用于创建TcaplusDB集群
+     * @param req CreateClusterRequest
+     * @return CreateClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCluster"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在TcaplusDB集群下创建表格组
+     * @param req CreateTableGroupRequest
+     * @return CreateTableGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTableGroupResponse CreateTableGroup(CreateTableGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTableGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTableGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTableGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据选择的IDL文件列表，批量创建表格
      * @param req CreateTablesRequest
      * @return CreateTablesResponse
      * @throws TencentCloudSDKException
@@ -110,17 +146,17 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *在TcaplusDB应用下创建大区
-     * @param req CreateZoneRequest
-     * @return CreateZoneResponse
+     *删除TcaplusDB集群，必须在集群所属所有资源（包括表格组，表）都已经释放的情况下才会成功。
+     * @param req DeleteClusterRequest
+     * @return DeleteClusterResponse
      * @throws TencentCloudSDKException
      */
-    public CreateZoneResponse CreateZone(CreateZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateZoneResponse> rsp = null;
+    public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateZoneResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateZone"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCluster"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -128,25 +164,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *删除TcaplusDB应用实例，必须在应用实例所属所有资源（包括大区，表）都已经释放的情况下才会成功。
-     * @param req DeleteAppRequest
-     * @return DeleteAppResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteAppResponse DeleteApp(DeleteAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAppResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAppResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteApp"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *指定应用ID和待删除IDL文件的信息，删除目标文件，如果文件正在被表关联则删除失败。
+     *指定集群ID和待删除IDL文件的信息，删除目标文件，如果文件正在被表关联则删除失败。
      * @param req DeleteIdlFilesRequest
      * @return DeleteIdlFilesResponse
      * @throws TencentCloudSDKException
@@ -157,6 +175,24 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIdlFilesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteIdlFiles"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除表格组
+     * @param req DeleteTableGroupRequest
+     * @return DeleteTableGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTableGroupResponse DeleteTableGroup(DeleteTableGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTableGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTableGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTableGroup"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -182,35 +218,17 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *删除大区
-     * @param req DeleteZoneRequest
-     * @return DeleteZoneResponse
+     *查询TcaplusDB集群列表，包含集群详细信息。
+     * @param req DescribeClustersRequest
+     * @return DescribeClustersResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteZoneResponse DeleteZone(DeleteZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteZoneResponse> rsp = null;
+    public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClustersResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteZoneResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteZone"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查询TcaplusDB应用列表，包含应用详细信息。
-     * @param req DescribeAppsRequest
-     * @return DescribeAppsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAppsResponse DescribeApps(DescribeAppsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAppsResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAppsResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeApps"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusters"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -247,6 +265,24 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRegions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询表格组列表
+     * @param req DescribeTableGroupsRequest
+     * @return DescribeTableGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableGroupsResponse DescribeTableGroups(DescribeTableGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTableGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTableGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTableGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -326,24 +362,6 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *查询大区列表
-     * @param req DescribeZonesRequest
-     * @return DescribeZonesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeZonesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZones"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改指定的应用名称
      * @param req ModifyAppNameRequest
      * @return ModifyAppNameResponse
@@ -362,17 +380,53 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *修改指定AppInstanceId的实例密码，后台将在旧密码失效之前同时支持TcaplusDB SDK使用旧密码和新密码访问数据库。在旧密码失效之前不能提交新的密码修改请求，在旧密码失效之后不能提交修改旧密码过期时间的请求。
-     * @param req ModifyAppPasswordRequest
-     * @return ModifyAppPasswordResponse
+     *修改指定的集群名称
+     * @param req ModifyClusterNameRequest
+     * @return ModifyClusterNameResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyAppPasswordResponse ModifyAppPassword(ModifyAppPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAppPasswordResponse> rsp = null;
+    public ModifyClusterNameResponse ModifyClusterName(ModifyClusterNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterNameResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAppPasswordResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterNameResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAppPassword"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改指定集群的密码，后台将在旧密码失效之前同时支持TcaplusDB SDK使用旧密码和新密码访问数据库。在旧密码失效之前不能提交新的密码修改请求，在旧密码失效之后不能提交修改旧密码过期时间的请求。
+     * @param req ModifyClusterPasswordRequest
+     * @return ModifyClusterPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterPasswordResponse ModifyClusterPassword(ModifyClusterPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterPasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterPasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterPassword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改TcaplusDB表格组名称
+     * @param req ModifyTableGroupNameRequest
+     * @return ModifyTableGroupNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTableGroupNameResponse ModifyTableGroupName(ModifyTableGroupNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTableGroupNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTableGroupNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTableGroupName"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -398,7 +452,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *表扩缩容
+     *表格扩缩容
      * @param req ModifyTableQuotasRequest
      * @return ModifyTableQuotasResponse
      * @throws TencentCloudSDKException
@@ -434,24 +488,6 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *修改TcaplusDB大区名称
-     * @param req ModifyZoneNameRequest
-     * @return ModifyZoneNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyZoneNameResponse ModifyZoneName(ModifyZoneNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneNameResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyZoneNameResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyZoneName"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *恢复回收站中，用户自行删除的表。对欠费待释放的表无效。
      * @param req RecoverRecycleTablesRequest
      * @return RecoverRecycleTablesResponse
@@ -470,7 +506,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *表数据回档
+     *表格数据回档
      * @param req RollbackTablesRequest
      * @return RollbackTablesResponse
      * @throws TencentCloudSDKException
@@ -488,7 +524,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *上传并校验加表文件，返回校验合法的表定义
+     *上传并校验创建表格文件，返回校验合法的表格定义
      * @param req VerifyIdlFilesRequest
      * @return VerifyIdlFilesResponse
      * @throws TencentCloudSDKException

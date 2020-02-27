@@ -23,40 +23,40 @@ import java.util.HashMap;
 public class RecoverRecycleTablesRequest extends AbstractModel{
 
     /**
-    * 表所在应用实例ID
+    * 表所在集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
     * 待恢复表信息
     */
     @SerializedName("SelectedTables")
     @Expose
-    private SelectedTableInfo [] SelectedTables;
+    private SelectedTableInfoNew [] SelectedTables;
 
     /**
-     * Get 表所在应用实例ID 
-     * @return ApplicationId 表所在应用实例ID
+     * Get 表所在集群ID 
+     * @return ClusterId 表所在集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 表所在应用实例ID
-     * @param ApplicationId 表所在应用实例ID
+     * Set 表所在集群ID
+     * @param ClusterId 表所在集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
      * Get 待恢复表信息 
      * @return SelectedTables 待恢复表信息
      */
-    public SelectedTableInfo [] getSelectedTables() {
+    public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
@@ -64,7 +64,7 @@ public class RecoverRecycleTablesRequest extends AbstractModel{
      * Set 待恢复表信息
      * @param SelectedTables 待恢复表信息
      */
-    public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
+    public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;
     }
 
@@ -72,7 +72,7 @@ public class RecoverRecycleTablesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
 
     }

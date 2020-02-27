@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyTaskExResponse extends AbstractModel{
 
     /**
-    * 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+    * 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyTaskExResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。 
-     * @return TaskId 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * Get 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。 
+     * @return TaskId 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
-     * @param TaskId 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * Set 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * @param TaskId 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

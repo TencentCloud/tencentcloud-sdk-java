@@ -58,6 +58,20 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private ClusterExtraArgs ExtraArgs;
 
     /**
+    * 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
+    * 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+    */
+    @SerializedName("IsNonStaticIpMode")
+    @Expose
+    private Boolean IsNonStaticIpMode;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -138,6 +152,38 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。 
+     * @return NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     * @param NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。 
+     * @return IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+     */
+    public Boolean getIsNonStaticIpMode() {
+        return this.IsNonStaticIpMode;
+    }
+
+    /**
+     * Set 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+     * @param IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+     */
+    public void setIsNonStaticIpMode(Boolean IsNonStaticIpMode) {
+        this.IsNonStaticIpMode = IsNonStaticIpMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
 
     }
 }

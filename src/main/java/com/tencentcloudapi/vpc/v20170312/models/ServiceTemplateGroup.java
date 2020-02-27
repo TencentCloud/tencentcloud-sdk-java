@@ -51,6 +51,13 @@ public class ServiceTemplateGroup extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 协议端口模板实例信息。
+    */
+    @SerializedName("ServiceTemplateSet")
+    @Expose
+    private ServiceTemplate [] ServiceTemplateSet;
+
+    /**
      * Get 协议端口模板集合实例ID，例如：ppmg-2klmrefu。 
      * @return ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
      */
@@ -115,6 +122,22 @@ public class ServiceTemplateGroup extends AbstractModel{
     }
 
     /**
+     * Get 协议端口模板实例信息。 
+     * @return ServiceTemplateSet 协议端口模板实例信息。
+     */
+    public ServiceTemplate [] getServiceTemplateSet() {
+        return this.ServiceTemplateSet;
+    }
+
+    /**
+     * Set 协议端口模板实例信息。
+     * @param ServiceTemplateSet 协议端口模板实例信息。
+     */
+    public void setServiceTemplateSet(ServiceTemplate [] ServiceTemplateSet) {
+        this.ServiceTemplateSet = ServiceTemplateSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ServiceTemplateGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceTemplateGroupName", this.ServiceTemplateGroupName);
         this.setParamArraySimple(map, prefix + "ServiceTemplateIdSet.", this.ServiceTemplateIdSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "ServiceTemplateSet.", this.ServiceTemplateSet);
 
     }
 }

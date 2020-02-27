@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel{
 
     /**
-    * 需要查询任务所属的应用ID列表
+    * 需要查询任务所属的集群ID列表
     */
-    @SerializedName("ApplicationIds")
+    @SerializedName("ClusterIds")
     @Expose
-    private String [] ApplicationIds;
+    private String [] ClusterIds;
 
     /**
     * 需要查询的任务ID列表
@@ -44,33 +44,33 @@ public class DescribeTasksRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 偏移量
+    * 查询列表偏移量
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 任务列表大小
+    * 查询列表返回记录数
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 需要查询任务所属的应用ID列表 
-     * @return ApplicationIds 需要查询任务所属的应用ID列表
+     * Get 需要查询任务所属的集群ID列表 
+     * @return ClusterIds 需要查询任务所属的集群ID列表
      */
-    public String [] getApplicationIds() {
-        return this.ApplicationIds;
+    public String [] getClusterIds() {
+        return this.ClusterIds;
     }
 
     /**
-     * Set 需要查询任务所属的应用ID列表
-     * @param ApplicationIds 需要查询任务所属的应用ID列表
+     * Set 需要查询任务所属的集群ID列表
+     * @param ClusterIds 需要查询任务所属的集群ID列表
      */
-    public void setApplicationIds(String [] ApplicationIds) {
-        this.ApplicationIds = ApplicationIds;
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
     }
 
     /**
@@ -106,32 +106,32 @@ public class DescribeTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 查询列表偏移量 
+     * @return Offset 查询列表偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 查询列表偏移量
+     * @param Offset 查询列表偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 任务列表大小 
-     * @return Limit 任务列表大小
+     * Get 查询列表返回记录数 
+     * @return Limit 查询列表返回记录数
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 任务列表大小
-     * @param Limit 任务列表大小
+     * Set 查询列表返回记录数
+     * @param Limit 查询列表返回记录数
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -141,7 +141,7 @@ public class DescribeTasksRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

@@ -37,6 +37,14 @@ public class GetFederationTokenResponse extends AbstractModel{
     private Long ExpiredTime;
 
     /**
+    * 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Expiration")
+    @Expose
+    private String Expiration;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class GetFederationTokenResponse extends AbstractModel{
     }
 
     /**
+     * Get 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Expiration 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpiration() {
+        return this.Expiration;
+    }
+
+    /**
+     * Set 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Expiration 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpiration(String Expiration) {
+        this.Expiration = Expiration;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +125,7 @@ public class GetFederationTokenResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Credentials.", this.Credentials);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "Expiration", this.Expiration);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

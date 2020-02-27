@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TerminateInstanceRequest extends AbstractModel{
 
     /**
-    * 被销毁的实例ID
+    * 实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 销毁节点ID
+    * 销毁节点ID。该参数为预留参数，用户无需配置。
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-     * Get 被销毁的实例ID 
-     * @return InstanceId 被销毁的实例ID
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 被销毁的实例ID
-     * @param InstanceId 被销毁的实例ID
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 销毁节点ID 
-     * @return ResourceIds 销毁节点ID
+     * Get 销毁节点ID。该参数为预留参数，用户无需配置。 
+     * @return ResourceIds 销毁节点ID。该参数为预留参数，用户无需配置。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 销毁节点ID
-     * @param ResourceIds 销毁节点ID
+     * Set 销毁节点ID。该参数为预留参数，用户无需配置。
+     * @param ResourceIds 销毁节点ID。该参数为预留参数，用户无需配置。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

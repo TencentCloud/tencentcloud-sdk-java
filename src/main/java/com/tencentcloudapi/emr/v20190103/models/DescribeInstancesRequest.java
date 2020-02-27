@@ -23,161 +23,201 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+    * 集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
     */
     @SerializedName("DisplayStrategy")
     @Expose
     private String DisplayStrategy;
 
     /**
-    * 查询列表,  如果不填写，返回该AppId下所有实例列表
+    * 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 查询偏移量，默认0
+    * 页编号，默认值为0，表示第一页。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询结果限制，默认值10
+    * 每页返回数量，默认值为10，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 项目列表，默认值-1
+    * 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 排序字段，当前支持以下排序字段：clusterId、addTime、status
+    * 排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 排序方法，0降序，1升序
+    * 按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
     */
     @SerializedName("Asc")
     @Expose
     private Long Asc;
 
     /**
-     * Get 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage 
-     * @return DisplayStrategy 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     * Get 集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li> 
+     * @return DisplayStrategy 集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
      */
     public String getDisplayStrategy() {
         return this.DisplayStrategy;
     }
 
     /**
-     * Set 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
-     * @param DisplayStrategy 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     * Set 集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
+     * @param DisplayStrategy 集群筛选策略。取值范围：
+<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li>
+<li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li>
+<li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
      */
     public void setDisplayStrategy(String DisplayStrategy) {
         this.DisplayStrategy = DisplayStrategy;
     }
 
     /**
-     * Get 查询列表,  如果不填写，返回该AppId下所有实例列表 
-     * @return InstanceIds 查询列表,  如果不填写，返回该AppId下所有实例列表
+     * Get 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。 
+     * @return InstanceIds 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 查询列表,  如果不填写，返回该AppId下所有实例列表
-     * @param InstanceIds 查询列表,  如果不填写，返回该AppId下所有实例列表
+     * Set 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
+     * @param InstanceIds 按照一个或者多个实例ID查询。实例ID形如: emr-xxxxxxxx 。(此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的 Ids.N 一节)。如果不填写实例ID，返回该APPID下所有实例列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 查询偏移量，默认0 
-     * @return Offset 查询偏移量，默认0
+     * Get 页编号，默认值为0，表示第一页。 
+     * @return Offset 页编号，默认值为0，表示第一页。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询偏移量，默认0
-     * @param Offset 查询偏移量，默认0
+     * Set 页编号，默认值为0，表示第一页。
+     * @param Offset 页编号，默认值为0，表示第一页。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询结果限制，默认值10 
-     * @return Limit 查询结果限制，默认值10
+     * Get 每页返回数量，默认值为10，最大值为100。 
+     * @return Limit 每页返回数量，默认值为10，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制，默认值10
-     * @param Limit 查询结果限制，默认值10
+     * Set 每页返回数量，默认值为10，最大值为100。
+     * @param Limit 每页返回数量，默认值为10，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 项目列表，默认值-1 
-     * @return ProjectId 项目列表，默认值-1
+     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。 
+     * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目列表，默认值-1
-     * @param ProjectId 项目列表，默认值-1
+     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
+     * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/378/4400) 的返回值中的 projectId 字段来获取。如果该参数取值为-1，返回所有实例列表。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 排序字段，当前支持以下排序字段：clusterId、addTime、status 
-     * @return OrderField 排序字段，当前支持以下排序字段：clusterId、addTime、status
+     * Get 排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li> 
+     * @return OrderField 排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段，当前支持以下排序字段：clusterId、addTime、status
-     * @param OrderField 排序字段，当前支持以下排序字段：clusterId、addTime、status
+     * Set 排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
+     * @param OrderField 排序字段。取值范围：
+<li>clusterId：表示按照实例ID排序。</li>
+<li>addTime：表示按照实例创建时间排序。</li>
+<li>status：表示按照实例的状态码排序。</li>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 排序方法，0降序，1升序 
-     * @return Asc 排序方法，0降序，1升序
+     * Get 按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。 
+     * @return Asc 按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set 排序方法，0降序，1升序
-     * @param Asc 排序方法，0降序，1升序
+     * Set 按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
+     * @param Asc 按照OrderField升序或者降序进行排序。取值范围：
+<li>0：表示降序。</li>
+<li>1：表示升序。</li>默认值为0。
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;

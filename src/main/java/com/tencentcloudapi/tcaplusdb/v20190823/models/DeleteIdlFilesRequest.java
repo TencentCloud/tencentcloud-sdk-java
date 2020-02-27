@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class DeleteIdlFilesRequest extends AbstractModel{
 
     /**
-    * 应用实例ID
+    * IDL所属集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
     * 待删除的IDL文件信息列表
@@ -37,19 +37,19 @@ public class DeleteIdlFilesRequest extends AbstractModel{
     private IdlFileInfo [] IdlFiles;
 
     /**
-     * Get 应用实例ID 
-     * @return ApplicationId 应用实例ID
+     * Get IDL所属集群ID 
+     * @return ClusterId IDL所属集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 应用实例ID
-     * @param ApplicationId 应用实例ID
+     * Set IDL所属集群ID
+     * @param ClusterId IDL所属集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class DeleteIdlFilesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
 
     }

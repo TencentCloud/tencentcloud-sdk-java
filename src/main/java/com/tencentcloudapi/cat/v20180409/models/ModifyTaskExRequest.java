@@ -30,7 +30,7 @@ public class ModifyTaskExRequest extends AbstractModel{
     private String CatTypeName;
 
     /**
-    * 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+    * 拨测的URL，例如：www.qq.com (URL域名解析需要能解析出具体的IP)
     */
     @SerializedName("Url")
     @Expose
@@ -51,14 +51,14 @@ public class ModifyTaskExRequest extends AbstractModel{
     private String TaskName;
 
     /**
-    * 验证成功的拨测任务id
+    * 验证成功的拨测任务ID
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的groupId的值。注意，Type为0时，AgentGroupId为必填
+    * 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
     */
     @SerializedName("AgentGroupId")
     @Expose
@@ -79,28 +79,28 @@ public class ModifyTaskExRequest extends AbstractModel{
     private Long Port;
 
     /**
-    * 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
+    * 是否为Header请求（非0 发起Header 请求。为0，且PostData非空，发起POST请求。为0，PostData为空，发起GET请求）
     */
     @SerializedName("IsHeader")
     @Expose
     private Long IsHeader;
 
     /**
-    * url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+    * URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
     */
     @SerializedName("SslVer")
     @Expose
     private String SslVer;
 
     /**
-    * POST 请求数据。空字符串表示非POST请求
+    * POST 请求数据，空字符串表示非POST请求
     */
     @SerializedName("PostData")
     @Expose
     private String PostData;
 
     /**
-    * 用户agent 信息
+    * 用户Agent信息
     */
     @SerializedName("UserAgent")
     @Expose
@@ -114,42 +114,42 @@ public class ModifyTaskExRequest extends AbstractModel{
     private String CheckStr;
 
     /**
-    * 1 表示通过检查结果是否包含checkStr 进行校验
+    * 1 表示通过检查结果是否包含CheckStr 进行校验
     */
     @SerializedName("CheckType")
     @Expose
     private Long CheckType;
 
     /**
-    * 需要设置的cookie信息
+    * 需要设置的Cookie信息
     */
     @SerializedName("Cookie")
     @Expose
     private String Cookie;
 
     /**
-    * 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+    * 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 登陆服务器的密码
+    * 登录服务器的密码
     */
     @SerializedName("PassWord")
     @Expose
     private String PassWord;
 
     /**
-    * 缺省为0。0 表示请求为字符串类型。1表示为二进制类型
+    * 缺省为0，0 表示请求为字符串类型, 1表示为二进制类型
     */
     @SerializedName("ReqDataType")
     @Expose
     private Long ReqDataType;
 
     /**
-    * 发起tcp, udp请求的协议请求数据
+    * 发起TCP, UDP请求的协议请求数据
     */
     @SerializedName("ReqData")
     @Expose
@@ -163,21 +163,21 @@ public class ModifyTaskExRequest extends AbstractModel{
     private String RespDataType;
 
     /**
-    * 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+    * 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
     */
     @SerializedName("RespData")
     @Expose
     private String RespData;
 
     /**
-    * 目的dns服务器  可以为空字符串
+    * 目的DNS服务器，可以为空字符串
     */
     @SerializedName("DnsSvr")
     @Expose
     private String DnsSvr;
 
     /**
-    * 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+    * 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
     */
     @SerializedName("DnsCheckIp")
     @Expose
@@ -191,14 +191,14 @@ public class ModifyTaskExRequest extends AbstractModel{
     private String DnsQueryType;
 
     /**
-    * 是否使用安全链接ssl  0 不使用，1 使用
+    * 是否使用安全链接SSL， 0 不使用，1 使用
     */
     @SerializedName("UseSecConn")
     @Expose
     private Long UseSecConn;
 
     /**
-    * ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+    * FTP登录验证方式，  0 不验证  1 匿名登录  2 需要身份验证
     */
     @SerializedName("NeedAuth")
     @Expose
@@ -235,16 +235,16 @@ public class ModifyTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip) 
-     * @return Url 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+     * Get 拨测的URL，例如：www.qq.com (URL域名解析需要能解析出具体的IP) 
+     * @return Url 拨测的URL，例如：www.qq.com (URL域名解析需要能解析出具体的IP)
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
-     * @param Url 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+     * Set 拨测的URL，例如：www.qq.com (URL域名解析需要能解析出具体的IP)
+     * @param Url 拨测的URL，例如：www.qq.com (URL域名解析需要能解析出具体的IP)
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -283,32 +283,32 @@ public class ModifyTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 验证成功的拨测任务id 
-     * @return TaskId 验证成功的拨测任务id
+     * Get 验证成功的拨测任务ID 
+     * @return TaskId 验证成功的拨测任务ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 验证成功的拨测任务id
-     * @param TaskId 验证成功的拨测任务id
+     * Set 验证成功的拨测任务ID
+     * @param TaskId 验证成功的拨测任务ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的groupId的值。注意，Type为0时，AgentGroupId为必填 
-     * @return AgentGroupId 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的groupId的值。注意，Type为0时，AgentGroupId为必填
+     * Get 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填 
+     * @return AgentGroupId 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
      */
     public Long getAgentGroupId() {
         return this.AgentGroupId;
     }
 
     /**
-     * Set 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的groupId的值。注意，Type为0时，AgentGroupId为必填
-     * @param AgentGroupId 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的groupId的值。注意，Type为0时，AgentGroupId为必填
+     * Set 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
+     * @param AgentGroupId 拨测分组ID，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroupList 接口，本参数使用返回结果里的GroupId的值。注意，Type为0时，AgentGroupId为必填
      */
     public void setAgentGroupId(Long AgentGroupId) {
         this.AgentGroupId = AgentGroupId;
@@ -347,64 +347,64 @@ public class ModifyTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求） 
-     * @return IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
+     * Get 是否为Header请求（非0 发起Header 请求。为0，且PostData非空，发起POST请求。为0，PostData为空，发起GET请求） 
+     * @return IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData非空，发起POST请求。为0，PostData为空，发起GET请求）
      */
     public Long getIsHeader() {
         return this.IsHeader;
     }
 
     /**
-     * Set 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
-     * @param IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
+     * Set 是否为Header请求（非0 发起Header 请求。为0，且PostData非空，发起POST请求。为0，PostData为空，发起GET请求）
+     * @param IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData非空，发起POST请求。为0，PostData为空，发起GET请求）
      */
     public void setIsHeader(Long IsHeader) {
         this.IsHeader = IsHeader;
     }
 
     /**
-     * Get url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一 
-     * @return SslVer url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * Get URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一 
+     * @return SslVer URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
      */
     public String getSslVer() {
         return this.SslVer;
     }
 
     /**
-     * Set url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
-     * @param SslVer url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * Set URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * @param SslVer URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
      */
     public void setSslVer(String SslVer) {
         this.SslVer = SslVer;
     }
 
     /**
-     * Get POST 请求数据。空字符串表示非POST请求 
-     * @return PostData POST 请求数据。空字符串表示非POST请求
+     * Get POST 请求数据，空字符串表示非POST请求 
+     * @return PostData POST 请求数据，空字符串表示非POST请求
      */
     public String getPostData() {
         return this.PostData;
     }
 
     /**
-     * Set POST 请求数据。空字符串表示非POST请求
-     * @param PostData POST 请求数据。空字符串表示非POST请求
+     * Set POST 请求数据，空字符串表示非POST请求
+     * @param PostData POST 请求数据，空字符串表示非POST请求
      */
     public void setPostData(String PostData) {
         this.PostData = PostData;
     }
 
     /**
-     * Get 用户agent 信息 
-     * @return UserAgent 用户agent 信息
+     * Get 用户Agent信息 
+     * @return UserAgent 用户Agent信息
      */
     public String getUserAgent() {
         return this.UserAgent;
     }
 
     /**
-     * Set 用户agent 信息
-     * @param UserAgent 用户agent 信息
+     * Set 用户Agent信息
+     * @param UserAgent 用户Agent信息
      */
     public void setUserAgent(String UserAgent) {
         this.UserAgent = UserAgent;
@@ -427,96 +427,96 @@ public class ModifyTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 1 表示通过检查结果是否包含checkStr 进行校验 
-     * @return CheckType 1 表示通过检查结果是否包含checkStr 进行校验
+     * Get 1 表示通过检查结果是否包含CheckStr 进行校验 
+     * @return CheckType 1 表示通过检查结果是否包含CheckStr 进行校验
      */
     public Long getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set 1 表示通过检查结果是否包含checkStr 进行校验
-     * @param CheckType 1 表示通过检查结果是否包含checkStr 进行校验
+     * Set 1 表示通过检查结果是否包含CheckStr 进行校验
+     * @param CheckType 1 表示通过检查结果是否包含CheckStr 进行校验
      */
     public void setCheckType(Long CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get 需要设置的cookie信息 
-     * @return Cookie 需要设置的cookie信息
+     * Get 需要设置的Cookie信息 
+     * @return Cookie 需要设置的Cookie信息
      */
     public String getCookie() {
         return this.Cookie;
     }
 
     /**
-     * Set 需要设置的cookie信息
-     * @param Cookie 需要设置的cookie信息
+     * Set 需要设置的Cookie信息
+     * @param Cookie 需要设置的Cookie信息
      */
     public void setCookie(String Cookie) {
         this.Cookie = Cookie;
     }
 
     /**
-     * Get 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。 
-     * @return UserName 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+     * Get 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测 
+     * @return UserName 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
-     * @param UserName 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+     * Set 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
+     * @param UserName 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 登陆服务器的密码 
-     * @return PassWord 登陆服务器的密码
+     * Get 登录服务器的密码 
+     * @return PassWord 登录服务器的密码
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set 登陆服务器的密码
-     * @param PassWord 登陆服务器的密码
+     * Set 登录服务器的密码
+     * @param PassWord 登录服务器的密码
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
     }
 
     /**
-     * Get 缺省为0。0 表示请求为字符串类型。1表示为二进制类型 
-     * @return ReqDataType 缺省为0。0 表示请求为字符串类型。1表示为二进制类型
+     * Get 缺省为0，0 表示请求为字符串类型, 1表示为二进制类型 
+     * @return ReqDataType 缺省为0，0 表示请求为字符串类型, 1表示为二进制类型
      */
     public Long getReqDataType() {
         return this.ReqDataType;
     }
 
     /**
-     * Set 缺省为0。0 表示请求为字符串类型。1表示为二进制类型
-     * @param ReqDataType 缺省为0。0 表示请求为字符串类型。1表示为二进制类型
+     * Set 缺省为0，0 表示请求为字符串类型, 1表示为二进制类型
+     * @param ReqDataType 缺省为0，0 表示请求为字符串类型, 1表示为二进制类型
      */
     public void setReqDataType(Long ReqDataType) {
         this.ReqDataType = ReqDataType;
     }
 
     /**
-     * Get 发起tcp, udp请求的协议请求数据 
-     * @return ReqData 发起tcp, udp请求的协议请求数据
+     * Get 发起TCP, UDP请求的协议请求数据 
+     * @return ReqData 发起TCP, UDP请求的协议请求数据
      */
     public String getReqData() {
         return this.ReqData;
     }
 
     /**
-     * Set 发起tcp, udp请求的协议请求数据
-     * @param ReqData 发起tcp, udp请求的协议请求数据
+     * Set 发起TCP, UDP请求的协议请求数据
+     * @param ReqData 发起TCP, UDP请求的协议请求数据
      */
     public void setReqData(String ReqData) {
         this.ReqData = ReqData;
@@ -539,48 +539,48 @@ public class ModifyTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过 
-     * @return RespData 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * Get 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过 
+     * @return RespData 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
      */
     public String getRespData() {
         return this.RespData;
     }
 
     /**
-     * Set 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
-     * @param RespData 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * Set 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+     * @param RespData 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
      */
     public void setRespData(String RespData) {
         this.RespData = RespData;
     }
 
     /**
-     * Get 目的dns服务器  可以为空字符串 
-     * @return DnsSvr 目的dns服务器  可以为空字符串
+     * Get 目的DNS服务器，可以为空字符串 
+     * @return DnsSvr 目的DNS服务器，可以为空字符串
      */
     public String getDnsSvr() {
         return this.DnsSvr;
     }
 
     /**
-     * Set 目的dns服务器  可以为空字符串
-     * @param DnsSvr 目的dns服务器  可以为空字符串
+     * Set 目的DNS服务器，可以为空字符串
+     * @param DnsSvr 目的DNS服务器，可以为空字符串
      */
     public void setDnsSvr(String DnsSvr) {
         this.DnsSvr = DnsSvr;
     }
 
     /**
-     * Get 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验 
-     * @return DnsCheckIp 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+     * Get 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验 
+     * @return DnsCheckIp 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
      */
     public String getDnsCheckIp() {
         return this.DnsCheckIp;
     }
 
     /**
-     * Set 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
-     * @param DnsCheckIp 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+     * Set 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
+     * @param DnsCheckIp 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
      */
     public void setDnsCheckIp(String DnsCheckIp) {
         this.DnsCheckIp = DnsCheckIp;
@@ -603,32 +603,32 @@ public class ModifyTaskExRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否使用安全链接ssl  0 不使用，1 使用 
-     * @return UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
+     * Get 是否使用安全链接SSL， 0 不使用，1 使用 
+     * @return UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public Long getUseSecConn() {
         return this.UseSecConn;
     }
 
     /**
-     * Set 是否使用安全链接ssl  0 不使用，1 使用
-     * @param UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
+     * Set 是否使用安全链接SSL， 0 不使用，1 使用
+     * @param UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public void setUseSecConn(Long UseSecConn) {
         this.UseSecConn = UseSecConn;
     }
 
     /**
-     * Get ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证 
-     * @return NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * Get FTP登录验证方式，  0 不验证  1 匿名登录  2 需要身份验证 
+     * @return NeedAuth FTP登录验证方式，  0 不验证  1 匿名登录  2 需要身份验证
      */
     public Long getNeedAuth() {
         return this.NeedAuth;
     }
 
     /**
-     * Set ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
-     * @param NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * Set FTP登录验证方式，  0 不验证  1 匿名登录  2 需要身份验证
+     * @param NeedAuth FTP登录验证方式，  0 不验证  1 匿名登录  2 需要身份验证
      */
     public void setNeedAuth(Long NeedAuth) {
         this.NeedAuth = NeedAuth;

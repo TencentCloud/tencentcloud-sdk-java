@@ -37,7 +37,7 @@ public class CatLog extends AbstractModel{
     private String CatTypeName;
 
     /**
-    * 任务Id
+    * 任务ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -58,14 +58,14 @@ public class CatLog extends AbstractModel{
     private String Isp;
 
     /**
-    * 被拨测Server 的Ip
+    * 被拨测Server的IP
     */
     @SerializedName("ServerIp")
     @Expose
     private String ServerIp;
 
     /**
-    * 被拨测Server 的域名
+    * 被拨测Server的域名
     */
     @SerializedName("DomainName")
     @Expose
@@ -121,7 +121,7 @@ public class CatLog extends AbstractModel{
     private String RespMsg;
 
     /**
-    * 客户端ip
+    * 客户端IP
     */
     @SerializedName("ClientIp")
     @Expose
@@ -209,16 +209,16 @@ public class CatLog extends AbstractModel{
     }
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
@@ -257,32 +257,32 @@ public class CatLog extends AbstractModel{
     }
 
     /**
-     * Get 被拨测Server 的Ip 
-     * @return ServerIp 被拨测Server 的Ip
+     * Get 被拨测Server的IP 
+     * @return ServerIp 被拨测Server的IP
      */
     public String getServerIp() {
         return this.ServerIp;
     }
 
     /**
-     * Set 被拨测Server 的Ip
-     * @param ServerIp 被拨测Server 的Ip
+     * Set 被拨测Server的IP
+     * @param ServerIp 被拨测Server的IP
      */
     public void setServerIp(String ServerIp) {
         this.ServerIp = ServerIp;
     }
 
     /**
-     * Get 被拨测Server 的域名 
-     * @return DomainName 被拨测Server 的域名
+     * Get 被拨测Server的域名 
+     * @return DomainName 被拨测Server的域名
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 被拨测Server 的域名
-     * @param DomainName 被拨测Server 的域名
+     * Set 被拨测Server的域名
+     * @param DomainName 被拨测Server的域名
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
@@ -401,16 +401,16 @@ public class CatLog extends AbstractModel{
     }
 
     /**
-     * Get 客户端ip 
-     * @return ClientIp 客户端ip
+     * Get 客户端IP 
+     * @return ClientIp 客户端IP
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 客户端ip
-     * @param ClientIp 客户端ip
+     * Set 客户端IP
+     * @param ClientIp 客户端IP
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;

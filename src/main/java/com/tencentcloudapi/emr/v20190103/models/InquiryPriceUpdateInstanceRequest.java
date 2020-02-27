@@ -23,138 +23,168 @@ import java.util.HashMap;
 public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
 
     /**
-    * 时间单位。s:按量用例单位。m:包年包月用例单位
+    * 变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 时间长度。按量用例长度为3600。
+    * 变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 变配参数
+    * 节点变配的目标配置。
     */
     @SerializedName("UpdateSpec")
     @Expose
     private UpdateInstanceSettings UpdateSpec;
 
     /**
-    * 计费类型
+    * 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 位置信息
+    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * 货币种类
+    * 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-     * Get 时间单位。s:按量用例单位。m:包年包月用例单位 
-     * @return TimeUnit 时间单位。s:按量用例单位。m:包年包月用例单位
+     * Get 变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
+     * @return TimeUnit 变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时间单位。s:按量用例单位。m:包年包月用例单位
-     * @param TimeUnit 时间单位。s:按量用例单位。m:包年包月用例单位
+     * Set 变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param TimeUnit 变配的时间单位。取值范围：
+<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 时间长度。按量用例长度为3600。 
-     * @return TimeSpan 时间长度。按量用例长度为3600。
+     * Get 变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li> 
+     * @return TimeSpan 变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 时间长度。按量用例长度为3600。
-     * @param TimeSpan 时间长度。按量用例长度为3600。
+     * Set 变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+     * @param TimeSpan 变配的时长。需要结合TimeUnit一起使用。
+<li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 变配参数 
-     * @return UpdateSpec 变配参数
+     * Get 节点变配的目标配置。 
+     * @return UpdateSpec 节点变配的目标配置。
      */
     public UpdateInstanceSettings getUpdateSpec() {
         return this.UpdateSpec;
     }
 
     /**
-     * Set 变配参数
-     * @param UpdateSpec 变配参数
+     * Set 节点变配的目标配置。
+     * @param UpdateSpec 节点变配的目标配置。
      */
     public void setUpdateSpec(UpdateInstanceSettings UpdateSpec) {
         this.UpdateSpec = UpdateSpec;
     }
 
     /**
-     * Get 计费类型 
-     * @return PayMode 计费类型
+     * Get 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li> 
+     * @return PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费类型
-     * @param PayMode 计费类型
+     * Set 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
+     * @param PayMode 实例计费模式。取值范围：
+<li>0：表示按量计费。</li>
+<li>1：表示包年包月。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 位置信息 
-     * @return Placement 位置信息
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
+     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 位置信息
-     * @param Placement 位置信息
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get 货币种类 
-     * @return Currency 货币种类
+     * Get 货币种类。取值范围：
+<li>CNY：表示人民币。</li> 
+     * @return Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 货币种类
-     * @param Currency 货币种类
+     * Set 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
+     * @param Currency 货币种类。取值范围：
+<li>CNY：表示人民币。</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

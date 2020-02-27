@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class ModifyTablesRequest extends AbstractModel{
 
     /**
-    * 待修改表所在应用实例ID
+    * 待修改表格所在集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
     * 选中的改表IDL文件
@@ -37,26 +37,26 @@ public class ModifyTablesRequest extends AbstractModel{
     private IdlFileInfo [] IdlFiles;
 
     /**
-    * 待改表列表
+    * 待改表格列表
     */
     @SerializedName("SelectedTables")
     @Expose
-    private SelectedTableInfo [] SelectedTables;
+    private SelectedTableInfoNew [] SelectedTables;
 
     /**
-     * Get 待修改表所在应用实例ID 
-     * @return ApplicationId 待修改表所在应用实例ID
+     * Get 待修改表格所在集群ID 
+     * @return ClusterId 待修改表格所在集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 待修改表所在应用实例ID
-     * @param ApplicationId 待修改表所在应用实例ID
+     * Set 待修改表格所在集群ID
+     * @param ClusterId 待修改表格所在集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -76,18 +76,18 @@ public class ModifyTablesRequest extends AbstractModel{
     }
 
     /**
-     * Get 待改表列表 
-     * @return SelectedTables 待改表列表
+     * Get 待改表格列表 
+     * @return SelectedTables 待改表格列表
      */
-    public SelectedTableInfo [] getSelectedTables() {
+    public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
     /**
-     * Set 待改表列表
-     * @param SelectedTables 待改表列表
+     * Set 待改表格列表
+     * @param SelectedTables 待改表格列表
      */
-    public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
+    public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;
     }
 
@@ -95,7 +95,7 @@ public class ModifyTablesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
         this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
 

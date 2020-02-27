@@ -44,6 +44,13 @@ public class UpdateInstanceSettings extends AbstractModel{
     private String ResourceId;
 
     /**
+    * 变配机器规格
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get 内存容量，单位为G 
      * @return Memory 内存容量，单位为G
      */
@@ -92,12 +99,29 @@ public class UpdateInstanceSettings extends AbstractModel{
     }
 
     /**
+     * Get 变配机器规格 
+     * @return InstanceType 变配机器规格
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 变配机器规格
+     * @param InstanceType 变配机器规格
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "CPUCores", this.CPUCores);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -824,7 +824,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *根据域名状态、类型等信息查询用户的域名信息
+     *根据域名状态、类型等信息查询用户的域名信息。
      * @param req DescribeLiveDomainsRequest
      * @return DescribeLiveDomainsResponse
      * @throws TencentCloudSDKException
@@ -1586,7 +1586,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *修改播放域名信息
+     *修改播放域名信息。
      * @param req ModifyLivePlayDomainRequest
      * @return ModifyLivePlayDomainResponse
      * @throws TencentCloudSDKException

@@ -23,115 +23,145 @@ import java.util.HashMap;
 public class CdnIp extends AbstractModel{
 
     /**
-    * 节点 ip。
+    * 指定查询的 IP
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
+    * IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 表示该节点所处的省份/国家。unknown 表示节点位置未知。
+    * 节点所处的省份/国家
+unknown 表示节点位置未知
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * 节点上下线历史记录。
+    * 节点上下线历史记录
     */
     @SerializedName("History")
     @Expose
     private CdnIpHistory [] History;
 
     /**
-    * 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+    * 节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get 节点 ip。 
-     * @return Ip 节点 ip。
+     * Get 指定查询的 IP 
+     * @return Ip 指定查询的 IP
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 节点 ip。
-     * @param Ip 节点 ip。
+     * Set 指定查询的 IP
+     * @param Ip 指定查询的 IP
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。 
-     * @return Platform 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
+     * Get IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN 
+     * @return Platform IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
-     * @param Platform 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
+     * Set IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
+     * @param Platform IP 归属：
+yes：节点归属于腾讯云 CDN
+no：节点不属于腾讯云 CDN
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 表示该节点所处的省份/国家。unknown 表示节点位置未知。 
-     * @return Location 表示该节点所处的省份/国家。unknown 表示节点位置未知。
+     * Get 节点所处的省份/国家
+unknown 表示节点位置未知 
+     * @return Location 节点所处的省份/国家
+unknown 表示节点位置未知
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 表示该节点所处的省份/国家。unknown 表示节点位置未知。
-     * @param Location 表示该节点所处的省份/国家。unknown 表示节点位置未知。
+     * Set 节点所处的省份/国家
+unknown 表示节点位置未知
+     * @param Location 节点所处的省份/国家
+unknown 表示节点位置未知
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 节点上下线历史记录。 
-     * @return History 节点上下线历史记录。
+     * Get 节点上下线历史记录 
+     * @return History 节点上下线历史记录
      */
     public CdnIpHistory [] getHistory() {
         return this.History;
     }
 
     /**
-     * Set 节点上下线历史记录。
-     * @param History 节点上下线历史记录。
+     * Set 节点上下线历史记录
+     * @param History 节点上下线历史记录
      */
     public void setHistory(CdnIpHistory [] History) {
         this.History = History;
     }
 
     /**
-     * Get 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。 
-     * @return Area 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+     * Get 节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取 
+     * @return Area 节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
-     * @param Area 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+     * Set 节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
+     * @param Area 节点的所在区域
+mainland：中国境内加速节点
+overseas：中国境外加速节点
+unknown：服务地域无法获取
      */
     public void setArea(String Area) {
         this.Area = Area;

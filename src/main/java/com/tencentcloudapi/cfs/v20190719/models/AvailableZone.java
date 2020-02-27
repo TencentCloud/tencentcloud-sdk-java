@@ -51,6 +51,13 @@ public class AvailableZone extends AbstractModel{
     private AvailableType [] Types;
 
     /**
+    * 可用区中英文名称
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
      * Get 可用区名称 
      * @return Zone 可用区名称
      */
@@ -115,6 +122,22 @@ public class AvailableZone extends AbstractModel{
     }
 
     /**
+     * Get 可用区中英文名称 
+     * @return ZoneName 可用区中英文名称
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 可用区中英文名称
+     * @param ZoneName 可用区中英文名称
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class AvailableZone extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneCnName", this.ZoneCnName);
         this.setParamArrayObj(map, prefix + "Types.", this.Types);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

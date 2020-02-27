@@ -30,7 +30,7 @@ public class DataDisk extends AbstractModel{
     private String DiskType;
 
     /**
-    * 文件系统
+    * 文件系统(ext3/ext4/xfs)
     */
     @SerializedName("FileSystem")
     @Expose
@@ -74,16 +74,16 @@ public class DataDisk extends AbstractModel{
     }
 
     /**
-     * Get 文件系统 
-     * @return FileSystem 文件系统
+     * Get 文件系统(ext3/ext4/xfs) 
+     * @return FileSystem 文件系统(ext3/ext4/xfs)
      */
     public String getFileSystem() {
         return this.FileSystem;
     }
 
     /**
-     * Set 文件系统
-     * @param FileSystem 文件系统
+     * Set 文件系统(ext3/ext4/xfs)
+     * @param FileSystem 文件系统(ext3/ext4/xfs)
      */
     public void setFileSystem(String FileSystem) {
         this.FileSystem = FileSystem;

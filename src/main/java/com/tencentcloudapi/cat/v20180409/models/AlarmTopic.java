@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AlarmTopic extends AbstractModel{
 
     /**
-    * 主题的Id
+    * 主题的ID
     */
     @SerializedName("TopicId")
     @Expose
@@ -37,16 +37,16 @@ public class AlarmTopic extends AbstractModel{
     private String TopicName;
 
     /**
-     * Get 主题的Id 
-     * @return TopicId 主题的Id
+     * Get 主题的ID 
+     * @return TopicId 主题的ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题的Id
-     * @param TopicId 主题的Id
+     * Set 主题的ID
+     * @param TopicId 主题的ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

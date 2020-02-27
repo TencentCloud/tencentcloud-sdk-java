@@ -74,6 +74,13 @@ public class EditMediaRequest extends AbstractModel{
     private String SessionContext;
 
     /**
+    * 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+    */
+    @SerializedName("TasksPriority")
+    @Expose
+    private Long TasksPriority;
+
+    /**
     * 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
@@ -208,6 +215,22 @@ public class EditMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。 
+     * @return TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     */
+    public Long getTasksPriority() {
+        return this.TasksPriority;
+    }
+
+    /**
+     * Set 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @param TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     */
+    public void setTasksPriority(Long TasksPriority) {
+        this.TasksPriority = TasksPriority;
+    }
+
+    /**
      * Get 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
@@ -250,6 +273,7 @@ public class EditMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 

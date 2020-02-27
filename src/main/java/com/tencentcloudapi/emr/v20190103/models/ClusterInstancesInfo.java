@@ -111,7 +111,34 @@ public class ClusterInstancesInfo extends AbstractModel{
     private Long SubnetId;
 
     /**
-    * 状态
+    * 实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -197,6 +224,38 @@ public class ClusterInstancesInfo extends AbstractModel{
     @SerializedName("AlarmInfo")
     @Expose
     private String AlarmInfo;
+
+    /**
+    * 是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsWoodpeckerCluster")
+    @Expose
+    private Long IsWoodpeckerCluster;
+
+    /**
+    * 元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaDb")
+    @Expose
+    private String MetaDb;
+
+    /**
+    * 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HiveMetaDb")
+    @Expose
+    private String HiveMetaDb;
 
     /**
      * Get ID
@@ -419,9 +478,63 @@ public class ClusterInstancesInfo extends AbstractModel{
     }
 
     /**
-     * Get 状态
+     * Get 实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -429,9 +542,63 @@ public class ClusterInstancesInfo extends AbstractModel{
     }
 
     /**
-     * Set 状态
+     * Set 实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 实例的状态码。取值范围：
+<li>2：表示集群运行中。</li>
+<li>3：表示集群创建中。</li>
+<li>4：表示集群扩容中。</li>
+<li>5：表示集群增加router节点中。</li>
+<li>6：表示集群安装组件中。</li>
+<li>7：表示集群执行命令中。</li>
+<li>8：表示重启服务中。</li>
+<li>9：表示进入维护中。</li>
+<li>10：表示服务暂停中。</li>
+<li>11：表示退出维护中。</li>
+<li>12：表示退出暂停中。</li>
+<li>13：表示配置下发中。</li>
+<li>14：表示销毁集群中。</li>
+<li>15：表示销毁core节点中。</li>
+<li>16：销毁task节点中。</li>
+<li>17：表示销毁router节点中。</li>
+<li>18：表示更改webproxy密码中。</li>
+<li>19：表示集群隔离中。</li>
+<li>20：表示集群冲正中。</li>
+<li>21：表示集群回收中。</li>
+<li>22：表示变配等待中。</li>
+<li>23：表示集群已隔离。</li>
+<li>24：表示缩容节点中。</li>
+<li>33：表示集群等待退费中。</li>
+<li>34：表示集群已退费。</li>
+<li>301：表示创建失败。</li>
+<li>302：表示扩容失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -639,6 +806,86 @@ public class ClusterInstancesInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsWoodpeckerCluster 是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsWoodpeckerCluster() {
+        return this.IsWoodpeckerCluster;
+    }
+
+    /**
+     * Set 是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsWoodpeckerCluster 是否采用新架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsWoodpeckerCluster(Long IsWoodpeckerCluster) {
+        this.IsWoodpeckerCluster = IsWoodpeckerCluster;
+    }
+
+    /**
+     * Get 元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetaDb 元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetaDb() {
+        return this.MetaDb;
+    }
+
+    /**
+     * Set 元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaDb 元数据库信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaDb(String MetaDb) {
+        this.MetaDb = MetaDb;
+    }
+
+    /**
+     * Get 标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HiveMetaDb Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHiveMetaDb() {
+        return this.HiveMetaDb;
+    }
+
+    /**
+     * Set Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HiveMetaDb Hive元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHiveMetaDb(String HiveMetaDb) {
+        this.HiveMetaDb = HiveMetaDb;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -664,6 +911,10 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceOrderId", this.ResourceOrderId);
         this.setParamSimple(map, prefix + "IsTradeCluster", this.IsTradeCluster);
         this.setParamSimple(map, prefix + "AlarmInfo", this.AlarmInfo);
+        this.setParamSimple(map, prefix + "IsWoodpeckerCluster", this.IsWoodpeckerCluster);
+        this.setParamSimple(map, prefix + "MetaDb", this.MetaDb);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
 
     }
 }

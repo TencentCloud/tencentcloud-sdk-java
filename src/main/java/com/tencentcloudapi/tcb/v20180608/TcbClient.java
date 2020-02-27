@@ -56,24 +56,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *创建mysql实例
-     * @param req CreateMysqlInstanceRequest
-     * @return CreateMysqlInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateMysqlInstanceResponse CreateMysqlInstance(CreateMysqlInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMysqlInstanceResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateMysqlInstanceResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateMysqlInstance"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取数据库权限
      * @param req DescribeDatabaseACLRequest
      * @return DescribeDatabaseACLResponse
@@ -110,24 +92,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *隔离mysql实例
-     * @param req IsolateMysqlInstanceRequest
-     * @return IsolateMysqlInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public IsolateMysqlInstanceResponse IsolateMysqlInstance(IsolateMysqlInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IsolateMysqlInstanceResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<IsolateMysqlInstanceResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "IsolateMysqlInstance"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改数据库权限
      * @param req ModifyDatabaseACLRequest
      * @return ModifyDatabaseACLResponse
@@ -157,42 +121,6 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyEnvResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyEnv"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线mysql实例
-     * @param req OfflineMysqlInstanceRequest
-     * @return OfflineMysqlInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public OfflineMysqlInstanceResponse OfflineMysqlInstance(OfflineMysqlInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OfflineMysqlInstanceResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<OfflineMysqlInstanceResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "OfflineMysqlInstance"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *升级mysql实例
-     * @param req UpgradeMysqlInstanceRequest
-     * @return UpgradeMysqlInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpgradeMysqlInstanceResponse UpgradeMysqlInstance(UpgradeMysqlInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeMysqlInstanceResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeMysqlInstanceResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeMysqlInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

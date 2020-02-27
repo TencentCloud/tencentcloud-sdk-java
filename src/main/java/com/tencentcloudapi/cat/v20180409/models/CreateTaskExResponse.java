@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateTaskExResponse extends AbstractModel{
 
     /**
-    * 拨测结果查询id。接下来可以使用查询拨测是否能够成功，验证能否通过。
+    * 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
     */
     @SerializedName("ResultId")
     @Expose
     private Long ResultId;
 
     /**
-    * 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+    * 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
     */
     @SerializedName("TaskId")
     @Expose
@@ -44,32 +44,32 @@ public class CreateTaskExResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 拨测结果查询id。接下来可以使用查询拨测是否能够成功，验证能否通过。 
-     * @return ResultId 拨测结果查询id。接下来可以使用查询拨测是否能够成功，验证能否通过。
+     * Get 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。 
+     * @return ResultId 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
      */
     public Long getResultId() {
         return this.ResultId;
     }
 
     /**
-     * Set 拨测结果查询id。接下来可以使用查询拨测是否能够成功，验证能否通过。
-     * @param ResultId 拨测结果查询id。接下来可以使用查询拨测是否能够成功，验证能否通过。
+     * Set 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
+     * @param ResultId 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
      */
     public void setResultId(Long ResultId) {
         this.ResultId = ResultId;
     }
 
     /**
-     * Get 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。 
-     * @return TaskId 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * Get 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。 
+     * @return TaskId 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
-     * @param TaskId 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * Set 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
+     * @param TaskId 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

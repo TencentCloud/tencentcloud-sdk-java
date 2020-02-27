@@ -23,25 +23,25 @@ import java.util.HashMap;
 public class DescribeTablesRequest extends AbstractModel{
 
     /**
-    * 待查询表所属应用实例ID
+    * 待查询表格所属集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
-    * 待查询表所属大区列表
+    * 待查询表格所属表格组ID列表
     */
-    @SerializedName("LogicZoneIds")
+    @SerializedName("TableGroupIds")
     @Expose
-    private String [] LogicZoneIds;
+    private String [] TableGroupIds;
 
     /**
-    * 待查询表信息列表
+    * 待查询表格信息列表
     */
     @SerializedName("SelectedTables")
     @Expose
-    private SelectedTableInfo [] SelectedTables;
+    private SelectedTableInfoNew [] SelectedTables;
 
     /**
     * 过滤条件，本接口支持：TableName，TableInstanceId
@@ -51,64 +51,64 @@ public class DescribeTablesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 偏移量
+    * 查询结果偏移量
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 结果列表数量
+    * 查询结果返回记录数量
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 待查询表所属应用实例ID 
-     * @return ApplicationId 待查询表所属应用实例ID
+     * Get 待查询表格所属集群ID 
+     * @return ClusterId 待查询表格所属集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 待查询表所属应用实例ID
-     * @param ApplicationId 待查询表所属应用实例ID
+     * Set 待查询表格所属集群ID
+     * @param ClusterId 待查询表格所属集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 待查询表所属大区列表 
-     * @return LogicZoneIds 待查询表所属大区列表
+     * Get 待查询表格所属表格组ID列表 
+     * @return TableGroupIds 待查询表格所属表格组ID列表
      */
-    public String [] getLogicZoneIds() {
-        return this.LogicZoneIds;
+    public String [] getTableGroupIds() {
+        return this.TableGroupIds;
     }
 
     /**
-     * Set 待查询表所属大区列表
-     * @param LogicZoneIds 待查询表所属大区列表
+     * Set 待查询表格所属表格组ID列表
+     * @param TableGroupIds 待查询表格所属表格组ID列表
      */
-    public void setLogicZoneIds(String [] LogicZoneIds) {
-        this.LogicZoneIds = LogicZoneIds;
+    public void setTableGroupIds(String [] TableGroupIds) {
+        this.TableGroupIds = TableGroupIds;
     }
 
     /**
-     * Get 待查询表信息列表 
-     * @return SelectedTables 待查询表信息列表
+     * Get 待查询表格信息列表 
+     * @return SelectedTables 待查询表格信息列表
      */
-    public SelectedTableInfo [] getSelectedTables() {
+    public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
     /**
-     * Set 待查询表信息列表
-     * @param SelectedTables 待查询表信息列表
+     * Set 待查询表格信息列表
+     * @param SelectedTables 待查询表格信息列表
      */
-    public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
+    public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;
     }
 
@@ -129,32 +129,32 @@ public class DescribeTablesRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 查询结果偏移量 
+     * @return Offset 查询结果偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 查询结果偏移量
+     * @param Offset 查询结果偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 结果列表数量 
-     * @return Limit 结果列表数量
+     * Get 查询结果返回记录数量 
+     * @return Limit 查询结果返回记录数量
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 结果列表数量
-     * @param Limit 结果列表数量
+     * Set 查询结果返回记录数量
+     * @param Limit 查询结果返回记录数量
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -164,8 +164,8 @@ public class DescribeTablesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-        this.setParamArraySimple(map, prefix + "LogicZoneIds.", this.LogicZoneIds);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "TableGroupIds.", this.TableGroupIds);
         this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

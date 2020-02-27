@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MigrateSource extends AbstractModel{
 
     /**
-    * 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+    * 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
     */
     @SerializedName("InstanceId")
     @Expose
@@ -93,16 +93,16 @@ public class MigrateSource extends AbstractModel{
     private String UrlPassword;
 
     /**
-     * Get 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl 
-     * @return InstanceId 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+     * Get 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl 
+     * @return InstanceId 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
-     * @param InstanceId 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+     * Set 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
+     * @param InstanceId 迁移源实例的ID，MigrateType=1(TencentDB for SQLServers)时使用，格式如：mssql-si2823jyl
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDBResponse extends AbstractModel{
 
     /**
-    * 任务流id
+    * 任务流ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDBResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务流id 
-     * @return FlowId 任务流id
+     * Get 任务流ID 
+     * @return FlowId 任务流ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 任务流id
-     * @param FlowId 任务流id
+     * Set 任务流ID
+     * @param FlowId 任务流ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AgentGroup extends AbstractModel{
 
     /**
-    * 拨测分组Id
+    * 拨测分组ID
     */
     @SerializedName("GroupId")
     @Expose
@@ -65,16 +65,16 @@ public class AgentGroup extends AbstractModel{
     private Long MaxGroupNum;
 
     /**
-     * Get 拨测分组Id 
-     * @return GroupId 拨测分组Id
+     * Get 拨测分组ID 
+     * @return GroupId 拨测分组ID
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 拨测分组Id
-     * @param GroupId 拨测分组Id
+     * Set 拨测分组ID
+     * @param GroupId 拨测分组ID
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

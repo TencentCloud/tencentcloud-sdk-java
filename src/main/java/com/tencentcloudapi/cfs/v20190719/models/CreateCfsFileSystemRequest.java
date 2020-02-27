@@ -51,21 +51,21 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String Protocol;
 
     /**
-    * 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
+    * 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 私有网路（VPC） ID
+    * 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID
+    * 子网 ID，若网络类型选择的是VPC，该字段为必填。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -84,6 +84,13 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     @SerializedName("FsName")
     @Expose
     private String FsName;
+
+    /**
+    * 文件系统标签
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfo [] ResourceTags;
 
     /**
      * Get 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表 
@@ -150,48 +157,48 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件系统存储类型，值为 SD ；其中 SD 为标准型存储 
-     * @return StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
+     * Get 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。 
+     * @return StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
-     * @param StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
+     * Set 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
+     * @param StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 私有网路（VPC） ID 
-     * @return VpcId 私有网路（VPC） ID
+     * Get 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。 
+     * @return VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网路（VPC） ID
-     * @param VpcId 私有网路（VPC） ID
+     * Set 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
+     * @param VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID 
-     * @return SubnetId 子网 ID
+     * Get 子网 ID，若网络类型选择的是VPC，该字段为必填。 
+     * @return SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID
-     * @param SubnetId 子网 ID
+     * Set 子网 ID，若网络类型选择的是VPC，该字段为必填。
+     * @param SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -230,6 +237,22 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
+     * Get 文件系统标签 
+     * @return ResourceTags 文件系统标签
+     */
+    public TagInfo [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 文件系统标签
+     * @param ResourceTags 文件系统标签
+     */
+    public void setResourceTags(TagInfo [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "MountIP", this.MountIP);
         this.setParamSimple(map, prefix + "FsName", this.FsName);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

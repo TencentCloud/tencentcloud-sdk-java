@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class RollbackTablesRequest extends AbstractModel{
 
     /**
-    * 待回档表所在应用实例ID
+    * 待回档表格所在集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
-    * 待回档表列表
+    * 待回档表格列表
     */
     @SerializedName("SelectedTables")
     @Expose
-    private SelectedTableInfo [] SelectedTables;
+    private SelectedTableInfoNew [] SelectedTables;
 
     /**
     * 待回档时间
@@ -51,34 +51,34 @@ public class RollbackTablesRequest extends AbstractModel{
     private String Mode;
 
     /**
-     * Get 待回档表所在应用实例ID 
-     * @return ApplicationId 待回档表所在应用实例ID
+     * Get 待回档表格所在集群ID 
+     * @return ClusterId 待回档表格所在集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 待回档表所在应用实例ID
-     * @param ApplicationId 待回档表所在应用实例ID
+     * Set 待回档表格所在集群ID
+     * @param ClusterId 待回档表格所在集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 待回档表列表 
-     * @return SelectedTables 待回档表列表
+     * Get 待回档表格列表 
+     * @return SelectedTables 待回档表格列表
      */
-    public SelectedTableInfo [] getSelectedTables() {
+    public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
     /**
-     * Set 待回档表列表
-     * @param SelectedTables 待回档表列表
+     * Set 待回档表格列表
+     * @param SelectedTables 待回档表格列表
      */
-    public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
+    public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;
     }
 
@@ -118,7 +118,7 @@ public class RollbackTablesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         this.setParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
         this.setParamSimple(map, prefix + "Mode", this.Mode);

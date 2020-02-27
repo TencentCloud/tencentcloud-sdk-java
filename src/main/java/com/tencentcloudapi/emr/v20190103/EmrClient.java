@@ -164,7 +164,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *销毁EMR实例
+     *销毁EMR实例。此接口仅支持弹性MapReduce正式计费版本。
      * @param req TerminateInstanceRequest
      * @return TerminateInstanceResponse
      * @throws TencentCloudSDKException

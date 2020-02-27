@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class DetailDomain extends AbstractModel{
 
     /**
-    * 域名ID。
+    * 域名 ID
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 腾讯云账号ID。
+    * 腾讯云账号ID
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 加速域名。
+    * 加速域名
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名CName。
+    * 域名对应的 CNAME 地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cname")
@@ -52,49 +52,56 @@ public class DetailDomain extends AbstractModel{
     private String Cname;
 
     /**
-    * 域名状态，pending，rejected，processing， online，offline，deleted分别表示审核中，审核未通过，审核通过部署中，已开启，已关闭，已删除。
+    * 加速服务状态
+rejected：域名审核未通过，域名备案过期/被注销导致
+processing：部署中
+online：已启动
+offline：已关闭
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 项目ID。
+    * 项目 ID，可前往腾讯云项目管理页面查看
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
+    * 域名业务类型
+web：静态加速
+download：下载加速
+media：流媒体点播加速
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 域名创建时间。
+    * 域名创建时间
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 域名更新时间。
+    * 域名更新时间
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 源站配置。
+    * 源站配置
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * IP黑白名单配置。
+    * IP 黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpFilter")
@@ -102,7 +109,7 @@ public class DetailDomain extends AbstractModel{
     private IpFilter IpFilter;
 
     /**
-    * IP限频配置。
+    * IP 访问限频配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpFreqLimit")
@@ -110,7 +117,7 @@ public class DetailDomain extends AbstractModel{
     private IpFreqLimit IpFreqLimit;
 
     /**
-    * 状态码缓存配置。
+    * 状态码缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusCodeCache")
@@ -118,7 +125,7 @@ public class DetailDomain extends AbstractModel{
     private StatusCodeCache StatusCodeCache;
 
     /**
-    * 智能压缩配置。
+    * 智能压缩配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compression")
@@ -126,7 +133,7 @@ public class DetailDomain extends AbstractModel{
     private Compression Compression;
 
     /**
-    * 带宽封顶配置。
+    * 带宽封顶配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthAlert")
@@ -134,7 +141,7 @@ public class DetailDomain extends AbstractModel{
     private BandwidthAlert BandwidthAlert;
 
     /**
-    * Range回源配置。
+    * Range 回源配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RangeOriginPull")
@@ -142,7 +149,7 @@ public class DetailDomain extends AbstractModel{
     private RangeOriginPull RangeOriginPull;
 
     /**
-    * 301和302自动回源跟随配置。
+    * 301/302 回源自动跟随配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FollowRedirect")
@@ -150,7 +157,7 @@ public class DetailDomain extends AbstractModel{
     private FollowRedirect FollowRedirect;
 
     /**
-    * 错误码重定向配置。
+    * 自定义错误页面配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorPage")
@@ -158,7 +165,7 @@ public class DetailDomain extends AbstractModel{
     private ErrorPage ErrorPage;
 
     /**
-    * 回源请求头部配置。
+    * 自定义请求头部配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestHeader")
@@ -166,7 +173,7 @@ public class DetailDomain extends AbstractModel{
     private RequestHeader RequestHeader;
 
     /**
-    * 源站响应头部配置。
+    * 自定义响应头部配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseHeader")
@@ -174,7 +181,7 @@ public class DetailDomain extends AbstractModel{
     private ResponseHeader ResponseHeader;
 
     /**
-    * 下载速度配置。
+    * 单链接下行限速配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownstreamCapping")
@@ -182,7 +189,7 @@ public class DetailDomain extends AbstractModel{
     private DownstreamCapping DownstreamCapping;
 
     /**
-    * 节点缓存配置。
+    * 带参/不带参缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheKey")
@@ -190,7 +197,7 @@ public class DetailDomain extends AbstractModel{
     private CacheKey CacheKey;
 
     /**
-    * 遵循源站缓存头部配置。
+    * 源站头部缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseHeaderCache")
@@ -198,7 +205,7 @@ public class DetailDomain extends AbstractModel{
     private ResponseHeaderCache ResponseHeaderCache;
 
     /**
-    * 视频拖拽配置。
+    * 视频拖拽配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoSeek")
@@ -206,7 +213,7 @@ public class DetailDomain extends AbstractModel{
     private VideoSeek VideoSeek;
 
     /**
-    * 缓存规则配置。
+    * 节点缓存过期规则配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cache")
@@ -214,7 +221,7 @@ public class DetailDomain extends AbstractModel{
     private Cache Cache;
 
     /**
-    * 跨国优化配置。
+    * 跨国链路优化配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginPullOptimization")
@@ -222,7 +229,7 @@ public class DetailDomain extends AbstractModel{
     private OriginPullOptimization OriginPullOptimization;
 
     /**
-    * Https配置。
+    * Https 加速相关配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Https")
@@ -230,7 +237,7 @@ public class DetailDomain extends AbstractModel{
     private Https Https;
 
     /**
-    * 时间戳防盗链配置。
+    * 时间戳防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Authentication")
@@ -238,7 +245,7 @@ public class DetailDomain extends AbstractModel{
     private Authentication Authentication;
 
     /**
-    * seo优化配置。
+    * SEO 优化配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Seo")
@@ -246,7 +253,15 @@ public class DetailDomain extends AbstractModel{
     private Seo Seo;
 
     /**
-    * 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping分别表示。
+    * 域名封禁状态
+normal：正常状态
+overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
+malicious：域名出现恶意行为，强制关闭加速服务
+ddos：域名被大规模 DDoS 攻击，关闭加速服务
+idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
+unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
+capping：触发配置的带宽阈值上限
+readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Disable")
@@ -254,7 +269,7 @@ public class DetailDomain extends AbstractModel{
     private String Disable;
 
     /**
-    * 访问协议强制跳转配置。
+    * 访问协议强制跳转配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForceRedirect")
@@ -262,7 +277,7 @@ public class DetailDomain extends AbstractModel{
     private ForceRedirect ForceRedirect;
 
     /**
-    * 防盗链配置。
+    * Referer 防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Referer")
@@ -270,7 +285,7 @@ public class DetailDomain extends AbstractModel{
     private Referer Referer;
 
     /**
-    * 浏览器缓存规则配置。
+    * 浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxAge")
@@ -278,7 +293,7 @@ public class DetailDomain extends AbstractModel{
     private MaxAge MaxAge;
 
     /**
-    * Ipv6配置。
+    * Ipv6 配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6")
@@ -286,7 +301,7 @@ public class DetailDomain extends AbstractModel{
     private Ipv6 Ipv6;
 
     /**
-    * 是否兼容旧版本配置。
+    * 是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Compatibility")
@@ -294,7 +309,7 @@ public class DetailDomain extends AbstractModel{
     private Compatibility Compatibility;
 
     /**
-    * 分地区特殊配置。
+    * 区域特殊配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecificConfig")
@@ -302,7 +317,10 @@ public class DetailDomain extends AbstractModel{
     private SpecificConfig SpecificConfig;
 
     /**
-    * 加速区域，mainland，overseas或global。
+    * 加速区域
+mainland：中国境内加速
+overseas：中国境外加速
+global：全球加速
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Area")
@@ -310,7 +328,11 @@ public class DetailDomain extends AbstractModel{
     private String Area;
 
     /**
-    * 域名锁定状态，normal，mainland，overseas或global，分别表示未被锁定，国内锁定，海外锁定或全球锁定。
+    * 域名锁定状态
+normal：未锁定
+mainland：中国境内锁定
+overseas：中国境外锁定
+global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Readonly")
@@ -326,57 +348,57 @@ public class DetailDomain extends AbstractModel{
     private OriginPullTimeout OriginPullTimeout;
 
     /**
-     * Get 域名ID。 
-     * @return ResourceId 域名ID。
+     * Get 域名 ID 
+     * @return ResourceId 域名 ID
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 域名ID。
-     * @param ResourceId 域名ID。
+     * Set 域名 ID
+     * @param ResourceId 域名 ID
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 腾讯云账号ID。 
-     * @return AppId 腾讯云账号ID。
+     * Get 腾讯云账号ID 
+     * @return AppId 腾讯云账号ID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 腾讯云账号ID。
-     * @param AppId 腾讯云账号ID。
+     * Set 腾讯云账号ID
+     * @param AppId 腾讯云账号ID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 加速域名。 
-     * @return Domain 加速域名。
+     * Get 加速域名 
+     * @return Domain 加速域名
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 加速域名。
-     * @param Domain 加速域名。
+     * Set 加速域名
+     * @param Domain 加速域名
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名CName。
+     * Get 域名对应的 CNAME 地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cname 域名CName。
+     * @return Cname 域名对应的 CNAME 地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCname() {
@@ -384,9 +406,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 域名CName。
+     * Set 域名对应的 CNAME 地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cname 域名CName。
+     * @param Cname 域名对应的 CNAME 地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCname(String Cname) {
@@ -394,105 +416,133 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 域名状态，pending，rejected，processing， online，offline，deleted分别表示审核中，审核未通过，审核通过部署中，已开启，已关闭，已删除。 
-     * @return Status 域名状态，pending，rejected，processing， online，offline，deleted分别表示审核中，审核未通过，审核通过部署中，已开启，已关闭，已删除。
+     * Get 加速服务状态
+rejected：域名审核未通过，域名备案过期/被注销导致
+processing：部署中
+online：已启动
+offline：已关闭 
+     * @return Status 加速服务状态
+rejected：域名审核未通过，域名备案过期/被注销导致
+processing：部署中
+online：已启动
+offline：已关闭
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名状态，pending，rejected，processing， online，offline，deleted分别表示审核中，审核未通过，审核通过部署中，已开启，已关闭，已删除。
-     * @param Status 域名状态，pending，rejected，processing， online，offline，deleted分别表示审核中，审核未通过，审核通过部署中，已开启，已关闭，已删除。
+     * Set 加速服务状态
+rejected：域名审核未通过，域名备案过期/被注销导致
+processing：部署中
+online：已启动
+offline：已关闭
+     * @param Status 加速服务状态
+rejected：域名审核未通过，域名备案过期/被注销导致
+processing：部署中
+online：已启动
+offline：已关闭
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目 ID，可前往腾讯云项目管理页面查看 
+     * @return ProjectId 项目 ID，可前往腾讯云项目管理页面查看
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目 ID，可前往腾讯云项目管理页面查看
+     * @param ProjectId 项目 ID，可前往腾讯云项目管理页面查看
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。 
-     * @return ServiceType 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
+     * Get 域名业务类型
+web：静态加速
+download：下载加速
+media：流媒体点播加速 
+     * @return ServiceType 域名业务类型
+web：静态加速
+download：下载加速
+media：流媒体点播加速
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
-     * @param ServiceType 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
+     * Set 域名业务类型
+web：静态加速
+download：下载加速
+media：流媒体点播加速
+     * @param ServiceType 域名业务类型
+web：静态加速
+download：下载加速
+media：流媒体点播加速
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 域名创建时间。 
-     * @return CreateTime 域名创建时间。
+     * Get 域名创建时间 
+     * @return CreateTime 域名创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 域名创建时间。
-     * @param CreateTime 域名创建时间。
+     * Set 域名创建时间
+     * @param CreateTime 域名创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 域名更新时间。 
-     * @return UpdateTime 域名更新时间。
+     * Get 域名更新时间 
+     * @return UpdateTime 域名更新时间
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 域名更新时间。
-     * @param UpdateTime 域名更新时间。
+     * Set 域名更新时间
+     * @param UpdateTime 域名更新时间
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 源站配置。 
-     * @return Origin 源站配置。
+     * Get 源站配置 
+     * @return Origin 源站配置
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set 源站配置。
-     * @param Origin 源站配置。
+     * Set 源站配置
+     * @param Origin 源站配置
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get IP黑白名单配置。
+     * Get IP 黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpFilter IP黑白名单配置。
+     * @return IpFilter IP 黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpFilter getIpFilter() {
@@ -500,9 +550,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set IP黑白名单配置。
+     * Set IP 黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpFilter IP黑白名单配置。
+     * @param IpFilter IP 黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpFilter(IpFilter IpFilter) {
@@ -510,9 +560,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get IP限频配置。
+     * Get IP 访问限频配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpFreqLimit IP限频配置。
+     * @return IpFreqLimit IP 访问限频配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpFreqLimit getIpFreqLimit() {
@@ -520,9 +570,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set IP限频配置。
+     * Set IP 访问限频配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpFreqLimit IP限频配置。
+     * @param IpFreqLimit IP 访问限频配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpFreqLimit(IpFreqLimit IpFreqLimit) {
@@ -530,9 +580,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 状态码缓存配置。
+     * Get 状态码缓存配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusCodeCache 状态码缓存配置。
+     * @return StatusCodeCache 状态码缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatusCodeCache getStatusCodeCache() {
@@ -540,9 +590,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 状态码缓存配置。
+     * Set 状态码缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusCodeCache 状态码缓存配置。
+     * @param StatusCodeCache 状态码缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusCodeCache(StatusCodeCache StatusCodeCache) {
@@ -550,9 +600,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 智能压缩配置。
+     * Get 智能压缩配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Compression 智能压缩配置。
+     * @return Compression 智能压缩配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Compression getCompression() {
@@ -560,9 +610,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 智能压缩配置。
+     * Set 智能压缩配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compression 智能压缩配置。
+     * @param Compression 智能压缩配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompression(Compression Compression) {
@@ -570,9 +620,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 带宽封顶配置。
+     * Get 带宽封顶配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BandwidthAlert 带宽封顶配置。
+     * @return BandwidthAlert 带宽封顶配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BandwidthAlert getBandwidthAlert() {
@@ -580,9 +630,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 带宽封顶配置。
+     * Set 带宽封顶配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthAlert 带宽封顶配置。
+     * @param BandwidthAlert 带宽封顶配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthAlert(BandwidthAlert BandwidthAlert) {
@@ -590,9 +640,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get Range回源配置。
+     * Get Range 回源配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RangeOriginPull Range回源配置。
+     * @return RangeOriginPull Range 回源配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RangeOriginPull getRangeOriginPull() {
@@ -600,9 +650,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set Range回源配置。
+     * Set Range 回源配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RangeOriginPull Range回源配置。
+     * @param RangeOriginPull Range 回源配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRangeOriginPull(RangeOriginPull RangeOriginPull) {
@@ -610,9 +660,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 301和302自动回源跟随配置。
+     * Get 301/302 回源自动跟随配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FollowRedirect 301和302自动回源跟随配置。
+     * @return FollowRedirect 301/302 回源自动跟随配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FollowRedirect getFollowRedirect() {
@@ -620,9 +670,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 301和302自动回源跟随配置。
+     * Set 301/302 回源自动跟随配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FollowRedirect 301和302自动回源跟随配置。
+     * @param FollowRedirect 301/302 回源自动跟随配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFollowRedirect(FollowRedirect FollowRedirect) {
@@ -630,9 +680,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 错误码重定向配置。
+     * Get 自定义错误页面配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorPage 错误码重定向配置。
+     * @return ErrorPage 自定义错误页面配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorPage getErrorPage() {
@@ -640,9 +690,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 错误码重定向配置。
+     * Set 自定义错误页面配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorPage 错误码重定向配置。
+     * @param ErrorPage 自定义错误页面配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorPage(ErrorPage ErrorPage) {
@@ -650,9 +700,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 回源请求头部配置。
+     * Get 自定义请求头部配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestHeader 回源请求头部配置。
+     * @return RequestHeader 自定义请求头部配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RequestHeader getRequestHeader() {
@@ -660,9 +710,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 回源请求头部配置。
+     * Set 自定义请求头部配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestHeader 回源请求头部配置。
+     * @param RequestHeader 自定义请求头部配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestHeader(RequestHeader RequestHeader) {
@@ -670,9 +720,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 源站响应头部配置。
+     * Get 自定义响应头部配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseHeader 源站响应头部配置。
+     * @return ResponseHeader 自定义响应头部配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResponseHeader getResponseHeader() {
@@ -680,9 +730,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 源站响应头部配置。
+     * Set 自定义响应头部配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseHeader 源站响应头部配置。
+     * @param ResponseHeader 自定义响应头部配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseHeader(ResponseHeader ResponseHeader) {
@@ -690,9 +740,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 下载速度配置。
+     * Get 单链接下行限速配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownstreamCapping 下载速度配置。
+     * @return DownstreamCapping 单链接下行限速配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DownstreamCapping getDownstreamCapping() {
@@ -700,9 +750,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 下载速度配置。
+     * Set 单链接下行限速配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownstreamCapping 下载速度配置。
+     * @param DownstreamCapping 单链接下行限速配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownstreamCapping(DownstreamCapping DownstreamCapping) {
@@ -710,9 +760,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 节点缓存配置。
+     * Get 带参/不带参缓存配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheKey 节点缓存配置。
+     * @return CacheKey 带参/不带参缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheKey getCacheKey() {
@@ -720,9 +770,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 节点缓存配置。
+     * Set 带参/不带参缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheKey 节点缓存配置。
+     * @param CacheKey 带参/不带参缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheKey(CacheKey CacheKey) {
@@ -730,9 +780,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 遵循源站缓存头部配置。
+     * Get 源站头部缓存配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseHeaderCache 遵循源站缓存头部配置。
+     * @return ResponseHeaderCache 源站头部缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResponseHeaderCache getResponseHeaderCache() {
@@ -740,9 +790,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 遵循源站缓存头部配置。
+     * Set 源站头部缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseHeaderCache 遵循源站缓存头部配置。
+     * @param ResponseHeaderCache 源站头部缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseHeaderCache(ResponseHeaderCache ResponseHeaderCache) {
@@ -750,9 +800,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 视频拖拽配置。
+     * Get 视频拖拽配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoSeek 视频拖拽配置。
+     * @return VideoSeek 视频拖拽配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoSeek getVideoSeek() {
@@ -760,9 +810,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 视频拖拽配置。
+     * Set 视频拖拽配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoSeek 视频拖拽配置。
+     * @param VideoSeek 视频拖拽配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoSeek(VideoSeek VideoSeek) {
@@ -770,9 +820,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 缓存规则配置。
+     * Get 节点缓存过期规则配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cache 缓存规则配置。
+     * @return Cache 节点缓存过期规则配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Cache getCache() {
@@ -780,9 +830,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 缓存规则配置。
+     * Set 节点缓存过期规则配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cache 缓存规则配置。
+     * @param Cache 节点缓存过期规则配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCache(Cache Cache) {
@@ -790,9 +840,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 跨国优化配置。
+     * Get 跨国链路优化配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginPullOptimization 跨国优化配置。
+     * @return OriginPullOptimization 跨国链路优化配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OriginPullOptimization getOriginPullOptimization() {
@@ -800,9 +850,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 跨国优化配置。
+     * Set 跨国链路优化配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginPullOptimization 跨国优化配置。
+     * @param OriginPullOptimization 跨国链路优化配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginPullOptimization(OriginPullOptimization OriginPullOptimization) {
@@ -810,9 +860,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get Https配置。
+     * Get Https 加速相关配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Https Https配置。
+     * @return Https Https 加速相关配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Https getHttps() {
@@ -820,9 +870,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set Https配置。
+     * Set Https 加速相关配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Https Https配置。
+     * @param Https Https 加速相关配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttps(Https Https) {
@@ -830,9 +880,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 时间戳防盗链配置。
+     * Get 时间戳防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Authentication 时间戳防盗链配置。
+     * @return Authentication 时间戳防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Authentication getAuthentication() {
@@ -840,9 +890,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 时间戳防盗链配置。
+     * Set 时间戳防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Authentication 时间戳防盗链配置。
+     * @param Authentication 时间戳防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthentication(Authentication Authentication) {
@@ -850,9 +900,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get seo优化配置。
+     * Get SEO 优化配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Seo seo优化配置。
+     * @return Seo SEO 优化配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Seo getSeo() {
@@ -860,9 +910,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set seo优化配置。
+     * Set SEO 优化配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Seo seo优化配置。
+     * @param Seo SEO 优化配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeo(Seo Seo) {
@@ -870,9 +920,25 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping分别表示。
+     * Get 域名封禁状态
+normal：正常状态
+overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
+malicious：域名出现恶意行为，强制关闭加速服务
+ddos：域名被大规模 DDoS 攻击，关闭加速服务
+idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
+unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
+capping：触发配置的带宽阈值上限
+readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Disable 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping分别表示。
+     * @return Disable 域名封禁状态
+normal：正常状态
+overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
+malicious：域名出现恶意行为，强制关闭加速服务
+ddos：域名被大规模 DDoS 攻击，关闭加速服务
+idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
+unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
+capping：触发配置的带宽阈值上限
+readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisable() {
@@ -880,9 +946,25 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping分别表示。
+     * Set 域名封禁状态
+normal：正常状态
+overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
+malicious：域名出现恶意行为，强制关闭加速服务
+ddos：域名被大规模 DDoS 攻击，关闭加速服务
+idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
+unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
+capping：触发配置的带宽阈值上限
+readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Disable 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping分别表示。
+     * @param Disable 域名封禁状态
+normal：正常状态
+overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
+malicious：域名出现恶意行为，强制关闭加速服务
+ddos：域名被大规模 DDoS 攻击，关闭加速服务
+idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
+unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
+capping：触发配置的带宽阈值上限
+readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisable(String Disable) {
@@ -890,9 +972,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 访问协议强制跳转配置。
+     * Get 访问协议强制跳转配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForceRedirect 访问协议强制跳转配置。
+     * @return ForceRedirect 访问协议强制跳转配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ForceRedirect getForceRedirect() {
@@ -900,9 +982,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 访问协议强制跳转配置。
+     * Set 访问协议强制跳转配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForceRedirect 访问协议强制跳转配置。
+     * @param ForceRedirect 访问协议强制跳转配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
@@ -910,9 +992,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 防盗链配置。
+     * Get Referer 防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Referer 防盗链配置。
+     * @return Referer Referer 防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Referer getReferer() {
@@ -920,9 +1002,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 防盗链配置。
+     * Set Referer 防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Referer 防盗链配置。
+     * @param Referer Referer 防盗链配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferer(Referer Referer) {
@@ -930,9 +1012,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 浏览器缓存规则配置。
+     * Get 浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxAge 浏览器缓存规则配置。
+     * @return MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MaxAge getMaxAge() {
@@ -940,9 +1022,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 浏览器缓存规则配置。
+     * Set 浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAge 浏览器缓存规则配置。
+     * @param MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxAge(MaxAge MaxAge) {
@@ -950,9 +1032,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get Ipv6配置。
+     * Get Ipv6 配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ipv6 Ipv6配置。
+     * @return Ipv6 Ipv6 配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Ipv6 getIpv6() {
@@ -960,9 +1042,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set Ipv6配置。
+     * Set Ipv6 配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6 Ipv6配置。
+     * @param Ipv6 Ipv6 配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6(Ipv6 Ipv6) {
@@ -970,9 +1052,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 是否兼容旧版本配置。
+     * Get 是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Compatibility 是否兼容旧版本配置。
+     * @return Compatibility 是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Compatibility getCompatibility() {
@@ -980,9 +1062,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 是否兼容旧版本配置。
+     * Set 是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compatibility 是否兼容旧版本配置。
+     * @param Compatibility 是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompatibility(Compatibility Compatibility) {
@@ -990,9 +1072,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 分地区特殊配置。
+     * Get 区域特殊配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecificConfig 分地区特殊配置。
+     * @return SpecificConfig 区域特殊配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpecificConfig getSpecificConfig() {
@@ -1000,9 +1082,9 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 分地区特殊配置。
+     * Set 区域特殊配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecificConfig 分地区特殊配置。
+     * @param SpecificConfig 区域特殊配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecificConfig(SpecificConfig SpecificConfig) {
@@ -1010,9 +1092,15 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 加速区域，mainland，overseas或global。
+     * Get 加速区域
+mainland：中国境内加速
+overseas：中国境外加速
+global：全球加速
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Area 加速区域，mainland，overseas或global。
+     * @return Area 加速区域
+mainland：中国境内加速
+overseas：中国境外加速
+global：全球加速
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArea() {
@@ -1020,9 +1108,15 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 加速区域，mainland，overseas或global。
+     * Set 加速区域
+mainland：中国境内加速
+overseas：中国境外加速
+global：全球加速
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Area 加速区域，mainland，overseas或global。
+     * @param Area 加速区域
+mainland：中国境内加速
+overseas：中国境外加速
+global：全球加速
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArea(String Area) {
@@ -1030,9 +1124,17 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Get 域名锁定状态，normal，mainland，overseas或global，分别表示未被锁定，国内锁定，海外锁定或全球锁定。
+     * Get 域名锁定状态
+normal：未锁定
+mainland：中国境内锁定
+overseas：中国境外锁定
+global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Readonly 域名锁定状态，normal，mainland，overseas或global，分别表示未被锁定，国内锁定，海外锁定或全球锁定。
+     * @return Readonly 域名锁定状态
+normal：未锁定
+mainland：中国境内锁定
+overseas：中国境外锁定
+global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadonly() {
@@ -1040,9 +1142,17 @@ public class DetailDomain extends AbstractModel{
     }
 
     /**
-     * Set 域名锁定状态，normal，mainland，overseas或global，分别表示未被锁定，国内锁定，海外锁定或全球锁定。
+     * Set 域名锁定状态
+normal：未锁定
+mainland：中国境内锁定
+overseas：中国境外锁定
+global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Readonly 域名锁定状态，normal，mainland，overseas或global，分别表示未被锁定，国内锁定，海外锁定或全球锁定。
+     * @param Readonly 域名锁定状态
+normal：未锁定
+mainland：中国境内锁定
+overseas：中国境外锁定
+global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadonly(String Readonly) {

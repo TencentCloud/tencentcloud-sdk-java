@@ -51,6 +51,27 @@ public class ClusterCIDRSettings extends AbstractModel{
     private Long MaxClusterServiceNum;
 
     /**
+    * 用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+    */
+    @SerializedName("ServiceCIDR")
+    @Expose
+    private String ServiceCIDR;
+
+    /**
+    * VPC-CNI网络模式下，弹性网卡的子网Id。
+    */
+    @SerializedName("EniSubnetIds")
+    @Expose
+    private String [] EniSubnetIds;
+
+    /**
+    * VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
+    */
+    @SerializedName("ClaimExpiredSeconds")
+    @Expose
+    private Long ClaimExpiredSeconds;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
      */
@@ -115,6 +136,54 @@ public class ClusterCIDRSettings extends AbstractModel{
     }
 
     /**
+     * Get 用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。 
+     * @return ServiceCIDR 用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+     */
+    public String getServiceCIDR() {
+        return this.ServiceCIDR;
+    }
+
+    /**
+     * Set 用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+     * @param ServiceCIDR 用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+     */
+    public void setServiceCIDR(String ServiceCIDR) {
+        this.ServiceCIDR = ServiceCIDR;
+    }
+
+    /**
+     * Get VPC-CNI网络模式下，弹性网卡的子网Id。 
+     * @return EniSubnetIds VPC-CNI网络模式下，弹性网卡的子网Id。
+     */
+    public String [] getEniSubnetIds() {
+        return this.EniSubnetIds;
+    }
+
+    /**
+     * Set VPC-CNI网络模式下，弹性网卡的子网Id。
+     * @param EniSubnetIds VPC-CNI网络模式下，弹性网卡的子网Id。
+     */
+    public void setEniSubnetIds(String [] EniSubnetIds) {
+        this.EniSubnetIds = EniSubnetIds;
+    }
+
+    /**
+     * Get VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000) 
+     * @return ClaimExpiredSeconds VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
+     */
+    public Long getClaimExpiredSeconds() {
+        return this.ClaimExpiredSeconds;
+    }
+
+    /**
+     * Set VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
+     * @param ClaimExpiredSeconds VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
+     */
+    public void setClaimExpiredSeconds(Long ClaimExpiredSeconds) {
+        this.ClaimExpiredSeconds = ClaimExpiredSeconds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +191,9 @@ public class ClusterCIDRSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "IgnoreClusterCIDRConflict", this.IgnoreClusterCIDRConflict);
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
         this.setParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
+        this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+        this.setParamArraySimple(map, prefix + "EniSubnetIds.", this.EniSubnetIds);
+        this.setParamSimple(map, prefix + "ClaimExpiredSeconds", this.ClaimExpiredSeconds);
 
     }
 }

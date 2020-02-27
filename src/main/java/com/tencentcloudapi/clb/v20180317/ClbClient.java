@@ -38,7 +38,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *监听器或转发规则绑定目标组。
+     *本接口(AssociateTargetGroups)用来将目标组绑定到负载均衡的监听器（四层协议）或转发规则（七层协议）上。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req AssociateTargetGroupsRequest
      * @return AssociateTargetGroupsResponse
@@ -170,6 +170,24 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *针对SnatPro负载均衡，这个接口用于添加SnatIp，如果负载均衡没有开启SnatPro，添加SnatIp后会自动开启
+     * @param req CreateLoadBalancerSnatIpsRequest
+     * @return CreateLoadBalancerSnatIpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoadBalancerSnatIpsResponse CreateLoadBalancerSnatIps(CreateLoadBalancerSnatIpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLoadBalancerSnatIpsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancerSnatIpsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLoadBalancerSnatIps"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *CreateRule 接口用于在一个已存在的负载均衡七层监听器下创建转发规则，七层监听器中，后端服务必须绑定到规则上而非监听器上。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req CreateRuleRequest
@@ -238,6 +256,43 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancer"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口支持删除负载均衡的多个监听器。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req DeleteLoadBalancerListenersRequest
+     * @return DeleteLoadBalancerListenersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerListenersResponse DeleteLoadBalancerListeners(DeleteLoadBalancerListenersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoadBalancerListenersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerListenersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancerListeners"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对于SnatPro的负载均衡，这个接口用于删除SnatIp
+     * @param req DeleteLoadBalancerSnatIpsRequest
+     * @return DeleteLoadBalancerSnatIpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerSnatIpsResponse DeleteLoadBalancerSnatIps(DeleteLoadBalancerSnatIpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoadBalancerSnatIpsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerSnatIpsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancerSnatIps"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

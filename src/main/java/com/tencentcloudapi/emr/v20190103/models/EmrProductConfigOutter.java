@@ -111,6 +111,46 @@ public class EmrProductConfigOutter extends AbstractModel{
     private Long ChargeType;
 
     /**
+    * Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouterNodeSize")
+    @Expose
+    private Long RouterNodeSize;
+
+    /**
+    * 是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportHA")
+    @Expose
+    private Boolean SupportHA;
+
+    /**
+    * 是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityOn")
+    @Expose
+    private Boolean SecurityOn;
+
+    /**
+    * 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
+    * 是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CbsEncrypt")
+    @Expose
+    private Long CbsEncrypt;
+
+    /**
      * Get 软件信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SoftInfo 软件信息
@@ -331,6 +371,106 @@ public class EmrProductConfigOutter extends AbstractModel{
     }
 
     /**
+     * Get Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouterNodeSize Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRouterNodeSize() {
+        return this.RouterNodeSize;
+    }
+
+    /**
+     * Set Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouterNodeSize Router节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouterNodeSize(Long RouterNodeSize) {
+        this.RouterNodeSize = RouterNodeSize;
+    }
+
+    /**
+     * Get 是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportHA 是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSupportHA() {
+        return this.SupportHA;
+    }
+
+    /**
+     * Set 是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportHA 是否支持HA
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportHA(Boolean SupportHA) {
+        this.SupportHA = SupportHA;
+    }
+
+    /**
+     * Get 是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityOn 是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSecurityOn() {
+        return this.SecurityOn;
+    }
+
+    /**
+     * Set 是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityOn 是否支持安全模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityOn(Boolean SecurityOn) {
+        this.SecurityOn = SecurityOn;
+    }
+
+    /**
+     * Get 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroup 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroup 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
+     * Get 是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CbsEncrypt 是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCbsEncrypt() {
+        return this.CbsEncrypt;
+    }
+
+    /**
+     * Set 是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CbsEncrypt 是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCbsEncrypt(Long CbsEncrypt) {
+        this.CbsEncrypt = CbsEncrypt;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -345,6 +485,11 @@ public class EmrProductConfigOutter extends AbstractModel{
         this.setParamObj(map, prefix + "ComResource.", this.ComResource);
         this.setParamSimple(map, prefix + "OnCos", this.OnCos);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "RouterNodeSize", this.RouterNodeSize);
+        this.setParamSimple(map, prefix + "SupportHA", this.SupportHA);
+        this.setParamSimple(map, prefix + "SecurityOn", this.SecurityOn);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
 
     }
 }

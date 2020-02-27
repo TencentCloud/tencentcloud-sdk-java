@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CatTaskDetail extends AbstractModel{
 
     /**
-    * 任务Id
+    * 任务ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -51,21 +51,21 @@ public class CatTaskDetail extends AbstractModel{
     private String CatTypeName;
 
     /**
-    * 拨测任务的Url
+    * 拨测任务的URL
     */
     @SerializedName("CgiUrl")
     @Expose
     private String CgiUrl;
 
     /**
-    * 拨测分组id
+    * 拨测分组ID
     */
     @SerializedName("AgentGroupId")
     @Expose
     private Long AgentGroupId;
 
     /**
-    * 告警策略组id
+    * 告警策略组ID
     */
     @SerializedName("PolicyGroupId")
     @Expose
@@ -93,7 +93,7 @@ public class CatTaskDetail extends AbstractModel{
     private Long Type;
 
     /**
-    * 绑定的统一告警主题Id
+    * 绑定的统一告警主题ID
     */
     @SerializedName("TopicId")
     @Expose
@@ -135,14 +135,14 @@ public class CatTaskDetail extends AbstractModel{
     private Long CheckType;
 
     /**
-    * 用户agent 信息
+    * 用户Agent信息
     */
     @SerializedName("UserAgent")
     @Expose
     private String UserAgent;
 
     /**
-    * 设置的cookie信息
+    * 设置的Cookie信息
     */
     @SerializedName("Cookie")
     @Expose
@@ -170,49 +170,49 @@ public class CatTaskDetail extends AbstractModel{
     private Long IsHeader;
 
     /**
-    * 目的dns服务器
+    * 目的DNS服务器
     */
     @SerializedName("DnsSvr")
     @Expose
     private String DnsSvr;
 
     /**
-    * 需要检验是否在dns ip列表的ip
+    * 需要检验是否在DNS IP列表的IP
     */
     @SerializedName("DnsCheckIp")
     @Expose
     private String DnsCheckIp;
 
     /**
-    * dns查询类型
+    * DNS查询类型
     */
     @SerializedName("DnsQueryType")
     @Expose
     private String DnsQueryType;
 
     /**
-    * 登陆服务器的账号
+    * 登录服务器的账号
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 登陆服务器的密码
+    * 登录服务器的密码
     */
     @SerializedName("PassWord")
     @Expose
     private String PassWord;
 
     /**
-    * 是否使用安全链接ssl  0 不使用，1 使用
+    * 是否使用安全链接SSL， 0 不使用，1 使用
     */
     @SerializedName("UseSecConn")
     @Expose
     private Long UseSecConn;
 
     /**
-    * ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+    * FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
     */
     @SerializedName("NeedAuth")
     @Expose
@@ -226,7 +226,7 @@ public class CatTaskDetail extends AbstractModel{
     private Long ReqDataType;
 
     /**
-    * 发起tcp, udp请求的协议请求数据
+    * 发起TCP, UDP请求的协议请求数据
     */
     @SerializedName("ReqData")
     @Expose
@@ -240,7 +240,7 @@ public class CatTaskDetail extends AbstractModel{
     private Long RespDataType;
 
     /**
-    * 预期的udp请求的回应数据
+    * 预期的UDP请求的回应数据
     */
     @SerializedName("RespData")
     @Expose
@@ -254,16 +254,16 @@ public class CatTaskDetail extends AbstractModel{
     private Long RedirectFollowNum;
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
@@ -318,48 +318,48 @@ public class CatTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 拨测任务的Url 
-     * @return CgiUrl 拨测任务的Url
+     * Get 拨测任务的URL 
+     * @return CgiUrl 拨测任务的URL
      */
     public String getCgiUrl() {
         return this.CgiUrl;
     }
 
     /**
-     * Set 拨测任务的Url
-     * @param CgiUrl 拨测任务的Url
+     * Set 拨测任务的URL
+     * @param CgiUrl 拨测任务的URL
      */
     public void setCgiUrl(String CgiUrl) {
         this.CgiUrl = CgiUrl;
     }
 
     /**
-     * Get 拨测分组id 
-     * @return AgentGroupId 拨测分组id
+     * Get 拨测分组ID 
+     * @return AgentGroupId 拨测分组ID
      */
     public Long getAgentGroupId() {
         return this.AgentGroupId;
     }
 
     /**
-     * Set 拨测分组id
-     * @param AgentGroupId 拨测分组id
+     * Set 拨测分组ID
+     * @param AgentGroupId 拨测分组ID
      */
     public void setAgentGroupId(Long AgentGroupId) {
         this.AgentGroupId = AgentGroupId;
     }
 
     /**
-     * Get 告警策略组id 
-     * @return PolicyGroupId 告警策略组id
+     * Get 告警策略组ID 
+     * @return PolicyGroupId 告警策略组ID
      */
     public Long getPolicyGroupId() {
         return this.PolicyGroupId;
     }
 
     /**
-     * Set 告警策略组id
-     * @param PolicyGroupId 告警策略组id
+     * Set 告警策略组ID
+     * @param PolicyGroupId 告警策略组ID
      */
     public void setPolicyGroupId(Long PolicyGroupId) {
         this.PolicyGroupId = PolicyGroupId;
@@ -414,16 +414,16 @@ public class CatTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 绑定的统一告警主题Id 
-     * @return TopicId 绑定的统一告警主题Id
+     * Get 绑定的统一告警主题ID 
+     * @return TopicId 绑定的统一告警主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 绑定的统一告警主题Id
-     * @param TopicId 绑定的统一告警主题Id
+     * Set 绑定的统一告警主题ID
+     * @param TopicId 绑定的统一告警主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -510,32 +510,32 @@ public class CatTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 用户agent 信息 
-     * @return UserAgent 用户agent 信息
+     * Get 用户Agent信息 
+     * @return UserAgent 用户Agent信息
      */
     public String getUserAgent() {
         return this.UserAgent;
     }
 
     /**
-     * Set 用户agent 信息
-     * @param UserAgent 用户agent 信息
+     * Set 用户Agent信息
+     * @param UserAgent 用户Agent信息
      */
     public void setUserAgent(String UserAgent) {
         this.UserAgent = UserAgent;
     }
 
     /**
-     * Get 设置的cookie信息 
-     * @return Cookie 设置的cookie信息
+     * Get 设置的Cookie信息 
+     * @return Cookie 设置的Cookie信息
      */
     public String getCookie() {
         return this.Cookie;
     }
 
     /**
-     * Set 设置的cookie信息
-     * @param Cookie 设置的cookie信息
+     * Set 设置的Cookie信息
+     * @param Cookie 设置的Cookie信息
      */
     public void setCookie(String Cookie) {
         this.Cookie = Cookie;
@@ -590,112 +590,112 @@ public class CatTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 目的dns服务器 
-     * @return DnsSvr 目的dns服务器
+     * Get 目的DNS服务器 
+     * @return DnsSvr 目的DNS服务器
      */
     public String getDnsSvr() {
         return this.DnsSvr;
     }
 
     /**
-     * Set 目的dns服务器
-     * @param DnsSvr 目的dns服务器
+     * Set 目的DNS服务器
+     * @param DnsSvr 目的DNS服务器
      */
     public void setDnsSvr(String DnsSvr) {
         this.DnsSvr = DnsSvr;
     }
 
     /**
-     * Get 需要检验是否在dns ip列表的ip 
-     * @return DnsCheckIp 需要检验是否在dns ip列表的ip
+     * Get 需要检验是否在DNS IP列表的IP 
+     * @return DnsCheckIp 需要检验是否在DNS IP列表的IP
      */
     public String getDnsCheckIp() {
         return this.DnsCheckIp;
     }
 
     /**
-     * Set 需要检验是否在dns ip列表的ip
-     * @param DnsCheckIp 需要检验是否在dns ip列表的ip
+     * Set 需要检验是否在DNS IP列表的IP
+     * @param DnsCheckIp 需要检验是否在DNS IP列表的IP
      */
     public void setDnsCheckIp(String DnsCheckIp) {
         this.DnsCheckIp = DnsCheckIp;
     }
 
     /**
-     * Get dns查询类型 
-     * @return DnsQueryType dns查询类型
+     * Get DNS查询类型 
+     * @return DnsQueryType DNS查询类型
      */
     public String getDnsQueryType() {
         return this.DnsQueryType;
     }
 
     /**
-     * Set dns查询类型
-     * @param DnsQueryType dns查询类型
+     * Set DNS查询类型
+     * @param DnsQueryType DNS查询类型
      */
     public void setDnsQueryType(String DnsQueryType) {
         this.DnsQueryType = DnsQueryType;
     }
 
     /**
-     * Get 登陆服务器的账号 
-     * @return UserName 登陆服务器的账号
+     * Get 登录服务器的账号 
+     * @return UserName 登录服务器的账号
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 登陆服务器的账号
-     * @param UserName 登陆服务器的账号
+     * Set 登录服务器的账号
+     * @param UserName 登录服务器的账号
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 登陆服务器的密码 
-     * @return PassWord 登陆服务器的密码
+     * Get 登录服务器的密码 
+     * @return PassWord 登录服务器的密码
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set 登陆服务器的密码
-     * @param PassWord 登陆服务器的密码
+     * Set 登录服务器的密码
+     * @param PassWord 登录服务器的密码
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
     }
 
     /**
-     * Get 是否使用安全链接ssl  0 不使用，1 使用 
-     * @return UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
+     * Get 是否使用安全链接SSL， 0 不使用，1 使用 
+     * @return UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public Long getUseSecConn() {
         return this.UseSecConn;
     }
 
     /**
-     * Set 是否使用安全链接ssl  0 不使用，1 使用
-     * @param UseSecConn 是否使用安全链接ssl  0 不使用，1 使用
+     * Set 是否使用安全链接SSL， 0 不使用，1 使用
+     * @param UseSecConn 是否使用安全链接SSL， 0 不使用，1 使用
      */
     public void setUseSecConn(Long UseSecConn) {
         this.UseSecConn = UseSecConn;
     }
 
     /**
-     * Get ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证 
-     * @return NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * Get FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证 
+     * @return NeedAuth FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
      */
     public Long getNeedAuth() {
         return this.NeedAuth;
     }
 
     /**
-     * Set ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
-     * @param NeedAuth ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+     * Set FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
+     * @param NeedAuth FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
      */
     public void setNeedAuth(Long NeedAuth) {
         this.NeedAuth = NeedAuth;
@@ -718,16 +718,16 @@ public class CatTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 发起tcp, udp请求的协议请求数据 
-     * @return ReqData 发起tcp, udp请求的协议请求数据
+     * Get 发起TCP, UDP请求的协议请求数据 
+     * @return ReqData 发起TCP, UDP请求的协议请求数据
      */
     public String getReqData() {
         return this.ReqData;
     }
 
     /**
-     * Set 发起tcp, udp请求的协议请求数据
-     * @param ReqData 发起tcp, udp请求的协议请求数据
+     * Set 发起TCP, UDP请求的协议请求数据
+     * @param ReqData 发起TCP, UDP请求的协议请求数据
      */
     public void setReqData(String ReqData) {
         this.ReqData = ReqData;
@@ -750,16 +750,16 @@ public class CatTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 预期的udp请求的回应数据 
-     * @return RespData 预期的udp请求的回应数据
+     * Get 预期的UDP请求的回应数据 
+     * @return RespData 预期的UDP请求的回应数据
      */
     public String getRespData() {
         return this.RespData;
     }
 
     /**
-     * Set 预期的udp请求的回应数据
-     * @param RespData 预期的udp请求的回应数据
+     * Set 预期的UDP请求的回应数据
+     * @param RespData 预期的UDP请求的回应数据
      */
     public void setRespData(String RespData) {
         this.RespData = RespData;

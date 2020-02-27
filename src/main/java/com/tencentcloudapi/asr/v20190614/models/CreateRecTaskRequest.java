@@ -42,7 +42,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ChannelNum;
 
     /**
-    * 识别结果文本编码方式。0：UTF-8。
+    * 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
     */
     @SerializedName("ResTextFormat")
     @Expose
@@ -143,16 +143,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别结果文本编码方式。0：UTF-8。 
-     * @return ResTextFormat 识别结果文本编码方式。0：UTF-8。
+     * Get 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景) 
+     * @return ResTextFormat 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
      */
     public Long getResTextFormat() {
         return this.ResTextFormat;
     }
 
     /**
-     * Set 识别结果文本编码方式。0：UTF-8。
-     * @param ResTextFormat 识别结果文本编码方式。0：UTF-8。
+     * Set 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
+     * @param ResTextFormat 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
      */
     public void setResTextFormat(Long ResTextFormat) {
         this.ResTextFormat = ResTextFormat;

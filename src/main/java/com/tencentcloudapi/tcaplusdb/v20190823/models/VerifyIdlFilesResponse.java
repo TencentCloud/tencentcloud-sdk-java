@@ -23,25 +23,25 @@ import java.util.HashMap;
 public class VerifyIdlFilesResponse extends AbstractModel{
 
     /**
-    * 本次上传校验所有的Idl文件信息列表
+    * 本次上传校验所有的IDL文件信息列表
     */
     @SerializedName("IdlFiles")
     @Expose
     private IdlFileInfo [] IdlFiles;
 
     /**
-    * 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
+    * 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+    * 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
     */
     @SerializedName("TableInfos")
     @Expose
-    private ParsedTableInfo [] TableInfos;
+    private ParsedTableInfoNew [] TableInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,50 +51,50 @@ public class VerifyIdlFilesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 本次上传校验所有的Idl文件信息列表 
-     * @return IdlFiles 本次上传校验所有的Idl文件信息列表
+     * Get 本次上传校验所有的IDL文件信息列表 
+     * @return IdlFiles 本次上传校验所有的IDL文件信息列表
      */
     public IdlFileInfo [] getIdlFiles() {
         return this.IdlFiles;
     }
 
     /**
-     * Set 本次上传校验所有的Idl文件信息列表
-     * @param IdlFiles 本次上传校验所有的Idl文件信息列表
+     * Set 本次上传校验所有的IDL文件信息列表
+     * @param IdlFiles 本次上传校验所有的IDL文件信息列表
      */
     public void setIdlFiles(IdlFileInfo [] IdlFiles) {
         this.IdlFiles = IdlFiles;
     }
 
     /**
-     * Get 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表 
-     * @return TotalCount 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
+     * Get 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表 
+     * @return TotalCount 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
-     * @param TotalCount 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
+     * Set 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
+     * @param TotalCount 读取IDL描述文件后解析出的合法表数量，不包含已经创建的表
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表 
-     * @return TableInfos 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+     * Get 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表 
+     * @return TableInfos 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
      */
-    public ParsedTableInfo [] getTableInfos() {
+    public ParsedTableInfoNew [] getTableInfos() {
         return this.TableInfos;
     }
 
     /**
-     * Set 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
-     * @param TableInfos 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+     * Set 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
+     * @param TableInfos 读取IDL描述文件后解析出的合法表列表，不包含已经创建的表
      */
-    public void setTableInfos(ParsedTableInfo [] TableInfos) {
+    public void setTableInfos(ParsedTableInfoNew [] TableInfos) {
         this.TableInfos = TableInfos;
     }
 

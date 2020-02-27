@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class RollbackTablesResponse extends AbstractModel{
 
     /**
-    * 表回档任务结果数量
+    * 表格回档任务结果数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 表回档任务结果列表
+    * 表格回档任务结果列表
     */
     @SerializedName("TableResults")
     @Expose
-    private TableRollbackResult [] TableResults;
+    private TableRollbackResultNew [] TableResults;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,34 +44,34 @@ public class RollbackTablesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 表回档任务结果数量 
-     * @return TotalCount 表回档任务结果数量
+     * Get 表格回档任务结果数量 
+     * @return TotalCount 表格回档任务结果数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 表回档任务结果数量
-     * @param TotalCount 表回档任务结果数量
+     * Set 表格回档任务结果数量
+     * @param TotalCount 表格回档任务结果数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 表回档任务结果列表 
-     * @return TableResults 表回档任务结果列表
+     * Get 表格回档任务结果列表 
+     * @return TableResults 表格回档任务结果列表
      */
-    public TableRollbackResult [] getTableResults() {
+    public TableRollbackResultNew [] getTableResults() {
         return this.TableResults;
     }
 
     /**
-     * Set 表回档任务结果列表
-     * @param TableResults 表回档任务结果列表
+     * Set 表格回档任务结果列表
+     * @param TableResults 表格回档任务结果列表
      */
-    public void setTableResults(TableRollbackResult [] TableResults) {
+    public void setTableResults(TableRollbackResultNew [] TableResults) {
         this.TableResults = TableResults;
     }
 

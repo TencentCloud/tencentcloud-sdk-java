@@ -95,6 +95,22 @@ public class PriceResource extends AbstractModel{
     private Long DiskCnt;
 
     /**
+    * 规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 需要的规格
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Spec 需要的规格
@@ -275,6 +291,46 @@ public class PriceResource extends AbstractModel{
     }
 
     /**
+     * Get 规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +343,8 @@ public class PriceResource extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamArrayObj(map, prefix + "MultiDisks.", this.MultiDisks);
         this.setParamSimple(map, prefix + "DiskCnt", this.DiskCnt);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

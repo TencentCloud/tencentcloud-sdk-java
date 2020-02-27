@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
 
     /**
-    * 未打折前价格，其值除以100表示多少钱。比如10010表示100.10元
+    * 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * 实际需要支付的价格，其值除以100表示多少钱。比如10010表示100.10元
+    * 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
     */
     @SerializedName("Price")
     @Expose
@@ -44,32 +44,32 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 未打折前价格，其值除以100表示多少钱。比如10010表示100.10元 
-     * @return OriginalPrice 未打折前价格，其值除以100表示多少钱。比如10010表示100.10元
+     * Get 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元 
+     * @return OriginalPrice 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 未打折前价格，其值除以100表示多少钱。比如10010表示100.10元
-     * @param OriginalPrice 未打折前价格，其值除以100表示多少钱。比如10010表示100.10元
+     * Set 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
+     * @param OriginalPrice 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 实际需要支付的价格，其值除以100表示多少钱。比如10010表示100.10元 
-     * @return Price 实际需要支付的价格，其值除以100表示多少钱。比如10010表示100.10元
+     * Get 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元 
+     * @return Price 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 实际需要支付的价格，其值除以100表示多少钱。比如10010表示100.10元
-     * @param Price 实际需要支付的价格，其值除以100表示多少钱。比如10010表示100.10元
+     * Set 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
+     * @param Price 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
      */
     public void setPrice(Long Price) {
         this.Price = Price;

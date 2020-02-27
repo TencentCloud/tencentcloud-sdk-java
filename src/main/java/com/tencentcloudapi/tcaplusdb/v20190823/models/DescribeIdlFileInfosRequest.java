@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class DescribeIdlFileInfosRequest extends AbstractModel{
 
     /**
-    * 文件所属应用实例ID
+    * 文件所属集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
-    * 文件所属大区ID
+    * 文件所属表格组ID
     */
-    @SerializedName("LogicZoneIds")
+    @SerializedName("TableGroupIds")
     @Expose
-    private String [] LogicZoneIds;
+    private String [] TableGroupIds;
 
     /**
-    * 指定文件ID
+    * 指定文件ID列表
     */
     @SerializedName("IdlFileIds")
     @Expose
     private String [] IdlFileIds;
 
     /**
-    * 偏移量
+    * 查询列表偏移量
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 文件列表大小
+    * 查询列表返回记录数
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 文件所属应用实例ID 
-     * @return ApplicationId 文件所属应用实例ID
+     * Get 文件所属集群ID 
+     * @return ClusterId 文件所属集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 文件所属应用实例ID
-     * @param ApplicationId 文件所属应用实例ID
+     * Set 文件所属集群ID
+     * @param ClusterId 文件所属集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 文件所属大区ID 
-     * @return LogicZoneIds 文件所属大区ID
+     * Get 文件所属表格组ID 
+     * @return TableGroupIds 文件所属表格组ID
      */
-    public String [] getLogicZoneIds() {
-        return this.LogicZoneIds;
+    public String [] getTableGroupIds() {
+        return this.TableGroupIds;
     }
 
     /**
-     * Set 文件所属大区ID
-     * @param LogicZoneIds 文件所属大区ID
+     * Set 文件所属表格组ID
+     * @param TableGroupIds 文件所属表格组ID
      */
-    public void setLogicZoneIds(String [] LogicZoneIds) {
-        this.LogicZoneIds = LogicZoneIds;
+    public void setTableGroupIds(String [] TableGroupIds) {
+        this.TableGroupIds = TableGroupIds;
     }
 
     /**
-     * Get 指定文件ID 
-     * @return IdlFileIds 指定文件ID
+     * Get 指定文件ID列表 
+     * @return IdlFileIds 指定文件ID列表
      */
     public String [] getIdlFileIds() {
         return this.IdlFileIds;
     }
 
     /**
-     * Set 指定文件ID
-     * @param IdlFileIds 指定文件ID
+     * Set 指定文件ID列表
+     * @param IdlFileIds 指定文件ID列表
      */
     public void setIdlFileIds(String [] IdlFileIds) {
         this.IdlFileIds = IdlFileIds;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 查询列表偏移量 
+     * @return Offset 查询列表偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 查询列表偏移量
+     * @param Offset 查询列表偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 文件列表大小 
-     * @return Limit 文件列表大小
+     * Get 查询列表返回记录数 
+     * @return Limit 查询列表返回记录数
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 文件列表大小
-     * @param Limit 文件列表大小
+     * Set 查询列表返回记录数
+     * @param Limit 查询列表返回记录数
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -141,8 +141,8 @@ public class DescribeIdlFileInfosRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-        this.setParamArraySimple(map, prefix + "LogicZoneIds.", this.LogicZoneIds);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "TableGroupIds.", this.TableGroupIds);
         this.setParamArraySimple(map, prefix + "IdlFileIds.", this.IdlFileIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

@@ -23,40 +23,40 @@ import java.util.HashMap;
 public class ModifyTableQuotasRequest extends AbstractModel{
 
     /**
-    * 带扩缩容表所属应用实例ID
+    * 带扩缩容表所属集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
     * 已选中待修改的表配额列表
     */
     @SerializedName("TableQuotas")
     @Expose
-    private SelectedTableInfo [] TableQuotas;
+    private SelectedTableInfoNew [] TableQuotas;
 
     /**
-     * Get 带扩缩容表所属应用实例ID 
-     * @return ApplicationId 带扩缩容表所属应用实例ID
+     * Get 带扩缩容表所属集群ID 
+     * @return ClusterId 带扩缩容表所属集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 带扩缩容表所属应用实例ID
-     * @param ApplicationId 带扩缩容表所属应用实例ID
+     * Set 带扩缩容表所属集群ID
+     * @param ClusterId 带扩缩容表所属集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
      * Get 已选中待修改的表配额列表 
      * @return TableQuotas 已选中待修改的表配额列表
      */
-    public SelectedTableInfo [] getTableQuotas() {
+    public SelectedTableInfoNew [] getTableQuotas() {
         return this.TableQuotas;
     }
 
@@ -64,7 +64,7 @@ public class ModifyTableQuotasRequest extends AbstractModel{
      * Set 已选中待修改的表配额列表
      * @param TableQuotas 已选中待修改的表配额列表
      */
-    public void setTableQuotas(SelectedTableInfo [] TableQuotas) {
+    public void setTableQuotas(SelectedTableInfoNew [] TableQuotas) {
         this.TableQuotas = TableQuotas;
     }
 
@@ -72,7 +72,7 @@ public class ModifyTableQuotasRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "TableQuotas.", this.TableQuotas);
 
     }

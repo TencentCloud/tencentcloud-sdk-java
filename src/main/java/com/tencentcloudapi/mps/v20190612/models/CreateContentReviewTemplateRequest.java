@@ -58,6 +58,16 @@ public class CreateContentReviewTemplateRequest extends AbstractModel{
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
+    * 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+    */
+    @SerializedName("ProhibitedConfigure")
+    @Expose
+    private ProhibitedConfigureInfo ProhibitedConfigure;
+
+    /**
     * 用户自定义内容审核控制参数。
     */
     @SerializedName("UserDefineConfigure")
@@ -145,6 +155,34 @@ public class CreateContentReviewTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。 
+     * @return ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+     */
+    public ProhibitedConfigureInfo getProhibitedConfigure() {
+        return this.ProhibitedConfigure;
+    }
+
+    /**
+     * Set 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+     * @param ProhibitedConfigure 违禁控制参数。违禁内容包括：
+<li>谩骂；</li>
+<li>涉毒违法。</li>
+注意：此参数尚未支持。
+     */
+    public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
+        this.ProhibitedConfigure = ProhibitedConfigure;
+    }
+
+    /**
      * Get 用户自定义内容审核控制参数。 
      * @return UserDefineConfigure 用户自定义内容审核控制参数。
      */
@@ -169,6 +207,7 @@ public class CreateContentReviewTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
         this.setParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+        this.setParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
 
     }

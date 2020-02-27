@@ -1,0 +1,652 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tcr.v20190924;
+
+import java.lang.reflect.Type;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.AbstractClient;
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.JsonResponseModel;
+import com.tencentcloudapi.common.Credential;
+import com.tencentcloudapi.tcr.v20190924.models.*;
+
+public class TcrClient extends AbstractClient{
+    private static String endpoint = "tcr.tencentcloudapi.com";
+    private static String version = "2019-09-24";
+
+    public TcrClient(Credential credential, String region) {
+        this(credential, region, new ClientProfile());
+    }
+
+    public TcrClient(Credential credential, String region, ClientProfile profile) {
+        super(TcrClient.endpoint, TcrClient.version, credential, region, profile);
+    }
+
+    /**
+     *用于在个人版镜像仓库中批量删除Tag
+     * @param req BatchDeleteImagePersonalRequest
+     * @return BatchDeleteImagePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteImagePersonalResponse BatchDeleteImagePersonal(BatchDeleteImagePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteImagePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteImagePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BatchDeleteImagePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于个人版镜像仓库中批量删除镜像仓库
+     * @param req BatchDeleteRepositoryPersonalRequest
+     * @return BatchDeleteRepositoryPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteRepositoryPersonalResponse BatchDeleteRepositoryPersonal(BatchDeleteRepositoryPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteRepositoryPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteRepositoryPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BatchDeleteRepositoryPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于创建应用更新触发器
+     * @param req CreateApplicationTriggerPersonalRequest
+     * @return CreateApplicationTriggerPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonal(CreateApplicationTriggerPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApplicationTriggerPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApplicationTriggerPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateApplicationTriggerPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版中创建清理策略
+     * @param req CreateImageLifecyclePersonalRequest
+     * @return CreateImageLifecyclePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonal(CreateImageLifecyclePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageLifecyclePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageLifecyclePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateImageLifecyclePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建实例
+     * @param req CreateInstanceRequest
+     * @return CreateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取临时登陆密码
+     * @param req CreateInstanceTokenRequest
+     * @return CreateInstanceTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceTokenResponse CreateInstanceToken(CreateInstanceTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceTokenResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceTokenResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateInstanceToken"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建个人版镜像仓库命名空间，此命名空间全局唯一
+     * @param req CreateNamespacePersonalRequest
+     * @return CreateNamespacePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNamespacePersonalResponse CreateNamespacePersonal(CreateNamespacePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNamespacePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNamespacePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNamespacePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版仓库中创建镜像仓库
+     * @param req CreateRepositoryPersonalRequest
+     * @return CreateRepositoryPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRepositoryPersonalResponse CreateRepositoryPersonal(CreateRepositoryPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRepositoryPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRepositoryPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRepositoryPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建个人用户
+     * @param req CreateUserPersonalRequest
+     * @return CreateUserPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserPersonalResponse CreateUserPersonal(CreateUserPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateUserPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于删除应用更新触发器
+     * @param req DeleteApplicationTriggerPersonalRequest
+     * @return DeleteApplicationTriggerPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonal(DeleteApplicationTriggerPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApplicationTriggerPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApplicationTriggerPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteApplicationTriggerPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版镜像仓库中删除仓库Tag自动清理策略
+     * @param req DeleteImageLifecyclePersonalRequest
+     * @return DeleteImageLifecyclePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageLifecyclePersonalResponse DeleteImageLifecyclePersonal(DeleteImageLifecyclePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageLifecyclePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageLifecyclePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteImageLifecyclePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版中删除tag
+     * @param req DeleteImagePersonalRequest
+     * @return DeleteImagePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImagePersonalResponse DeleteImagePersonal(DeleteImagePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImagePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImagePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteImagePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除共享版命名空间
+     * @param req DeleteNamespacePersonalRequest
+     * @return DeleteNamespacePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNamespacePersonalResponse DeleteNamespacePersonal(DeleteNamespacePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNamespacePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNamespacePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNamespacePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于个人版镜像仓库中删除
+     * @param req DeleteRepositoryPersonalRequest
+     * @return DeleteRepositoryPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRepositoryPersonalResponse DeleteRepositoryPersonal(DeleteRepositoryPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRepositoryPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRepositoryPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRepositoryPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询应用更新触发器触发日志
+     * @param req DescribeApplicationTriggerLogPersonalRequest
+     * @return DescribeApplicationTriggerLogPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonal(DescribeApplicationTriggerLogPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationTriggerLogPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationTriggerLogPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeApplicationTriggerLogPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询应用更新触发器
+     * @param req DescribeApplicationTriggerPersonalRequest
+     * @return DescribeApplicationTriggerPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationTriggerPersonalResponse DescribeApplicationTriggerPersonal(DescribeApplicationTriggerPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationTriggerPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationTriggerPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeApplicationTriggerPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询个人收藏仓库
+     * @param req DescribeFavorRepositoryPersonalRequest
+     * @return DescribeFavorRepositoryPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFavorRepositoryPersonalResponse DescribeFavorRepositoryPersonal(DescribeFavorRepositoryPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFavorRepositoryPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFavorRepositoryPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFavorRepositoryPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版中查询与指定tag镜像内容相同的tag列表
+     * @param req DescribeImageFilterPersonalRequest
+     * @return DescribeImageFilterPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageFilterPersonalResponse DescribeImageFilterPersonal(DescribeImageFilterPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageFilterPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageFilterPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageFilterPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于获取个人版仓库中自动清理策略
+     * @param req DescribeImageLifecyclePersonalRequest
+     * @return DescribeImageLifecyclePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageLifecyclePersonalResponse DescribeImageLifecyclePersonal(DescribeImageLifecyclePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageLifecyclePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageLifecyclePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageLifecyclePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于获取个人版镜像仓库tag列表
+     * @param req DescribeImagePersonalRequest
+     * @return DescribeImagePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImagePersonalResponse DescribeImagePersonal(DescribeImagePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImagePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImagePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImagePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例当前状态以及过程信息
+     * @param req DescribeInstanceStatusRequest
+     * @return DescribeInstanceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceStatusResponse DescribeInstanceStatus(DescribeInstanceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例信息
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询个人版命名空间信息
+     * @param req DescribeNamespacePersonalRequest
+     * @return DescribeNamespacePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNamespacePersonalResponse DescribeNamespacePersonal(DescribeNamespacePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNamespacePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNamespacePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNamespacePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版版镜像仓库中，获取满足输入搜索条件的用户镜像仓库
+     * @param req DescribeRepositoryFilterPersonalRequest
+     * @return DescribeRepositoryFilterPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRepositoryFilterPersonalResponse DescribeRepositoryFilterPersonal(DescribeRepositoryFilterPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRepositoryFilterPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRepositoryFilterPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRepositoryFilterPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版中获取用户全部的镜像仓库列表
+     * @param req DescribeRepositoryOwnerPersonalRequest
+     * @return DescribeRepositoryOwnerPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRepositoryOwnerPersonalResponse DescribeRepositoryOwnerPersonal(DescribeRepositoryOwnerPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRepositoryOwnerPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRepositoryOwnerPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRepositoryOwnerPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询个人版仓库信息
+     * @param req DescribeRepositoryPersonalRequest
+     * @return DescribeRepositoryPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRepositoryPersonalResponse DescribeRepositoryPersonal(DescribeRepositoryPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRepositoryPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRepositoryPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRepositoryPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询个人用户配额
+     * @param req DescribeUserQuotaPersonalRequest
+     * @return DescribeUserQuotaPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserQuotaPersonalResponse DescribeUserQuotaPersonal(DescribeUserQuotaPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserQuotaPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserQuotaPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeUserQuotaPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版镜像仓库中复制镜像版本
+     * @param req DuplicateImagePersonalRequest
+     * @return DuplicateImagePersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DuplicateImagePersonalResponse DuplicateImagePersonal(DuplicateImagePersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DuplicateImagePersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DuplicateImagePersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DuplicateImagePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于修改应用更新触发器
+     * @param req ModifyApplicationTriggerPersonalRequest
+     * @return ModifyApplicationTriggerPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(ModifyApplicationTriggerPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationTriggerPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyApplicationTriggerPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于更新个人版镜像仓库的访问属性
+     * @param req ModifyRepositoryAccessPersonalRequest
+     * @return ModifyRepositoryAccessPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRepositoryAccessPersonalResponse ModifyRepositoryAccessPersonal(ModifyRepositoryAccessPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRepositoryAccessPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRepositoryAccessPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyRepositoryAccessPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于在个人版镜像仓库中更新容器镜像描述
+     * @param req ModifyRepositoryInfoPersonalRequest
+     * @return ModifyRepositoryInfoPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRepositoryInfoPersonalResponse ModifyRepositoryInfoPersonal(ModifyRepositoryInfoPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRepositoryInfoPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRepositoryInfoPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyRepositoryInfoPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改个人用户登陆密码
+     * @param req ModifyUserPasswordPersonalRequest
+     * @return ModifyUserPasswordPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserPasswordPersonalResponse ModifyUserPasswordPersonal(ModifyUserPasswordPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserPasswordPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserPasswordPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyUserPasswordPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询个人版用户命名空间是否存在
+     * @param req ValidateNamespaceExistPersonalRequest
+     * @return ValidateNamespaceExistPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ValidateNamespaceExistPersonalResponse ValidateNamespaceExistPersonal(ValidateNamespaceExistPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ValidateNamespaceExistPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ValidateNamespaceExistPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ValidateNamespaceExistPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于判断个人版仓库是否存在
+     * @param req ValidateRepositoryExistPersonalRequest
+     * @return ValidateRepositoryExistPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ValidateRepositoryExistPersonalResponse ValidateRepositoryExistPersonal(ValidateRepositoryExistPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ValidateRepositoryExistPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ValidateRepositoryExistPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ValidateRepositoryExistPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+}

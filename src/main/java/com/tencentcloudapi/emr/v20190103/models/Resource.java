@@ -87,6 +87,38 @@ public class Resource extends AbstractModel{
     private MultiDisk [] MultiDisks;
 
     /**
+    * 需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalDiskNum")
+    @Expose
+    private Long LocalDiskNum;
+
+    /**
+    * 盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskNum")
+    @Expose
+    private Long DiskNum;
+
+    /**
      * Get 节点规格描述
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Spec 节点规格描述
@@ -247,6 +279,86 @@ public class Resource extends AbstractModel{
     }
 
     /**
+     * Get 需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 需要绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 规格类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalDiskNum 本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLocalDiskNum() {
+        return this.LocalDiskNum;
+    }
+
+    /**
+     * Set 本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalDiskNum 本地盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalDiskNum(Long LocalDiskNum) {
+        this.LocalDiskNum = LocalDiskNum;
+    }
+
+    /**
+     * Get 盘数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskNum 盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDiskNum() {
+        return this.DiskNum;
+    }
+
+    /**
+     * Set 盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskNum 盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskNum(Long DiskNum) {
+        this.DiskNum = DiskNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +370,10 @@ public class Resource extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "RootSize", this.RootSize);
         this.setParamArrayObj(map, prefix + "MultiDisks.", this.MultiDisks);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
+        this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
 
     }
 }

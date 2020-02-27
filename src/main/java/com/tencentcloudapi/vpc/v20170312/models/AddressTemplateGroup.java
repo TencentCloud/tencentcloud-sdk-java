@@ -51,6 +51,13 @@ public class AddressTemplateGroup extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * IP地址模板实例。
+    */
+    @SerializedName("AddressTemplateSet")
+    @Expose
+    private AddressTemplateItem [] AddressTemplateSet;
+
+    /**
      * Get IP地址模板集合名称。 
      * @return AddressTemplateGroupName IP地址模板集合名称。
      */
@@ -115,6 +122,22 @@ public class AddressTemplateGroup extends AbstractModel{
     }
 
     /**
+     * Get IP地址模板实例。 
+     * @return AddressTemplateSet IP地址模板实例。
+     */
+    public AddressTemplateItem [] getAddressTemplateSet() {
+        return this.AddressTemplateSet;
+    }
+
+    /**
+     * Set IP地址模板实例。
+     * @param AddressTemplateSet IP地址模板实例。
+     */
+    public void setAddressTemplateSet(AddressTemplateItem [] AddressTemplateSet) {
+        this.AddressTemplateSet = AddressTemplateSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class AddressTemplateGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressTemplateGroupId", this.AddressTemplateGroupId);
         this.setParamArraySimple(map, prefix + "AddressTemplateIdSet.", this.AddressTemplateIdSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "AddressTemplateSet.", this.AddressTemplateSet);
 
     }
 }

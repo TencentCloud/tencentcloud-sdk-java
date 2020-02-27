@@ -114,6 +114,13 @@ public class Address extends AbstractModel{
     private Boolean CascadeRelease;
 
     /**
+    * EIP ALG开启的协议类型。
+    */
+    @SerializedName("EipAlgType")
+    @Expose
+    private AlgType EipAlgType;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -322,6 +329,22 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get EIP ALG开启的协议类型。 
+     * @return EipAlgType EIP ALG开启的协议类型。
+     */
+    public AlgType getEipAlgType() {
+        return this.EipAlgType;
+    }
+
+    /**
+     * Set EIP ALG开启的协议类型。
+     * @param EipAlgType EIP ALG开启的协议类型。
+     */
+    public void setEipAlgType(AlgType EipAlgType) {
+        this.EipAlgType = EipAlgType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "IsEipDirectConnection", this.IsEipDirectConnection);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
+        this.setParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
 
     }
 }

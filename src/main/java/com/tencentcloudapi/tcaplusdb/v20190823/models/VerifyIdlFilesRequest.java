@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class VerifyIdlFilesRequest extends AbstractModel{
 
     /**
-    * 待加表的应用实例ID
+    * 待创建表格的集群ID
     */
-    @SerializedName("ApplicationId")
+    @SerializedName("ClusterId")
     @Expose
-    private String ApplicationId;
+    private String ClusterId;
 
     /**
-    * 待加表的大区ID
+    * 待创建表格的表格组ID
     */
-    @SerializedName("LogicZoneId")
+    @SerializedName("TableGroupId")
     @Expose
-    private String LogicZoneId;
+    private String TableGroupId;
 
     /**
     * 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
@@ -51,35 +51,35 @@ public class VerifyIdlFilesRequest extends AbstractModel{
     private IdlFileInfo [] NewIdlFiles;
 
     /**
-     * Get 待加表的应用实例ID 
-     * @return ApplicationId 待加表的应用实例ID
+     * Get 待创建表格的集群ID 
+     * @return ClusterId 待创建表格的集群ID
      */
-    public String getApplicationId() {
-        return this.ApplicationId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 待加表的应用实例ID
-     * @param ApplicationId 待加表的应用实例ID
+     * Set 待创建表格的集群ID
+     * @param ClusterId 待创建表格的集群ID
      */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 待加表的大区ID 
-     * @return LogicZoneId 待加表的大区ID
+     * Get 待创建表格的表格组ID 
+     * @return TableGroupId 待创建表格的表格组ID
      */
-    public String getLogicZoneId() {
-        return this.LogicZoneId;
+    public String getTableGroupId() {
+        return this.TableGroupId;
     }
 
     /**
-     * Set 待加表的大区ID
-     * @param LogicZoneId 待加表的大区ID
+     * Set 待创建表格的表格组ID
+     * @param TableGroupId 待创建表格的表格组ID
      */
-    public void setLogicZoneId(String LogicZoneId) {
-        this.LogicZoneId = LogicZoneId;
+    public void setTableGroupId(String TableGroupId) {
+        this.TableGroupId = TableGroupId;
     }
 
     /**
@@ -118,8 +118,8 @@ public class VerifyIdlFilesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-        this.setParamSimple(map, prefix + "LogicZoneId", this.LogicZoneId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
         this.setParamArrayObj(map, prefix + "ExistingIdlFiles.", this.ExistingIdlFiles);
         this.setParamArrayObj(map, prefix + "NewIdlFiles.", this.NewIdlFiles);
 

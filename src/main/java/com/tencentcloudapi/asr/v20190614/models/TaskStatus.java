@@ -58,6 +58,14 @@ public class TaskStatus extends AbstractModel{
     private String ErrorMsg;
 
     /**
+    * 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultDetail")
+    @Expose
+    private SentenceDetail [] ResultDetail;
+
+    /**
      * Get 任务标识。 
      * @return TaskId 任务标识。
      */
@@ -138,6 +146,26 @@ public class TaskStatus extends AbstractModel{
     }
 
     /**
+     * Get 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultDetail 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SentenceDetail [] getResultDetail() {
+        return this.ResultDetail;
+    }
+
+    /**
+     * Set 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultDetail 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultDetail(SentenceDetail [] ResultDetail) {
+        this.ResultDetail = ResultDetail;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class TaskStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusStr", this.StatusStr);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
 
     }
 }
