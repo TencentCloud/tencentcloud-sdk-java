@@ -79,6 +79,22 @@ public class AgentClientElem extends AbstractModel{
     private Long Status;
 
     /**
+    * 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SalesUin")
+    @Expose
+    private String SalesUin;
+
+    /**
+    * 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SalesName")
+    @Expose
+    private String SalesName;
+
+    /**
      * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
@@ -207,6 +223,46 @@ public class AgentClientElem extends AbstractModel{
     }
 
     /**
+     * Get 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SalesUin 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSalesUin() {
+        return this.SalesUin;
+    }
+
+    /**
+     * Set 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SalesUin 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSalesUin(String SalesUin) {
+        this.SalesUin = SalesUin;
+    }
+
+    /**
+     * Get 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SalesName 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSalesName() {
+        return this.SalesName;
+    }
+
+    /**
+     * Set 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SalesName 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSalesName(String SalesName) {
+        this.SalesName = SalesName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +274,8 @@ public class AgentClientElem extends AbstractModel{
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
+        this.setParamSimple(map, prefix + "SalesName", this.SalesName);
 
     }
 }

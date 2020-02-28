@@ -38,7 +38,6 @@ public class TextData extends AbstractModel{
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
     */
     @SerializedName("EvilType")
     @Expose
@@ -75,8 +74,7 @@ public class TextData extends AbstractModel{
 20006：涉毒违法
 20007：谩骂
 20105：广告引流 
-24001：暴恐
-21000：综合 
+24001：暴恐 
      * @return EvilType 恶意类型
 100：正常
 20001：政治
@@ -85,7 +83,6 @@ public class TextData extends AbstractModel{
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
      */
     public Long getEvilType() {
         return this.EvilType;
@@ -100,7 +97,6 @@ public class TextData extends AbstractModel{
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
      * @param EvilType 恶意类型
 100：正常
 20001：政治
@@ -109,7 +105,6 @@ public class TextData extends AbstractModel{
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;

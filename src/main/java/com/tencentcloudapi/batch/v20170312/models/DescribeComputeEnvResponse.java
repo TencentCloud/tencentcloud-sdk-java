@@ -93,6 +93,13 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     private String NextAction;
 
     /**
+    * 用户添加到计算环境中的计算节点个数
+    */
+    @SerializedName("AttachedComputeNodeCount")
+    @Expose
+    private Long AttachedComputeNodeCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +267,22 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户添加到计算环境中的计算节点个数 
+     * @return AttachedComputeNodeCount 用户添加到计算环境中的计算节点个数
+     */
+    public Long getAttachedComputeNodeCount() {
+        return this.AttachedComputeNodeCount;
+    }
+
+    /**
+     * Set 用户添加到计算环境中的计算节点个数
+     * @param AttachedComputeNodeCount 用户添加到计算环境中的计算节点个数
+     */
+    public void setAttachedComputeNodeCount(Long AttachedComputeNodeCount) {
+        this.AttachedComputeNodeCount = AttachedComputeNodeCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -289,6 +312,7 @@ public class DescribeComputeEnvResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "NextAction", this.NextAction);
+        this.setParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

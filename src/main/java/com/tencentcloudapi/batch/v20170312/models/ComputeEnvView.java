@@ -86,6 +86,13 @@ public class ComputeEnvView extends AbstractModel{
     private String NextAction;
 
     /**
+    * 用户添加到计算环境中的计算节点个数
+    */
+    @SerializedName("AttachedComputeNodeCount")
+    @Expose
+    private Long AttachedComputeNodeCount;
+
+    /**
      * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
@@ -230,6 +237,22 @@ public class ComputeEnvView extends AbstractModel{
     }
 
     /**
+     * Get 用户添加到计算环境中的计算节点个数 
+     * @return AttachedComputeNodeCount 用户添加到计算环境中的计算节点个数
+     */
+    public Long getAttachedComputeNodeCount() {
+        return this.AttachedComputeNodeCount;
+    }
+
+    /**
+     * Set 用户添加到计算环境中的计算节点个数
+     * @param AttachedComputeNodeCount 用户添加到计算环境中的计算节点个数
+     */
+    public void setAttachedComputeNodeCount(Long AttachedComputeNodeCount) {
+        this.AttachedComputeNodeCount = AttachedComputeNodeCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class ComputeEnvView extends AbstractModel{
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "NextAction", this.NextAction);
+        this.setParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
 
     }
 }

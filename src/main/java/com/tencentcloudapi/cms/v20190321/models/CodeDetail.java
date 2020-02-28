@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CodeDetail extends AbstractModel{
 
     /**
-    * 二维码在图片中的位置，由4个点的坐标表示
+    * 二维码在图片中的位置，由边界点的坐标表示
     */
     @SerializedName("CodePosition")
     @Expose
@@ -44,23 +44,23 @@ public class CodeDetail extends AbstractModel{
     private String CodeText;
 
     /**
-    * 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+    * 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
     */
     @SerializedName("CodeType")
     @Expose
     private Long CodeType;
 
     /**
-     * Get 二维码在图片中的位置，由4个点的坐标表示 
-     * @return CodePosition 二维码在图片中的位置，由4个点的坐标表示
+     * Get 二维码在图片中的位置，由边界点的坐标表示 
+     * @return CodePosition 二维码在图片中的位置，由边界点的坐标表示
      */
     public CodePosition [] getCodePosition() {
         return this.CodePosition;
     }
 
     /**
-     * Set 二维码在图片中的位置，由4个点的坐标表示
-     * @param CodePosition 二维码在图片中的位置，由4个点的坐标表示
+     * Set 二维码在图片中的位置，由边界点的坐标表示
+     * @param CodePosition 二维码在图片中的位置，由边界点的坐标表示
      */
     public void setCodePosition(CodePosition [] CodePosition) {
         this.CodePosition = CodePosition;
@@ -99,16 +99,16 @@ public class CodeDetail extends AbstractModel{
     }
 
     /**
-     * Get 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX 
-     * @return CodeType 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+     * Get 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX 
+     * @return CodeType 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
      */
     public Long getCodeType() {
         return this.CodeType;
     }
 
     /**
-     * Set 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
-     * @param CodeType 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+     * Set 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
+     * @param CodeType 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
      */
     public void setCodeType(Long CodeType) {
         this.CodeType = CodeType;

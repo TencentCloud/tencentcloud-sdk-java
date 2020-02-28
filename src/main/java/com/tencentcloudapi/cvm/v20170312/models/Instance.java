@@ -224,6 +224,14 @@ public class Instance extends AbstractModel{
     private String LatestOperationRequestId;
 
     /**
+    * 分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisasterRecoverGroupId")
+    @Expose
+    private String DisasterRecoverGroupId;
+
+    /**
      * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
@@ -692,6 +700,26 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisasterRecoverGroupId 分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisasterRecoverGroupId() {
+        return this.DisasterRecoverGroupId;
+    }
+
+    /**
+     * Set 分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisasterRecoverGroupId 分散置放群组ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
+        this.DisasterRecoverGroupId = DisasterRecoverGroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -723,6 +751,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+        this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
 
     }
 }

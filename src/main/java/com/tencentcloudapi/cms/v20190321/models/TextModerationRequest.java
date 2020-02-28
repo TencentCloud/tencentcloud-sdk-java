@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class TextModerationRequest extends AbstractModel{
 
     /**
-    * 文本内容Base64编码
+    * 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 文本内容Base64编码 
-     * @return Content 文本内容Base64编码
+     * Get 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。 
+     * @return Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 文本内容Base64编码
-     * @param Content 文本内容Base64编码
+     * Set 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+     * @param Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
      */
     public void setContent(String Content) {
         this.Content = Content;

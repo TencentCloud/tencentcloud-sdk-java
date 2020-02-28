@@ -30,7 +30,7 @@ public class UnifiedOrderRequest extends AbstractModel{
     private String CurrencyType;
 
     /**
-    * 聚鑫分配的支付主MidasAppid
+    * 聚鑫分配的支付主MidasAppId
     */
     @SerializedName("MidasAppId")
     @Expose
@@ -51,7 +51,7 @@ public class UnifiedOrderRequest extends AbstractModel{
     private String ProductDetail;
 
     /**
-    * 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+    * 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
     */
     @SerializedName("ProductId")
     @Expose
@@ -72,21 +72,21 @@ public class UnifiedOrderRequest extends AbstractModel{
     private Long TotalAmt;
 
     /**
-    * 用户Id，长度不小于5位，仅支持字母和数字的组合
+    * 用户ID，长度不小于5位，仅支持字母和数字的组合
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 银行真实渠道.如:bank_ccb
+    * 银行真实渠道.如:bank_pingan
     */
     @SerializedName("RealChannel")
     @Expose
     private String RealChannel;
 
     /**
-    * 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+    * 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
     */
     @SerializedName("SubOrderList")
     @Expose
@@ -194,16 +194,16 @@ public class UnifiedOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 聚鑫分配的支付主MidasAppid 
-     * @return MidasAppId 聚鑫分配的支付主MidasAppid
+     * Get 聚鑫分配的支付主MidasAppId 
+     * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
     public String getMidasAppId() {
         return this.MidasAppId;
     }
 
     /**
-     * Set 聚鑫分配的支付主MidasAppid
-     * @param MidasAppId 聚鑫分配的支付主MidasAppid
+     * Set 聚鑫分配的支付主MidasAppId
+     * @param MidasAppId 聚鑫分配的支付主MidasAppId
      */
     public void setMidasAppId(String MidasAppId) {
         this.MidasAppId = MidasAppId;
@@ -242,16 +242,16 @@ public class UnifiedOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合 
-     * @return ProductId 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+     * Get 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合 
+     * @return ProductId 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
-     * @param ProductId 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+     * Set 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+     * @param ProductId 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
@@ -290,48 +290,48 @@ public class UnifiedOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户Id，长度不小于5位，仅支持字母和数字的组合 
-     * @return UserId 用户Id，长度不小于5位，仅支持字母和数字的组合
+     * Get 用户ID，长度不小于5位，仅支持字母和数字的组合 
+     * @return UserId 用户ID，长度不小于5位，仅支持字母和数字的组合
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，长度不小于5位，仅支持字母和数字的组合
-     * @param UserId 用户Id，长度不小于5位，仅支持字母和数字的组合
+     * Set 用户ID，长度不小于5位，仅支持字母和数字的组合
+     * @param UserId 用户ID，长度不小于5位，仅支持字母和数字的组合
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 银行真实渠道.如:bank_ccb 
-     * @return RealChannel 银行真实渠道.如:bank_ccb
+     * Get 银行真实渠道.如:bank_pingan 
+     * @return RealChannel 银行真实渠道.如:bank_pingan
      */
     public String getRealChannel() {
         return this.RealChannel;
     }
 
     /**
-     * Set 银行真实渠道.如:bank_ccb
-     * @param RealChannel 银行真实渠道.如:bank_ccb
+     * Set 银行真实渠道.如:bank_pingan
+     * @param RealChannel 银行真实渠道.如:bank_pingan
      */
     public void setRealChannel(String RealChannel) {
         this.RealChannel = RealChannel;
     }
 
     /**
-     * Get 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符) 
-     * @return SubOrderList 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+     * Get 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符) 
+     * @return SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
      */
     public UnifiedOrderInSubOrderList [] getSubOrderList() {
         return this.SubOrderList;
     }
 
     /**
-     * Set 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
-     * @param SubOrderList 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+     * Set 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+     * @param SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
      */
     public void setSubOrderList(UnifiedOrderInSubOrderList [] SubOrderList) {
         this.SubOrderList = SubOrderList;

@@ -30,7 +30,7 @@ public class CreateAcctRequest extends AbstractModel{
     private String MidasAppId;
 
     /**
-    * 业务平台的子商户Id，唯一
+    * 业务平台的子商户ID，唯一
     */
     @SerializedName("SubMchId")
     @Expose
@@ -122,16 +122,16 @@ public class CreateAcctRequest extends AbstractModel{
     }
 
     /**
-     * Get 业务平台的子商户Id，唯一 
-     * @return SubMchId 业务平台的子商户Id，唯一
+     * Get 业务平台的子商户ID，唯一 
+     * @return SubMchId 业务平台的子商户ID，唯一
      */
     public String getSubMchId() {
         return this.SubMchId;
     }
 
     /**
-     * Set 业务平台的子商户Id，唯一
-     * @param SubMchId 业务平台的子商户Id，唯一
+     * Set 业务平台的子商户ID，唯一
+     * @param SubMchId 业务平台的子商户ID，唯一
      */
     public void setSubMchId(String SubMchId) {
         this.SubMchId = SubMchId;

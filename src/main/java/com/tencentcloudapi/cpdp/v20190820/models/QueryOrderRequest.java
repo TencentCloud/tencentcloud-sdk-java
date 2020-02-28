@@ -30,7 +30,7 @@ public class QueryOrderRequest extends AbstractModel{
     private String MidasAppId;
 
     /**
-    * 用户Id，长度不小于5位， 仅支持字母和数字的组合
+    * 用户ID，长度不小于5位， 仅支持字母和数字的组合
     */
     @SerializedName("UserId")
     @Expose
@@ -117,16 +117,16 @@ type=by_user根据用户id 查订单 。
     }
 
     /**
-     * Get 用户Id，长度不小于5位， 仅支持字母和数字的组合 
-     * @return UserId 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * Get 用户ID，长度不小于5位， 仅支持字母和数字的组合 
+     * @return UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，长度不小于5位， 仅支持字母和数字的组合
-     * @param UserId 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * Set 用户ID，长度不小于5位， 仅支持字母和数字的组合
+     * @param UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

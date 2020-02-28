@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateTextSampleResponse extends AbstractModel{
 
     /**
+    * 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
     * 任务状态
 1：已完成
 2：处理中
@@ -37,6 +44,22 @@ public class CreateTextSampleResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码 
+     * @return ErrMsg 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+     * @param ErrMsg 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
 
     /**
      * Get 任务状态
@@ -82,6 +105,7 @@ public class CreateTextSampleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

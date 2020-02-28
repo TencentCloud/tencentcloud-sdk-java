@@ -37,7 +37,6 @@ public class CreateTextSampleRequest extends AbstractModel{
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
     */
     @SerializedName("EvilType")
@@ -52,6 +51,13 @@ public class CreateTextSampleRequest extends AbstractModel{
     @SerializedName("Label")
     @Expose
     private Long Label;
+
+    /**
+    * 测试修改参数
+    */
+    @SerializedName("Test")
+    @Expose
+    private String Test;
 
     /**
      * Get 关键词数组 
@@ -77,7 +83,6 @@ public class CreateTextSampleRequest extends AbstractModel{
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流 
      * @return EvilType 恶意类型
 100：正常
@@ -86,7 +91,6 @@ public class CreateTextSampleRequest extends AbstractModel{
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      */
     public Long getEvilType() {
@@ -101,7 +105,6 @@ public class CreateTextSampleRequest extends AbstractModel{
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      * @param EvilType 恶意类型
 100：正常
@@ -110,7 +113,6 @@ public class CreateTextSampleRequest extends AbstractModel{
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      */
     public void setEvilType(Long EvilType) {
@@ -142,12 +144,29 @@ public class CreateTextSampleRequest extends AbstractModel{
     }
 
     /**
+     * Get 测试修改参数 
+     * @return Test 测试修改参数
+     */
+    public String getTest() {
+        return this.Test;
+    }
+
+    /**
+     * Set 测试修改参数
+     * @param Test 测试修改参数
+     */
+    public void setTest(String Test) {
+        this.Test = Test;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Contents.", this.Contents);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "Test", this.Test);
 
     }
 }

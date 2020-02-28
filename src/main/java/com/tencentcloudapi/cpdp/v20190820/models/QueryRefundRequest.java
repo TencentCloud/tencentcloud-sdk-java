@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class QueryRefundRequest extends AbstractModel{
 
     /**
-    * 用户Id，长度不小于5位，仅支持字母和数字的组合。
+    * 用户ID，长度不小于5位，仅支持字母和数字的组合。
     */
     @SerializedName("UserId")
     @Expose
@@ -37,7 +37,7 @@ public class QueryRefundRequest extends AbstractModel{
     private String RefundId;
 
     /**
-    * 聚鑫分配的支付主MidasAppid
+    * 聚鑫分配的支付主MidasAppId
     */
     @SerializedName("MidasAppId")
     @Expose
@@ -58,16 +58,16 @@ public class QueryRefundRequest extends AbstractModel{
     private String MidasSignature;
 
     /**
-     * Get 用户Id，长度不小于5位，仅支持字母和数字的组合。 
-     * @return UserId 用户Id，长度不小于5位，仅支持字母和数字的组合。
+     * Get 用户ID，长度不小于5位，仅支持字母和数字的组合。 
+     * @return UserId 用户ID，长度不小于5位，仅支持字母和数字的组合。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，长度不小于5位，仅支持字母和数字的组合。
-     * @param UserId 用户Id，长度不小于5位，仅支持字母和数字的组合。
+     * Set 用户ID，长度不小于5位，仅支持字母和数字的组合。
+     * @param UserId 用户ID，长度不小于5位，仅支持字母和数字的组合。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -90,16 +90,16 @@ public class QueryRefundRequest extends AbstractModel{
     }
 
     /**
-     * Get 聚鑫分配的支付主MidasAppid 
-     * @return MidasAppId 聚鑫分配的支付主MidasAppid
+     * Get 聚鑫分配的支付主MidasAppId 
+     * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
     public String getMidasAppId() {
         return this.MidasAppId;
     }
 
     /**
-     * Set 聚鑫分配的支付主MidasAppid
-     * @param MidasAppId 聚鑫分配的支付主MidasAppid
+     * Set 聚鑫分配的支付主MidasAppId
+     * @param MidasAppId 聚鑫分配的支付主MidasAppId
      */
     public void setMidasAppId(String MidasAppId) {
         this.MidasAppId = MidasAppId;

@@ -100,6 +100,14 @@ public class ComputeNode extends AbstractModel{
     private String ResourceType;
 
     /**
+    * 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
+    */
+    @SerializedName("ResourceOrigin")
+    @Expose
+    private String ResourceOrigin;
+
+    /**
      * Get 计算节点ID 
      * @return ComputeNodeId 计算节点ID
      */
@@ -276,6 +284,26 @@ public class ComputeNode extends AbstractModel{
     }
 
     /**
+     * Get 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。 
+     * @return ResourceOrigin 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
+     */
+    public String getResourceOrigin() {
+        return this.ResourceOrigin;
+    }
+
+    /**
+     * Set 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
+     * @param ResourceOrigin 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+USER_ATTACHED：用户添加到计算环境中的实例资源。
+     */
+    public void setResourceOrigin(String ResourceOrigin) {
+        this.ResourceOrigin = ResourceOrigin;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +318,7 @@ public class ComputeNode extends AbstractModel{
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "ResourceOrigin", this.ResourceOrigin);
 
     }
 }

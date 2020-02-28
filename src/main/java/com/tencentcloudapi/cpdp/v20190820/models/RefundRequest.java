@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RefundRequest extends AbstractModel{
 
     /**
-    * 用户Id，长度不小于5位， 仅支持字母和数字的组合
+    * 用户ID，长度不小于5位， 仅支持字母和数字的组合
     */
     @SerializedName("UserId")
     @Expose
@@ -37,21 +37,21 @@ public class RefundRequest extends AbstractModel{
     private String RefundId;
 
     /**
-    * 聚鑫分配的支付主MidasAppid
+    * 聚鑫分配的支付主MidasAppId
     */
     @SerializedName("MidasAppId")
     @Expose
     private String MidasAppId;
 
     /**
-    * 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
+    * 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
     */
     @SerializedName("TotalRefundAmt")
     @Expose
     private Long TotalRefundAmt;
 
     /**
-    * 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
+    * 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
     */
     @SerializedName("SubOrderRefundList")
     @Expose
@@ -100,16 +100,16 @@ public class RefundRequest extends AbstractModel{
     private Long PlatformRefundAmt;
 
     /**
-     * Get 用户Id，长度不小于5位， 仅支持字母和数字的组合 
-     * @return UserId 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * Get 用户ID，长度不小于5位， 仅支持字母和数字的组合 
+     * @return UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id，长度不小于5位， 仅支持字母和数字的组合
-     * @param UserId 用户Id，长度不小于5位， 仅支持字母和数字的组合
+     * Set 用户ID，长度不小于5位， 仅支持字母和数字的组合
+     * @param UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -132,48 +132,48 @@ public class RefundRequest extends AbstractModel{
     }
 
     /**
-     * Get 聚鑫分配的支付主MidasAppid 
-     * @return MidasAppId 聚鑫分配的支付主MidasAppid
+     * Get 聚鑫分配的支付主MidasAppId 
+     * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
     public String getMidasAppId() {
         return this.MidasAppId;
     }
 
     /**
-     * Set 聚鑫分配的支付主MidasAppid
-     * @param MidasAppId 聚鑫分配的支付主MidasAppid
+     * Set 聚鑫分配的支付主MidasAppId
+     * @param MidasAppId 聚鑫分配的支付主MidasAppId
      */
     public void setMidasAppId(String MidasAppId) {
         this.MidasAppId = MidasAppId;
     }
 
     /**
-     * Get 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额 
-     * @return TotalRefundAmt 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
+     * Get 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额 
+     * @return TotalRefundAmt 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
      */
     public Long getTotalRefundAmt() {
         return this.TotalRefundAmt;
     }
 
     /**
-     * Set 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
-     * @param TotalRefundAmt 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
+     * Set 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
+     * @param TotalRefundAmt 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
      */
     public void setTotalRefundAmt(Long TotalRefundAmt) {
         this.TotalRefundAmt = TotalRefundAmt;
     }
 
     /**
-     * Get 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。 
-     * @return SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
+     * Get 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。 
+     * @return SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
      */
     public RefundOutSubOrderRefundList [] getSubOrderRefundList() {
         return this.SubOrderRefundList;
     }
 
     /**
-     * Set 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
-     * @param SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
+     * Set 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+     * @param SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
      */
     public void setSubOrderRefundList(RefundOutSubOrderRefundList [] SubOrderRefundList) {
         this.SubOrderRefundList = SubOrderRefundList;

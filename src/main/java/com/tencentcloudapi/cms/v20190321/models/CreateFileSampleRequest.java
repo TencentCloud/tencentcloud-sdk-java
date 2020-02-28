@@ -37,7 +37,6 @@ public class CreateFileSampleRequest extends AbstractModel{
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
     */
     @SerializedName("EvilType")
@@ -45,10 +44,7 @@ public class CreateFileSampleRequest extends AbstractModel{
     private Long EvilType;
 
     /**
-    * 文件类型
-image：图片
-audio：音频
-video：视频
+    * image：图片
     */
     @SerializedName("FileType")
     @Expose
@@ -87,7 +83,6 @@ video：视频
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流 
      * @return EvilType 恶意类型
 100：正常
@@ -96,7 +91,6 @@ video：视频
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      */
     public Long getEvilType() {
@@ -111,7 +105,6 @@ video：视频
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      * @param EvilType 恶意类型
 100：正常
@@ -120,7 +113,6 @@ video：视频
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
 20105：广告引流
      */
     public void setEvilType(Long EvilType) {
@@ -128,28 +120,16 @@ video：视频
     }
 
     /**
-     * Get 文件类型
-image：图片
-audio：音频
-video：视频 
-     * @return FileType 文件类型
-image：图片
-audio：音频
-video：视频
+     * Get image：图片 
+     * @return FileType image：图片
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型
-image：图片
-audio：音频
-video：视频
-     * @param FileType 文件类型
-image：图片
-audio：音频
-video：视频
+     * Set image：图片
+     * @param FileType image：图片
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

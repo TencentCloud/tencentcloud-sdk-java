@@ -79,14 +79,11 @@ public class IDCardOCRResponse extends AbstractModel{
     private String ValidDate;
 
     /**
-    * 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
-
-目前支持的扩展字段为：
-IdCard，身份证照片，请求 CropIdCard 时返回；
-Portrait，人像照片，请求 CropPortrait 时返回；
-WarnInfos，告警信息（Code - 告警码），识别出以下告警内容时返回。
-
-Code 告警码列表和释义：
+    * 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
+IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
+QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
 -9102	身份证复印件告警，
@@ -235,14 +232,11 @@ Code 告警码列表和释义：
     }
 
     /**
-     * Get 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
-
-目前支持的扩展字段为：
-IdCard，身份证照片，请求 CropIdCard 时返回；
-Portrait，人像照片，请求 CropPortrait 时返回；
-WarnInfos，告警信息（Code - 告警码），识别出以下告警内容时返回。
-
-Code 告警码列表和释义：
+     * Get 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
+IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
+QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
 -9102	身份证复印件告警，
@@ -250,14 +244,11 @@ Code 告警码列表和释义：
 -9105	身份证框内遮挡告警，
 -9104	临时身份证告警，
 -9106	身份证 PS 告警。 
-     * @return AdvancedInfo 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
-
-目前支持的扩展字段为：
-IdCard，身份证照片，请求 CropIdCard 时返回；
-Portrait，人像照片，请求 CropPortrait 时返回；
-WarnInfos，告警信息（Code - 告警码），识别出以下告警内容时返回。
-
-Code 告警码列表和释义：
+     * @return AdvancedInfo 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
+IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
+QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
 -9102	身份证复印件告警，
@@ -271,14 +262,11 @@ Code 告警码列表和释义：
     }
 
     /**
-     * Set 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
-
-目前支持的扩展字段为：
-IdCard，身份证照片，请求 CropIdCard 时返回；
-Portrait，人像照片，请求 CropPortrait 时返回；
-WarnInfos，告警信息（Code - 告警码），识别出以下告警内容时返回。
-
-Code 告警码列表和释义：
+     * Set 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
+IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
+QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
 -9102	身份证复印件告警，
@@ -286,14 +274,11 @@ Code 告警码列表和释义：
 -9105	身份证框内遮挡告警，
 -9104	临时身份证告警，
 -9106	身份证 PS 告警。
-     * @param AdvancedInfo 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
-
-目前支持的扩展字段为：
-IdCard，身份证照片，请求 CropIdCard 时返回；
-Portrait，人像照片，请求 CropPortrait 时返回；
-WarnInfos，告警信息（Code - 告警码），识别出以下告警内容时返回。
-
-Code 告警码列表和释义：
+     * @param AdvancedInfo 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
+IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
+QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
 -9102	身份证复印件告警，

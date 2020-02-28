@@ -56,6 +56,24 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询硬件节点信息
+     * @param req DescribeClusterNodesRequest
+     * @return DescribeClusterNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterNodesResponse DescribeClusterNodes(DescribeClusterNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterNodesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterNodesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterNodes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询EMR实例
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse

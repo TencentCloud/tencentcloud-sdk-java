@@ -44,6 +44,13 @@ public class FileSample extends AbstractModel{
     private String FileUrl;
 
     /**
+    * 文件压缩后云url
+    */
+    @SerializedName("CompressFileUrl")
+    @Expose
+    private String CompressFileUrl;
+
+    /**
      * Get 文件md5 
      * @return FileMd5 文件md5
      */
@@ -92,12 +99,29 @@ public class FileSample extends AbstractModel{
     }
 
     /**
+     * Get 文件压缩后云url 
+     * @return CompressFileUrl 文件压缩后云url
+     */
+    public String getCompressFileUrl() {
+        return this.CompressFileUrl;
+    }
+
+    /**
+     * Set 文件压缩后云url
+     * @param CompressFileUrl 文件压缩后云url
+     */
+    public void setCompressFileUrl(String CompressFileUrl) {
+        this.CompressFileUrl = CompressFileUrl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
+        this.setParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
 
     }
 }

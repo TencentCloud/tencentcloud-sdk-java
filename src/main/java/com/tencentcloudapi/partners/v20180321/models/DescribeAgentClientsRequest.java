@@ -65,6 +65,20 @@ public class DescribeAgentClientsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 业务员ID
+    */
+    @SerializedName("SalesUin")
+    @Expose
+    private String SalesUin;
+
+    /**
+    * 业务员姓名（模糊查询）
+    */
+    @SerializedName("SalesName")
+    @Expose
+    private String SalesName;
+
+    /**
      * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
@@ -161,6 +175,38 @@ public class DescribeAgentClientsRequest extends AbstractModel{
     }
 
     /**
+     * Get 业务员ID 
+     * @return SalesUin 业务员ID
+     */
+    public String getSalesUin() {
+        return this.SalesUin;
+    }
+
+    /**
+     * Set 业务员ID
+     * @param SalesUin 业务员ID
+     */
+    public void setSalesUin(String SalesUin) {
+        this.SalesUin = SalesUin;
+    }
+
+    /**
+     * Get 业务员姓名（模糊查询） 
+     * @return SalesName 业务员姓名（模糊查询）
+     */
+    public String getSalesName() {
+        return this.SalesName;
+    }
+
+    /**
+     * Set 业务员姓名（模糊查询）
+     * @param SalesName 业务员姓名（模糊查询）
+     */
+    public void setSalesName(String SalesName) {
+        this.SalesName = SalesName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +216,8 @@ public class DescribeAgentClientsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
+        this.setParamSimple(map, prefix + "SalesName", this.SalesName);
 
     }
 }

@@ -38,7 +38,6 @@ public class ImageData extends AbstractModel{
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
     */
     @SerializedName("EvilType")
     @Expose
@@ -64,6 +63,13 @@ public class ImageData extends AbstractModel{
     @SerializedName("IllegalDetect")
     @Expose
     private ImageIllegalDetect IllegalDetect;
+
+    /**
+    * logo详情
+    */
+    @SerializedName("LogoDetect")
+    @Expose
+    private LogoDetail LogoDetect;
 
     /**
     * 图片OCR详情
@@ -124,8 +130,7 @@ public class ImageData extends AbstractModel{
 20006：涉毒违法
 20007：谩骂 
 20103：性感
-24001：暴恐
-21000：综合 
+24001：暴恐 
      * @return EvilType 恶意类型
 100：正常 
 20001：政治
@@ -134,7 +139,6 @@ public class ImageData extends AbstractModel{
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
      */
     public Long getEvilType() {
         return this.EvilType;
@@ -149,7 +153,6 @@ public class ImageData extends AbstractModel{
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
      * @param EvilType 恶意类型
 100：正常 
 20001：政治
@@ -158,7 +161,6 @@ public class ImageData extends AbstractModel{
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;
@@ -210,6 +212,22 @@ public class ImageData extends AbstractModel{
      */
     public void setIllegalDetect(ImageIllegalDetect IllegalDetect) {
         this.IllegalDetect = IllegalDetect;
+    }
+
+    /**
+     * Get logo详情 
+     * @return LogoDetect logo详情
+     */
+    public LogoDetail getLogoDetect() {
+        return this.LogoDetect;
+    }
+
+    /**
+     * Set logo详情
+     * @param LogoDetect logo详情
+     */
+    public void setLogoDetect(LogoDetail LogoDetect) {
+        this.LogoDetect = LogoDetect;
     }
 
     /**
@@ -301,6 +319,7 @@ public class ImageData extends AbstractModel{
         this.setParamObj(map, prefix + "CodeDetect.", this.CodeDetect);
         this.setParamObj(map, prefix + "HotDetect.", this.HotDetect);
         this.setParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
+        this.setParamObj(map, prefix + "LogoDetect.", this.LogoDetect);
         this.setParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
         this.setParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
         this.setParamObj(map, prefix + "PornDetect.", this.PornDetect);

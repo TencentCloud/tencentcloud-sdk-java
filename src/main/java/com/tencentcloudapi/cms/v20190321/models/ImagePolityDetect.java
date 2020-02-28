@@ -39,6 +39,13 @@ public class ImagePolityDetect extends AbstractModel{
     private Long HitFlag;
 
     /**
+    * 命中的logo标签信息
+    */
+    @SerializedName("PolityLogoDetail")
+    @Expose
+    private Logo [] PolityLogoDetail;
+
+    /**
     * 命中的人脸名称
     */
     @SerializedName("FaceNames")
@@ -104,6 +111,22 @@ public class ImagePolityDetect extends AbstractModel{
      */
     public void setHitFlag(Long HitFlag) {
         this.HitFlag = HitFlag;
+    }
+
+    /**
+     * Get 命中的logo标签信息 
+     * @return PolityLogoDetail 命中的logo标签信息
+     */
+    public Logo [] getPolityLogoDetail() {
+        return this.PolityLogoDetail;
+    }
+
+    /**
+     * Set 命中的logo标签信息
+     * @param PolityLogoDetail 命中的logo标签信息
+     */
+    public void setPolityLogoDetail(Logo [] PolityLogoDetail) {
+        this.PolityLogoDetail = PolityLogoDetail;
     }
 
     /**
@@ -176,6 +199,7 @@ public class ImagePolityDetect extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
+        this.setParamArrayObj(map, prefix + "PolityLogoDetail.", this.PolityLogoDetail);
         this.setParamArraySimple(map, prefix + "FaceNames.", this.FaceNames);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArraySimple(map, prefix + "PolityItems.", this.PolityItems);

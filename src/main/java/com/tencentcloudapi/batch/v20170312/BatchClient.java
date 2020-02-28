@@ -38,6 +38,30 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *此接口可将已存在实例添加到计算环境中。
+实例需要满足如下条件：<br/>
+1.实例不在批量计算系统中。<br/>
+2.实例状态要求处于运行中。<br/>
+3.支持预付费实例，按小时后付费实例，专享子机实例。不支持竞价实例。<br/>
+
+此接口会将加入到计算环境中的实例重设UserData和重装操作系统。
+     * @param req AttachInstancesRequest
+     * @return AttachInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachInstancesResponse AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AttachInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于创建计算环境
      * @param req CreateComputeEnvRequest
      * @return CreateComputeEnvResponse
@@ -411,6 +435,24 @@ public class BatchClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将添加到计算环境中的实例从计算环境中移出。若是由批量计算自动创建的计算节点实例则不允许移出。
+     * @param req DetachInstancesRequest
+     * @return DetachInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachInstancesResponse DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetachInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

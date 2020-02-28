@@ -1351,6 +1351,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *接口用来查询直播增值业务--截图的张数
+     * @param req DescribeScreenShotSheetNumListRequest
+     * @return DescribeScreenShotSheetNumListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(DescribeScreenShotSheetNumListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScreenShotSheetNumListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScreenShotSheetNumListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeScreenShotSheetNumList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询天维度每条流的播放数据，包括总流量等。
      * @param req DescribeStreamDayPlayInfoListRequest
      * @return DescribeStreamDayPlayInfoListResponse
