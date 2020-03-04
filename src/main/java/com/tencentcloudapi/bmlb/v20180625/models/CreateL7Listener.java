@@ -107,6 +107,13 @@ public class CreateL7Listener extends AbstractModel{
     private Long Bandwidth;
 
     /**
+    * 转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+    */
+    @SerializedName("ForwardProtocol")
+    @Expose
+    private Long ForwardProtocol;
+
+    /**
      * Get 七层监听器端口，可选值1~65535。 
      * @return LoadBalancerPort 七层监听器端口，可选值1~65535。
      */
@@ -299,6 +306,22 @@ public class CreateL7Listener extends AbstractModel{
     }
 
     /**
+     * Get 转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。 
+     * @return ForwardProtocol 转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+     */
+    public Long getForwardProtocol() {
+        return this.ForwardProtocol;
+    }
+
+    /**
+     * Set 转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+     * @param ForwardProtocol 转发协议。当Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+     */
+    public void setForwardProtocol(Long ForwardProtocol) {
+        this.ForwardProtocol = ForwardProtocol;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class CreateL7Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "CertCaName", this.CertCaName);
         this.setParamSimple(map, prefix + "CertCaContent", this.CertCaContent);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
 
     }
 }

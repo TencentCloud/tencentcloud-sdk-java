@@ -226,6 +226,13 @@ global：全球加速
     private String Area;
 
     /**
+    * 回源超时配置
+    */
+    @SerializedName("OriginPullTimeout")
+    @Expose
+    private OriginPullTimeout OriginPullTimeout;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -702,6 +709,22 @@ global：全球加速
     }
 
     /**
+     * Get 回源超时配置 
+     * @return OriginPullTimeout 回源超时配置
+     */
+    public OriginPullTimeout getOriginPullTimeout() {
+        return this.OriginPullTimeout;
+    }
+
+    /**
+     * Set 回源超时配置
+     * @param OriginPullTimeout 回源超时配置
+     */
+    public void setOriginPullTimeout(OriginPullTimeout OriginPullTimeout) {
+        this.OriginPullTimeout = OriginPullTimeout;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -733,6 +756,7 @@ global：全球加速
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
 
     }
 }

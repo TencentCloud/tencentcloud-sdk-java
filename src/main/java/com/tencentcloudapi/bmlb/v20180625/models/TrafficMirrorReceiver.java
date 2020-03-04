@@ -114,6 +114,13 @@ public class TrafficMirrorReceiver extends AbstractModel{
     private String HealthStatus;
 
     /**
+    * 接收机的可以执行的操作集合。
+    */
+    @SerializedName("Operates")
+    @Expose
+    private String [] Operates;
+
+    /**
      * Get 接收机实例ID。 
      * @return InstanceId 接收机实例ID。
      */
@@ -322,6 +329,22 @@ public class TrafficMirrorReceiver extends AbstractModel{
     }
 
     /**
+     * Get 接收机的可以执行的操作集合。 
+     * @return Operates 接收机的可以执行的操作集合。
+     */
+    public String [] getOperates() {
+        return this.Operates;
+    }
+
+    /**
+     * Set 接收机的可以执行的操作集合。
+     * @param Operates 接收机的可以执行的操作集合。
+     */
+    public void setOperates(String [] Operates) {
+        this.Operates = Operates;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class TrafficMirrorReceiver extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+        this.setParamArraySimple(map, prefix + "Operates.", this.Operates);
 
     }
 }

@@ -107,6 +107,13 @@ public class L7ListenerInfo extends AbstractModel{
     private L7ListenerInfoRule [] RuleSet;
 
     /**
+    * https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+    */
+    @SerializedName("ForwardProtocol")
+    @Expose
+    private Long ForwardProtocol;
+
+    /**
      * Get 七层监听器实例ID。 
      * @return ListenerId 七层监听器实例ID。
      */
@@ -299,6 +306,22 @@ public class L7ListenerInfo extends AbstractModel{
     }
 
     /**
+     * Get https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。 
+     * @return ForwardProtocol https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+     */
+    public Long getForwardProtocol() {
+        return this.ForwardProtocol;
+    }
+
+    /**
+     * Set https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+     * @param ForwardProtocol https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+     */
+    public void setForwardProtocol(Long ForwardProtocol) {
+        this.ForwardProtocol = ForwardProtocol;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class L7ListenerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AddTimestamp", this.AddTimestamp);
         this.setParamArrayObj(map, prefix + "RuleSet.", this.RuleSet);
+        this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
 
     }
 }

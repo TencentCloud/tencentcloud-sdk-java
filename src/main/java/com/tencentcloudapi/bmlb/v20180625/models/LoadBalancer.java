@@ -205,6 +205,13 @@ public class LoadBalancer extends AbstractModel{
     private String BzL7Metrics;
 
     /**
+    * 该负载均衡对应的所在的整形类型的VpcId
+    */
+    @SerializedName("IntVpcId")
+    @Expose
+    private Long IntVpcId;
+
+    /**
      * Get 负载均衡器ID 
      * @return LoadBalancerId 负载均衡器ID
      */
@@ -621,6 +628,22 @@ public class LoadBalancer extends AbstractModel{
     }
 
     /**
+     * Get 该负载均衡对应的所在的整形类型的VpcId 
+     * @return IntVpcId 该负载均衡对应的所在的整形类型的VpcId
+     */
+    public Long getIntVpcId() {
+        return this.IntVpcId;
+    }
+
+    /**
+     * Set 该负载均衡对应的所在的整形类型的VpcId
+     * @param IntVpcId 该负载均衡对应的所在的整形类型的VpcId
+     */
+    public void setIntVpcId(Long IntVpcId) {
+        this.IntVpcId = IntVpcId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -650,6 +673,7 @@ public class LoadBalancer extends AbstractModel{
         this.setParamSimple(map, prefix + "BzPayMode", this.BzPayMode);
         this.setParamSimple(map, prefix + "BzL4Metrics", this.BzL4Metrics);
         this.setParamSimple(map, prefix + "BzL7Metrics", this.BzL7Metrics);
+        this.setParamSimple(map, prefix + "IntVpcId", this.IntVpcId);
 
     }
 }

@@ -74,6 +74,24 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *获取收支明细列表，支持翻页和参数过滤
+     * @param req DescribeBillListRequest
+     * @return DescribeBillListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillListResponse DescribeBillList(DescribeBillListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询账单资源汇总数据 
      * @param req DescribeBillResourceSummaryRequest
      * @return DescribeBillResourceSummaryResponse

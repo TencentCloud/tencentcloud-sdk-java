@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipsResponse extends AbstractModel{
+public class UnbindRsListResponse extends AbstractModel{
 
     /**
-    * 返回EIP信息数组
+    * 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
     */
-    @SerializedName("EipSet")
+    @SerializedName("TaskId")
     @Expose
-    private EipInfo [] EipSet;
-
-    /**
-    * 返回EIP数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeEipsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回EIP信息数组 
-     * @return EipSet 返回EIP信息数组
+     * Get 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态 
+     * @return TaskId 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
      */
-    public EipInfo [] getEipSet() {
-        return this.EipSet;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 返回EIP信息数组
-     * @param EipSet 返回EIP信息数组
+     * Set 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
+     * @param TaskId 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态
      */
-    public void setEipSet(EipInfo [] EipSet) {
-        this.EipSet = EipSet;
-    }
-
-    /**
-     * Get 返回EIP数量 
-     * @return TotalCount 返回EIP数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 返回EIP数量
-     * @param TotalCount 返回EIP数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class DescribeEipsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "EipSet.", this.EipSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

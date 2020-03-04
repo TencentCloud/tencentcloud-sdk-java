@@ -362,6 +362,24 @@ public class BmeipClient extends AbstractClient{
     }
 
     /**
+     *批量解绑物理机弹性公网IP接口
+     * @param req UnbindRsListRequest
+     * @return UnbindRsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindRsListResponse UnbindRsList(UnbindRsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindRsListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindRsListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnbindRsList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *黑石EIP解绑VPCIP
      * @param req UnbindVpcIpRequest
      * @return UnbindVpcIpResponse

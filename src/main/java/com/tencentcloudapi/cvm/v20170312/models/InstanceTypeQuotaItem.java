@@ -108,6 +108,14 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     private ItemPrice Price;
 
     /**
+    * 售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SoldOutReason")
+    @Expose
+    private String SoldOutReason;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -304,6 +312,26 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     }
 
     /**
+     * Get 售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SoldOutReason 售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSoldOutReason() {
+        return this.SoldOutReason;
+    }
+
+    /**
+     * Set 售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SoldOutReason 售罄原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSoldOutReason(String SoldOutReason) {
+        this.SoldOutReason = SoldOutReason;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +347,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.setParamArrayObj(map, prefix + "LocalDiskTypeList.", this.LocalDiskTypeList);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Price.", this.Price);
+        this.setParamSimple(map, prefix + "SoldOutReason", this.SoldOutReason);
 
     }
 }

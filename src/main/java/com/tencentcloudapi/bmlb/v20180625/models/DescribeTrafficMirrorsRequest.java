@@ -58,6 +58,27 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 排序字段。trafficMirrorId或者createTime。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方式，取值：0:增序(默认)，1:降序
+    */
+    @SerializedName("Order")
+    @Expose
+    private Long Order;
+
+    /**
+    * 模糊匹配trafficMirrorId或者alias字段。
+    */
+    @SerializedName("SearchKey")
+    @Expose
+    private String SearchKey;
+
+    /**
      * Get 流量镜像实例ID的数组，支持批量查询 
      * @return TrafficMirrorIds 流量镜像实例ID的数组，支持批量查询
      */
@@ -138,6 +159,54 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
     }
 
     /**
+     * Get 排序字段。trafficMirrorId或者createTime。 
+     * @return OrderField 排序字段。trafficMirrorId或者createTime。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段。trafficMirrorId或者createTime。
+     * @param OrderField 排序字段。trafficMirrorId或者createTime。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方式，取值：0:增序(默认)，1:降序 
+     * @return Order 排序方式，取值：0:增序(默认)，1:降序
+     */
+    public Long getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式，取值：0:增序(默认)，1:降序
+     * @param Order 排序方式，取值：0:增序(默认)，1:降序
+     */
+    public void setOrder(Long Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 模糊匹配trafficMirrorId或者alias字段。 
+     * @return SearchKey 模糊匹配trafficMirrorId或者alias字段。
+     */
+    public String getSearchKey() {
+        return this.SearchKey;
+    }
+
+    /**
+     * Set 模糊匹配trafficMirrorId或者alias字段。
+     * @param SearchKey 模糊匹配trafficMirrorId或者alias字段。
+     */
+    public void setSearchKey(String SearchKey) {
+        this.SearchKey = SearchKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +215,9 @@ public class DescribeTrafficMirrorsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
 
     }
 }

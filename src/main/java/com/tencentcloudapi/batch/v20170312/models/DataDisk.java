@@ -64,7 +64,7 @@ public class DataDisk extends AbstractModel{
     private String SnapshotId;
 
     /**
-    * 数据盘是否随子机销毁。取值范围：
+    * 数据盘是加密。取值范围：
 <li>TRUE：加密
 <li>FALSE：不加密<br>
 默认取值：FALSE<br>
@@ -180,13 +180,13 @@ public class DataDisk extends AbstractModel{
     }
 
     /**
-     * Get 数据盘是否随子机销毁。取值范围：
+     * Get 数据盘是加密。取值范围：
 <li>TRUE：加密
 <li>FALSE：不加密<br>
 默认取值：FALSE<br>
 该参数目前仅用于 `RunInstances` 接口。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Encrypt 数据盘是否随子机销毁。取值范围：
+     * @return Encrypt 数据盘是加密。取值范围：
 <li>TRUE：加密
 <li>FALSE：不加密<br>
 默认取值：FALSE<br>
@@ -198,13 +198,13 @@ public class DataDisk extends AbstractModel{
     }
 
     /**
-     * Set 数据盘是否随子机销毁。取值范围：
+     * Set 数据盘是加密。取值范围：
 <li>TRUE：加密
 <li>FALSE：不加密<br>
 默认取值：FALSE<br>
 该参数目前仅用于 `RunInstances` 接口。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Encrypt 数据盘是否随子机销毁。取值范围：
+     * @param Encrypt 数据盘是加密。取值范围：
 <li>TRUE：加密
 <li>FALSE：不加密<br>
 默认取值：FALSE<br>

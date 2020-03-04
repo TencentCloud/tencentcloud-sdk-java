@@ -51,7 +51,7 @@ public class DescribeL7BackendsRequest extends AbstractModel{
     private String LocationId;
 
     /**
-    * 查询条件，传'all'则查询所有与规则绑定的主机信息。
+    * 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
     */
     @SerializedName("QueryType")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeL7BackendsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询条件，传'all'则查询所有与规则绑定的主机信息。 
-     * @return QueryType 查询条件，传'all'则查询所有与规则绑定的主机信息。
+     * Get 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。 
+     * @return QueryType 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
      */
     public String getQueryType() {
         return this.QueryType;
     }
 
     /**
-     * Set 查询条件，传'all'则查询所有与规则绑定的主机信息。
-     * @param QueryType 查询条件，传'all'则查询所有与规则绑定的主机信息。
+     * Set 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
+     * @param QueryType 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;

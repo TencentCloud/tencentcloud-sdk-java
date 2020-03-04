@@ -20,94 +20,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubscribedInfo extends AbstractModel{
+public class GroupResponse extends AbstractModel{
 
     /**
-    * 订阅的主题名
-    */
-    @SerializedName("TopicName")
-    @Expose
-    private String TopicName;
-
-    /**
-    * 订阅的分区
+    * 计数
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Partition")
+    @SerializedName("TotalCount")
     @Expose
-    private Long [] Partition;
+    private Long TotalCount;
 
     /**
-    * 分区offset信息
+    * GroupList
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("PartitionOffset")
+    @SerializedName("GroupList")
     @Expose
-    private PartitionOffset [] PartitionOffset;
+    private DescribeGroup [] GroupList;
 
     /**
-     * Get 订阅的主题名 
-     * @return TopicName 订阅的主题名
-     */
-    public String getTopicName() {
-        return this.TopicName;
-    }
-
-    /**
-     * Set 订阅的主题名
-     * @param TopicName 订阅的主题名
-     */
-    public void setTopicName(String TopicName) {
-        this.TopicName = TopicName;
-    }
-
-    /**
-     * Get 订阅的分区
+     * Get 计数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Partition 订阅的分区
+     * @return TotalCount 计数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long [] getPartition() {
-        return this.Partition;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 订阅的分区
+     * Set 计数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Partition 订阅的分区
+     * @param TotalCount 计数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPartition(Long [] Partition) {
-        this.Partition = Partition;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 分区offset信息
+     * Get GroupList
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PartitionOffset 分区offset信息
+     * @return GroupList GroupList
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public PartitionOffset [] getPartitionOffset() {
-        return this.PartitionOffset;
+    public DescribeGroup [] getGroupList() {
+        return this.GroupList;
     }
 
     /**
-     * Set 分区offset信息
+     * Set GroupList
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PartitionOffset 分区offset信息
+     * @param GroupList GroupList
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPartitionOffset(PartitionOffset [] PartitionOffset) {
-        this.PartitionOffset = PartitionOffset;
+    public void setGroupList(DescribeGroup [] GroupList) {
+        this.GroupList = GroupList;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
-        this.setParamArraySimple(map, prefix + "Partition.", this.Partition);
-        this.setParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);
 
     }
 }

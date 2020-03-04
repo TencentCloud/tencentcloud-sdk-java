@@ -27,7 +27,7 @@ public class DescribeGroupResponse extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private DescribeGroup [] Result;
+    private GroupResponse Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeGroupResponse extends AbstractModel{
      * Get 返回结果集列表 
      * @return Result 返回结果集列表
      */
-    public DescribeGroup [] getResult() {
+    public GroupResponse getResult() {
         return this.Result;
     }
 
@@ -48,7 +48,7 @@ public class DescribeGroupResponse extends AbstractModel{
      * Set 返回结果集列表
      * @param Result 返回结果集列表
      */
-    public void setResult(DescribeGroup [] Result) {
+    public void setResult(GroupResponse Result) {
         this.Result = Result;
     }
 
@@ -72,7 +72,7 @@ public class DescribeGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Result.", this.Result);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

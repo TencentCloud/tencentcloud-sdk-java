@@ -100,7 +100,7 @@ public class L7Listener extends AbstractModel{
     private String AddTimestamp;
 
     /**
-    * https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+    * https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
     */
     @SerializedName("ForwardProtocol")
     @Expose
@@ -283,16 +283,16 @@ public class L7Listener extends AbstractModel{
     }
 
     /**
-     * Get https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。 
-     * @return ForwardProtocol https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+     * Get https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。 
+     * @return ForwardProtocol https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
      */
     public Long getForwardProtocol() {
         return this.ForwardProtocol;
     }
 
     /**
-     * Set https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
-     * @param ForwardProtocol https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+     * Set https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+     * @param ForwardProtocol https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
      */
     public void setForwardProtocol(Long ForwardProtocol) {
         this.ForwardProtocol = ForwardProtocol;

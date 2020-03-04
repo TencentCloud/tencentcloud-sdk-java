@@ -107,6 +107,13 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel{
     private String BusinessCodeName;
 
     /**
+    * 消耗类型
+    */
+    @SerializedName("ConsumptionTypeName")
+    @Expose
+    private String ConsumptionTypeName;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -299,6 +306,22 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel{
     }
 
     /**
+     * Get 消耗类型 
+     * @return ConsumptionTypeName 消耗类型
+     */
+    public String getConsumptionTypeName() {
+        return this.ConsumptionTypeName;
+    }
+
+    /**
+     * Set 消耗类型
+     * @param ConsumptionTypeName 消耗类型
+     */
+    public void setConsumptionTypeName(String ConsumptionTypeName) {
+        this.ConsumptionTypeName = ConsumptionTypeName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel{
         this.setParamSimple(map, prefix + "PayModeName", this.PayModeName);
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
+        this.setParamSimple(map, prefix + "ConsumptionTypeName", this.ConsumptionTypeName);
 
     }
 }

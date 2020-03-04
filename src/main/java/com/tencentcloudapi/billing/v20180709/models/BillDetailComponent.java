@@ -135,7 +135,7 @@ public class BillDetailComponent extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
-    * 组件类型代码
+    * 组件类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCode")
@@ -143,7 +143,7 @@ public class BillDetailComponent extends AbstractModel{
     private String ItemCode;
 
     /**
-    * 组件名称代码
+    * 组件名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCode")
@@ -415,9 +415,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 组件类型代码
+     * Get 组件类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ItemCode 组件类型代码
+     * @return ItemCode 组件类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemCode() {
@@ -425,9 +425,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 组件类型代码
+     * Set 组件类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ItemCode 组件类型代码
+     * @param ItemCode 组件类型代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCode(String ItemCode) {
@@ -435,9 +435,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 组件名称代码
+     * Get 组件名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComponentCode 组件名称代码
+     * @return ComponentCode 组件名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCode() {
@@ -445,9 +445,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 组件名称代码
+     * Set 组件名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComponentCode 组件名称代码
+     * @param ComponentCode 组件名称代码（未开放的字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCode(String ComponentCode) {

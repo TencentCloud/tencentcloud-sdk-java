@@ -179,6 +179,38 @@ public class InstanceAttributesResponse extends AbstractModel{
     private Long ExpireTime;
 
     /**
+    * 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
+    * kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxGroupNum")
+    @Expose
+    private Long MaxGroupNum;
+
+    /**
+    * 售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cvm")
+    @Expose
+    private Long Cvm;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -539,6 +571,86 @@ public class InstanceAttributesResponse extends AbstractModel{
     }
 
     /**
+     * Get 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneIds 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneIds 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
+    /**
+     * Get kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get 最大分组数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxGroupNum 最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxGroupNum() {
+        return this.MaxGroupNum;
+    }
+
+    /**
+     * Set 最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxGroupNum 最大分组数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxGroupNum(Long MaxGroupNum) {
+        this.MaxGroupNum = MaxGroupNum;
+    }
+
+    /**
+     * Get 售卖类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cvm 售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCvm() {
+        return this.Cvm;
+    }
+
+    /**
+     * Set 售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cvm 售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvm(Long Cvm) {
+        this.Cvm = Cvm;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -564,6 +676,10 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTopics", this.CreatedTopics);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "MaxGroupNum", this.MaxGroupNum);
+        this.setParamSimple(map, prefix + "Cvm", this.Cvm);
 
     }
 }

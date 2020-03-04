@@ -111,7 +111,7 @@ public class InstanceDetail extends AbstractModel{
     */
     @SerializedName("Healthy")
     @Expose
-    private String Healthy;
+    private Long Healthy;
 
     /**
     * 实例状态信息
@@ -154,6 +154,30 @@ public class InstanceDetail extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
+    * ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cvm")
+    @Expose
+    private Long Cvm;
 
     /**
      * Get 实例id 
@@ -351,7 +375,7 @@ public class InstanceDetail extends AbstractModel{
      * Get 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常 
      * @return Healthy 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
      */
-    public String getHealthy() {
+    public Long getHealthy() {
         return this.Healthy;
     }
 
@@ -359,7 +383,7 @@ public class InstanceDetail extends AbstractModel{
      * Set 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
      * @param Healthy 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
      */
-    public void setHealthy(String Healthy) {
+    public void setHealthy(Long Healthy) {
         this.Healthy = Healthy;
     }
 
@@ -460,6 +484,66 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
+     * Get kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version kafka版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneIds 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneIds 跨可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
+    /**
+     * Get ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cvm ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCvm() {
+        return this.Cvm;
+    }
+
+    /**
+     * Set ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cvm ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvm(Long Cvm) {
+        this.Cvm = Cvm;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +566,9 @@ public class InstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "IsInternal", this.IsInternal);
         this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "Cvm", this.Cvm);
 
     }
 }

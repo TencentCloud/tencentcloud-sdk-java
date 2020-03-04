@@ -37,6 +37,14 @@ public class JgwOperateResponse extends AbstractModel{
     private String ReturnMessage;
 
     /**
+    * 操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private OperateResponseData Data;
+
+    /**
      * Get 返回的code，0为正常，非0为错误 
      * @return ReturnCode 返回的code，0为正常，非0为错误
      */
@@ -69,11 +77,32 @@ public class JgwOperateResponse extends AbstractModel{
     }
 
     /**
+     * Get 操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OperateResponseData getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 操作型返回的Data数据,可能有flowId等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(OperateResponseData Data) {
+        this.Data = Data;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         this.setParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
+        this.setParamObj(map, prefix + "Data.", this.Data);
 
     }
 }

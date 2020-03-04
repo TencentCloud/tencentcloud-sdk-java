@@ -107,6 +107,13 @@ public class ModifyL7ListenerRequest extends AbstractModel{
     private Long Bandwidth;
 
     /**
+    * 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+    */
+    @SerializedName("ForwardProtocol")
+    @Expose
+    private Long ForwardProtocol;
+
+    /**
      * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
@@ -299,6 +306,22 @@ public class ModifyL7ListenerRequest extends AbstractModel{
     }
 
     /**
+     * Get 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。 
+     * @return ForwardProtocol 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+     */
+    public Long getForwardProtocol() {
+        return this.ForwardProtocol;
+    }
+
+    /**
+     * Set 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+     * @param ForwardProtocol 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+     */
+    public void setForwardProtocol(Long ForwardProtocol) {
+        this.ForwardProtocol = ForwardProtocol;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class ModifyL7ListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CertCaName", this.CertCaName);
         this.setParamSimple(map, prefix + "CertCaContent", this.CertCaContent);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
 
     }
 }
