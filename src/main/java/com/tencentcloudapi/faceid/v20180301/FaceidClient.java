@@ -146,6 +146,24 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+     * @param req GetDetectInfoEnhancedRequest
+     * @return GetDetectInfoEnhancedResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDetectInfoEnhancedResponse GetDetectInfoEnhanced(GetDetectInfoEnhancedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDetectInfoEnhancedResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDetectInfoEnhancedResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetDetectInfoEnhanced"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用数字活体检测模式前，需调用本接口获取数字验证码。
      * @param req GetLiveCodeRequest
      * @return GetLiveCodeResponse

@@ -38,7 +38,7 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *输入人脸图片，输出美颜后的人脸图片。
+     *用户上传一张人脸图片，精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
      * @param req BeautifyPicRequest
      * @return BeautifyPicResponse
      * @throws TencentCloudSDKException
@@ -56,7 +56,10 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *上传 LUT 格式文件注册唇色ID。最多允许上传1万张素材。
+     *在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
+
+注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
+
      * @param req CreateModelRequest
      * @return CreateModelResponse
      * @throws TencentCloudSDKException

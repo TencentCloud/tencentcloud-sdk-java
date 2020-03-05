@@ -59,7 +59,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     private Long MaxFaceNum;
 
     /**
-    * 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+    * 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
     */
     @SerializedName("MinFaceSize")
     @Expose
@@ -199,16 +199,16 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * Get 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。 
-     * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * Get 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。 
+     * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
      */
     public Long getMinFaceSize() {
         return this.MinFaceSize;
     }
 
     /**
-     * Set 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
-     * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * Set 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
+     * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
      */
     public void setMinFaceSize(Long MinFaceSize) {
         this.MinFaceSize = MinFaceSize;

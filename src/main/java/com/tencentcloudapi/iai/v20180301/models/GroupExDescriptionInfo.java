@@ -24,6 +24,7 @@ public class GroupExDescriptionInfo extends AbstractModel{
 
     /**
     * 人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupExDescriptionIndex")
     @Expose
@@ -37,8 +38,10 @@ public class GroupExDescriptionInfo extends AbstractModel{
     private String GroupExDescription;
 
     /**
-     * Get 人员库自定义描述字段Index，从0开始 
+     * Get 人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupExDescriptionIndex() {
         return this.GroupExDescriptionIndex;
@@ -46,7 +49,9 @@ public class GroupExDescriptionInfo extends AbstractModel{
 
     /**
      * Set 人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupExDescriptionIndex(Long GroupExDescriptionIndex) {
         this.GroupExDescriptionIndex = GroupExDescriptionIndex;

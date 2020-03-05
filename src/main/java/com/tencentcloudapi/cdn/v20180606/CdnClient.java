@@ -191,6 +191,25 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细
+注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
+     * @param req DescribeIpStatusRequest
+     * @return DescribeIpStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpStatusResponse DescribeIpStatus(DescribeIpStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIpStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeIpVisit 用于查询 5 分钟活跃用户数，及日活跃用户数明细
 
 + 5 分钟活跃用户数：根据日志中客户端 IP，5 分钟粒度去重统计
@@ -276,6 +295,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribePurgeQuota 用于查询账户刷新配额和每日可用量。
+     * @param req DescribePurgeQuotaRequest
+     * @return DescribePurgeQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePurgeQuotaResponse DescribePurgeQuota(DescribePurgeQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePurgeQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePurgeQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePurgeQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribePurgeTasks 用于查询提交的 URL 刷新、目录刷新记录及执行进度，通过 PurgePathCache 与 PurgeUrlsCache 接口提交的任务均可通过此接口进行查询。
      * @param req DescribePurgeTasksRequest
      * @return DescribePurgeTasksResponse
@@ -287,6 +324,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePurgeTasksResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePurgeTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribePushQuota  用于查询预热配额和每日可用量。
+     * @param req DescribePushQuotaRequest
+     * @return DescribePushQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePushQuotaResponse DescribePushQuota(DescribePushQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePushQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePushQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePushQuota"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

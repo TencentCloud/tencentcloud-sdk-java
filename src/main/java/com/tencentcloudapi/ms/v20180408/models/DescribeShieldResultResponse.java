@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeShieldResultResponse extends AbstractModel{
 
     /**
-    * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+    * 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeShieldResultResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
-     * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Get 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时 
+     * @return TaskStatus 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
-     * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Set 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
+     * @param TaskStatus 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
