@@ -72,6 +72,13 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     private NotificationTarget NotificationTarget;
 
     /**
+    * 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+    */
+    @SerializedName("LifecycleTransitionType")
+    @Expose
+    private String LifecycleTransitionType;
+
+    /**
      * Get 生命周期挂钩ID 
      * @return LifecycleHookId 生命周期挂钩ID
      */
@@ -184,6 +191,22 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     }
 
     /**
+     * Get 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。 
+     * @return LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     */
+    public String getLifecycleTransitionType() {
+        return this.LifecycleTransitionType;
+    }
+
+    /**
+     * Set 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     * @param LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     */
+    public void setLifecycleTransitionType(String LifecycleTransitionType) {
+        this.LifecycleTransitionType = LifecycleTransitionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HeartbeatTimeout", this.HeartbeatTimeout);
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+        this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
 
     }
 }

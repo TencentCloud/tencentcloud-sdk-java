@@ -30,7 +30,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 实例版本（支持"5.6.4"、"6.4.3"）
+    * 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
     */
     @SerializedName("EsVersion")
     @Expose
@@ -236,16 +236,16 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例版本（支持"5.6.4"、"6.4.3"） 
-     * @return EsVersion 实例版本（支持"5.6.4"、"6.4.3"）
+     * Get 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"） 
+     * @return EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set 实例版本（支持"5.6.4"、"6.4.3"）
-     * @param EsVersion 实例版本（支持"5.6.4"、"6.4.3"）
+     * Set 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
+     * @param EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;

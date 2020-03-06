@@ -233,6 +233,13 @@ global：全球加速
     private OriginPullTimeout OriginPullTimeout;
 
     /**
+    * 回源S3私有鉴权
+    */
+    @SerializedName("AwsPrivateAccess")
+    @Expose
+    private AwsPrivateAccess AwsPrivateAccess;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -725,6 +732,22 @@ global：全球加速
     }
 
     /**
+     * Get 回源S3私有鉴权 
+     * @return AwsPrivateAccess 回源S3私有鉴权
+     */
+    public AwsPrivateAccess getAwsPrivateAccess() {
+        return this.AwsPrivateAccess;
+    }
+
+    /**
+     * Set 回源S3私有鉴权
+     * @param AwsPrivateAccess 回源S3私有鉴权
+     */
+    public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
+        this.AwsPrivateAccess = AwsPrivateAccess;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -757,6 +780,7 @@ global：全球加速
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+        this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
 
     }
 }

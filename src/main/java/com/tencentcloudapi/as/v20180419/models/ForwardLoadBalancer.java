@@ -51,7 +51,7 @@ public class ForwardLoadBalancer extends AbstractModel{
     private String LocationId;
 
     /**
-    * 负载均衡实例所属地域，默认取AS服务所在地域
+    * 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
     */
     @SerializedName("Region")
     @Expose
@@ -122,16 +122,16 @@ public class ForwardLoadBalancer extends AbstractModel{
     }
 
     /**
-     * Get 负载均衡实例所属地域，默认取AS服务所在地域 
-     * @return Region 负载均衡实例所属地域，默认取AS服务所在地域
+     * Get 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。 
+     * @return Region 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 负载均衡实例所属地域，默认取AS服务所在地域
-     * @param Region 负载均衡实例所属地域，默认取AS服务所在地域
+     * Set 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
+     * @param Region 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
      */
     public void setRegion(String Region) {
         this.Region = Region;

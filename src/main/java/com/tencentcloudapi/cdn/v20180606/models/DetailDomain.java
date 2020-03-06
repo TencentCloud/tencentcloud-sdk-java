@@ -348,6 +348,14 @@ global：全球锁定
     private OriginPullTimeout OriginPullTimeout;
 
     /**
+    * 回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AwsPrivateAccess")
+    @Expose
+    private AwsPrivateAccess AwsPrivateAccess;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1180,6 +1188,26 @@ global：全球锁定
     }
 
     /**
+     * Get 回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AwsPrivateAccess 回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AwsPrivateAccess getAwsPrivateAccess() {
+        return this.AwsPrivateAccess;
+    }
+
+    /**
+     * Set 回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AwsPrivateAccess 回源S3鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
+        this.AwsPrivateAccess = AwsPrivateAccess;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1222,6 +1250,7 @@ global：全球锁定
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+        this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
 
     }
 }

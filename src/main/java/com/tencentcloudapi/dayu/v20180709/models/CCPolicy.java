@@ -79,7 +79,7 @@ public class CCPolicy extends AbstractModel{
     private CCRule [] RuleList;
 
     /**
-    * IP列表
+    * IP列表，如果不填时，请传空数组但不能为null；
     */
     @SerializedName("IpList")
     @Expose
@@ -235,16 +235,16 @@ public class CCPolicy extends AbstractModel{
     }
 
     /**
-     * Get IP列表 
-     * @return IpList IP列表
+     * Get IP列表，如果不填时，请传空数组但不能为null； 
+     * @return IpList IP列表，如果不填时，请传空数组但不能为null；
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set IP列表
-     * @param IpList IP列表
+     * Set IP列表，如果不填时，请传空数组但不能为null；
+     * @param IpList IP列表，如果不填时，请传空数组但不能为null；
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;
