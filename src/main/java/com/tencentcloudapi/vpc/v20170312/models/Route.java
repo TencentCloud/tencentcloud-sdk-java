@@ -86,6 +86,13 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String RouteType;
 
     /**
+    * 路由表实例ID，例如：rtb-azd4dt1c。
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
      * Get 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
      * @return DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
@@ -254,6 +261,22 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
+     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
+     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -264,6 +287,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.setParamSimple(map, prefix + "RouteDescription", this.RouteDescription);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
 
     }
 }

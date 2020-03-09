@@ -109,6 +109,45 @@ public class Cluster extends AbstractModel{
     private String Property;
 
     /**
+    * 集群当前master数量
+    */
+    @SerializedName("ClusterMaterNodeNum")
+    @Expose
+    private Long ClusterMaterNodeNum;
+
+    /**
+    * 集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
+    * OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
+    * 集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerRuntime")
+    @Expose
+    private String ContainerRuntime;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -309,6 +348,102 @@ public class Cluster extends AbstractModel{
     }
 
     /**
+     * Get 集群当前master数量 
+     * @return ClusterMaterNodeNum 集群当前master数量
+     */
+    public Long getClusterMaterNodeNum() {
+        return this.ClusterMaterNodeNum;
+    }
+
+    /**
+     * Set 集群当前master数量
+     * @param ClusterMaterNodeNum 集群当前master数量
+     */
+    public void setClusterMaterNodeNum(Long ClusterMaterNodeNum) {
+        this.ClusterMaterNodeNum = ClusterMaterNodeNum;
+    }
+
+    /**
+     * Get 集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageId 集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set 集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageId 集群使用镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
+     * Get OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OsCustomizeType OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OsCustomizeType OsCustomizeType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
+     * Get 集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerRuntime 集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerRuntime() {
+        return this.ContainerRuntime;
+    }
+
+    /**
+     * Set 集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerRuntime 集群运行环境docker或container
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerRuntime(String ContainerRuntime) {
+        this.ContainerRuntime = ContainerRuntime;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -324,6 +459,11 @@ public class Cluster extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "Property", this.Property);
+        this.setParamSimple(map, prefix + "ClusterMaterNodeNum", this.ClusterMaterNodeNum);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }

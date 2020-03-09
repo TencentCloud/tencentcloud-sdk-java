@@ -30,7 +30,7 @@ public class CustomLayout extends AbstractModel{
     private Canvas Canvas;
 
     /**
-    * 流布局参数
+    * 流布局参数，每路流的布局不能超出画布区域
     */
     @SerializedName("InputStreamList")
     @Expose
@@ -53,16 +53,16 @@ public class CustomLayout extends AbstractModel{
     }
 
     /**
-     * Get 流布局参数 
-     * @return InputStreamList 流布局参数
+     * Get 流布局参数，每路流的布局不能超出画布区域 
+     * @return InputStreamList 流布局参数，每路流的布局不能超出画布区域
      */
     public StreamLayout [] getInputStreamList() {
         return this.InputStreamList;
     }
 
     /**
-     * Set 流布局参数
-     * @param InputStreamList 流布局参数
+     * Set 流布局参数，每路流的布局不能超出画布区域
+     * @param InputStreamList 流布局参数，每路流的布局不能超出画布区域
      */
     public void setInputStreamList(StreamLayout [] InputStreamList) {
         this.InputStreamList = InputStreamList;

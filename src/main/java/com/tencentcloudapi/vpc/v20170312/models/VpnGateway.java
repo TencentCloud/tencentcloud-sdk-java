@@ -44,7 +44,7 @@ public class VpnGateway extends AbstractModel{
     private String VpnGatewayName;
 
     /**
-    * 网关实例类型：'IPSEC', 'SSL'。
+    * 网关实例类型：'IPSEC', 'SSL','CCN'。
     */
     @SerializedName("Type")
     @Expose
@@ -142,6 +142,13 @@ public class VpnGateway extends AbstractModel{
     private String Version;
 
     /**
+    * Type值为CCN时，该值表示云联网实例ID
+    */
+    @SerializedName("NetworkInstanceId")
+    @Expose
+    private String NetworkInstanceId;
+
+    /**
      * Get 网关实例ID。 
      * @return VpnGatewayId 网关实例ID。
      */
@@ -190,16 +197,16 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
-     * Get 网关实例类型：'IPSEC', 'SSL'。 
-     * @return Type 网关实例类型：'IPSEC', 'SSL'。
+     * Get 网关实例类型：'IPSEC', 'SSL','CCN'。 
+     * @return Type 网关实例类型：'IPSEC', 'SSL','CCN'。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 网关实例类型：'IPSEC', 'SSL'。
-     * @param Type 网关实例类型：'IPSEC', 'SSL'。
+     * Set 网关实例类型：'IPSEC', 'SSL','CCN'。
+     * @param Type 网关实例类型：'IPSEC', 'SSL','CCN'。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -414,6 +421,22 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
+     * Get Type值为CCN时，该值表示云联网实例ID 
+     * @return NetworkInstanceId Type值为CCN时，该值表示云联网实例ID
+     */
+    public String getNetworkInstanceId() {
+        return this.NetworkInstanceId;
+    }
+
+    /**
+     * Set Type值为CCN时，该值表示云联网实例ID
+     * @param NetworkInstanceId Type值为CCN时，该值表示云联网实例ID
+     */
+    public void setNetworkInstanceId(String NetworkInstanceId) {
+        this.NetworkInstanceId = NetworkInstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class VpnGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
 
     }
 }

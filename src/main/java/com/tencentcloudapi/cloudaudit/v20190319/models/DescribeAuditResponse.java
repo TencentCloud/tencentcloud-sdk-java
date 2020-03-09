@@ -72,6 +72,34 @@ public class DescribeAuditResponse extends AbstractModel{
     private Long IsEnableCmqNotify;
 
     /**
+    * 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+    */
+    @SerializedName("IsEnableKmsEncry")
+    @Expose
+    private Long IsEnableKmsEncry;
+
+    /**
+    * CMK的全局唯一标识符。
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * CMK别名。
+    */
+    @SerializedName("KmsAlias")
+    @Expose
+    private String KmsAlias;
+
+    /**
+    * kms地域。
+    */
+    @SerializedName("KmsRegion")
+    @Expose
+    private String KmsRegion;
+
+    /**
     * 日志前缀。
     */
     @SerializedName("LogFilePrefix")
@@ -205,6 +233,70 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。 
+     * @return IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public Long getIsEnableKmsEncry() {
+        return this.IsEnableKmsEncry;
+    }
+
+    /**
+     * Set 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     * @param IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public void setIsEnableKmsEncry(Long IsEnableKmsEncry) {
+        this.IsEnableKmsEncry = IsEnableKmsEncry;
+    }
+
+    /**
+     * Get CMK的全局唯一标识符。 
+     * @return KeyId CMK的全局唯一标识符。
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set CMK的全局唯一标识符。
+     * @param KeyId CMK的全局唯一标识符。
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get CMK别名。 
+     * @return KmsAlias CMK别名。
+     */
+    public String getKmsAlias() {
+        return this.KmsAlias;
+    }
+
+    /**
+     * Set CMK别名。
+     * @param KmsAlias CMK别名。
+     */
+    public void setKmsAlias(String KmsAlias) {
+        this.KmsAlias = KmsAlias;
+    }
+
+    /**
+     * Get kms地域。 
+     * @return KmsRegion kms地域。
+     */
+    public String getKmsRegion() {
+        return this.KmsRegion;
+    }
+
+    /**
+     * Set kms地域。
+     * @param KmsRegion kms地域。
+     */
+    public void setKmsRegion(String KmsRegion) {
+        this.KmsRegion = KmsRegion;
+    }
+
+    /**
      * Get 日志前缀。 
      * @return LogFilePrefix 日志前缀。
      */
@@ -263,6 +355,10 @@ public class DescribeAuditResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "IsEnableCmqNotify", this.IsEnableCmqNotify);
+        this.setParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "KmsAlias", this.KmsAlias);
+        this.setParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
         this.setParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
         this.setParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -67,6 +67,14 @@ public class DescribeCaptchaResultResponse extends AbstractModel{
     private Long EvilLevel;
 
     /**
+    * 前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GetCaptchaTime")
+    @Expose
+    private Long GetCaptchaTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -214,6 +222,26 @@ public class DescribeCaptchaResultResponse extends AbstractModel{
     }
 
     /**
+     * Get 前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GetCaptchaTime 前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGetCaptchaTime() {
+        return this.GetCaptchaTime;
+    }
+
+    /**
+     * Set 前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GetCaptchaTime 前端获取验证码时间，时间戳格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGetCaptchaTime(Long GetCaptchaTime) {
+        this.GetCaptchaTime = GetCaptchaTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +264,7 @@ public class DescribeCaptchaResultResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);
         this.setParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
         this.setParamSimple(map, prefix + "EvilLevel", this.EvilLevel);
+        this.setParamSimple(map, prefix + "GetCaptchaTime", this.GetCaptchaTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

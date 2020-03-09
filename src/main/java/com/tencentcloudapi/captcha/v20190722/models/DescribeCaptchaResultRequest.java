@@ -93,6 +93,13 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     private String Imei;
 
     /**
+    * 是否返回前端获取验证码时间，取值1：需要返回
+    */
+    @SerializedName("NeedGetCaptchaTime")
+    @Expose
+    private Long NeedGetCaptchaTime;
+
+    /**
      * Get 验证码类型，9：滑块验证码 
      * @return CaptchaType 验证码类型，9：滑块验证码
      */
@@ -253,6 +260,22 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否返回前端获取验证码时间，取值1：需要返回 
+     * @return NeedGetCaptchaTime 是否返回前端获取验证码时间，取值1：需要返回
+     */
+    public Long getNeedGetCaptchaTime() {
+        return this.NeedGetCaptchaTime;
+    }
+
+    /**
+     * Set 是否返回前端获取验证码时间，取值1：需要返回
+     * @param NeedGetCaptchaTime 是否返回前端获取验证码时间，取值1：需要返回
+     */
+    public void setNeedGetCaptchaTime(Long NeedGetCaptchaTime) {
+        this.NeedGetCaptchaTime = NeedGetCaptchaTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SceneId", this.SceneId);
         this.setParamSimple(map, prefix + "MacAddress", this.MacAddress);
         this.setParamSimple(map, prefix + "Imei", this.Imei);
+        this.setParamSimple(map, prefix + "NeedGetCaptchaTime", this.NeedGetCaptchaTime);
 
     }
 }

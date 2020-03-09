@@ -51,6 +51,29 @@ public class Instance extends AbstractModel{
     private String InstanceState;
 
     /**
+    * 实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DrainStatus")
+    @Expose
+    private String DrainStatus;
+
+    /**
+    * 配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceAdvancedSettings")
+    @Expose
+    private InstanceAdvancedSettings InstanceAdvancedSettings;
+
+    /**
+    * 添加时间
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -115,6 +138,62 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DrainStatus 实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDrainStatus() {
+        return this.DrainStatus;
+    }
+
+    /**
+     * Set 实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DrainStatus 实例是否封锁状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDrainStatus(String DrainStatus) {
+        this.DrainStatus = DrainStatus;
+    }
+
+    /**
+     * Get 配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceAdvancedSettings 配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceAdvancedSettings getInstanceAdvancedSettings() {
+        return this.InstanceAdvancedSettings;
+    }
+
+    /**
+     * Set 配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceAdvancedSettings 配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
+        this.InstanceAdvancedSettings = InstanceAdvancedSettings;
+    }
+
+    /**
+     * Get 添加时间 
+     * @return CreatedTime 添加时间
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 添加时间
+     * @param CreatedTime 添加时间
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +201,9 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "DrainStatus", this.DrainStatus);
+        this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }

@@ -65,7 +65,7 @@ public class Event extends AbstractModel{
     private String EventName;
 
     /**
-    * 事件名称中文描述
+    * 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
     */
     @SerializedName("EventNameCn")
     @Expose
@@ -100,7 +100,14 @@ public class Event extends AbstractModel{
     private String RequestID;
 
     /**
-    * 资源类型中文描述
+    * 资源地域
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private String ResourceRegion;
+
+    /**
+    * 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
     */
     @SerializedName("ResourceTypeCn")
     @Expose
@@ -224,16 +231,16 @@ public class Event extends AbstractModel{
     }
 
     /**
-     * Get 事件名称中文描述 
-     * @return EventNameCn 事件名称中文描述
+     * Get 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述） 
+     * @return EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
     public String getEventNameCn() {
         return this.EventNameCn;
     }
 
     /**
-     * Set 事件名称中文描述
-     * @param EventNameCn 事件名称中文描述
+     * Set 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * @param EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
     public void setEventNameCn(String EventNameCn) {
         this.EventNameCn = EventNameCn;
@@ -304,16 +311,32 @@ public class Event extends AbstractModel{
     }
 
     /**
-     * Get 资源类型中文描述 
-     * @return ResourceTypeCn 资源类型中文描述
+     * Get 资源地域 
+     * @return ResourceRegion 资源地域
+     */
+    public String getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set 资源地域
+     * @param ResourceRegion 资源地域
+     */
+    public void setResourceRegion(String ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
+    }
+
+    /**
+     * Get 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述） 
+     * @return ResourceTypeCn 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
     public String getResourceTypeCn() {
         return this.ResourceTypeCn;
     }
 
     /**
-     * Set 资源类型中文描述
-     * @param ResourceTypeCn 资源类型中文描述
+     * Set 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * @param ResourceTypeCn 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
     public void setResourceTypeCn(String ResourceTypeCn) {
         this.ResourceTypeCn = ResourceTypeCn;
@@ -382,6 +405,7 @@ public class Event extends AbstractModel{
         this.setParamSimple(map, prefix + "EventSource", this.EventSource);
         this.setParamSimple(map, prefix + "EventTime", this.EventTime);
         this.setParamSimple(map, prefix + "RequestID", this.RequestID);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "SourceIPAddress", this.SourceIPAddress);

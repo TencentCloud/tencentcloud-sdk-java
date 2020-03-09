@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeStreamPlayInfoListRequest extends AbstractModel{
 
     /**
-    * 结束时间，北京时间，
+    * 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
     */
     @SerializedName("EndTime")
@@ -38,7 +38,7 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     private String PlayDomain;
 
     /**
-    * 开始时间，北京时间，
+    * 开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
     */
     @SerializedName("StartTime")
@@ -54,9 +54,9 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     private String StreamName;
 
     /**
-     * Get 结束时间，北京时间，
+     * Get 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。 
-     * @return EndTime 结束时间，北京时间，
+     * @return EndTime 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
      */
     public String getEndTime() {
@@ -64,9 +64,9 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Set 结束时间，北京时间，
+     * Set 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
-     * @param EndTime 结束时间，北京时间，
+     * @param EndTime 结束时间，北京时间，格式：2019-04-28 10:36:00
 结束时间 和 开始时间  必须在同一天内。
      */
     public void setEndTime(String EndTime) {
@@ -90,9 +90,9 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get 开始时间，北京时间，
+     * Get 开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。 
-     * @return StartTime 开始时间，北京时间，
+     * @return StartTime 开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
      */
     public String getStartTime() {
@@ -100,9 +100,9 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Set 开始时间，北京时间，
+     * Set 开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
-     * @param StartTime 开始时间，北京时间，
+     * @param StartTime 开始时间，北京时间，格式：2019-04-28 10:36:00
 当前时间 和 开始时间 间隔不超过30天。
      */
     public void setStartTime(String StartTime) {

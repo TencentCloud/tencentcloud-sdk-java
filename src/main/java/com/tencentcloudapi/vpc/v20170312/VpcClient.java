@@ -2744,6 +2744,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyNetworkAclEntries）用于修改（包括添加和删除）网络ACL的入站规则和出站规则。
+     * @param req ModifyNetworkAclEntriesRequest
+     * @return ModifyNetworkAclEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkAclEntriesResponse ModifyNetworkAclEntries(ModifyNetworkAclEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkAclEntriesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclEntriesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetworkAclEntries"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
      * @param req ModifyNetworkInterfaceAttributeRequest
      * @return ModifyNetworkInterfaceAttributeResponse

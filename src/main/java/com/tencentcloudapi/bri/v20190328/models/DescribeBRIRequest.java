@@ -30,7 +30,7 @@ public class DescribeBRIRequest extends AbstractModel{
     private BRIRequest RequestData;
 
     /**
-    * 客户用于计费的资源Id
+    * 客户用于计费的资源ID
     */
     @SerializedName("ResourceId")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeBRIRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户用于计费的资源Id 
-     * @return ResourceId 客户用于计费的资源Id
+     * Get 客户用于计费的资源ID 
+     * @return ResourceId 客户用于计费的资源ID
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 客户用于计费的资源Id
-     * @param ResourceId 客户用于计费的资源Id
+     * Set 客户用于计费的资源ID
+     * @param ResourceId 客户用于计费的资源ID
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

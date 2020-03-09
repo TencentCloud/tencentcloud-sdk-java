@@ -49,6 +49,13 @@ public class RecordParam extends AbstractModel{
     private Long Enable;
 
     /**
+    * 点播子应用ID。
+    */
+    @SerializedName("VodSubAppId")
+    @Expose
+    private Long VodSubAppId;
+
+    /**
      * Get 录制间隔。
 单位秒，默认值1800。
 取值范围:300-7200。
@@ -117,12 +124,29 @@ public class RecordParam extends AbstractModel{
     }
 
     /**
+     * Get 点播子应用ID。 
+     * @return VodSubAppId 点播子应用ID。
+     */
+    public Long getVodSubAppId() {
+        return this.VodSubAppId;
+    }
+
+    /**
+     * Set 点播子应用ID。
+     * @param VodSubAppId 点播子应用ID。
+     */
+    public void setVodSubAppId(Long VodSubAppId) {
+        this.VodSubAppId = VodSubAppId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RecordInterval", this.RecordInterval);
         this.setParamSimple(map, prefix + "StorageTime", this.StorageTime);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
 
     }
 }

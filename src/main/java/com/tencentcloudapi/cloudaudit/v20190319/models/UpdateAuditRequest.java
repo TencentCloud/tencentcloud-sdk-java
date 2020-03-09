@@ -79,6 +79,27 @@ public class UpdateAuditRequest extends AbstractModel{
     private Long IsEnableCmqNotify;
 
     /**
+    * 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+    */
+    @SerializedName("IsEnableKmsEncry")
+    @Expose
+    private Long IsEnableKmsEncry;
+
+    /**
+    * CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
+    */
+    @SerializedName("KmsRegion")
+    @Expose
+    private String KmsRegion;
+
+    /**
     * 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。
     */
     @SerializedName("LogFilePrefix")
@@ -221,6 +242,54 @@ public class UpdateAuditRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。 
+     * @return IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public Long getIsEnableKmsEncry() {
+        return this.IsEnableKmsEncry;
+    }
+
+    /**
+     * Set 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     * @param IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public void setIsEnableKmsEncry(Long IsEnableKmsEncry) {
+        this.IsEnableKmsEncry = IsEnableKmsEncry;
+    }
+
+    /**
+     * Get CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。 
+     * @return KeyId CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+     * @param KeyId CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。 
+     * @return KmsRegion kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
+     */
+    public String getKmsRegion() {
+        return this.KmsRegion;
+    }
+
+    /**
+     * Set kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
+     * @param KmsRegion kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
+     */
+    public void setKmsRegion(String KmsRegion) {
+        this.KmsRegion = KmsRegion;
+    }
+
+    /**
      * Get 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。 
      * @return LogFilePrefix 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。
      */
@@ -264,6 +333,9 @@ public class UpdateAuditRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsCreateNewBucket", this.IsCreateNewBucket);
         this.setParamSimple(map, prefix + "IsCreateNewQueue", this.IsCreateNewQueue);
         this.setParamSimple(map, prefix + "IsEnableCmqNotify", this.IsEnableCmqNotify);
+        this.setParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
         this.setParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
         this.setParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
 

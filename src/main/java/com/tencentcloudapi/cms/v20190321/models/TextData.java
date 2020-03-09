@@ -44,6 +44,27 @@ public class TextData extends AbstractModel{
     private Long EvilType;
 
     /**
+    * 消息类公共相关参数
+    */
+    @SerializedName("Common")
+    @Expose
+    private TextOutputComm Common;
+
+    /**
+    * 消息类ID信息
+    */
+    @SerializedName("ID")
+    @Expose
+    private TextOutputID ID;
+
+    /**
+    * 消息类输出结果
+    */
+    @SerializedName("Res")
+    @Expose
+    private TextOutputRes Res;
+
+    /**
     * 命中的关键词
     */
     @SerializedName("Keywords")
@@ -111,6 +132,54 @@ public class TextData extends AbstractModel{
     }
 
     /**
+     * Get 消息类公共相关参数 
+     * @return Common 消息类公共相关参数
+     */
+    public TextOutputComm getCommon() {
+        return this.Common;
+    }
+
+    /**
+     * Set 消息类公共相关参数
+     * @param Common 消息类公共相关参数
+     */
+    public void setCommon(TextOutputComm Common) {
+        this.Common = Common;
+    }
+
+    /**
+     * Get 消息类ID信息 
+     * @return ID 消息类ID信息
+     */
+    public TextOutputID getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set 消息类ID信息
+     * @param ID 消息类ID信息
+     */
+    public void setID(TextOutputID ID) {
+        this.ID = ID;
+    }
+
+    /**
+     * Get 消息类输出结果 
+     * @return Res 消息类输出结果
+     */
+    public TextOutputRes getRes() {
+        return this.Res;
+    }
+
+    /**
+     * Set 消息类输出结果
+     * @param Res 消息类输出结果
+     */
+    public void setRes(TextOutputRes Res) {
+        this.Res = Res;
+    }
+
+    /**
      * Get 命中的关键词 
      * @return Keywords 命中的关键词
      */
@@ -132,6 +201,9 @@ public class TextData extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
+        this.setParamObj(map, prefix + "Common.", this.Common);
+        this.setParamObj(map, prefix + "ID.", this.ID);
+        this.setParamObj(map, prefix + "Res.", this.Res);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
 
     }

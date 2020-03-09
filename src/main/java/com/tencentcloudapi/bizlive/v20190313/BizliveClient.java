@@ -38,6 +38,24 @@ public class BizliveClient extends AbstractClient{
     }
 
     /**
+     *创建会话
+     * @param req CreateSessionRequest
+     * @return CreateSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSessionResponse CreateSession(CreateSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSessionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSessionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSession"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
      * @param req DescribeStreamPlayInfoListRequest
      * @return DescribeStreamPlayInfoListResponse
@@ -49,6 +67,24 @@ public class BizliveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeStreamPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询空闲机器数量
+     * @param req DescribeWorkersRequest
+     * @return DescribeWorkersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkersResponse DescribeWorkers(DescribeWorkersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWorkers"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -85,6 +121,24 @@ public class BizliveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RegisterIMResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RegisterIM"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *强制退出游戏
+     * @param req StopGameRequest
+     * @return StopGameResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopGameResponse StopGame(StopGameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopGameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopGameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopGame"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
