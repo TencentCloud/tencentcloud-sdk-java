@@ -86,6 +86,13 @@ public class DescribeEipAclsRequest extends AbstractModel{
     private Long Order;
 
     /**
+    * ACL名称列表，支持模糊查找
+    */
+    @SerializedName("AclNames")
+    @Expose
+    private String [] AclNames;
+
+    /**
      * Get ACL 名称，支持模糊查找 
      * @return AclName ACL 名称，支持模糊查找
      */
@@ -230,6 +237,22 @@ public class DescribeEipAclsRequest extends AbstractModel{
     }
 
     /**
+     * Get ACL名称列表，支持模糊查找 
+     * @return AclNames ACL名称列表，支持模糊查找
+     */
+    public String [] getAclNames() {
+        return this.AclNames;
+    }
+
+    /**
+     * Set ACL名称列表，支持模糊查找
+     * @param AclNames ACL名称列表，支持模糊查找
+     */
+    public void setAclNames(String [] AclNames) {
+        this.AclNames = AclNames;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class DescribeEipAclsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "EipNames.", this.EipNames);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamArraySimple(map, prefix + "AclNames.", this.AclNames);
 
     }
 }

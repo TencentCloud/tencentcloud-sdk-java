@@ -24,6 +24,7 @@ public class SendSmsResponse extends AbstractModel{
 
     /**
     * 短信流水信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -37,8 +38,10 @@ public class SendSmsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 短信流水信息 
+     * Get 短信流水信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Data 短信流水信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmsSid getData() {
         return this.Data;
@@ -46,7 +49,9 @@ public class SendSmsResponse extends AbstractModel{
 
     /**
      * Set 短信流水信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 短信流水信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(SmsSid Data) {
         this.Data = Data;
