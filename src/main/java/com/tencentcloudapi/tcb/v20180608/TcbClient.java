@@ -38,6 +38,24 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *检查是否开通Tcb服务
+     * @param req CheckTcbServiceRequest
+     * @return CheckTcbServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckTcbServiceResponse CheckTcbService(CheckTcbServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckTcbServiceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckTcbServiceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CheckTcbService"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *TCB云API统一入口
      * @param req CommonServiceAPIRequest
      * @return CommonServiceAPIResponse
@@ -49,6 +67,78 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CommonServiceAPIResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CommonServiceAPI"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建托管域名
+     * @param req CreateHostingDomainRequest
+     * @return CreateHostingDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHostingDomainResponse CreateHostingDomain(CreateHostingDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHostingDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHostingDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateHostingDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
+     * @param req CreateStaticStoreRequest
+     * @return CreateStaticStoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStaticStoreResponse CreateStaticStore(CreateStaticStoreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStaticStoreResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStaticStoreResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateStaticStore"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除终端用户
+     * @param req DeleteEndUserRequest
+     * @return DeleteEndUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEndUserResponse DeleteEndUser(DeleteEndUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEndUserResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEndUserResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteEndUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取安全域名列表
+     * @param req DescribeAuthDomainsRequest
+     * @return DescribeAuthDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthDomainsResponse DescribeAuthDomains(DescribeAuthDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuthDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuthDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAuthDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -74,6 +164,42 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取终端用户列表
+     * @param req DescribeEndUsersRequest
+     * @return DescribeEndUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndUsersResponse DescribeEndUsers(DescribeEndUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEndUsersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEndUsersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEndUsers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询环境个数上限
+     * @param req DescribeEnvLimitRequest
+     * @return DescribeEnvLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvLimitResponse DescribeEnvLimit(DescribeEnvLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvLimitResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvLimitResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEnvLimit"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
      * @param req DescribeEnvsRequest
      * @return DescribeEnvsResponse
@@ -85,6 +211,60 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeEnvs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定指标的配额使用量
+     * @param req DescribeQuotaDataRequest
+     * @return DescribeQuotaDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQuotaDataResponse DescribeQuotaData(DescribeQuotaDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQuotaDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQuotaDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeQuotaData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *销毁环境
+     * @param req DestroyEnvRequest
+     * @return DestroyEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyEnvResponse DestroyEnv(DestroyEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyEnvResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyEnvResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DestroyEnv"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
+     * @param req DestroyStaticStoreRequest
+     * @return DestroyStaticStoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyStaticStoreResponse DestroyStaticStore(DestroyStaticStoreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyStaticStoreResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyStaticStoreResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DestroyStaticStore"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -121,6 +301,24 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyEnvResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyEnv"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *针对已隔离的免费环境，可以通过本接口将其恢复访问。
+     * @param req ReinstateEnvRequest
+     * @return ReinstateEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReinstateEnvResponse ReinstateEnv(ReinstateEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReinstateEnvResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReinstateEnvResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReinstateEnv"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

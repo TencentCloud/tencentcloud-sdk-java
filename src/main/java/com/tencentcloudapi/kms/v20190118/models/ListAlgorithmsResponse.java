@@ -20,22 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListKeyDetailResponse extends AbstractModel{
+public class ListAlgorithmsResponse extends AbstractModel{
 
     /**
-    * CMK的总数量
+    * 本地区支持的对称加密算法
     */
-    @SerializedName("TotalCount")
+    @SerializedName("SymmetricAlgorithms")
     @Expose
-    private Long TotalCount;
+    private AlgorithmInfo [] SymmetricAlgorithms;
 
     /**
-    * 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 本地区支持的非对称加密算法
     */
-    @SerializedName("KeyMetadatas")
+    @SerializedName("AsymmetricAlgorithms")
     @Expose
-    private KeyMetadata [] KeyMetadatas;
+    private AlgorithmInfo [] AsymmetricAlgorithms;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class ListKeyDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get CMK的总数量 
-     * @return TotalCount CMK的总数量
+     * Get 本地区支持的对称加密算法 
+     * @return SymmetricAlgorithms 本地区支持的对称加密算法
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public AlgorithmInfo [] getSymmetricAlgorithms() {
+        return this.SymmetricAlgorithms;
     }
 
     /**
-     * Set CMK的总数量
-     * @param TotalCount CMK的总数量
+     * Set 本地区支持的对称加密算法
+     * @param SymmetricAlgorithms 本地区支持的对称加密算法
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setSymmetricAlgorithms(AlgorithmInfo [] SymmetricAlgorithms) {
+        this.SymmetricAlgorithms = SymmetricAlgorithms;
     }
 
     /**
-     * Get 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 本地区支持的非对称加密算法 
+     * @return AsymmetricAlgorithms 本地区支持的非对称加密算法
      */
-    public KeyMetadata [] getKeyMetadatas() {
-        return this.KeyMetadatas;
+    public AlgorithmInfo [] getAsymmetricAlgorithms() {
+        return this.AsymmetricAlgorithms;
     }
 
     /**
-     * Set 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 本地区支持的非对称加密算法
+     * @param AsymmetricAlgorithms 本地区支持的非对称加密算法
      */
-    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
-        this.KeyMetadatas = KeyMetadatas;
+    public void setAsymmetricAlgorithms(AlgorithmInfo [] AsymmetricAlgorithms) {
+        this.AsymmetricAlgorithms = AsymmetricAlgorithms;
     }
 
     /**
@@ -100,8 +95,8 @@ public class ListKeyDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
+        this.setParamArrayObj(map, prefix + "SymmetricAlgorithms.", this.SymmetricAlgorithms);
+        this.setParamArrayObj(map, prefix + "AsymmetricAlgorithms.", this.AsymmetricAlgorithms);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

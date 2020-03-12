@@ -58,7 +58,7 @@ public class KeyMetadata extends AbstractModel{
     private String KeyState;
 
     /**
-    * CMK用途，当前是 ENCRYPT_DECRYPT
+    * CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
     */
     @SerializedName("KeyUsage")
     @Expose
@@ -204,16 +204,16 @@ public class KeyMetadata extends AbstractModel{
     }
 
     /**
-     * Get CMK用途，当前是 ENCRYPT_DECRYPT 
-     * @return KeyUsage CMK用途，当前是 ENCRYPT_DECRYPT
+     * Get CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 
+     * @return KeyUsage CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
      */
     public String getKeyUsage() {
         return this.KeyUsage;
     }
 
     /**
-     * Set CMK用途，当前是 ENCRYPT_DECRYPT
-     * @param KeyUsage CMK用途，当前是 ENCRYPT_DECRYPT
+     * Set CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
+     * @param KeyUsage CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
      */
     public void setKeyUsage(String KeyUsage) {
         this.KeyUsage = KeyUsage;

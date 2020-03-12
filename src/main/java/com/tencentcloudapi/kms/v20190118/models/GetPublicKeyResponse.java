@@ -20,22 +20,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListKeyDetailResponse extends AbstractModel{
+public class GetPublicKeyResponse extends AbstractModel{
 
     /**
-    * CMK的总数量
+    * CMK的唯一标识。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("KeyId")
     @Expose
-    private Long TotalCount;
+    private String KeyId;
 
     /**
-    * 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 经过base64编码的公钥内容。
     */
-    @SerializedName("KeyMetadatas")
+    @SerializedName("PublicKey")
     @Expose
-    private KeyMetadata [] KeyMetadatas;
+    private String PublicKey;
+
+    /**
+    * PEM格式的公钥内容。
+    */
+    @SerializedName("PublicKeyPem")
+    @Expose
+    private String PublicKeyPem;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +51,51 @@ public class ListKeyDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get CMK的总数量 
-     * @return TotalCount CMK的总数量
+     * Get CMK的唯一标识。 
+     * @return KeyId CMK的唯一标识。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getKeyId() {
+        return this.KeyId;
     }
 
     /**
-     * Set CMK的总数量
-     * @param TotalCount CMK的总数量
+     * Set CMK的唯一标识。
+     * @param KeyId CMK的唯一标识。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
     }
 
     /**
-     * Get 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 经过base64编码的公钥内容。 
+     * @return PublicKey 经过base64编码的公钥内容。
      */
-    public KeyMetadata [] getKeyMetadatas() {
-        return this.KeyMetadatas;
+    public String getPublicKey() {
+        return this.PublicKey;
     }
 
     /**
-     * Set 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 经过base64编码的公钥内容。
+     * @param PublicKey 经过base64编码的公钥内容。
      */
-    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
-        this.KeyMetadatas = KeyMetadatas;
+    public void setPublicKey(String PublicKey) {
+        this.PublicKey = PublicKey;
+    }
+
+    /**
+     * Get PEM格式的公钥内容。 
+     * @return PublicKeyPem PEM格式的公钥内容。
+     */
+    public String getPublicKeyPem() {
+        return this.PublicKeyPem;
+    }
+
+    /**
+     * Set PEM格式的公钥内容。
+     * @param PublicKeyPem PEM格式的公钥内容。
+     */
+    public void setPublicKeyPem(String PublicKeyPem) {
+        this.PublicKeyPem = PublicKeyPem;
     }
 
     /**
@@ -100,8 +118,9 @@ public class ListKeyDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "PublicKey", this.PublicKey);
+        this.setParamSimple(map, prefix + "PublicKeyPem", this.PublicKeyPem);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

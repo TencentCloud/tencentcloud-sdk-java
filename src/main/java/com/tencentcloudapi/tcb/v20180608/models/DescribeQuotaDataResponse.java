@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListKeyDetailResponse extends AbstractModel{
+public class DescribeQuotaDataResponse extends AbstractModel{
 
     /**
-    * CMK的总数量
+    * 指标名
     */
-    @SerializedName("TotalCount")
+    @SerializedName("MetricName")
     @Expose
-    private Long TotalCount;
+    private String MetricName;
 
     /**
-    * 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 指标的值
     */
-    @SerializedName("KeyMetadatas")
+    @SerializedName("Value")
     @Expose
-    private KeyMetadata [] KeyMetadatas;
+    private Long Value;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class ListKeyDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get CMK的总数量 
-     * @return TotalCount CMK的总数量
+     * Get 指标名 
+     * @return MetricName 指标名
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getMetricName() {
+        return this.MetricName;
     }
 
     /**
-     * Set CMK的总数量
-     * @param TotalCount CMK的总数量
+     * Set 指标名
+     * @param MetricName 指标名
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
     }
 
     /**
-     * Get 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 指标的值 
+     * @return Value 指标的值
      */
-    public KeyMetadata [] getKeyMetadatas() {
-        return this.KeyMetadatas;
+    public Long getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 指标的值
+     * @param Value 指标的值
      */
-    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
-        this.KeyMetadatas = KeyMetadatas;
+    public void setValue(Long Value) {
+        this.Value = Value;
     }
 
     /**
@@ -100,8 +95,8 @@ public class ListKeyDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

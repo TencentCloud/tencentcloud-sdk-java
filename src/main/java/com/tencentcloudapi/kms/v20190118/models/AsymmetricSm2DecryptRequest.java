@@ -20,60 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateKeyDescriptionRequest extends AbstractModel{
+public class AsymmetricSm2DecryptRequest extends AbstractModel{
 
     /**
-    * 新的描述信息，最大支持1024字节
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
-
-    /**
-    * 需要修改描述信息的CMK ID
+    * CMK的唯一标识
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-     * Get 新的描述信息，最大支持1024字节 
-     * @return Description 新的描述信息，最大支持1024字节
-     */
-    public String getDescription() {
-        return this.Description;
-    }
+    * 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+    */
+    @SerializedName("Ciphertext")
+    @Expose
+    private String Ciphertext;
 
     /**
-     * Set 新的描述信息，最大支持1024字节
-     * @param Description 新的描述信息，最大支持1024字节
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
-    }
-
-    /**
-     * Get 需要修改描述信息的CMK ID 
-     * @return KeyId 需要修改描述信息的CMK ID
+     * Get CMK的唯一标识 
+     * @return KeyId CMK的唯一标识
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 需要修改描述信息的CMK ID
-     * @param KeyId 需要修改描述信息的CMK ID
+     * Set CMK的唯一标识
+     * @param KeyId CMK的唯一标识
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
+     * Get 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。 
+     * @return Ciphertext 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     */
+    public String getCiphertext() {
+        return this.Ciphertext;
+    }
+
+    /**
+     * Set 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     * @param Ciphertext 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     */
+    public void setCiphertext(String Ciphertext) {
+        this.Ciphertext = Ciphertext;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "Ciphertext", this.Ciphertext);
 
     }
 }

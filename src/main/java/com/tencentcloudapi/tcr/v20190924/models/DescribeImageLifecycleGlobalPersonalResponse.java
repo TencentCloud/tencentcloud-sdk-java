@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListKeyDetailResponse extends AbstractModel{
+public class DescribeImageLifecycleGlobalPersonalResponse extends AbstractModel{
 
     /**
-    * CMK的总数量
+    * 全局自动删除策略信息
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Data")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("KeyMetadatas")
-    @Expose
-    private KeyMetadata [] KeyMetadatas;
+    private AutoDelStrategyInfoResp Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class ListKeyDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get CMK的总数量 
-     * @return TotalCount CMK的总数量
+     * Get 全局自动删除策略信息 
+     * @return Data 全局自动删除策略信息
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public AutoDelStrategyInfoResp getData() {
+        return this.Data;
     }
 
     /**
-     * Set CMK的总数量
-     * @param TotalCount CMK的总数量
+     * Set 全局自动删除策略信息
+     * @param Data 全局自动删除策略信息
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public KeyMetadata [] getKeyMetadatas() {
-        return this.KeyMetadatas;
-    }
-
-    /**
-     * Set 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
-        this.KeyMetadatas = KeyMetadatas;
+    public void setData(AutoDelStrategyInfoResp Data) {
+        this.Data = Data;
     }
 
     /**
@@ -100,8 +72,7 @@ public class ListKeyDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

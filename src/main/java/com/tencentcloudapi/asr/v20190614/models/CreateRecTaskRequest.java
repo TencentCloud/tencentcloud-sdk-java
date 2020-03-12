@@ -42,7 +42,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ChannelNum;
 
     /**
-    * 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
+    * 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
     */
     @SerializedName("ResTextFormat")
     @Expose
@@ -143,16 +143,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景) 
-     * @return ResTextFormat 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
+     * Get 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。 
+     * @return ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
      */
     public Long getResTextFormat() {
         return this.ResTextFormat;
     }
 
     /**
-     * Set 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
-     * @param ResTextFormat 识别结果返回形式。0：标准结果  1：含词时间戳列表结果(一般用于生成字幕场景)
+     * Set 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
+     * @param ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
      */
     public void setResTextFormat(Long ResTextFormat) {
         this.ResTextFormat = ResTextFormat;

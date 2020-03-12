@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListKeyDetailResponse extends AbstractModel{
+public class DescribeEndUsersResponse extends AbstractModel{
 
     /**
-    * CMK的总数量
+    * 用户总数
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Total")
     @Expose
-    private Long TotalCount;
+    private Long Total;
 
     /**
-    * 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 用户列表
     */
-    @SerializedName("KeyMetadatas")
+    @SerializedName("Users")
     @Expose
-    private KeyMetadata [] KeyMetadatas;
+    private EndUserInfo [] Users;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class ListKeyDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get CMK的总数量 
-     * @return TotalCount CMK的总数量
+     * Get 用户总数 
+     * @return Total 用户总数
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set CMK的总数量
-     * @param TotalCount CMK的总数量
+     * Set 用户总数
+     * @param Total 用户总数
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户列表 
+     * @return Users 用户列表
      */
-    public KeyMetadata [] getKeyMetadatas() {
-        return this.KeyMetadatas;
+    public EndUserInfo [] getUsers() {
+        return this.Users;
     }
 
     /**
-     * Set 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 用户列表
+     * @param Users 用户列表
      */
-    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
-        this.KeyMetadatas = KeyMetadatas;
+    public void setUsers(EndUserInfo [] Users) {
+        this.Users = Users;
     }
 
     /**
@@ -100,8 +95,8 @@ public class ListKeyDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Users.", this.Users);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -218,6 +218,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于删除个人版全局镜像版本自动清理策略
+     * @param req DeleteImageLifecycleGlobalPersonalRequest
+     * @return DeleteImageLifecycleGlobalPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageLifecycleGlobalPersonalResponse DeleteImageLifecycleGlobalPersonal(DeleteImageLifecycleGlobalPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteImageLifecycleGlobalPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在个人版镜像仓库中删除仓库Tag自动清理策略
      * @param req DeleteImageLifecyclePersonalRequest
      * @return DeleteImageLifecyclePersonalResponse
@@ -355,6 +373,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeImageFilterPersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageFilterPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于获取个人版全局镜像版本自动清理策略
+     * @param req DescribeImageLifecycleGlobalPersonalRequest
+     * @return DescribeImageLifecycleGlobalPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageLifecycleGlobalPersonalResponse DescribeImageLifecycleGlobalPersonal(DescribeImageLifecycleGlobalPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageLifecycleGlobalPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageLifecycleGlobalPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageLifecycleGlobalPersonal"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -535,6 +571,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DuplicateImagePersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DuplicateImagePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于设置个人版全局镜像版本自动清理策略
+     * @param req ManageImageLifecycleGlobalPersonalRequest
+     * @return ManageImageLifecycleGlobalPersonalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageImageLifecycleGlobalPersonalResponse ManageImageLifecycleGlobalPersonal(ManageImageLifecycleGlobalPersonalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ManageImageLifecycleGlobalPersonal"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

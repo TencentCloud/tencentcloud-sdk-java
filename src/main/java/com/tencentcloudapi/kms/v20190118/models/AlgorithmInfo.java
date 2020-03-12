@@ -20,60 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateKeyDescriptionRequest extends AbstractModel{
+public class AlgorithmInfo extends AbstractModel{
 
     /**
-    * 新的描述信息，最大支持1024字节
+    * 算法的标识
     */
-    @SerializedName("Description")
+    @SerializedName("KeyUsage")
     @Expose
-    private String Description;
+    private String KeyUsage;
 
     /**
-    * 需要修改描述信息的CMK ID
+    * 算法的名称
     */
-    @SerializedName("KeyId")
+    @SerializedName("Algorithm")
     @Expose
-    private String KeyId;
+    private String Algorithm;
 
     /**
-     * Get 新的描述信息，最大支持1024字节 
-     * @return Description 新的描述信息，最大支持1024字节
+     * Get 算法的标识 
+     * @return KeyUsage 算法的标识
      */
-    public String getDescription() {
-        return this.Description;
+    public String getKeyUsage() {
+        return this.KeyUsage;
     }
 
     /**
-     * Set 新的描述信息，最大支持1024字节
-     * @param Description 新的描述信息，最大支持1024字节
+     * Set 算法的标识
+     * @param KeyUsage 算法的标识
      */
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public void setKeyUsage(String KeyUsage) {
+        this.KeyUsage = KeyUsage;
     }
 
     /**
-     * Get 需要修改描述信息的CMK ID 
-     * @return KeyId 需要修改描述信息的CMK ID
+     * Get 算法的名称 
+     * @return Algorithm 算法的名称
      */
-    public String getKeyId() {
-        return this.KeyId;
+    public String getAlgorithm() {
+        return this.Algorithm;
     }
 
     /**
-     * Set 需要修改描述信息的CMK ID
-     * @param KeyId 需要修改描述信息的CMK ID
+     * Set 算法的名称
+     * @param Algorithm 算法的名称
      */
-    public void setKeyId(String KeyId) {
-        this.KeyId = KeyId;
+    public void setAlgorithm(String Algorithm) {
+        this.Algorithm = Algorithm;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
+        this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
 
     }
 }

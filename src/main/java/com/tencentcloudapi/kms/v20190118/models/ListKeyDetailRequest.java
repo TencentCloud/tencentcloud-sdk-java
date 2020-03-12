@@ -30,7 +30,7 @@ public class ListKeyDetailRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
+    * 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
     */
     @SerializedName("Limit")
     @Expose
@@ -72,6 +72,13 @@ public class ListKeyDetailRequest extends AbstractModel{
     private String Origin;
 
     /**
+    * 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
+    */
+    @SerializedName("KeyUsage")
+    @Expose
+    private String KeyUsage;
+
+    /**
      * Get 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0 
      * @return Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      */
@@ -88,16 +95,16 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200 
-     * @return Limit 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
+     * Get 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200 
+     * @return Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
-     * @param Limit 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
+     * Set 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
+     * @param Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -184,6 +191,22 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
+     * Get 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2 
+     * @return KeyUsage 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
+     */
+    public String getKeyUsage() {
+        return this.KeyUsage;
+    }
+
+    /**
+     * Set 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
+     * @param KeyUsage 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
+     */
+    public void setKeyUsage(String KeyUsage) {
+        this.KeyUsage = KeyUsage;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ListKeyDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyState", this.KeyState);
         this.setParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
         this.setParamSimple(map, prefix + "Origin", this.Origin);
+        this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
 
     }
 }

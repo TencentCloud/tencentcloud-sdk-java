@@ -38,6 +38,42 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
+     * @param req AsymmetricRsaDecryptRequest
+     * @return AsymmetricRsaDecryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AsymmetricRsaDecryptResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AsymmetricRsaDecrypt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用指定的SM2非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。传入的密文的长度不能超过256字节。
+     * @param req AsymmetricSm2DecryptRequest
+     * @return AsymmetricSm2DecryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AsymmetricSm2DecryptResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AsymmetricSm2Decrypt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *取消CMK的计划删除操作
      * @param req CancelKeyDeletionRequest
      * @return CancelKeyDeletionResponse
@@ -344,6 +380,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *该接口用户获取 KeyUsage为ASYMMETRIC_DECRYPT_RSA_2048 和 ASYMMETRIC_DECRYPT_SM2 的非对称密钥的公钥信息，使用该公钥用户可在本地进行数据加密，使用该公钥加密的数据只能通过KMS使用对应的私钥进行解密。只有处于Enabled状态的非对称密钥才可能获取公钥。
+     * @param req GetPublicKeyRequest
+     * @return GetPublicKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPublicKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetPublicKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询该用户是否已开通KMS服务
      * @param req GetServiceStatusRequest
      * @return GetServiceStatusResponse
@@ -374,6 +428,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImportKeyMaterialResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImportKeyMaterial"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列出当前Region支持的加密方式
+     * @param req ListAlgorithmsRequest
+     * @return ListAlgorithmsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAlgorithmsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAlgorithmsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListAlgorithms"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
