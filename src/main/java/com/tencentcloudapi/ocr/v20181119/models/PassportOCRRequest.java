@@ -44,11 +44,8 @@ public class PassportOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
+    * 默认填写CN
+支持中国大陆居民护照。
     */
     @SerializedName("Type")
     @Expose
@@ -115,32 +112,20 @@ THAI：支持泰国护照（部分主要字段）。
     }
 
     /**
-     * Get 护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。 
-     * @return Type 护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
+     * Get 默认填写CN
+支持中国大陆居民护照。 
+     * @return Type 默认填写CN
+支持中国大陆居民护照。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
-     * @param Type 护照类型（默认CN）：
-CN：支持中国大陆居民护照，字段较多，精度更高；
-HK：支持中国香港护照（部分主要字段）；
-GENERAL：支持国外护照（部分主要字段）；
-THAI：支持泰国护照（部分主要字段）。
+     * Set 默认填写CN
+支持中国大陆居民护照。
+     * @param Type 默认填写CN
+支持中国大陆居民护照。
      */
     public void setType(String Type) {
         this.Type = Type;

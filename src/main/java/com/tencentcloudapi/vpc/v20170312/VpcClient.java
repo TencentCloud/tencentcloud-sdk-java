@@ -259,6 +259,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AssociateNetworkAclSubnets）用于网络ACL关联vpc下的子网。
+     * @param req AssociateNetworkAclSubnetsRequest
+     * @return AssociateNetworkAclSubnetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(AssociateNetworkAclSubnetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateNetworkAclSubnetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateNetworkAclSubnetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateNetworkAclSubnets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
 每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
      * @param req AttachCcnInstancesRequest
@@ -594,6 +612,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateNetDetectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateNetDetect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateNetworkAcl）用于创建新的<a href="https://cloud.tencent.com/document/product/215/20088">网络ACL</a>。
+* 新建的网络ACL的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用ModifyNetworkAclEntries将网络ACL的规则设置为需要的规则。
+     * @param req CreateNetworkAclRequest
+     * @return CreateNetworkAclResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkAclResponse CreateNetworkAcl(CreateNetworkAclRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetworkAclResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetworkAclResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNetworkAcl"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1089,6 +1126,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteNetDetectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteNetDetect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteNetworkAcl）用于删除网络ACL。
+     * @param req DeleteNetworkAclRequest
+     * @return DeleteNetworkAclResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkAclResponse DeleteNetworkAcl(DeleteNetworkAclRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNetworkAclResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNetworkAcl"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1793,6 +1848,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeNetworkAcls）用于查询网络ACL列表。
+     * @param req DescribeNetworkAclsRequest
+     * @return DescribeNetworkAclsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkAclsResponse DescribeNetworkAcls(DescribeNetworkAclsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkAclsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkAclsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkAcls"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID查询弹性网卡配额，返回该CVM实例能绑定的弹性网卡配额，以及每个弹性网卡可以分配的IP配额
      * @param req DescribeNetworkInterfaceLimitRequest
      * @return DescribeNetworkInterfaceLimitResponse
@@ -2225,6 +2298,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DisassociateNatGatewayAddressResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DisassociateNatGatewayAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DisassociateNetworkAclSubnets）用于网络ACL解关联vpc下的子网。
+     * @param req DisassociateNetworkAclSubnetsRequest
+     * @return DisassociateNetworkAclSubnetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnets(DisassociateNetworkAclSubnetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateNetworkAclSubnetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateNetworkAclSubnets"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -2737,6 +2828,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyNetDetectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetDetect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyNetworkAclAttribute）用于修改网络ACL属性。
+     * @param req ModifyNetworkAclAttributeRequest
+     * @return ModifyNetworkAclAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkAclAttributeResponse ModifyNetworkAclAttribute(ModifyNetworkAclAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkAclAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetworkAclAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

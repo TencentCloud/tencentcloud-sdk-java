@@ -53,7 +53,7 @@ public class InvoiceDetectInfo extends AbstractModel{
     private Long Type;
 
     /**
-    * 识别出的图片在混贴票据图片中的位置信息。
+    * 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
     */
     @SerializedName("Rect")
     @Expose
@@ -164,16 +164,16 @@ public class InvoiceDetectInfo extends AbstractModel{
     }
 
     /**
-     * Get 识别出的图片在混贴票据图片中的位置信息。 
-     * @return Rect 识别出的图片在混贴票据图片中的位置信息。
+     * Get 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。 
+     * @return Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
      */
     public Rect getRect() {
         return this.Rect;
     }
 
     /**
-     * Set 识别出的图片在混贴票据图片中的位置信息。
-     * @param Rect 识别出的图片在混贴票据图片中的位置信息。
+     * Set 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
+     * @param Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
      */
     public void setRect(Rect Rect) {
         this.Rect = Rect;

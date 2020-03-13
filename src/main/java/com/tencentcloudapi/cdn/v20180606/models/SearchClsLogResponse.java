@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cms.v20190321.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioModerationResponse extends AbstractModel{
+public class SearchClsLogResponse extends AbstractModel{
 
     /**
-    * 业务返回码 
-60001：成功请求回调任务
+    * 查询结果
     */
-    @SerializedName("BusinessCode")
+    @SerializedName("Logs")
     @Expose
-    private Long BusinessCode;
-
-    /**
-    * 识别返回结果
-    */
-    @SerializedName("Data")
-    @Expose
-    private String [] Data;
+    private ClsSearchLogs Logs;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class AudioModerationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 业务返回码 
-60001：成功请求回调任务 
-     * @return BusinessCode 业务返回码 
-60001：成功请求回调任务
+     * Get 查询结果 
+     * @return Logs 查询结果
      */
-    public Long getBusinessCode() {
-        return this.BusinessCode;
+    public ClsSearchLogs getLogs() {
+        return this.Logs;
     }
 
     /**
-     * Set 业务返回码 
-60001：成功请求回调任务
-     * @param BusinessCode 业务返回码 
-60001：成功请求回调任务
+     * Set 查询结果
+     * @param Logs 查询结果
      */
-    public void setBusinessCode(Long BusinessCode) {
-        this.BusinessCode = BusinessCode;
-    }
-
-    /**
-     * Get 识别返回结果 
-     * @return Data 识别返回结果
-     */
-    public String [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 识别返回结果
-     * @param Data 识别返回结果
-     */
-    public void setData(String [] Data) {
-        this.Data = Data;
+    public void setLogs(ClsSearchLogs Logs) {
+        this.Logs = Logs;
     }
 
     /**
@@ -100,8 +72,7 @@ public class AudioModerationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
-        this.setParamArraySimple(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "Logs.", this.Logs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -56,6 +56,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *CreatClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
+     * @param req CreateClsLogTopicRequest
+     * @return CreateClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClsLogTopicResponse CreateClsLogTopic(CreateClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClsLogTopic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DeleteCdnDomain 用于删除指定加速域名
      * @param req DeleteCdnDomainRequest
      * @return DeleteCdnDomainResponse
@@ -67,6 +85,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteCdnDomainResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DeleteClsLogTopic 用于删除日志主题。注意：删除后，所有该日志主题下绑定域名的日志将不再继续投递至该主题，已经投递的日志将会被全部清空。生效时间约 5~15 分钟。
+     * @param req DeleteClsLogTopicRequest
+     * @return DeleteClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClsLogTopicResponse DeleteClsLogTopic(DeleteClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClsLogTopic"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -423,6 +459,25 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DisableClsLogTopic 用于停止日志主题投递。注意：停止后，所有绑定该日志主题域名的日志将不再继续投递至该主题，已经投递的日志将会继续保留。生效时间约 5~15 分钟。
+
+     * @param req DisableClsLogTopicRequest
+     * @return DisableClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClsLogTopicResponse DisableClsLogTopic(DisableClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableClsLogTopic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
      * @param req EnableCachesRequest
      * @return EnableCachesResponse
@@ -441,6 +496,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *EnableClsLogTopic 用于启动日志主题投递。注意：启动后，所有绑定该日志主题域名的日志将继续投递至该主题。生效时间约 5~15 分钟。
+     * @param req EnableClsLogTopicRequest
+     * @return EnableClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClsLogTopicResponse EnableClsLogTopic(EnableClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableClsLogTopic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
      * @param req GetDisableRecordsRequest
      * @return GetDisableRecordsResponse
@@ -452,6 +525,42 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetDisableRecordsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetDisableRecords"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *ListClsLogTopics 用于显示日志主题列表。注意：一个日志集下至多含10个日志主题。
+     * @param req ListClsLogTopicsRequest
+     * @return ListClsLogTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListClsLogTopicsResponse ListClsLogTopics(ListClsLogTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListClsLogTopicsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListClsLogTopicsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListClsLogTopics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取主题下绑定的域名列表
+     * @param req ListClsTopicDomainsRequest
+     * @return ListClsTopicDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListClsTopicDomainsResponse ListClsTopicDomains(ListClsTopicDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListClsTopicDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListClsTopicDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListClsTopicDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -478,6 +587,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListTopDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListTopData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *ManageClsTopicDomains 用于管理某日志主题下绑定的域名列表。
+     * @param req ManageClsTopicDomainsRequest
+     * @return ManageClsTopicDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageClsTopicDomainsResponse ManageClsTopicDomains(ManageClsTopicDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageClsTopicDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageClsTopicDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ManageClsTopicDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -536,6 +663,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PushUrlsCacheResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PushUrlsCache"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *SearchClsLog 用于 CLS 日志检索。支持检索今天，24小时（可选近7中的某一天），近7天的日志数据。
+     * @param req SearchClsLogRequest
+     * @return SearchClsLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchClsLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchClsLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SearchClsLog"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

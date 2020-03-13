@@ -30,7 +30,7 @@ public class DescribeMusicRequest extends AbstractModel{
     private String ItemId;
 
     /**
-    * User identity ID，用来唯一标识用户
+    * 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
     */
     @SerializedName("IdentityId")
     @Expose
@@ -68,16 +68,16 @@ Values:Y , N(default)
     }
 
     /**
-     * Get User identity ID，用来唯一标识用户 
-     * @return IdentityId User identity ID，用来唯一标识用户
+     * Get 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。 
+     * @return IdentityId 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
      */
     public String getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set User identity ID，用来唯一标识用户
-     * @param IdentityId User identity ID，用来唯一标识用户
+     * Set 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
+     * @param IdentityId 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
      */
     public void setIdentityId(String IdentityId) {
         this.IdentityId = IdentityId;

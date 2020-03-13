@@ -65,6 +65,13 @@ public class DescribeConfigsRequest extends AbstractModel{
     private String ConfigName;
 
     /**
+    * 配置项版本，精确查询，不传入时查询全量
+    */
+    @SerializedName("ConfigVersion")
+    @Expose
+    private String ConfigVersion;
+
+    /**
      * Get 应用ID，不传入时查询全量 
      * @return ApplicationId 应用ID，不传入时查询全量
      */
@@ -161,6 +168,22 @@ public class DescribeConfigsRequest extends AbstractModel{
     }
 
     /**
+     * Get 配置项版本，精确查询，不传入时查询全量 
+     * @return ConfigVersion 配置项版本，精确查询，不传入时查询全量
+     */
+    public String getConfigVersion() {
+        return this.ConfigVersion;
+    }
+
+    /**
+     * Set 配置项版本，精确查询，不传入时查询全量
+     * @param ConfigVersion 配置项版本，精确查询，不传入时查询全量
+     */
+    public void setConfigVersion(String ConfigVersion) {
+        this.ConfigVersion = ConfigVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribeConfigsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "ConfigIdList.", this.ConfigIdList);
         this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);
+        this.setParamSimple(map, prefix + "ConfigVersion", this.ConfigVersion);
 
     }
 }

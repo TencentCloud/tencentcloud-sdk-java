@@ -51,6 +51,13 @@ public class DescribeImageTagsRequest extends AbstractModel{
     private Long QueryImageIdFlag;
 
     /**
+    * 可用于搜索的 tag 名字
+    */
+    @SerializedName("SearchWord")
+    @Expose
+    private String SearchWord;
+
+    /**
      * Get 应用Id 
      * @return ApplicationId 应用Id
      */
@@ -115,6 +122,22 @@ public class DescribeImageTagsRequest extends AbstractModel{
     }
 
     /**
+     * Get 可用于搜索的 tag 名字 
+     * @return SearchWord 可用于搜索的 tag 名字
+     */
+    public String getSearchWord() {
+        return this.SearchWord;
+    }
+
+    /**
+     * Set 可用于搜索的 tag 名字
+     * @param SearchWord 可用于搜索的 tag 名字
+     */
+    public void setSearchWord(String SearchWord) {
+        this.SearchWord = SearchWord;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DescribeImageTagsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "QueryImageIdFlag", this.QueryImageIdFlag);
+        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
 
     }
 }

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cms.v20190321.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModerationOverviewResponse extends AbstractModel{
+public class CreateNetworkAclResponse extends AbstractModel{
 
     /**
-    * 概览数据集合
+    * 网络ACL实例。
     */
-    @SerializedName("Results")
+    @SerializedName("NetworkAcl")
     @Expose
-    private OverviewRecord [] Results;
+    private NetworkAcl NetworkAcl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeModerationOverviewResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 概览数据集合 
-     * @return Results 概览数据集合
+     * Get 网络ACL实例。 
+     * @return NetworkAcl 网络ACL实例。
      */
-    public OverviewRecord [] getResults() {
-        return this.Results;
+    public NetworkAcl getNetworkAcl() {
+        return this.NetworkAcl;
     }
 
     /**
-     * Set 概览数据集合
-     * @param Results 概览数据集合
+     * Set 网络ACL实例。
+     * @param NetworkAcl 网络ACL实例。
      */
-    public void setResults(OverviewRecord [] Results) {
-        this.Results = Results;
+    public void setNetworkAcl(NetworkAcl NetworkAcl) {
+        this.NetworkAcl = NetworkAcl;
     }
 
     /**
@@ -72,7 +72,7 @@ public class DescribeModerationOverviewResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Results.", this.Results);
+        this.setParamObj(map, prefix + "NetworkAcl.", this.NetworkAcl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
