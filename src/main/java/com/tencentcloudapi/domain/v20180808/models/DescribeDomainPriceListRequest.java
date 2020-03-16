@@ -30,6 +30,20 @@ public class DescribeDomainPriceListRequest extends AbstractModel{
     private String [] TldList;
 
     /**
+    * 查询购买的年份，默认会列出所有年份的价格
+    */
+    @SerializedName("Year")
+    @Expose
+    private Long [] Year;
+
+    /**
+    * 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+    */
+    @SerializedName("Operation")
+    @Expose
+    private String [] Operation;
+
+    /**
      * Get 查询价格的后缀列表。默认则为全部后缀 
      * @return TldList 查询价格的后缀列表。默认则为全部后缀
      */
@@ -46,10 +60,44 @@ public class DescribeDomainPriceListRequest extends AbstractModel{
     }
 
     /**
+     * Get 查询购买的年份，默认会列出所有年份的价格 
+     * @return Year 查询购买的年份，默认会列出所有年份的价格
+     */
+    public Long [] getYear() {
+        return this.Year;
+    }
+
+    /**
+     * Set 查询购买的年份，默认会列出所有年份的价格
+     * @param Year 查询购买的年份，默认会列出所有年份的价格
+     */
+    public void setYear(Long [] Year) {
+        this.Year = Year;
+    }
+
+    /**
+     * Get 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入 
+     * @return Operation 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+     */
+    public String [] getOperation() {
+        return this.Operation;
+    }
+
+    /**
+     * Set 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+     * @param Operation 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+     */
+    public void setOperation(String [] Operation) {
+        this.Operation = Operation;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TldList.", this.TldList);
+        this.setParamArraySimple(map, prefix + "Year.", this.Year);
+        this.setParamArraySimple(map, prefix + "Operation.", this.Operation);
 
     }
 }

@@ -100,6 +100,13 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private Long BackEndCall;
 
     /**
+    * 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
+    */
+    @SerializedName("IsUnionRule")
+    @Expose
+    private Long IsUnionRule;
+
+    /**
      * Get 组策略名称 
      * @return GroupName 组策略名称
      */
@@ -276,6 +283,22 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警) 
+     * @return IsUnionRule 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
+     */
+    public Long getIsUnionRule() {
+        return this.IsUnionRule;
+    }
+
+    /**
+     * Set 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
+     * @param IsUnionRule 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
+     */
+    public void setIsUnionRule(Long IsUnionRule) {
+        this.IsUnionRule = IsUnionRule;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
         this.setParamArrayObj(map, prefix + "EventConditions.", this.EventConditions);
         this.setParamSimple(map, prefix + "BackEndCall", this.BackEndCall);
+        this.setParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
 
     }
 }

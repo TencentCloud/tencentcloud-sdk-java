@@ -93,6 +93,13 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
     private String TransactorPhone;
 
     /**
+    * 企业联系人邮箱
+    */
+    @SerializedName("Email")
+    @Expose
+    private String Email;
+
+    /**
      * Get 模块名AccountMng 
      * @return Module 模块名AccountMng
      */
@@ -253,6 +260,22 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
     }
 
     /**
+     * Get 企业联系人邮箱 
+     * @return Email 企业联系人邮箱
+     */
+    public String getEmail() {
+        return this.Email;
+    }
+
+    /**
+     * Set 企业联系人邮箱
+     * @param Email 企业联系人邮箱
+     */
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class CreateEnterpriseAccountRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TransactorIdentType", this.TransactorIdentType);
         this.setParamSimple(map, prefix + "TransactorIdentNo", this.TransactorIdentNo);
         this.setParamSimple(map, prefix + "TransactorPhone", this.TransactorPhone);
+        this.setParamSimple(map, prefix + "Email", this.Email);
 
     }
 }

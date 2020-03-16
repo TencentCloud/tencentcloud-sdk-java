@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Scaler extends AbstractModel{
 
     /**
-    * 最大副本数
+    * 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
     */
     @SerializedName("MaxReplicas")
     @Expose
     private Long MaxReplicas;
 
     /**
-    * 最小副本数
+    * 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
     */
     @SerializedName("MinReplicas")
     @Expose
@@ -51,32 +51,32 @@ public class Scaler extends AbstractModel{
     private Option [] HpaMetrics;
 
     /**
-     * Get 最大副本数 
-     * @return MaxReplicas 最大副本数
+     * Get 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值 
+     * @return MaxReplicas 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
      */
     public Long getMaxReplicas() {
         return this.MaxReplicas;
     }
 
     /**
-     * Set 最大副本数
-     * @param MaxReplicas 最大副本数
+     * Set 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+     * @param MaxReplicas 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
      */
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;
     }
 
     /**
-     * Get 最小副本数 
-     * @return MinReplicas 最小副本数
+     * Get 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值 
+     * @return MinReplicas 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
      */
     public Long getMinReplicas() {
         return this.MinReplicas;
     }
 
     /**
-     * Set 最小副本数
-     * @param MinReplicas 最小副本数
+     * Set 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
+     * @param MinReplicas 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
      */
     public void setMinReplicas(Long MinReplicas) {
         this.MinReplicas = MinReplicas;

@@ -80,6 +80,14 @@ public class RoleInfo extends AbstractModel{
     private String RoleType;
 
     /**
+    * 有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionDuration")
+    @Expose
+    private Long SessionDuration;
+
+    /**
      * Get 角色ID 
      * @return RoleId 角色ID
      */
@@ -212,6 +220,26 @@ public class RoleInfo extends AbstractModel{
     }
 
     /**
+     * Get 有效时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionDuration 有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSessionDuration() {
+        return this.SessionDuration;
+    }
+
+    /**
+     * Set 有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionDuration 有效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionDuration(Long SessionDuration) {
+        this.SessionDuration = SessionDuration;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -223,6 +251,7 @@ public class RoleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
         this.setParamSimple(map, prefix + "RoleType", this.RoleType);
+        this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
 
     }
 }

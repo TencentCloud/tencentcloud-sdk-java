@@ -52,7 +52,7 @@ public class InstanceInfo extends AbstractModel{
     private RoVipInfo RoVipInfo;
 
     /**
-    * 内存容量，单位为MB
+    * 内存容量，单位为 MB
     */
     @SerializedName("Memory")
     @Expose
@@ -66,7 +66,7 @@ public class InstanceInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * 私有网络ID，例如：51102
+    * 私有网络 ID，例如：51102
     */
     @SerializedName("VpcId")
     @Expose
@@ -81,14 +81,14 @@ public class InstanceInfo extends AbstractModel{
     private SlaveInfo SlaveInfo;
 
     /**
-    * 实例ID
+    * 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 硬盘容量，单位为GB
+    * 硬盘容量，单位为 GB
     */
     @SerializedName("Volume")
     @Expose
@@ -117,7 +117,7 @@ public class InstanceInfo extends AbstractModel{
     private RoGroup [] RoGroups;
 
     /**
-    * 子网ID，例如：2333
+    * 子网 ID，例如：2333
     */
     @SerializedName("SubnetId")
     @Expose
@@ -131,7 +131,7 @@ public class InstanceInfo extends AbstractModel{
     private Long InstanceType;
 
     /**
-    * 项目ID
+    * 项目 ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -231,7 +231,7 @@ public class InstanceInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 实例IP
+    * 实例 IP
     */
     @SerializedName("Vip")
     @Expose
@@ -266,7 +266,7 @@ public class InstanceInfo extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-    * 物理ID
+    * 物理 ID
     */
     @SerializedName("PhysicalId")
     @Expose
@@ -302,12 +302,20 @@ public class InstanceInfo extends AbstractModel{
     private String DeviceClass;
 
     /**
-    * 置放群组ID
+    * 置放群组 ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployGroupId")
     @Expose
     private String DeployGroupId;
+
+    /**
+    * 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
 
     /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
@@ -378,16 +386,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 内存容量，单位为MB 
-     * @return Memory 内存容量，单位为MB
+     * Get 内存容量，单位为 MB 
+     * @return Memory 内存容量，单位为 MB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存容量，单位为MB
-     * @param Memory 内存容量，单位为MB
+     * Set 内存容量，单位为 MB
+     * @param Memory 内存容量，单位为 MB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
@@ -410,16 +418,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 私有网络ID，例如：51102 
-     * @return VpcId 私有网络ID，例如：51102
+     * Get 私有网络 ID，例如：51102 
+     * @return VpcId 私有网络 ID，例如：51102
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，例如：51102
-     * @param VpcId 私有网络ID，例如：51102
+     * Set 私有网络 ID，例如：51102
+     * @param VpcId 私有网络 ID，例如：51102
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
@@ -446,32 +454,32 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 硬盘容量，单位为GB 
-     * @return Volume 硬盘容量，单位为GB
+     * Get 硬盘容量，单位为 GB 
+     * @return Volume 硬盘容量，单位为 GB
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 硬盘容量，单位为GB
-     * @param Volume 硬盘容量，单位为GB
+     * Set 硬盘容量，单位为 GB
+     * @param Volume 硬盘容量，单位为 GB
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
@@ -530,16 +538,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 子网ID，例如：2333 
-     * @return SubnetId 子网ID，例如：2333
+     * Get 子网 ID，例如：2333 
+     * @return SubnetId 子网 ID，例如：2333
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID，例如：2333
-     * @param SubnetId 子网ID，例如：2333
+     * Set 子网 ID，例如：2333
+     * @param SubnetId 子网 ID，例如：2333
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
@@ -562,16 +570,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目 ID 
+     * @return ProjectId 项目 ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目 ID
+     * @param ProjectId 项目 ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -794,16 +802,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例IP 
-     * @return Vip 实例IP
+     * Get 实例 IP 
+     * @return Vip 实例 IP
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 实例IP
-     * @param Vip 实例IP
+     * Set 实例 IP
+     * @param Vip 实例 IP
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
@@ -874,16 +882,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 物理ID 
-     * @return PhysicalId 物理ID
+     * Get 物理 ID 
+     * @return PhysicalId 物理 ID
      */
     public String getPhysicalId() {
         return this.PhysicalId;
     }
 
     /**
-     * Set 物理ID
-     * @param PhysicalId 物理ID
+     * Set 物理 ID
+     * @param PhysicalId 物理 ID
      */
     public void setPhysicalId(String PhysicalId) {
         this.PhysicalId = PhysicalId;
@@ -958,9 +966,9 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 置放群组ID
+     * Get 置放群组 ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployGroupId 置放群组ID
+     * @return DeployGroupId 置放群组 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployGroupId() {
@@ -968,13 +976,33 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Set 置放群组ID
+     * Set 置放群组 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployGroupId 置放群组ID
+     * @param DeployGroupId 置放群组 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
+    }
+
+    /**
+     * Get 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneId 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneId 可用区 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
     /**
@@ -1021,6 +1049,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

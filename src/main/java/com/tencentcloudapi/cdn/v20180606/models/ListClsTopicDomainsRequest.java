@@ -30,14 +30,14 @@ public class ListClsTopicDomainsRequest extends AbstractModel{
     private String LogsetId;
 
     /**
-    * 主题ID
+    * 日志主题ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 接入渠道，默认值为cdn，后期可扩充dsa/ecdn等
+    * 接入渠道，默认值为cdn
     */
     @SerializedName("Channel")
     @Expose
@@ -60,32 +60,32 @@ public class ListClsTopicDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Get 主题ID 
-     * @return TopicId 主题ID
+     * Get 日志主题ID 
+     * @return TopicId 日志主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题ID
-     * @param TopicId 主题ID
+     * Set 日志主题ID
+     * @param TopicId 日志主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 接入渠道，默认值为cdn，后期可扩充dsa/ecdn等 
-     * @return Channel 接入渠道，默认值为cdn，后期可扩充dsa/ecdn等
+     * Get 接入渠道，默认值为cdn 
+     * @return Channel 接入渠道，默认值为cdn
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 接入渠道，默认值为cdn，后期可扩充dsa/ecdn等
-     * @param Channel 接入渠道，默认值为cdn，后期可扩充dsa/ecdn等
+     * Set 接入渠道，默认值为cdn
+     * @param Channel 接入渠道，默认值为cdn
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;

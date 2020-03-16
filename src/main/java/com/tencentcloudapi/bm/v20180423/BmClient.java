@@ -840,6 +840,24 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     }
 
     /**
+     *重装操作系统
+     * @param req ReloadDeviceOsRequest
+     * @return ReloadDeviceOsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReloadDeviceOsResponse ReloadDeviceOs(ReloadDeviceOsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReloadDeviceOsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReloadDeviceOsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReloadDeviceOs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于操作维修任务<br>
 入参TaskId为维修任务ID<br>
 入参Operate表示对维修任务的操作，支持如下取值：<br>

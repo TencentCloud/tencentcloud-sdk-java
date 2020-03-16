@@ -123,6 +123,27 @@ public class PushDataInfo extends AbstractModel{
     private Long AsampleRate;
 
     /**
+    * metadata中的音频码率，单位是Kbps。
+    */
+    @SerializedName("MetaAudioSpeed")
+    @Expose
+    private Long MetaAudioSpeed;
+
+    /**
+    * metadata中的视频码率，单位是Kbps。
+    */
+    @SerializedName("MetaVideoSpeed")
+    @Expose
+    private Long MetaVideoSpeed;
+
+    /**
+    * metadata中的帧率。
+    */
+    @SerializedName("MetaFps")
+    @Expose
+    private Long MetaFps;
+
+    /**
      * Get 流名称。 
      * @return StreamName 流名称。
      */
@@ -355,6 +376,54 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
+     * Get metadata中的音频码率，单位是Kbps。 
+     * @return MetaAudioSpeed metadata中的音频码率，单位是Kbps。
+     */
+    public Long getMetaAudioSpeed() {
+        return this.MetaAudioSpeed;
+    }
+
+    /**
+     * Set metadata中的音频码率，单位是Kbps。
+     * @param MetaAudioSpeed metadata中的音频码率，单位是Kbps。
+     */
+    public void setMetaAudioSpeed(Long MetaAudioSpeed) {
+        this.MetaAudioSpeed = MetaAudioSpeed;
+    }
+
+    /**
+     * Get metadata中的视频码率，单位是Kbps。 
+     * @return MetaVideoSpeed metadata中的视频码率，单位是Kbps。
+     */
+    public Long getMetaVideoSpeed() {
+        return this.MetaVideoSpeed;
+    }
+
+    /**
+     * Set metadata中的视频码率，单位是Kbps。
+     * @param MetaVideoSpeed metadata中的视频码率，单位是Kbps。
+     */
+    public void setMetaVideoSpeed(Long MetaVideoSpeed) {
+        this.MetaVideoSpeed = MetaVideoSpeed;
+    }
+
+    /**
+     * Get metadata中的帧率。 
+     * @return MetaFps metadata中的帧率。
+     */
+    public Long getMetaFps() {
+        return this.MetaFps;
+    }
+
+    /**
+     * Set metadata中的帧率。
+     * @param MetaFps metadata中的帧率。
+     */
+    public void setMetaFps(Long MetaFps) {
+        this.MetaFps = MetaFps;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -372,6 +441,9 @@ public class PushDataInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "AsampleRate", this.AsampleRate);
+        this.setParamSimple(map, prefix + "MetaAudioSpeed", this.MetaAudioSpeed);
+        this.setParamSimple(map, prefix + "MetaVideoSpeed", this.MetaVideoSpeed);
+        this.setParamSimple(map, prefix + "MetaFps", this.MetaFps);
 
     }
 }

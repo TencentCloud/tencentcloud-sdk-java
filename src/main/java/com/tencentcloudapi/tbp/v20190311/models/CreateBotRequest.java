@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.tbp.v20190311.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter extends AbstractModel{
+public class CreateBotRequest extends AbstractModel{
 
     /**
-    * 过滤键的名称。
+    * 机器人名称
     */
-    @SerializedName("Name")
+    @SerializedName("BotName")
     @Expose
-    private String Name;
+    private String BotName;
 
     /**
-    * 一个或者多个过滤值。
+    * 机器人中文名称
     */
-    @SerializedName("Values")
+    @SerializedName("BotCnName")
     @Expose
-    private String [] Values;
+    private String BotCnName;
 
     /**
-     * Get 过滤键的名称。 
-     * @return Name 过滤键的名称。
+     * Get 机器人名称 
+     * @return BotName 机器人名称
      */
-    public String getName() {
-        return this.Name;
+    public String getBotName() {
+        return this.BotName;
     }
 
     /**
-     * Set 过滤键的名称。
-     * @param Name 过滤键的名称。
+     * Set 机器人名称
+     * @param BotName 机器人名称
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setBotName(String BotName) {
+        this.BotName = BotName;
     }
 
     /**
-     * Get 一个或者多个过滤值。 
-     * @return Values 一个或者多个过滤值。
+     * Get 机器人中文名称 
+     * @return BotCnName 机器人中文名称
      */
-    public String [] getValues() {
-        return this.Values;
+    public String getBotCnName() {
+        return this.BotCnName;
     }
 
     /**
-     * Set 一个或者多个过滤值。
-     * @param Values 一个或者多个过滤值。
+     * Set 机器人中文名称
+     * @param BotCnName 机器人中文名称
      */
-    public void setValues(String [] Values) {
-        this.Values = Values;
+    public void setBotCnName(String BotCnName) {
+        this.BotCnName = BotCnName;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamSimple(map, prefix + "BotName", this.BotName);
+        this.setParamSimple(map, prefix + "BotCnName", this.BotCnName);
 
     }
 }

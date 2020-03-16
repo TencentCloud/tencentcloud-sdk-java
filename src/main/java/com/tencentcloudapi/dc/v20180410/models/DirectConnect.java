@@ -196,6 +196,21 @@ public class DirectConnect extends AbstractModel{
     private String FaultReportContactNumber;
 
     /**
+    * 标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
+    * 物理专线的接入点类型。
+    */
+    @SerializedName("AccessPointType")
+    @Expose
+    private String AccessPointType;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -624,6 +639,42 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
+     * Get 标签键值对
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
+     * Get 物理专线的接入点类型。 
+     * @return AccessPointType 物理专线的接入点类型。
+     */
+    public String getAccessPointType() {
+        return this.AccessPointType;
+    }
+
+    /**
+     * Set 物理专线的接入点类型。
+     * @param AccessPointType 物理专线的接入点类型。
+     */
+    public void setAccessPointType(String AccessPointType) {
+        this.AccessPointType = AccessPointType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -649,6 +700,8 @@ public class DirectConnect extends AbstractModel{
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
 
     }
 }

@@ -59,7 +59,7 @@ public class Instance extends AbstractModel{
     private String DrainStatus;
 
     /**
-    * 配置
+    * 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceAdvancedSettings")
@@ -158,9 +158,9 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Get 配置
+     * Get 节点配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceAdvancedSettings 配置
+     * @return InstanceAdvancedSettings 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
@@ -168,9 +168,9 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Set 配置
+     * Set 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceAdvancedSettings 配置
+     * @param InstanceAdvancedSettings 节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {

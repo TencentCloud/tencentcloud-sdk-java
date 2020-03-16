@@ -550,7 +550,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *获取主题下绑定的域名列表
+     *ListClsTopicDomains 用于获取某日志主题下绑定的域名列表。
      * @param req ListClsTopicDomainsRequest
      * @return ListClsTopicDomainsResponse
      * @throws TencentCloudSDKException

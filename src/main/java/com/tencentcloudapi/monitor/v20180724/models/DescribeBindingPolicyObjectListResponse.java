@@ -45,6 +45,14 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
     private Long NoShieldedSum;
 
     /**
+    * 绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceGroup")
+    @Expose
+    private DescribeBindingPolicyObjectListInstanceGroup InstanceGroup;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -104,6 +112,26 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
     }
 
     /**
+     * Get 绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() {
+        return this.InstanceGroup;
+    }
+
+    /**
+     * Set 绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceGroup 绑定的实例分组信息，没有绑定实例分组则为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup InstanceGroup) {
+        this.InstanceGroup = InstanceGroup;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -126,6 +154,7 @@ public class DescribeBindingPolicyObjectListResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "NoShieldedSum", this.NoShieldedSum);
+        this.setParamObj(map, prefix + "InstanceGroup.", this.InstanceGroup);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

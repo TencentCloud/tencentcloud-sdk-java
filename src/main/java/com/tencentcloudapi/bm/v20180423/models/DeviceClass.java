@@ -73,6 +73,7 @@ public class DeviceClass extends AbstractModel{
 
     /**
     * 单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Discount")
     @Expose
@@ -80,6 +81,7 @@ public class DeviceClass extends AbstractModel{
 
     /**
     * 用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -87,6 +89,7 @@ public class DeviceClass extends AbstractModel{
 
     /**
     * 实际价格
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealPrice")
     @Expose
@@ -94,6 +97,7 @@ public class DeviceClass extends AbstractModel{
 
     /**
     * 官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalPrice")
     @Expose
@@ -112,6 +116,20 @@ public class DeviceClass extends AbstractModel{
     @SerializedName("Series")
     @Expose
     private Long Series;
+
+    /**
+    * cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * 内存容量。单位G
+    */
+    @SerializedName("Mem")
+    @Expose
+    private Long Mem;
 
     /**
      * Get 机型ID 
@@ -226,8 +244,10 @@ public class DeviceClass extends AbstractModel{
     }
 
     /**
-     * Get 单价折扣 
+     * Get 单价折扣
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Discount 单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscount() {
         return this.Discount;
@@ -235,15 +255,19 @@ public class DeviceClass extends AbstractModel{
 
     /**
      * Set 单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Discount 单价折扣
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 用户刊例价格 
+     * Get 用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UnitPrice 用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnitPrice() {
         return this.UnitPrice;
@@ -251,15 +275,19 @@ public class DeviceClass extends AbstractModel{
 
     /**
      * Set 用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 用户刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Long UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 实际价格 
+     * Get 实际价格
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealPrice 实际价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealPrice() {
         return this.RealPrice;
@@ -267,15 +295,19 @@ public class DeviceClass extends AbstractModel{
 
     /**
      * Set 实际价格
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RealPrice 实际价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealPrice(Long RealPrice) {
         this.RealPrice = RealPrice;
     }
 
     /**
-     * Get 官网刊例价格 
+     * Get 官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NormalPrice 官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNormalPrice() {
         return this.NormalPrice;
@@ -283,7 +315,9 @@ public class DeviceClass extends AbstractModel{
 
     /**
      * Set 官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      * @param NormalPrice 官网刊例价格
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalPrice(Long NormalPrice) {
         this.NormalPrice = NormalPrice;
@@ -322,6 +356,38 @@ public class DeviceClass extends AbstractModel{
     }
 
     /**
+     * Get cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2 
+     * @return Cpu cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     * @param Cpu cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get 内存容量。单位G 
+     * @return Mem 内存容量。单位G
+     */
+    public Long getMem() {
+        return this.Mem;
+    }
+
+    /**
+     * Set 内存容量。单位G
+     * @param Mem 内存容量。单位G
+     */
+    public void setMem(Long Mem) {
+        this.Mem = Mem;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +404,8 @@ public class DeviceClass extends AbstractModel{
         this.setParamSimple(map, prefix + "NormalPrice", this.NormalPrice);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "Series", this.Series);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Mem", this.Mem);
 
     }
 }

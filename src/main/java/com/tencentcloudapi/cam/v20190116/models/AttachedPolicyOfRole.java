@@ -59,12 +59,20 @@ public class AttachedPolicyOfRole extends AbstractModel{
     private Long CreateMode;
 
     /**
-    * 是否已下线
+    * 是否已下线(0:否 1:是)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deactived")
     @Expose
     private Long Deactived;
+
+    /**
+    * 已下线的产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeactivedDetail")
+    @Expose
+    private String [] DeactivedDetail;
 
     /**
      * Get 策略ID 
@@ -151,9 +159,9 @@ public class AttachedPolicyOfRole extends AbstractModel{
     }
 
     /**
-     * Get 是否已下线
+     * Get 是否已下线(0:否 1:是)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Deactived 是否已下线
+     * @return Deactived 是否已下线(0:否 1:是)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeactived() {
@@ -161,13 +169,33 @@ public class AttachedPolicyOfRole extends AbstractModel{
     }
 
     /**
-     * Set 是否已下线
+     * Set 是否已下线(0:否 1:是)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Deactived 是否已下线
+     * @param Deactived 是否已下线(0:否 1:是)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactived(Long Deactived) {
         this.Deactived = Deactived;
+    }
+
+    /**
+     * Get 已下线的产品列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeactivedDetail 已下线的产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDeactivedDetail() {
+        return this.DeactivedDetail;
+    }
+
+    /**
+     * Set 已下线的产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeactivedDetail 已下线的产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeactivedDetail(String [] DeactivedDetail) {
+        this.DeactivedDetail = DeactivedDetail;
     }
 
     /**
@@ -180,6 +208,7 @@ public class AttachedPolicyOfRole extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
         this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
+        this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
 
     }
 }

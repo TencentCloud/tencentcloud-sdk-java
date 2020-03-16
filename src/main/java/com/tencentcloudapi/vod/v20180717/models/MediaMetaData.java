@@ -24,7 +24,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -32,7 +31,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 容器类型，例如 m4a，mp4 等。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Container")
     @Expose
@@ -40,7 +38,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 视频流码率平均值与音频流码率平均值之和，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -48,7 +45,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 视频流高度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
@@ -56,7 +52,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 视频流宽度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -64,7 +59,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -72,7 +66,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 视频拍摄时的选择角度，单位：度。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rotate")
     @Expose
@@ -96,7 +89,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoDuration")
     @Expose
@@ -104,17 +96,14 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 音频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioDuration")
     @Expose
     private Float AudioDuration;
 
     /**
-     * Get 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。 
      * @return Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -122,19 +111,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 容器类型，例如 m4a，mp4 等。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器类型，例如 m4a，mp4 等。 
      * @return Container 容器类型，例如 m4a，mp4 等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainer() {
         return this.Container;
@@ -142,19 +127,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 容器类型，例如 m4a，mp4 等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Container 容器类型，例如 m4a，mp4 等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 视频流码率平均值与音频流码率平均值之和，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频流码率平均值与音频流码率平均值之和，单位：bps。 
      * @return Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBitrate() {
         return this.Bitrate;
@@ -162,19 +143,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 视频流码率平均值与音频流码率平均值之和，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 视频流高度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频流高度的最大值，单位：px。 
      * @return Height 视频流高度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
@@ -182,19 +159,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 视频流高度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 视频流高度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 视频流宽度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频流宽度的最大值，单位：px。 
      * @return Width 视频流宽度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -202,19 +175,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 视频流宽度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 视频流宽度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频时长，单位：秒。 
      * @return Duration 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDuration() {
         return this.Duration;
@@ -222,19 +191,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 视频拍摄时的选择角度，单位：度。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频拍摄时的选择角度，单位：度。 
      * @return Rotate 视频拍摄时的选择角度，单位：度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRotate() {
         return this.Rotate;
@@ -242,9 +207,7 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 视频拍摄时的选择角度，单位：度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rotate 视频拍摄时的选择角度，单位：度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
@@ -291,10 +254,8 @@ public class MediaMetaData extends AbstractModel{
     }
 
     /**
-     * Get 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频时长，单位：秒。 
      * @return VideoDuration 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getVideoDuration() {
         return this.VideoDuration;
@@ -302,19 +263,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoDuration 视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoDuration(Float VideoDuration) {
         this.VideoDuration = VideoDuration;
     }
 
     /**
-     * Get 音频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音频时长，单位：秒。 
      * @return AudioDuration 音频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAudioDuration() {
         return this.AudioDuration;
@@ -322,9 +279,7 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 音频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioDuration 音频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioDuration(Float AudioDuration) {
         this.AudioDuration = AudioDuration;

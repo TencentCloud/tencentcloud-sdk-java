@@ -58,6 +58,27 @@ public class ProjectInfo extends AbstractModel{
     private Entity Owner;
 
     /**
+    * 项目封面图片地址。
+    */
+    @SerializedName("CoverUrl")
+    @Expose
+    private String CoverUrl;
+
+    /**
+    * 项目创建时间，格式按照 ISO 8601 标准表示。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 项目更新时间，格式按照 ISO 8601 标准表示。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 项目 Id。 
      * @return ProjectId 项目 Id。
      */
@@ -138,6 +159,54 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
+     * Get 项目封面图片地址。 
+     * @return CoverUrl 项目封面图片地址。
+     */
+    public String getCoverUrl() {
+        return this.CoverUrl;
+    }
+
+    /**
+     * Set 项目封面图片地址。
+     * @param CoverUrl 项目封面图片地址。
+     */
+    public void setCoverUrl(String CoverUrl) {
+        this.CoverUrl = CoverUrl;
+    }
+
+    /**
+     * Get 项目创建时间，格式按照 ISO 8601 标准表示。 
+     * @return CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 项目创建时间，格式按照 ISO 8601 标准表示。
+     * @param CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 项目更新时间，格式按照 ISO 8601 标准表示。 
+     * @return UpdateTime 项目更新时间，格式按照 ISO 8601 标准表示。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 项目更新时间，格式按照 ISO 8601 标准表示。
+     * @param UpdateTime 项目更新时间，格式按照 ISO 8601 标准表示。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +215,9 @@ public class ProjectInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
+        this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

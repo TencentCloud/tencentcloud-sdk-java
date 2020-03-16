@@ -24,7 +24,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 转动图的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -32,7 +31,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
     @Expose
@@ -40,7 +38,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图格式，如 gif。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Container")
     @Expose
@@ -48,7 +45,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
@@ -56,7 +52,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -64,7 +59,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -72,7 +66,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图大小，单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -80,7 +73,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图的md5值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5")
     @Expose
@@ -88,7 +80,6 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图在视频中的起始时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -96,17 +87,14 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 动图在视频中的结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get 转动图的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转动图的文件地址。 
      * @return Url 转动图的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -114,19 +102,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 转动图的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 转动图的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefinition() {
         return this.Definition;
@@ -134,19 +118,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 动图格式，如 gif。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图格式，如 gif。 
      * @return Container 动图格式，如 gif。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainer() {
         return this.Container;
@@ -154,19 +134,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图格式，如 gif。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Container 动图格式，如 gif。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 动图的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图的高度，单位：px。 
      * @return Height 动图的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
@@ -174,19 +150,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 动图的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 动图的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图的宽度，单位：px。 
      * @return Width 动图的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -194,19 +166,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 动图的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 动图码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图码率，单位：bps。 
      * @return Bitrate 动图码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBitrate() {
         return this.Bitrate;
@@ -214,19 +182,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 动图码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 动图大小，单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图大小，单位：字节。 
      * @return Size 动图大小，单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -234,19 +198,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图大小，单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 动图大小，单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 动图的md5值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图的md5值。 
      * @return Md5 动图的md5值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5() {
         return this.Md5;
@@ -254,19 +214,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图的md5值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 动图的md5值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 动图在视频中的起始时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图在视频中的起始时间偏移，单位：秒。 
      * @return StartTimeOffset 动图在视频中的起始时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
@@ -274,19 +230,15 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图在视频中的起始时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 动图在视频中的起始时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 动图在视频中的结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 动图在视频中的结束时间偏移，单位：秒。 
      * @return EndTimeOffset 动图在视频中的结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -294,9 +246,7 @@ public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
      * Set 动图在视频中的结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 动图在视频中的结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

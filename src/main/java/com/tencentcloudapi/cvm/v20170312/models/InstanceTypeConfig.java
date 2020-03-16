@@ -65,6 +65,13 @@ public class InstanceTypeConfig extends AbstractModel{
     private Long Memory;
 
     /**
+    * FPGA核数，单位：核。
+    */
+    @SerializedName("FPGA")
+    @Expose
+    private Long FPGA;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -161,6 +168,22 @@ public class InstanceTypeConfig extends AbstractModel{
     }
 
     /**
+     * Get FPGA核数，单位：核。 
+     * @return FPGA FPGA核数，单位：核。
+     */
+    public Long getFPGA() {
+        return this.FPGA;
+    }
+
+    /**
+     * Set FPGA核数，单位：核。
+     * @param FPGA FPGA核数，单位：核。
+     */
+    public void setFPGA(Long FPGA) {
+        this.FPGA = FPGA;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class InstanceTypeConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "GPU", this.GPU);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "FPGA", this.FPGA);
 
     }
 }

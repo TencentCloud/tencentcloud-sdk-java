@@ -290,6 +290,13 @@ public class DCDBInstanceInfo extends AbstractModel{
     private Long IsAuditSupported;
 
     /**
+    * Cpu核数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -902,6 +909,22 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
+     * Get Cpu核数 
+     * @return Cpu Cpu核数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Cpu核数
+     * @param Cpu Cpu核数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -943,6 +966,7 @@ public class DCDBInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Locker", this.Locker);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

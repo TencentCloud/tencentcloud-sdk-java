@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDBInstanceResponse extends AbstractModel{
-
-    /**
-    * 交易名字。
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+public class ModifyWorkersResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class UpgradeDBInstanceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 交易名字。 
-     * @return DealName 交易名字。
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set 交易名字。
-     * @param DealName 交易名字。
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class UpgradeDBInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

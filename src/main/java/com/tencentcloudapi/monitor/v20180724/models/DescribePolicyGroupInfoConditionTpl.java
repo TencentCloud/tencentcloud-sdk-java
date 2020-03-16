@@ -58,6 +58,30 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel{
     private String LastEditUin;
 
     /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private Long UpdateTime;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InsertTime")
+    @Expose
+    private Long InsertTime;
+
+    /**
+    * 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsUnionRule")
+    @Expose
+    private Long IsUnionRule;
+
+    /**
      * Get 策略组id 
      * @return GroupId 策略组id
      */
@@ -138,6 +162,66 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel{
     }
 
     /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(Long UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InsertTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInsertTime() {
+        return this.InsertTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InsertTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInsertTime(Long InsertTime) {
+        this.InsertTime = InsertTime;
+    }
+
+    /**
+     * Get 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsUnionRule 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsUnionRule() {
+        return this.IsUnionRule;
+    }
+
+    /**
+     * Set 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsUnionRule 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsUnionRule(Long IsUnionRule) {
+        this.IsUnionRule = IsUnionRule;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +230,9 @@ public class DescribePolicyGroupInfoConditionTpl extends AbstractModel{
         this.setParamSimple(map, prefix + "ViewName", this.ViewName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "LastEditUin", this.LastEditUin);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "InsertTime", this.InsertTime);
+        this.setParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
 
     }
 }

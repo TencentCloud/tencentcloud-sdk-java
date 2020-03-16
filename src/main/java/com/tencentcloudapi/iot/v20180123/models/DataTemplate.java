@@ -24,6 +24,7 @@ public class DataTemplate extends AbstractModel{
 
     /**
     * 数字类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Number")
     @Expose
@@ -31,6 +32,7 @@ public class DataTemplate extends AbstractModel{
 
     /**
     * 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("String")
     @Expose
@@ -38,6 +40,7 @@ public class DataTemplate extends AbstractModel{
 
     /**
     * 枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enum")
     @Expose
@@ -45,14 +48,17 @@ public class DataTemplate extends AbstractModel{
 
     /**
     * 布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bool")
     @Expose
     private BoolData Bool;
 
     /**
-     * Get 数字类型 
+     * Get 数字类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Number 数字类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public NumberData getNumber() {
         return this.Number;
@@ -60,15 +66,19 @@ public class DataTemplate extends AbstractModel{
 
     /**
      * Set 数字类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Number 数字类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumber(NumberData Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 字符串类型 
+     * Get 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return String 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public StringData getString() {
         return this.String;
@@ -76,15 +86,19 @@ public class DataTemplate extends AbstractModel{
 
     /**
      * Set 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param String 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setString(StringData String) {
         this.String = String;
     }
 
     /**
-     * Get 枚举类型 
+     * Get 枚举类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Enum 枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnumData getEnum() {
         return this.Enum;
@@ -92,15 +106,19 @@ public class DataTemplate extends AbstractModel{
 
     /**
      * Set 枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Enum 枚举类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnum(EnumData Enum) {
         this.Enum = Enum;
     }
 
     /**
-     * Get 布尔类型 
+     * Get 布尔类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bool 布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public BoolData getBool() {
         return this.Bool;
@@ -108,7 +126,9 @@ public class DataTemplate extends AbstractModel{
 
     /**
      * Set 布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Bool 布尔类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBool(BoolData Bool) {
         this.Bool = Bool;

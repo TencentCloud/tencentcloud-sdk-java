@@ -30,14 +30,14 @@ public class SignInfo extends AbstractModel{
     private String AccountResId;
 
     /**
-    * 授权时间，格式为年月日时分秒，例20160801095509
+    * 授权时间（上传合同可不传该参数）
     */
     @SerializedName("AuthorizationTime")
     @Expose
     private String AuthorizationTime;
 
     /**
-    * 授权IP地址
+    * 授权IP地址（上传合同可不传该参数）
     */
     @SerializedName("Location")
     @Expose
@@ -88,32 +88,32 @@ public class SignInfo extends AbstractModel{
     }
 
     /**
-     * Get 授权时间，格式为年月日时分秒，例20160801095509 
-     * @return AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
+     * Get 授权时间（上传合同可不传该参数） 
+     * @return AuthorizationTime 授权时间（上传合同可不传该参数）
      */
     public String getAuthorizationTime() {
         return this.AuthorizationTime;
     }
 
     /**
-     * Set 授权时间，格式为年月日时分秒，例20160801095509
-     * @param AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
+     * Set 授权时间（上传合同可不传该参数）
+     * @param AuthorizationTime 授权时间（上传合同可不传该参数）
      */
     public void setAuthorizationTime(String AuthorizationTime) {
         this.AuthorizationTime = AuthorizationTime;
     }
 
     /**
-     * Get 授权IP地址 
-     * @return Location 授权IP地址
+     * Get 授权IP地址（上传合同可不传该参数） 
+     * @return Location 授权IP地址（上传合同可不传该参数）
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 授权IP地址
-     * @param Location 授权IP地址
+     * Set 授权IP地址（上传合同可不传该参数）
+     * @param Location 授权IP地址（上传合同可不传该参数）
      */
     public void setLocation(String Location) {
         this.Location = Location;

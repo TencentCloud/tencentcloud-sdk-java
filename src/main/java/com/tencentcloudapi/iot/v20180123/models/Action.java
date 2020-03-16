@@ -24,6 +24,7 @@ public class Action extends AbstractModel{
 
     /**
     * 转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -31,6 +32,7 @@ public class Action extends AbstractModel{
 
     /**
     * 转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -38,14 +40,17 @@ public class Action extends AbstractModel{
 
     /**
     * 转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ckafka")
     @Expose
     private CkafkaAction Ckafka;
 
     /**
-     * Get 转发至topic 
+     * Get 转发至topic
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Topic 转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicAction getTopic() {
         return this.Topic;
@@ -53,15 +58,19 @@ public class Action extends AbstractModel{
 
     /**
      * Set 转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic 转发至topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(TopicAction Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 转发至第三发 
+     * Get 转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Service 转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceAction getService() {
         return this.Service;
@@ -69,15 +78,19 @@ public class Action extends AbstractModel{
 
     /**
      * Set 转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Service 转发至第三发
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(ServiceAction Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 转发至第三发Ckafka 
+     * Get 转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ckafka 转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CkafkaAction getCkafka() {
         return this.Ckafka;
@@ -85,7 +98,9 @@ public class Action extends AbstractModel{
 
     /**
      * Set 转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Ckafka 转发至第三发Ckafka
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCkafka(CkafkaAction Ckafka) {
         this.Ckafka = Ckafka;

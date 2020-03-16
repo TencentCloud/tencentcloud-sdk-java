@@ -31,7 +31,7 @@ public class MediaTranscodeItem extends AbstractModel{
     private String Url;
 
     /**
-    * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+    * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
@@ -131,9 +131,9 @@ public class MediaTranscodeItem extends AbstractModel{
     }
 
     /**
-     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefinition() {
@@ -141,9 +141,9 @@ public class MediaTranscodeItem extends AbstractModel{
     }
 
     /**
-     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Long Definition) {

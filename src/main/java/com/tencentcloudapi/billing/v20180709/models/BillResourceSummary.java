@@ -234,6 +234,27 @@ public class BillResourceSummary extends AbstractModel{
     private String OperateUin;
 
     /**
+    * 商品名称代码
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
+    * 子商品名称代码
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 区域ID
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
      * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -718,6 +739,54 @@ public class BillResourceSummary extends AbstractModel{
     }
 
     /**
+     * Get 商品名称代码 
+     * @return BusinessCode 商品名称代码
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set 商品名称代码
+     * @param BusinessCode 商品名称代码
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
+    /**
+     * Get 子商品名称代码 
+     * @return ProductCode 子商品名称代码
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set 子商品名称代码
+     * @param ProductCode 子商品名称代码
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get 区域ID 
+     * @return RegionId 区域ID
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 区域ID
+     * @param RegionId 区域ID
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -751,6 +820,9 @@ public class BillResourceSummary extends AbstractModel{
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

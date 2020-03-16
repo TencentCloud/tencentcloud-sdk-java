@@ -38,8 +38,8 @@ public class AuthDomain extends AbstractModel{
 
     /**
     * 域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
     */
     @SerializedName("Type")
     @Expose
@@ -102,11 +102,11 @@ public class AuthDomain extends AbstractModel{
 
     /**
      * Get 域名类型。包含以下取值：
-<li>system</li>
-<li>user</li> 
+<li>SYSTEM</li>
+<li>USER</li> 
      * @return Type 域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
      */
     public String getType() {
         return this.Type;
@@ -114,11 +114,11 @@ public class AuthDomain extends AbstractModel{
 
     /**
      * Set 域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
      * @param Type 域名类型。包含以下取值：
-<li>system</li>
-<li>user</li>
+<li>SYSTEM</li>
+<li>USER</li>
      */
     public void setType(String Type) {
         this.Type = Type;

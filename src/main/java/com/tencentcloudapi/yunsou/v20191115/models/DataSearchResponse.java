@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.yunsou.v20191115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesResponse extends AbstractModel{
+public class DataSearchResponse extends AbstractModel{
 
     /**
-    * 查询到的实例数量。
+    * 检索结果
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Data")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 实例详细信息集合。
-    */
-    @SerializedName("DBInstanceSet")
-    @Expose
-    private DBInstance [] DBInstanceSet;
+    private SearchResult Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询到的实例数量。 
-     * @return TotalCount 查询到的实例数量。
+     * Get 检索结果 
+     * @return Data 检索结果
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public SearchResult getData() {
+        return this.Data;
     }
 
     /**
-     * Set 查询到的实例数量。
-     * @param TotalCount 查询到的实例数量。
+     * Set 检索结果
+     * @param Data 检索结果
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 实例详细信息集合。 
-     * @return DBInstanceSet 实例详细信息集合。
-     */
-    public DBInstance [] getDBInstanceSet() {
-        return this.DBInstanceSet;
-    }
-
-    /**
-     * Set 实例详细信息集合。
-     * @param DBInstanceSet 实例详细信息集合。
-     */
-    public void setDBInstanceSet(DBInstance [] DBInstanceSet) {
-        this.DBInstanceSet = DBInstanceSet;
+    public void setData(SearchResult Data) {
+        this.Data = Data;
     }
 
     /**
@@ -95,8 +72,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "DBInstanceSet.", this.DBInstanceSet);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

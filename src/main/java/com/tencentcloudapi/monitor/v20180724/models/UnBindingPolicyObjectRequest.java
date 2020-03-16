@@ -44,6 +44,13 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private String [] UniqueId;
 
     /**
+    * 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private Long InstanceGroupId;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -92,12 +99,29 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的 
+     * @return InstanceGroupId 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+     */
+    public Long getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+     * @param InstanceGroupId 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+     */
+    public void setInstanceGroupId(Long InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArraySimple(map, prefix + "UniqueId.", this.UniqueId);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }

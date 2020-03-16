@@ -239,7 +239,7 @@ public class Certificates extends AbstractModel{
     private ProjectInfo ProjectInfo;
 
     /**
-    * 需要权限的资源。
+    * 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BoundResource")
@@ -795,9 +795,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Get 需要权限的资源。
+     * Get 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BoundResource 需要权限的资源。
+     * @return BoundResource 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBoundResource() {
@@ -805,9 +805,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Set 需要权限的资源。
+     * Set 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BoundResource 需要权限的资源。
+     * @param BoundResource 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBoundResource(String [] BoundResource) {

@@ -207,6 +207,14 @@ public class ModelService extends AbstractModel{
     private String GpuType;
 
     /**
+    * Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogTopicId")
+    @Expose
+    private String LogTopicId;
+
+    /**
      * Get 服务ID 
      * @return Id 服务ID
      */
@@ -643,6 +651,26 @@ public class ModelService extends AbstractModel{
     }
 
     /**
+     * Get Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogTopicId Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogTopicId() {
+        return this.LogTopicId;
+    }
+
+    /**
+     * Set Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogTopicId Cls日志主题Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogTopicId(String LogTopicId) {
+        this.LogTopicId = LogTopicId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -671,6 +699,7 @@ public class ModelService extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);
+        this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
 
     }
 }

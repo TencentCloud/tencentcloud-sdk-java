@@ -65,6 +65,13 @@ public class IPSECOptionsSpecification extends AbstractModel{
     private String SecurityProto;
 
     /**
+    * 报文封装模式:默认为Tunnel
+    */
+    @SerializedName("EncapMode")
+    @Expose
+    private String EncapMode;
+
+    /**
      * Get PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL 
      * @return PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
      */
@@ -161,6 +168,22 @@ public class IPSECOptionsSpecification extends AbstractModel{
     }
 
     /**
+     * Get 报文封装模式:默认为Tunnel 
+     * @return EncapMode 报文封装模式:默认为Tunnel
+     */
+    public String getEncapMode() {
+        return this.EncapMode;
+    }
+
+    /**
+     * Set 报文封装模式:默认为Tunnel
+     * @param EncapMode 报文封装模式:默认为Tunnel
+     */
+    public void setEncapMode(String EncapMode) {
+        this.EncapMode = EncapMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class IPSECOptionsSpecification extends AbstractModel{
         this.setParamSimple(map, prefix + "IntegrityAlgorith", this.IntegrityAlgorith);
         this.setParamSimple(map, prefix + "IPSECSaLifetimeSeconds", this.IPSECSaLifetimeSeconds);
         this.setParamSimple(map, prefix + "SecurityProto", this.SecurityProto);
+        this.setParamSimple(map, prefix + "EncapMode", this.EncapMode);
 
     }
 }

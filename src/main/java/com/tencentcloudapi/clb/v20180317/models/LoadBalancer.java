@@ -348,6 +348,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     private SnatIp [] SnatIps;
 
     /**
+    * 性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaType")
+    @Expose
+    private String SlaType;
+
+    /**
+    * vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsBlock")
+    @Expose
+    private Boolean IsBlock;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1156,6 +1172,46 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaType 性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSlaType() {
+        return this.SlaType;
+    }
+
+    /**
+     * Set 性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaType 性能保障规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaType(String SlaType) {
+        this.SlaType = SlaType;
+    }
+
+    /**
+     * Get vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsBlock vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsBlock() {
+        return this.IsBlock;
+    }
+
+    /**
+     * Set vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsBlock vip是否被封堵
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsBlock(Boolean IsBlock) {
+        this.IsBlock = IsBlock;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1200,6 +1256,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "IPv6Mode", this.IPv6Mode);
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+        this.setParamSimple(map, prefix + "SlaType", this.SlaType);
+        this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
 
     }
 }

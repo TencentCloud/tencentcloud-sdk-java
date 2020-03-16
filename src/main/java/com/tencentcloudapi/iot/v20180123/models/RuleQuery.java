@@ -38,6 +38,7 @@ public class RuleQuery extends AbstractModel{
 
     /**
     * Topic
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -45,6 +46,7 @@ public class RuleQuery extends AbstractModel{
 
     /**
     * 产品Id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductId")
     @Expose
@@ -83,8 +85,10 @@ public class RuleQuery extends AbstractModel{
     }
 
     /**
-     * Get Topic 
+     * Get Topic
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Topic Topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -92,15 +96,19 @@ public class RuleQuery extends AbstractModel{
 
     /**
      * Set Topic
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic Topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 产品Id 
+     * Get 产品Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 产品Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductId() {
         return this.ProductId;
@@ -108,7 +116,9 @@ public class RuleQuery extends AbstractModel{
 
     /**
      * Set 产品Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;

@@ -111,6 +111,22 @@ public class Namespace extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceResourceType")
+    @Expose
+    private String NamespaceResourceType;
+
+    /**
+    * 命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceType")
+    @Expose
+    private String NamespaceType;
+
+    /**
      * Get 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
@@ -331,6 +347,46 @@ public class Namespace extends AbstractModel{
     }
 
     /**
+     * Get 集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceResourceType 集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceResourceType() {
+        return this.NamespaceResourceType;
+    }
+
+    /**
+     * Set 集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceResourceType 集群资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceResourceType(String NamespaceResourceType) {
+        this.NamespaceResourceType = NamespaceResourceType;
+    }
+
+    /**
+     * Get 命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceType 命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceType() {
+        return this.NamespaceType;
+    }
+
+    /**
+     * Set 命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceType 命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceType(String NamespaceType) {
+        this.NamespaceType = NamespaceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -345,6 +401,8 @@ public class Namespace extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
+        this.setParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
 
     }
 }

@@ -177,6 +177,22 @@ public class TaskInfo extends AbstractModel{
     private String MgtIp;
 
     /**
+    * 故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskTypeName")
+    @Expose
+    private String TaskTypeName;
+
+    /**
+    * 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskSubType")
+    @Expose
+    private String TaskSubType;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -529,6 +545,46 @@ public class TaskInfo extends AbstractModel{
     }
 
     /**
+     * Get 故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskTypeName 故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskTypeName() {
+        return this.TaskTypeName;
+    }
+
+    /**
+     * Set 故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskTypeName 故障类中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskTypeName(String TaskTypeName) {
+        this.TaskTypeName = TaskTypeName;
+    }
+
+    /**
+     * Get 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskSubType 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskSubType() {
+        return this.TaskSubType;
+    }
+
+    /**
+     * Set 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskSubType 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskSubType(String TaskSubType) {
+        this.TaskSubType = TaskSubType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +610,8 @@ public class TaskInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "WanIp", this.WanIp);
         this.setParamSimple(map, prefix + "LanIp", this.LanIp);
         this.setParamSimple(map, prefix + "MgtIp", this.MgtIp);
+        this.setParamSimple(map, prefix + "TaskTypeName", this.TaskTypeName);
+        this.setParamSimple(map, prefix + "TaskSubType", this.TaskSubType);
 
     }
 }

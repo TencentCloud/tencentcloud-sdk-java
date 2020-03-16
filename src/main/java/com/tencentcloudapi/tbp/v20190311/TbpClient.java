@@ -38,6 +38,24 @@ public class TbpClient extends AbstractClient{
     }
 
     /**
+     *创建机器人
+     * @param req CreateBotRequest
+     * @return CreateBotResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBotResponse CreateBot(CreateBotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBotResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBotResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateBot"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对当前机器人的会话状态进行复位
      * @param req ResetRequest
      * @return ResetResponse

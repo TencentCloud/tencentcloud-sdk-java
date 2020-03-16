@@ -292,6 +292,13 @@ public class DBInstance extends AbstractModel{
     private Long IsEncryptSupported;
 
     /**
+    * 实例CPU核数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 实例 ID，唯一标识一个 TDSQL 实例 
      * @return InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      */
@@ -912,6 +919,22 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例CPU核数 
+     * @return Cpu 实例CPU核数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 实例CPU核数
+     * @param Cpu 实例CPU核数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -953,6 +976,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
         this.setParamSimple(map, prefix + "Machine", this.Machine);
         this.setParamSimple(map, prefix + "IsEncryptSupported", this.IsEncryptSupported);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

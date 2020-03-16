@@ -30,7 +30,7 @@ public class TranscodePlayInfo2017 extends AbstractModel{
     private String Url;
 
     /**
-    * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+    * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
     */
     @SerializedName("Definition")
     @Expose
@@ -74,16 +74,16 @@ public class TranscodePlayInfo2017 extends AbstractModel{
     }
 
     /**
-     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。 
-     * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。 
+     * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
-     * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
+     * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

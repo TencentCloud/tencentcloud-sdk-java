@@ -258,6 +258,14 @@ public class ClusterInstancesInfo extends AbstractModel{
     private String HiveMetaDb;
 
     /**
+    * 集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceClass")
+    @Expose
+    private String ServiceClass;
+
+    /**
      * Get ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID
@@ -886,6 +894,26 @@ public class ClusterInstancesInfo extends AbstractModel{
     }
 
     /**
+     * Get 集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceClass() {
+        return this.ServiceClass;
+    }
+
+    /**
+     * Set 集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceClass 集群类型:EMR,CLICKHOUSE,DRUID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceClass(String ServiceClass) {
+        this.ServiceClass = ServiceClass;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -915,6 +943,7 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MetaDb", this.MetaDb);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
+        this.setParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
 
     }
 }

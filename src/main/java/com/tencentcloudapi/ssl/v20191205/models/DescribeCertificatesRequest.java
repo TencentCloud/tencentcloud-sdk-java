@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCertificatesRequest extends AbstractModel{
 
     /**
-    * 页数。
+    * 分页偏移量，从0开始
     */
     @SerializedName("Offset")
     @Expose
@@ -79,16 +79,16 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Deployable;
 
     /**
-     * Get 页数。 
-     * @return Offset 页数。
+     * Get 分页偏移量，从0开始 
+     * @return Offset 分页偏移量，从0开始
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页数。
-     * @param Offset 页数。
+     * Set 分页偏移量，从0开始
+     * @param Offset 分页偏移量，从0开始
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

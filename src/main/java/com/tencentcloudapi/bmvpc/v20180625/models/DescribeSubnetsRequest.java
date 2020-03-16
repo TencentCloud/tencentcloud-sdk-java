@@ -56,6 +56,20 @@ zone - String - （过滤条件）可用区。
     private Long Limit;
 
     /**
+    * 排序字段, 支持按“CreateTime”，“VlanId”
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方向, “asc”、“desc”
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
      * Get 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。 
      * @return SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
      */
@@ -140,6 +154,38 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
+     * Get 排序字段, 支持按“CreateTime”，“VlanId” 
+     * @return OrderField 排序字段, 支持按“CreateTime”，“VlanId”
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段, 支持按“CreateTime”，“VlanId”
+     * @param OrderField 排序字段, 支持按“CreateTime”，“VlanId”
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方向, “asc”、“desc” 
+     * @return OrderDirection 排序方向, “asc”、“desc”
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方向, “asc”、“desc”
+     * @param OrderDirection 排序方向, “asc”、“desc”
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +193,8 @@ zone - String - （过滤条件）可用区。
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

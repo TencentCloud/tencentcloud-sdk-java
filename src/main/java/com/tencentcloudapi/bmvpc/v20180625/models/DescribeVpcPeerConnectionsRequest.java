@@ -53,6 +53,13 @@ public class DescribeVpcPeerConnectionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 私有网络ID
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * Get 对等连接实例ID 
      * @return VpcPeerConnectionIds 对等连接实例ID
      */
@@ -125,6 +132,22 @@ public class DescribeVpcPeerConnectionsRequest extends AbstractModel{
     }
 
     /**
+     * Get 私有网络ID 
+     * @return VpcId 私有网络ID
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 私有网络ID
+     * @param VpcId 私有网络ID
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +155,7 @@ public class DescribeVpcPeerConnectionsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

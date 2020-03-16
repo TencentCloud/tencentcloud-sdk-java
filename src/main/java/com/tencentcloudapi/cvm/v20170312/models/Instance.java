@@ -130,6 +130,7 @@ public class Instance extends AbstractModel{
 
     /**
     * 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -143,7 +144,7 @@ public class Instance extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+    * 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -230,6 +231,22 @@ public class Instance extends AbstractModel{
     @SerializedName("DisasterRecoverGroupId")
     @Expose
     private String DisasterRecoverGroupId;
+
+    /**
+    * 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6Addresses")
+    @Expose
+    private String IPv6Addresses;
+
+    /**
+    * CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
 
     /**
      * Get 实例所在的位置。 
@@ -476,8 +493,10 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Get 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。 
+     * Get 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null 
      * @return RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -485,7 +504,9 @@ public class Instance extends AbstractModel{
 
     /**
      * Set 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
      * @param RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+<br><li>注意：后付费模式本项为null
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -508,16 +529,16 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Get 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
-     * @return ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null 
+     * @return ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
+     * @param ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
@@ -720,6 +741,46 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6Addresses 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIPv6Addresses() {
+        return this.IPv6Addresses;
+    }
+
+    /**
+     * Set 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6Addresses 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6Addresses(String IPv6Addresses) {
+        this.IPv6Addresses = IPv6Addresses;
+    }
+
+    /**
+     * Get CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CamRoleName CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * Set CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CamRoleName CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -752,6 +813,8 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+        this.setParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }
 }

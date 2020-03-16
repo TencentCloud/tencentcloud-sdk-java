@@ -135,6 +135,13 @@ public class FileSystemInfo extends AbstractModel{
     private String KmsKeyId;
 
     /**
+    * 应用ID
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
      * Get 创建时间 
      * @return CreationTime 创建时间
      */
@@ -391,6 +398,22 @@ public class FileSystemInfo extends AbstractModel{
     }
 
     /**
+     * Get 应用ID 
+     * @return AppId 应用ID
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 应用ID
+     * @param AppId 应用ID
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FsName", this.FsName);
         this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

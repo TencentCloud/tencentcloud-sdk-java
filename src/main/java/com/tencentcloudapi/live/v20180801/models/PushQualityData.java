@@ -135,6 +135,27 @@ public class PushQualityData extends AbstractModel{
     private Long AudioTs;
 
     /**
+    * metadata中的视频码率，单位是kbps。
+    */
+    @SerializedName("MetaVideoRate")
+    @Expose
+    private Long MetaVideoRate;
+
+    /**
+    * metadata中的音频码率，单位是kbps。
+    */
+    @SerializedName("MetaAudioRate")
+    @Expose
+    private Long MetaAudioRate;
+
+    /**
+    * metadata中的帧率。
+    */
+    @SerializedName("MateFps")
+    @Expose
+    private Long MateFps;
+
+    /**
      * Get 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
      * @return Time 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
@@ -391,6 +412,54 @@ public class PushQualityData extends AbstractModel{
     }
 
     /**
+     * Get metadata中的视频码率，单位是kbps。 
+     * @return MetaVideoRate metadata中的视频码率，单位是kbps。
+     */
+    public Long getMetaVideoRate() {
+        return this.MetaVideoRate;
+    }
+
+    /**
+     * Set metadata中的视频码率，单位是kbps。
+     * @param MetaVideoRate metadata中的视频码率，单位是kbps。
+     */
+    public void setMetaVideoRate(Long MetaVideoRate) {
+        this.MetaVideoRate = MetaVideoRate;
+    }
+
+    /**
+     * Get metadata中的音频码率，单位是kbps。 
+     * @return MetaAudioRate metadata中的音频码率，单位是kbps。
+     */
+    public Long getMetaAudioRate() {
+        return this.MetaAudioRate;
+    }
+
+    /**
+     * Set metadata中的音频码率，单位是kbps。
+     * @param MetaAudioRate metadata中的音频码率，单位是kbps。
+     */
+    public void setMetaAudioRate(Long MetaAudioRate) {
+        this.MetaAudioRate = MetaAudioRate;
+    }
+
+    /**
+     * Get metadata中的帧率。 
+     * @return MateFps metadata中的帧率。
+     */
+    public Long getMateFps() {
+        return this.MateFps;
+    }
+
+    /**
+     * Set metadata中的帧率。
+     * @param MateFps metadata中的帧率。
+     */
+    public void setMateFps(Long MateFps) {
+        this.MateFps = MateFps;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +479,9 @@ public class PushQualityData extends AbstractModel{
         this.setParamSimple(map, prefix + "LocalTs", this.LocalTs);
         this.setParamSimple(map, prefix + "VideoTs", this.VideoTs);
         this.setParamSimple(map, prefix + "AudioTs", this.AudioTs);
+        this.setParamSimple(map, prefix + "MetaVideoRate", this.MetaVideoRate);
+        this.setParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
+        this.setParamSimple(map, prefix + "MateFps", this.MateFps);
 
     }
 }

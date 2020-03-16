@@ -74,6 +74,42 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *获取机器信息
+     * @param req DescribeWorkersInfoRequest
+     * @return DescribeWorkersInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkersInfoResponse DescribeWorkersInfo(DescribeWorkersInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkersInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkersInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWorkersInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改机器信息
+     * @param req ModifyWorkersRequest
+     * @return ModifyWorkersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWorkersResponse ModifyWorkers(ModifyWorkersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWorkersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWorkersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyWorkers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *强制退出游戏
      * @param req StopGameRequest
      * @return StopGameResponse

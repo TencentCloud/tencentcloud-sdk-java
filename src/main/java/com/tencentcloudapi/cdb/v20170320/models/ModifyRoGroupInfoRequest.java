@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyRoGroupInfoRequest extends AbstractModel{
 
     /**
-    * RO 组的实例 ID。
+    * RO 组的 ID。
     */
     @SerializedName("RoGroupId")
     @Expose
@@ -51,16 +51,16 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
     private Long IsBalanceRoLoad;
 
     /**
-     * Get RO 组的实例 ID。 
-     * @return RoGroupId RO 组的实例 ID。
+     * Get RO 组的 ID。 
+     * @return RoGroupId RO 组的 ID。
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set RO 组的实例 ID。
-     * @param RoGroupId RO 组的实例 ID。
+     * Set RO 组的 ID。
+     * @param RoGroupId RO 组的 ID。
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;

@@ -38,6 +38,24 @@ public class CdsClient extends AbstractClient{
     }
 
     /**
+     *获取镜像列表
+     * @param req DescribeDasbImageIdsRequest
+     * @return DescribeDasbImageIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDasbImageIdsResponse DescribeDasbImageIds(DescribeDasbImageIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDasbImageIdsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDasbImageIdsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDasbImageIds"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
      * @param req DescribeDbauditInstanceTypeRequest
      * @return DescribeDbauditInstanceTypeResponse

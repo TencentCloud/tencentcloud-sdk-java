@@ -98,6 +98,14 @@ public class StrategyInfo extends AbstractModel{
     private Long Deactived;
 
     /**
+    * 已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeactivedDetail")
+    @Expose
+    private String [] DeactivedDetail;
+
+    /**
      * Get 策略ID。 
      * @return PolicyId 策略ID。
      */
@@ -278,6 +286,26 @@ public class StrategyInfo extends AbstractModel{
     }
 
     /**
+     * Get 已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeactivedDetail 已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDeactivedDetail() {
+        return this.DeactivedDetail;
+    }
+
+    /**
+     * Set 已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeactivedDetail 已下线产品列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeactivedDetail(String [] DeactivedDetail) {
+        this.DeactivedDetail = DeactivedDetail;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -291,6 +319,7 @@ public class StrategyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "IsAttached", this.IsAttached);
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
+        this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
 
     }
 }

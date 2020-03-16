@@ -51,7 +51,7 @@ public class NatGatewayInfo extends AbstractModel{
     private String VpcName;
 
     /**
-    * 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+    * 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
     */
     @SerializedName("ProductionStatus")
     @Expose
@@ -112,6 +112,27 @@ public class NatGatewayInfo extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * 网关启用状态，1为禁用，0为启用。
+    */
+    @SerializedName("State")
+    @Expose
+    private Long State;
+
+    /**
+    * 私有网络整型ID
+    */
+    @SerializedName("IntVpcId")
+    @Expose
+    private Long IntVpcId;
+
+    /**
+    * NAT资源ID
+    */
+    @SerializedName("NatResourceId")
+    @Expose
+    private Long NatResourceId;
 
     /**
      * Get NAT网关ID 
@@ -178,16 +199,16 @@ public class NatGatewayInfo extends AbstractModel{
     }
 
     /**
-     * Get 网关状态，其中0表示创建中，1表示运行中，2表示创建失败 
-     * @return ProductionStatus 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+     * Get 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败 
+     * @return ProductionStatus 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
      */
     public Long getProductionStatus() {
         return this.ProductionStatus;
     }
 
     /**
-     * Set 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
-     * @param ProductionStatus 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+     * Set 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
+     * @param ProductionStatus 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
      */
     public void setProductionStatus(Long ProductionStatus) {
         this.ProductionStatus = ProductionStatus;
@@ -322,6 +343,54 @@ public class NatGatewayInfo extends AbstractModel{
     }
 
     /**
+     * Get 网关启用状态，1为禁用，0为启用。 
+     * @return State 网关启用状态，1为禁用，0为启用。
+     */
+    public Long getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 网关启用状态，1为禁用，0为启用。
+     * @param State 网关启用状态，1为禁用，0为启用。
+     */
+    public void setState(Long State) {
+        this.State = State;
+    }
+
+    /**
+     * Get 私有网络整型ID 
+     * @return IntVpcId 私有网络整型ID
+     */
+    public Long getIntVpcId() {
+        return this.IntVpcId;
+    }
+
+    /**
+     * Set 私有网络整型ID
+     * @param IntVpcId 私有网络整型ID
+     */
+    public void setIntVpcId(Long IntVpcId) {
+        this.IntVpcId = IntVpcId;
+    }
+
+    /**
+     * Get NAT资源ID 
+     * @return NatResourceId NAT资源ID
+     */
+    public Long getNatResourceId() {
+        return this.NatResourceId;
+    }
+
+    /**
+     * Set NAT资源ID
+     * @param NatResourceId NAT资源ID
+     */
+    public void setNatResourceId(Long NatResourceId) {
+        this.NatResourceId = NatResourceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +407,9 @@ public class NatGatewayInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "IntVpcId", this.IntVpcId);
+        this.setParamSimple(map, prefix + "NatResourceId", this.NatResourceId);
 
     }
 }

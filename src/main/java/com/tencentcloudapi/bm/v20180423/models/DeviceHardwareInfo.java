@@ -128,6 +128,13 @@ public class DeviceHardwareInfo extends AbstractModel{
     private String RaidDescription;
 
     /**
+    * cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 设备实例 ID 
      * @return InstanceId 设备实例 ID
      */
@@ -368,6 +375,22 @@ public class DeviceHardwareInfo extends AbstractModel{
     }
 
     /**
+     * Get cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2 
+     * @return Cpu cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     * @param Cpu cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class DeviceHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskDescription", this.DiskDescription);
         this.setParamSimple(map, prefix + "NicDescription", this.NicDescription);
         this.setParamSimple(map, prefix + "RaidDescription", this.RaidDescription);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

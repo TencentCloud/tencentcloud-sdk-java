@@ -47,7 +47,7 @@ public class ResourceInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * 资源Ip
+    * 资源IP
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
@@ -227,9 +227,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Get 资源Ip
+     * Get 资源IP
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip 资源Ip
+     * @return Vip 资源IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
@@ -237,9 +237,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Set 资源Ip
+     * Set 资源IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip 资源Ip
+     * @param Vip 资源IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {

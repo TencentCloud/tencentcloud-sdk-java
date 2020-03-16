@@ -210,6 +210,14 @@ public class Job extends AbstractModel{
     private QuantizationInput QuantizationInput;
 
     /**
+    * Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogTopicId")
+    @Expose
+    private String LogTopicId;
+
+    /**
      * Get 任务 Id 
      * @return Id 任务 Id
      */
@@ -670,6 +678,26 @@ public class Job extends AbstractModel{
     }
 
     /**
+     * Get Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogTopicId Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogTopicId() {
+        return this.LogTopicId;
+    }
+
+    /**
+     * Set Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogTopicId Cls日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogTopicId(String LogTopicId) {
+        this.LogTopicId = LogTopicId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -697,6 +725,7 @@ public class Job extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfigVersion", this.ConfigVersion);
         this.setParamSimple(map, prefix + "JobType", this.JobType);
         this.setParamObj(map, prefix + "QuantizationInput.", this.QuantizationInput);
+        this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
 
     }
 }

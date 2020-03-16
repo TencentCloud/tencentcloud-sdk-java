@@ -140,6 +140,14 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
     private Boolean CanSetDefault;
 
     /**
+    * 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsUnionRule")
+    @Expose
+    private Long IsUnionRule;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -423,6 +431,26 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsUnionRule 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsUnionRule() {
+        return this.IsUnionRule;
+    }
+
+    /**
+     * Set 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsUnionRule 是否且规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsUnionRule(Long IsUnionRule) {
+        this.IsUnionRule = IsUnionRule;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -458,6 +486,7 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
         this.setParamObj(map, prefix + "Callback.", this.Callback);
         this.setParamObj(map, prefix + "ConditionsTemp.", this.ConditionsTemp);
         this.setParamSimple(map, prefix + "CanSetDefault", this.CanSetDefault);
+        this.setParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

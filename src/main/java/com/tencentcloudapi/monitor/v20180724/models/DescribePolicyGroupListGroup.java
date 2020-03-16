@@ -161,6 +161,14 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     private DescribePolicyGroupListGroupInstanceGroup InstanceGroup;
 
     /**
+    * 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsUnionRule")
+    @Expose
+    private Long IsUnionRule;
+
+    /**
      * Get 策略组id 
      * @return GroupId 策略组id
      */
@@ -485,6 +493,26 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     }
 
     /**
+     * Get 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsUnionRule 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsUnionRule() {
+        return this.IsUnionRule;
+    }
+
+    /**
+     * Set 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsUnionRule 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsUnionRule(Long IsUnionRule) {
+        this.IsUnionRule = IsUnionRule;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -507,6 +535,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ReceiverInfos.", this.ReceiverInfos);
         this.setParamObj(map, prefix + "ConditionsTemp.", this.ConditionsTemp);
         this.setParamObj(map, prefix + "InstanceGroup.", this.InstanceGroup);
+        this.setParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
 
     }
 }

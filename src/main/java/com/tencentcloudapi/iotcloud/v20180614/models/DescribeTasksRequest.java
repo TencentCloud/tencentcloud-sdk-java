@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel{
 
     /**
-    * 偏移l量，从0开始
+    * 偏移量，从0开始
     */
     @SerializedName("Offset")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeTasksRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 偏移l量，从0开始 
-     * @return Offset 偏移l量，从0开始
+     * Get 偏移量，从0开始 
+     * @return Offset 偏移量，从0开始
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移l量，从0开始
-     * @param Offset 偏移l量，从0开始
+     * Set 偏移量，从0开始
+     * @param Offset 偏移量，从0开始
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -24,6 +24,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
     * 检测方式
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcType")
     @Expose
@@ -31,6 +32,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
     * 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcValue")
     @Expose
@@ -38,6 +40,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
     * 持续时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinueTime")
     @Expose
@@ -45,6 +48,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
     * 数据周期
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
     @Expose
@@ -52,6 +56,7 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
     * 持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodNum")
     @Expose
@@ -66,8 +71,10 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
     private DescribePolicyConditionListConfigManualStatType StatType;
 
     /**
-     * Get 检测方式 
+     * Get 检测方式
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CalcType 检测方式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualCalcType getCalcType() {
         return this.CalcType;
@@ -75,15 +82,19 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
      * Set 检测方式
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CalcType 检测方式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcType(DescribePolicyConditionListConfigManualCalcType CalcType) {
         this.CalcType = CalcType;
     }
 
     /**
-     * Get 检测阈值 
+     * Get 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CalcValue 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualCalcValue getCalcValue() {
         return this.CalcValue;
@@ -91,15 +102,19 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
      * Set 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CalcValue 检测阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcValue(DescribePolicyConditionListConfigManualCalcValue CalcValue) {
         this.CalcValue = CalcValue;
     }
 
     /**
-     * Get 持续时间 
+     * Get 持续时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ContinueTime 持续时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualContinueTime getContinueTime() {
         return this.ContinueTime;
@@ -107,15 +122,19 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
      * Set 持续时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ContinueTime 持续时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinueTime(DescribePolicyConditionListConfigManualContinueTime ContinueTime) {
         this.ContinueTime = ContinueTime;
     }
 
     /**
-     * Get 数据周期 
+     * Get 数据周期
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Period 数据周期
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualPeriod getPeriod() {
         return this.Period;
@@ -123,15 +142,19 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
      * Set 数据周期
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Period 数据周期
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(DescribePolicyConditionListConfigManualPeriod Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 持续周期个数 
+     * Get 持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PeriodNum 持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManualPeriodNum getPeriodNum() {
         return this.PeriodNum;
@@ -139,7 +162,9 @@ public class DescribePolicyConditionListConfigManual extends AbstractModel{
 
     /**
      * Set 持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PeriodNum 持续周期个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodNum(DescribePolicyConditionListConfigManualPeriodNum PeriodNum) {
         this.PeriodNum = PeriodNum;

@@ -258,6 +258,13 @@ public class Disk extends AbstractModel{
     private Long SnapshotSize;
 
     /**
+    * 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+    */
+    @SerializedName("BackupDisk")
+    @Expose
+    private Boolean BackupDisk;
+
+    /**
      * Get 云硬盘ID。 
      * @return DiskId 云硬盘ID。
      */
@@ -814,6 +821,22 @@ public class Disk extends AbstractModel{
     }
 
     /**
+     * Get 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。 
+     * @return BackupDisk 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+     */
+    public Boolean getBackupDisk() {
+        return this.BackupDisk;
+    }
+
+    /**
+     * Set 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+     * @param BackupDisk 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+     */
+    public void setBackupDisk(Boolean BackupDisk) {
+        this.BackupDisk = BackupDisk;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -849,6 +872,7 @@ public class Disk extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         this.setParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
         this.setParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
+        this.setParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
 
     }
 }

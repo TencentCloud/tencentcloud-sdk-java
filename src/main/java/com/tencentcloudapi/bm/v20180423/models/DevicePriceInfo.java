@@ -128,7 +128,7 @@ public class DevicePriceInfo extends AbstractModel{
     private Long TimeSpan;
 
     /**
-    * 计费时长单位, m:按月计费; d:按天计费
+    * 计费时长单位, M:按月计费; D:按天计费
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -382,16 +382,16 @@ public class DevicePriceInfo extends AbstractModel{
     }
 
     /**
-     * Get 计费时长单位, m:按月计费; d:按天计费 
-     * @return TimeUnit 计费时长单位, m:按月计费; d:按天计费
+     * Get 计费时长单位, M:按月计费; D:按天计费 
+     * @return TimeUnit 计费时长单位, M:按月计费; D:按天计费
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 计费时长单位, m:按月计费; d:按天计费
-     * @param TimeUnit 计费时长单位, m:按月计费; d:按天计费
+     * Set 计费时长单位, M:按月计费; D:按天计费
+     * @param TimeUnit 计费时长单位, M:按月计费; D:按天计费
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

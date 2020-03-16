@@ -163,6 +163,30 @@ public class VpcResource extends AbstractModel{
     private Boolean IsOld;
 
     /**
+    * 云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcnServiceNum")
+    @Expose
+    private Long CcnServiceNum;
+
+    /**
+    * VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcPeerLimitToAllRegion")
+    @Expose
+    private Long VpcPeerLimitToAllRegion;
+
+    /**
+    * VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcPeerLimitToSameRegion")
+    @Expose
+    private Long VpcPeerLimitToSameRegion;
+
+    /**
      * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
@@ -483,6 +507,66 @@ public class VpcResource extends AbstractModel{
     }
 
     /**
+     * Get 云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CcnServiceNum 云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCcnServiceNum() {
+        return this.CcnServiceNum;
+    }
+
+    /**
+     * Set 云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcnServiceNum 云联网服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcnServiceNum(Long CcnServiceNum) {
+        this.CcnServiceNum = CcnServiceNum;
+    }
+
+    /**
+     * Get VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcPeerLimitToAllRegion VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVpcPeerLimitToAllRegion() {
+        return this.VpcPeerLimitToAllRegion;
+    }
+
+    /**
+     * Set VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcPeerLimitToAllRegion VPC允许创建的对等连接个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcPeerLimitToAllRegion(Long VpcPeerLimitToAllRegion) {
+        this.VpcPeerLimitToAllRegion = VpcPeerLimitToAllRegion;
+    }
+
+    /**
+     * Get VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcPeerLimitToSameRegion VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVpcPeerLimitToSameRegion() {
+        return this.VpcPeerLimitToSameRegion;
+    }
+
+    /**
+     * Set VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcPeerLimitToSameRegion VPC允许创建的同地域的对等连接的个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcPeerLimitToSameRegion(Long VpcPeerLimitToSameRegion) {
+        this.VpcPeerLimitToSameRegion = VpcPeerLimitToSameRegion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -506,6 +590,9 @@ public class VpcResource extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "IsOld", this.IsOld);
+        this.setParamSimple(map, prefix + "CcnServiceNum", this.CcnServiceNum);
+        this.setParamSimple(map, prefix + "VpcPeerLimitToAllRegion", this.VpcPeerLimitToAllRegion);
+        this.setParamSimple(map, prefix + "VpcPeerLimitToSameRegion", this.VpcPeerLimitToSameRegion);
 
     }
 }

@@ -181,6 +181,14 @@ public class BillDetail extends AbstractModel{
     private String ActionType;
 
     /**
+    * 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
      * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -549,6 +557,26 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
+     * Get 区域ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionId 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionId 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -574,6 +602,7 @@ public class BillDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

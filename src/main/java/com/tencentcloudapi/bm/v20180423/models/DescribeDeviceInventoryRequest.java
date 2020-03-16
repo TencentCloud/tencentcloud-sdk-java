@@ -51,46 +51,53 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * CpuId，自定义机型时需传入
+    * CPU型号ID，查询自定义机型时必填
     */
     @SerializedName("CpuId")
     @Expose
     private Long CpuId;
 
     /**
-    * 硬盘类型，自定义机型时需传入
+    * 内存大小，单位为G，查询自定义机型时必填
     */
-    @SerializedName("DiskType")
+    @SerializedName("MemSize")
     @Expose
-    private String DiskType;
+    private Long MemSize;
 
     /**
-    * 单块硬盘大小，自定义机型时需传入
+    * 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
     */
-    @SerializedName("DiskSize")
+    @SerializedName("ContainRaidCard")
     @Expose
-    private Long DiskSize;
+    private Long ContainRaidCard;
 
     /**
-    * 硬盘数量，自定义机型时需传入
+    * 系统盘类型ID，查询自定义机型时必填
     */
-    @SerializedName("DiskNum")
+    @SerializedName("SystemDiskTypeId")
     @Expose
-    private Long DiskNum;
+    private Long SystemDiskTypeId;
 
     /**
-    * 内存总大小，自定义机型时需传入
+    * 系统盘数量，查询自定义机型时必填
     */
-    @SerializedName("Mem")
+    @SerializedName("SystemDiskCount")
     @Expose
-    private Long Mem;
+    private Long SystemDiskCount;
 
     /**
-    * 是否支持raid，自定义机型时需传入
+    * 数据盘类型ID，查询自定义机型时可填
     */
-    @SerializedName("HaveRaidCard")
+    @SerializedName("DataDiskTypeId")
     @Expose
-    private Long HaveRaidCard;
+    private Long DataDiskTypeId;
+
+    /**
+    * 数据盘数量，查询自定义机型时可填
+    */
+    @SerializedName("DataDiskCount")
+    @Expose
+    private Long DataDiskCount;
 
     /**
      * Get 可用区 
@@ -157,99 +164,115 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
     }
 
     /**
-     * Get CpuId，自定义机型时需传入 
-     * @return CpuId CpuId，自定义机型时需传入
+     * Get CPU型号ID，查询自定义机型时必填 
+     * @return CpuId CPU型号ID，查询自定义机型时必填
      */
     public Long getCpuId() {
         return this.CpuId;
     }
 
     /**
-     * Set CpuId，自定义机型时需传入
-     * @param CpuId CpuId，自定义机型时需传入
+     * Set CPU型号ID，查询自定义机型时必填
+     * @param CpuId CPU型号ID，查询自定义机型时必填
      */
     public void setCpuId(Long CpuId) {
         this.CpuId = CpuId;
     }
 
     /**
-     * Get 硬盘类型，自定义机型时需传入 
-     * @return DiskType 硬盘类型，自定义机型时需传入
+     * Get 内存大小，单位为G，查询自定义机型时必填 
+     * @return MemSize 内存大小，单位为G，查询自定义机型时必填
      */
-    public String getDiskType() {
-        return this.DiskType;
+    public Long getMemSize() {
+        return this.MemSize;
     }
 
     /**
-     * Set 硬盘类型，自定义机型时需传入
-     * @param DiskType 硬盘类型，自定义机型时需传入
+     * Set 内存大小，单位为G，查询自定义机型时必填
+     * @param MemSize 内存大小，单位为G，查询自定义机型时必填
      */
-    public void setDiskType(String DiskType) {
-        this.DiskType = DiskType;
+    public void setMemSize(Long MemSize) {
+        this.MemSize = MemSize;
     }
 
     /**
-     * Get 单块硬盘大小，自定义机型时需传入 
-     * @return DiskSize 单块硬盘大小，自定义机型时需传入
+     * Get 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填 
+     * @return ContainRaidCard 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
      */
-    public Long getDiskSize() {
-        return this.DiskSize;
+    public Long getContainRaidCard() {
+        return this.ContainRaidCard;
     }
 
     /**
-     * Set 单块硬盘大小，自定义机型时需传入
-     * @param DiskSize 单块硬盘大小，自定义机型时需传入
+     * Set 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
+     * @param ContainRaidCard 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
      */
-    public void setDiskSize(Long DiskSize) {
-        this.DiskSize = DiskSize;
+    public void setContainRaidCard(Long ContainRaidCard) {
+        this.ContainRaidCard = ContainRaidCard;
     }
 
     /**
-     * Get 硬盘数量，自定义机型时需传入 
-     * @return DiskNum 硬盘数量，自定义机型时需传入
+     * Get 系统盘类型ID，查询自定义机型时必填 
+     * @return SystemDiskTypeId 系统盘类型ID，查询自定义机型时必填
      */
-    public Long getDiskNum() {
-        return this.DiskNum;
+    public Long getSystemDiskTypeId() {
+        return this.SystemDiskTypeId;
     }
 
     /**
-     * Set 硬盘数量，自定义机型时需传入
-     * @param DiskNum 硬盘数量，自定义机型时需传入
+     * Set 系统盘类型ID，查询自定义机型时必填
+     * @param SystemDiskTypeId 系统盘类型ID，查询自定义机型时必填
      */
-    public void setDiskNum(Long DiskNum) {
-        this.DiskNum = DiskNum;
+    public void setSystemDiskTypeId(Long SystemDiskTypeId) {
+        this.SystemDiskTypeId = SystemDiskTypeId;
     }
 
     /**
-     * Get 内存总大小，自定义机型时需传入 
-     * @return Mem 内存总大小，自定义机型时需传入
+     * Get 系统盘数量，查询自定义机型时必填 
+     * @return SystemDiskCount 系统盘数量，查询自定义机型时必填
      */
-    public Long getMem() {
-        return this.Mem;
+    public Long getSystemDiskCount() {
+        return this.SystemDiskCount;
     }
 
     /**
-     * Set 内存总大小，自定义机型时需传入
-     * @param Mem 内存总大小，自定义机型时需传入
+     * Set 系统盘数量，查询自定义机型时必填
+     * @param SystemDiskCount 系统盘数量，查询自定义机型时必填
      */
-    public void setMem(Long Mem) {
-        this.Mem = Mem;
+    public void setSystemDiskCount(Long SystemDiskCount) {
+        this.SystemDiskCount = SystemDiskCount;
     }
 
     /**
-     * Get 是否支持raid，自定义机型时需传入 
-     * @return HaveRaidCard 是否支持raid，自定义机型时需传入
+     * Get 数据盘类型ID，查询自定义机型时可填 
+     * @return DataDiskTypeId 数据盘类型ID，查询自定义机型时可填
      */
-    public Long getHaveRaidCard() {
-        return this.HaveRaidCard;
+    public Long getDataDiskTypeId() {
+        return this.DataDiskTypeId;
     }
 
     /**
-     * Set 是否支持raid，自定义机型时需传入
-     * @param HaveRaidCard 是否支持raid，自定义机型时需传入
+     * Set 数据盘类型ID，查询自定义机型时可填
+     * @param DataDiskTypeId 数据盘类型ID，查询自定义机型时可填
      */
-    public void setHaveRaidCard(Long HaveRaidCard) {
-        this.HaveRaidCard = HaveRaidCard;
+    public void setDataDiskTypeId(Long DataDiskTypeId) {
+        this.DataDiskTypeId = DataDiskTypeId;
+    }
+
+    /**
+     * Get 数据盘数量，查询自定义机型时可填 
+     * @return DataDiskCount 数据盘数量，查询自定义机型时可填
+     */
+    public Long getDataDiskCount() {
+        return this.DataDiskCount;
+    }
+
+    /**
+     * Set 数据盘数量，查询自定义机型时可填
+     * @param DataDiskCount 数据盘数量，查询自定义机型时可填
+     */
+    public void setDataDiskCount(Long DataDiskCount) {
+        this.DataDiskCount = DataDiskCount;
     }
 
     /**
@@ -261,11 +284,12 @@ public class DescribeDeviceInventoryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "CpuId", this.CpuId);
-        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
-        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
-        this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
-        this.setParamSimple(map, prefix + "Mem", this.Mem);
-        this.setParamSimple(map, prefix + "HaveRaidCard", this.HaveRaidCard);
+        this.setParamSimple(map, prefix + "MemSize", this.MemSize);
+        this.setParamSimple(map, prefix + "ContainRaidCard", this.ContainRaidCard);
+        this.setParamSimple(map, prefix + "SystemDiskTypeId", this.SystemDiskTypeId);
+        this.setParamSimple(map, prefix + "SystemDiskCount", this.SystemDiskCount);
+        this.setParamSimple(map, prefix + "DataDiskTypeId", this.DataDiskTypeId);
+        this.setParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
 
     }
 }

@@ -51,6 +51,13 @@ public class CreateRoleRequest extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
+    * 申请角色临时密钥的最长有效期限制(范围：0~43200)
+    */
+    @SerializedName("SessionDuration")
+    @Expose
+    private Long SessionDuration;
+
+    /**
      * Get 角色名称 
      * @return RoleName 角色名称
      */
@@ -115,6 +122,22 @@ public class CreateRoleRequest extends AbstractModel{
     }
 
     /**
+     * Get 申请角色临时密钥的最长有效期限制(范围：0~43200) 
+     * @return SessionDuration 申请角色临时密钥的最长有效期限制(范围：0~43200)
+     */
+    public Long getSessionDuration() {
+        return this.SessionDuration;
+    }
+
+    /**
+     * Set 申请角色临时密钥的最长有效期限制(范围：0~43200)
+     * @param SessionDuration 申请角色临时密钥的最长有效期限制(范围：0~43200)
+     */
+    public void setSessionDuration(Long SessionDuration) {
+        this.SessionDuration = SessionDuration;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateRoleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
+        this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
 
     }
 }

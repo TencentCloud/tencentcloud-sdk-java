@@ -220,7 +220,7 @@ public class BuyDevicesRequest extends AbstractModel{
 
     /**
     * CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
     */
     @SerializedName("CpuId")
     @Expose
@@ -288,6 +288,20 @@ public class BuyDevicesRequest extends AbstractModel{
     @SerializedName("BuySession")
     @Expose
     private String BuySession;
+
+    /**
+    * 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+    */
+    @SerializedName("SgId")
+    @Expose
+    private String SgId;
+
+    /**
+    * 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
 
     /**
      * Get 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息 
@@ -739,9 +753,9 @@ public class BuyDevicesRequest extends AbstractModel{
 
     /**
      * Get CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/> 
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/> 
      * @return CpuId CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
      */
     public Long getCpuId() {
         return this.CpuId;
@@ -749,9 +763,9 @@ public class BuyDevicesRequest extends AbstractModel{
 
     /**
      * Set CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
      * @param CpuId CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+<br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
      */
     public void setCpuId(Long CpuId) {
         this.CpuId = CpuId;
@@ -902,6 +916,38 @@ public class BuyDevicesRequest extends AbstractModel{
     }
 
     /**
+     * Get 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效 
+     * @return SgId 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+     */
+    public String getSgId() {
+        return this.SgId;
+    }
+
+    /**
+     * Set 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+     * @param SgId 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+     */
+    public void setSgId(String SgId) {
+        this.SgId = SgId;
+    }
+
+    /**
+     * Get 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入 
+     * @return TemplateId 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
+     * @param TemplateId 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -943,6 +989,8 @@ public class BuyDevicesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
         this.setParamSimple(map, prefix + "BuySession", this.BuySession);
+        this.setParamSimple(map, prefix + "SgId", this.SgId);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

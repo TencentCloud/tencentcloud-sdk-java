@@ -51,25 +51,25 @@ public class SignContractByCoordinateRequest extends AbstractModel{
     private String AccountResId;
 
     /**
-    * 授权时间，格式为年月日时分秒，例20160801095509
+    * 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
+    */
+    @SerializedName("SignLocations")
+    @Expose
+    private SignLocation [] SignLocations;
+
+    /**
+    * 授权时间（由平台自动填充）
     */
     @SerializedName("AuthorizationTime")
     @Expose
     private String AuthorizationTime;
 
     /**
-    * 授权IP地址
+    * 授权IP地址（由平台自动填充）
     */
     @SerializedName("Position")
     @Expose
     private String Position;
-
-    /**
-    * 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
-    */
-    @SerializedName("SignLocations")
-    @Expose
-    private SignLocation [] SignLocations;
 
     /**
     * 签章ID
@@ -157,38 +157,6 @@ public class SignContractByCoordinateRequest extends AbstractModel{
     }
 
     /**
-     * Get 授权时间，格式为年月日时分秒，例20160801095509 
-     * @return AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
-     */
-    public String getAuthorizationTime() {
-        return this.AuthorizationTime;
-    }
-
-    /**
-     * Set 授权时间，格式为年月日时分秒，例20160801095509
-     * @param AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
-     */
-    public void setAuthorizationTime(String AuthorizationTime) {
-        this.AuthorizationTime = AuthorizationTime;
-    }
-
-    /**
-     * Get 授权IP地址 
-     * @return Position 授权IP地址
-     */
-    public String getPosition() {
-        return this.Position;
-    }
-
-    /**
-     * Set 授权IP地址
-     * @param Position 授权IP地址
-     */
-    public void setPosition(String Position) {
-        this.Position = Position;
-    }
-
-    /**
      * Get 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界 
      * @return SignLocations 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
      */
@@ -202,6 +170,38 @@ public class SignContractByCoordinateRequest extends AbstractModel{
      */
     public void setSignLocations(SignLocation [] SignLocations) {
         this.SignLocations = SignLocations;
+    }
+
+    /**
+     * Get 授权时间（由平台自动填充） 
+     * @return AuthorizationTime 授权时间（由平台自动填充）
+     */
+    public String getAuthorizationTime() {
+        return this.AuthorizationTime;
+    }
+
+    /**
+     * Set 授权时间（由平台自动填充）
+     * @param AuthorizationTime 授权时间（由平台自动填充）
+     */
+    public void setAuthorizationTime(String AuthorizationTime) {
+        this.AuthorizationTime = AuthorizationTime;
+    }
+
+    /**
+     * Get 授权IP地址（由平台自动填充） 
+     * @return Position 授权IP地址（由平台自动填充）
+     */
+    public String getPosition() {
+        return this.Position;
+    }
+
+    /**
+     * Set 授权IP地址（由平台自动填充）
+     * @param Position 授权IP地址（由平台自动填充）
+     */
+    public void setPosition(String Position) {
+        this.Position = Position;
     }
 
     /**
@@ -260,9 +260,9 @@ public class SignContractByCoordinateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "ContractResId", this.ContractResId);
         this.setParamSimple(map, prefix + "AccountResId", this.AccountResId);
+        this.setParamArrayObj(map, prefix + "SignLocations.", this.SignLocations);
         this.setParamSimple(map, prefix + "AuthorizationTime", this.AuthorizationTime);
         this.setParamSimple(map, prefix + "Position", this.Position);
-        this.setParamArrayObj(map, prefix + "SignLocations.", this.SignLocations);
         this.setParamSimple(map, prefix + "SealResId", this.SealResId);
         this.setParamSimple(map, prefix + "CertType", this.CertType);
         this.setParamSimple(map, prefix + "ImageData", this.ImageData);

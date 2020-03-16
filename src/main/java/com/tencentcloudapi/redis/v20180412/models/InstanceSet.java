@@ -278,6 +278,54 @@ public class InstanceSet extends AbstractModel{
     private Boolean NoAuth;
 
     /**
+    * 客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientLimit")
+    @Expose
+    private Long ClientLimit;
+
+    /**
+    * DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DtsStatus")
+    @Expose
+    private Long DtsStatus;
+
+    /**
+    * 分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetLimit")
+    @Expose
+    private Long NetLimit;
+
+    /**
+    * 免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PasswordFree")
+    @Expose
+    private Long PasswordFree;
+
+    /**
+    * 实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadOnly")
+    @Expose
+    private Long ReadOnly;
+
+    /**
+    * 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vip6")
+    @Expose
+    private String Vip6;
+
+    /**
      * Get 实例名称 
      * @return InstanceName 实例名称
      */
@@ -866,6 +914,126 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
+     * Get 客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientLimit 客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientLimit() {
+        return this.ClientLimit;
+    }
+
+    /**
+     * Set 客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientLimit 客户端连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientLimit(Long ClientLimit) {
+        this.ClientLimit = ClientLimit;
+    }
+
+    /**
+     * Get DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DtsStatus DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDtsStatus() {
+        return this.DtsStatus;
+    }
+
+    /**
+     * Set DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DtsStatus DTS状态（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDtsStatus(Long DtsStatus) {
+        this.DtsStatus = DtsStatus;
+    }
+
+    /**
+     * Get 分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetLimit 分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNetLimit() {
+        return this.NetLimit;
+    }
+
+    /**
+     * Set 分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetLimit 分片带宽上限，单位MB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetLimit(Long NetLimit) {
+        this.NetLimit = NetLimit;
+    }
+
+    /**
+     * Get 免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PasswordFree 免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPasswordFree() {
+        return this.PasswordFree;
+    }
+
+    /**
+     * Set 免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PasswordFree 免密实例标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPasswordFree(Long PasswordFree) {
+        this.PasswordFree = PasswordFree;
+    }
+
+    /**
+     * Get 实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadOnly 实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadOnly() {
+        return this.ReadOnly;
+    }
+
+    /**
+     * Set 实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadOnly 实例只读标识（内部参数，用户可忽略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadOnly(Long ReadOnly) {
+        this.ReadOnly = ReadOnly;
+    }
+
+    /**
+     * Get 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vip6 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVip6() {
+        return this.Vip6;
+    }
+
+    /**
+     * Set 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vip6 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVip6(String Vip6) {
+        this.Vip6 = Vip6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -905,6 +1073,12 @@ public class InstanceSet extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
+        this.setParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
+        this.setParamSimple(map, prefix + "DtsStatus", this.DtsStatus);
+        this.setParamSimple(map, prefix + "NetLimit", this.NetLimit);
+        this.setParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
+        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "Vip6", this.Vip6);
 
     }
 }

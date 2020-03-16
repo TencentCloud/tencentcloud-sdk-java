@@ -51,6 +51,13 @@ public class ModifyStudioProductRequest extends AbstractModel{
     private Long ModuleId;
 
     /**
+    * 是否打开二进制转Json功能, 取值为字符串 true/false
+    */
+    @SerializedName("EnableProductScript")
+    @Expose
+    private String EnableProductScript;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -115,6 +122,22 @@ public class ModifyStudioProductRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否打开二进制转Json功能, 取值为字符串 true/false 
+     * @return EnableProductScript 是否打开二进制转Json功能, 取值为字符串 true/false
+     */
+    public String getEnableProductScript() {
+        return this.EnableProductScript;
+    }
+
+    /**
+     * Set 是否打开二进制转Json功能, 取值为字符串 true/false
+     * @param EnableProductScript 是否打开二进制转Json功能, 取值为字符串 true/false
+     */
+    public void setEnableProductScript(String EnableProductScript) {
+        this.EnableProductScript = EnableProductScript;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ModifyStudioProductRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "ProductDesc", this.ProductDesc);
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
+        this.setParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
 
     }
 }

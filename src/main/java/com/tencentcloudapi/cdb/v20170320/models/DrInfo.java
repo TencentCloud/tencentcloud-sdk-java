@@ -51,7 +51,12 @@ public class DrInfo extends AbstractModel{
     private String Region;
 
     /**
-    * 实例同步状态
+    * 实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
     */
     @SerializedName("SyncStatus")
     @Expose
@@ -136,16 +141,36 @@ public class DrInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例同步状态 
-     * @return SyncStatus 实例同步状态
+     * Get 实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。 
+     * @return SyncStatus 实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set 实例同步状态
-     * @param SyncStatus 实例同步状态
+     * Set 实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
+     * @param SyncStatus 实例同步状态。可能的返回值为：
+0 - 灾备未同步；
+1 - 灾备同步中；
+2 - 灾备同步成功；
+3 - 灾备同步失败；
+4 - 灾备同步修复中。
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;

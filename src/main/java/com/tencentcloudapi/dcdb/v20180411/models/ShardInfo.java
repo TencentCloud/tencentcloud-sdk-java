@@ -86,6 +86,13 @@ public class ShardInfo extends AbstractModel{
     private Long Pid;
 
     /**
+    * Cpu核数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 分片ID 
      * @return ShardInstanceId 分片ID
      */
@@ -230,6 +237,22 @@ public class ShardInfo extends AbstractModel{
     }
 
     /**
+     * Get Cpu核数 
+     * @return Cpu Cpu核数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Cpu核数
+     * @param Cpu Cpu核数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class ShardInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ShardId", this.ShardId);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

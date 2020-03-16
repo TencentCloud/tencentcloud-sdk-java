@@ -31,10 +31,18 @@ public class EvaluationResponse extends AbstractModel{
 
     /**
     * 识别出的算式信息；
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
     private Item [] Items;
+
+    /**
+    * 任务 id，用于查询接口
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -60,8 +68,10 @@ public class EvaluationResponse extends AbstractModel{
     }
 
     /**
-     * Get 识别出的算式信息； 
+     * Get 识别出的算式信息；
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Items 识别出的算式信息；
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Item [] getItems() {
         return this.Items;
@@ -69,10 +79,28 @@ public class EvaluationResponse extends AbstractModel{
 
     /**
      * Set 识别出的算式信息；
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 识别出的算式信息；
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(Item [] Items) {
         this.Items = Items;
+    }
+
+    /**
+     * Get 任务 id，用于查询接口 
+     * @return TaskId 任务 id，用于查询接口
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务 id，用于查询接口
+     * @param TaskId 任务 id，用于查询接口
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -97,6 +125,7 @@ public class EvaluationResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -72,7 +72,7 @@ public class SubnetInfo extends AbstractModel{
     private Long Type;
 
     /**
-    * 可用区ID。
+    * 子网可用区ID。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -147,6 +147,35 @@ public class SubnetInfo extends AbstractModel{
     @SerializedName("IsSmartNic")
     @Expose
     private Long IsSmartNic;
+
+    /**
+    * 子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * VPC所在可用区ID
+    */
+    @SerializedName("VpcZoneId")
+    @Expose
+    private Long VpcZoneId;
+
+    /**
+    * VPC所在可用区
+    */
+    @SerializedName("VpcZone")
+    @Expose
+    private String VpcZone;
+
+    /**
+    * 是否开启广播，关闭为0，开启为1。
+    */
+    @SerializedName("BroadcastFlag")
+    @Expose
+    private Long BroadcastFlag;
 
     /**
      * Get 私有网络的唯一ID。 
@@ -261,16 +290,16 @@ public class SubnetInfo extends AbstractModel{
     }
 
     /**
-     * Get 可用区ID。 
-     * @return ZoneId 可用区ID。
+     * Get 子网可用区ID。 
+     * @return ZoneId 子网可用区ID。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区ID。
-     * @param ZoneId 可用区ID。
+     * Set 子网可用区ID。
+     * @param ZoneId 子网可用区ID。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -437,6 +466,74 @@ public class SubnetInfo extends AbstractModel{
     }
 
     /**
+     * Get 子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 子网可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get VPC所在可用区ID 
+     * @return VpcZoneId VPC所在可用区ID
+     */
+    public Long getVpcZoneId() {
+        return this.VpcZoneId;
+    }
+
+    /**
+     * Set VPC所在可用区ID
+     * @param VpcZoneId VPC所在可用区ID
+     */
+    public void setVpcZoneId(Long VpcZoneId) {
+        this.VpcZoneId = VpcZoneId;
+    }
+
+    /**
+     * Get VPC所在可用区 
+     * @return VpcZone VPC所在可用区
+     */
+    public String getVpcZone() {
+        return this.VpcZone;
+    }
+
+    /**
+     * Set VPC所在可用区
+     * @param VpcZone VPC所在可用区
+     */
+    public void setVpcZone(String VpcZone) {
+        this.VpcZone = VpcZone;
+    }
+
+    /**
+     * Get 是否开启广播，关闭为0，开启为1。 
+     * @return BroadcastFlag 是否开启广播，关闭为0，开启为1。
+     */
+    public Long getBroadcastFlag() {
+        return this.BroadcastFlag;
+    }
+
+    /**
+     * Set 是否开启广播，关闭为0，开启为1。
+     * @param BroadcastFlag 是否开启广播，关闭为0，开启为1。
+     */
+    public void setBroadcastFlag(Long BroadcastFlag) {
+        this.BroadcastFlag = BroadcastFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +555,10 @@ public class SubnetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalIpNum", this.TotalIpNum);
         this.setParamSimple(map, prefix + "SubnetCreateTime", this.SubnetCreateTime);
         this.setParamSimple(map, prefix + "IsSmartNic", this.IsSmartNic);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "VpcZoneId", this.VpcZoneId);
+        this.setParamSimple(map, prefix + "VpcZone", this.VpcZone);
+        this.setParamSimple(map, prefix + "BroadcastFlag", this.BroadcastFlag);
 
     }
 }

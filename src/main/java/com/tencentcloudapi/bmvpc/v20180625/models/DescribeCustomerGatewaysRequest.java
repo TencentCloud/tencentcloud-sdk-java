@@ -55,6 +55,20 @@ public class DescribeCustomerGatewaysRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 排序字段, 支持"CreateTime"排序
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方向, “asc”、“desc”
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
      * Get 对端网关ID，例如：bmcgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。 
      * @return CustomerGatewayIds 对端网关ID，例如：bmcgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
      */
@@ -135,6 +149,38 @@ public class DescribeCustomerGatewaysRequest extends AbstractModel{
     }
 
     /**
+     * Get 排序字段, 支持"CreateTime"排序 
+     * @return OrderField 排序字段, 支持"CreateTime"排序
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段, 支持"CreateTime"排序
+     * @param OrderField 排序字段, 支持"CreateTime"排序
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方向, “asc”、“desc” 
+     * @return OrderDirection 排序方向, “asc”、“desc”
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方向, “asc”、“desc”
+     * @param OrderDirection 排序方向, “asc”、“desc”
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +188,8 @@ public class DescribeCustomerGatewaysRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

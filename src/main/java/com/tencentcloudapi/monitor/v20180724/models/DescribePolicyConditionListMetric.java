@@ -24,6 +24,7 @@ public class DescribePolicyConditionListMetric extends AbstractModel{
 
     /**
     * 指标配置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigManual")
     @Expose
@@ -51,8 +52,10 @@ public class DescribePolicyConditionListMetric extends AbstractModel{
     private String MetricUnit;
 
     /**
-     * Get 指标配置 
+     * Get 指标配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigManual 指标配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePolicyConditionListConfigManual getConfigManual() {
         return this.ConfigManual;
@@ -60,7 +63,9 @@ public class DescribePolicyConditionListMetric extends AbstractModel{
 
     /**
      * Set 指标配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigManual 指标配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigManual(DescribePolicyConditionListConfigManual ConfigManual) {
         this.ConfigManual = ConfigManual;

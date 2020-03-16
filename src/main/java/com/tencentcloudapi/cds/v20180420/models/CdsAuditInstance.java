@@ -100,6 +100,45 @@ public class CdsAuditInstance extends AbstractModel{
     private String ExpireTime;
 
     /**
+    * 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * 实例公网IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
+
+    /**
+    * 实例私网IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrivateIp")
+    @Expose
+    private String PrivateIp;
+
+    /**
+    * 实例类型（版本）
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 实例域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pdomain")
+    @Expose
+    private String Pdomain;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -276,6 +315,102 @@ public class CdsAuditInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceName 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceName 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 实例公网IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicIp 实例公网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 实例公网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicIp 实例公网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
+    }
+
+    /**
+     * Get 实例私网IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrivateIp 实例私网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivateIp() {
+        return this.PrivateIp;
+    }
+
+    /**
+     * Set 实例私网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrivateIp 实例私网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivateIp(String PrivateIp) {
+        this.PrivateIp = PrivateIp;
+    }
+
+    /**
+     * Get 实例类型（版本） 
+     * @return InstanceType 实例类型（版本）
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型（版本）
+     * @param InstanceType 实例类型（版本）
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 实例域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pdomain 实例域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPdomain() {
+        return this.Pdomain;
+    }
+
+    /**
+     * Set 实例域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pdomain 实例域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPdomain(String Pdomain) {
+        this.Pdomain = Pdomain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +425,11 @@ public class CdsAuditInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "IsolatedTimestamp", this.IsolatedTimestamp);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
+        this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "Pdomain", this.Pdomain);
 
     }
 }

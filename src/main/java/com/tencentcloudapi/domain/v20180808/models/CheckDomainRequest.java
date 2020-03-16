@@ -30,6 +30,13 @@ public class CheckDomainRequest extends AbstractModel{
     private String DomainName;
 
     /**
+    * 年限
+    */
+    @SerializedName("Period")
+    @Expose
+    private String Period;
+
+    /**
      * Get 所查询域名名称 
      * @return DomainName 所查询域名名称
      */
@@ -46,10 +53,27 @@ public class CheckDomainRequest extends AbstractModel{
     }
 
     /**
+     * Get 年限 
+     * @return Period 年限
+     */
+    public String getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 年限
+     * @param Period 年限
+     */
+    public void setPeriod(String Period) {
+        this.Period = Period;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

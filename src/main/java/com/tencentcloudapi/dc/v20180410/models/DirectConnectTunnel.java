@@ -75,7 +75,7 @@ REJECTED:拒绝
     private String NetworkType;
 
     /**
-    * VPC地域
+    * VPC地域对应的网络名，如ap-guangzhou
     */
     @SerializedName("NetworkRegion")
     @Expose
@@ -157,6 +157,61 @@ REJECTED:拒绝
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
+
+    /**
+    * 专线通道标签值
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
+    * 关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetDetectId")
+    @Expose
+    private String NetDetectId;
+
+    /**
+    * BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableBGPCommunity")
+    @Expose
+    private Boolean EnableBGPCommunity;
+
+    /**
+    * 是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NatType")
+    @Expose
+    private Long NatType;
+
+    /**
+    * VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcRegion")
+    @Expose
+    private String VpcRegion;
+
+    /**
+    * 是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BfdEnable")
+    @Expose
+    private Long BfdEnable;
+
+    /**
+    * 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessPointType")
+    @Expose
+    private String AccessPointType;
 
     /**
      * Get 专线通道ID 
@@ -295,16 +350,16 @@ REJECTED:拒绝
     }
 
     /**
-     * Get VPC地域 
-     * @return NetworkRegion VPC地域
+     * Get VPC地域对应的网络名，如ap-guangzhou 
+     * @return NetworkRegion VPC地域对应的网络名，如ap-guangzhou
      */
     public String getNetworkRegion() {
         return this.NetworkRegion;
     }
 
     /**
-     * Set VPC地域
-     * @param NetworkRegion VPC地域
+     * Set VPC地域对应的网络名，如ap-guangzhou
+     * @param NetworkRegion VPC地域对应的网络名，如ap-guangzhou
      */
     public void setNetworkRegion(String NetworkRegion) {
         this.NetworkRegion = NetworkRegion;
@@ -487,6 +542,142 @@ REJECTED:拒绝
     }
 
     /**
+     * Get 专线通道标签值 
+     * @return TagSet 专线通道标签值
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 专线通道标签值
+     * @param TagSet 专线通道标签值
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
+     * Get 关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetDetectId 关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetDetectId() {
+        return this.NetDetectId;
+    }
+
+    /**
+     * Set 关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetDetectId 关联的网络自定义探测ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetDetectId(String NetDetectId) {
+        this.NetDetectId = NetDetectId;
+    }
+
+    /**
+     * Get BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableBGPCommunity BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableBGPCommunity() {
+        return this.EnableBGPCommunity;
+    }
+
+    /**
+     * Set BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableBGPCommunity BGP community开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableBGPCommunity(Boolean EnableBGPCommunity) {
+        this.EnableBGPCommunity = EnableBGPCommunity;
+    }
+
+    /**
+     * Get 是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NatType 是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNatType() {
+        return this.NatType;
+    }
+
+    /**
+     * Set 是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NatType 是否为Nat通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNatType(Long NatType) {
+        this.NatType = NatType;
+    }
+
+    /**
+     * Get VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcRegion VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcRegion() {
+        return this.VpcRegion;
+    }
+
+    /**
+     * Set VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcRegion VPC地域简码，如gz、cd
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcRegion(String VpcRegion) {
+        this.VpcRegion = VpcRegion;
+    }
+
+    /**
+     * Get 是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BfdEnable 是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBfdEnable() {
+        return this.BfdEnable;
+    }
+
+    /**
+     * Set 是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BfdEnable 是否开启BFD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBfdEnable(Long BfdEnable) {
+        this.BfdEnable = BfdEnable;
+    }
+
+    /**
+     * Get 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessPointType 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessPointType() {
+        return this.AccessPointType;
+    }
+
+    /**
+     * Set 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessPointType 专线通道接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessPointType(String AccessPointType) {
+        this.AccessPointType = AccessPointType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -508,6 +699,13 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "DirectConnectTunnelName", this.DirectConnectTunnelName);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "NetDetectId", this.NetDetectId);
+        this.setParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
+        this.setParamSimple(map, prefix + "NatType", this.NatType);
+        this.setParamSimple(map, prefix + "VpcRegion", this.VpcRegion);
+        this.setParamSimple(map, prefix + "BfdEnable", this.BfdEnable);
+        this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
 
     }
 }

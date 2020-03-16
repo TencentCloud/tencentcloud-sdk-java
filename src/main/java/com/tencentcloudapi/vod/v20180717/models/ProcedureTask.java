@@ -40,7 +40,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -48,7 +47,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -58,7 +56,6 @@ public class ProcedureTask extends AbstractModel{
     * 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -68,7 +65,6 @@ public class ProcedureTask extends AbstractModel{
     * 媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -85,6 +81,7 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
     @Expose
@@ -124,7 +121,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TasksPriority")
     @Expose
@@ -135,7 +131,6 @@ public class ProcedureTask extends AbstractModel{
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TasksNotifyMode")
     @Expose
@@ -143,7 +138,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionContext")
     @Expose
@@ -151,7 +145,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
     @Expose
@@ -198,10 +191,8 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Get 已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已弃用，请使用各个具体任务的 ErrCode。 
      * @return ErrCode 已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -209,19 +200,15 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 已弃用，请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已弃用，请使用各个具体任务的 Message。 
      * @return Message 已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -229,9 +216,7 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 已弃用，请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -240,12 +225,10 @@ public class ProcedureTask extends AbstractModel{
     /**
      * Get 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
-<li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li> 
      * @return FileId 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -255,11 +238,9 @@ public class ProcedureTask extends AbstractModel{
      * Set 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 媒体文件 ID
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -268,12 +249,10 @@ public class ProcedureTask extends AbstractModel{
     /**
      * Get 媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
-<li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li> 
      * @return FileName 媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -283,11 +262,9 @@ public class ProcedureTask extends AbstractModel{
      * Set 媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 媒体文件名称
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -318,8 +295,10 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Get 原始视频的元信息。 
+     * Get 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetaData 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
@@ -327,7 +306,9 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
@@ -414,10 +395,8 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Get 任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务流的优先级，取值范围为 [-10, 10]。 
      * @return TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
@@ -425,9 +404,7 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
@@ -437,13 +414,11 @@ public class ProcedureTask extends AbstractModel{
      * Get 任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
-<li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>None：不接受该任务流回调。</li> 
      * @return TasksNotifyMode 任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
@@ -454,22 +429,18 @@ public class ProcedureTask extends AbstractModel{
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TasksNotifyMode 任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
 <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
 <li>None：不接受该任务流回调。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionContext() {
         return this.SessionContext;
@@ -477,19 +448,15 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionId() {
         return this.SessionId;
@@ -497,9 +464,7 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

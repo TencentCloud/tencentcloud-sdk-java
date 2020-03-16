@@ -87,6 +87,13 @@ topspeed_H265 =》极速高清-H265。
     private String PushDomain;
 
     /**
+    * 分辨率。
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
+
+    /**
      * Get 流名称。 
      * @return StreamName 流名称。
      */
@@ -247,6 +254,22 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
+     * Get 分辨率。 
+     * @return Resolution 分辨率。
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set 分辨率。
+     * @param Resolution 分辨率。
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +281,7 @@ topspeed_H265 =》极速高清-H265。
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "PushDomain", this.PushDomain);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
 
     }
 }

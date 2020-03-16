@@ -59,6 +59,13 @@ public class ParamDesc extends AbstractModel{
     private ParamConstraint Constraint;
 
     /**
+    * 是否有设置过值，false:没有设置过值，true:有设置过值。
+    */
+    @SerializedName("HaveSetValue")
+    @Expose
+    private Boolean HaveSetValue;
+
+    /**
      * Get 参数名字 
      * @return Param 参数名字
      */
@@ -143,6 +150,22 @@ public class ParamDesc extends AbstractModel{
     }
 
     /**
+     * Get 是否有设置过值，false:没有设置过值，true:有设置过值。 
+     * @return HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public Boolean getHaveSetValue() {
+        return this.HaveSetValue;
+    }
+
+    /**
+     * Set 是否有设置过值，false:没有设置过值，true:有设置过值。
+     * @param HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public void setHaveSetValue(Boolean HaveSetValue) {
+        this.HaveSetValue = HaveSetValue;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +174,7 @@ public class ParamDesc extends AbstractModel{
         this.setParamSimple(map, prefix + "SetValue", this.SetValue);
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamObj(map, prefix + "Constraint.", this.Constraint);
+        this.setParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
 
     }
 }

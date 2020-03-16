@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BackupFile extends AbstractModel{
 
     /**
-    * 备份文件所属的副本集/分片id
+    * 备份文件所属的副本集/分片ID
     */
     @SerializedName("ReplicateSetId")
     @Expose
@@ -37,16 +37,16 @@ public class BackupFile extends AbstractModel{
     private String File;
 
     /**
-     * Get 备份文件所属的副本集/分片id 
-     * @return ReplicateSetId 备份文件所属的副本集/分片id
+     * Get 备份文件所属的副本集/分片ID 
+     * @return ReplicateSetId 备份文件所属的副本集/分片ID
      */
     public String getReplicateSetId() {
         return this.ReplicateSetId;
     }
 
     /**
-     * Set 备份文件所属的副本集/分片id
-     * @param ReplicateSetId 备份文件所属的副本集/分片id
+     * Set 备份文件所属的副本集/分片ID
+     * @param ReplicateSetId 备份文件所属的副本集/分片ID
      */
     public void setReplicateSetId(String ReplicateSetId) {
         this.ReplicateSetId = ReplicateSetId;

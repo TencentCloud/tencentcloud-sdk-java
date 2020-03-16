@@ -38,6 +38,7 @@ public class DeviceStatus extends AbstractModel{
 
     /**
     * 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstOnline")
     @Expose
@@ -45,6 +46,7 @@ public class DeviceStatus extends AbstractModel{
 
     /**
     * 最后上线时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastOnline")
     @Expose
@@ -90,8 +92,10 @@ public class DeviceStatus extends AbstractModel{
     }
 
     /**
-     * Get 首次上线时间 
+     * Get 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FirstOnline 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstOnline() {
         return this.FirstOnline;
@@ -99,15 +103,19 @@ public class DeviceStatus extends AbstractModel{
 
     /**
      * Set 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstOnline 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstOnline(String FirstOnline) {
         this.FirstOnline = FirstOnline;
     }
 
     /**
-     * Get 最后上线时间 
+     * Get 最后上线时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastOnline 最后上线时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastOnline() {
         return this.LastOnline;
@@ -115,7 +123,9 @@ public class DeviceStatus extends AbstractModel{
 
     /**
      * Set 最后上线时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LastOnline 最后上线时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastOnline(String LastOnline) {
         this.LastOnline = LastOnline;

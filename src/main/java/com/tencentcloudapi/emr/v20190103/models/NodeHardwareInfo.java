@@ -303,6 +303,14 @@ public class NodeHardwareInfo extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoFlag")
+    @Expose
+    private Long AutoFlag;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1003,6 +1011,26 @@ public class NodeHardwareInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoFlag() {
+        return this.AutoFlag;
+    }
+
+    /**
+     * Set 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoFlag(Long AutoFlag) {
+        this.AutoFlag = AutoFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1041,6 +1069,7 @@ public class NodeHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Destroyable", this.Destroyable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
 
     }
 }

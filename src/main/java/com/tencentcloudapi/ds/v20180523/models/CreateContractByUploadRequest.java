@@ -58,18 +58,18 @@ public class CreateContractByUploadRequest extends AbstractModel{
     private String ContractName;
 
     /**
-    * 合同发起方帐号ID
-    */
-    @SerializedName("Initiator")
-    @Expose
-    private String Initiator;
-
-    /**
     * 备注
     */
     @SerializedName("Remarks")
     @Expose
     private String Remarks;
+
+    /**
+    * 合同发起方腾讯云帐号ID（由平台自动填写）
+    */
+    @SerializedName("Initiator")
+    @Expose
+    private String Initiator;
 
     /**
     * 合同长时间未签署的过期时间
@@ -159,22 +159,6 @@ public class CreateContractByUploadRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同发起方帐号ID 
-     * @return Initiator 合同发起方帐号ID
-     */
-    public String getInitiator() {
-        return this.Initiator;
-    }
-
-    /**
-     * Set 合同发起方帐号ID
-     * @param Initiator 合同发起方帐号ID
-     */
-    public void setInitiator(String Initiator) {
-        this.Initiator = Initiator;
-    }
-
-    /**
      * Get 备注 
      * @return Remarks 备注
      */
@@ -188,6 +172,22 @@ public class CreateContractByUploadRequest extends AbstractModel{
      */
     public void setRemarks(String Remarks) {
         this.Remarks = Remarks;
+    }
+
+    /**
+     * Get 合同发起方腾讯云帐号ID（由平台自动填写） 
+     * @return Initiator 合同发起方腾讯云帐号ID（由平台自动填写）
+     */
+    public String getInitiator() {
+        return this.Initiator;
+    }
+
+    /**
+     * Set 合同发起方腾讯云帐号ID（由平台自动填写）
+     * @param Initiator 合同发起方腾讯云帐号ID（由平台自动填写）
+     */
+    public void setInitiator(String Initiator) {
+        this.Initiator = Initiator;
     }
 
     /**
@@ -215,8 +215,8 @@ public class CreateContractByUploadRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SignInfos.", this.SignInfos);
         this.setParamSimple(map, prefix + "ContractFile", this.ContractFile);
         this.setParamSimple(map, prefix + "ContractName", this.ContractName);
-        this.setParamSimple(map, prefix + "Initiator", this.Initiator);
         this.setParamSimple(map, prefix + "Remarks", this.Remarks);
+        this.setParamSimple(map, prefix + "Initiator", this.Initiator);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }

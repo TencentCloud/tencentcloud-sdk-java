@@ -65,6 +65,27 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * NAT所在可用区，形如：ap-guangzhou-2。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 排序字段, 支持"CreateTime"排序
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方向, “asc”、“desc”
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
      * Get NAT网关ID，例如：nat-kdm476mp 
      * @return NatId NAT网关ID，例如：nat-kdm476mp
      */
@@ -161,6 +182,54 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
     }
 
     /**
+     * Get NAT所在可用区，形如：ap-guangzhou-2。 
+     * @return Zone NAT所在可用区，形如：ap-guangzhou-2。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set NAT所在可用区，形如：ap-guangzhou-2。
+     * @param Zone NAT所在可用区，形如：ap-guangzhou-2。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 排序字段, 支持"CreateTime"排序 
+     * @return OrderField 排序字段, 支持"CreateTime"排序
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段, 支持"CreateTime"排序
+     * @param OrderField 排序字段, 支持"CreateTime"排序
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方向, “asc”、“desc” 
+     * @return OrderDirection 排序方向, “asc”、“desc”
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方向, “asc”、“desc”
+     * @param OrderDirection 排序方向, “asc”、“desc”
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +239,9 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

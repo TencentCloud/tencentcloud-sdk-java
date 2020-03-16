@@ -62,6 +62,14 @@ public class JobStatus extends AbstractModel{
     private String [] Replicas;
 
     /**
+    * 副本实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplicaInfos")
+    @Expose
+    private ReplicaInfo [] ReplicaInfos;
+
+    /**
      * Get 任务状态 
      * @return Status 任务状态
      */
@@ -158,6 +166,26 @@ public class JobStatus extends AbstractModel{
     }
 
     /**
+     * Get 副本实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplicaInfos 副本实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReplicaInfo [] getReplicaInfos() {
+        return this.ReplicaInfos;
+    }
+
+    /**
+     * Set 副本实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplicaInfos 副本实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplicaInfos(ReplicaInfo [] ReplicaInfos) {
+        this.ReplicaInfos = ReplicaInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -166,6 +194,7 @@ public class JobStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "DesiredWorkers", this.DesiredWorkers);
         this.setParamSimple(map, prefix + "CurrentWorkers", this.CurrentWorkers);
         this.setParamArraySimple(map, prefix + "Replicas.", this.Replicas);
+        this.setParamArrayObj(map, prefix + "ReplicaInfos.", this.ReplicaInfos);
 
     }
 }

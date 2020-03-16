@@ -65,6 +65,13 @@ public class EvaluationRequest extends AbstractModel{
     private Boolean RejectNonArithmeticImage;
 
     /**
+    * 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+    */
+    @SerializedName("IsAsync")
+    @Expose
+    private Long IsAsync;
+
+    /**
      * Get 图片唯一标识，一张图片一个SessionId； 
      * @return SessionId 图片唯一标识，一张图片一个SessionId；
      */
@@ -161,6 +168,22 @@ public class EvaluationRequest extends AbstractModel{
     }
 
     /**
+     * Get 异步模式标识，0：同步模式，1：异步模式。默认为同步模式 
+     * @return IsAsync 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     */
+    public Long getIsAsync() {
+        return this.IsAsync;
+    }
+
+    /**
+     * Set 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     * @param IsAsync 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     */
+    public void setIsAsync(Long IsAsync) {
+        this.IsAsync = IsAsync;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class EvaluationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "SupportHorizontalImage", this.SupportHorizontalImage);
         this.setParamSimple(map, prefix + "RejectNonArithmeticImage", this.RejectNonArithmeticImage);
+        this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
 
     }
 }

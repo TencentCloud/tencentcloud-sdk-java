@@ -102,6 +102,15 @@ public class DomainInfo extends AbstractModel{
     private String RentExpireTime;
 
     /**
+    * 0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsMiniProgramLive")
+    @Expose
+    private Long IsMiniProgramLive;
+
+    /**
      * Get 直播域名 
      * @return Name 直播域名
      */
@@ -286,6 +295,30 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
+     * Get 0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsMiniProgramLive 0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsMiniProgramLive() {
+        return this.IsMiniProgramLive;
+    }
+
+    /**
+     * Set 0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsMiniProgramLive 0：标准直播，
+1：小程序直播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsMiniProgramLive(Long IsMiniProgramLive) {
+        this.IsMiniProgramLive = IsMiniProgramLive;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -300,6 +333,7 @@ public class DomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CurrentCName", this.CurrentCName);
         this.setParamSimple(map, prefix + "RentTag", this.RentTag);
         this.setParamSimple(map, prefix + "RentExpireTime", this.RentExpireTime);
+        this.setParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
 
     }
 }

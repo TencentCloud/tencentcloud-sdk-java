@@ -38,6 +38,24 @@ public class TicmClient extends AbstractClient{
     }
 
     /**
+     *提交完视频审核任务后，可以通过本接口来获取当前处理的进度和结果
+     * @param req DescribeVideoTaskRequest
+     * @return DescribeVideoTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoTaskResponse DescribeVideoTask(DescribeVideoTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVideoTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVideoTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVideoTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
      * @param req ImageModerationRequest
      * @return ImageModerationResponse
@@ -49,6 +67,24 @@ public class TicmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImageModeration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口提供多种维度的视频审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+     * @param req VideoModerationRequest
+     * @return VideoModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public VideoModerationResponse VideoModeration(VideoModerationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VideoModerationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<VideoModerationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "VideoModeration"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

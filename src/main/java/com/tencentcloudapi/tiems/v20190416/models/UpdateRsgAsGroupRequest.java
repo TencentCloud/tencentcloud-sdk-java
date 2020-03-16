@@ -37,6 +37,20 @@ public class UpdateRsgAsGroupRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 伸缩组最大节点数
+    */
+    @SerializedName("MaxSize")
+    @Expose
+    private Long MaxSize;
+
+    /**
+    * 伸缩组最小节点数
+    */
+    @SerializedName("MinSize")
+    @Expose
+    private Long MinSize;
+
+    /**
      * Get 伸缩组 ID 
      * @return Id 伸缩组 ID
      */
@@ -69,11 +83,45 @@ public class UpdateRsgAsGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 伸缩组最大节点数 
+     * @return MaxSize 伸缩组最大节点数
+     */
+    public Long getMaxSize() {
+        return this.MaxSize;
+    }
+
+    /**
+     * Set 伸缩组最大节点数
+     * @param MaxSize 伸缩组最大节点数
+     */
+    public void setMaxSize(Long MaxSize) {
+        this.MaxSize = MaxSize;
+    }
+
+    /**
+     * Get 伸缩组最小节点数 
+     * @return MinSize 伸缩组最小节点数
+     */
+    public Long getMinSize() {
+        return this.MinSize;
+    }
+
+    /**
+     * Set 伸缩组最小节点数
+     * @param MinSize 伸缩组最小节点数
+     */
+    public void setMinSize(Long MinSize) {
+        this.MinSize = MinSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
+        this.setParamSimple(map, prefix + "MinSize", this.MinSize);
 
     }
 }

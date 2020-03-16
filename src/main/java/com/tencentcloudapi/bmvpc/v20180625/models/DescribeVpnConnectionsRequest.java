@@ -54,6 +54,34 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * VPN网关实例ID
+    */
+    @SerializedName("VpnGatewayId")
+    @Expose
+    private String VpnGatewayId;
+
+    /**
+    * VPN通道名称
+    */
+    @SerializedName("VpnConnectionName")
+    @Expose
+    private String VpnConnectionName;
+
+    /**
+    * 排序字段, 支持"CreateTime"排序
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方向, “asc”、“desc”
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
      * Get VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。 
      * @return VpnConnectionIds VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
      */
@@ -130,6 +158,70 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
     }
 
     /**
+     * Get VPN网关实例ID 
+     * @return VpnGatewayId VPN网关实例ID
+     */
+    public String getVpnGatewayId() {
+        return this.VpnGatewayId;
+    }
+
+    /**
+     * Set VPN网关实例ID
+     * @param VpnGatewayId VPN网关实例ID
+     */
+    public void setVpnGatewayId(String VpnGatewayId) {
+        this.VpnGatewayId = VpnGatewayId;
+    }
+
+    /**
+     * Get VPN通道名称 
+     * @return VpnConnectionName VPN通道名称
+     */
+    public String getVpnConnectionName() {
+        return this.VpnConnectionName;
+    }
+
+    /**
+     * Set VPN通道名称
+     * @param VpnConnectionName VPN通道名称
+     */
+    public void setVpnConnectionName(String VpnConnectionName) {
+        this.VpnConnectionName = VpnConnectionName;
+    }
+
+    /**
+     * Get 排序字段, 支持"CreateTime"排序 
+     * @return OrderField 排序字段, 支持"CreateTime"排序
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段, 支持"CreateTime"排序
+     * @param OrderField 排序字段, 支持"CreateTime"排序
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方向, “asc”、“desc” 
+     * @return OrderDirection 排序方向, “asc”、“desc”
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方向, “asc”、“desc”
+     * @param OrderDirection 排序方向, “asc”、“desc”
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -137,6 +229,10 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
+        this.setParamSimple(map, prefix + "VpnConnectionName", this.VpnConnectionName);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

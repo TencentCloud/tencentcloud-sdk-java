@@ -111,6 +111,22 @@ public class PriceResource extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskNum")
+    @Expose
+    private Long DiskNum;
+
+    /**
+    * 本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalDiskNum")
+    @Expose
+    private Long LocalDiskNum;
+
+    /**
      * Get 需要的规格
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Spec 需要的规格
@@ -331,6 +347,46 @@ public class PriceResource extends AbstractModel{
     }
 
     /**
+     * Get 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskNum 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDiskNum() {
+        return this.DiskNum;
+    }
+
+    /**
+     * Set 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskNum 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskNum(Long DiskNum) {
+        this.DiskNum = DiskNum;
+    }
+
+    /**
+     * Get 本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalDiskNum 本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLocalDiskNum() {
+        return this.LocalDiskNum;
+    }
+
+    /**
+     * Set 本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalDiskNum 本地盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalDiskNum(Long LocalDiskNum) {
+        this.LocalDiskNum = LocalDiskNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -345,6 +401,8 @@ public class PriceResource extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskCnt", this.DiskCnt);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
+        this.setParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
 
     }
 }

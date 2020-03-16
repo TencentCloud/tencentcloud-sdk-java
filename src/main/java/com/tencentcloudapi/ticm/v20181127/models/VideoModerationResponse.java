@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.ticm.v20181127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesResponse extends AbstractModel{
+public class VideoModerationResponse extends AbstractModel{
 
     /**
-    * 订单号列表。每个实例对应一个订单号。
+    * 视频审核任务ID
     */
-    @SerializedName("DealNames")
+    @SerializedName("VodTaskId")
     @Expose
-    private String [] DealNames;
+    private String VodTaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单号列表。每个实例对应一个订单号。 
-     * @return DealNames 订单号列表。每个实例对应一个订单号。
+     * Get 视频审核任务ID 
+     * @return VodTaskId 视频审核任务ID
      */
-    public String [] getDealNames() {
-        return this.DealNames;
+    public String getVodTaskId() {
+        return this.VodTaskId;
     }
 
     /**
-     * Set 订单号列表。每个实例对应一个订单号。
-     * @param DealNames 订单号列表。每个实例对应一个订单号。
+     * Set 视频审核任务ID
+     * @param VodTaskId 视频审核任务ID
      */
-    public void setDealNames(String [] DealNames) {
-        this.DealNames = DealNames;
+    public void setVodTaskId(String VodTaskId) {
+        this.VodTaskId = VodTaskId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class CreateDBInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+        this.setParamSimple(map, prefix + "VodTaskId", this.VodTaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

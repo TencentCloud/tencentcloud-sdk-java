@@ -31,7 +31,6 @@ public class WatermarkInput extends AbstractModel{
 
     /**
     * 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextContent")
     @Expose
@@ -39,7 +38,6 @@ public class WatermarkInput extends AbstractModel{
 
     /**
     * SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SvgContent")
     @Expose
@@ -82,10 +80,8 @@ public class WatermarkInput extends AbstractModel{
     }
 
     /**
-     * Get 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。 
      * @return TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTextContent() {
         return this.TextContent;
@@ -93,19 +89,15 @@ public class WatermarkInput extends AbstractModel{
 
     /**
      * Set 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
     }
 
     /**
-     * Get SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。 
      * @return SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSvgContent() {
         return this.SvgContent;
@@ -113,9 +105,7 @@ public class WatermarkInput extends AbstractModel{
 
     /**
      * Set SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;

@@ -51,7 +51,7 @@ public class CheckDomainResponse extends AbstractModel{
     private Boolean Premium;
 
     /**
-    * 价格
+    * 域名价格
     */
     @SerializedName("Price")
     @Expose
@@ -63,6 +63,52 @@ public class CheckDomainResponse extends AbstractModel{
     @SerializedName("BlackWord")
     @Expose
     private Boolean BlackWord;
+
+    /**
+    * 溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Describe")
+    @Expose
+    private String Describe;
+
+    /**
+    * 溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FeeRenew")
+    @Expose
+    private Long FeeRenew;
+
+    /**
+    * 域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RealPrice")
+    @Expose
+    private Long RealPrice;
+
+    /**
+    * 溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FeeTransfer")
+    @Expose
+    private Long FeeTransfer;
+
+    /**
+    * 溢价词的赎回价格
+    */
+    @SerializedName("FeeRestore")
+    @Expose
+    private Long FeeRestore;
+
+    /**
+    * 检测年限
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -136,16 +182,16 @@ public class CheckDomainResponse extends AbstractModel{
     }
 
     /**
-     * Get 价格 
-     * @return Price 价格
+     * Get 域名价格 
+     * @return Price 域名价格
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 价格
-     * @param Price 价格
+     * Set 域名价格
+     * @param Price 域名价格
      */
     public void setPrice(Long Price) {
         this.Price = Price;
@@ -165,6 +211,118 @@ public class CheckDomainResponse extends AbstractModel{
      */
     public void setBlackWord(Boolean BlackWord) {
         this.BlackWord = BlackWord;
+    }
+
+    /**
+     * Get 溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Describe 溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescribe() {
+        return this.Describe;
+    }
+
+    /**
+     * Set 溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Describe 溢价词描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescribe(String Describe) {
+        this.Describe = Describe;
+    }
+
+    /**
+     * Get 溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FeeRenew 溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFeeRenew() {
+        return this.FeeRenew;
+    }
+
+    /**
+     * Set 溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FeeRenew 溢价词的续费价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeeRenew(Long FeeRenew) {
+        this.FeeRenew = FeeRenew;
+    }
+
+    /**
+     * Get 域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealPrice 域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRealPrice() {
+        return this.RealPrice;
+    }
+
+    /**
+     * Set 域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealPrice 域名真实价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealPrice(Long RealPrice) {
+        this.RealPrice = RealPrice;
+    }
+
+    /**
+     * Get 溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FeeTransfer 溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFeeTransfer() {
+        return this.FeeTransfer;
+    }
+
+    /**
+     * Set 溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FeeTransfer 溢价词的转入价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeeTransfer(Long FeeTransfer) {
+        this.FeeTransfer = FeeTransfer;
+    }
+
+    /**
+     * Get 溢价词的赎回价格 
+     * @return FeeRestore 溢价词的赎回价格
+     */
+    public Long getFeeRestore() {
+        return this.FeeRestore;
+    }
+
+    /**
+     * Set 溢价词的赎回价格
+     * @param FeeRestore 溢价词的赎回价格
+     */
+    public void setFeeRestore(Long FeeRestore) {
+        this.FeeRestore = FeeRestore;
+    }
+
+    /**
+     * Get 检测年限 
+     * @return Period 检测年限
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 检测年限
+     * @param Period 检测年限
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
     }
 
     /**
@@ -193,6 +351,12 @@ public class CheckDomainResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Premium", this.Premium);
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "BlackWord", this.BlackWord);
+        this.setParamSimple(map, prefix + "Describe", this.Describe);
+        this.setParamSimple(map, prefix + "FeeRenew", this.FeeRenew);
+        this.setParamSimple(map, prefix + "RealPrice", this.RealPrice);
+        this.setParamSimple(map, prefix + "FeeTransfer", this.FeeTransfer);
+        this.setParamSimple(map, prefix + "FeeRestore", this.FeeRestore);
+        this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

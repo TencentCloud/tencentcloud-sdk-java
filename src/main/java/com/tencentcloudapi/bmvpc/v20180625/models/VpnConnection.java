@@ -135,6 +135,28 @@ public class VpnConnection extends AbstractModel{
     private String VpcName;
 
     /**
+    * VPN网关名称
+    */
+    @SerializedName("VpnGatewayName")
+    @Expose
+    private String VpnGatewayName;
+
+    /**
+    * 对端网关名称
+    */
+    @SerializedName("CustomerGatewayName")
+    @Expose
+    private String CustomerGatewayName;
+
+    /**
+    * IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DestinationCidr")
+    @Expose
+    private String [] DestinationCidr;
+
+    /**
      * Get 通道实例ID。 
      * @return VpnConnectionId 通道实例ID。
      */
@@ -391,6 +413,58 @@ public class VpnConnection extends AbstractModel{
     }
 
     /**
+     * Get VPN网关名称 
+     * @return VpnGatewayName VPN网关名称
+     */
+    public String getVpnGatewayName() {
+        return this.VpnGatewayName;
+    }
+
+    /**
+     * Set VPN网关名称
+     * @param VpnGatewayName VPN网关名称
+     */
+    public void setVpnGatewayName(String VpnGatewayName) {
+        this.VpnGatewayName = VpnGatewayName;
+    }
+
+    /**
+     * Get 对端网关名称 
+     * @return CustomerGatewayName 对端网关名称
+     */
+    public String getCustomerGatewayName() {
+        return this.CustomerGatewayName;
+    }
+
+    /**
+     * Set 对端网关名称
+     * @param CustomerGatewayName 对端网关名称
+     */
+    public void setCustomerGatewayName(String CustomerGatewayName) {
+        this.CustomerGatewayName = CustomerGatewayName;
+    }
+
+    /**
+     * Get IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DestinationCidr IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDestinationCidr() {
+        return this.DestinationCidr;
+    }
+
+    /**
+     * Set IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DestinationCidr IPSEC VPN通道路由策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDestinationCidr(String [] DestinationCidr) {
+        this.DestinationCidr = DestinationCidr;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +484,9 @@ public class VpnConnection extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
+        this.setParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
+        this.setParamArraySimple(map, prefix + "DestinationCidr.", this.DestinationCidr);
 
     }
 }

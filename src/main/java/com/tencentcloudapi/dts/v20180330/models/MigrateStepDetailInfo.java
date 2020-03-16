@@ -51,6 +51,14 @@ public class MigrateStepDetailInfo extends AbstractModel{
     private Long Status;
 
     /**
+    * 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
      * Get 步骤序列 
      * @return StepNo 步骤序列
      */
@@ -115,6 +123,26 @@ public class MigrateStepDetailInfo extends AbstractModel{
     }
 
     /**
+     * Get 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 当前步骤开始的时间，格式为"yyyy-mm-dd hh:mm:ss"，该字段不存在或者为空是无意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +150,7 @@ public class MigrateStepDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StepName", this.StepName);
         this.setParamSimple(map, prefix + "StepId", this.StepId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
 
     }
 }

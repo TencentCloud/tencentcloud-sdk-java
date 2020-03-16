@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OperationCountLimit extends AbstractModel{
 
     /**
-    * 实例操作。
+    * 实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式
     */
     @SerializedName("Operation")
     @Expose
@@ -51,16 +51,16 @@ public class OperationCountLimit extends AbstractModel{
     private Long LimitCount;
 
     /**
-     * Get 实例操作。 
-     * @return Operation 实例操作。
+     * Get 实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式 
+     * @return Operation 实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 实例操作。
-     * @param Operation 实例操作。
+     * Set 实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式
+     * @param Operation 实例操作。取值范围：<br><li>`INSTANCE_DEGRADE`：降配操作<br><li>`INTERNET_CHARGE_TYPE_CHANGE`：修改网络带宽计费模式
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

@@ -56,24 +56,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
-     * @param req CreateDBInstancesRequest
-     * @return CreateDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDBInstancesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateDBInstances"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（DescribeAccounts）用于获取实例用户列表。
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -139,24 +121,6 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstanceAttribute"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
-     * @param req DescribeDBInstancesRequest
-     * @return DescribeDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -481,24 +445,6 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetAutoRenewFlagResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SetAutoRenewFlag"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本接口（UpgradeDBInstance）用于升级实例。
-     * @param req UpgradeDBInstanceRequest
-     * @return UpgradeDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeDBInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

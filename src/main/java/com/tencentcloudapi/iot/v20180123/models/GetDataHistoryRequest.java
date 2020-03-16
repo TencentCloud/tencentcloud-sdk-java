@@ -55,7 +55,7 @@ public class GetDataHistoryRequest extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Long [] Size;
+    private Long Size;
 
     /**
     * 时间排序（desc/asc）
@@ -139,7 +139,7 @@ public class GetDataHistoryRequest extends AbstractModel{
      * Get 查询数据量 
      * @return Size 查询数据量
      */
-    public Long [] getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
@@ -147,7 +147,7 @@ public class GetDataHistoryRequest extends AbstractModel{
      * Set 查询数据量
      * @param Size 查询数据量
      */
-    public void setSize(Long [] Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 
@@ -191,7 +191,7 @@ public class GetDataHistoryRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamArraySimple(map, prefix + "Size.", this.Size);
+        this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "ScrollId", this.ScrollId);
 

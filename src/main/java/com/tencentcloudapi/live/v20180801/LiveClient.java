@@ -626,6 +626,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询并发录制路数，对慢直播和普通直播适用。
+     * @param req DescribeConcurrentRecordStreamNumRequest
+     * @return DescribeConcurrentRecordStreamNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(DescribeConcurrentRecordStreamNumRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConcurrentRecordStreamNumResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConcurrentRecordStreamNumResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeConcurrentRecordStreamNum"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询按省份和运营商分组的下行播放数据。
      * @param req DescribeGroupProIspPlayInfoListRequest
      * @return DescribeGroupProIspPlayInfoListResponse

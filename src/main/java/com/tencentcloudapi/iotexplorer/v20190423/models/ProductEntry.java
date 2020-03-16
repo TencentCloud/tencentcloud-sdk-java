@@ -121,6 +121,14 @@ public class ProductEntry extends AbstractModel{
     private Long ModuleId;
 
     /**
+    * 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableProductScript")
+    @Expose
+    private String EnableProductScript;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -345,6 +353,26 @@ public class ProductEntry extends AbstractModel{
     }
 
     /**
+     * Get 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnableProductScript() {
+        return this.EnableProductScript;
+    }
+
+    /**
+     * Set 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableProductScript(String EnableProductScript) {
+        this.EnableProductScript = EnableProductScript;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +390,7 @@ public class ProductEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductType", this.ProductType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
+        this.setParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
 
     }
 }

@@ -34,7 +34,7 @@ public class DescribeVpcResourceRequest extends AbstractModel{
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
     */
     @SerializedName("Filters")
     @Expose
@@ -53,6 +53,20 @@ state - String - （过滤条件）VPC状态。
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 排序字段
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方向, “asc”、“desc”
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
 
     /**
      * Get 私有网络实例ID 
@@ -75,12 +89,12 @@ state - String - （过滤条件）VPC状态。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。 
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中 
      * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -91,12 +105,12 @@ state - String - （过滤条件）VPC状态。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
      * @param Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -135,6 +149,38 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
+     * Get 排序字段 
+     * @return OrderField 排序字段
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段
+     * @param OrderField 排序字段
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方向, “asc”、“desc” 
+     * @return OrderDirection 排序方向, “asc”、“desc”
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方向, “asc”、“desc”
+     * @param OrderDirection 排序方向, “asc”、“desc”
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +188,8 @@ state - String - （过滤条件）VPC状态。
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

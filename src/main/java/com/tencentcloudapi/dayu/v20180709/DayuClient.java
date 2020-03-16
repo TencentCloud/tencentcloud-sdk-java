@@ -272,6 +272,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *高防IP专业版一键切回源站
+     * @param req CreateNetReturnRequest
+     * @return CreateNetReturnResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetReturnResponse CreateNetReturn(CreateNetReturnRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetReturnResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetReturnResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNetReturn"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *IP解封操作
      * @param req CreateUnblockIpRequest
      * @return CreateUnblockIpResponse
@@ -1687,6 +1705,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyL7RulesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyL7Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在客户收攻击或者被封堵时，切回到源站，并设置回切的时长
+     * @param req ModifyNetReturnSwitchRequest
+     * @return ModifyNetReturnSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetReturnSwitchResponse ModifyNetReturnSwitch(ModifyNetReturnSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetReturnSwitchResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetReturnSwitchResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetReturnSwitch"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
