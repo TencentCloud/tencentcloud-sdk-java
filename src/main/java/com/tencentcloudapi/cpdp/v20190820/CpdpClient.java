@@ -262,6 +262,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *聚鑫-查询子账户绑定银行卡
+     * @param req QueryAcctBindingRequest
+     * @return QueryAcctBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAcctBindingResponse QueryAcctBinding(QueryAcctBindingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryAcctBindingResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryAcctBindingResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctBinding"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *子商户余额查询
      * @param req QueryBalanceRequest
      * @return QueryBalanceResponse

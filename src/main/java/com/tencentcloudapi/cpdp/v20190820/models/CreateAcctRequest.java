@@ -106,6 +106,13 @@ public class CreateAcctRequest extends AbstractModel{
     private String ShortName;
 
     /**
+    * 平台参数，沙箱环境传sandbox，生产环境传release，默认release
+    */
+    @SerializedName("PlatformId")
+    @Expose
+    private String PlatformId;
+
+    /**
      * Get 聚鑫平台分配的支付MidasAppId 
      * @return MidasAppId 聚鑫平台分配的支付MidasAppId
      */
@@ -306,6 +313,22 @@ public class CreateAcctRequest extends AbstractModel{
     }
 
     /**
+     * Get 平台参数，沙箱环境传sandbox，生产环境传release，默认release 
+     * @return PlatformId 平台参数，沙箱环境传sandbox，生产环境传release，默认release
+     */
+    public String getPlatformId() {
+        return this.PlatformId;
+    }
+
+    /**
+     * Set 平台参数，沙箱环境传sandbox，生产环境传release，默认release
+     * @param PlatformId 平台参数，沙箱环境传sandbox，生产环境传release，默认release
+     */
+    public void setPlatformId(String PlatformId) {
+        this.PlatformId = PlatformId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -320,6 +343,7 @@ public class CreateAcctRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
         this.setParamSimple(map, prefix + "SubMchType", this.SubMchType);
         this.setParamSimple(map, prefix + "ShortName", this.ShortName);
+        this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
 
     }
 }

@@ -79,6 +79,20 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] SearchKeys;
 
     /**
+    * 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+    */
+    @SerializedName("UniqSubnetIds")
+    @Expose
+    private String [] UniqSubnetIds;
+
+    /**
+    * 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+    */
+    @SerializedName("UniqVpcIds")
+    @Expose
+    private String [] UniqVpcIds;
+
+    /**
     * 实例服务IP组成的数组，数组下标从0开始
     */
     @SerializedName("Vips")
@@ -214,6 +228,38 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2 
+     * @return UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     */
+    public String [] getUniqSubnetIds() {
+        return this.UniqSubnetIds;
+    }
+
+    /**
+     * Set 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * @param UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     */
+    public void setUniqSubnetIds(String [] UniqSubnetIds) {
+        this.UniqSubnetIds = UniqSubnetIds;
+    }
+
+    /**
+     * Get 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk 
+     * @return UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     */
+    public String [] getUniqVpcIds() {
+        return this.UniqVpcIds;
+    }
+
+    /**
+     * Set 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * @param UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     */
+    public void setUniqVpcIds(String [] UniqVpcIds) {
+        this.UniqVpcIds = UniqVpcIds;
+    }
+
+    /**
      * Get 实例服务IP组成的数组，数组下标从0开始 
      * @return Vips 实例服务IP组成的数组，数组下标从0开始
      */
@@ -241,6 +287,8 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
+        this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
+        this.setParamArraySimple(map, prefix + "UniqVpcIds.", this.UniqVpcIds);
         this.setParamArraySimple(map, prefix + "Vips.", this.Vips);
 
     }

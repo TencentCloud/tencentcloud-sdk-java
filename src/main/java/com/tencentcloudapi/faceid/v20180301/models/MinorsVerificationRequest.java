@@ -32,7 +32,9 @@ public class MinorsVerificationRequest extends AbstractModel{
     private String Type;
 
     /**
-    * 手机号。11位数字。
+    * 手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
     */
     @SerializedName("Mobile")
     @Expose
@@ -77,16 +79,24 @@ public class MinorsVerificationRequest extends AbstractModel{
     }
 
     /**
-     * Get 手机号。11位数字。 
-     * @return Mobile 手机号。11位数字。
+     * Get 手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。 
+     * @return Mobile 手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 手机号。11位数字。
-     * @param Mobile 手机号。11位数字。
+     * Set 手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
+     * @param Mobile 手机号，11位数字，
+特别提示：
+手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

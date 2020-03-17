@@ -114,6 +114,13 @@ public class CreateSessionRequest extends AbstractModel{
     private String UserIp;
 
     /**
+    * 优化项，便于客户灰度开启新的优化项，默认为0
+    */
+    @SerializedName("Optimization")
+    @Expose
+    private Long Optimization;
+
+    /**
      * Get 客户端session信息，从JSSDK请求中获得 
      * @return ClientSession 客户端session信息，从JSSDK请求中获得
      */
@@ -322,6 +329,22 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
+     * Get 优化项，便于客户灰度开启新的优化项，默认为0 
+     * @return Optimization 优化项，便于客户灰度开启新的优化项，默认为0
+     */
+    public Long getOptimization() {
+        return this.Optimization;
+    }
+
+    /**
+     * Set 优化项，便于客户灰度开启新的优化项，默认为0
+     * @param Optimization 优化项，便于客户灰度开启新的优化项，默认为0
+     */
+    public void setOptimization(Long Optimization) {
+        this.Optimization = Optimization;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class CreateSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MinBitrate", this.MinBitrate);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
+        this.setParamSimple(map, prefix + "Optimization", this.Optimization);
 
     }
 }
