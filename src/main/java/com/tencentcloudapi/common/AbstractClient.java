@@ -214,6 +214,9 @@ public abstract class AbstractClient {
     if (this.profile.isUnsignedPayload()) {
       hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
     }
+    if (null != this.profile.getLanguage()) {
+      hb.add("X-TC-Language", this.profile.getLanguage().getValue());
+    }
 
     Headers headers = hb.build();
     Response resp = conn.postRequest(url, requestPayload, headers);
@@ -469,6 +472,9 @@ public abstract class AbstractClient {
     if (this.profile.isUnsignedPayload()) {
       hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
     }
+    if (null != this.profile.getLanguage()) {
+      hb.add("X-TC-Language", this.profile.getLanguage().getValue());
+    }
 
     Headers headers = hb.build();
     if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
@@ -550,6 +556,10 @@ public abstract class AbstractClient {
 
     if (this.credential.getToken() != null && (!this.credential.getToken().isEmpty())) {
       param.put("Token", this.credential.getToken());
+    }
+
+    if (null != this.profile.getLanguage()) {
+      param.put("Language", this.profile.getLanguage().getValue());
     }
 
     String endpoint = this.endpoint;
