@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAgentGroupRequest extends AbstractModel{
 
     /**
-    * 拨测分组id
+    * 拨测分组ID
     */
     @SerializedName("GroupId")
     @Expose
@@ -37,7 +37,7 @@ public class ModifyAgentGroupRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * 是否为默认分组。取值可为0，1
+    * 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
     */
     @SerializedName("IsDefault")
     @Expose
@@ -51,16 +51,16 @@ public class ModifyAgentGroupRequest extends AbstractModel{
     private CatAgent [] Agents;
 
     /**
-     * Get 拨测分组id 
-     * @return GroupId 拨测分组id
+     * Get 拨测分组ID 
+     * @return GroupId 拨测分组ID
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 拨测分组id
-     * @param GroupId 拨测分组id
+     * Set 拨测分组ID
+     * @param GroupId 拨测分组ID
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
@@ -83,16 +83,16 @@ public class ModifyAgentGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为默认分组。取值可为0，1 
-     * @return IsDefault 是否为默认分组。取值可为0，1
+     * Get 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组 
+     * @return IsDefault 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否为默认分组。取值可为0，1
-     * @param IsDefault 是否为默认分组。取值可为0，1
+     * Set 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
+     * @param IsDefault 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;

@@ -37,7 +37,7 @@ public class ModifyTableGroupNameRequest extends AbstractModel{
     private String TableGroupId;
 
     /**
-    * 新的大区名称，可以使用中英文字符和符号
+    * 新的表格组名称，可以使用中英文字符和符号
     */
     @SerializedName("TableGroupName")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyTableGroupNameRequest extends AbstractModel{
     }
 
     /**
-     * Get 新的大区名称，可以使用中英文字符和符号 
-     * @return TableGroupName 新的大区名称，可以使用中英文字符和符号
+     * Get 新的表格组名称，可以使用中英文字符和符号 
+     * @return TableGroupName 新的表格组名称，可以使用中英文字符和符号
      */
     public String getTableGroupName() {
         return this.TableGroupName;
     }
 
     /**
-     * Set 新的大区名称，可以使用中英文字符和符号
-     * @param TableGroupName 新的大区名称，可以使用中英文字符和符号
+     * Set 新的表格组名称，可以使用中英文字符和符号
+     * @param TableGroupName 新的表格组名称，可以使用中英文字符和符号
      */
     public void setTableGroupName(String TableGroupName) {
         this.TableGroupName = TableGroupName;

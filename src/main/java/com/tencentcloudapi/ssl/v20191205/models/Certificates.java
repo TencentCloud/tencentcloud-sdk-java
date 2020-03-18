@@ -47,7 +47,7 @@ public class Certificates extends AbstractModel{
     private String From;
 
     /**
-    * 证书套餐类型。
+    * 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
@@ -63,7 +63,7 @@ public class Certificates extends AbstractModel{
     private String CertificateType;
 
     /**
-    * 证书办法者名称。
+    * 颁发者。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductZhName")
@@ -79,7 +79,7 @@ public class Certificates extends AbstractModel{
     private String Domain;
 
     /**
-    * 别名。
+    * 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
@@ -119,7 +119,7 @@ public class Certificates extends AbstractModel{
     private String StatusMsg;
 
     /**
-    * 验证类型。
+    * 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifyType")
@@ -143,7 +143,7 @@ public class Certificates extends AbstractModel{
     private String CertEndTime;
 
     /**
-    * 证书过期时间。
+    * 证书有效期，单位（月）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidityPeriod")
@@ -315,9 +315,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Get 证书套餐类型。
+     * Get 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageType 证书套餐类型。
+     * @return PackageType 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
@@ -325,9 +325,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Set 证书套餐类型。
+     * Set 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageType 证书套餐类型。
+     * @param PackageType 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
@@ -355,9 +355,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Get 证书办法者名称。
+     * Get 颁发者。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductZhName 证书办法者名称。
+     * @return ProductZhName 颁发者。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductZhName() {
@@ -365,9 +365,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Set 证书办法者名称。
+     * Set 颁发者。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductZhName 证书办法者名称。
+     * @param ProductZhName 颁发者。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductZhName(String ProductZhName) {
@@ -395,9 +395,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Get 别名。
+     * Get 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alias 别名。
+     * @return Alias 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
@@ -405,9 +405,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Set 别名。
+     * Set 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alias 别名。
+     * @param Alias 备注名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
@@ -495,9 +495,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Get 验证类型。
+     * Get 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VerifyType 验证类型。
+     * @return VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVerifyType() {
@@ -505,9 +505,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Set 验证类型。
+     * Set 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VerifyType 验证类型。
+     * @param VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifyType(String VerifyType) {
@@ -555,9 +555,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Get 证书过期时间。
+     * Get 证书有效期，单位（月）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValidityPeriod 证书过期时间。
+     * @return ValidityPeriod 证书有效期，单位（月）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidityPeriod() {
@@ -565,9 +565,9 @@ public class Certificates extends AbstractModel{
     }
 
     /**
-     * Set 证书过期时间。
+     * Set 证书有效期，单位（月）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValidityPeriod 证书过期时间。
+     * @param ValidityPeriod 证书有效期，单位（月）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidityPeriod(String ValidityPeriod) {

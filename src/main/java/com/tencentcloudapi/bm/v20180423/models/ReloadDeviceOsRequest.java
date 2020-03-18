@@ -156,6 +156,13 @@ public class ReloadDeviceOsRequest extends AbstractModel{
     private Long ReserveSgConfig;
 
     /**
+    * /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
+    */
+    @SerializedName("SysDataSpace")
+    @Expose
+    private Long SysDataSpace;
+
+    /**
      * Get 设备的唯一ID 
      * @return InstanceId 设备的唯一ID
      */
@@ -460,6 +467,22 @@ public class ReloadDeviceOsRequest extends AbstractModel{
     }
 
     /**
+     * Get /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区 
+     * @return SysDataSpace /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
+     */
+    public Long getSysDataSpace() {
+        return this.SysDataSpace;
+    }
+
+    /**
+     * Set /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
+     * @param SysDataSpace /data分区大小，可不填。除root、swap、usr/local的剩余空间会自动分配到data分区
+     */
+    public void setSysDataSpace(Long SysDataSpace) {
+        this.SysDataSpace = SysDataSpace;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +505,7 @@ public class ReloadDeviceOsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedEMRAgent", this.NeedEMRAgent);
         this.setParamSimple(map, prefix + "NeedEMRSoftware", this.NeedEMRSoftware);
         this.setParamSimple(map, prefix + "ReserveSgConfig", this.ReserveSgConfig);
+        this.setParamSimple(map, prefix + "SysDataSpace", this.SysDataSpace);
 
     }
 }

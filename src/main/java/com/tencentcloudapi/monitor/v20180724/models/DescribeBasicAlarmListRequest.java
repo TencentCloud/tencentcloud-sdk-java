@@ -44,14 +44,14 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 每页返回的数量，默认20
+    * 分页参数，每页返回的数量，取值1~100，默认20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 页偏移量，默认0
+    * 分页参数，页偏移量，从0开始计数，默认0
     */
     @SerializedName("Offset")
     @Expose
@@ -148,32 +148,32 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页返回的数量，默认20 
-     * @return Limit 每页返回的数量，默认20
+     * Get 分页参数，每页返回的数量，取值1~100，默认20 
+     * @return Limit 分页参数，每页返回的数量，取值1~100，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页返回的数量，默认20
-     * @param Limit 每页返回的数量，默认20
+     * Set 分页参数，每页返回的数量，取值1~100，默认20
+     * @param Limit 分页参数，每页返回的数量，取值1~100，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 页偏移量，默认0 
-     * @return Offset 页偏移量，默认0
+     * Get 分页参数，页偏移量，从0开始计数，默认0 
+     * @return Offset 分页参数，页偏移量，从0开始计数，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页偏移量，默认0
-     * @param Offset 页偏移量，默认0
+     * Set 分页参数，页偏移量，从0开始计数，默认0
+     * @param Offset 分页参数，页偏移量，从0开始计数，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -95,7 +95,7 @@ public class SubmittedData extends AbstractModel{
     private String OrganizationCountry;
 
     /**
-    * 省。
+    * 市。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationCity")
@@ -103,7 +103,7 @@ public class SubmittedData extends AbstractModel{
     private String OrganizationCity;
 
     /**
-    * 市。
+    * 省。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationRegion")
@@ -403,9 +403,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Get 省。
+     * Get 市。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrganizationCity 省。
+     * @return OrganizationCity 市。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationCity() {
@@ -413,9 +413,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Set 省。
+     * Set 市。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrganizationCity 省。
+     * @param OrganizationCity 市。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationCity(String OrganizationCity) {
@@ -423,9 +423,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Get 市。
+     * Get 省。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrganizationRegion 市。
+     * @return OrganizationRegion 省。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationRegion() {
@@ -433,9 +433,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Set 市。
+     * Set 省。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrganizationRegion 市。
+     * @param OrganizationRegion 省。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationRegion(String OrganizationRegion) {

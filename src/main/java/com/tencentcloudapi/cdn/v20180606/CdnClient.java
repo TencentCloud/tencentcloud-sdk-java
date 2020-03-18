@@ -191,6 +191,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *校验证书并提取SSL证书中包含的域名，返回CDN已接入的域名列表，及已配置证书的域名列表
+     * @param req DescribeCertDomainsRequest
+     * @return DescribeCertDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCertDomainsResponse DescribeCertDomains(DescribeCertDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCertDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCertDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCertDomains"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
      * @param req DescribeDomainsRequest
      * @return DescribeDomainsResponse

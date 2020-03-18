@@ -30,14 +30,14 @@ public class CreateAgentGroupRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * 是否为默认分组，取值可为 0 或 1
+    * 是否为默认分组，取值可为 0 或 1。取 1 时表示设置为默认分组
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-    * Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgentList 的返回结果。
+    * Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
     */
     @SerializedName("Agents")
     @Expose
@@ -60,32 +60,32 @@ public class CreateAgentGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为默认分组，取值可为 0 或 1 
-     * @return IsDefault 是否为默认分组，取值可为 0 或 1
+     * Get 是否为默认分组，取值可为 0 或 1。取 1 时表示设置为默认分组 
+     * @return IsDefault 是否为默认分组，取值可为 0 或 1。取 1 时表示设置为默认分组
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否为默认分组，取值可为 0 或 1
-     * @param IsDefault 是否为默认分组，取值可为 0 或 1
+     * Set 是否为默认分组，取值可为 0 或 1。取 1 时表示设置为默认分组
+     * @param IsDefault 是否为默认分组，取值可为 0 或 1。取 1 时表示设置为默认分组
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgentList 的返回结果。 
-     * @return Agents Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgentList 的返回结果。
+     * Get Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。 
+     * @return Agents Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
      */
     public CatAgent [] getAgents() {
         return this.Agents;
     }
 
     /**
-     * Set Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgentList 的返回结果。
-     * @param Agents Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgentList 的返回结果。
+     * Set Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
+     * @param Agents Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
      */
     public void setAgents(CatAgent [] Agents) {
         this.Agents = Agents;
