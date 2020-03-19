@@ -128,6 +128,13 @@ public class MigrateJobInfo extends AbstractModel{
     private MigrateDetailInfo Detail;
 
     /**
+    * 任务错误信息提示，当任务发生错误时，不为null或者空值
+    */
+    @SerializedName("ErrorInfo")
+    @Expose
+    private ErrorInfo [] ErrorInfo;
+
+    /**
      * Get 数据迁移任务ID 
      * @return JobId 数据迁移任务ID
      */
@@ -368,6 +375,22 @@ public class MigrateJobInfo extends AbstractModel{
     }
 
     /**
+     * Get 任务错误信息提示，当任务发生错误时，不为null或者空值 
+     * @return ErrorInfo 任务错误信息提示，当任务发生错误时，不为null或者空值
+     */
+    public ErrorInfo [] getErrorInfo() {
+        return this.ErrorInfo;
+    }
+
+    /**
+     * Set 任务错误信息提示，当任务发生错误时，不为null或者空值
+     * @param ErrorInfo 任务错误信息提示，当任务发生错误时，不为null或者空值
+     */
+    public void setErrorInfo(ErrorInfo [] ErrorInfo) {
+        this.ErrorInfo = ErrorInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class MigrateJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Detail.", this.Detail);
+        this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
 
     }
 }

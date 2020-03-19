@@ -72,7 +72,7 @@ public class ListKeyDetailRequest extends AbstractModel{
     private String Origin;
 
     /**
-    * 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
+    * 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
     */
     @SerializedName("KeyUsage")
     @Expose
@@ -191,16 +191,16 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2 
-     * @return KeyUsage 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
+     * Get 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型 
+     * @return KeyUsage 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
      */
     public String getKeyUsage() {
         return this.KeyUsage;
     }
 
     /**
-     * Set 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
-     * @param KeyUsage 根据CMK的KeyUsage筛选，为空表示筛选全部，可使用的参数为：ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2
+     * Set 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
+     * @param KeyUsage 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
      */
     public void setKeyUsage(String KeyUsage) {
         this.KeyUsage = KeyUsage;

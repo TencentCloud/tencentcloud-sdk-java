@@ -30,9 +30,9 @@ public class DescribeSignListStatus extends AbstractModel{
     private Long SignId;
 
     /**
-    * 是否国际短信。其中：
+    * 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
     */
     @SerializedName("International")
     @Expose
@@ -85,24 +85,24 @@ public class DescribeSignListStatus extends AbstractModel{
     }
 
     /**
-     * Get 是否国际短信。其中：
+     * Get 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。 
-     * @return International 是否国际短信。其中：
+1：表示国际/港澳台短信。 
+     * @return International 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
      */
     public Long getInternational() {
         return this.International;
     }
 
     /**
-     * Set 是否国际短信。其中：
+     * Set 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
-     * @param International 是否国际短信。其中：
+1：表示国际/港澳台短信。
+     * @param International 是否国际/港澳台短信：
 0：表示国内短信。
-1：表示海外短信。
+1：表示国际/港澳台短信。
      */
     public void setInternational(Long International) {
         this.International = International;

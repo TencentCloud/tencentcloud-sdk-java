@@ -38,7 +38,7 @@ public class FtClient extends AbstractClient{
     }
 
     /**
-     *用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸变老或变年轻的图片，支持实现人脸不同年龄的变化。（目前暂只支持变10岁，后续放开再通知）
+     *用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸变老或变年轻的图片，支持实现人脸不同年龄的变化。（目前暂只支持变10岁，后续放开再通知） 
      * @param req ChangeAgePicRequest
      * @return ChangeAgePicResponse
      * @throws TencentCloudSDKException
@@ -56,7 +56,7 @@ public class FtClient extends AbstractClient{
     }
 
     /**
-     *用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。
+     *用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。 
      * @param req SwapGenderPicRequest
      * @return SwapGenderPicResponse
      * @throws TencentCloudSDKException

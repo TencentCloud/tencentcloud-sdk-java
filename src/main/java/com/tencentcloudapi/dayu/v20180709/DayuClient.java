@@ -200,6 +200,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *此接口是7层CC的访问频控自定义规则（IP+Host维度，不支持具体的URI），此接口已弃用，请调用新接口CreateCCFrequencyRules，新接口同时支持IP+Host维度以及具体的URI；
+     * @param req CreateL7CCRuleRequest
+     * @return CreateL7CCRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL7CCRuleResponse CreateL7CCRule(CreateL7CCRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateL7CCRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateL7CCRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateL7CCRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *上传七层健康检查配置
      * @param req CreateL7HealthConfigRequest
      * @return CreateL7HealthConfigResponse

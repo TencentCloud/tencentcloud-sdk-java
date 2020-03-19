@@ -56,42 +56,6 @@ public class GseClient extends AbstractClient{
     }
 
     /**
-     *用于删除扩缩容配置
-     * @param req DeleteScalingPolicyRequest
-     * @return DeleteScalingPolicyResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteScalingPolicyResponse DeleteScalingPolicy(DeleteScalingPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteScalingPolicyResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteScalingPolicyResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteScalingPolicy"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *用于查询服务部署容量配置
-     * @param req DescribeFleetCapacityRequest
-     * @return DescribeFleetCapacityResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFleetCapacityResponse DescribeFleetCapacity(DescribeFleetCapacityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFleetCapacityResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFleetCapacityResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFleetCapacity"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表
      * @param req DescribeGameServerSessionDetailsRequest
      * @return DescribeGameServerSessionDetailsResponse
@@ -146,6 +110,24 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *用于查询服务器实例列表
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribePlayerSessions）用于获取玩家会话列表
      * @param req DescribePlayerSessionsRequest
      * @return DescribePlayerSessionsResponse
@@ -157,24 +139,6 @@ public class GseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePlayerSessionsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePlayerSessions"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *用于查询服务部署的动态扩缩容配置
-     * @param req DescribeScalingPoliciesRequest
-     * @return DescribeScalingPoliciesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScalingPoliciesResponse DescribeScalingPolicies(DescribeScalingPoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeScalingPoliciesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScalingPoliciesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeScalingPolicies"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -200,6 +164,24 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *获取实例登录所需要的凭据
+     * @param req GetInstanceAccessRequest
+     * @return GetInstanceAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInstanceAccessResponse GetInstanceAccess(GetInstanceAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetInstanceAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetInstanceAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetInstanceAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（JoinGameServerSession）用于加入游戏服务器会话
      * @param req JoinGameServerSessionRequest
      * @return JoinGameServerSessionResponse
@@ -211,24 +193,6 @@ public class GseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<JoinGameServerSessionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "JoinGameServerSession"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *用于设置动态扩缩容配置
-     * @param req PutScalingPolicyRequest
-     * @return PutScalingPolicyResponse
-     * @throws TencentCloudSDKException
-     */
-    public PutScalingPolicyResponse PutScalingPolicy(PutScalingPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PutScalingPolicyResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<PutScalingPolicyResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "PutScalingPolicy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -265,24 +229,6 @@ public class GseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopGameServerSessionPlacementResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "StopGameServerSessionPlacement"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *用于更新服务部署容量配置
-     * @param req UpdateFleetCapacityRequest
-     * @return UpdateFleetCapacityResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateFleetCapacityResponse UpdateFleetCapacity(UpdateFleetCapacityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateFleetCapacityResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateFleetCapacityResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UpdateFleetCapacity"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

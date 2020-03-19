@@ -149,12 +149,20 @@ public class VpnConnection extends AbstractModel{
     private String CustomerGatewayName;
 
     /**
-    * IPSEC VPN通道路由策略
+    * IPSEC VPN通道路由策略目的端地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationCidr")
     @Expose
     private String [] DestinationCidr;
+
+    /**
+    * IPSEC VPN通道路由策略源端地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceCidr")
+    @Expose
+    private String [] SourceCidr;
 
     /**
      * Get 通道实例ID。 
@@ -445,9 +453,9 @@ public class VpnConnection extends AbstractModel{
     }
 
     /**
-     * Get IPSEC VPN通道路由策略
+     * Get IPSEC VPN通道路由策略目的端地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DestinationCidr IPSEC VPN通道路由策略
+     * @return DestinationCidr IPSEC VPN通道路由策略目的端地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDestinationCidr() {
@@ -455,13 +463,33 @@ public class VpnConnection extends AbstractModel{
     }
 
     /**
-     * Set IPSEC VPN通道路由策略
+     * Set IPSEC VPN通道路由策略目的端地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DestinationCidr IPSEC VPN通道路由策略
+     * @param DestinationCidr IPSEC VPN通道路由策略目的端地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationCidr(String [] DestinationCidr) {
         this.DestinationCidr = DestinationCidr;
+    }
+
+    /**
+     * Get IPSEC VPN通道路由策略源端地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceCidr IPSEC VPN通道路由策略源端地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSourceCidr() {
+        return this.SourceCidr;
+    }
+
+    /**
+     * Set IPSEC VPN通道路由策略源端地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceCidr IPSEC VPN通道路由策略源端地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceCidr(String [] SourceCidr) {
+        this.SourceCidr = SourceCidr;
     }
 
     /**
@@ -487,6 +515,7 @@ public class VpnConnection extends AbstractModel{
         this.setParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
         this.setParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
         this.setParamArraySimple(map, prefix + "DestinationCidr.", this.DestinationCidr);
+        this.setParamArraySimple(map, prefix + "SourceCidr.", this.SourceCidr);
 
     }
 }

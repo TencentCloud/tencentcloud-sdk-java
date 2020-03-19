@@ -326,6 +326,14 @@ public class InstanceSet extends AbstractModel{
     private String Vip6;
 
     /**
+    * 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemainBandwidthDuration")
+    @Expose
+    private String RemainBandwidthDuration;
+
+    /**
      * Get 实例名称 
      * @return InstanceName 实例名称
      */
@@ -1034,6 +1042,26 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
+     * Get 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemainBandwidthDuration 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemainBandwidthDuration() {
+        return this.RemainBandwidthDuration;
+    }
+
+    /**
+     * Set 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemainBandwidthDuration 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
+        this.RemainBandwidthDuration = RemainBandwidthDuration;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1079,6 +1107,7 @@ public class InstanceSet extends AbstractModel{
         this.setParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
+        this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
 
     }
 }

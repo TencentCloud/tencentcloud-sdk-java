@@ -51,13 +51,6 @@ public class QueryAcctBindingRequest extends AbstractModel{
     private String MidasSignature;
 
     /**
-    * 平台参数，沙箱环境传sandbox，生产环境传release，默认release
-    */
-    @SerializedName("PlatformId")
-    @Expose
-    private String PlatformId;
-
-    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -122,22 +115,6 @@ public class QueryAcctBindingRequest extends AbstractModel{
     }
 
     /**
-     * Get 平台参数，沙箱环境传sandbox，生产环境传release，默认release 
-     * @return PlatformId 平台参数，沙箱环境传sandbox，生产环境传release，默认release
-     */
-    public String getPlatformId() {
-        return this.PlatformId;
-    }
-
-    /**
-     * Set 平台参数，沙箱环境传sandbox，生产环境传release，默认release
-     * @param PlatformId 平台参数，沙箱环境传sandbox，生产环境传release，默认release
-     */
-    public void setPlatformId(String PlatformId) {
-        this.PlatformId = PlatformId;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -145,7 +122,6 @@ public class QueryAcctBindingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
         this.setParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
-        this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
 
     }
 }

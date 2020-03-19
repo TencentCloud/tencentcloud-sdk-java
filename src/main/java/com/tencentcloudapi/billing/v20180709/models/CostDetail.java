@@ -126,7 +126,7 @@ public class CostDetail extends AbstractModel{
     */
     @SerializedName("ComponentSet")
     @Expose
-    private CostComponentSet ComponentSet;
+    private CostComponentSet [] ComponentSet;
 
     /**
     * 产品代码
@@ -367,7 +367,7 @@ public class CostDetail extends AbstractModel{
      * Get 组件明细 
      * @return ComponentSet 组件明细
      */
-    public CostComponentSet getComponentSet() {
+    public CostComponentSet [] getComponentSet() {
         return this.ComponentSet;
     }
 
@@ -375,7 +375,7 @@ public class CostDetail extends AbstractModel{
      * Set 组件明细
      * @param ComponentSet 组件明细
      */
-    public void setComponentSet(CostComponentSet ComponentSet) {
+    public void setComponentSet(CostComponentSet [] ComponentSet) {
         this.ComponentSet = ComponentSet;
     }
 
@@ -413,7 +413,7 @@ public class CostDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "BillId", this.BillId);
         this.setParamSimple(map, prefix + "FeeBeginTime", this.FeeBeginTime);
         this.setParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
-        this.setParamObj(map, prefix + "ComponentSet.", this.ComponentSet);
+        this.setParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
 
     }

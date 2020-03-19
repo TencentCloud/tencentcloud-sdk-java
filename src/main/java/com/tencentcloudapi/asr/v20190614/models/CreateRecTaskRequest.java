@@ -91,6 +91,20 @@ public class CreateRecTaskRequest extends AbstractModel{
     private String HotwordId;
 
     /**
+    * 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+    */
+    @SerializedName("FilterDirty")
+    @Expose
+    private Long FilterDirty;
+
+    /**
+    * 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+    */
+    @SerializedName("FilterModal")
+    @Expose
+    private Long FilterModal;
+
+    /**
      * Get 引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
@@ -255,6 +269,38 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。 
+     * @return FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     */
+    public Long getFilterDirty() {
+        return this.FilterDirty;
+    }
+
+    /**
+     * Set 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     * @param FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     */
+    public void setFilterDirty(Long FilterDirty) {
+        this.FilterDirty = FilterDirty;
+    }
+
+    /**
+     * Get 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。 
+     * @return FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     */
+    public Long getFilterModal() {
+        return this.FilterModal;
+    }
+
+    /**
+     * Set 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     * @param FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     */
+    public void setFilterModal(Long FilterModal) {
+        this.FilterModal = FilterModal;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -267,6 +313,8 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "DataLen", this.DataLen);
         this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
+        this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+        this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
 
     }
 }

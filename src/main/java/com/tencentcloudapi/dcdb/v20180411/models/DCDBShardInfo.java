@@ -187,6 +187,13 @@ public class DCDBShardInfo extends AbstractModel{
     private String [] ShardSlaveZones;
 
     /**
+    * CPU核数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 所属实例Id 
      * @return InstanceId 所属实例Id
      */
@@ -567,6 +574,22 @@ public class DCDBShardInfo extends AbstractModel{
     }
 
     /**
+     * Get CPU核数 
+     * @return Cpu CPU核数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set CPU核数
+     * @param Cpu CPU核数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -593,6 +616,7 @@ public class DCDBShardInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
         this.setParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
         this.setParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

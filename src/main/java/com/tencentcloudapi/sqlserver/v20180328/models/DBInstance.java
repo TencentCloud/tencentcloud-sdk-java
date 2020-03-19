@@ -233,6 +233,20 @@ public class DBInstance extends AbstractModel{
     private Long Pid;
 
     /**
+    * 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -713,6 +727,38 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串 
+     * @return UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     * @param UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串 
+     * @return UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     * @param UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -746,6 +792,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
 
     }
 }

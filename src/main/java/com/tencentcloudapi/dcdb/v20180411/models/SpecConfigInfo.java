@@ -72,6 +72,13 @@ public class SpecConfigInfo extends AbstractModel{
     private Long Qps;
 
     /**
+    * CPU核数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 节点个数，2 表示一主一从，3 表示一主二从 
      * @return NodeCount 节点个数，2 表示一主一从，3 表示一主二从
      */
@@ -184,6 +191,22 @@ public class SpecConfigInfo extends AbstractModel{
     }
 
     /**
+     * Get CPU核数 
+     * @return Cpu CPU核数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set CPU核数
+     * @param Cpu CPU核数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class SpecConfigInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SuitInfo", this.SuitInfo);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "Qps", this.Qps);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

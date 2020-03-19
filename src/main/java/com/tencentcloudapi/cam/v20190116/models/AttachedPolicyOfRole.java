@@ -75,6 +75,14 @@ public class AttachedPolicyOfRole extends AbstractModel{
     private String [] DeactivedDetail;
 
     /**
+    * 策略描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 策略ID 
      * @return PolicyId 策略ID
      */
@@ -199,6 +207,26 @@ public class AttachedPolicyOfRole extends AbstractModel{
     }
 
     /**
+     * Get 策略描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 策略描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 策略描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 策略描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -209,6 +237,7 @@ public class AttachedPolicyOfRole extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
         this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

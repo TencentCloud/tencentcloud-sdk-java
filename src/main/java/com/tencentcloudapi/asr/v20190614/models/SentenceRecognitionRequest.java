@@ -97,6 +97,27 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private String HotwordId;
 
     /**
+    * 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+    */
+    @SerializedName("FilterDirty")
+    @Expose
+    private Long FilterDirty;
+
+    /**
+    * 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+    */
+    @SerializedName("FilterModal")
+    @Expose
+    private Long FilterModal;
+
+    /**
+    * 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
+    */
+    @SerializedName("FilterPunc")
+    @Expose
+    private Long FilterPunc;
+
+    /**
      * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
@@ -273,6 +294,54 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。 
+     * @return FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     */
+    public Long getFilterDirty() {
+        return this.FilterDirty;
+    }
+
+    /**
+     * Set 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     * @param FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+     */
+    public void setFilterDirty(Long FilterDirty) {
+        this.FilterDirty = FilterDirty;
+    }
+
+    /**
+     * Get 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。 
+     * @return FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     */
+    public Long getFilterModal() {
+        return this.FilterModal;
+    }
+
+    /**
+     * Set 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     * @param FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+     */
+    public void setFilterModal(Long FilterModal) {
+        this.FilterModal = FilterModal;
+    }
+
+    /**
+     * Get 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。 
+     * @return FilterPunc 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
+     */
+    public Long getFilterPunc() {
+        return this.FilterPunc;
+    }
+
+    /**
+     * Set 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
+     * @param FilterPunc 是否过滤句末的句号（目前支持中文普通话引擎）。0：不过滤句末的句号；1：过滤句末的句号。
+     */
+    public void setFilterPunc(Long FilterPunc) {
+        this.FilterPunc = FilterPunc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -286,6 +355,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "DataLen", this.DataLen);
         this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
+        this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+        this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
+        this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
 
     }
 }
