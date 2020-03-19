@@ -34,7 +34,7 @@ public class Position extends AbstractModel{
     */
     @SerializedName("Country")
     @Expose
-    private  Country;
+    private Country Country;
 
     /**
     * 实例所在的Area的信息。
@@ -48,14 +48,14 @@ public class Position extends AbstractModel{
     */
     @SerializedName("Province")
     @Expose
-    private  Province;
+    private Province Province;
 
     /**
     * 实例所在的城市的信息。
     */
     @SerializedName("City")
     @Expose
-    private  City;
+    private City City;
 
     /**
     * 实例所在的Region的信息。
@@ -84,7 +84,7 @@ public class Position extends AbstractModel{
      * Get 实例所在的国家的信息。 
      * @return Country 实例所在的国家的信息。
      */
-    public  getCountry() {
+    public Country getCountry() {
         return this.Country;
     }
 
@@ -92,7 +92,7 @@ public class Position extends AbstractModel{
      * Set 实例所在的国家的信息。
      * @param Country 实例所在的国家的信息。
      */
-    public void setCountry( Country) {
+    public void setCountry(Country Country) {
         this.Country = Country;
     }
 
@@ -116,7 +116,7 @@ public class Position extends AbstractModel{
      * Get 实例所在的省份的信息。 
      * @return Province 实例所在的省份的信息。
      */
-    public  getProvince() {
+    public Province getProvince() {
         return this.Province;
     }
 
@@ -124,7 +124,7 @@ public class Position extends AbstractModel{
      * Set 实例所在的省份的信息。
      * @param Province 实例所在的省份的信息。
      */
-    public void setProvince( Province) {
+    public void setProvince(Province Province) {
         this.Province = Province;
     }
 
@@ -132,7 +132,7 @@ public class Position extends AbstractModel{
      * Get 实例所在的城市的信息。 
      * @return City 实例所在的城市的信息。
      */
-    public  getCity() {
+    public City getCity() {
         return this.City;
     }
 
@@ -140,7 +140,7 @@ public class Position extends AbstractModel{
      * Set 实例所在的城市的信息。
      * @param City 实例所在的城市的信息。
      */
-    public void setCity( City) {
+    public void setCity(City City) {
         this.City = City;
     }
 
