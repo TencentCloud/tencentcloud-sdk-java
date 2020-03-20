@@ -263,6 +263,14 @@ public class ContainerGroupDetail extends AbstractModel{
     private String MemRequest;
 
     /**
+    * 子网id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -863,6 +871,26 @@ public class ContainerGroupDetail extends AbstractModel{
     }
 
     /**
+     * Get 子网id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 子网id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 子网id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -896,6 +924,7 @@ public class ContainerGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamSimple(map, prefix + "CpuRequest", this.CpuRequest);
         this.setParamSimple(map, prefix + "MemRequest", this.MemRequest);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

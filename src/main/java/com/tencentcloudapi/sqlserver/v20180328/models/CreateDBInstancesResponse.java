@@ -30,6 +30,13 @@ public class CreateDBInstancesResponse extends AbstractModel{
     private String DealName;
 
     /**
+    * 订单名称数组
+    */
+    @SerializedName("DealNames")
+    @Expose
+    private String [] DealNames;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class CreateDBInstancesResponse extends AbstractModel{
     }
 
     /**
+     * Get 订单名称数组 
+     * @return DealNames 订单名称数组
+     */
+    public String [] getDealNames() {
+        return this.DealNames;
+    }
+
+    /**
+     * Set 订单名称数组
+     * @param DealNames 订单名称数组
+     */
+    public void setDealNames(String [] DealNames) {
+        this.DealNames = DealNames;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class CreateDBInstancesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePullStreamConfigResponse extends AbstractModel{
 
     /**
-    * 配置成功后的id。
+    * 配置成功后的 ID。
     */
     @SerializedName("ConfigId")
     @Expose
@@ -37,16 +37,16 @@ public class CreatePullStreamConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 配置成功后的id。 
-     * @return ConfigId 配置成功后的id。
+     * Get 配置成功后的 ID。 
+     * @return ConfigId 配置成功后的 ID。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置成功后的id。
-     * @param ConfigId 配置成功后的id。
+     * Set 配置成功后的 ID。
+     * @param ConfigId 配置成功后的 ID。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

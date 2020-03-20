@@ -186,7 +186,7 @@ public class BillDetail extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Long RegionId;
+    private String RegionId;
 
     /**
      * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
@@ -562,7 +562,7 @@ public class BillDetail extends AbstractModel{
      * @return RegionId 区域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRegionId() {
+    public String getRegionId() {
         return this.RegionId;
     }
 
@@ -572,7 +572,7 @@ public class BillDetail extends AbstractModel{
      * @param RegionId 区域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRegionId(Long RegionId) {
+    public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 

@@ -30,6 +30,21 @@ public class DescribeEnvsRequest extends AbstractModel{
     private String EnvId;
 
     /**
+    * 指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+    */
+    @SerializedName("IsVisible")
+    @Expose
+    private Boolean IsVisible;
+
+    /**
+    * 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+    */
+    @SerializedName("Channels")
+    @Expose
+    private String [] Channels;
+
+    /**
      * Get 环境ID，如果传了这个参数则只返回该环境的相关信息 
      * @return EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
      */
@@ -46,10 +61,48 @@ public class DescribeEnvsRequest extends AbstractModel{
     }
 
     /**
+     * Get 指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"] 
+     * @return IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     */
+    public Boolean getIsVisible() {
+        return this.IsVisible;
+    }
+
+    /**
+     * Set 指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     * @param IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
+如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+     */
+    public void setIsVisible(Boolean IsVisible) {
+        this.IsVisible = IsVisible;
+    }
+
+    /**
+     * Get 渠道列表，代表可见或不可见渠道由IsVisible参数指定 
+     * @return Channels 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     */
+    public String [] getChannels() {
+        return this.Channels;
+    }
+
+    /**
+     * Set 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     * @param Channels 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     */
+    public void setChannels(String [] Channels) {
+        this.Channels = Channels;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "IsVisible", this.IsVisible);
+        this.setParamArraySimple(map, prefix + "Channels.", this.Channels);
 
     }
 }

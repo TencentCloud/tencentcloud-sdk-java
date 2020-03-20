@@ -77,6 +77,20 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long PayMode;
 
     /**
+    * 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -221,6 +235,38 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。 
+     * @return VpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+     * @param VpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。 
+     * @return SubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+     * @param SubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -230,6 +276,8 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

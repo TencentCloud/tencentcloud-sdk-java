@@ -789,6 +789,30 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDeviceProperty）用于修改设备物模型的属性（ProWritable）。
+可对setVal数据属性进行写入,如:
+ProWritable.Pos.setVal
+对于嵌套类型的可写属性，可以仅对其部分数据内容进行写入，如:
+ProWritable.Pos.setVal.x;
+可写属性云端写入成功即返回;云端向设备端发布属性变更参数;若当前设备不在线,在设备下次上线时会自动更新这些属性参数;
+物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。
+     * @param req ModifyDevicePropertyRequest
+     * @return ModifyDevicePropertyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDevicePropertyResponse ModifyDeviceProperty(ModifyDevicePropertyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDevicePropertyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDevicePropertyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDeviceProperty"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyProduct）用于编辑物联网智能视频产品的相关信息。
      * @param req ModifyProductRequest
      * @return ModifyProductResponse

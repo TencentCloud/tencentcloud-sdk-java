@@ -38,6 +38,24 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于配置数据订阅，只有在未配置状态的订阅实例才能调用此接口。
+     * @param req ActivateSubscribeRequest
+     * @return ActivateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateSubscribeResponse ActivateSubscribe(ActivateSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ActivateSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ActivateSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ActivateSubscribe"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CompleteMigrateJob）用于完成数据迁移任务。
 选择采用增量迁移方式的任务, 需要在迁移进度进入准备完成阶段后, 调用本接口, 停止迁移增量数据。
 通过DescribeMigrateJobs接口查询到任务的状态为准备完成（status=8）时，此时可以调用本接口完成迁移任务。
@@ -92,6 +110,24 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateJobResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateMigrateJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(CreateSubscribe)用于创建一个数据订阅实例。
+     * @param req CreateSubscribeRequest
+     * @return CreateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSubscribe"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -173,6 +209,24 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeAsyncRequestInfo）用于查询任务执行结果
+     * @param req DescribeAsyncRequestInfoRequest
+     * @return DescribeAsyncRequestInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAsyncRequestInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
 若通过校验, 则可调用'StartMigrateJob' 开始迁移.
 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrateJob'修改迁移配置或是调整源/目标实例的相关参数.
@@ -205,6 +259,60 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateJobsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMigrateJobs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeRegionConf）用于查询可售卖订阅实例的地域
+     * @param req DescribeRegionConfRequest
+     * @return DescribeRegionConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionConfResponse DescribeRegionConf(DescribeRegionConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionConfResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionConfResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRegionConf"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSubscribeConf）用于查询订阅实例配置
+     * @param req DescribeSubscribeConfRequest
+     * @return DescribeSubscribeConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribeConfResponse DescribeSubscribeConf(DescribeSubscribeConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubscribeConfResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubscribeConfResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubscribeConf"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeSubscribes)获取数据订阅实例信息列表，默认分页，每次返回20条
+     * @param req DescribeSubscribesRequest
+     * @return DescribeSubscribesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribesResponse DescribeSubscribes(DescribeSubscribesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubscribesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubscribesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubscribes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -253,6 +361,24 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *本接口（IsolateSubscribe）用于隔离小时计费的订阅实例。调用后，订阅实例将不能使用，同时停止计费。
+     * @param req IsolateSubscribeRequest
+     * @return IsolateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateSubscribeResponse IsolateSubscribe(IsolateSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "IsolateSubscribe"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyMigrateJob）用于修改数据迁移任务。
 当迁移任务处于下述状态时，允许调用本接口修改迁移任务：迁移创建中（status=1）、 校验成功(status=4)、校验失败(status=5)、迁移失败(status=10)。但源实例、目标实例类型和目标实例地域不允许修改。
 
@@ -274,6 +400,78 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifySubscribeConsumeTime)用于修改数据订阅通道的消费时间点
+     * @param req ModifySubscribeConsumeTimeRequest
+     * @return ModifySubscribeConsumeTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeConsumeTimeResponse ModifySubscribeConsumeTime(ModifySubscribeConsumeTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeConsumeTimeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeConsumeTimeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeConsumeTime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifySubscribeName)用于修改数据订阅实例的名称
+     * @param req ModifySubscribeNameRequest
+     * @return ModifySubscribeNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeNameResponse ModifySubscribeName(ModifySubscribeNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifySubscribeObjects)用于修改数据订阅通道的订阅规则
+     * @param req ModifySubscribeObjectsRequest
+     * @return ModifySubscribeObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeObjectsResponse ModifySubscribeObjects(ModifySubscribeObjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeObjectsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeObjectsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeObjects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifySubscribeVipVport)用于修改数据订阅实例的IP和端口号
+     * @param req ModifySubscribeVipVportRequest
+     * @return ModifySubscribeVipVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeVipVportResponse ModifySubscribeVipVport(ModifySubscribeVipVportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeVipVportResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeVipVportResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeVipVport"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改灾备同步任务. 
 当同步任务处于下述状态时, 允许调用本接口: 同步任务创建中, 创建完成, 校验成功, 校验失败. 
 源实例和目标实例信息不允许修改，可以修改任务名、需要同步的库表。
@@ -287,6 +485,42 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySyncJobResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifySyncJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（OfflineIsolatedSubscribe）用于下线已隔离的数据订阅实例
+     * @param req OfflineIsolatedSubscribeRequest
+     * @return OfflineIsolatedSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineIsolatedSubscribeResponse OfflineIsolatedSubscribe(OfflineIsolatedSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OfflineIsolatedSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OfflineIsolatedSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OfflineIsolatedSubscribe"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ResetSubscribe)用于重置数据订阅实例，已经激活的数据订阅实例，重置后可以使用ActivateSubscribe接口绑定其他的数据库实例
+     * @param req ResetSubscribeRequest
+     * @return ResetSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetSubscribeResponse ResetSubscribe(ResetSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetSubscribe"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

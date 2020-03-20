@@ -146,6 +146,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于在企业版中创建命名空间
+     * @param req CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNamespaceResponse CreateNamespace(CreateNamespaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNamespaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNamespaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNamespace"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建个人版镜像仓库命名空间，此命名空间全局唯一
      * @param req CreateNamespacePersonalRequest
      * @return CreateNamespacePersonalResponse
@@ -157,6 +175,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateNamespacePersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateNamespacePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于企业版创建镜像仓库
+     * @param req CreateRepositoryRequest
+     * @return CreateRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRepositoryResponse CreateRepository(CreateRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRepositoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRepositoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRepository"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -272,6 +308,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除命名空间
+     * @param req DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNamespaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNamespaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNamespace"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除共享版命名空间
      * @param req DeleteNamespacePersonalRequest
      * @return DeleteNamespacePersonalResponse
@@ -283,6 +337,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteNamespacePersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteNamespacePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除镜像仓库
+     * @param req DeleteRepositoryRequest
+     * @return DeleteRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRepositoryResponse DeleteRepository(DeleteRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRepositoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRepositoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRepository"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -434,6 +506,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于在企业版中查询镜像仓库内容器镜像信息，获取镜像版本列表
+     * @param req DescribeImagesRequest
+     * @return DescribeImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实例当前状态以及过程信息
      * @param req DescribeInstanceStatusRequest
      * @return DescribeInstanceStatusResponse
@@ -481,6 +571,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNamespacePersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeNamespacePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询镜像仓库信息
+     * @param req DescribeRepositoriesRequest
+     * @return DescribeRepositoriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRepositoriesResponse DescribeRepositories(DescribeRepositoriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRepositoriesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRepositoriesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRepositories"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -607,6 +715,42 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyApplicationTriggerPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新命名空间信息
+     * @param req ModifyNamespaceRequest
+     * @return ModifyNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNamespaceResponse ModifyNamespace(ModifyNamespaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNamespaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNamespaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNamespace"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新镜像仓库描述
+     * @param req ModifyRepositoryRequest
+     * @return ModifyRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRepositoryResponse ModifyRepository(ModifyRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRepositoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRepositoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyRepository"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

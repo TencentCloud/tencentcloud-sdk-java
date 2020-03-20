@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AddLiveWatermarkRequest extends AbstractModel{
 
     /**
-    * 水印图片url。
+    * 水印图片 URL。
     */
     @SerializedName("PictureUrl")
     @Expose
@@ -37,7 +37,7 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     private String WatermarkName;
 
     /**
-    * 显示位置,X轴偏移。
+    * 显示位置, X轴偏移。
     */
     @SerializedName("XPosition")
     @Expose
@@ -65,16 +65,16 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     private Long Height;
 
     /**
-     * Get 水印图片url。 
-     * @return PictureUrl 水印图片url。
+     * Get 水印图片 URL。 
+     * @return PictureUrl 水印图片 URL。
      */
     public String getPictureUrl() {
         return this.PictureUrl;
     }
 
     /**
-     * Set 水印图片url。
-     * @param PictureUrl 水印图片url。
+     * Set 水印图片 URL。
+     * @param PictureUrl 水印图片 URL。
      */
     public void setPictureUrl(String PictureUrl) {
         this.PictureUrl = PictureUrl;
@@ -97,16 +97,16 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     }
 
     /**
-     * Get 显示位置,X轴偏移。 
-     * @return XPosition 显示位置,X轴偏移。
+     * Get 显示位置, X轴偏移。 
+     * @return XPosition 显示位置, X轴偏移。
      */
     public Long getXPosition() {
         return this.XPosition;
     }
 
     /**
-     * Set 显示位置,X轴偏移。
-     * @param XPosition 显示位置,X轴偏移。
+     * Set 显示位置, X轴偏移。
+     * @param XPosition 显示位置, X轴偏移。
      */
     public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;

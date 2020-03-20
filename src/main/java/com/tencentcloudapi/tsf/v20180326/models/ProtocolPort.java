@@ -44,6 +44,13 @@ public class ProtocolPort extends AbstractModel{
     private Long TargetPort;
 
     /**
+    * 主机端口
+    */
+    @SerializedName("NodePort")
+    @Expose
+    private Long NodePort;
+
+    /**
      * Get TCP UDP 
      * @return Protocol TCP UDP
      */
@@ -92,12 +99,29 @@ public class ProtocolPort extends AbstractModel{
     }
 
     /**
+     * Get 主机端口 
+     * @return NodePort 主机端口
+     */
+    public Long getNodePort() {
+        return this.NodePort;
+    }
+
+    /**
+     * Set 主机端口
+     * @param NodePort 主机端口
+     */
+    public void setNodePort(Long NodePort) {
+        this.NodePort = NodePort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "TargetPort", this.TargetPort);
+        this.setParamSimple(map, prefix + "NodePort", this.NodePort);
 
     }
 }

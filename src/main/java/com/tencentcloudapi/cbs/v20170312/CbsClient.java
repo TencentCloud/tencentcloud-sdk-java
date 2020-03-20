@@ -408,6 +408,24 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *获取快照概览信息
+     * @param req GetSnapOverviewRequest
+     * @return GetSnapOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSnapOverviewResponse GetSnapOverview(GetSnapOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSnapOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSnapOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetSnapOverview"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquiryPriceCreateDisks）用于创建云硬盘询价。
 
 * 支持查询创建多块云硬盘的价格，此时返回结果为总价格。

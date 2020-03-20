@@ -214,6 +214,22 @@ REJECTED:拒绝
     private String AccessPointType;
 
     /**
+    * 专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DirectConnectGatewayName")
+    @Expose
+    private String DirectConnectGatewayName;
+
+    /**
+    * VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
      * Get 专线通道ID 
      * @return DirectConnectTunnelId 专线通道ID
      */
@@ -678,6 +694,46 @@ REJECTED:拒绝
     }
 
     /**
+     * Get 专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DirectConnectGatewayName 专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDirectConnectGatewayName() {
+        return this.DirectConnectGatewayName;
+    }
+
+    /**
+     * Set 专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DirectConnectGatewayName 专线网关名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
+        this.DirectConnectGatewayName = DirectConnectGatewayName;
+    }
+
+    /**
+     * Get VPC名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcName VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcName VPC名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -706,6 +762,8 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "VpcRegion", this.VpcRegion);
         this.setParamSimple(map, prefix + "BfdEnable", this.BfdEnable);
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
+        this.setParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
 
     }
 }

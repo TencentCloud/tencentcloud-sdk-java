@@ -44,28 +44,28 @@ public class ListClsTopicDomainsResponse extends AbstractModel{
     private String LogsetId;
 
     /**
-    * 主题ID
+    * 日志主题ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
+    * 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
     */
     @SerializedName("DomainAreaConfigs")
     @Expose
     private DomainAreaConfig [] DomainAreaConfigs;
 
     /**
-    * 主题名称
+    * 日志主题名称
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 主题最近更新时间
+    * 日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -128,57 +128,57 @@ public class ListClsTopicDomainsResponse extends AbstractModel{
     }
 
     /**
-     * Get 主题ID 
-     * @return TopicId 主题ID
+     * Get 日志主题ID 
+     * @return TopicId 日志主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题ID
-     * @param TopicId 主题ID
+     * Set 日志主题ID
+     * @param TopicId 日志主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。 
-     * @return DomainAreaConfigs 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
+     * Get 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名 
+     * @return DomainAreaConfigs 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
      */
     public DomainAreaConfig [] getDomainAreaConfigs() {
         return this.DomainAreaConfigs;
     }
 
     /**
-     * Set 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
-     * @param DomainAreaConfigs 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名。
+     * Set 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
+     * @param DomainAreaConfigs 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
      */
     public void setDomainAreaConfigs(DomainAreaConfig [] DomainAreaConfigs) {
         this.DomainAreaConfigs = DomainAreaConfigs;
     }
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get 日志主题名称 
+     * @return TopicName 日志主题名称
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set 日志主题名称
+     * @param TopicName 日志主题名称
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 主题最近更新时间
+     * Get 日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 主题最近更新时间
+     * @return UpdateTime 日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -186,9 +186,9 @@ public class ListClsTopicDomainsResponse extends AbstractModel{
     }
 
     /**
-     * Set 主题最近更新时间
+     * Set 日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 主题最近更新时间
+     * @param UpdateTime 日志主题最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {

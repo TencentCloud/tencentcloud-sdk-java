@@ -107,6 +107,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String DBVersion;
 
     /**
+    * 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取 
      * @return Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
@@ -299,6 +306,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。 
+     * @return AutoRenewFlag 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
+     * @param AutoRenewFlag 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

@@ -211,6 +211,22 @@ public class DirectConnect extends AbstractModel{
     private String AccessPointType;
 
     /**
+    * IDC所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdcCity")
+    @Expose
+    private String IdcCity;
+
+    /**
+    * 计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChargeState")
+    @Expose
+    private String ChargeState;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -675,6 +691,46 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
+     * Get IDC所在城市
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdcCity IDC所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdcCity() {
+        return this.IdcCity;
+    }
+
+    /**
+     * Set IDC所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdcCity IDC所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdcCity(String IdcCity) {
+        this.IdcCity = IdcCity;
+    }
+
+    /**
+     * Get 计费状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChargeState 计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChargeState() {
+        return this.ChargeState;
+    }
+
+    /**
+     * Set 计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChargeState 计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChargeState(String ChargeState) {
+        this.ChargeState = ChargeState;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -702,6 +758,8 @@ public class DirectConnect extends AbstractModel{
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
+        this.setParamSimple(map, prefix + "IdcCity", this.IdcCity);
+        this.setParamSimple(map, prefix + "ChargeState", this.ChargeState);
 
     }
 }

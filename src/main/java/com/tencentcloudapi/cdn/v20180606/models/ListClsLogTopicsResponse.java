@@ -30,7 +30,7 @@ public class ListClsLogTopicsResponse extends AbstractModel{
     private LogSetInfo Logset;
 
     /**
-    * 主题信息列表
+    * 日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topics")
@@ -61,9 +61,9 @@ public class ListClsLogTopicsResponse extends AbstractModel{
     }
 
     /**
-     * Get 主题信息列表
+     * Get 日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Topics 主题信息列表
+     * @return Topics 日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopicInfo [] getTopics() {
@@ -71,9 +71,9 @@ public class ListClsLogTopicsResponse extends AbstractModel{
     }
 
     /**
-     * Set 主题信息列表
+     * Set 日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Topics 主题信息列表
+     * @param Topics 日志主题信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopics(TopicInfo [] Topics) {

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeNetworkInterfaceLimitRequest extends AbstractModel{
 
     /**
-    * 要查询的CVM实例ID
+    * 要查询的CVM实例ID或弹性网卡ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 要查询的CVM实例ID 
-     * @return InstanceId 要查询的CVM实例ID
+     * Get 要查询的CVM实例ID或弹性网卡ID 
+     * @return InstanceId 要查询的CVM实例ID或弹性网卡ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 要查询的CVM实例ID
-     * @param InstanceId 要查询的CVM实例ID
+     * Set 要查询的CVM实例ID或弹性网卡ID
+     * @param InstanceId 要查询的CVM实例ID或弹性网卡ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
