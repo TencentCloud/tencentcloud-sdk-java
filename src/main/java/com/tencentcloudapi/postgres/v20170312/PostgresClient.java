@@ -56,6 +56,60 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *关闭serverlessDB实例外网
+     * @param req CloseServerlessDBExtranetAccessRequest
+     * @return CloseServerlessDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccess(CloseServerlessDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseServerlessDBExtranetAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseServerlessDBExtranetAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CloseServerlessDBExtranetAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
+     * @param req CreateServerlessDBInstanceRequest
+     * @return CreateServerlessDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServerlessDBInstanceResponse CreateServerlessDBInstance(CreateServerlessDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateServerlessDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateServerlessDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateServerlessDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
+     * @param req DeleteServerlessDBInstanceRequest
+     * @return DeleteServerlessDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteServerlessDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteServerlessDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteServerlessDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeAccounts）用于获取实例用户列表。
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -218,6 +272,24 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *用于查询一个或多个serverlessDB实例的详细信息
+     * @param req DescribeServerlessDBInstancesRequest
+     * @return DescribeServerlessDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessDBInstancesResponse DescribeServerlessDBInstances(DescribeServerlessDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServerlessDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServerlessDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeServerlessDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeZones) 用于查询支持的可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -373,6 +445,24 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "OpenDBExtranetAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开通serverlessDB实例外网
+     * @param req OpenServerlessDBExtranetAccessRequest
+     * @return OpenServerlessDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenServerlessDBExtranetAccessResponse OpenServerlessDBExtranetAccess(OpenServerlessDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenServerlessDBExtranetAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenServerlessDBExtranetAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OpenServerlessDBExtranetAccess"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

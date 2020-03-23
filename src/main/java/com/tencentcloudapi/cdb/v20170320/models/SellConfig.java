@@ -114,6 +114,13 @@ public class SellConfig extends AbstractModel{
     private Long Status;
 
     /**
+    * 标签值
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Long Tag;
+
+    /**
      * Get 设备类型 
      * @return Device 设备类型
      */
@@ -322,6 +329,22 @@ public class SellConfig extends AbstractModel{
     }
 
     /**
+     * Get 标签值 
+     * @return Tag 标签值
+     */
+    public Long getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签值
+     * @param Tag 标签值
+     */
+    public void setTag(Long Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class SellConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Iops", this.Iops);
         this.setParamSimple(map, prefix + "Info", this.Info);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

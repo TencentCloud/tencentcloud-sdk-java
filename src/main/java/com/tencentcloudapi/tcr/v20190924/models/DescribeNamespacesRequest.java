@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNamespaceRequest extends AbstractModel{
+public class DescribeNamespacesRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -30,18 +30,25 @@ public class ModifyNamespaceRequest extends AbstractModel{
     private String RegistryId;
 
     /**
-    * 命名空间名称
+    * 指定命名空间，不填写默认查询所有命名空间
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * 访问级别，True为公开，False为私有
+    * 每页个数
     */
-    @SerializedName("IsPublic")
+    @SerializedName("Limit")
     @Expose
-    private Boolean IsPublic;
+    private Long Limit;
+
+    /**
+    * 页偏移
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 实例Id 
@@ -60,35 +67,51 @@ public class ModifyNamespaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 命名空间名称 
-     * @return NamespaceName 命名空间名称
+     * Get 指定命名空间，不填写默认查询所有命名空间 
+     * @return NamespaceName 指定命名空间，不填写默认查询所有命名空间
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set 命名空间名称
-     * @param NamespaceName 命名空间名称
+     * Set 指定命名空间，不填写默认查询所有命名空间
+     * @param NamespaceName 指定命名空间，不填写默认查询所有命名空间
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 访问级别，True为公开，False为私有 
-     * @return IsPublic 访问级别，True为公开，False为私有
+     * Get 每页个数 
+     * @return Limit 每页个数
      */
-    public Boolean getIsPublic() {
-        return this.IsPublic;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 访问级别，True为公开，False为私有
-     * @param IsPublic 访问级别，True为公开，False为私有
+     * Set 每页个数
+     * @param Limit 每页个数
      */
-    public void setIsPublic(Boolean IsPublic) {
-        this.IsPublic = IsPublic;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 页偏移 
+     * @return Offset 页偏移
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 页偏移
+     * @param Offset 页偏移
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -97,7 +120,8 @@ public class ModifyNamespaceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
-        this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

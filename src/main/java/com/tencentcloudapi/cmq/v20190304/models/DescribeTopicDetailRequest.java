@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTopicDetailRequest extends AbstractModel{
 
     /**
-    * Offset
+    * 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit
+    * 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
     */
     @SerializedName("Limit")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeTopicDetailRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * TagKey
+    * 标签匹配
     */
     @SerializedName("TagKey")
     @Expose
@@ -58,32 +58,32 @@ public class DescribeTopicDetailRequest extends AbstractModel{
     private String TopicName;
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。 
+     * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+     * @param Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit 
-     * @return Limit Limit
+     * Get 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。 
+     * @return Limit 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit
-     * @param Limit Limit
+     * Set 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+     * @param Limit 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -106,16 +106,16 @@ public class DescribeTopicDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get TagKey 
-     * @return TagKey TagKey
+     * Get 标签匹配 
+     * @return TagKey 标签匹配
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set TagKey
-     * @param TagKey TagKey
+     * Set 标签匹配
+     * @param TagKey 标签匹配
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;

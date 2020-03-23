@@ -74,6 +74,24 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *增加安全域名
+     * @param req CreateAuthDomainRequest
+     * @return CreateAuthDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuthDomainResponse CreateAuthDomain(CreateAuthDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuthDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuthDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAuthDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建托管域名
      * @param req CreateHostingDomainRequest
      * @return CreateHostingDomainResponse

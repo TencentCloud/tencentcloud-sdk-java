@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteClsLogTopicRequest extends AbstractModel{
 
     /**
-    * 主日志题ID
+    * 日志主题ID
     */
     @SerializedName("TopicId")
     @Expose
@@ -44,16 +44,16 @@ public class DeleteClsLogTopicRequest extends AbstractModel{
     private String Channel;
 
     /**
-     * Get 主日志题ID 
-     * @return TopicId 主日志题ID
+     * Get 日志主题ID 
+     * @return TopicId 日志主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主日志题ID
-     * @param TopicId 主日志题ID
+     * Set 日志主题ID
+     * @param TopicId 日志主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

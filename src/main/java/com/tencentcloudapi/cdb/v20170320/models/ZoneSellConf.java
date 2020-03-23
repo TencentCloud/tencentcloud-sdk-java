@@ -121,6 +121,21 @@ public class ZoneSellConf extends AbstractModel{
     private String [] DrZone;
 
     /**
+    * 是否支持跨可用区只读
+    */
+    @SerializedName("IsSupportRemoteRo")
+    @Expose
+    private Boolean IsSupportRemoteRo;
+
+    /**
+    * 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemoteRoZone")
+    @Expose
+    private String [] RemoteRoZone;
+
+    /**
      * Get 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示 
      * @return Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      */
@@ -345,6 +360,42 @@ public class ZoneSellConf extends AbstractModel{
     }
 
     /**
+     * Get 是否支持跨可用区只读 
+     * @return IsSupportRemoteRo 是否支持跨可用区只读
+     */
+    public Boolean getIsSupportRemoteRo() {
+        return this.IsSupportRemoteRo;
+    }
+
+    /**
+     * Set 是否支持跨可用区只读
+     * @param IsSupportRemoteRo 是否支持跨可用区只读
+     */
+    public void setIsSupportRemoteRo(Boolean IsSupportRemoteRo) {
+        this.IsSupportRemoteRo = IsSupportRemoteRo;
+    }
+
+    /**
+     * Get 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemoteRoZone 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getRemoteRoZone() {
+        return this.RemoteRoZone;
+    }
+
+    /**
+     * Set 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoteRoZone 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemoteRoZone(String [] RemoteRoZone) {
+        this.RemoteRoZone = RemoteRoZone;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +413,8 @@ public class ZoneSellConf extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SellType.", this.SellType);
         this.setParamObj(map, prefix + "ZoneConf.", this.ZoneConf);
         this.setParamArraySimple(map, prefix + "DrZone.", this.DrZone);
+        this.setParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
+        this.setParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
 
     }
 }

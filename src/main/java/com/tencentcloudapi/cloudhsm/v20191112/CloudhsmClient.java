@@ -38,6 +38,42 @@ public class CloudhsmClient extends AbstractClient{
     }
 
     /**
+     *通过SubnetId获取Hsm资源数
+     * @param req DescribeHSMBySubnetIdRequest
+     * @return DescribeHSMBySubnetIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHSMBySubnetIdResponse DescribeHSMBySubnetId(DescribeHSMBySubnetIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHSMBySubnetIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHSMBySubnetIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHSMBySubnetId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过VpcId获取Hsm资源数
+     * @param req DescribeHSMByVpcIdRequest
+     * @return DescribeHSMByVpcIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHSMByVpcIdResponse DescribeHSMByVpcId(DescribeHSMByVpcIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHSMByVpcIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHSMByVpcIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHSMByVpcId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询子网列表
      * @param req DescribeSubnetRequest
      * @return DescribeSubnetResponse

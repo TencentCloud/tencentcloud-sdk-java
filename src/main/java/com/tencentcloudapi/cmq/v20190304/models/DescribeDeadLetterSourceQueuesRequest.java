@@ -30,14 +30,14 @@ public class DescribeDeadLetterSourceQueuesRequest extends AbstractModel{
     private String DeadLetterQueueName;
 
     /**
-    * limit
+    * 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * offset
+    * 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
     */
     @SerializedName("Offset")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeDeadLetterSourceQueuesRequest extends AbstractModel{
     }
 
     /**
-     * Get limit 
-     * @return Limit limit
+     * Get 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。 
+     * @return Limit 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set limit
-     * @param Limit limit
+     * Set 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+     * @param Limit 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get offset 
-     * @return Offset offset
+     * Get 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。 
+     * @return Offset 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set offset
-     * @param Offset offset
+     * Set 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+     * @param Offset 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

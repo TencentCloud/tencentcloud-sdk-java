@@ -578,6 +578,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询命名空间列表或指定命名空间信息
+     * @param req DescribeNamespacesRequest
+     * @return DescribeNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNamespacesResponse DescribeNamespaces(DescribeNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNamespacesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNamespacesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNamespaces"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询镜像仓库信息
      * @param req DescribeRepositoriesRequest
      * @return DescribeRepositoriesResponse
@@ -722,7 +740,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *更新命名空间信息
+     *更新命名空间信息，当前仅支持修改命名空间访问级别
      * @param req ModifyNamespaceRequest
      * @return ModifyNamespaceResponse
      * @throws TencentCloudSDKException

@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeSubscriptionDetailRequest extends AbstractModel{
 
     /**
-    * TopicName
+    * 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Offset
+    * 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit
+    * 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 目前只支持SubscriptionName，且仅支持一个关键字
+    * 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get TopicName 
-     * @return TopicName TopicName
+     * Get 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。 
+     * @return TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set TopicName
-     * @param TopicName TopicName
+     * Set 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+     * @param TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0 
+     * @return Offset 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+     * @param Offset 分页时本页获取主题列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit 
-     * @return Limit Limit
+     * Get 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。 
+     * @return Limit 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit
-     * @param Limit Limit
+     * Set 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
+     * @param Limit 分页时本页获取主题的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 目前只支持SubscriptionName，且仅支持一个关键字 
-     * @return Filters 目前只支持SubscriptionName，且仅支持一个关键字
+     * Get 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。 
+     * @return Filters 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 目前只支持SubscriptionName，且仅支持一个关键字
-     * @param Filters 目前只支持SubscriptionName，且仅支持一个关键字
+     * Set 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
+     * @param Filters 筛选参数，目前只支持SubscriptionName，且仅支持一个关键字。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

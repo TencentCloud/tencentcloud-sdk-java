@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ModifyTopicAttributeRequest extends AbstractModel{
 
     /**
-    * TopicName
+    * 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * MaxMsgSize
+    * 消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。
     */
     @SerializedName("MaxMsgSize")
     @Expose
     private Long MaxMsgSize;
 
     /**
-    * MsgRetentionSeconds
+    * 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
@@ -51,48 +51,48 @@ public class ModifyTopicAttributeRequest extends AbstractModel{
     private Boolean Trace;
 
     /**
-     * Get TopicName 
-     * @return TopicName TopicName
+     * Get 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。 
+     * @return TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set TopicName
-     * @param TopicName TopicName
+     * Set 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+     * @param TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get MaxMsgSize 
-     * @return MaxMsgSize MaxMsgSize
+     * Get 消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。 
+     * @return MaxMsgSize 消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
     }
 
     /**
-     * Set MaxMsgSize
-     * @param MaxMsgSize MaxMsgSize
+     * Set 消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。
+     * @param MaxMsgSize 消息最大长度。取值范围1024 - 65536 Byte（即1 - 64K），默认值65536。
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get MsgRetentionSeconds 
-     * @return MsgRetentionSeconds MsgRetentionSeconds
+     * Get 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。 
+     * @return MsgRetentionSeconds 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
     }
 
     /**
-     * Set MsgRetentionSeconds
-     * @param MsgRetentionSeconds MsgRetentionSeconds
+     * Set 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
+     * @param MsgRetentionSeconds 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;

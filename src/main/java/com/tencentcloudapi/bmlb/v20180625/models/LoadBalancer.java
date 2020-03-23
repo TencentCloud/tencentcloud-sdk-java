@@ -135,7 +135,7 @@ public class LoadBalancer extends AbstractModel{
     private String VpcCidrBlock;
 
     /**
-    * 负载均衡获得的公网IP地址,支持多个
+    * 负载均衡的IPV4的VIP。
     */
     @SerializedName("LoadBalancerVips")
     @Expose
@@ -210,6 +210,14 @@ public class LoadBalancer extends AbstractModel{
     @SerializedName("IntVpcId")
     @Expose
     private Long IntVpcId;
+
+    /**
+    * 负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurVips")
+    @Expose
+    private String [] CurVips;
 
     /**
      * Get 负载均衡器ID 
@@ -468,16 +476,16 @@ public class LoadBalancer extends AbstractModel{
     }
 
     /**
-     * Get 负载均衡获得的公网IP地址,支持多个 
-     * @return LoadBalancerVips 负载均衡获得的公网IP地址,支持多个
+     * Get 负载均衡的IPV4的VIP。 
+     * @return LoadBalancerVips 负载均衡的IPV4的VIP。
      */
     public String [] getLoadBalancerVips() {
         return this.LoadBalancerVips;
     }
 
     /**
-     * Set 负载均衡获得的公网IP地址,支持多个
-     * @param LoadBalancerVips 负载均衡获得的公网IP地址,支持多个
+     * Set 负载均衡的IPV4的VIP。
+     * @param LoadBalancerVips 负载均衡的IPV4的VIP。
      */
     public void setLoadBalancerVips(String [] LoadBalancerVips) {
         this.LoadBalancerVips = LoadBalancerVips;
@@ -644,6 +652,26 @@ public class LoadBalancer extends AbstractModel{
     }
 
     /**
+     * Get 负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurVips 负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCurVips() {
+        return this.CurVips;
+    }
+
+    /**
+     * Set 负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurVips 负载均衡的IPV6或者IPV4的VIP。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurVips(String [] CurVips) {
+        this.CurVips = CurVips;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -674,6 +702,7 @@ public class LoadBalancer extends AbstractModel{
         this.setParamSimple(map, prefix + "BzL4Metrics", this.BzL4Metrics);
         this.setParamSimple(map, prefix + "BzL7Metrics", this.BzL7Metrics);
         this.setParamSimple(map, prefix + "IntVpcId", this.IntVpcId);
+        this.setParamArraySimple(map, prefix + "CurVips.", this.CurVips);
 
     }
 }

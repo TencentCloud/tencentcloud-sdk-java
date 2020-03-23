@@ -44,7 +44,7 @@ public class AppInfo extends AbstractModel{
     private Long AppSize;
 
     /**
-    * app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+    * app的文件名
     */
     @SerializedName("FileName")
     @Expose
@@ -127,16 +127,16 @@ public class AppInfo extends AbstractModel{
     }
 
     /**
-     * Get app的文件名，指定后加固后的文件名是{FileName}_legu.apk 
-     * @return FileName app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+     * Get app的文件名 
+     * @return FileName app的文件名
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set app的文件名，指定后加固后的文件名是{FileName}_legu.apk
-     * @param FileName app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+     * Set app的文件名
+     * @param FileName app的文件名
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
