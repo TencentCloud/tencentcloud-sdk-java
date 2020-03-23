@@ -80,7 +80,7 @@ public class DescribeZones
 
 ## 代理
 
-指定代理访问(版本>=3.0.96)，目前仅支持 HTTP 代理：
+从3.0.96版本开始，可以单独设置  HTTP 代理：
 
 ```
 HttpProfile httpProfile = new HttpProfile();
@@ -88,17 +88,20 @@ httpProfile.setProxyHost("真实代理ip");
 httpProfile.setProxyPort(真实代理端口);
 ```
 
-或者设置系统代理，您可以在代码中请求发起前设置：
+## 语言
+
+从3.1.16版本开始，我们添加了对公共参数 Language 的支持，以满足部分产品国际化的诉求。和以前一样，Language 默认不传，行为由各产品接口自行决定，通常是中文的，但也有默认英文的。目前可选值为中文或者英文，通过如下方法设置：
 
 ```
-System.setProperty("https.proxyHost", "真实代理ip");
-System.setProperty("https.proxyPort", "真实代理端口");
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.profile.Language;
+...
+    ClientProfile clientProfile = new ClientProfile();
+    clientProfile.setLanguage(Language.ZH_CN);
 ```
 
-或者运行程序时在启动参数中设置。
-
-# 旧版SDK
-我们推荐您使用新版SDK， 如果需要旧版SDK，请在您的Maven pom.xml 添加以下依赖项即可：
+# 旧版 SDK
+我们推荐您使用新版 SDK， 如果需要旧版 SDK，请在您的 Maven pom.xml 添加以下依赖项即可：
 ```xml
 <dependency>
 <groupId>com.qcloud</groupId>
@@ -109,4 +112,4 @@ System.setProperty("https.proxyPort", "真实代理端口");
 
 # 其他问题
 
-请注意，从3.0.x版本升级到3.1.x版本有兼容性问题，对于Integer字段的使用修改为了Long类型，需要重新编译项目。
+请注意，从 3.0.x 版本升级到 3.1.x 版本有兼容性问题，对于 Integer 字段的使用修改为了 Long 类型，需要重新编译项目。
