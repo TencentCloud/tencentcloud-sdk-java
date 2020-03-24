@@ -103,7 +103,7 @@ public class DeviceData extends AbstractModel{
     private String Certificate;
 
     /**
-    * 白盒秘钥库文件下载地址
+    * 设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WhiteBoxSoUrl")
@@ -319,9 +319,9 @@ public class DeviceData extends AbstractModel{
     }
 
     /**
-     * Get 白盒秘钥库文件下载地址
+     * Get 设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WhiteBoxSoUrl 白盒秘钥库文件下载地址
+     * @return WhiteBoxSoUrl 设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWhiteBoxSoUrl() {
@@ -329,9 +329,9 @@ public class DeviceData extends AbstractModel{
     }
 
     /**
-     * Set 白盒秘钥库文件下载地址
+     * Set 设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WhiteBoxSoUrl 白盒秘钥库文件下载地址
+     * @param WhiteBoxSoUrl 设备私钥下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWhiteBoxSoUrl(String WhiteBoxSoUrl) {

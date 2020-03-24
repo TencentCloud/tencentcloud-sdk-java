@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
 
     /**
-    * 推流域名。
+    * 播放域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
     */
     @SerializedName("DomainName")
@@ -55,9 +55,9 @@ public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-     * Get 推流域名。
+     * Get 播放域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。 
-     * @return DomainName 推流域名。
+     * @return DomainName 播放域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public String getDomainName() {
@@ -65,9 +65,9 @@ public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
     }
 
     /**
-     * Set 推流域名。
+     * Set 播放域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
-     * @param DomainName 推流域名。
+     * @param DomainName 播放域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
     public void setDomainName(String DomainName) {

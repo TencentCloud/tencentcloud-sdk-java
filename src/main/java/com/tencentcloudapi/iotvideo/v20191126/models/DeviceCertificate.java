@@ -37,7 +37,7 @@ public class DeviceCertificate extends AbstractModel{
     private String Certificate;
 
     /**
-    * 白盒私钥下载地址
+    * 设备私钥下载地址
     */
     @SerializedName("WhiteBoxSoUrl")
     @Expose
@@ -76,16 +76,16 @@ public class DeviceCertificate extends AbstractModel{
     }
 
     /**
-     * Get 白盒私钥下载地址 
-     * @return WhiteBoxSoUrl 白盒私钥下载地址
+     * Get 设备私钥下载地址 
+     * @return WhiteBoxSoUrl 设备私钥下载地址
      */
     public String getWhiteBoxSoUrl() {
         return this.WhiteBoxSoUrl;
     }
 
     /**
-     * Set 白盒私钥下载地址
-     * @param WhiteBoxSoUrl 白盒私钥下载地址
+     * Set 设备私钥下载地址
+     * @param WhiteBoxSoUrl 设备私钥下载地址
      */
     public void setWhiteBoxSoUrl(String WhiteBoxSoUrl) {
         this.WhiteBoxSoUrl = WhiteBoxSoUrl;

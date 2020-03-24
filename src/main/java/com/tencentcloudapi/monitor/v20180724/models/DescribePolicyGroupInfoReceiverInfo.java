@@ -115,6 +115,14 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
     private String [] RecoverNotify;
 
     /**
+    * 告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReceiveLanguage")
+    @Expose
+    private String ReceiveLanguage;
+
+    /**
      * Get 告警接收组id列表 
      * @return ReceiverGroupList 告警接收组id列表
      */
@@ -327,6 +335,26 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
     }
 
     /**
+     * Get 告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReceiveLanguage 告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReceiveLanguage() {
+        return this.ReceiveLanguage;
+    }
+
+    /**
+     * Set 告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReceiveLanguage 告警发送语言
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReceiveLanguage(String ReceiveLanguage) {
+        this.ReceiveLanguage = ReceiveLanguage;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -343,6 +371,7 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedSendNotice", this.NeedSendNotice);
         this.setParamArraySimple(map, prefix + "SendFor.", this.SendFor);
         this.setParamArraySimple(map, prefix + "RecoverNotify.", this.RecoverNotify);
+        this.setParamSimple(map, prefix + "ReceiveLanguage", this.ReceiveLanguage);
 
     }
 }

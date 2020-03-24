@@ -121,6 +121,13 @@ public class ReceiverInfo extends AbstractModel{
     private Long [] ReceiverUserList;
 
     /**
+    * 告警接收语言，枚举值（zh-CN，en-US）
+    */
+    @SerializedName("ReceiveLanguage")
+    @Expose
+    private String ReceiveLanguage;
+
+    /**
      * Get 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0" 
      * @return StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      */
@@ -345,6 +352,22 @@ public class ReceiverInfo extends AbstractModel{
     }
 
     /**
+     * Get 告警接收语言，枚举值（zh-CN，en-US） 
+     * @return ReceiveLanguage 告警接收语言，枚举值（zh-CN，en-US）
+     */
+    public String getReceiveLanguage() {
+        return this.ReceiveLanguage;
+    }
+
+    /**
+     * Set 告警接收语言，枚举值（zh-CN，en-US）
+     * @param ReceiveLanguage 告警接收语言，枚举值（zh-CN，en-US）
+     */
+    public void setReceiveLanguage(String ReceiveLanguage) {
+        this.ReceiveLanguage = ReceiveLanguage;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class ReceiverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedSendNotice", this.NeedSendNotice);
         this.setParamArraySimple(map, prefix + "ReceiverGroupList.", this.ReceiverGroupList);
         this.setParamArraySimple(map, prefix + "ReceiverUserList.", this.ReceiverUserList);
+        this.setParamSimple(map, prefix + "ReceiveLanguage", this.ReceiveLanguage);
 
     }
 }

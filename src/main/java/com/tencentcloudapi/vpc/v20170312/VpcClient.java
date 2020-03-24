@@ -1412,6 +1412,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+     * @param req DescribeAddressTemplateInstancesRequest
+     * @return DescribeAddressTemplateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddressTemplateInstancesResponse DescribeAddressTemplateInstances(DescribeAddressTemplateInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddressTemplateInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddressTemplateInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAddressTemplateInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeAddressTemplates）用于查询IP地址模板
      * @param req DescribeAddressTemplatesRequest
      * @return DescribeAddressTemplatesResponse
@@ -2075,6 +2093,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResultResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskResult"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeTemplateLimits）用于查询参数模板配额列表。
+     * @param req DescribeTemplateLimitsRequest
+     * @return DescribeTemplateLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTemplateLimitsResponse DescribeTemplateLimits(DescribeTemplateLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTemplateLimitsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTemplateLimitsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTemplateLimits"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

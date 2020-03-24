@@ -452,6 +452,25 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取高防IP可添加的最多7层规则数量
+
+     * @param req DescribeBGPIPL7RuleMaxCntRequest
+     * @return DescribeBGPIPL7RuleMaxCntResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBGPIPL7RuleMaxCntResponse DescribeBGPIPL7RuleMaxCnt(DescribeBGPIPL7RuleMaxCntRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBGPIPL7RuleMaxCntResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBGPIPL7RuleMaxCntResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBGPIPL7RuleMaxCnt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *为大禹子产品提供业务转发指标数据的接口
      * @param req DescribeBaradDataRequest
      * @return DescribeBaradDataResponse

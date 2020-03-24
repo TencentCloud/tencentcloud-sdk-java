@@ -21,7 +21,6 @@ import com.google.gson.reflect.TypeToken;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.AbstractClient;
 import com.tencentcloudapi.common.profile.ClientProfile;
-import com.tencentcloudapi.common.profile.Region;
 import com.tencentcloudapi.common.JsonResponseModel;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.cvm.v20170312.models.*;
@@ -38,15 +37,7 @@ public class CvmClient extends AbstractClient{
         super(CvmClient.endpoint, CvmClient.version, credential, region, profile);
     }
 
-  public CvmClient(Credential credential, Region region) {
-    this(credential, region, new ClientProfile());
-  }
-
-  public CvmClient(Credential credential, Region region, ClientProfile profile) {
-    this(credential, region.getValue(), profile);
-  }
-
-  /**
+    /**
      *本接口 (AllocateHosts) 用于创建一个或多个指定配置的CDH实例。
 * 当HostChargeType为PREPAID时，必须指定HostChargePrepaid参数。
      * @param req AllocateHostsRequest

@@ -51,6 +51,13 @@ public class LookUpEventsRequest extends AbstractModel{
     private Long MaxResults;
 
     /**
+    * 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
     * 查看更多日志的凭证
     */
     @SerializedName("NextToken")
@@ -122,6 +129,22 @@ public class LookUpEventsRequest extends AbstractModel{
     }
 
     /**
+     * Get 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式 
+     * @return Mode 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+     * @param Mode 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
      * Get 查看更多日志的凭证 
      * @return NextToken 查看更多日志的凭证
      */
@@ -145,6 +168,7 @@ public class LookUpEventsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
 
     }
