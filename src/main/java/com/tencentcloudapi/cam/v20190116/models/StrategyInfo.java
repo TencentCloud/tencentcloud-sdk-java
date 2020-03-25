@@ -106,6 +106,14 @@ public class StrategyInfo extends AbstractModel{
     private String [] DeactivedDetail;
 
     /**
+    * 是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsServiceLinkedPolicy")
+    @Expose
+    private Long IsServiceLinkedPolicy;
+
+    /**
      * Get 策略ID。 
      * @return PolicyId 策略ID。
      */
@@ -306,6 +314,26 @@ public class StrategyInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsServiceLinkedPolicy 是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsServiceLinkedPolicy() {
+        return this.IsServiceLinkedPolicy;
+    }
+
+    /**
+     * Set 是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsServiceLinkedPolicy 是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsServiceLinkedPolicy(Long IsServiceLinkedPolicy) {
+        this.IsServiceLinkedPolicy = IsServiceLinkedPolicy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -320,6 +348,7 @@ public class StrategyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAttached", this.IsAttached);
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
         this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
+        this.setParamSimple(map, prefix + "IsServiceLinkedPolicy", this.IsServiceLinkedPolicy);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateUsrTokenRequest extends AbstractModel{
 
     /**
-    * 终端用户在IotVideo上的唯一标识id
+    * 终端用户在IoT Video上的唯一标识ID
     */
     @SerializedName("AccessId")
     @Expose
     private String AccessId;
 
     /**
-    * 终端唯一id,用于区分同一个用户的多个终端
+    * 终端唯一ID，用于区分同一个用户的多个终端
     */
     @SerializedName("UniqueId")
     @Expose
@@ -44,32 +44,32 @@ public class CreateUsrTokenRequest extends AbstractModel{
     private Long TtlMinutes;
 
     /**
-     * Get 终端用户在IotVideo上的唯一标识id 
-     * @return AccessId 终端用户在IotVideo上的唯一标识id
+     * Get 终端用户在IoT Video上的唯一标识ID 
+     * @return AccessId 终端用户在IoT Video上的唯一标识ID
      */
     public String getAccessId() {
         return this.AccessId;
     }
 
     /**
-     * Set 终端用户在IotVideo上的唯一标识id
-     * @param AccessId 终端用户在IotVideo上的唯一标识id
+     * Set 终端用户在IoT Video上的唯一标识ID
+     * @param AccessId 终端用户在IoT Video上的唯一标识ID
      */
     public void setAccessId(String AccessId) {
         this.AccessId = AccessId;
     }
 
     /**
-     * Get 终端唯一id,用于区分同一个用户的多个终端 
-     * @return UniqueId 终端唯一id,用于区分同一个用户的多个终端
+     * Get 终端唯一ID，用于区分同一个用户的多个终端 
+     * @return UniqueId 终端唯一ID，用于区分同一个用户的多个终端
      */
     public String getUniqueId() {
         return this.UniqueId;
     }
 
     /**
-     * Set 终端唯一id,用于区分同一个用户的多个终端
-     * @param UniqueId 终端唯一id,用于区分同一个用户的多个终端
+     * Set 终端唯一ID，用于区分同一个用户的多个终端
+     * @param UniqueId 终端唯一ID，用于区分同一个用户的多个终端
      */
     public void setUniqueId(String UniqueId) {
         this.UniqueId = UniqueId;

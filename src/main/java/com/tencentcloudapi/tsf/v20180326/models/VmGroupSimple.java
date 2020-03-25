@@ -135,6 +135,14 @@ public class VmGroupSimple extends AbstractModel{
     private String MicroserviceType;
 
     /**
+    * GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupResourceType")
+    @Expose
+    private String GroupResourceType;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -415,6 +423,26 @@ public class VmGroupSimple extends AbstractModel{
     }
 
     /**
+     * Get GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupResourceType GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupResourceType() {
+        return this.GroupResourceType;
+    }
+
+    /**
+     * Set GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupResourceType GroupResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupResourceType(String GroupResourceType) {
+        this.GroupResourceType = GroupResourceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -432,6 +460,7 @@ public class VmGroupSimple extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+        this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
 
     }
 }

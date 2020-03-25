@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateUsrTokenResponse extends AbstractModel{
 
     /**
-    * 终端用户在IotVideo上的唯一标识id
+    * 终端用户在IoT Video上的唯一标识ID
     */
     @SerializedName("AccessId")
     @Expose
     private String AccessId;
 
     /**
-    * IotVideo平台的accessToken
+    * IoT Video平台的AccessToken
     */
     @SerializedName("AccessToken")
     @Expose
@@ -44,7 +44,7 @@ public class CreateUsrTokenResponse extends AbstractModel{
     private Long ExpireTime;
 
     /**
-    * 终端id
+    * 终端ID
     */
     @SerializedName("TerminalId")
     @Expose
@@ -58,32 +58,32 @@ public class CreateUsrTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 终端用户在IotVideo上的唯一标识id 
-     * @return AccessId 终端用户在IotVideo上的唯一标识id
+     * Get 终端用户在IoT Video上的唯一标识ID 
+     * @return AccessId 终端用户在IoT Video上的唯一标识ID
      */
     public String getAccessId() {
         return this.AccessId;
     }
 
     /**
-     * Set 终端用户在IotVideo上的唯一标识id
-     * @param AccessId 终端用户在IotVideo上的唯一标识id
+     * Set 终端用户在IoT Video上的唯一标识ID
+     * @param AccessId 终端用户在IoT Video上的唯一标识ID
      */
     public void setAccessId(String AccessId) {
         this.AccessId = AccessId;
     }
 
     /**
-     * Get IotVideo平台的accessToken 
-     * @return AccessToken IotVideo平台的accessToken
+     * Get IoT Video平台的AccessToken 
+     * @return AccessToken IoT Video平台的AccessToken
      */
     public String getAccessToken() {
         return this.AccessToken;
     }
 
     /**
-     * Set IotVideo平台的accessToken
-     * @param AccessToken IotVideo平台的accessToken
+     * Set IoT Video平台的AccessToken
+     * @param AccessToken IoT Video平台的AccessToken
      */
     public void setAccessToken(String AccessToken) {
         this.AccessToken = AccessToken;
@@ -106,16 +106,16 @@ public class CreateUsrTokenResponse extends AbstractModel{
     }
 
     /**
-     * Get 终端id 
-     * @return TerminalId 终端id
+     * Get 终端ID 
+     * @return TerminalId 终端ID
      */
     public String getTerminalId() {
         return this.TerminalId;
     }
 
     /**
-     * Set 终端id
-     * @param TerminalId 终端id
+     * Set 终端ID
+     * @param TerminalId 终端ID
      */
     public void setTerminalId(String TerminalId) {
         this.TerminalId = TerminalId;

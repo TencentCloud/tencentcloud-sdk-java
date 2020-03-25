@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateAppUsrRequest extends AbstractModel{
 
     /**
-    * 标识用户的唯一id，防止同一个用户多次注册
+    * 标识用户的唯一ID，防止同一个用户多次注册
     */
     @SerializedName("CunionId")
     @Expose
     private String CunionId;
 
     /**
-     * Get 标识用户的唯一id，防止同一个用户多次注册 
-     * @return CunionId 标识用户的唯一id，防止同一个用户多次注册
+     * Get 标识用户的唯一ID，防止同一个用户多次注册 
+     * @return CunionId 标识用户的唯一ID，防止同一个用户多次注册
      */
     public String getCunionId() {
         return this.CunionId;
     }
 
     /**
-     * Set 标识用户的唯一id，防止同一个用户多次注册
-     * @param CunionId 标识用户的唯一id，防止同一个用户多次注册
+     * Set 标识用户的唯一ID，防止同一个用户多次注册
+     * @param CunionId 标识用户的唯一ID，防止同一个用户多次注册
      */
     public void setCunionId(String CunionId) {
         this.CunionId = CunionId;

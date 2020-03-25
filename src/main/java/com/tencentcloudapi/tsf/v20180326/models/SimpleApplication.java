@@ -95,6 +95,22 @@ public class SimpleApplication extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApigatewayServiceId")
+    @Expose
+    private String ApigatewayServiceId;
+
+    /**
+    * ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationRuntimeType")
+    @Expose
+    private String ApplicationRuntimeType;
+
+    /**
      * Get 应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
@@ -275,6 +291,46 @@ public class SimpleApplication extends AbstractModel{
     }
 
     /**
+     * Get ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApigatewayServiceId ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApigatewayServiceId() {
+        return this.ApigatewayServiceId;
+    }
+
+    /**
+     * Set ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApigatewayServiceId ApigatewayServiceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApigatewayServiceId(String ApigatewayServiceId) {
+        this.ApigatewayServiceId = ApigatewayServiceId;
+    }
+
+    /**
+     * Get ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationRuntimeType ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationRuntimeType() {
+        return this.ApplicationRuntimeType;
+    }
+
+    /**
+     * Set ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationRuntimeType ApplicationRuntimeType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationRuntimeType(String ApplicationRuntimeType) {
+        this.ApplicationRuntimeType = ApplicationRuntimeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +343,8 @@ public class SimpleApplication extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
+        this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
 
     }
 }

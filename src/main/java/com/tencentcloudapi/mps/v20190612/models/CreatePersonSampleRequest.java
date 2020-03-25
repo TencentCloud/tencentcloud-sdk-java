@@ -30,14 +30,6 @@ public class CreatePersonSampleRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
-注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
-    */
-    @SerializedName("FaceContents")
-    @Expose
-    private String [] FaceContents;
-
-    /**
     * 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
@@ -53,6 +45,14 @@ public class CreatePersonSampleRequest extends AbstractModel{
     @SerializedName("Description")
     @Expose
     private String Description;
+
+    /**
+    * 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
+    */
+    @SerializedName("FaceContents")
+    @Expose
+    private String [] FaceContents;
 
     /**
     * 人物标签
@@ -77,26 +77,6 @@ public class CreatePersonSampleRequest extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
-    }
-
-    /**
-     * Get 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
-注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。 
-     * @return FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
-注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
-     */
-    public String [] getFaceContents() {
-        return this.FaceContents;
-    }
-
-    /**
-     * Set 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
-注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
-     * @param FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
-注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
-     */
-    public void setFaceContents(String [] FaceContents) {
-        this.FaceContents = FaceContents;
     }
 
     /**
@@ -144,6 +124,26 @@ public class CreatePersonSampleRequest extends AbstractModel{
     }
 
     /**
+     * Get 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。 
+     * @return FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
+     */
+    public String [] getFaceContents() {
+        return this.FaceContents;
+    }
+
+    /**
+     * Set 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
+     * @param FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
+     */
+    public void setFaceContents(String [] FaceContents) {
+        this.FaceContents = FaceContents;
+    }
+
+    /**
      * Get 人物标签
 <li>数组长度限制：20 个标签；</li>
 <li>单个标签长度限制：128 个字符。</li> 
@@ -172,9 +172,9 @@ public class CreatePersonSampleRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "FaceContents.", this.FaceContents);
         this.setParamArraySimple(map, prefix + "Usages.", this.Usages);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArraySimple(map, prefix + "FaceContents.", this.FaceContents);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 
     }

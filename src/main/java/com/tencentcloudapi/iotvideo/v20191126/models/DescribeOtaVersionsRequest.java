@@ -30,7 +30,7 @@ public class DescribeOtaVersionsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 每页数量,,0<取值范围<=100
+    * 每页数量，0<取值范围<=100
     */
     @SerializedName("Limit")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeOtaVersionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页数量,,0<取值范围<=100 
-     * @return Limit 每页数量,,0<取值范围<=100
+     * Get 每页数量，0<取值范围<=100 
+     * @return Limit 每页数量，0<取值范围<=100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量,,0<取值范围<=100
-     * @param Limit 每页数量,,0<取值范围<=100
+     * Set 每页数量，0<取值范围<=100
+     * @param Limit 每页数量，0<取值范围<=100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

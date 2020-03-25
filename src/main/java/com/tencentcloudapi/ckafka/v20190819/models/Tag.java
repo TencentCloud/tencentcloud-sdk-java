@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Tag extends AbstractModel{
 
     /**
-    * 标识的key
+    * 标签的key
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 标识的值
+    * 标签的值
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get 标识的key 
-     * @return TagKey 标识的key
+     * Get 标签的key 
+     * @return TagKey 标签的key
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标识的key
-     * @param TagKey 标识的key
+     * Set 标签的key
+     * @param TagKey 标签的key
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 标识的值 
-     * @return TagValue 标识的值
+     * Get 标签的值 
+     * @return TagValue 标签的值
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set 标识的值
-     * @param TagValue 标识的值
+     * Set 标签的值
+     * @param TagValue 标签的值
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

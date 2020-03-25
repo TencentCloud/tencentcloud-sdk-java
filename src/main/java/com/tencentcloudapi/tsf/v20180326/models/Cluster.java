@@ -223,6 +223,22 @@ public class Cluster extends AbstractModel{
     private Long RunServiceInstanceCount;
 
     /**
+    * 集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * 返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationInfo")
+    @Expose
+    private OperationInfo OperationInfo;
+
+    /**
      * Get 集群ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
@@ -723,6 +739,46 @@ public class Cluster extends AbstractModel{
     }
 
     /**
+     * Get 集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 集群所属子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationInfo 返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OperationInfo getOperationInfo() {
+        return this.OperationInfo;
+    }
+
+    /**
+     * Set 返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationInfo 返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationInfo(OperationInfo OperationInfo) {
+        this.OperationInfo = OperationInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -751,6 +807,8 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterLimitCpu", this.ClusterLimitCpu);
         this.setParamSimple(map, prefix + "ClusterLimitMem", this.ClusterLimitMem);
         this.setParamSimple(map, prefix + "RunServiceInstanceCount", this.RunServiceInstanceCount);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamObj(map, prefix + "OperationInfo.", this.OperationInfo);
 
     }
 }

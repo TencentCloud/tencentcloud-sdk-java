@@ -247,6 +247,62 @@ public class Instance extends AbstractModel{
     private Long OperationState;
 
     /**
+    * NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceId")
+    @Expose
+    private String NamespaceId;
+
+    /**
+    * InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceZoneId")
+    @Expose
+    private String InstanceZoneId;
+
+    /**
+    * InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceImportMode")
+    @Expose
+    private String InstanceImportMode;
+
+    /**
+    * ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationType")
+    @Expose
+    private String ApplicationType;
+
+    /**
+    * ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationResourceType")
+    @Expose
+    private String ApplicationResourceType;
+
+    /**
+    * ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceSidecarStatus")
+    @Expose
+    private String ServiceSidecarStatus;
+
+    /**
+    * GroupName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
      * Get 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID
@@ -807,6 +863,146 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceId NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceId() {
+        return this.NamespaceId;
+    }
+
+    /**
+     * Set NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceId NamespaceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceId(String NamespaceId) {
+        this.NamespaceId = NamespaceId;
+    }
+
+    /**
+     * Get InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceZoneId InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceZoneId() {
+        return this.InstanceZoneId;
+    }
+
+    /**
+     * Set InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceZoneId InstanceZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceZoneId(String InstanceZoneId) {
+        this.InstanceZoneId = InstanceZoneId;
+    }
+
+    /**
+     * Get InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceImportMode InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceImportMode() {
+        return this.InstanceImportMode;
+    }
+
+    /**
+     * Set InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceImportMode InstanceImportMode
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceImportMode(String InstanceImportMode) {
+        this.InstanceImportMode = InstanceImportMode;
+    }
+
+    /**
+     * Get ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationType ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationType() {
+        return this.ApplicationType;
+    }
+
+    /**
+     * Set ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationType ApplicationType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationType(String ApplicationType) {
+        this.ApplicationType = ApplicationType;
+    }
+
+    /**
+     * Get ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationResourceType ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationResourceType() {
+        return this.ApplicationResourceType;
+    }
+
+    /**
+     * Set ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationResourceType ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationResourceType(String ApplicationResourceType) {
+        this.ApplicationResourceType = ApplicationResourceType;
+    }
+
+    /**
+     * Get ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceSidecarStatus ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceSidecarStatus() {
+        return this.ServiceSidecarStatus;
+    }
+
+    /**
+     * Set ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceSidecarStatus ServiceSidecarStatus
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceSidecarStatus(String ServiceSidecarStatus) {
+        this.ServiceSidecarStatus = ServiceSidecarStatus;
+    }
+
+    /**
+     * Get GroupName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupName GroupName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set GroupName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupName GroupName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -838,6 +1034,13 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "OperationState", this.OperationState);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "InstanceZoneId", this.InstanceZoneId);
+        this.setParamSimple(map, prefix + "InstanceImportMode", this.InstanceImportMode);
+        this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
+        this.setParamSimple(map, prefix + "ServiceSidecarStatus", this.ServiceSidecarStatus);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
 
     }
 }

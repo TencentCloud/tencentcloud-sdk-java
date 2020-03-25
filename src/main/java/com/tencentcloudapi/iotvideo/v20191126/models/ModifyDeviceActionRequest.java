@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyDeviceActionRequest extends AbstractModel{
 
     /**
-    * 设备Tid
+    * 设备TID
     */
     @SerializedName("Tid")
     @Expose
@@ -58,16 +58,16 @@ public class ModifyDeviceActionRequest extends AbstractModel{
     private Boolean IsNum;
 
     /**
-     * Get 设备Tid 
-     * @return Tid 设备Tid
+     * Get 设备TID 
+     * @return Tid 设备TID
      */
     public String getTid() {
         return this.Tid;
     }
 
     /**
-     * Set 设备Tid
-     * @param Tid 设备Tid
+     * Set 设备TID
+     * @param Tid 设备TID
      */
     public void setTid(String Tid) {
         this.Tid = Tid;

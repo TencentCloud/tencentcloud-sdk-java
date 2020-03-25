@@ -38,7 +38,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateAppUsr）用于接收由厂商云发送过来的注册请求,建立厂商云终端用户与IotVideo终端用户的映射关系。
+     *本接口（CreateAppUsr）用于接收由厂商云发送过来的注册请求,建立厂商云终端用户与IoT Video终端用户的映射关系。
      * @param req CreateAppUsrRequest
      * @return CreateAppUsrResponse
      * @throws TencentCloudSDKException
@@ -217,24 +217,6 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateUploadPathResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateUploadPath"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *设备申请cos上传证书
-     * @param req CreateUploadTestRequest
-     * @return CreateUploadTestResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateUploadTestResponse CreateUploadTest(CreateUploadTestRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUploadTestResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateUploadTestResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateUploadTest"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -824,24 +806,6 @@ ProWritable.Pos.setVal.x;
                 Type type = new TypeToken<JsonResponseModel<ModifyProductResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyProduct"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *设备刷新cos上传证书
-     * @param req RenewUploadTestRequest
-     * @return RenewUploadTestResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenewUploadTestResponse RenewUploadTest(RenewUploadTestRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RenewUploadTestResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<RenewUploadTestResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RenewUploadTest"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

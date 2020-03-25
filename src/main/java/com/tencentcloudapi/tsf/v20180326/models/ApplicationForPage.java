@@ -103,6 +103,14 @@ public class ApplicationForPage extends AbstractModel{
     private String ApplicationRuntimeType;
 
     /**
+    * Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApigatewayServiceId")
+    @Expose
+    private String ApigatewayServiceId;
+
+    /**
      * Get 应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
@@ -303,6 +311,26 @@ public class ApplicationForPage extends AbstractModel{
     }
 
     /**
+     * Get Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApigatewayServiceId Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApigatewayServiceId() {
+        return this.ApigatewayServiceId;
+    }
+
+    /**
+     * Set Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApigatewayServiceId Apigateway的serviceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApigatewayServiceId(String ApigatewayServiceId) {
+        this.ApigatewayServiceId = ApigatewayServiceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -316,6 +344,7 @@ public class ApplicationForPage extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
         this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
+        this.setParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
 
     }
 }

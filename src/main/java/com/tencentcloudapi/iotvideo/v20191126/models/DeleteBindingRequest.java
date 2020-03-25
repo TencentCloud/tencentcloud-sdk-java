@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteBindingRequest extends AbstractModel{
 
     /**
-    * 终端用户在IotVideo上的唯一标识id
+    * 终端用户在IoT Video上的唯一标识ID
     */
     @SerializedName("AccessId")
     @Expose
@@ -44,16 +44,16 @@ public class DeleteBindingRequest extends AbstractModel{
     private String Role;
 
     /**
-     * Get 终端用户在IotVideo上的唯一标识id 
-     * @return AccessId 终端用户在IotVideo上的唯一标识id
+     * Get 终端用户在IoT Video上的唯一标识ID 
+     * @return AccessId 终端用户在IoT Video上的唯一标识ID
      */
     public String getAccessId() {
         return this.AccessId;
     }
 
     /**
-     * Set 终端用户在IotVideo上的唯一标识id
-     * @param AccessId 终端用户在IotVideo上的唯一标识id
+     * Set 终端用户在IoT Video上的唯一标识ID
+     * @param AccessId 终端用户在IoT Video上的唯一标识ID
      */
     public void setAccessId(String AccessId) {
         this.AccessId = AccessId;

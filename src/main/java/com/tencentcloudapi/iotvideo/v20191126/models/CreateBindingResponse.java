@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateBindingResponse extends AbstractModel{
 
     /**
-    * 访问设备的accessToken
+    * 访问设备的AccessToken
     */
     @SerializedName("AccessToken")
     @Expose
@@ -37,16 +37,16 @@ public class CreateBindingResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 访问设备的accessToken 
-     * @return AccessToken 访问设备的accessToken
+     * Get 访问设备的AccessToken 
+     * @return AccessToken 访问设备的AccessToken
      */
     public String getAccessToken() {
         return this.AccessToken;
     }
 
     /**
-     * Set 访问设备的accessToken
-     * @param AccessToken 访问设备的accessToken
+     * Set 访问设备的AccessToken
+     * @param AccessToken 访问设备的AccessToken
      */
     public void setAccessToken(String AccessToken) {
         this.AccessToken = AccessToken;

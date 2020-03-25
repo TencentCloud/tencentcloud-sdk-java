@@ -31,7 +31,6 @@ public class CreatePersonSampleResponse extends AbstractModel{
 
     /**
     * 处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailFaceInfoSet")
     @Expose
@@ -61,10 +60,8 @@ public class CreatePersonSampleResponse extends AbstractModel{
     }
 
     /**
-     * Get 处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理失败的人脸信息。 
      * @return FailFaceInfoSet 处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiSampleFailFaceInfo [] getFailFaceInfoSet() {
         return this.FailFaceInfoSet;
@@ -72,9 +69,7 @@ public class CreatePersonSampleResponse extends AbstractModel{
 
     /**
      * Set 处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailFaceInfoSet 处理失败的人脸信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailFaceInfoSet(AiSampleFailFaceInfo [] FailFaceInfoSet) {
         this.FailFaceInfoSet = FailFaceInfoSet;

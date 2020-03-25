@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateAppUsrResponse extends AbstractModel{
 
     /**
-    * 厂商云标识用户的唯一id
+    * 厂商云标识用户的唯一ID
     */
     @SerializedName("CunionId")
     @Expose
     private String CunionId;
 
     /**
-    * 客户的终端用户在IotVideo上的唯一标识id
+    * 客户的终端用户在IoT Video上的唯一标识ID
     */
     @SerializedName("AccessId")
     @Expose
@@ -51,32 +51,32 @@ public class CreateAppUsrResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 厂商云标识用户的唯一id 
-     * @return CunionId 厂商云标识用户的唯一id
+     * Get 厂商云标识用户的唯一ID 
+     * @return CunionId 厂商云标识用户的唯一ID
      */
     public String getCunionId() {
         return this.CunionId;
     }
 
     /**
-     * Set 厂商云标识用户的唯一id
-     * @param CunionId 厂商云标识用户的唯一id
+     * Set 厂商云标识用户的唯一ID
+     * @param CunionId 厂商云标识用户的唯一ID
      */
     public void setCunionId(String CunionId) {
         this.CunionId = CunionId;
     }
 
     /**
-     * Get 客户的终端用户在IotVideo上的唯一标识id 
-     * @return AccessId 客户的终端用户在IotVideo上的唯一标识id
+     * Get 客户的终端用户在IoT Video上的唯一标识ID 
+     * @return AccessId 客户的终端用户在IoT Video上的唯一标识ID
      */
     public String getAccessId() {
         return this.AccessId;
     }
 
     /**
-     * Set 客户的终端用户在IotVideo上的唯一标识id
-     * @param AccessId 客户的终端用户在IotVideo上的唯一标识id
+     * Set 客户的终端用户在IoT Video上的唯一标识ID
+     * @param AccessId 客户的终端用户在IoT Video上的唯一标识ID
      */
     public void setAccessId(String AccessId) {
         this.AccessId = AccessId;
