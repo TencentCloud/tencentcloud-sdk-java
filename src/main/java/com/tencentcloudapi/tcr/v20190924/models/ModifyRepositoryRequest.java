@@ -30,6 +30,13 @@ public class ModifyRepositoryRequest extends AbstractModel{
     private String RegistryId;
 
     /**
+    * 命名空间名称
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
     * 镜像仓库名称
     */
     @SerializedName("RepositoryName")
@@ -37,25 +44,18 @@ public class ModifyRepositoryRequest extends AbstractModel{
     private String RepositoryName;
 
     /**
-    * 仓库描述
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
-
-    /**
-    * 仓库的简短描述
+    * 仓库简短描述
     */
     @SerializedName("BriefDescription")
     @Expose
     private String BriefDescription;
 
     /**
-    * 命名空间名称
+    * 仓库详细描述
     */
-    @SerializedName("NamespaceName")
+    @SerializedName("Description")
     @Expose
-    private String NamespaceName;
+    private String Description;
 
     /**
      * Get 实例ID 
@@ -71,54 +71,6 @@ public class ModifyRepositoryRequest extends AbstractModel{
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
-    }
-
-    /**
-     * Get 镜像仓库名称 
-     * @return RepositoryName 镜像仓库名称
-     */
-    public String getRepositoryName() {
-        return this.RepositoryName;
-    }
-
-    /**
-     * Set 镜像仓库名称
-     * @param RepositoryName 镜像仓库名称
-     */
-    public void setRepositoryName(String RepositoryName) {
-        this.RepositoryName = RepositoryName;
-    }
-
-    /**
-     * Get 仓库描述 
-     * @return Description 仓库描述
-     */
-    public String getDescription() {
-        return this.Description;
-    }
-
-    /**
-     * Set 仓库描述
-     * @param Description 仓库描述
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
-    }
-
-    /**
-     * Get 仓库的简短描述 
-     * @return BriefDescription 仓库的简短描述
-     */
-    public String getBriefDescription() {
-        return this.BriefDescription;
-    }
-
-    /**
-     * Set 仓库的简短描述
-     * @param BriefDescription 仓库的简短描述
-     */
-    public void setBriefDescription(String BriefDescription) {
-        this.BriefDescription = BriefDescription;
     }
 
     /**
@@ -138,14 +90,62 @@ public class ModifyRepositoryRequest extends AbstractModel{
     }
 
     /**
+     * Get 镜像仓库名称 
+     * @return RepositoryName 镜像仓库名称
+     */
+    public String getRepositoryName() {
+        return this.RepositoryName;
+    }
+
+    /**
+     * Set 镜像仓库名称
+     * @param RepositoryName 镜像仓库名称
+     */
+    public void setRepositoryName(String RepositoryName) {
+        this.RepositoryName = RepositoryName;
+    }
+
+    /**
+     * Get 仓库简短描述 
+     * @return BriefDescription 仓库简短描述
+     */
+    public String getBriefDescription() {
+        return this.BriefDescription;
+    }
+
+    /**
+     * Set 仓库简短描述
+     * @param BriefDescription 仓库简短描述
+     */
+    public void setBriefDescription(String BriefDescription) {
+        this.BriefDescription = BriefDescription;
+    }
+
+    /**
+     * Get 仓库详细描述 
+     * @return Description 仓库详细描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 仓库详细描述
+     * @param Description 仓库详细描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
-        this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
-        this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "BriefDescription", this.BriefDescription);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
+        this.setParamSimple(map, prefix + "BriefDescription", this.BriefDescription);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

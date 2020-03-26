@@ -58,6 +58,14 @@ public class TagResource extends AbstractModel{
     private String TagValueMd5;
 
     /**
+    * 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
      * Get 标签键 
      * @return TagKey 标签键
      */
@@ -138,6 +146,26 @@ public class TagResource extends AbstractModel{
     }
 
     /**
+     * Get 资源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceType 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceType 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class TagResource extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "TagKeyMd5", this.TagKeyMd5);
         this.setParamSimple(map, prefix + "TagValueMd5", this.TagValueMd5);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
 
     }
 }

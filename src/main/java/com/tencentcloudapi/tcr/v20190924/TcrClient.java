@@ -128,7 +128,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *获取临时登录密码
+     *创建实例的临时或长期访问凭证
      * @param req CreateInstanceTokenRequest
      * @return CreateInstanceTokenResponse
      * @throws TencentCloudSDKException
@@ -301,6 +301,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteImagePersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteImagePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除长期访问凭证
+     * @param req DeleteInstanceTokenRequest
+     * @return DeleteInstanceTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceTokenResponse DeleteInstanceToken(DeleteInstanceTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstanceTokenResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstanceTokenResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteInstanceToken"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -506,7 +524,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *用于在企业版中查询镜像仓库内容器镜像信息，获取镜像版本列表
+     *查询镜像版本列表或指定容器镜像信息
      * @param req DescribeImagesRequest
      * @return DescribeImagesResponse
      * @throws TencentCloudSDKException
@@ -535,6 +553,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceStatusResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询长期访问凭证信息
+     * @param req DescribeInstanceTokenRequest
+     * @return DescribeInstanceTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceTokenResponse DescribeInstanceToken(DescribeInstanceTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceTokenResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceTokenResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceToken"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -596,7 +632,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *查询镜像仓库信息
+     *查询镜像仓库列表或指定镜像仓库信息
      * @param req DescribeRepositoriesRequest
      * @return DescribeRepositoriesResponse
      * @throws TencentCloudSDKException
@@ -740,6 +776,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *更新实例内指定长期访问凭证的启用状态
+     * @param req ModifyInstanceTokenRequest
+     * @return ModifyInstanceTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceTokenResponse ModifyInstanceToken(ModifyInstanceTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceTokenResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceTokenResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyInstanceToken"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新命名空间信息，当前仅支持修改命名空间访问级别
      * @param req ModifyNamespaceRequest
      * @return ModifyNamespaceResponse
@@ -758,7 +812,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *更新镜像仓库描述
+     *更新镜像仓库信息，可修改仓库描述信息
      * @param req ModifyRepositoryRequest
      * @return ModifyRepositoryResponse
      * @throws TencentCloudSDKException

@@ -30,7 +30,14 @@ public class DescribeRepositoriesRequest extends AbstractModel{
     private String RegistryId;
 
     /**
-    * 仓库名称，用于查询
+    * 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
+    * 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
     */
     @SerializedName("RepositoryName")
     @Expose
@@ -58,13 +65,6 @@ public class DescribeRepositoriesRequest extends AbstractModel{
     private String SortBy;
 
     /**
-    * 命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
-    */
-    @SerializedName("NamespaceName")
-    @Expose
-    private String NamespaceName;
-
-    /**
      * Get 实例Id 
      * @return RegistryId 实例Id
      */
@@ -81,16 +81,32 @@ public class DescribeRepositoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 仓库名称，用于查询 
-     * @return RepositoryName 仓库名称，用于查询
+     * Get 指定命名空间，不填写默认为查询所有命名空间下镜像仓库 
+     * @return NamespaceName 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+     */
+    public String getNamespaceName() {
+        return this.NamespaceName;
+    }
+
+    /**
+     * Set 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+     * @param NamespaceName 指定命名空间，不填写默认为查询所有命名空间下镜像仓库
+     */
+    public void setNamespaceName(String NamespaceName) {
+        this.NamespaceName = NamespaceName;
+    }
+
+    /**
+     * Get 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库 
+     * @return RepositoryName 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
      */
     public String getRepositoryName() {
         return this.RepositoryName;
     }
 
     /**
-     * Set 仓库名称，用于查询
-     * @param RepositoryName 仓库名称，用于查询
+     * Set 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
+     * @param RepositoryName 指定镜像仓库，不填写默认查询指定命名空间下所有镜像仓库
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;
@@ -145,31 +161,15 @@ public class DescribeRepositoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下 
-     * @return NamespaceName 命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
-     */
-    public String getNamespaceName() {
-        return this.NamespaceName;
-    }
-
-    /**
-     * Set 命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
-     * @param NamespaceName 命名空间名称，用于查询改命名空间下的仓库，如果不填写默认为所有命名空间下
-     */
-    public void setNamespaceName(String NamespaceName) {
-        this.NamespaceName = NamespaceName;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
-        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
 
     }
 }

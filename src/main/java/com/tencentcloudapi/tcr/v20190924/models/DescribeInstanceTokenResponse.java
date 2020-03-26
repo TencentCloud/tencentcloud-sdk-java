@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceTokenResponse extends AbstractModel{
+public class DescribeInstanceTokenResponse extends AbstractModel{
 
     /**
-    * 访问凭证
+    * 长期访问凭证总数
     */
-    @SerializedName("Token")
+    @SerializedName("TotalCount")
     @Expose
-    private String Token;
+    private Long TotalCount;
 
     /**
-    * 访问凭证过期时间戳
+    * 长期访问凭证列表
     */
-    @SerializedName("ExpTime")
+    @SerializedName("Tokens")
     @Expose
-    private Long ExpTime;
+    private TcrInstanceToken [] Tokens;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class CreateInstanceTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 访问凭证 
-     * @return Token 访问凭证
+     * Get 长期访问凭证总数 
+     * @return TotalCount 长期访问凭证总数
      */
-    public String getToken() {
-        return this.Token;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 访问凭证
-     * @param Token 访问凭证
+     * Set 长期访问凭证总数
+     * @param TotalCount 长期访问凭证总数
      */
-    public void setToken(String Token) {
-        this.Token = Token;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 访问凭证过期时间戳 
-     * @return ExpTime 访问凭证过期时间戳
+     * Get 长期访问凭证列表 
+     * @return Tokens 长期访问凭证列表
      */
-    public Long getExpTime() {
-        return this.ExpTime;
+    public TcrInstanceToken [] getTokens() {
+        return this.Tokens;
     }
 
     /**
-     * Set 访问凭证过期时间戳
-     * @param ExpTime 访问凭证过期时间戳
+     * Set 长期访问凭证列表
+     * @param Tokens 长期访问凭证列表
      */
-    public void setExpTime(Long ExpTime) {
-        this.ExpTime = ExpTime;
+    public void setTokens(TcrInstanceToken [] Tokens) {
+        this.Tokens = Tokens;
     }
 
     /**
@@ -95,8 +95,8 @@ public class CreateInstanceTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "ExpTime", this.ExpTime);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Tokens.", this.Tokens);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

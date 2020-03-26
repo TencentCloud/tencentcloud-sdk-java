@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AgeInfo extends AbstractModel{
 
     /**
-    * 选择变化范围，参数为【10，80】，当前默认值为10且不可调整（算法有待调整）。
+    * 当前只支持设置为10且不可调整（后续放开后再知会）。
     */
     @SerializedName("Age")
     @Expose
@@ -38,16 +38,16 @@ public class AgeInfo extends AbstractModel{
     private FaceRect FaceRect;
 
     /**
-     * Get 选择变化范围，参数为【10，80】，当前默认值为10且不可调整（算法有待调整）。 
-     * @return Age 选择变化范围，参数为【10，80】，当前默认值为10且不可调整（算法有待调整）。
+     * Get 当前只支持设置为10且不可调整（后续放开后再知会）。 
+     * @return Age 当前只支持设置为10且不可调整（后续放开后再知会）。
      */
     public Long getAge() {
         return this.Age;
     }
 
     /**
-     * Set 选择变化范围，参数为【10，80】，当前默认值为10且不可调整（算法有待调整）。
-     * @param Age 选择变化范围，参数为【10，80】，当前默认值为10且不可调整（算法有待调整）。
+     * Set 当前只支持设置为10且不可调整（后续放开后再知会）。
+     * @param Age 当前只支持设置为10且不可调整（后续放开后再知会）。
      */
     public void setAge(Long Age) {
         this.Age = Age;

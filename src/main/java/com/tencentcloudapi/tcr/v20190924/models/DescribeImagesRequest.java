@@ -30,6 +30,13 @@ public class DescribeImagesRequest extends AbstractModel{
     private String RegistryId;
 
     /**
+    * 命名空间名称
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
     * 镜像仓库名称
     */
     @SerializedName("RepositoryName")
@@ -37,11 +44,11 @@ public class DescribeImagesRequest extends AbstractModel{
     private String RepositoryName;
 
     /**
-    * 命名空间名称
+    * 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
     */
-    @SerializedName("NamespaceName")
+    @SerializedName("ImageVersion")
     @Expose
-    private String NamespaceName;
+    private String ImageVersion;
 
     /**
     * 每页个数，用于分页，默认20
@@ -58,13 +65,6 @@ public class DescribeImagesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 镜像版本(Tag)，置空则返回仓库内全部的容器镜像
-    */
-    @SerializedName("ImageVersion")
-    @Expose
-    private String ImageVersion;
-
-    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -78,6 +78,22 @@ public class DescribeImagesRequest extends AbstractModel{
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
+    }
+
+    /**
+     * Get 命名空间名称 
+     * @return NamespaceName 命名空间名称
+     */
+    public String getNamespaceName() {
+        return this.NamespaceName;
+    }
+
+    /**
+     * Set 命名空间名称
+     * @param NamespaceName 命名空间名称
+     */
+    public void setNamespaceName(String NamespaceName) {
+        this.NamespaceName = NamespaceName;
     }
 
     /**
@@ -97,19 +113,19 @@ public class DescribeImagesRequest extends AbstractModel{
     }
 
     /**
-     * Get 命名空间名称 
-     * @return NamespaceName 命名空间名称
+     * Get 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像 
+     * @return ImageVersion 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
      */
-    public String getNamespaceName() {
-        return this.NamespaceName;
+    public String getImageVersion() {
+        return this.ImageVersion;
     }
 
     /**
-     * Set 命名空间名称
-     * @param NamespaceName 命名空间名称
+     * Set 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+     * @param ImageVersion 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
      */
-    public void setNamespaceName(String NamespaceName) {
-        this.NamespaceName = NamespaceName;
+    public void setImageVersion(String ImageVersion) {
+        this.ImageVersion = ImageVersion;
     }
 
     /**
@@ -145,31 +161,15 @@ public class DescribeImagesRequest extends AbstractModel{
     }
 
     /**
-     * Get 镜像版本(Tag)，置空则返回仓库内全部的容器镜像 
-     * @return ImageVersion 镜像版本(Tag)，置空则返回仓库内全部的容器镜像
-     */
-    public String getImageVersion() {
-        return this.ImageVersion;
-    }
-
-    /**
-     * Set 镜像版本(Tag)，置空则返回仓库内全部的容器镜像
-     * @param ImageVersion 镜像版本(Tag)，置空则返回仓库内全部的容器镜像
-     */
-    public void setImageVersion(String ImageVersion) {
-        this.ImageVersion = ImageVersion;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
-        this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
+        this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
 
     }
 }

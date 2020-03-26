@@ -303,6 +303,14 @@ public class Instance extends AbstractModel{
     private String GroupName;
 
     /**
+    * NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
      * Get 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID
@@ -1003,6 +1011,26 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceName NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceName() {
+        return this.NamespaceName;
+    }
+
+    /**
+     * Set NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceName NamespaceName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceName(String NamespaceName) {
+        this.NamespaceName = NamespaceName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1041,6 +1069,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
         this.setParamSimple(map, prefix + "ServiceSidecarStatus", this.ServiceSidecarStatus);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
 
     }
 }

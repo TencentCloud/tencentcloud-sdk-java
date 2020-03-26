@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceTokenResponse extends AbstractModel{
-
-    /**
-    * 访问凭证
-    */
-    @SerializedName("Token")
-    @Expose
-    private String Token;
-
-    /**
-    * 访问凭证过期时间戳
-    */
-    @SerializedName("ExpTime")
-    @Expose
-    private Long ExpTime;
+public class DeleteInstanceTokenResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class CreateInstanceTokenResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 访问凭证 
-     * @return Token 访问凭证
-     */
-    public String getToken() {
-        return this.Token;
-    }
-
-    /**
-     * Set 访问凭证
-     * @param Token 访问凭证
-     */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get 访问凭证过期时间戳 
-     * @return ExpTime 访问凭证过期时间戳
-     */
-    public Long getExpTime() {
-        return this.ExpTime;
-    }
-
-    /**
-     * Set 访问凭证过期时间戳
-     * @param ExpTime 访问凭证过期时间戳
-     */
-    public void setExpTime(Long ExpTime) {
-        this.ExpTime = ExpTime;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class CreateInstanceTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "ExpTime", this.ExpTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

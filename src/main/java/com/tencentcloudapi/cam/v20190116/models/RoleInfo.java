@@ -72,7 +72,7 @@ public class RoleInfo extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
-    * 角色类型，取user或system
+    * 角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleType")
@@ -86,6 +86,14 @@ public class RoleInfo extends AbstractModel{
     @SerializedName("SessionDuration")
     @Expose
     private Long SessionDuration;
+
+    /**
+    * 服务相关角色删除TaskId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeletionTaskId")
+    @Expose
+    private String DeletionTaskId;
 
     /**
      * Get 角色ID 
@@ -200,9 +208,9 @@ public class RoleInfo extends AbstractModel{
     }
 
     /**
-     * Get 角色类型，取user或system
+     * Get 角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleType 角色类型，取user或system
+     * @return RoleType 角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleType() {
@@ -210,9 +218,9 @@ public class RoleInfo extends AbstractModel{
     }
 
     /**
-     * Set 角色类型，取user或system
+     * Set 角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleType 角色类型，取user或system
+     * @param RoleType 角色类型，取user、system或service_linked
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleType(String RoleType) {
@@ -240,6 +248,26 @@ public class RoleInfo extends AbstractModel{
     }
 
     /**
+     * Get 服务相关角色删除TaskId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeletionTaskId 服务相关角色删除TaskId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeletionTaskId() {
+        return this.DeletionTaskId;
+    }
+
+    /**
+     * Set 服务相关角色删除TaskId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeletionTaskId 服务相关角色删除TaskId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeletionTaskId(String DeletionTaskId) {
+        this.DeletionTaskId = DeletionTaskId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +280,7 @@ public class RoleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
         this.setParamSimple(map, prefix + "RoleType", this.RoleType);
         this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
+        this.setParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
 
     }
 }

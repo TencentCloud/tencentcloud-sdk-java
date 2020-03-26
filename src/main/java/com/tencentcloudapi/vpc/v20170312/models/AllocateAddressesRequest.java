@@ -88,6 +88,13 @@ AnycastEIP是否用于绑定负载均衡。
     private Boolean ApplicableForCLB;
 
     /**
+    * BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
+    */
+    @SerializedName("BandwidthPackageId")
+    @Expose
+    private String BandwidthPackageId;
+
+    /**
      * Get EIP数量。默认值：1。 
      * @return AddressCount EIP数量。默认值：1。
      */
@@ -264,6 +271,22 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
+     * Get BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费 
+     * @return BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
+     */
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
+    }
+
+    /**
+     * Set BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
+     * @param BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
+     */
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -274,6 +297,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
         this.setParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
+        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
 
     }
 }

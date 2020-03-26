@@ -30,6 +30,20 @@ public class CreateInstanceTokenRequest extends AbstractModel{
     private String RegistryId;
 
     /**
+    * 访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+    */
+    @SerializedName("TokenType")
+    @Expose
+    private String TokenType;
+
+    /**
+    * 长期访问凭证描述信息
+    */
+    @SerializedName("Desc")
+    @Expose
+    private String Desc;
+
+    /**
      * Get 实例Id 
      * @return RegistryId 实例Id
      */
@@ -46,10 +60,44 @@ public class CreateInstanceTokenRequest extends AbstractModel{
     }
 
     /**
+     * Get 访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时 
+     * @return TokenType 访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+     */
+    public String getTokenType() {
+        return this.TokenType;
+    }
+
+    /**
+     * Set 访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+     * @param TokenType 访问凭证类型，longterm 为长期访问凭证，temp 为临时访问凭证，默认是临时访问凭证，有效期1小时
+     */
+    public void setTokenType(String TokenType) {
+        this.TokenType = TokenType;
+    }
+
+    /**
+     * Get 长期访问凭证描述信息 
+     * @return Desc 长期访问凭证描述信息
+     */
+    public String getDesc() {
+        return this.Desc;
+    }
+
+    /**
+     * Set 长期访问凭证描述信息
+     * @param Desc 长期访问凭证描述信息
+     */
+    public void setDesc(String Desc) {
+        this.Desc = Desc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
+        this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }
 }

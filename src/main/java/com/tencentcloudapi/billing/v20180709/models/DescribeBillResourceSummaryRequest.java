@@ -59,6 +59,13 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private Long NeedRecordNum;
 
     /**
+    * 查询交易类型。如 按量计费日结，按量计费小时结 等
+    */
+    @SerializedName("ActionType")
+    @Expose
+    private String ActionType;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -143,6 +150,22 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     }
 
     /**
+     * Get 查询交易类型。如 按量计费日结，按量计费小时结 等 
+     * @return ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
+     */
+    public String getActionType() {
+        return this.ActionType;
+    }
+
+    /**
+     * Set 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * @param ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
+     */
+    public void setActionType(String ActionType) {
+        this.ActionType = ActionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +174,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PeriodType", this.PeriodType);
         this.setParamSimple(map, prefix + "Month", this.Month);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
+        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
 
     }
 }

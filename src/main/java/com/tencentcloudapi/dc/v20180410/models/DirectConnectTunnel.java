@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DirectConnectTunnel extends AbstractModel{
 
     /**
-    * 专线通道ID
+    * 专用通道ID
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
@@ -37,7 +37,7 @@ public class DirectConnectTunnel extends AbstractModel{
     private String DirectConnectId;
 
     /**
-    * 专线通道状态
+    * 专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -60,7 +60,7 @@ REJECTED:拒绝
     private String DirectConnectOwnerAccount;
 
     /**
-    * 专线通道的拥有者，开发商账号 ID
+    * 专用通道的拥有者，开发商账号 ID
     */
     @SerializedName("OwnerAccount")
     @Expose
@@ -117,7 +117,7 @@ REJECTED:拒绝
     private RouteFilterPrefix [] RouteFilterPrefixes;
 
     /**
-    * 专线通道的Vlan
+    * 专用通道的Vlan
     */
     @SerializedName("Vlan")
     @Expose
@@ -138,28 +138,28 @@ REJECTED:拒绝
     private String CustomerAddress;
 
     /**
-    * 专线通道名称
+    * 专用通道名称
     */
     @SerializedName("DirectConnectTunnelName")
     @Expose
     private String DirectConnectTunnelName;
 
     /**
-    * 专线通道创建时间
+    * 专用通道创建时间
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 专线通道带宽值
+    * 专用通道带宽值
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 专线通道标签值
+    * 专用通道标签值
     */
     @SerializedName("TagSet")
     @Expose
@@ -206,7 +206,7 @@ REJECTED:拒绝
     private Long BfdEnable;
 
     /**
-    * 专线通道接入点类型
+    * 专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessPointType")
@@ -230,16 +230,16 @@ REJECTED:拒绝
     private String VpcName;
 
     /**
-     * Get 专线通道ID 
-     * @return DirectConnectTunnelId 专线通道ID
+     * Get 专用通道ID 
+     * @return DirectConnectTunnelId 专用通道ID
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * Set 专线通道ID
-     * @param DirectConnectTunnelId 专线通道ID
+     * Set 专用通道ID
+     * @param DirectConnectTunnelId 专用通道ID
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;
@@ -262,7 +262,7 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 专线通道状态
+     * Get 专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -272,7 +272,7 @@ DELETING:删除中
 DELETED:删除完成
 COMFIRMING:待接受
 REJECTED:拒绝 
-     * @return State 专线通道状态
+     * @return State 专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -288,7 +288,7 @@ REJECTED:拒绝
     }
 
     /**
-     * Set 专线通道状态
+     * Set 专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -298,7 +298,7 @@ DELETING:删除中
 DELETED:删除完成
 COMFIRMING:待接受
 REJECTED:拒绝
-     * @param State 专线通道状态
+     * @param State 专用通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -330,16 +330,16 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 专线通道的拥有者，开发商账号 ID 
-     * @return OwnerAccount 专线通道的拥有者，开发商账号 ID
+     * Get 专用通道的拥有者，开发商账号 ID 
+     * @return OwnerAccount 专用通道的拥有者，开发商账号 ID
      */
     public String getOwnerAccount() {
         return this.OwnerAccount;
     }
 
     /**
-     * Set 专线通道的拥有者，开发商账号 ID
-     * @param OwnerAccount 专线通道的拥有者，开发商账号 ID
+     * Set 专用通道的拥有者，开发商账号 ID
+     * @param OwnerAccount 专用通道的拥有者，开发商账号 ID
      */
     public void setOwnerAccount(String OwnerAccount) {
         this.OwnerAccount = OwnerAccount;
@@ -462,16 +462,16 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 专线通道的Vlan 
-     * @return Vlan 专线通道的Vlan
+     * Get 专用通道的Vlan 
+     * @return Vlan 专用通道的Vlan
      */
     public Long getVlan() {
         return this.Vlan;
     }
 
     /**
-     * Set 专线通道的Vlan
-     * @param Vlan 专线通道的Vlan
+     * Set 专用通道的Vlan
+     * @param Vlan 专用通道的Vlan
      */
     public void setVlan(Long Vlan) {
         this.Vlan = Vlan;
@@ -510,64 +510,64 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 专线通道名称 
-     * @return DirectConnectTunnelName 专线通道名称
+     * Get 专用通道名称 
+     * @return DirectConnectTunnelName 专用通道名称
      */
     public String getDirectConnectTunnelName() {
         return this.DirectConnectTunnelName;
     }
 
     /**
-     * Set 专线通道名称
-     * @param DirectConnectTunnelName 专线通道名称
+     * Set 专用通道名称
+     * @param DirectConnectTunnelName 专用通道名称
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
         this.DirectConnectTunnelName = DirectConnectTunnelName;
     }
 
     /**
-     * Get 专线通道创建时间 
-     * @return CreatedTime 专线通道创建时间
+     * Get 专用通道创建时间 
+     * @return CreatedTime 专用通道创建时间
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 专线通道创建时间
-     * @param CreatedTime 专线通道创建时间
+     * Set 专用通道创建时间
+     * @param CreatedTime 专用通道创建时间
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 专线通道带宽值 
-     * @return Bandwidth 专线通道带宽值
+     * Get 专用通道带宽值 
+     * @return Bandwidth 专用通道带宽值
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 专线通道带宽值
-     * @param Bandwidth 专线通道带宽值
+     * Set 专用通道带宽值
+     * @param Bandwidth 专用通道带宽值
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 专线通道标签值 
-     * @return TagSet 专线通道标签值
+     * Get 专用通道标签值 
+     * @return TagSet 专用通道标签值
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 专线通道标签值
-     * @param TagSet 专线通道标签值
+     * Set 专用通道标签值
+     * @param TagSet 专用通道标签值
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
@@ -674,9 +674,9 @@ REJECTED:拒绝
     }
 
     /**
-     * Get 专线通道接入点类型
+     * Get 专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessPointType 专线通道接入点类型
+     * @return AccessPointType 专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessPointType() {
@@ -684,9 +684,9 @@ REJECTED:拒绝
     }
 
     /**
-     * Set 专线通道接入点类型
+     * Set 专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessPointType 专线通道接入点类型
+     * @param AccessPointType 专用通道接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessPointType(String AccessPointType) {

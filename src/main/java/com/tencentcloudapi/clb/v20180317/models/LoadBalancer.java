@@ -364,6 +364,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Boolean IsBlock;
 
     /**
+    * 封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsBlockTime")
+    @Expose
+    private String IsBlockTime;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1212,6 +1220,26 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsBlockTime 封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsBlockTime() {
+        return this.IsBlockTime;
+    }
+
+    /**
+     * Set 封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsBlockTime 封堵或解封时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsBlockTime(String IsBlockTime) {
+        this.IsBlockTime = IsBlockTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1258,6 +1286,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
+        this.setParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
 
     }
 }
