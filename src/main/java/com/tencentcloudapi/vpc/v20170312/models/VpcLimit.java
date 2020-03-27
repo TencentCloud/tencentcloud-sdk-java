@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCertificateAliasRequest extends AbstractModel{
+public class VpcLimit extends AbstractModel{
 
     /**
-    * 证书id。
+    * 私有网络配额描述
     */
-    @SerializedName("CertificateId")
+    @SerializedName("LimitType")
     @Expose
-    private String CertificateId;
+    private String LimitType;
 
     /**
-    * 备注名称。
+    * 私有网络配额值
     */
-    @SerializedName("Alias")
+    @SerializedName("LimitValue")
     @Expose
-    private String Alias;
+    private Long LimitValue;
 
     /**
-     * Get 证书id。 
-     * @return CertificateId 证书id。
+     * Get 私有网络配额描述 
+     * @return LimitType 私有网络配额描述
      */
-    public String getCertificateId() {
-        return this.CertificateId;
+    public String getLimitType() {
+        return this.LimitType;
     }
 
     /**
-     * Set 证书id。
-     * @param CertificateId 证书id。
+     * Set 私有网络配额描述
+     * @param LimitType 私有网络配额描述
      */
-    public void setCertificateId(String CertificateId) {
-        this.CertificateId = CertificateId;
+    public void setLimitType(String LimitType) {
+        this.LimitType = LimitType;
     }
 
     /**
-     * Get 备注名称。 
-     * @return Alias 备注名称。
+     * Get 私有网络配额值 
+     * @return LimitValue 私有网络配额值
      */
-    public String getAlias() {
-        return this.Alias;
+    public Long getLimitValue() {
+        return this.LimitValue;
     }
 
     /**
-     * Set 备注名称。
-     * @param Alias 备注名称。
+     * Set 私有网络配额值
+     * @param LimitValue 私有网络配额值
      */
-    public void setAlias(String Alias) {
-        this.Alias = Alias;
+    public void setLimitValue(Long LimitValue) {
+        this.LimitValue = LimitValue;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
-        this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "LimitType", this.LimitType);
+        this.setParamSimple(map, prefix + "LimitValue", this.LimitValue);
 
     }
 }

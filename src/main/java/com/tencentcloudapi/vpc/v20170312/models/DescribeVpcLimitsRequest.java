@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableLiveDomainRequest extends AbstractModel{
+public class DescribeVpcLimitsRequest extends AbstractModel{
 
     /**
-    * 待启用的直播域名。
+    * 配额名称。每次最大查询100个配额类型。
     */
-    @SerializedName("DomainName")
+    @SerializedName("LimitTypes")
     @Expose
-    private String DomainName;
+    private String [] LimitTypes;
 
     /**
-     * Get 待启用的直播域名。 
-     * @return DomainName 待启用的直播域名。
+     * Get 配额名称。每次最大查询100个配额类型。 
+     * @return LimitTypes 配额名称。每次最大查询100个配额类型。
      */
-    public String getDomainName() {
-        return this.DomainName;
+    public String [] getLimitTypes() {
+        return this.LimitTypes;
     }
 
     /**
-     * Set 待启用的直播域名。
-     * @param DomainName 待启用的直播域名。
+     * Set 配额名称。每次最大查询100个配额类型。
+     * @param LimitTypes 配额名称。每次最大查询100个配额类型。
      */
-    public void setDomainName(String DomainName) {
-        this.DomainName = DomainName;
+    public void setLimitTypes(String [] LimitTypes) {
+        this.LimitTypes = LimitTypes;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamArraySimple(map, prefix + "LimitTypes.", this.LimitTypes);
 
     }
 }

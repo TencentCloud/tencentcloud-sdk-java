@@ -13,30 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadCertificateResponse extends AbstractModel{
+public class ModifyClusterAttributeResponse extends AbstractModel{
 
     /**
-    * ZIP base64编码内容，base64解码后可保存为ZIP文件。
+    * 集群所属项目
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Content")
+    @SerializedName("ProjectId")
     @Expose
-    private String Content;
+    private Long ProjectId;
 
     /**
-    * MIME类型：application/zip = ZIP压缩文件。
+    * 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ContentType")
+    @SerializedName("ClusterName")
     @Expose
-    private String ContentType;
+    private String ClusterName;
+
+    /**
+    * 集群描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterDesc")
+    @Expose
+    private String ClusterDesc;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +54,63 @@ public class DownloadCertificateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * Get 集群所属项目
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * @return ProjectId 集群所属项目
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getContent() {
-        return this.Content;
+    public Long getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * Set 集群所属项目
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * @param ProjectId 集群所属项目
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
-     * Get MIME类型：application/zip = ZIP压缩文件。
+     * Get 集群名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContentType MIME类型：application/zip = ZIP压缩文件。
+     * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getContentType() {
-        return this.ContentType;
+    public String getClusterName() {
+        return this.ClusterName;
     }
 
     /**
-     * Set MIME类型：application/zip = ZIP压缩文件。
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContentType MIME类型：application/zip = ZIP压缩文件。
+     * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setContentType(String ContentType) {
-        this.ContentType = ContentType;
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get 集群描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterDesc 集群描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterDesc() {
+        return this.ClusterDesc;
+    }
+
+    /**
+     * Set 集群描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterDesc 集群描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterDesc(String ClusterDesc) {
+        this.ClusterDesc = ClusterDesc;
     }
 
     /**
@@ -105,8 +133,9 @@ public class DownloadCertificateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Content", this.Content);
-        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

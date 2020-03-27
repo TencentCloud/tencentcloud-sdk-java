@@ -86,6 +86,13 @@ public class BizLicenseOCRResponse extends AbstractModel{
     private String ComposingForm;
 
     /**
+    * 成立日期
+    */
+    @SerializedName("SetDate")
+    @Expose
+    private String SetDate;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -237,6 +244,22 @@ public class BizLicenseOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 成立日期 
+     * @return SetDate 成立日期
+     */
+    public String getSetDate() {
+        return this.SetDate;
+    }
+
+    /**
+     * Set 成立日期
+     * @param SetDate 成立日期
+     */
+    public void setSetDate(String SetDate) {
+        this.SetDate = SetDate;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -265,6 +288,7 @@ public class BizLicenseOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "ComposingForm", this.ComposingForm);
+        this.setParamSimple(map, prefix + "SetDate", this.SetDate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

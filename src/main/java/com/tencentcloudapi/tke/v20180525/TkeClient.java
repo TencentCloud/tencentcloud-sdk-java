@@ -488,6 +488,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取镜像信息
+     * @param req DescribeImagesRequest
+     * @return DescribeImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取容器服务支持的所有地域
+     * @param req DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRegions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询路由表冲突列表
      * @param req DescribeRouteTableConflictsRequest
      * @return DescribeRouteTableConflictsResponse
@@ -517,6 +553,24 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterAsGroupAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterAsGroupAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改集群属性
+     * @param req ModifyClusterAttributeRequest
+     * @return ModifyClusterAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterAttributeResponse ModifyClusterAttribute(ModifyClusterAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

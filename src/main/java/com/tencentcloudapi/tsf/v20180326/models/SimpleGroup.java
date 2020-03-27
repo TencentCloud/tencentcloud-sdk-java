@@ -103,6 +103,30 @@ public class SimpleGroup extends AbstractModel{
     private String NamespaceName;
 
     /**
+    * 启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartupParameters")
+    @Expose
+    private String StartupParameters;
+
+    /**
+    * 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupResourceType")
+    @Expose
+    private String GroupResourceType;
+
+    /**
+    * 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppMicroServiceType")
+    @Expose
+    private String AppMicroServiceType;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -303,6 +327,66 @@ public class SimpleGroup extends AbstractModel{
     }
 
     /**
+     * Get 启动参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartupParameters 启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartupParameters() {
+        return this.StartupParameters;
+    }
+
+    /**
+     * Set 启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartupParameters 启动参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartupParameters(String StartupParameters) {
+        this.StartupParameters = StartupParameters;
+    }
+
+    /**
+     * Get 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupResourceType 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupResourceType() {
+        return this.GroupResourceType;
+    }
+
+    /**
+     * Set 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupResourceType 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupResourceType(String GroupResourceType) {
+        this.GroupResourceType = GroupResourceType;
+    }
+
+    /**
+     * Get 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppMicroServiceType 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppMicroServiceType() {
+        return this.AppMicroServiceType;
+    }
+
+    /**
+     * Set 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppMicroServiceType 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppMicroServiceType(String AppMicroServiceType) {
+        this.AppMicroServiceType = AppMicroServiceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -316,6 +400,9 @@ public class SimpleGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
+        this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+        this.setParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
 
     }
 }

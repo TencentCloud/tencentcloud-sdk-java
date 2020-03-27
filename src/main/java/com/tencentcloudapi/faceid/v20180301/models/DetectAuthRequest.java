@@ -37,7 +37,7 @@ public class DetectAuthRequest extends AbstractModel{
     private String TerminalType;
 
     /**
-    * 身份标识（与公安权威库比对时必须是身份证号）。
+    * 身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
     */
     @SerializedName("IdCard")
@@ -45,7 +45,7 @@ public class DetectAuthRequest extends AbstractModel{
     private String IdCard;
 
     /**
-    * 姓名。最长长度32位。中文请使用UTF-8编码。
+    * 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
     */
     @SerializedName("Name")
     @Expose
@@ -106,9 +106,9 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * Get 身份标识（与公安权威库比对时必须是身份证号）。
+     * Get 身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。 
-     * @return IdCard 身份标识（与公安权威库比对时必须是身份证号）。
+     * @return IdCard 身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
      */
     public String getIdCard() {
@@ -116,9 +116,9 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * Set 身份标识（与公安权威库比对时必须是身份证号）。
+     * Set 身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
-     * @param IdCard 身份标识（与公安权威库比对时必须是身份证号）。
+     * @param IdCard 身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
      */
     public void setIdCard(String IdCard) {
@@ -126,16 +126,16 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * Get 姓名。最长长度32位。中文请使用UTF-8编码。 
-     * @return Name 姓名。最长长度32位。中文请使用UTF-8编码。
+     * Get 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。 
+     * @return Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名。最长长度32位。中文请使用UTF-8编码。
-     * @param Name 姓名。最长长度32位。中文请使用UTF-8编码。
+     * Set 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
+     * @param Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
      */
     public void setName(String Name) {
         this.Name = Name;

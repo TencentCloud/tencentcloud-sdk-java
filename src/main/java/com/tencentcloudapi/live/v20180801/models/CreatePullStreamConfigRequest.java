@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePullStreamConfigRequest extends AbstractModel{
 
     /**
-    * 源 Url。目前可支持直播流及点播文件。
+    * 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
@@ -34,7 +34,7 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     private String FromUrl;
 
     /**
-    * 目的 Url，目前限制该目标地址为腾讯域名。
+    * 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
 仅支持：rtmp 协议。
     */
     @SerializedName("ToUrl")
@@ -88,12 +88,12 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get 源 Url。目前可支持直播流及点播文件。
+     * Get 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
 3. 支持拉流文件格式：flv，rtmp，hls，mp4。 
-     * @return FromUrl 源 Url。目前可支持直播流及点播文件。
+     * @return FromUrl 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
@@ -104,12 +104,12 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     }
 
     /**
-     * Set 源 Url。目前可支持直播流及点播文件。
+     * Set 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
 3. 支持拉流文件格式：flv，rtmp，hls，mp4。
-     * @param FromUrl 源 Url。目前可支持直播流及点播文件。
+     * @param FromUrl 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
@@ -120,9 +120,9 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 目的 Url，目前限制该目标地址为腾讯域名。
+     * Get 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
 仅支持：rtmp 协议。 
-     * @return ToUrl 目的 Url，目前限制该目标地址为腾讯域名。
+     * @return ToUrl 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
 仅支持：rtmp 协议。
      */
     public String getToUrl() {
@@ -130,9 +130,9 @@ public class CreatePullStreamConfigRequest extends AbstractModel{
     }
 
     /**
-     * Set 目的 Url，目前限制该目标地址为腾讯域名。
+     * Set 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
 仅支持：rtmp 协议。
-     * @param ToUrl 目的 Url，目前限制该目标地址为腾讯域名。
+     * @param ToUrl 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
 仅支持：rtmp 协议。
      */
     public void setToUrl(String ToUrl) {

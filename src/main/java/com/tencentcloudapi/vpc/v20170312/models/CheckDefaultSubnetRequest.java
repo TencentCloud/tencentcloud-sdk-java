@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableLiveDomainRequest extends AbstractModel{
+public class CheckDefaultSubnetRequest extends AbstractModel{
 
     /**
-    * 待启用的直播域名。
+    * 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
     */
-    @SerializedName("DomainName")
+    @SerializedName("Zone")
     @Expose
-    private String DomainName;
+    private String Zone;
 
     /**
-     * Get 待启用的直播域名。 
-     * @return DomainName 待启用的直播域名。
+     * Get 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。 
+     * @return Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
-    public String getDomainName() {
-        return this.DomainName;
+    public String getZone() {
+        return this.Zone;
     }
 
     /**
-     * Set 待启用的直播域名。
-     * @param DomainName 待启用的直播域名。
+     * Set 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+     * @param Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
-    public void setDomainName(String DomainName) {
-        this.DomainName = DomainName;
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

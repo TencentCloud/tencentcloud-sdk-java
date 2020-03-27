@@ -108,6 +108,14 @@ public class DDoSEventRecord extends AbstractModel{
     private String ResourceName;
 
     /**
+    * 攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
      * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
@@ -304,6 +312,26 @@ public class DDoSEventRecord extends AbstractModel{
     }
 
     /**
+     * Get 攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventId 攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventId 攻击事件Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +347,7 @@ public class DDoSEventRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "OverLoad", this.OverLoad);
         this.setParamSimple(map, prefix + "AttackStatus", this.AttackStatus);
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

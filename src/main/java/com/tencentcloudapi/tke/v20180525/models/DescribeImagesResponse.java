@@ -13,30 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadCertificateResponse extends AbstractModel{
+public class DescribeImagesResponse extends AbstractModel{
 
     /**
-    * ZIP base64编码内容，base64解码后可保存为ZIP文件。
+    * 镜像数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Content")
+    @SerializedName("TotalCount")
     @Expose
-    private String Content;
+    private Long TotalCount;
 
     /**
-    * MIME类型：application/zip = ZIP压缩文件。
+    * 镜像信息列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ContentType")
+    @SerializedName("ImageInstanceSet")
     @Expose
-    private String ContentType;
+    private ImageInstance [] ImageInstanceSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +46,43 @@ public class DownloadCertificateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * Get 镜像数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * @return TotalCount 镜像数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getContent() {
-        return this.Content;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * Set 镜像数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * @param TotalCount 镜像数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get MIME类型：application/zip = ZIP压缩文件。
+     * Get 镜像信息列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContentType MIME类型：application/zip = ZIP压缩文件。
+     * @return ImageInstanceSet 镜像信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getContentType() {
-        return this.ContentType;
+    public ImageInstance [] getImageInstanceSet() {
+        return this.ImageInstanceSet;
     }
 
     /**
-     * Set MIME类型：application/zip = ZIP压缩文件。
+     * Set 镜像信息列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContentType MIME类型：application/zip = ZIP压缩文件。
+     * @param ImageInstanceSet 镜像信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setContentType(String ContentType) {
-        this.ContentType = ContentType;
+    public void setImageInstanceSet(ImageInstance [] ImageInstanceSet) {
+        this.ImageInstanceSet = ImageInstanceSet;
     }
 
     /**
@@ -105,8 +105,8 @@ public class DownloadCertificateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Content", this.Content);
-        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ImageInstanceSet.", this.ImageInstanceSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

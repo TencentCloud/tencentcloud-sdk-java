@@ -30,14 +30,14 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String CertificateId;
 
     /**
-    * 验证类型 DNS,DNS_AUTO,FILE
+    * 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
     */
     @SerializedName("ValidType")
     @Expose
     private String ValidType;
 
     /**
-    * 类型，可选项：Original、Upload、Online，默认original。
+    * 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
     */
     @SerializedName("CsrType")
     @Expose
@@ -74,32 +74,32 @@ public class ReplaceCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 验证类型 DNS,DNS_AUTO,FILE 
-     * @return ValidType 验证类型 DNS,DNS_AUTO,FILE
+     * Get 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。 
+     * @return ValidType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      */
     public String getValidType() {
         return this.ValidType;
     }
 
     /**
-     * Set 验证类型 DNS,DNS_AUTO,FILE
-     * @param ValidType 验证类型 DNS,DNS_AUTO,FILE
+     * Set 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
+     * @param ValidType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      */
     public void setValidType(String ValidType) {
         this.ValidType = ValidType;
     }
 
     /**
-     * Get 类型，可选项：Original、Upload、Online，默认original。 
-     * @return CsrType 类型，可选项：Original、Upload、Online，默认original。
+     * Get 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。 
+     * @return CsrType 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set 类型，可选项：Original、Upload、Online，默认original。
-     * @param CsrType 类型，可选项：Original、Upload、Online，默认original。
+     * Set 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
+     * @param CsrType 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;

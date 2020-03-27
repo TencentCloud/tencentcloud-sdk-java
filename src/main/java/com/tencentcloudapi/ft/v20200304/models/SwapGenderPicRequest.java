@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class SwapGenderPicRequest extends AbstractModel{
 
     /**
-    * 人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
+    * 人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
     */
     @SerializedName("GenderInfos")
     @Expose
@@ -50,20 +50,20 @@ public class SwapGenderPicRequest extends AbstractModel{
     private String Url;
 
     /**
-     * Get 人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。 
-     * @return GenderInfos 人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
+     * Get 人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。 
+     * @return GenderInfos 人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
      */
     public GenderInfo [] getGenderInfos() {
         return this.GenderInfos;
     }
 
     /**
-     * Set 人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
-     * @param GenderInfos 人脸变化性别信息。 
-您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸变换性别。
+     * Set 人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
+     * @param GenderInfos 人脸转化性别信息。 
+您可以输入最多3个 GenderInfo 来实现给一张图中的最多3张人脸转换性别。
      */
     public void setGenderInfos(GenderInfo [] GenderInfos) {
         this.GenderInfos = GenderInfos;

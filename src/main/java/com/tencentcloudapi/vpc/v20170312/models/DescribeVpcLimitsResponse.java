@@ -20,7 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddressTemplateInstancesResponse extends AbstractModel{
+public class DescribeVpcLimitsResponse extends AbstractModel{
+
+    /**
+    * 私有网络配额
+    */
+    @SerializedName("VpcLimitSet")
+    @Expose
+    private VpcLimit [] VpcLimitSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class DescribeAddressTemplateInstancesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 私有网络配额 
+     * @return VpcLimitSet 私有网络配额
+     */
+    public VpcLimit [] getVpcLimitSet() {
+        return this.VpcLimitSet;
+    }
+
+    /**
+     * Set 私有网络配额
+     * @param VpcLimitSet 私有网络配额
+     */
+    public void setVpcLimitSet(VpcLimit [] VpcLimitSet) {
+        this.VpcLimitSet = VpcLimitSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class DescribeAddressTemplateInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "VpcLimitSet.", this.VpcLimitSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

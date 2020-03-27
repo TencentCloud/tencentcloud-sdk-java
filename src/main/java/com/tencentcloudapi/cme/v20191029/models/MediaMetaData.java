@@ -65,6 +65,13 @@ public class MediaMetaData extends AbstractModel{
     private Float Duration;
 
     /**
+    * 视频拍摄时的选择角度，单位：度
+    */
+    @SerializedName("Rotate")
+    @Expose
+    private Long Rotate;
+
+    /**
     * 视频流信息。
     */
     @SerializedName("VideoStreamInfoSet")
@@ -175,6 +182,22 @@ public class MediaMetaData extends AbstractModel{
     }
 
     /**
+     * Get 视频拍摄时的选择角度，单位：度 
+     * @return Rotate 视频拍摄时的选择角度，单位：度
+     */
+    public Long getRotate() {
+        return this.Rotate;
+    }
+
+    /**
+     * Set 视频拍摄时的选择角度，单位：度
+     * @param Rotate 视频拍摄时的选择角度，单位：度
+     */
+    public void setRotate(Long Rotate) {
+        this.Rotate = Rotate;
+    }
+
+    /**
      * Get 视频流信息。 
      * @return VideoStreamInfoSet 视频流信息。
      */
@@ -216,6 +239,7 @@ public class MediaMetaData extends AbstractModel{
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "Rotate", this.Rotate);
         this.setParamArrayObj(map, prefix + "VideoStreamInfoSet.", this.VideoStreamInfoSet);
         this.setParamArrayObj(map, prefix + "AudioStreamInfoSet.", this.AudioStreamInfoSet);
 

@@ -13,43 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableLiveDomainRequest extends AbstractModel{
-
-    /**
-    * 待启用的直播域名。
-    */
-    @SerializedName("DomainName")
-    @Expose
-    private String DomainName;
-
-    /**
-     * Get 待启用的直播域名。 
-     * @return DomainName 待启用的直播域名。
-     */
-    public String getDomainName() {
-        return this.DomainName;
-    }
-
-    /**
-     * Set 待启用的直播域名。
-     * @param DomainName 待启用的直播域名。
-     */
-    public void setDomainName(String DomainName) {
-        this.DomainName = DomainName;
-    }
+public class DescribeRegionsRequest extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
 
     }
 }

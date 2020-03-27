@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ApplyCertificateRequest extends AbstractModel{
 
     /**
-    * 验证方式（'DNS_AUTO'， 'DNS'， 'FILE'）：DNS_AUTO = 自动DNS验证。
+    * 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
     */
     @SerializedName("DvAuthMethod")
     @Expose
@@ -44,7 +44,7 @@ public class ApplyCertificateRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 证书类型，默认2。免费证书目前只有 2 了。
+    * 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
     */
     @SerializedName("PackageType")
     @Expose
@@ -65,7 +65,7 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String ContactPhone;
 
     /**
-    * 有效期，默认12。
+    * 有效期，默认12个月，目前仅支持12个月。
     */
     @SerializedName("ValidityPeriod")
     @Expose
@@ -107,16 +107,16 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String OldCertificateId;
 
     /**
-     * Get 验证方式（'DNS_AUTO'， 'DNS'， 'FILE'）：DNS_AUTO = 自动DNS验证。 
-     * @return DvAuthMethod 验证方式（'DNS_AUTO'， 'DNS'， 'FILE'）：DNS_AUTO = 自动DNS验证。
+     * Get 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。 
+     * @return DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      */
     public String getDvAuthMethod() {
         return this.DvAuthMethod;
     }
 
     /**
-     * Set 验证方式（'DNS_AUTO'， 'DNS'， 'FILE'）：DNS_AUTO = 自动DNS验证。
-     * @param DvAuthMethod 验证方式（'DNS_AUTO'， 'DNS'， 'FILE'）：DNS_AUTO = 自动DNS验证。
+     * Set 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
+     * @param DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      */
     public void setDvAuthMethod(String DvAuthMethod) {
         this.DvAuthMethod = DvAuthMethod;
@@ -155,16 +155,16 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书类型，默认2。免费证书目前只有 2 了。 
-     * @return PackageType 证书类型，默认2。免费证书目前只有 2 了。
+     * Get 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。 
+     * @return PackageType 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 证书类型，默认2。免费证书目前只有 2 了。
-     * @param PackageType 证书类型，默认2。免费证书目前只有 2 了。
+     * Set 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+     * @param PackageType 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -203,16 +203,16 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 有效期，默认12。 
-     * @return ValidityPeriod 有效期，默认12。
+     * Get 有效期，默认12个月，目前仅支持12个月。 
+     * @return ValidityPeriod 有效期，默认12个月，目前仅支持12个月。
      */
     public String getValidityPeriod() {
         return this.ValidityPeriod;
     }
 
     /**
-     * Set 有效期，默认12。
-     * @param ValidityPeriod 有效期，默认12。
+     * Set 有效期，默认12个月，目前仅支持12个月。
+     * @param ValidityPeriod 有效期，默认12个月，目前仅支持12个月。
      */
     public void setValidityPeriod(String ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;

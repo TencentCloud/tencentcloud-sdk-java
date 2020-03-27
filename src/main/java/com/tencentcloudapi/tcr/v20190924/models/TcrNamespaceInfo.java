@@ -44,6 +44,13 @@ public class TcrNamespaceInfo extends AbstractModel{
     private Boolean Public;
 
     /**
+    * 命名空间的Id
+    */
+    @SerializedName("NamespaceId")
+    @Expose
+    private Long NamespaceId;
+
+    /**
      * Get 命名空间名称 
      * @return Name 命名空间名称
      */
@@ -92,12 +99,29 @@ public class TcrNamespaceInfo extends AbstractModel{
     }
 
     /**
+     * Get 命名空间的Id 
+     * @return NamespaceId 命名空间的Id
+     */
+    public Long getNamespaceId() {
+        return this.NamespaceId;
+    }
+
+    /**
+     * Set 命名空间的Id
+     * @param NamespaceId 命名空间的Id
+     */
+    public void setNamespaceId(Long NamespaceId) {
+        this.NamespaceId = NamespaceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);
         this.setParamSimple(map, prefix + "Public", this.Public);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
 
     }
 }
