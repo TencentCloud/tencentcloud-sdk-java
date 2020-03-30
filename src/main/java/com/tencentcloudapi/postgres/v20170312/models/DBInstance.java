@@ -191,6 +191,20 @@ public class DBInstance extends AbstractModel{
     private String Type;
 
     /**
+    * 用户的AppId
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * 实例的Uid
+    */
+    @SerializedName("Uid")
+    @Expose
+    private Long Uid;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -575,6 +589,38 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 用户的AppId 
+     * @return AppId 用户的AppId
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 用户的AppId
+     * @param AppId 用户的AppId
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 实例的Uid 
+     * @return Uid 实例的Uid
+     */
+    public Long getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * Set 实例的Uid
+     * @param Uid 实例的Uid
+     */
+    public void setUid(Long Uid) {
+        this.Uid = Uid;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -602,6 +648,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
 
     }
 }

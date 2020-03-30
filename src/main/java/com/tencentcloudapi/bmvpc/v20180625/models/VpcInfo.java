@@ -65,6 +65,13 @@ public class VpcInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 整型私有网络ID。
+    */
+    @SerializedName("IntVpcId")
+    @Expose
+    private Long IntVpcId;
+
+    /**
      * Get 私有网络的唯一ID。 
      * @return VpcId 私有网络的唯一ID。
      */
@@ -161,6 +168,22 @@ public class VpcInfo extends AbstractModel{
     }
 
     /**
+     * Get 整型私有网络ID。 
+     * @return IntVpcId 整型私有网络ID。
+     */
+    public Long getIntVpcId() {
+        return this.IntVpcId;
+    }
+
+    /**
+     * Set 整型私有网络ID。
+     * @param IntVpcId 整型私有网络ID。
+     */
+    public void setIntVpcId(Long IntVpcId) {
+        this.IntVpcId = IntVpcId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class VpcInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "IntVpcId", this.IntVpcId);
 
     }
 }

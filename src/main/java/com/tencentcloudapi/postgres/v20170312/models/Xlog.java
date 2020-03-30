@@ -58,6 +58,13 @@ public class Xlog extends AbstractModel{
     private String ExternalAddr;
 
     /**
+    * 备份文件大小
+    */
+    @SerializedName("Size")
+    @Expose
+    private Long Size;
+
+    /**
      * Get 备份文件唯一标识 
      * @return Id 备份文件唯一标识
      */
@@ -138,6 +145,22 @@ public class Xlog extends AbstractModel{
     }
 
     /**
+     * Get 备份文件大小 
+     * @return Size 备份文件大小
+     */
+    public Long getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set 备份文件大小
+     * @param Size 备份文件大小
+     */
+    public void setSize(Long Size) {
+        this.Size = Size;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class Xlog extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
         this.setParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+        this.setParamSimple(map, prefix + "Size", this.Size);
 
     }
 }

@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperationLog extends AbstractModel{
+public class TraceInfo extends AbstractModel{
 
     /**
-    * 操作证书动作。
+    * 人体轨迹ID。
     */
-    @SerializedName("Action")
+    @SerializedName("TraceId")
     @Expose
-    private String Action;
+    private String TraceId;
 
     /**
-    * 操作时间。
+    * 包含的人体轨迹图片Id列表。
     */
-    @SerializedName("CreatedOn")
+    @SerializedName("BodyIds")
     @Expose
-    private String CreatedOn;
+    private String [] BodyIds;
 
     /**
-     * Get 操作证书动作。 
-     * @return Action 操作证书动作。
+     * Get 人体轨迹ID。 
+     * @return TraceId 人体轨迹ID。
      */
-    public String getAction() {
-        return this.Action;
+    public String getTraceId() {
+        return this.TraceId;
     }
 
     /**
-     * Set 操作证书动作。
-     * @param Action 操作证书动作。
+     * Set 人体轨迹ID。
+     * @param TraceId 人体轨迹ID。
      */
-    public void setAction(String Action) {
-        this.Action = Action;
+    public void setTraceId(String TraceId) {
+        this.TraceId = TraceId;
     }
 
     /**
-     * Get 操作时间。 
-     * @return CreatedOn 操作时间。
+     * Get 包含的人体轨迹图片Id列表。 
+     * @return BodyIds 包含的人体轨迹图片Id列表。
      */
-    public String getCreatedOn() {
-        return this.CreatedOn;
+    public String [] getBodyIds() {
+        return this.BodyIds;
     }
 
     /**
-     * Set 操作时间。
-     * @param CreatedOn 操作时间。
+     * Set 包含的人体轨迹图片Id列表。
+     * @param BodyIds 包含的人体轨迹图片Id列表。
      */
-    public void setCreatedOn(String CreatedOn) {
-        this.CreatedOn = CreatedOn;
+    public void setBodyIds(String [] BodyIds) {
+        this.BodyIds = BodyIds;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Action", this.Action);
-        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "TraceId", this.TraceId);
+        this.setParamArraySimple(map, prefix + "BodyIds.", this.BodyIds);
 
     }
 }

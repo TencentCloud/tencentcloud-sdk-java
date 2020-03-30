@@ -31,7 +31,7 @@ public class ProjectInfo extends AbstractModel{
     private String ProjectName;
 
     /**
-    * 项目创建用户UIN。
+    * 项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectCreatorUin")
@@ -55,7 +55,7 @@ public class ProjectInfo extends AbstractModel{
     private String ProjectResume;
 
     /**
-    * 用户UIN。
+    * 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
@@ -63,7 +63,7 @@ public class ProjectInfo extends AbstractModel{
     private Long OwnerUin;
 
     /**
-    * 项目ID。
+    * 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -91,9 +91,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 项目创建用户UIN。
+     * Get 项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectCreatorUin 项目创建用户UIN。
+     * @return ProjectCreatorUin 项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectCreatorUin() {
@@ -101,9 +101,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Set 项目创建用户UIN。
+     * Set 项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectCreatorUin 项目创建用户UIN。
+     * @param ProjectCreatorUin 项目创建用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectCreatorUin(Long ProjectCreatorUin) {
@@ -151,9 +151,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 用户UIN。
+     * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerUin 用户UIN。
+     * @return OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOwnerUin() {
@@ -161,9 +161,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Set 用户UIN。
+     * Set 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerUin 用户UIN。
+     * @param OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(Long OwnerUin) {
@@ -171,9 +171,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 项目ID。
+     * Get 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目ID。
+     * @return ProjectId 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -181,9 +181,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Set 项目ID。
+     * Set 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目ID。
+     * @param ProjectId 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {

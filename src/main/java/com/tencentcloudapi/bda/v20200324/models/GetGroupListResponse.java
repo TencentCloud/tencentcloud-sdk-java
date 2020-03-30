@@ -13,36 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceTokenResponse extends AbstractModel{
+public class GetGroupListResponse extends AbstractModel{
 
     /**
-    * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回的人体库信息。
     */
-    @SerializedName("Username")
+    @SerializedName("GroupInfos")
     @Expose
-    private String Username;
+    private GroupInfo [] GroupInfos;
 
     /**
-    * 访问凭证
+    * 人体库总数量。
     */
-    @SerializedName("Token")
+    @SerializedName("GroupNum")
     @Expose
-    private String Token;
-
-    /**
-    * 访问凭证过期时间戳
-    */
-    @SerializedName("ExpTime")
-    @Expose
-    private Long ExpTime;
+    private Long GroupNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,55 +44,35 @@ public class CreateInstanceTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回的人体库信息。 
+     * @return GroupInfos 返回的人体库信息。
      */
-    public String getUsername() {
-        return this.Username;
+    public GroupInfo [] getGroupInfos() {
+        return this.GroupInfos;
     }
 
     /**
-     * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回的人体库信息。
+     * @param GroupInfos 返回的人体库信息。
      */
-    public void setUsername(String Username) {
-        this.Username = Username;
+    public void setGroupInfos(GroupInfo [] GroupInfos) {
+        this.GroupInfos = GroupInfos;
     }
 
     /**
-     * Get 访问凭证 
-     * @return Token 访问凭证
+     * Get 人体库总数量。 
+     * @return GroupNum 人体库总数量。
      */
-    public String getToken() {
-        return this.Token;
+    public Long getGroupNum() {
+        return this.GroupNum;
     }
 
     /**
-     * Set 访问凭证
-     * @param Token 访问凭证
+     * Set 人体库总数量。
+     * @param GroupNum 人体库总数量。
      */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get 访问凭证过期时间戳 
-     * @return ExpTime 访问凭证过期时间戳
-     */
-    public Long getExpTime() {
-        return this.ExpTime;
-    }
-
-    /**
-     * Set 访问凭证过期时间戳
-     * @param ExpTime 访问凭证过期时间戳
-     */
-    public void setExpTime(Long ExpTime) {
-        this.ExpTime = ExpTime;
+    public void setGroupNum(Long GroupNum) {
+        this.GroupNum = GroupNum;
     }
 
     /**
@@ -123,9 +95,8 @@ public class CreateInstanceTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Username", this.Username);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "ExpTime", this.ExpTime);
+        this.setParamArrayObj(map, prefix + "GroupInfos.", this.GroupInfos);
+        this.setParamSimple(map, prefix + "GroupNum", this.GroupNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

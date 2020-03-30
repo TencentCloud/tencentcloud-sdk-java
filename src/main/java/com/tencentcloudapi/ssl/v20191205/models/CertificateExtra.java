@@ -31,7 +31,7 @@ public class CertificateExtra extends AbstractModel{
     private String DomainNumber;
 
     /**
-    * 原始证书ID。
+    * 原始证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginCertificateId")
@@ -39,7 +39,7 @@ public class CertificateExtra extends AbstractModel{
     private String OriginCertificateId;
 
     /**
-    * 重颁发证书原始ID。
+    * 重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplacedBy")
@@ -47,7 +47,7 @@ public class CertificateExtra extends AbstractModel{
     private String ReplacedBy;
 
     /**
-    * 重颁发证书新ID。
+    * 重颁发证书新 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplacedFor")
@@ -55,7 +55,7 @@ public class CertificateExtra extends AbstractModel{
     private String ReplacedFor;
 
     /**
-    * 新订单证书ID。
+    * 新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewOrder")
@@ -83,9 +83,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Get 原始证书ID。
+     * Get 原始证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginCertificateId 原始证书ID。
+     * @return OriginCertificateId 原始证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginCertificateId() {
@@ -93,9 +93,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Set 原始证书ID。
+     * Set 原始证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginCertificateId 原始证书ID。
+     * @param OriginCertificateId 原始证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginCertificateId(String OriginCertificateId) {
@@ -103,9 +103,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Get 重颁发证书原始ID。
+     * Get 重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplacedBy 重颁发证书原始ID。
+     * @return ReplacedBy 重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReplacedBy() {
@@ -113,9 +113,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Set 重颁发证书原始ID。
+     * Set 重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplacedBy 重颁发证书原始ID。
+     * @param ReplacedBy 重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplacedBy(String ReplacedBy) {
@@ -123,9 +123,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Get 重颁发证书新ID。
+     * Get 重颁发证书新 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplacedFor 重颁发证书新ID。
+     * @return ReplacedFor 重颁发证书新 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReplacedFor() {
@@ -133,9 +133,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Set 重颁发证书新ID。
+     * Set 重颁发证书新 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplacedFor 重颁发证书新ID。
+     * @param ReplacedFor 重颁发证书新 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplacedFor(String ReplacedFor) {
@@ -143,9 +143,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Get 新订单证书ID。
+     * Get 新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewOrder 新订单证书ID。
+     * @return RenewOrder 新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRenewOrder() {
@@ -153,9 +153,9 @@ public class CertificateExtra extends AbstractModel{
     }
 
     /**
-     * Set 新订单证书ID。
+     * Set 新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewOrder 新订单证书ID。
+     * @param RenewOrder 新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewOrder(String RenewOrder) {

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DvAuthDetail extends AbstractModel{
 
     /**
-    * DV认证密钥。
+    * DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthKey")
@@ -31,7 +31,7 @@ public class DvAuthDetail extends AbstractModel{
     private String DvAuthKey;
 
     /**
-    * DV认证值。
+    * DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthValue")
@@ -39,7 +39,7 @@ public class DvAuthDetail extends AbstractModel{
     private String DvAuthValue;
 
     /**
-    * DV认证值域名。
+    * DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthDomain")
@@ -47,7 +47,7 @@ public class DvAuthDetail extends AbstractModel{
     private String DvAuthDomain;
 
     /**
-    * DV认证值路径。
+    * DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthPath")
@@ -55,7 +55,7 @@ public class DvAuthDetail extends AbstractModel{
     private String DvAuthPath;
 
     /**
-    * DV认证子域名。
+    * DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuthKeySubDomain")
@@ -63,7 +63,7 @@ public class DvAuthDetail extends AbstractModel{
     private String DvAuthKeySubDomain;
 
     /**
-    * DV认证信息。
+    * DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DvAuths")
@@ -71,9 +71,9 @@ public class DvAuthDetail extends AbstractModel{
     private DvAuths [] DvAuths;
 
     /**
-     * Get DV认证密钥。
+     * Get DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthKey DV认证密钥。
+     * @return DvAuthKey DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthKey() {
@@ -81,9 +81,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Set DV认证密钥。
+     * Set DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthKey DV认证密钥。
+     * @param DvAuthKey DV 认证密钥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthKey(String DvAuthKey) {
@@ -91,9 +91,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Get DV认证值。
+     * Get DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthValue DV认证值。
+     * @return DvAuthValue DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthValue() {
@@ -101,9 +101,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Set DV认证值。
+     * Set DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthValue DV认证值。
+     * @param DvAuthValue DV 认证值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthValue(String DvAuthValue) {
@@ -111,9 +111,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Get DV认证值域名。
+     * Get DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthDomain DV认证值域名。
+     * @return DvAuthDomain DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthDomain() {
@@ -121,9 +121,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Set DV认证值域名。
+     * Set DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthDomain DV认证值域名。
+     * @param DvAuthDomain DV 认证值域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthDomain(String DvAuthDomain) {
@@ -131,9 +131,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Get DV认证值路径。
+     * Get DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthPath DV认证值路径。
+     * @return DvAuthPath DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthPath() {
@@ -141,9 +141,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Set DV认证值路径。
+     * Set DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthPath DV认证值路径。
+     * @param DvAuthPath DV 认证值路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthPath(String DvAuthPath) {
@@ -151,9 +151,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Get DV认证子域名。
+     * Get DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuthKeySubDomain DV认证子域名。
+     * @return DvAuthKeySubDomain DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDvAuthKeySubDomain() {
@@ -161,9 +161,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Set DV认证子域名。
+     * Set DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuthKeySubDomain DV认证子域名。
+     * @param DvAuthKeySubDomain DV 认证子域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuthKeySubDomain(String DvAuthKeySubDomain) {
@@ -171,9 +171,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Get DV认证信息。
+     * Get DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DvAuths DV认证信息。
+     * @return DvAuths DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DvAuths [] getDvAuths() {
@@ -181,9 +181,9 @@ public class DvAuthDetail extends AbstractModel{
     }
 
     /**
-     * Set DV认证信息。
+     * Set DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DvAuths DV认证信息。
+     * @param DvAuths DV 认证信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDvAuths(DvAuths [] DvAuths) {

@@ -30,7 +30,7 @@ public class CreateL7RuleCertRequest extends AbstractModel{
     private String Business;
 
     /**
-    * 资源ID
+    * 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
     */
     @SerializedName("Id")
     @Expose
@@ -88,16 +88,16 @@ public class CreateL7RuleCertRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源ID 
-     * @return Id 资源ID
+     * Get 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID 
+     * @return Id 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资源ID
-     * @param Id 资源ID
+     * Set 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
+     * @param Id 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
      */
     public void setId(String Id) {
         this.Id = Id;

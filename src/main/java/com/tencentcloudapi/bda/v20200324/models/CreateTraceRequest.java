@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperationLog extends AbstractModel{
+public class CreateTraceRequest extends AbstractModel{
 
     /**
-    * 操作证书动作。
+    * 人员ID。
     */
-    @SerializedName("Action")
+    @SerializedName("PersonId")
     @Expose
-    private String Action;
+    private String PersonId;
 
     /**
-    * 操作时间。
+    * 人体轨迹信息。
     */
-    @SerializedName("CreatedOn")
+    @SerializedName("Trace")
     @Expose
-    private String CreatedOn;
+    private Trace Trace;
 
     /**
-     * Get 操作证书动作。 
-     * @return Action 操作证书动作。
+     * Get 人员ID。 
+     * @return PersonId 人员ID。
      */
-    public String getAction() {
-        return this.Action;
+    public String getPersonId() {
+        return this.PersonId;
     }
 
     /**
-     * Set 操作证书动作。
-     * @param Action 操作证书动作。
+     * Set 人员ID。
+     * @param PersonId 人员ID。
      */
-    public void setAction(String Action) {
-        this.Action = Action;
+    public void setPersonId(String PersonId) {
+        this.PersonId = PersonId;
     }
 
     /**
-     * Get 操作时间。 
-     * @return CreatedOn 操作时间。
+     * Get 人体轨迹信息。 
+     * @return Trace 人体轨迹信息。
      */
-    public String getCreatedOn() {
-        return this.CreatedOn;
+    public Trace getTrace() {
+        return this.Trace;
     }
 
     /**
-     * Set 操作时间。
-     * @param CreatedOn 操作时间。
+     * Set 人体轨迹信息。
+     * @param Trace 人体轨迹信息。
      */
-    public void setCreatedOn(String CreatedOn) {
-        this.CreatedOn = CreatedOn;
+    public void setTrace(Trace Trace) {
+        this.Trace = Trace;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Action", this.Action);
-        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
+        this.setParamObj(map, prefix + "Trace.", this.Trace);
 
     }
 }

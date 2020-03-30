@@ -114,6 +114,13 @@ public class RsgAsGroup extends AbstractModel{
     private Long InstanceCount;
 
     /**
+    * 伸缩组起始节点数
+    */
+    @SerializedName("DesiredSize")
+    @Expose
+    private Long DesiredSize;
+
+    /**
      * Get 伸缩组 ID 
      * @return Id 伸缩组 ID
      */
@@ -322,6 +329,22 @@ public class RsgAsGroup extends AbstractModel{
     }
 
     /**
+     * Get 伸缩组起始节点数 
+     * @return DesiredSize 伸缩组起始节点数
+     */
+    public Long getDesiredSize() {
+        return this.DesiredSize;
+    }
+
+    /**
+     * Set 伸缩组起始节点数
+     * @param DesiredSize 伸缩组起始节点数
+     */
+    public void setDesiredSize(Long DesiredSize) {
+        this.DesiredSize = DesiredSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class RsgAsGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamSimple(map, prefix + "DesiredSize", this.DesiredSize);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SubmittedData extends AbstractModel{
 
     /**
-    * CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+    * CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CsrType")
@@ -31,7 +31,7 @@ public class SubmittedData extends AbstractModel{
     private String CsrType;
 
     /**
-    * CSR内容。
+    * CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CsrContent")
@@ -47,7 +47,7 @@ public class SubmittedData extends AbstractModel{
     private String CertificateDomain;
 
     /**
-    * DNS信息。
+    * DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainList")
@@ -223,9 +223,9 @@ public class SubmittedData extends AbstractModel{
     private String VerifyType;
 
     /**
-     * Get CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+     * Get CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CsrType CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+     * @return CsrType CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCsrType() {
@@ -233,9 +233,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Set CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+     * Set CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CsrType CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+     * @param CsrType CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCsrType(String CsrType) {
@@ -243,9 +243,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Get CSR内容。
+     * Get CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CsrContent CSR内容。
+     * @return CsrContent CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCsrContent() {
@@ -253,9 +253,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Set CSR内容。
+     * Set CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CsrContent CSR内容。
+     * @param CsrContent CSR 内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCsrContent(String CsrContent) {
@@ -283,9 +283,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Get DNS信息。
+     * Get DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DomainList DNS信息。
+     * @return DomainList DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDomainList() {
@@ -293,9 +293,9 @@ public class SubmittedData extends AbstractModel{
     }
 
     /**
-     * Set DNS信息。
+     * Set DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DomainList DNS信息。
+     * @param DomainList DNS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainList(String [] DomainList) {

@@ -65,7 +65,7 @@ public class VpcPeerConnection extends AbstractModel{
     private String VpcPeerConnectionName;
 
     /**
-    * 对等连接状态
+    * 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
     */
     @SerializedName("State")
     @Expose
@@ -241,16 +241,16 @@ public class VpcPeerConnection extends AbstractModel{
     }
 
     /**
-     * Get 对等连接状态 
-     * @return State 对等连接状态
+     * Get 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除 
+     * @return State 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 对等连接状态
-     * @param State 对等连接状态
+     * Set 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
+     * @param State 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
      */
     public void setState(String State) {
         this.State = State;

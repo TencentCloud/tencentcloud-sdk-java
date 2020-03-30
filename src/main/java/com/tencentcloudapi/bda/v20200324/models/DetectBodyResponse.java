@@ -13,36 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceTokenResponse extends AbstractModel{
+public class DetectBodyResponse extends AbstractModel{
 
     /**
-    * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 图中检测出来的人体框。
     */
-    @SerializedName("Username")
+    @SerializedName("BodyDetectResults")
     @Expose
-    private String Username;
+    private BodyDetectResult [] BodyDetectResults;
 
     /**
-    * 访问凭证
+    * 人体识别所用的算法模型版本。
     */
-    @SerializedName("Token")
+    @SerializedName("BodyModelVersion")
     @Expose
-    private String Token;
-
-    /**
-    * 访问凭证过期时间戳
-    */
-    @SerializedName("ExpTime")
-    @Expose
-    private Long ExpTime;
+    private String BodyModelVersion;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,55 +44,35 @@ public class CreateInstanceTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 图中检测出来的人体框。 
+     * @return BodyDetectResults 图中检测出来的人体框。
      */
-    public String getUsername() {
-        return this.Username;
+    public BodyDetectResult [] getBodyDetectResults() {
+        return this.BodyDetectResults;
     }
 
     /**
-     * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 图中检测出来的人体框。
+     * @param BodyDetectResults 图中检测出来的人体框。
      */
-    public void setUsername(String Username) {
-        this.Username = Username;
+    public void setBodyDetectResults(BodyDetectResult [] BodyDetectResults) {
+        this.BodyDetectResults = BodyDetectResults;
     }
 
     /**
-     * Get 访问凭证 
-     * @return Token 访问凭证
+     * Get 人体识别所用的算法模型版本。 
+     * @return BodyModelVersion 人体识别所用的算法模型版本。
      */
-    public String getToken() {
-        return this.Token;
+    public String getBodyModelVersion() {
+        return this.BodyModelVersion;
     }
 
     /**
-     * Set 访问凭证
-     * @param Token 访问凭证
+     * Set 人体识别所用的算法模型版本。
+     * @param BodyModelVersion 人体识别所用的算法模型版本。
      */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get 访问凭证过期时间戳 
-     * @return ExpTime 访问凭证过期时间戳
-     */
-    public Long getExpTime() {
-        return this.ExpTime;
-    }
-
-    /**
-     * Set 访问凭证过期时间戳
-     * @param ExpTime 访问凭证过期时间戳
-     */
-    public void setExpTime(Long ExpTime) {
-        this.ExpTime = ExpTime;
+    public void setBodyModelVersion(String BodyModelVersion) {
+        this.BodyModelVersion = BodyModelVersion;
     }
 
     /**
@@ -123,9 +95,8 @@ public class CreateInstanceTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Username", this.Username);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "ExpTime", this.ExpTime);
+        this.setParamArrayObj(map, prefix + "BodyDetectResults.", this.BodyDetectResults);
+        this.setParamSimple(map, prefix + "BodyModelVersion", this.BodyModelVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
