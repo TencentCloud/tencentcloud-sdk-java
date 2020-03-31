@@ -25,6 +25,7 @@ public class ParseNotificationResponse extends AbstractModel{
     /**
     * 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
     */
     @SerializedName("EventType")
     @Expose
@@ -37,6 +38,14 @@ public class ParseNotificationResponse extends AbstractModel{
     @SerializedName("WorkflowTaskEvent")
     @Expose
     private WorkflowTask WorkflowTaskEvent;
+
+    /**
+    * 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EditMediaTaskEvent")
+    @Expose
+    private EditMediaTask EditMediaTaskEvent;
 
     /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
@@ -61,9 +70,11 @@ public class ParseNotificationResponse extends AbstractModel{
 
     /**
      * Get 支持事件类型，目前取值有：
-<li>WorkflowTask：视频工作流处理任务。</li> 
+<li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li> 
      * @return EventType 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
      */
     public String getEventType() {
         return this.EventType;
@@ -72,8 +83,10 @@ public class ParseNotificationResponse extends AbstractModel{
     /**
      * Set 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
      * @param EventType 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -97,6 +110,26 @@ public class ParseNotificationResponse extends AbstractModel{
      */
     public void setWorkflowTaskEvent(WorkflowTask WorkflowTaskEvent) {
         this.WorkflowTaskEvent = WorkflowTaskEvent;
+    }
+
+    /**
+     * Get 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EditMediaTaskEvent 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EditMediaTask getEditMediaTaskEvent() {
+        return this.EditMediaTaskEvent;
+    }
+
+    /**
+     * Set 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EditMediaTaskEvent 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEditMediaTaskEvent(EditMediaTask EditMediaTaskEvent) {
+        this.EditMediaTaskEvent = EditMediaTaskEvent;
     }
 
     /**
@@ -153,6 +186,7 @@ public class ParseNotificationResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamObj(map, prefix + "WorkflowTaskEvent.", this.WorkflowTaskEvent);
+        this.setParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

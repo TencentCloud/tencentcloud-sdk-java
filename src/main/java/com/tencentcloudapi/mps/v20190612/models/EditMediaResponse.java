@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTrainingJobResponse extends AbstractModel{
+public class EditMediaResponse extends AbstractModel{
 
     /**
-    * 训练任务名称
+    * 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
     */
-    @SerializedName("TrainingJobName")
+    @SerializedName("TaskId")
     @Expose
-    private String TrainingJobName;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateTrainingJobResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 训练任务名称 
-     * @return TrainingJobName 训练任务名称
+     * Get 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。 
+     * @return TaskId 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
      */
-    public String getTrainingJobName() {
-        return this.TrainingJobName;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 训练任务名称
-     * @param TrainingJobName 训练任务名称
+     * Set 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
+     * @param TaskId 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
      */
-    public void setTrainingJobName(String TrainingJobName) {
-        this.TrainingJobName = TrainingJobName;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class CreateTrainingJobResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -46,8 +46,9 @@ public class DescribeBillBandwidthAndFluxListRequest extends AbstractModel{
     /**
     * 可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
     */
     @SerializedName("MainlandOrOversea")
     @Expose
@@ -63,6 +64,13 @@ Oversea：则查询国外数据。
     @SerializedName("Granularity")
     @Expose
     private Long Granularity;
+
+    /**
+    * 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
 
     /**
      * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
@@ -115,12 +123,14 @@ Oversea：则查询国外数据。
     /**
      * Get 可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
-默认：查询国内+国外的数据。 
+Oversea：则查询国外数据，
+默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。 
      * @return MainlandOrOversea 可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
@@ -129,12 +139,14 @@ Oversea：则查询国外数据。
     /**
      * Set 可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
      * @param MainlandOrOversea 可选值：
 Mainland：查询国内数据，
-Oversea：则查询国外数据。
+Oversea：则查询国外数据，
 默认：查询国内+国外的数据。
+注：LEB（快直播）只支持国内+国外数据查询。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;
@@ -173,6 +185,22 @@ Oversea：则查询国外数据。
     }
 
     /**
+     * Get 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。 
+     * @return ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     * @param ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -181,6 +209,7 @@ Oversea：则查询国外数据。
         this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
 
     }
 }

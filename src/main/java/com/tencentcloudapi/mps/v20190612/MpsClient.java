@@ -773,6 +773,28 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
+
+1. 对一个文件进行剪辑，生成一个新的视频；
+2. 对多个文件进行拼接，生成一个新的视频；
+3. 对多个文件进行剪辑，然后再拼接，生成一个新的视频。
+     * @param req EditMediaRequest
+     * @return EditMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EditMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EditMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启用工作流。
      * @param req EnableWorkflowRequest
      * @return EnableWorkflowResponse

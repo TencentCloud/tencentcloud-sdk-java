@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTrainingJobResponse extends AbstractModel{
-
-    /**
-    * 训练任务名称
-    */
-    @SerializedName("TrainingJobName")
-    @Expose
-    private String TrainingJobName;
+public class ModifyEventNotificationConfigForConsoleResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateTrainingJobResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 训练任务名称 
-     * @return TrainingJobName 训练任务名称
-     */
-    public String getTrainingJobName() {
-        return this.TrainingJobName;
-    }
-
-    /**
-     * Set 训练任务名称
-     * @param TrainingJobName 训练任务名称
-     */
-    public void setTrainingJobName(String TrainingJobName) {
-        this.TrainingJobName = TrainingJobName;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class CreateTrainingJobResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

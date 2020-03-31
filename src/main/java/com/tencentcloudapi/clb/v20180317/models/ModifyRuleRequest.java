@@ -73,11 +73,25 @@ public class ModifyRuleRequest extends AbstractModel{
     private Long SessionExpireTime;
 
     /**
-    * 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+    * 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
     */
     @SerializedName("ForwardType")
     @Expose
     private String ForwardType;
+
+    /**
+    * TRPC被调服务器路由，ForwardType为TRPC时必填
+    */
+    @SerializedName("TrpcCallee")
+    @Expose
+    private String TrpcCallee;
+
+    /**
+    * TRPC调用服务接口，ForwardType为TRPC时必填
+    */
+    @SerializedName("TrpcFunc")
+    @Expose
+    private String TrpcFunc;
 
     /**
      * Get 负载均衡实例 ID 
@@ -196,19 +210,51 @@ public class ModifyRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS 
-     * @return ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+     * Get 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC 
+     * @return ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
-     * @param ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+     * Set 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
+     * @param ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
+    }
+
+    /**
+     * Get TRPC被调服务器路由，ForwardType为TRPC时必填 
+     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
+     */
+    public String getTrpcCallee() {
+        return this.TrpcCallee;
+    }
+
+    /**
+     * Set TRPC被调服务器路由，ForwardType为TRPC时必填
+     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
+     */
+    public void setTrpcCallee(String TrpcCallee) {
+        this.TrpcCallee = TrpcCallee;
+    }
+
+    /**
+     * Get TRPC调用服务接口，ForwardType为TRPC时必填 
+     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     */
+    public String getTrpcFunc() {
+        return this.TrpcFunc;
+    }
+
+    /**
+     * Set TRPC调用服务接口，ForwardType为TRPC时必填
+     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     */
+    public void setTrpcFunc(String TrpcFunc) {
+        this.TrpcFunc = TrpcFunc;
     }
 
     /**
@@ -223,6 +269,8 @@ public class ModifyRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
+        this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+        this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
 
     }
 }

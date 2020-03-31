@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeTaskResultRequest extends AbstractModel{
 
     /**
-    * 异步任务ID
+    * 异步任务ID。TaskId和DealName必填一个参数
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 计费订单号
+    * 计费订单号。TaskId和DealName必填一个参数
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-     * Get 异步任务ID 
-     * @return TaskId 异步任务ID
+     * Get 异步任务ID。TaskId和DealName必填一个参数 
+     * @return TaskId 异步任务ID。TaskId和DealName必填一个参数
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务ID
-     * @param TaskId 异步任务ID
+     * Set 异步任务ID。TaskId和DealName必填一个参数
+     * @param TaskId 异步任务ID。TaskId和DealName必填一个参数
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 计费订单号 
-     * @return DealName 计费订单号
+     * Get 计费订单号。TaskId和DealName必填一个参数 
+     * @return DealName 计费订单号。TaskId和DealName必填一个参数
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 计费订单号
-     * @param DealName 计费订单号
+     * Set 计费订单号。TaskId和DealName必填一个参数
+     * @param DealName 计费订单号。TaskId和DealName必填一个参数
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

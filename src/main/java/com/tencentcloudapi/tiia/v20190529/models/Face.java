@@ -80,6 +80,14 @@ public class Face extends AbstractModel{
     private Long Height;
 
     /**
+    * 公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ID")
+    @Expose
+    private String ID;
+
+    /**
      * Get 与图片中人脸最相似的公众人物的名字。 
      * @return Name 与图片中人脸最相似的公众人物的名字。
      */
@@ -212,6 +220,26 @@ public class Face extends AbstractModel{
     }
 
     /**
+     * Get 公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ID 公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set 公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ID 公众人物的唯一编号，可以用于区分同名人物、一个人物不同称呼等情况。唯一编号为8个字符构成的字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -223,6 +251,7 @@ public class Face extends AbstractModel{
         this.setParamSimple(map, prefix + "Y", this.Y);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ID", this.ID);
 
     }
 }

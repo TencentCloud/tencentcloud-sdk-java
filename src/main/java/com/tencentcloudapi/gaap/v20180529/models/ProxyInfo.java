@@ -196,6 +196,14 @@ UNKNOWN，未知状态。
     private Long SupportSecurity;
 
     /**
+    * 计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingType")
+    @Expose
+    private Long BillingType;
+
+    /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -624,6 +632,26 @@ UNKNOWN，未知状态。
     }
 
     /**
+     * Get 计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingType 计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBillingType() {
+        return this.BillingType;
+    }
+
+    /**
+     * Set 计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingType 计费类型:(0:按带宽计费  1:按流量计费）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingType(Long BillingType) {
+        this.BillingType = BillingType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -649,6 +677,7 @@ UNKNOWN，未知状态。
         this.setParamSimple(map, prefix + "ForwardIP", this.ForwardIP);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
+        this.setParamSimple(map, prefix + "BillingType", this.BillingType);
 
     }
 }

@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
 
     /**
-    * 日期，
-格式：YYYY-mm-dd。
+    * 日期，格式：YYYY-mm-dd。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
     */
     @SerializedName("DayTime")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
     private String PlayDomain;
 
     /**
-    * 页号，范围[1,10]，默认值是1。
+    * 页号，范围[1,1000]，默认值是1。
     */
     @SerializedName("PageNum")
     @Expose
@@ -52,20 +52,20 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
     private Long PageSize;
 
     /**
-     * Get 日期，
-格式：YYYY-mm-dd。 
-     * @return DayTime 日期，
-格式：YYYY-mm-dd。
+     * Get 日期，格式：YYYY-mm-dd。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。 
+     * @return DayTime 日期，格式：YYYY-mm-dd。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
      */
     public String getDayTime() {
         return this.DayTime;
     }
 
     /**
-     * Set 日期，
-格式：YYYY-mm-dd。
-     * @param DayTime 日期，
-格式：YYYY-mm-dd。
+     * Set 日期，格式：YYYY-mm-dd。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+     * @param DayTime 日期，格式：YYYY-mm-dd。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
      */
     public void setDayTime(String DayTime) {
         this.DayTime = DayTime;
@@ -88,16 +88,16 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get 页号，范围[1,10]，默认值是1。 
-     * @return PageNum 页号，范围[1,10]，默认值是1。
+     * Get 页号，范围[1,1000]，默认值是1。 
+     * @return PageNum 页号，范围[1,1000]，默认值是1。
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 页号，范围[1,10]，默认值是1。
-     * @param PageNum 页号，范围[1,10]，默认值是1。
+     * Set 页号，范围[1,1000]，默认值是1。
+     * @param PageNum 页号，范围[1,1000]，默认值是1。
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;

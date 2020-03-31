@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateTrainingJobRequest extends AbstractModel{
 
     /**
-    * 训练任务名称
-    */
-    @SerializedName("TrainingJobName")
-    @Expose
-    private String TrainingJobName;
-
-    /**
     * 算法镜像配置
     */
     @SerializedName("AlgorithmSpecification")
@@ -58,6 +51,13 @@ public class CreateTrainingJobRequest extends AbstractModel{
     private ResourceConfig ResourceConfig;
 
     /**
+    * 训练任务名称
+    */
+    @SerializedName("TrainingJobName")
+    @Expose
+    private String TrainingJobName;
+
+    /**
     * 中止条件
     */
     @SerializedName("StoppingCondition")
@@ -79,13 +79,6 @@ public class CreateTrainingJobRequest extends AbstractModel{
     private String HyperParameters;
 
     /**
-    * 角色名称
-    */
-    @SerializedName("RoleName")
-    @Expose
-    private String RoleName;
-
-    /**
     * 环境变量配置
     */
     @SerializedName("EnvConfig")
@@ -93,20 +86,11 @@ public class CreateTrainingJobRequest extends AbstractModel{
     private EnvConfig [] EnvConfig;
 
     /**
-     * Get 训练任务名称 
-     * @return TrainingJobName 训练任务名称
-     */
-    public String getTrainingJobName() {
-        return this.TrainingJobName;
-    }
-
-    /**
-     * Set 训练任务名称
-     * @param TrainingJobName 训练任务名称
-     */
-    public void setTrainingJobName(String TrainingJobName) {
-        this.TrainingJobName = TrainingJobName;
-    }
+    * 角色名称
+    */
+    @SerializedName("RoleName")
+    @Expose
+    private String RoleName;
 
     /**
      * Get 算法镜像配置 
@@ -173,6 +157,22 @@ public class CreateTrainingJobRequest extends AbstractModel{
     }
 
     /**
+     * Get 训练任务名称 
+     * @return TrainingJobName 训练任务名称
+     */
+    public String getTrainingJobName() {
+        return this.TrainingJobName;
+    }
+
+    /**
+     * Set 训练任务名称
+     * @param TrainingJobName 训练任务名称
+     */
+    public void setTrainingJobName(String TrainingJobName) {
+        this.TrainingJobName = TrainingJobName;
+    }
+
+    /**
      * Get 中止条件 
      * @return StoppingCondition 中止条件
      */
@@ -221,22 +221,6 @@ public class CreateTrainingJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 角色名称 
-     * @return RoleName 角色名称
-     */
-    public String getRoleName() {
-        return this.RoleName;
-    }
-
-    /**
-     * Set 角色名称
-     * @param RoleName 角色名称
-     */
-    public void setRoleName(String RoleName) {
-        this.RoleName = RoleName;
-    }
-
-    /**
      * Get 环境变量配置 
      * @return EnvConfig 环境变量配置
      */
@@ -253,19 +237,35 @@ public class CreateTrainingJobRequest extends AbstractModel{
     }
 
     /**
+     * Get 角色名称 
+     * @return RoleName 角色名称
+     */
+    public String getRoleName() {
+        return this.RoleName;
+    }
+
+    /**
+     * Set 角色名称
+     * @param RoleName 角色名称
+     */
+    public void setRoleName(String RoleName) {
+        this.RoleName = RoleName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
         this.setParamObj(map, prefix + "AlgorithmSpecification.", this.AlgorithmSpecification);
         this.setParamArrayObj(map, prefix + "InputDataConfig.", this.InputDataConfig);
         this.setParamObj(map, prefix + "OutputDataConfig.", this.OutputDataConfig);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
         this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         this.setParamSimple(map, prefix + "HyperParameters", this.HyperParameters);
-        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamArrayObj(map, prefix + "EnvConfig.", this.EnvConfig);
+        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
 
     }
 }

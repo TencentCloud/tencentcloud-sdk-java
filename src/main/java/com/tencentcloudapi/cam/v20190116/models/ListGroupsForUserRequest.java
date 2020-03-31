@@ -44,6 +44,13 @@ public class ListGroupsForUserRequest extends AbstractModel{
     private Long Page;
 
     /**
+    * 子账号UIN
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private Long SubUin;
+
+    /**
      * Get 子用户 UID 
      * @return Uid 子用户 UID
      */
@@ -92,12 +99,29 @@ public class ListGroupsForUserRequest extends AbstractModel{
     }
 
     /**
+     * Get 子账号UIN 
+     * @return SubUin 子账号UIN
+     */
+    public Long getSubUin() {
+        return this.SubUin;
+    }
+
+    /**
+     * Set 子账号UIN
+     * @param SubUin 子账号UIN
+     */
+    public void setSubUin(Long SubUin) {
+        this.SubUin = SubUin;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "Rp", this.Rp);
         this.setParamSimple(map, prefix + "Page", this.Page);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
 
     }
 }

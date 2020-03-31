@@ -25,6 +25,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     /**
     * 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
     */
     @SerializedName("TaskType")
@@ -69,6 +70,14 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     @SerializedName("WorkflowTask")
     @Expose
     private WorkflowTask WorkflowTask;
+
+    /**
+    * 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EditMediaTask")
+    @Expose
+    private EditMediaTask EditMediaTask;
 
     /**
     * 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
@@ -117,9 +126,11 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     /**
      * Get 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li> 
      * @return TaskType 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
      */
     public String getTaskType() {
@@ -129,9 +140,11 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     /**
      * Set 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
      * @param TaskType 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
+<li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
      */
     public void setTaskType(String TaskType) {
@@ -232,6 +245,26 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      */
     public void setWorkflowTask(WorkflowTask WorkflowTask) {
         this.WorkflowTask = WorkflowTask;
+    }
+
+    /**
+     * Get 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EditMediaTask getEditMediaTask() {
+        return this.EditMediaTask;
+    }
+
+    /**
+     * Set 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEditMediaTask(EditMediaTask EditMediaTask) {
+        this.EditMediaTask = EditMediaTask;
     }
 
     /**
@@ -348,6 +381,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
+        this.setParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
         this.setParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
