@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeServicesRequest extends AbstractModel{
 
     /**
-    * 筛选选项，支持按照name等字段进行筛选
+    * 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
     */
     @SerializedName("Filters")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeServicesRequest extends AbstractModel{
     private String OrderField;
 
     /**
-     * Get 筛选选项，支持按照name等字段进行筛选 
-     * @return Filters 筛选选项，支持按照name等字段进行筛选
+     * Get 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id 
+     * @return Filters 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选选项，支持按照name等字段进行筛选
-     * @param Filters 筛选选项，支持按照name等字段进行筛选
+     * Set 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
+     * @param Filters 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -818,6 +818,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *根据检索条件查询实例错误日志详情。只能查询一个月之内的错误日志。
+     * @param req DescribeErrorLogDataRequest
+     * @return DescribeErrorLogDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeErrorLogDataResponse DescribeErrorLogData(DescribeErrorLogDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeErrorLogDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeErrorLogDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeErrorLogData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
      * @param req DescribeInstanceParamRecordsRequest
      * @return DescribeInstanceParamRecordsResponse

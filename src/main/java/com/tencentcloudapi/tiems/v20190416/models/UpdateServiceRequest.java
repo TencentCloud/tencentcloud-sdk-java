@@ -93,6 +93,13 @@ public class UpdateServiceRequest extends AbstractModel{
     private Long Gpu;
 
     /**
+    * Cls日志主题ID
+    */
+    @SerializedName("LogTopicId")
+    @Expose
+    private String LogTopicId;
+
+    /**
      * Get 服务Id 
      * @return ServiceId 服务Id
      */
@@ -253,6 +260,22 @@ public class UpdateServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get Cls日志主题ID 
+     * @return LogTopicId Cls日志主题ID
+     */
+    public String getLogTopicId() {
+        return this.LogTopicId;
+    }
+
+    /**
+     * Set Cls日志主题ID
+     * @param LogTopicId Cls日志主题ID
+     */
+    public void setLogTopicId(String LogTopicId) {
+        this.LogTopicId = LogTopicId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class UpdateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
+        this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
 
     }
 }

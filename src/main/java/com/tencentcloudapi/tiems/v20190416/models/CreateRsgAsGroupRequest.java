@@ -44,6 +44,13 @@ public class CreateRsgAsGroupRequest extends AbstractModel{
     private Long MinSize;
 
     /**
+    * 伸缩组的节点规格
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
     * 资源组所在的集群名
     */
     @SerializedName("Cluster")
@@ -56,6 +63,13 @@ public class CreateRsgAsGroupRequest extends AbstractModel{
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * 伸缩组期望的节点数
+    */
+    @SerializedName("DesiredSize")
+    @Expose
+    private Long DesiredSize;
 
     /**
      * Get 资源组 ID 
@@ -106,6 +120,22 @@ public class CreateRsgAsGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 伸缩组的节点规格 
+     * @return InstanceType 伸缩组的节点规格
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 伸缩组的节点规格
+     * @param InstanceType 伸缩组的节点规格
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
      * Get 资源组所在的集群名 
      * @return Cluster 资源组所在的集群名
      */
@@ -138,14 +168,32 @@ public class CreateRsgAsGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 伸缩组期望的节点数 
+     * @return DesiredSize 伸缩组期望的节点数
+     */
+    public Long getDesiredSize() {
+        return this.DesiredSize;
+    }
+
+    /**
+     * Set 伸缩组期望的节点数
+     * @param DesiredSize 伸缩组期望的节点数
+     */
+    public void setDesiredSize(Long DesiredSize) {
+        this.DesiredSize = DesiredSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RsgId", this.RsgId);
         this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
         this.setParamSimple(map, prefix + "MinSize", this.MinSize);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DesiredSize", this.DesiredSize);
 
     }
 }

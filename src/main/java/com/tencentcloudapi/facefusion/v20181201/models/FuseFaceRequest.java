@@ -52,7 +52,7 @@ public class FuseFaceRequest extends AbstractModel{
 
     /**
     * 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
     */
     @SerializedName("FuseProfileDegree")
     @Expose
@@ -60,7 +60,7 @@ public class FuseFaceRequest extends AbstractModel{
 
     /**
     * 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
     */
     @SerializedName("FuseFaceDegree")
     @Expose
@@ -140,9 +140,9 @@ public class FuseFaceRequest extends AbstractModel{
 
     /**
      * Get 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。 
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整） 
      * @return FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
      */
     public Long getFuseProfileDegree() {
         return this.FuseProfileDegree;
@@ -150,9 +150,9 @@ public class FuseFaceRequest extends AbstractModel{
 
     /**
      * Set 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
      * @param FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。（换脸版算法暂不支持此参数调整）
      */
     public void setFuseProfileDegree(Long FuseProfileDegree) {
         this.FuseProfileDegree = FuseProfileDegree;
@@ -160,9 +160,9 @@ public class FuseFaceRequest extends AbstractModel{
 
     /**
      * Get 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。 
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整） 
      * @return FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
      */
     public Long getFuseFaceDegree() {
         return this.FuseFaceDegree;
@@ -170,9 +170,9 @@ public class FuseFaceRequest extends AbstractModel{
 
     /**
      * Set 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
      * @param FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+若此参数不填写，则使用人脸融合控制台中五官参数数值。（换脸版算法暂不支持此参数调整）
      */
     public void setFuseFaceDegree(Long FuseFaceDegree) {
         this.FuseFaceDegree = FuseFaceDegree;

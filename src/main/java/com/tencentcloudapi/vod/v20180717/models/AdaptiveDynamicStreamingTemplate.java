@@ -53,13 +53,12 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     private String Comment;
 
     /**
-    * 打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
+    * 自适应转码格式，取值范围：
+<li>HLS。</li>
     */
-    @SerializedName("PackageType")
+    @SerializedName("Format")
     @Expose
-    private String PackageType;
+    private String Format;
 
     /**
     * DRM 类型，取值范围：
@@ -71,28 +70,6 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
-
-    /**
-    * 视频轨模板列表。
-    */
-    @SerializedName("VideoTrackTemplateSet")
-    @Expose
-    private VideoTrackTemplateInfo [] VideoTrackTemplateSet;
-
-    /**
-    * 音频轨模板列表。
-    */
-    @SerializedName("AudioTrackTemplateSet")
-    @Expose
-    private AudioTrackTemplateInfo [] AudioTrackTemplateSet;
-
-    /**
-    * 自适应转码格式，取值范围：
-<li>HLS。</li>
-    */
-    @SerializedName("Format")
-    @Expose
-    private String Format;
 
     /**
     * 自适应转码输入流参数信息，最多输入10路流。
@@ -206,27 +183,23 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     }
 
     /**
-     * Get 打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li> 
-     * @return PackageType 打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
+     * Get 自适应转码格式，取值范围：
+<li>HLS。</li> 
+     * @return Format 自适应转码格式，取值范围：
+<li>HLS。</li>
      */
-    public String getPackageType() {
-        return this.PackageType;
+    public String getFormat() {
+        return this.Format;
     }
 
     /**
-     * Set 打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
-     * @param PackageType 打包类型，取值范围：
-<li>hls；</li>
-<li>dash。</li>
+     * Set 自适应转码格式，取值范围：
+<li>HLS。</li>
+     * @param Format 自适应转码格式，取值范围：
+<li>HLS。</li>
      */
-    public void setPackageType(String PackageType) {
-        this.PackageType = PackageType;
+    public void setFormat(String Format) {
+        this.Format = Format;
     }
 
     /**
@@ -259,58 +232,6 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
-    }
-
-    /**
-     * Get 视频轨模板列表。 
-     * @return VideoTrackTemplateSet 视频轨模板列表。
-     */
-    public VideoTrackTemplateInfo [] getVideoTrackTemplateSet() {
-        return this.VideoTrackTemplateSet;
-    }
-
-    /**
-     * Set 视频轨模板列表。
-     * @param VideoTrackTemplateSet 视频轨模板列表。
-     */
-    public void setVideoTrackTemplateSet(VideoTrackTemplateInfo [] VideoTrackTemplateSet) {
-        this.VideoTrackTemplateSet = VideoTrackTemplateSet;
-    }
-
-    /**
-     * Get 音频轨模板列表。 
-     * @return AudioTrackTemplateSet 音频轨模板列表。
-     */
-    public AudioTrackTemplateInfo [] getAudioTrackTemplateSet() {
-        return this.AudioTrackTemplateSet;
-    }
-
-    /**
-     * Set 音频轨模板列表。
-     * @param AudioTrackTemplateSet 音频轨模板列表。
-     */
-    public void setAudioTrackTemplateSet(AudioTrackTemplateInfo [] AudioTrackTemplateSet) {
-        this.AudioTrackTemplateSet = AudioTrackTemplateSet;
-    }
-
-    /**
-     * Get 自适应转码格式，取值范围：
-<li>HLS。</li> 
-     * @return Format 自适应转码格式，取值范围：
-<li>HLS。</li>
-     */
-    public String getFormat() {
-        return this.Format;
-    }
-
-    /**
-     * Set 自适应转码格式，取值范围：
-<li>HLS。</li>
-     * @param Format 自适应转码格式，取值范围：
-<li>HLS。</li>
-     */
-    public void setFormat(String Format) {
-        this.Format = Format;
     }
 
     /**
@@ -417,11 +338,8 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
-        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
-        this.setParamSimple(map, prefix + "DrmType", this.DrmType);
-        this.setParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
-        this.setParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);

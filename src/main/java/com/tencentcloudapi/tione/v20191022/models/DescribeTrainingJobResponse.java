@@ -24,7 +24,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlgorithmSpecification")
     @Expose
@@ -32,7 +31,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrainingJobName")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputDataConfig")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputDataConfig")
     @Expose
@@ -72,7 +68,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceConfig")
     @Expose
@@ -96,7 +91,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifiedTime")
     @Expose
@@ -128,7 +122,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 详细状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondaryStatus")
     @Expose
@@ -152,7 +145,6 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
     * 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrainingJobStatus")
     @Expose
@@ -166,10 +158,8 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 算法镜像配置 
      * @return AlgorithmSpecification 算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlgorithmSpecification getAlgorithmSpecification() {
         return this.AlgorithmSpecification;
@@ -177,19 +167,15 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlgorithmSpecification 算法镜像配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgorithmSpecification(AlgorithmSpecification AlgorithmSpecification) {
         this.AlgorithmSpecification = AlgorithmSpecification;
     }
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return TrainingJobName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrainingJobName() {
         return this.TrainingJobName;
@@ -197,9 +183,7 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrainingJobName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrainingJobName(String TrainingJobName) {
         this.TrainingJobName = TrainingJobName;
@@ -226,10 +210,8 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     }
 
     /**
-     * Get 输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入数据配置 
      * @return InputDataConfig 输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputDataConfig [] getInputDataConfig() {
         return this.InputDataConfig;
@@ -237,19 +219,15 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputDataConfig 输入数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputDataConfig(InputDataConfig [] InputDataConfig) {
         this.InputDataConfig = InputDataConfig;
     }
 
     /**
-     * Get 输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出数据配置 
      * @return OutputDataConfig 输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutputDataConfig getOutputDataConfig() {
         return this.OutputDataConfig;
@@ -257,9 +235,7 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputDataConfig 输出数据配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputDataConfig(OutputDataConfig OutputDataConfig) {
         this.OutputDataConfig = OutputDataConfig;
@@ -286,10 +262,8 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     }
 
     /**
-     * Get 计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算实例配置 
      * @return ResourceConfig 计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceConfig getResourceConfig() {
         return this.ResourceConfig;
@@ -297,9 +271,7 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceConfig 计算实例配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceConfig(ResourceConfig ResourceConfig) {
         this.ResourceConfig = ResourceConfig;
@@ -346,10 +318,8 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     }
 
     /**
-     * Get 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近修改时间 
      * @return LastModifiedTime 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastModifiedTime() {
         return this.LastModifiedTime;
@@ -357,9 +327,7 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastModifiedTime 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifiedTime(String LastModifiedTime) {
         this.LastModifiedTime = LastModifiedTime;
@@ -426,10 +394,8 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     }
 
     /**
-     * Get 详细状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详细状态 
      * @return SecondaryStatus 详细状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecondaryStatus() {
         return this.SecondaryStatus;
@@ -437,9 +403,7 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 详细状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondaryStatus 详细状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondaryStatus(String SecondaryStatus) {
         this.SecondaryStatus = SecondaryStatus;
@@ -486,10 +450,8 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     }
 
     /**
-     * Get 任务状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态 
      * @return TrainingJobStatus 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrainingJobStatus() {
         return this.TrainingJobStatus;
@@ -497,9 +459,7 @@ public class DescribeTrainingJobResponse extends AbstractModel{
 
     /**
      * Set 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrainingJobStatus 任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrainingJobStatus(String TrainingJobStatus) {
         this.TrainingJobStatus = TrainingJobStatus;

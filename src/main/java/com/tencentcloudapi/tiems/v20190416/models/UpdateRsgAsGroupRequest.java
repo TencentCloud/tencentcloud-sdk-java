@@ -51,6 +51,13 @@ public class UpdateRsgAsGroupRequest extends AbstractModel{
     private Long MinSize;
 
     /**
+    * 伸缩组期望的节点数
+    */
+    @SerializedName("DesiredSize")
+    @Expose
+    private Long DesiredSize;
+
+    /**
      * Get 伸缩组 ID 
      * @return Id 伸缩组 ID
      */
@@ -115,6 +122,22 @@ public class UpdateRsgAsGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 伸缩组期望的节点数 
+     * @return DesiredSize 伸缩组期望的节点数
+     */
+    public Long getDesiredSize() {
+        return this.DesiredSize;
+    }
+
+    /**
+     * Set 伸缩组期望的节点数
+     * @param DesiredSize 伸缩组期望的节点数
+     */
+    public void setDesiredSize(Long DesiredSize) {
+        this.DesiredSize = DesiredSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class UpdateRsgAsGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
         this.setParamSimple(map, prefix + "MinSize", this.MinSize);
+        this.setParamSimple(map, prefix + "DesiredSize", this.DesiredSize);
 
     }
 }

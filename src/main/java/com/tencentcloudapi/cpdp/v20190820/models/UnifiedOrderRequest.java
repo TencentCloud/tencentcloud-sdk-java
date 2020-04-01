@@ -86,13 +86,6 @@ public class UnifiedOrderRequest extends AbstractModel{
     private String RealChannel;
 
     /**
-    * 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
-    */
-    @SerializedName("SubOrderList")
-    @Expose
-    private UnifiedOrderInSubOrderList [] SubOrderList;
-
-    /**
     * 原始金额
     */
     @SerializedName("OriginalAmt")
@@ -148,6 +141,14 @@ public class UnifiedOrderRequest extends AbstractModel{
     @SerializedName("SubAppId")
     @Expose
     private String SubAppId;
+
+    /**
+    * 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
+    */
+    @SerializedName("SubOrderList")
+    @Expose
+    private UnifiedOrderInSubOrderList [] SubOrderList;
 
     /**
     * 结算应收金额，单位：分
@@ -322,22 +323,6 @@ public class UnifiedOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符) 
-     * @return SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
-     */
-    public UnifiedOrderInSubOrderList [] getSubOrderList() {
-        return this.SubOrderList;
-    }
-
-    /**
-     * Set 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
-     * @param SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
-     */
-    public void setSubOrderList(UnifiedOrderInSubOrderList [] SubOrderList) {
-        this.SubOrderList = SubOrderList;
-    }
-
-    /**
      * Get 原始金额 
      * @return OriginalAmt 原始金额
      */
@@ -470,6 +455,26 @@ public class UnifiedOrderRequest extends AbstractModel{
     }
 
     /**
+     * Get 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传 
+     * @return SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
+     */
+    public UnifiedOrderInSubOrderList [] getSubOrderList() {
+        return this.SubOrderList;
+    }
+
+    /**
+     * Set 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
+     * @param SubOrderList 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+注：接入银行或其他支付渠道服务商模式下，必传
+     */
+    public void setSubOrderList(UnifiedOrderInSubOrderList [] SubOrderList) {
+        this.SubOrderList = SubOrderList;
+    }
+
+    /**
      * Get 结算应收金额，单位：分 
      * @return TotalMchIncome 结算应收金额，单位：分
      */
@@ -546,7 +551,6 @@ public class UnifiedOrderRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalAmt", this.TotalAmt);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "RealChannel", this.RealChannel);
-        this.setParamArrayObj(map, prefix + "SubOrderList.", this.SubOrderList);
         this.setParamSimple(map, prefix + "OriginalAmt", this.OriginalAmt);
         this.setParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
         this.setParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
@@ -555,6 +559,7 @@ public class UnifiedOrderRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Metadata", this.Metadata);
         this.setParamSimple(map, prefix + "Quantity", this.Quantity);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamArrayObj(map, prefix + "SubOrderList.", this.SubOrderList);
         this.setParamSimple(map, prefix + "TotalMchIncome", this.TotalMchIncome);
         this.setParamSimple(map, prefix + "TotalPlatformIncome", this.TotalPlatformIncome);
         this.setParamSimple(map, prefix + "WxOpenId", this.WxOpenId);

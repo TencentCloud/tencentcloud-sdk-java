@@ -298,6 +298,24 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *发送自定义消息告警
+     * @param req SendCustomAlarmMsgRequest
+     * @return SendCustomAlarmMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendCustomAlarmMsgResponse SendCustomAlarmMsg(SendCustomAlarmMsgRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendCustomAlarmMsgResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendCustomAlarmMsgResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SendCustomAlarmMsg"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除全部的关联对象
      * @param req UnBindingAllPolicyObjectRequest
      * @return UnBindingAllPolicyObjectResponse

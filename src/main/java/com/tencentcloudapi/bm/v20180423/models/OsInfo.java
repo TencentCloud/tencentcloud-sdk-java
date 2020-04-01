@@ -72,6 +72,22 @@ public class OsInfo extends AbstractModel{
     private Long MaxPartitionSize;
 
     /**
+    * 黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OsMinorVersion")
+    @Expose
+    private String OsMinorVersion;
+
+    /**
+    * 黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OsMinorClass")
+    @Expose
+    private String OsMinorClass;
+
+    /**
      * Get 操作系统ID 
      * @return OsTypeId 操作系统ID
      */
@@ -184,6 +200,46 @@ public class OsInfo extends AbstractModel{
     }
 
     /**
+     * Get 黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OsMinorVersion 黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOsMinorVersion() {
+        return this.OsMinorVersion;
+    }
+
+    /**
+     * Set 黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OsMinorVersion 黑石版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOsMinorVersion(String OsMinorVersion) {
+        this.OsMinorVersion = OsMinorVersion;
+    }
+
+    /**
+     * Get 黑石版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OsMinorClass 黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOsMinorClass() {
+        return this.OsMinorClass;
+    }
+
+    /**
+     * Set 黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OsMinorClass 黑石版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOsMinorClass(String OsMinorClass) {
+        this.OsMinorClass = OsMinorClass;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +250,8 @@ public class OsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "OsClass", this.OsClass);
         this.setParamSimple(map, prefix + "ImageTag", this.ImageTag);
         this.setParamSimple(map, prefix + "MaxPartitionSize", this.MaxPartitionSize);
+        this.setParamSimple(map, prefix + "OsMinorVersion", this.OsMinorVersion);
+        this.setParamSimple(map, prefix + "OsMinorClass", this.OsMinorClass);
 
     }
 }

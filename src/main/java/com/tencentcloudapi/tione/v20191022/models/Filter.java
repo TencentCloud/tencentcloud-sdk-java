@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.tione.v20191022.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEventNotificationConfigForConsoleResponse extends AbstractModel{
+public class Filter extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 过滤字段名称
     */
-    @SerializedName("RequestId")
+    @SerializedName("Name")
     @Expose
-    private String RequestId;
+    private String Name;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 过滤字段取值
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
+     * Get 过滤字段名称 
+     * @return Name 过滤字段名称
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 过滤字段名称
+     * @param Name 过滤字段名称
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 过滤字段取值 
+     * @return Values 过滤字段取值
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set 过滤字段取值
+     * @param Values 过滤字段取值
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

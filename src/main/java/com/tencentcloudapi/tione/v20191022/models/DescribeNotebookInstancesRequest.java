@@ -37,67 +37,32 @@ public class DescribeNotebookInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 排序字段
-    */
-    @SerializedName("SortBy")
-    @Expose
-    private String SortBy;
-
-    /**
-    * 排序方式
+    * 排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-    * 创建时间晚于
+    * 过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
     */
-    @SerializedName("CreationTimeAfter")
+    @SerializedName("Filters")
     @Expose
-    private String CreationTimeAfter;
+    private Filter [] Filters;
 
     /**
-    * 创建时间早于
+    * 【废弃字段】排序字段
     */
-    @SerializedName("CreationTimeBefore")
+    @SerializedName("SortBy")
     @Expose
-    private String CreationTimeBefore;
-
-    /**
-    * 最近修改时间晚于
-    */
-    @SerializedName("LastModifiedTimeAfter")
-    @Expose
-    private String LastModifiedTimeAfter;
-
-    /**
-    * 最近修改时间早于
-    */
-    @SerializedName("LastModifiedTimeBefore")
-    @Expose
-    private String LastModifiedTimeBefore;
-
-    /**
-    * 根据名称过滤
-    */
-    @SerializedName("NameContains")
-    @Expose
-    private String NameContains;
-
-    /**
-    * 根据状态过滤
-    */
-    @SerializedName("StatusEquals")
-    @Expose
-    private String StatusEquals;
-
-    /**
-    * 最大返回个数
-    */
-    @SerializedName("MaxResults")
-    @Expose
-    private Long MaxResults;
+    private String SortBy;
 
     /**
      * Get 偏移量 
@@ -132,147 +97,79 @@ public class DescribeNotebookInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段 
-     * @return SortBy 排序字段
-     */
-    public String getSortBy() {
-        return this.SortBy;
-    }
-
-    /**
-     * Set 排序字段
-     * @param SortBy 排序字段
-     */
-    public void setSortBy(String SortBy) {
-        this.SortBy = SortBy;
-    }
-
-    /**
-     * Get 排序方式 
-     * @return SortOrder 排序方式
+     * Get 排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序 
+     * @return SortOrder 排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set 排序方式
-     * @param SortOrder 排序方式
+     * Set 排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
+     * @param SortOrder 排序规则。默认取Descending
+Descending 按更新时间降序
+Ascending 按更新时间升序
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;
     }
 
     /**
-     * Get 创建时间晚于 
-     * @return CreationTimeAfter 创建时间晚于
+     * Get 过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。 
+     * @return Filters 过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
      */
-    public String getCreationTimeAfter() {
-        return this.CreationTimeAfter;
+    public Filter [] getFilters() {
+        return this.Filters;
     }
 
     /**
-     * Set 创建时间晚于
-     * @param CreationTimeAfter 创建时间晚于
+     * Set 过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+     * @param Filters 过滤条件。
+instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
      */
-    public void setCreationTimeAfter(String CreationTimeAfter) {
-        this.CreationTimeAfter = CreationTimeAfter;
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
-     * Get 创建时间早于 
-     * @return CreationTimeBefore 创建时间早于
+     * Get 【废弃字段】排序字段 
+     * @return SortBy 【废弃字段】排序字段
      */
-    public String getCreationTimeBefore() {
-        return this.CreationTimeBefore;
+    public String getSortBy() {
+        return this.SortBy;
     }
 
     /**
-     * Set 创建时间早于
-     * @param CreationTimeBefore 创建时间早于
+     * Set 【废弃字段】排序字段
+     * @param SortBy 【废弃字段】排序字段
      */
-    public void setCreationTimeBefore(String CreationTimeBefore) {
-        this.CreationTimeBefore = CreationTimeBefore;
-    }
-
-    /**
-     * Get 最近修改时间晚于 
-     * @return LastModifiedTimeAfter 最近修改时间晚于
-     */
-    public String getLastModifiedTimeAfter() {
-        return this.LastModifiedTimeAfter;
-    }
-
-    /**
-     * Set 最近修改时间晚于
-     * @param LastModifiedTimeAfter 最近修改时间晚于
-     */
-    public void setLastModifiedTimeAfter(String LastModifiedTimeAfter) {
-        this.LastModifiedTimeAfter = LastModifiedTimeAfter;
-    }
-
-    /**
-     * Get 最近修改时间早于 
-     * @return LastModifiedTimeBefore 最近修改时间早于
-     */
-    public String getLastModifiedTimeBefore() {
-        return this.LastModifiedTimeBefore;
-    }
-
-    /**
-     * Set 最近修改时间早于
-     * @param LastModifiedTimeBefore 最近修改时间早于
-     */
-    public void setLastModifiedTimeBefore(String LastModifiedTimeBefore) {
-        this.LastModifiedTimeBefore = LastModifiedTimeBefore;
-    }
-
-    /**
-     * Get 根据名称过滤 
-     * @return NameContains 根据名称过滤
-     */
-    public String getNameContains() {
-        return this.NameContains;
-    }
-
-    /**
-     * Set 根据名称过滤
-     * @param NameContains 根据名称过滤
-     */
-    public void setNameContains(String NameContains) {
-        this.NameContains = NameContains;
-    }
-
-    /**
-     * Get 根据状态过滤 
-     * @return StatusEquals 根据状态过滤
-     */
-    public String getStatusEquals() {
-        return this.StatusEquals;
-    }
-
-    /**
-     * Set 根据状态过滤
-     * @param StatusEquals 根据状态过滤
-     */
-    public void setStatusEquals(String StatusEquals) {
-        this.StatusEquals = StatusEquals;
-    }
-
-    /**
-     * Get 最大返回个数 
-     * @return MaxResults 最大返回个数
-     */
-    public Long getMaxResults() {
-        return this.MaxResults;
-    }
-
-    /**
-     * Set 最大返回个数
-     * @param MaxResults 最大返回个数
-     */
-    public void setMaxResults(Long MaxResults) {
-        this.MaxResults = MaxResults;
+    public void setSortBy(String SortBy) {
+        this.SortBy = SortBy;
     }
 
     /**
@@ -281,15 +178,9 @@ public class DescribeNotebookInstancesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
-        this.setParamSimple(map, prefix + "CreationTimeAfter", this.CreationTimeAfter);
-        this.setParamSimple(map, prefix + "CreationTimeBefore", this.CreationTimeBefore);
-        this.setParamSimple(map, prefix + "LastModifiedTimeAfter", this.LastModifiedTimeAfter);
-        this.setParamSimple(map, prefix + "LastModifiedTimeBefore", this.LastModifiedTimeBefore);
-        this.setParamSimple(map, prefix + "NameContains", this.NameContains);
-        this.setParamSimple(map, prefix + "StatusEquals", this.StatusEquals);
-        this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "SortBy", this.SortBy);
 
     }
 }
