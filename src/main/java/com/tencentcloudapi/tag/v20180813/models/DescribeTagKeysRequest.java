@@ -44,6 +44,13 @@ public class DescribeTagKeysRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 是否展现项目
+    */
+    @SerializedName("ShowProject")
+    @Expose
+    private Long ShowProject;
+
+    /**
      * Get 创建者用户 Uin，不传或为空只将 Uin 作为条件查询 
      * @return CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      */
@@ -92,12 +99,29 @@ public class DescribeTagKeysRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否展现项目 
+     * @return ShowProject 是否展现项目
+     */
+    public Long getShowProject() {
+        return this.ShowProject;
+    }
+
+    /**
+     * Set 是否展现项目
+     * @param ShowProject 是否展现项目
+     */
+    public void setShowProject(Long ShowProject) {
+        this.ShowProject = ShowProject;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ShowProject", this.ShowProject);
 
     }
 }

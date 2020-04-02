@@ -238,7 +238,7 @@ public class Instance extends AbstractModel{
     */
     @SerializedName("IPv6Addresses")
     @Expose
-    private String IPv6Addresses;
+    private String [] IPv6Addresses;
 
     /**
     * CAM角色名。
@@ -746,7 +746,7 @@ public class Instance extends AbstractModel{
      * @return IPv6Addresses 实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIPv6Addresses() {
+    public String [] getIPv6Addresses() {
         return this.IPv6Addresses;
     }
 
@@ -756,7 +756,7 @@ public class Instance extends AbstractModel{
      * @param IPv6Addresses 实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIPv6Addresses(String IPv6Addresses) {
+    public void setIPv6Addresses(String [] IPv6Addresses) {
         this.IPv6Addresses = IPv6Addresses;
     }
 
@@ -813,7 +813,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
-        this.setParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+        this.setParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }

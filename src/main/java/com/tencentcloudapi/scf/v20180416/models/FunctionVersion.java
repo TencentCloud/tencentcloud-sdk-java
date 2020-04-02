@@ -38,6 +38,22 @@ public class FunctionVersion extends AbstractModel{
     private String Description;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddTime")
+    @Expose
+    private String AddTime;
+
+    /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModTime")
+    @Expose
+    private String ModTime;
+
+    /**
      * Get 函数版本名称 
      * @return Version 函数版本名称
      */
@@ -74,11 +90,53 @@ public class FunctionVersion extends AbstractModel{
     }
 
     /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAddTime() {
+        return this.AddTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddTime(String AddTime) {
+        this.AddTime = AddTime;
+    }
+
+    /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModTime() {
+        return this.ModTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModTime(String ModTime) {
+        this.ModTime = ModTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AddTime", this.AddTime);
+        this.setParamSimple(map, prefix + "ModTime", this.ModTime);
 
     }
 }

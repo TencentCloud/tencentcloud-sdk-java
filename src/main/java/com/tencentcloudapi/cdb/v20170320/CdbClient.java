@@ -272,7 +272,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DeleteBackup)用于删除数据库备份。
+     *本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
      * @param req DeleteBackupRequest
      * @return DeleteBackupResponse
      * @throws TencentCloudSDKException
@@ -955,6 +955,24 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackRangeTimeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRollbackRangeTime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *条件检索实例的慢日志。只允许查看一个月之内的慢日志
+     * @param req DescribeSLowLogDataRequest
+     * @return DescribeSLowLogDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSLowLogDataResponse DescribeSLowLogData(DescribeSLowLogDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSLowLogDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSLowLogDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSLowLogData"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

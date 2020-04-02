@@ -58,6 +58,13 @@ public class DescribeTagsRequest extends AbstractModel{
     private Long CreateUin;
 
     /**
+    * 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
+
+    /**
      * Get 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签 
      * @return TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
      */
@@ -138,6 +145,22 @@ public class DescribeTagsRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值 
+     * @return TagKeys 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+     * @param TagKeys 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeTagsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
 
     }
 }

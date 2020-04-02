@@ -13,21 +13,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNotebookInstanceResponse extends AbstractModel{
+public class DescribeResourceTagsByTagKeysResponse extends AbstractModel{
 
     /**
-    * Notebook实例名字
+    * 结果总数
     */
-    @SerializedName("NotebookInstanceName")
+    @SerializedName("TotalCount")
     @Expose
-    private String NotebookInstanceName;
+    private Long TotalCount;
+
+    /**
+    * 数据位移偏量
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 每页大小
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 资源标签
+    */
+    @SerializedName("Rows")
+    @Expose
+    private ResourceIdTag [] Rows;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +58,67 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Notebook实例名字 
-     * @return NotebookInstanceName Notebook实例名字
+     * Get 结果总数 
+     * @return TotalCount 结果总数
      */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Notebook实例名字
-     * @param NotebookInstanceName Notebook实例名字
+     * Set 结果总数
+     * @param TotalCount 结果总数
      */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 数据位移偏量 
+     * @return Offset 数据位移偏量
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 数据位移偏量
+     * @param Offset 数据位移偏量
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 每页大小 
+     * @return Limit 每页大小
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页大小
+     * @param Limit 每页大小
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 资源标签 
+     * @return Rows 资源标签
+     */
+    public ResourceIdTag [] getRows() {
+        return this.Rows;
+    }
+
+    /**
+     * Set 资源标签
+     * @param Rows 资源标签
+     */
+    public void setRows(ResourceIdTag [] Rows) {
+        this.Rows = Rows;
     }
 
     /**
@@ -72,7 +141,10 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Rows.", this.Rows);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

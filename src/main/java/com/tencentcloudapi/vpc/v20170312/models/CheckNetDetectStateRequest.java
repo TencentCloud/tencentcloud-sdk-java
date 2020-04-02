@@ -54,28 +54,28 @@ NORMAL_CVM：普通云服务器；
     private String NextHopDestination;
 
     /**
-    * 网络探测实例ID。形如：netd-12345678。
+    * 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
     */
     @SerializedName("NetDetectId")
     @Expose
     private String NetDetectId;
 
     /**
-    * `VPC`实例`ID`。形如：`vpc-12345678`
+    * `VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网实例ID。形如：subnet-12345678。
+    * 子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 网络探测名称，最大长度不能超过60个字节。
+    * 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
     */
     @SerializedName("NetDetectName")
     @Expose
@@ -170,64 +170,64 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * Get 网络探测实例ID。形如：netd-12345678。 
-     * @return NetDetectId 网络探测实例ID。形如：netd-12345678。
+     * Get 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。 
+     * @return NetDetectId 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public String getNetDetectId() {
         return this.NetDetectId;
     }
 
     /**
-     * Set 网络探测实例ID。形如：netd-12345678。
-     * @param NetDetectId 网络探测实例ID。形如：netd-12345678。
+     * Set 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
+     * @param NetDetectId 网络探测实例ID。形如：netd-12345678。该参数与（VpcId，SubnetId，NetDetectName），至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public void setNetDetectId(String NetDetectId) {
         this.NetDetectId = NetDetectId;
     }
 
     /**
-     * Get `VPC`实例`ID`。形如：`vpc-12345678` 
-     * @return VpcId `VPC`实例`ID`。形如：`vpc-12345678`
+     * Get `VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。 
+     * @return VpcId `VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。形如：`vpc-12345678`
-     * @param VpcId `VPC`实例`ID`。形如：`vpc-12345678`
+     * Set `VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+     * @param VpcId `VPC`实例`ID`。形如：`vpc-12345678`。该参数与（SubnetId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网实例ID。形如：subnet-12345678。 
-     * @return SubnetId 子网实例ID。形如：subnet-12345678。
+     * Get 子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。 
+     * @return SubnetId 子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID。形如：subnet-12345678。
-     * @param SubnetId 子网实例ID。形如：subnet-12345678。
+     * Set 子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+     * @param SubnetId 子网实例ID。形如：subnet-12345678。该参数与（VpcId，NetDetectName）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 网络探测名称，最大长度不能超过60个字节。 
-     * @return NetDetectName 网络探测名称，最大长度不能超过60个字节。
+     * Get 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。 
+     * @return NetDetectName 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public String getNetDetectName() {
         return this.NetDetectName;
     }
 
     /**
-     * Set 网络探测名称，最大长度不能超过60个字节。
-     * @param NetDetectName 网络探测名称，最大长度不能超过60个字节。
+     * Set 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
+     * @param NetDetectName 网络探测名称，最大长度不能超过60个字节。该参数与（VpcId，SubnetId）配合使用，与NetDetectId至少要有一个。当NetDetectId存在时，使用NetDetectId。
      */
     public void setNetDetectName(String NetDetectName) {
         this.NetDetectName = NetDetectName;

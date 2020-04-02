@@ -172,6 +172,14 @@ public class RuleOutput extends AbstractModel{
     private String TrpcFunc;
 
     /**
+    * QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuicStatus")
+    @Expose
+    private String QuicStatus;
+
+    /**
      * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
@@ -528,6 +536,26 @@ public class RuleOutput extends AbstractModel{
     }
 
     /**
+     * Get QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuicStatus QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQuicStatus() {
+        return this.QuicStatus;
+    }
+
+    /**
+     * Set QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuicStatus QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuicStatus(String QuicStatus) {
+        this.QuicStatus = QuicStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -551,6 +579,7 @@ public class RuleOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "WafDomainId", this.WafDomainId);
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+        this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDeviceDataHistoryResponse extends AbstractModel{
 
     /**
-    * 属性字段名称
+    * 属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldName")
@@ -62,9 +62,9 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 属性字段名称
+     * Get 属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FieldName 属性字段名称
+     * @return FieldName 属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFieldName() {
@@ -72,9 +72,9 @@ public class DescribeDeviceDataHistoryResponse extends AbstractModel{
     }
 
     /**
-     * Set 属性字段名称
+     * Set 属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FieldName 属性字段名称
+     * @param FieldName 属性字段名称，对应数据模板中功能属性的标识符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldName(String FieldName) {

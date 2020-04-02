@@ -37,21 +37,21 @@ public class ListEventHistoryRequest extends AbstractModel{
     private String DeviceName;
 
     /**
-    * 搜索的事件类型
+    * 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 起始时间, 为0 表示 当前时间 - 24h
+    * 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间, 为0 表示当前时间
+    * 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -104,48 +104,48 @@ public class ListEventHistoryRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索的事件类型 
-     * @return Type 搜索的事件类型
+     * Get 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件 
+     * @return Type 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 搜索的事件类型
-     * @param Type 搜索的事件类型
+     * Set 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
+     * @param Type 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 起始时间, 为0 表示 当前时间 - 24h 
-     * @return StartTime 起始时间, 为0 表示 当前时间 - 24h
+     * Get 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h 
+     * @return StartTime 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间, 为0 表示 当前时间 - 24h
-     * @param StartTime 起始时间, 为0 表示 当前时间 - 24h
+     * Set 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
+     * @param StartTime 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间, 为0 表示当前时间 
-     * @return EndTime 结束时间, 为0 表示当前时间
+     * Get 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间 
+     * @return EndTime 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间, 为0 表示当前时间
-     * @param EndTime 结束时间, 为0 表示当前时间
+     * Set 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
+     * @param EndTime 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

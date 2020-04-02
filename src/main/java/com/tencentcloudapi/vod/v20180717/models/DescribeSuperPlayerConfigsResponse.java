@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNotebookInstanceResponse extends AbstractModel{
+public class DescribeSuperPlayerConfigsResponse extends AbstractModel{
 
     /**
-    * Notebook实例名字
+    * 符合过滤条件的记录总数。
     */
-    @SerializedName("NotebookInstanceName")
+    @SerializedName("TotalCount")
     @Expose
-    private String NotebookInstanceName;
+    private Long TotalCount;
+
+    /**
+    * 播放器配置数组。
+    */
+    @SerializedName("PlayerConfigSet")
+    @Expose
+    private PlayerConfig [] PlayerConfigSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Notebook实例名字 
-     * @return NotebookInstanceName Notebook实例名字
+     * Get 符合过滤条件的记录总数。 
+     * @return TotalCount 符合过滤条件的记录总数。
      */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Notebook实例名字
-     * @param NotebookInstanceName Notebook实例名字
+     * Set 符合过滤条件的记录总数。
+     * @param TotalCount 符合过滤条件的记录总数。
      */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 播放器配置数组。 
+     * @return PlayerConfigSet 播放器配置数组。
+     */
+    public PlayerConfig [] getPlayerConfigSet() {
+        return this.PlayerConfigSet;
+    }
+
+    /**
+     * Set 播放器配置数组。
+     * @param PlayerConfigSet 播放器配置数组。
+     */
+    public void setPlayerConfigSet(PlayerConfig [] PlayerConfigSet) {
+        this.PlayerConfigSet = PlayerConfigSet;
     }
 
     /**
@@ -72,7 +95,8 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "PlayerConfigSet.", this.PlayerConfigSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

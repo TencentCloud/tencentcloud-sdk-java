@@ -149,6 +149,14 @@ public class L7RuleEntry extends AbstractModel{
     private String CCLevel;
 
     /**
+    * 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpsToHttpEnable")
+    @Expose
+    private Long HttpsToHttpEnable;
+
+    /**
      * Get 转发协议，取值[http, https] 
      * @return Protocol 转发协议，取值[http, https]
      */
@@ -437,6 +445,26 @@ public class L7RuleEntry extends AbstractModel{
     }
 
     /**
+     * Get 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHttpsToHttpEnable() {
+        return this.HttpsToHttpEnable;
+    }
+
+    /**
+     * Set 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpsToHttpEnable(Long HttpsToHttpEnable) {
+        this.HttpsToHttpEnable = HttpsToHttpEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +486,7 @@ public class L7RuleEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "CCEnable", this.CCEnable);
         this.setParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
         this.setParamSimple(map, prefix + "CCLevel", this.CCLevel);
+        this.setParamSimple(map, prefix + "HttpsToHttpEnable", this.HttpsToHttpEnable);
 
     }
 }

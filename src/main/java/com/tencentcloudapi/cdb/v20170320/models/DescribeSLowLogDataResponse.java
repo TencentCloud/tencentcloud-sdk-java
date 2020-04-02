@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNotebookInstanceResponse extends AbstractModel{
+public class DescribeSLowLogDataResponse extends AbstractModel{
 
     /**
-    * Notebook实例名字
+    * 符合条件的记录总数。
     */
-    @SerializedName("NotebookInstanceName")
+    @SerializedName("TotalCount")
     @Expose
-    private String NotebookInstanceName;
+    private Long TotalCount;
+
+    /**
+    * 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Items")
+    @Expose
+    private SlowLogItem [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Notebook实例名字 
-     * @return NotebookInstanceName Notebook实例名字
+     * Get 符合条件的记录总数。 
+     * @return TotalCount 符合条件的记录总数。
      */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Notebook实例名字
-     * @param NotebookInstanceName Notebook实例名字
+     * Set 符合条件的记录总数。
+     * @param TotalCount 符合条件的记录总数。
      */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlowLogItem [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItems(SlowLogItem [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -72,7 +100,8 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

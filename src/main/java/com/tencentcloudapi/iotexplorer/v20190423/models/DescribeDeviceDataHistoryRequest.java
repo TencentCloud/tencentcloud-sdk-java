@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDeviceDataHistoryRequest extends AbstractModel{
 
     /**
-    * 区间开始时间
+    * 区间开始时间（Unix 时间戳，毫秒级）
     */
     @SerializedName("MinTime")
     @Expose
     private Long MinTime;
 
     /**
-    * 区间结束时间
+    * 区间结束时间（Unix 时间戳，毫秒级）
     */
     @SerializedName("MaxTime")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeDeviceDataHistoryRequest extends AbstractModel{
     private String DeviceName;
 
     /**
-    * 属性字段名称
+    * 属性字段名称，对应数据模板中功能属性的标识符
     */
     @SerializedName("FieldName")
     @Expose
@@ -72,32 +72,32 @@ public class DescribeDeviceDataHistoryRequest extends AbstractModel{
     private String Context;
 
     /**
-     * Get 区间开始时间 
-     * @return MinTime 区间开始时间
+     * Get 区间开始时间（Unix 时间戳，毫秒级） 
+     * @return MinTime 区间开始时间（Unix 时间戳，毫秒级）
      */
     public Long getMinTime() {
         return this.MinTime;
     }
 
     /**
-     * Set 区间开始时间
-     * @param MinTime 区间开始时间
+     * Set 区间开始时间（Unix 时间戳，毫秒级）
+     * @param MinTime 区间开始时间（Unix 时间戳，毫秒级）
      */
     public void setMinTime(Long MinTime) {
         this.MinTime = MinTime;
     }
 
     /**
-     * Get 区间结束时间 
-     * @return MaxTime 区间结束时间
+     * Get 区间结束时间（Unix 时间戳，毫秒级） 
+     * @return MaxTime 区间结束时间（Unix 时间戳，毫秒级）
      */
     public Long getMaxTime() {
         return this.MaxTime;
     }
 
     /**
-     * Set 区间结束时间
-     * @param MaxTime 区间结束时间
+     * Set 区间结束时间（Unix 时间戳，毫秒级）
+     * @param MaxTime 区间结束时间（Unix 时间戳，毫秒级）
      */
     public void setMaxTime(Long MaxTime) {
         this.MaxTime = MaxTime;
@@ -136,16 +136,16 @@ public class DescribeDeviceDataHistoryRequest extends AbstractModel{
     }
 
     /**
-     * Get 属性字段名称 
-     * @return FieldName 属性字段名称
+     * Get 属性字段名称，对应数据模板中功能属性的标识符 
+     * @return FieldName 属性字段名称，对应数据模板中功能属性的标识符
      */
     public String getFieldName() {
         return this.FieldName;
     }
 
     /**
-     * Set 属性字段名称
-     * @param FieldName 属性字段名称
+     * Set 属性字段名称，对应数据模板中功能属性的标识符
+     * @param FieldName 属性字段名称，对应数据模板中功能属性的标识符
      */
     public void setFieldName(String FieldName) {
         this.FieldName = FieldName;

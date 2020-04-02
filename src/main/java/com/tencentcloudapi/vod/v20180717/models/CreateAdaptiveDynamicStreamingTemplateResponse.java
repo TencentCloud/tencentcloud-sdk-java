@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNotebookInstanceResponse extends AbstractModel{
+public class CreateAdaptiveDynamicStreamingTemplateResponse extends AbstractModel{
 
     /**
-    * Notebook实例名字
+    * 自适应转码模板唯一标识。
     */
-    @SerializedName("NotebookInstanceName")
+    @SerializedName("Definition")
     @Expose
-    private String NotebookInstanceName;
+    private Long Definition;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Notebook实例名字 
-     * @return NotebookInstanceName Notebook实例名字
+     * Get 自适应转码模板唯一标识。 
+     * @return Definition 自适应转码模板唯一标识。
      */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
+    public Long getDefinition() {
+        return this.Definition;
     }
 
     /**
-     * Set Notebook实例名字
-     * @param NotebookInstanceName Notebook实例名字
+     * Set 自适应转码模板唯一标识。
+     * @param Definition 自适应转码模板唯一标识。
      */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
     /**
@@ -72,7 +72,7 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

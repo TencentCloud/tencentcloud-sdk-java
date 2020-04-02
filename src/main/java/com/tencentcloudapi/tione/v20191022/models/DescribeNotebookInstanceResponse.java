@@ -62,14 +62,6 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     private String RootAccess;
 
     /**
-    * 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SecurityGroupIds")
-    @Expose
-    private String [] SecurityGroupIds;
-
-    /**
     * 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -84,14 +76,6 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     @SerializedName("VolumeSizeInGB")
     @Expose
     private Long VolumeSizeInGB;
-
-    /**
-    * Notebook实例链接
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
 
     /**
     * 创建失败原因
@@ -118,14 +102,6 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     private String LastModifiedTime;
 
     /**
-    * Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("NetworkInterfaceId")
-    @Expose
-    private String NetworkInterfaceId;
-
-    /**
     * Notebook实例日志链接
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -148,6 +124,32 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LifecycleScriptsName")
+    @Expose
+    private String LifecycleScriptsName;
+
+    /**
+    * 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultCodeRepository")
+    @Expose
+    private String DefaultCodeRepository;
+
+    /**
+    * 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdditionalCodeRepositories")
+    @Expose
+    private String [] AdditionalCodeRepositories;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -253,26 +255,6 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroupIds 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String [] getSecurityGroupIds() {
-        return this.SecurityGroupIds;
-    }
-
-    /**
-     * Set 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroupIds 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSecurityGroupIds(String [] SecurityGroupIds) {
-        this.SecurityGroupIds = SecurityGroupIds;
-    }
-
-    /**
      * Get 子网ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetId 子网ID
@@ -310,26 +292,6 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
      */
     public void setVolumeSizeInGB(Long VolumeSizeInGB) {
         this.VolumeSizeInGB = VolumeSizeInGB;
-    }
-
-    /**
-     * Get Notebook实例链接
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url Notebook实例链接
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set Notebook实例链接
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url Notebook实例链接
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
     }
 
     /**
@@ -393,26 +355,6 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetworkInterfaceId Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getNetworkInterfaceId() {
-        return this.NetworkInterfaceId;
-    }
-
-    /**
-     * Set Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetworkInterfaceId Notebook实例网卡ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setNetworkInterfaceId(String NetworkInterfaceId) {
-        this.NetworkInterfaceId = NetworkInterfaceId;
-    }
-
-    /**
      * Get Notebook实例日志链接
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogUrl Notebook实例日志链接
@@ -473,6 +415,74 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LifecycleScriptsName notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLifecycleScriptsName() {
+        return this.LifecycleScriptsName;
+    }
+
+    /**
+     * Set notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LifecycleScriptsName notebook生命周期脚本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLifecycleScriptsName(String LifecycleScriptsName) {
+        this.LifecycleScriptsName = LifecycleScriptsName;
+    }
+
+    /**
+     * Get 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultCodeRepository 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultCodeRepository() {
+        return this.DefaultCodeRepository;
+    }
+
+    /**
+     * Set 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultCodeRepository 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultCodeRepository(String DefaultCodeRepository) {
+        this.DefaultCodeRepository = DefaultCodeRepository;
+    }
+
+    /**
+     * Get 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdditionalCodeRepositories 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAdditionalCodeRepositories() {
+        return this.AdditionalCodeRepositories;
+    }
+
+    /**
+     * Set 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdditionalCodeRepositories 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdditionalCodeRepositories(String [] AdditionalCodeRepositories) {
+        this.AdditionalCodeRepositories = AdditionalCodeRepositories;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -497,17 +507,17 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
         this.setParamSimple(map, prefix + "DirectInternetAccess", this.DirectInternetAccess);
         this.setParamSimple(map, prefix + "RootAccess", this.RootAccess);
-        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
-        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "FailureReason", this.FailureReason);
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);
         this.setParamSimple(map, prefix + "LastModifiedTime", this.LastModifiedTime);
-        this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "LogUrl", this.LogUrl);
         this.setParamSimple(map, prefix + "NotebookInstanceStatus", this.NotebookInstanceStatus);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
+        this.setParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
+        this.setParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

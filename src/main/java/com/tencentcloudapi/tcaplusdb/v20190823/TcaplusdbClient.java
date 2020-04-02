@@ -362,24 +362,6 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *修改指定的应用名称
-     * @param req ModifyAppNameRequest
-     * @return ModifyAppNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAppNameResponse ModifyAppName(ModifyAppNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAppNameResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAppNameResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAppName"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改指定的集群名称
      * @param req ModifyClusterNameRequest
      * @return ModifyClusterNameResponse

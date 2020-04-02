@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNotebookInstanceResponse extends AbstractModel{
-
-    /**
-    * Notebook实例名字
-    */
-    @SerializedName("NotebookInstanceName")
-    @Expose
-    private String NotebookInstanceName;
+public class DeleteSuperPlayerConfigResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Notebook实例名字 
-     * @return NotebookInstanceName Notebook实例名字
-     */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
-    }
-
-    /**
-     * Set Notebook实例名字
-     * @param NotebookInstanceName Notebook实例名字
-     */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class CreateNotebookInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

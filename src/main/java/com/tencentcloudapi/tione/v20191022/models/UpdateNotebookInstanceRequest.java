@@ -58,6 +58,55 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     private String InstanceType;
 
     /**
+    * notebook生命周期脚本名称
+    */
+    @SerializedName("LifecycleScriptsName")
+    @Expose
+    private String LifecycleScriptsName;
+
+    /**
+    * 是否解绑生命周期脚本，默认 false。
+如果本来就没有绑定脚本，则忽略此参数；
+如果本来有绑定脚本，此参数为 true 则解绑；
+如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+    */
+    @SerializedName("DisassociateLifecycleScript")
+    @Expose
+    private Boolean DisassociateLifecycleScript;
+
+    /**
+    * 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+    */
+    @SerializedName("DefaultCodeRepository")
+    @Expose
+    private String DefaultCodeRepository;
+
+    /**
+    * 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+    */
+    @SerializedName("AdditionalCodeRepositories")
+    @Expose
+    private String [] AdditionalCodeRepositories;
+
+    /**
+    * 是否取消关联默认存储库，默认false
+该值为true时，DefaultCodeRepository将被忽略
+    */
+    @SerializedName("DisassociateDefaultCodeRepository")
+    @Expose
+    private Boolean DisassociateDefaultCodeRepository;
+
+    /**
+    * 是否取消关联其他存储库，默认false
+该值为true时，AdditionalCodeRepositories将被忽略
+    */
+    @SerializedName("DisassociateAdditionalCodeRepositories")
+    @Expose
+    private Boolean DisassociateAdditionalCodeRepositories;
+
+    /**
      * Get Notebook实例名称 
      * @return NotebookInstanceName Notebook实例名称
      */
@@ -138,6 +187,130 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get notebook生命周期脚本名称 
+     * @return LifecycleScriptsName notebook生命周期脚本名称
+     */
+    public String getLifecycleScriptsName() {
+        return this.LifecycleScriptsName;
+    }
+
+    /**
+     * Set notebook生命周期脚本名称
+     * @param LifecycleScriptsName notebook生命周期脚本名称
+     */
+    public void setLifecycleScriptsName(String LifecycleScriptsName) {
+        this.LifecycleScriptsName = LifecycleScriptsName;
+    }
+
+    /**
+     * Get 是否解绑生命周期脚本，默认 false。
+如果本来就没有绑定脚本，则忽略此参数；
+如果本来有绑定脚本，此参数为 true 则解绑；
+如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName 
+     * @return DisassociateLifecycleScript 是否解绑生命周期脚本，默认 false。
+如果本来就没有绑定脚本，则忽略此参数；
+如果本来有绑定脚本，此参数为 true 则解绑；
+如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+     */
+    public Boolean getDisassociateLifecycleScript() {
+        return this.DisassociateLifecycleScript;
+    }
+
+    /**
+     * Set 是否解绑生命周期脚本，默认 false。
+如果本来就没有绑定脚本，则忽略此参数；
+如果本来有绑定脚本，此参数为 true 则解绑；
+如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+     * @param DisassociateLifecycleScript 是否解绑生命周期脚本，默认 false。
+如果本来就没有绑定脚本，则忽略此参数；
+如果本来有绑定脚本，此参数为 true 则解绑；
+如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+     */
+    public void setDisassociateLifecycleScript(Boolean DisassociateLifecycleScript) {
+        this.DisassociateLifecycleScript = DisassociateLifecycleScript;
+    }
+
+    /**
+     * Get 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库 
+     * @return DefaultCodeRepository 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+     */
+    public String getDefaultCodeRepository() {
+        return this.DefaultCodeRepository;
+    }
+
+    /**
+     * Set 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+     * @param DefaultCodeRepository 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+     */
+    public void setDefaultCodeRepository(String DefaultCodeRepository) {
+        this.DefaultCodeRepository = DefaultCodeRepository;
+    }
+
+    /**
+     * Get 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库 
+     * @return AdditionalCodeRepositories 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+     */
+    public String [] getAdditionalCodeRepositories() {
+        return this.AdditionalCodeRepositories;
+    }
+
+    /**
+     * Set 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+     * @param AdditionalCodeRepositories 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+     */
+    public void setAdditionalCodeRepositories(String [] AdditionalCodeRepositories) {
+        this.AdditionalCodeRepositories = AdditionalCodeRepositories;
+    }
+
+    /**
+     * Get 是否取消关联默认存储库，默认false
+该值为true时，DefaultCodeRepository将被忽略 
+     * @return DisassociateDefaultCodeRepository 是否取消关联默认存储库，默认false
+该值为true时，DefaultCodeRepository将被忽略
+     */
+    public Boolean getDisassociateDefaultCodeRepository() {
+        return this.DisassociateDefaultCodeRepository;
+    }
+
+    /**
+     * Set 是否取消关联默认存储库，默认false
+该值为true时，DefaultCodeRepository将被忽略
+     * @param DisassociateDefaultCodeRepository 是否取消关联默认存储库，默认false
+该值为true时，DefaultCodeRepository将被忽略
+     */
+    public void setDisassociateDefaultCodeRepository(Boolean DisassociateDefaultCodeRepository) {
+        this.DisassociateDefaultCodeRepository = DisassociateDefaultCodeRepository;
+    }
+
+    /**
+     * Get 是否取消关联其他存储库，默认false
+该值为true时，AdditionalCodeRepositories将被忽略 
+     * @return DisassociateAdditionalCodeRepositories 是否取消关联其他存储库，默认false
+该值为true时，AdditionalCodeRepositories将被忽略
+     */
+    public Boolean getDisassociateAdditionalCodeRepositories() {
+        return this.DisassociateAdditionalCodeRepositories;
+    }
+
+    /**
+     * Set 是否取消关联其他存储库，默认false
+该值为true时，AdditionalCodeRepositories将被忽略
+     * @param DisassociateAdditionalCodeRepositories 是否取消关联其他存储库，默认false
+该值为true时，AdditionalCodeRepositories将被忽略
+     */
+    public void setDisassociateAdditionalCodeRepositories(Boolean DisassociateAdditionalCodeRepositories) {
+        this.DisassociateAdditionalCodeRepositories = DisassociateAdditionalCodeRepositories;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +319,12 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RootAccess", this.RootAccess);
         this.setParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
+        this.setParamSimple(map, prefix + "DisassociateLifecycleScript", this.DisassociateLifecycleScript);
+        this.setParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
+        this.setParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
+        this.setParamSimple(map, prefix + "DisassociateDefaultCodeRepository", this.DisassociateDefaultCodeRepository);
+        this.setParamSimple(map, prefix + "DisassociateAdditionalCodeRepositories", this.DisassociateAdditionalCodeRepositories);
 
     }
 }

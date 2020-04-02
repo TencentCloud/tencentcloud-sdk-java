@@ -13,77 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel{
+public class ResourceIdTag extends AbstractModel{
 
     /**
-    * key
+    * 资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Key")
+    @SerializedName("ResourceId")
     @Expose
-    private String Key;
+    private String ResourceId;
 
     /**
-    * value
+    * 标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Value")
+    @SerializedName("TagKeyValues")
     @Expose
-    private String Value;
+    private Tag [] TagKeyValues;
 
     /**
-     * Get key
+     * Get 资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key key
+     * @return ResourceId 资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getKey() {
-        return this.Key;
+    public String getResourceId() {
+        return this.ResourceId;
     }
 
     /**
-     * Set key
+     * Set 资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key key
+     * @param ResourceId 资源唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     /**
-     * Get value
+     * Get 标签键值对
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value value
+     * @return TagKeyValues 标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getValue() {
-        return this.Value;
+    public Tag [] getTagKeyValues() {
+        return this.TagKeyValues;
     }
 
     /**
-     * Set value
+     * Set 标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value value
+     * @param TagKeyValues 标签键值对
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setTagKeyValues(Tag [] TagKeyValues) {
+        this.TagKeyValues = TagKeyValues;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamArrayObj(map, prefix + "TagKeyValues.", this.TagKeyValues);
 
     }
 }

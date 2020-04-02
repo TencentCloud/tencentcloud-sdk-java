@@ -37,11 +37,11 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     private String InstanceType;
 
     /**
-    * 角色的资源描述
+    * 数据卷大小(GB)
     */
-    @SerializedName("RoleArn")
+    @SerializedName("VolumeSizeInGB")
     @Expose
-    private String RoleArn;
+    private Long VolumeSizeInGB;
 
     /**
     * 外网访问权限，可取值Enabled/Disabled
@@ -58,13 +58,6 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     private String RootAccess;
 
     /**
-    * 安全组ID
-    */
-    @SerializedName("SecurityGroupIds")
-    @Expose
-    private String [] SecurityGroupIds;
-
-    /**
     * 子网ID
     */
     @SerializedName("SubnetId")
@@ -72,18 +65,27 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 数据卷大小(GB)
+    * 生命周期脚本名称
     */
-    @SerializedName("VolumeSizeInGB")
+    @SerializedName("LifecycleScriptsName")
     @Expose
-    private Long VolumeSizeInGB;
+    private String LifecycleScriptsName;
 
     /**
-    * Notebook标签
+    * 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
     */
-    @SerializedName("Tags")
+    @SerializedName("DefaultCodeRepository")
     @Expose
-    private Tag [] Tags;
+    private String DefaultCodeRepository;
+
+    /**
+    * 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+    */
+    @SerializedName("AdditionalCodeRepositories")
+    @Expose
+    private String [] AdditionalCodeRepositories;
 
     /**
      * Get Notebook实例名称 
@@ -118,19 +120,19 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 角色的资源描述 
-     * @return RoleArn 角色的资源描述
+     * Get 数据卷大小(GB) 
+     * @return VolumeSizeInGB 数据卷大小(GB)
      */
-    public String getRoleArn() {
-        return this.RoleArn;
+    public Long getVolumeSizeInGB() {
+        return this.VolumeSizeInGB;
     }
 
     /**
-     * Set 角色的资源描述
-     * @param RoleArn 角色的资源描述
+     * Set 数据卷大小(GB)
+     * @param VolumeSizeInGB 数据卷大小(GB)
      */
-    public void setRoleArn(String RoleArn) {
-        this.RoleArn = RoleArn;
+    public void setVolumeSizeInGB(Long VolumeSizeInGB) {
+        this.VolumeSizeInGB = VolumeSizeInGB;
     }
 
     /**
@@ -166,22 +168,6 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 安全组ID 
-     * @return SecurityGroupIds 安全组ID
-     */
-    public String [] getSecurityGroupIds() {
-        return this.SecurityGroupIds;
-    }
-
-    /**
-     * Set 安全组ID
-     * @param SecurityGroupIds 安全组ID
-     */
-    public void setSecurityGroupIds(String [] SecurityGroupIds) {
-        this.SecurityGroupIds = SecurityGroupIds;
-    }
-
-    /**
      * Get 子网ID 
      * @return SubnetId 子网ID
      */
@@ -198,35 +184,59 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据卷大小(GB) 
-     * @return VolumeSizeInGB 数据卷大小(GB)
+     * Get 生命周期脚本名称 
+     * @return LifecycleScriptsName 生命周期脚本名称
      */
-    public Long getVolumeSizeInGB() {
-        return this.VolumeSizeInGB;
+    public String getLifecycleScriptsName() {
+        return this.LifecycleScriptsName;
     }
 
     /**
-     * Set 数据卷大小(GB)
-     * @param VolumeSizeInGB 数据卷大小(GB)
+     * Set 生命周期脚本名称
+     * @param LifecycleScriptsName 生命周期脚本名称
      */
-    public void setVolumeSizeInGB(Long VolumeSizeInGB) {
-        this.VolumeSizeInGB = VolumeSizeInGB;
+    public void setLifecycleScriptsName(String LifecycleScriptsName) {
+        this.LifecycleScriptsName = LifecycleScriptsName;
     }
 
     /**
-     * Get Notebook标签 
-     * @return Tags Notebook标签
+     * Get 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库 
+     * @return DefaultCodeRepository 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
      */
-    public Tag [] getTags() {
-        return this.Tags;
+    public String getDefaultCodeRepository() {
+        return this.DefaultCodeRepository;
     }
 
     /**
-     * Set Notebook标签
-     * @param Tags Notebook标签
+     * Set 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
+     * @param DefaultCodeRepository 默认存储库名称
+可以是已创建的存储库名称或者已https://开头的公共git库
      */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
+    public void setDefaultCodeRepository(String DefaultCodeRepository) {
+        this.DefaultCodeRepository = DefaultCodeRepository;
+    }
+
+    /**
+     * Get 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库 
+     * @return AdditionalCodeRepositories 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+     */
+    public String [] getAdditionalCodeRepositories() {
+        return this.AdditionalCodeRepositories;
+    }
+
+    /**
+     * Set 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+     * @param AdditionalCodeRepositories 其他存储库列表
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+     */
+    public void setAdditionalCodeRepositories(String [] AdditionalCodeRepositories) {
+        this.AdditionalCodeRepositories = AdditionalCodeRepositories;
     }
 
     /**
@@ -235,13 +245,13 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
-        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
         this.setParamSimple(map, prefix + "DirectInternetAccess", this.DirectInternetAccess);
         this.setParamSimple(map, prefix + "RootAccess", this.RootAccess);
-        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
-        this.setParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
+        this.setParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
+        this.setParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
 
     }
 }

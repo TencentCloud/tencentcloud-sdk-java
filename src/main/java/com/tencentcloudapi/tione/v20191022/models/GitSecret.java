@@ -25,9 +25,9 @@ public class GitSecret extends AbstractModel{
     /**
     * 无秘钥，默认选项
     */
-    @SerializedName("None")
+    @SerializedName("NoSecret")
     @Expose
-    private Boolean None;
+    private Boolean NoSecret;
 
     /**
     * Git用户名密码base64编码后的字符串
@@ -40,18 +40,18 @@ public class GitSecret extends AbstractModel{
 
     /**
      * Get 无秘钥，默认选项 
-     * @return None 无秘钥，默认选项
+     * @return NoSecret 无秘钥，默认选项
      */
-    public Boolean getNone() {
-        return this.None;
+    public Boolean getNoSecret() {
+        return this.NoSecret;
     }
 
     /**
      * Set 无秘钥，默认选项
-     * @param None 无秘钥，默认选项
+     * @param NoSecret 无秘钥，默认选项
      */
-    public void setNone(Boolean None) {
-        this.None = None;
+    public void setNoSecret(Boolean NoSecret) {
+        this.NoSecret = NoSecret;
     }
 
     /**
@@ -82,7 +82,7 @@ public class GitSecret extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "None", this.None);
+        this.setParamSimple(map, prefix + "NoSecret", this.NoSecret);
         this.setParamSimple(map, prefix + "Secret", this.Secret);
 
     }

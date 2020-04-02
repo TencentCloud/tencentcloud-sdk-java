@@ -153,6 +153,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建自适应转码模板，数量上限：100。
+     * @param req CreateAdaptiveDynamicStreamingTemplateRequest
+     * @return CreateAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义转动图模板，数量上限：16。
      * @param req CreateAnimatedGraphicsTemplateRequest
      * @return CreateAnimatedGraphicsTemplateResponse
@@ -300,6 +318,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建超级播放器配置，数量上限：100。
+     * @param req CreateSuperPlayerConfigRequest
+     * @return CreateSuperPlayerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSuperPlayerConfigResponse CreateSuperPlayerConfig(CreateSuperPlayerConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSuperPlayerConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSuperPlayerConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSuperPlayerConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义转码模板，数量上限：100。
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
@@ -385,6 +421,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteAIRecognitionTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除自适应转码模板
+     * @param req DeleteAdaptiveDynamicStreamingTemplateRequest
+     * @return DeleteAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -549,6 +603,25 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除超级播放器配置。  
+*注：系统预置播放器配置不允许删除。*
+     * @param req DeleteSuperPlayerConfigRequest
+     * @return DeleteSuperPlayerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSuperPlayerConfigResponse DeleteSuperPlayerConfig(DeleteSuperPlayerConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSuperPlayerConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSuperPlayerConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSuperPlayerConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -976,6 +1049,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *查询超级播放器配置，支持根据条件，分页查询。
+     * @param req DescribeSuperPlayerConfigsRequest
+     * @return DescribeSuperPlayerConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSuperPlayerConfigsResponse DescribeSuperPlayerConfigs(DescribeSuperPlayerConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSuperPlayerConfigsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSuperPlayerConfigsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSuperPlayerConfigs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
@@ -1232,6 +1323,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *修改自适应转码模板
+     * @param req ModifyAdaptiveDynamicStreamingTemplateRequest
+     * @return ModifyAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改用户自定义转动图模板。
      * @param req ModifyAnimatedGraphicsTemplateRequest
      * @return ModifyAnimatedGraphicsTemplateResponse
@@ -1405,6 +1514,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySubAppIdStatusResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifySubAppIdStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改超级播放器配置。
+     * @param req ModifySuperPlayerConfigRequest
+     * @return ModifySuperPlayerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySuperPlayerConfigResponse ModifySuperPlayerConfig(ModifySuperPlayerConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySuperPlayerConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySuperPlayerConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySuperPlayerConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

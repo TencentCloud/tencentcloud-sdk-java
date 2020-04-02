@@ -108,6 +108,13 @@ public class RuleInput extends AbstractModel{
     private String TrpcFunc;
 
     /**
+    * 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Boolean Quic;
+
+    /**
      * Get 转发规则的域名。长度限制为：1~80。 
      * @return Domain 转发规则的域名。长度限制为：1~80。
      */
@@ -304,6 +311,22 @@ public class RuleInput extends AbstractModel{
     }
 
     /**
+     * Get 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC 
+     * @return Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     */
+    public Boolean getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     * @param Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     */
+    public void setQuic(Boolean Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +342,7 @@ public class RuleInput extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+        this.setParamSimple(map, prefix + "Quic", this.Quic);
 
     }
 }

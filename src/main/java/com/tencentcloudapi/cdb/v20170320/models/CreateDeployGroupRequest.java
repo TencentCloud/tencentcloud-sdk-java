@@ -51,6 +51,13 @@ public class CreateDeployGroupRequest extends AbstractModel{
     private Long LimitNum;
 
     /**
+    * 置放群组机型属性，可选参数：SH12+SH02、TS85。
+    */
+    @SerializedName("DevClass")
+    @Expose
+    private String [] DevClass;
+
+    /**
      * Get 置放群组名称，最长不能超过60个字符。 
      * @return DeployGroupName 置放群组名称，最长不能超过60个字符。
      */
@@ -115,6 +122,22 @@ public class CreateDeployGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 置放群组机型属性，可选参数：SH12+SH02、TS85。 
+     * @return DevClass 置放群组机型属性，可选参数：SH12+SH02、TS85。
+     */
+    public String [] getDevClass() {
+        return this.DevClass;
+    }
+
+    /**
+     * Set 置放群组机型属性，可选参数：SH12+SH02、TS85。
+     * @param DevClass 置放群组机型属性，可选参数：SH12+SH02、TS85。
+     */
+    public void setDevClass(String [] DevClass) {
+        this.DevClass = DevClass;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateDeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArraySimple(map, prefix + "Affinity.", this.Affinity);
         this.setParamSimple(map, prefix + "LimitNum", this.LimitNum);
+        this.setParamArraySimple(map, prefix + "DevClass.", this.DevClass);
 
     }
 }
