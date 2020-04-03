@@ -30,28 +30,28 @@ public class UploadCertificateRequest extends AbstractModel{
     private String CertificatePublicKey;
 
     /**
-    * 私钥内容，证书类型为SVR时必填，为CA时可不填。
+    * 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
     */
     @SerializedName("CertificatePrivateKey")
     @Expose
     private String CertificatePrivateKey;
 
     /**
-    * 证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
+    * 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
     */
     @SerializedName("CertificateType")
     @Expose
     private String CertificateType;
 
     /**
-    * 证书别名。
+    * 备注名称。
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 项目id。
+    * 项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -74,64 +74,64 @@ public class UploadCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 私钥内容，证书类型为SVR时必填，为CA时可不填。 
-     * @return CertificatePrivateKey 私钥内容，证书类型为SVR时必填，为CA时可不填。
+     * Get 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。 
+     * @return CertificatePrivateKey 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
      */
     public String getCertificatePrivateKey() {
         return this.CertificatePrivateKey;
     }
 
     /**
-     * Set 私钥内容，证书类型为SVR时必填，为CA时可不填。
-     * @param CertificatePrivateKey 私钥内容，证书类型为SVR时必填，为CA时可不填。
+     * Set 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
+     * @param CertificatePrivateKey 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
      */
     public void setCertificatePrivateKey(String CertificatePrivateKey) {
         this.CertificatePrivateKey = CertificatePrivateKey;
     }
 
     /**
-     * Get 证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。 
-     * @return CertificateType 证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
+     * Get 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。 
+     * @return CertificateType 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set 证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
-     * @param CertificateType 证书类型，默认SVR。CA = 客户端证书，SVR = 服务器证书。
+     * Set 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+     * @param CertificateType 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;
     }
 
     /**
-     * Get 证书别名。 
-     * @return Alias 证书别名。
+     * Get 备注名称。 
+     * @return Alias 备注名称。
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 证书别名。
-     * @param Alias 证书别名。
+     * Set 备注名称。
+     * @param Alias 备注名称。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 项目id。 
-     * @return ProjectId 项目id。
+     * Get 项目 ID。 
+     * @return ProjectId 项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id。
-     * @param ProjectId 项目id。
+     * Set 项目 ID。
+     * @param ProjectId 项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

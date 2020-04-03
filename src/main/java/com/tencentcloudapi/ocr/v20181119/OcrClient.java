@@ -146,7 +146,11 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持对驾驶证主页所有字段的自动定位与识别，包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限，重点字段的识别准确度达到99%以上。
+     *本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
+
+驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限。
+
+驾驶证副页：包括证号、姓名、档案编号、记录。
 
 另外，本接口还支持复印件、翻拍和PS告警功能。
      * @param req DriverLicenseOCRRequest
@@ -421,6 +425,24 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *港澳台居住证OCR支持港澳台居住证正反面全字段内容检测识别功能，包括姓名、性别、出生日期、地址、身份证ID、签发机关、有效期限、签发次数、通行证号码关键字段识别。可以应用于港澳台居住证信息有效性校验场景，例如银行开户、用户注册等场景。
+     * @param req HmtResidentPermitOCRRequest
+     * @return HmtResidentPermitOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public HmtResidentPermitOCRResponse HmtResidentPermitOCR(HmtResidentPermitOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<HmtResidentPermitOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "HmtResidentPermitOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持中国大陆居民二代身份证正反面所有字段的识别，包括姓名、性别、民族、出生日期、住址、公民身份证号、签发机关、有效期限，识别准确度达到99%以上。
 
 另外，本接口还支持多种增值能力，满足不同场景的需求。如身份证照片、人像照片的裁剪功能，同时具备9种告警功能，如下表所示。
@@ -588,6 +610,24 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<MLIDPassportOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "MLIDPassportOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智能识别并结构化港澳台居民来往内地通行证正面全部字段，包含中文姓名、英文姓名、性别、出生日期、签发机关、有效期限、证件号、签发地点、签发次数、证件类别。
+     * @param req MainlandPermitOCRRequest
+     * @return MainlandPermitOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public MainlandPermitOCRResponse MainlandPermitOCR(MainlandPermitOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MainlandPermitOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MainlandPermitOCR"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

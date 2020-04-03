@@ -58,7 +58,7 @@ public class CreateStudioProductRequest extends AbstractModel{
     private String NetType;
 
     /**
-    * 数据协议 (1 使用物模型)
+    * 数据协议 (1 使用物模型 2 为自定义)
     */
     @SerializedName("DataProtocol")
     @Expose
@@ -159,16 +159,16 @@ public class CreateStudioProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据协议 (1 使用物模型) 
-     * @return DataProtocol 数据协议 (1 使用物模型)
+     * Get 数据协议 (1 使用物模型 2 为自定义) 
+     * @return DataProtocol 数据协议 (1 使用物模型 2 为自定义)
      */
     public Long getDataProtocol() {
         return this.DataProtocol;
     }
 
     /**
-     * Set 数据协议 (1 使用物模型)
-     * @param DataProtocol 数据协议 (1 使用物模型)
+     * Set 数据协议 (1 使用物模型 2 为自定义)
+     * @param DataProtocol 数据协议 (1 使用物模型 2 为自定义)
      */
     public void setDataProtocol(Long DataProtocol) {
         this.DataProtocol = DataProtocol;

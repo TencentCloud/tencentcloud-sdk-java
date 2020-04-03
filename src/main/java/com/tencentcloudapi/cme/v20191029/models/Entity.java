@@ -25,13 +25,14 @@ public class Entity extends AbstractModel{
     /**
     * 类型，取值有：
 <li>PERSON：个人。</li>
+<li>TEAM：团队。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Id，当 Type=PERSON，取值为用户 Id。
+    * Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
     */
     @SerializedName("Id")
     @Expose
@@ -39,9 +40,11 @@ public class Entity extends AbstractModel{
 
     /**
      * Get 类型，取值有：
-<li>PERSON：个人。</li> 
+<li>PERSON：个人。</li>
+<li>TEAM：团队。</li> 
      * @return Type 类型，取值有：
 <li>PERSON：个人。</li>
+<li>TEAM：团队。</li>
      */
     public String getType() {
         return this.Type;
@@ -50,24 +53,26 @@ public class Entity extends AbstractModel{
     /**
      * Set 类型，取值有：
 <li>PERSON：个人。</li>
+<li>TEAM：团队。</li>
      * @param Type 类型，取值有：
 <li>PERSON：个人。</li>
+<li>TEAM：团队。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Id，当 Type=PERSON，取值为用户 Id。 
-     * @return Id Id，当 Type=PERSON，取值为用户 Id。
+     * Get Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。 
+     * @return Id Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Id，当 Type=PERSON，取值为用户 Id。
-     * @param Id Id，当 Type=PERSON，取值为用户 Id。
+     * Set Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
+     * @param Id Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
      */
     public void setId(String Id) {
         this.Id = Id;

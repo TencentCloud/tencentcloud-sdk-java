@@ -814,6 +814,24 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *获取部署组实例列表
+     * @param req DescribePodInstancesRequest
+     * @return DescribePodInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePodInstancesResponse DescribePodInstances(DescribePodInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePodInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePodInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePodInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询公共配置（单条）
      * @param req DescribePublicConfigRequest
      * @return DescribePublicConfigResponse

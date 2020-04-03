@@ -39,6 +39,14 @@ public class DriverLicenseOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
+    */
+    @SerializedName("CardSide")
+    @Expose
+    private String CardSide;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -79,11 +87,32 @@ public class DriverLicenseOCRRequest extends AbstractModel{
     }
 
     /**
+     * Get FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。 
+     * @return CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
+     */
+    public String getCardSide() {
+        return this.CardSide;
+    }
+
+    /**
+     * Set FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
+     * @param CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
+BACK 为驾驶证副页正面（有档案编号的一面）。
+     */
+    public void setCardSide(String CardSide) {
+        this.CardSide = CardSide;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "CardSide", this.CardSide);
 
     }
 }

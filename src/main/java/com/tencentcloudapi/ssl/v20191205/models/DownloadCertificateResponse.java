@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DownloadCertificateResponse extends AbstractModel{
 
     /**
-    * ZIP base64编码内容，base64解码后可保存为ZIP文件。
+    * ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
@@ -31,7 +31,7 @@ public class DownloadCertificateResponse extends AbstractModel{
     private String Content;
 
     /**
-    * MIME类型：application/zip = ZIP压缩文件。
+    * MIME 类型：application/zip = ZIP 压缩文件。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentType")
@@ -46,9 +46,9 @@ public class DownloadCertificateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * Get ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * @return Content ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
@@ -56,9 +56,9 @@ public class DownloadCertificateResponse extends AbstractModel{
     }
 
     /**
-     * Set ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * Set ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content ZIP base64编码内容，base64解码后可保存为ZIP文件。
+     * @param Content ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
@@ -66,9 +66,9 @@ public class DownloadCertificateResponse extends AbstractModel{
     }
 
     /**
-     * Get MIME类型：application/zip = ZIP压缩文件。
+     * Get MIME 类型：application/zip = ZIP 压缩文件。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContentType MIME类型：application/zip = ZIP压缩文件。
+     * @return ContentType MIME 类型：application/zip = ZIP 压缩文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContentType() {
@@ -76,9 +76,9 @@ public class DownloadCertificateResponse extends AbstractModel{
     }
 
     /**
-     * Set MIME类型：application/zip = ZIP压缩文件。
+     * Set MIME 类型：application/zip = ZIP 压缩文件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContentType MIME类型：application/zip = ZIP压缩文件。
+     * @param ContentType MIME 类型：application/zip = ZIP 压缩文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentType(String ContentType) {

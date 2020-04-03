@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReplaceCertificateRequest extends AbstractModel{
 
     /**
-    * 证书ID。
+    * 证书 ID。
     */
     @SerializedName("CertificateId")
     @Expose
@@ -37,37 +37,37 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String ValidType;
 
     /**
-    * 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
+    * 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
     */
     @SerializedName("CsrType")
     @Expose
     private String CsrType;
 
     /**
-    * CSR内容。
+    * CSR 内容。
     */
     @SerializedName("CsrContent")
     @Expose
     private String CsrContent;
 
     /**
-    * key密码。
+    * KEY 密码。
     */
     @SerializedName("CsrkeyPassword")
     @Expose
     private String CsrkeyPassword;
 
     /**
-     * Get 证书ID。 
-     * @return CertificateId 证书ID。
+     * Get 证书 ID。 
+     * @return CertificateId 证书 ID。
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 证书ID。
-     * @param CertificateId 证书ID。
+     * Set 证书 ID。
+     * @param CertificateId 证书 ID。
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
@@ -90,48 +90,48 @@ public class ReplaceCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。 
-     * @return CsrType 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
+     * Get 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。 
+     * @return CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
-     * @param CsrType 类型，默认Original。可选项：Original = 原证书csr，Upload = 手动上传，Online = 在线生成。
+     * Set 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+     * @param CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
     }
 
     /**
-     * Get CSR内容。 
-     * @return CsrContent CSR内容。
+     * Get CSR 内容。 
+     * @return CsrContent CSR 内容。
      */
     public String getCsrContent() {
         return this.CsrContent;
     }
 
     /**
-     * Set CSR内容。
-     * @param CsrContent CSR内容。
+     * Set CSR 内容。
+     * @param CsrContent CSR 内容。
      */
     public void setCsrContent(String CsrContent) {
         this.CsrContent = CsrContent;
     }
 
     /**
-     * Get key密码。 
-     * @return CsrkeyPassword key密码。
+     * Get KEY 密码。 
+     * @return CsrkeyPassword KEY 密码。
      */
     public String getCsrkeyPassword() {
         return this.CsrkeyPassword;
     }
 
     /**
-     * Set key密码。
-     * @param CsrkeyPassword key密码。
+     * Set KEY 密码。
+     * @param CsrkeyPassword KEY 密码。
      */
     public void setCsrkeyPassword(String CsrkeyPassword) {
         this.CsrkeyPassword = CsrkeyPassword;

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class SubmitCertificateInformationRequest extends AbstractModel{
 
     /**
-    * 证书id。
+    * 证书 ID。
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * Csr生成方式: online = 在线生成, parse = 手动上传 。
+    * CSR 生成方式：online = 在线生成, parse = 手动上传 。
     */
     @SerializedName("CsrType")
     @Expose
     private String CsrType;
 
     /**
-    * 上传的Csr内容。
+    * 上传的 CSR 内容。
     */
     @SerializedName("CsrContent")
     @Expose
@@ -86,7 +86,7 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String OrganizationAddress;
 
     /**
-    * 国家名称 如中国:CN 。
+    * 国家名称 如中国：CN 。
     */
     @SerializedName("OrganizationCountry")
     @Expose
@@ -205,48 +205,48 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String ContactPosition;
 
     /**
-     * Get 证书id。 
-     * @return CertificateId 证书id。
+     * Get 证书 ID。 
+     * @return CertificateId 证书 ID。
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 证书id。
-     * @param CertificateId 证书id。
+     * Set 证书 ID。
+     * @param CertificateId 证书 ID。
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get Csr生成方式: online = 在线生成, parse = 手动上传 。 
-     * @return CsrType Csr生成方式: online = 在线生成, parse = 手动上传 。
+     * Get CSR 生成方式：online = 在线生成, parse = 手动上传 。 
+     * @return CsrType CSR 生成方式：online = 在线生成, parse = 手动上传 。
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set Csr生成方式: online = 在线生成, parse = 手动上传 。
-     * @param CsrType Csr生成方式: online = 在线生成, parse = 手动上传 。
+     * Set CSR 生成方式：online = 在线生成, parse = 手动上传 。
+     * @param CsrType CSR 生成方式：online = 在线生成, parse = 手动上传 。
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
     }
 
     /**
-     * Get 上传的Csr内容。 
-     * @return CsrContent 上传的Csr内容。
+     * Get 上传的 CSR 内容。 
+     * @return CsrContent 上传的 CSR 内容。
      */
     public String getCsrContent() {
         return this.CsrContent;
     }
 
     /**
-     * Set 上传的Csr内容。
-     * @param CsrContent 上传的Csr内容。
+     * Set 上传的 CSR 内容。
+     * @param CsrContent 上传的 CSR 内容。
      */
     public void setCsrContent(String CsrContent) {
         this.CsrContent = CsrContent;
@@ -349,16 +349,16 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 国家名称 如中国:CN 。 
-     * @return OrganizationCountry 国家名称 如中国:CN 。
+     * Get 国家名称 如中国：CN 。 
+     * @return OrganizationCountry 国家名称 如中国：CN 。
      */
     public String getOrganizationCountry() {
         return this.OrganizationCountry;
     }
 
     /**
-     * Set 国家名称 如中国:CN 。
-     * @param OrganizationCountry 国家名称 如中国:CN 。
+     * Set 国家名称 如中国：CN 。
+     * @param OrganizationCountry 国家名称 如中国：CN 。
      */
     public void setOrganizationCountry(String OrganizationCountry) {
         this.OrganizationCountry = OrganizationCountry;

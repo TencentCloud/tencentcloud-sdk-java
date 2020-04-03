@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCertificatesRequest extends AbstractModel{
 
     /**
-    * 分页偏移量，从0开始
+    * 分页偏移量，从0开始。
     */
     @SerializedName("Offset")
     @Expose
@@ -44,21 +44,21 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private String SearchKey;
 
     /**
-    * 证书类型，可选值：CA，SVR。
+    * 证书类型：CA = 客户端证书，SVR = 服务器证书。
     */
     @SerializedName("CertificateType")
     @Expose
     private String CertificateType;
 
     /**
-    * 项目ID。
+    * 项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 按到期时间排序：DESC降序， ASC 升序。
+    * 按到期时间排序：DESC = 降序， ASC = 升序。
     */
     @SerializedName("ExpirationSort")
     @Expose
@@ -79,16 +79,16 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Deployable;
 
     /**
-     * Get 分页偏移量，从0开始 
-     * @return Offset 分页偏移量，从0开始
+     * Get 分页偏移量，从0开始。 
+     * @return Offset 分页偏移量，从0开始。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，从0开始
-     * @param Offset 分页偏移量，从0开始
+     * Set 分页偏移量，从0开始。
+     * @param Offset 分页偏移量，从0开始。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -127,48 +127,48 @@ public class DescribeCertificatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书类型，可选值：CA，SVR。 
-     * @return CertificateType 证书类型，可选值：CA，SVR。
+     * Get 证书类型：CA = 客户端证书，SVR = 服务器证书。 
+     * @return CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set 证书类型，可选值：CA，SVR。
-     * @param CertificateType 证书类型，可选值：CA，SVR。
+     * Set 证书类型：CA = 客户端证书，SVR = 服务器证书。
+     * @param CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目 ID。 
+     * @return ProjectId 项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目 ID。
+     * @param ProjectId 项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 按到期时间排序：DESC降序， ASC 升序。 
-     * @return ExpirationSort 按到期时间排序：DESC降序， ASC 升序。
+     * Get 按到期时间排序：DESC = 降序， ASC = 升序。 
+     * @return ExpirationSort 按到期时间排序：DESC = 降序， ASC = 升序。
      */
     public String getExpirationSort() {
         return this.ExpirationSort;
     }
 
     /**
-     * Set 按到期时间排序：DESC降序， ASC 升序。
-     * @param ExpirationSort 按到期时间排序：DESC降序， ASC 升序。
+     * Set 按到期时间排序：DESC = 降序， ASC = 升序。
+     * @param ExpirationSort 按到期时间排序：DESC = 降序， ASC = 升序。
      */
     public void setExpirationSort(String ExpirationSort) {
         this.ExpirationSort = ExpirationSort;

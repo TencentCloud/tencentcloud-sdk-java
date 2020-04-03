@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyCertificateResponse extends AbstractModel{
+public class DescribePodInstancesResponse extends AbstractModel{
 
     /**
-    * 证书 ID。
+    * 查询的权限数据对象
     */
-    @SerializedName("CertificateId")
+    @SerializedName("Result")
     @Expose
-    private String CertificateId;
+    private GroupPodResult Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class ApplyCertificateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 证书 ID。 
-     * @return CertificateId 证书 ID。
+     * Get 查询的权限数据对象 
+     * @return Result 查询的权限数据对象
      */
-    public String getCertificateId() {
-        return this.CertificateId;
+    public GroupPodResult getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertificateId 证书 ID。
+     * Set 查询的权限数据对象
+     * @param Result 查询的权限数据对象
      */
-    public void setCertificateId(String CertificateId) {
-        this.CertificateId = CertificateId;
+    public void setResult(GroupPodResult Result) {
+        this.Result = Result;
     }
 
     /**
@@ -72,7 +72,7 @@ public class ApplyCertificateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

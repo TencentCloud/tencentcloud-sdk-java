@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCaptchaResultRequest extends AbstractModel{
 
     /**
-    * 验证码类型，9：滑块验证码
+    * 固定填值：9。可在控制台配置不同验证码类型。
     */
     @SerializedName("CaptchaType")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     private Long NeedGetCaptchaTime;
 
     /**
-     * Get 验证码类型，9：滑块验证码 
-     * @return CaptchaType 验证码类型，9：滑块验证码
+     * Get 固定填值：9。可在控制台配置不同验证码类型。 
+     * @return CaptchaType 固定填值：9。可在控制台配置不同验证码类型。
      */
     public Long getCaptchaType() {
         return this.CaptchaType;
     }
 
     /**
-     * Set 验证码类型，9：滑块验证码
-     * @param CaptchaType 验证码类型，9：滑块验证码
+     * Set 固定填值：9。可在控制台配置不同验证码类型。
+     * @param CaptchaType 固定填值：9。可在控制台配置不同验证码类型。
      */
     public void setCaptchaType(Long CaptchaType) {
         this.CaptchaType = CaptchaType;

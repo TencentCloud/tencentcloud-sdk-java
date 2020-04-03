@@ -93,6 +93,20 @@ public class DriverLicenseOCRResponse extends AbstractModel{
     private String CardCode;
 
     /**
+    * 档案编号
+    */
+    @SerializedName("ArchivesCode")
+    @Expose
+    private String ArchivesCode;
+
+    /**
+    * 记录
+    */
+    @SerializedName("Record")
+    @Expose
+    private String Record;
+
+    /**
     * Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
@@ -283,6 +297,38 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     }
 
     /**
+     * Get 档案编号 
+     * @return ArchivesCode 档案编号
+     */
+    public String getArchivesCode() {
+        return this.ArchivesCode;
+    }
+
+    /**
+     * Set 档案编号
+     * @param ArchivesCode 档案编号
+     */
+    public void setArchivesCode(String ArchivesCode) {
+        this.ArchivesCode = ArchivesCode;
+    }
+
+    /**
+     * Get 记录 
+     * @return Record 记录
+     */
+    public String getRecord() {
+        return this.Record;
+    }
+
+    /**
+     * Set 记录
+     * @param Record 记录
+     */
+    public void setRecord(String Record) {
+        this.Record = Record;
+    }
+
+    /**
      * Get Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
@@ -376,6 +422,8 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         this.setParamSimple(map, prefix + "StartDate", this.StartDate);
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "CardCode", this.CardCode);
+        this.setParamSimple(map, prefix + "ArchivesCode", this.ArchivesCode);
+        this.setParamSimple(map, prefix + "Record", this.Record);
         this.setParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
         this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

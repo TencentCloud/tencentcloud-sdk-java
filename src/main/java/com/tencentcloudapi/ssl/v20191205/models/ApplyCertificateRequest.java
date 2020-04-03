@@ -37,7 +37,7 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * 项目ID。
+    * 项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -72,7 +72,7 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String ValidityPeriod;
 
     /**
-    * 加密算法，仅支持RSA。
+    * 加密算法，仅支持 RSA。
     */
     @SerializedName("CsrEncryptAlgo")
     @Expose
@@ -86,7 +86,7 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String CsrKeyParameter;
 
     /**
-    * csr的加密密码。
+    * CSR 的加密密码。
     */
     @SerializedName("CsrKeyPassword")
     @Expose
@@ -100,7 +100,7 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String Alias;
 
     /**
-    * 原证书id，用于重新申请。
+    * 原证书 ID，用于重新申请。
     */
     @SerializedName("OldCertificateId")
     @Expose
@@ -139,16 +139,16 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目 ID。 
+     * @return ProjectId 项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目 ID。
+     * @param ProjectId 项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -219,16 +219,16 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 加密算法，仅支持RSA。 
-     * @return CsrEncryptAlgo 加密算法，仅支持RSA。
+     * Get 加密算法，仅支持 RSA。 
+     * @return CsrEncryptAlgo 加密算法，仅支持 RSA。
      */
     public String getCsrEncryptAlgo() {
         return this.CsrEncryptAlgo;
     }
 
     /**
-     * Set 加密算法，仅支持RSA。
-     * @param CsrEncryptAlgo 加密算法，仅支持RSA。
+     * Set 加密算法，仅支持 RSA。
+     * @param CsrEncryptAlgo 加密算法，仅支持 RSA。
      */
     public void setCsrEncryptAlgo(String CsrEncryptAlgo) {
         this.CsrEncryptAlgo = CsrEncryptAlgo;
@@ -251,16 +251,16 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get csr的加密密码。 
-     * @return CsrKeyPassword csr的加密密码。
+     * Get CSR 的加密密码。 
+     * @return CsrKeyPassword CSR 的加密密码。
      */
     public String getCsrKeyPassword() {
         return this.CsrKeyPassword;
     }
 
     /**
-     * Set csr的加密密码。
-     * @param CsrKeyPassword csr的加密密码。
+     * Set CSR 的加密密码。
+     * @param CsrKeyPassword CSR 的加密密码。
      */
     public void setCsrKeyPassword(String CsrKeyPassword) {
         this.CsrKeyPassword = CsrKeyPassword;
@@ -283,16 +283,16 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 原证书id，用于重新申请。 
-     * @return OldCertificateId 原证书id，用于重新申请。
+     * Get 原证书 ID，用于重新申请。 
+     * @return OldCertificateId 原证书 ID，用于重新申请。
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set 原证书id，用于重新申请。
-     * @param OldCertificateId 原证书id，用于重新申请。
+     * Set 原证书 ID，用于重新申请。
+     * @param OldCertificateId 原证书 ID，用于重新申请。
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CancelCertificateOrderResponse extends AbstractModel{
 
     /**
-    * 取消订单成功的证书id
+    * 取消订单成功的证书 ID。
     */
     @SerializedName("CertificateId")
     @Expose
@@ -37,16 +37,16 @@ public class CancelCertificateOrderResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 取消订单成功的证书id 
-     * @return CertificateId 取消订单成功的证书id
+     * Get 取消订单成功的证书 ID。 
+     * @return CertificateId 取消订单成功的证书 ID。
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 取消订单成功的证书id
-     * @param CertificateId 取消订单成功的证书id
+     * Set 取消订单成功的证书 ID。
+     * @param CertificateId 取消订单成功的证书 ID。
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCertificateProjectResponse extends AbstractModel{
 
     /**
-    * 修改所属项目成功的证书集合
+    * 修改所属项目成功的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessCertificates")
@@ -31,7 +31,7 @@ public class ModifyCertificateProjectResponse extends AbstractModel{
     private String [] SuccessCertificates;
 
     /**
-    * 修改所属项目失败的证书集合
+    * 修改所属项目失败的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailCertificates")
@@ -46,9 +46,9 @@ public class ModifyCertificateProjectResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 修改所属项目成功的证书集合
+     * Get 修改所属项目成功的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuccessCertificates 修改所属项目成功的证书集合
+     * @return SuccessCertificates 修改所属项目成功的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSuccessCertificates() {
@@ -56,9 +56,9 @@ public class ModifyCertificateProjectResponse extends AbstractModel{
     }
 
     /**
-     * Set 修改所属项目成功的证书集合
+     * Set 修改所属项目成功的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuccessCertificates 修改所属项目成功的证书集合
+     * @param SuccessCertificates 修改所属项目成功的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessCertificates(String [] SuccessCertificates) {
@@ -66,9 +66,9 @@ public class ModifyCertificateProjectResponse extends AbstractModel{
     }
 
     /**
-     * Get 修改所属项目失败的证书集合
+     * Get 修改所属项目失败的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailCertificates 修改所属项目失败的证书集合
+     * @return FailCertificates 修改所属项目失败的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailCertificates() {
@@ -76,9 +76,9 @@ public class ModifyCertificateProjectResponse extends AbstractModel{
     }
 
     /**
-     * Set 修改所属项目失败的证书集合
+     * Set 修改所属项目失败的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailCertificates 修改所属项目失败的证书集合
+     * @param FailCertificates 修改所属项目失败的证书集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailCertificates(String [] FailCertificates) {

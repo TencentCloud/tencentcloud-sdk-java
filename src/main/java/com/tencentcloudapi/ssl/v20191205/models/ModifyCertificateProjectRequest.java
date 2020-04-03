@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyCertificateProjectRequest extends AbstractModel{
 
     /**
-    * 需要修改所属项目的证书id集合，最多100个证书
+    * 需要修改所属项目的证书 ID 集合，最多100个证书。
     */
     @SerializedName("CertificateIdList")
     @Expose
     private String [] CertificateIdList;
 
     /**
-    * 项目id。
+    * 项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get 需要修改所属项目的证书id集合，最多100个证书 
-     * @return CertificateIdList 需要修改所属项目的证书id集合，最多100个证书
+     * Get 需要修改所属项目的证书 ID 集合，最多100个证书。 
+     * @return CertificateIdList 需要修改所属项目的证书 ID 集合，最多100个证书。
      */
     public String [] getCertificateIdList() {
         return this.CertificateIdList;
     }
 
     /**
-     * Set 需要修改所属项目的证书id集合，最多100个证书
-     * @param CertificateIdList 需要修改所属项目的证书id集合，最多100个证书
+     * Set 需要修改所属项目的证书 ID 集合，最多100个证书。
+     * @param CertificateIdList 需要修改所属项目的证书 ID 集合，最多100个证书。
      */
     public void setCertificateIdList(String [] CertificateIdList) {
         this.CertificateIdList = CertificateIdList;
     }
 
     /**
-     * Get 项目id。 
-     * @return ProjectId 项目id。
+     * Get 项目 ID。 
+     * @return ProjectId 项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id。
-     * @param ProjectId 项目id。
+     * Set 项目 ID。
+     * @param ProjectId 项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
