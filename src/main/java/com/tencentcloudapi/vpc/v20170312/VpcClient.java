@@ -277,6 +277,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AssociateNetworkInterfaceSecurityGroups）用于弹性网卡绑定安全组（SecurityGroup）。
+     * @param req AssociateNetworkInterfaceSecurityGroupsRequest
+     * @return AssociateNetworkInterfaceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateNetworkInterfaceSecurityGroupsResponse AssociateNetworkInterfaceSecurityGroups(AssociateNetworkInterfaceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateNetworkInterfaceSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateNetworkInterfaceSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateNetworkInterfaceSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
 每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
      * @param req AttachCcnInstancesRequest
@@ -2399,6 +2417,24 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DisassociateNetworkAclSubnets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DisassociateNetworkInterfaceSecurityGroups）用于弹性网卡解绑安全组。支持弹性网卡完全解绑安全组。
+     * @param req DisassociateNetworkInterfaceSecurityGroupsRequest
+     * @return DisassociateNetworkInterfaceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateNetworkInterfaceSecurityGroupsResponse DisassociateNetworkInterfaceSecurityGroups(DisassociateNetworkInterfaceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateNetworkInterfaceSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateNetworkInterfaceSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateNetworkInterfaceSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

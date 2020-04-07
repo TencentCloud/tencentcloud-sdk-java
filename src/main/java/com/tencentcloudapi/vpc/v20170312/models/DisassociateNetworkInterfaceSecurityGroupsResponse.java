@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesStatusResponse extends AbstractModel{
-
-    /**
-    * 符合条件的实例状态数量。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * [实例状态](https://cloud.tencent.com/document/api/213/15753#InstanceStatus) 列表。
-    */
-    @SerializedName("InstanceStatusSet")
-    @Expose
-    private InstanceStatus [] InstanceStatusSet;
+public class DisassociateNetworkInterfaceSecurityGroupsResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 符合条件的实例状态数量。 
-     * @return TotalCount 符合条件的实例状态数量。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 符合条件的实例状态数量。
-     * @param TotalCount 符合条件的实例状态数量。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get [实例状态](https://cloud.tencent.com/document/api/213/15753#InstanceStatus) 列表。 
-     * @return InstanceStatusSet [实例状态](https://cloud.tencent.com/document/api/213/15753#InstanceStatus) 列表。
-     */
-    public InstanceStatus [] getInstanceStatusSet() {
-        return this.InstanceStatusSet;
-    }
-
-    /**
-     * Set [实例状态](https://cloud.tencent.com/document/api/213/15753#InstanceStatus) 列表。
-     * @param InstanceStatusSet [实例状态](https://cloud.tencent.com/document/api/213/15753#InstanceStatus) 列表。
-     */
-    public void setInstanceStatusSet(InstanceStatus [] InstanceStatusSet) {
-        this.InstanceStatusSet = InstanceStatusSet;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "InstanceStatusSet.", this.InstanceStatusSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

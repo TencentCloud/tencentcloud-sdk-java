@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDisasterRecoverGroupsRequest extends AbstractModel{
 
     /**
-    * 分散置放群组ID列表。
+    * 分散置放群组ID列表。每次请求允许操作的分散置放群组数量上限是100。
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeDisasterRecoverGroupsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 分散置放群组ID列表。 
-     * @return DisasterRecoverGroupIds 分散置放群组ID列表。
+     * Get 分散置放群组ID列表。每次请求允许操作的分散置放群组数量上限是100。 
+     * @return DisasterRecoverGroupIds 分散置放群组ID列表。每次请求允许操作的分散置放群组数量上限是100。
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 分散置放群组ID列表。
-     * @param DisasterRecoverGroupIds 分散置放群组ID列表。
+     * Set 分散置放群组ID列表。每次请求允许操作的分散置放群组数量上限是100。
+     * @param DisasterRecoverGroupIds 分散置放群组ID列表。每次请求允许操作的分散置放群组数量上限是100。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;

@@ -51,13 +51,6 @@ public class RefundRequest extends AbstractModel{
     private Long TotalRefundAmt;
 
     /**
-    * 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
-    */
-    @SerializedName("SubOrderRefundList")
-    @Expose
-    private RefundOutSubOrderRefundList [] SubOrderRefundList;
-
-    /**
     * 聚鑫分配的安全ID
     */
     @SerializedName("MidasSecretId")
@@ -98,6 +91,13 @@ public class RefundRequest extends AbstractModel{
     @SerializedName("PlatformRefundAmt")
     @Expose
     private Long PlatformRefundAmt;
+
+    /**
+    * 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+    */
+    @SerializedName("SubOrderRefundList")
+    @Expose
+    private RefundOutSubOrderRefundList [] SubOrderRefundList;
 
     /**
      * Get 用户ID，长度不小于5位， 仅支持字母和数字的组合 
@@ -161,22 +161,6 @@ public class RefundRequest extends AbstractModel{
      */
     public void setTotalRefundAmt(Long TotalRefundAmt) {
         this.TotalRefundAmt = TotalRefundAmt;
-    }
-
-    /**
-     * Get 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。 
-     * @return SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
-     */
-    public RefundOutSubOrderRefundList [] getSubOrderRefundList() {
-        return this.SubOrderRefundList;
-    }
-
-    /**
-     * Set 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
-     * @param SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
-     */
-    public void setSubOrderRefundList(RefundOutSubOrderRefundList [] SubOrderRefundList) {
-        this.SubOrderRefundList = SubOrderRefundList;
     }
 
     /**
@@ -276,6 +260,22 @@ public class RefundRequest extends AbstractModel{
     }
 
     /**
+     * Get 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。 
+     * @return SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+     */
+    public RefundOutSubOrderRefundList [] getSubOrderRefundList() {
+        return this.SubOrderRefundList;
+    }
+
+    /**
+     * Set 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+     * @param SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+     */
+    public void setSubOrderRefundList(RefundOutSubOrderRefundList [] SubOrderRefundList) {
+        this.SubOrderRefundList = SubOrderRefundList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -283,13 +283,13 @@ public class RefundRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RefundId", this.RefundId);
         this.setParamSimple(map, prefix + "MidasAppId", this.MidasAppId);
         this.setParamSimple(map, prefix + "TotalRefundAmt", this.TotalRefundAmt);
-        this.setParamArrayObj(map, prefix + "SubOrderRefundList.", this.SubOrderRefundList);
         this.setParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
         this.setParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
         this.setParamSimple(map, prefix + "OutTradeNo", this.OutTradeNo);
         this.setParamSimple(map, prefix + "MchRefundAmt", this.MchRefundAmt);
         this.setParamSimple(map, prefix + "TransactionId", this.TransactionId);
         this.setParamSimple(map, prefix + "PlatformRefundAmt", this.PlatformRefundAmt);
+        this.setParamArrayObj(map, prefix + "SubOrderRefundList.", this.SubOrderRefundList);
 
     }
 }

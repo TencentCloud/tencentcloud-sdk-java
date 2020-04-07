@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RenewHostsRequest extends AbstractModel{
 
     /**
-    * 一个或多个待操作的CDH实例ID。
+    * 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
     */
     @SerializedName("HostIds")
     @Expose
@@ -37,16 +37,16 @@ public class RenewHostsRequest extends AbstractModel{
     private ChargePrepaid HostChargePrepaid;
 
     /**
-     * Get 一个或多个待操作的CDH实例ID。 
-     * @return HostIds 一个或多个待操作的CDH实例ID。
+     * Get 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。 
+     * @return HostIds 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
      */
     public String [] getHostIds() {
         return this.HostIds;
     }
 
     /**
-     * Set 一个或多个待操作的CDH实例ID。
-     * @param HostIds 一个或多个待操作的CDH实例ID。
+     * Set 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
+     * @param HostIds 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
      */
     public void setHostIds(String [] HostIds) {
         this.HostIds = HostIds;

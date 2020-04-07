@@ -65,6 +65,13 @@ public class DescribeTagsRequest extends AbstractModel{
     private String [] TagKeys;
 
     /**
+    * 是否展现项目标签
+    */
+    @SerializedName("ShowProject")
+    @Expose
+    private Long ShowProject;
+
+    /**
      * Get 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签 
      * @return TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
      */
@@ -161,6 +168,22 @@ public class DescribeTagsRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否展现项目标签 
+     * @return ShowProject 是否展现项目标签
+     */
+    public Long getShowProject() {
+        return this.ShowProject;
+    }
+
+    /**
+     * Set 是否展现项目标签
+     * @param ShowProject 是否展现项目标签
+     */
+    public void setShowProject(Long ShowProject) {
+        this.ShowProject = ShowProject;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribeTagsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamSimple(map, prefix + "ShowProject", this.ShowProject);
 
     }
 }

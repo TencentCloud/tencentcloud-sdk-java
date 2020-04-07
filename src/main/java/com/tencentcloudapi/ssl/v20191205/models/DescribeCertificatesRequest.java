@@ -30,7 +30,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 每页数量。
+    * 每页数量，默认20。
     */
     @SerializedName("Limit")
     @Expose
@@ -95,16 +95,16 @@ public class DescribeCertificatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页数量。 
-     * @return Limit 每页数量。
+     * Get 每页数量，默认20。 
+     * @return Limit 每页数量，默认20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量。
-     * @param Limit 每页数量。
+     * Set 每页数量，默认20。
+     * @param Limit 每页数量，默认20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

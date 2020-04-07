@@ -30,7 +30,7 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String CertificateId;
 
     /**
-    * CSR 生成方式：online = 在线生成, parse = 手动上传 。
+    * CSR 生成方式：online = 在线生成, parse = 手动上传。
     */
     @SerializedName("CsrType")
     @Expose
@@ -44,7 +44,7 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String CsrContent;
 
     /**
-    * 绑定证书的域名 。
+    * 绑定证书的域名。
     */
     @SerializedName("CertificateDomain")
     @Expose
@@ -58,14 +58,14 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String [] DomainList;
 
     /**
-    * 私钥密码 。
+    * 私钥密码。
     */
     @SerializedName("KeyPassword")
     @Expose
     private String KeyPassword;
 
     /**
-    * 公司名称 。
+    * 公司名称。
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -79,21 +79,21 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String OrganizationDivision;
 
     /**
-    * 公司详细地址 。
+    * 公司详细地址。
     */
     @SerializedName("OrganizationAddress")
     @Expose
     private String OrganizationAddress;
 
     /**
-    * 国家名称 如中国：CN 。
+    * 国家名称，如中国：CN 。
     */
     @SerializedName("OrganizationCountry")
     @Expose
     private String OrganizationCountry;
 
     /**
-    * 公司所在城市 。
+    * 公司所在城市。
     */
     @SerializedName("OrganizationCity")
     @Expose
@@ -107,28 +107,28 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String OrganizationRegion;
 
     /**
-    * 公司邮编 。
+    * 公司邮编。
     */
     @SerializedName("PostalCode")
     @Expose
     private String PostalCode;
 
     /**
-    * 公司座机区号 。
+    * 公司座机区号。
     */
     @SerializedName("PhoneAreaCode")
     @Expose
     private String PhoneAreaCode;
 
     /**
-    * 公司座机号码 。
+    * 公司座机号码。
     */
     @SerializedName("PhoneNumber")
     @Expose
     private String PhoneNumber;
 
     /**
-    * 证书验证方式 。
+    * 证书验证方式。
     */
     @SerializedName("VerifyType")
     @Expose
@@ -184,14 +184,14 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String ContactLastName;
 
     /**
-    * 联系人邮箱地址 。
+    * 联系人邮箱地址。
     */
     @SerializedName("ContactEmail")
     @Expose
     private String ContactEmail;
 
     /**
-    * 联系人手机号码 。
+    * 联系人手机号码。
     */
     @SerializedName("ContactNumber")
     @Expose
@@ -221,16 +221,16 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get CSR 生成方式：online = 在线生成, parse = 手动上传 。 
-     * @return CsrType CSR 生成方式：online = 在线生成, parse = 手动上传 。
+     * Get CSR 生成方式：online = 在线生成, parse = 手动上传。 
+     * @return CsrType CSR 生成方式：online = 在线生成, parse = 手动上传。
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set CSR 生成方式：online = 在线生成, parse = 手动上传 。
-     * @param CsrType CSR 生成方式：online = 在线生成, parse = 手动上传 。
+     * Set CSR 生成方式：online = 在线生成, parse = 手动上传。
+     * @param CsrType CSR 生成方式：online = 在线生成, parse = 手动上传。
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
@@ -253,16 +253,16 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 绑定证书的域名 。 
-     * @return CertificateDomain 绑定证书的域名 。
+     * Get 绑定证书的域名。 
+     * @return CertificateDomain 绑定证书的域名。
      */
     public String getCertificateDomain() {
         return this.CertificateDomain;
     }
 
     /**
-     * Set 绑定证书的域名 。
-     * @param CertificateDomain 绑定证书的域名 。
+     * Set 绑定证书的域名。
+     * @param CertificateDomain 绑定证书的域名。
      */
     public void setCertificateDomain(String CertificateDomain) {
         this.CertificateDomain = CertificateDomain;
@@ -285,32 +285,32 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 私钥密码 。 
-     * @return KeyPassword 私钥密码 。
+     * Get 私钥密码。 
+     * @return KeyPassword 私钥密码。
      */
     public String getKeyPassword() {
         return this.KeyPassword;
     }
 
     /**
-     * Set 私钥密码 。
-     * @param KeyPassword 私钥密码 。
+     * Set 私钥密码。
+     * @param KeyPassword 私钥密码。
      */
     public void setKeyPassword(String KeyPassword) {
         this.KeyPassword = KeyPassword;
     }
 
     /**
-     * Get 公司名称 。 
-     * @return OrganizationName 公司名称 。
+     * Get 公司名称。 
+     * @return OrganizationName 公司名称。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 公司名称 。
-     * @param OrganizationName 公司名称 。
+     * Set 公司名称。
+     * @param OrganizationName 公司名称。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
@@ -333,48 +333,48 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 公司详细地址 。 
-     * @return OrganizationAddress 公司详细地址 。
+     * Get 公司详细地址。 
+     * @return OrganizationAddress 公司详细地址。
      */
     public String getOrganizationAddress() {
         return this.OrganizationAddress;
     }
 
     /**
-     * Set 公司详细地址 。
-     * @param OrganizationAddress 公司详细地址 。
+     * Set 公司详细地址。
+     * @param OrganizationAddress 公司详细地址。
      */
     public void setOrganizationAddress(String OrganizationAddress) {
         this.OrganizationAddress = OrganizationAddress;
     }
 
     /**
-     * Get 国家名称 如中国：CN 。 
-     * @return OrganizationCountry 国家名称 如中国：CN 。
+     * Get 国家名称，如中国：CN 。 
+     * @return OrganizationCountry 国家名称，如中国：CN 。
      */
     public String getOrganizationCountry() {
         return this.OrganizationCountry;
     }
 
     /**
-     * Set 国家名称 如中国：CN 。
-     * @param OrganizationCountry 国家名称 如中国：CN 。
+     * Set 国家名称，如中国：CN 。
+     * @param OrganizationCountry 国家名称，如中国：CN 。
      */
     public void setOrganizationCountry(String OrganizationCountry) {
         this.OrganizationCountry = OrganizationCountry;
     }
 
     /**
-     * Get 公司所在城市 。 
-     * @return OrganizationCity 公司所在城市 。
+     * Get 公司所在城市。 
+     * @return OrganizationCity 公司所在城市。
      */
     public String getOrganizationCity() {
         return this.OrganizationCity;
     }
 
     /**
-     * Set 公司所在城市 。
-     * @param OrganizationCity 公司所在城市 。
+     * Set 公司所在城市。
+     * @param OrganizationCity 公司所在城市。
      */
     public void setOrganizationCity(String OrganizationCity) {
         this.OrganizationCity = OrganizationCity;
@@ -397,64 +397,64 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 公司邮编 。 
-     * @return PostalCode 公司邮编 。
+     * Get 公司邮编。 
+     * @return PostalCode 公司邮编。
      */
     public String getPostalCode() {
         return this.PostalCode;
     }
 
     /**
-     * Set 公司邮编 。
-     * @param PostalCode 公司邮编 。
+     * Set 公司邮编。
+     * @param PostalCode 公司邮编。
      */
     public void setPostalCode(String PostalCode) {
         this.PostalCode = PostalCode;
     }
 
     /**
-     * Get 公司座机区号 。 
-     * @return PhoneAreaCode 公司座机区号 。
+     * Get 公司座机区号。 
+     * @return PhoneAreaCode 公司座机区号。
      */
     public String getPhoneAreaCode() {
         return this.PhoneAreaCode;
     }
 
     /**
-     * Set 公司座机区号 。
-     * @param PhoneAreaCode 公司座机区号 。
+     * Set 公司座机区号。
+     * @param PhoneAreaCode 公司座机区号。
      */
     public void setPhoneAreaCode(String PhoneAreaCode) {
         this.PhoneAreaCode = PhoneAreaCode;
     }
 
     /**
-     * Get 公司座机号码 。 
-     * @return PhoneNumber 公司座机号码 。
+     * Get 公司座机号码。 
+     * @return PhoneNumber 公司座机号码。
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 公司座机号码 。
-     * @param PhoneNumber 公司座机号码 。
+     * Set 公司座机号码。
+     * @param PhoneNumber 公司座机号码。
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
     }
 
     /**
-     * Get 证书验证方式 。 
-     * @return VerifyType 证书验证方式 。
+     * Get 证书验证方式。 
+     * @return VerifyType 证书验证方式。
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set 证书验证方式 。
-     * @param VerifyType 证书验证方式 。
+     * Set 证书验证方式。
+     * @param VerifyType 证书验证方式。
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;
@@ -573,32 +573,32 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 联系人邮箱地址 。 
-     * @return ContactEmail 联系人邮箱地址 。
+     * Get 联系人邮箱地址。 
+     * @return ContactEmail 联系人邮箱地址。
      */
     public String getContactEmail() {
         return this.ContactEmail;
     }
 
     /**
-     * Set 联系人邮箱地址 。
-     * @param ContactEmail 联系人邮箱地址 。
+     * Set 联系人邮箱地址。
+     * @param ContactEmail 联系人邮箱地址。
      */
     public void setContactEmail(String ContactEmail) {
         this.ContactEmail = ContactEmail;
     }
 
     /**
-     * Get 联系人手机号码 。 
-     * @return ContactNumber 联系人手机号码 。
+     * Get 联系人手机号码。 
+     * @return ContactNumber 联系人手机号码。
      */
     public String getContactNumber() {
         return this.ContactNumber;
     }
 
     /**
-     * Set 联系人手机号码 。
-     * @param ContactNumber 联系人手机号码 。
+     * Set 联系人手机号码。
+     * @param ContactNumber 联系人手机号码。
      */
     public void setContactNumber(String ContactNumber) {
         this.ContactNumber = ContactNumber;

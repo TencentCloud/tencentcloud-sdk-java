@@ -28,14 +28,15 @@ public class CreateRecTaskRequest extends AbstractModel{
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
     */
     @SerializedName("EngineModelType")
     @Expose
     private String EngineModelType;
 
     /**
-    * 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
+    * 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
     */
     @SerializedName("ChannelNum")
     @Expose
@@ -110,13 +111,15 @@ public class CreateRecTaskRequest extends AbstractModel{
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。 
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。 
      * @return EngineModelType 引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
      */
     public String getEngineModelType() {
         return this.EngineModelType;
@@ -128,29 +131,31 @@ public class CreateRecTaskRequest extends AbstractModel{
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
      * @param EngineModelType 引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
 16k_zh：16k 中文普通话通用；
 16k_en：16k 英语；
-16k_ca：16k 粤语。
+16k_ca：16k 粤语；
+16k_zh_video：16k 音视频领域模型。
      */
     public void setEngineModelType(String EngineModelType) {
         this.EngineModelType = EngineModelType;
     }
 
     /**
-     * Get 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。 
-     * @return ChannelNum 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
+     * Get 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。 
+     * @return ChannelNum 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
      */
     public Long getChannelNum() {
         return this.ChannelNum;
     }
 
     /**
-     * Set 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
-     * @param ChannelNum 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
+     * Set 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
+     * @param ChannelNum 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
      */
     public void setChannelNum(Long ChannelNum) {
         this.ChannelNum = ChannelNum;

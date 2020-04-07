@@ -37,7 +37,7 @@ public class InquiryPriceRenewInstancesRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 试运行。
+    * 试运行，测试使用，不执行具体逻辑。取值范围：<br><li>TRUE：跳过执行逻辑<br><li>FALSE：执行逻辑<br><br>默认取值：FALSE。
     */
     @SerializedName("DryRun")
     @Expose
@@ -83,16 +83,16 @@ public class InquiryPriceRenewInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 试运行。 
-     * @return DryRun 试运行。
+     * Get 试运行，测试使用，不执行具体逻辑。取值范围：<br><li>TRUE：跳过执行逻辑<br><li>FALSE：执行逻辑<br><br>默认取值：FALSE。 
+     * @return DryRun 试运行，测试使用，不执行具体逻辑。取值范围：<br><li>TRUE：跳过执行逻辑<br><li>FALSE：执行逻辑<br><br>默认取值：FALSE。
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 试运行。
-     * @param DryRun 试运行。
+     * Set 试运行，测试使用，不执行具体逻辑。取值范围：<br><li>TRUE：跳过执行逻辑<br><li>FALSE：执行逻辑<br><br>默认取值：FALSE。
+     * @param DryRun 试运行，测试使用，不执行具体逻辑。取值范围：<br><li>TRUE：跳过执行逻辑<br><li>FALSE：执行逻辑<br><br>默认取值：FALSE。
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

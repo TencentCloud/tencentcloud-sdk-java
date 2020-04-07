@@ -30,7 +30,7 @@ public class CreateImageRequest extends AbstractModel{
     private String ImageName;
 
     /**
-    * 需要制作镜像的实例ID
+    * 需要制作镜像的实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,21 +59,21 @@ public class CreateImageRequest extends AbstractModel{
     private String Sysprep;
 
     /**
-    * 实例需要制作镜像的数据盘Id
+    * 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
     */
     @SerializedName("DataDiskIds")
     @Expose
     private String [] DataDiskIds;
 
     /**
-    * 需要制作镜像的快照ID,必须包含一个系统盘快照
+    * 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
     */
     @SerializedName("SnapshotIds")
     @Expose
     private String [] SnapshotIds;
 
     /**
-    * 检测请求的合法性，但不会对操作的资源产生任何影响
+    * 检测本次请求的是否成功，但不会对操作的资源产生任何影响
     */
     @SerializedName("DryRun")
     @Expose
@@ -96,16 +96,16 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要制作镜像的实例ID 
-     * @return InstanceId 需要制作镜像的实例ID
+     * Get 需要制作镜像的实例ID。 
+     * @return InstanceId 需要制作镜像的实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 需要制作镜像的实例ID
-     * @param InstanceId 需要制作镜像的实例ID
+     * Set 需要制作镜像的实例ID。
+     * @param InstanceId 需要制作镜像的实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -164,48 +164,48 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例需要制作镜像的数据盘Id 
-     * @return DataDiskIds 实例需要制作镜像的数据盘Id
+     * Get 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id 
+     * @return DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
      */
     public String [] getDataDiskIds() {
         return this.DataDiskIds;
     }
 
     /**
-     * Set 实例需要制作镜像的数据盘Id
-     * @param DataDiskIds 实例需要制作镜像的数据盘Id
+     * Set 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+     * @param DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
      */
     public void setDataDiskIds(String [] DataDiskIds) {
         this.DataDiskIds = DataDiskIds;
     }
 
     /**
-     * Get 需要制作镜像的快照ID,必须包含一个系统盘快照 
-     * @return SnapshotIds 需要制作镜像的快照ID,必须包含一个系统盘快照
+     * Get 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。 
+     * @return SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
      */
     public String [] getSnapshotIds() {
         return this.SnapshotIds;
     }
 
     /**
-     * Set 需要制作镜像的快照ID,必须包含一个系统盘快照
-     * @param SnapshotIds 需要制作镜像的快照ID,必须包含一个系统盘快照
+     * Set 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
+     * @param SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
      */
     public void setSnapshotIds(String [] SnapshotIds) {
         this.SnapshotIds = SnapshotIds;
     }
 
     /**
-     * Get 检测请求的合法性，但不会对操作的资源产生任何影响 
-     * @return DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
+     * Get 检测本次请求的是否成功，但不会对操作的资源产生任何影响 
+     * @return DryRun 检测本次请求的是否成功，但不会对操作的资源产生任何影响
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 检测请求的合法性，但不会对操作的资源产生任何影响
-     * @param DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
+     * Set 检测本次请求的是否成功，但不会对操作的资源产生任何影响
+     * @param DryRun 检测本次请求的是否成功，但不会对操作的资源产生任何影响
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

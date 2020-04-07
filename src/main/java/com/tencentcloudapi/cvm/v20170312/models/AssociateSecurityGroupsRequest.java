@@ -30,7 +30,7 @@ public class AssociateSecurityGroupsRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+    * 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -53,16 +53,16 @@ public class AssociateSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。 
-     * @return InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+     * Get 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。 
+     * @return InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
-     * @param InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+     * Set 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
+     * @param InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

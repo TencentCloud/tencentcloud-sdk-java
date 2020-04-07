@@ -44,7 +44,7 @@ public class AllocateHostsRequest extends AbstractModel{
     private ChargePrepaid HostChargePrepaid;
 
     /**
-    * 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+    * 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
     */
     @SerializedName("HostChargeType")
     @Expose
@@ -58,7 +58,7 @@ public class AllocateHostsRequest extends AbstractModel{
     private String HostType;
 
     /**
-    * 购买CDH实例数量。
+    * 购买CDH实例数量，默认为：1。
     */
     @SerializedName("HostCount")
     @Expose
@@ -120,16 +120,16 @@ public class AllocateHostsRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。 
-     * @return HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+     * Get 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。 
+     * @return HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
      */
     public String getHostChargeType() {
         return this.HostChargeType;
     }
 
     /**
-     * Set 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
-     * @param HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+     * Set 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
+     * @param HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
      */
     public void setHostChargeType(String HostChargeType) {
         this.HostChargeType = HostChargeType;
@@ -152,16 +152,16 @@ public class AllocateHostsRequest extends AbstractModel{
     }
 
     /**
-     * Get 购买CDH实例数量。 
-     * @return HostCount 购买CDH实例数量。
+     * Get 购买CDH实例数量，默认为：1。 
+     * @return HostCount 购买CDH实例数量，默认为：1。
      */
     public Long getHostCount() {
         return this.HostCount;
     }
 
     /**
-     * Set 购买CDH实例数量。
-     * @param HostCount 购买CDH实例数量。
+     * Set 购买CDH实例数量，默认为：1。
+     * @param HostCount 购买CDH实例数量，默认为：1。
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
