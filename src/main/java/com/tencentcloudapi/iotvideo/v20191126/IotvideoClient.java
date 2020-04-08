@@ -242,6 +242,24 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteAppUsr）用于删除终端用户。
+     * @param req DeleteAppUsrRequest
+     * @return DeleteAppUsrResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAppUsrResponse DeleteAppUsr(DeleteAppUsrRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAppUsrResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAppUsrResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAppUsr"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteBinding）用于终端用户和设备进行解绑定。
      * @param req DeleteBindingRequest
      * @return DeleteBindingResponse

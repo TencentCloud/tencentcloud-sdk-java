@@ -271,6 +271,22 @@ public class ContainerGroupDetail extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupResourceType")
+    @Expose
+    private String GroupResourceType;
+
+    /**
+    * 部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceCount")
+    @Expose
+    private Long InstanceCount;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -891,6 +907,46 @@ public class ContainerGroupDetail extends AbstractModel{
     }
 
     /**
+     * Get 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupResourceType 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupResourceType() {
+        return this.GroupResourceType;
+    }
+
+    /**
+     * Set 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupResourceType 部署组资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupResourceType(String GroupResourceType) {
+        this.GroupResourceType = GroupResourceType;
+    }
+
+    /**
+     * Get 部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceCount 部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceCount() {
+        return this.InstanceCount;
+    }
+
+    /**
+     * Set 部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceCount 部署组实例个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceCount(Long InstanceCount) {
+        this.InstanceCount = InstanceCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -925,6 +981,8 @@ public class ContainerGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "CpuRequest", this.CpuRequest);
         this.setParamSimple(map, prefix + "MemRequest", this.MemRequest);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
 
     }
 }

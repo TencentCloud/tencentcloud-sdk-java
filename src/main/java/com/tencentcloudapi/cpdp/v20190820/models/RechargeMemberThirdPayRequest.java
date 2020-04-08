@@ -44,14 +44,17 @@ public class RechargeMemberThirdPayRequest extends AbstractModel{
     private String Commission;
 
     /**
-    * STRING(3)，币种
+    * STRING(3)，币种。如RMB
     */
     @SerializedName("Ccy")
     @Expose
     private String Ccy;
 
     /**
-    * STRING(20)，支付渠道类型
+    * STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
     */
     @SerializedName("PayChannelType")
     @Expose
@@ -169,32 +172,44 @@ public class RechargeMemberThirdPayRequest extends AbstractModel{
     }
 
     /**
-     * Get STRING(3)，币种 
-     * @return Ccy STRING(3)，币种
+     * Get STRING(3)，币种。如RMB 
+     * @return Ccy STRING(3)，币种。如RMB
      */
     public String getCcy() {
         return this.Ccy;
     }
 
     /**
-     * Set STRING(3)，币种
-     * @param Ccy STRING(3)，币种
+     * Set STRING(3)，币种。如RMB
+     * @param Ccy STRING(3)，币种。如RMB
      */
     public void setCcy(String Ccy) {
         this.Ccy = Ccy;
     }
 
     /**
-     * Get STRING(20)，支付渠道类型 
-     * @return PayChannelType STRING(20)，支付渠道类型
+     * Get STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付 
+     * @return PayChannelType STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
      */
     public String getPayChannelType() {
         return this.PayChannelType;
     }
 
     /**
-     * Set STRING(20)，支付渠道类型
-     * @param PayChannelType STRING(20)，支付渠道类型
+     * Set STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
+     * @param PayChannelType STRING(20)，支付渠道类型。
+0001-微信
+0002-支付宝
+0003-京东支付
      */
     public void setPayChannelType(String PayChannelType) {
         this.PayChannelType = PayChannelType;

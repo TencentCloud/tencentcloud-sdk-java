@@ -94,6 +94,7 @@ public class ImageTag extends AbstractModel{
 
     /**
     * 操作系统
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Os")
     @Expose
@@ -274,8 +275,10 @@ public class ImageTag extends AbstractModel{
     }
 
     /**
-     * Get 操作系统 
+     * Get 操作系统
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Os 操作系统
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOs() {
         return this.Os;
@@ -283,7 +286,9 @@ public class ImageTag extends AbstractModel{
 
     /**
      * Set 操作系统
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Os 操作系统
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOs(String Os) {
         this.Os = Os;

@@ -106,6 +106,16 @@ public class CreateAcctRequest extends AbstractModel{
     private String ShortName;
 
     /**
+    * 子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
+    */
+    @SerializedName("SubMerchantMemberType")
+    @Expose
+    private String SubMerchantMemberType;
+
+    /**
      * Get 聚鑫平台分配的支付MidasAppId 
      * @return MidasAppId 聚鑫平台分配的支付MidasAppId
      */
@@ -306,6 +316,34 @@ public class CreateAcctRequest extends AbstractModel{
     }
 
     /**
+     * Get 子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general 
+     * @return SubMerchantMemberType 子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
+     */
+    public String getSubMerchantMemberType() {
+        return this.SubMerchantMemberType;
+    }
+
+    /**
+     * Set 子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
+     * @param SubMerchantMemberType 子商户会员类型：
+general:普通子账户
+merchant:商户子账户
+缺省： general
+     */
+    public void setSubMerchantMemberType(String SubMerchantMemberType) {
+        this.SubMerchantMemberType = SubMerchantMemberType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -320,6 +358,7 @@ public class CreateAcctRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
         this.setParamSimple(map, prefix + "SubMchType", this.SubMchType);
         this.setParamSimple(map, prefix + "ShortName", this.ShortName);
+        this.setParamSimple(map, prefix + "SubMerchantMemberType", this.SubMerchantMemberType);
 
     }
 }

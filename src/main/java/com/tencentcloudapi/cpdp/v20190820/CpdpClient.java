@@ -226,6 +226,60 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *智慧零售-发票开具
+     * @param req CreateInvoiceRequest
+     * @return CreateInvoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInvoiceResponse CreateInvoice(CreateInvoiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInvoiceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInvoiceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateInvoice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智慧零售-商户注册
+     * @param req CreateMerchantRequest
+     * @return CreateMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMerchantResponse CreateMerchant(CreateMerchantRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMerchantResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMerchantResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateMerchant"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智慧零售-发票红冲
+     * @param req CreateRedInvoiceRequest
+     * @return CreateRedInvoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRedInvoiceResponse CreateRedInvoice(CreateRedInvoiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRedInvoiceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRedInvoiceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRedInvoice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
      * @param req DownloadBillRequest
      * @return DownloadBillResponse
@@ -388,6 +442,42 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *智慧零售-发票查询
+     * @param req QueryInvoiceRequest
+     * @return QueryInvoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryInvoiceResponse QueryInvoice(QueryInvoiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryInvoiceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryInvoiceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryInvoice"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智慧零售-查询管理端发票
+     * @param req QueryInvoiceForManagementRequest
+     * @return QueryInvoiceForManagementResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryInvoiceForManagementResponse QueryInvoiceForManagement(QueryInvoiceForManagementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryInvoiceForManagementResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryInvoiceForManagementResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryInvoiceForManagement"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
      * @param req QueryMemberBindRequest
@@ -418,6 +508,24 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryMemberTransactionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "QueryMemberTransaction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智慧零售-查询管理端商户
+     * @param req QueryMerchantInfoForManagementRequest
+     * @return QueryMerchantInfoForManagementResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(QueryMerchantInfoForManagementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMerchantInfoForManagementResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryMerchantInfoForManagement"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -580,6 +688,24 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RevRegisterBillSupportWithdrawResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RevRegisterBillSupportWithdraw"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *登记挂账撤销。此接口可以实现把RegisterBillSupportWithdraw接口完成的登记挂账进行撤销，即调减普通会员子账户的可提现和可用余额，调增挂账子账户的可用余额。
+     * @param req RevResigterBillSupportWithdrawRequest
+     * @return RevResigterBillSupportWithdrawResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevResigterBillSupportWithdrawResponse RevResigterBillSupportWithdraw(RevResigterBillSupportWithdrawRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevResigterBillSupportWithdrawResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevResigterBillSupportWithdrawResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RevResigterBillSupportWithdraw"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

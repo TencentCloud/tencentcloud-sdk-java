@@ -290,6 +290,24 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *从CVM产品导入镜像到ECM
+     * @param req ImportImageRequest
+     * @return ImportImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportImageResponse ImportImage(ImportImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ImportImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改实例的属性。
      * @param req ModifyInstancesAttributeRequest
      * @return ModifyInstancesAttributeResponse

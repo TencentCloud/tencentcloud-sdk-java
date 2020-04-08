@@ -88,6 +88,13 @@ AnycastEIP是否用于绑定负载均衡。
     private Boolean ApplicableForCLB;
 
     /**
+    * 需要关联的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
     */
     @SerializedName("BandwidthPackageId")
@@ -271,6 +278,22 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
+     * Get 需要关联的标签列表。 
+     * @return Tags 需要关联的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 需要关联的标签列表。
+     * @param Tags 需要关联的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费 
      * @return BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
      */
@@ -297,6 +320,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
         this.setParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
 
     }
