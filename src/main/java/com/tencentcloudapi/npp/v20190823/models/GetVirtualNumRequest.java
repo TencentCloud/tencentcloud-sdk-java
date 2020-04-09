@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetVirtualNumRequest extends AbstractModel{
 
     /**
-    * appId 值测试时由腾讯统一分配
+    * 业务appid
     */
     @SerializedName("BizAppId")
     @Expose
@@ -130,16 +130,16 @@ public class GetVirtualNumRequest extends AbstractModel{
     private String RecordUrl;
 
     /**
-     * Get appId 值测试时由腾讯统一分配 
-     * @return BizAppId appId 值测试时由腾讯统一分配
+     * Get 业务appid 
+     * @return BizAppId 业务appid
      */
     public String getBizAppId() {
         return this.BizAppId;
     }
 
     /**
-     * Set appId 值测试时由腾讯统一分配
-     * @param BizAppId appId 值测试时由腾讯统一分配
+     * Set 业务appid
+     * @param BizAppId 业务appid
      */
     public void setBizAppId(String BizAppId) {
         this.BizAppId = BizAppId;

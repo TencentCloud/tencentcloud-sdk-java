@@ -200,7 +200,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *根据指定的表信息删除目标表
+     *删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
      * @param req DeleteTablesRequest
      * @return DeleteTablesResponse
      * @throws TencentCloudSDKException

@@ -155,6 +155,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private String KibanaPrivateAccess;
 
     /**
+    * ES 6.8及以上版本基础版开启或关闭用户认证
+    */
+    @SerializedName("BasicSecurityType")
+    @Expose
+    private Long BasicSecurityType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -467,6 +474,22 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get ES 6.8及以上版本基础版开启或关闭用户认证 
+     * @return BasicSecurityType ES 6.8及以上版本基础版开启或关闭用户认证
+     */
+    public Long getBasicSecurityType() {
+        return this.BasicSecurityType;
+    }
+
+    /**
+     * Set ES 6.8及以上版本基础版开启或关闭用户认证
+     * @param BasicSecurityType ES 6.8及以上版本基础版开启或关闭用户认证
+     */
+    public void setBasicSecurityType(Long BasicSecurityType) {
+        this.BasicSecurityType = BasicSecurityType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -488,6 +511,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
         this.setParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
+        this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
 
     }
 }

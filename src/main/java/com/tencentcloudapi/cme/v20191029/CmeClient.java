@@ -38,6 +38,44 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *向一个团队中团队成员，并且指定成员的角色。
+     * @param req AddTeamMemberRequest
+     * @return AddTeamMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddTeamMemberResponse AddTeamMember(AddTeamMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddTeamMemberResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddTeamMemberResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddTeamMember"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新增分类，用于管理素材。
+<li>分类层数不能超过10；</li>
+<li>子分类数不能超过10。</li>
+     * @param req CreateClassRequest
+     * @return CreateClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClassResponse CreateClass(CreateClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建云剪的编辑项目，支持创建视频剪辑及直播剪辑两大类项目。
 
      * @param req CreateProjectRequest
@@ -50,6 +88,44 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateProjectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建一个团队。
+     * @param req CreateTeamRequest
+     * @return CreateTeamResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTeamResponse CreateTeam(CreateTeamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTeamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTeamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTeam"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除分类信息，删除时检验下述限制：
+<li>分类路径必须存在；</li>
+<li>分类下没有绑定素材。</li>
+     * @param req DeleteClassRequest
+     * @return DeleteClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClassResponse DeleteClass(DeleteClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClass"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -75,6 +151,24 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *根据素材 Id 删除素材。
+     * @param req DeleteMaterialRequest
+     * @return DeleteMaterialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMaterialResponse DeleteMaterial(DeleteMaterialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMaterialResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMaterialResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteMaterial"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除云剪编辑项目。
      * @param req DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -86,6 +180,80 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteProjectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除一个团队。
+<li>要删除的团队必须没有归属的素材；</li>
+<li>要删除的团队必须没有归属的分类。</li>
+     * @param req DeleteTeamRequest
+     * @return DeleteTeamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTeamResponse DeleteTeam(DeleteTeamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTeamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTeamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTeam"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将团队成员从团队中删除，默认只有 Owner 及管理员才有此权限。
+     * @param req DeleteTeamMembersRequest
+     * @return DeleteTeamMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTeamMembersResponse DeleteTeamMembers(DeleteTeamMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTeamMembersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTeamMembersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTeamMembers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定归属者下所有的分类信息。
+     * @param req DescribeClassRequest
+     * @return DescribeClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClassResponse DescribeClass(DescribeClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定的团队成员所加入的团队列表。
+     * @param req DescribeJoinTeamsRequest
+     * @return DescribeJoinTeamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJoinTeamsResponse DescribeJoinTeams(DescribeJoinTeamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJoinTeamsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJoinTeamsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeJoinTeams"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -111,6 +279,24 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *根据素材 Id 批量获取素材详情。
+     * @param req DescribeMaterialsRequest
+     * @return DescribeMaterialsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaterialsResponse DescribeMaterials(DescribeMaterialsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMaterialsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMaterialsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMaterials"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *支持根据多种条件过滤出项目列表。
      * @param req DescribeProjectsRequest
      * @return DescribeProjectsResponse
@@ -122,6 +308,42 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeProjects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定资源的授权列表。
+     * @param req DescribeResourceAuthorizationRequest
+     * @return DescribeResourceAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceAuthorizationResponse DescribeResourceAuthorization(DescribeResourceAuthorizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceAuthorizationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceAuthorizationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeResourceAuthorization"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取共享空间。当实体A对实体B授权某资源以后，实体B的共享空间就会增加实体A。
+     * @param req DescribeSharedSpaceRequest
+     * @return DescribeSharedSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSpaceResponse DescribeSharedSpace(DescribeSharedSpaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSharedSpaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSharedSpaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSharedSpace"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -149,7 +371,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *支持各种条件筛选，返回对应的任务基础信息列表。
+     *获取任务列表，支持条件筛选，返回对应的任务基础信息列表。
      * @param req DescribeTasksRequest
      * @return DescribeTasksResponse
      * @throws TencentCloudSDKException
@@ -160,6 +382,42 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定成员 ID 的信息，同时支持拉取所有团队成员信息。
+     * @param req DescribeTeamMembersRequest
+     * @return DescribeTeamMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTeamMembersResponse DescribeTeamMembers(DescribeTeamMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTeamMembersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTeamMembersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTeamMembers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取指定团队的信息。
+     * @param req DescribeTeamsRequest
+     * @return DescribeTeamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTeamsResponse DescribeTeams(DescribeTeamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTeamsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTeamsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTeams"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -185,7 +443,61 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *将云点播中的媒资添加到素材库中，提供给后续的视频编辑。
+     *平铺分类路径下及其子分类下的所有素材。
+     * @param req FlattenListMediaRequest
+     * @return FlattenListMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public FlattenListMediaResponse FlattenListMedia(FlattenListMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FlattenListMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FlattenListMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FlattenListMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *资源所属实体对目标实体授予目标资源的相应权限。
+     * @param req GrantResourceAuthorizationRequest
+     * @return GrantResourceAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantResourceAuthorizationResponse GrantResourceAuthorization(GrantResourceAuthorizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GrantResourceAuthorizationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GrantResourceAuthorizationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GrantResourceAuthorization"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将云点播媒资文件导入到云剪素材库。
+     * @param req ImportMaterialRequest
+     * @return ImportMaterialResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportMaterialResponse ImportMaterial(ImportMaterialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportMaterialResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportMaterialResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ImportMaterial"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将云点播中的媒资添加到素材库中，供后续视频编辑使用。
      * @param req ImportMediaToProjectRequest
      * @return ImportMediaToProjectResponse
      * @throws TencentCloudSDKException
@@ -196,6 +508,42 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImportMediaToProjectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImportMediaToProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     * 浏览当前分类路径下的资源，包括素材和子分类。
+     * @param req ListMediaRequest
+     * @return ListMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListMediaResponse ListMedia(ListMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改素材信息，支持修改素材名称、分类路径、标签等信息。
+     * @param req ModifyMaterialRequest
+     * @return ModifyMaterialResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaterialResponse ModifyMaterial(ModifyMaterialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMaterialResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMaterialResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMaterial"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -214,6 +562,79 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyProjectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyProject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改团队信息，目前支持修改的操作有：
+<li>修改团队名称。</li>
+     * @param req ModifyTeamRequest
+     * @return ModifyTeamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTeamResponse ModifyTeam(ModifyTeamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTeamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTeamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTeam"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改团队成员信息，包括成员备注、角色等。
+     * @param req ModifyTeamMemberRequest
+     * @return ModifyTeamMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTeamMemberResponse ModifyTeamMember(ModifyTeamMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTeamMemberResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTeamMemberResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTeamMember"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     * 资源所属实体对目标实体回收目标资源的相应权限，若原本没有相应权限则不产生变更。
+     * @param req RevokeResourceAuthorizationRequest
+     * @return RevokeResourceAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeResourceAuthorizationResponse RevokeResourceAuthorization(RevokeResourceAuthorizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevokeResourceAuthorizationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevokeResourceAuthorizationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RevokeResourceAuthorization"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据检索条件搜索素材，返回素材的基本信息。
+     * @param req SearchMaterialRequest
+     * @return SearchMaterialResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchMaterialResponse SearchMaterial(SearchMaterialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchMaterialResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchMaterialResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SearchMaterial"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

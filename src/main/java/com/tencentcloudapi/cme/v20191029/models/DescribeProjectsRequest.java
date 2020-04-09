@@ -51,6 +51,15 @@ public class DescribeProjectsRequest extends AbstractModel{
     private String [] CategorySet;
 
     /**
+    * 列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
+    */
+    @SerializedName("Sort")
+    @Expose
+    private SortBy Sort;
+
+    /**
     * 项目归属者。
     */
     @SerializedName("Owner")
@@ -136,6 +145,30 @@ public class DescribeProjectsRequest extends AbstractModel{
     }
 
     /**
+     * Get 列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li> 
+     * @return Sort 列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
+     */
+    public SortBy getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
+     * @param Sort 列表排序，支持下列排序字段：
+<li>CreateTime：创建时间；</li>
+<li>UpdateTime：更新时间。</li>
+     */
+    public void setSort(SortBy Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
      * Get 项目归属者。 
      * @return Owner 项目归属者。
      */
@@ -191,6 +224,7 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamArraySimple(map, prefix + "AspectRatioSet.", this.AspectRatioSet);
         this.setParamArraySimple(map, prefix + "CategorySet.", this.CategorySet);
+        this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

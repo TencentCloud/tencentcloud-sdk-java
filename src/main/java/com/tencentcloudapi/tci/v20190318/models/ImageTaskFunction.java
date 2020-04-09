@@ -30,7 +30,7 @@ public class ImageTaskFunction extends AbstractModel{
     private Boolean EnableActionClass;
 
     /**
-    * 人脸检测选项
+    * 人脸检测选项（默认为true，目前不可编辑）
     */
     @SerializedName("EnableFaceDetect")
     @Expose
@@ -44,7 +44,7 @@ public class ImageTaskFunction extends AbstractModel{
     private Boolean EnableFaceExpression;
 
     /**
-    * 人脸检索选项
+    * 人脸检索选项（默认为true，目前不可编辑）
     */
     @SerializedName("EnableFaceIdentify")
     @Expose
@@ -86,7 +86,7 @@ public class ImageTaskFunction extends AbstractModel{
     private Boolean EnableTeacherBodyMovements;
 
     /**
-    * 判断老师是否在屏幕中
+    * 判断老师是否在屏幕中（该功能尚未支持）
     */
     @SerializedName("EnableTeacherOutScreen")
     @Expose
@@ -109,16 +109,16 @@ public class ImageTaskFunction extends AbstractModel{
     }
 
     /**
-     * Get 人脸检测选项 
-     * @return EnableFaceDetect 人脸检测选项
+     * Get 人脸检测选项（默认为true，目前不可编辑） 
+     * @return EnableFaceDetect 人脸检测选项（默认为true，目前不可编辑）
      */
     public Boolean getEnableFaceDetect() {
         return this.EnableFaceDetect;
     }
 
     /**
-     * Set 人脸检测选项
-     * @param EnableFaceDetect 人脸检测选项
+     * Set 人脸检测选项（默认为true，目前不可编辑）
+     * @param EnableFaceDetect 人脸检测选项（默认为true，目前不可编辑）
      */
     public void setEnableFaceDetect(Boolean EnableFaceDetect) {
         this.EnableFaceDetect = EnableFaceDetect;
@@ -141,16 +141,16 @@ public class ImageTaskFunction extends AbstractModel{
     }
 
     /**
-     * Get 人脸检索选项 
-     * @return EnableFaceIdentify 人脸检索选项
+     * Get 人脸检索选项（默认为true，目前不可编辑） 
+     * @return EnableFaceIdentify 人脸检索选项（默认为true，目前不可编辑）
      */
     public Boolean getEnableFaceIdentify() {
         return this.EnableFaceIdentify;
     }
 
     /**
-     * Set 人脸检索选项
-     * @param EnableFaceIdentify 人脸检索选项
+     * Set 人脸检索选项（默认为true，目前不可编辑）
+     * @param EnableFaceIdentify 人脸检索选项（默认为true，目前不可编辑）
      */
     public void setEnableFaceIdentify(Boolean EnableFaceIdentify) {
         this.EnableFaceIdentify = EnableFaceIdentify;
@@ -237,16 +237,16 @@ public class ImageTaskFunction extends AbstractModel{
     }
 
     /**
-     * Get 判断老师是否在屏幕中 
-     * @return EnableTeacherOutScreen 判断老师是否在屏幕中
+     * Get 判断老师是否在屏幕中（该功能尚未支持） 
+     * @return EnableTeacherOutScreen 判断老师是否在屏幕中（该功能尚未支持）
      */
     public Boolean getEnableTeacherOutScreen() {
         return this.EnableTeacherOutScreen;
     }
 
     /**
-     * Set 判断老师是否在屏幕中
-     * @param EnableTeacherOutScreen 判断老师是否在屏幕中
+     * Set 判断老师是否在屏幕中（该功能尚未支持）
+     * @param EnableTeacherOutScreen 判断老师是否在屏幕中（该功能尚未支持）
      */
     public void setEnableTeacherOutScreen(Boolean EnableTeacherOutScreen) {
         this.EnableTeacherOutScreen = EnableTeacherOutScreen;

@@ -44,6 +44,15 @@ public class ModifyProjectRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
+    */
+    @SerializedName("AspectRatio")
+    @Expose
+    private String AspectRatio;
+
+    /**
     * 归属者。
     */
     @SerializedName("Owner")
@@ -99,6 +108,30 @@ public class ModifyProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li> 
+     * @return AspectRatio 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
+     */
+    public String getAspectRatio() {
+        return this.AspectRatio;
+    }
+
+    /**
+     * Set 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
+     * @param AspectRatio 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
+     */
+    public void setAspectRatio(String AspectRatio) {
+        this.AspectRatio = AspectRatio;
+    }
+
+    /**
      * Get 归属者。 
      * @return Owner 归属者。
      */
@@ -121,6 +154,7 @@ public class ModifyProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
 
     }

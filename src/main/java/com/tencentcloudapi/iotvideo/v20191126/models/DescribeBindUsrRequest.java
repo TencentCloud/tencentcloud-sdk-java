@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeBindUsrRequest extends AbstractModel{
 
     /**
-    * 设备主人的AccessId
-    */
-    @SerializedName("AccessId")
-    @Expose
-    private String AccessId;
-
-    /**
     * 设备TID
     */
     @SerializedName("Tid")
@@ -37,20 +30,11 @@ public class DescribeBindUsrRequest extends AbstractModel{
     private String Tid;
 
     /**
-     * Get 设备主人的AccessId 
-     * @return AccessId 设备主人的AccessId
-     */
-    public String getAccessId() {
-        return this.AccessId;
-    }
-
-    /**
-     * Set 设备主人的AccessId
-     * @param AccessId 设备主人的AccessId
-     */
-    public void setAccessId(String AccessId) {
-        this.AccessId = AccessId;
-    }
+    * 设备主人的AccessId
+    */
+    @SerializedName("AccessId")
+    @Expose
+    private String AccessId;
 
     /**
      * Get 设备TID 
@@ -69,11 +53,27 @@ public class DescribeBindUsrRequest extends AbstractModel{
     }
 
     /**
+     * Get 设备主人的AccessId 
+     * @return AccessId 设备主人的AccessId
+     */
+    public String getAccessId() {
+        return this.AccessId;
+    }
+
+    /**
+     * Set 设备主人的AccessId
+     * @param AccessId 设备主人的AccessId
+     */
+    public void setAccessId(String AccessId) {
+        this.AccessId = AccessId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AccessId", this.AccessId);
         this.setParamSimple(map, prefix + "Tid", this.Tid);
+        this.setParamSimple(map, prefix + "AccessId", this.AccessId);
 
     }
 }

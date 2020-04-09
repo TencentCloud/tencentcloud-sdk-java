@@ -51,6 +51,13 @@ public class SubmitImageTaskRequest extends AbstractModel{
     private LightStandard [] LightStandardSet;
 
     /**
+    * 结果更新回调地址。
+    */
+    @SerializedName("EventsCallBack")
+    @Expose
+    private String EventsCallBack;
+
+    /**
     * 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
     */
     @SerializedName("FrameInterval")
@@ -143,6 +150,22 @@ public class SubmitImageTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 结果更新回调地址。 
+     * @return EventsCallBack 结果更新回调地址。
+     */
+    public String getEventsCallBack() {
+        return this.EventsCallBack;
+    }
+
+    /**
+     * Set 结果更新回调地址。
+     * @param EventsCallBack 结果更新回调地址。
+     */
+    public void setEventsCallBack(String EventsCallBack) {
+        this.EventsCallBack = EventsCallBack;
+    }
+
+    /**
      * Get 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。 
      * @return FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      */
@@ -214,6 +237,7 @@ public class SubmitImageTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamObj(map, prefix + "Functions.", this.Functions);
         this.setParamArrayObj(map, prefix + "LightStandardSet.", this.LightStandardSet);
+        this.setParamSimple(map, prefix + "EventsCallBack", this.EventsCallBack);
         this.setParamSimple(map, prefix + "FrameInterval", this.FrameInterval);
         this.setParamArraySimple(map, prefix + "LibrarySet.", this.LibrarySet);
         this.setParamSimple(map, prefix + "MaxVideoDuration", this.MaxVideoDuration);

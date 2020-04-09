@@ -61,6 +61,14 @@ public class NodeInfo extends AbstractModel{
     private Long DiskSize;
 
     /**
+    * 节点本地盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalDiskInfo")
+    @Expose
+    private LocalDiskInfo LocalDiskInfo;
+
+    /**
      * Get 节点数量 
      * @return NodeNum 节点数量
      */
@@ -153,6 +161,26 @@ public class NodeInfo extends AbstractModel{
     }
 
     /**
+     * Get 节点本地盘信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalDiskInfo 节点本地盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LocalDiskInfo getLocalDiskInfo() {
+        return this.LocalDiskInfo;
+    }
+
+    /**
+     * Set 节点本地盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalDiskInfo 节点本地盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalDiskInfo(LocalDiskInfo LocalDiskInfo) {
+        this.LocalDiskInfo = LocalDiskInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -161,6 +189,7 @@ public class NodeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
 
     }
 }
