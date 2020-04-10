@@ -174,7 +174,7 @@ public class InstanceInfo extends AbstractModel{
     private MasterInfo MasterInfo;
 
     /**
-    * 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
+    * 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
     */
     @SerializedName("DeviceType")
     @Expose
@@ -670,16 +670,16 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版 
-     * @return DeviceType 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
+     * Get 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版 
+     * @return DeviceType 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
-     * @param DeviceType 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
+     * Set 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
+     * @param DeviceType 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

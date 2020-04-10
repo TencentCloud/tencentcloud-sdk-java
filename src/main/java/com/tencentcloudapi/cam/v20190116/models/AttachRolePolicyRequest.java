@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AttachRolePolicyRequest extends AbstractModel{
 
     /**
-    * 策略ID
+    * 策略ID，入参PolicyId与PolicyName二选一
     */
     @SerializedName("PolicyId")
     @Expose
@@ -44,16 +44,23 @@ public class AttachRolePolicyRequest extends AbstractModel{
     private String AttachRoleName;
 
     /**
-     * Get 策略ID 
-     * @return PolicyId 策略ID
+    * 策略名，入参PolicyId与PolicyName二选一
+    */
+    @SerializedName("PolicyName")
+    @Expose
+    private String PolicyName;
+
+    /**
+     * Get 策略ID，入参PolicyId与PolicyName二选一 
+     * @return PolicyId 策略ID，入参PolicyId与PolicyName二选一
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略ID
-     * @param PolicyId 策略ID
+     * Set 策略ID，入参PolicyId与PolicyName二选一
+     * @param PolicyId 策略ID，入参PolicyId与PolicyName二选一
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
@@ -92,12 +99,29 @@ public class AttachRolePolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get 策略名，入参PolicyId与PolicyName二选一 
+     * @return PolicyName 策略名，入参PolicyId与PolicyName二选一
+     */
+    public String getPolicyName() {
+        return this.PolicyName;
+    }
+
+    /**
+     * Set 策略名，入参PolicyId与PolicyName二选一
+     * @param PolicyName 策略名，入参PolicyId与PolicyName二选一
+     */
+    public void setPolicyName(String PolicyName) {
+        this.PolicyName = PolicyName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "AttachRoleId", this.AttachRoleId);
         this.setParamSimple(map, prefix + "AttachRoleName", this.AttachRoleName);
+        this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
 
     }
 }

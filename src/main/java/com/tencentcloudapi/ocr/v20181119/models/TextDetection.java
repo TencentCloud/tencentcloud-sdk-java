@@ -53,6 +53,13 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     private String AdvancedInfo;
 
     /**
+    * 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+    */
+    @SerializedName("ItemPolygon")
+    @Expose
+    private ItemCoord ItemPolygon;
+
+    /**
      * Get 识别出的文本行内容 
      * @return DetectedText 识别出的文本行内容
      */
@@ -125,6 +132,22 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
+     * Get 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height） 
+     * @return ItemPolygon 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public ItemCoord getItemPolygon() {
+        return this.ItemPolygon;
+    }
+
+    /**
+     * Set 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param ItemPolygon 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public void setItemPolygon(ItemCoord ItemPolygon) {
+        this.ItemPolygon = ItemPolygon;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +155,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamArrayObj(map, prefix + "Polygon.", this.Polygon);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
 
     }
 }

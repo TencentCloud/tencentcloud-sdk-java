@@ -2402,6 +2402,24 @@ LimitTypes取值范围：
     }
 
     /**
+     *查看VPC资源
+     * @param req DescribeVpcResourceDashboardRequest
+     * @return DescribeVpcResourceDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcResourceDashboardResponse DescribeVpcResourceDashboard(DescribeVpcResourceDashboardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcResourceDashboardResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcResourceDashboardResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpcResourceDashboard"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeVpcs）用于查询私有网络列表。
      * @param req DescribeVpcsRequest
      * @return DescribeVpcsResponse

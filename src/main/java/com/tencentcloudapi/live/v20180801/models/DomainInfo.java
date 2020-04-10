@@ -88,14 +88,14 @@ public class DomainInfo extends AbstractModel{
     private String CurrentCName;
 
     /**
-    * 是否租用域名
+    * 已无效，可忽略。
     */
     @SerializedName("RentTag")
     @Expose
     private Long RentTag;
 
     /**
-    * 租用域名过期时间
+    * 已无效，可忽略。
     */
     @SerializedName("RentExpireTime")
     @Expose
@@ -263,32 +263,32 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否租用域名 
-     * @return RentTag 是否租用域名
+     * Get 已无效，可忽略。 
+     * @return RentTag 已无效，可忽略。
      */
     public Long getRentTag() {
         return this.RentTag;
     }
 
     /**
-     * Set 是否租用域名
-     * @param RentTag 是否租用域名
+     * Set 已无效，可忽略。
+     * @param RentTag 已无效，可忽略。
      */
     public void setRentTag(Long RentTag) {
         this.RentTag = RentTag;
     }
 
     /**
-     * Get 租用域名过期时间 
-     * @return RentExpireTime 租用域名过期时间
+     * Get 已无效，可忽略。 
+     * @return RentExpireTime 已无效，可忽略。
      */
     public String getRentExpireTime() {
         return this.RentExpireTime;
     }
 
     /**
-     * Set 租用域名过期时间
-     * @param RentExpireTime 租用域名过期时间
+     * Set 已无效，可忽略。
+     * @param RentExpireTime 已无效，可忽略。
      */
     public void setRentExpireTime(String RentExpireTime) {
         this.RentExpireTime = RentExpireTime;

@@ -188,6 +188,24 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateStorage）用于购买云存套餐。
+     * @param req CreateStorageRequest
+     * @return CreateStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStorageResponse CreateStorage(CreateStorageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStorageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStorageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateStorage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateTraceIds）用于将设备加到日志跟踪白名单。
      * @param req CreateTraceIdsRequest
      * @return CreateTraceIdsResponse

@@ -606,6 +606,25 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *移动某一个分类到另外一个分类下，也可用于分类重命名。
+<li>如果 SourceClassPath = /素材/视频/NBA，DestinationClassPath = /素材/视频/篮球，当 DestinationClassPath 不存在时候，操作结果为重命名 ClassPath，如果 DestinationClassPath 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA。</li>
+     * @param req MoveClassRequest
+     * @return MoveClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public MoveClassResponse MoveClass(MoveClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MoveClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MoveClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MoveClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 资源所属实体对目标实体回收目标资源的相应权限，若原本没有相应权限则不产生变更。
      * @param req RevokeResourceAuthorizationRequest
      * @return RevokeResourceAuthorizationResponse
