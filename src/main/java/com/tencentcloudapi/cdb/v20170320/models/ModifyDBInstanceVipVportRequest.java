@@ -58,6 +58,13 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     private String UniqSubnetId;
 
     /**
+    * 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+    */
+    @SerializedName("ReleaseDuration")
+    @Expose
+    private Long ReleaseDuration;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -138,6 +145,22 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     }
 
     /**
+     * Get 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。 
+     * @return ReleaseDuration 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+     */
+    public Long getReleaseDuration() {
+        return this.ReleaseDuration;
+    }
+
+    /**
+     * Set 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+     * @param ReleaseDuration 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+     */
+    public void setReleaseDuration(Long ReleaseDuration) {
+        this.ReleaseDuration = ReleaseDuration;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DstPort", this.DstPort);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "ReleaseDuration", this.ReleaseDuration);
 
     }
 }

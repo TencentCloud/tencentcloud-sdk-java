@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceVipVportResponse extends AbstractModel{
+public class DescribeReportDataResponse extends AbstractModel{
 
     /**
-    * 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 域名维度数据详情
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("DomainReport")
     @Expose
-    private String AsyncRequestId;
+    private ReportData [] DomainReport;
+
+    /**
+    * 项目维度数据详情
+    */
+    @SerializedName("ProjectReport")
+    @Expose
+    private ReportData [] ProjectReport;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 域名维度数据详情 
+     * @return DomainReport 域名维度数据详情
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public ReportData [] getDomainReport() {
+        return this.DomainReport;
     }
 
     /**
-     * Set 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 域名维度数据详情
+     * @param DomainReport 域名维度数据详情
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setDomainReport(ReportData [] DomainReport) {
+        this.DomainReport = DomainReport;
+    }
+
+    /**
+     * Get 项目维度数据详情 
+     * @return ProjectReport 项目维度数据详情
+     */
+    public ReportData [] getProjectReport() {
+        return this.ProjectReport;
+    }
+
+    /**
+     * Set 项目维度数据详情
+     * @param ProjectReport 项目维度数据详情
+     */
+    public void setProjectReport(ReportData [] ProjectReport) {
+        this.ProjectReport = ProjectReport;
     }
 
     /**
@@ -77,7 +95,8 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamArrayObj(map, prefix + "DomainReport.", this.DomainReport);
+        this.setParamArrayObj(map, prefix + "ProjectReport.", this.ProjectReport);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

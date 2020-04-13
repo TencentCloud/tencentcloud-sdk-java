@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeletePullStreamConfigResponse extends AbstractModel{
+public class CreateAndAttachNetworkInterfaceResponse extends AbstractModel{
+
+    /**
+    * 弹性网卡实例。
+    */
+    @SerializedName("NetworkInterface")
+    @Expose
+    private NetworkInterface NetworkInterface;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class DeletePullStreamConfigResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 弹性网卡实例。 
+     * @return NetworkInterface 弹性网卡实例。
+     */
+    public NetworkInterface getNetworkInterface() {
+        return this.NetworkInterface;
+    }
+
+    /**
+     * Set 弹性网卡实例。
+     * @param NetworkInterface 弹性网卡实例。
+     */
+    public void setNetworkInterface(NetworkInterface NetworkInterface) {
+        this.NetworkInterface = NetworkInterface;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class DeletePullStreamConfigResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "NetworkInterface.", this.NetworkInterface);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

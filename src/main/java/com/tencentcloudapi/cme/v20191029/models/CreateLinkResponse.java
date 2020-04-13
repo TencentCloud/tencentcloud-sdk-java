@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceVipVportResponse extends AbstractModel{
+public class CreateLinkResponse extends AbstractModel{
 
     /**
-    * 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 新建链接的素材 Id。
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("MaterialId")
     @Expose
-    private String AsyncRequestId;
+    private String MaterialId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 新建链接的素材 Id。 
+     * @return MaterialId 新建链接的素材 Id。
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public String getMaterialId() {
+        return this.MaterialId;
     }
 
     /**
-     * Set 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 新建链接的素材 Id。
+     * @param MaterialId 新建链接的素材 Id。
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setMaterialId(String MaterialId) {
+        this.MaterialId = MaterialId;
     }
 
     /**
@@ -77,7 +72,7 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

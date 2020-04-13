@@ -76,6 +76,24 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     * 创建素材链接或分类路径链接，将源资源信息链接到目标。
+     * @param req CreateLinkRequest
+     * @return CreateLinkResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLinkResponse CreateLink(CreateLinkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLinkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLinkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLink"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建云剪的编辑项目，支持创建视频剪辑及直播剪辑两大类项目。
 
      * @param req CreateProjectRequest

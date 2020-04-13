@@ -74,6 +74,14 @@ public class Instance extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LanIP")
+    @Expose
+    private String LanIP;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -194,6 +202,26 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LanIP 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLanIP() {
+        return this.LanIP;
+    }
+
+    /**
+     * Set 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LanIP 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLanIP(String LanIP) {
+        this.LanIP = LanIP;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -204,6 +232,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "DrainStatus", this.DrainStatus);
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "LanIP", this.LanIP);
 
     }
 }

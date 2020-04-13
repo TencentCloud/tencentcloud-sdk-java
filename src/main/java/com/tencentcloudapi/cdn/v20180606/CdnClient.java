@@ -422,6 +422,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
+     * @param req DescribeReportDataRequest
+     * @return DescribeReportDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportDataResponse DescribeReportData(DescribeReportDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReportDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReportDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReportData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeTrafficPackages 用于查询境内 CDN 流量包详情。
      * @param req DescribeTrafficPackagesRequest
      * @return DescribeTrafficPackagesResponse

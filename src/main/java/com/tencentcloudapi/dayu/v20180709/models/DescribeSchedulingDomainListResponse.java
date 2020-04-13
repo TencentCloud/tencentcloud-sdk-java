@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSLowLogDataResponse extends AbstractModel{
+public class DescribeSchedulingDomainListResponse extends AbstractModel{
 
     /**
-    * 符合条件的记录总数。
+    * 调度域名总数
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Total")
     @Expose
-    private Long TotalCount;
+    private Long Total;
 
     /**
-    * 查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 调度域名列表信息
     */
-    @SerializedName("Items")
+    @SerializedName("DomainList")
     @Expose
-    private SlowLogItem [] Items;
+    private SchedulingDomain [] DomainList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class DescribeSLowLogDataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的记录总数。 
-     * @return TotalCount 符合条件的记录总数。
+     * Get 调度域名总数 
+     * @return Total 调度域名总数
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 符合条件的记录总数。
-     * @param TotalCount 符合条件的记录总数。
+     * Set 调度域名总数
+     * @param Total 调度域名总数
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 调度域名列表信息 
+     * @return DomainList 调度域名列表信息
      */
-    public SlowLogItem [] getItems() {
-        return this.Items;
+    public SchedulingDomain [] getDomainList() {
+        return this.DomainList;
     }
 
     /**
-     * Set 查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 查询到的记录。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 调度域名列表信息
+     * @param DomainList 调度域名列表信息
      */
-    public void setItems(SlowLogItem [] Items) {
-        this.Items = Items;
+    public void setDomainList(SchedulingDomain [] DomainList) {
+        this.DomainList = DomainList;
     }
 
     /**
@@ -100,8 +95,8 @@ public class DescribeSLowLogDataResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "DomainList.", this.DomainList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

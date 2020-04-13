@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSLowLogDataRequest extends AbstractModel{
+public class DescribeSlowLogDataRequest extends AbstractModel{
 
     /**
     * 实例 ID。

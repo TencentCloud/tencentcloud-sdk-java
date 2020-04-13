@@ -1173,6 +1173,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取调度域名列表
+     * @param req DescribeSchedulingDomainListRequest
+     * @return DescribeSchedulingDomainListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchedulingDomainListResponse DescribeSchedulingDomainList(DescribeSchedulingDomainListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSchedulingDomainListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSchedulingDomainListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSchedulingDomainList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取本月安全统计
      * @param req DescribeSecIndexRequest
      * @return DescribeSecIndexResponse

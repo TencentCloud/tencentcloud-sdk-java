@@ -23,23 +23,38 @@ import java.util.HashMap;
 public class DescribeLiveRecordTemplatesRequest extends AbstractModel{
 
     /**
-    * 是否属于慢直播模板
+    * 是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
     */
     @SerializedName("IsDelayLive")
     @Expose
     private Long IsDelayLive;
 
     /**
-     * Get 是否属于慢直播模板 
-     * @return IsDelayLive 是否属于慢直播模板
+     * Get 是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。 
+     * @return IsDelayLive 是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
      */
     public Long getIsDelayLive() {
         return this.IsDelayLive;
     }
 
     /**
-     * Set 是否属于慢直播模板
-     * @param IsDelayLive 是否属于慢直播模板
+     * Set 是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
+     * @param IsDelayLive 是否属于慢直播模板。默认：0。
+示例：
+0 - 标准直播。
+1 - 慢直播。
      */
     public void setIsDelayLive(Long IsDelayLive) {
         this.IsDelayLive = IsDelayLive;

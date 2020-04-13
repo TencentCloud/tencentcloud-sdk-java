@@ -20,15 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceVipVportResponse extends AbstractModel{
+public class DescribeSlowLogDataResponse extends AbstractModel{
 
     /**
-    * 异步任务ID。(该返回字段目前已废弃)
+    * 符合条件的记录总数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 查询到的记录。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("Items")
     @Expose
-    private String AsyncRequestId;
+    private SlowLogItem [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +45,39 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 符合条件的记录总数。 
+     * @return TotalCount 符合条件的记录总数。
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 异步任务ID。(该返回字段目前已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
+     * Set 符合条件的记录总数。
+     * @param TotalCount 符合条件的记录总数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 查询到的记录。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public SlowLogItem [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 查询到的记录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItems(SlowLogItem [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -77,7 +100,8 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

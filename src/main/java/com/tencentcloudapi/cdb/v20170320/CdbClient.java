@@ -963,16 +963,16 @@ public class CdbClient extends AbstractClient{
 
     /**
      *条件检索实例的慢日志。只允许查看一个月之内的慢日志
-     * @param req DescribeSLowLogDataRequest
-     * @return DescribeSLowLogDataResponse
+     * @param req DescribeSlowLogDataRequest
+     * @return DescribeSlowLogDataResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeSLowLogDataResponse DescribeSLowLogData(DescribeSLowLogDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSLowLogDataResponse> rsp = null;
+    public DescribeSlowLogDataResponse DescribeSlowLogData(DescribeSlowLogDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogDataResponse> rsp = null;
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSLowLogDataResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogDataResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSLowLogData"), type);
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogData"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

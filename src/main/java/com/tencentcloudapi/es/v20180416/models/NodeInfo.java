@@ -69,6 +69,13 @@ public class NodeInfo extends AbstractModel{
     private LocalDiskInfo LocalDiskInfo;
 
     /**
+    * 节点磁盘块数
+    */
+    @SerializedName("DiskCount")
+    @Expose
+    private Long DiskCount;
+
+    /**
      * Get 节点数量 
      * @return NodeNum 节点数量
      */
@@ -181,6 +188,22 @@ public class NodeInfo extends AbstractModel{
     }
 
     /**
+     * Get 节点磁盘块数 
+     * @return DiskCount 节点磁盘块数
+     */
+    public Long getDiskCount() {
+        return this.DiskCount;
+    }
+
+    /**
+     * Set 节点磁盘块数
+     * @param DiskCount 节点磁盘块数
+     */
+    public void setDiskCount(Long DiskCount) {
+        this.DiskCount = DiskCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -190,6 +213,7 @@ public class NodeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
+        this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
 
     }
 }

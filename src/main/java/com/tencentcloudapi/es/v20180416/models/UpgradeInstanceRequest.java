@@ -30,7 +30,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 目标ES版本
+    * 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
     */
     @SerializedName("EsVersion")
     @Expose
@@ -74,16 +74,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 目标ES版本 
-     * @return EsVersion 目标ES版本
+     * Get 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1" 
+     * @return EsVersion 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set 目标ES版本
-     * @param EsVersion 目标ES版本
+     * Set 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
+     * @param EsVersion 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
