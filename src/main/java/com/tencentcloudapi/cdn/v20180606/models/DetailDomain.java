@@ -356,6 +356,14 @@ global：全球锁定
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
+    * Scdn配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityConfig")
+    @Expose
+    private SecurityConfig [] SecurityConfig;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1208,6 +1216,26 @@ global：全球锁定
     }
 
     /**
+     * Get Scdn配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityConfig Scdn配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityConfig [] getSecurityConfig() {
+        return this.SecurityConfig;
+    }
+
+    /**
+     * Set Scdn配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityConfig Scdn配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityConfig(SecurityConfig [] SecurityConfig) {
+        this.SecurityConfig = SecurityConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1251,6 +1279,7 @@ global：全球锁定
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+        this.setParamArrayObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
 
     }
 }

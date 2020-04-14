@@ -38,6 +38,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *正常结算提现失败情况下，发起重新提现的请求接口
+     * @param req ApplyReWithdrawalRequest
+     * @return ApplyReWithdrawalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyReWithdrawalResponse ApplyReWithdrawal(ApplyReWithdrawalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyReWithdrawalResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyReWithdrawalResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ApplyReWithdrawal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *商户提现
      * @param req ApplyWithdrawalRequest
      * @return ApplyWithdrawalResponse
@@ -327,6 +345,42 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryAcctBindingResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctBinding"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *聚鑫-开户信息查询
+     * @param req QueryAcctInfoRequest
+     * @return QueryAcctInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAcctInfoResponse QueryAcctInfo(QueryAcctInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryAcctInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryAcctInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *聚鑫-开户信息列表查询, 查询某一段时间的开户信息
+     * @param req QueryAcctInfoListRequest
+     * @return QueryAcctInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAcctInfoListResponse QueryAcctInfoList(QueryAcctInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryAcctInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryAcctInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctInfoList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -13,37 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.scf.v20180416.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListVersionByFunctionResponse extends AbstractModel{
+public class QueryAcctInfoListResponse extends AbstractModel{
 
     /**
-    * 函数版本。
+    * 本次交易返回查询结果记录数
     */
-    @SerializedName("FunctionVersion")
+    @SerializedName("ResultCount")
     @Expose
-    private String [] FunctionVersion;
+    private Long ResultCount;
 
     /**
-    * 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Versions")
-    @Expose
-    private FunctionVersion [] Versions;
-
-    /**
-    * 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 符合业务查询条件的记录总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 查询结果项 [object,object]
+    */
+    @SerializedName("QueryAcctItems")
+    @Expose
+    private QueryAcctItem [] QueryAcctItems;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,59 +51,51 @@ public class ListVersionByFunctionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 函数版本。 
-     * @return FunctionVersion 函数版本。
+     * Get 本次交易返回查询结果记录数 
+     * @return ResultCount 本次交易返回查询结果记录数
      */
-    public String [] getFunctionVersion() {
-        return this.FunctionVersion;
+    public Long getResultCount() {
+        return this.ResultCount;
     }
 
     /**
-     * Set 函数版本。
-     * @param FunctionVersion 函数版本。
+     * Set 本次交易返回查询结果记录数
+     * @param ResultCount 本次交易返回查询结果记录数
      */
-    public void setFunctionVersion(String [] FunctionVersion) {
-        this.FunctionVersion = FunctionVersion;
+    public void setResultCount(Long ResultCount) {
+        this.ResultCount = ResultCount;
     }
 
     /**
-     * Get 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Versions 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public FunctionVersion [] getVersions() {
-        return this.Versions;
-    }
-
-    /**
-     * Set 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Versions 函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setVersions(FunctionVersion [] Versions) {
-        this.Versions = Versions;
-    }
-
-    /**
-     * Get 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 符合业务查询条件的记录总数 
+     * @return TotalCount 符合业务查询条件的记录总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 函数版本总数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 符合业务查询条件的记录总数
+     * @param TotalCount 符合业务查询条件的记录总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 查询结果项 [object,object] 
+     * @return QueryAcctItems 查询结果项 [object,object]
+     */
+    public QueryAcctItem [] getQueryAcctItems() {
+        return this.QueryAcctItems;
+    }
+
+    /**
+     * Set 查询结果项 [object,object]
+     * @param QueryAcctItems 查询结果项 [object,object]
+     */
+    public void setQueryAcctItems(QueryAcctItem [] QueryAcctItems) {
+        this.QueryAcctItems = QueryAcctItems;
     }
 
     /**
@@ -128,9 +118,9 @@ public class ListVersionByFunctionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "FunctionVersion.", this.FunctionVersion);
-        this.setParamArrayObj(map, prefix + "Versions.", this.Versions);
+        this.setParamSimple(map, prefix + "ResultCount", this.ResultCount);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "QueryAcctItems.", this.QueryAcctItems);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

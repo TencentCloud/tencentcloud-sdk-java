@@ -159,6 +159,38 @@ public class GameServerSession extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurrentCustomCount")
+    @Expose
+    private Long CurrentCustomCount;
+
+    /**
+    * 最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxCustomCount")
+    @Expose
+    private Long MaxCustomCount;
+
+    /**
+    * 权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
+    * 会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvailabilityStatus")
+    @Expose
+    private String AvailabilityStatus;
+
+    /**
      * Get 游戏服务器会话创建时间 
      * @return CreationTime 游戏服务器会话创建时间
      */
@@ -487,6 +519,86 @@ public class GameServerSession extends AbstractModel{
     }
 
     /**
+     * Get 当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurrentCustomCount 当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCurrentCustomCount() {
+        return this.CurrentCustomCount;
+    }
+
+    /**
+     * Set 当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurrentCustomCount 当前自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrentCustomCount(Long CurrentCustomCount) {
+        this.CurrentCustomCount = CurrentCustomCount;
+    }
+
+    /**
+     * Get 最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxCustomCount 最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxCustomCount() {
+        return this.MaxCustomCount;
+    }
+
+    /**
+     * Set 最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxCustomCount 最大自定义数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxCustomCount(Long MaxCustomCount) {
+        this.MaxCustomCount = MaxCustomCount;
+    }
+
+    /**
+     * Get 权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
+     * Get 会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvailabilityStatus 会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAvailabilityStatus() {
+        return this.AvailabilityStatus;
+    }
+
+    /**
+     * Set 会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvailabilityStatus 会话可用性状态，是否被屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvailabilityStatus(String AvailabilityStatus) {
+        this.AvailabilityStatus = AvailabilityStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -508,6 +620,10 @@ public class GameServerSession extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusReason", this.StatusReason);
         this.setParamSimple(map, prefix + "TerminationTime", this.TerminationTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "CurrentCustomCount", this.CurrentCustomCount);
+        this.setParamSimple(map, prefix + "MaxCustomCount", this.MaxCustomCount);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "AvailabilityStatus", this.AvailabilityStatus);
 
     }
 }

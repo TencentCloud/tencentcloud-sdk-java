@@ -114,6 +114,42 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
+     * @param req CancelCommonMixStreamRequest
+     * @return CancelCommonMixStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelCommonMixStreamResponse CancelCommonMixStream(CancelCommonMixStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelCommonMixStreamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelCommonMixStream"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
+     * @param req CreateCommonMixStreamRequest
+     * @return CreateCommonMixStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCommonMixStreamResponse CreateCommonMixStream(CreateCommonMixStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCommonMixStreamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCommonMixStream"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建回调规则，需要先调用[CreateLiveCallbackTemplate](/document/product/267/32637)接口创建回调模板，将返回的模板id绑定到域名/路径进行使用。
 <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
      * @param req CreateLiveCallbackRuleRequest

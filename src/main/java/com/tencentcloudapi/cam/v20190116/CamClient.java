@@ -740,24 +740,6 @@ public class CamClient extends AbstractClient{
     }
 
     /**
-     *本接口（UpdatePolicy ）可用于更新策略。
-     * @param req UpdatePolicyRequest
-     * @return UpdatePolicyResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdatePolicyResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdatePolicyResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UpdatePolicy"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（UpdateRoleDescription）用于修改角色的描述信息。
      * @param req UpdateRoleDescriptionRequest
      * @return UpdateRoleDescriptionResponse

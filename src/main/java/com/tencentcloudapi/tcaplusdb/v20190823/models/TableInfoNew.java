@@ -231,6 +231,14 @@ public class TableInfoNew extends AbstractModel{
     private Long SortRule;
 
     /**
+    * 表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbClusterInfoStruct")
+    @Expose
+    private String DbClusterInfoStruct;
+
+    /**
      * Get 表格名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableName 表格名称
@@ -751,6 +759,26 @@ public class TableInfoNew extends AbstractModel{
     }
 
     /**
+     * Get 表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbClusterInfoStruct 表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbClusterInfoStruct() {
+        return this.DbClusterInfoStruct;
+    }
+
+    /**
+     * Set 表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbClusterInfoStruct 表格分布式索引信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbClusterInfoStruct(String DbClusterInfoStruct) {
+        this.DbClusterInfoStruct = DbClusterInfoStruct;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -780,6 +808,7 @@ public class TableInfoNew extends AbstractModel{
         this.setParamSimple(map, prefix + "ApiAccessId", this.ApiAccessId);
         this.setParamSimple(map, prefix + "SortFieldNum", this.SortFieldNum);
         this.setParamSimple(map, prefix + "SortRule", this.SortRule);
+        this.setParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
 
     }
 }

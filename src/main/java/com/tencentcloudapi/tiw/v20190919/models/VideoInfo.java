@@ -67,7 +67,7 @@ public class VideoInfo extends AbstractModel{
     /**
     * 视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
@@ -77,7 +77,7 @@ public class VideoInfo extends AbstractModel{
     private Long VideoType;
 
     /**
-    * 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+    * 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
     */
     @SerializedName("UserId")
     @Expose
@@ -182,13 +182,13 @@ public class VideoInfo extends AbstractModel{
     /**
      * Get 视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3) 
      * @return VideoType 视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
@@ -200,13 +200,13 @@ public class VideoInfo extends AbstractModel{
     /**
      * Set 视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
      * @param VideoType 视频流类型 
 - 0：摄像头视频 
-- 1：屏幕分享视频（仅课后录制支持）
+- 1：屏幕分享视频
 - 2：白板视频 
 - 3：混流视频
 - 4：纯音频（mp3)
@@ -216,16 +216,16 @@ public class VideoInfo extends AbstractModel{
     }
 
     /**
-     * Get 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型） 
-     * @return UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+     * Get 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id） 
+     * @return UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
-     * @param UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+     * Set 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
+     * @param UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

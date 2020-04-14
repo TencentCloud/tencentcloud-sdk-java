@@ -23,49 +23,141 @@ import java.util.HashMap;
 public class ListVersionByFunctionRequest extends AbstractModel{
 
     /**
-    * 函数ID
+    * 函数名
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * 命名空间
+    * 函数所在命名空间
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get 函数ID 
-     * @return FunctionName 函数ID
+    * 数据偏移量，默认值为 0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 返回数据长度，默认值为 20
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+     * Get 函数名 
+     * @return FunctionName 函数名
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 函数ID
-     * @param FunctionName 函数ID
+     * Set 函数名
+     * @param FunctionName 函数名
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get 命名空间 
-     * @return Namespace 命名空间
+     * Get 函数所在命名空间 
+     * @return Namespace 函数所在命名空间
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间
-     * @param Namespace 命名空间
+     * Set 函数所在命名空间
+     * @param Namespace 函数所在命名空间
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
+    }
+
+    /**
+     * Get 数据偏移量，默认值为 0 
+     * @return Offset 数据偏移量，默认值为 0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 数据偏移量，默认值为 0
+     * @param Offset 数据偏移量，默认值为 0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 返回数据长度，默认值为 20 
+     * @return Limit 返回数据长度，默认值为 20
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 返回数据长度，默认值为 20
+     * @param Limit 返回数据长度，默认值为 20
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 以升序还是降序的方式返回结果，可选值 ASC 和 DESC 
+     * @return Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     * @param Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime 
+     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime
+     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
     }
 
     /**
@@ -74,6 +166,10 @@ public class ListVersionByFunctionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }
