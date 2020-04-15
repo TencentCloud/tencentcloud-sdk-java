@@ -198,6 +198,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String ClientToken;
 
     /**
+    * 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
      * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
@@ -598,6 +605,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。 
+     * @return DeviceType 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     * @param DeviceType 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -626,6 +649,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

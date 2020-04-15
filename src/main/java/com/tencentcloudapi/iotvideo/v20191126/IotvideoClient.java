@@ -675,6 +675,24 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeRegistrationStatus）用于查询终端用户的注册状态。
+     * @param req DescribeRegistrationStatusRequest
+     * @return DescribeRegistrationStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegistrationStatusResponse DescribeRegistrationStatus(DescribeRegistrationStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegistrationStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegistrationStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRegistrationStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeRunLog）用于获取设备运行日志。
      * @param req DescribeRunLogRequest
      * @return DescribeRunLogResponse

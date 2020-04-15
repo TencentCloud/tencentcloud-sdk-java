@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePullStreamConfigsResponse extends AbstractModel{
-
-    /**
-    * 拉流配置。
-    */
-    @SerializedName("PullStreamConfigs")
-    @Expose
-    private PullStreamConfig [] PullStreamConfigs;
+public class DeleteWhiteBoxKeyResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class DescribePullStreamConfigsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 拉流配置。 
-     * @return PullStreamConfigs 拉流配置。
-     */
-    public PullStreamConfig [] getPullStreamConfigs() {
-        return this.PullStreamConfigs;
-    }
-
-    /**
-     * Set 拉流配置。
-     * @param PullStreamConfigs 拉流配置。
-     */
-    public void setPullStreamConfigs(PullStreamConfig [] PullStreamConfigs) {
-        this.PullStreamConfigs = PullStreamConfigs;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class DescribePullStreamConfigsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "PullStreamConfigs.", this.PullStreamConfigs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

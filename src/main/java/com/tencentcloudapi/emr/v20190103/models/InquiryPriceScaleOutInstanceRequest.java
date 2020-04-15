@@ -25,14 +25,16 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     /**
     * 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 扩容的时长。需要结合TimeUnit一起使用。
+    * 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -48,7 +50,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     /**
     * 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
     */
     @SerializedName("PayMode")
     @Expose
@@ -93,10 +95,10 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
      * @return TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -105,26 +107,34 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     /**
      * Set 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      * @param TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 扩容的时长。需要结合TimeUnit一起使用。 
-     * @return TimeSpan 扩容的时长。需要结合TimeUnit一起使用。
+     * Get 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
+     * @return TimeSpan 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 扩容的时长。需要结合TimeUnit一起使用。
-     * @param TimeSpan 扩容的时长。需要结合TimeUnit一起使用。
+     * Set 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * @param TimeSpan 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -149,10 +159,10 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     /**
      * Get 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li> 
+<li>1：表示包年包月。</li> 
      * @return PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -161,10 +171,10 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     /**
      * Set 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
      * @param PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;

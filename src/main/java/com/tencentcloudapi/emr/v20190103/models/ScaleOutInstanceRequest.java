@@ -32,7 +32,9 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private String TimeUnit;
 
     /**
-    * 扩容的时长。需要结合TimeUnit一起使用。
+    * 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -151,16 +153,24 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 扩容的时长。需要结合TimeUnit一起使用。 
-     * @return TimeSpan 扩容的时长。需要结合TimeUnit一起使用。
+     * Get 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
+     * @return TimeSpan 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 扩容的时长。需要结合TimeUnit一起使用。
-     * @param TimeSpan 扩容的时长。需要结合TimeUnit一起使用。
+     * Set 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * @param TimeSpan 扩容的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

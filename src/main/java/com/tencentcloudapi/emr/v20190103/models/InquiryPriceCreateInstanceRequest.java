@@ -25,14 +25,16 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     /**
     * 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 购买实例的时长。需要结合TimeUnit一起使用。
+    * 购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -56,7 +58,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     /**
     * 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
     */
     @SerializedName("PayMode")
     @Expose
@@ -72,7 +74,11 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     private Long SupportHA;
 
     /**
-    * 部署的组件列表。
+    * 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
     */
     @SerializedName("Software")
     @Expose
@@ -130,10 +136,10 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     /**
      * Get 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
      * @return TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -142,26 +148,34 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     /**
      * Set 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      * @param TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 购买实例的时长。需要结合TimeUnit一起使用。 
-     * @return TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
+     * Get 购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
+     * @return TimeSpan 购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买实例的时长。需要结合TimeUnit一起使用。
-     * @param TimeSpan 购买实例的时长。需要结合TimeUnit一起使用。
+     * Set 购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * @param TimeSpan 购买实例的时长。结合TimeUnit一起使用。
+<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -206,10 +220,10 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     /**
      * Get 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li> 
+<li>1：表示包年包月。</li> 
      * @return PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -218,10 +232,10 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     /**
      * Set 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
      * @param PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+<li>1：表示包年包月。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -252,16 +266,32 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 部署的组件列表。 
-     * @return Software 部署的组件列表。
+     * Get 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li> 
+     * @return Software 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
      */
     public String [] getSoftware() {
         return this.Software;
     }
 
     /**
-     * Set 部署的组件列表。
-     * @param Software 部署的组件列表。
+     * Set 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
+     * @param Software 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;

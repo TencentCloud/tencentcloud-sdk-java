@@ -47,9 +47,7 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
     * DRM方案类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES。</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
     */
     @SerializedName("DrmType")
@@ -141,14 +139,10 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Get DRM方案类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES。</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。 
      * @return DrmType DRM方案类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES。</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public String getDrmType() {
@@ -157,14 +151,10 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Set DRM方案类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES。</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      * @param DrmType DRM方案类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES。</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public void setDrmType(String DrmType) {

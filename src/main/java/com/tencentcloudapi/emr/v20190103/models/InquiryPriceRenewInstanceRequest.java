@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquiryPriceRenewInstanceRequest extends AbstractModel{
 
     /**
-    * 实例续费的时长。需要结合TimeUnit一起使用。
+    * 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -52,7 +52,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
 
     /**
     * 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -67,16 +67,16 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
     private String Currency;
 
     /**
-     * Get 实例续费的时长。需要结合TimeUnit一起使用。 
-     * @return TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。
+     * Get 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月 
+     * @return TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 实例续费的时长。需要结合TimeUnit一起使用。
-     * @param TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。
+     * Set 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
+     * @param TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -132,9 +132,9 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
 
     /**
      * Get 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li> 
+<li>m：表示月份。</li> 
      * @return TimeUnit 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -142,9 +142,9 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
 
     /**
      * Set 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
      * @param TimeUnit 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

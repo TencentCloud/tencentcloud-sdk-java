@@ -44,7 +44,7 @@ public class DescribeDatabasesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 匹配数据库库名的正则表达式，规则同 MySQL 官网
+    * 匹配数据库库名的正则表达式。
     */
     @SerializedName("DatabaseRegexp")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeDatabasesRequest extends AbstractModel{
     }
 
     /**
-     * Get 匹配数据库库名的正则表达式，规则同 MySQL 官网 
-     * @return DatabaseRegexp 匹配数据库库名的正则表达式，规则同 MySQL 官网
+     * Get 匹配数据库库名的正则表达式。 
+     * @return DatabaseRegexp 匹配数据库库名的正则表达式。
      */
     public String getDatabaseRegexp() {
         return this.DatabaseRegexp;
     }
 
     /**
-     * Set 匹配数据库库名的正则表达式，规则同 MySQL 官网
-     * @param DatabaseRegexp 匹配数据库库名的正则表达式，规则同 MySQL 官网
+     * Set 匹配数据库库名的正则表达式。
+     * @param DatabaseRegexp 匹配数据库库名的正则表达式。
      */
     public void setDatabaseRegexp(String DatabaseRegexp) {
         this.DatabaseRegexp = DatabaseRegexp;

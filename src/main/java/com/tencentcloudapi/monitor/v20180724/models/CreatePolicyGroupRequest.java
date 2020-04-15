@@ -86,7 +86,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private CreatePolicyGroupCondition [] Conditions;
 
     /**
-    * 策略组中的时间告警规则
+    * 策略组中的事件告警规则
     */
     @SerializedName("EventConditions")
     @Expose
@@ -251,16 +251,16 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略组中的时间告警规则 
-     * @return EventConditions 策略组中的时间告警规则
+     * Get 策略组中的事件告警规则 
+     * @return EventConditions 策略组中的事件告警规则
      */
     public CreatePolicyGroupEventCondition [] getEventConditions() {
         return this.EventConditions;
     }
 
     /**
-     * Set 策略组中的时间告警规则
-     * @param EventConditions 策略组中的时间告警规则
+     * Set 策略组中的事件告警规则
+     * @param EventConditions 策略组中的事件告警规则
      */
     public void setEventConditions(CreatePolicyGroupEventCondition [] EventConditions) {
         this.EventConditions = EventConditions;

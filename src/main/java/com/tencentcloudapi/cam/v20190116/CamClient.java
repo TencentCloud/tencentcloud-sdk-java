@@ -128,6 +128,42 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *mfa校验
+     * @param req CheckRequest
+     * @return CheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckResponse Check(CheckRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "Check"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *校验新手机新邮箱接口
+     * @param req CheckNewMfaCodeRequest
+     * @return CheckNewMfaCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckNewMfaCodeResponse CheckNewMfaCode(CheckNewMfaCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckNewMfaCodeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckNewMfaCodeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CheckNewMfaCode"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *验证自定义多因子Token
      * @param req ConsumeCustomMFATokenRequest
      * @return ConsumeCustomMFATokenResponse
@@ -308,6 +344,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *查询微信code状态
+     * @param req DescribeMfaCodeStatusRequest
+     * @return DescribeMfaCodeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMfaCodeStatusResponse DescribeMfaCodeStatus(DescribeMfaCodeStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMfaCodeStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMfaCodeStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMfaCodeStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeRoleList）用于获取账号下的角色列表。
      * @param req DescribeRoleListRequest
      * @return DescribeRoleListResponse
@@ -373,6 +427,60 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetachUserPolicyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DetachUserPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *发起人脸核身
+     * @param req DetectAuthRequest
+     * @return DetectAuthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectAuthResponse DetectAuth(DetectAuthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectAuthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectAuthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectAuth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取并更新人脸核身校验状态实名传递参数比对
+     * @param req DetectMaskAuthRequest
+     * @return DetectMaskAuthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectMaskAuthResponse DetectMaskAuth(DetectMaskAuthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectMaskAuthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectMaskAuthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectMaskAuth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取并且更新人联合身状态
+     * @param req DetectStateRequest
+     * @return DetectStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectStateResponse DetectState(DetectStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectStateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectStateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectState"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

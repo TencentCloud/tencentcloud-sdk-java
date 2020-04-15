@@ -110,6 +110,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *创建白盒密钥。 密钥个数的上限为 50。
+     * @param req CreateWhiteBoxKeyRequest
+     * @return CreateWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWhiteBoxKeyResponse CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于解密密文，得到明文数据。
      * @param req DecryptRequest
      * @return DecryptResponse
@@ -146,6 +164,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *删除白盒密钥, 注意：必须先禁用后，才可以删除。
+     * @param req DeleteWhiteBoxKeyRequest
+     * @return DeleteWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取指定KeyId的主密钥属性详情信息。
      * @param req DescribeKeyRequest
      * @return DescribeKeyResponse
@@ -175,6 +211,78 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取白盒解密密钥
+     * @param req DescribeWhiteBoxDecryptKeyRequest
+     * @return DescribeWhiteBoxDecryptKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxDecryptKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *展示白盒密钥的信息
+     * @param req DescribeWhiteBoxKeyRequest
+     * @return DescribeWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取白盒密钥列表
+     * @param req DescribeWhiteBoxKeyDetailsRequest
+     * @return DescribeWhiteBoxKeyDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxKeyDetails"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取白盒密钥服务状态
+     * @param req DescribeWhiteBoxServiceStatusRequest
+     * @return DescribeWhiteBoxServiceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxServiceStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -236,6 +344,42 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *禁用白盒密钥
+     * @param req DisableWhiteBoxKeyRequest
+     * @return DisableWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableWhiteBoxKeyResponse DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量禁用白盒密钥
+     * @param req DisableWhiteBoxKeysRequest
+     * @return DisableWhiteBoxKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableWhiteBoxKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于启用一个指定的CMK。
      * @param req EnableKeyRequest
      * @return EnableKeyResponse
@@ -290,6 +434,42 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *批量启用白盒密钥
+     * @param req EnableWhiteBoxKeyRequest
+     * @return EnableWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableWhiteBoxKeyResponse EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量启用白盒密钥
+     * @param req EnableWhiteBoxKeysRequest
+     * @return EnableWhiteBoxKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableWhiteBoxKeysResponse EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableWhiteBoxKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
      * @param req EncryptRequest
      * @return EncryptResponse
@@ -301,6 +481,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EncryptResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "Encrypt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用白盒密钥进行加密
+     * @param req EncryptByWhiteBoxRequest
+     * @return EncryptByWhiteBoxResponse
+     * @throws TencentCloudSDKException
+     */
+    public EncryptByWhiteBoxResponse EncryptByWhiteBox(EncryptByWhiteBoxRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EncryptByWhiteBoxResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EncryptByWhiteBox"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePullStreamConfigsRequest extends AbstractModel{
+public class DescribeRegistrationStatusRequest extends AbstractModel{
 
     /**
-    * 配置id。
+    * 终端用户的唯一ID列表，0<元素数量<=100
     */
-    @SerializedName("ConfigId")
+    @SerializedName("CunionIds")
     @Expose
-    private String ConfigId;
+    private String [] CunionIds;
 
     /**
-     * Get 配置id。 
-     * @return ConfigId 配置id。
+     * Get 终端用户的唯一ID列表，0<元素数量<=100 
+     * @return CunionIds 终端用户的唯一ID列表，0<元素数量<=100
      */
-    public String getConfigId() {
-        return this.ConfigId;
+    public String [] getCunionIds() {
+        return this.CunionIds;
     }
 
     /**
-     * Set 配置id。
-     * @param ConfigId 配置id。
+     * Set 终端用户的唯一ID列表，0<元素数量<=100
+     * @param CunionIds 终端用户的唯一ID列表，0<元素数量<=100
      */
-    public void setConfigId(String ConfigId) {
-        this.ConfigId = ConfigId;
+    public void setCunionIds(String [] CunionIds) {
+        this.CunionIds = CunionIds;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamArraySimple(map, prefix + "CunionIds.", this.CunionIds);
 
     }
 }

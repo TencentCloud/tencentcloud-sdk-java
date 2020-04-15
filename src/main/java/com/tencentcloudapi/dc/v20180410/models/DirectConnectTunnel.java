@@ -230,6 +230,14 @@ REJECTED:拒绝
     private String VpcName;
 
     /**
+    * TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TencentBackupAddress")
+    @Expose
+    private String TencentBackupAddress;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -734,6 +742,26 @@ REJECTED:拒绝
     }
 
     /**
+     * Get TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTencentBackupAddress() {
+        return this.TencentBackupAddress;
+    }
+
+    /**
+     * Set TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTencentBackupAddress(String TencentBackupAddress) {
+        this.TencentBackupAddress = TencentBackupAddress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -764,6 +792,7 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         this.setParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
 
     }
 }

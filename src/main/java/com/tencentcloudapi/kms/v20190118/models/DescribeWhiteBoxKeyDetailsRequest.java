@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPullStreamConfigResponse extends AbstractModel{
+public class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 过滤条件：密钥的状态，0：disabled，1：enabled
     */
-    @SerializedName("RequestId")
+    @SerializedName("KeyStatus")
     @Expose
-    private String RequestId;
+    private Long KeyStatus;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 过滤条件：密钥的状态，0：disabled，1：enabled 
+     * @return KeyStatus 过滤条件：密钥的状态，0：disabled，1：enabled
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public Long getKeyStatus() {
+        return this.KeyStatus;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 过滤条件：密钥的状态，0：disabled，1：enabled
+     * @param KeyStatus 过滤条件：密钥的状态，0：disabled，1：enabled
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setKeyStatus(Long KeyStatus) {
+        this.KeyStatus = KeyStatus;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "KeyStatus", this.KeyStatus);
 
     }
 }
