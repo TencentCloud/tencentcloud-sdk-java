@@ -58,6 +58,13 @@ public class CreateGroupRequest extends AbstractModel{
     private String GroupDesc;
 
     /**
+    * 部署组资源类型
+    */
+    @SerializedName("GroupResourceType")
+    @Expose
+    private String GroupResourceType;
+
+    /**
      * Get 部署组所属的应用ID 
      * @return ApplicationId 部署组所属的应用ID
      */
@@ -138,6 +145,22 @@ public class CreateGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 部署组资源类型 
+     * @return GroupResourceType 部署组资源类型
+     */
+    public String getGroupResourceType() {
+        return this.GroupResourceType;
+    }
+
+    /**
+     * Set 部署组资源类型
+     * @param GroupResourceType 部署组资源类型
+     */
+    public void setGroupResourceType(String GroupResourceType) {
+        this.GroupResourceType = GroupResourceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "GroupDesc", this.GroupDesc);
+        this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
 
     }
 }

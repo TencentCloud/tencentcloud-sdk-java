@@ -96,7 +96,7 @@ public class DcClient extends AbstractClient{
 
     /**
      *删除物理专线。
-只能删除处于状态的物理专线。
+只能删除处于已连接状态的物理专线。
      * @param req DeleteDirectConnectRequest
      * @return DeleteDirectConnectResponse
      * @throws TencentCloudSDKException

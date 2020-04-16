@@ -65,6 +65,13 @@ public class InvokeRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
+    */
+    @SerializedName("RoutingKey")
+    @Expose
+    private String RoutingKey;
+
+    /**
      * Get 函数名称 
      * @return FunctionName 函数名称
      */
@@ -161,6 +168,22 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
+     * Get 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节 
+     * @return RoutingKey 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
+     */
+    public String getRoutingKey() {
+        return this.RoutingKey;
+    }
+
+    /**
+     * Set 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
+     * @param RoutingKey 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
+     */
+    public void setRoutingKey(String RoutingKey) {
+        this.RoutingKey = RoutingKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class InvokeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientContext", this.ClientContext);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
 
     }
 }

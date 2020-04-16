@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWordSamplesResponse extends AbstractModel{
+public class DescribePullStreamConfigsResponse extends AbstractModel{
 
     /**
-    * 符合条件的记录总数。
+    * 拉流配置。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("PullStreamConfigs")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 关键词信息。
-    */
-    @SerializedName("WordSet")
-    @Expose
-    private AiSampleWord [] WordSet;
+    private PullStreamConfig [] PullStreamConfigs;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeWordSamplesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的记录总数。 
-     * @return TotalCount 符合条件的记录总数。
+     * Get 拉流配置。 
+     * @return PullStreamConfigs 拉流配置。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public PullStreamConfig [] getPullStreamConfigs() {
+        return this.PullStreamConfigs;
     }
 
     /**
-     * Set 符合条件的记录总数。
-     * @param TotalCount 符合条件的记录总数。
+     * Set 拉流配置。
+     * @param PullStreamConfigs 拉流配置。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 关键词信息。 
-     * @return WordSet 关键词信息。
-     */
-    public AiSampleWord [] getWordSet() {
-        return this.WordSet;
-    }
-
-    /**
-     * Set 关键词信息。
-     * @param WordSet 关键词信息。
-     */
-    public void setWordSet(AiSampleWord [] WordSet) {
-        this.WordSet = WordSet;
+    public void setPullStreamConfigs(PullStreamConfig [] PullStreamConfigs) {
+        this.PullStreamConfigs = PullStreamConfigs;
     }
 
     /**
@@ -95,8 +72,7 @@ public class DescribeWordSamplesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "WordSet.", this.WordSet);
+        this.setParamArrayObj(map, prefix + "PullStreamConfigs.", this.PullStreamConfigs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

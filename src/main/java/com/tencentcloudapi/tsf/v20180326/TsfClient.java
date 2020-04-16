@@ -146,7 +146,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建容器部署组
+     *创建虚拟机部署组
      * @param req CreateGroupRequest
      * @return CreateGroupResponse
      * @throws TencentCloudSDKException

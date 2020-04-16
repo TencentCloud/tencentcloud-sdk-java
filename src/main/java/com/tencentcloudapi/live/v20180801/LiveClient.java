@@ -626,6 +626,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *删除直播拉流配置
+     * @param req DeletePullStreamConfigRequest
+     * @return DeletePullStreamConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePullStreamConfigResponse DeletePullStreamConfig(DeletePullStreamConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePullStreamConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePullStreamConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePullStreamConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播计费带宽和流量数据查询。
      * @param req DescribeBillBandwidthAndFluxListRequest
      * @return DescribeBillBandwidthAndFluxListResponse
@@ -1370,6 +1388,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *查询直播拉流配置。
+     * @param req DescribePullStreamConfigsRequest
+     * @return DescribePullStreamConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePullStreamConfigsResponse DescribePullStreamConfigs(DescribePullStreamConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePullStreamConfigsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePullStreamConfigsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePullStreamConfigs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口用来查询直播增值业务--截图的张数
      * @param req DescribeScreenShotSheetNumListRequest
      * @return DescribeScreenShotSheetNumListResponse
@@ -1706,6 +1742,42 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveTranscodeTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyLiveTranscodeTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新拉流配置。
+     * @param req ModifyPullStreamConfigRequest
+     * @return ModifyPullStreamConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPullStreamConfigResponse ModifyPullStreamConfig(ModifyPullStreamConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPullStreamConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPullStreamConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPullStreamConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改直播拉流配置的状态。
+     * @param req ModifyPullStreamStatusRequest
+     * @return ModifyPullStreamStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPullStreamStatusResponse ModifyPullStreamStatus(ModifyPullStreamStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPullStreamStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPullStreamStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPullStreamStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

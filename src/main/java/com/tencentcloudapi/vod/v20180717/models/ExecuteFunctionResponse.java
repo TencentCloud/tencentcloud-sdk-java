@@ -24,7 +24,6 @@ public class ExecuteFunctionResponse extends AbstractModel{
 
     /**
     * 处理结果打包后的字符串，具体与后台一同协调。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -38,10 +37,8 @@ public class ExecuteFunctionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 处理结果打包后的字符串，具体与后台一同协调。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理结果打包后的字符串，具体与后台一同协调。 
      * @return Result 处理结果打包后的字符串，具体与后台一同协调。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -49,9 +46,7 @@ public class ExecuteFunctionResponse extends AbstractModel{
 
     /**
      * Set 处理结果打包后的字符串，具体与后台一同协调。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 处理结果打包后的字符串，具体与后台一同协调。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;

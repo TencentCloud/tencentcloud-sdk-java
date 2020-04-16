@@ -71,6 +71,22 @@ public class GetPolicyResponse extends AbstractModel{
     private String PolicyDocument;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PresetAlias")
+    @Expose
+    private String PresetAlias;
+
+    /**
+    * 是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsServiceLinkedRolePolicy")
+    @Expose
+    private Long IsServiceLinkedRolePolicy;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -198,6 +214,46 @@ public class GetPolicyResponse extends AbstractModel{
     }
 
     /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PresetAlias 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPresetAlias() {
+        return this.PresetAlias;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PresetAlias 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPresetAlias(String PresetAlias) {
+        this.PresetAlias = PresetAlias;
+    }
+
+    /**
+     * Get 是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsServiceLinkedRolePolicy 是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsServiceLinkedRolePolicy() {
+        return this.IsServiceLinkedRolePolicy;
+    }
+
+    /**
+     * Set 是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsServiceLinkedRolePolicy 是否服务相关策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsServiceLinkedRolePolicy(Long IsServiceLinkedRolePolicy) {
+        this.IsServiceLinkedRolePolicy = IsServiceLinkedRolePolicy;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -223,6 +279,8 @@ public class GetPolicyResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+        this.setParamSimple(map, prefix + "PresetAlias", this.PresetAlias);
+        this.setParamSimple(map, prefix + "IsServiceLinkedRolePolicy", this.IsServiceLinkedRolePolicy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

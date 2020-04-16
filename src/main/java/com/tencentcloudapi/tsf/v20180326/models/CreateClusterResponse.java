@@ -29,7 +29,7 @@ false：操作失败。
     */
     @SerializedName("Result")
     @Expose
-    private Boolean Result;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,7 +46,7 @@ false：操作失败。
 true：操作成功。
 false：操作失败。
      */
-    public Boolean getResult() {
+    public String getResult() {
         return this.Result;
     }
 
@@ -58,7 +58,7 @@ false：操作失败。
 true：操作成功。
 false：操作失败。
      */
-    public void setResult(Boolean Result) {
+    public void setResult(String Result) {
         this.Result = Result;
     }
 

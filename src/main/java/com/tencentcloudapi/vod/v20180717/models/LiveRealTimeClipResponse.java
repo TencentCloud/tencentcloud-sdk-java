@@ -31,7 +31,6 @@ public class LiveRealTimeClipResponse extends AbstractModel{
 
     /**
     * 剪辑固化后的视频的媒体文件的唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -39,7 +38,6 @@ public class LiveRealTimeClipResponse extends AbstractModel{
 
     /**
     * 剪辑固化后的视频任务流 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VodTaskId")
     @Expose
@@ -77,10 +75,8 @@ public class LiveRealTimeClipResponse extends AbstractModel{
     }
 
     /**
-     * Get 剪辑固化后的视频的媒体文件的唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剪辑固化后的视频的媒体文件的唯一标识。 
      * @return FileId 剪辑固化后的视频的媒体文件的唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -88,19 +84,15 @@ public class LiveRealTimeClipResponse extends AbstractModel{
 
     /**
      * Set 剪辑固化后的视频的媒体文件的唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 剪辑固化后的视频的媒体文件的唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 剪辑固化后的视频任务流 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剪辑固化后的视频任务流 ID。 
      * @return VodTaskId 剪辑固化后的视频任务流 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVodTaskId() {
         return this.VodTaskId;
@@ -108,9 +100,7 @@ public class LiveRealTimeClipResponse extends AbstractModel{
 
     /**
      * Set 剪辑固化后的视频任务流 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VodTaskId 剪辑固化后的视频任务流 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVodTaskId(String VodTaskId) {
         this.VodTaskId = VodTaskId;

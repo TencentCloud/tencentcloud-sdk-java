@@ -58,14 +58,14 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private String Reponame;
 
     /**
-    * 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+    * 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
     */
     @SerializedName("CpuLimit")
     @Expose
     private String CpuLimit;
 
     /**
-    * 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+    * 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
     */
     @SerializedName("MemLimit")
     @Expose
@@ -79,14 +79,14 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private String JvmOpts;
 
     /**
-    * 分配的 CPU 核数，对应 K8S 的 request
+    * 业务容器分配的 CPU 核数，对应 K8S 的 request
     */
     @SerializedName("CpuRequest")
     @Expose
     private String CpuRequest;
 
     /**
-    * 分配的内存 MiB 数，对应 K8S 的 request
+    * 业务容器分配的内存 MiB 数，对应 K8S 的 request
     */
     @SerializedName("MemRequest")
     @Expose
@@ -119,6 +119,62 @@ public class DeployContainerGroupRequest extends AbstractModel{
     @SerializedName("UpdateIvl")
     @Expose
     private Long UpdateIvl;
+
+    /**
+    * agent 容器分配的 CPU 核数，对应 K8S 的 request
+    */
+    @SerializedName("AgentCpuRequest")
+    @Expose
+    private String AgentCpuRequest;
+
+    /**
+    * agent 容器最大的 CPU 核数，对应 K8S 的 limit
+    */
+    @SerializedName("AgentCpuLimit")
+    @Expose
+    private String AgentCpuLimit;
+
+    /**
+    * agent 容器分配的内存 MiB 数，对应 K8S 的 request
+    */
+    @SerializedName("AgentMemRequest")
+    @Expose
+    private String AgentMemRequest;
+
+    /**
+    * agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+    */
+    @SerializedName("AgentMemLimit")
+    @Expose
+    private String AgentMemLimit;
+
+    /**
+    * istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+    */
+    @SerializedName("IstioCpuRequest")
+    @Expose
+    private String IstioCpuRequest;
+
+    /**
+    * istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+    */
+    @SerializedName("IstioCpuLimit")
+    @Expose
+    private String IstioCpuLimit;
+
+    /**
+    * istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+    */
+    @SerializedName("IstioMemRequest")
+    @Expose
+    private String IstioMemRequest;
+
+    /**
+    * istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+    */
+    @SerializedName("IstioMemLimit")
+    @Expose
+    private String IstioMemLimit;
 
     /**
      * Get 部署组ID，分组唯一标识 
@@ -201,32 +257,32 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍 
-     * @return CpuLimit 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Get 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍 
+     * @return CpuLimit 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public String getCpuLimit() {
         return this.CpuLimit;
     }
 
     /**
-     * Set 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
-     * @param CpuLimit 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Set 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * @param CpuLimit 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public void setCpuLimit(String CpuLimit) {
         this.CpuLimit = CpuLimit;
     }
 
     /**
-     * Get 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍 
-     * @return MemLimit 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Get 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍 
+     * @return MemLimit 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public String getMemLimit() {
         return this.MemLimit;
     }
 
     /**
-     * Set 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
-     * @param MemLimit 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Set 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * @param MemLimit 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public void setMemLimit(String MemLimit) {
         this.MemLimit = MemLimit;
@@ -249,32 +305,32 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 分配的 CPU 核数，对应 K8S 的 request 
-     * @return CpuRequest 分配的 CPU 核数，对应 K8S 的 request
+     * Get 业务容器分配的 CPU 核数，对应 K8S 的 request 
+     * @return CpuRequest 业务容器分配的 CPU 核数，对应 K8S 的 request
      */
     public String getCpuRequest() {
         return this.CpuRequest;
     }
 
     /**
-     * Set 分配的 CPU 核数，对应 K8S 的 request
-     * @param CpuRequest 分配的 CPU 核数，对应 K8S 的 request
+     * Set 业务容器分配的 CPU 核数，对应 K8S 的 request
+     * @param CpuRequest 业务容器分配的 CPU 核数，对应 K8S 的 request
      */
     public void setCpuRequest(String CpuRequest) {
         this.CpuRequest = CpuRequest;
     }
 
     /**
-     * Get 分配的内存 MiB 数，对应 K8S 的 request 
-     * @return MemRequest 分配的内存 MiB 数，对应 K8S 的 request
+     * Get 业务容器分配的内存 MiB 数，对应 K8S 的 request 
+     * @return MemRequest 业务容器分配的内存 MiB 数，对应 K8S 的 request
      */
     public String getMemRequest() {
         return this.MemRequest;
     }
 
     /**
-     * Set 分配的内存 MiB 数，对应 K8S 的 request
-     * @param MemRequest 分配的内存 MiB 数，对应 K8S 的 request
+     * Set 业务容器分配的内存 MiB 数，对应 K8S 的 request
+     * @param MemRequest 业务容器分配的内存 MiB 数，对应 K8S 的 request
      */
     public void setMemRequest(String MemRequest) {
         this.MemRequest = MemRequest;
@@ -345,6 +401,134 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get agent 容器分配的 CPU 核数，对应 K8S 的 request 
+     * @return AgentCpuRequest agent 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public String getAgentCpuRequest() {
+        return this.AgentCpuRequest;
+    }
+
+    /**
+     * Set agent 容器分配的 CPU 核数，对应 K8S 的 request
+     * @param AgentCpuRequest agent 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public void setAgentCpuRequest(String AgentCpuRequest) {
+        this.AgentCpuRequest = AgentCpuRequest;
+    }
+
+    /**
+     * Get agent 容器最大的 CPU 核数，对应 K8S 的 limit 
+     * @return AgentCpuLimit agent 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public String getAgentCpuLimit() {
+        return this.AgentCpuLimit;
+    }
+
+    /**
+     * Set agent 容器最大的 CPU 核数，对应 K8S 的 limit
+     * @param AgentCpuLimit agent 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public void setAgentCpuLimit(String AgentCpuLimit) {
+        this.AgentCpuLimit = AgentCpuLimit;
+    }
+
+    /**
+     * Get agent 容器分配的内存 MiB 数，对应 K8S 的 request 
+     * @return AgentMemRequest agent 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public String getAgentMemRequest() {
+        return this.AgentMemRequest;
+    }
+
+    /**
+     * Set agent 容器分配的内存 MiB 数，对应 K8S 的 request
+     * @param AgentMemRequest agent 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public void setAgentMemRequest(String AgentMemRequest) {
+        this.AgentMemRequest = AgentMemRequest;
+    }
+
+    /**
+     * Get agent 容器最大的内存 MiB 数，对应 K8S 的 limit 
+     * @return AgentMemLimit agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public String getAgentMemLimit() {
+        return this.AgentMemLimit;
+    }
+
+    /**
+     * Set agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+     * @param AgentMemLimit agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public void setAgentMemLimit(String AgentMemLimit) {
+        this.AgentMemLimit = AgentMemLimit;
+    }
+
+    /**
+     * Get istioproxy 容器分配的 CPU 核数，对应 K8S 的 request 
+     * @return IstioCpuRequest istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public String getIstioCpuRequest() {
+        return this.IstioCpuRequest;
+    }
+
+    /**
+     * Set istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+     * @param IstioCpuRequest istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+     */
+    public void setIstioCpuRequest(String IstioCpuRequest) {
+        this.IstioCpuRequest = IstioCpuRequest;
+    }
+
+    /**
+     * Get istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit 
+     * @return IstioCpuLimit istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public String getIstioCpuLimit() {
+        return this.IstioCpuLimit;
+    }
+
+    /**
+     * Set istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+     * @param IstioCpuLimit istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+     */
+    public void setIstioCpuLimit(String IstioCpuLimit) {
+        this.IstioCpuLimit = IstioCpuLimit;
+    }
+
+    /**
+     * Get istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request 
+     * @return IstioMemRequest istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public String getIstioMemRequest() {
+        return this.IstioMemRequest;
+    }
+
+    /**
+     * Set istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+     * @param IstioMemRequest istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+     */
+    public void setIstioMemRequest(String IstioMemRequest) {
+        this.IstioMemRequest = IstioMemRequest;
+    }
+
+    /**
+     * Get istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit 
+     * @return IstioMemLimit istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public String getIstioMemLimit() {
+        return this.IstioMemLimit;
+    }
+
+    /**
+     * Set istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+     * @param IstioMemLimit istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+     */
+    public void setIstioMemLimit(String IstioMemLimit) {
+        this.IstioMemLimit = IstioMemLimit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +546,14 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RepoName", this.RepoName);
         this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
         this.setParamSimple(map, prefix + "UpdateIvl", this.UpdateIvl);
+        this.setParamSimple(map, prefix + "AgentCpuRequest", this.AgentCpuRequest);
+        this.setParamSimple(map, prefix + "AgentCpuLimit", this.AgentCpuLimit);
+        this.setParamSimple(map, prefix + "AgentMemRequest", this.AgentMemRequest);
+        this.setParamSimple(map, prefix + "AgentMemLimit", this.AgentMemLimit);
+        this.setParamSimple(map, prefix + "IstioCpuRequest", this.IstioCpuRequest);
+        this.setParamSimple(map, prefix + "IstioCpuLimit", this.IstioCpuLimit);
+        this.setParamSimple(map, prefix + "IstioMemRequest", this.IstioMemRequest);
+        this.setParamSimple(map, prefix + "IstioMemLimit", this.IstioMemLimit);
 
     }
 }

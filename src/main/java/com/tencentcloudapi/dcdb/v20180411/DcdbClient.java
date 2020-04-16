@@ -419,6 +419,24 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeProjects）用于查询项目列表
+     * @param req DescribeProjectsRequest
+     * @return DescribeProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProjects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询可创建的分布式数据库可售卖的分片规格配置。
      * @param req DescribeShardSpecRequest
      * @return DescribeShardSpecResponse

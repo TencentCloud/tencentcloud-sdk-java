@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWordSamplesResponse extends AbstractModel{
+public class ListCollaboratorsResponse extends AbstractModel{
 
     /**
-    * 符合条件的记录总数。
+    * 总数
     */
-    @SerializedName("TotalCount")
+    @SerializedName("TotalNum")
     @Expose
-    private Long TotalCount;
+    private Long TotalNum;
 
     /**
-    * 关键词信息。
+    * 协作者信息
     */
-    @SerializedName("WordSet")
+    @SerializedName("Data")
     @Expose
-    private AiSampleWord [] WordSet;
+    private SubAccountInfo [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeWordSamplesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的记录总数。 
-     * @return TotalCount 符合条件的记录总数。
+     * Get 总数 
+     * @return TotalNum 总数
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getTotalNum() {
+        return this.TotalNum;
     }
 
     /**
-     * Set 符合条件的记录总数。
-     * @param TotalCount 符合条件的记录总数。
+     * Set 总数
+     * @param TotalNum 总数
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setTotalNum(Long TotalNum) {
+        this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 关键词信息。 
-     * @return WordSet 关键词信息。
+     * Get 协作者信息 
+     * @return Data 协作者信息
      */
-    public AiSampleWord [] getWordSet() {
-        return this.WordSet;
+    public SubAccountInfo [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 关键词信息。
-     * @param WordSet 关键词信息。
+     * Set 协作者信息
+     * @param Data 协作者信息
      */
-    public void setWordSet(AiSampleWord [] WordSet) {
-        this.WordSet = WordSet;
+    public void setData(SubAccountInfo [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -95,8 +95,8 @@ public class DescribeWordSamplesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "WordSet.", this.WordSet);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

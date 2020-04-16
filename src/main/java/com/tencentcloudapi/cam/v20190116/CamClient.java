@@ -650,6 +650,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取协作者列表
+     * @param req ListCollaboratorsRequest
+     * @return ListCollaboratorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCollaboratorsResponse ListCollaborators(ListCollaboratorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListCollaboratorsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListCollaboratorsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListCollaborators"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ListEntitiesForPolicy）可用于查询策略关联的实体列表。
      * @param req ListEntitiesForPolicyRequest
      * @return ListEntitiesForPolicyResponse
@@ -841,6 +859,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdateGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。
+     * @param req UpdateRoleConsoleLoginRequest
+     * @return UpdateRoleConsoleLoginResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(UpdateRoleConsoleLoginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateRoleConsoleLoginResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateRoleConsoleLogin"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
