@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralEfficientOCRResponse extends AbstractModel{
-
-    /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
-    */
-    @SerializedName("TextDetections")
-    @Expose
-    private TextDetection [] TextDetections;
-
-    /**
-    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-    */
-    @SerializedName("Angel")
-    @Expose
-    private Float Angel;
+public class ModifyVpnGatewayCcnRoutesResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class GeneralEfficientOCRResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 检测到的文本信息，具体内容请点击左侧链接。 
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
-     */
-    public TextDetection [] getTextDetections() {
-        return this.TextDetections;
-    }
-
-    /**
-     * Set 检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
-     */
-    public void setTextDetections(TextDetection [] TextDetections) {
-        this.TextDetections = TextDetections;
-    }
-
-    /**
-     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负 
-     * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     */
-    public Float getAngel() {
-        return this.Angel;
-    }
-
-    /**
-     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     */
-    public void setAngel(Float Angel) {
-        this.Angel = Angel;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class GeneralEfficientOCRResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-        this.setParamSimple(map, prefix + "Angel", this.Angel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

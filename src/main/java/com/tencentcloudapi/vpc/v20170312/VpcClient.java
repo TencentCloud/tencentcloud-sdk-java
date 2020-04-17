@@ -3492,6 +3492,24 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由
+     * @param req ModifyVpnGatewayCcnRoutesRequest
+     * @return ModifyVpnGatewayCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpnGatewayCcnRoutesResponse ModifyVpnGatewayCcnRoutes(ModifyVpnGatewayCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyVpnGatewayCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RejectAttachCcnInstances）用于跨账号关联实例时，云联网所有者拒绝关联操作。
 
      * @param req RejectAttachCcnInstancesRequest

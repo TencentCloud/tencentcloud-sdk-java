@@ -13,28 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralEfficientOCRResponse extends AbstractModel{
+public class DescribeMFADeviceCollResponse extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
+    * Token状态
     */
-    @SerializedName("TextDetections")
+    @SerializedName("Status")
     @Expose
-    private TextDetection [] TextDetections;
+    private Long Status;
 
     /**
-    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+    * Token值
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Angel")
+    @SerializedName("TokenSn")
     @Expose
-    private Float Angel;
+    private String TokenSn;
+
+    /**
+    * token类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TokenType")
+    @Expose
+    private Long TokenType;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +53,59 @@ public class GeneralEfficientOCRResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 检测到的文本信息，具体内容请点击左侧链接。 
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * Get Token状态 
+     * @return Status Token状态
      */
-    public TextDetection [] getTextDetections() {
-        return this.TextDetections;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * Set Token状态
+     * @param Status Token状态
      */
-    public void setTextDetections(TextDetection [] TextDetections) {
-        this.TextDetections = TextDetections;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负 
-     * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * Get Token值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TokenSn Token值
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Float getAngel() {
-        return this.Angel;
+    public String getTokenSn() {
+        return this.TokenSn;
     }
 
     /**
-     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * Set Token值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TokenSn Token值
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAngel(Float Angel) {
-        this.Angel = Angel;
+    public void setTokenSn(String TokenSn) {
+        this.TokenSn = TokenSn;
+    }
+
+    /**
+     * Get token类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TokenType token类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTokenType() {
+        return this.TokenType;
+    }
+
+    /**
+     * Set token类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TokenType token类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTokenType(Long TokenType) {
+        this.TokenType = TokenType;
     }
 
     /**
@@ -95,8 +128,9 @@ public class GeneralEfficientOCRResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-        this.setParamSimple(map, prefix + "Angel", this.Angel);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TokenSn", this.TokenSn);
+        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

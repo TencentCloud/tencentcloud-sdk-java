@@ -65,6 +65,13 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * VPN网关类型。值“CCN”云联网类型VPN网关
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
@@ -161,6 +168,22 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     }
 
     /**
+     * Get VPN网关类型。值“CCN”云联网类型VPN网关 
+     * @return Type VPN网关类型。值“CCN”云联网类型VPN网关
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set VPN网关类型。值“CCN”云联网类型VPN网关
+     * @param Type VPN网关类型。值“CCN”云联网类型VPN网关
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateVpnGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

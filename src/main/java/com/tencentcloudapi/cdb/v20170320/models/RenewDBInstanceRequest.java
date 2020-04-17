@@ -37,6 +37,13 @@ public class RenewDBInstanceRequest extends AbstractModel{
     private Long TimeSpan;
 
     /**
+    * 如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。
+    */
+    @SerializedName("ModifyPayType")
+    @Expose
+    private String ModifyPayType;
+
+    /**
      * Get 待续费的实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。 
      * @return InstanceId 待续费的实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
      */
@@ -69,11 +76,28 @@ public class RenewDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。 
+     * @return ModifyPayType 如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。
+     */
+    public String getModifyPayType() {
+        return this.ModifyPayType;
+    }
+
+    /**
+     * Set 如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。
+     * @param ModifyPayType 如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。
+     */
+    public void setModifyPayType(String ModifyPayType) {
+        this.ModifyPayType = ModifyPayType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "ModifyPayType", this.ModifyPayType);
 
     }
 }

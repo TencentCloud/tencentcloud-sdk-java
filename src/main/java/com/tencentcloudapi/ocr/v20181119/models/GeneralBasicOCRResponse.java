@@ -37,6 +37,13 @@ public class GeneralBasicOCRResponse extends AbstractModel{
     private String Language;
 
     /**
+    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+    */
+    @SerializedName("Angel")
+    @Expose
+    private Float Angel;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class GeneralBasicOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负 
+     * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     */
+    public Float getAngel() {
+        return this.Angel;
+    }
+
+    /**
+     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     */
+    public void setAngel(Float Angel) {
+        this.Angel = Angel;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +120,7 @@ public class GeneralBasicOCRResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
         this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamSimple(map, prefix + "Angel", this.Angel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

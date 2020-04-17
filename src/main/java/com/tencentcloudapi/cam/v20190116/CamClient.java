@@ -344,6 +344,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *查询mfa设备
+     * @param req DescribeMFADeviceCollRequest
+     * @return DescribeMFADeviceCollResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMFADeviceCollResponse DescribeMFADeviceColl(DescribeMFADeviceCollRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMFADeviceCollResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMFADeviceCollResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMFADeviceColl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询微信code状态
      * @param req DescribeMfaCodeStatusRequest
      * @return DescribeMfaCodeStatusResponse

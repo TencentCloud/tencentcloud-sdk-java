@@ -130,6 +130,13 @@ STATIC：静态
     private String CustomerAddress;
 
     /**
+    * TencentBackupAddress，腾讯侧备用互联 IP
+    */
+    @SerializedName("TencentBackupAddress")
+    @Expose
+    private String TencentBackupAddress;
+
+    /**
      * Get 专线 ID，例如：dc-kd7d06of 
      * @return DirectConnectId 专线 ID，例如：dc-kd7d06of
      */
@@ -390,6 +397,22 @@ STATIC：静态
     }
 
     /**
+     * Get TencentBackupAddress，腾讯侧备用互联 IP 
+     * @return TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
+     */
+    public String getTencentBackupAddress() {
+        return this.TencentBackupAddress;
+    }
+
+    /**
+     * Set TencentBackupAddress，腾讯侧备用互联 IP
+     * @param TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
+     */
+    public void setTencentBackupAddress(String TencentBackupAddress) {
+        this.TencentBackupAddress = TencentBackupAddress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -407,6 +430,7 @@ STATIC：静态
         this.setParamSimple(map, prefix + "Vlan", this.Vlan);
         this.setParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
+        this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
 
     }
 }
