@@ -52,7 +52,6 @@ public class MediaClassInfo extends AbstractModel{
 
     /**
     * 当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubClassIdSet")
     @Expose
@@ -123,10 +122,8 @@ public class MediaClassInfo extends AbstractModel{
     }
 
     /**
-     * Get 当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前分类的第一级子类 ID 集合 
      * @return SubClassIdSet 当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSubClassIdSet() {
         return this.SubClassIdSet;
@@ -134,9 +131,7 @@ public class MediaClassInfo extends AbstractModel{
 
     /**
      * Set 当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubClassIdSet 当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubClassIdSet(Long [] SubClassIdSet) {
         this.SubClassIdSet = SubClassIdSet;

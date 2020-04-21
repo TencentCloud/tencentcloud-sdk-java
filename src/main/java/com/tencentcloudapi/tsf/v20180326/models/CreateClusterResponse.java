@@ -23,9 +23,7 @@ import java.util.HashMap;
 public class CreateClusterResponse extends AbstractModel{
 
     /**
-    * 创建集群操作是否成功。
-true：操作成功。
-false：操作失败。
+    * 集群ID
     */
     @SerializedName("Result")
     @Expose
@@ -39,24 +37,16 @@ false：操作失败。
     private String RequestId;
 
     /**
-     * Get 创建集群操作是否成功。
-true：操作成功。
-false：操作失败。 
-     * @return Result 创建集群操作是否成功。
-true：操作成功。
-false：操作失败。
+     * Get 集群ID 
+     * @return Result 集群ID
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 创建集群操作是否成功。
-true：操作成功。
-false：操作失败。
-     * @param Result 创建集群操作是否成功。
-true：操作成功。
-false：操作失败。
+     * Set 集群ID
+     * @param Result 集群ID
      */
     public void setResult(String Result) {
         this.Result = Result;

@@ -34,7 +34,6 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -42,7 +41,6 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
 
     /**
     * 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -83,13 +81,11 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
      * Get 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
-<li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>70000：内部服务错误，建议重试。</li> 
      * @return ErrCode 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -100,22 +96,18 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息。 
      * @return Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -123,9 +115,7 @@ public class AiReviewTaskPornOcrResult extends AbstractModel{
 
     /**
      * Set 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

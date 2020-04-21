@@ -35,7 +35,6 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -47,7 +46,6 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -55,7 +53,6 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 
     /**
     * 有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -85,13 +82,11 @@ public class AiReviewPornTaskOutput extends AbstractModel{
      * Get 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>block。</li> 
      * @return Suggestion 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -102,12 +97,10 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -118,14 +111,12 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
-<li>intimacy：亲密行为。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>intimacy：亲密行为。</li> 
      * @return Label 视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -137,23 +128,19 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有涉黄嫌疑的视频片段列表。 
      * @return SegmentSet 有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -161,9 +148,7 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 
     /**
      * Set 有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet 有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

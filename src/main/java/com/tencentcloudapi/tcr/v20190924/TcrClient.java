@@ -236,6 +236,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建触发器
+     * @param req CreateWebhookTriggerRequest
+     * @return CreateWebhookTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWebhookTriggerResponse CreateWebhookTrigger(CreateWebhookTriggerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWebhookTriggerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWebhookTriggerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateWebhookTrigger"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于删除应用更新触发器
      * @param req DeleteApplicationTriggerPersonalRequest
      * @return DeleteApplicationTriggerPersonalResponse
@@ -398,6 +416,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除触发器
+     * @param req DeleteWebhookTriggerRequest
+     * @return DeleteWebhookTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWebhookTriggerResponse DeleteWebhookTrigger(DeleteWebhookTriggerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWebhookTriggerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWebhookTriggerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWebhookTrigger"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询应用更新触发器触发日志
      * @param req DescribeApplicationTriggerLogPersonalRequest
      * @return DescribeApplicationTriggerLogPersonalResponse
@@ -499,6 +535,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeImageLifecyclePersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageLifecyclePersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询容器镜像Manifest信息
+     * @param req DescribeImageManifestsRequest
+     * @return DescribeImageManifestsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageManifestsResponse DescribeImageManifests(DescribeImageManifestsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageManifestsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageManifestsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageManifests"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -722,6 +776,42 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询触发器
+     * @param req DescribeWebhookTriggerRequest
+     * @return DescribeWebhookTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebhookTriggerResponse DescribeWebhookTrigger(DescribeWebhookTriggerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebhookTriggerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebhookTriggerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWebhookTrigger"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取触发器日志
+     * @param req DescribeWebhookTriggerLogRequest
+     * @return DescribeWebhookTriggerLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebhookTriggerLogResponse DescribeWebhookTriggerLog(DescribeWebhookTriggerLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWebhookTriggerLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWebhookTriggerLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWebhookTriggerLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在个人版镜像仓库中复制镜像版本
      * @param req DuplicateImagePersonalRequest
      * @return DuplicateImagePersonalResponse
@@ -877,6 +967,24 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyUserPasswordPersonalResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyUserPasswordPersonal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新触发器
+     * @param req ModifyWebhookTriggerRequest
+     * @return ModifyWebhookTriggerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebhookTriggerResponse ModifyWebhookTrigger(ModifyWebhookTriggerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWebhookTriggerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWebhookTriggerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyWebhookTrigger"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

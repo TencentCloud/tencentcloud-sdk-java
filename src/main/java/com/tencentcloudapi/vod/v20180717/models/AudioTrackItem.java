@@ -45,7 +45,6 @@ public class AudioTrackItem extends AbstractModel{
 
     /**
     * 对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioOperations")
     @Expose
@@ -100,10 +99,8 @@ public class AudioTrackItem extends AbstractModel{
     }
 
     /**
-     * Get 对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对音频片段进行的操作，如音量调节等。 
      * @return AudioOperations 对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioTransform [] getAudioOperations() {
         return this.AudioOperations;
@@ -111,9 +108,7 @@ public class AudioTrackItem extends AbstractModel{
 
     /**
      * Set 对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioOperations 对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioOperations(AudioTransform [] AudioOperations) {
         this.AudioOperations = AudioOperations;

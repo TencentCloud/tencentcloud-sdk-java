@@ -38,6 +38,84 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *申请一个或多个弹性公网IP（简称 EIP）
+     * @param req AllocateAddressesRequest
+     * @return AllocateAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateAddressesResponse AllocateAddresses(AllocateAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AllocateAddressesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AllocateAddressesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AllocateAddresses"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *弹性网卡申请内网 IP
+     * @param req AssignPrivateIpAddressesRequest
+     * @return AssignPrivateIpAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignPrivateIpAddressesResponse AssignPrivateIpAddresses(AssignPrivateIpAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignPrivateIpAddressesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignPrivateIpAddressesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssignPrivateIpAddresses"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将弹性公网IP（简称 EIP）绑定到实例或弹性网卡的指定内网 IP 上。
+将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
+将 EIP 绑定到主网卡的主内网IP上，绑定过程会把其上绑定的普通公网 IP 自动解绑并释放。
+将 EIP 绑定到指定网卡的内网 IP上（非主网卡的主内网IP），则必须先解绑该 EIP，才能再绑定新的。
+将 EIP 绑定到NAT网关，请使用接口EipBindNatGateway
+EIP 如果欠费或被封堵，则不能被绑定。
+只有状态为 UNBIND 的 EIP 才能够被绑定。
+     * @param req AssociateAddressRequest
+     * @return AssociateAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateAddressResponse AssociateAddress(AssociateAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateAddressResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateAddressResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *弹性网卡绑定云主机
+     * @param req AttachNetworkInterfaceRequest
+     * @return AttachNetworkInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachNetworkInterfaceResponse AttachNetworkInterface(AttachNetworkInterfaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachNetworkInterfaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachNetworkInterfaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AttachNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建模块
      * @param req CreateModuleRequest
      * @return CreateModuleResponse
@@ -49,6 +127,60 @@ public class EcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateModuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateModule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建弹性网卡
+     * @param req CreateNetworkInterfaceRequest
+     * @return CreateNetworkInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkInterfaceResponse CreateNetworkInterface(CreateNetworkInterfaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetworkInterfaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetworkInterfaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建子网
+     * @param req CreateSubnetRequest
+     * @return CreateSubnetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubnetResponse CreateSubnet(CreateSubnetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSubnetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSubnetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSubnet"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建私有网络
+     * @param req CreateVpcRequest
+     * @return CreateVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcResponse CreateVpc(CreateVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateVpc"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -85,6 +217,96 @@ public class EcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteModuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteModule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除弹性网卡
+     * @param req DeleteNetworkInterfaceRequest
+     * @return DeleteNetworkInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkInterfaceResponse DeleteNetworkInterface(DeleteNetworkInterfaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNetworkInterfaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNetworkInterfaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除子网
+     * @param req DeleteSubnetRequest
+     * @return DeleteSubnetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSubnetResponse DeleteSubnet(DeleteSubnetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSubnetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSubnetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSubnet"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除私有网络
+     * @param req DeleteVpcRequest
+     * @return DeleteVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcResponse DeleteVpc(DeleteVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteVpc"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询您账户的弹性公网IP（简称 EIP）在当前地域的配额信息
+     * @param req DescribeAddressQuotaRequest
+     * @return DescribeAddressQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddressQuotaResponse DescribeAddressQuota(DescribeAddressQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddressQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddressQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAddressQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询弹性公网IP列表
+     * @param req DescribeAddressesRequest
+     * @return DescribeAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddressesResponse DescribeAddresses(DescribeAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddressesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddressesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAddresses"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -236,6 +458,24 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *查询弹性网卡列表
+     * @param req DescribeNetworkInterfacesRequest
+     * @return DescribeNetworkInterfacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkInterfacesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkInterfacesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkInterfaces"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取节点列表
      * @param req DescribeNodeRequest
      * @return DescribeNodeResponse
@@ -290,6 +530,80 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *查询子网列表
+     * @param req DescribeSubnetsRequest
+     * @return DescribeSubnetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubnetsResponse DescribeSubnets(DescribeSubnetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubnetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubnetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubnets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询EIP异步任务执行结果
+     * @param req DescribeTaskResultRequest
+     * @return DescribeTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResultResponse DescribeTaskResult(DescribeTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskResultResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskResultResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskResult"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *弹性网卡解绑云主机
+     * @param req DetachNetworkInterfaceRequest
+     * @return DetachNetworkInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachNetworkInterfaceResponse DetachNetworkInterface(DetachNetworkInterfaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachNetworkInterfaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachNetworkInterfaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetachNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑弹性公网IP（简称 EIP）
+只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
+EIP 如果被封堵，则不能进行解绑定操作。
+     * @param req DisassociateAddressRequest
+     * @return DisassociateAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateAddressResponse DisassociateAddress(DisassociateAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateAddressResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateAddressResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *从CVM产品导入镜像到ECM
      * @param req ImportImageRequest
      * @return ImportImageResponse
@@ -301,6 +615,81 @@ public class EcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImportImageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImportImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *弹性网卡迁移
+     * @param req MigrateNetworkInterfaceRequest
+     * @return MigrateNetworkInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public MigrateNetworkInterfaceResponse MigrateNetworkInterface(MigrateNetworkInterfaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MigrateNetworkInterfaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MigrateNetworkInterfaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MigrateNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *弹性网卡内网IP迁移。
+该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
+迁移前后的弹性网卡必须在同一个子网内。
+     * @param req MigratePrivateIpAddressRequest
+     * @return MigratePrivateIpAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public MigratePrivateIpAddressResponse MigratePrivateIpAddress(MigratePrivateIpAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MigratePrivateIpAddressResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MigratePrivateIpAddressResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MigratePrivateIpAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改弹性公网IP属性
+     * @param req ModifyAddressAttributeRequest
+     * @return ModifyAddressAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressAttributeResponse ModifyAddressAttribute(ModifyAddressAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAddressAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAddressAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAddressAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *调整弹性公网IP带宽
+
+     * @param req ModifyAddressesBandwidthRequest
+     * @return ModifyAddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressesBandwidthResponse ModifyAddressesBandwidth(ModifyAddressesBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAddressesBandwidthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAddressesBandwidthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAddressesBandwidth"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -380,6 +769,42 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *修改子网属性
+     * @param req ModifySubnetAttributeRequest
+     * @return ModifySubnetAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubnetAttributeResponse ModifySubnetAttribute(ModifySubnetAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubnetAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubnetAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubnetAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改私有网络（VPC）的相关属性
+     * @param req ModifyVpcAttributeRequest
+     * @return ModifyVpcAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcAttributeResponse ModifyVpcAttribute(ModifyVpcAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyVpcAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *只有状态为RUNNING的实例才可以进行此操作；接口调用成功时，实例会进入REBOOTING状态；重启实例成功时，实例会进入RUNNING状态；支持强制重启，强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
      * @param req RebootInstancesRequest
      * @return RebootInstancesResponse
@@ -391,6 +816,45 @@ public class EcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RebootInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RebootInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *释放一个或多个弹性公网IP（简称 EIP）。
+该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
+只有状态为 UNBIND 的 EIP 才能进行释放操作。
+     * @param req ReleaseAddressesRequest
+     * @return ReleaseAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseAddressesResponse ReleaseAddresses(ReleaseAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseAddressesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseAddressesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReleaseAddresses"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *弹性网卡退还内网 IP。
+退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
+     * @param req RemovePrivateIpAddressesRequest
+     * @return RemovePrivateIpAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemovePrivateIpAddressesResponse RemovePrivateIpAddresses(RemovePrivateIpAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemovePrivateIpAddressesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemovePrivateIpAddressesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RemovePrivateIpAddresses"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -427,6 +891,24 @@ public class EcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesMaxBandwidthResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ResetInstancesMaxBandwidth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建ECM实例
+     * @param req RunInstancesRequest
+     * @return RunInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunInstancesResponse RunInstances(RunInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RunInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RunInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RunInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

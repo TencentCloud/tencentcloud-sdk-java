@@ -102,6 +102,13 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     private Float FaceMatchThreshold;
 
     /**
+    * 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+    */
+    @SerializedName("NeedRotateDetection")
+    @Expose
+    private Long NeedRotateDetection;
+
+    /**
      * Get 希望搜索的人员库列表，上限100个。 
      * @return GroupIds 希望搜索的人员库列表，上限100个。
      */
@@ -310,6 +317,22 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
+     * Get 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。 
+     * @return NeedRotateDetection 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+     */
+    public Long getNeedRotateDetection() {
+        return this.NeedRotateDetection;
+    }
+
+    /**
+     * Set 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+     * @param NeedRotateDetection 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+     */
+    public void setNeedRotateDetection(Long NeedRotateDetection) {
+        this.NeedRotateDetection = NeedRotateDetection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -322,6 +345,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
         this.setParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
         this.setParamSimple(map, prefix + "QualityControl", this.QualityControl);
         this.setParamSimple(map, prefix + "FaceMatchThreshold", this.FaceMatchThreshold);
+        this.setParamSimple(map, prefix + "NeedRotateDetection", this.NeedRotateDetection);
 
     }
 }

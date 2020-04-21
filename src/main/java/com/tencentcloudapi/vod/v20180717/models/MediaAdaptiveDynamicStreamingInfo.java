@@ -24,17 +24,14 @@ public class MediaAdaptiveDynamicStreamingInfo extends AbstractModel{
 
     /**
     * 转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdaptiveDynamicStreamingSet")
     @Expose
     private AdaptiveDynamicStreamingInfoItem [] AdaptiveDynamicStreamingSet;
 
     /**
-     * Get 转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转自适应码流信息数组。 
      * @return AdaptiveDynamicStreamingSet 转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdaptiveDynamicStreamingInfoItem [] getAdaptiveDynamicStreamingSet() {
         return this.AdaptiveDynamicStreamingSet;
@@ -42,9 +39,7 @@ public class MediaAdaptiveDynamicStreamingInfo extends AbstractModel{
 
     /**
      * Set 转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdaptiveDynamicStreamingSet 转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdaptiveDynamicStreamingSet(AdaptiveDynamicStreamingInfoItem [] AdaptiveDynamicStreamingSet) {
         this.AdaptiveDynamicStreamingSet = AdaptiveDynamicStreamingSet;

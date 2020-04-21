@@ -116,6 +116,13 @@ public class Activity extends AbstractModel{
     private String StatusMessageSimplified;
 
     /**
+    * 伸缩活动中生命周期挂钩的执行结果。
+    */
+    @SerializedName("LifecycleActionResultSet")
+    @Expose
+    private LifecycleActionResultInfo [] LifecycleActionResultSet;
+
+    /**
      * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
@@ -344,6 +351,22 @@ public class Activity extends AbstractModel{
     }
 
     /**
+     * Get 伸缩活动中生命周期挂钩的执行结果。 
+     * @return LifecycleActionResultSet 伸缩活动中生命周期挂钩的执行结果。
+     */
+    public LifecycleActionResultInfo [] getLifecycleActionResultSet() {
+        return this.LifecycleActionResultSet;
+    }
+
+    /**
+     * Set 伸缩活动中生命周期挂钩的执行结果。
+     * @param LifecycleActionResultSet 伸缩活动中生命周期挂钩的执行结果。
+     */
+    public void setLifecycleActionResultSet(LifecycleActionResultInfo [] LifecycleActionResultSet) {
+        this.LifecycleActionResultSet = LifecycleActionResultSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -359,6 +382,7 @@ public class Activity extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "ActivityRelatedInstanceSet.", this.ActivityRelatedInstanceSet);
         this.setParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
+        this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
 
     }
 }

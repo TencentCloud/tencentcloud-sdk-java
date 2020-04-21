@@ -40,7 +40,6 @@ public class WatermarkTemplate extends AbstractModel{
 
     /**
     * 水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -161,10 +160,8 @@ public class WatermarkTemplate extends AbstractModel{
     }
 
     /**
-     * Get 水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印模板名称。 
      * @return Name 水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -172,9 +169,7 @@ public class WatermarkTemplate extends AbstractModel{
 
     /**
      * Set 水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

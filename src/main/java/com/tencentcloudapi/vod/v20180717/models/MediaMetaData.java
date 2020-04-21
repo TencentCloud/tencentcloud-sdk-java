@@ -73,7 +73,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoStreamSet")
     @Expose
@@ -81,7 +80,6 @@ public class MediaMetaData extends AbstractModel{
 
     /**
     * 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioStreamSet")
     @Expose
@@ -214,10 +212,8 @@ public class MediaMetaData extends AbstractModel{
     }
 
     /**
-     * Get 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频流信息。 
      * @return VideoStreamSet 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
@@ -225,19 +221,15 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoStreamSet 视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
     }
 
     /**
-     * Get 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音频流信息。 
      * @return AudioStreamSet 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
@@ -245,9 +237,7 @@ public class MediaMetaData extends AbstractModel{
 
     /**
      * Set 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioStreamSet 音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;

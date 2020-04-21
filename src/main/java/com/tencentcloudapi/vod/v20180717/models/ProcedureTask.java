@@ -89,7 +89,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
@@ -97,7 +96,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
@@ -105,7 +103,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
@@ -113,7 +110,6 @@ public class ProcedureTask extends AbstractModel{
 
     /**
     * 视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiRecognitionResultSet")
     @Expose
@@ -315,10 +311,8 @@ public class ProcedureTask extends AbstractModel{
     }
 
     /**
-     * Get 视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频处理任务的执行状态与结果。 
      * @return MediaProcessResultSet 视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
@@ -326,19 +320,15 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessResultSet 视频处理任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get 视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容审核任务的执行状态与结果。 
      * @return AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
@@ -346,19 +336,15 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
     }
 
     /**
-     * Get 视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容分析任务的执行状态与结果。 
      * @return AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
@@ -366,19 +352,15 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;
     }
 
     /**
-     * Get 视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频内容识别任务的执行状态与结果。 
      * @return AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
         return this.AiRecognitionResultSet;
@@ -386,9 +368,7 @@ public class ProcedureTask extends AbstractModel{
 
     /**
      * Set 视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
         this.AiRecognitionResultSet = AiRecognitionResultSet;

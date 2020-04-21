@@ -38,7 +38,6 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
 
     /**
     * 小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -55,7 +54,6 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
 
     /**
     * 小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReviewSummary")
     @Expose
@@ -94,10 +92,8 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
     }
 
     /**
-     * Get 小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序审核视频播放地址。 
      * @return Url 小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -105,9 +101,7 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
 
     /**
      * Set 小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -138,10 +132,8 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
     }
 
     /**
-     * Get 小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序审核元素。 
      * @return ReviewSummary 小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMiniProgramReviewElem [] getReviewSummary() {
         return this.ReviewSummary;
@@ -149,9 +141,7 @@ public class MediaMiniProgramReviewInfoItem extends AbstractModel{
 
     /**
      * Set 小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReviewSummary 小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReviewSummary(MediaMiniProgramReviewElem [] ReviewSummary) {
         this.ReviewSummary = ReviewSummary;

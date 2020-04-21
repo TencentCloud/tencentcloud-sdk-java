@@ -31,7 +31,6 @@ public class MediaSnapshotByTimeOffsetItem extends AbstractModel{
 
     /**
     * 同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PicInfoSet")
     @Expose
@@ -54,10 +53,8 @@ public class MediaSnapshotByTimeOffsetItem extends AbstractModel{
     }
 
     /**
-     * Get 同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同一规格的截图信息集合，每个元素代表一张截图。 
      * @return PicInfoSet 同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSnapshotByTimePicInfoItem [] getPicInfoSet() {
         return this.PicInfoSet;
@@ -65,9 +62,7 @@ public class MediaSnapshotByTimeOffsetItem extends AbstractModel{
 
     /**
      * Set 同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PicInfoSet 同一规格的截图信息集合，每个元素代表一张截图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPicInfoSet(MediaSnapshotByTimePicInfoItem [] PicInfoSet) {
         this.PicInfoSet = PicInfoSet;

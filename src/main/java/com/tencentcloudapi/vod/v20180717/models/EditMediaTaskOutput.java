@@ -24,7 +24,6 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
     * 文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
     @Expose
@@ -32,7 +31,6 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
     * 媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUrl")
     @Expose
@@ -40,7 +38,6 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
     * 媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -48,7 +45,6 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
     * 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaName")
     @Expose
@@ -57,7 +53,6 @@ public class EditMediaTaskOutput extends AbstractModel{
     /**
     * 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClassId")
     @Expose
@@ -65,17 +60,14 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
     * 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get 文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件类型，例如 mp4、flv 等。 
      * @return FileType 文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
         return this.FileType;
@@ -83,19 +75,15 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
      * Set 文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体文件播放地址。 
      * @return FileUrl 媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileUrl() {
         return this.FileUrl;
@@ -103,19 +91,15 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
      * Set 媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体文件 ID。 
      * @return FileId 媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -123,19 +107,15 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
      * Set 媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。 
      * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMediaName() {
         return this.MediaName;
@@ -143,9 +123,7 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
      * Set 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
@@ -153,11 +131,9 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
      * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>默认值：0，表示其他分类。</li> 
      * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClassId() {
         return this.ClassId;
@@ -166,20 +142,16 @@ public class EditMediaTaskOutput extends AbstractModel{
     /**
      * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -187,9 +159,7 @@ public class EditMediaTaskOutput extends AbstractModel{
 
     /**
      * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

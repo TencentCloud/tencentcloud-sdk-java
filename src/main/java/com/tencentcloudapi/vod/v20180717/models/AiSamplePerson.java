@@ -38,7 +38,6 @@ public class AiSamplePerson extends AbstractModel{
 
     /**
     * 人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -53,7 +52,6 @@ public class AiSamplePerson extends AbstractModel{
 
     /**
     * 人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -113,10 +111,8 @@ public class AiSamplePerson extends AbstractModel{
     }
 
     /**
-     * Get 人物描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物描述。 
      * @return Description 人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -124,9 +120,7 @@ public class AiSamplePerson extends AbstractModel{
 
     /**
      * Set 人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -149,10 +143,8 @@ public class AiSamplePerson extends AbstractModel{
     }
 
     /**
-     * Get 人物标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物标签。 
      * @return TagSet 人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTagSet() {
         return this.TagSet;
@@ -160,9 +152,7 @@ public class AiSamplePerson extends AbstractModel{
 
     /**
      * Set 人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;

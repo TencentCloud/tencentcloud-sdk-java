@@ -31,6 +31,7 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
 
     /**
     * 通道带宽费用梯度价格。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthUnitPrice")
     @Expose
@@ -49,6 +50,22 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
     @SerializedName("Currency")
     @Expose
     private String Currency;
+
+    /**
+    * 通道的流量费用价格，单位: 元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowUnitPrice")
+    @Expose
+    private Float FlowUnitPrice;
+
+    /**
+    * 通道的流量费用折扣价格，单位:元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountFlowUnitPrice")
+    @Expose
+    private Float DiscountFlowUnitPrice;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -74,8 +91,10 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
     }
 
     /**
-     * Get 通道带宽费用梯度价格。 
+     * Get 通道带宽费用梯度价格。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BandwidthUnitPrice 通道带宽费用梯度价格。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public BandwidthPriceGradient [] getBandwidthUnitPrice() {
         return this.BandwidthUnitPrice;
@@ -83,7 +102,9 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
 
     /**
      * Set 通道带宽费用梯度价格。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BandwidthUnitPrice 通道带宽费用梯度价格。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthUnitPrice(BandwidthPriceGradient [] BandwidthUnitPrice) {
         this.BandwidthUnitPrice = BandwidthUnitPrice;
@@ -122,6 +143,46 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
     }
 
     /**
+     * Get 通道的流量费用价格，单位: 元/GB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowUnitPrice 通道的流量费用价格，单位: 元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getFlowUnitPrice() {
+        return this.FlowUnitPrice;
+    }
+
+    /**
+     * Set 通道的流量费用价格，单位: 元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowUnitPrice 通道的流量费用价格，单位: 元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowUnitPrice(Float FlowUnitPrice) {
+        this.FlowUnitPrice = FlowUnitPrice;
+    }
+
+    /**
+     * Get 通道的流量费用折扣价格，单位:元/GB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountFlowUnitPrice 通道的流量费用折扣价格，单位:元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountFlowUnitPrice() {
+        return this.DiscountFlowUnitPrice;
+    }
+
+    /**
+     * Set 通道的流量费用折扣价格，单位:元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountFlowUnitPrice 通道的流量费用折扣价格，单位:元/GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountFlowUnitPrice(Float DiscountFlowUnitPrice) {
+        this.DiscountFlowUnitPrice = DiscountFlowUnitPrice;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -145,6 +206,8 @@ public class InquiryPriceCreateProxyResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "BandwidthUnitPrice.", this.BandwidthUnitPrice);
         this.setParamSimple(map, prefix + "DiscountProxyDailyPrice", this.DiscountProxyDailyPrice);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "FlowUnitPrice", this.FlowUnitPrice);
+        this.setParamSimple(map, prefix + "DiscountFlowUnitPrice", this.DiscountFlowUnitPrice);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

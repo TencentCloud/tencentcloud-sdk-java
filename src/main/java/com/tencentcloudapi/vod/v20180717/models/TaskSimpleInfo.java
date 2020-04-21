@@ -54,7 +54,6 @@ public class TaskSimpleInfo extends AbstractModel{
 
     /**
     * 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未开始，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -62,7 +61,6 @@ public class TaskSimpleInfo extends AbstractModel{
 
     /**
     * 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未完成，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishTime")
     @Expose
@@ -167,10 +165,8 @@ public class TaskSimpleInfo extends AbstractModel{
     }
 
     /**
-     * Get 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未开始，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未开始，该字段为空。 
      * @return BeginProcessTime 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未开始，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
@@ -178,19 +174,15 @@ public class TaskSimpleInfo extends AbstractModel{
 
     /**
      * Set 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未开始，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginProcessTime 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未开始，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未完成，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未完成，该字段为空。 
      * @return FinishTime 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未完成，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishTime() {
         return this.FinishTime;
@@ -198,9 +190,7 @@ public class TaskSimpleInfo extends AbstractModel{
 
     /**
      * Set 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未完成，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishTime 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。若任务尚未完成，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

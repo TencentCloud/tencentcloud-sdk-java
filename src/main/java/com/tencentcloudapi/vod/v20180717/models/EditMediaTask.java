@@ -33,7 +33,6 @@ public class EditMediaTask extends AbstractModel{
     * 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -44,7 +43,6 @@ public class EditMediaTask extends AbstractModel{
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -52,7 +50,6 @@ public class EditMediaTask extends AbstractModel{
 
     /**
     * 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -76,7 +73,6 @@ public class EditMediaTask extends AbstractModel{
 
     /**
     * 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureTaskId")
     @Expose
@@ -84,7 +80,6 @@ public class EditMediaTask extends AbstractModel{
 
     /**
     * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionContext")
     @Expose
@@ -92,7 +87,6 @@ public class EditMediaTask extends AbstractModel{
 
     /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
     @Expose
@@ -117,12 +111,10 @@ public class EditMediaTask extends AbstractModel{
     /**
      * Get 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>FINISH：已完成。</li> 
      * @return Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -132,11 +124,9 @@ public class EditMediaTask extends AbstractModel{
      * Set 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -146,13 +136,11 @@ public class EditMediaTask extends AbstractModel{
      * Get 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
-<li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>70000：内部服务错误，建议重试。</li> 
      * @return ErrCode 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -163,22 +151,18 @@ public class EditMediaTask extends AbstractModel{
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息。 
      * @return Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -186,9 +170,7 @@ public class EditMediaTask extends AbstractModel{
 
     /**
      * Set 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -235,10 +217,8 @@ public class EditMediaTask extends AbstractModel{
     }
 
     /**
-     * Get 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。 
      * @return ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcedureTaskId() {
         return this.ProcedureTaskId;
@@ -246,19 +226,15 @@ public class EditMediaTask extends AbstractModel{
 
     /**
      * Set 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionContext() {
         return this.SessionContext;
@@ -266,19 +242,15 @@ public class EditMediaTask extends AbstractModel{
 
     /**
      * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionId() {
         return this.SessionId;
@@ -286,9 +258,7 @@ public class EditMediaTask extends AbstractModel{
 
     /**
      * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

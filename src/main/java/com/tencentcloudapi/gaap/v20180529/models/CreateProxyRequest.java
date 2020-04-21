@@ -95,6 +95,13 @@ public class CreateProxyRequest extends AbstractModel{
     private String ClonedProxyId;
 
     /**
+    * 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+    */
+    @SerializedName("BillingType")
+    @Expose
+    private Long BillingType;
+
+    /**
      * Get 通道的项目ID。 
      * @return ProjectId 通道的项目ID。
      */
@@ -263,6 +270,22 @@ public class CreateProxyRequest extends AbstractModel{
     }
 
     /**
+     * Get 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费） 
+     * @return BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     */
+    public Long getBillingType() {
+        return this.BillingType;
+    }
+
+    /**
+     * Set 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * @param BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     */
+    public void setBillingType(Long BillingType) {
+        this.BillingType = BillingType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +299,7 @@ public class CreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
+        this.setParamSimple(map, prefix + "BillingType", this.BillingType);
 
     }
 }

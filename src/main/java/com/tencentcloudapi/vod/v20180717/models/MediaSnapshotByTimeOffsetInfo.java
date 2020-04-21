@@ -24,17 +24,14 @@ public class MediaSnapshotByTimeOffsetInfo extends AbstractModel{
 
     /**
     * 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetSet")
     @Expose
     private MediaSnapshotByTimeOffsetItem [] SnapshotByTimeOffsetSet;
 
     /**
-     * Get 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。 
      * @return SnapshotByTimeOffsetSet 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSnapshotByTimeOffsetItem [] getSnapshotByTimeOffsetSet() {
         return this.SnapshotByTimeOffsetSet;
@@ -42,9 +39,7 @@ public class MediaSnapshotByTimeOffsetInfo extends AbstractModel{
 
     /**
      * Set 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetSet 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetSet(MediaSnapshotByTimeOffsetItem [] SnapshotByTimeOffsetSet) {
         this.SnapshotByTimeOffsetSet = SnapshotByTimeOffsetSet;

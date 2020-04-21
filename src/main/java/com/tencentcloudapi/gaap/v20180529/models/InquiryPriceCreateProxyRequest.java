@@ -65,6 +65,13 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private Long Concurrent;
 
     /**
+    * 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+    */
+    @SerializedName("BillingType")
+    @Expose
+    private Long BillingType;
+
+    /**
      * Get 加速区域名称。 
      * @return AccessRegion 加速区域名称。
      */
@@ -161,6 +168,22 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     }
 
     /**
+     * Get 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费） 
+     * @return BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     */
+    public Long getBillingType() {
+        return this.BillingType;
+    }
+
+    /**
+     * Set 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * @param BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     */
+    public void setBillingType(Long BillingType) {
+        this.BillingType = BillingType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Concurrency", this.Concurrency);
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
+        this.setParamSimple(map, prefix + "BillingType", this.BillingType);
 
     }
 }

@@ -72,6 +72,13 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
     private Long Bandwidth;
 
     /**
+    * 腾讯侧备用互联IP
+    */
+    @SerializedName("TencentBackupAddress")
+    @Expose
+    private String TencentBackupAddress;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -184,6 +191,22 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 腾讯侧备用互联IP 
+     * @return TencentBackupAddress 腾讯侧备用互联IP
+     */
+    public String getTencentBackupAddress() {
+        return this.TencentBackupAddress;
+    }
+
+    /**
+     * Set 腾讯侧备用互联IP
+     * @param TencentBackupAddress 腾讯侧备用互联IP
+     */
+    public void setTencentBackupAddress(String TencentBackupAddress) {
+        this.TencentBackupAddress = TencentBackupAddress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
 
     }
 }

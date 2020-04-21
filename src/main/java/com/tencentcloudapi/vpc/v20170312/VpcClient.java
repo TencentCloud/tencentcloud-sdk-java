@@ -2479,6 +2479,24 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由
+     * @param req DescribeVpnGatewayCcnRoutesRequest
+     * @return DescribeVpnGatewayCcnRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnGatewayCcnRoutesResponse DescribeVpnGatewayCcnRoutes(DescribeVpnGatewayCcnRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpnGatewayCcnRoutes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeVpnGateways）用于查询VPN网关列表。
      * @param req DescribeVpnGatewaysRequest
      * @return DescribeVpnGatewaysResponse

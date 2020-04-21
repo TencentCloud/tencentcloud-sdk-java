@@ -98,7 +98,6 @@ public class VideoTrackItem extends AbstractModel{
 
     /**
     * 对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageOperations")
     @Expose
@@ -106,7 +105,6 @@ public class VideoTrackItem extends AbstractModel{
 
     /**
     * 对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioOperations")
     @Expose
@@ -313,10 +311,8 @@ public class VideoTrackItem extends AbstractModel{
     }
 
     /**
-     * Get 对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对图像进行的操作，如图像旋转等。 
      * @return ImageOperations 对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageTransform [] getImageOperations() {
         return this.ImageOperations;
@@ -324,19 +320,15 @@ public class VideoTrackItem extends AbstractModel{
 
     /**
      * Set 对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageOperations 对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageOperations(ImageTransform [] ImageOperations) {
         this.ImageOperations = ImageOperations;
     }
 
     /**
-     * Get 对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对音频进行操作，如静音等。 
      * @return AudioOperations 对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioTransform [] getAudioOperations() {
         return this.AudioOperations;
@@ -344,9 +336,7 @@ public class VideoTrackItem extends AbstractModel{
 
     /**
      * Set 对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioOperations 对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioOperations(AudioTransform [] AudioOperations) {
         this.AudioOperations = AudioOperations;

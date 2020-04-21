@@ -44,6 +44,13 @@ public class TcrImageInfo extends AbstractModel{
     private String ImageVersion;
 
     /**
+    * 更新时间
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 哈希值 
      * @return Digest 哈希值
      */
@@ -92,12 +99,29 @@ public class TcrImageInfo extends AbstractModel{
     }
 
     /**
+     * Get 更新时间 
+     * @return UpdateTime 更新时间
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间
+     * @param UpdateTime 更新时间
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Digest", this.Digest);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

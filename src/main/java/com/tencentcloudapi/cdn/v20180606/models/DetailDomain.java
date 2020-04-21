@@ -361,7 +361,7 @@ global：全球锁定
     */
     @SerializedName("SecurityConfig")
     @Expose
-    private SecurityConfig [] SecurityConfig;
+    private SecurityConfig SecurityConfig;
 
     /**
      * Get 域名 ID 
@@ -1221,7 +1221,7 @@ global：全球锁定
      * @return SecurityConfig Scdn配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public SecurityConfig [] getSecurityConfig() {
+    public SecurityConfig getSecurityConfig() {
         return this.SecurityConfig;
     }
 
@@ -1231,7 +1231,7 @@ global：全球锁定
      * @param SecurityConfig Scdn配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSecurityConfig(SecurityConfig [] SecurityConfig) {
+    public void setSecurityConfig(SecurityConfig SecurityConfig) {
         this.SecurityConfig = SecurityConfig;
     }
 
@@ -1279,7 +1279,7 @@ global：全球锁定
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
-        this.setParamArrayObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
+        this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
 
     }
 }

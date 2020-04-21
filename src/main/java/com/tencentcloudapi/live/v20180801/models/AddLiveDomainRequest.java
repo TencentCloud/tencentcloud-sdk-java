@@ -60,6 +60,16 @@ public class AddLiveDomainRequest extends AbstractModel{
     private Long IsDelayLive;
 
     /**
+    * 是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。
+    */
+    @SerializedName("IsMiniProgramLive")
+    @Expose
+    private Long IsMiniProgramLive;
+
+    /**
      * Get 域名名称。 
      * @return DomainName 域名名称。
      */
@@ -160,6 +170,34 @@ public class AddLiveDomainRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。 
+     * @return IsMiniProgramLive 是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。
+     */
+    public Long getIsMiniProgramLive() {
+        return this.IsMiniProgramLive;
+    }
+
+    /**
+     * Set 是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。
+     * @param IsMiniProgramLive 是否是小程序直播：
+0： 标准直播，
+1 ：小程序直播 。
+默认值： 0。
+     */
+    public void setIsMiniProgramLive(Long IsMiniProgramLive) {
+        this.IsMiniProgramLive = IsMiniProgramLive;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -167,6 +205,7 @@ public class AddLiveDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainType", this.DomainType);
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+        this.setParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
 
     }
 }

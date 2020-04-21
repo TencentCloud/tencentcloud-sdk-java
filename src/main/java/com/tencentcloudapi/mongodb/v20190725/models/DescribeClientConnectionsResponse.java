@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class DescribeClientConnectionsResponse extends AbstractModel{
 
     /**
-    * 客户端连接信息，包括客户端IP和对应IP的连接数量
+    * 客户端连接信息，包括客户端IP和对应IP的连接数量。
     */
     @SerializedName("Clients")
     @Expose
     private ClientConnection [] Clients;
+
+    /**
+    * 满足条件的记录总条数，可用于分页查询。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 客户端连接信息，包括客户端IP和对应IP的连接数量 
-     * @return Clients 客户端连接信息，包括客户端IP和对应IP的连接数量
+     * Get 客户端连接信息，包括客户端IP和对应IP的连接数量。 
+     * @return Clients 客户端连接信息，包括客户端IP和对应IP的连接数量。
      */
     public ClientConnection [] getClients() {
         return this.Clients;
     }
 
     /**
-     * Set 客户端连接信息，包括客户端IP和对应IP的连接数量
-     * @param Clients 客户端连接信息，包括客户端IP和对应IP的连接数量
+     * Set 客户端连接信息，包括客户端IP和对应IP的连接数量。
+     * @param Clients 客户端连接信息，包括客户端IP和对应IP的连接数量。
      */
     public void setClients(ClientConnection [] Clients) {
         this.Clients = Clients;
+    }
+
+    /**
+     * Get 满足条件的记录总条数，可用于分页查询。 
+     * @return TotalCount 满足条件的记录总条数，可用于分页查询。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 满足条件的记录总条数，可用于分页查询。
+     * @param TotalCount 满足条件的记录总条数，可用于分页查询。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -73,6 +96,7 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Clients.", this.Clients);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

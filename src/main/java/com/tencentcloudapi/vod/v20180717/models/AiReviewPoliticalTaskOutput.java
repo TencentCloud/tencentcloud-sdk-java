@@ -24,7 +24,6 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
 
     /**
     * 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -35,7 +34,6 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -45,7 +43,6 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
     * 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -53,17 +50,14 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
 
     /**
     * 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewPoliticalSegmentItem [] SegmentSet;
 
     /**
-     * Get 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频涉政评分，分值为0到100。 
      * @return Confidence 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -71,9 +65,7 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
 
     /**
      * Set 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 视频涉政评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -83,13 +75,11 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
      * Get 涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>block。</li> 
      * @return Suggestion 涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -100,12 +90,10 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -114,12 +102,10 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
     /**
      * Get 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
-<li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>violation_photo：违规图标。</li> 
      * @return Label 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -129,21 +115,17 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
      * Set 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有涉政嫌疑的视频片段列表。 
      * @return SegmentSet 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaContentReviewPoliticalSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -151,9 +133,7 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
 
     /**
      * Set 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet 有涉政嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(MediaContentReviewPoliticalSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -38,7 +38,6 @@ public class TranscodeTemplate extends AbstractModel{
 
     /**
     * 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -46,7 +45,6 @@ public class TranscodeTemplate extends AbstractModel{
 
     /**
     * 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -159,10 +157,8 @@ public class TranscodeTemplate extends AbstractModel{
     }
 
     /**
-     * Get 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码模板名称。 
      * @return Name 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -170,19 +166,15 @@ public class TranscodeTemplate extends AbstractModel{
 
     /**
      * Set 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板描述信息。 
      * @return Comment 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -190,9 +182,7 @@ public class TranscodeTemplate extends AbstractModel{
 
     /**
      * Set 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

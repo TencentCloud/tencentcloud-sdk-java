@@ -24,7 +24,6 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -32,7 +31,6 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -40,7 +38,6 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -51,7 +48,6 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -59,17 +55,14 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-     * Get 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 嫌疑片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
@@ -77,19 +70,15 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
      * Set 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 嫌疑片段结束的偏移时间，单位：秒。 
      * @return EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -97,19 +86,15 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
      * Set 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get 嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 嫌疑片段置信度。 
      * @return Confidence 嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -117,9 +102,7 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
      * Set 嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -129,13 +112,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
      * Get 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>block。</li> 
      * @return Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -146,22 +127,18 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 嫌疑关键词列表。 
      * @return KeywordSet 嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
@@ -169,9 +146,7 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
      * Set 嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeywordSet 嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

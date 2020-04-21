@@ -111,7 +111,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。目前只支持3.2版本的MongoDB实例。
+     *本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。
      * @param req DescribeClientConnectionsRequest
      * @return DescribeClientConnectionsResponse
      * @throws TencentCloudSDKException
@@ -158,6 +158,42 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
+     * @param req DescribeSlowLogPatternsRequest
+     * @return DescribeSlowLogPatternsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(DescribeSlowLogPatternsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogPatternsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogPatternsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogPatterns"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSlowLogs）用于获取云数据库慢日志信息。接口只支持查询最近7天内慢日志。
+     * @param req DescribeSlowLogsRequest
+     * @return DescribeSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogs"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -248,6 +284,24 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RenameInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RenameInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
+     * @param req RenewDBInstancesRequest
+     * @return RenewDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewDBInstancesResponse RenewDBInstances(RenewDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RenewDBInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

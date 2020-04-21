@@ -30,6 +30,20 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 查询返回记录条数，默认为10000。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移量，默认值为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
@@ -46,10 +60,44 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     }
 
     /**
+     * Get 查询返回记录条数，默认为10000。 
+     * @return Limit 查询返回记录条数，默认为10000。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 查询返回记录条数，默认为10000。
+     * @param Limit 查询返回记录条数，默认为10000。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量，默认值为0。 
+     * @return Offset 偏移量，默认值为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认值为0。
+     * @param Offset 偏移量，默认值为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

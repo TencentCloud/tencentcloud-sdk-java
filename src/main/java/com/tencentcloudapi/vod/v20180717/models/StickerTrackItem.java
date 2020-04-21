@@ -97,7 +97,6 @@ public class StickerTrackItem extends AbstractModel{
 
     /**
     * 对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageOperations")
     @Expose
@@ -300,10 +299,8 @@ public class StickerTrackItem extends AbstractModel{
     }
 
     /**
-     * Get 对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对贴图进行的操作，如图像旋转等。 
      * @return ImageOperations 对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageTransform [] getImageOperations() {
         return this.ImageOperations;
@@ -311,9 +308,7 @@ public class StickerTrackItem extends AbstractModel{
 
     /**
      * Set 对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageOperations 对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageOperations(ImageTransform [] ImageOperations) {
         this.ImageOperations = ImageOperations;
