@@ -30,7 +30,7 @@ public class PlayDataInfoByStream extends AbstractModel{
     private String StreamName;
 
     /**
-    * 总流量（单位MB）。
+    * 总流量，单位: MB。
     */
     @SerializedName("TotalFlux")
     @Expose
@@ -53,16 +53,16 @@ public class PlayDataInfoByStream extends AbstractModel{
     }
 
     /**
-     * Get 总流量（单位MB）。 
-     * @return TotalFlux 总流量（单位MB）。
+     * Get 总流量，单位: MB。 
+     * @return TotalFlux 总流量，单位: MB。
      */
     public Float getTotalFlux() {
         return this.TotalFlux;
     }
 
     /**
-     * Set 总流量（单位MB）。
-     * @param TotalFlux 总流量（单位MB）。
+     * Set 总流量，单位: MB。
+     * @param TotalFlux 总流量，单位: MB。
      */
     public void setTotalFlux(Float TotalFlux) {
         this.TotalFlux = TotalFlux;

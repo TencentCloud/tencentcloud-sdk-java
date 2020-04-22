@@ -31,65 +31,64 @@ h264/h265。
     private String Vcodec;
 
     /**
-    * 视频码率。100-8000kbps
+    * 视频码率，取值范围：100kbps - 8000kbps。
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * 音频编码：aac/mp3
-aac/mp3。
+    * 音频编码，可选 aac 或 mp3。
     */
     @SerializedName("Acodec")
     @Expose
     private String Acodec;
 
     /**
-    * 音频码率。0-500
+    * 音频码率。取值范围：0kbps - 500kbps。
     */
     @SerializedName("AudioBitrate")
     @Expose
     private Long AudioBitrate;
 
     /**
-    * 宽。0-3000
+    * 宽，取值范围：0-3000。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 高。0-3000
+    * 高，取值范围：0-3000。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 帧率。0-200
+    * 帧率。取值范围：0fps - 200fps。
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 关键帧间隔，单位：秒。1-50
+    * 关键帧间隔，取值范围：1秒 - 50秒。
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * 旋转角度。0 90 180 270
+    * 旋转角度。可选择：0 90 180 270。
     */
     @SerializedName("Rotate")
     @Expose
     private Long Rotate;
 
     /**
-    * 编码质量：
-baseline/main/high。
+    * 编码质量，可选择：
+baseline，main，high。
     */
     @SerializedName("Profile")
     @Expose
@@ -131,35 +130,35 @@ baseline/main/high。
     private Long NeedAudio;
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 模板名称
+    * 模板名称。
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 模板描述
+    * 模板描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 是否是急速高清模板，0：否，1：是。默认0。
+    * 是否是极速高清模板，0：否，1：是。默认0。
     */
     @SerializedName("AiTransCode")
     @Expose
     private Long AiTransCode;
 
     /**
-    * 急速高清相比VideoBitrate少多少码率，0.1到0.5
+    * 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -186,152 +185,148 @@ h264/h265。
     }
 
     /**
-     * Get 视频码率。100-8000kbps 
-     * @return VideoBitrate 视频码率。100-8000kbps
+     * Get 视频码率，取值范围：100kbps - 8000kbps。 
+     * @return VideoBitrate 视频码率，取值范围：100kbps - 8000kbps。
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set 视频码率。100-8000kbps
-     * @param VideoBitrate 视频码率。100-8000kbps
+     * Set 视频码率，取值范围：100kbps - 8000kbps。
+     * @param VideoBitrate 视频码率，取值范围：100kbps - 8000kbps。
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get 音频编码：aac/mp3
-aac/mp3。 
-     * @return Acodec 音频编码：aac/mp3
-aac/mp3。
+     * Get 音频编码，可选 aac 或 mp3。 
+     * @return Acodec 音频编码，可选 aac 或 mp3。
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set 音频编码：aac/mp3
-aac/mp3。
-     * @param Acodec 音频编码：aac/mp3
-aac/mp3。
+     * Set 音频编码，可选 aac 或 mp3。
+     * @param Acodec 音频编码，可选 aac 或 mp3。
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
     }
 
     /**
-     * Get 音频码率。0-500 
-     * @return AudioBitrate 音频码率。0-500
+     * Get 音频码率。取值范围：0kbps - 500kbps。 
+     * @return AudioBitrate 音频码率。取值范围：0kbps - 500kbps。
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set 音频码率。0-500
-     * @param AudioBitrate 音频码率。0-500
+     * Set 音频码率。取值范围：0kbps - 500kbps。
+     * @param AudioBitrate 音频码率。取值范围：0kbps - 500kbps。
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
     }
 
     /**
-     * Get 宽。0-3000 
-     * @return Width 宽。0-3000
+     * Get 宽，取值范围：0-3000。 
+     * @return Width 宽，取值范围：0-3000。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽。0-3000
-     * @param Width 宽。0-3000
+     * Set 宽，取值范围：0-3000。
+     * @param Width 宽，取值范围：0-3000。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高。0-3000 
-     * @return Height 高。0-3000
+     * Get 高，取值范围：0-3000。 
+     * @return Height 高，取值范围：0-3000。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高。0-3000
-     * @param Height 高。0-3000
+     * Set 高，取值范围：0-3000。
+     * @param Height 高，取值范围：0-3000。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 帧率。0-200 
-     * @return Fps 帧率。0-200
+     * Get 帧率。取值范围：0fps - 200fps。 
+     * @return Fps 帧率。取值范围：0fps - 200fps。
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 帧率。0-200
-     * @param Fps 帧率。0-200
+     * Set 帧率。取值范围：0fps - 200fps。
+     * @param Fps 帧率。取值范围：0fps - 200fps。
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 关键帧间隔，单位：秒。1-50 
-     * @return Gop 关键帧间隔，单位：秒。1-50
+     * Get 关键帧间隔，取值范围：1秒 - 50秒。 
+     * @return Gop 关键帧间隔，取值范围：1秒 - 50秒。
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set 关键帧间隔，单位：秒。1-50
-     * @param Gop 关键帧间隔，单位：秒。1-50
+     * Set 关键帧间隔，取值范围：1秒 - 50秒。
+     * @param Gop 关键帧间隔，取值范围：1秒 - 50秒。
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get 旋转角度。0 90 180 270 
-     * @return Rotate 旋转角度。0 90 180 270
+     * Get 旋转角度。可选择：0 90 180 270。 
+     * @return Rotate 旋转角度。可选择：0 90 180 270。
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set 旋转角度。0 90 180 270
-     * @param Rotate 旋转角度。0 90 180 270
+     * Set 旋转角度。可选择：0 90 180 270。
+     * @param Rotate 旋转角度。可选择：0 90 180 270。
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
     /**
-     * Get 编码质量：
-baseline/main/high。 
-     * @return Profile 编码质量：
-baseline/main/high。
+     * Get 编码质量，可选择：
+baseline，main，high。 
+     * @return Profile 编码质量，可选择：
+baseline，main，high。
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set 编码质量：
-baseline/main/high。
-     * @param Profile 编码质量：
-baseline/main/high。
+     * Set 编码质量，可选择：
+baseline，main，high。
+     * @param Profile 编码质量，可选择：
+baseline，main，high。
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
@@ -418,80 +413,80 @@ baseline/main/high。
     }
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称 
-     * @return TemplateName 模板名称
+     * Get 模板名称。 
+     * @return TemplateName 模板名称。
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称
-     * @param TemplateName 模板名称
+     * Set 模板名称。
+     * @param TemplateName 模板名称。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 模板描述 
-     * @return Description 模板描述
+     * Get 模板描述。 
+     * @return Description 模板描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 模板描述
-     * @param Description 模板描述
+     * Set 模板描述。
+     * @param Description 模板描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 是否是急速高清模板，0：否，1：是。默认0。 
-     * @return AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
+     * Get 是否是极速高清模板，0：否，1：是。默认0。 
+     * @return AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
      */
     public Long getAiTransCode() {
         return this.AiTransCode;
     }
 
     /**
-     * Set 是否是急速高清模板，0：否，1：是。默认0。
-     * @param AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
+     * Set 是否是极速高清模板，0：否，1：是。默认0。
+     * @param AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
      */
     public void setAiTransCode(Long AiTransCode) {
         this.AiTransCode = AiTransCode;
     }
 
     /**
-     * Get 急速高清相比VideoBitrate少多少码率，0.1到0.5 
-     * @return AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Get 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。 
+     * @return AdaptBitratePercent 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set 急速高清相比VideoBitrate少多少码率，0.1到0.5
-     * @param AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Set 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+     * @param AdaptBitratePercent 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

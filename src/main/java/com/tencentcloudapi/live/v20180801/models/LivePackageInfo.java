@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LivePackageInfo extends AbstractModel{
 
     /**
-    * 包ID。
+    * 包 ID。
     */
     @SerializedName("Id")
     @Expose
@@ -31,7 +31,7 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
     * 总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
     */
     @SerializedName("Total")
@@ -40,7 +40,7 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
     * 使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
     */
     @SerializedName("Used")
@@ -49,7 +49,7 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
     * 剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
     */
     @SerializedName("Left")
@@ -71,36 +71,36 @@ public class LivePackageInfo extends AbstractModel{
     private String ExpireTime;
 
     /**
-    * 包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
+    * 包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
+    * 包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 包ID。 
-     * @return Id 包ID。
+     * Get 包 ID。 
+     * @return Id 包 ID。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 包ID。
-     * @param Id 包ID。
+     * Set 包 ID。
+     * @param Id 包 ID。
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -108,10 +108,10 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Get 总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。 
      * @return Total 总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public Long getTotal() {
@@ -120,10 +120,10 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Set 总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      * @param Total 总量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public void setTotal(Long Total) {
@@ -132,10 +132,10 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Get 使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。 
      * @return Used 使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public Long getUsed() {
@@ -144,10 +144,10 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Set 使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      * @param Used 使用量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public void setUsed(Long Used) {
@@ -156,10 +156,10 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Get 剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。 
      * @return Left 剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public Long getLeft() {
@@ -168,10 +168,10 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Set 剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      * @param Left 剩余量。
-注意：当为流量包时单位为字节；
+注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
      */
     public void setLeft(Long Left) {
@@ -211,56 +211,56 @@ public class LivePackageInfo extends AbstractModel{
     }
 
     /**
-     * Get 包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。 
-     * @return Type 包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
+     * Get 包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。 
+     * @return Type 包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
-     * @param Type 包类型，可选值：
-0：流量包；
-1：普通转码包；
-2：极速高清包。
+     * Set 包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
+     * @param Type 包类型，可选值:
+0: 流量包。
+1: 普通转码包。
+2: 极速高清包。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。 
-     * @return Status 包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
+     * Get 包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。 
+     * @return Status 包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
-     * @param Status 包状态，可选值：
-0：未使用；
-1：使用中；
-2：已过期。
+     * Set 包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
+     * @param Status 包状态，可选值:
+0: 未使用。
+1: 使用中。
+2: 已过期。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -23,21 +23,23 @@ import java.util.HashMap;
 public class DomainDetailInfo extends AbstractModel{
 
     /**
-    * 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
+    * 国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-    * 带宽，单位是Mbps。
+    * 带宽，单位: Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Float Bandwidth;
 
     /**
-    * 流量，单位是MB。
+    * 流量，单位: MB。
     */
     @SerializedName("Flux")
     @Expose
@@ -58,48 +60,56 @@ public class DomainDetailInfo extends AbstractModel{
     private Long Request;
 
     /**
-     * Get 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。 
-     * @return MainlandOrOversea 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
+     * Get 国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。 
+     * @return MainlandOrOversea 国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
-     * @param MainlandOrOversea 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
+     * Set 国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
+     * @param MainlandOrOversea 国内还是国外:
+Mainland: 表示国内数据。
+Oversea: 表示国外数据。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;
     }
 
     /**
-     * Get 带宽，单位是Mbps。 
-     * @return Bandwidth 带宽，单位是Mbps。
+     * Get 带宽，单位: Mbps。 
+     * @return Bandwidth 带宽，单位: Mbps。
      */
     public Float getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽，单位是Mbps。
-     * @param Bandwidth 带宽，单位是Mbps。
+     * Set 带宽，单位: Mbps。
+     * @param Bandwidth 带宽，单位: Mbps。
      */
     public void setBandwidth(Float Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 流量，单位是MB。 
-     * @return Flux 流量，单位是MB。
+     * Get 流量，单位: MB。 
+     * @return Flux 流量，单位: MB。
      */
     public Float getFlux() {
         return this.Flux;
     }
 
     /**
-     * Set 流量，单位是MB。
-     * @param Flux 流量，单位是MB。
+     * Set 流量，单位: MB。
+     * @param Flux 流量，单位: MB。
      */
     public void setFlux(Float Flux) {
         this.Flux = Flux;

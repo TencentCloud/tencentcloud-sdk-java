@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLiveRecordTemplateRequest extends AbstractModel{
 
     /**
-    * 模板名。非空的字符串
+    * 模板名。仅支持中文、英文、数字、_、-。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -65,7 +65,8 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam AacParam;
 
     /**
-    * 0：普通直播，
+    * 直播类型，默认 0。
+0：普通直播，
 1：慢直播。
     */
     @SerializedName("IsDelayLive")
@@ -87,16 +88,16 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
-     * Get 模板名。非空的字符串 
-     * @return TemplateName 模板名。非空的字符串
+     * Get 模板名。仅支持中文、英文、数字、_、-。 
+     * @return TemplateName 模板名。仅支持中文、英文、数字、_、-。
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名。非空的字符串
-     * @param TemplateName 模板名。非空的字符串
+     * Set 模板名。仅支持中文、英文、数字、_、-。
+     * @param TemplateName 模板名。仅支持中文、英文、数字、_、-。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -183,9 +184,11 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 0：普通直播，
+     * Get 直播类型，默认 0。
+0：普通直播，
 1：慢直播。 
-     * @return IsDelayLive 0：普通直播，
+     * @return IsDelayLive 直播类型，默认 0。
+0：普通直播，
 1：慢直播。
      */
     public Long getIsDelayLive() {
@@ -193,9 +196,11 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Set 0：普通直播，
+     * Set 直播类型，默认 0。
+0：普通直播，
 1：慢直播。
-     * @param IsDelayLive 0：普通直播，
+     * @param IsDelayLive 直播类型，默认 0。
+0：普通直播，
 1：慢直播。
      */
     public void setIsDelayLive(Long IsDelayLive) {

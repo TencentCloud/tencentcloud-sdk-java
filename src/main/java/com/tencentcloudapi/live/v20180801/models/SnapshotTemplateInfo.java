@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SnapshotTemplateInfo extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -37,21 +37,23 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private String TemplateName;
 
     /**
-    * 截图时间间隔。5-300秒。
+    * 截图时间间隔，5-300秒。
     */
     @SerializedName("SnapshotInterval")
     @Expose
     private Long SnapshotInterval;
 
     /**
-    * 截图宽度。0-3000 0原始宽度并适配原始比例
+    * 截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 截图高度。0-2000 0原始高度并适配原始比例
+    * 截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
     */
     @SerializedName("Height")
     @Expose
@@ -65,7 +67,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private Long PornFlag;
 
     /**
-    * Cos AppId。
+    * Cos 应用 ID。
     */
     @SerializedName("CosAppId")
     @Expose
@@ -86,23 +88,23 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private String CosRegion;
 
     /**
-    * 模板描述
+    * 模板描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -125,48 +127,56 @@ public class SnapshotTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 截图时间间隔。5-300秒。 
-     * @return SnapshotInterval 截图时间间隔。5-300秒。
+     * Get 截图时间间隔，5-300秒。 
+     * @return SnapshotInterval 截图时间间隔，5-300秒。
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * Set 截图时间间隔。5-300秒。
-     * @param SnapshotInterval 截图时间间隔。5-300秒。
+     * Set 截图时间间隔，5-300秒。
+     * @param SnapshotInterval 截图时间间隔，5-300秒。
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
     /**
-     * Get 截图宽度。0-3000 0原始宽度并适配原始比例 
-     * @return Width 截图宽度。0-3000 0原始宽度并适配原始比例
+     * Get 截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。 
+     * @return Width 截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 截图宽度。0-3000 0原始宽度并适配原始比例
-     * @param Width 截图宽度。0-3000 0原始宽度并适配原始比例
+     * Set 截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
+     * @param Width 截图宽度，范围：0-3000。 
+0：原始宽度并适配原始比例。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 截图高度。0-2000 0原始高度并适配原始比例 
-     * @return Height 截图高度。0-2000 0原始高度并适配原始比例
+     * Get 截图高度，范围：0-2000。
+0：原始高度并适配原始比例。 
+     * @return Height 截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 截图高度。0-2000 0原始高度并适配原始比例
-     * @param Height 截图高度。0-2000 0原始高度并适配原始比例
+     * Set 截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
+     * @param Height 截图高度，范围：0-2000。
+0：原始高度并适配原始比例。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -189,16 +199,16 @@ public class SnapshotTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Cos AppId。 
-     * @return CosAppId Cos AppId。
+     * Get Cos 应用 ID。 
+     * @return CosAppId Cos 应用 ID。
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set Cos AppId。
-     * @param CosAppId Cos AppId。
+     * Set Cos 应用 ID。
+     * @param CosAppId Cos 应用 ID。
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
@@ -237,16 +247,16 @@ public class SnapshotTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板描述 
-     * @return Description 模板描述
+     * Get 模板描述。 
+     * @return Description 模板描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 模板描述
-     * @param Description 模板描述
+     * Set 模板描述。
+     * @param Description 模板描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;

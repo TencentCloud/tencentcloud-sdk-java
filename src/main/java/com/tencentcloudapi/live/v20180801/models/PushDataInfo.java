@@ -37,42 +37,42 @@ public class PushDataInfo extends AbstractModel{
     private String AppName;
 
     /**
-    * 推流客户端ip。
+    * 推流客户端 IP。
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * 接流服务器ip。
+    * 接流服务器 IP。
     */
     @SerializedName("ServerIp")
     @Expose
     private String ServerIp;
 
     /**
-    * 推流视频帧率，单位是Hz。
+    * 推流视频帧率，单位: Hz。
     */
     @SerializedName("VideoFps")
     @Expose
     private Long VideoFps;
 
     /**
-    * 推流视频码率，单位是bps。
+    * 推流视频码率，单位: bps。
     */
     @SerializedName("VideoSpeed")
     @Expose
     private Long VideoSpeed;
 
     /**
-    * 推流音频帧率，单位是Hz。
+    * 推流音频帧率，单位: Hz。
     */
     @SerializedName("AudioFps")
     @Expose
     private Long AudioFps;
 
     /**
-    * 推流音频码率，单位是bps。
+    * 推流音频码率，单位: bps。
     */
     @SerializedName("AudioSpeed")
     @Expose
@@ -123,21 +123,21 @@ public class PushDataInfo extends AbstractModel{
     private Long AsampleRate;
 
     /**
-    * metadata中的音频码率，单位是Kbps。
+    * metadata 中的音频码率，单位: Kbps。
     */
     @SerializedName("MetaAudioSpeed")
     @Expose
     private Long MetaAudioSpeed;
 
     /**
-    * metadata中的视频码率，单位是Kbps。
+    * metadata 中的视频码率，单位: Kbps。
     */
     @SerializedName("MetaVideoSpeed")
     @Expose
     private Long MetaVideoSpeed;
 
     /**
-    * metadata中的帧率。
+    * metadata 中的帧率。
     */
     @SerializedName("MetaFps")
     @Expose
@@ -176,96 +176,96 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
-     * Get 推流客户端ip。 
-     * @return ClientIp 推流客户端ip。
+     * Get 推流客户端 IP。 
+     * @return ClientIp 推流客户端 IP。
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 推流客户端ip。
-     * @param ClientIp 推流客户端ip。
+     * Set 推流客户端 IP。
+     * @param ClientIp 推流客户端 IP。
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get 接流服务器ip。 
-     * @return ServerIp 接流服务器ip。
+     * Get 接流服务器 IP。 
+     * @return ServerIp 接流服务器 IP。
      */
     public String getServerIp() {
         return this.ServerIp;
     }
 
     /**
-     * Set 接流服务器ip。
-     * @param ServerIp 接流服务器ip。
+     * Set 接流服务器 IP。
+     * @param ServerIp 接流服务器 IP。
      */
     public void setServerIp(String ServerIp) {
         this.ServerIp = ServerIp;
     }
 
     /**
-     * Get 推流视频帧率，单位是Hz。 
-     * @return VideoFps 推流视频帧率，单位是Hz。
+     * Get 推流视频帧率，单位: Hz。 
+     * @return VideoFps 推流视频帧率，单位: Hz。
      */
     public Long getVideoFps() {
         return this.VideoFps;
     }
 
     /**
-     * Set 推流视频帧率，单位是Hz。
-     * @param VideoFps 推流视频帧率，单位是Hz。
+     * Set 推流视频帧率，单位: Hz。
+     * @param VideoFps 推流视频帧率，单位: Hz。
      */
     public void setVideoFps(Long VideoFps) {
         this.VideoFps = VideoFps;
     }
 
     /**
-     * Get 推流视频码率，单位是bps。 
-     * @return VideoSpeed 推流视频码率，单位是bps。
+     * Get 推流视频码率，单位: bps。 
+     * @return VideoSpeed 推流视频码率，单位: bps。
      */
     public Long getVideoSpeed() {
         return this.VideoSpeed;
     }
 
     /**
-     * Set 推流视频码率，单位是bps。
-     * @param VideoSpeed 推流视频码率，单位是bps。
+     * Set 推流视频码率，单位: bps。
+     * @param VideoSpeed 推流视频码率，单位: bps。
      */
     public void setVideoSpeed(Long VideoSpeed) {
         this.VideoSpeed = VideoSpeed;
     }
 
     /**
-     * Get 推流音频帧率，单位是Hz。 
-     * @return AudioFps 推流音频帧率，单位是Hz。
+     * Get 推流音频帧率，单位: Hz。 
+     * @return AudioFps 推流音频帧率，单位: Hz。
      */
     public Long getAudioFps() {
         return this.AudioFps;
     }
 
     /**
-     * Set 推流音频帧率，单位是Hz。
-     * @param AudioFps 推流音频帧率，单位是Hz。
+     * Set 推流音频帧率，单位: Hz。
+     * @param AudioFps 推流音频帧率，单位: Hz。
      */
     public void setAudioFps(Long AudioFps) {
         this.AudioFps = AudioFps;
     }
 
     /**
-     * Get 推流音频码率，单位是bps。 
-     * @return AudioSpeed 推流音频码率，单位是bps。
+     * Get 推流音频码率，单位: bps。 
+     * @return AudioSpeed 推流音频码率，单位: bps。
      */
     public Long getAudioSpeed() {
         return this.AudioSpeed;
     }
 
     /**
-     * Set 推流音频码率，单位是bps。
-     * @param AudioSpeed 推流音频码率，单位是bps。
+     * Set 推流音频码率，单位: bps。
+     * @param AudioSpeed 推流音频码率，单位: bps。
      */
     public void setAudioSpeed(Long AudioSpeed) {
         this.AudioSpeed = AudioSpeed;
@@ -376,48 +376,48 @@ public class PushDataInfo extends AbstractModel{
     }
 
     /**
-     * Get metadata中的音频码率，单位是Kbps。 
-     * @return MetaAudioSpeed metadata中的音频码率，单位是Kbps。
+     * Get metadata 中的音频码率，单位: Kbps。 
+     * @return MetaAudioSpeed metadata 中的音频码率，单位: Kbps。
      */
     public Long getMetaAudioSpeed() {
         return this.MetaAudioSpeed;
     }
 
     /**
-     * Set metadata中的音频码率，单位是Kbps。
-     * @param MetaAudioSpeed metadata中的音频码率，单位是Kbps。
+     * Set metadata 中的音频码率，单位: Kbps。
+     * @param MetaAudioSpeed metadata 中的音频码率，单位: Kbps。
      */
     public void setMetaAudioSpeed(Long MetaAudioSpeed) {
         this.MetaAudioSpeed = MetaAudioSpeed;
     }
 
     /**
-     * Get metadata中的视频码率，单位是Kbps。 
-     * @return MetaVideoSpeed metadata中的视频码率，单位是Kbps。
+     * Get metadata 中的视频码率，单位: Kbps。 
+     * @return MetaVideoSpeed metadata 中的视频码率，单位: Kbps。
      */
     public Long getMetaVideoSpeed() {
         return this.MetaVideoSpeed;
     }
 
     /**
-     * Set metadata中的视频码率，单位是Kbps。
-     * @param MetaVideoSpeed metadata中的视频码率，单位是Kbps。
+     * Set metadata 中的视频码率，单位: Kbps。
+     * @param MetaVideoSpeed metadata 中的视频码率，单位: Kbps。
      */
     public void setMetaVideoSpeed(Long MetaVideoSpeed) {
         this.MetaVideoSpeed = MetaVideoSpeed;
     }
 
     /**
-     * Get metadata中的帧率。 
-     * @return MetaFps metadata中的帧率。
+     * Get metadata 中的帧率。 
+     * @return MetaFps metadata 中的帧率。
      */
     public Long getMetaFps() {
         return this.MetaFps;
     }
 
     /**
-     * Set metadata中的帧率。
-     * @param MetaFps metadata中的帧率。
+     * Set metadata 中的帧率。
+     * @param MetaFps metadata 中的帧率。
      */
     public void setMetaFps(Long MetaFps) {
         this.MetaFps = MetaFps;

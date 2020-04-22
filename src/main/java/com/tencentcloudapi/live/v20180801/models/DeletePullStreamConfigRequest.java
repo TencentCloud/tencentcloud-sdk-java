@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class DeletePullStreamConfigRequest extends AbstractModel{
 
     /**
-    * 配置id。
+    * 配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-     * Get 配置id。 
-     * @return ConfigId 配置id。
+     * Get 配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。 
+     * @return ConfigId 配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置id。
-     * @param ConfigId 配置id。
+     * Set 配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
+     * @param ConfigId 配置 ID。
+1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

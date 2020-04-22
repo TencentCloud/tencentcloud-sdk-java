@@ -45,8 +45,8 @@ public class BindRealServer extends AbstractModel{
 
     /**
     * 源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -119,13 +119,13 @@ public class BindRealServer extends AbstractModel{
 
     /**
      * Get 源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerStatus 源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -135,13 +135,13 @@ public class BindRealServer extends AbstractModel{
 
     /**
      * Set 源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerStatus 源站健康检查状态，其中：
-0，正常；
-1，异常。
+0表示正常；
+1表示异常。
 未开启健康检查状态时，该状态始终为正常。
 注意：此字段可能返回 null，表示取不到有效值。
      */

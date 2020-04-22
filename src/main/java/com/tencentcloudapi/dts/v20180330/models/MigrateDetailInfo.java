@@ -37,14 +37,14 @@ public class MigrateDetailInfo extends AbstractModel{
     private Long StepNow;
 
     /**
-    * 总进度,如：
+    * 总进度,如："10"
     */
     @SerializedName("Progress")
     @Expose
     private String Progress;
 
     /**
-    * 当前步骤进度,如:
+    * 当前步骤进度,如:"1"
     */
     @SerializedName("CurrentStepProgress")
     @Expose
@@ -104,32 +104,32 @@ public class MigrateDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 总进度,如： 
-     * @return Progress 总进度,如：
+     * Get 总进度,如："10" 
+     * @return Progress 总进度,如："10"
      */
     public String getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 总进度,如：
-     * @param Progress 总进度,如：
+     * Set 总进度,如："10"
+     * @param Progress 总进度,如："10"
      */
     public void setProgress(String Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 当前步骤进度,如: 
-     * @return CurrentStepProgress 当前步骤进度,如:
+     * Get 当前步骤进度,如:"1" 
+     * @return CurrentStepProgress 当前步骤进度,如:"1"
      */
     public String getCurrentStepProgress() {
         return this.CurrentStepProgress;
     }
 
     /**
-     * Set 当前步骤进度,如:
-     * @param CurrentStepProgress 当前步骤进度,如:
+     * Set 当前步骤进度,如:"1"
+     * @param CurrentStepProgress 当前步骤进度,如:"1"
      */
     public void setCurrentStepProgress(String CurrentStepProgress) {
         this.CurrentStepProgress = CurrentStepProgress;

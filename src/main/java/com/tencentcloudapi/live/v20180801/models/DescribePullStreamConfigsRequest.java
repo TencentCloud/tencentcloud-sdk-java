@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribePullStreamConfigsRequest extends AbstractModel{
 
     /**
-    * 配置id。
+    * 配置 ID。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-     * Get 配置id。 
-     * @return ConfigId 配置id。
+     * Get 配置 ID。 
+     * @return ConfigId 配置 ID。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置id。
-     * @param ConfigId 配置id。
+     * Set 配置 ID。
+     * @param ConfigId 配置 ID。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

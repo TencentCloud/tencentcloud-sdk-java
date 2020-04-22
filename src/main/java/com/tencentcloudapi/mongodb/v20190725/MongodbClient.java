@@ -147,6 +147,24 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBInstanceDeal）用于获取MongoDB购买、续费及变配订单详细。
+     * @param req DescribeDBInstanceDealRequest
+     * @return DescribeDBInstanceDealResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceDealResponse DescribeDBInstanceDeal(DescribeDBInstanceDealRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceDealResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceDealResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstanceDeal"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -212,6 +230,60 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSpecInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSpecInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
+     * @param req InquirePriceCreateDBInstancesRequest
+     * @return InquirePriceCreateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateDBInstancesResponse InquirePriceCreateDBInstances(InquirePriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceCreateDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceCreateDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePriceCreateDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (InquirePriceModifyDBInstanceSpec) 用于调整实例的配置询价。
+     * @param req InquirePriceModifyDBInstanceSpecRequest
+     * @return InquirePriceModifyDBInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceModifyDBInstanceSpecResponse InquirePriceModifyDBInstanceSpec(InquirePriceModifyDBInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePriceModifyDBInstanceSpec"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (InquiryPriceRenewDBInstances) 用于续费包年包月实例询价。
+     * @param req InquirePriceRenewDBInstancesRequest
+     * @return InquirePriceRenewDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(InquirePriceRenewDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceRenewDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceRenewDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePriceRenewDBInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

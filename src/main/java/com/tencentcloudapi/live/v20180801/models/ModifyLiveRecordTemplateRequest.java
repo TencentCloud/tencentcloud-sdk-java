@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLiveRecordTemplateRequest extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -44,58 +44,58 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Flv录制参数，开启Flv录制时设置。
+    * FLV 录制参数，开启 FLV 录制时设置。
     */
     @SerializedName("FlvParam")
     @Expose
     private RecordParam FlvParam;
 
     /**
-    * Hls录制参数，开启hls录制时设置。
+    * HLS 录制参数，开启 HLS 录制时设置。
     */
     @SerializedName("HlsParam")
     @Expose
     private RecordParam HlsParam;
 
     /**
-    * Mp4录制参数，开启Mp4录制时设置。
+    * MP4 录制参数，开启 MP4 录制时设置。
     */
     @SerializedName("Mp4Param")
     @Expose
     private RecordParam Mp4Param;
 
     /**
-    * Aac录制参数，开启Aac录制时设置。
+    * AAC 录制参数，开启 AAC 录制时设置。
     */
     @SerializedName("AacParam")
     @Expose
     private RecordParam AacParam;
 
     /**
-    * HLS录制定制参数
+    * HLS 录制定制参数。
     */
     @SerializedName("HlsSpecialParam")
     @Expose
     private HlsSpecialParam HlsSpecialParam;
 
     /**
-    * Mp3录制参数，开启Mp3录制时设置。
+    * MP3 录制参数，开启 MP3 录制时设置。
     */
     @SerializedName("Mp3Param")
     @Expose
     private RecordParam Mp3Param;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -134,96 +134,96 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Flv录制参数，开启Flv录制时设置。 
-     * @return FlvParam Flv录制参数，开启Flv录制时设置。
+     * Get FLV 录制参数，开启 FLV 录制时设置。 
+     * @return FlvParam FLV 录制参数，开启 FLV 录制时设置。
      */
     public RecordParam getFlvParam() {
         return this.FlvParam;
     }
 
     /**
-     * Set Flv录制参数，开启Flv录制时设置。
-     * @param FlvParam Flv录制参数，开启Flv录制时设置。
+     * Set FLV 录制参数，开启 FLV 录制时设置。
+     * @param FlvParam FLV 录制参数，开启 FLV 录制时设置。
      */
     public void setFlvParam(RecordParam FlvParam) {
         this.FlvParam = FlvParam;
     }
 
     /**
-     * Get Hls录制参数，开启hls录制时设置。 
-     * @return HlsParam Hls录制参数，开启hls录制时设置。
+     * Get HLS 录制参数，开启 HLS 录制时设置。 
+     * @return HlsParam HLS 录制参数，开启 HLS 录制时设置。
      */
     public RecordParam getHlsParam() {
         return this.HlsParam;
     }
 
     /**
-     * Set Hls录制参数，开启hls录制时设置。
-     * @param HlsParam Hls录制参数，开启hls录制时设置。
+     * Set HLS 录制参数，开启 HLS 录制时设置。
+     * @param HlsParam HLS 录制参数，开启 HLS 录制时设置。
      */
     public void setHlsParam(RecordParam HlsParam) {
         this.HlsParam = HlsParam;
     }
 
     /**
-     * Get Mp4录制参数，开启Mp4录制时设置。 
-     * @return Mp4Param Mp4录制参数，开启Mp4录制时设置。
+     * Get MP4 录制参数，开启 MP4 录制时设置。 
+     * @return Mp4Param MP4 录制参数，开启 MP4 录制时设置。
      */
     public RecordParam getMp4Param() {
         return this.Mp4Param;
     }
 
     /**
-     * Set Mp4录制参数，开启Mp4录制时设置。
-     * @param Mp4Param Mp4录制参数，开启Mp4录制时设置。
+     * Set MP4 录制参数，开启 MP4 录制时设置。
+     * @param Mp4Param MP4 录制参数，开启 MP4 录制时设置。
      */
     public void setMp4Param(RecordParam Mp4Param) {
         this.Mp4Param = Mp4Param;
     }
 
     /**
-     * Get Aac录制参数，开启Aac录制时设置。 
-     * @return AacParam Aac录制参数，开启Aac录制时设置。
+     * Get AAC 录制参数，开启 AAC 录制时设置。 
+     * @return AacParam AAC 录制参数，开启 AAC 录制时设置。
      */
     public RecordParam getAacParam() {
         return this.AacParam;
     }
 
     /**
-     * Set Aac录制参数，开启Aac录制时设置。
-     * @param AacParam Aac录制参数，开启Aac录制时设置。
+     * Set AAC 录制参数，开启 AAC 录制时设置。
+     * @param AacParam AAC 录制参数，开启 AAC 录制时设置。
      */
     public void setAacParam(RecordParam AacParam) {
         this.AacParam = AacParam;
     }
 
     /**
-     * Get HLS录制定制参数 
-     * @return HlsSpecialParam HLS录制定制参数
+     * Get HLS 录制定制参数。 
+     * @return HlsSpecialParam HLS 录制定制参数。
      */
     public HlsSpecialParam getHlsSpecialParam() {
         return this.HlsSpecialParam;
     }
 
     /**
-     * Set HLS录制定制参数
-     * @param HlsSpecialParam HLS录制定制参数
+     * Set HLS 录制定制参数。
+     * @param HlsSpecialParam HLS 录制定制参数。
      */
     public void setHlsSpecialParam(HlsSpecialParam HlsSpecialParam) {
         this.HlsSpecialParam = HlsSpecialParam;
     }
 
     /**
-     * Get Mp3录制参数，开启Mp3录制时设置。 
-     * @return Mp3Param Mp3录制参数，开启Mp3录制时设置。
+     * Get MP3 录制参数，开启 MP3 录制时设置。 
+     * @return Mp3Param MP3 录制参数，开启 MP3 录制时设置。
      */
     public RecordParam getMp3Param() {
         return this.Mp3Param;
     }
 
     /**
-     * Set Mp3录制参数，开启Mp3录制时设置。
-     * @param Mp3Param Mp3录制参数，开启Mp3录制时设置。
+     * Set MP3 录制参数，开启 MP3 录制时设置。
+     * @param Mp3Param MP3 录制参数，开启 MP3 录制时设置。
      */
     public void setMp3Param(RecordParam Mp3Param) {
         this.Mp3Param = Mp3Param;

@@ -30,7 +30,8 @@ public class DelayInfo extends AbstractModel{
     private String DomainName;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+    * 推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -51,7 +52,7 @@ public class DelayInfo extends AbstractModel{
     private Long DelayInterval;
 
     /**
-    * 创建时间，UTC时间。
+    * 创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
     */
@@ -60,7 +61,7 @@ public class DelayInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 过期时间，UTC时间。
+    * 过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
     */
@@ -69,8 +70,8 @@ public class DelayInfo extends AbstractModel{
     private String ExpireTime;
 
     /**
-    * 当前状态，
--1：已过期，
+    * 当前状态:
+-1：已过期。
 1： 生效中。
     */
     @SerializedName("Status")
@@ -94,16 +95,20 @@ public class DelayInfo extends AbstractModel{
     }
 
     /**
-     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。 
+     * @return AppName 推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的 
+ AppName 保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -142,10 +147,10 @@ public class DelayInfo extends AbstractModel{
     }
 
     /**
-     * Get 创建时间，UTC时间。
+     * Get 创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。 
-     * @return CreateTime 创建时间，UTC时间。
+     * @return CreateTime 创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      */
@@ -154,10 +159,10 @@ public class DelayInfo extends AbstractModel{
     }
 
     /**
-     * Set 创建时间，UTC时间。
+     * Set 创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
-     * @param CreateTime 创建时间，UTC时间。
+     * @param CreateTime 创建时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      */
@@ -166,10 +171,10 @@ public class DelayInfo extends AbstractModel{
     }
 
     /**
-     * Get 过期时间，UTC时间。
+     * Get 过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。 
-     * @return ExpireTime 过期时间，UTC时间。
+     * @return ExpireTime 过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      */
@@ -178,10 +183,10 @@ public class DelayInfo extends AbstractModel{
     }
 
     /**
-     * Set 过期时间，UTC时间。
+     * Set 过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
-     * @param ExpireTime 过期时间，UTC时间。
+     * @param ExpireTime 过期时间，UTC 时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      */
@@ -190,11 +195,11 @@ public class DelayInfo extends AbstractModel{
     }
 
     /**
-     * Get 当前状态，
--1：已过期，
+     * Get 当前状态:
+-1：已过期。
 1： 生效中。 
-     * @return Status 当前状态，
--1：已过期，
+     * @return Status 当前状态:
+-1：已过期。
 1： 生效中。
      */
     public Long getStatus() {
@@ -202,11 +207,11 @@ public class DelayInfo extends AbstractModel{
     }
 
     /**
-     * Set 当前状态，
--1：已过期，
+     * Set 当前状态:
+-1：已过期。
 1： 生效中。
-     * @param Status 当前状态，
--1：已过期，
+     * @param Status 当前状态:
+-1：已过期。
 1： 生效中。
      */
     public void setStatus(Long Status) {

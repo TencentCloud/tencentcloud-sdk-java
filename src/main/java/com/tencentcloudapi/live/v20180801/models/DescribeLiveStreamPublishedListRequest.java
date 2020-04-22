@@ -49,7 +49,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     private String StartTime;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+    * 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
     */
     @SerializedName("AppName")
     @Expose
@@ -149,16 +149,16 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。 
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * Get 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。 
+     * @return AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * Set 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
+     * @param AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

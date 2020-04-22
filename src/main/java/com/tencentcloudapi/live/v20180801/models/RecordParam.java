@@ -24,8 +24,8 @@ public class RecordParam extends AbstractModel{
 
     /**
     * 录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
     */
     @SerializedName("RecordInterval")
@@ -34,22 +34,22 @@ public class RecordParam extends AbstractModel{
 
     /**
     * 录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
     */
     @SerializedName("StorageTime")
     @Expose
     private Long StorageTime;
 
     /**
-    * 是否开启当前格式录制，0 否 1是。默认值0。
+    * 是否开启当前格式录制，默认值为0，0：否， 1：是。
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 点播子应用ID。
+    * 点播子应用 ID。
     */
     @SerializedName("VodSubAppId")
     @Expose
@@ -57,12 +57,12 @@ public class RecordParam extends AbstractModel{
 
     /**
      * Get 录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。 
      * @return RecordInterval 录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public Long getRecordInterval() {
@@ -71,12 +71,12 @@ public class RecordParam extends AbstractModel{
 
     /**
      * Set 录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      * @param RecordInterval 录制间隔。
-单位秒，默认值1800。
-取值范围:300-7200。
+单位秒，默认：1800。
+取值范围：300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public void setRecordInterval(Long RecordInterval) {
@@ -85,11 +85,11 @@ public class RecordParam extends AbstractModel{
 
     /**
      * Get 录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。 
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。 
      * @return StorageTime 录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
      */
     public Long getStorageTime() {
         return this.StorageTime;
@@ -97,43 +97,43 @@ public class RecordParam extends AbstractModel{
 
     /**
      * Set 录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
      * @param StorageTime 录制存储时长。
-单位秒，取值范围： 0-93312000。
-0表示永久存储。
+单位秒，取值范围： 0 - 93312000。
+0：表示永久存储。
      */
     public void setStorageTime(Long StorageTime) {
         this.StorageTime = StorageTime;
     }
 
     /**
-     * Get 是否开启当前格式录制，0 否 1是。默认值0。 
-     * @return Enable 是否开启当前格式录制，0 否 1是。默认值0。
+     * Get 是否开启当前格式录制，默认值为0，0：否， 1：是。 
+     * @return Enable 是否开启当前格式录制，默认值为0，0：否， 1：是。
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启当前格式录制，0 否 1是。默认值0。
-     * @param Enable 是否开启当前格式录制，0 否 1是。默认值0。
+     * Set 是否开启当前格式录制，默认值为0，0：否， 1：是。
+     * @param Enable 是否开启当前格式录制，默认值为0，0：否， 1：是。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 点播子应用ID。 
-     * @return VodSubAppId 点播子应用ID。
+     * Get 点播子应用 ID。 
+     * @return VodSubAppId 点播子应用 ID。
      */
     public Long getVodSubAppId() {
         return this.VodSubAppId;
     }
 
     /**
-     * Set 点播子应用ID。
-     * @param VodSubAppId 点播子应用ID。
+     * Set 点播子应用 ID。
+     * @param VodSubAppId 点播子应用 ID。
      */
     public void setVodSubAppId(Long VodSubAppId) {
         this.VodSubAppId = VodSubAppId;

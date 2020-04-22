@@ -30,7 +30,7 @@ public class RealServerStatus extends AbstractModel{
     private String RealServerId;
 
     /**
-    * 0: 未被绑定 1：被规则或者监听器绑定。
+    * 0表示未被绑定 1表示被规则或者监听器绑定。
     */
     @SerializedName("BindStatus")
     @Expose
@@ -60,16 +60,16 @@ public class RealServerStatus extends AbstractModel{
     }
 
     /**
-     * Get 0: 未被绑定 1：被规则或者监听器绑定。 
-     * @return BindStatus 0: 未被绑定 1：被规则或者监听器绑定。
+     * Get 0表示未被绑定 1表示被规则或者监听器绑定。 
+     * @return BindStatus 0表示未被绑定 1表示被规则或者监听器绑定。
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set 0: 未被绑定 1：被规则或者监听器绑定。
-     * @param BindStatus 0: 未被绑定 1：被规则或者监听器绑定。
+     * Set 0表示未被绑定 1表示被规则或者监听器绑定。
+     * @param BindStatus 0表示未被绑定 1表示被规则或者监听器绑定。
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;

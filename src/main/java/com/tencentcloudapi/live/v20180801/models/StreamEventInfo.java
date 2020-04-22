@@ -45,8 +45,7 @@ public class StreamEventInfo extends AbstractModel{
 
     /**
     * 推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
     */
     @SerializedName("StreamStartTime")
     @Expose
@@ -54,8 +53,7 @@ UTC格式时间，
 
     /**
     * 推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
     */
     @SerializedName("StreamEndTime")
     @Expose
@@ -76,7 +74,7 @@ UTC格式时间，
     private Long Duration;
 
     /**
-    * 主播IP。
+    * 主播 IP。
     */
     @SerializedName("ClientIp")
     @Expose
@@ -139,11 +137,9 @@ UTC格式时间，
 
     /**
      * Get 推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。 
+UTC 格式时间，例如：2019-01-07T12:00:00Z。 
      * @return StreamStartTime 推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
      */
     public String getStreamStartTime() {
         return this.StreamStartTime;
@@ -151,11 +147,9 @@ UTC格式时间，
 
     /**
      * Set 推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
      * @param StreamStartTime 推流开始时间。
-UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+UTC 格式时间，例如：2019-01-07T12:00:00Z。
      */
     public void setStreamStartTime(String StreamStartTime) {
         this.StreamStartTime = StreamStartTime;
@@ -163,11 +157,9 @@ UTC格式时间，
 
     /**
      * Get 推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。 
+UTC 格式时间，例如：2019-01-07T15:00:00Z。 
      * @return StreamEndTime 推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
      */
     public String getStreamEndTime() {
         return this.StreamEndTime;
@@ -175,11 +167,9 @@ UTC格式时间，
 
     /**
      * Set 推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
      * @param StreamEndTime 推流结束时间。
-UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+UTC 格式时间，例如：2019-01-07T15:00:00Z。
      */
     public void setStreamEndTime(String StreamEndTime) {
         this.StreamEndTime = StreamEndTime;
@@ -218,16 +208,16 @@ UTC格式时间，
     }
 
     /**
-     * Get 主播IP。 
-     * @return ClientIp 主播IP。
+     * Get 主播 IP。 
+     * @return ClientIp 主播 IP。
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 主播IP。
-     * @param ClientIp 主播IP。
+     * Set 主播 IP。
+     * @param ClientIp 主播 IP。
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;

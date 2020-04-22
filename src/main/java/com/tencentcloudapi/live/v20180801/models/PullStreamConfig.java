@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class PullStreamConfig extends AbstractModel{
 
     /**
-    * 拉流配置Id。
+    * 拉流配置 ID。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 源Url。
+    * 源 URL。
     */
     @SerializedName("FromUrl")
     @Expose
     private String FromUrl;
 
     /**
-    * 目的Url。
+    * 目的 URL。
     */
     @SerializedName("ToUrl")
     @Expose
@@ -59,8 +59,7 @@ public class PullStreamConfig extends AbstractModel{
 
     /**
     * 开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("StartTime")
@@ -70,8 +69,7 @@ UTC格式时间，
     /**
     * 结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("EndTime")
@@ -79,55 +77,60 @@ UTC格式时间，
     private String EndTime;
 
     /**
-    * 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+    * 状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 拉流配置Id。 
-     * @return ConfigId 拉流配置Id。
+     * Get 拉流配置 ID。 
+     * @return ConfigId 拉流配置 ID。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 拉流配置Id。
-     * @param ConfigId 拉流配置Id。
+     * Set 拉流配置 ID。
+     * @param ConfigId 拉流配置 ID。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 源Url。 
-     * @return FromUrl 源Url。
+     * Get 源 URL。 
+     * @return FromUrl 源 URL。
      */
     public String getFromUrl() {
         return this.FromUrl;
     }
 
     /**
-     * Set 源Url。
-     * @param FromUrl 源Url。
+     * Set 源 URL。
+     * @param FromUrl 源 URL。
      */
     public void setFromUrl(String FromUrl) {
         this.FromUrl = FromUrl;
     }
 
     /**
-     * Get 目的Url。 
-     * @return ToUrl 目的Url。
+     * Get 目的 URL。 
+     * @return ToUrl 目的 URL。
      */
     public String getToUrl() {
         return this.ToUrl;
     }
 
     /**
-     * Set 目的Url。
-     * @param ToUrl 目的Url。
+     * Set 目的 URL。
+     * @param ToUrl 目的 URL。
      */
     public void setToUrl(String ToUrl) {
         this.ToUrl = ToUrl;
@@ -167,12 +170,10 @@ UTC格式时间，
 
     /**
      * Get 开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return StartTime 开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getStartTime() {
@@ -181,12 +182,10 @@ UTC格式时间，
 
     /**
      * Set 开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param StartTime 开始时间。
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如: 2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setStartTime(String StartTime) {
@@ -196,13 +195,11 @@ UTC格式时间，
     /**
      * Get 结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return EndTime 结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getEndTime() {
@@ -212,13 +209,11 @@ UTC格式时间，
     /**
      * Set 结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param EndTime 结束时间。
 
-UTC格式时间，
-例如：2019-01-08T10:00:00Z。
+UTC格式时间，例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setEndTime(String EndTime) {
@@ -226,16 +221,36 @@ UTC格式时间，
     }
 
     /**
-     * Get 0无效，1初始状态，2正在运行，3拉起失败，4暂停。 
-     * @return Status 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+     * Get 状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。 
+     * @return Status 状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
-     * @param Status 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+     * Set 状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
+     * @param Status 状态:
+0: 无效。
+1: 初始状态。
+2: 正在运行。
+3: 拉起失败。
+4: 暂停。
      */
     public void setStatus(String Status) {
         this.Status = Status;

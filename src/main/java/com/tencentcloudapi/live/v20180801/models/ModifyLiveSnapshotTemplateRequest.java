@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -68,14 +68,16 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     private Long Height;
 
     /**
-    * 是否开启鉴黄，0：不开启，1：开启。
+    * 是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
     */
     @SerializedName("PornFlag")
     @Expose
     private Long PornFlag;
 
     /**
-    * Cos AppId。
+    * Cos 应用 ID。
     */
     @SerializedName("CosAppId")
     @Expose
@@ -96,16 +98,16 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     private String CosRegion;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -204,32 +206,40 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启鉴黄，0：不开启，1：开启。 
-     * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。
+     * Get 是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。 
+     * @return PornFlag 是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
      */
     public Long getPornFlag() {
         return this.PornFlag;
     }
 
     /**
-     * Set 是否开启鉴黄，0：不开启，1：开启。
-     * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。
+     * Set 是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
+     * @param PornFlag 是否开启鉴黄，默认 0 。
+0：不开启。
+1：开启。
      */
     public void setPornFlag(Long PornFlag) {
         this.PornFlag = PornFlag;
     }
 
     /**
-     * Get Cos AppId。 
-     * @return CosAppId Cos AppId。
+     * Get Cos 应用 ID。 
+     * @return CosAppId Cos 应用 ID。
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set Cos AppId。
-     * @param CosAppId Cos AppId。
+     * Set Cos 应用 ID。
+     * @param CosAppId Cos 应用 ID。
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;

@@ -13,37 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMFADeviceCollResponse extends AbstractModel{
+public class DescribeVpcsResponse extends AbstractModel{
 
     /**
-    * Token状态
+    * 符合条件的对象数。
     */
-    @SerializedName("Status")
+    @SerializedName("TotalCount")
     @Expose
-    private Long Status;
+    private Long TotalCount;
 
     /**
-    * Token值
+    * 私有网络对象。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TokenSn")
+    @SerializedName("VpcSet")
     @Expose
-    private String TokenSn;
-
-    /**
-    * token类型
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TokenType")
-    @Expose
-    private Long TokenType;
+    private VpcInfo [] VpcSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,59 +45,39 @@ public class DescribeMFADeviceCollResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Token状态 
-     * @return Status Token状态
+     * Get 符合条件的对象数。 
+     * @return TotalCount 符合条件的对象数。
      */
-    public Long getStatus() {
-        return this.Status;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Token状态
-     * @param Status Token状态
+     * Set 符合条件的对象数。
+     * @param TotalCount 符合条件的对象数。
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Token值
+     * Get 私有网络对象。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TokenSn Token值
+     * @return VpcSet 私有网络对象。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTokenSn() {
-        return this.TokenSn;
+    public VpcInfo [] getVpcSet() {
+        return this.VpcSet;
     }
 
     /**
-     * Set Token值
+     * Set 私有网络对象。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TokenSn Token值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTokenSn(String TokenSn) {
-        this.TokenSn = TokenSn;
-    }
-
-    /**
-     * Get token类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TokenType token类型
+     * @param VpcSet 私有网络对象。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTokenType() {
-        return this.TokenType;
-    }
-
-    /**
-     * Set token类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TokenType token类型
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTokenType(Long TokenType) {
-        this.TokenType = TokenType;
+    public void setVpcSet(VpcInfo [] VpcSet) {
+        this.VpcSet = VpcSet;
     }
 
     /**
@@ -128,9 +100,8 @@ public class DescribeMFADeviceCollResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "TokenSn", this.TokenSn);
-        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

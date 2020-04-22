@@ -65,14 +65,14 @@ public class RuleInfo extends AbstractModel{
     private String Scheduler;
 
     /**
-    * 是否开启健康检查标志，1开启，0关闭
+    * 是否开启健康检查标志，1表示开启，0表示关闭
     */
     @SerializedName("HealthCheck")
     @Expose
     private Long HealthCheck;
 
     /**
-    * 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+    * 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -93,7 +93,7 @@ public class RuleInfo extends AbstractModel{
     private BindRealServer [] RealServerSet;
 
     /**
-    * 源站的服务状态，0：异常，1：正常。
+    * 源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
     */
@@ -206,32 +206,32 @@ public class RuleInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否开启健康检查标志，1开启，0关闭 
-     * @return HealthCheck 是否开启健康检查标志，1开启，0关闭
+     * Get 是否开启健康检查标志，1表示开启，0表示关闭 
+     * @return HealthCheck 是否开启健康检查标志，1表示开启，0表示关闭
      */
     public Long getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 是否开启健康检查标志，1开启，0关闭
-     * @param HealthCheck 是否开启健康检查标志，1开启，0关闭
+     * Set 是否开启健康检查标志，1表示开启，0表示关闭
+     * @param HealthCheck 是否开启健康检查标志，1表示开启，0表示关闭
      */
     public void setHealthCheck(Long HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中 
-     * @return RuleStatus 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+     * Get 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中 
+     * @return RuleStatus 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
      */
     public Long getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
-     * @param RuleStatus 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+     * Set 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
+     * @param RuleStatus 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
      */
     public void setRuleStatus(Long RuleStatus) {
         this.RuleStatus = RuleStatus;
@@ -270,10 +270,10 @@ public class RuleInfo extends AbstractModel{
     }
 
     /**
-     * Get 源站的服务状态，0：异常，1：正常。
+     * Get 源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。 
-     * @return BindStatus 源站的服务状态，0：异常，1：正常。
+     * @return BindStatus 源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      */
@@ -282,10 +282,10 @@ public class RuleInfo extends AbstractModel{
     }
 
     /**
-     * Set 源站的服务状态，0：异常，1：正常。
+     * Set 源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
-     * @param BindStatus 源站的服务状态，0：异常，1：正常。
+     * @param BindStatus 源站的服务状态，0表示异常，1表示正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      */

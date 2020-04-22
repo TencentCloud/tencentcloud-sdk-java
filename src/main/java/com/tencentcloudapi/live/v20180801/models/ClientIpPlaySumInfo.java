@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ClientIpPlaySumInfo extends AbstractModel{
 
     /**
-    * 客户端ip，点分型。
+    * 客户端 IP，点分型。
     */
     @SerializedName("ClientIp")
     @Expose
@@ -65,16 +65,16 @@ public class ClientIpPlaySumInfo extends AbstractModel{
     private String CountryArea;
 
     /**
-     * Get 客户端ip，点分型。 
-     * @return ClientIp 客户端ip，点分型。
+     * Get 客户端 IP，点分型。 
+     * @return ClientIp 客户端 IP，点分型。
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 客户端ip，点分型。
-     * @param ClientIp 客户端ip，点分型。
+     * Set 客户端 IP，点分型。
+     * @param ClientIp 客户端 IP，点分型。
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;

@@ -31,7 +31,6 @@ public class EditMediaTaskInput extends AbstractModel{
 
     /**
     * 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileInfoSet")
     @Expose
@@ -39,7 +38,6 @@ public class EditMediaTaskInput extends AbstractModel{
 
     /**
     * 输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamInfoSet")
     @Expose
@@ -62,10 +60,8 @@ public class EditMediaTaskInput extends AbstractModel{
     }
 
     /**
-     * Get 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入的视频文件信息，当 InputType 为 File 时，该字段有值。 
      * @return FileInfoSet 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaFileInfo [] getFileInfoSet() {
         return this.FileInfoSet;
@@ -73,19 +69,15 @@ public class EditMediaTaskInput extends AbstractModel{
 
     /**
      * Set 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileInfoSet 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileInfoSet(EditMediaFileInfo [] FileInfoSet) {
         this.FileInfoSet = FileInfoSet;
     }
 
     /**
-     * Get 输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入的流信息，当 InputType 为 Stream 时，该字段有值。 
      * @return StreamInfoSet 输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaStreamInfo [] getStreamInfoSet() {
         return this.StreamInfoSet;
@@ -93,9 +85,7 @@ public class EditMediaTaskInput extends AbstractModel{
 
     /**
      * Set 输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamInfoSet 输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamInfoSet(EditMediaStreamInfo [] StreamInfoSet) {
         this.StreamInfoSet = StreamInfoSet;

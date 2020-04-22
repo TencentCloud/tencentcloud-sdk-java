@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class BillDataInfo extends AbstractModel{
 
     /**
-    * 时间点，格式为yyyy-mm-dd HH:MM:SS。
+    * 时间点，格式: yyyy-mm-dd HH:MM:SS。
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 带宽，单位是Mbps。
+    * 带宽，单位是 Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Float Bandwidth;
 
     /**
-    * 流量，单位是MB。
+    * 流量，单位是 MB。
     */
     @SerializedName("Flux")
     @Expose
     private Float Flux;
 
     /**
-    * 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+    * 峰值时间点，格式: yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
     */
     @SerializedName("PeakTime")
     @Expose
     private String PeakTime;
 
     /**
-     * Get 时间点，格式为yyyy-mm-dd HH:MM:SS。 
-     * @return Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 时间点，格式: yyyy-mm-dd HH:MM:SS。 
+     * @return Time 时间点，格式: yyyy-mm-dd HH:MM:SS。
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 时间点，格式: yyyy-mm-dd HH:MM:SS。
+     * @param Time 时间点，格式: yyyy-mm-dd HH:MM:SS。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 带宽，单位是Mbps。 
-     * @return Bandwidth 带宽，单位是Mbps。
+     * Get 带宽，单位是 Mbps。 
+     * @return Bandwidth 带宽，单位是 Mbps。
      */
     public Float getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽，单位是Mbps。
-     * @param Bandwidth 带宽，单位是Mbps。
+     * Set 带宽，单位是 Mbps。
+     * @param Bandwidth 带宽，单位是 Mbps。
      */
     public void setBandwidth(Float Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 流量，单位是MB。 
-     * @return Flux 流量，单位是MB。
+     * Get 流量，单位是 MB。 
+     * @return Flux 流量，单位是 MB。
      */
     public Float getFlux() {
         return this.Flux;
     }
 
     /**
-     * Set 流量，单位是MB。
-     * @param Flux 流量，单位是MB。
+     * Set 流量，单位是 MB。
+     * @param Flux 流量，单位是 MB。
      */
     public void setFlux(Float Flux) {
         this.Flux = Flux;
     }
 
     /**
-     * Get 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。 
-     * @return PeakTime 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     * Get 峰值时间点，格式: yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。 
+     * @return PeakTime 峰值时间点，格式: yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
      */
     public String getPeakTime() {
         return this.PeakTime;
     }
 
     /**
-     * Set 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
-     * @param PeakTime 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     * Set 峰值时间点，格式: yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     * @param PeakTime 峰值时间点，格式: yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
      */
     public void setPeakTime(String PeakTime) {
         this.PeakTime = PeakTime;

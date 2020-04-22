@@ -30,7 +30,7 @@ public class DeleteLiveSnapshotRuleRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+    * 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -60,16 +60,16 @@ public class DeleteLiveSnapshotRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。 
+     * @return AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

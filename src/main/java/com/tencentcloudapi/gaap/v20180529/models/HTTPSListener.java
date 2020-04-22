@@ -52,11 +52,11 @@ public class HTTPSListener extends AbstractModel{
 
     /**
     * 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
     */
     @SerializedName("ListenerStatus")
     @Expose
@@ -191,17 +191,17 @@ public class HTTPSListener extends AbstractModel{
 
     /**
      * Get 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。 
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。 
      * @return ListenerStatus 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      */
     public Long getListenerStatus() {
         return this.ListenerStatus;
@@ -209,17 +209,17 @@ public class HTTPSListener extends AbstractModel{
 
     /**
      * Set 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      * @param ListenerStatus 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      */
     public void setListenerStatus(Long ListenerStatus) {
         this.ListenerStatus = ListenerStatus;

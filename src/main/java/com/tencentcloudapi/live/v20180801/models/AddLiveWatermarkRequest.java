@@ -37,28 +37,28 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     private String WatermarkName;
 
     /**
-    * 显示位置, X轴偏移。
+    * 显示位置，X轴偏移，默认 0。
     */
     @SerializedName("XPosition")
     @Expose
     private Long XPosition;
 
     /**
-    * 显示位置,Y轴偏移。
+    * 显示位置，Y轴偏移，默认 0。
     */
     @SerializedName("YPosition")
     @Expose
     private Long YPosition;
 
     /**
-    * 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+    * 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+    * 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
     */
     @SerializedName("Height")
     @Expose
@@ -97,64 +97,64 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     }
 
     /**
-     * Get 显示位置, X轴偏移。 
-     * @return XPosition 显示位置, X轴偏移。
+     * Get 显示位置，X轴偏移，默认 0。 
+     * @return XPosition 显示位置，X轴偏移，默认 0。
      */
     public Long getXPosition() {
         return this.XPosition;
     }
 
     /**
-     * Set 显示位置, X轴偏移。
-     * @param XPosition 显示位置, X轴偏移。
+     * Set 显示位置，X轴偏移，默认 0。
+     * @param XPosition 显示位置，X轴偏移，默认 0。
      */
     public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;
     }
 
     /**
-     * Get 显示位置,Y轴偏移。 
-     * @return YPosition 显示位置,Y轴偏移。
+     * Get 显示位置，Y轴偏移，默认 0。 
+     * @return YPosition 显示位置，Y轴偏移，默认 0。
      */
     public Long getYPosition() {
         return this.YPosition;
     }
 
     /**
-     * Set 显示位置,Y轴偏移。
-     * @param YPosition 显示位置,Y轴偏移。
+     * Set 显示位置，Y轴偏移，默认 0。
+     * @param YPosition 显示位置，Y轴偏移，默认 0。
      */
     public void setYPosition(Long YPosition) {
         this.YPosition = YPosition;
     }
 
     /**
-     * Get 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。 
-     * @return Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Get 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。 
+     * @return Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
-     * @param Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Set 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
+     * @param Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。 
-     * @return Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Get 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。 
+     * @return Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
-     * @param Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Set 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * @param Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

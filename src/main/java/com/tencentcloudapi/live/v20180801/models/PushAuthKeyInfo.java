@@ -37,14 +37,14 @@ public class PushAuthKeyInfo extends AbstractModel{
     private Long Enable;
 
     /**
-    * 主鉴权key。
+    * 主鉴权 Key。
     */
     @SerializedName("MasterAuthKey")
     @Expose
     private String MasterAuthKey;
 
     /**
-    * 备鉴权key。
+    * 备鉴权 Key。
     */
     @SerializedName("BackupAuthKey")
     @Expose
@@ -90,32 +90,32 @@ public class PushAuthKeyInfo extends AbstractModel{
     }
 
     /**
-     * Get 主鉴权key。 
-     * @return MasterAuthKey 主鉴权key。
+     * Get 主鉴权 Key。 
+     * @return MasterAuthKey 主鉴权 Key。
      */
     public String getMasterAuthKey() {
         return this.MasterAuthKey;
     }
 
     /**
-     * Set 主鉴权key。
-     * @param MasterAuthKey 主鉴权key。
+     * Set 主鉴权 Key。
+     * @param MasterAuthKey 主鉴权 Key。
      */
     public void setMasterAuthKey(String MasterAuthKey) {
         this.MasterAuthKey = MasterAuthKey;
     }
 
     /**
-     * Get 备鉴权key。 
-     * @return BackupAuthKey 备鉴权key。
+     * Get 备鉴权 Key。 
+     * @return BackupAuthKey 备鉴权 Key。
      */
     public String getBackupAuthKey() {
         return this.BackupAuthKey;
     }
 
     /**
-     * Set 备鉴权key。
-     * @param BackupAuthKey 备鉴权key。
+     * Set 备鉴权 Key。
+     * @param BackupAuthKey 备鉴权 Key。
      */
     public void setBackupAuthKey(String BackupAuthKey) {
         this.BackupAuthKey = BackupAuthKey;

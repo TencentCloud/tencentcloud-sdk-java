@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class CdnPlayStatData extends AbstractModel{
 
     /**
-    * 时间点，格式为yyyy-mm-dd HH:MM:SS。
+    * 时间点，格式: yyyy-mm-dd HH:MM:SS。
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 带宽，（单位Mbps）。
+    * 带宽，单位: Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Float Bandwidth;
 
     /**
-    * 流量，（单位MB）。
+    * 流量，单位: MB。
     */
     @SerializedName("Flux")
     @Expose
@@ -58,48 +58,48 @@ public class CdnPlayStatData extends AbstractModel{
     private Long Online;
 
     /**
-     * Get 时间点，格式为yyyy-mm-dd HH:MM:SS。 
-     * @return Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 时间点，格式: yyyy-mm-dd HH:MM:SS。 
+     * @return Time 时间点，格式: yyyy-mm-dd HH:MM:SS。
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 时间点，格式: yyyy-mm-dd HH:MM:SS。
+     * @param Time 时间点，格式: yyyy-mm-dd HH:MM:SS。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 带宽，（单位Mbps）。 
-     * @return Bandwidth 带宽，（单位Mbps）。
+     * Get 带宽，单位: Mbps。 
+     * @return Bandwidth 带宽，单位: Mbps。
      */
     public Float getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽，（单位Mbps）。
-     * @param Bandwidth 带宽，（单位Mbps）。
+     * Set 带宽，单位: Mbps。
+     * @param Bandwidth 带宽，单位: Mbps。
      */
     public void setBandwidth(Float Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 流量，（单位MB）。 
-     * @return Flux 流量，（单位MB）。
+     * Get 流量，单位: MB。 
+     * @return Flux 流量，单位: MB。
      */
     public Float getFlux() {
         return this.Flux;
     }
 
     /**
-     * Set 流量，（单位MB）。
-     * @param Flux 流量，（单位MB）。
+     * Set 流量，单位: MB。
+     * @param Flux 流量，单位: MB。
      */
     public void setFlux(Float Flux) {
         this.Flux = Flux;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyPullStreamStatusRequest extends AbstractModel{
 
     /**
-    * 配置id列表。
+    * 配置 ID 列表。
     */
     @SerializedName("ConfigIds")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyPullStreamStatusRequest extends AbstractModel{
     private String Status;
 
     /**
-     * Get 配置id列表。 
-     * @return ConfigIds 配置id列表。
+     * Get 配置 ID 列表。 
+     * @return ConfigIds 配置 ID 列表。
      */
     public String [] getConfigIds() {
         return this.ConfigIds;
     }
 
     /**
-     * Set 配置id列表。
-     * @param ConfigIds 配置id列表。
+     * Set 配置 ID 列表。
+     * @param ConfigIds 配置 ID 列表。
      */
     public void setConfigIds(String [] ConfigIds) {
         this.ConfigIds = ConfigIds;

@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.taf.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckResponse extends AbstractModel{
+public class DetectAccountActivityResponse extends AbstractModel{
+
+    /**
+    * 回包数据
+    */
+    @SerializedName("Data")
+    @Expose
+    private OutputDetectAccountActivity Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class CheckResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 回包数据 
+     * @return Data 回包数据
+     */
+    public OutputDetectAccountActivity getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 回包数据
+     * @param Data 回包数据
+     */
+    public void setData(OutputDetectAccountActivity Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class CheckResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

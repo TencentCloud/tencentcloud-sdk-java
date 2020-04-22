@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectAuthResponse extends AbstractModel{
+public class InquirePriceRenewDBInstancesResponse extends AbstractModel{
 
     /**
-    * 人脸核身token
+    * 价格
     */
-    @SerializedName("Token")
+    @SerializedName("Price")
     @Expose
-    private String Token;
+    private DBInstancePrice Price;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DetectAuthResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 人脸核身token 
-     * @return Token 人脸核身token
+     * Get 价格 
+     * @return Price 价格
      */
-    public String getToken() {
-        return this.Token;
+    public DBInstancePrice getPrice() {
+        return this.Price;
     }
 
     /**
-     * Set 人脸核身token
-     * @param Token 人脸核身token
+     * Set 价格
+     * @param Price 价格
      */
-    public void setToken(String Token) {
-        this.Token = Token;
+    public void setPrice(DBInstancePrice Price) {
+        this.Price = Price;
     }
 
     /**
@@ -72,7 +72,7 @@ public class DetectAuthResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamObj(map, prefix + "Price.", this.Price);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

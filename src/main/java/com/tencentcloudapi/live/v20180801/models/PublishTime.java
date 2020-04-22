@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PublishTime extends AbstractModel{
 
     /**
-    * 推流时间
+    * 推流时间。
 UTC 格式，例如：2018-06-29T19:00:00Z。
     */
     @SerializedName("PublishTime")
@@ -31,9 +31,9 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
     private String PublishTime;
 
     /**
-     * Get 推流时间
+     * Get 推流时间。
 UTC 格式，例如：2018-06-29T19:00:00Z。 
-     * @return PublishTime 推流时间
+     * @return PublishTime 推流时间。
 UTC 格式，例如：2018-06-29T19:00:00Z。
      */
     public String getPublishTime() {
@@ -41,9 +41,9 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
     }
 
     /**
-     * Set 推流时间
+     * Set 推流时间。
 UTC 格式，例如：2018-06-29T19:00:00Z。
-     * @param PublishTime 推流时间
+     * @param PublishTime 推流时间。
 UTC 格式，例如：2018-06-29T19:00:00Z。
      */
     public void setPublishTime(String PublishTime) {

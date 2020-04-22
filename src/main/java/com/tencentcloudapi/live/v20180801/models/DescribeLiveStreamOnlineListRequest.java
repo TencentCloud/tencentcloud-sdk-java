@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
 
     /**
-    * 推流域名。多域名用户需要填写DomainName。
+    * 推流域名。多域名用户需要填写 DomainName。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
+    * 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
     */
     @SerializedName("AppName")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
     private String StreamName;
 
     /**
-     * Get 推流域名。多域名用户需要填写DomainName。 
-     * @return DomainName 推流域名。多域名用户需要填写DomainName。
+     * Get 推流域名。多域名用户需要填写 DomainName。 
+     * @return DomainName 推流域名。多域名用户需要填写 DomainName。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 推流域名。多域名用户需要填写DomainName。
-     * @param DomainName 推流域名。多域名用户需要填写DomainName。
+     * Set 推流域名。多域名用户需要填写 DomainName。
+     * @param DomainName 推流域名。多域名用户需要填写 DomainName。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。 
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
+     * Get 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。 
+     * @return AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。多路径用户需要填写AppName。
+     * Set 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
+     * @param AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。多路径用户需要填写 AppName。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

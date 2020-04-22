@@ -23,15 +23,16 @@ import java.util.HashMap;
 public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
-    * 模板名称，非空的字符串。
+    * 模板名称。
 长度上限：255字节。
+仅支持中文、英文、数字、_、-。
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * Cos AppId。
+    * Cos 应用 ID。
     */
     @SerializedName("CosAppId")
     @Expose
@@ -54,6 +55,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     /**
     * 描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
     */
     @SerializedName("Description")
     @Expose
@@ -89,36 +91,40 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     private Long PornFlag;
 
     /**
-     * Get 模板名称，非空的字符串。
-长度上限：255字节。 
-     * @return TemplateName 模板名称，非空的字符串。
+     * Get 模板名称。
 长度上限：255字节。
+仅支持中文、英文、数字、_、-。 
+     * @return TemplateName 模板名称。
+长度上限：255字节。
+仅支持中文、英文、数字、_、-。
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称，非空的字符串。
+     * Set 模板名称。
 长度上限：255字节。
-     * @param TemplateName 模板名称，非空的字符串。
+仅支持中文、英文、数字、_、-。
+     * @param TemplateName 模板名称。
 长度上限：255字节。
+仅支持中文、英文、数字、_、-。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get Cos AppId。 
-     * @return CosAppId Cos AppId。
+     * Get Cos 应用 ID。 
+     * @return CosAppId Cos 应用 ID。
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set Cos AppId。
-     * @param CosAppId Cos AppId。
+     * Set Cos 应用 ID。
+     * @param CosAppId Cos 应用 ID。
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
@@ -158,9 +164,11 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Get 描述信息。
-长度上限：1024字节。 
+长度上限：1024字节。
+仅支持中文、英文、数字、_、-。 
      * @return Description 描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
      */
     public String getDescription() {
         return this.Description;
@@ -169,8 +177,10 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     /**
      * Set 描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
      * @param Description 描述信息。
 长度上限：1024字节。
+仅支持中文、英文、数字、_、-。
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -24,7 +24,6 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 
     /**
     * 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -59,10 +58,8 @@ public class AiReviewPornTaskOutput extends AbstractModel{
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-     * Get 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频鉴黄评分，分值为0到100。 
      * @return Confidence 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -70,9 +67,7 @@ public class AiReviewPornTaskOutput extends AbstractModel{
 
     /**
      * Set 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 视频鉴黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

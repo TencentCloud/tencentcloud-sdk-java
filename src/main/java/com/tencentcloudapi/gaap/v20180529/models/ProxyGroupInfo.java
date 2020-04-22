@@ -62,10 +62,10 @@ public class ProxyGroupInfo extends AbstractModel{
     /**
     * 通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
     */
     @SerializedName("Status")
     @Expose
@@ -169,16 +169,16 @@ public class ProxyGroupInfo extends AbstractModel{
     /**
      * Get 通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。 
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。 
      * @return Status 通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
      */
     public String getStatus() {
         return this.Status;
@@ -187,16 +187,16 @@ public class ProxyGroupInfo extends AbstractModel{
     /**
      * Set 通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
      * @param Status 通道组状态。
 其中，
-0，运行中；
-1，创建中；
-4，销毁中；
-11，通道迁移中。
+0表示运行中；
+1表示创建中；
+4表示销毁中；
+11表示通道迁移中。
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -30,16 +30,14 @@ public class TranscodeDetailInfo extends AbstractModel{
     private String StreamName;
 
     /**
-    * 开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+    * 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+    * 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
     */
     @SerializedName("EndTime")
     @Expose
@@ -56,10 +54,10 @@ public class TranscodeDetailInfo extends AbstractModel{
     /**
     * 编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
     */
     @SerializedName("ModuleCodec")
     @Expose
@@ -73,7 +71,7 @@ topspeed_H265 =》极速高清-H265。
     private Long Bitrate;
 
     /**
-    * 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+    * 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
     */
     @SerializedName("Type")
     @Expose
@@ -110,40 +108,32 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * Get 开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。 
-     * @return StartTime 开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * Get 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。 
+     * @return StartTime 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
-     * @param StartTime 开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * Set 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
+     * @param StartTime 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。 
-     * @return EndTime 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * Get 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。 
+     * @return EndTime 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
-     * @param EndTime 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * Set 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
+     * @param EndTime 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -172,16 +162,16 @@ topspeed_H265 =》极速高清-H265。
     /**
      * Get 编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。 
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。 
      * @return ModuleCodec 编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
      */
     public String getModuleCodec() {
         return this.ModuleCodec;
@@ -190,16 +180,16 @@ topspeed_H265 =》极速高清-H265。
     /**
      * Set 编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
      * @param ModuleCodec 编码方式，带模块，
 示例：
-liveprocessor_H264 =》直播转码-H264，
-liveprocessor_H265 =》 直播转码-H265，
-topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+liveprocessor_H264：直播转码-H264，
+liveprocessor_H265： 直播转码-H265，
+topspeed_H264：极速高清-H264，
+topspeed_H265：极速高清-H265。
      */
     public void setModuleCodec(String ModuleCodec) {
         this.ModuleCodec = ModuleCodec;
@@ -222,16 +212,16 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * Get 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。 
-     * @return Type 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+     * Get 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。 
+     * @return Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
-     * @param Type 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+     * Set 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+     * @param Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
      */
     public void setType(String Type) {
         this.Type = Type;

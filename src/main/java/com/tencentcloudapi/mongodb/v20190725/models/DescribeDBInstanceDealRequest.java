@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMFADeviceCollRequest extends AbstractModel{
+public class DescribeDBInstanceDealRequest extends AbstractModel{
 
     /**
-    * 子用户Uin
+    * 订单ID，通过CreateDBInstance等接口返回
     */
-    @SerializedName("SubUin")
+    @SerializedName("DealId")
     @Expose
-    private Long SubUin;
+    private String DealId;
 
     /**
-     * Get 子用户Uin 
-     * @return SubUin 子用户Uin
+     * Get 订单ID，通过CreateDBInstance等接口返回 
+     * @return DealId 订单ID，通过CreateDBInstance等接口返回
      */
-    public Long getSubUin() {
-        return this.SubUin;
+    public String getDealId() {
+        return this.DealId;
     }
 
     /**
-     * Set 子用户Uin
-     * @param SubUin 子用户Uin
+     * Set 订单ID，通过CreateDBInstance等接口返回
+     * @param DealId 订单ID，通过CreateDBInstance等接口返回
      */
-    public void setSubUin(Long SubUin) {
-        this.SubUin = SubUin;
+    public void setDealId(String DealId) {
+        this.DealId = DealId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
+        this.setParamSimple(map, prefix + "DealId", this.DealId);
 
     }
 }

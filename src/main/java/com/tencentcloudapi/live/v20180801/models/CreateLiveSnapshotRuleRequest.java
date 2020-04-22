@@ -30,14 +30,14 @@ public class CreateLiveSnapshotRuleRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+    * 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
     */
     @SerializedName("AppName")
     @Expose
@@ -68,32 +68,32 @@ public class CreateLiveSnapshotRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。 
+     * @return AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
+     * @param AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

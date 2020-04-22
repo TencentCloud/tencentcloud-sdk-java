@@ -566,6 +566,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *查询私有网络列表
+     * @param req DescribeVpcsRequest
+     * @return DescribeVpcsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcsResponse DescribeVpcs(DescribeVpcsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVpcs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *弹性网卡解绑云主机
      * @param req DetachNetworkInterfaceRequest
      * @return DetachNetworkInterfaceResponse

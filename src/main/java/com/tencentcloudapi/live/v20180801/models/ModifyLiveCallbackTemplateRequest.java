@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -44,58 +44,59 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 开播回调URL。
+    * 开播回调 URL。
     */
     @SerializedName("StreamBeginNotifyUrl")
     @Expose
     private String StreamBeginNotifyUrl;
 
     /**
-    * 断流回调URL。
+    * 断流回调 URL。
     */
     @SerializedName("StreamEndNotifyUrl")
     @Expose
     private String StreamEndNotifyUrl;
 
     /**
-    * 录制回调URL。
+    * 录制回调 URL。
     */
     @SerializedName("RecordNotifyUrl")
     @Expose
     private String RecordNotifyUrl;
 
     /**
-    * 截图回调URL。
+    * 截图回调 URL。
     */
     @SerializedName("SnapshotNotifyUrl")
     @Expose
     private String SnapshotNotifyUrl;
 
     /**
-    * 鉴黄回调URL。
+    * 鉴黄回调 URL。
     */
     @SerializedName("PornCensorshipNotifyUrl")
     @Expose
     private String PornCensorshipNotifyUrl;
 
     /**
-    * 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
+    * 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
     */
     @SerializedName("CallbackKey")
     @Expose
     private String CallbackKey;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -134,96 +135,100 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 开播回调URL。 
-     * @return StreamBeginNotifyUrl 开播回调URL。
+     * Get 开播回调 URL。 
+     * @return StreamBeginNotifyUrl 开播回调 URL。
      */
     public String getStreamBeginNotifyUrl() {
         return this.StreamBeginNotifyUrl;
     }
 
     /**
-     * Set 开播回调URL。
-     * @param StreamBeginNotifyUrl 开播回调URL。
+     * Set 开播回调 URL。
+     * @param StreamBeginNotifyUrl 开播回调 URL。
      */
     public void setStreamBeginNotifyUrl(String StreamBeginNotifyUrl) {
         this.StreamBeginNotifyUrl = StreamBeginNotifyUrl;
     }
 
     /**
-     * Get 断流回调URL。 
-     * @return StreamEndNotifyUrl 断流回调URL。
+     * Get 断流回调 URL。 
+     * @return StreamEndNotifyUrl 断流回调 URL。
      */
     public String getStreamEndNotifyUrl() {
         return this.StreamEndNotifyUrl;
     }
 
     /**
-     * Set 断流回调URL。
-     * @param StreamEndNotifyUrl 断流回调URL。
+     * Set 断流回调 URL。
+     * @param StreamEndNotifyUrl 断流回调 URL。
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
         this.StreamEndNotifyUrl = StreamEndNotifyUrl;
     }
 
     /**
-     * Get 录制回调URL。 
-     * @return RecordNotifyUrl 录制回调URL。
+     * Get 录制回调 URL。 
+     * @return RecordNotifyUrl 录制回调 URL。
      */
     public String getRecordNotifyUrl() {
         return this.RecordNotifyUrl;
     }
 
     /**
-     * Set 录制回调URL。
-     * @param RecordNotifyUrl 录制回调URL。
+     * Set 录制回调 URL。
+     * @param RecordNotifyUrl 录制回调 URL。
      */
     public void setRecordNotifyUrl(String RecordNotifyUrl) {
         this.RecordNotifyUrl = RecordNotifyUrl;
     }
 
     /**
-     * Get 截图回调URL。 
-     * @return SnapshotNotifyUrl 截图回调URL。
+     * Get 截图回调 URL。 
+     * @return SnapshotNotifyUrl 截图回调 URL。
      */
     public String getSnapshotNotifyUrl() {
         return this.SnapshotNotifyUrl;
     }
 
     /**
-     * Set 截图回调URL。
-     * @param SnapshotNotifyUrl 截图回调URL。
+     * Set 截图回调 URL。
+     * @param SnapshotNotifyUrl 截图回调 URL。
      */
     public void setSnapshotNotifyUrl(String SnapshotNotifyUrl) {
         this.SnapshotNotifyUrl = SnapshotNotifyUrl;
     }
 
     /**
-     * Get 鉴黄回调URL。 
-     * @return PornCensorshipNotifyUrl 鉴黄回调URL。
+     * Get 鉴黄回调 URL。 
+     * @return PornCensorshipNotifyUrl 鉴黄回调 URL。
      */
     public String getPornCensorshipNotifyUrl() {
         return this.PornCensorshipNotifyUrl;
     }
 
     /**
-     * Set 鉴黄回调URL。
-     * @param PornCensorshipNotifyUrl 鉴黄回调URL。
+     * Set 鉴黄回调 URL。
+     * @param PornCensorshipNotifyUrl 鉴黄回调 URL。
      */
     public void setPornCensorshipNotifyUrl(String PornCensorshipNotifyUrl) {
         this.PornCensorshipNotifyUrl = PornCensorshipNotifyUrl;
     }
 
     /**
-     * Get 回调key，回调URL公用，鉴权回调说明详见回调格式文档。 
-     * @return CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
+     * Get 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。 
+     * @return CallbackKey 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
      */
     public String getCallbackKey() {
         return this.CallbackKey;
     }
 
     /**
-     * Set 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
-     * @param CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
+     * Set 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
+     * @param CallbackKey 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+[事件消息通知](/document/product/267/32744)。
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ActivateSubscribeResponse extends AbstractModel{
 
     /**
-    * 配置数据订阅任务任务ID。
+    * 配置数据订阅任务ID。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -37,16 +37,16 @@ public class ActivateSubscribeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 配置数据订阅任务任务ID。 
-     * @return AsyncRequestId 配置数据订阅任务任务ID。
+     * Get 配置数据订阅任务ID。 
+     * @return AsyncRequestId 配置数据订阅任务ID。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 配置数据订阅任务任务ID。
-     * @param AsyncRequestId 配置数据订阅任务任务ID。
+     * Set 配置数据订阅任务ID。
+     * @param AsyncRequestId 配置数据订阅任务ID。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

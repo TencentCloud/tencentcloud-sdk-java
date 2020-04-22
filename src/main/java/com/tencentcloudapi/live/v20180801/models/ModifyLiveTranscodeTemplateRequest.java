@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板 Id。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -46,7 +46,8 @@ aac/mp3。
     private String Acodec;
 
     /**
-    * 音频码率，默认0。0-500
+    * 音频码率，默认0。
+范围：0-500。
     */
     @SerializedName("AudioBitrate")
     @Expose
@@ -60,14 +61,15 @@ aac/mp3。
     private String Description;
 
     /**
-    * 视频码率。100-8000
+    * 视频码率。
+范围：100-8000。
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * 宽。0-3000
+    * 宽。0-3000。
     */
     @SerializedName("Width")
     @Expose
@@ -88,28 +90,29 @@ aac/mp3。
     private Long NeedAudio;
 
     /**
-    * 高。0-3000
+    * 高。0-3000。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 帧率。0-200
+    * 帧率。0-200。
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 关键帧间隔，单位：秒。0-50
+    * 关键帧间隔，单位：秒。0-50。
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * 旋转角度。0 90 180 270
+    * 旋转角度。
+0 90 180 270。
     */
     @SerializedName("Rotate")
     @Expose
@@ -145,23 +148,23 @@ baseline/main/high。
     private Long FpsToOrig;
 
     /**
-    * 急速高清相比VideoBitrate少多少码率，0.1到0.5
+    * 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
     private Float AdaptBitratePercent;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 Id。 
+     * @return TemplateId 模板 Id。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 Id。
+     * @param TemplateId 模板 Id。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -208,16 +211,20 @@ aac/mp3。
     }
 
     /**
-     * Get 音频码率，默认0。0-500 
-     * @return AudioBitrate 音频码率，默认0。0-500
+     * Get 音频码率，默认0。
+范围：0-500。 
+     * @return AudioBitrate 音频码率，默认0。
+范围：0-500。
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set 音频码率，默认0。0-500
-     * @param AudioBitrate 音频码率，默认0。0-500
+     * Set 音频码率，默认0。
+范围：0-500。
+     * @param AudioBitrate 音频码率，默认0。
+范围：0-500。
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
@@ -240,32 +247,36 @@ aac/mp3。
     }
 
     /**
-     * Get 视频码率。100-8000 
-     * @return VideoBitrate 视频码率。100-8000
+     * Get 视频码率。
+范围：100-8000。 
+     * @return VideoBitrate 视频码率。
+范围：100-8000。
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set 视频码率。100-8000
-     * @param VideoBitrate 视频码率。100-8000
+     * Set 视频码率。
+范围：100-8000。
+     * @param VideoBitrate 视频码率。
+范围：100-8000。
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get 宽。0-3000 
-     * @return Width 宽。0-3000
+     * Get 宽。0-3000。 
+     * @return Width 宽。0-3000。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽。0-3000
-     * @param Width 宽。0-3000
+     * Set 宽。0-3000。
+     * @param Width 宽。0-3000。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -304,64 +315,68 @@ aac/mp3。
     }
 
     /**
-     * Get 高。0-3000 
-     * @return Height 高。0-3000
+     * Get 高。0-3000。 
+     * @return Height 高。0-3000。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高。0-3000
-     * @param Height 高。0-3000
+     * Set 高。0-3000。
+     * @param Height 高。0-3000。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 帧率。0-200 
-     * @return Fps 帧率。0-200
+     * Get 帧率。0-200。 
+     * @return Fps 帧率。0-200。
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 帧率。0-200
-     * @param Fps 帧率。0-200
+     * Set 帧率。0-200。
+     * @param Fps 帧率。0-200。
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 关键帧间隔，单位：秒。0-50 
-     * @return Gop 关键帧间隔，单位：秒。0-50
+     * Get 关键帧间隔，单位：秒。0-50。 
+     * @return Gop 关键帧间隔，单位：秒。0-50。
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set 关键帧间隔，单位：秒。0-50
-     * @param Gop 关键帧间隔，单位：秒。0-50
+     * Set 关键帧间隔，单位：秒。0-50。
+     * @param Gop 关键帧间隔，单位：秒。0-50。
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get 旋转角度。0 90 180 270 
-     * @return Rotate 旋转角度。0 90 180 270
+     * Get 旋转角度。
+0 90 180 270。 
+     * @return Rotate 旋转角度。
+0 90 180 270。
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set 旋转角度。0 90 180 270
-     * @param Rotate 旋转角度。0 90 180 270
+     * Set 旋转角度。
+0 90 180 270。
+     * @param Rotate 旋转角度。
+0 90 180 270。
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
@@ -436,16 +451,16 @@ baseline/main/high。
     }
 
     /**
-     * Get 急速高清相比VideoBitrate少多少码率，0.1到0.5 
-     * @return AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Get 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。 
+     * @return AdaptBitratePercent 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set 急速高清相比VideoBitrate少多少码率，0.1到0.5
-     * @param AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Set 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+     * @param AdaptBitratePercent 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

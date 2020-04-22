@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteLiveRecordTemplateRequest extends AbstractModel{
 
     /**
-    * 模板ID。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get 模板ID。 
-     * @return TemplateId 模板ID。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID。
-     * @param TemplateId 模板ID。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

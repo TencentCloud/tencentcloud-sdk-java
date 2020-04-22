@@ -30,21 +30,21 @@ public class LogInfo extends AbstractModel{
     private String LogName;
 
     /**
-    * 日志Url。
+    * 日志 URL。
     */
     @SerializedName("LogUrl")
     @Expose
     private String LogUrl;
 
     /**
-    * 日志生成时间
+    * 日志生成时间。
     */
     @SerializedName("LogTime")
     @Expose
     private String LogTime;
 
     /**
-    * 文件大小
+    * 文件大小。
     */
     @SerializedName("FileSize")
     @Expose
@@ -67,48 +67,48 @@ public class LogInfo extends AbstractModel{
     }
 
     /**
-     * Get 日志Url。 
-     * @return LogUrl 日志Url。
+     * Get 日志 URL。 
+     * @return LogUrl 日志 URL。
      */
     public String getLogUrl() {
         return this.LogUrl;
     }
 
     /**
-     * Set 日志Url。
-     * @param LogUrl 日志Url。
+     * Set 日志 URL。
+     * @param LogUrl 日志 URL。
      */
     public void setLogUrl(String LogUrl) {
         this.LogUrl = LogUrl;
     }
 
     /**
-     * Get 日志生成时间 
-     * @return LogTime 日志生成时间
+     * Get 日志生成时间。 
+     * @return LogTime 日志生成时间。
      */
     public String getLogTime() {
         return this.LogTime;
     }
 
     /**
-     * Set 日志生成时间
-     * @param LogTime 日志生成时间
+     * Set 日志生成时间。
+     * @param LogTime 日志生成时间。
      */
     public void setLogTime(String LogTime) {
         this.LogTime = LogTime;
     }
 
     /**
-     * Get 文件大小 
-     * @return FileSize 文件大小
+     * Get 文件大小。 
+     * @return FileSize 文件大小。
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小
-     * @param FileSize 文件大小
+     * Set 文件大小。
+     * @param FileSize 文件大小。
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;

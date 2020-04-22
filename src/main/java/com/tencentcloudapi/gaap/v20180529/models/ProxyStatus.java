@@ -32,16 +32,16 @@ public class ProxyStatus extends AbstractModel{
     /**
     * 通道状态。
 其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中；
-ISOLATED，已隔离；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中；
+ISOLATED表示已隔离；
+UNKNOWN表示未知状态。
     */
     @SerializedName("Status")
     @Expose
@@ -66,28 +66,28 @@ UNKNOWN，未知状态。
     /**
      * Get 通道状态。
 其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中；
-ISOLATED，已隔离；
-UNKNOWN，未知状态。 
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中；
+ISOLATED表示已隔离；
+UNKNOWN表示未知状态。 
      * @return Status 通道状态。
 其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中；
-ISOLATED，已隔离；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中；
+ISOLATED表示已隔离；
+UNKNOWN表示未知状态。
      */
     public String getStatus() {
         return this.Status;
@@ -96,28 +96,28 @@ UNKNOWN，未知状态。
     /**
      * Set 通道状态。
 其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中；
-ISOLATED，已隔离；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中；
+ISOLATED表示已隔离；
+UNKNOWN表示未知状态。
      * @param Status 通道状态。
 其中：
-RUNNING，运行中；
-CREATING，创建中；
-DESTROYING，销毁中；
-OPENING，开启中；
-CLOSING，关闭中；
-CLOSED，已关闭；
-ADJUSTING，配置变更中；
-ISOLATING，隔离中；
-ISOLATED，已隔离；
-UNKNOWN，未知状态。
+RUNNING表示运行中；
+CREATING表示创建中；
+DESTROYING表示销毁中；
+OPENING表示开启中；
+CLOSING表示关闭中；
+CLOSED表示已关闭；
+ADJUSTING表示配置变更中；
+ISOLATING表示隔离中；
+ISOLATED表示已隔离；
+UNKNOWN表示未知状态。
      */
     public void setStatus(String Status) {
         this.Status = Status;

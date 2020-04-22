@@ -67,11 +67,11 @@ public class UDPListener extends AbstractModel{
 
     /**
     * 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
     */
     @SerializedName("ListenerStatus")
     @Expose
@@ -85,7 +85,7 @@ public class UDPListener extends AbstractModel{
     private String Scheduler;
 
     /**
-    * 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
+    * 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
     */
     @SerializedName("BindStatus")
     @Expose
@@ -207,17 +207,17 @@ public class UDPListener extends AbstractModel{
 
     /**
      * Get 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。 
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。 
      * @return ListenerStatus 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      */
     public Long getListenerStatus() {
         return this.ListenerStatus;
@@ -225,17 +225,17 @@ public class UDPListener extends AbstractModel{
 
     /**
      * Set 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      * @param ListenerStatus 监听器状态，其中：
-0， 运行中；
-1， 创建中；
-2，销毁中；
-3，源站调整中；
-4，配置变更中。
+0表示运行中；
+1表示创建中；
+2表示销毁中；
+3表示源站调整中；
+4表示配置变更中。
      */
     public void setListenerStatus(Long ListenerStatus) {
         this.ListenerStatus = ListenerStatus;
@@ -258,16 +258,16 @@ public class UDPListener extends AbstractModel{
     }
 
     /**
-     * Get 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常 
-     * @return BindStatus 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
+     * Get 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常 
+     * @return BindStatus 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
-     * @param BindStatus 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
+     * Set 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
+     * @param BindStatus 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;

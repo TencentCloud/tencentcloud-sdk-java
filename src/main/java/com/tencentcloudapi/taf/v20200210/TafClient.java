@@ -38,6 +38,24 @@ public class TafClient extends AbstractClient{
     }
 
     /**
+     *DetectAccountActivity
+     * @param req DetectAccountActivityRequest
+     * @return DetectAccountActivityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectAccountActivityResponse DetectAccountActivity(DetectAccountActivityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectAccountActivityResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectAccountActivityResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectAccountActivity"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DetectFraudKOL
      * @param req DetectFraudKOLRequest
      * @return DetectFraudKOLResponse

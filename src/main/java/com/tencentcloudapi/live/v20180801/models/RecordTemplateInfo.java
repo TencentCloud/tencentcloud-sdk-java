@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RecordTemplateInfo extends AbstractModel{
 
     /**
-    * 模板Id。
+    * 模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -44,28 +44,28 @@ public class RecordTemplateInfo extends AbstractModel{
     private String Description;
 
     /**
-    * Flv录制参数。
+    * FLV 录制参数。
     */
     @SerializedName("FlvParam")
     @Expose
     private RecordParam FlvParam;
 
     /**
-    * Hls录制参数。
+    * HLS 录制参数。
     */
     @SerializedName("HlsParam")
     @Expose
     private RecordParam HlsParam;
 
     /**
-    * Mp4录制参数。
+    * MP4 录制参数。
     */
     @SerializedName("Mp4Param")
     @Expose
     private RecordParam Mp4Param;
 
     /**
-    * Aac录制参数。
+    * AAC 录制参数。
     */
     @SerializedName("AacParam")
     @Expose
@@ -80,30 +80,30 @@ public class RecordTemplateInfo extends AbstractModel{
     private Long IsDelayLive;
 
     /**
-    * HLS录制定制参数
+    * HLS 录制定制参数
     */
     @SerializedName("HlsSpecialParam")
     @Expose
     private HlsSpecialParam HlsSpecialParam;
 
     /**
-    * Mp3录制参数。
+    * MP3 录制参数。
     */
     @SerializedName("Mp3Param")
     @Expose
     private RecordParam Mp3Param;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板 ID。 
+     * @return TemplateId 模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板 ID。
+     * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -142,64 +142,64 @@ public class RecordTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Flv录制参数。 
-     * @return FlvParam Flv录制参数。
+     * Get FLV 录制参数。 
+     * @return FlvParam FLV 录制参数。
      */
     public RecordParam getFlvParam() {
         return this.FlvParam;
     }
 
     /**
-     * Set Flv录制参数。
-     * @param FlvParam Flv录制参数。
+     * Set FLV 录制参数。
+     * @param FlvParam FLV 录制参数。
      */
     public void setFlvParam(RecordParam FlvParam) {
         this.FlvParam = FlvParam;
     }
 
     /**
-     * Get Hls录制参数。 
-     * @return HlsParam Hls录制参数。
+     * Get HLS 录制参数。 
+     * @return HlsParam HLS 录制参数。
      */
     public RecordParam getHlsParam() {
         return this.HlsParam;
     }
 
     /**
-     * Set Hls录制参数。
-     * @param HlsParam Hls录制参数。
+     * Set HLS 录制参数。
+     * @param HlsParam HLS 录制参数。
      */
     public void setHlsParam(RecordParam HlsParam) {
         this.HlsParam = HlsParam;
     }
 
     /**
-     * Get Mp4录制参数。 
-     * @return Mp4Param Mp4录制参数。
+     * Get MP4 录制参数。 
+     * @return Mp4Param MP4 录制参数。
      */
     public RecordParam getMp4Param() {
         return this.Mp4Param;
     }
 
     /**
-     * Set Mp4录制参数。
-     * @param Mp4Param Mp4录制参数。
+     * Set MP4 录制参数。
+     * @param Mp4Param MP4 录制参数。
      */
     public void setMp4Param(RecordParam Mp4Param) {
         this.Mp4Param = Mp4Param;
     }
 
     /**
-     * Get Aac录制参数。 
-     * @return AacParam Aac录制参数。
+     * Get AAC 录制参数。 
+     * @return AacParam AAC 录制参数。
      */
     public RecordParam getAacParam() {
         return this.AacParam;
     }
 
     /**
-     * Set Aac录制参数。
-     * @param AacParam Aac录制参数。
+     * Set AAC 录制参数。
+     * @param AacParam AAC 录制参数。
      */
     public void setAacParam(RecordParam AacParam) {
         this.AacParam = AacParam;
@@ -226,32 +226,32 @@ public class RecordTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get HLS录制定制参数 
-     * @return HlsSpecialParam HLS录制定制参数
+     * Get HLS 录制定制参数 
+     * @return HlsSpecialParam HLS 录制定制参数
      */
     public HlsSpecialParam getHlsSpecialParam() {
         return this.HlsSpecialParam;
     }
 
     /**
-     * Set HLS录制定制参数
-     * @param HlsSpecialParam HLS录制定制参数
+     * Set HLS 录制定制参数
+     * @param HlsSpecialParam HLS 录制定制参数
      */
     public void setHlsSpecialParam(HlsSpecialParam HlsSpecialParam) {
         this.HlsSpecialParam = HlsSpecialParam;
     }
 
     /**
-     * Get Mp3录制参数。 
-     * @return Mp3Param Mp3录制参数。
+     * Get MP3 录制参数。 
+     * @return Mp3Param MP3 录制参数。
      */
     public RecordParam getMp3Param() {
         return this.Mp3Param;
     }
 
     /**
-     * Set Mp3录制参数。
-     * @param Mp3Param Mp3录制参数。
+     * Set MP3 录制参数。
+     * @param Mp3Param MP3 录制参数。
      */
     public void setMp3Param(RecordParam Mp3Param) {
         this.Mp3Param = Mp3Param;

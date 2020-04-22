@@ -23,23 +23,28 @@ import java.util.HashMap;
 public class DeleteLiveWatermarkRequest extends AbstractModel{
 
     /**
-    * 水印ID。
+    * 水印 ID。
+在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
     */
     @SerializedName("WatermarkId")
     @Expose
     private Long WatermarkId;
 
     /**
-     * Get 水印ID。 
-     * @return WatermarkId 水印ID。
+     * Get 水印 ID。
+在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。 
+     * @return WatermarkId 水印 ID。
+在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
     }
 
     /**
-     * Set 水印ID。
-     * @param WatermarkId 水印ID。
+     * Set 水印 ID。
+在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+     * @param WatermarkId 水印 ID。
+在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;
