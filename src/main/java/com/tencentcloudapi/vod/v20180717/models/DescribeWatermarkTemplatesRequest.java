@@ -32,7 +32,8 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     /**
     * 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -80,10 +81,12 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     /**
      * Get 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li> 
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li> 
      * @return Type 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      */
     public String getType() {
         return this.Type;
@@ -92,10 +95,12 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     /**
      * Set 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      * @param Type 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

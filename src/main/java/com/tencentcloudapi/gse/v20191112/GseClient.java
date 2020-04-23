@@ -200,6 +200,24 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表
+     * @param req SearchGameServerSessionsRequest
+     * @return SearchGameServerSessionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchGameServerSessionsResponse SearchGameServerSessions(SearchGameServerSessionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchGameServerSessionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchGameServerSessionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SearchGameServerSessions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话
      * @param req StartGameServerSessionPlacementRequest
      * @return StartGameServerSessionPlacementResponse

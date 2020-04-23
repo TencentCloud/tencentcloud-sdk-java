@@ -37,7 +37,7 @@ public class SpeechTranslateResponse extends AbstractModel{
     private Long RecognizeStatus;
 
     /**
-    * 识别出的源文
+    * 识别出的原文
     */
     @SerializedName("SourceText")
     @Expose
@@ -58,7 +58,7 @@ public class SpeechTranslateResponse extends AbstractModel{
     private Long Seq;
 
     /**
-    * 源语言
+    * 原语言
     */
     @SerializedName("Source")
     @Expose
@@ -118,16 +118,16 @@ public class SpeechTranslateResponse extends AbstractModel{
     }
 
     /**
-     * Get 识别出的源文 
-     * @return SourceText 识别出的源文
+     * Get 识别出的原文 
+     * @return SourceText 识别出的原文
      */
     public String getSourceText() {
         return this.SourceText;
     }
 
     /**
-     * Set 识别出的源文
-     * @param SourceText 识别出的源文
+     * Set 识别出的原文
+     * @param SourceText 识别出的原文
      */
     public void setSourceText(String SourceText) {
         this.SourceText = SourceText;
@@ -166,16 +166,16 @@ public class SpeechTranslateResponse extends AbstractModel{
     }
 
     /**
-     * Get 源语言 
-     * @return Source 源语言
+     * Get 原语言 
+     * @return Source 原语言
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 源语言
-     * @param Source 源语言
+     * Set 原语言
+     * @param Source 原语言
      */
     public void setSource(String Source) {
         this.Source = Source;

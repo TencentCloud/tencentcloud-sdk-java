@@ -20,7 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckNewMfaCodeResponse extends AbstractModel{
+public class CreateServiceLinkedRoleResponse extends AbstractModel{
+
+    /**
+    * 角色ID
+    */
+    @SerializedName("RoleId")
+    @Expose
+    private String RoleId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class CheckNewMfaCodeResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 角色ID 
+     * @return RoleId 角色ID
+     */
+    public String getRoleId() {
+        return this.RoleId;
+    }
+
+    /**
+     * Set 角色ID
+     * @param RoleId 角色ID
+     */
+    public void setRoleId(String RoleId) {
+        this.RoleId = RoleId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class CheckNewMfaCodeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

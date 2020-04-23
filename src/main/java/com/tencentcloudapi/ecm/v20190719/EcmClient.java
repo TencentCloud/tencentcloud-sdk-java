@@ -916,6 +916,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *重置处于运行中状态的实例的密码，需要显式指定强制关机参数ForceStop。如果没有显式指定强制关机参数，则只有处于关机状态的实例才允许执行重置密码操作。
+     * @param req ResetInstancesPasswordRequest
+     * @return ResetInstancesPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetInstancesPasswordResponse ResetInstancesPassword(ResetInstancesPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetInstancesPasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetInstancesPassword"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建ECM实例
      * @param req RunInstancesRequest
      * @return RunInstancesResponse
@@ -927,6 +945,44 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<RunInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RunInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。
+     * @param req StartInstancesRequest
+     * @return StartInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartInstancesResponse StartInstances(StartInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *只有处于"RUNNING"状态的实例才能够进行关机操作；
+调用成功时，实例会进入STOPPING状态；关闭实例成功时，实例会进入STOPPED状态；
+支持强制关闭，强制关机的效果等同于关闭物理计算机的电源开关，强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+     * @param req StopInstancesRequest
+     * @return StopInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopInstancesResponse StopInstances(StopInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

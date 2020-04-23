@@ -44,7 +44,7 @@ public class SpeechTranslateRequest extends AbstractModel{
     private String Target;
 
     /**
-    * pcm : 146   amr : 33554432   mp3 : 83886080
+    * pcm : 146   speex : 16779154   mp3 : 83886080
     */
     @SerializedName("AudioFormat")
     @Expose
@@ -134,16 +134,16 @@ public class SpeechTranslateRequest extends AbstractModel{
     }
 
     /**
-     * Get pcm : 146   amr : 33554432   mp3 : 83886080 
-     * @return AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
+     * Get pcm : 146   speex : 16779154   mp3 : 83886080 
+     * @return AudioFormat pcm : 146   speex : 16779154   mp3 : 83886080
      */
     public Long getAudioFormat() {
         return this.AudioFormat;
     }
 
     /**
-     * Set pcm : 146   amr : 33554432   mp3 : 83886080
-     * @param AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
+     * Set pcm : 146   speex : 16779154   mp3 : 83886080
+     * @param AudioFormat pcm : 146   speex : 16779154   mp3 : 83886080
      */
     public void setAudioFormat(Long AudioFormat) {
         this.AudioFormat = AudioFormat;

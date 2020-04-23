@@ -13,28 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePurgeQuotaResponse extends AbstractModel{
+public class SearchGameServerSessionsResponse extends AbstractModel{
 
     /**
-    * URL刷新用量及配额。
+    * 游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("UrlPurge")
+    @SerializedName("GameServerSessions")
     @Expose
-    private Quota [] UrlPurge;
+    private GameServerSession [] GameServerSessions;
 
     /**
-    * 目录刷新用量及配额。
+    * 页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("PathPurge")
+    @SerializedName("NextToken")
     @Expose
-    private Quota [] PathPurge;
+    private String NextToken;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +46,43 @@ public class DescribePurgeQuotaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get URL刷新用量及配额。 
-     * @return UrlPurge URL刷新用量及配额。
+     * Get 游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GameServerSessions 游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Quota [] getUrlPurge() {
-        return this.UrlPurge;
+    public GameServerSession [] getGameServerSessions() {
+        return this.GameServerSessions;
     }
 
     /**
-     * Set URL刷新用量及配额。
-     * @param UrlPurge URL刷新用量及配额。
+     * Set 游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GameServerSessions 游戏服务器会话列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUrlPurge(Quota [] UrlPurge) {
-        this.UrlPurge = UrlPurge;
+    public void setGameServerSessions(GameServerSession [] GameServerSessions) {
+        this.GameServerSessions = GameServerSessions;
     }
 
     /**
-     * Get 目录刷新用量及配额。 
-     * @return PathPurge 目录刷新用量及配额。
+     * Get 页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextToken 页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Quota [] getPathPurge() {
-        return this.PathPurge;
+    public String getNextToken() {
+        return this.NextToken;
     }
 
     /**
-     * Set 目录刷新用量及配额。
-     * @param PathPurge 目录刷新用量及配额。
+     * Set 页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextToken 页偏移，用于查询下一页
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPathPurge(Quota [] PathPurge) {
-        this.PathPurge = PathPurge;
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
     }
 
     /**
@@ -95,8 +105,8 @@ public class DescribePurgeQuotaResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "UrlPurge.", this.UrlPurge);
-        this.setParamArrayObj(map, prefix + "PathPurge.", this.PathPurge);
+        this.setParamArrayObj(map, prefix + "GameServerSessions.", this.GameServerSessions);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

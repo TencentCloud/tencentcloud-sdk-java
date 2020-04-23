@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ClusterInstancesInfo extends AbstractModel{
 
     /**
-    * ID
+    * ID号
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -274,9 +274,17 @@ public class ClusterInstancesInfo extends AbstractModel{
     private String AliasInfo;
 
     /**
-     * Get ID
+    * 集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private Long ProductId;
+
+    /**
+     * Get ID号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id ID
+     * @return Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -284,9 +292,9 @@ public class ClusterInstancesInfo extends AbstractModel{
     }
 
     /**
-     * Set ID
+     * Set ID号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id ID
+     * @param Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -942,6 +950,26 @@ public class ClusterInstancesInfo extends AbstractModel{
     }
 
     /**
+     * Get 集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(Long ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -973,6 +1001,7 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
         this.setParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
         this.setParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

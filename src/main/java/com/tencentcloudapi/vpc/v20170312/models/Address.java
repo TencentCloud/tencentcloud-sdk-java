@@ -121,6 +121,13 @@ public class Address extends AbstractModel{
     private AlgType EipAlgType;
 
     /**
+    * 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+    */
+    @SerializedName("InternetServiceProvider")
+    @Expose
+    private String InternetServiceProvider;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -345,6 +352,22 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP" 
+     * @return InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+     */
+    public String getInternetServiceProvider() {
+        return this.InternetServiceProvider;
+    }
+
+    /**
+     * Set 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+     * @param InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+     */
+    public void setInternetServiceProvider(String InternetServiceProvider) {
+        this.InternetServiceProvider = InternetServiceProvider;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
         this.setParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
+        this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
 
     }
 }

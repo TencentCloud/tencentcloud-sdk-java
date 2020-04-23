@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePurgeQuotaResponse extends AbstractModel{
-
-    /**
-    * URL刷新用量及配额。
-    */
-    @SerializedName("UrlPurge")
-    @Expose
-    private Quota [] UrlPurge;
-
-    /**
-    * 目录刷新用量及配额。
-    */
-    @SerializedName("PathPurge")
-    @Expose
-    private Quota [] PathPurge;
+public class StartInstancesResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribePurgeQuotaResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get URL刷新用量及配额。 
-     * @return UrlPurge URL刷新用量及配额。
-     */
-    public Quota [] getUrlPurge() {
-        return this.UrlPurge;
-    }
-
-    /**
-     * Set URL刷新用量及配额。
-     * @param UrlPurge URL刷新用量及配额。
-     */
-    public void setUrlPurge(Quota [] UrlPurge) {
-        this.UrlPurge = UrlPurge;
-    }
-
-    /**
-     * Get 目录刷新用量及配额。 
-     * @return PathPurge 目录刷新用量及配额。
-     */
-    public Quota [] getPathPurge() {
-        return this.PathPurge;
-    }
-
-    /**
-     * Set 目录刷新用量及配额。
-     * @param PathPurge 目录刷新用量及配额。
-     */
-    public void setPathPurge(Quota [] PathPurge) {
-        this.PathPurge = PathPurge;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class DescribePurgeQuotaResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "UrlPurge.", this.UrlPurge);
-        this.setParamArrayObj(map, prefix + "PathPurge.", this.PathPurge);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

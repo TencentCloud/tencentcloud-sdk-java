@@ -2425,7 +2425,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *查看VPC资源
+     *本接口(DescribeVpcResourceDashboard)用于查看VPC资源信息。
      * @param req DescribeVpcResourceDashboardRequest
      * @return DescribeVpcResourceDashboardResponse
      * @throws TencentCloudSDKException

@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePurgeQuotaResponse extends AbstractModel{
+public class DeleteServiceLinkedRoleResponse extends AbstractModel{
 
     /**
-    * URL刷新用量及配额。
+    * 删除任务ID，可用于检查删除服务相关角色状态。
     */
-    @SerializedName("UrlPurge")
+    @SerializedName("DeletionTaskId")
     @Expose
-    private Quota [] UrlPurge;
-
-    /**
-    * 目录刷新用量及配额。
-    */
-    @SerializedName("PathPurge")
-    @Expose
-    private Quota [] PathPurge;
+    private String DeletionTaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribePurgeQuotaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get URL刷新用量及配额。 
-     * @return UrlPurge URL刷新用量及配额。
+     * Get 删除任务ID，可用于检查删除服务相关角色状态。 
+     * @return DeletionTaskId 删除任务ID，可用于检查删除服务相关角色状态。
      */
-    public Quota [] getUrlPurge() {
-        return this.UrlPurge;
+    public String getDeletionTaskId() {
+        return this.DeletionTaskId;
     }
 
     /**
-     * Set URL刷新用量及配额。
-     * @param UrlPurge URL刷新用量及配额。
+     * Set 删除任务ID，可用于检查删除服务相关角色状态。
+     * @param DeletionTaskId 删除任务ID，可用于检查删除服务相关角色状态。
      */
-    public void setUrlPurge(Quota [] UrlPurge) {
-        this.UrlPurge = UrlPurge;
-    }
-
-    /**
-     * Get 目录刷新用量及配额。 
-     * @return PathPurge 目录刷新用量及配额。
-     */
-    public Quota [] getPathPurge() {
-        return this.PathPurge;
-    }
-
-    /**
-     * Set 目录刷新用量及配额。
-     * @param PathPurge 目录刷新用量及配额。
-     */
-    public void setPathPurge(Quota [] PathPurge) {
-        this.PathPurge = PathPurge;
+    public void setDeletionTaskId(String DeletionTaskId) {
+        this.DeletionTaskId = DeletionTaskId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class DescribePurgeQuotaResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "UrlPurge.", this.UrlPurge);
-        this.setParamArrayObj(map, prefix + "PathPurge.", this.PathPurge);
+        this.setParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

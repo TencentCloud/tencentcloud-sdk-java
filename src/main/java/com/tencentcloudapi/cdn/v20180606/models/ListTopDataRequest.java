@@ -48,8 +48,8 @@ url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
 path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 district：省份、国家/地区排序，支持的 Filter 为 flux、request
 isp：运营商排序，支持的 Filter 为 flux、request
-host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+host：域名访问数据排序，支持的 Filter 为：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
+originHost：域名回源数据排序，支持的 Filter 为 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
     */
     @SerializedName("Metric")
     @Expose
@@ -93,7 +93,7 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
 
     /**
     * 多域名查询时，默认（false)返回所有域名汇总排序结果
-Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
+Metric 为 url、path、district、isp，Filter 为 flux、request 时，可设置为 true，返回每一个 Domain 的排序数据
     */
     @SerializedName("Detail")
     @Expose
@@ -116,7 +116,7 @@ overseas：指定查询中国境外 CDN 数据，支持的 Metric 为 url、dist
     private String Area;
 
     /**
-    * 查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+    * 查询中国境外CDN数据，且仅当 Metric 为 district 或 host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 district 或 host 时可用）
 server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
 client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
     */
@@ -186,15 +186,15 @@ url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
 path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 district：省份、国家/地区排序，支持的 Filter 为 flux、request
 isp：运营商排序，支持的 Filter 为 flux、request
-host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计 
+host：域名访问数据排序，支持的 Filter 为：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
+originHost：域名回源数据排序，支持的 Filter 为 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode 
      * @return Metric 排序对象，支持以下几种形式：
 url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
 path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 district：省份、国家/地区排序，支持的 Filter 为 flux、request
 isp：运营商排序，支持的 Filter 为 flux、request
-host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+host：域名访问数据排序，支持的 Filter 为：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
+originHost：域名回源数据排序，支持的 Filter 为 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
      */
     public String getMetric() {
         return this.Metric;
@@ -206,15 +206,15 @@ url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
 path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 district：省份、国家/地区排序，支持的 Filter 为 flux、request
 isp：运营商排序，支持的 Filter 为 flux、request
-host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+host：域名访问数据排序，支持的 Filter 为：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
+originHost：域名回源数据排序，支持的 Filter 为 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
      * @param Metric 排序对象，支持以下几种形式：
 url：访问 URL 排序，带参数统计，支持的 Filter 为 flux、request
 path：访问 URL 排序，不带参数统计，支持的 Filter 为 flux、request（白名单功能）
 district：省份、国家/地区排序，支持的 Filter 为 flux、request
 isp：运营商排序，支持的 Filter 为 flux、request
-host：域名访问数据排序，支持的 Filter 为：flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX，具体状态码统计
-originHost：域名回源数据排序，支持的 Filter 为 flux， request，bandwidth，origin_2XX，origin_3XX，oringin_4XX，origin_5XX，具体回源状态码统计
+host：域名访问数据排序，支持的 Filter 为：flux、request、bandwidth、fluxHitRate、2XX、3XX、4XX、5XX、statusCode
+originHost：域名回源数据排序，支持的 Filter 为 flux、request、bandwidth、origin_2XX、origin_3XX、origin_4XX、origin_5XX、OriginStatusCode
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
@@ -330,9 +330,9 @@ OriginStatusCode：指定回源状态码统计，在 Code 参数中填充指定�
 
     /**
      * Get 多域名查询时，默认（false)返回所有域名汇总排序结果
-Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据 
+Metric 为 url、path、district、isp，Filter 为 flux、request 时，可设置为 true，返回每一个 Domain 的排序数据 
      * @return Detail 多域名查询时，默认（false)返回所有域名汇总排序结果
-Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
+Metric 为 url、path、district、isp，Filter 为 flux、request 时，可设置为 true，返回每一个 Domain 的排序数据
      */
     public Boolean getDetail() {
         return this.Detail;
@@ -340,9 +340,9 @@ Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设�
 
     /**
      * Set 多域名查询时，默认（false)返回所有域名汇总排序结果
-Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
+Metric 为 url、path、district、isp，Filter 为 flux、request 时，可设置为 true，返回每一个 Domain 的排序数据
      * @param Detail 多域名查询时，默认（false)返回所有域名汇总排序结果
-Metric 为 Url、Path、District、Isp，Filter 为 flux、reqeust 时，可设置为 true，返回每一个 Domain 的排序数据
+Metric 为 url、path、district、isp，Filter 为 flux、request 时，可设置为 true，返回每一个 Domain 的排序数据
      */
     public void setDetail(Boolean Detail) {
         this.Detail = Detail;
@@ -389,10 +389,10 @@ overseas：指定查询中国境外 CDN 数据，支持的 Metric 为 url、dist
     }
 
     /**
-     * Get 查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+     * Get 查询中国境外CDN数据，且仅当 Metric 为 district 或 host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 district 或 host 时可用）
 server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
 client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter 
-     * @return AreaType 查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+     * @return AreaType 查询中国境外CDN数据，且仅当 Metric 为 district 或 host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 district 或 host 时可用）
 server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
 client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
      */
@@ -401,10 +401,10 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
     }
 
     /**
-     * Set 查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+     * Set 查询中国境外CDN数据，且仅当 Metric 为 district 或 host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 district 或 host 时可用）
 server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
 client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
-     * @param AreaType 查询中国境外CDN数据，且仅当 Metric 为 District 或 Host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 District 或 Host 时可用）
+     * @param AreaType 查询中国境外CDN数据，且仅当 Metric 为 district 或 host 时，可指定地区类型查询，不填充表示查询服务地区数据（仅在 Area 为 overseas，且 Metric 是 district 或 host 时可用）
 server：指定查询服务地区（腾讯云 CDN 节点服务器所在地区）数据
 client：指定查询客户端地区（用户请求终端所在地区）数据，当 Metric 为 host 时仅支持 flux、request、bandwidth Filter
      */
