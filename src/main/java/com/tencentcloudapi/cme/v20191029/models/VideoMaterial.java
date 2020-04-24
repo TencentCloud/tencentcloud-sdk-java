@@ -51,7 +51,7 @@ public class VideoMaterial extends AbstractModel{
     private String CoverUrl;
 
     /**
-    * 媒体文件分辨率。
+    * 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
     */
     @SerializedName("Resolution")
     @Expose
@@ -122,16 +122,16 @@ public class VideoMaterial extends AbstractModel{
     }
 
     /**
-     * Get 媒体文件分辨率。 
-     * @return Resolution 媒体文件分辨率。
+     * Get 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。 
+     * @return Resolution 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 媒体文件分辨率。
-     * @param Resolution 媒体文件分辨率。
+     * Set 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
+     * @param Resolution 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;

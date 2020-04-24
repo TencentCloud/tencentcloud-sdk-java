@@ -320,6 +320,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建点播子应用。
+     * @param req CreateSubAppIdRequest
+     * @return CreateSubAppIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubAppIdResponse CreateSubAppId(CreateSubAppIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSubAppIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSubAppIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSubAppId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建超级播放器配置，数量上限：100。
      * @param req CreateSuperPlayerConfigRequest
      * @return CreateSuperPlayerConfigResponse

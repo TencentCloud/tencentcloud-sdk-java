@@ -82,6 +82,22 @@ UNAVAILABLE-不可用
     private String ServiceState;
 
     /**
+    * 用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
+    * 游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GameId")
+    @Expose
+    private String GameId;
+
+    /**
      * Get 客户appid 
      * @return AppId 客户appid
      */
@@ -234,6 +250,46 @@ UNAVAILABLE-不可用
     }
 
     /**
+     * Get 用户ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId 用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId 用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
+     * Get 游戏ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GameId 游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGameId() {
+        return this.GameId;
+    }
+
+    /**
+     * Set 游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GameId 游戏ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGameId(String GameId) {
+        this.GameId = GameId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -244,6 +300,8 @@ UNAVAILABLE-不可用
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "ServiceState", this.ServiceState);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "GameId", this.GameId);
 
     }
 }

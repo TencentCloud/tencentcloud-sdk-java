@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mariadb.v20170312.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceNameResponse extends AbstractModel{
+public class DescribeAllStreamPlayInfoListResponse extends AbstractModel{
 
     /**
-    * 实例ID
+    * 查询时间点，回传的输入参数中的查询时间。
     */
-    @SerializedName("InstanceId")
+    @SerializedName("QueryTime")
     @Expose
-    private String InstanceId;
+    private String QueryTime;
+
+    /**
+    * 数据信息列表。
+    */
+    @SerializedName("DataInfoList")
+    @Expose
+    private MonitorStreamPlayInfo [] DataInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class ModifyDBInstanceNameResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 查询时间点，回传的输入参数中的查询时间。 
+     * @return QueryTime 查询时间点，回传的输入参数中的查询时间。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getQueryTime() {
+        return this.QueryTime;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 查询时间点，回传的输入参数中的查询时间。
+     * @param QueryTime 查询时间点，回传的输入参数中的查询时间。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setQueryTime(String QueryTime) {
+        this.QueryTime = QueryTime;
+    }
+
+    /**
+     * Get 数据信息列表。 
+     * @return DataInfoList 数据信息列表。
+     */
+    public MonitorStreamPlayInfo [] getDataInfoList() {
+        return this.DataInfoList;
+    }
+
+    /**
+     * Set 数据信息列表。
+     * @param DataInfoList 数据信息列表。
+     */
+    public void setDataInfoList(MonitorStreamPlayInfo [] DataInfoList) {
+        this.DataInfoList = DataInfoList;
     }
 
     /**
@@ -72,7 +95,8 @@ public class ModifyDBInstanceNameResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "QueryTime", this.QueryTime);
+        this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

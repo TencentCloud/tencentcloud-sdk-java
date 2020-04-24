@@ -132,6 +132,13 @@ public class ImageSpriteTemplate extends AbstractModel{
     private String FillType;
 
     /**
+    * 模板描述信息。
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
      * Get 雪碧图模板唯一标识。 
      * @return Definition 雪碧图模板唯一标识。
      */
@@ -412,6 +419,22 @@ public class ImageSpriteTemplate extends AbstractModel{
     }
 
     /**
+     * Get 模板描述信息。 
+     * @return Comment 模板描述信息。
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 模板描述信息。
+     * @param Comment 模板描述信息。
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -428,6 +451,7 @@ public class ImageSpriteTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

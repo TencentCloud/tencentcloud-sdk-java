@@ -135,12 +135,20 @@ public class VmGroupSimple extends AbstractModel{
     private String MicroserviceType;
 
     /**
-    * GroupResourceType
+    * 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupResourceType")
     @Expose
     private String GroupResourceType;
+
+    /**
+    * 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private Long UpdatedTime;
 
     /**
      * Get 部署组ID
@@ -423,9 +431,9 @@ public class VmGroupSimple extends AbstractModel{
     }
 
     /**
-     * Get GroupResourceType
+     * Get 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupResourceType GroupResourceType
+     * @return GroupResourceType 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupResourceType() {
@@ -433,13 +441,33 @@ public class VmGroupSimple extends AbstractModel{
     }
 
     /**
-     * Set GroupResourceType
+     * Set 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupResourceType GroupResourceType
+     * @param GroupResourceType 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
+    }
+
+    /**
+     * Get 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatedTime 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatedTime 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatedTime(Long UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
     }
 
     /**
@@ -461,6 +489,7 @@ public class VmGroupSimple extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

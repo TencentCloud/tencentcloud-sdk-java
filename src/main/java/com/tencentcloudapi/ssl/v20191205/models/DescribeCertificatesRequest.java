@@ -37,7 +37,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 搜索关键词。
+    * 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
     */
     @SerializedName("SearchKey")
     @Expose
@@ -111,16 +111,16 @@ public class DescribeCertificatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索关键词。 
-     * @return SearchKey 搜索关键词。
+     * Get 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。 
+     * @return SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键词。
-     * @param SearchKey 搜索关键词。
+     * Set 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
+     * @param SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

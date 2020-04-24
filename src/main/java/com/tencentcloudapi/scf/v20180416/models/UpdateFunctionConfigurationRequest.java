@@ -37,21 +37,21 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
+    * 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
     */
     @SerializedName("MemorySize")
     @Expose
     private Long MemorySize;
 
     /**
-    * 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
+    * 函数最长执行时间，单位为秒，可选值范 1-900 秒，默认为 3 秒
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
+    * 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，PHP5， PHP7，Golang1 和 Java8
     */
     @SerializedName("Runtime")
     @Expose
@@ -167,48 +167,48 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M 
-     * @return MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
+     * Get 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。 
+     * @return MemorySize 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
      */
     public Long getMemorySize() {
         return this.MemorySize;
     }
 
     /**
-     * Set 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
-     * @param MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
+     * Set 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
+     * @param MemorySize 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
      */
     public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒 
-     * @return Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
+     * Get 函数最长执行时间，单位为秒，可选值范 1-900 秒，默认为 3 秒 
+     * @return Timeout 函数最长执行时间，单位为秒，可选值范 1-900 秒，默认为 3 秒
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
-     * @param Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
+     * Set 函数最长执行时间，单位为秒，可选值范 1-900 秒，默认为 3 秒
+     * @param Timeout 函数最长执行时间，单位为秒，可选值范 1-900 秒，默认为 3 秒
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8 
-     * @return Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
+     * Get 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，PHP5， PHP7，Golang1 和 Java8 
+     * @return Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，PHP5， PHP7，Golang1 和 Java8
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
-     * @param Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
+     * Set 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，PHP5， PHP7，Golang1 和 Java8
+     * @param Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，PHP5， PHP7，Golang1 和 Java8
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;

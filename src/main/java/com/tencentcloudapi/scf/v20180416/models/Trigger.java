@@ -72,6 +72,13 @@ public class Trigger extends AbstractModel{
     private String CustomArgument;
 
     /**
+    * 触发器状态
+    */
+    @SerializedName("AvailableStatus")
+    @Expose
+    private String AvailableStatus;
+
+    /**
      * Get 触发器最后修改时间 
      * @return ModTime 触发器最后修改时间
      */
@@ -184,6 +191,22 @@ public class Trigger extends AbstractModel{
     }
 
     /**
+     * Get 触发器状态 
+     * @return AvailableStatus 触发器状态
+     */
+    public String getAvailableStatus() {
+        return this.AvailableStatus;
+    }
+
+    /**
+     * Set 触发器状态
+     * @param AvailableStatus 触发器状态
+     */
+    public void setAvailableStatus(String AvailableStatus) {
+        this.AvailableStatus = AvailableStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class Trigger extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
+        this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
 
     }
 }

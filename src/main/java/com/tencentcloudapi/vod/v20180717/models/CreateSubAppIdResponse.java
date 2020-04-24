@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mariadb.v20170312.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceNameResponse extends AbstractModel{
+public class CreateSubAppIdResponse extends AbstractModel{
 
     /**
-    * 实例ID
+    * 新创建的子应用 ID。
     */
-    @SerializedName("InstanceId")
+    @SerializedName("SubAppId")
     @Expose
-    private String InstanceId;
+    private Long SubAppId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class ModifyDBInstanceNameResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 新创建的子应用 ID。 
+     * @return SubAppId 新创建的子应用 ID。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Long getSubAppId() {
+        return this.SubAppId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 新创建的子应用 ID。
+     * @param SubAppId 新创建的子应用 ID。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class ModifyDBInstanceNameResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

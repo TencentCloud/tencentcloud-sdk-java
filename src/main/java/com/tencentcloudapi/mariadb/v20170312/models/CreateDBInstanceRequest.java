@@ -110,6 +110,27 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private String DbVersionId;
 
     /**
+    * 实例名称， 可以通过该字段自主的设置实例的名字
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * 安全组ID列表
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * 自动续费标志，1:自动续费，2:不自动续费
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。 
      * @return Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      */
@@ -314,6 +335,54 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例名称， 可以通过该字段自主的设置实例的名字 
+     * @return InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名称， 可以通过该字段自主的设置实例的名字
+     * @param InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 安全组ID列表 
+     * @return SecurityGroupIds 安全组ID列表
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组ID列表
+     * @param SecurityGroupIds 安全组ID列表
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get 自动续费标志，1:自动续费，2:不自动续费 
+     * @return AutoRenewFlag 自动续费标志，1:自动续费，2:不自动续费
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标志，1:自动续费，2:不自动续费
+     * @param AutoRenewFlag 自动续费标志，1:自动续费，2:不自动续费
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -329,6 +398,9 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

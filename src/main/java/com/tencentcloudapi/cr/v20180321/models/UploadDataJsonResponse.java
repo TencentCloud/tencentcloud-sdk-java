@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mariadb.v20170312.models;
+package com.tencentcloudapi.cr.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceNameResponse extends AbstractModel{
+public class UploadDataJsonResponse extends AbstractModel{
 
     /**
-    * 实例ID
+    * 响应报文信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Data")
     @Expose
-    private String InstanceId;
+    private String Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class ModifyDBInstanceNameResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 响应报文信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 响应报文信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getData() {
+        return this.Data;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 响应报文信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 响应报文信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setData(String Data) {
+        this.Data = Data;
     }
 
     /**
@@ -72,7 +77,7 @@ public class ModifyDBInstanceNameResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

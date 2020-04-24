@@ -646,6 +646,24 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
+     * @param req DescribeAllStreamPlayInfoListRequest
+     * @return DescribeAllStreamPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllStreamPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播计费带宽和流量数据查询。
      * @param req DescribeBillBandwidthAndFluxListRequest
      * @return DescribeBillBandwidthAndFluxListResponse

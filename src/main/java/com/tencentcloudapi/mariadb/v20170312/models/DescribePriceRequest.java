@@ -68,6 +68,13 @@ public class DescribePriceRequest extends AbstractModel{
     private Long Count;
 
     /**
+    * 付费类型。postpaid：按量付费   prepaid：预付费
+    */
+    @SerializedName("Paymode")
+    @Expose
+    private String Paymode;
+
+    /**
      * Get 欲新购实例的可用区ID。 
      * @return Zone 欲新购实例的可用区ID。
      */
@@ -176,6 +183,22 @@ public class DescribePriceRequest extends AbstractModel{
     }
 
     /**
+     * Get 付费类型。postpaid：按量付费   prepaid：预付费 
+     * @return Paymode 付费类型。postpaid：按量付费   prepaid：预付费
+     */
+    public String getPaymode() {
+        return this.Paymode;
+    }
+
+    /**
+     * Set 付费类型。postpaid：按量付费   prepaid：预付费
+     * @param Paymode 付费类型。postpaid：按量付费   prepaid：预付费
+     */
+    public void setPaymode(String Paymode) {
+        this.Paymode = Paymode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -185,6 +208,7 @@ public class DescribePriceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "Paymode", this.Paymode);
 
     }
 }

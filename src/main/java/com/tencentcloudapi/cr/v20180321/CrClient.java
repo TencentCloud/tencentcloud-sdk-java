@@ -183,6 +183,24 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *实时数据查询
+     * @param req QueryInstantDataRequest
+     * @return QueryInstantDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryInstantDataResponse QueryInstantData(QueryInstantDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryInstantDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryInstantDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryInstantData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。
      * @param req UploadDataFileRequest
      * @return UploadDataFileResponse
@@ -194,6 +212,24 @@ public class CrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UploadDataFileResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UploadDataFile"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上传Json格式数据，接口返回数据任务ID
+     * @param req UploadDataJsonRequest
+     * @return UploadDataJsonResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadDataJsonResponse UploadDataJson(UploadDataJsonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadDataJsonResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadDataJsonResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UploadDataJson"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

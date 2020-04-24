@@ -91,6 +91,13 @@ public class PlayerConfig extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 模板描述信息。
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
      * Get 播放器配置名字。 
      * @return Name 播放器配置名字。
      */
@@ -255,6 +262,22 @@ public class PlayerConfig extends AbstractModel{
     }
 
     /**
+     * Get 模板描述信息。 
+     * @return Comment 模板描述信息。
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 模板描述信息。
+     * @param Comment 模板描述信息。
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -267,6 +290,7 @@ public class PlayerConfig extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ResolutionNameSet.", this.ResolutionNameSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }
