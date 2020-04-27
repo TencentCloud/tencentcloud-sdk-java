@@ -72,6 +72,13 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     private InstanceStatistic [] InstanceStatistics;
 
     /**
+    * 所有资源的总计数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
      * Get 安全组实例ID。 
      * @return SecurityGroupId 安全组实例ID。
      */
@@ -184,6 +191,22 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     }
 
     /**
+     * Get 所有资源的总计数。 
+     * @return TotalCount 所有资源的总计数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 所有资源的总计数。
+     * @param TotalCount 所有资源的总计数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
         this.setParamSimple(map, prefix + "SG", this.SG);
         this.setParamSimple(map, prefix + "CLB", this.CLB);
         this.setParamArrayObj(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
 
     }
 }

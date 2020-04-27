@@ -44,7 +44,7 @@ public class CreateMerchantRequest extends AbstractModel{
     private String TaxpayerNum;
 
     /**
-    * 注册企业法人代表名称
+    * 注册企业法定代表人名称
     */
     @SerializedName("LegalPersonName")
     @Expose
@@ -222,16 +222,16 @@ public class CreateMerchantRequest extends AbstractModel{
     }
 
     /**
-     * Get 注册企业法人代表名称 
-     * @return LegalPersonName 注册企业法人代表名称
+     * Get 注册企业法定代表人名称 
+     * @return LegalPersonName 注册企业法定代表人名称
      */
     public String getLegalPersonName() {
         return this.LegalPersonName;
     }
 
     /**
-     * Set 注册企业法人代表名称
-     * @param LegalPersonName 注册企业法人代表名称
+     * Set 注册企业法定代表人名称
+     * @param LegalPersonName 注册企业法定代表人名称
      */
     public void setLegalPersonName(String LegalPersonName) {
         this.LegalPersonName = LegalPersonName;

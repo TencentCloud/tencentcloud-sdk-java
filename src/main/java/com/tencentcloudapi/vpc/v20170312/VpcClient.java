@@ -2923,6 +2923,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *该接口用于调整具有带宽属性弹性公网IP的网络计费模式
+* 支持BANDWIDTH_PREPAID_BY_MONTH和TRAFFIC_POSTPAID_BY_HOUR两种网络计费模式之间的切换。
+* 每个弹性公网IP支持调整两次，次数超出则无法调整。
+     * @param req ModifyAddressInternetChargeTypeRequest
+     * @return ModifyAddressInternetChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressInternetChargeTypeResponse ModifyAddressInternetChargeType(ModifyAddressInternetChargeTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAddressInternetChargeTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAddressInternetChargeTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAddressInternetChargeType"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
      * @param req ModifyAddressTemplateAttributeRequest
      * @return ModifyAddressTemplateAttributeResponse

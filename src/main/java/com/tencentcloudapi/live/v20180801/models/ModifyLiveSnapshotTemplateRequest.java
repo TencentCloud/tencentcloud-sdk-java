@@ -98,6 +98,20 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     private String CosRegion;
 
     /**
+    * Cos Bucket文件夹前缀。
+    */
+    @SerializedName("CosPrefix")
+    @Expose
+    private String CosPrefix;
+
+    /**
+    * Cos 文件名称。
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
+
+    /**
      * Get 模板 ID。 
      * @return TemplateId 模板 ID。
      */
@@ -278,6 +292,38 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get Cos Bucket文件夹前缀。 
+     * @return CosPrefix Cos Bucket文件夹前缀。
+     */
+    public String getCosPrefix() {
+        return this.CosPrefix;
+    }
+
+    /**
+     * Set Cos Bucket文件夹前缀。
+     * @param CosPrefix Cos Bucket文件夹前缀。
+     */
+    public void setCosPrefix(String CosPrefix) {
+        this.CosPrefix = CosPrefix;
+    }
+
+    /**
+     * Get Cos 文件名称。 
+     * @return CosFileName Cos 文件名称。
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * Set Cos 文件名称。
+     * @param CosFileName Cos 文件名称。
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -291,6 +337,8 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CosAppId", this.CosAppId);
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
+        this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 
     }
 }

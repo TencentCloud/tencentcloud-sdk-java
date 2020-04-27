@@ -95,6 +95,22 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private String Description;
 
     /**
+    * Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosPrefix")
+    @Expose
+    private String CosPrefix;
+
+    /**
+    * Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
+
+    /**
      * Get 模板 ID。 
      * @return TemplateId 模板 ID。
      */
@@ -263,6 +279,46 @@ public class SnapshotTemplateInfo extends AbstractModel{
     }
 
     /**
+     * Get Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosPrefix Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCosPrefix() {
+        return this.CosPrefix;
+    }
+
+    /**
+     * Set Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosPrefix Cos Bucket文件夹前缀。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosPrefix(String CosPrefix) {
+        this.CosPrefix = CosPrefix;
+    }
+
+    /**
+     * Get Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosFileName Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * Set Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosFileName Cos 文件名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +332,8 @@ public class SnapshotTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 
     }
 }

@@ -91,6 +91,20 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     private Long PornFlag;
 
     /**
+    * Cos Bucket文件夹前缀。
+    */
+    @SerializedName("CosPrefix")
+    @Expose
+    private String CosPrefix;
+
+    /**
+    * Cos 文件名称。
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
+
+    /**
      * Get 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。 
@@ -255,6 +269,38 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get Cos Bucket文件夹前缀。 
+     * @return CosPrefix Cos Bucket文件夹前缀。
+     */
+    public String getCosPrefix() {
+        return this.CosPrefix;
+    }
+
+    /**
+     * Set Cos Bucket文件夹前缀。
+     * @param CosPrefix Cos Bucket文件夹前缀。
+     */
+    public void setCosPrefix(String CosPrefix) {
+        this.CosPrefix = CosPrefix;
+    }
+
+    /**
+     * Get Cos 文件名称。 
+     * @return CosFileName Cos 文件名称。
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * Set Cos 文件名称。
+     * @param CosFileName Cos 文件名称。
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -267,6 +313,8 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "PornFlag", this.PornFlag);
+        this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 
     }
 }

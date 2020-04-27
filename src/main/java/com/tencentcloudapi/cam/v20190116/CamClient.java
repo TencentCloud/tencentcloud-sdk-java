@@ -182,6 +182,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *该接口（CreatePolicyVersion）用于新增策略版本，用户创建了一个策略版本之后可以方便的通过变更策略版本的方式来变更策略。
+     * @param req CreatePolicyVersionRequest
+     * @return CreatePolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePolicyVersionResponse CreatePolicyVersion(CreatePolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePolicyVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateRole）用于创建角色。
      * @param req CreateRoleRequest
      * @return CreateRoleResponse
@@ -265,6 +283,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePolicyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeletePolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeletePolicyVersion）可用于删除一个策略的策略版本。
+     * @param req DeletePolicyVersionRequest
+     * @return DeletePolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePolicyVersionResponse DeletePolicyVersion(DeletePolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePolicyVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -463,6 +499,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetPolicyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（GetPolicyVersion）用于查询策略版本详情
+     * @param req GetPolicyVersionRequest
+     * @return GetPolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPolicyVersionResponse GetPolicyVersion(GetPolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetPolicyVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -686,6 +740,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *该接口（ListPolicyVersions）用于获取策略版本列表
+     * @param req ListPolicyVersionsRequest
+     * @return ListPolicyVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPolicyVersionsResponse ListPolicyVersions(ListPolicyVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListPolicyVersionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListPolicyVersions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询SAML身份提供商列表
      * @param req ListSAMLProvidersRequest
      * @return ListSAMLProvidersResponse
@@ -751,6 +823,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveUserFromGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RemoveUserFromGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（SetDefaultPolicyVersion）可用于设置生效的策略版本。
+     * @param req SetDefaultPolicyVersionRequest
+     * @return SetDefaultPolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(SetDefaultPolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetDefaultPolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetDefaultPolicyVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

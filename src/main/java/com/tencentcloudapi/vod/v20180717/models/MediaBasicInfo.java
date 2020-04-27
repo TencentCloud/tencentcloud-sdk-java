@@ -129,6 +129,16 @@ public class MediaBasicInfo extends AbstractModel{
     private String Vid;
 
     /**
+    * 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get 媒体文件名称。 
      * @return Name 媒体文件名称。
      */
@@ -373,6 +383,34 @@ public class MediaBasicInfo extends AbstractModel{
     }
 
     /**
+     * Get 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li> 
+     * @return Category 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     * @param Category 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -391,6 +429,7 @@ public class MediaBasicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
         this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Vid", this.Vid);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

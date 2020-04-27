@@ -124,6 +124,13 @@ public class KeyMetadata extends AbstractModel{
     private Long ValidTo;
 
     /**
+    * 资源ID，格式：creatorUin/$creatorUin/$keyId
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get CMK的全局唯一标识 
      * @return KeyId CMK的全局唯一标识
      */
@@ -360,6 +367,22 @@ public class KeyMetadata extends AbstractModel{
     }
 
     /**
+     * Get 资源ID，格式：creatorUin/$creatorUin/$keyId 
+     * @return ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源ID，格式：creatorUin/$creatorUin/$keyId
+     * @param ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -377,6 +400,7 @@ public class KeyMetadata extends AbstractModel{
         this.setParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

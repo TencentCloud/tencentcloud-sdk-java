@@ -93,6 +93,13 @@ public class WhiteboxKeyInfo extends AbstractModel{
     private String DecryptKey;
 
     /**
+    * 资源ID，格式：creatorUin/$creatorUin/$keyId
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get 白盒密钥的全局唯一标识符 
      * @return KeyId 白盒密钥的全局唯一标识符
      */
@@ -253,6 +260,22 @@ public class WhiteboxKeyInfo extends AbstractModel{
     }
 
     /**
+     * Get 资源ID，格式：creatorUin/$creatorUin/$keyId 
+     * @return ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源ID，格式：creatorUin/$creatorUin/$keyId
+     * @param ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class WhiteboxKeyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
         this.setParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
         this.setParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

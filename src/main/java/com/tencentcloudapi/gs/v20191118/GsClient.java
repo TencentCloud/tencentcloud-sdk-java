@@ -92,6 +92,24 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *进入排队锁定机器
+     * @param req EnterQueueRequest
+     * @return EnterQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnterQueueResponse EnterQueue(EnterQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnterQueueResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnterQueueResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnterQueue"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改机器信息
      * @param req ModifyWorkersRequest
      * @return ModifyWorkersResponse
@@ -103,6 +121,24 @@ public class GsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyWorkersResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyWorkers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *退出排队
+     * @param req QuitQueueRequest
+     * @return QuitQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuitQueueResponse QuitQueue(QuitQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QuitQueueResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QuitQueueResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QuitQueue"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

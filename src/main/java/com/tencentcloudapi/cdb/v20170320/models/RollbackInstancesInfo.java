@@ -24,6 +24,7 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
     * 云数据库实例ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,6 +46,7 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
     * 待回档的数据库信息，表示整库回档
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Databases")
     @Expose
@@ -52,14 +54,17 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
     * 待回档的数据库表信息，表示按表回档
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tables")
     @Expose
     private RollbackTables [] Tables;
 
     /**
-     * Get 云数据库实例ID 
+     * Get 云数据库实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 云数据库实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -67,7 +72,9 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
      * Set 云数据库实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 云数据库实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -106,8 +113,10 @@ public class RollbackInstancesInfo extends AbstractModel{
     }
 
     /**
-     * Get 待回档的数据库信息，表示整库回档 
+     * Get 待回档的数据库信息，表示整库回档
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Databases 待回档的数据库信息，表示整库回档
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackDBName [] getDatabases() {
         return this.Databases;
@@ -115,15 +124,19 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
      * Set 待回档的数据库信息，表示整库回档
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Databases 待回档的数据库信息，表示整库回档
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabases(RollbackDBName [] Databases) {
         this.Databases = Databases;
     }
 
     /**
-     * Get 待回档的数据库表信息，表示按表回档 
+     * Get 待回档的数据库表信息，表示按表回档
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tables 待回档的数据库表信息，表示按表回档
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackTables [] getTables() {
         return this.Tables;
@@ -131,7 +144,9 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
      * Set 待回档的数据库表信息，表示按表回档
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tables 待回档的数据库表信息，表示按表回档
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTables(RollbackTables [] Tables) {
         this.Tables = Tables;

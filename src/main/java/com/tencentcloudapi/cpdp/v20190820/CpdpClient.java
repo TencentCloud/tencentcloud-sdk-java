@@ -622,24 +622,6 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *智慧零售-查询管理端发票
-     * @param req QueryInvoiceForManagementRequest
-     * @return QueryInvoiceForManagementResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryInvoiceForManagementResponse QueryInvoiceForManagement(QueryInvoiceForManagementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryInvoiceForManagementResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryInvoiceForManagementResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryInvoiceForManagement"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
      * @param req QueryMemberBindRequest
@@ -688,24 +670,6 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantBalanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "QueryMerchantBalance"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *智慧零售-查询管理端商户
-     * @param req QueryMerchantInfoForManagementRequest
-     * @return QueryMerchantInfoForManagementResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(QueryMerchantInfoForManagementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryMerchantInfoForManagementResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryMerchantInfoForManagement"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

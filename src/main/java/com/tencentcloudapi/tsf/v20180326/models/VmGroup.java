@@ -183,7 +183,7 @@ public class VmGroup extends AbstractModel{
     private String MicroserviceType;
 
     /**
-    * ApplicationType
+    * 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationType")
@@ -191,12 +191,20 @@ public class VmGroup extends AbstractModel{
     private String ApplicationType;
 
     /**
-    * GroupResourceType
+    * 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupResourceType")
     @Expose
     private String GroupResourceType;
+
+    /**
+    * 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private Long UpdatedTime;
 
     /**
      * Get 部署组ID
@@ -599,9 +607,9 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
-     * Get ApplicationType
+     * Get 应用类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationType ApplicationType
+     * @return ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationType() {
@@ -609,9 +617,9 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
-     * Set ApplicationType
+     * Set 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationType ApplicationType
+     * @param ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationType(String ApplicationType) {
@@ -619,9 +627,9 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
-     * Get GroupResourceType
+     * Get 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupResourceType GroupResourceType
+     * @return GroupResourceType 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupResourceType() {
@@ -629,13 +637,33 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
-     * Set GroupResourceType
+     * Set 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupResourceType GroupResourceType
+     * @param GroupResourceType 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
+    }
+
+    /**
+     * Get 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatedTime 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatedTime 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatedTime(Long UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
     }
 
     /**
@@ -664,6 +692,7 @@ public class VmGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

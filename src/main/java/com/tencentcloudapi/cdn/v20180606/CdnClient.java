@@ -245,6 +245,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *获取域名图片优化的当前配置，支持Webp、TPG、Guetzli 
+     * @param req DescribeImageConfigRequest
+     * @return DescribeImageConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageConfigResponse DescribeImageConfig(DescribeImageConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细
 注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
      * @param req DescribeIpStatusRequest
@@ -773,6 +791,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateDomainConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdateDomainConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新控制台图片优化的相关配置，支持Webp、TPG、Guetzli 
+     * @param req UpdateImageConfigRequest
+     * @return UpdateImageConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateImageConfigResponse UpdateImageConfig(UpdateImageConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateImageConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateImageConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateImageConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

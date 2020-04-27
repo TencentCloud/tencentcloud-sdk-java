@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cpdp.v20190820.models;
+package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryInvoiceForManagementResponse extends AbstractModel{
+public class DeleteNewL7RulesResponse extends AbstractModel{
 
     /**
-    * 发票结果
-注意：此字段可能返回 null，表示取不到有效值。
+    * 成功码
     */
-    @SerializedName("Result")
+    @SerializedName("Success")
     @Expose
-    private InvoiceManangementResult Result;
+    private SuccessCode Success;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class QueryInvoiceForManagementResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 发票结果
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 发票结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 成功码 
+     * @return Success 成功码
      */
-    public InvoiceManangementResult getResult() {
-        return this.Result;
+    public SuccessCode getSuccess() {
+        return this.Success;
     }
 
     /**
-     * Set 发票结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 发票结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 成功码
+     * @param Success 成功码
      */
-    public void setResult(InvoiceManangementResult Result) {
-        this.Result = Result;
+    public void setSuccess(SuccessCode Success) {
+        this.Success = Success;
     }
 
     /**
@@ -77,7 +72,7 @@ public class QueryInvoiceForManagementResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamObj(map, prefix + "Success.", this.Success);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

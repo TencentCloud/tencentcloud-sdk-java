@@ -200,6 +200,24 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询后付费免费配额信息
+     * @param req DescribeEnvFreeQuotaRequest
+     * @return DescribeEnvFreeQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvFreeQuotaResponse DescribeEnvFreeQuota(DescribeEnvFreeQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvFreeQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvFreeQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEnvFreeQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询环境个数上限
      * @param req DescribeEnvLimitRequest
      * @return DescribeEnvLimitResponse

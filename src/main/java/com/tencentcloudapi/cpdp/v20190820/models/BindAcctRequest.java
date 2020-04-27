@@ -115,7 +115,7 @@ BindType==2时必填
     private String Mobile;
 
     /**
-    * 超级网银行号和大小额行号
+    * 大小额行号，超级网银行号和大小额行号
 二选一
     */
     @SerializedName("CnapsBranchId")
@@ -123,7 +123,7 @@ BindType==2时必填
     private String CnapsBranchId;
 
     /**
-    * 超级网银行号和大小额行号
+    * 超级网银行号，超级网银行号和大小额行号
 二选一
     */
     @SerializedName("EiconBankBranchId")
@@ -355,9 +355,9 @@ BindType==2时必填
     }
 
     /**
-     * Get 超级网银行号和大小额行号
+     * Get 大小额行号，超级网银行号和大小额行号
 二选一 
-     * @return CnapsBranchId 超级网银行号和大小额行号
+     * @return CnapsBranchId 大小额行号，超级网银行号和大小额行号
 二选一
      */
     public String getCnapsBranchId() {
@@ -365,9 +365,9 @@ BindType==2时必填
     }
 
     /**
-     * Set 超级网银行号和大小额行号
+     * Set 大小额行号，超级网银行号和大小额行号
 二选一
-     * @param CnapsBranchId 超级网银行号和大小额行号
+     * @param CnapsBranchId 大小额行号，超级网银行号和大小额行号
 二选一
      */
     public void setCnapsBranchId(String CnapsBranchId) {
@@ -375,9 +375,9 @@ BindType==2时必填
     }
 
     /**
-     * Get 超级网银行号和大小额行号
+     * Get 超级网银行号，超级网银行号和大小额行号
 二选一 
-     * @return EiconBankBranchId 超级网银行号和大小额行号
+     * @return EiconBankBranchId 超级网银行号，超级网银行号和大小额行号
 二选一
      */
     public String getEiconBankBranchId() {
@@ -385,9 +385,9 @@ BindType==2时必填
     }
 
     /**
-     * Set 超级网银行号和大小额行号
+     * Set 超级网银行号，超级网银行号和大小额行号
 二选一
-     * @param EiconBankBranchId 超级网银行号和大小额行号
+     * @param EiconBankBranchId 超级网银行号，超级网银行号和大小额行号
 二选一
      */
     public void setEiconBankBranchId(String EiconBankBranchId) {

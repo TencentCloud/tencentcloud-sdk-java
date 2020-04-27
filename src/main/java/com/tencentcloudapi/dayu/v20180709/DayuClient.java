@@ -308,6 +308,42 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *添加L4转发规则
+     * @param req CreateNewL4RulesRequest
+     * @return CreateNewL4RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNewL4RulesResponse CreateNewL4Rules(CreateNewL4RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNewL4RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNewL4RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNewL4Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加7层转发规则
+     * @param req CreateNewL7RulesRequest
+     * @return CreateNewL7RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNewL7RulesResponse CreateNewL7Rules(CreateNewL7RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNewL7Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *IP解封操作
      * @param req CreateUnblockIpRequest
      * @return CreateUnblockIpResponse
@@ -427,6 +463,42 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteL7RulesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteL7Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除L4转发规则
+     * @param req DeleteNewL4RulesRequest
+     * @return DeleteNewL4RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNewL4RulesResponse DeleteNewL4Rules(DeleteNewL4RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNewL4RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNewL4RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNewL4Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除L7转发规则
+     * @param req DeleteNewL7RulesRequest
+     * @return DeleteNewL7RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNewL7RulesResponse DeleteNewL7Rules(DeleteNewL7RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNewL7RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNewL7RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNewL7Rules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1065,6 +1137,60 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取L4转发规则
+     * @param req DescribeNewL4RulesRequest
+     * @return DescribeNewL4RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNewL4RulesResponse DescribeNewL4Rules(DescribeNewL4RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNewL4RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNewL4RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNewL4Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取L4转发规则健康检查异常结果
+     * @param req DescribeNewL4RulesErrHealthRequest
+     * @return DescribeNewL4RulesErrHealthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNewL4RulesErrHealthResponse DescribeNewL4RulesErrHealth(DescribeNewL4RulesErrHealthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNewL4RulesErrHealthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNewL4RulesErrHealthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNewL4RulesErrHealth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取L7转发规则健康检查异常结果
+     * @param req DescribeNewL7RulesErrHealthRequest
+     * @return DescribeNewL7RulesErrHealthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNewL7RulesErrHealth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取产品总览统计，支持高防包、高防IP、高防IP专业版；
      * @param req DescribePackIndexRequest
      * @return DescribePackIndexResponse
@@ -1292,6 +1418,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribleL7RulesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribleL7Rules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取7层规则
+     * @param req DescribleNewL7RulesRequest
+     * @return DescribleNewL7RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribleNewL7RulesResponse DescribleNewL7Rules(DescribleNewL7RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribleNewL7RulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribleNewL7RulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribleNewL7Rules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

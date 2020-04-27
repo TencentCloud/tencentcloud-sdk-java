@@ -167,6 +167,14 @@ public class ServerlessGroup extends AbstractModel{
     private Long InstanceCount;
 
     /**
+    * 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String [] ApplicationName;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -527,6 +535,26 @@ public class ServerlessGroup extends AbstractModel{
     }
 
     /**
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationName 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationName 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationName(String [] ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -548,6 +576,7 @@ public class ServerlessGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
 
     }
 }
