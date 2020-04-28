@@ -434,7 +434,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *批量启用白盒密钥
+     *启用白盒密钥
      * @param req EnableWhiteBoxKeyRequest
      * @return EnableWhiteBoxKeyResponse
      * @throws TencentCloudSDKException

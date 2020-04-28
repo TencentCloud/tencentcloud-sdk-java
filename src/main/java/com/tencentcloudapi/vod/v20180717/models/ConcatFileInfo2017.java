@@ -26,7 +26,6 @@ public class ConcatFileInfo2017 extends AbstractModel{
     * 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -34,7 +33,6 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
     * 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -42,7 +40,6 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
     * 视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -50,7 +47,6 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
     * 视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUrl")
     @Expose
@@ -58,7 +54,6 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
     * 视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
     @Expose
@@ -67,12 +62,10 @@ public class ConcatFileInfo2017 extends AbstractModel{
     /**
      * Get 错误码
 <li>0：成功；</li>
-<li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>其他值：失败。</li> 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -82,21 +75,17 @@ public class ConcatFileInfo2017 extends AbstractModel{
      * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息。 
      * @return Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -104,19 +93,15 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
      * Set 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频拼接源文件的 ID。 
      * @return FileId 视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -124,19 +109,15 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
      * Set 视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频拼接源文件的地址。 
      * @return FileUrl 视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileUrl() {
         return this.FileUrl;
@@ -144,19 +125,15 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
      * Set 视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频拼接源文件的格式。 
      * @return FileType 视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
         return this.FileType;
@@ -164,9 +141,7 @@ public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
      * Set 视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

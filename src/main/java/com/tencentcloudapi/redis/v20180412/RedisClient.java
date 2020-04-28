@@ -362,7 +362,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例大Key大小分布
+     *查询实例访问的耗时分布
      * @param req DescribeInstanceMonitorTookDistRequest
      * @return DescribeInstanceMonitorTookDistResponse
      * @throws TencentCloudSDKException

@@ -26,7 +26,6 @@ public class ClipFileInfo2017 extends AbstractModel{
     * 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -34,7 +33,6 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
     * 错误描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -42,7 +40,6 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
     * 输出目标文件的文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -50,7 +47,6 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
     * 输出目标文件的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUrl")
     @Expose
@@ -58,7 +54,6 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
     * 输出目标文件的文件类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
     @Expose
@@ -67,12 +62,10 @@ public class ClipFileInfo2017 extends AbstractModel{
     /**
      * Get 错误码
 <li>0：成功；</li>
-<li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>其他值：失败。</li> 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -82,21 +75,17 @@ public class ClipFileInfo2017 extends AbstractModel{
      * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误描述。 
      * @return Message 错误描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -104,19 +93,15 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
      * Set 错误描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 输出目标文件的文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出目标文件的文件 ID。 
      * @return FileId 输出目标文件的文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
         return this.FileId;
@@ -124,19 +109,15 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
      * Set 输出目标文件的文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 输出目标文件的文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 输出目标文件的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出目标文件的文件地址。 
      * @return FileUrl 输出目标文件的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileUrl() {
         return this.FileUrl;
@@ -144,19 +125,15 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
      * Set 输出目标文件的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 输出目标文件的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 输出目标文件的文件类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出目标文件的文件类型。 
      * @return FileType 输出目标文件的文件类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
         return this.FileType;
@@ -164,9 +141,7 @@ public class ClipFileInfo2017 extends AbstractModel{
 
     /**
      * Set 输出目标文件的文件类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 输出目标文件的文件类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

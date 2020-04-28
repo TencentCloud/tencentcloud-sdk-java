@@ -26,7 +26,6 @@ public class SnapshotByTimeOffset2017 extends AbstractModel{
     * 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -34,7 +33,6 @@ public class SnapshotByTimeOffset2017 extends AbstractModel{
 
     /**
     * 截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeOffset")
     @Expose
@@ -42,7 +40,6 @@ public class SnapshotByTimeOffset2017 extends AbstractModel{
 
     /**
     * 截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -51,12 +48,10 @@ public class SnapshotByTimeOffset2017 extends AbstractModel{
     /**
      * Get 错误码
 <li>0：成功；</li>
-<li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>其他值：失败。</li> 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -66,21 +61,17 @@ public class SnapshotByTimeOffset2017 extends AbstractModel{
      * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 截图的具体时间点，单位：毫秒。 
      * @return TimeOffset 截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeOffset() {
         return this.TimeOffset;
@@ -88,19 +79,15 @@ public class SnapshotByTimeOffset2017 extends AbstractModel{
 
     /**
      * Set 截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeOffset 截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeOffset(Long TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 
     /**
-     * Get 截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 截图输出文件地址。 
      * @return Url 截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -108,9 +95,7 @@ public class SnapshotByTimeOffset2017 extends AbstractModel{
 
     /**
      * Set 截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

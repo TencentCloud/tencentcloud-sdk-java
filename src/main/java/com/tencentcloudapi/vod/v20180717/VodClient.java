@@ -793,24 +793,6 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *获取转自适应码流音频轨模板列表，支持根据条件，分页查询。
-     * @param req DescribeAudioTrackTemplatesRequest
-     * @return DescribeAudioTrackTemplatesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAudioTrackTemplatesResponse DescribeAudioTrackTemplates(DescribeAudioTrackTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAudioTrackTemplatesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAudioTrackTemplatesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAudioTrackTemplates"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *该接口用于查询点播 CDN 的流量、带宽等统计数据。
    1. 可以查询最近365天内的 CDN 用量数据。
    2.  查询时间跨度不超过90天。
@@ -1136,24 +1118,6 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTranscodeTemplates"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *获取转自适应码流视频轨模板列表，支持根据条件，分页查询。
-     * @param req DescribeVideoTrackTemplatesRequest
-     * @return DescribeVideoTrackTemplatesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVideoTrackTemplatesResponse DescribeVideoTrackTemplates(DescribeVideoTrackTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVideoTrackTemplatesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVideoTrackTemplatesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVideoTrackTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

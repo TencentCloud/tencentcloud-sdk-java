@@ -58,6 +58,13 @@ public class CreatePublicConfigRequest extends AbstractModel{
     private String ConfigType;
 
     /**
+    * Base64编码的配置项
+    */
+    @SerializedName("EncodeWithBase64")
+    @Expose
+    private Boolean EncodeWithBase64;
+
+    /**
      * Get 配置项名称 
      * @return ConfigName 配置项名称
      */
@@ -138,6 +145,22 @@ public class CreatePublicConfigRequest extends AbstractModel{
     }
 
     /**
+     * Get Base64编码的配置项 
+     * @return EncodeWithBase64 Base64编码的配置项
+     */
+    public Boolean getEncodeWithBase64() {
+        return this.EncodeWithBase64;
+    }
+
+    /**
+     * Set Base64编码的配置项
+     * @param EncodeWithBase64 Base64编码的配置项
+     */
+    public void setEncodeWithBase64(Boolean EncodeWithBase64) {
+        this.EncodeWithBase64 = EncodeWithBase64;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreatePublicConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfigValue", this.ConfigValue);
         this.setParamSimple(map, prefix + "ConfigVersionDesc", this.ConfigVersionDesc);
         this.setParamSimple(map, prefix + "ConfigType", this.ConfigType);
+        this.setParamSimple(map, prefix + "EncodeWithBase64", this.EncodeWithBase64);
 
     }
 }

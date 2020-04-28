@@ -72,7 +72,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     private InstanceStatistic [] InstanceStatistics;
 
     /**
-    * 所有资源的总计数。
+    * 所有资源的总计数（不包含被安全组引用数）。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -191,16 +191,16 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     }
 
     /**
-     * Get 所有资源的总计数。 
-     * @return TotalCount 所有资源的总计数。
+     * Get 所有资源的总计数（不包含被安全组引用数）。 
+     * @return TotalCount 所有资源的总计数（不包含被安全组引用数）。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 所有资源的总计数。
-     * @param TotalCount 所有资源的总计数。
+     * Set 所有资源的总计数（不包含被安全组引用数）。
+     * @param TotalCount 所有资源的总计数（不包含被安全组引用数）。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
