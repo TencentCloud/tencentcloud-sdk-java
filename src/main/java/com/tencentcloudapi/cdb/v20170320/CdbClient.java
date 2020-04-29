@@ -962,6 +962,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeRollbackTaskDetail)用于查询云数据库实例回档任务详情。
+     * @param req DescribeRollbackTaskDetailRequest
+     * @return DescribeRollbackTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetail(DescribeRollbackTaskDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRollbackTaskDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRollbackTaskDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRollbackTaskDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *条件检索实例的慢日志。只允许查看一个月之内的慢日志
      * @param req DescribeSlowLogDataRequest
      * @return DescribeSlowLogDataResponse

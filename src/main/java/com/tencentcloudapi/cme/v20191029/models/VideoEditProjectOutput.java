@@ -44,14 +44,6 @@ public class VideoEditProjectOutput extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-    * 素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MaterialBaseInfo")
-    @Expose
-    private MaterialBaseInfo MaterialBaseInfo;
-
-    /**
      * Get 云点播媒资 FileId。 
      * @return VodFileId 云点播媒资 FileId。
      */
@@ -100,33 +92,12 @@ public class VideoEditProjectOutput extends AbstractModel{
     }
 
     /**
-     * Get 素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaterialBaseInfo 素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public MaterialBaseInfo getMaterialBaseInfo() {
-        return this.MaterialBaseInfo;
-    }
-
-    /**
-     * Set 素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaterialBaseInfo 素材基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMaterialBaseInfo(MaterialBaseInfo MaterialBaseInfo) {
-        this.MaterialBaseInfo = MaterialBaseInfo;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
         this.setParamSimple(map, prefix + "URL", this.URL);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
-        this.setParamObj(map, prefix + "MaterialBaseInfo.", this.MaterialBaseInfo);
 
     }
 }

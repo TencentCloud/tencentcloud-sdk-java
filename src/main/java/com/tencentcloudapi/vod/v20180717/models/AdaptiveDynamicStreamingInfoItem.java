@@ -30,7 +30,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private Long Definition;
 
     /**
-    * 打包格式，可能为 hls 和 dash 两种。
+    * 打包格式，只能为 HLS。
     */
     @SerializedName("Package")
     @Expose
@@ -67,16 +67,16 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     }
 
     /**
-     * Get 打包格式，可能为 hls 和 dash 两种。 
-     * @return Package 打包格式，可能为 hls 和 dash 两种。
+     * Get 打包格式，只能为 HLS。 
+     * @return Package 打包格式，只能为 HLS。
      */
     public String getPackage() {
         return this.Package;
     }
 
     /**
-     * Set 打包格式，可能为 hls 和 dash 两种。
-     * @param Package 打包格式，可能为 hls 和 dash 两种。
+     * Set 打包格式，只能为 HLS。
+     * @param Package 打包格式，只能为 HLS。
      */
     public void setPackage(String Package) {
         this.Package = Package;

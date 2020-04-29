@@ -58,6 +58,20 @@ public class DstInfo extends AbstractModel{
     private Long ReadOnly;
 
     /**
+    * 目标数据库账号
+    */
+    @SerializedName("User")
+    @Expose
+    private String User;
+
+    /**
+    * 目标数据库密码
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
      * Get 目标实例ID，如cdb-jd92ijd8 
      * @return InstanceId 目标实例ID，如cdb-jd92ijd8
      */
@@ -138,6 +152,38 @@ public class DstInfo extends AbstractModel{
     }
 
     /**
+     * Get 目标数据库账号 
+     * @return User 目标数据库账号
+     */
+    public String getUser() {
+        return this.User;
+    }
+
+    /**
+     * Set 目标数据库账号
+     * @param User 目标数据库账号
+     */
+    public void setUser(String User) {
+        this.User = User;
+    }
+
+    /**
+     * Get 目标数据库密码 
+     * @return Password 目标数据库密码
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set 目标数据库密码
+     * @param Password 目标数据库密码
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class DstInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

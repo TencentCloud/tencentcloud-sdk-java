@@ -556,7 +556,8 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *删除转码规则
+     *删除转码规则。
+DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配。其中TemplateId必填，其余参数为空时也需要传空字符串进行强匹配。
      * @param req DeleteLiveTranscodeRuleRequest
      * @return DeleteLiveTranscodeRuleResponse
      * @throws TencentCloudSDKException
@@ -574,7 +575,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *删除转码模板
+     *删除转码模板。
      * @param req DeleteLiveTranscodeTemplateRequest
      * @return DeleteLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
@@ -1226,7 +1227,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *获取单个转码模板
+     *获取单个转码模板。
      * @param req DescribeLiveTranscodeTemplateRequest
      * @return DescribeLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
@@ -1244,7 +1245,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *获取转码模板列表
+     *获取转码模板列表。
      * @param req DescribeLiveTranscodeTemplatesRequest
      * @return DescribeLiveTranscodeTemplatesResponse
      * @throws TencentCloudSDKException

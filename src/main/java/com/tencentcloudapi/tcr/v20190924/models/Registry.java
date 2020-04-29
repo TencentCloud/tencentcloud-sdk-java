@@ -93,6 +93,13 @@ public class Registry extends AbstractModel{
     private Long TokenValidTime;
 
     /**
+    * 实例内部访问地址
+    */
+    @SerializedName("InternalEndpoint")
+    @Expose
+    private String InternalEndpoint;
+
+    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -253,6 +260,22 @@ public class Registry extends AbstractModel{
     }
 
     /**
+     * Get 实例内部访问地址 
+     * @return InternalEndpoint 实例内部访问地址
+     */
+    public String getInternalEndpoint() {
+        return this.InternalEndpoint;
+    }
+
+    /**
+     * Set 实例内部访问地址
+     * @param InternalEndpoint 实例内部访问地址
+     */
+    public void setInternalEndpoint(String InternalEndpoint) {
+        this.InternalEndpoint = InternalEndpoint;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class Registry extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "EnableAnonymous", this.EnableAnonymous);
         this.setParamSimple(map, prefix + "TokenValidTime", this.TokenValidTime);
+        this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
 
     }
 }

@@ -58,6 +58,14 @@ public class VideoMaterial extends AbstractModel{
     private String Resolution;
 
     /**
+    * 素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaterialStatus")
+    @Expose
+    private MaterialStatus MaterialStatus;
+
+    /**
      * Get 素材元信息。 
      * @return MetaData 素材元信息。
      */
@@ -138,6 +146,26 @@ public class VideoMaterial extends AbstractModel{
     }
 
     /**
+     * Get 素材状态。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaterialStatus 素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MaterialStatus getMaterialStatus() {
+        return this.MaterialStatus;
+    }
+
+    /**
+     * Set 素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaterialStatus 素材状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaterialStatus(MaterialStatus MaterialStatus) {
+        this.MaterialStatus = MaterialStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class VideoMaterial extends AbstractModel{
         this.setParamSimple(map, prefix + "MaterialUrl", this.MaterialUrl);
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamObj(map, prefix + "MaterialStatus.", this.MaterialStatus);
 
     }
 }

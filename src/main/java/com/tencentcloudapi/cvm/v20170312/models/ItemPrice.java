@@ -55,12 +55,12 @@ public class ItemPrice extends AbstractModel{
     private Float DiscountPrice;
 
     /**
-    * 折扣，如20代表2折
+    * 折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Discount")
     @Expose
-    private Long Discount;
+    private Float Discount;
 
     /**
     * 后续合计费用的折扣价，后付费模式使用，单位：元<br><li>如返回了其他时间区间项，如UnitPriceDiscountSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时
@@ -183,22 +183,22 @@ public class ItemPrice extends AbstractModel{
     }
 
     /**
-     * Get 折扣，如20代表2折
+     * Get 折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Discount 折扣，如20代表2折
+     * @return Discount 折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDiscount() {
+    public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣，如20代表2折
+     * Set 折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Discount 折扣，如20代表2折
+     * @param Discount 折扣，如20.0代表2折
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDiscount(Long Discount) {
+    public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 

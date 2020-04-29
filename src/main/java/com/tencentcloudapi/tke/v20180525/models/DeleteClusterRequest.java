@@ -37,6 +37,13 @@ public class DeleteClusterRequest extends AbstractModel{
     private String InstanceDeleteMode;
 
     /**
+    * 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+    */
+    @SerializedName("ResourceDeleteOptions")
+    @Expose
+    private ResourceDeleteOption [] ResourceDeleteOptions;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -69,11 +76,28 @@ public class DeleteClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 集群删除时资源的删除策略，目前支持CBS（默认保留CBS） 
+     * @return ResourceDeleteOptions 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     */
+    public ResourceDeleteOption [] getResourceDeleteOptions() {
+        return this.ResourceDeleteOptions;
+    }
+
+    /**
+     * Set 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     * @param ResourceDeleteOptions 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     */
+    public void setResourceDeleteOptions(ResourceDeleteOption [] ResourceDeleteOptions) {
+        this.ResourceDeleteOptions = ResourceDeleteOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "InstanceDeleteMode", this.InstanceDeleteMode);
+        this.setParamArrayObj(map, prefix + "ResourceDeleteOptions.", this.ResourceDeleteOptions);
 
     }
 }

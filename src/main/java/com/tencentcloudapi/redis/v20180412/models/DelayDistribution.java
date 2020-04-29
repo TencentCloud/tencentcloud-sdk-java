@@ -37,6 +37,13 @@ public class DelayDistribution extends AbstractModel{
     private Long Size;
 
     /**
+    * 修改时间
+    */
+    @SerializedName("Updatetime")
+    @Expose
+    private Long Updatetime;
+
+    /**
      * Get 分布阶梯 
      * @return Ladder 分布阶梯
      */
@@ -69,11 +76,28 @@ public class DelayDistribution extends AbstractModel{
     }
 
     /**
+     * Get 修改时间 
+     * @return Updatetime 修改时间
+     */
+    public Long getUpdatetime() {
+        return this.Updatetime;
+    }
+
+    /**
+     * Set 修改时间
+     * @param Updatetime 修改时间
+     */
+    public void setUpdatetime(Long Updatetime) {
+        this.Updatetime = Updatetime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ladder", this.Ladder);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "Updatetime", this.Updatetime);
 
     }
 }

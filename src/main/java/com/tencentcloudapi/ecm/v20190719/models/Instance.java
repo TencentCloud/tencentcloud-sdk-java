@@ -153,7 +153,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     private Long DataDiskSize;
 
     /**
-    * UUID
+    * 实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UUID")
@@ -222,6 +222,14 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     @SerializedName("DataDisks")
     @Expose
     private DiskInfo [] DataDisks;
+
+    /**
+    * 新实例标志
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewFlag")
+    @Expose
+    private Long NewFlag;
 
     /**
      * Get 实例ID。 
@@ -564,9 +572,9 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     }
 
     /**
-     * Get UUID
+     * Get 实例UUID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UUID UUID
+     * @return UUID 实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUUID() {
@@ -574,9 +582,9 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     }
 
     /**
-     * Set UUID
+     * Set 实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UUID UUID
+     * @param UUID 实例UUID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUUID(String UUID) {
@@ -752,6 +760,26 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     }
 
     /**
+     * Get 新实例标志
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewFlag 新实例标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNewFlag() {
+        return this.NewFlag;
+    }
+
+    /**
+     * Set 新实例标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewFlag 新实例标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewFlag(Long NewFlag) {
+        this.NewFlag = NewFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -778,6 +806,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         this.setParamSimple(map, prefix + "ExpireState", this.ExpireState);
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamSimple(map, prefix + "NewFlag", this.NewFlag);
 
     }
 }

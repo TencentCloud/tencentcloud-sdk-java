@@ -72,6 +72,14 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
     private String [] SecurityPolicy;
 
     /**
+    * 集群Kubeconfig文件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Kubeconfig")
+    @Expose
+    private String Kubeconfig;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +199,26 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
     }
 
     /**
+     * Get 集群Kubeconfig文件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Kubeconfig 集群Kubeconfig文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKubeconfig() {
+        return this.Kubeconfig;
+    }
+
+    /**
+     * Set 集群Kubeconfig文件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Kubeconfig 集群Kubeconfig文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKubeconfig(String Kubeconfig) {
+        this.Kubeconfig = Kubeconfig;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +245,7 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "PgwEndpoint", this.PgwEndpoint);
         this.setParamArraySimple(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+        this.setParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

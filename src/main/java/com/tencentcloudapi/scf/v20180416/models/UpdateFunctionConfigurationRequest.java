@@ -107,13 +107,6 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String Publish;
 
     /**
-    * 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
-    */
-    @SerializedName("L5Enable")
-    @Expose
-    private String L5Enable;
-
-    /**
     * 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
     */
     @SerializedName("Layers")
@@ -126,13 +119,6 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     @SerializedName("DeadLetterConfig")
     @Expose
     private DeadLetterConfig DeadLetterConfig;
-
-    /**
-    * 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
-    */
-    @SerializedName("OnsEnable")
-    @Expose
-    private String OnsEnable;
 
     /**
      * Get 要修改的函数名称 
@@ -327,22 +313,6 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启L5访问能力，TRUE 为开启，FALSE为关闭 
-     * @return L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
-     */
-    public String getL5Enable() {
-        return this.L5Enable;
-    }
-
-    /**
-     * Set 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
-     * @param L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
-     */
-    public void setL5Enable(String L5Enable) {
-        this.L5Enable = L5Enable;
-    }
-
-    /**
      * Get 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。 
      * @return Layers 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
      */
@@ -375,22 +345,6 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭 
-     * @return OnsEnable 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
-     */
-    public String getOnsEnable() {
-        return this.OnsEnable;
-    }
-
-    /**
-     * Set 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
-     * @param OnsEnable 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
-     */
-    public void setOnsEnable(String OnsEnable) {
-        this.OnsEnable = OnsEnable;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -406,10 +360,8 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);
-        this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
-        this.setParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
 
     }
 }

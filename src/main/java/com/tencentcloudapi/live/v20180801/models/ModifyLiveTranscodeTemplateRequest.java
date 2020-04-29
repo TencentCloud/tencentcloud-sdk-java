@@ -61,8 +61,8 @@ aac/mp3。
     private String Description;
 
     /**
-    * 视频码率。
-范围：100-8000。
+    * 视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
     */
     @SerializedName("VideoBitrate")
     @Expose
@@ -247,20 +247,20 @@ aac/mp3。
     }
 
     /**
-     * Get 视频码率。
-范围：100-8000。 
-     * @return VideoBitrate 视频码率。
-范围：100-8000。
+     * Get 视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。 
+     * @return VideoBitrate 视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set 视频码率。
-范围：100-8000。
-     * @param VideoBitrate 视频码率。
-范围：100-8000。
+     * Set 视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
+     * @param VideoBitrate 视频码率。范围：100kbps - 8000kbps。
+注意：码率必须是100的倍数。
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;

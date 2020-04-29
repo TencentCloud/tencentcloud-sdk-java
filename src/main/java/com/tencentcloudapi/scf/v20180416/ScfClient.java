@@ -116,6 +116,24 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *删除一个函数版本的别名
+     * @param req DeleteAliasRequest
+     * @return DeleteAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAliasResponse DeleteAlias(DeleteAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAlias"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据传入参数删除函数。
      * @param req DeleteFunctionRequest
      * @return DeleteFunctionResponse

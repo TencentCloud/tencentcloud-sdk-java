@@ -38,6 +38,96 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询指定时间内的用户列表及用户通话质量数据。
+     * @param req DescribeCallDetailRequest
+     * @return DescribeCallDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallDetailResponse DescribeCallDetail(DescribeCallDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCallDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCallDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCallDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
+     * @param req DescribeRealtimeNetworkRequest
+     * @return DescribeRealtimeNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeNetworkResponse DescribeRealtimeNetwork(DescribeRealtimeNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRealtimeNetworkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeNetworkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRealtimeNetwork"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询sdkappid维度下实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不超过1个小时。
+     * @param req DescribeRealtimeQualityRequest
+     * @return DescribeRealtimeQualityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeQualityResponse DescribeRealtimeQuality(DescribeRealtimeQualityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRealtimeQualityResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeQualityResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRealtimeQuality"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询sdkappid维度下实时规模，可查询24小时内数据，查询起止时间不超过1个小时。
+     * @param req DescribeRealtimeScaleRequest
+     * @return DescribeRealtimeScaleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeScaleResponse DescribeRealtimeScale(DescribeRealtimeScaleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRealtimeScaleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeScaleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRealtimeScale"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询最近5天的数据。
+     * @param req DescribeRoomInformationRequest
+     * @return DescribeRoomInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoomInformationResponse DescribeRoomInformation(DescribeRoomInformationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoomInformationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRoomInformation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
      * @param req DismissRoomRequest
      * @return DismissRoomResponse
