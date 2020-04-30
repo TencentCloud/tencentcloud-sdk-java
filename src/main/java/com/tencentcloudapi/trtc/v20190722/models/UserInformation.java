@@ -37,7 +37,7 @@ public class UserInformation extends AbstractModel{
     private String UserId;
 
     /**
-    * 用户进房事件
+    * 用户进房时间
     */
     @SerializedName("JoinTs")
     @Expose
@@ -104,16 +104,16 @@ public class UserInformation extends AbstractModel{
     }
 
     /**
-     * Get 用户进房事件 
-     * @return JoinTs 用户进房事件
+     * Get 用户进房时间 
+     * @return JoinTs 用户进房时间
      */
     public Long getJoinTs() {
         return this.JoinTs;
     }
 
     /**
-     * Set 用户进房事件
-     * @param JoinTs 用户进房事件
+     * Set 用户进房时间
+     * @param JoinTs 用户进房时间
      */
     public void setJoinTs(Long JoinTs) {
         this.JoinTs = JoinTs;

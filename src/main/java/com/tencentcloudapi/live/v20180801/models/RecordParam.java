@@ -56,6 +56,13 @@ public class RecordParam extends AbstractModel{
     private Long VodSubAppId;
 
     /**
+    * 录制文件名。
+    */
+    @SerializedName("VodFileName")
+    @Expose
+    private String VodFileName;
+
+    /**
      * Get 录制间隔。
 单位秒，默认：1800。
 取值范围：300-7200。
@@ -140,6 +147,22 @@ public class RecordParam extends AbstractModel{
     }
 
     /**
+     * Get 录制文件名。 
+     * @return VodFileName 录制文件名。
+     */
+    public String getVodFileName() {
+        return this.VodFileName;
+    }
+
+    /**
+     * Set 录制文件名。
+     * @param VodFileName 录制文件名。
+     */
+    public void setVodFileName(String VodFileName) {
+        this.VodFileName = VodFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +170,7 @@ public class RecordParam extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageTime", this.StorageTime);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
+        this.setParamSimple(map, prefix + "VodFileName", this.VodFileName);
 
     }
 }

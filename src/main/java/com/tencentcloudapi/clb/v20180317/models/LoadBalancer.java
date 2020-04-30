@@ -372,6 +372,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String IsBlockTime;
 
     /**
+    * IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalBgp")
+    @Expose
+    private Boolean LocalBgp;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1240,6 +1248,26 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalBgp IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLocalBgp() {
+        return this.LocalBgp;
+    }
+
+    /**
+     * Set IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalBgp IP类型是否是本地BGP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalBgp(Boolean LocalBgp) {
+        this.LocalBgp = LocalBgp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1287,6 +1315,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
         this.setParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
+        this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
 
     }
 }

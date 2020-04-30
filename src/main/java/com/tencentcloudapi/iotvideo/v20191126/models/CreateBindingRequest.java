@@ -44,7 +44,7 @@ public class CreateBindingRequest extends AbstractModel{
     private String Role;
 
     /**
-    * 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
+    * 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
     */
     @SerializedName("ForceBind")
     @Expose
@@ -99,16 +99,16 @@ public class CreateBindingRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填 
-     * @return ForceBind 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
+     * Get 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填 
+     * @return ForceBind 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
      */
     public Boolean getForceBind() {
         return this.ForceBind;
     }
 
     /**
-     * Set 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
-     * @param ForceBind 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为owner时，可以不填
+     * Set 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
+     * @param ForceBind 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
      */
     public void setForceBind(Boolean ForceBind) {
         this.ForceBind = ForceBind;

@@ -106,6 +106,13 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long FilterModal;
 
     /**
+    * 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+    */
+    @SerializedName("ConvertNumMode")
+    @Expose
+    private Long ConvertNumMode;
+
+    /**
      * Get 引擎模型类型。
 8k_zh：电话 8k 中文普通话通用，可用于双声道音频的识别；
 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
@@ -306,6 +313,22 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1 
+     * @return ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     */
+    public Long getConvertNumMode() {
+        return this.ConvertNumMode;
+    }
+
+    /**
+     * Set 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     * @param ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     */
+    public void setConvertNumMode(Long ConvertNumMode) {
+        this.ConvertNumMode = ConvertNumMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -320,6 +343,7 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
         this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
         this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
+        this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
 
     }
 }

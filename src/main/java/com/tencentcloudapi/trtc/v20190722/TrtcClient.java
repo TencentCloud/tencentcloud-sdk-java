@@ -56,6 +56,24 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询历史房间和用户数，每分钟1次，可查询最近5天的数据
+     * @param req DescribeHistoryScaleRequest
+     * @return DescribeHistoryScaleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHistoryScaleResponse DescribeHistoryScale(DescribeHistoryScaleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHistoryScaleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHistoryScale"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
      * @param req DescribeRealtimeNetworkRequest
      * @return DescribeRealtimeNetworkResponse

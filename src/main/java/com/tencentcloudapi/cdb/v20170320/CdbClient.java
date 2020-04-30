@@ -618,6 +618,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *查询实例基本信息（实例 ID ，实例名称，是否开通加密 ）
+     * @param req DescribeDBInstanceInfoRequest
+     * @return DescribeDBInstanceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceInfoResponse DescribeDBInstanceInfo(DescribeDBInstanceInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstanceInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
      * @param req DescribeDBInstanceRebootTimeRequest
      * @return DescribeDBInstanceRebootTimeResponse

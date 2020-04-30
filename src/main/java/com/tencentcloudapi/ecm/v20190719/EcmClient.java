@@ -386,6 +386,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *查询实例管理终端地址
+     * @param req DescribeInstanceVncUrlRequest
+     * @return DescribeInstanceVncUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceVncUrlResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceVncUrl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取实例的相关信息。
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse

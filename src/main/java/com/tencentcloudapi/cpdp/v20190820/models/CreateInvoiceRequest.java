@@ -246,6 +246,13 @@ public class CreateInvoiceRequest extends AbstractModel{
     private String Profile;
 
     /**
+    * 撤销部分商品。0-不撤销，1-撤销
+    */
+    @SerializedName("UndoPart")
+    @Expose
+    private Long UndoPart;
+
+    /**
      * Get 开票平台ID。0：高灯 
      * @return InvoicePlatformId 开票平台ID。0：高灯
      */
@@ -766,6 +773,22 @@ public class CreateInvoiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 撤销部分商品。0-不撤销，1-撤销 
+     * @return UndoPart 撤销部分商品。0-不撤销，1-撤销
+     */
+    public Long getUndoPart() {
+        return this.UndoPart;
+    }
+
+    /**
+     * Set 撤销部分商品。0-不撤销，1-撤销
+     * @param UndoPart 撤销部分商品。0-不撤销，1-撤销
+     */
+    public void setUndoPart(Long UndoPart) {
+        this.UndoPart = UndoPart;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -800,6 +823,7 @@ public class CreateInvoiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "Profile", this.Profile);
+        this.setParamSimple(map, prefix + "UndoPart", this.UndoPart);
 
     }
 }

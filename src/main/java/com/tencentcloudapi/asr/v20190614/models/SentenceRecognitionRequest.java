@@ -118,6 +118,13 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long FilterPunc;
 
     /**
+    * 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+    */
+    @SerializedName("ConvertNumMode")
+    @Expose
+    private Long ConvertNumMode;
+
+    /**
      * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
@@ -342,6 +349,22 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1 
+     * @return ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     */
+    public Long getConvertNumMode() {
+        return this.ConvertNumMode;
+    }
+
+    /**
+     * Set 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     * @param ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+     */
+    public void setConvertNumMode(Long ConvertNumMode) {
+        this.ConvertNumMode = ConvertNumMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -358,6 +381,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
         this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
         this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
+        this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
 
     }
 }

@@ -45,7 +45,6 @@ public class ApplyUploadResponse extends AbstractModel{
 
     /**
     * 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaStoragePath")
     @Expose
@@ -53,7 +52,6 @@ public class ApplyUploadResponse extends AbstractModel{
 
     /**
     * 封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverStoragePath")
     @Expose
@@ -122,10 +120,8 @@ public class ApplyUploadResponse extends AbstractModel{
     }
 
     /**
-     * Get 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体存储路径，用于上传接口存储媒体的对象键（Key）。 
      * @return MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
@@ -133,19 +129,15 @@ public class ApplyUploadResponse extends AbstractModel{
 
     /**
      * Set 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
-     * Get 封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 封面存储路径，用于上传接口存储封面的对象键（Key）。 
      * @return CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoverStoragePath() {
         return this.CoverStoragePath;
@@ -153,9 +145,7 @@ public class ApplyUploadResponse extends AbstractModel{
 
     /**
      * Set 封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverStoragePath(String CoverStoragePath) {
         this.CoverStoragePath = CoverStoragePath;

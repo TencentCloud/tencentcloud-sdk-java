@@ -443,6 +443,24 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *使用在线编辑轨道数据直接导出视频。
+     * @param req ExportVideoByEditorTrackDataRequest
+     * @return ExportVideoByEditorTrackDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackData(ExportVideoByEditorTrackDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportVideoByEditorTrackDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportVideoByEditorTrackDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ExportVideoByEditorTrackData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *导出视频编辑项目，支持指定输出的模板。
      * @param req ExportVideoEditProjectRequest
      * @return ExportVideoEditProjectResponse

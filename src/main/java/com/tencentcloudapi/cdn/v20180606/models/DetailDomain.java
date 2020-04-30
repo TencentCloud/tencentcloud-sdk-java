@@ -372,6 +372,14 @@ global：全球锁定
     private ImageOptimization ImageOptimization;
 
     /**
+    * UA黑白名单配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserAgentFilter")
+    @Expose
+    private UserAgentFilter UserAgentFilter;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1264,6 +1272,26 @@ global：全球锁定
     }
 
     /**
+     * Get UA黑白名单配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserAgentFilter UA黑白名单配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UserAgentFilter getUserAgentFilter() {
+        return this.UserAgentFilter;
+    }
+
+    /**
+     * Set UA黑白名单配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserAgentFilter UA黑白名单配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
+        this.UserAgentFilter = UserAgentFilter;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1309,6 +1337,7 @@ global：全球锁定
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
         this.setParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
+        this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
 
     }
 }

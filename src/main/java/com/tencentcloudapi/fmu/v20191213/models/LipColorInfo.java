@@ -46,6 +46,13 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
     private FaceRect FaceRect;
 
     /**
+    * 涂妆浓淡[0,100]。建议取值50。本参数仅控制ModelId对应的涂妆浓淡。
+    */
+    @SerializedName("ModelAlpha")
+    @Expose
+    private Long ModelAlpha;
+
+    /**
      * Get 使用RGBA模型试唇色。 
      * @return RGBA 使用RGBA模型试唇色。
      */
@@ -102,12 +109,29 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
     }
 
     /**
+     * Get 涂妆浓淡[0,100]。建议取值50。本参数仅控制ModelId对应的涂妆浓淡。 
+     * @return ModelAlpha 涂妆浓淡[0,100]。建议取值50。本参数仅控制ModelId对应的涂妆浓淡。
+     */
+    public Long getModelAlpha() {
+        return this.ModelAlpha;
+    }
+
+    /**
+     * Set 涂妆浓淡[0,100]。建议取值50。本参数仅控制ModelId对应的涂妆浓淡。
+     * @param ModelAlpha 涂妆浓淡[0,100]。建议取值50。本参数仅控制ModelId对应的涂妆浓淡。
+     */
+    public void setModelAlpha(Long ModelAlpha) {
+        this.ModelAlpha = ModelAlpha;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "RGBA.", this.RGBA);
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamObj(map, prefix + "FaceRect.", this.FaceRect);
+        this.setParamSimple(map, prefix + "ModelAlpha", this.ModelAlpha);
 
     }
 }

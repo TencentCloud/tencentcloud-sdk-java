@@ -62,6 +62,25 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *为某个函数版本创建一个别名，您可以使用别名来标记特定的函数版本，如DEV/RELEASE版本，也可以随时修改别名指向的版本。
+一个别名必须指向一个主版本，此外还可以同时指向一个附加版本。调用函数时指定特定的别名，则请求会被发送到别名指向的版本上，您可以配置请求发送到主版本和附加版本的比例。
+     * @param req CreateAliasRequest
+     * @return CreateAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAliasResponse CreateAlias(CreateAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAlias"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据传入参数创建新的函数。
      * @param req CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -206,6 +225,24 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *获取别名的详细信息，包括名称、描述、版本、路由信息等。
+     * @param req GetAliasRequest
+     * @return GetAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAliasResponse GetAlias(GetAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetAlias"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
      * @param req GetFunctionRequest
      * @return GetFunctionResponse
@@ -289,6 +326,24 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "Invoke"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *返回一个函数下的全部别名，可以根据特定函数版本过滤。
+     * @param req ListAliasesRequest
+     * @return ListAliasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAliasesResponse ListAliases(ListAliasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAliasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAliasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListAliases"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -415,6 +470,24 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PublishVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新别名的配置
+     * @param req UpdateAliasRequest
+     * @return UpdateAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateAlias"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -263,8 +263,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细
-注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
+     *DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细。注意事项：边缘节点（edge）尚未全量开放，未在内测名单中的账号不支持调用
      * @param req DescribeIpStatusRequest
      * @return DescribeIpStatusResponse
      * @throws TencentCloudSDKException

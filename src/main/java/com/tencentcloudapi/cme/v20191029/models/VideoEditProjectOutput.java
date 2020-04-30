@@ -38,6 +38,7 @@ public class VideoEditProjectOutput extends AbstractModel{
 
     /**
     * 元信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
     @Expose
@@ -76,8 +77,10 @@ public class VideoEditProjectOutput extends AbstractModel{
     }
 
     /**
-     * Get 元信息。 
+     * Get 元信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetaData 元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
@@ -85,7 +88,9 @@ public class VideoEditProjectOutput extends AbstractModel{
 
     /**
      * Set 元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
