@@ -30,7 +30,7 @@ public class SentimentAnalysisRequest extends AbstractModel{
     private String Text;
 
     /**
-    * 文本所属类型（默认取4值）：
+    * 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
@@ -39,6 +39,15 @@ public class SentimentAnalysisRequest extends AbstractModel{
     @SerializedName("Flag")
     @Expose
     private Long Flag;
+
+    /**
+    * 情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
 
     /**
      * Get 待分析的文本（仅支持UTF-8格式，不超过200字） 
@@ -57,12 +66,12 @@ public class SentimentAnalysisRequest extends AbstractModel{
     }
 
     /**
-     * Get 文本所属类型（默认取4值）：
+     * Get 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
 4、通用领域类 
-     * @return Flag 文本所属类型（默认取4值）：
+     * @return Flag 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
@@ -73,12 +82,12 @@ public class SentimentAnalysisRequest extends AbstractModel{
     }
 
     /**
-     * Set 文本所属类型（默认取4值）：
+     * Set 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
 4、通用领域类
-     * @param Flag 文本所属类型（默认取4值）：
+     * @param Flag 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
@@ -89,11 +98,36 @@ public class SentimentAnalysisRequest extends AbstractModel{
     }
 
     /**
+     * Get 情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果 
+     * @return Mode 情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
+     * @param Mode 情感分类模式选项，可取2class或3class（默认值为2class）
+1、2class：返回正负面二分类情感结果
+2、3class：返回正负面及中性三分类情感结果
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Flag", this.Flag);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
 
     }
 }

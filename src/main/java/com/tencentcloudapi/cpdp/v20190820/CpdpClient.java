@@ -297,6 +297,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *直播平台-代理商完税信息录入
+     * @param req CreateAgentTaxPaymentInfosRequest
+     * @return CreateAgentTaxPaymentInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(CreateAgentTaxPaymentInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAgentTaxPaymentInfosResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAgentTaxPaymentInfosResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAgentTaxPaymentInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
 平台需保存银行返回的子账户账号，后续交易接口都会用到。会员属性字段为预留扩展字段，当前必须送默认值。
      * @param req CreateCustAcctIdRequest
@@ -370,6 +388,42 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *直播平台-删除代理商完税信息
+     * @param req DeleteAgentTaxPaymentInfoRequest
+     * @return DeleteAgentTaxPaymentInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAgentTaxPaymentInfoResponse DeleteAgentTaxPaymentInfo(DeleteAgentTaxPaymentInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAgentTaxPaymentInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAgentTaxPaymentInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAgentTaxPaymentInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播平台-删除代理商完税信息
+     * @param req DeleteAgentTaxPaymentInfosRequest
+     * @return DeleteAgentTaxPaymentInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfos(DeleteAgentTaxPaymentInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAgentTaxPaymentInfosResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAgentTaxPaymentInfosResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAgentTaxPaymentInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
      * @param req DownloadBillRequest
      * @return DownloadBillResponse
@@ -381,6 +435,24 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadBillResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DownloadBill"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播平台-修改代理商完税信息
+     * @param req ModifyAgentTaxPaymentInfoRequest
+     * @return ModifyAgentTaxPaymentInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(ModifyAgentTaxPaymentInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAgentTaxPaymentInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAgentTaxPaymentInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAgentTaxPaymentInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -453,6 +525,24 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryAcctInfoListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播平台-查询批次信息
+     * @param req QueryAgentTaxPaymentBatchRequest
+     * @return QueryAgentTaxPaymentBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAgentTaxPaymentBatchResponse QueryAgentTaxPaymentBatch(QueryAgentTaxPaymentBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryAgentTaxPaymentBatchResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryAgentTaxPaymentBatchResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryAgentTaxPaymentBatch"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

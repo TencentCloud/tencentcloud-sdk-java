@@ -162,6 +162,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private Long BasicSecurityType;
 
     /**
+    * Kibana内网端口
+    */
+    @SerializedName("KibanaPrivatePort")
+    @Expose
+    private Long KibanaPrivatePort;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -490,6 +497,22 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Kibana内网端口 
+     * @return KibanaPrivatePort Kibana内网端口
+     */
+    public Long getKibanaPrivatePort() {
+        return this.KibanaPrivatePort;
+    }
+
+    /**
+     * Set Kibana内网端口
+     * @param KibanaPrivatePort Kibana内网端口
+     */
+    public void setKibanaPrivatePort(Long KibanaPrivatePort) {
+        this.KibanaPrivatePort = KibanaPrivatePort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -512,6 +535,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+        this.setParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
 
     }
 }

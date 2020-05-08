@@ -100,6 +100,13 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     private Long [] InstanceGroupIds;
 
     /**
+    * 根据指标名过滤
+    */
+    @SerializedName("MetricNames")
+    @Expose
+    private String [] MetricNames;
+
+    /**
      * Get 接口模块名，当前取值monitor 
      * @return Module 接口模块名，当前取值monitor
      */
@@ -276,6 +283,22 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     }
 
     /**
+     * Get 根据指标名过滤 
+     * @return MetricNames 根据指标名过滤
+     */
+    public String [] getMetricNames() {
+        return this.MetricNames;
+    }
+
+    /**
+     * Set 根据指标名过滤
+     * @param MetricNames 根据指标名过滤
+     */
+    public void setMetricNames(String [] MetricNames) {
+        this.MetricNames = MetricNames;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AlarmStatus.", this.AlarmStatus);
         this.setParamSimple(map, prefix + "ObjLike", this.ObjLike);
         this.setParamArraySimple(map, prefix + "InstanceGroupIds.", this.InstanceGroupIds);
+        this.setParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
 
     }
 }

@@ -47,6 +47,13 @@ public class TranscodeTaskInput extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * 马赛克列表，最大可支持 10 张。
+    */
+    @SerializedName("MosaicSet")
+    @Expose
+    private MosaicInput [] MosaicSet;
+
+    /**
     * 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -137,6 +144,22 @@ public class TranscodeTaskInput extends AbstractModel{
     }
 
     /**
+     * Get 马赛克列表，最大可支持 10 张。 
+     * @return MosaicSet 马赛克列表，最大可支持 10 张。
+     */
+    public MosaicInput [] getMosaicSet() {
+        return this.MosaicSet;
+    }
+
+    /**
+     * Set 马赛克列表，最大可支持 10 张。
+     * @param MosaicSet 马赛克列表，最大可支持 10 张。
+     */
+    public void setMosaicSet(MosaicInput [] MosaicSet) {
+        this.MosaicSet = MosaicSet;
+    }
+
+    /**
      * Get 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputStorage 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -215,6 +238,7 @@ public class TranscodeTaskInput extends AbstractModel{
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);

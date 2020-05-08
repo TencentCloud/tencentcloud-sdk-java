@@ -30,7 +30,16 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
-    * 截图时间点列表，单位为<font color=red>毫秒</font>。
+    * 截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+    */
+    @SerializedName("ExtTimeOffsetSet")
+    @Expose
+    private String [] ExtTimeOffsetSet;
+
+    /**
+    * 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
     */
     @SerializedName("TimeOffsetSet")
     @Expose
@@ -60,16 +69,40 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel{
     }
 
     /**
-     * Get 截图时间点列表，单位为<font color=red>毫秒</font>。 
-     * @return TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
+     * Get 截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li> 
+     * @return ExtTimeOffsetSet 截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+     */
+    public String [] getExtTimeOffsetSet() {
+        return this.ExtTimeOffsetSet;
+    }
+
+    /**
+     * Set 截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+     * @param ExtTimeOffsetSet 截图时间点列表，时间点支持 s、% 两种格式：
+<li>当字符串以 s 结尾，表示时间点单位为秒，如 3.5s 表示时间点为第3.5秒；</li>
+<li>当字符串以 % 结尾，表示时间点为视频时长的百分比大小，如10%表示时间点为视频前第10%的时间。</li>
+     */
+    public void setExtTimeOffsetSet(String [] ExtTimeOffsetSet) {
+        this.ExtTimeOffsetSet = ExtTimeOffsetSet;
+    }
+
+    /**
+     * Get 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。 
+     * @return TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
      */
     public Float [] getTimeOffsetSet() {
         return this.TimeOffsetSet;
     }
 
     /**
-     * Set 截图时间点列表，单位为<font color=red>毫秒</font>。
-     * @param TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
+     * Set 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
+     * @param TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。此参数已不再建议使用，建议您使用 ExtTimeOffsetSet 参数。
      */
     public void setTimeOffsetSet(Float [] TimeOffsetSet) {
         this.TimeOffsetSet = TimeOffsetSet;
@@ -96,6 +129,7 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamArraySimple(map, prefix + "ExtTimeOffsetSet.", this.ExtTimeOffsetSet);
         this.setParamArraySimple(map, prefix + "TimeOffsetSet.", this.TimeOffsetSet);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
 

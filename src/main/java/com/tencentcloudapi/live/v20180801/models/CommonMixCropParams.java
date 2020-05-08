@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CommonMixCropParams extends AbstractModel{
 
     /**
-    * 裁剪的宽度。取值范围[0，3000]。
+    * 裁剪的宽度。取值范围[0，2000]。
     */
     @SerializedName("CropWidth")
     @Expose
     private Float CropWidth;
 
     /**
-    * 裁剪的高度。取值范围[0，3000]。
+    * 裁剪的高度。取值范围[0，2000]。
     */
     @SerializedName("CropHeight")
     @Expose
     private Float CropHeight;
 
     /**
-    * 裁剪的起始X坐标。取值范围[0，3000]。
+    * 裁剪的起始X坐标。取值范围[0，2000]。
     */
     @SerializedName("CropStartLocationX")
     @Expose
     private Float CropStartLocationX;
 
     /**
-    * 裁剪的起始Y坐标。取值范围[0，3000]。
+    * 裁剪的起始Y坐标。取值范围[0，2000]。
     */
     @SerializedName("CropStartLocationY")
     @Expose
     private Float CropStartLocationY;
 
     /**
-     * Get 裁剪的宽度。取值范围[0，3000]。 
-     * @return CropWidth 裁剪的宽度。取值范围[0，3000]。
+     * Get 裁剪的宽度。取值范围[0，2000]。 
+     * @return CropWidth 裁剪的宽度。取值范围[0，2000]。
      */
     public Float getCropWidth() {
         return this.CropWidth;
     }
 
     /**
-     * Set 裁剪的宽度。取值范围[0，3000]。
-     * @param CropWidth 裁剪的宽度。取值范围[0，3000]。
+     * Set 裁剪的宽度。取值范围[0，2000]。
+     * @param CropWidth 裁剪的宽度。取值范围[0，2000]。
      */
     public void setCropWidth(Float CropWidth) {
         this.CropWidth = CropWidth;
     }
 
     /**
-     * Get 裁剪的高度。取值范围[0，3000]。 
-     * @return CropHeight 裁剪的高度。取值范围[0，3000]。
+     * Get 裁剪的高度。取值范围[0，2000]。 
+     * @return CropHeight 裁剪的高度。取值范围[0，2000]。
      */
     public Float getCropHeight() {
         return this.CropHeight;
     }
 
     /**
-     * Set 裁剪的高度。取值范围[0，3000]。
-     * @param CropHeight 裁剪的高度。取值范围[0，3000]。
+     * Set 裁剪的高度。取值范围[0，2000]。
+     * @param CropHeight 裁剪的高度。取值范围[0，2000]。
      */
     public void setCropHeight(Float CropHeight) {
         this.CropHeight = CropHeight;
     }
 
     /**
-     * Get 裁剪的起始X坐标。取值范围[0，3000]。 
-     * @return CropStartLocationX 裁剪的起始X坐标。取值范围[0，3000]。
+     * Get 裁剪的起始X坐标。取值范围[0，2000]。 
+     * @return CropStartLocationX 裁剪的起始X坐标。取值范围[0，2000]。
      */
     public Float getCropStartLocationX() {
         return this.CropStartLocationX;
     }
 
     /**
-     * Set 裁剪的起始X坐标。取值范围[0，3000]。
-     * @param CropStartLocationX 裁剪的起始X坐标。取值范围[0，3000]。
+     * Set 裁剪的起始X坐标。取值范围[0，2000]。
+     * @param CropStartLocationX 裁剪的起始X坐标。取值范围[0，2000]。
      */
     public void setCropStartLocationX(Float CropStartLocationX) {
         this.CropStartLocationX = CropStartLocationX;
     }
 
     /**
-     * Get 裁剪的起始Y坐标。取值范围[0，3000]。 
-     * @return CropStartLocationY 裁剪的起始Y坐标。取值范围[0，3000]。
+     * Get 裁剪的起始Y坐标。取值范围[0，2000]。 
+     * @return CropStartLocationY 裁剪的起始Y坐标。取值范围[0，2000]。
      */
     public Float getCropStartLocationY() {
         return this.CropStartLocationY;
     }
 
     /**
-     * Set 裁剪的起始Y坐标。取值范围[0，3000]。
-     * @param CropStartLocationY 裁剪的起始Y坐标。取值范围[0，3000]。
+     * Set 裁剪的起始Y坐标。取值范围[0，2000]。
+     * @param CropStartLocationY 裁剪的起始Y坐标。取值范围[0，2000]。
      */
     public void setCropStartLocationY(Float CropStartLocationY) {
         this.CropStartLocationY = CropStartLocationY;

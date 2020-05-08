@@ -30,11 +30,20 @@ public class DescribeFileSystemResponse extends AbstractModel{
     private FileSystem FileSystem;
 
     /**
-    * 文件系统已使用大小（byte）
+    * 文件系统已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSystemCapacityUsed")
     @Expose
     private Long FileSystemCapacityUsed;
+
+    /**
+    * 已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CapacityUsed")
+    @Expose
+    private Long CapacityUsed;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -60,19 +69,43 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Get 文件系统已使用大小（byte） 
-     * @return FileSystemCapacityUsed 文件系统已使用大小（byte）
+     * Get 文件系统已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileSystemCapacityUsed 文件系统已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSystemCapacityUsed() {
         return this.FileSystemCapacityUsed;
     }
 
     /**
-     * Set 文件系统已使用大小（byte）
-     * @param FileSystemCapacityUsed 文件系统已使用大小（byte）
+     * Set 文件系统已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileSystemCapacityUsed 文件系统已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSystemCapacityUsed(Long FileSystemCapacityUsed) {
         this.FileSystemCapacityUsed = FileSystemCapacityUsed;
+    }
+
+    /**
+     * Get 已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CapacityUsed 已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCapacityUsed() {
+        return this.CapacityUsed;
+    }
+
+    /**
+     * Set 已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CapacityUsed 已使用容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCapacityUsed(Long CapacityUsed) {
+        this.CapacityUsed = CapacityUsed;
     }
 
     /**
@@ -97,6 +130,7 @@ public class DescribeFileSystemResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "FileSystem.", this.FileSystem);
         this.setParamSimple(map, prefix + "FileSystemCapacityUsed", this.FileSystemCapacityUsed);
+        this.setParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -48,10 +48,10 @@ public class ReceiverInfo extends AbstractModel{
     */
     @SerializedName("ReceiverType")
     @Expose
-    private String [] ReceiverType;
+    private String ReceiverType;
 
     /**
-    * Id
+    * ReceiverId
     */
     @SerializedName("Id")
     @Expose
@@ -179,7 +179,7 @@ public class ReceiverInfo extends AbstractModel{
      * Get 接收人类型。“group” 或 “user” 
      * @return ReceiverType 接收人类型。“group” 或 “user”
      */
-    public String [] getReceiverType() {
+    public String getReceiverType() {
         return this.ReceiverType;
     }
 
@@ -187,21 +187,21 @@ public class ReceiverInfo extends AbstractModel{
      * Set 接收人类型。“group” 或 “user”
      * @param ReceiverType 接收人类型。“group” 或 “user”
      */
-    public void setReceiverType(String [] ReceiverType) {
+    public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
     }
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get ReceiverId 
+     * @return Id ReceiverId
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set ReceiverId
+     * @param Id ReceiverId
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -374,7 +374,7 @@ public class ReceiverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "NotifyWay.", this.NotifyWay);
-        this.setParamArraySimple(map, prefix + "ReceiverType.", this.ReceiverType);
+        this.setParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamArraySimple(map, prefix + "SendFor.", this.SendFor);
         this.setParamArraySimple(map, prefix + "UidList.", this.UidList);

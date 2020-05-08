@@ -72,6 +72,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private Boolean IsNonStaticIpMode;
 
     /**
+    * 是否启用集群删除保护
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -184,6 +191,22 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get 是否启用集群删除保护 
+     * @return DeletionProtection 是否启用集群删除保护
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 是否启用集群删除保护
+     * @param DeletionProtection 是否启用集群删除保护
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

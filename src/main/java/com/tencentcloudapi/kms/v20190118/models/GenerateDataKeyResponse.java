@@ -30,14 +30,14 @@ public class GenerateDataKeyResponse extends AbstractModel{
     private String KeyId;
 
     /**
-    * 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
+    * 生成的数据密钥DataKey的明文，该明文使用base64进行了编码，需base64解码后作为数据密钥本地使用
     */
     @SerializedName("Plaintext")
     @Expose
     private String Plaintext;
 
     /**
-    * DataKey加密后经过base64编码的密文，用户需要自行保存密文
+    * 数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -67,32 +67,32 @@ public class GenerateDataKeyResponse extends AbstractModel{
     }
 
     /**
-     * Get 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文 
-     * @return Plaintext 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
+     * Get 生成的数据密钥DataKey的明文，该明文使用base64进行了编码，需base64解码后作为数据密钥本地使用 
+     * @return Plaintext 生成的数据密钥DataKey的明文，该明文使用base64进行了编码，需base64解码后作为数据密钥本地使用
      */
     public String getPlaintext() {
         return this.Plaintext;
     }
 
     /**
-     * Set 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
-     * @param Plaintext 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
+     * Set 生成的数据密钥DataKey的明文，该明文使用base64进行了编码，需base64解码后作为数据密钥本地使用
+     * @param Plaintext 生成的数据密钥DataKey的明文，该明文使用base64进行了编码，需base64解码后作为数据密钥本地使用
      */
     public void setPlaintext(String Plaintext) {
         this.Plaintext = Plaintext;
     }
 
     /**
-     * Get DataKey加密后经过base64编码的密文，用户需要自行保存密文 
-     * @return CiphertextBlob DataKey加密后经过base64编码的密文，用户需要自行保存密文
+     * Get 数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文 
+     * @return CiphertextBlob 数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * Set DataKey加密后经过base64编码的密文，用户需要自行保存密文
-     * @param CiphertextBlob DataKey加密后经过base64编码的密文，用户需要自行保存密文
+     * Set 数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文
+     * @param CiphertextBlob 数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCallDetailRequest extends AbstractModel{
 
     /**
-    * 通话ID
+    * 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
     */
     @SerializedName("CommId")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeCallDetailRequest extends AbstractModel{
     private String SdkAppId;
 
     /**
-    * 需查询的用户数组，不填默认返回6个用户
+    * 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
     */
     @SerializedName("UserIds")
     @Expose
@@ -78,16 +78,16 @@ vHeight：上/下行分辨率高
     private String [] DataType;
 
     /**
-     * Get 通话ID 
-     * @return CommId 通话ID
+     * Get 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。 
+     * @return CommId 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
      */
     public String getCommId() {
         return this.CommId;
     }
 
     /**
-     * Set 通话ID
-     * @param CommId 通话ID
+     * Set 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+     * @param CommId 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
      */
     public void setCommId(String CommId) {
         this.CommId = CommId;
@@ -142,16 +142,16 @@ vHeight：上/下行分辨率高
     }
 
     /**
-     * Get 需查询的用户数组，不填默认返回6个用户 
-     * @return UserIds 需查询的用户数组，不填默认返回6个用户
+     * Get 需查询的用户数组，不填默认返回6个用户,最多可填6个用户 
+     * @return UserIds 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 需查询的用户数组，不填默认返回6个用户
-     * @param UserIds 需查询的用户数组，不填默认返回6个用户
+     * Set 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
+     * @param UserIds 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

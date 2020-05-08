@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BizLicenseOCRResponse extends AbstractModel{
 
     /**
-    * 注册号
+    * 统一社会信用代码（三合一之前为注册号）
     */
     @SerializedName("RegNum")
     @Expose
@@ -100,16 +100,16 @@ public class BizLicenseOCRResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 注册号 
-     * @return RegNum 注册号
+     * Get 统一社会信用代码（三合一之前为注册号） 
+     * @return RegNum 统一社会信用代码（三合一之前为注册号）
      */
     public String getRegNum() {
         return this.RegNum;
     }
 
     /**
-     * Set 注册号
-     * @param RegNum 注册号
+     * Set 统一社会信用代码（三合一之前为注册号）
+     * @param RegNum 统一社会信用代码（三合一之前为注册号）
      */
     public void setRegNum(String RegNum) {
         this.RegNum = RegNum;

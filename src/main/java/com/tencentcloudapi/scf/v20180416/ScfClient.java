@@ -423,6 +423,24 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *获取函数触发器列表
+     * @param req ListTriggersRequest
+     * @return ListTriggersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggersResponse ListTriggers(ListTriggersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListTriggersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListTriggersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListTriggers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据传入的参数查询函数的版本。
      * @param req ListVersionByFunctionRequest
      * @return ListVersionByFunctionResponse
