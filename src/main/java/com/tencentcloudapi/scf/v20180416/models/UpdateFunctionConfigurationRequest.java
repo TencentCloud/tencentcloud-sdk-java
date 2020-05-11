@@ -128,6 +128,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private DeadLetterConfig DeadLetterConfig;
 
     /**
+    * 公网访问配置
+    */
+    @SerializedName("PublicNetConfig")
+    @Expose
+    private PublicNetConfigIn PublicNetConfig;
+
+    /**
      * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
@@ -368,6 +375,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get 公网访问配置 
+     * @return PublicNetConfig 公网访问配置
+     */
+    public PublicNetConfigIn getPublicNetConfig() {
+        return this.PublicNetConfig;
+    }
+
+    /**
+     * Set 公网访问配置
+     * @param PublicNetConfig 公网访问配置
+     */
+    public void setPublicNetConfig(PublicNetConfigIn PublicNetConfig) {
+        this.PublicNetConfig = PublicNetConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+        this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
 
     }
 }

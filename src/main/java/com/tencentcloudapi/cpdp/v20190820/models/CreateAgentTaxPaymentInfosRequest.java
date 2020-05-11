@@ -65,6 +65,13 @@ public class CreateAgentTaxPaymentInfosRequest extends AbstractModel{
     private AgentTaxPayment [] AgentTaxPaymentInfos;
 
     /**
+    * 接入环境。沙箱环境填sandbox
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
      * Get 代理商ID 
      * @return AgentId 代理商ID
      */
@@ -161,6 +168,22 @@ public class CreateAgentTaxPaymentInfosRequest extends AbstractModel{
     }
 
     /**
+     * Get 接入环境。沙箱环境填sandbox 
+     * @return Profile 接入环境。沙箱环境填sandbox
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 接入环境。沙箱环境填sandbox
+     * @param Profile 接入环境。沙箱环境填sandbox
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateAgentTaxPaymentInfosRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RawElectronicCertUrl", this.RawElectronicCertUrl);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamArrayObj(map, prefix + "AgentTaxPaymentInfos.", this.AgentTaxPaymentInfos);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

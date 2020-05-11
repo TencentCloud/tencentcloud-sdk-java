@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cpdp.v20190820.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAgentTaxPaymentInfoRequest extends AbstractModel{
+public class ProductSimple extends AbstractModel{
 
     /**
-    * 批次号
+    * 命名空间
     */
-    @SerializedName("BatchNum")
+    @SerializedName("Namespace")
     @Expose
-    private Long BatchNum;
+    private String Namespace;
 
     /**
-    * 接入环境。沙箱环境填sandbox
+    * 产品名称
     */
-    @SerializedName("Profile")
+    @SerializedName("ProductName")
     @Expose
-    private String Profile;
+    private String ProductName;
 
     /**
-     * Get 批次号 
-     * @return BatchNum 批次号
+     * Get 命名空间 
+     * @return Namespace 命名空间
      */
-    public Long getBatchNum() {
-        return this.BatchNum;
+    public String getNamespace() {
+        return this.Namespace;
     }
 
     /**
-     * Set 批次号
-     * @param BatchNum 批次号
+     * Set 命名空间
+     * @param Namespace 命名空间
      */
-    public void setBatchNum(Long BatchNum) {
-        this.BatchNum = BatchNum;
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
     }
 
     /**
-     * Get 接入环境。沙箱环境填sandbox 
-     * @return Profile 接入环境。沙箱环境填sandbox
+     * Get 产品名称 
+     * @return ProductName 产品名称
      */
-    public String getProfile() {
-        return this.Profile;
+    public String getProductName() {
+        return this.ProductName;
     }
 
     /**
-     * Set 接入环境。沙箱环境填sandbox
-     * @param Profile 接入环境。沙箱环境填sandbox
+     * Set 产品名称
+     * @param ProductName 产品名称
      */
-    public void setProfile(String Profile) {
-        this.Profile = Profile;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BatchNum", this.BatchNum);
-        this.setParamSimple(map, prefix + "Profile", this.Profile);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

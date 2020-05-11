@@ -13,21 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sms.v20190711.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSmsTemplateListResponse extends AbstractModel{
+public class DescribeProductListResponse extends AbstractModel{
 
     /**
-    * 获取短信模板信息响应
+    * 产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DescribeTemplateStatusSet")
+    @SerializedName("ProductList")
     @Expose
-    private DescribeTemplateListStatus [] DescribeTemplateStatusSet;
+    private ProductSimple [] ProductList;
+
+    /**
+    * 产品总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +46,43 @@ public class DescribeSmsTemplateListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 获取短信模板信息响应 
-     * @return DescribeTemplateStatusSet 获取短信模板信息响应
+     * Get 产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductList 产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DescribeTemplateListStatus [] getDescribeTemplateStatusSet() {
-        return this.DescribeTemplateStatusSet;
+    public ProductSimple [] getProductList() {
+        return this.ProductList;
     }
 
     /**
-     * Set 获取短信模板信息响应
-     * @param DescribeTemplateStatusSet 获取短信模板信息响应
+     * Set 产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductList 产品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDescribeTemplateStatusSet(DescribeTemplateListStatus [] DescribeTemplateStatusSet) {
-        this.DescribeTemplateStatusSet = DescribeTemplateStatusSet;
+    public void setProductList(ProductSimple [] ProductList) {
+        this.ProductList = ProductList;
+    }
+
+    /**
+     * Get 产品总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 产品总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 产品总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 产品总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -72,7 +105,8 @@ public class DescribeSmsTemplateListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DescribeTemplateStatusSet.", this.DescribeTemplateStatusSet);
+        this.setParamArrayObj(map, prefix + "ProductList.", this.ProductList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

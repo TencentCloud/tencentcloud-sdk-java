@@ -39,7 +39,7 @@ Windows实例密码必须12~30位，不能以“/”开头且不包括用户名�
     private String Password;
 
     /**
-    * 待重置密码的实例操作系统的管理员账户。不得超过64个字符。
+    * 待重置密码的实例操作系统的用户名。不得超过64个字符。
     */
     @SerializedName("UserName")
     @Expose
@@ -93,16 +93,16 @@ Windows实例密码必须12~30位，不能以“/”开头且不包括用户名�
     }
 
     /**
-     * Get 待重置密码的实例操作系统的管理员账户。不得超过64个字符。 
-     * @return UserName 待重置密码的实例操作系统的管理员账户。不得超过64个字符。
+     * Get 待重置密码的实例操作系统的用户名。不得超过64个字符。 
+     * @return UserName 待重置密码的实例操作系统的用户名。不得超过64个字符。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 待重置密码的实例操作系统的管理员账户。不得超过64个字符。
-     * @param UserName 待重置密码的实例操作系统的管理员账户。不得超过64个字符。
+     * Set 待重置密码的实例操作系统的用户名。不得超过64个字符。
+     * @param UserName 待重置密码的实例操作系统的用户名。不得超过64个字符。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

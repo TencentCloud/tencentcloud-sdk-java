@@ -236,6 +236,24 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *查询云监控产品列表
+     * @param req DescribeProductListRequest
+     * @return DescribeProductListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductListResponse DescribeProductList(DescribeProductListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProductListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProductListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProductList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取云产品的监控数据。传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
 接口调用频率限制为：20次/秒，1200次/分钟。
 若您需要调用的指标、对象较多，可能存在因限频出现拉取失败的情况，建议尽量将请求按时间维度均摊。

@@ -142,6 +142,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private DeadLetterConfig DeadLetterConfig;
 
     /**
+    * 公网访问配置
+    */
+    @SerializedName("PublicNetConfig")
+    @Expose
+    private PublicNetConfigIn PublicNetConfig;
+
+    /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -414,6 +421,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get 公网访问配置 
+     * @return PublicNetConfig 公网访问配置
+     */
+    public PublicNetConfigIn getPublicNetConfig() {
+        return this.PublicNetConfig;
+    }
+
+    /**
+     * Set 公网访问配置
+     * @param PublicNetConfig 公网访问配置
+     */
+    public void setPublicNetConfig(PublicNetConfigIn PublicNetConfig) {
+        this.PublicNetConfig = PublicNetConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CodeSource", this.CodeSource);
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+        this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
 
     }
 }

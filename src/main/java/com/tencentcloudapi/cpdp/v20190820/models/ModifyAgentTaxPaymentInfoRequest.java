@@ -44,6 +44,13 @@ public class ModifyAgentTaxPaymentInfoRequest extends AbstractModel{
     private String FileName;
 
     /**
+    * 接入环境。沙箱环境填sandbox
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
      * Get 批次号 
      * @return BatchNum 批次号
      */
@@ -92,12 +99,29 @@ public class ModifyAgentTaxPaymentInfoRequest extends AbstractModel{
     }
 
     /**
+     * Get 接入环境。沙箱环境填sandbox 
+     * @return Profile 接入环境。沙箱环境填sandbox
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set 接入环境。沙箱环境填sandbox
+     * @param Profile 接入环境。沙箱环境填sandbox
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BatchNum", this.BatchNum);
         this.setParamSimple(map, prefix + "RawElectronicCertUrl", this.RawElectronicCertUrl);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

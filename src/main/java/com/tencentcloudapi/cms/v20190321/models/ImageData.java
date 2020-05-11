@@ -79,6 +79,13 @@ public class ImageData extends AbstractModel{
     private OCRDetect OCRDetect;
 
     /**
+    * 手机检测详情
+    */
+    @SerializedName("PhoneDetect")
+    @Expose
+    private PhoneDetect PhoneDetect;
+
+    /**
     * 图片涉政详情
     */
     @SerializedName("PolityDetect")
@@ -247,6 +254,22 @@ public class ImageData extends AbstractModel{
     }
 
     /**
+     * Get 手机检测详情 
+     * @return PhoneDetect 手机检测详情
+     */
+    public PhoneDetect getPhoneDetect() {
+        return this.PhoneDetect;
+    }
+
+    /**
+     * Set 手机检测详情
+     * @param PhoneDetect 手机检测详情
+     */
+    public void setPhoneDetect(PhoneDetect PhoneDetect) {
+        this.PhoneDetect = PhoneDetect;
+    }
+
+    /**
      * Get 图片涉政详情 
      * @return PolityDetect 图片涉政详情
      */
@@ -321,6 +344,7 @@ public class ImageData extends AbstractModel{
         this.setParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
         this.setParamObj(map, prefix + "LogoDetect.", this.LogoDetect);
         this.setParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
+        this.setParamObj(map, prefix + "PhoneDetect.", this.PhoneDetect);
         this.setParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
         this.setParamObj(map, prefix + "PornDetect.", this.PornDetect);
         this.setParamObj(map, prefix + "Similar.", this.Similar);

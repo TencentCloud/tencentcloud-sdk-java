@@ -30,6 +30,13 @@ public class VatInvoiceOCRResponse extends AbstractModel{
     private TextVatInvoice [] VatInvoiceInfos;
 
     /**
+    * 明细条目。VatInvoiceInfos中关于明细项的具体条目。
+    */
+    @SerializedName("Items")
+    @Expose
+    private VatInvoiceItem [] Items;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class VatInvoiceOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 明细条目。VatInvoiceInfos中关于明细项的具体条目。 
+     * @return Items 明细条目。VatInvoiceInfos中关于明细项的具体条目。
+     */
+    public VatInvoiceItem [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 明细条目。VatInvoiceInfos中关于明细项的具体条目。
+     * @param Items 明细条目。VatInvoiceInfos中关于明细项的具体条目。
+     */
+    public void setItems(VatInvoiceItem [] Items) {
+        this.Items = Items;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class VatInvoiceOCRResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VatInvoiceInfos.", this.VatInvoiceInfos);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

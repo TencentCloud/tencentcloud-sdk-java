@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteModuleRequest extends AbstractModel{
+public class EipConfigIn extends AbstractModel{
 
     /**
-    * 模块ID。如：em-qn46snq8
+    * Eip开启状态，取值['ENABLE','DISABLE']
     */
-    @SerializedName("ModuleId")
+    @SerializedName("EipStatus")
     @Expose
-    private String ModuleId;
+    private String EipStatus;
 
     /**
-     * Get 模块ID。如：em-qn46snq8 
-     * @return ModuleId 模块ID。如：em-qn46snq8
+     * Get Eip开启状态，取值['ENABLE','DISABLE'] 
+     * @return EipStatus Eip开启状态，取值['ENABLE','DISABLE']
      */
-    public String getModuleId() {
-        return this.ModuleId;
+    public String getEipStatus() {
+        return this.EipStatus;
     }
 
     /**
-     * Set 模块ID。如：em-qn46snq8
-     * @param ModuleId 模块ID。如：em-qn46snq8
+     * Set Eip开启状态，取值['ENABLE','DISABLE']
+     * @param EipStatus Eip开启状态，取值['ENABLE','DISABLE']
      */
-    public void setModuleId(String ModuleId) {
-        this.ModuleId = ModuleId;
+    public void setEipStatus(String EipStatus) {
+        this.EipStatus = EipStatus;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
+        this.setParamSimple(map, prefix + "EipStatus", this.EipStatus);
 
     }
 }

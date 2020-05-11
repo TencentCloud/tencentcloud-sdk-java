@@ -30,7 +30,7 @@ public class CreateFileSystemRequest extends AbstractModel{
     private String FileSystemName;
 
     /**
-    * 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+    * 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
     */
     @SerializedName("CapacityQuota")
     @Expose
@@ -60,16 +60,16 @@ public class CreateFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍 
-     * @return CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+     * Get 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍 
+     * @return CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
      */
     public Long getCapacityQuota() {
         return this.CapacityQuota;
     }
 
     /**
-     * Set 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
-     * @param CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+     * Set 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * @param CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
      */
     public void setCapacityQuota(Long CapacityQuota) {
         this.CapacityQuota = CapacityQuota;

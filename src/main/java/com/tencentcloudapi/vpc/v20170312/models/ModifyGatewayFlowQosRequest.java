@@ -33,7 +33,7 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
     private String GatewayId;
 
     /**
-    * 流控带宽值。
+    * 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -75,16 +75,16 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
     }
 
     /**
-     * Get 流控带宽值。 
-     * @return Bandwidth 流控带宽值。
+     * Get 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。 
+     * @return Bandwidth 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 流控带宽值。
-     * @param Bandwidth 流控带宽值。
+     * Set 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
+     * @param Bandwidth 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
