@@ -72,6 +72,13 @@ public class WebhookTrigger extends AbstractModel{
     private String Description;
 
     /**
+    * 触发器所属命名空间 Id
+    */
+    @SerializedName("NamespaceId")
+    @Expose
+    private Long NamespaceId;
+
+    /**
      * Get 触发器名称 
      * @return Name 触发器名称
      */
@@ -184,6 +191,22 @@ public class WebhookTrigger extends AbstractModel{
     }
 
     /**
+     * Get 触发器所属命名空间 Id 
+     * @return NamespaceId 触发器所属命名空间 Id
+     */
+    public Long getNamespaceId() {
+        return this.NamespaceId;
+    }
+
+    /**
+     * Set 触发器所属命名空间 Id
+     * @param NamespaceId 触发器所属命名空间 Id
+     */
+    public void setNamespaceId(Long NamespaceId) {
+        this.NamespaceId = NamespaceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class WebhookTrigger extends AbstractModel{
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
 
     }
 }

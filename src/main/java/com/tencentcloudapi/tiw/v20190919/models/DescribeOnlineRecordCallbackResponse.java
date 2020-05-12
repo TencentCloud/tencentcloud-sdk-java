@@ -30,6 +30,13 @@ public class DescribeOnlineRecordCallbackResponse extends AbstractModel{
     private String Callback;
 
     /**
+    * 实时录制回调鉴权密钥
+    */
+    @SerializedName("CallbackKey")
+    @Expose
+    private String CallbackKey;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class DescribeOnlineRecordCallbackResponse extends AbstractModel{
     }
 
     /**
+     * Get 实时录制回调鉴权密钥 
+     * @return CallbackKey 实时录制回调鉴权密钥
+     */
+    public String getCallbackKey() {
+        return this.CallbackKey;
+    }
+
+    /**
+     * Set 实时录制回调鉴权密钥
+     * @param CallbackKey 实时录制回调鉴权密钥
+     */
+    public void setCallbackKey(String CallbackKey) {
+        this.CallbackKey = CallbackKey;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class DescribeOnlineRecordCallbackResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Callback", this.Callback);
+        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

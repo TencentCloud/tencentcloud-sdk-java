@@ -13,28 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tiw.v20190919.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTranscodeCallbackResponse extends AbstractModel{
+public class RegisterBillResponse extends AbstractModel{
 
     /**
-    * 文档转码回调地址
+    * 银行流水号
     */
-    @SerializedName("Callback")
+    @SerializedName("FrontSeqNo")
     @Expose
-    private String Callback;
+    private String FrontSeqNo;
 
     /**
-    * 文档转码回调鉴权密钥
+    * 保留字段
     */
-    @SerializedName("CallbackKey")
+    @SerializedName("ReservedMessage")
     @Expose
-    private String CallbackKey;
+    private String ReservedMessage;
+
+    /**
+    * 请求类型
+    */
+    @SerializedName("RequestType")
+    @Expose
+    private String RequestType;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class DescribeTranscodeCallbackResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文档转码回调地址 
-     * @return Callback 文档转码回调地址
+     * Get 银行流水号 
+     * @return FrontSeqNo 银行流水号
      */
-    public String getCallback() {
-        return this.Callback;
+    public String getFrontSeqNo() {
+        return this.FrontSeqNo;
     }
 
     /**
-     * Set 文档转码回调地址
-     * @param Callback 文档转码回调地址
+     * Set 银行流水号
+     * @param FrontSeqNo 银行流水号
      */
-    public void setCallback(String Callback) {
-        this.Callback = Callback;
+    public void setFrontSeqNo(String FrontSeqNo) {
+        this.FrontSeqNo = FrontSeqNo;
     }
 
     /**
-     * Get 文档转码回调鉴权密钥 
-     * @return CallbackKey 文档转码回调鉴权密钥
+     * Get 保留字段 
+     * @return ReservedMessage 保留字段
      */
-    public String getCallbackKey() {
-        return this.CallbackKey;
+    public String getReservedMessage() {
+        return this.ReservedMessage;
     }
 
     /**
-     * Set 文档转码回调鉴权密钥
-     * @param CallbackKey 文档转码回调鉴权密钥
+     * Set 保留字段
+     * @param ReservedMessage 保留字段
      */
-    public void setCallbackKey(String CallbackKey) {
-        this.CallbackKey = CallbackKey;
+    public void setReservedMessage(String ReservedMessage) {
+        this.ReservedMessage = ReservedMessage;
+    }
+
+    /**
+     * Get 请求类型 
+     * @return RequestType 请求类型
+     */
+    public String getRequestType() {
+        return this.RequestType;
+    }
+
+    /**
+     * Set 请求类型
+     * @param RequestType 请求类型
+     */
+    public void setRequestType(String RequestType) {
+        this.RequestType = RequestType;
     }
 
     /**
@@ -95,8 +118,9 @@ public class DescribeTranscodeCallbackResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Callback", this.Callback);
-        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "FrontSeqNo", this.FrontSeqNo);
+        this.setParamSimple(map, prefix + "ReservedMessage", this.ReservedMessage);
+        this.setParamSimple(map, prefix + "RequestType", this.RequestType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

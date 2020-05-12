@@ -947,6 +947,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *登记挂账(支持撤销)
+     * @param req RegisterBillRequest
+     * @return RegisterBillResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterBillResponse RegisterBill(RegisterBillRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RegisterBillResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RegisterBillResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RegisterBill"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *登记挂账(支持撤销)。此接口可实现把不明来账或自有资金等已登记在挂账子账户下的资金调整到普通会员子账户。即通过申请调用此接口，将会减少挂账子账户的资金，调增指定的普通会员子账户的可提现余额及可用余额。此接口不支持把挂账子账户资金清分到功能子账户。
      * @param req RegisterBillSupportWithdrawRequest
      * @return RegisterBillSupportWithdrawResponse

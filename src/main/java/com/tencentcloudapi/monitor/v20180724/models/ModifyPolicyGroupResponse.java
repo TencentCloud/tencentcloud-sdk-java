@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tiw.v20190919.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTranscodeCallbackResponse extends AbstractModel{
+public class ModifyPolicyGroupResponse extends AbstractModel{
 
     /**
-    * 文档转码回调地址
+    * 策略组id
     */
-    @SerializedName("Callback")
+    @SerializedName("GroupId")
     @Expose
-    private String Callback;
-
-    /**
-    * 文档转码回调鉴权密钥
-    */
-    @SerializedName("CallbackKey")
-    @Expose
-    private String CallbackKey;
+    private Long GroupId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeTranscodeCallbackResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文档转码回调地址 
-     * @return Callback 文档转码回调地址
+     * Get 策略组id 
+     * @return GroupId 策略组id
      */
-    public String getCallback() {
-        return this.Callback;
+    public Long getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set 文档转码回调地址
-     * @param Callback 文档转码回调地址
+     * Set 策略组id
+     * @param GroupId 策略组id
      */
-    public void setCallback(String Callback) {
-        this.Callback = Callback;
-    }
-
-    /**
-     * Get 文档转码回调鉴权密钥 
-     * @return CallbackKey 文档转码回调鉴权密钥
-     */
-    public String getCallbackKey() {
-        return this.CallbackKey;
-    }
-
-    /**
-     * Set 文档转码回调鉴权密钥
-     * @param CallbackKey 文档转码回调鉴权密钥
-     */
-    public void setCallbackKey(String CallbackKey) {
-        this.CallbackKey = CallbackKey;
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class DescribeTranscodeCallbackResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Callback", this.Callback);
-        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

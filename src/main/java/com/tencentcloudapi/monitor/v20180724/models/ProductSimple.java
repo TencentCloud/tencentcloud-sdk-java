@@ -30,11 +30,19 @@ public class ProductSimple extends AbstractModel{
     private String Namespace;
 
     /**
-    * 产品名称
+    * 产品中文名称
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
+
+    /**
+    * 产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductEnName")
+    @Expose
+    private String ProductEnName;
 
     /**
      * Get 命名空间 
@@ -53,19 +61,39 @@ public class ProductSimple extends AbstractModel{
     }
 
     /**
-     * Get 产品名称 
-     * @return ProductName 产品名称
+     * Get 产品中文名称 
+     * @return ProductName 产品中文名称
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 产品名称
-     * @param ProductName 产品名称
+     * Set 产品中文名称
+     * @param ProductName 产品中文名称
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
+    }
+
+    /**
+     * Get 产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductEnName 产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductEnName() {
+        return this.ProductEnName;
+    }
+
+    /**
+     * Set 产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductEnName 产品英文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductEnName(String ProductEnName) {
+        this.ProductEnName = ProductEnName;
     }
 
     /**
@@ -74,6 +102,7 @@ public class ProductSimple extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ProductEnName", this.ProductEnName);
 
     }
 }

@@ -292,6 +292,24 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *更新策略组
+     * @param req ModifyPolicyGroupRequest
+     * @return ModifyPolicyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPolicyGroupResponse ModifyPolicyGroup(ModifyPolicyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPolicyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPolicyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPolicyGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *默认接口请求频率限制：50次/秒。
 默认单租户指标上限：100个。
 单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。
