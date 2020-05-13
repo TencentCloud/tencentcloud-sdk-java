@@ -24,6 +24,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountTarget")
     @Expose
@@ -31,6 +32,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DockerGraphPath")
     @Expose
@@ -38,6 +40,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserScript")
     @Expose
@@ -52,6 +55,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * 节点Label数组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -59,6 +63,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * 数据盘相关信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisks")
     @Expose
@@ -66,14 +71,17 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * 节点相关的自定义参数信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraArgs")
     @Expose
     private InstanceExtraArgs ExtraArgs;
 
     /**
-     * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。 
+     * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountTarget() {
         return this.MountTarget;
@@ -81,15 +89,19 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountTarget(String MountTarget) {
         this.MountTarget = MountTarget;
     }
 
     /**
-     * Get dockerd --graph 指定值, 默认为 /var/lib/docker 
+     * Get dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDockerGraphPath() {
         return this.DockerGraphPath;
@@ -97,15 +109,19 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDockerGraphPath(String DockerGraphPath) {
         this.DockerGraphPath = DockerGraphPath;
     }
 
     /**
-     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度 
+     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserScript() {
         return this.UserScript;
@@ -113,7 +129,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserScript(String UserScript) {
         this.UserScript = UserScript;
@@ -136,8 +154,10 @@ public class InstanceAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get 节点Label数组 
+     * Get 节点Label数组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels 节点Label数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Label [] getLabels() {
         return this.Labels;
@@ -145,15 +165,19 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set 节点Label数组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 节点Label数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 数据盘相关信息 
+     * Get 数据盘相关信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataDisks 数据盘相关信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
@@ -161,15 +185,19 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set 数据盘相关信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataDisks 数据盘相关信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get 节点相关的自定义参数信息 
+     * Get 节点相关的自定义参数信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExtraArgs 节点相关的自定义参数信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceExtraArgs getExtraArgs() {
         return this.ExtraArgs;
@@ -177,7 +205,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set 节点相关的自定义参数信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraArgs 节点相关的自定义参数信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
         this.ExtraArgs = ExtraArgs;

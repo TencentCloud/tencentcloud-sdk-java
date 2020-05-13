@@ -95,6 +95,38 @@ public class ClusterAsGroupOption extends AbstractModel{
     private Boolean IgnoreDaemonSetsUtilization;
 
     /**
+    * CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OkTotalUnreadyCount")
+    @Expose
+    private Long OkTotalUnreadyCount;
+
+    /**
+    * 未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxTotalUnreadyPercentage")
+    @Expose
+    private Long MaxTotalUnreadyPercentage;
+
+    /**
+    * 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScaleDownUnreadyTime")
+    @Expose
+    private Long ScaleDownUnreadyTime;
+
+    /**
+    * CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnregisteredNodeRemovalTime")
+    @Expose
+    private Long UnregisteredNodeRemovalTime;
+
+    /**
      * Get 是否开启缩容
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsScaleDownEnabled 是否开启缩容
@@ -275,6 +307,86 @@ public class ClusterAsGroupOption extends AbstractModel{
     }
 
     /**
+     * Get CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OkTotalUnreadyCount CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOkTotalUnreadyCount() {
+        return this.OkTotalUnreadyCount;
+    }
+
+    /**
+     * Set CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OkTotalUnreadyCount CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOkTotalUnreadyCount(Long OkTotalUnreadyCount) {
+        this.OkTotalUnreadyCount = OkTotalUnreadyCount;
+    }
+
+    /**
+     * Get 未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxTotalUnreadyPercentage 未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxTotalUnreadyPercentage() {
+        return this.MaxTotalUnreadyPercentage;
+    }
+
+    /**
+     * Set 未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxTotalUnreadyPercentage 未就绪节点的最大百分比，此后CA会停止操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxTotalUnreadyPercentage(Long MaxTotalUnreadyPercentage) {
+        this.MaxTotalUnreadyPercentage = MaxTotalUnreadyPercentage;
+    }
+
+    /**
+     * Get 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScaleDownUnreadyTime() {
+        return this.ScaleDownUnreadyTime;
+    }
+
+    /**
+     * Set 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScaleDownUnreadyTime(Long ScaleDownUnreadyTime) {
+        this.ScaleDownUnreadyTime = ScaleDownUnreadyTime;
+    }
+
+    /**
+     * Get CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUnregisteredNodeRemovalTime() {
+        return this.UnregisteredNodeRemovalTime;
+    }
+
+    /**
+     * Set CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnregisteredNodeRemovalTime(Long UnregisteredNodeRemovalTime) {
+        this.UnregisteredNodeRemovalTime = UnregisteredNodeRemovalTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +399,10 @@ public class ClusterAsGroupOption extends AbstractModel{
         this.setParamSimple(map, prefix + "SkipNodesWithLocalStorage", this.SkipNodesWithLocalStorage);
         this.setParamSimple(map, prefix + "SkipNodesWithSystemPods", this.SkipNodesWithSystemPods);
         this.setParamSimple(map, prefix + "IgnoreDaemonSetsUtilization", this.IgnoreDaemonSetsUtilization);
+        this.setParamSimple(map, prefix + "OkTotalUnreadyCount", this.OkTotalUnreadyCount);
+        this.setParamSimple(map, prefix + "MaxTotalUnreadyPercentage", this.MaxTotalUnreadyPercentage);
+        this.setParamSimple(map, prefix + "ScaleDownUnreadyTime", this.ScaleDownUnreadyTime);
+        this.setParamSimple(map, prefix + "UnregisteredNodeRemovalTime", this.UnregisteredNodeRemovalTime);
 
     }
 }

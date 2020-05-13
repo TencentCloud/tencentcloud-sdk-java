@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateWebhookTriggerResponse extends AbstractModel{
 
     /**
+    * 新建的触发器
+    */
+    @SerializedName("Trigger")
+    @Expose
+    private WebhookTrigger Trigger;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 新建的触发器 
+     * @return Trigger 新建的触发器
+     */
+    public WebhookTrigger getTrigger() {
+        return this.Trigger;
+    }
+
+    /**
+     * Set 新建的触发器
+     * @param Trigger 新建的触发器
+     */
+    public void setTrigger(WebhookTrigger Trigger) {
+        this.Trigger = Trigger;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class CreateWebhookTriggerResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Trigger.", this.Trigger);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

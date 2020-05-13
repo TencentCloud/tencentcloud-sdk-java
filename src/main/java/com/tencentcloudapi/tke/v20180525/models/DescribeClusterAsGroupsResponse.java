@@ -34,7 +34,7 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
     */
     @SerializedName("ClusterAsGroupSet")
     @Expose
-    private ClusterAsGroup ClusterAsGroupSet;
+    private ClusterAsGroup [] ClusterAsGroupSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -63,7 +63,7 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
      * Get 集群关联的伸缩组列表 
      * @return ClusterAsGroupSet 集群关联的伸缩组列表
      */
-    public ClusterAsGroup getClusterAsGroupSet() {
+    public ClusterAsGroup [] getClusterAsGroupSet() {
         return this.ClusterAsGroupSet;
     }
 
@@ -71,7 +71,7 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
      * Set 集群关联的伸缩组列表
      * @param ClusterAsGroupSet 集群关联的伸缩组列表
      */
-    public void setClusterAsGroupSet(ClusterAsGroup ClusterAsGroupSet) {
+    public void setClusterAsGroupSet(ClusterAsGroup [] ClusterAsGroupSet) {
         this.ClusterAsGroupSet = ClusterAsGroupSet;
     }
 
@@ -96,7 +96,7 @@ public class DescribeClusterAsGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "ClusterAsGroupSet.", this.ClusterAsGroupSet);
+        this.setParamArrayObj(map, prefix + "ClusterAsGroupSet.", this.ClusterAsGroupSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

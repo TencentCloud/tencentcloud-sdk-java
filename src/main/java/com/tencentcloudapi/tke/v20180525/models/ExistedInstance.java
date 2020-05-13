@@ -87,17 +87,6 @@ public class ExistedInstance extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * 实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("InstanceChargeType")
-    @Expose
-    private String InstanceChargeType;
-
-    /**
     * 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -128,6 +117,22 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
+
+    /**
+    * 伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoscalingGroupId")
+    @Expose
+    private String AutoscalingGroupId;
+
+    /**
+    * 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
 
     /**
      * Get 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
@@ -290,38 +295,6 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * Get 实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceChargeType 实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getInstanceChargeType() {
-        return this.InstanceChargeType;
-    }
-
-    /**
-     * Set 实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceChargeType 实例计费模式。取值范围：
-PREPAID：表示预付费，即包年包月
-POSTPAID_BY_HOUR：表示后付费，即按量计费
-CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setInstanceChargeType(String InstanceChargeType) {
-        this.InstanceChargeType = InstanceChargeType;
-    }
-
-    /**
      * Get 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CPU 实例的CPU核数，单位：核。
@@ -402,6 +375,46 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
+     * Get 伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoscalingGroupId 伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAutoscalingGroupId() {
+        return this.AutoscalingGroupId;
+    }
+
+    /**
+     * Set 伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoscalingGroupId 伸缩组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoscalingGroupId(String AutoscalingGroupId) {
+        this.AutoscalingGroupId = AutoscalingGroupId;
+    }
+
+    /**
+     * Get 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceChargeType 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceChargeType 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -413,11 +426,12 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
 
     }
 }

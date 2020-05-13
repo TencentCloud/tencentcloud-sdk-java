@@ -24,6 +24,7 @@ public class DataDisk extends AbstractModel{
 
     /**
     * 云盘类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -31,6 +32,7 @@ public class DataDisk extends AbstractModel{
 
     /**
     * 文件系统(ext3/ext4/xfs)
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSystem")
     @Expose
@@ -38,6 +40,7 @@ public class DataDisk extends AbstractModel{
 
     /**
     * 云盘大小(G）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -45,6 +48,7 @@ public class DataDisk extends AbstractModel{
 
     /**
     * 是否自动化格式盘并挂载
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoFormatAndMount")
     @Expose
@@ -52,14 +56,17 @@ public class DataDisk extends AbstractModel{
 
     /**
     * 挂载目录
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountTarget")
     @Expose
     private String MountTarget;
 
     /**
-     * Get 云盘类型 
+     * Get 云盘类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 云盘类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -67,15 +74,19 @@ public class DataDisk extends AbstractModel{
 
     /**
      * Set 云盘类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 云盘类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 文件系统(ext3/ext4/xfs) 
+     * Get 文件系统(ext3/ext4/xfs)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileSystem 文件系统(ext3/ext4/xfs)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileSystem() {
         return this.FileSystem;
@@ -83,15 +94,19 @@ public class DataDisk extends AbstractModel{
 
     /**
      * Set 文件系统(ext3/ext4/xfs)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSystem 文件系统(ext3/ext4/xfs)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSystem(String FileSystem) {
         this.FileSystem = FileSystem;
     }
 
     /**
-     * Get 云盘大小(G） 
+     * Get 云盘大小(G）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskSize 云盘大小(G）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -99,15 +114,19 @@ public class DataDisk extends AbstractModel{
 
     /**
      * Set 云盘大小(G）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 云盘大小(G）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 是否自动化格式盘并挂载 
+     * Get 是否自动化格式盘并挂载
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AutoFormatAndMount 是否自动化格式盘并挂载
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoFormatAndMount() {
         return this.AutoFormatAndMount;
@@ -115,15 +134,19 @@ public class DataDisk extends AbstractModel{
 
     /**
      * Set 是否自动化格式盘并挂载
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoFormatAndMount 是否自动化格式盘并挂载
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoFormatAndMount(Boolean AutoFormatAndMount) {
         this.AutoFormatAndMount = AutoFormatAndMount;
     }
 
     /**
-     * Get 挂载目录 
+     * Get 挂载目录
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MountTarget 挂载目录
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountTarget() {
         return this.MountTarget;
@@ -131,7 +154,9 @@ public class DataDisk extends AbstractModel{
 
     /**
      * Set 挂载目录
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MountTarget 挂载目录
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountTarget(String MountTarget) {
         this.MountTarget = MountTarget;

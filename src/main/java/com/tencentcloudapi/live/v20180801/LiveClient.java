@@ -864,7 +864,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *获取域名证书信息
+     *获取域名证书信息。
      * @param req DescribeLiveDomainCertRequest
      * @return DescribeLiveDomainCertResponse
      * @throws TencentCloudSDKException

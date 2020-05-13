@@ -53,6 +53,13 @@ public class ClusterAsGroup extends AbstractModel{
     private Label [] Labels;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -125,6 +132,22 @@ public class ClusterAsGroup extends AbstractModel{
     }
 
     /**
+     * Get 创建时间 
+     * @return CreatedTime 创建时间
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreatedTime 创建时间
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +155,7 @@ public class ClusterAsGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsUnschedulable", this.IsUnschedulable);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }

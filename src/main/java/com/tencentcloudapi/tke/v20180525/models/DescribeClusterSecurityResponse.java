@@ -66,6 +66,7 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
 
     /**
     * 集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityPolicy")
     @Expose
@@ -78,6 +79,14 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
     @SerializedName("Kubeconfig")
     @Expose
     private String Kubeconfig;
+
+    /**
+    * 集群JnsGw的访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JnsGwEndpoint")
+    @Expose
+    private String JnsGwEndpoint;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -183,8 +192,10 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
     }
 
     /**
-     * Get 集群访问策略组 
+     * Get 集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityPolicy 集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityPolicy() {
         return this.SecurityPolicy;
@@ -192,7 +203,9 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
 
     /**
      * Set 集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityPolicy 集群访问策略组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityPolicy(String [] SecurityPolicy) {
         this.SecurityPolicy = SecurityPolicy;
@@ -216,6 +229,26 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
      */
     public void setKubeconfig(String Kubeconfig) {
         this.Kubeconfig = Kubeconfig;
+    }
+
+    /**
+     * Get 集群JnsGw的访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JnsGwEndpoint 集群JnsGw的访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJnsGwEndpoint() {
+        return this.JnsGwEndpoint;
+    }
+
+    /**
+     * Set 集群JnsGw的访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JnsGwEndpoint 集群JnsGw的访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJnsGwEndpoint(String JnsGwEndpoint) {
+        this.JnsGwEndpoint = JnsGwEndpoint;
     }
 
     /**
@@ -246,6 +279,7 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PgwEndpoint", this.PgwEndpoint);
         this.setParamArraySimple(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
         this.setParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
+        this.setParamSimple(map, prefix + "JnsGwEndpoint", this.JnsGwEndpoint);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
