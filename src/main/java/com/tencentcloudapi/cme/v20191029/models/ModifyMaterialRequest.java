@@ -51,13 +51,6 @@ public class ModifyMaterialRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private String [] Tags;
-
-    /**
     * 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
     */
     @SerializedName("ClassPath")
@@ -136,22 +129,6 @@ public class ModifyMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。 
-     * @return Tags 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
-     */
-    public String [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
-     * @param Tags 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
-     */
-    public void setTags(String [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
      * Get 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。 
      * @return ClassPath 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
      */
@@ -191,7 +168,6 @@ public class ModifyMaterialRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ClassPath", this.ClassPath);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
 

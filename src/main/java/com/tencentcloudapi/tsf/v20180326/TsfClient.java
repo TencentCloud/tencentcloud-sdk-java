@@ -164,6 +164,42 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建泳道
+     * @param req CreateLaneRequest
+     * @return CreateLaneResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaneResponse CreateLane(CreateLaneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLaneResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLaneResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLane"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建泳道规则
+     * @param req CreateLaneRuleRequest
+     * @return CreateLaneRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaneRuleResponse CreateLaneRule(CreateLaneRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLaneRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLaneRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLaneRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新增微服务
      * @param req CreateMicroserviceRequest
      * @return CreateMicroserviceResponse
@@ -319,6 +355,24 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteImageTagsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteImageTags"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除泳道
+     * @param req DeleteLaneRequest
+     * @return DeleteLaneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLaneResponse DeleteLane(DeleteLaneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLaneResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLaneResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLane"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -760,6 +814,42 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询泳道规则列表
+     * @param req DescribeLaneRulesRequest
+     * @return DescribeLaneRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLaneRulesResponse DescribeLaneRules(DescribeLaneRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLaneRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLaneRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLaneRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询泳道列表
+     * @param req DescribeLanesRequest
+     * @return DescribeLanesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLanesResponse DescribeLanes(DescribeLanesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLanesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLanesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLanes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询微服务详情
      * @param req DescribeMicroserviceRequest
      * @return DescribeMicroserviceResponse
@@ -1114,6 +1204,42 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<ModifyContainerReplicasResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyContainerReplicas"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新泳道信息
+     * @param req ModifyLaneRequest
+     * @return ModifyLaneResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLaneResponse ModifyLane(ModifyLaneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLaneResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLaneResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLane"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新泳道规则
+     * @param req ModifyLaneRuleRequest
+     * @return ModifyLaneRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLaneRuleResponse ModifyLaneRule(ModifyLaneRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLaneRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLaneRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLaneRule"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

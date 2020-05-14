@@ -44,7 +44,7 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 分页查询偏移量，默认为 0 （第一页）
+    * 分页查询偏移量，默认为 0
     */
     @SerializedName("Offset")
     @Expose
@@ -67,6 +67,14 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     @SerializedName("Area")
     @Expose
     private String Area;
+
+    /**
+    * 指定下载日志的类型。
+access：获取访问日志
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
 
     /**
      * Get 指定域名查询 
@@ -117,16 +125,16 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * Get 分页查询偏移量，默认为 0 （第一页） 
-     * @return Offset 分页查询偏移量，默认为 0 （第一页）
+     * Get 分页查询偏移量，默认为 0 
+     * @return Offset 分页查询偏移量，默认为 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询偏移量，默认为 0 （第一页）
-     * @param Offset 分页查询偏移量，默认为 0 （第一页）
+     * Set 分页查询偏移量，默认为 0
+     * @param Offset 分页查询偏移量，默认为 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -181,6 +189,26 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
+     * Get 指定下载日志的类型。
+access：获取访问日志 
+     * @return LogType 指定下载日志的类型。
+access：获取访问日志
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set 指定下载日志的类型。
+access：获取访问日志
+     * @param LogType 指定下载日志的类型。
+access：获取访问日志
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -190,6 +218,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
 
     }
 }

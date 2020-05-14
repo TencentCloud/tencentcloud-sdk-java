@@ -72,14 +72,6 @@ public class MaterialBasicInfo extends AbstractModel{
     private String ClassPath;
 
     /**
-    * 素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TagSet")
-    @Expose
-    private String [] TagSet;
-
-    /**
     * 素材媒体文件的预览图。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -200,26 +192,6 @@ public class MaterialBasicInfo extends AbstractModel{
     }
 
     /**
-     * Get 素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagSet 素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String [] getTagSet() {
-        return this.TagSet;
-    }
-
-    /**
-     * Set 素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagSet 素材标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTagSet(String [] TagSet) {
-        this.TagSet = TagSet;
-    }
-
-    /**
      * Get 素材媒体文件的预览图。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PreviewUrl 素材媒体文件的预览图。
@@ -250,7 +222,6 @@ public class MaterialBasicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ClassPath", this.ClassPath);
-        this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
 
     }

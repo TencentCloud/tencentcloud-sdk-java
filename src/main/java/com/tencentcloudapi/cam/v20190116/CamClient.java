@@ -848,6 +848,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *设置用户的登录保护和敏感操作校验方式
+     * @param req SetMfaFlagRequest
+     * @return SetMfaFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetMfaFlagResponse SetMfaFlag(SetMfaFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetMfaFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetMfaFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetMfaFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
      * @param req UpdateAssumeRolePolicyRequest
      * @return UpdateAssumeRolePolicyResponse

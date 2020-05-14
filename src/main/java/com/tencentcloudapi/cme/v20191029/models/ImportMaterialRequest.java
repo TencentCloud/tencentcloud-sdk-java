@@ -58,13 +58,6 @@ public class ImportMaterialRequest extends AbstractModel{
     private String ClassPath;
 
     /**
-    * 素材标签，单个标签长度不能超过10，数组长度不能超过10。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private String [] Tags;
-
-    /**
     * 素材预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
     */
@@ -160,22 +153,6 @@ public class ImportMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 素材标签，单个标签长度不能超过10，数组长度不能超过10。 
-     * @return Tags 素材标签，单个标签长度不能超过10，数组长度不能超过10。
-     */
-    public String [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 素材标签，单个标签长度不能超过10，数组长度不能超过10。
-     * @param Tags 素材标签，单个标签长度不能超过10，数组长度不能超过10。
-     */
-    public void setTags(String [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
      * Get 素材预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li> 
      * @return PreProcessDefinition 素材预处理任务模板 ID。取值：
@@ -220,7 +197,6 @@ public class ImportMaterialRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ClassPath", this.ClassPath);
-        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
 

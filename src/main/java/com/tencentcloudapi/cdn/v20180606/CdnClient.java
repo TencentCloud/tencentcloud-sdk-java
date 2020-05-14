@@ -457,7 +457,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *DescribeTrafficPackages 用于查询境内 CDN 流量包详情。
+     *DescribeTrafficPackages 用于查询中国境内 CDN 流量包详情。
      * @param req DescribeTrafficPackagesRequest
      * @return DescribeTrafficPackagesResponse
      * @throws TencentCloudSDKException

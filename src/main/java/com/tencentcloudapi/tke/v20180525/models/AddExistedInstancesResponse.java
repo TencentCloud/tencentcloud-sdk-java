@@ -24,6 +24,7 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
     * 失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedInstanceIds")
     @Expose
@@ -31,6 +32,7 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
     * 成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccInstanceIds")
     @Expose
@@ -38,6 +40,7 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
     * 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeoutInstanceIds")
     @Expose
@@ -51,8 +54,10 @@ public class AddExistedInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 失败的节点ID 
+     * Get 失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FailedInstanceIds 失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailedInstanceIds() {
         return this.FailedInstanceIds;
@@ -60,15 +65,19 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
      * Set 失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedInstanceIds 失败的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedInstanceIds(String [] FailedInstanceIds) {
         this.FailedInstanceIds = FailedInstanceIds;
     }
 
     /**
-     * Get 成功的节点ID 
+     * Get 成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SuccInstanceIds 成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSuccInstanceIds() {
         return this.SuccInstanceIds;
@@ -76,15 +85,19 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
      * Set 成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccInstanceIds 成功的节点ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccInstanceIds(String [] SuccInstanceIds) {
         this.SuccInstanceIds = SuccInstanceIds;
     }
 
     /**
-     * Get 超时未返回出来节点的ID(可能失败，也可能成功) 
+     * Get 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTimeoutInstanceIds() {
         return this.TimeoutInstanceIds;
@@ -92,7 +105,9 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
      * Set 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeoutInstanceIds(String [] TimeoutInstanceIds) {
         this.TimeoutInstanceIds = TimeoutInstanceIds;

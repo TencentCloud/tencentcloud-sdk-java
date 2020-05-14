@@ -53,7 +53,7 @@ enable：当前为可用状态，已解禁，可正常访问
     private String Status;
 
     /**
-    * 分页查询偏移量，默认为 0 （第一页）。
+    * 分页查询偏移量，默认为 0
     */
     @SerializedName("Offset")
     @Expose
@@ -139,16 +139,16 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * Get 分页查询偏移量，默认为 0 （第一页）。 
-     * @return Offset 分页查询偏移量，默认为 0 （第一页）。
+     * Get 分页查询偏移量，默认为 0 
+     * @return Offset 分页查询偏移量，默认为 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询偏移量，默认为 0 （第一页）。
-     * @param Offset 分页查询偏移量，默认为 0 （第一页）。
+     * Set 分页查询偏移量，默认为 0
+     * @param Offset 分页查询偏移量，默认为 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

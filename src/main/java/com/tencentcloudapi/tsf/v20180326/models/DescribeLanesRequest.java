@@ -13,67 +13,91 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficPackagesRequest extends AbstractModel{
+public class DescribeLanesRequest extends AbstractModel{
 
     /**
-    * 分页查询起始地址，默认 0
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * 分页查询记录个数，默认100，最大1000
+    * 每页展示的条数
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 分页查询起始地址，默认 0 
-     * @return Offset 分页查询起始地址，默认 0
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
+    * 翻页偏移量
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
-     * Set 分页查询起始地址，默认 0
-     * @param Offset 分页查询起始地址，默认 0
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
+    * 搜索关键字
+    */
+    @SerializedName("SearchWord")
+    @Expose
+    private String SearchWord;
 
     /**
-     * Get 分页查询记录个数，默认100，最大1000 
-     * @return Limit 分页查询记录个数，默认100，最大1000
+     * Get 每页展示的条数 
+     * @return Limit 每页展示的条数
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询记录个数，默认100，最大1000
-     * @param Limit 分页查询记录个数，默认100，最大1000
+     * Set 每页展示的条数
+     * @param Limit 每页展示的条数
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
+     * Get 翻页偏移量 
+     * @return Offset 翻页偏移量
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 翻页偏移量
+     * @param Offset 翻页偏移量
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 搜索关键字 
+     * @return SearchWord 搜索关键字
+     */
+    public String getSearchWord() {
+        return this.SearchWord;
+    }
+
+    /**
+     * Set 搜索关键字
+     * @param SearchWord 搜索关键字
+     */
+    public void setSearchWord(String SearchWord) {
+        this.SearchWord = SearchWord;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
 
     }
 }
