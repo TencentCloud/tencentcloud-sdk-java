@@ -152,6 +152,14 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     private String [] AdditionalCodeRepositories;
 
     /**
+    * 是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClsAccess")
+    @Expose
+    private String ClsAccess;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -483,6 +491,26 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClsAccess 是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClsAccess() {
+        return this.ClsAccess;
+    }
+
+    /**
+     * Set 是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClsAccess 是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClsAccess(String ClsAccess) {
+        this.ClsAccess = ClsAccess;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -518,6 +546,7 @@ public class DescribeNotebookInstanceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
         this.setParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
         this.setParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
+        this.setParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

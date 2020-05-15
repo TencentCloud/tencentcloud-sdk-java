@@ -44,20 +44,6 @@ public class RegisterMigrationTaskRequest extends AbstractModel{
     private String ServiceSupplier;
 
     /**
-    * 迁移任务源信息
-    */
-    @SerializedName("SrcInfo")
-    @Expose
-    private SrcInfo SrcInfo;
-
-    /**
-    * 迁移任务目的信息
-    */
-    @SerializedName("DstInfo")
-    @Expose
-    private DstInfo DstInfo;
-
-    /**
     * 迁移任务创建时间
     */
     @SerializedName("CreateTime")
@@ -77,6 +63,20 @@ public class RegisterMigrationTaskRequest extends AbstractModel{
     @SerializedName("MigrateClass")
     @Expose
     private String MigrateClass;
+
+    /**
+    * 迁移任务源信息
+    */
+    @SerializedName("SrcInfo")
+    @Expose
+    private SrcInfo SrcInfo;
+
+    /**
+    * 迁移任务目的信息
+    */
+    @SerializedName("DstInfo")
+    @Expose
+    private DstInfo DstInfo;
 
     /**
     * 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
@@ -155,38 +155,6 @@ public class RegisterMigrationTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 迁移任务源信息 
-     * @return SrcInfo 迁移任务源信息
-     */
-    public SrcInfo getSrcInfo() {
-        return this.SrcInfo;
-    }
-
-    /**
-     * Set 迁移任务源信息
-     * @param SrcInfo 迁移任务源信息
-     */
-    public void setSrcInfo(SrcInfo SrcInfo) {
-        this.SrcInfo = SrcInfo;
-    }
-
-    /**
-     * Get 迁移任务目的信息 
-     * @return DstInfo 迁移任务目的信息
-     */
-    public DstInfo getDstInfo() {
-        return this.DstInfo;
-    }
-
-    /**
-     * Set 迁移任务目的信息
-     * @param DstInfo 迁移任务目的信息
-     */
-    public void setDstInfo(DstInfo DstInfo) {
-        this.DstInfo = DstInfo;
-    }
-
-    /**
      * Get 迁移任务创建时间 
      * @return CreateTime 迁移任务创建时间
      */
@@ -232,6 +200,38 @@ public class RegisterMigrationTaskRequest extends AbstractModel{
      */
     public void setMigrateClass(String MigrateClass) {
         this.MigrateClass = MigrateClass;
+    }
+
+    /**
+     * Get 迁移任务源信息 
+     * @return SrcInfo 迁移任务源信息
+     */
+    public SrcInfo getSrcInfo() {
+        return this.SrcInfo;
+    }
+
+    /**
+     * Set 迁移任务源信息
+     * @param SrcInfo 迁移任务源信息
+     */
+    public void setSrcInfo(SrcInfo SrcInfo) {
+        this.SrcInfo = SrcInfo;
+    }
+
+    /**
+     * Get 迁移任务目的信息 
+     * @return DstInfo 迁移任务目的信息
+     */
+    public DstInfo getDstInfo() {
+        return this.DstInfo;
+    }
+
+    /**
+     * Set 迁移任务目的信息
+     * @param DstInfo 迁移任务目的信息
+     */
+    public void setDstInfo(DstInfo DstInfo) {
+        this.DstInfo = DstInfo;
     }
 
     /**
@@ -305,11 +305,11 @@ public class RegisterMigrationTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "ServiceSupplier", this.ServiceSupplier);
-        this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
-        this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "MigrateClass", this.MigrateClass);
+        this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+        this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
         this.setParamSimple(map, prefix + "SrcDatabaseType", this.SrcDatabaseType);
         this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);

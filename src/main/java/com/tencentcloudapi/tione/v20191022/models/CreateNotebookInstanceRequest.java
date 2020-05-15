@@ -88,6 +88,13 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     private String [] AdditionalCodeRepositories;
 
     /**
+    * 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+    */
+    @SerializedName("ClsAccess")
+    @Expose
+    private String ClsAccess;
+
+    /**
      * Get Notebook实例名称 
      * @return NotebookInstanceName Notebook实例名称
      */
@@ -240,6 +247,22 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled 
+     * @return ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     */
+    public String getClsAccess() {
+        return this.ClsAccess;
+    }
+
+    /**
+     * Set 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     * @param ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     */
+    public void setClsAccess(String ClsAccess) {
+        this.ClsAccess = ClsAccess;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +275,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
         this.setParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
         this.setParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
+        this.setParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
 
     }
 }

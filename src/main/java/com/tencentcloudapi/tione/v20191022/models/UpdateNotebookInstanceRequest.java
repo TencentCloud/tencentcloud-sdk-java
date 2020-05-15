@@ -107,6 +107,13 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     private Boolean DisassociateAdditionalCodeRepositories;
 
     /**
+    * 是否开启CLS日志服务，可取值Enabled/Disabled
+    */
+    @SerializedName("ClsAccess")
+    @Expose
+    private String ClsAccess;
+
+    /**
      * Get Notebook实例名称 
      * @return NotebookInstanceName Notebook实例名称
      */
@@ -311,6 +318,22 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启CLS日志服务，可取值Enabled/Disabled 
+     * @return ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled
+     */
+    public String getClsAccess() {
+        return this.ClsAccess;
+    }
+
+    /**
+     * Set 是否开启CLS日志服务，可取值Enabled/Disabled
+     * @param ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled
+     */
+    public void setClsAccess(String ClsAccess) {
+        this.ClsAccess = ClsAccess;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -325,6 +348,7 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
         this.setParamSimple(map, prefix + "DisassociateDefaultCodeRepository", this.DisassociateDefaultCodeRepository);
         this.setParamSimple(map, prefix + "DisassociateAdditionalCodeRepositories", this.DisassociateAdditionalCodeRepositories);
+        this.setParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
 
     }
 }

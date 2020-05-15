@@ -30,14 +30,14 @@ public class DescribeHistoryScaleRequest extends AbstractModel{
     private String SdkAppId;
 
     /**
-    * 查询开始时间
+    * 查询开始时间，5天内。本地unix时间戳（1588031999s）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询结束时间
+    * 查询结束时间，本地unix时间戳（1588031999s）
     */
     @SerializedName("EndTime")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeHistoryScaleRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间 
-     * @return StartTime 查询开始时间
+     * Get 查询开始时间，5天内。本地unix时间戳（1588031999s） 
+     * @return StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间
-     * @param StartTime 查询开始时间
+     * Set 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * @param StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get 查询结束时间，本地unix时间戳（1588031999s） 
+     * @return EndTime 查询结束时间，本地unix时间戳（1588031999s）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set 查询结束时间，本地unix时间戳（1588031999s）
+     * @param EndTime 查询结束时间，本地unix时间戳（1588031999s）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

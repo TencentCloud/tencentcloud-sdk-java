@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class OCRDetect extends AbstractModel{
 
     /**
+    * 识别到的详细信息
+    */
+    @SerializedName("Item")
+    @Expose
+    private OCRItem [] Item;
+
+    /**
     * 识别到的文本信息
     */
     @SerializedName("TextInfo")
     @Expose
     private String TextInfo;
+
+    /**
+     * Get 识别到的详细信息 
+     * @return Item 识别到的详细信息
+     */
+    public OCRItem [] getItem() {
+        return this.Item;
+    }
+
+    /**
+     * Set 识别到的详细信息
+     * @param Item 识别到的详细信息
+     */
+    public void setItem(OCRItem [] Item) {
+        this.Item = Item;
+    }
 
     /**
      * Get 识别到的文本信息 
@@ -49,6 +72,7 @@ public class OCRDetect extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Item.", this.Item);
         this.setParamSimple(map, prefix + "TextInfo", this.TextInfo);
 
     }

@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateClsLogTopicResponse extends AbstractModel{
 
     /**
+    * 主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 主题ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicId 主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set 主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicId 主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +77,7 @@ public class CreateClsLogTopicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

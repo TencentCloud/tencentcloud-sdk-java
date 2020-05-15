@@ -51,6 +51,20 @@ public class TextData extends AbstractModel{
     private TextOutputComm Common;
 
     /**
+    * 返回的自定义词库结果
+    */
+    @SerializedName("CustomResult")
+    @Expose
+    private CustomResult [] CustomResult;
+
+    /**
+    * 返回的详细结果
+    */
+    @SerializedName("DetailResult")
+    @Expose
+    private DetailResult [] DetailResult;
+
+    /**
     * 消息类ID信息
     */
     @SerializedName("ID")
@@ -65,11 +79,39 @@ public class TextData extends AbstractModel{
     private TextOutputRes Res;
 
     /**
+    * 最终使用的BizType
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
+
+    /**
+    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    */
+    @SerializedName("EvilLabel")
+    @Expose
+    private String EvilLabel;
+
+    /**
     * 命中的关键词
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
+
+    /**
+    * 命中的模型分值
+    */
+    @SerializedName("Score")
+    @Expose
+    private Long Score;
+
+    /**
+    * 建议值,Block：打击,Review：待复审,Normal：正常
+    */
+    @SerializedName("Suggestion")
+    @Expose
+    private String Suggestion;
 
     /**
      * Get 是否恶意 0：正常 1：可疑 
@@ -148,6 +190,38 @@ public class TextData extends AbstractModel{
     }
 
     /**
+     * Get 返回的自定义词库结果 
+     * @return CustomResult 返回的自定义词库结果
+     */
+    public CustomResult [] getCustomResult() {
+        return this.CustomResult;
+    }
+
+    /**
+     * Set 返回的自定义词库结果
+     * @param CustomResult 返回的自定义词库结果
+     */
+    public void setCustomResult(CustomResult [] CustomResult) {
+        this.CustomResult = CustomResult;
+    }
+
+    /**
+     * Get 返回的详细结果 
+     * @return DetailResult 返回的详细结果
+     */
+    public DetailResult [] getDetailResult() {
+        return this.DetailResult;
+    }
+
+    /**
+     * Set 返回的详细结果
+     * @param DetailResult 返回的详细结果
+     */
+    public void setDetailResult(DetailResult [] DetailResult) {
+        this.DetailResult = DetailResult;
+    }
+
+    /**
      * Get 消息类ID信息 
      * @return ID 消息类ID信息
      */
@@ -180,6 +254,38 @@ public class TextData extends AbstractModel{
     }
 
     /**
+     * Get 最终使用的BizType 
+     * @return BizType 最终使用的BizType
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set 最终使用的BizType
+     * @param BizType 最终使用的BizType
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
+    /**
+     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
+     * @return EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public String getEvilLabel() {
+        return this.EvilLabel;
+    }
+
+    /**
+     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @param EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public void setEvilLabel(String EvilLabel) {
+        this.EvilLabel = EvilLabel;
+    }
+
+    /**
      * Get 命中的关键词 
      * @return Keywords 命中的关键词
      */
@@ -196,15 +302,53 @@ public class TextData extends AbstractModel{
     }
 
     /**
+     * Get 命中的模型分值 
+     * @return Score 命中的模型分值
+     */
+    public Long getScore() {
+        return this.Score;
+    }
+
+    /**
+     * Set 命中的模型分值
+     * @param Score 命中的模型分值
+     */
+    public void setScore(Long Score) {
+        this.Score = Score;
+    }
+
+    /**
+     * Get 建议值,Block：打击,Review：待复审,Normal：正常 
+     * @return Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
+     */
+    public String getSuggestion() {
+        return this.Suggestion;
+    }
+
+    /**
+     * Set 建议值,Block：打击,Review：待复审,Normal：正常
+     * @param Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
+     */
+    public void setSuggestion(String Suggestion) {
+        this.Suggestion = Suggestion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamObj(map, prefix + "Common.", this.Common);
+        this.setParamArrayObj(map, prefix + "CustomResult.", this.CustomResult);
+        this.setParamArrayObj(map, prefix + "DetailResult.", this.DetailResult);
         this.setParamObj(map, prefix + "ID.", this.ID);
         this.setParamObj(map, prefix + "Res.", this.Res);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
 
     }
 }

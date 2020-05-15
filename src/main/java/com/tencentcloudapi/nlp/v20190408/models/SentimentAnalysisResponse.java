@@ -44,7 +44,10 @@ public class SentimentAnalysisResponse extends AbstractModel{
     private Float Positive;
 
     /**
-    * 情感属性
+    * 情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
     */
     @SerializedName("Sentiment")
     @Expose
@@ -106,16 +109,28 @@ public class SentimentAnalysisResponse extends AbstractModel{
     }
 
     /**
-     * Get 情感属性 
-     * @return Sentiment 情感属性
+     * Get 情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感 
+     * @return Sentiment 情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
      */
     public String getSentiment() {
         return this.Sentiment;
     }
 
     /**
-     * Set 情感属性
-     * @param Sentiment 情感属性
+     * Set 情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
+     * @param Sentiment 情感分类结果：
+1、positive，表示正面情感
+2、negative，表示负面情感
+3、neutral，表示中性、无情感
      */
     public void setSentiment(String Sentiment) {
         this.Sentiment = Sentiment;

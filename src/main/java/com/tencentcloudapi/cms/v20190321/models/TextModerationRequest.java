@@ -30,6 +30,27 @@ public class TextModerationRequest extends AbstractModel{
     private String Content;
 
     /**
+    * 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
+
+    /**
+    * 数据ID，英文字母、下划线、-组成，不超过64个字符
+    */
+    @SerializedName("DataId")
+    @Expose
+    private String DataId;
+
+    /**
+    * 业务应用ID
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
+
+    /**
      * Get 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。 
      * @return Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
      */
@@ -46,10 +67,61 @@ public class TextModerationRequest extends AbstractModel{
     }
 
     /**
+     * Get 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略 
+     * @return BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     * @param BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
+    /**
+     * Get 数据ID，英文字母、下划线、-组成，不超过64个字符 
+     * @return DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
+     */
+    public String getDataId() {
+        return this.DataId;
+    }
+
+    /**
+     * Set 数据ID，英文字母、下划线、-组成，不超过64个字符
+     * @param DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
+     */
+    public void setDataId(String DataId) {
+        this.DataId = DataId;
+    }
+
+    /**
+     * Get 业务应用ID 
+     * @return SdkAppId 业务应用ID
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set 业务应用ID
+     * @param SdkAppId 业务应用ID
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamSimple(map, prefix + "DataId", this.DataId);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
 
     }
 }

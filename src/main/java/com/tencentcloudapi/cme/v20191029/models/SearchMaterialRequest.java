@@ -47,7 +47,7 @@ public class SearchMaterialRequest extends AbstractModel{
     private String [] MaterialTypes;
 
     /**
-    * 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+    * 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
     */
     @SerializedName("Text")
     @Expose
@@ -73,13 +73,6 @@ public class SearchMaterialRequest extends AbstractModel{
     @SerializedName("CreateTimeRange")
     @Expose
     private TimeRange CreateTimeRange;
-
-    /**
-    * 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private String [] Tags;
 
     /**
     * 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
@@ -170,16 +163,16 @@ public class SearchMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。 
-     * @return Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+     * Get 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。 
+     * @return Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
-     * @param Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+     * Set 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+     * @param Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      */
     public void setText(String Text) {
         this.Text = Text;
@@ -231,22 +224,6 @@ public class SearchMaterialRequest extends AbstractModel{
      */
     public void setCreateTimeRange(TimeRange CreateTimeRange) {
         this.CreateTimeRange = CreateTimeRange;
-    }
-
-    /**
-     * Get 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。 
-     * @return Tags 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
-     */
-    public String [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
-     * @param Tags 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
-     */
-    public void setTags(String [] Tags) {
-        this.Tags = Tags;
     }
 
     /**
@@ -324,7 +301,6 @@ public class SearchMaterialRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamObj(map, prefix + "DurationRange.", this.DurationRange);
         this.setParamObj(map, prefix + "CreateTimeRange.", this.CreateTimeRange);
-        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

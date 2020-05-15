@@ -76,13 +76,6 @@ public class CreateLinkRequest extends AbstractModel{
     private String ClassPath;
 
     /**
-    * 链接标签，单个标签长度不能超过10，数组长度不能超过10。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private String [] Tags;
-
-    /**
     * 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
     */
     @SerializedName("Operator")
@@ -218,22 +211,6 @@ public class CreateLinkRequest extends AbstractModel{
     }
 
     /**
-     * Get 链接标签，单个标签长度不能超过10，数组长度不能超过10。 
-     * @return Tags 链接标签，单个标签长度不能超过10，数组长度不能超过10。
-     */
-    public String [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 链接标签，单个标签长度不能超过10，数组长度不能超过10。
-     * @param Tags 链接标签，单个标签长度不能超过10，数组长度不能超过10。
-     */
-    public void setTags(String [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
      * Get 操作者。填写用户的 Id，用于标识调用者及校验操作权限。 
      * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
      */
@@ -260,7 +237,6 @@ public class CreateLinkRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DestinationId", this.DestinationId);
         this.setParamObj(map, prefix + "DestinationOwner.", this.DestinationOwner);
         this.setParamSimple(map, prefix + "ClassPath", this.ClassPath);
-        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
