@@ -72,6 +72,13 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
+    * 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+    */
+    @SerializedName("NewDefaultServerDomain")
+    @Expose
+    private String NewDefaultServerDomain;
+
+    /**
      * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -184,6 +191,22 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。 
+     * @return NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+     */
+    public String getNewDefaultServerDomain() {
+        return this.NewDefaultServerDomain;
+    }
+
+    /**
+     * Set 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+     * @param NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+     */
+    public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
+        this.NewDefaultServerDomain = NewDefaultServerDomain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+        this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
 
     }
 }

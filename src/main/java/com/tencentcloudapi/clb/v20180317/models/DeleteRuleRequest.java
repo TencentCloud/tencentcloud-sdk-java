@@ -58,6 +58,13 @@ public class DeleteRuleRequest extends AbstractModel{
     private String Url;
 
     /**
+    * 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+    */
+    @SerializedName("NewDefaultServerDomain")
+    @Expose
+    private String NewDefaultServerDomain;
+
+    /**
      * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -138,6 +145,22 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
+     * Get 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。 
+     * @return NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     */
+    public String getNewDefaultServerDomain() {
+        return this.NewDefaultServerDomain;
+    }
+
+    /**
+     * Set 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     * @param NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     */
+    public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
+        this.NewDefaultServerDomain = NewDefaultServerDomain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DeleteRuleRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
 
     }
 }

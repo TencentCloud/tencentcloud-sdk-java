@@ -58,7 +58,7 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     private String NextToken;
 
     /**
-    * 游戏服务器会话状态
+    * 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
     */
     @SerializedName("StatusFilter")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏服务器会话状态 
-     * @return StatusFilter 游戏服务器会话状态
+     * Get 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR) 
+     * @return StatusFilter 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
      */
     public String getStatusFilter() {
         return this.StatusFilter;
     }
 
     /**
-     * Set 游戏服务器会话状态
-     * @param StatusFilter 游戏服务器会话状态
+     * Set 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
+     * @param StatusFilter 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
      */
     public void setStatusFilter(String StatusFilter) {
         this.StatusFilter = StatusFilter;

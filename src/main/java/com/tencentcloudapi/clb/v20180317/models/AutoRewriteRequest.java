@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class AutoRewriteRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * HTTPS:443监听器的ID
+    * HTTPS:443监听器的ID。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * HTTPS:443监听器下需要重定向的域名
+    * HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-     * Get 负载均衡实例ID 
-     * @return LoadBalancerId 负载均衡实例ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID
-     * @param LoadBalancerId 负载均衡实例ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get HTTPS:443监听器的ID 
-     * @return ListenerId HTTPS:443监听器的ID
+     * Get HTTPS:443监听器的ID。 
+     * @return ListenerId HTTPS:443监听器的ID。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set HTTPS:443监听器的ID
-     * @param ListenerId HTTPS:443监听器的ID
+     * Set HTTPS:443监听器的ID。
+     * @param ListenerId HTTPS:443监听器的ID。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get HTTPS:443监听器下需要重定向的域名 
-     * @return Domains HTTPS:443监听器下需要重定向的域名
+     * Get HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。 
+     * @return Domains HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set HTTPS:443监听器下需要重定向的域名
-     * @param Domains HTTPS:443监听器下需要重定向的域名
+     * Set HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+     * @param Domains HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
