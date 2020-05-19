@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cpdp.v20190820.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAcctResponse extends AbstractModel{
-
-    /**
-    * 聚鑫计费SubAppId，代表子商户
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private String SubAppId;
-
-    /**
-    * 银行生成的子商户账户
-    */
-    @SerializedName("SubAcctNo")
-    @Expose
-    private String SubAcctNo;
+public class CreateTroubleInfoResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class CreateAcctResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 聚鑫计费SubAppId，代表子商户 
-     * @return SubAppId 聚鑫计费SubAppId，代表子商户
-     */
-    public String getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 聚鑫计费SubAppId，代表子商户
-     * @param SubAppId 聚鑫计费SubAppId，代表子商户
-     */
-    public void setSubAppId(String SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
-    /**
-     * Get 银行生成的子商户账户 
-     * @return SubAcctNo 银行生成的子商户账户
-     */
-    public String getSubAcctNo() {
-        return this.SubAcctNo;
-    }
-
-    /**
-     * Set 银行生成的子商户账户
-     * @param SubAcctNo 银行生成的子商户账户
-     */
-    public void setSubAcctNo(String SubAcctNo) {
-        this.SubAcctNo = SubAcctNo;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class CreateAcctResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
-        this.setParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -51,6 +51,13 @@ public class ResetInstancesRequest extends AbstractModel{
     private EnhancedService EnhancedService;
 
     /**
+    * 是否保留数据盘数据，取值"true"/"false"。默认为"true"
+    */
+    @SerializedName("KeepData")
+    @Expose
+    private String KeepData;
+
+    /**
      * Get 待重装的实例ID列表。 
      * @return InstanceIdSet 待重装的实例ID列表。
      */
@@ -115,6 +122,22 @@ public class ResetInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否保留数据盘数据，取值"true"/"false"。默认为"true" 
+     * @return KeepData 是否保留数据盘数据，取值"true"/"false"。默认为"true"
+     */
+    public String getKeepData() {
+        return this.KeepData;
+    }
+
+    /**
+     * Set 是否保留数据盘数据，取值"true"/"false"。默认为"true"
+     * @param KeepData 是否保留数据盘数据，取值"true"/"false"。默认为"true"
+     */
+    public void setKeepData(String KeepData) {
+        this.KeepData = KeepData;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ResetInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+        this.setParamSimple(map, prefix + "KeepData", this.KeepData);
 
     }
 }

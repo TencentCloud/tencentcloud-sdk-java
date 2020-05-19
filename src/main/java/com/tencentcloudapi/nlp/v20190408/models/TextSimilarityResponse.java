@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cpdp.v20190820.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAcctResponse extends AbstractModel{
+public class TextSimilarityResponse extends AbstractModel{
 
     /**
-    * 聚鑫计费SubAppId，代表子商户
+    * 每个目标句子与源句子的相似度分值，按照分值降序排列
     */
-    @SerializedName("SubAppId")
+    @SerializedName("Similarity")
     @Expose
-    private String SubAppId;
-
-    /**
-    * 银行生成的子商户账户
-    */
-    @SerializedName("SubAcctNo")
-    @Expose
-    private String SubAcctNo;
+    private Similarity [] Similarity;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class CreateAcctResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 聚鑫计费SubAppId，代表子商户 
-     * @return SubAppId 聚鑫计费SubAppId，代表子商户
+     * Get 每个目标句子与源句子的相似度分值，按照分值降序排列 
+     * @return Similarity 每个目标句子与源句子的相似度分值，按照分值降序排列
      */
-    public String getSubAppId() {
-        return this.SubAppId;
+    public Similarity [] getSimilarity() {
+        return this.Similarity;
     }
 
     /**
-     * Set 聚鑫计费SubAppId，代表子商户
-     * @param SubAppId 聚鑫计费SubAppId，代表子商户
+     * Set 每个目标句子与源句子的相似度分值，按照分值降序排列
+     * @param Similarity 每个目标句子与源句子的相似度分值，按照分值降序排列
      */
-    public void setSubAppId(String SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
-    /**
-     * Get 银行生成的子商户账户 
-     * @return SubAcctNo 银行生成的子商户账户
-     */
-    public String getSubAcctNo() {
-        return this.SubAcctNo;
-    }
-
-    /**
-     * Set 银行生成的子商户账户
-     * @param SubAcctNo 银行生成的子商户账户
-     */
-    public void setSubAcctNo(String SubAcctNo) {
-        this.SubAcctNo = SubAcctNo;
+    public void setSimilarity(Similarity [] Similarity) {
+        this.Similarity = Similarity;
     }
 
     /**
@@ -95,8 +72,7 @@ public class CreateAcctResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
-        this.setParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
+        this.setParamArrayObj(map, prefix + "Similarity.", this.Similarity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,6 +44,13 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel{
     private Boolean ForceStop;
 
     /**
+    * 待扩容的系统盘配置信息。只支持扩容云盘。
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
      * Get 待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。 
      * @return InstanceId 待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      */
@@ -92,12 +99,29 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel{
     }
 
     /**
+     * Get 待扩容的系统盘配置信息。只支持扩容云盘。 
+     * @return SystemDisk 待扩容的系统盘配置信息。只支持扩容云盘。
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 待扩容的系统盘配置信息。只支持扩容云盘。
+     * @param SystemDisk 待扩容的系统盘配置信息。只支持扩容云盘。
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
 
     }
 }

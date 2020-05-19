@@ -38,6 +38,24 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *创建异常信息
+     * @param req CreateTroubleInfoRequest
+     * @return CreateTroubleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTroubleInfoResponse CreateTroubleInfo(CreateTroubleInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTroubleInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTroubleInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个
      * @param req DescribeCallDetailRequest
      * @return DescribeCallDetailResponse

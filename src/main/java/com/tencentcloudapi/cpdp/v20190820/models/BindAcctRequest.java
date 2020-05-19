@@ -39,6 +39,8 @@ public class BindAcctRequest extends AbstractModel{
     /**
     * 1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
     */
     @SerializedName("BindType")
@@ -131,6 +133,16 @@ BindType==2时必填
     private String EiconBankBranchId;
 
     /**
+    * 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private String EncryptType;
+
+    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -165,9 +177,13 @@ BindType==2时必填
     /**
      * Get 1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证 
      * @return BindType 1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
      */
     public Long getBindType() {
@@ -177,9 +193,13 @@ BindType==2时必填
     /**
      * Set 1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
      * @param BindType 1 – 小额转账验证
 2 – 短信验证
+3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+4 - 银行四要素验证，无需再调CheckAcct验证绑卡
 每个结算账户每天只能使用一次小额转账验证
      */
     public void setBindType(Long BindType) {
@@ -395,6 +415,34 @@ BindType==2时必填
     }
 
     /**
+     * Get 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA 
+     * @return EncryptType 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     */
+    public String getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     * @param EncryptType 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     */
+    public void setEncryptType(String EncryptType) {
+        this.EncryptType = EncryptType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -412,6 +460,7 @@ BindType==2时必填
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "CnapsBranchId", this.CnapsBranchId);
         this.setParamSimple(map, prefix + "EiconBankBranchId", this.EiconBankBranchId);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
 
     }
 }

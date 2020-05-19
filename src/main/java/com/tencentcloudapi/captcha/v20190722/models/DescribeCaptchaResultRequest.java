@@ -30,7 +30,7 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     private Long CaptchaType;
 
     /**
-    * 验证码返回给用户的票据
+    * 前端回调函数返回的用户验证票据
     */
     @SerializedName("Ticket")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     private String UserIp;
 
     /**
-    * 验证票据需要的随机字符串
+    * 前端回调函数返回的随机字符串
     */
     @SerializedName("Randstr")
     @Expose
@@ -116,16 +116,16 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 验证码返回给用户的票据 
-     * @return Ticket 验证码返回给用户的票据
+     * Get 前端回调函数返回的用户验证票据 
+     * @return Ticket 前端回调函数返回的用户验证票据
      */
     public String getTicket() {
         return this.Ticket;
     }
 
     /**
-     * Set 验证码返回给用户的票据
-     * @param Ticket 验证码返回给用户的票据
+     * Set 前端回调函数返回的用户验证票据
+     * @param Ticket 前端回调函数返回的用户验证票据
      */
     public void setTicket(String Ticket) {
         this.Ticket = Ticket;
@@ -148,16 +148,16 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 验证票据需要的随机字符串 
-     * @return Randstr 验证票据需要的随机字符串
+     * Get 前端回调函数返回的随机字符串 
+     * @return Randstr 前端回调函数返回的随机字符串
      */
     public String getRandstr() {
         return this.Randstr;
     }
 
     /**
-     * Set 验证票据需要的随机字符串
-     * @param Randstr 验证票据需要的随机字符串
+     * Set 前端回调函数返回的随机字符串
+     * @param Randstr 前端回调函数返回的随机字符串
      */
     public void setRandstr(String Randstr) {
         this.Randstr = Randstr;

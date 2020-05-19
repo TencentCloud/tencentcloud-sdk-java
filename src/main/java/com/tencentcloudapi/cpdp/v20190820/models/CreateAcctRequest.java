@@ -107,13 +107,46 @@ public class CreateAcctRequest extends AbstractModel{
 
     /**
     * 子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
     */
     @SerializedName("SubMerchantMemberType")
     @Expose
     private String SubMerchantMemberType;
+
+    /**
+    * 子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+    */
+    @SerializedName("SubMerchantKey")
+    @Expose
+    private String SubMerchantKey;
+
+    /**
+    * 子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+    */
+    @SerializedName("SubMerchantPrivateKey")
+    @Expose
+    private String SubMerchantPrivateKey;
+
+    /**
+    * 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private String EncryptType;
+
+    /**
+    * 银行生成的子商户账户，已开户的场景需要录入
+    */
+    @SerializedName("SubAcctNo")
+    @Expose
+    private String SubAcctNo;
 
     /**
      * Get 聚鑫平台分配的支付MidasAppId 
@@ -317,13 +350,13 @@ merchant:商户子账户
 
     /**
      * Get 子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general 
+general: 普通子账户
+merchant: 商户子账户
+缺省: general 
      * @return SubMerchantMemberType 子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
      */
     public String getSubMerchantMemberType() {
         return this.SubMerchantMemberType;
@@ -331,16 +364,100 @@ merchant:商户子账户
 
     /**
      * Set 子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
      * @param SubMerchantMemberType 子商户会员类型：
-general:普通子账户
-merchant:商户子账户
-缺省： general
+general: 普通子账户
+merchant: 商户子账户
+缺省: general
      */
     public void setSubMerchantMemberType(String SubMerchantMemberType) {
         this.SubMerchantMemberType = SubMerchantMemberType;
+    }
+
+    /**
+     * Get 子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+     * @return SubMerchantKey 子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     */
+    public String getSubMerchantKey() {
+        return this.SubMerchantKey;
+    }
+
+    /**
+     * Set 子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     * @param SubMerchantKey 子商户密钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     */
+    public void setSubMerchantKey(String SubMerchantKey) {
+        this.SubMerchantKey = SubMerchantKey;
+    }
+
+    /**
+     * Get 子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+     * @return SubMerchantPrivateKey 子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     */
+    public String getSubMerchantPrivateKey() {
+        return this.SubMerchantPrivateKey;
+    }
+
+    /**
+     * Set 子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     * @param SubMerchantPrivateKey 子商户私钥
+<敏感信息>加密详见《商户端接口敏感信息加密说明》
+     */
+    public void setSubMerchantPrivateKey(String SubMerchantPrivateKey) {
+        this.SubMerchantPrivateKey = SubMerchantPrivateKey;
+    }
+
+    /**
+     * Get 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA 
+     * @return EncryptType 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     */
+    public String getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     * @param EncryptType 敏感信息加密类型:
+RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+默认RSA
+     */
+    public void setEncryptType(String EncryptType) {
+        this.EncryptType = EncryptType;
+    }
+
+    /**
+     * Get 银行生成的子商户账户，已开户的场景需要录入 
+     * @return SubAcctNo 银行生成的子商户账户，已开户的场景需要录入
+     */
+    public String getSubAcctNo() {
+        return this.SubAcctNo;
+    }
+
+    /**
+     * Set 银行生成的子商户账户，已开户的场景需要录入
+     * @param SubAcctNo 银行生成的子商户账户，已开户的场景需要录入
+     */
+    public void setSubAcctNo(String SubAcctNo) {
+        this.SubAcctNo = SubAcctNo;
     }
 
     /**
@@ -359,6 +476,10 @@ merchant:商户子账户
         this.setParamSimple(map, prefix + "SubMchType", this.SubMchType);
         this.setParamSimple(map, prefix + "ShortName", this.ShortName);
         this.setParamSimple(map, prefix + "SubMerchantMemberType", this.SubMerchantMemberType);
+        this.setParamSimple(map, prefix + "SubMerchantKey", this.SubMerchantKey);
+        this.setParamSimple(map, prefix + "SubMerchantPrivateKey", this.SubMerchantPrivateKey);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
+        this.setParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
 
     }
 }
