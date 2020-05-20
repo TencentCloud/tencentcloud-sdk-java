@@ -182,6 +182,42 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取环境终端用户新增与登录信息
+     * @param req DescribeEndUserLoginStatisticRequest
+     * @return DescribeEndUserLoginStatisticResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndUserLoginStatisticResponse DescribeEndUserLoginStatistic(DescribeEndUserLoginStatisticRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEndUserLoginStatisticResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEndUserLoginStatisticResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEndUserLoginStatistic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取终端用户总量与平台分布情况
+     * @param req DescribeEndUserStatisticRequest
+     * @return DescribeEndUserStatisticResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndUserStatisticResponse DescribeEndUserStatistic(DescribeEndUserStatisticRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEndUserStatisticResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEndUserStatisticResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEndUserStatistic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取终端用户列表
      * @param req DescribeEndUsersRequest
      * @return DescribeEndUsersResponse
@@ -247,6 +283,24 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeEnvs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取增值包计费相关信息
+     * @param req DescribeExtraPkgBillingInfoRequest
+     * @return DescribeExtraPkgBillingInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtraPkgBillingInfoResponse DescribeExtraPkgBillingInfo(DescribeExtraPkgBillingInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExtraPkgBillingInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExtraPkgBillingInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeExtraPkgBillingInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

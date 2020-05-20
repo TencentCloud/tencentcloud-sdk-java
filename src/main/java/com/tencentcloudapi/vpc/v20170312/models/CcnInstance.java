@@ -41,6 +41,7 @@ public class CcnInstance extends AbstractModel{
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -82,11 +83,13 @@ public class CcnInstance extends AbstractModel{
      * Get 关联实例类型，可选值：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li> 
+<li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li> 
      * @return InstanceType 关联实例类型，可选值：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -97,10 +100,12 @@ public class CcnInstance extends AbstractModel{
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
      * @param InstanceType 关联实例类型，可选值：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
+<li>`VPNGW`：VPNGW类型</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

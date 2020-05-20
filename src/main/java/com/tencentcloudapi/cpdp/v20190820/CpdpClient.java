@@ -767,6 +767,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *智慧零售-查询管理端商户
+     * @param req QueryMerchantInfoForManagementRequest
+     * @return QueryMerchantInfoForManagementResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(QueryMerchantInfoForManagementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMerchantInfoForManagementResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryMerchantInfoForManagement"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据订单号，或者用户Id，查询支付订单状态 
      * @param req QueryOrderRequest
      * @return QueryOrderResponse
