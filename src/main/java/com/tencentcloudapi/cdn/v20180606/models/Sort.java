@@ -26,6 +26,7 @@ public class Sort extends AbstractModel{
     * 排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
     */
     @SerializedName("Key")
     @Expose
@@ -41,10 +42,12 @@ certExpireTime，证书过期时间
     /**
      * Get 排序字段，当前支持：
 createTime，域名创建时间
-certExpireTime，证书过期时间 
+certExpireTime，证书过期时间
+默认createTime。 
      * @return Key 排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
      */
     public String getKey() {
         return this.Key;
@@ -54,9 +57,11 @@ certExpireTime，证书过期时间
      * Set 排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
      * @param Key 排序字段，当前支持：
 createTime，域名创建时间
 certExpireTime，证书过期时间
+默认createTime。
      */
     public void setKey(String Key) {
         this.Key = Key;

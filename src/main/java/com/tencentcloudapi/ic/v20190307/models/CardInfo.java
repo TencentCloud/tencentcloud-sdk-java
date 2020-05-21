@@ -222,6 +222,14 @@ public class CardInfo extends AbstractModel{
     private Long Provider;
 
     /**
+    * 实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertificationState")
+    @Expose
+    private Long CertificationState;
+
+    /**
      * Get 卡片ID 
      * @return Iccid 卡片ID
      */
@@ -706,6 +714,26 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
+     * Get 实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertificationState 实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCertificationState() {
+        return this.CertificationState;
+    }
+
+    /**
+     * Set 实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertificationState 实名验证(浙江联通)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertificationState(Long CertificationState) {
+        this.CertificationState = CertificationState;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -735,6 +763,7 @@ public class CardInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AllowArrears", this.AllowArrears);
         this.setParamSimple(map, prefix + "NeedSms", this.NeedSms);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
+        this.setParamSimple(map, prefix + "CertificationState", this.CertificationState);
 
     }
 }

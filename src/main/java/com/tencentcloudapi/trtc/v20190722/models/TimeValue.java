@@ -30,7 +30,7 @@ public class TimeValue extends AbstractModel{
     private Long Time;
 
     /**
-    * 当前时间取值
+    * 当前时间取值，unix时间戳
     */
     @SerializedName("Value")
     @Expose
@@ -53,16 +53,16 @@ public class TimeValue extends AbstractModel{
     }
 
     /**
-     * Get 当前时间取值 
-     * @return Value 当前时间取值
+     * Get 当前时间取值，unix时间戳 
+     * @return Value 当前时间取值，unix时间戳
      */
     public Float getValue() {
         return this.Value;
     }
 
     /**
-     * Set 当前时间取值
-     * @param Value 当前时间取值
+     * Set 当前时间取值，unix时间戳
+     * @param Value 当前时间取值，unix时间戳
      */
     public void setValue(Float Value) {
         this.Value = Value;

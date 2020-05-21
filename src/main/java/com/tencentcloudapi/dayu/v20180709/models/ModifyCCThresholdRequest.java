@@ -111,6 +111,13 @@ public class ModifyCCThresholdRequest extends AbstractModel{
     private Long BasicIspCode;
 
     /**
+    * 可选字段，当协议取值HTTPS时，必填
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示基础防护） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示基础防护）
      */
@@ -331,6 +338,22 @@ public class ModifyCCThresholdRequest extends AbstractModel{
     }
 
     /**
+     * Get 可选字段，当协议取值HTTPS时，必填 
+     * @return Domain 可选字段，当协议取值HTTPS时，必填
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 可选字段，当协议取值HTTPS时，必填
+     * @param Domain 可选字段，当协议取值HTTPS时，必填
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -345,6 +368,7 @@ public class ModifyCCThresholdRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BasicDeviceType", this.BasicDeviceType);
         this.setParamSimple(map, prefix + "BasicIpInstance", this.BasicIpInstance);
         this.setParamSimple(map, prefix + "BasicIspCode", this.BasicIspCode);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }
