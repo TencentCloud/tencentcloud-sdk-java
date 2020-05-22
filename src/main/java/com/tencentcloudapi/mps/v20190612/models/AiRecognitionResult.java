@@ -28,9 +28,7 @@ public class AiRecognitionResult extends AbstractModel{
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -87,17 +85,13 @@ public class AiRecognitionResult extends AbstractModel{
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li> 
+<li>OcrFullTextRecognition：文本全文识别。</li> 
      * @return Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
      */
     public String getType() {
         return this.Type;
@@ -109,17 +103,13 @@ public class AiRecognitionResult extends AbstractModel{
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
      * @param Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别，</li>
-<li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

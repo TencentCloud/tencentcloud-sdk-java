@@ -38,6 +38,24 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
+     *广交会商品企业信息发布内容审核
+     * @param req CommonMediaRecognitionRequest
+     * @return CommonMediaRecognitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CommonMediaRecognitionResponse CommonMediaRecognition(CommonMediaRecognitionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CommonMediaRecognitionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CommonMediaRecognitionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CommonMediaRecognition"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
 <br>
 通过该接口可以将图片新增到样本库。

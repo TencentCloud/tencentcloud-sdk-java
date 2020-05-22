@@ -26,6 +26,9 @@ public class DescribeModuleRequest extends AbstractModel{
     * 过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
     */
     @SerializedName("Filters")
@@ -47,13 +50,37 @@ module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤
     private Long Limit;
 
     /**
+    * 指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+    */
+    @SerializedName("OrderByField")
+    @Expose
+    private String OrderByField;
+
+    /**
+    * 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private Long OrderDirection;
+
+    /**
      * Get 过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。 
      * @return Filters 过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public Filter [] getFilters() {
@@ -64,10 +91,16 @@ module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤
      * Set 过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param Filters 过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public void setFilters(Filter [] Filters) {
@@ -107,12 +140,62 @@ module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤
     }
 
     /**
+     * Get 指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序 
+     * @return OrderByField 指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+     */
+    public String getOrderByField() {
+        return this.OrderByField;
+    }
+
+    /**
+     * Set 指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+     * @param OrderByField 指定排序字段。目前支持的可选值如下
+instance-num 按实例数量排序。
+node-num 按节点数量排序。
+timestamp 按实例创建时间排序。
+如果不传，默认按实例创建时间排序
+     */
+    public void setOrderByField(String OrderByField) {
+        this.OrderByField = OrderByField;
+    }
+
+    /**
+     * Get 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序 
+     * @return OrderDirection 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+     */
+    public Long getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+     * @param OrderDirection 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+     */
+    public void setOrderDirection(Long OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderByField", this.OrderByField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }
