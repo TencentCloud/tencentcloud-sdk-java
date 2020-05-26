@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectAccountActivityResponse extends AbstractModel{
+public class DescribeDetailEventResponse extends AbstractModel{
 
     /**
-    * 回包数据
+    * 返回的事件列表
     */
     @SerializedName("Data")
     @Expose
-    private OutputDetectAccountActivity Data;
+    private EventList [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,18 +37,18 @@ public class DetectAccountActivityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 回包数据 
-     * @return Data 回包数据
+     * Get 返回的事件列表 
+     * @return Data 返回的事件列表
      */
-    public OutputDetectAccountActivity getData() {
+    public EventList [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 回包数据
-     * @param Data 回包数据
+     * Set 返回的事件列表
+     * @param Data 返回的事件列表
      */
-    public void setData(OutputDetectAccountActivity Data) {
+    public void setData(EventList [] Data) {
         this.Data = Data;
     }
 
@@ -72,7 +72,7 @@ public class DetectAccountActivityResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

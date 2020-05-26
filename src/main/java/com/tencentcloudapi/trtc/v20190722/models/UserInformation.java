@@ -72,6 +72,13 @@ public class UserInformation extends AbstractModel{
     private String ClientIp;
 
     /**
+    * 判断用户是否已经离开房间
+    */
+    @SerializedName("Finished")
+    @Expose
+    private Boolean Finished;
+
+    /**
      * Get 房间号 
      * @return RoomStr 房间号
      */
@@ -184,6 +191,22 @@ public class UserInformation extends AbstractModel{
     }
 
     /**
+     * Get 判断用户是否已经离开房间 
+     * @return Finished 判断用户是否已经离开房间
+     */
+    public Boolean getFinished() {
+        return this.Finished;
+    }
+
+    /**
+     * Set 判断用户是否已经离开房间
+     * @param Finished 判断用户是否已经离开房间
+     */
+    public void setFinished(Boolean Finished) {
+        this.Finished = Finished;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class UserInformation extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
         this.setParamSimple(map, prefix + "ClientIp", this.ClientIp);
+        this.setParamSimple(map, prefix + "Finished", this.Finished);
 
     }
 }

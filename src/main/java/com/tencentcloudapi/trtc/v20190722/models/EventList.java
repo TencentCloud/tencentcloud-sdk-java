@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.taf.v20200210.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectAccountActivityRequest extends AbstractModel{
+public class EventList extends AbstractModel{
 
     /**
-    * 业务入参
+    * 数据内容
     */
-    @SerializedName("BusinessSecurityData")
+    @SerializedName("Content")
     @Expose
-    private InputDetectAccountActivity BusinessSecurityData;
+    private EventMessage [] Content;
 
     /**
-     * Get 业务入参 
-     * @return BusinessSecurityData 业务入参
+    * 发送端的userId
+    */
+    @SerializedName("PeerId")
+    @Expose
+    private String PeerId;
+
+    /**
+     * Get 数据内容 
+     * @return Content 数据内容
      */
-    public InputDetectAccountActivity getBusinessSecurityData() {
-        return this.BusinessSecurityData;
+    public EventMessage [] getContent() {
+        return this.Content;
     }
 
     /**
-     * Set 业务入参
-     * @param BusinessSecurityData 业务入参
+     * Set 数据内容
+     * @param Content 数据内容
      */
-    public void setBusinessSecurityData(InputDetectAccountActivity BusinessSecurityData) {
-        this.BusinessSecurityData = BusinessSecurityData;
+    public void setContent(EventMessage [] Content) {
+        this.Content = Content;
+    }
+
+    /**
+     * Get 发送端的userId 
+     * @return PeerId 发送端的userId
+     */
+    public String getPeerId() {
+        return this.PeerId;
+    }
+
+    /**
+     * Set 发送端的userId
+     * @param PeerId 发送端的userId
+     */
+    public void setPeerId(String PeerId) {
+        this.PeerId = PeerId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
+        this.setParamArrayObj(map, prefix + "Content.", this.Content);
+        this.setParamSimple(map, prefix + "PeerId", this.PeerId);
 
     }
 }

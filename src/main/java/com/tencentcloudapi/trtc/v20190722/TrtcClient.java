@@ -74,6 +74,24 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询用户某次通话内的进退房，视频开关等详细事件。可查询5天内数据。
+     * @param req DescribeDetailEventRequest
+     * @return DescribeDetailEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDetailEventResponse DescribeDetailEvent(DescribeDetailEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDetailEventResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDetailEventResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDetailEvent"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询历史房间和用户数，每分钟1次，可查询最近5天的数据
      * @param req DescribeHistoryScaleRequest
      * @return DescribeHistoryScaleResponse

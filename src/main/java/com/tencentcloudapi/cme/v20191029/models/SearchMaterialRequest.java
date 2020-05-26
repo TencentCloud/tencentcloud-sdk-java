@@ -75,6 +75,13 @@ public class SearchMaterialRequest extends AbstractModel{
     private TimeRange CreateTimeRange;
 
     /**
+    * 按标签检索，填入检索的标签名。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
     * 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
     */
     @SerializedName("Sort")
@@ -227,6 +234,22 @@ public class SearchMaterialRequest extends AbstractModel{
     }
 
     /**
+     * Get 按标签检索，填入检索的标签名。 
+     * @return Tags 按标签检索，填入检索的标签名。
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 按标签检索，填入检索的标签名。
+     * @param Tags 按标签检索，填入检索的标签名。
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。 
      * @return Sort 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
      */
@@ -301,6 +324,7 @@ public class SearchMaterialRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamObj(map, prefix + "DurationRange.", this.DurationRange);
         this.setParamObj(map, prefix + "CreateTimeRange.", this.CreateTimeRange);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
