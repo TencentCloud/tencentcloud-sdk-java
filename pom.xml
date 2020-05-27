@@ -10,6 +10,11 @@
   <description>Tencent Cloud Open API SDK for Java</description>
   <dependencies>
     <dependency>
+      <groupId>com.squareup.okio</groupId>
+      <artifactId>okio</artifactId>
+      <version>1.12.0</version>
+    </dependency>
+    <dependency>
       <groupId>com.squareup.okhttp</groupId>
       <artifactId>okhttp</artifactId>
       <version>2.5.0</version>
@@ -59,7 +64,7 @@
         <version>2.3.2</version>
         <configuration>
           <excludes>
-                    </excludes>
+          </excludes>
         </configuration>
       </plugin>
       <plugin>
