@@ -532,6 +532,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *直播平台-查询代理商结算单链接
+     * @param req QueryAgentStatementsRequest
+     * @return QueryAgentStatementsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAgentStatementsResponse QueryAgentStatements(QueryAgentStatementsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryAgentStatementsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryAgentStatementsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryAgentStatements"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播平台-查询批次信息
      * @param req QueryAgentTaxPaymentBatchRequest
      * @return QueryAgentTaxPaymentBatchResponse

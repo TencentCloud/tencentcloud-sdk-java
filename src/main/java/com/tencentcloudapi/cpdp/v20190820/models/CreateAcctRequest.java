@@ -91,8 +91,8 @@ public class CreateAcctRequest extends AbstractModel{
     /**
     * 子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
     */
     @SerializedName("SubMchType")
     @Expose
@@ -133,9 +133,9 @@ merchant: 商户子账户
 
     /**
     * 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
     */
     @SerializedName("EncryptType")
     @Expose
@@ -147,6 +147,17 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
     @SerializedName("SubAcctNo")
     @Expose
     private String SubAcctNo;
+
+    /**
+    * 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+    */
+    @SerializedName("MidasEnvironment")
+    @Expose
+    private String MidasEnvironment;
 
     /**
      * Get 聚鑫平台分配的支付MidasAppId 
@@ -307,12 +318,12 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
     /**
      * Get 子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise 
+企业: enterprise
+缺省: enterprise 
      * @return SubMchType 子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
      */
     public String getSubMchType() {
         return this.SubMchType;
@@ -321,12 +332,12 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
     /**
      * Set 子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
      * @param SubMchType 子商户类型：
 个人: personal
-企业：enterprise
-缺省： enterprise
+企业: enterprise
+缺省: enterprise
      */
     public void setSubMchType(String SubMchType) {
         this.SubMchType = SubMchType;
@@ -418,13 +429,13 @@ merchant: 商户子账户
 
     /**
      * Get 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA 
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA 
      * @return EncryptType 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      */
     public String getEncryptType() {
         return this.EncryptType;
@@ -432,13 +443,13 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
 
     /**
      * Set 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      * @param EncryptType 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      */
     public void setEncryptType(String EncryptType) {
         this.EncryptType = EncryptType;
@@ -461,6 +472,38 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
     }
 
     /**
+     * Get 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release 
+     * @return MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public String getMidasEnvironment() {
+        return this.MidasEnvironment;
+    }
+
+    /**
+     * Set 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     * @param MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public void setMidasEnvironment(String MidasEnvironment) {
+        this.MidasEnvironment = MidasEnvironment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -480,6 +523,7 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
         this.setParamSimple(map, prefix + "SubMerchantPrivateKey", this.SubMerchantPrivateKey);
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
         this.setParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
+        this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
 
     }
 }

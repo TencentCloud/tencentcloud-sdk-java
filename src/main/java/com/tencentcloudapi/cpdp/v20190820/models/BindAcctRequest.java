@@ -134,13 +134,24 @@ BindType==2时必填
 
     /**
     * 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
     */
     @SerializedName("EncryptType")
     @Expose
     private String EncryptType;
+
+    /**
+    * 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+    */
+    @SerializedName("MidasEnvironment")
+    @Expose
+    private String MidasEnvironment;
 
     /**
      * Get 聚鑫分配的支付主MidasAppId 
@@ -416,13 +427,13 @@ BindType==2时必填
 
     /**
      * Get 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA 
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA 
      * @return EncryptType 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      */
     public String getEncryptType() {
         return this.EncryptType;
@@ -430,16 +441,48 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
 
     /**
      * Set 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      * @param EncryptType 敏感信息加密类型:
-RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
-AES,  aes对称加密，使用AES256-CBC-PCKS7padding
-默认RSA
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
      */
     public void setEncryptType(String EncryptType) {
         this.EncryptType = EncryptType;
+    }
+
+    /**
+     * Get 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release 
+     * @return MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public String getMidasEnvironment() {
+        return this.MidasEnvironment;
+    }
+
+    /**
+     * Set 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     * @param MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public void setMidasEnvironment(String MidasEnvironment) {
+        this.MidasEnvironment = MidasEnvironment;
     }
 
     /**
@@ -461,6 +504,7 @@ AES,  aes对称加密，使用AES256-CBC-PCKS7padding
         this.setParamSimple(map, prefix + "CnapsBranchId", this.CnapsBranchId);
         this.setParamSimple(map, prefix + "EiconBankBranchId", this.EiconBankBranchId);
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
+        this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
 
     }
 }

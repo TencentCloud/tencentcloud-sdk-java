@@ -37,7 +37,7 @@ public class CallDeviceActionAsyncRequest extends AbstractModel{
     private String DeviceName;
 
     /**
-    * 动作Id
+    * 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
     */
     @SerializedName("ActionId")
     @Expose
@@ -83,16 +83,16 @@ public class CallDeviceActionAsyncRequest extends AbstractModel{
     }
 
     /**
-     * Get 动作Id 
-     * @return ActionId 动作Id
+     * Get 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义 
+     * @return ActionId 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
      */
     public String getActionId() {
         return this.ActionId;
     }
 
     /**
-     * Set 动作Id
-     * @param ActionId 动作Id
+     * Set 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
+     * @param ActionId 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
      */
     public void setActionId(String ActionId) {
         this.ActionId = ActionId;

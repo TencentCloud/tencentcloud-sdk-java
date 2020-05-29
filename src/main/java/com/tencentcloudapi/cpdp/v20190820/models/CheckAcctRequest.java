@@ -37,8 +37,9 @@ public class CheckAcctRequest extends AbstractModel{
     private String SubAppId;
 
     /**
-    * 1：小额鉴权
-2：短信校验鉴权
+    * 1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
     */
     @SerializedName("BindType")
     @Expose
@@ -100,6 +101,27 @@ BindType==1必填
     private String CurrencyAmt;
 
     /**
+    * 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private String EncryptType;
+
+    /**
+    * 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+    */
+    @SerializedName("MidasEnvironment")
+    @Expose
+    private String MidasEnvironment;
+
+    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -132,20 +154,24 @@ BindType==1必填
     }
 
     /**
-     * Get 1：小额鉴权
-2：短信校验鉴权 
-     * @return BindType 1：小额鉴权
-2：短信校验鉴权
+     * Get 1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证 
+     * @return BindType 1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
      */
     public Long getBindType() {
         return this.BindType;
     }
 
     /**
-     * Set 1：小额鉴权
-2：短信校验鉴权
-     * @param BindType 1：小额鉴权
-2：短信校验鉴权
+     * Set 1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
+     * @param BindType 1 – 小额转账验证
+2 – 短信验证
+每个结算账户每天只能使用一次小额转账验证
      */
     public void setBindType(Long BindType) {
         this.BindType = BindType;
@@ -288,6 +314,66 @@ BindType==1必填
     }
 
     /**
+     * Get 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA 
+     * @return EncryptType 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+     */
+    public String getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+     * @param EncryptType 敏感信息加密类型:
+RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+AES: aes对称加密，使用AES256-CBC-PCKS7padding
+缺省: RSA
+     */
+    public void setEncryptType(String EncryptType) {
+        this.EncryptType = EncryptType;
+    }
+
+    /**
+     * Get 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release 
+     * @return MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public String getMidasEnvironment() {
+        return this.MidasEnvironment;
+    }
+
+    /**
+     * Set 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     * @param MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public void setMidasEnvironment(String MidasEnvironment) {
+        this.MidasEnvironment = MidasEnvironment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -301,6 +387,8 @@ BindType==1必填
         this.setParamSimple(map, prefix + "CurrencyType", this.CurrencyType);
         this.setParamSimple(map, prefix + "CurrencyUnit", this.CurrencyUnit);
         this.setParamSimple(map, prefix + "CurrencyAmt", this.CurrencyAmt);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
+        this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
 
     }
 }

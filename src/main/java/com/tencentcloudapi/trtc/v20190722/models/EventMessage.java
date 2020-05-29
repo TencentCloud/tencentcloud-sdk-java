@@ -41,7 +41,7 @@ public class EventMessage extends AbstractModel{
     private Long Time;
 
     /**
-    * 事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
+    * 事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
     */
     @SerializedName("EventId")
     @Expose
@@ -110,16 +110,16 @@ public class EventMessage extends AbstractModel{
     }
 
     /**
-     * Get 事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表 
-     * @return EventId 事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
+     * Get 事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916 
+     * @return EventId 事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
-     * @param EventId 事件Id：分为sdk的事件和webrtc的事件，具体映射，查看：事件ID映射表
+     * Set 事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
+     * @param EventId 事件Id：分为sdk的事件和webrtc的事件，详情见：附录/事件 ID 映射表：https://cloud.tencent.com/document/product/647/44916
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;

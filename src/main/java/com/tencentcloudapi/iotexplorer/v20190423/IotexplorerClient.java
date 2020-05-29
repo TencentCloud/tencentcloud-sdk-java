@@ -38,7 +38,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *提供给用户异步调用设备动作的能力
+     *提供给用户异步调用设备行为的能力
      * @param req CallDeviceActionAsyncRequest
      * @return CallDeviceActionAsyncResponse
      * @throws TencentCloudSDKException
@@ -56,7 +56,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *为用户提供同步调用设备动作的能力。
+     *为用户提供同步调用设备行为的能力。
      * @param req CallDeviceActionSyncRequest
      * @return CallDeviceActionSyncResponse
      * @throws TencentCloudSDKException
