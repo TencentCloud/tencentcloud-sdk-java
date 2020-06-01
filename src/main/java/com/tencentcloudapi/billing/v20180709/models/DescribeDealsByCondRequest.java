@@ -77,6 +77,13 @@ public class DescribeDealsByCondRequest extends AbstractModel{
     private String OrderId;
 
     /**
+    * 大订单号
+    */
+    @SerializedName("BigDealId")
+    @Expose
+    private String BigDealId;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -221,6 +228,22 @@ public class DescribeDealsByCondRequest extends AbstractModel{
     }
 
     /**
+     * Get 大订单号 
+     * @return BigDealId 大订单号
+     */
+    public String getBigDealId() {
+        return this.BigDealId;
+    }
+
+    /**
+     * Set 大订单号
+     * @param BigDealId 大订单号
+     */
+    public void setBigDealId(String BigDealId) {
+        this.BigDealId = BigDealId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -230,6 +253,7 @@ public class DescribeDealsByCondRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
+        this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
 
     }
 }

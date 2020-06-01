@@ -51,7 +51,7 @@ public class ApplyOutwardOrderRequest extends AbstractModel{
     private String TargetCurrency;
 
     /**
-    * 收款人类型
+    * 收款人类型（银行卡填"BANK_ACCOUNT"）
     */
     @SerializedName("PayeeType")
     @Expose
@@ -79,56 +79,58 @@ public class ApplyOutwardOrderRequest extends AbstractModel{
     private Float TargetAmount;
 
     /**
-    * 收款人姓名
+    * 收款人姓名（PayeeType为"BANK_COUNT"时必填）
     */
     @SerializedName("PayeeName")
     @Expose
     private String PayeeName;
 
     /**
-    * 收款人地址
+    * 收款人地址（PayeeType为"BANK_COUNT"时必填）
     */
     @SerializedName("PayeeAddress")
     @Expose
     private String PayeeAddress;
 
     /**
-    * 收款人银行账号类型
+    * 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
+个人填"INDIVIDUAL"
+企业填"CORPORATE"
     */
     @SerializedName("PayeeBankAccountType")
     @Expose
     private String PayeeBankAccountType;
 
     /**
-    * 收款人国家或地区编码
+    * 收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
     */
     @SerializedName("PayeeCountryCode")
     @Expose
     private String PayeeCountryCode;
 
     /**
-    * 收款人开户银行名称
+    * 收款人开户银行名称（PayeeType为"BANK_COUNT"时必填）
     */
     @SerializedName("PayeeBankName")
     @Expose
     private String PayeeBankName;
 
     /**
-    * 收款人开户银行地址
+    * 收款人开户银行地址（PayeeType为"BANK_COUNT"时必填）
     */
     @SerializedName("PayeeBankAddress")
     @Expose
     private String PayeeBankAddress;
 
     /**
-    * 收款人开户银行所在国家或地区编码
+    * 收款人开户银行所在国家或地区编码（PayeeType为"BANK_COUNT"时必填）
     */
     @SerializedName("PayeeBankDistrict")
     @Expose
     private String PayeeBankDistrict;
 
     /**
-    * 收款银行SwiftCode
+    * 收款银行SwiftCode（PayeeType为"BANK_COUNT"时必填）
     */
     @SerializedName("PayeeBankSwiftCode")
     @Expose
@@ -227,16 +229,16 @@ public class ApplyOutwardOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 收款人类型 
-     * @return PayeeType 收款人类型
+     * Get 收款人类型（银行卡填"BANK_ACCOUNT"） 
+     * @return PayeeType 收款人类型（银行卡填"BANK_ACCOUNT"）
      */
     public String getPayeeType() {
         return this.PayeeType;
     }
 
     /**
-     * Set 收款人类型
-     * @param PayeeType 收款人类型
+     * Set 收款人类型（银行卡填"BANK_ACCOUNT"）
+     * @param PayeeType 收款人类型（银行卡填"BANK_ACCOUNT"）
      */
     public void setPayeeType(String PayeeType) {
         this.PayeeType = PayeeType;
@@ -291,128 +293,136 @@ public class ApplyOutwardOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 收款人姓名 
-     * @return PayeeName 收款人姓名
+     * Get 收款人姓名（PayeeType为"BANK_COUNT"时必填） 
+     * @return PayeeName 收款人姓名（PayeeType为"BANK_COUNT"时必填）
      */
     public String getPayeeName() {
         return this.PayeeName;
     }
 
     /**
-     * Set 收款人姓名
-     * @param PayeeName 收款人姓名
+     * Set 收款人姓名（PayeeType为"BANK_COUNT"时必填）
+     * @param PayeeName 收款人姓名（PayeeType为"BANK_COUNT"时必填）
      */
     public void setPayeeName(String PayeeName) {
         this.PayeeName = PayeeName;
     }
 
     /**
-     * Get 收款人地址 
-     * @return PayeeAddress 收款人地址
+     * Get 收款人地址（PayeeType为"BANK_COUNT"时必填） 
+     * @return PayeeAddress 收款人地址（PayeeType为"BANK_COUNT"时必填）
      */
     public String getPayeeAddress() {
         return this.PayeeAddress;
     }
 
     /**
-     * Set 收款人地址
-     * @param PayeeAddress 收款人地址
+     * Set 收款人地址（PayeeType为"BANK_COUNT"时必填）
+     * @param PayeeAddress 收款人地址（PayeeType为"BANK_COUNT"时必填）
      */
     public void setPayeeAddress(String PayeeAddress) {
         this.PayeeAddress = PayeeAddress;
     }
 
     /**
-     * Get 收款人银行账号类型 
-     * @return PayeeBankAccountType 收款人银行账号类型
+     * Get 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
+个人填"INDIVIDUAL"
+企业填"CORPORATE" 
+     * @return PayeeBankAccountType 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
+个人填"INDIVIDUAL"
+企业填"CORPORATE"
      */
     public String getPayeeBankAccountType() {
         return this.PayeeBankAccountType;
     }
 
     /**
-     * Set 收款人银行账号类型
-     * @param PayeeBankAccountType 收款人银行账号类型
+     * Set 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
+个人填"INDIVIDUAL"
+企业填"CORPORATE"
+     * @param PayeeBankAccountType 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
+个人填"INDIVIDUAL"
+企业填"CORPORATE"
      */
     public void setPayeeBankAccountType(String PayeeBankAccountType) {
         this.PayeeBankAccountType = PayeeBankAccountType;
     }
 
     /**
-     * Get 收款人国家或地区编码 
-     * @return PayeeCountryCode 收款人国家或地区编码
+     * Get 收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填） 
+     * @return PayeeCountryCode 收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
      */
     public String getPayeeCountryCode() {
         return this.PayeeCountryCode;
     }
 
     /**
-     * Set 收款人国家或地区编码
-     * @param PayeeCountryCode 收款人国家或地区编码
+     * Set 收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
+     * @param PayeeCountryCode 收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
      */
     public void setPayeeCountryCode(String PayeeCountryCode) {
         this.PayeeCountryCode = PayeeCountryCode;
     }
 
     /**
-     * Get 收款人开户银行名称 
-     * @return PayeeBankName 收款人开户银行名称
+     * Get 收款人开户银行名称（PayeeType为"BANK_COUNT"时必填） 
+     * @return PayeeBankName 收款人开户银行名称（PayeeType为"BANK_COUNT"时必填）
      */
     public String getPayeeBankName() {
         return this.PayeeBankName;
     }
 
     /**
-     * Set 收款人开户银行名称
-     * @param PayeeBankName 收款人开户银行名称
+     * Set 收款人开户银行名称（PayeeType为"BANK_COUNT"时必填）
+     * @param PayeeBankName 收款人开户银行名称（PayeeType为"BANK_COUNT"时必填）
      */
     public void setPayeeBankName(String PayeeBankName) {
         this.PayeeBankName = PayeeBankName;
     }
 
     /**
-     * Get 收款人开户银行地址 
-     * @return PayeeBankAddress 收款人开户银行地址
+     * Get 收款人开户银行地址（PayeeType为"BANK_COUNT"时必填） 
+     * @return PayeeBankAddress 收款人开户银行地址（PayeeType为"BANK_COUNT"时必填）
      */
     public String getPayeeBankAddress() {
         return this.PayeeBankAddress;
     }
 
     /**
-     * Set 收款人开户银行地址
-     * @param PayeeBankAddress 收款人开户银行地址
+     * Set 收款人开户银行地址（PayeeType为"BANK_COUNT"时必填）
+     * @param PayeeBankAddress 收款人开户银行地址（PayeeType为"BANK_COUNT"时必填）
      */
     public void setPayeeBankAddress(String PayeeBankAddress) {
         this.PayeeBankAddress = PayeeBankAddress;
     }
 
     /**
-     * Get 收款人开户银行所在国家或地区编码 
-     * @return PayeeBankDistrict 收款人开户银行所在国家或地区编码
+     * Get 收款人开户银行所在国家或地区编码（PayeeType为"BANK_COUNT"时必填） 
+     * @return PayeeBankDistrict 收款人开户银行所在国家或地区编码（PayeeType为"BANK_COUNT"时必填）
      */
     public String getPayeeBankDistrict() {
         return this.PayeeBankDistrict;
     }
 
     /**
-     * Set 收款人开户银行所在国家或地区编码
-     * @param PayeeBankDistrict 收款人开户银行所在国家或地区编码
+     * Set 收款人开户银行所在国家或地区编码（PayeeType为"BANK_COUNT"时必填）
+     * @param PayeeBankDistrict 收款人开户银行所在国家或地区编码（PayeeType为"BANK_COUNT"时必填）
      */
     public void setPayeeBankDistrict(String PayeeBankDistrict) {
         this.PayeeBankDistrict = PayeeBankDistrict;
     }
 
     /**
-     * Get 收款银行SwiftCode 
-     * @return PayeeBankSwiftCode 收款银行SwiftCode
+     * Get 收款银行SwiftCode（PayeeType为"BANK_COUNT"时必填） 
+     * @return PayeeBankSwiftCode 收款银行SwiftCode（PayeeType为"BANK_COUNT"时必填）
      */
     public String getPayeeBankSwiftCode() {
         return this.PayeeBankSwiftCode;
     }
 
     /**
-     * Set 收款银行SwiftCode
-     * @param PayeeBankSwiftCode 收款银行SwiftCode
+     * Set 收款银行SwiftCode（PayeeType为"BANK_COUNT"时必填）
+     * @param PayeeBankSwiftCode 收款银行SwiftCode（PayeeType为"BANK_COUNT"时必填）
      */
     public void setPayeeBankSwiftCode(String PayeeBankSwiftCode) {
         this.PayeeBankSwiftCode = PayeeBankSwiftCode;

@@ -152,7 +152,7 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
-     *创建子网
+     *创建子网，若创建成功，则此子网会成为此可用区的默认子网。
      * @param req CreateSubnetRequest
      * @return CreateSubnetResponse
      * @throws TencentCloudSDKException
@@ -242,7 +242,7 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
-     *删除子网
+     *删除子网，若子网为可用区下的默认子网，则默认子网会回退到系统自动创建的默认子网，非用户最新创建的子网。若默认子网不满足需求，可调用设置默认子网接口设置。
      * @param req DeleteSubnetRequest
      * @return DeleteSubnetResponse
      * @throws TencentCloudSDKException
@@ -343,6 +343,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询可用区的默认子网
+     * @param req DescribeDefaultSubnetRequest
+     * @return DescribeDefaultSubnetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefaultSubnetResponse DescribeDefaultSubnet(DescribeDefaultSubnetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDefaultSubnetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDefaultSubnetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDefaultSubnet"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -726,6 +744,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ModifyAddressesBandwidthResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAddressesBandwidth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改在一个可用区下创建实例时使用的默认子网（创建实例时，未填写VPC参数时使用的sunbetId）
+     * @param req ModifyDefaultSubnetRequest
+     * @return ModifyDefaultSubnetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDefaultSubnetResponse ModifyDefaultSubnet(ModifyDefaultSubnetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDefaultSubnetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDefaultSubnetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDefaultSubnet"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

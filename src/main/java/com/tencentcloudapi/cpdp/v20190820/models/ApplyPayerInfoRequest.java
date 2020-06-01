@@ -72,7 +72,7 @@ public class ApplyPayerInfoRequest extends AbstractModel{
     private String PayerContactName;
 
     /**
-    * 付款人联系电话 (PayerType=CORPORATE 必填)
+    * 付款人联系电话
     */
     @SerializedName("PayerContactNumber")
     @Expose
@@ -205,16 +205,16 @@ public class ApplyPayerInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 付款人联系电话 (PayerType=CORPORATE 必填) 
-     * @return PayerContactNumber 付款人联系电话 (PayerType=CORPORATE 必填)
+     * Get 付款人联系电话 
+     * @return PayerContactNumber 付款人联系电话
      */
     public String getPayerContactNumber() {
         return this.PayerContactNumber;
     }
 
     /**
-     * Set 付款人联系电话 (PayerType=CORPORATE 必填)
-     * @param PayerContactNumber 付款人联系电话 (PayerType=CORPORATE 必填)
+     * Set 付款人联系电话
+     * @param PayerContactNumber 付款人联系电话
      */
     public void setPayerContactNumber(String PayerContactNumber) {
         this.PayerContactNumber = PayerContactNumber;

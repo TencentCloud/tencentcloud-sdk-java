@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PayDealsResponse extends AbstractModel{
 
     /**
-    * 此次操作支付成功的订单号数组
+    * 此次操作支付成功的子订单号数组
     */
     @SerializedName("OrderIds")
     @Expose
@@ -37,6 +37,13 @@ public class PayDealsResponse extends AbstractModel{
     private String [] ResourceIds;
 
     /**
+    * 此次操作支付成功的大订单号数组
+    */
+    @SerializedName("BigDealIds")
+    @Expose
+    private String [] BigDealIds;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -44,16 +51,16 @@ public class PayDealsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 此次操作支付成功的订单号数组 
-     * @return OrderIds 此次操作支付成功的订单号数组
+     * Get 此次操作支付成功的子订单号数组 
+     * @return OrderIds 此次操作支付成功的子订单号数组
      */
     public String [] getOrderIds() {
         return this.OrderIds;
     }
 
     /**
-     * Set 此次操作支付成功的订单号数组
-     * @param OrderIds 此次操作支付成功的订单号数组
+     * Set 此次操作支付成功的子订单号数组
+     * @param OrderIds 此次操作支付成功的子订单号数组
      */
     public void setOrderIds(String [] OrderIds) {
         this.OrderIds = OrderIds;
@@ -73,6 +80,22 @@ public class PayDealsResponse extends AbstractModel{
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
+    }
+
+    /**
+     * Get 此次操作支付成功的大订单号数组 
+     * @return BigDealIds 此次操作支付成功的大订单号数组
+     */
+    public String [] getBigDealIds() {
+        return this.BigDealIds;
+    }
+
+    /**
+     * Set 此次操作支付成功的大订单号数组
+     * @param BigDealIds 此次操作支付成功的大订单号数组
+     */
+    public void setBigDealIds(String [] BigDealIds) {
+        this.BigDealIds = BigDealIds;
     }
 
     /**
@@ -97,6 +120,7 @@ public class PayDealsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "OrderIds.", this.OrderIds);
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

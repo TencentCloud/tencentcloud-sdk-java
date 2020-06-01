@@ -308,6 +308,24 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取后付费免费额度
+     * @param req DescribePostpayPackageFreeQuotasRequest
+     * @return DescribePostpayPackageFreeQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePostpayPackageFreeQuotasResponse DescribePostpayPackageFreeQuotas(DescribePostpayPackageFreeQuotasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePostpayPackageFreeQuotasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePostpayPackageFreeQuotasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePostpayPackageFreeQuotas"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定指标的配额使用量
      * @param req DescribeQuotaDataRequest
      * @return DescribeQuotaDataResponse

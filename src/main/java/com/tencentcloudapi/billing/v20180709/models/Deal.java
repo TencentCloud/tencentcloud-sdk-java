@@ -150,6 +150,13 @@ public class Deal extends AbstractModel{
     private String SubProductCode;
 
     /**
+    * 大订单号
+    */
+    @SerializedName("BigDealId")
+    @Expose
+    private String BigDealId;
+
+    /**
      * Get 订单号 
      * @return OrderId 订单号
      */
@@ -442,6 +449,22 @@ public class Deal extends AbstractModel{
     }
 
     /**
+     * Get 大订单号 
+     * @return BigDealId 大订单号
+     */
+    public String getBigDealId() {
+        return this.BigDealId;
+    }
+
+    /**
+     * Set 大订单号
+     * @param BigDealId 大订单号
+     */
+    public void setBigDealId(String BigDealId) {
+        this.BigDealId = BigDealId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -463,6 +486,7 @@ public class Deal extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+        this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
 
     }
 }

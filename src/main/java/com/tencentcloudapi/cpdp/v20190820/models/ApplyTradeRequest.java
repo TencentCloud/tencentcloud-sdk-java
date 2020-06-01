@@ -44,7 +44,7 @@ public class ApplyTradeRequest extends AbstractModel{
     private String PayerId;
 
     /**
-    * 付款人姓名
+    * 收款人姓名
     */
     @SerializedName("PayeeName")
     @Expose
@@ -178,16 +178,16 @@ TradeType=SERVICE时填写贸易类别，见常见问题-贸易类别)
     }
 
     /**
-     * Get 付款人姓名 
-     * @return PayeeName 付款人姓名
+     * Get 收款人姓名 
+     * @return PayeeName 收款人姓名
      */
     public String getPayeeName() {
         return this.PayeeName;
     }
 
     /**
-     * Set 付款人姓名
-     * @param PayeeName 付款人姓名
+     * Set 收款人姓名
+     * @param PayeeName 收款人姓名
      */
     public void setPayeeName(String PayeeName) {
         this.PayeeName = PayeeName;

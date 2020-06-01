@@ -130,6 +130,14 @@ public class EnvInfo extends AbstractModel{
     private Boolean IsAutoDegrade;
 
     /**
+    * 环境渠道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvChannel")
+    @Expose
+    private String EnvChannel;
+
+    /**
      * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
@@ -390,6 +398,26 @@ public class EnvInfo extends AbstractModel{
     }
 
     /**
+     * Get 环境渠道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvChannel 环境渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvChannel() {
+        return this.EnvChannel;
+    }
+
+    /**
+     * Set 环境渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvChannel 环境渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvChannel(String EnvChannel) {
+        this.EnvChannel = EnvChannel;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -407,6 +435,7 @@ public class EnvInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "LogServices.", this.LogServices);
         this.setParamArrayObj(map, prefix + "StaticStorages.", this.StaticStorages);
         this.setParamSimple(map, prefix + "IsAutoDegrade", this.IsAutoDegrade);
+        this.setParamSimple(map, prefix + "EnvChannel", this.EnvChannel);
 
     }
 }

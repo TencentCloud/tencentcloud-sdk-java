@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PayDealsRequest extends AbstractModel{
 
     /**
-    * 需要支付的一个或者多个订单号
+    * 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
     */
     @SerializedName("OrderIds")
     @Expose
@@ -44,16 +44,23 @@ public class PayDealsRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * Get 需要支付的一个或者多个订单号 
-     * @return OrderIds 需要支付的一个或者多个订单号
+    * 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+    */
+    @SerializedName("BigDealIds")
+    @Expose
+    private String [] BigDealIds;
+
+    /**
+     * Get 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数 
+     * @return OrderIds 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
      */
     public String [] getOrderIds() {
         return this.OrderIds;
     }
 
     /**
-     * Set 需要支付的一个或者多个订单号
-     * @param OrderIds 需要支付的一个或者多个订单号
+     * Set 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
+     * @param OrderIds 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
      */
     public void setOrderIds(String [] OrderIds) {
         this.OrderIds = OrderIds;
@@ -92,12 +99,29 @@ public class PayDealsRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数 
+     * @return BigDealIds 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+     */
+    public String [] getBigDealIds() {
+        return this.BigDealIds;
+    }
+
+    /**
+     * Set 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+     * @param BigDealIds 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+     */
+    public void setBigDealIds(String [] BigDealIds) {
+        this.BigDealIds = BigDealIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "OrderIds.", this.OrderIds);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
 
     }
 }

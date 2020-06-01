@@ -38,7 +38,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *跨境-提交申报材料
+     *跨境-提交申报材料。申报材料的主体是付款人，需要提前调用【跨境-付款人申请】接口提交付款人信息且审核通过后调用。
      * @param req ApplyApplicationMaterialRequest
      * @return ApplyApplicationMaterialResponse
      * @throws TencentCloudSDKException
@@ -56,7 +56,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *跨境-汇出指令申请
+     *跨境-汇出指令申请。通过该接口可将对接方账户中的人民币余额汇兑成外币，再汇出至指定银行账户。
      * @param req ApplyOutwardOrderRequest
      * @return ApplyOutwardOrderResponse
      * @throws TencentCloudSDKException
@@ -74,7 +74,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *跨境-付款人申请
+     *跨境-付款人申请。通过该接口提交付款人信息并进行 kyc 审核。
      * @param req ApplyPayerInfoRequest
      * @return ApplyPayerInfoResponse
      * @throws TencentCloudSDKException
@@ -110,7 +110,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *跨境-提交贸易材料
+     *跨境-提交贸易材料。通过提交贸易材料接口可为对接方累计贸易额度，在额度范围内可发起汇兑汇出交易。
      * @param req ApplyTradeRequest
      * @return ApplyTradeResponse
      * @throws TencentCloudSDKException
@@ -568,7 +568,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *跨境-成功申报材料查询
+     *跨境-成功申报材料查询。查询成功入库的申报材料。
      * @param req QueryApplicationMaterialRequest
      * @return QueryApplicationMaterialResponse
      * @throws TencentCloudSDKException
@@ -929,7 +929,7 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *跨境-贸易材料明细查询
+     *跨境-贸易材料明细查询。
      * @param req QueryTradeRequest
      * @return QueryTradeResponse
      * @throws TencentCloudSDKException
