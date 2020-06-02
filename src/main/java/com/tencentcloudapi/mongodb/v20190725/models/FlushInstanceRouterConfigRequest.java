@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceRequest extends AbstractModel{
+public class FlushInstanceRouterConfigRequest extends AbstractModel{
 
     /**
-    * 取值FourAction时 返回四种动作的动作序列
+    * 实例ID
     */
-    @SerializedName("ActionType")
+    @SerializedName("InstanceId")
     @Expose
-    private String ActionType;
+    private String InstanceId;
 
     /**
-     * Get 取值FourAction时 返回四种动作的动作序列 
-     * @return ActionType 取值FourAction时 返回四种动作的动作序列
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
-    public String getActionType() {
-        return this.ActionType;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 取值FourAction时 返回四种动作的动作序列
-     * @param ActionType 取值FourAction时 返回四种动作的动作序列
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

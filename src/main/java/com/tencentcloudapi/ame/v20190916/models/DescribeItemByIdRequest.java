@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceRequest extends AbstractModel{
+public class DescribeItemByIdRequest extends AbstractModel{
 
     /**
-    * 取值FourAction时 返回四种动作的动作序列
+    * 歌曲ID，目前暂不支持批量查询
     */
-    @SerializedName("ActionType")
+    @SerializedName("ItemIDs")
     @Expose
-    private String ActionType;
+    private String ItemIDs;
 
     /**
-     * Get 取值FourAction时 返回四种动作的动作序列 
-     * @return ActionType 取值FourAction时 返回四种动作的动作序列
+     * Get 歌曲ID，目前暂不支持批量查询 
+     * @return ItemIDs 歌曲ID，目前暂不支持批量查询
      */
-    public String getActionType() {
-        return this.ActionType;
+    public String getItemIDs() {
+        return this.ItemIDs;
     }
 
     /**
-     * Set 取值FourAction时 返回四种动作的动作序列
-     * @param ActionType 取值FourAction时 返回四种动作的动作序列
+     * Set 歌曲ID，目前暂不支持批量查询
+     * @param ItemIDs 歌曲ID，目前暂不支持批量查询
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setItemIDs(String ItemIDs) {
+        this.ItemIDs = ItemIDs;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ItemIDs", this.ItemIDs);
 
     }
 }

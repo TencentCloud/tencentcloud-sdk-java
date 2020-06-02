@@ -38,6 +38,24 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *根据歌曲ID查询歌曲信息
+     * @param req DescribeItemByIdRequest
+     * @return DescribeItemByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeItemByIdResponse DescribeItemById(DescribeItemByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeItemByIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeItemByIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeItemById"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *分类内容下歌曲列表获取，根据CategoryID或CategoryCode
      * @param req DescribeItemsRequest
      * @return DescribeItemsResponse

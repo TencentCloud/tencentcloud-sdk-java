@@ -241,6 +241,25 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+     * @param req AssociateDhcpIpWithAddressIpRequest
+     * @return AssociateDhcpIpWithAddressIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateDhcpIpWithAddressIpResponse AssociateDhcpIpWithAddressIp(AssociateDhcpIpWithAddressIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateDhcpIpWithAddressIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateDhcpIpWithAddressIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateDhcpIpWithAddressIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
      * @param req AssociateNatGatewayAddressRequest
      * @return AssociateNatGatewayAddressResponse
@@ -586,6 +605,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDefaultVpcResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateDefaultVpc"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateDhcpIp）用于创建DhcpIp
+     * @param req CreateDhcpIpRequest
+     * @return CreateDhcpIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDhcpIpResponse CreateDhcpIp(CreateDhcpIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDhcpIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDhcpIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDhcpIp"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1148,6 +1185,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomerGatewayResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteCustomerGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteDhcpIp）用于删除DhcpIp
+     * @param req DeleteDhcpIpRequest
+     * @return DeleteDhcpIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDhcpIpResponse DeleteDhcpIp(DeleteDhcpIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDhcpIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDhcpIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDhcpIp"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1794,6 +1849,24 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomerGatewaysResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeCustomerGateways"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDhcpIps）用于查询DhcpIp列表
+     * @param req DescribeDhcpIpsRequest
+     * @return DescribeDhcpIpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDhcpIpsResponse DescribeDhcpIps(DescribeDhcpIpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDhcpIpsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDhcpIpsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDhcpIps"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -2650,6 +2723,25 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定<br />
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+     * @param req DisassociateDhcpIpWithAddressIpRequest
+     * @return DisassociateDhcpIpWithAddressIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateDhcpIpWithAddressIpResponse DisassociateDhcpIpWithAddressIp(DisassociateDhcpIpWithAddressIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateDhcpIpWithAddressIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateDhcpIpWithAddressIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateDhcpIpWithAddressIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
      * @param req DisassociateNatGatewayAddressRequest
      * @return DisassociateNatGatewayAddressResponse
@@ -3084,6 +3176,24 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyCustomerGatewayAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDhcpIpAttribute）用于修改DhcpIp属性
+     * @param req ModifyDhcpIpAttributeRequest
+     * @return ModifyDhcpIpAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDhcpIpAttributeResponse ModifyDhcpIpAttribute(ModifyDhcpIpAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDhcpIpAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDhcpIpAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDhcpIpAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

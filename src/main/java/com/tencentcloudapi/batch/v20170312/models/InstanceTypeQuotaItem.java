@@ -116,6 +116,34 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     private String SoldOutReason;
 
     /**
+    * 内网带宽，单位Gbps。
+    */
+    @SerializedName("InstanceBandwidth")
+    @Expose
+    private Float InstanceBandwidth;
+
+    /**
+    * 网络收发包能力，单位万PPS。
+    */
+    @SerializedName("InstancePps")
+    @Expose
+    private Long InstancePps;
+
+    /**
+    * 本地存储块数量。
+    */
+    @SerializedName("StorageBlockAmount")
+    @Expose
+    private Long StorageBlockAmount;
+
+    /**
+    * 处理器型号。
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -332,6 +360,70 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     }
 
     /**
+     * Get 内网带宽，单位Gbps。 
+     * @return InstanceBandwidth 内网带宽，单位Gbps。
+     */
+    public Float getInstanceBandwidth() {
+        return this.InstanceBandwidth;
+    }
+
+    /**
+     * Set 内网带宽，单位Gbps。
+     * @param InstanceBandwidth 内网带宽，单位Gbps。
+     */
+    public void setInstanceBandwidth(Float InstanceBandwidth) {
+        this.InstanceBandwidth = InstanceBandwidth;
+    }
+
+    /**
+     * Get 网络收发包能力，单位万PPS。 
+     * @return InstancePps 网络收发包能力，单位万PPS。
+     */
+    public Long getInstancePps() {
+        return this.InstancePps;
+    }
+
+    /**
+     * Set 网络收发包能力，单位万PPS。
+     * @param InstancePps 网络收发包能力，单位万PPS。
+     */
+    public void setInstancePps(Long InstancePps) {
+        this.InstancePps = InstancePps;
+    }
+
+    /**
+     * Get 本地存储块数量。 
+     * @return StorageBlockAmount 本地存储块数量。
+     */
+    public Long getStorageBlockAmount() {
+        return this.StorageBlockAmount;
+    }
+
+    /**
+     * Set 本地存储块数量。
+     * @param StorageBlockAmount 本地存储块数量。
+     */
+    public void setStorageBlockAmount(Long StorageBlockAmount) {
+        this.StorageBlockAmount = StorageBlockAmount;
+    }
+
+    /**
+     * Get 处理器型号。 
+     * @return CpuType 处理器型号。
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set 处理器型号。
+     * @param CpuType 处理器型号。
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -348,6 +440,10 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Price.", this.Price);
         this.setParamSimple(map, prefix + "SoldOutReason", this.SoldOutReason);
+        this.setParamSimple(map, prefix + "InstanceBandwidth", this.InstanceBandwidth);
+        this.setParamSimple(map, prefix + "InstancePps", this.InstancePps);
+        this.setParamSimple(map, prefix + "StorageBlockAmount", this.StorageBlockAmount);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

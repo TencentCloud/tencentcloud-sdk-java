@@ -58,6 +58,13 @@ public class CreateClusterRequest extends AbstractModel{
     private String Password;
 
     /**
+    * 集群标签列表
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfoUnit [] ResourceTags;
+
+    /**
      * Get 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX` 
      * @return IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      */
@@ -138,6 +145,22 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 集群标签列表 
+     * @return ResourceTags 集群标签列表
+     */
+    public TagInfoUnit [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 集群标签列表
+     * @param ResourceTags 集群标签列表
+     */
+    public void setResourceTags(TagInfoUnit [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

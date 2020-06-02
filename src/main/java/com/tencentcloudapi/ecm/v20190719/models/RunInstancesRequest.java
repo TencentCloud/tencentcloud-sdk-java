@@ -30,13 +30,6 @@ public class RunInstancesRequest extends AbstractModel{
     private ZoneInstanceCountISP [] ZoneInstanceCountISPSet;
 
     /**
-    * 模块ID
-    */
-    @SerializedName("ModuleId")
-    @Expose
-    private String ModuleId;
-
-    /**
     * 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
 Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
     */
@@ -45,14 +38,21 @@ Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [
     private String Password;
 
     /**
-    * 公网出带宽上限，单位：Mbps
+    * 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 镜像ID，不传则使用模块下的默认值
+    * 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+    */
+    @SerializedName("ModuleId")
+    @Expose
+    private String ModuleId;
+
+    /**
+    * 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
     */
     @SerializedName("ImageId")
     @Expose
@@ -110,6 +110,20 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     private String UserData;
 
     /**
+    * 机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+    */
+    @SerializedName("DataDiskSize")
+    @Expose
+    private Long DataDiskSize;
+
+    /**
      * Get 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100 
      * @return ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
      */
@@ -123,22 +137,6 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
      */
     public void setZoneInstanceCountISPSet(ZoneInstanceCountISP [] ZoneInstanceCountISPSet) {
         this.ZoneInstanceCountISPSet = ZoneInstanceCountISPSet;
-    }
-
-    /**
-     * Get 模块ID 
-     * @return ModuleId 模块ID
-     */
-    public String getModuleId() {
-        return this.ModuleId;
-    }
-
-    /**
-     * Set 模块ID
-     * @param ModuleId 模块ID
-     */
-    public void setModuleId(String ModuleId) {
-        this.ModuleId = ModuleId;
     }
 
     /**
@@ -162,32 +160,48 @@ Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [
     }
 
     /**
-     * Get 公网出带宽上限，单位：Mbps 
-     * @return InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps
+     * Get 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值 
+     * @return InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 公网出带宽上限，单位：Mbps
-     * @param InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps
+     * Set 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+     * @param InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 镜像ID，不传则使用模块下的默认值 
-     * @return ImageId 镜像ID，不传则使用模块下的默认值
+     * Get 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数 
+     * @return ModuleId 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+     */
+    public String getModuleId() {
+        return this.ModuleId;
+    }
+
+    /**
+     * Set 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+     * @param ModuleId 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+     */
+    public void setModuleId(String ModuleId) {
+        this.ModuleId = ModuleId;
+    }
+
+    /**
+     * Get 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值 
+     * @return ImageId 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 镜像ID，不传则使用模块下的默认值
-     * @param ImageId 镜像ID，不传则使用模块下的默认值
+     * Set 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
+     * @param ImageId 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
@@ -326,13 +340,45 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     }
 
     /**
+     * Get 机型。如果未传该参数或者传的值为空，则使用模块下的默认值 
+     * @return InstanceType 机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+     * @param InstanceType 机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值 
+     * @return DataDiskSize 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+     */
+    public Long getDataDiskSize() {
+        return this.DataDiskSize;
+    }
+
+    /**
+     * Set 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+     * @param DataDiskSize 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+     */
+    public void setDataDiskSize(Long DataDiskSize) {
+        this.DataDiskSize = DataDiskSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ZoneInstanceCountISPSet.", this.ZoneInstanceCountISPSet);
-        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
@@ -340,6 +386,8 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
 
     }
 }

@@ -96,6 +96,14 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
     private Long ContinueTime;
 
     /**
+    * 告警指标名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricName")
+    @Expose
+    private String MetricName;
+
+    /**
      * Get 指标名称 
      * @return MetricShowName 指标名称
      */
@@ -268,6 +276,26 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
     }
 
     /**
+     * Get 告警指标名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricName 告警指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetricName() {
+        return this.MetricName;
+    }
+
+    /**
+     * Set 告警指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricName 告警指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -281,6 +309,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
         this.setParamSimple(map, prefix + "CalcType", this.CalcType);
         this.setParamSimple(map, prefix + "CalcValue", this.CalcValue);
         this.setParamSimple(map, prefix + "ContinueTime", this.ContinueTime);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
 
     }
 }

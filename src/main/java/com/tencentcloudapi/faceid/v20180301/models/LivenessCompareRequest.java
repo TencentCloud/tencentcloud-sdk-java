@@ -57,6 +57,9 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
     /**
     * 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
     */
     @SerializedName("Optional")
     @Expose
@@ -147,8 +150,14 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * Get 额外配置，传入JSON字符串。 
+     * Get 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+} 
      * @return Optional 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
      */
     public String getOptional() {
         return this.Optional;
@@ -156,7 +165,13 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
     /**
      * Set 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
      * @param Optional 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
      */
     public void setOptional(String Optional) {
         this.Optional = Optional;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class GeneralEfficientOCRResponse extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
+    * 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
     */
     @SerializedName("TextDetections")
     @Expose
     private TextDetection [] TextDetections;
 
     /**
-    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
     */
     @SerializedName("Angel")
     @Expose
@@ -44,32 +44,32 @@ public class GeneralEfficientOCRResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 检测到的文本信息，具体内容请点击左侧链接。 
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * Get 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。 
+     * @return TextDetections 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
      */
     public TextDetection [] getTextDetections() {
         return this.TextDetections;
     }
 
     /**
-     * Set 检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * Set 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
+     * @param TextDetections 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
      */
     public void setTextDetections(TextDetection [] TextDetections) {
         this.TextDetections = TextDetections;
     }
 
     /**
-     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负 
-     * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。 
+     * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
      */
     public Float getAngel() {
         return this.Angel;
     }
 
     /**
-     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
-     * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+     * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
      */
     public void setAngel(Float Angel) {
         this.Angel = Angel;

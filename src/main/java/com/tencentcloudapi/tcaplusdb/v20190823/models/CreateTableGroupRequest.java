@@ -44,6 +44,13 @@ public class CreateTableGroupRequest extends AbstractModel{
     private String TableGroupId;
 
     /**
+    * 表格组标签列表
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfoUnit [] ResourceTags;
+
+    /**
      * Get 表格组所属集群ID 
      * @return ClusterId 表格组所属集群ID
      */
@@ -92,12 +99,29 @@ public class CreateTableGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 表格组标签列表 
+     * @return ResourceTags 表格组标签列表
+     */
+    public TagInfoUnit [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 表格组标签列表
+     * @param ResourceTags 表格组标签列表
+     */
+    public void setResourceTags(TagInfoUnit [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "TableGroupName", this.TableGroupName);
         this.setParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

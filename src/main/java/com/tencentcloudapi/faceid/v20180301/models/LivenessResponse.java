@@ -24,6 +24,7 @@ public class LivenessResponse extends AbstractModel{
 
     /**
     * 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BestFrameBase64")
     @Expose
@@ -44,6 +45,14 @@ public class LivenessResponse extends AbstractModel{
     private String Description;
 
     /**
+    * 最佳最佳截图列表，仅在配置了返回多张最佳截图时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BestFrameList")
+    @Expose
+    private String [] BestFrameList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,8 +60,10 @@ public class LivenessResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。 
+     * Get 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BestFrameBase64 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBestFrameBase64() {
         return this.BestFrameBase64;
@@ -60,7 +71,9 @@ public class LivenessResponse extends AbstractModel{
 
     /**
      * Set 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BestFrameBase64 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBestFrameBase64(String BestFrameBase64) {
         this.BestFrameBase64 = BestFrameBase64;
@@ -99,6 +112,26 @@ public class LivenessResponse extends AbstractModel{
     }
 
     /**
+     * Get 最佳最佳截图列表，仅在配置了返回多张最佳截图时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BestFrameList 最佳最佳截图列表，仅在配置了返回多张最佳截图时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getBestFrameList() {
+        return this.BestFrameList;
+    }
+
+    /**
+     * Set 最佳最佳截图列表，仅在配置了返回多张最佳截图时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BestFrameList 最佳最佳截图列表，仅在配置了返回多张最佳截图时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBestFrameList(String [] BestFrameList) {
+        this.BestFrameList = BestFrameList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -121,6 +154,7 @@ public class LivenessResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArraySimple(map, prefix + "BestFrameList.", this.BestFrameList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceRequest extends AbstractModel{
+public class DeleteDhcpIpRequest extends AbstractModel{
 
     /**
-    * 取值FourAction时 返回四种动作的动作序列
+    * `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。
     */
-    @SerializedName("ActionType")
+    @SerializedName("DhcpIpId")
     @Expose
-    private String ActionType;
+    private String DhcpIpId;
 
     /**
-     * Get 取值FourAction时 返回四种动作的动作序列 
-     * @return ActionType 取值FourAction时 返回四种动作的动作序列
+     * Get `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。 
+     * @return DhcpIpId `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。
      */
-    public String getActionType() {
-        return this.ActionType;
+    public String getDhcpIpId() {
+        return this.DhcpIpId;
     }
 
     /**
-     * Set 取值FourAction时 返回四种动作的动作序列
-     * @param ActionType 取值FourAction时 返回四种动作的动作序列
+     * Set `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。
+     * @param DhcpIpId `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setDhcpIpId(String DhcpIpId) {
+        this.DhcpIpId = DhcpIpId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "DhcpIpId", this.DhcpIpId);
 
     }
 }

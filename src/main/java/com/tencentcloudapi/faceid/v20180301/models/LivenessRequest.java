@@ -24,7 +24,7 @@ public class LivenessRequest extends AbstractModel{
 
     /**
     * 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
     */
     @SerializedName("VideoBase64")
     @Expose
@@ -48,7 +48,10 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     private String ValidateData;
 
     /**
-    * 本接口不需要传递此参数。
+    * 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
     */
     @SerializedName("Optional")
     @Expose
@@ -56,9 +59,9 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
     /**
      * Get 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。 
+BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。 
      * @return VideoBase64 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
      */
     public String getVideoBase64() {
         return this.VideoBase64;
@@ -66,9 +69,9 @@ BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
 
     /**
      * Set 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
      * @param VideoBase64 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
      */
     public void setVideoBase64(String VideoBase64) {
         this.VideoBase64 = VideoBase64;
@@ -119,16 +122,28 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * Get 本接口不需要传递此参数。 
-     * @return Optional 本接口不需要传递此参数。
+     * Get 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+} 
+     * @return Optional 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
      */
     public String getOptional() {
         return this.Optional;
     }
 
     /**
-     * Set 本接口不需要传递此参数。
-     * @param Optional 本接口不需要传递此参数。
+     * Set 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
+     * @param Optional 额外配置，传入JSON字符串。
+{
+"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+}
      */
     public void setOptional(String Optional) {
         this.Optional = Optional;

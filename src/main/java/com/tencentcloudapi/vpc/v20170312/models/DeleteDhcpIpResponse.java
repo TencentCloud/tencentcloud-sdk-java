@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceRequest extends AbstractModel{
+public class DeleteDhcpIpResponse extends AbstractModel{
 
     /**
-    * 取值FourAction时 返回四种动作的动作序列
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("ActionType")
+    @SerializedName("RequestId")
     @Expose
-    private String ActionType;
+    private String RequestId;
 
     /**
-     * Get 取值FourAction时 返回四种动作的动作序列 
-     * @return ActionType 取值FourAction时 返回四种动作的动作序列
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getActionType() {
-        return this.ActionType;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 取值FourAction时 返回四种动作的动作序列
-     * @param ActionType 取值FourAction时 返回四种动作的动作序列
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

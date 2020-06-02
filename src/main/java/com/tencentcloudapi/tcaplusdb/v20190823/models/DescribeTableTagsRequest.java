@@ -20,98 +20,52 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTablesRequest extends AbstractModel{
+public class DescribeTableTagsRequest extends AbstractModel{
 
     /**
-    * 待创建表格所属集群ID
+    * 表格所属集群ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 用户选定的建表格IDL文件列表
-    */
-    @SerializedName("IdlFiles")
-    @Expose
-    private IdlFileInfo [] IdlFiles;
-
-    /**
-    * 待创建表格信息列表
+    * 表格列表
     */
     @SerializedName("SelectedTables")
     @Expose
     private SelectedTableInfoNew [] SelectedTables;
 
     /**
-    * 表格标签列表
-    */
-    @SerializedName("ResourceTags")
-    @Expose
-    private TagInfoUnit [] ResourceTags;
-
-    /**
-     * Get 待创建表格所属集群ID 
-     * @return ClusterId 待创建表格所属集群ID
+     * Get 表格所属集群ID 
+     * @return ClusterId 表格所属集群ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 待创建表格所属集群ID
-     * @param ClusterId 待创建表格所属集群ID
+     * Set 表格所属集群ID
+     * @param ClusterId 表格所属集群ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 用户选定的建表格IDL文件列表 
-     * @return IdlFiles 用户选定的建表格IDL文件列表
-     */
-    public IdlFileInfo [] getIdlFiles() {
-        return this.IdlFiles;
-    }
-
-    /**
-     * Set 用户选定的建表格IDL文件列表
-     * @param IdlFiles 用户选定的建表格IDL文件列表
-     */
-    public void setIdlFiles(IdlFileInfo [] IdlFiles) {
-        this.IdlFiles = IdlFiles;
-    }
-
-    /**
-     * Get 待创建表格信息列表 
-     * @return SelectedTables 待创建表格信息列表
+     * Get 表格列表 
+     * @return SelectedTables 表格列表
      */
     public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
     /**
-     * Set 待创建表格信息列表
-     * @param SelectedTables 待创建表格信息列表
+     * Set 表格列表
+     * @param SelectedTables 表格列表
      */
     public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;
-    }
-
-    /**
-     * Get 表格标签列表 
-     * @return ResourceTags 表格标签列表
-     */
-    public TagInfoUnit [] getResourceTags() {
-        return this.ResourceTags;
-    }
-
-    /**
-     * Set 表格标签列表
-     * @param ResourceTags 表格标签列表
-     */
-    public void setResourceTags(TagInfoUnit [] ResourceTags) {
-        this.ResourceTags = ResourceTags;
     }
 
     /**
@@ -119,9 +73,7 @@ public class CreateTablesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
         this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
-        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceRequest extends AbstractModel{
+public class DescribeClusterTagsRequest extends AbstractModel{
 
     /**
-    * 取值FourAction时 返回四种动作的动作序列
+    * 集群ID列表
     */
-    @SerializedName("ActionType")
+    @SerializedName("ClusterIds")
     @Expose
-    private String ActionType;
+    private String [] ClusterIds;
 
     /**
-     * Get 取值FourAction时 返回四种动作的动作序列 
-     * @return ActionType 取值FourAction时 返回四种动作的动作序列
+     * Get 集群ID列表 
+     * @return ClusterIds 集群ID列表
      */
-    public String getActionType() {
-        return this.ActionType;
+    public String [] getClusterIds() {
+        return this.ClusterIds;
     }
 
     /**
-     * Set 取值FourAction时 返回四种动作的动作序列
-     * @param ActionType 取值FourAction时 返回四种动作的动作序列
+     * Set 集群ID列表
+     * @param ClusterIds 集群ID列表
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
 
     }
 }

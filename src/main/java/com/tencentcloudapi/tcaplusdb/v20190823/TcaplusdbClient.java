@@ -218,6 +218,24 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *获取集群关联的标签列表
+     * @param req DescribeClusterTagsRequest
+     * @return DescribeClusterTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterTagsResponse DescribeClusterTags(DescribeClusterTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterTags"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询TcaplusDB集群列表，包含集群详细信息。
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse
@@ -272,6 +290,24 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *获取表格组关联的标签列表
+     * @param req DescribeTableGroupTagsRequest
+     * @return DescribeTableGroupTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableGroupTagsResponse DescribeTableGroupTags(DescribeTableGroupTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTableGroupTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTableGroupTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTableGroupTags"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询表格组列表
      * @param req DescribeTableGroupsRequest
      * @return DescribeTableGroupsResponse
@@ -283,6 +319,24 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTableGroupsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTableGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取表格标签
+     * @param req DescribeTableTagsRequest
+     * @return DescribeTableTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableTagsResponse DescribeTableTags(DescribeTableTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTableTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTableTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTableTags"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -398,6 +452,24 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *修改集群标签
+     * @param req ModifyClusterTagsRequest
+     * @return ModifyClusterTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterTagsResponse ModifyClusterTags(ModifyClusterTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterTags"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改TcaplusDB表格组名称
      * @param req ModifyTableGroupNameRequest
      * @return ModifyTableGroupNameResponse
@@ -409,6 +481,24 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyTableGroupNameResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyTableGroupName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改表格组标签
+     * @param req ModifyTableGroupTagsRequest
+     * @return ModifyTableGroupTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTableGroupTagsResponse ModifyTableGroupTags(ModifyTableGroupTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTableGroupTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTableGroupTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTableGroupTags"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -445,6 +535,24 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyTableQuotasResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyTableQuotas"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改表格标签
+     * @param req ModifyTableTagsRequest
+     * @return ModifyTableTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTableTagsResponse ModifyTableTags(ModifyTableTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTableTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTableTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTableTags"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
