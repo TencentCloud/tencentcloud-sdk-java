@@ -24,6 +24,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
 
     /**
     * 拉取起始时间，UNIX 时间戳（时间：秒）。
+注：最大可拉取当前时期7天前的数据。
     */
     @SerializedName("SendDateTime")
     @Expose
@@ -59,8 +60,17 @@ public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
     private String SmsSdkAppid;
 
     /**
-     * Get 拉取起始时间，UNIX 时间戳（时间：秒）。 
+    * 拉取截止时间，UNIX 时间戳（时间：秒）。
+    */
+    @SerializedName("EndDateTime")
+    @Expose
+    private Long EndDateTime;
+
+    /**
+     * Get 拉取起始时间，UNIX 时间戳（时间：秒）。
+注：最大可拉取当前时期7天前的数据。 
      * @return SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）。
+注：最大可拉取当前时期7天前的数据。
      */
     public Long getSendDateTime() {
         return this.SendDateTime;
@@ -68,7 +78,9 @@ public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
 
     /**
      * Set 拉取起始时间，UNIX 时间戳（时间：秒）。
+注：最大可拉取当前时期7天前的数据。
      * @param SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）。
+注：最大可拉取当前时期7天前的数据。
      */
     public void setSendDateTime(Long SendDateTime) {
         this.SendDateTime = SendDateTime;
@@ -143,6 +155,22 @@ public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
     }
 
     /**
+     * Get 拉取截止时间，UNIX 时间戳（时间：秒）。 
+     * @return EndDateTime 拉取截止时间，UNIX 时间戳（时间：秒）。
+     */
+    public Long getEndDateTime() {
+        return this.EndDateTime;
+    }
+
+    /**
+     * Set 拉取截止时间，UNIX 时间戳（时间：秒）。
+     * @param EndDateTime 拉取截止时间，UNIX 时间戳（时间：秒）。
+     */
+    public void setEndDateTime(Long EndDateTime) {
+        this.EndDateTime = EndDateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +179,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+        this.setParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
 
     }
 }

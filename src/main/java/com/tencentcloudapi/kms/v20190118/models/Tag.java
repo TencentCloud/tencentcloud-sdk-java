@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceRequest extends AbstractModel{
+public class Tag extends AbstractModel{
 
     /**
-    * 默认不需要使用
+    * 标签键
     */
-    @SerializedName("ActionType")
+    @SerializedName("TagKey")
     @Expose
-    private String ActionType;
+    private String TagKey;
 
     /**
-     * Get 默认不需要使用 
-     * @return ActionType 默认不需要使用
+    * 标签值
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
+     * Get 标签键 
+     * @return TagKey 标签键
      */
-    public String getActionType() {
-        return this.ActionType;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set 默认不需要使用
-     * @param ActionType 默认不需要使用
+     * Set 标签键
+     * @param TagKey 标签键
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
+    }
+
+    /**
+     * Get 标签值 
+     * @return TagValue 标签值
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set 标签值
+     * @param TagValue 标签值
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

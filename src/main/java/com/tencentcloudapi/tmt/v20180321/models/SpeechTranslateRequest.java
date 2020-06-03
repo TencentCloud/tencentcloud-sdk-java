@@ -37,7 +37,7 @@ public class SpeechTranslateRequest extends AbstractModel{
     private String Source;
 
     /**
-    * 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+    * 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
     */
     @SerializedName("Target")
     @Expose
@@ -118,16 +118,16 @@ public class SpeechTranslateRequest extends AbstractModel{
     }
 
     /**
-     * Get 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
-     * @return Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
+     * @return Target 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @param Target 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public void setTarget(String Target) {
         this.Target = Target;

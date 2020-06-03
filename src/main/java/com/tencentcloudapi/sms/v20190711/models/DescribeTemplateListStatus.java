@@ -41,6 +41,7 @@ public class DescribeTemplateListStatus extends AbstractModel{
     /**
     * 申请签名状态。其中：
 0：表示审核通过。
+1：表示审核中。
 -1：表示审核未通过或审核失败。
     */
     @SerializedName("StatusCode")
@@ -111,9 +112,11 @@ public class DescribeTemplateListStatus extends AbstractModel{
     /**
      * Get 申请签名状态。其中：
 0：表示审核通过。
+1：表示审核中。
 -1：表示审核未通过或审核失败。 
      * @return StatusCode 申请签名状态。其中：
 0：表示审核通过。
+1：表示审核中。
 -1：表示审核未通过或审核失败。
      */
     public Long getStatusCode() {
@@ -123,9 +126,11 @@ public class DescribeTemplateListStatus extends AbstractModel{
     /**
      * Set 申请签名状态。其中：
 0：表示审核通过。
+1：表示审核中。
 -1：表示审核未通过或审核失败。
      * @param StatusCode 申请签名状态。其中：
 0：表示审核通过。
+1：表示审核中。
 -1：表示审核未通过或审核失败。
      */
     public void setStatusCode(Long StatusCode) {

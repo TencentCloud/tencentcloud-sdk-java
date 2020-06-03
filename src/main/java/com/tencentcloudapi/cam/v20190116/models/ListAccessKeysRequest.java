@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceRequest extends AbstractModel{
+public class ListAccessKeysRequest extends AbstractModel{
 
     /**
-    * 默认不需要使用
+    * 指定用户Uin，不填默认列出当前用户访问密钥
     */
-    @SerializedName("ActionType")
+    @SerializedName("TargetUin")
     @Expose
-    private String ActionType;
+    private Long TargetUin;
 
     /**
-     * Get 默认不需要使用 
-     * @return ActionType 默认不需要使用
+     * Get 指定用户Uin，不填默认列出当前用户访问密钥 
+     * @return TargetUin 指定用户Uin，不填默认列出当前用户访问密钥
      */
-    public String getActionType() {
-        return this.ActionType;
+    public Long getTargetUin() {
+        return this.TargetUin;
     }
 
     /**
-     * Set 默认不需要使用
-     * @param ActionType 默认不需要使用
+     * Set 指定用户Uin，不填默认列出当前用户访问密钥
+     * @param TargetUin 指定用户Uin，不填默认列出当前用户访问密钥
      */
-    public void setActionType(String ActionType) {
-        this.ActionType = ActionType;
+    public void setTargetUin(Long TargetUin) {
+        this.TargetUin = TargetUin;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
 
     }
 }

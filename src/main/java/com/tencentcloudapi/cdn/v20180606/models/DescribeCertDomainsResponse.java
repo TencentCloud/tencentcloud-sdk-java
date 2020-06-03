@@ -31,7 +31,7 @@ public class DescribeCertDomainsResponse extends AbstractModel{
     private String [] Domains;
 
     /**
-    * CDN已配置证书的域名列表
+    * 已配置证书的CDN域名列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertifiedDomains")
@@ -66,9 +66,9 @@ public class DescribeCertDomainsResponse extends AbstractModel{
     }
 
     /**
-     * Get CDN已配置证书的域名列表
+     * Get 已配置证书的CDN域名列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertifiedDomains CDN已配置证书的域名列表
+     * @return CertifiedDomains 已配置证书的CDN域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCertifiedDomains() {
@@ -76,9 +76,9 @@ public class DescribeCertDomainsResponse extends AbstractModel{
     }
 
     /**
-     * Set CDN已配置证书的域名列表
+     * Set 已配置证书的CDN域名列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertifiedDomains CDN已配置证书的域名列表
+     * @param CertifiedDomains 已配置证书的CDN域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertifiedDomains(String [] CertifiedDomains) {

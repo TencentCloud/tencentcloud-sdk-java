@@ -596,6 +596,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *列出指定CAM用户的访问密钥
+     * @param req ListAccessKeysRequest
+     * @return ListAccessKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAccessKeysResponse ListAccessKeys(ListAccessKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAccessKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAccessKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListAccessKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ListAttachedGroupPolicies）可用于查询用户组关联的策略列表。
      * @param req ListAttachedGroupPoliciesRequest
      * @return ListAttachedGroupPoliciesResponse

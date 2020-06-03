@@ -66,6 +66,22 @@ public class CreateKeyResponse extends AbstractModel{
     private String KeyUsage;
 
     /**
+    * 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagCode")
+    @Expose
+    private Long TagCode;
+
+    /**
+    * 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagMsg")
+    @Expose
+    private String TagMsg;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -173,6 +189,46 @@ public class CreateKeyResponse extends AbstractModel{
     }
 
     /**
+     * Get 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTagCode() {
+        return this.TagCode;
+    }
+
+    /**
+     * Set 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagCode(Long TagCode) {
+        this.TagCode = TagCode;
+    }
+
+    /**
+     * Get 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagMsg 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTagMsg() {
+        return this.TagMsg;
+    }
+
+    /**
+     * Set 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagMsg 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagMsg(String TagMsg) {
+        this.TagMsg = TagMsg;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -198,6 +254,8 @@ public class CreateKeyResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KeyState", this.KeyState);
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
+        this.setParamSimple(map, prefix + "TagCode", this.TagCode);
+        this.setParamSimple(map, prefix + "TagMsg", this.TagMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

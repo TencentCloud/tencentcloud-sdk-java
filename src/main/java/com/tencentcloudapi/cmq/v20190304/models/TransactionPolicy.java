@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TransactionPolicy extends AbstractModel{
 
     /**
-    * FirstQueryInterval
+    * 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstQueryInterval")
@@ -31,7 +31,7 @@ public class TransactionPolicy extends AbstractModel{
     private Long FirstQueryInterval;
 
     /**
-    * MaxQueryCount
+    * 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxQueryCount")
@@ -39,9 +39,9 @@ public class TransactionPolicy extends AbstractModel{
     private Long MaxQueryCount;
 
     /**
-     * Get FirstQueryInterval
+     * Get 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstQueryInterval FirstQueryInterval
+     * @return FirstQueryInterval 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirstQueryInterval() {
@@ -49,9 +49,9 @@ public class TransactionPolicy extends AbstractModel{
     }
 
     /**
-     * Set FirstQueryInterval
+     * Set 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstQueryInterval FirstQueryInterval
+     * @param FirstQueryInterval 第一次回查时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstQueryInterval(Long FirstQueryInterval) {
@@ -59,9 +59,9 @@ public class TransactionPolicy extends AbstractModel{
     }
 
     /**
-     * Get MaxQueryCount
+     * Get 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxQueryCount MaxQueryCount
+     * @return MaxQueryCount 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxQueryCount() {
@@ -69,9 +69,9 @@ public class TransactionPolicy extends AbstractModel{
     }
 
     /**
-     * Set MaxQueryCount
+     * Set 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxQueryCount MaxQueryCount
+     * @param MaxQueryCount 最大查询次数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxQueryCount(Long MaxQueryCount) {

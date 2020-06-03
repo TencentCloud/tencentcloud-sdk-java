@@ -44,6 +44,13 @@ public class CreateWhiteBoxKeyRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字。Alias不可重复。 
      * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字。Alias不可重复。
      */
@@ -92,12 +99,29 @@ public class CreateWhiteBoxKeyRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cmq.v20190304.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeQueueDetailResponse extends AbstractModel{
+public class ListAccessKeysResponse extends AbstractModel{
 
     /**
-    * 总队列数。
+    * 访问密钥列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("AccessKeys")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 队列详情列表。
-    */
-    @SerializedName("QueueSet")
-    @Expose
-    private QueueSet [] QueueSet;
+    private AccessKey [] AccessKeys;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeQueueDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总队列数。 
-     * @return TotalCount 总队列数。
+     * Get 访问密钥列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessKeys 访问密钥列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public AccessKey [] getAccessKeys() {
+        return this.AccessKeys;
     }
 
     /**
-     * Set 总队列数。
-     * @param TotalCount 总队列数。
+     * Set 访问密钥列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessKeys 访问密钥列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 队列详情列表。 
-     * @return QueueSet 队列详情列表。
-     */
-    public QueueSet [] getQueueSet() {
-        return this.QueueSet;
-    }
-
-    /**
-     * Set 队列详情列表。
-     * @param QueueSet 队列详情列表。
-     */
-    public void setQueueSet(QueueSet [] QueueSet) {
-        this.QueueSet = QueueSet;
+    public void setAccessKeys(AccessKey [] AccessKeys) {
+        this.AccessKeys = AccessKeys;
     }
 
     /**
@@ -95,8 +77,7 @@ public class DescribeQueueDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "QueueSet.", this.QueueSet);
+        this.setParamArrayObj(map, prefix + "AccessKeys.", this.AccessKeys);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

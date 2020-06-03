@@ -191,7 +191,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *校验证书并提取SSL证书中包含的域名，返回CDN已接入的域名列表，及已配置证书的域名列表
+     *DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
      * @param req DescribeCertDomainsRequest
      * @return DescribeCertDomainsResponse
      * @throws TencentCloudSDKException
@@ -245,7 +245,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *获取域名图片优化的当前配置，支持Webp、TPG、Guetzli 
+     *DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG 和 Guetzli。 
      * @param req DescribeImageConfigRequest
      * @return DescribeImageConfigResponse
      * @throws TencentCloudSDKException
@@ -797,7 +797,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *更新控制台图片优化的相关配置，支持Webp、TPG、Guetzli 
+     *UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 
      * @param req UpdateImageConfigRequest
      * @return UpdateImageConfigResponse
      * @throws TencentCloudSDKException

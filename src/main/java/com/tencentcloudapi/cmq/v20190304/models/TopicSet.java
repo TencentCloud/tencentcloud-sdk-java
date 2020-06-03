@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TopicSet extends AbstractModel{
 
     /**
-    * TopicId
+    * 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
@@ -31,7 +31,7 @@ public class TopicSet extends AbstractModel{
     private String TopicId;
 
     /**
-    * TopicName
+    * 主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
@@ -39,7 +39,7 @@ public class TopicSet extends AbstractModel{
     private String TopicName;
 
     /**
-    * MsgRetentionSeconds
+    * 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgRetentionSeconds")
@@ -47,7 +47,7 @@ public class TopicSet extends AbstractModel{
     private Long MsgRetentionSeconds;
 
     /**
-    * MaxMsgSize
+    * 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMsgSize")
@@ -55,7 +55,7 @@ public class TopicSet extends AbstractModel{
     private Long MaxMsgSize;
 
     /**
-    * Qps
+    * 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qps")
@@ -63,7 +63,9 @@ public class TopicSet extends AbstractModel{
     private Long Qps;
 
     /**
-    * FilterType
+    * 描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterType")
@@ -71,7 +73,7 @@ public class TopicSet extends AbstractModel{
     private Long FilterType;
 
     /**
-    * CreateTime
+    * 主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -79,7 +81,7 @@ public class TopicSet extends AbstractModel{
     private Long CreateTime;
 
     /**
-    * LastModifyTime
+    * 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifyTime")
@@ -87,7 +89,7 @@ public class TopicSet extends AbstractModel{
     private Long LastModifyTime;
 
     /**
-    * MsgCount
+    * 当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgCount")
@@ -95,7 +97,7 @@ public class TopicSet extends AbstractModel{
     private Long MsgCount;
 
     /**
-    * CreateUin
+    * 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUin")
@@ -103,7 +105,7 @@ public class TopicSet extends AbstractModel{
     private Long CreateUin;
 
     /**
-    * Tags
+    * 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -111,7 +113,7 @@ public class TopicSet extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 主题是否开启消息轨迹，true表示开启，false表示不开启
+    * 主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trace")
@@ -119,9 +121,9 @@ public class TopicSet extends AbstractModel{
     private Boolean Trace;
 
     /**
-     * Get TopicId
+     * Get 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId TopicId
+     * @return TopicId 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
@@ -129,9 +131,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set TopicId
+     * Set 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId TopicId
+     * @param TopicId 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
@@ -139,9 +141,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get TopicName
+     * Get 主题名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicName TopicName
+     * @return TopicName 主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
@@ -149,9 +151,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set TopicName
+     * Set 主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicName TopicName
+     * @param TopicName 主题名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
@@ -159,9 +161,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get MsgRetentionSeconds
+     * Get 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MsgRetentionSeconds MsgRetentionSeconds
+     * @return MsgRetentionSeconds 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgRetentionSeconds() {
@@ -169,9 +171,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set MsgRetentionSeconds
+     * Set 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MsgRetentionSeconds MsgRetentionSeconds
+     * @param MsgRetentionSeconds 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
@@ -179,9 +181,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get MaxMsgSize
+     * Get 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxMsgSize MaxMsgSize
+     * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMsgSize() {
@@ -189,9 +191,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set MaxMsgSize
+     * Set 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxMsgSize MaxMsgSize
+     * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
@@ -199,9 +201,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get Qps
+     * Get 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Qps Qps
+     * @return Qps 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQps() {
@@ -209,9 +211,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set Qps
+     * Set 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Qps Qps
+     * @param Qps 每秒钟发布消息的条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQps(Long Qps) {
@@ -219,9 +221,13 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get FilterType
+     * Get 描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FilterType FilterType
+     * @return FilterType 描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFilterType() {
@@ -229,9 +235,13 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set FilterType
+     * Set 描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FilterType FilterType
+     * @param FilterType 描述用户创建订阅时选择的过滤策略：
+FilterType = 1表示用户使用 FilterTag 标签过滤;
+FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterType(Long FilterType) {
@@ -239,9 +249,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get CreateTime
+     * Get 主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime CreateTime
+     * @return CreateTime 主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -249,9 +259,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set CreateTime
+     * Set 主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime CreateTime
+     * @param CreateTime 主题的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
@@ -259,9 +269,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get LastModifyTime
+     * Get 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastModifyTime LastModifyTime
+     * @return LastModifyTime 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifyTime() {
@@ -269,9 +279,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set LastModifyTime
+     * Set 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastModifyTime LastModifyTime
+     * @param LastModifyTime 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifyTime(Long LastModifyTime) {
@@ -279,9 +289,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get MsgCount
+     * Get 当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MsgCount MsgCount
+     * @return MsgCount 当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgCount() {
@@ -289,9 +299,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set MsgCount
+     * Set 当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MsgCount MsgCount
+     * @param MsgCount 当前该主题中消息数目（消息堆积数）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgCount(Long MsgCount) {
@@ -299,9 +309,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get CreateUin
+     * Get 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUin CreateUin
+     * @return CreateUin 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateUin() {
@@ -309,9 +319,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set CreateUin
+     * Set 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUin CreateUin
+     * @param CreateUin 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUin(Long CreateUin) {
@@ -319,9 +329,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get Tags
+     * Get 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags Tags
+     * @return Tags 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -329,9 +339,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set Tags
+     * Set 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags Tags
+     * @param Tags 关联的标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -339,9 +349,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Get 主题是否开启消息轨迹，true表示开启，false表示不开启
+     * Get 主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Trace 主题是否开启消息轨迹，true表示开启，false表示不开启
+     * @return Trace 主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTrace() {
@@ -349,9 +359,9 @@ public class TopicSet extends AbstractModel{
     }
 
     /**
-     * Set 主题是否开启消息轨迹，true表示开启，false表示不开启
+     * Set 主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Trace 主题是否开启消息轨迹，true表示开启，false表示不开启
+     * @param Trace 主题是否开启消息轨迹。true表示开启，false表示不开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrace(Boolean Trace) {

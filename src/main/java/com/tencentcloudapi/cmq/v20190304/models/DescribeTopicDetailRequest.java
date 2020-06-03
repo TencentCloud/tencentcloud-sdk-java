@@ -37,21 +37,21 @@ public class DescribeTopicDetailRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 目前只支持过滤TopicName ， 且只能填一个过滤值
+    * 目前只支持过滤TopicName ， 且只能填一个过滤值。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 标签匹配
+    * 标签匹配。
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 精确匹配TopicName
+    * 精确匹配TopicName。
     */
     @SerializedName("TopicName")
     @Expose
@@ -90,48 +90,48 @@ public class DescribeTopicDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 目前只支持过滤TopicName ， 且只能填一个过滤值 
-     * @return Filters 目前只支持过滤TopicName ， 且只能填一个过滤值
+     * Get 目前只支持过滤TopicName ， 且只能填一个过滤值。 
+     * @return Filters 目前只支持过滤TopicName ， 且只能填一个过滤值。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 目前只支持过滤TopicName ， 且只能填一个过滤值
-     * @param Filters 目前只支持过滤TopicName ， 且只能填一个过滤值
+     * Set 目前只支持过滤TopicName ， 且只能填一个过滤值。
+     * @param Filters 目前只支持过滤TopicName ， 且只能填一个过滤值。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 标签匹配 
-     * @return TagKey 标签匹配
+     * Get 标签匹配。 
+     * @return TagKey 标签匹配。
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标签匹配
-     * @param TagKey 标签匹配
+     * Set 标签匹配。
+     * @param TagKey 标签匹配。
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 精确匹配TopicName 
-     * @return TopicName 精确匹配TopicName
+     * Get 精确匹配TopicName。 
+     * @return TopicName 精确匹配TopicName。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 精确匹配TopicName
-     * @param TopicName 精确匹配TopicName
+     * Set 精确匹配TopicName。
+     * @param TopicName 精确匹配TopicName。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
