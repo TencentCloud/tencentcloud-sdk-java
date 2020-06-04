@@ -72,14 +72,14 @@ public class SelectedTableInfoNew extends AbstractModel{
     private Long ReservedVolume;
 
     /**
-    * 表格预留读QPS
+    * 表格预留读CU
     */
     @SerializedName("ReservedReadQps")
     @Expose
     private Long ReservedReadQps;
 
     /**
-    * 表格预留写QPS
+    * 表格预留写CU
     */
     @SerializedName("ReservedWriteQps")
     @Expose
@@ -233,32 +233,32 @@ public class SelectedTableInfoNew extends AbstractModel{
     }
 
     /**
-     * Get 表格预留读QPS 
-     * @return ReservedReadQps 表格预留读QPS
+     * Get 表格预留读CU 
+     * @return ReservedReadQps 表格预留读CU
      */
     public Long getReservedReadQps() {
         return this.ReservedReadQps;
     }
 
     /**
-     * Set 表格预留读QPS
-     * @param ReservedReadQps 表格预留读QPS
+     * Set 表格预留读CU
+     * @param ReservedReadQps 表格预留读CU
      */
     public void setReservedReadQps(Long ReservedReadQps) {
         this.ReservedReadQps = ReservedReadQps;
     }
 
     /**
-     * Get 表格预留写QPS 
-     * @return ReservedWriteQps 表格预留写QPS
+     * Get 表格预留写CU 
+     * @return ReservedWriteQps 表格预留写CU
      */
     public Long getReservedWriteQps() {
         return this.ReservedWriteQps;
     }
 
     /**
-     * Set 表格预留写QPS
-     * @param ReservedWriteQps 表格预留写QPS
+     * Set 表格预留写CU
+     * @param ReservedWriteQps 表格预留写CU
      */
     public void setReservedWriteQps(Long ReservedWriteQps) {
         this.ReservedWriteQps = ReservedWriteQps;

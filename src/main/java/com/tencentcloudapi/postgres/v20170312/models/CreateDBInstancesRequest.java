@@ -121,7 +121,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * 实例名
+    * 实例名(后续支持)
     */
     @SerializedName("Name")
     @Expose
@@ -352,16 +352,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例名 
-     * @return Name 实例名
+     * Get 实例名(后续支持) 
+     * @return Name 实例名(后续支持)
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名
-     * @param Name 实例名
+     * Set 实例名(后续支持)
+     * @param Name 实例名(后续支持)
      */
     public void setName(String Name) {
         this.Name = Name;

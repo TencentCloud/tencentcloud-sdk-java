@@ -113,7 +113,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     private Tag [] Tags;
 
     /**
-    * 主题是否开启消息轨迹。true表示开启，false表示不开启
+    * 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trace")
@@ -349,9 +349,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     }
 
     /**
-     * Get 主题是否开启消息轨迹。true表示开启，false表示不开启
+     * Get 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Trace 主题是否开启消息轨迹。true表示开启，false表示不开启
+     * @return Trace 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTrace() {
@@ -359,9 +359,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     }
 
     /**
-     * Set 主题是否开启消息轨迹。true表示开启，false表示不开启
+     * Set 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Trace 主题是否开启消息轨迹。true表示开启，false表示不开启
+     * @param Trace 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrace(Boolean Trace) {

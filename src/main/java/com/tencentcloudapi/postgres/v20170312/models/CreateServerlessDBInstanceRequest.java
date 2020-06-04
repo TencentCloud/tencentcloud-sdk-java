@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateServerlessDBInstanceRequest extends AbstractModel{
 
     /**
-    * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+    * 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
     */
     @SerializedName("Zone")
     @Expose
@@ -37,14 +37,14 @@ public class CreateServerlessDBInstanceRequest extends AbstractModel{
     private String DBInstanceName;
 
     /**
-    * PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
+    * PostgreSQL内核版本，目前只支持：10.4。
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
+    * PostgreSQL数据库字符集，目前支持UTF8。
     */
     @SerializedName("DBCharset")
     @Expose
@@ -72,16 +72,16 @@ public class CreateServerlessDBInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-     * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
-     * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Get 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2. 
+     * @return Zone 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @param Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Set 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
+     * @param Zone 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -104,32 +104,32 @@ public class CreateServerlessDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。 
-     * @return DBVersion PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
+     * Get PostgreSQL内核版本，目前只支持：10.4。 
+     * @return DBVersion PostgreSQL内核版本，目前只支持：10.4。
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
-     * @param DBVersion PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
+     * Set PostgreSQL内核版本，目前只支持：10.4。
+     * @param DBVersion PostgreSQL内核版本，目前只支持：10.4。
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
     }
 
     /**
-     * Get PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。 
-     * @return DBCharset PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
+     * Get PostgreSQL数据库字符集，目前支持UTF8。 
+     * @return DBCharset PostgreSQL数据库字符集，目前支持UTF8。
      */
     public String getDBCharset() {
         return this.DBCharset;
     }
 
     /**
-     * Set PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
-     * @param DBCharset PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
+     * Set PostgreSQL数据库字符集，目前支持UTF8。
+     * @param DBCharset PostgreSQL数据库字符集，目前支持UTF8。
      */
     public void setDBCharset(String DBCharset) {
         this.DBCharset = DBCharset;

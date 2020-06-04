@@ -51,7 +51,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
+    * 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
     */
     @SerializedName("Limit")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。 
-     * @return Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
+     * Get 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理） 
+     * @return Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
-     * @param Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
+     * Set 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
+     * @param Limit 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

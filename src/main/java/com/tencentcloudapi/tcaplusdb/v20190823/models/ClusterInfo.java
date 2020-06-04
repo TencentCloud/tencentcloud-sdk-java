@@ -44,7 +44,7 @@ public class ClusterInfo extends AbstractModel{
     private String Region;
 
     /**
-    * 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+    * 集群数据描述语言类型，如：`PROTO`,`TDR`
     */
     @SerializedName("IdlType")
     @Expose
@@ -170,16 +170,16 @@ public class ClusterInfo extends AbstractModel{
     }
 
     /**
-     * Get 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX` 
-     * @return IdlType 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+     * Get 集群数据描述语言类型，如：`PROTO`,`TDR` 
+     * @return IdlType 集群数据描述语言类型，如：`PROTO`,`TDR`
      */
     public String getIdlType() {
         return this.IdlType;
     }
 
     /**
-     * Set 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
-     * @param IdlType 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+     * Set 集群数据描述语言类型，如：`PROTO`,`TDR`
+     * @param IdlType 集群数据描述语言类型，如：`PROTO`,`TDR`
      */
     public void setIdlType(String IdlType) {
         this.IdlType = IdlType;

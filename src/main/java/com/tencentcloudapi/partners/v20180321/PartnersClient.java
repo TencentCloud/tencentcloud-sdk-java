@@ -146,6 +146,24 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *传入代客uin，查客户级别，客户审核状态，客户实名认证状态
+     * @param req DescribeAgentClientGradeRequest
+     * @return DescribeAgentClientGradeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentClientGradeResponse DescribeAgentClientGrade(DescribeAgentClientGradeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentClientGradeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentClientGradeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAgentClientGrade"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *代理商可查询自己名下待审核客户列表
      * @param req DescribeAgentClientsRequest
      * @return DescribeAgentClientsResponse

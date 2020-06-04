@@ -143,7 +143,7 @@ public class TableInfoNew extends AbstractModel{
     private Long ReservedVolume;
 
     /**
-    * 表格预留读QPS
+    * 表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReservedReadQps")
@@ -151,7 +151,7 @@ public class TableInfoNew extends AbstractModel{
     private Long ReservedReadQps;
 
     /**
-    * 表格预留写QPS
+    * 表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReservedWriteQps")
@@ -539,9 +539,9 @@ public class TableInfoNew extends AbstractModel{
     }
 
     /**
-     * Get 表格预留读QPS
+     * Get 表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReservedReadQps 表格预留读QPS
+     * @return ReservedReadQps 表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReservedReadQps() {
@@ -549,9 +549,9 @@ public class TableInfoNew extends AbstractModel{
     }
 
     /**
-     * Set 表格预留读QPS
+     * Set 表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReservedReadQps 表格预留读QPS
+     * @param ReservedReadQps 表格预留读CU
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReservedReadQps(Long ReservedReadQps) {
@@ -559,9 +559,9 @@ public class TableInfoNew extends AbstractModel{
     }
 
     /**
-     * Get 表格预留写QPS
+     * Get 表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReservedWriteQps 表格预留写QPS
+     * @return ReservedWriteQps 表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReservedWriteQps() {
@@ -569,9 +569,9 @@ public class TableInfoNew extends AbstractModel{
     }
 
     /**
-     * Set 表格预留写QPS
+     * Set 表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReservedWriteQps 表格预留写QPS
+     * @param ReservedWriteQps 表格预留写CU
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReservedWriteQps(Long ReservedWriteQps) {

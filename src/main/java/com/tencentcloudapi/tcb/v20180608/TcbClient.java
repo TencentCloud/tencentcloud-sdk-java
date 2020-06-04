@@ -110,6 +110,24 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *开通后付费资源
+     * @param req CreatePostpayPackageRequest
+     * @return CreatePostpayPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePostpayPackageResponse CreatePostpayPackage(CreatePostpayPackageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePostpayPackageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePostpayPackageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePostpayPackage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
      * @param req CreateStaticStoreRequest
      * @return CreateStaticStoreResponse
