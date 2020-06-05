@@ -64,6 +64,7 @@ public class CreatePostpayPackageRequest extends AbstractModel{
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
     */
     @SerializedName("EnvSource")
     @Expose
@@ -72,6 +73,7 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     /**
     * 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
     */
     @SerializedName("Channel")
     @Expose
@@ -169,11 +171,13 @@ public class CreatePostpayPackageRequest extends AbstractModel{
      * Get 环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>
-用法同CreateEnv接口的Source参数 
+用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。 
      * @return EnvSource 环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public String getEnvSource() {
         return this.EnvSource;
@@ -184,10 +188,12 @@ public class CreatePostpayPackageRequest extends AbstractModel{
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
      * @param EnvSource 环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
+和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public void setEnvSource(String EnvSource) {
         this.EnvSource = EnvSource;
@@ -195,9 +201,11 @@ public class CreatePostpayPackageRequest extends AbstractModel{
 
     /**
      * Get 如果envsource为miniapp, channel可以为ide或api;
-如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud 
+如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。 
      * @return Channel 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public String getChannel() {
         return this.Channel;
@@ -206,8 +214,10 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     /**
      * Set 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      * @param Channel 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;

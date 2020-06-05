@@ -44,6 +44,14 @@ public class DeviceTag extends AbstractModel{
     private String Value;
 
     /**
+    * 属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 属性名称 
      * @return Tag 属性名称
      */
@@ -92,12 +100,33 @@ public class DeviceTag extends AbstractModel{
     }
 
     /**
+     * Get 属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 属性描述名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

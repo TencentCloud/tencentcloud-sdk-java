@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetDeviceStateResponse extends AbstractModel{
+public class DescribeProductTasksResponse extends AbstractModel{
 
     /**
-    * 批量重置设备成功数
+    * 符合条件的任务总个数
     */
-    @SerializedName("SuccessCount")
+    @SerializedName("TotalCount")
     @Expose
-    private Long SuccessCount;
+    private Long TotalCount;
 
     /**
-    * 批量重置设备结果
+    * 任务详细信息列表
     */
-    @SerializedName("ResetDeviceResults")
+    @SerializedName("TaskInfos")
     @Expose
-    private ResetDeviceResult [] ResetDeviceResults;
+    private ProductTaskInfo [] TaskInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class ResetDeviceStateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量重置设备成功数 
-     * @return SuccessCount 批量重置设备成功数
+     * Get 符合条件的任务总个数 
+     * @return TotalCount 符合条件的任务总个数
      */
-    public Long getSuccessCount() {
-        return this.SuccessCount;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 批量重置设备成功数
-     * @param SuccessCount 批量重置设备成功数
+     * Set 符合条件的任务总个数
+     * @param TotalCount 符合条件的任务总个数
      */
-    public void setSuccessCount(Long SuccessCount) {
-        this.SuccessCount = SuccessCount;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 批量重置设备结果 
-     * @return ResetDeviceResults 批量重置设备结果
+     * Get 任务详细信息列表 
+     * @return TaskInfos 任务详细信息列表
      */
-    public ResetDeviceResult [] getResetDeviceResults() {
-        return this.ResetDeviceResults;
+    public ProductTaskInfo [] getTaskInfos() {
+        return this.TaskInfos;
     }
 
     /**
-     * Set 批量重置设备结果
-     * @param ResetDeviceResults 批量重置设备结果
+     * Set 任务详细信息列表
+     * @param TaskInfos 任务详细信息列表
      */
-    public void setResetDeviceResults(ResetDeviceResult [] ResetDeviceResults) {
-        this.ResetDeviceResults = ResetDeviceResults;
+    public void setTaskInfos(ProductTaskInfo [] TaskInfos) {
+        this.TaskInfos = TaskInfos;
     }
 
     /**
@@ -95,8 +95,8 @@ public class ResetDeviceStateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
-        this.setParamArrayObj(map, prefix + "ResetDeviceResults.", this.ResetDeviceResults);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TaskInfos.", this.TaskInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

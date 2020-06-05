@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetDeviceStateResponse extends AbstractModel{
+public class CreateMultiDevicesTaskResponse extends AbstractModel{
 
     /**
-    * 批量重置设备成功数
+    * 任务ID
     */
-    @SerializedName("SuccessCount")
+    @SerializedName("Id")
     @Expose
-    private Long SuccessCount;
-
-    /**
-    * 批量重置设备结果
-    */
-    @SerializedName("ResetDeviceResults")
-    @Expose
-    private ResetDeviceResult [] ResetDeviceResults;
+    private Long Id;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class ResetDeviceStateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量重置设备成功数 
-     * @return SuccessCount 批量重置设备成功数
+     * Get 任务ID 
+     * @return Id 任务ID
      */
-    public Long getSuccessCount() {
-        return this.SuccessCount;
+    public Long getId() {
+        return this.Id;
     }
 
     /**
-     * Set 批量重置设备成功数
-     * @param SuccessCount 批量重置设备成功数
+     * Set 任务ID
+     * @param Id 任务ID
      */
-    public void setSuccessCount(Long SuccessCount) {
-        this.SuccessCount = SuccessCount;
-    }
-
-    /**
-     * Get 批量重置设备结果 
-     * @return ResetDeviceResults 批量重置设备结果
-     */
-    public ResetDeviceResult [] getResetDeviceResults() {
-        return this.ResetDeviceResults;
-    }
-
-    /**
-     * Set 批量重置设备结果
-     * @param ResetDeviceResults 批量重置设备结果
-     */
-    public void setResetDeviceResults(ResetDeviceResult [] ResetDeviceResults) {
-        this.ResetDeviceResults = ResetDeviceResults;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     /**
@@ -95,8 +72,7 @@ public class ResetDeviceStateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
-        this.setParamArrayObj(map, prefix + "ResetDeviceResults.", this.ResetDeviceResults);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

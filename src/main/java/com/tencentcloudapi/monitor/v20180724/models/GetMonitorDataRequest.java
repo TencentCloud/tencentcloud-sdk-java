@@ -30,7 +30,7 @@ public class GetMonitorDataRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
+    * 指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
     */
     @SerializedName("MetricName")
     @Expose
@@ -81,16 +81,16 @@ public class GetMonitorDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档 
-     * @return MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
+     * Get 指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档 
+     * @return MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
-     * @param MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
+     * Set 指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
+     * @param MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

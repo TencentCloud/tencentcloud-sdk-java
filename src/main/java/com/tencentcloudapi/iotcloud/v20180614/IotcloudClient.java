@@ -128,6 +128,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateMultiDevicesTask）用于创建产品级别的批量创建设备任务
+     * @param req CreateMultiDevicesTaskRequest
+     * @return CreateMultiDevicesTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiDevicesTaskResponse CreateMultiDevicesTask(CreateMultiDevicesTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMultiDevicesTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMultiDevicesTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateMultiDevicesTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateProduct）用于创建一个新的物联网通信产品 
      * @param req CreateProductRequest
      * @return CreateProductResponse
@@ -157,6 +175,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTaskResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateTaskFileUrl）用于获取产品级任务文件上传链接
+     * @param req CreateTaskFileUrlRequest
+     * @return CreateTaskFileUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFileUrlResponse CreateTaskFileUrl(CreateTaskFileUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTaskFileUrlResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTaskFileUrlResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTaskFileUrl"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -272,7 +308,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDevice）用于查看设备信息 
+     *本接口（DescribeDevice）用于查看设备信息
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse
      * @throws TencentCloudSDKException
@@ -391,6 +427,42 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMultiDevicesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMultiDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeProductTask）用于查看产品级别的任务信息
+     * @param req DescribeProductTaskRequest
+     * @return DescribeProductTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductTaskResponse DescribeProductTask(DescribeProductTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProductTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProductTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProductTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeProductTasks）用于查看产品级别的任务列表
+     * @param req DescribeProductTasksRequest
+     * @return DescribeProductTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductTasksResponse DescribeProductTasks(DescribeProductTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProductTasksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProductTasksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProductTasks"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

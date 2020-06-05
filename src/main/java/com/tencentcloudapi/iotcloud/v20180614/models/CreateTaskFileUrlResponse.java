@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetDeviceStateResponse extends AbstractModel{
+public class CreateTaskFileUrlResponse extends AbstractModel{
 
     /**
-    * 批量重置设备成功数
+    * 任务文件上传链接
     */
-    @SerializedName("SuccessCount")
+    @SerializedName("Url")
     @Expose
-    private Long SuccessCount;
+    private String Url;
 
     /**
-    * 批量重置设备结果
+    * 任务文件名
     */
-    @SerializedName("ResetDeviceResults")
+    @SerializedName("FileName")
     @Expose
-    private ResetDeviceResult [] ResetDeviceResults;
+    private String FileName;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class ResetDeviceStateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量重置设备成功数 
-     * @return SuccessCount 批量重置设备成功数
+     * Get 任务文件上传链接 
+     * @return Url 任务文件上传链接
      */
-    public Long getSuccessCount() {
-        return this.SuccessCount;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set 批量重置设备成功数
-     * @param SuccessCount 批量重置设备成功数
+     * Set 任务文件上传链接
+     * @param Url 任务文件上传链接
      */
-    public void setSuccessCount(Long SuccessCount) {
-        this.SuccessCount = SuccessCount;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
-     * Get 批量重置设备结果 
-     * @return ResetDeviceResults 批量重置设备结果
+     * Get 任务文件名 
+     * @return FileName 任务文件名
      */
-    public ResetDeviceResult [] getResetDeviceResults() {
-        return this.ResetDeviceResults;
+    public String getFileName() {
+        return this.FileName;
     }
 
     /**
-     * Set 批量重置设备结果
-     * @param ResetDeviceResults 批量重置设备结果
+     * Set 任务文件名
+     * @param FileName 任务文件名
      */
-    public void setResetDeviceResults(ResetDeviceResult [] ResetDeviceResults) {
-        this.ResetDeviceResults = ResetDeviceResults;
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
     }
 
     /**
@@ -95,8 +95,8 @@ public class ResetDeviceStateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
-        this.setParamArrayObj(map, prefix + "ResetDeviceResults.", this.ResetDeviceResults);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

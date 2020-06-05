@@ -110,6 +110,16 @@ public class SearchMediaRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+    */
+    @SerializedName("Categories")
+    @Expose
+    private String [] Categories;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
@@ -333,6 +343,34 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li> 
+     * @return Categories 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public String [] getCategories() {
+        return this.Categories;
+    }
+
+    /**
+     * Set 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     * @param Categories 文件类型：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public void setCategories(String [] Categories) {
+        this.Categories = Categories;
+    }
+
+    /**
      * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
@@ -363,6 +401,7 @@ public class SearchMediaRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
