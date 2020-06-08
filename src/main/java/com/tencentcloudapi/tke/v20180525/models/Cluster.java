@@ -124,7 +124,7 @@ public class Cluster extends AbstractModel{
     private String ImageId;
 
     /**
-    * OsCustomizeType
+    * OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsCustomizeType")
@@ -146,6 +146,14 @@ public class Cluster extends AbstractModel{
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
+
+    /**
+    * 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
 
     /**
      * Get 集群ID 
@@ -384,9 +392,9 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Get OsCustomizeType
+     * Get OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OsCustomizeType OsCustomizeType
+     * @return OsCustomizeType OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOsCustomizeType() {
@@ -394,9 +402,9 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Set OsCustomizeType
+     * Set OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OsCustomizeType OsCustomizeType
+     * @param OsCustomizeType OsCustomizeType 系统定制类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsCustomizeType(String OsCustomizeType) {
@@ -444,6 +452,26 @@ public class Cluster extends AbstractModel{
     }
 
     /**
+     * Get 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeletionProtection 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeletionProtection 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -464,6 +492,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }
