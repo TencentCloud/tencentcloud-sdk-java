@@ -23,14 +23,6 @@ import java.util.HashMap;
 public class LaneGroup extends AbstractModel{
 
     /**
-    * 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LaneId")
-    @Expose
-    private String LaneId;
-
-    /**
     * 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -53,6 +45,14 @@ public class LaneGroup extends AbstractModel{
     @SerializedName("LaneGroupId")
     @Expose
     private String LaneGroupId;
+
+    /**
+    * 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LaneId")
+    @Expose
+    private String LaneId;
 
     /**
     * 部署组名
@@ -119,26 +119,6 @@ public class LaneGroup extends AbstractModel{
     private String ClusterType;
 
     /**
-     * Get 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LaneId 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getLaneId() {
-        return this.LaneId;
-    }
-
-    /**
-     * Set 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LaneId 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLaneId(String LaneId) {
-        this.LaneId = LaneId;
-    }
-
-    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -196,6 +176,26 @@ public class LaneGroup extends AbstractModel{
      */
     public void setLaneGroupId(String LaneGroupId) {
         this.LaneGroupId = LaneGroupId;
+    }
+
+    /**
+     * Get 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LaneId 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLaneId() {
+        return this.LaneId;
+    }
+
+    /**
+     * Set 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LaneId 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLaneId(String LaneId) {
+        this.LaneId = LaneId;
     }
 
     /**
@@ -362,10 +362,10 @@ public class LaneGroup extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LaneId", this.LaneId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Entrance", this.Entrance);
         this.setParamSimple(map, prefix + "LaneGroupId", this.LaneGroupId);
+        this.setParamSimple(map, prefix + "LaneId", this.LaneId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);

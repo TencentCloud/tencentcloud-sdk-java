@@ -121,7 +121,16 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     private ModelArtifacts ModelArtifacts;
 
     /**
-    * 详细状态
+    * 详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
     */
     @SerializedName("SecondaryStatus")
     @Expose
@@ -144,7 +153,12 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     private String RoleName;
 
     /**
-    * 任务状态
+    * 训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
     */
     @SerializedName("TrainingJobStatus")
     @Expose
@@ -394,16 +408,52 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     }
 
     /**
-     * Get 详细状态 
-     * @return SecondaryStatus 详细状态
+     * Get 详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止 
+     * @return SecondaryStatus 详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
      */
     public String getSecondaryStatus() {
         return this.SecondaryStatus;
     }
 
     /**
-     * Set 详细状态
-     * @param SecondaryStatus 详细状态
+     * Set 详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
+     * @param SecondaryStatus 详细状态，取值范围
+Starting：启动中
+Downloading: 准备训练数据
+Training: 正在训练
+Uploading: 上传训练结果
+Completed：已完成
+Failed: 失败
+MaxRuntimeExceeded: 任务超过最大运行时间
+Stopping: 停止中
+Stopped：已停止
      */
     public void setSecondaryStatus(String SecondaryStatus) {
         this.SecondaryStatus = SecondaryStatus;
@@ -450,16 +500,36 @@ public class DescribeTrainingJobResponse extends AbstractModel{
     }
 
     /**
-     * Get 任务状态 
-     * @return TrainingJobStatus 任务状态
+     * Get 训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止 
+     * @return TrainingJobStatus 训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
      */
     public String getTrainingJobStatus() {
         return this.TrainingJobStatus;
     }
 
     /**
-     * Set 任务状态
-     * @param TrainingJobStatus 任务状态
+     * Set 训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
+     * @param TrainingJobStatus 训练任务状态，取值范围
+InProgress：运行中
+Completed: 已完成
+Failed: 失败
+Stopping: 停止中
+Stopped：已停止
      */
     public void setTrainingJobStatus(String TrainingJobStatus) {
         this.TrainingJobStatus = TrainingJobStatus;

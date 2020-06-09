@@ -30,7 +30,7 @@ public class ReqParameter extends AbstractModel{
     private String Name;
 
     /**
-    * API 的前端参数位置，如 head。目前支持 head、qurey、path。
+    * API 的前端参数位置，如 head。目前支持 head、query、path。
     */
     @SerializedName("Position")
     @Expose
@@ -81,16 +81,16 @@ public class ReqParameter extends AbstractModel{
     }
 
     /**
-     * Get API 的前端参数位置，如 head。目前支持 head、qurey、path。 
-     * @return Position API 的前端参数位置，如 head。目前支持 head、qurey、path。
+     * Get API 的前端参数位置，如 head。目前支持 head、query、path。 
+     * @return Position API 的前端参数位置，如 head。目前支持 head、query、path。
      */
     public String getPosition() {
         return this.Position;
     }
 
     /**
-     * Set API 的前端参数位置，如 head。目前支持 head、qurey、path。
-     * @param Position API 的前端参数位置，如 head。目前支持 head、qurey、path。
+     * Set API 的前端参数位置，如 head。目前支持 head、query、path。
+     * @param Position API 的前端参数位置，如 head。目前支持 head、query、path。
      */
     public void setPosition(String Position) {
         this.Position = Position;

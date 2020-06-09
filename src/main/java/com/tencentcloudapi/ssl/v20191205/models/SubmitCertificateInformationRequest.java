@@ -135,14 +135,14 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String VerifyType;
 
     /**
-    * 管理人姓。
+    * 管理人名。
     */
     @SerializedName("AdminFirstName")
     @Expose
     private String AdminFirstName;
 
     /**
-    * 管理人名。
+    * 管理人姓。
     */
     @SerializedName("AdminLastName")
     @Expose
@@ -170,14 +170,14 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String AdminPosition;
 
     /**
-    * 联系人姓。
+    * 联系人名。
     */
     @SerializedName("ContactFirstName")
     @Expose
     private String ContactFirstName;
 
     /**
-    * 联系人名。
+    * 联系人姓。
     */
     @SerializedName("ContactLastName")
     @Expose
@@ -461,32 +461,32 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 管理人姓。 
-     * @return AdminFirstName 管理人姓。
+     * Get 管理人名。 
+     * @return AdminFirstName 管理人名。
      */
     public String getAdminFirstName() {
         return this.AdminFirstName;
     }
 
     /**
-     * Set 管理人姓。
-     * @param AdminFirstName 管理人姓。
+     * Set 管理人名。
+     * @param AdminFirstName 管理人名。
      */
     public void setAdminFirstName(String AdminFirstName) {
         this.AdminFirstName = AdminFirstName;
     }
 
     /**
-     * Get 管理人名。 
-     * @return AdminLastName 管理人名。
+     * Get 管理人姓。 
+     * @return AdminLastName 管理人姓。
      */
     public String getAdminLastName() {
         return this.AdminLastName;
     }
 
     /**
-     * Set 管理人名。
-     * @param AdminLastName 管理人名。
+     * Set 管理人姓。
+     * @param AdminLastName 管理人姓。
      */
     public void setAdminLastName(String AdminLastName) {
         this.AdminLastName = AdminLastName;
@@ -541,32 +541,32 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 联系人姓。 
-     * @return ContactFirstName 联系人姓。
+     * Get 联系人名。 
+     * @return ContactFirstName 联系人名。
      */
     public String getContactFirstName() {
         return this.ContactFirstName;
     }
 
     /**
-     * Set 联系人姓。
-     * @param ContactFirstName 联系人姓。
+     * Set 联系人名。
+     * @param ContactFirstName 联系人名。
      */
     public void setContactFirstName(String ContactFirstName) {
         this.ContactFirstName = ContactFirstName;
     }
 
     /**
-     * Get 联系人名。 
-     * @return ContactLastName 联系人名。
+     * Get 联系人姓。 
+     * @return ContactLastName 联系人姓。
      */
     public String getContactLastName() {
         return this.ContactLastName;
     }
 
     /**
-     * Set 联系人名。
-     * @param ContactLastName 联系人名。
+     * Set 联系人姓。
+     * @param ContactLastName 联系人姓。
      */
     public void setContactLastName(String ContactLastName) {
         this.ContactLastName = ContactLastName;
