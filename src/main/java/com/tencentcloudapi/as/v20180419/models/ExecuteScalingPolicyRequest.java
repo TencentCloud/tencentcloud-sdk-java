@@ -37,6 +37,13 @@ public class ExecuteScalingPolicyRequest extends AbstractModel{
     private Boolean HonorCooldown;
 
     /**
+    * 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+    */
+    @SerializedName("TriggerSource")
+    @Expose
+    private String TriggerSource;
+
+    /**
      * Get 告警伸缩策略ID 
      * @return AutoScalingPolicyId 告警伸缩策略ID
      */
@@ -69,11 +76,28 @@ public class ExecuteScalingPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。 
+     * @return TriggerSource 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+     */
+    public String getTriggerSource() {
+        return this.TriggerSource;
+    }
+
+    /**
+     * Set 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+     * @param TriggerSource 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+     */
+    public void setTriggerSource(String TriggerSource) {
+        this.TriggerSource = TriggerSource;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingPolicyId", this.AutoScalingPolicyId);
         this.setParamSimple(map, prefix + "HonorCooldown", this.HonorCooldown);
+        this.setParamSimple(map, prefix + "TriggerSource", this.TriggerSource);
 
     }
 }

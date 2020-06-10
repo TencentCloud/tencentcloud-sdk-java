@@ -86,6 +86,13 @@ public class RegisterBillSupportWithdrawRequest extends AbstractModel{
     private String ReservedMsgThree;
 
     /**
+    * STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
      * Get STRING(32)，交易网会员代码 
      * @return TranNetMemberCode STRING(32)，交易网会员代码
      */
@@ -230,6 +237,22 @@ public class RegisterBillSupportWithdrawRequest extends AbstractModel{
     }
 
     /**
+     * Get STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod" 
+     * @return Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @param Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class RegisterBillSupportWithdrawRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReservedMsgOne", this.ReservedMsgOne);
         this.setParamSimple(map, prefix + "ReservedMsgTwo", this.ReservedMsgTwo);
         this.setParamSimple(map, prefix + "ReservedMsgThree", this.ReservedMsgThree);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

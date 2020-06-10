@@ -107,6 +107,13 @@ public class FunctionLog extends AbstractModel{
     private String Source;
 
     /**
+    * 重试次数
+    */
+    @SerializedName("RetryNum")
+    @Expose
+    private Long RetryNum;
+
+    /**
      * Get 函数的名称 
      * @return FunctionName 函数的名称
      */
@@ -299,6 +306,22 @@ public class FunctionLog extends AbstractModel{
     }
 
     /**
+     * Get 重试次数 
+     * @return RetryNum 重试次数
+     */
+    public Long getRetryNum() {
+        return this.RetryNum;
+    }
+
+    /**
+     * Set 重试次数
+     * @param RetryNum 重试次数
+     */
+    public void setRetryNum(Long RetryNum) {
+        this.RetryNum = RetryNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class FunctionLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Log", this.Log);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "RetryNum", this.RetryNum);
 
     }
 }

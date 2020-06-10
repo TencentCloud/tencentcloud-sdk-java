@@ -227,6 +227,14 @@ public class DirectConnect extends AbstractModel{
     private String ChargeState;
 
     /**
+    * 物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -731,6 +739,26 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
+     * Get 物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -760,6 +788,7 @@ public class DirectConnect extends AbstractModel{
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         this.setParamSimple(map, prefix + "IdcCity", this.IdcCity);
         this.setParamSimple(map, prefix + "ChargeState", this.ChargeState);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
 
     }
 }

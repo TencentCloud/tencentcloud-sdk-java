@@ -86,7 +86,7 @@ public class Subnet extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * 可用`IP`数。
+    * 可用`IPv4`数。
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
@@ -114,7 +114,7 @@ public class Subnet extends AbstractModel{
     private Boolean IsRemoteVpcSnat;
 
     /**
-    * 子网`IP`总数。
+    * 子网`IPv4`总数。
     */
     @SerializedName("TotalIpAddressCount")
     @Expose
@@ -272,16 +272,16 @@ public class Subnet extends AbstractModel{
     }
 
     /**
-     * Get 可用`IP`数。 
-     * @return AvailableIpAddressCount 可用`IP`数。
+     * Get 可用`IPv4`数。 
+     * @return AvailableIpAddressCount 可用`IPv4`数。
      */
     public Long getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
     }
 
     /**
-     * Set 可用`IP`数。
-     * @param AvailableIpAddressCount 可用`IP`数。
+     * Set 可用`IPv4`数。
+     * @param AvailableIpAddressCount 可用`IPv4`数。
      */
     public void setAvailableIpAddressCount(Long AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
@@ -336,16 +336,16 @@ public class Subnet extends AbstractModel{
     }
 
     /**
-     * Get 子网`IP`总数。 
-     * @return TotalIpAddressCount 子网`IP`总数。
+     * Get 子网`IPv4`总数。 
+     * @return TotalIpAddressCount 子网`IPv4`总数。
      */
     public Long getTotalIpAddressCount() {
         return this.TotalIpAddressCount;
     }
 
     /**
-     * Set 子网`IP`总数。
-     * @param TotalIpAddressCount 子网`IP`总数。
+     * Set 子网`IPv4`总数。
+     * @param TotalIpAddressCount 子网`IPv4`总数。
      */
     public void setTotalIpAddressCount(Long TotalIpAddressCount) {
         this.TotalIpAddressCount = TotalIpAddressCount;

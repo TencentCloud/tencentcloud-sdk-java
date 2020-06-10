@@ -542,7 +542,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（EnableTopicRule）用于启用规则
+     *本接口（EnableTopicRule）用于启用规则 
      * @param req EnableTopicRuleRequest
      * @return EnableTopicRuleResponse
      * @throws TencentCloudSDKException

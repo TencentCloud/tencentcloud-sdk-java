@@ -58,6 +58,13 @@ public class QueryCustAcctIdBalanceRequest extends AbstractModel{
     private String ReservedMsg;
 
     /**
+    * STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+    */
+    @SerializedName("Profile")
+    @Expose
+    private String Profile;
+
+    /**
      * Get String(22)，商户号（签约客户号） 
      * @return MrchCode String(22)，商户号（签约客户号）
      */
@@ -138,6 +145,22 @@ public class QueryCustAcctIdBalanceRequest extends AbstractModel{
     }
 
     /**
+     * Get STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod" 
+     * @return Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public String getProfile() {
+        return this.Profile;
+    }
+
+    /**
+     * Set STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @param Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     */
+    public void setProfile(String Profile) {
+        this.Profile = Profile;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class QueryCustAcctIdBalanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
         this.setParamSimple(map, prefix + "ReservedMsg", this.ReservedMsg);
+        this.setParamSimple(map, prefix + "Profile", this.Profile);
 
     }
 }

@@ -30,14 +30,16 @@ public class UpdateNotebookLifecycleScriptRequest extends AbstractModel{
     private String NotebookLifecycleScriptsName;
 
     /**
-    * 创建脚本
+    * 创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
     */
     @SerializedName("CreateScript")
     @Expose
     private String CreateScript;
 
     /**
-    * 启动脚本
+    * 启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
     */
     @SerializedName("StartScript")
     @Expose
@@ -60,32 +62,40 @@ public class UpdateNotebookLifecycleScriptRequest extends AbstractModel{
     }
 
     /**
-     * Get 创建脚本 
-     * @return CreateScript 创建脚本
+     * Get 创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符 
+     * @return CreateScript 创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
      */
     public String getCreateScript() {
         return this.CreateScript;
     }
 
     /**
-     * Set 创建脚本
-     * @param CreateScript 创建脚本
+     * Set 创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
+     * @param CreateScript 创建脚本，base64编码
+base64后的脚本长度不能超过16384个字符
      */
     public void setCreateScript(String CreateScript) {
         this.CreateScript = CreateScript;
     }
 
     /**
-     * Get 启动脚本 
-     * @return StartScript 启动脚本
+     * Get 启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符 
+     * @return StartScript 启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
      */
     public String getStartScript() {
         return this.StartScript;
     }
 
     /**
-     * Set 启动脚本
-     * @param StartScript 启动脚本
+     * Set 启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
+     * @param StartScript 启动脚本，base64编码
+base64后的脚本长度不能超过16384个字符
      */
     public void setStartScript(String StartScript) {
         this.StartScript = StartScript;

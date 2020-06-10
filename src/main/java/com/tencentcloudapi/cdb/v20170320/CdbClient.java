@@ -128,6 +128,60 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+     * @param req CreateAuditLogFileRequest
+     * @return CreateAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditLogFileResponse CreateAuditLogFile(CreateAuditLogFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuditLogFileResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuditLogFileResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAuditLogFile"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(CreateAuditPolicy)用于创建云数据库实例的审计策略，即将审计规则绑定到具体的云数据库实例上。
+     * @param req CreateAuditPolicyRequest
+     * @return CreateAuditPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditPolicyResponse CreateAuditPolicy(CreateAuditPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuditPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuditPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAuditPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
+     * @param req CreateAuditRuleRequest
+     * @return CreateAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditRuleResponse CreateAuditRule(CreateAuditRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuditRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuditRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAuditRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateBackup)用于创建数据库备份。
      * @param req CreateBackupRequest
      * @return CreateBackupResponse
@@ -272,6 +326,60 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+     * @param req DeleteAuditLogFileRequest
+     * @return DeleteAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditLogFileResponse DeleteAuditLogFile(DeleteAuditLogFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAuditLogFileResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAuditLogFileResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAuditLogFile"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DeleteAuditPolicy)用于删除用户的审计策略。
+     * @param req DeleteAuditPolicyRequest
+     * @return DeleteAuditPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditPolicyResponse DeleteAuditPolicy(DeleteAuditPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAuditPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAuditPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAuditPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DeleteAuditRule)用于删除用户的审计规则。
+     * @param req DeleteAuditRuleRequest
+     * @return DeleteAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditRuleResponse DeleteAuditRule(DeleteAuditRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAuditRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAuditRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAuditRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
      * @param req DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -391,6 +499,78 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeAsyncRequestInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
+     * @param req DescribeAuditConfigRequest
+     * @return DescribeAuditConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditConfigResponse DescribeAuditConfig(DescribeAuditConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAuditConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+     * @param req DescribeAuditLogFilesRequest
+     * @return DescribeAuditLogFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditLogFilesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditLogFilesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAuditLogFiles"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeAuditPolicies)用于查询云数据库实例的审计策略。
+     * @param req DescribeAuditPoliciesRequest
+     * @return DescribeAuditPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditPoliciesResponse DescribeAuditPolicies(DescribeAuditPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAuditPolicies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
+     * @param req DescribeAuditRulesRequest
+     * @return DescribeAuditRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRulesResponse DescribeAuditRules(DescribeAuditRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAuditRules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1264,6 +1444,42 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountPrivilegesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAccountPrivileges"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyAuditConfig)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
+     * @param req ModifyAuditConfigRequest
+     * @return ModifyAuditConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditConfigResponse ModifyAuditConfig(ModifyAuditConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAuditConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAuditConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAuditConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyAuditRule)用于修改用户的审计规则。
+     * @param req ModifyAuditRuleRequest
+     * @return ModifyAuditRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditRuleResponse ModifyAuditRule(ModifyAuditRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAuditRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAuditRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAuditRule"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
