@@ -51,6 +51,13 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
+    * 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+    */
+    @SerializedName("AccessRegionSet")
+    @Expose
+    private AccessConfiguration [] AccessRegionSet;
+
+    /**
      * Get 通道组所属项目ID 
      * @return ProjectId 通道组所属项目ID
      */
@@ -115,6 +122,22 @@ public class CreateProxyGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。 
+     * @return AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+     */
+    public AccessConfiguration [] getAccessRegionSet() {
+        return this.AccessRegionSet;
+    }
+
+    /**
+     * Set 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+     * @param AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+     */
+    public void setAccessRegionSet(AccessConfiguration [] AccessRegionSet) {
+        this.AccessRegionSet = AccessRegionSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
 
     }
 }

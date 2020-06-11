@@ -37,6 +37,13 @@ public class ModifyProxyGroupAttributeRequest extends AbstractModel{
     private String GroupName;
 
     /**
+    * 项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 需要修改的通道组ID。 
      * @return GroupId 需要修改的通道组ID。
      */
@@ -69,11 +76,28 @@ public class ModifyProxyGroupAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 项目ID 
+     * @return ProjectId 项目ID
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ProjectId 项目ID
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

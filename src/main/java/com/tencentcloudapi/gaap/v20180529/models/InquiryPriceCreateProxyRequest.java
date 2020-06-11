@@ -65,7 +65,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private Long Concurrent;
 
     /**
-    * 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+    * 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
     */
     @SerializedName("BillingType")
     @Expose
@@ -168,16 +168,16 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费） 
-     * @return BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * Get 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费 
+     * @return BillingType 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
      */
     public Long getBillingType() {
         return this.BillingType;
     }
 
     /**
-     * Set 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
-     * @param BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * Set 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
+     * @param BillingType 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
      */
     public void setBillingType(Long BillingType) {
         this.BillingType = BillingType;

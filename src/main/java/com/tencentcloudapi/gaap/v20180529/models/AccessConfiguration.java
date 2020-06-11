@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckProxyCreateRequest extends AbstractModel{
+public class AccessConfiguration extends AbstractModel{
 
     /**
-    * 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+    * 加速地域。
     */
     @SerializedName("AccessRegion")
     @Expose
     private String AccessRegion;
-
-    /**
-    * 通道的源站区域。取值可通过接口DescribeDestRegions获取到
-    */
-    @SerializedName("RealServerRegion")
-    @Expose
-    private String RealServerRegion;
 
     /**
     * 通道带宽上限，单位：Mbps。
@@ -51,42 +44,19 @@ public class CheckProxyCreateRequest extends AbstractModel{
     private Long Concurrent;
 
     /**
-    * 如果在通道组下创建通道，需要填写通道组的ID
-    */
-    @SerializedName("GroupId")
-    @Expose
-    private String GroupId;
-
-    /**
-     * Get 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到 
-     * @return AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * Get 加速地域。 
+     * @return AccessRegion 加速地域。
      */
     public String getAccessRegion() {
         return this.AccessRegion;
     }
 
     /**
-     * Set 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
-     * @param AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * Set 加速地域。
+     * @param AccessRegion 加速地域。
      */
     public void setAccessRegion(String AccessRegion) {
         this.AccessRegion = AccessRegion;
-    }
-
-    /**
-     * Get 通道的源站区域。取值可通过接口DescribeDestRegions获取到 
-     * @return RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
-     */
-    public String getRealServerRegion() {
-        return this.RealServerRegion;
-    }
-
-    /**
-     * Set 通道的源站区域。取值可通过接口DescribeDestRegions获取到
-     * @param RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
-     */
-    public void setRealServerRegion(String RealServerRegion) {
-        this.RealServerRegion = RealServerRegion;
     }
 
     /**
@@ -122,30 +92,12 @@ public class CheckProxyCreateRequest extends AbstractModel{
     }
 
     /**
-     * Get 如果在通道组下创建通道，需要填写通道组的ID 
-     * @return GroupId 如果在通道组下创建通道，需要填写通道组的ID
-     */
-    public String getGroupId() {
-        return this.GroupId;
-    }
-
-    /**
-     * Set 如果在通道组下创建通道，需要填写通道组的ID
-     * @param GroupId 如果在通道组下创建通道，需要填写通道组的ID
-     */
-    public void setGroupId(String GroupId) {
-        this.GroupId = GroupId;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
-        this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
-        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

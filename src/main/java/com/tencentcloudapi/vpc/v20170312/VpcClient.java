@@ -2868,6 +2868,24 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（GetCcnRegionBandwidthLimits）用于查询云联网相关地域带宽信息，其中预付费模式的云联网仅支持地域间限速，后付费模式的云联网支持地域间限速和地域出口限速。
+     * @param req GetCcnRegionBandwidthLimitsRequest
+     * @return GetCcnRegionBandwidthLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCcnRegionBandwidthLimitsResponse GetCcnRegionBandwidthLimits(GetCcnRegionBandwidthLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCcnRegionBandwidthLimitsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCcnRegionBandwidthLimitsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetCcnRegionBandwidthLimits"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
      * @param req HaVipAssociateAddressIpRequest

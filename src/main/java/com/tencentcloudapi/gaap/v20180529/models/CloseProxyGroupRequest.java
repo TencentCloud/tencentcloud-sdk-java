@@ -20,60 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseSecurityPolicyRequest extends AbstractModel{
+public class CloseProxyGroupRequest extends AbstractModel{
 
     /**
-    * 通道ID
+    * 通道组的实例 ID。
     */
-    @SerializedName("ProxyId")
+    @SerializedName("GroupId")
     @Expose
-    private String ProxyId;
+    private String GroupId;
 
     /**
-    * 安全组策略ID
-    */
-    @SerializedName("PolicyId")
-    @Expose
-    private String PolicyId;
-
-    /**
-     * Get 通道ID 
-     * @return ProxyId 通道ID
+     * Get 通道组的实例 ID。 
+     * @return GroupId 通道组的实例 ID。
      */
-    public String getProxyId() {
-        return this.ProxyId;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set 通道ID
-     * @param ProxyId 通道ID
+     * Set 通道组的实例 ID。
+     * @param GroupId 通道组的实例 ID。
      */
-    public void setProxyId(String ProxyId) {
-        this.ProxyId = ProxyId;
-    }
-
-    /**
-     * Get 安全组策略ID 
-     * @return PolicyId 安全组策略ID
-     */
-    public String getPolicyId() {
-        return this.PolicyId;
-    }
-
-    /**
-     * Set 安全组策略ID
-     * @param PolicyId 安全组策略ID
-     */
-    public void setPolicyId(String PolicyId) {
-        this.PolicyId = PolicyId;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

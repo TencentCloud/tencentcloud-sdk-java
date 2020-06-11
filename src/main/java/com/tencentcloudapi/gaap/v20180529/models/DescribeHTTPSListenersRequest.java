@@ -72,6 +72,13 @@ public class DescribeHTTPSListenersRequest extends AbstractModel{
     private String SearchValue;
 
     /**
+    * 过滤条件，通道组ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 过滤条件，通道ID 
      * @return ProxyId 过滤条件，通道ID
      */
@@ -184,6 +191,22 @@ public class DescribeHTTPSListenersRequest extends AbstractModel{
     }
 
     /**
+     * Get 过滤条件，通道组ID 
+     * @return GroupId 过滤条件，通道组ID
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 过滤条件，通道组ID
+     * @param GroupId 过滤条件，通道组ID
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class DescribeHTTPSListenersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchValue", this.SearchValue);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateSecurityPolicyRequest extends AbstractModel{
 
     /**
-    * 加速通道ID
-    */
-    @SerializedName("ProxyId")
-    @Expose
-    private String ProxyId;
-
-    /**
     * 默认策略：ACCEPT或DROP
     */
     @SerializedName("DefaultAction")
@@ -37,20 +30,18 @@ public class CreateSecurityPolicyRequest extends AbstractModel{
     private String DefaultAction;
 
     /**
-     * Get 加速通道ID 
-     * @return ProxyId 加速通道ID
-     */
-    public String getProxyId() {
-        return this.ProxyId;
-    }
+    * 加速通道ID
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
 
     /**
-     * Set 加速通道ID
-     * @param ProxyId 加速通道ID
-     */
-    public void setProxyId(String ProxyId) {
-        this.ProxyId = ProxyId;
-    }
+    * 通道组ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
      * Get 默认策略：ACCEPT或DROP 
@@ -69,11 +60,44 @@ public class CreateSecurityPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get 加速通道ID 
+     * @return ProxyId 加速通道ID
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set 加速通道ID
+     * @param ProxyId 加速通道ID
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get 通道组ID 
+     * @return GroupId 通道组ID
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 通道组ID
+     * @param GroupId 通道组ID
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
         this.setParamSimple(map, prefix + "DefaultAction", this.DefaultAction);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

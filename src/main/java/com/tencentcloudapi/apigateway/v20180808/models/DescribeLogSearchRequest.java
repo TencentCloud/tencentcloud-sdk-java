@@ -44,7 +44,7 @@ public class DescribeLogSearchRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * 精确查询，支持apiid/reqid搜索
+    * 保留字段
     */
     @SerializedName("Filters")
     @Expose
@@ -72,11 +72,28 @@ public class DescribeLogSearchRequest extends AbstractModel{
     private String Sort;
 
     /**
-    * 模糊查询，根据关键字检索日志
+    * 保留字段
     */
     @SerializedName("Query")
     @Expose
     private String Query;
+
+    /**
+    * 检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+    */
+    @SerializedName("LogQuerys")
+    @Expose
+    private LogQuery [] LogQuerys;
 
     /**
      * Get 日志开始时间 
@@ -127,16 +144,16 @@ public class DescribeLogSearchRequest extends AbstractModel{
     }
 
     /**
-     * Get 精确查询，支持apiid/reqid搜索 
-     * @return Filters 精确查询，支持apiid/reqid搜索
+     * Get 保留字段 
+     * @return Filters 保留字段
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 精确查询，支持apiid/reqid搜索
-     * @param Filters 精确查询，支持apiid/reqid搜索
+     * Set 保留字段
+     * @param Filters 保留字段
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -191,19 +208,75 @@ public class DescribeLogSearchRequest extends AbstractModel{
     }
 
     /**
-     * Get 模糊查询，根据关键字检索日志 
-     * @return Query 模糊查询，根据关键字检索日志
+     * Get 保留字段 
+     * @return Query 保留字段
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 模糊查询，根据关键字检索日志
-     * @param Query 模糊查询，根据关键字检索日志
+     * Set 保留字段
+     * @param Query 保留字段
      */
     public void setQuery(String Query) {
         this.Query = Query;
+    }
+
+    /**
+     * Get 检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明 
+     * @return LogQuerys 检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+     */
+    public LogQuery [] getLogQuerys() {
+        return this.LogQuerys;
+    }
+
+    /**
+     * Set 检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+     * @param LogQuerys 检索条件,支持的检索条件如下：
+req_id：“=”
+api_id：“=”
+cip：“=”
+uip：“:”
+err_msg：“:”
+rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+req_t：”>=“ 、 ”<=“
+
+说明：
+“:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+     */
+    public void setLogQuerys(LogQuery [] LogQuerys) {
+        this.LogQuerys = LogQuerys;
     }
 
     /**
@@ -218,6 +291,7 @@ public class DescribeLogSearchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConText", this.ConText);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamArrayObj(map, prefix + "LogQuerys.", this.LogQuerys);
 
     }
 }

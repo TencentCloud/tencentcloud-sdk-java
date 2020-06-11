@@ -13,67 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gaap.v20180529.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseSecurityPolicyRequest extends AbstractModel{
+public class DescribeRouteRequest extends AbstractModel{
 
     /**
-    * 通道ID
+    * 实例唯一id
     */
-    @SerializedName("ProxyId")
+    @SerializedName("InstanceId")
     @Expose
-    private String ProxyId;
+    private String InstanceId;
 
     /**
-    * 安全组策略ID
-    */
-    @SerializedName("PolicyId")
-    @Expose
-    private String PolicyId;
-
-    /**
-     * Get 通道ID 
-     * @return ProxyId 通道ID
+     * Get 实例唯一id 
+     * @return InstanceId 实例唯一id
      */
-    public String getProxyId() {
-        return this.ProxyId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 通道ID
-     * @param ProxyId 通道ID
+     * Set 实例唯一id
+     * @param InstanceId 实例唯一id
      */
-    public void setProxyId(String ProxyId) {
-        this.ProxyId = ProxyId;
-    }
-
-    /**
-     * Get 安全组策略ID 
-     * @return PolicyId 安全组策略ID
-     */
-    public String getPolicyId() {
-        return this.PolicyId;
-    }
-
-    /**
-     * Set 安全组策略ID
-     * @param PolicyId 安全组策略ID
-     */
-    public void setPolicyId(String PolicyId) {
-        this.PolicyId = PolicyId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

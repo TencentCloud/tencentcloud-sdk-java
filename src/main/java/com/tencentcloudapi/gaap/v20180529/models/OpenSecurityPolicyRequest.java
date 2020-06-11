@@ -30,6 +30,13 @@ public class OpenSecurityPolicyRequest extends AbstractModel{
     private String ProxyId;
 
     /**
+    * 安全策略ID
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
      * Get 需开启安全策略的通道ID 
      * @return ProxyId 需开启安全策略的通道ID
      */
@@ -46,10 +53,27 @@ public class OpenSecurityPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全策略ID 
+     * @return PolicyId 安全策略ID
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set 安全策略ID
+     * @param PolicyId 安全策略ID
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

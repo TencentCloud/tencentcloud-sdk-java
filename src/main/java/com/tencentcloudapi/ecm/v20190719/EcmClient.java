@@ -152,6 +152,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *创建安全组
+     * @param req CreateSecurityGroupRequest
+     * @return CreateSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityGroupResponse CreateSecurityGroup(CreateSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSecurityGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSecurityGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSecurityGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建子网，若创建成功，则此子网会成为此可用区的默认子网。
      * @param req CreateSubnetRequest
      * @return CreateSubnetResponse

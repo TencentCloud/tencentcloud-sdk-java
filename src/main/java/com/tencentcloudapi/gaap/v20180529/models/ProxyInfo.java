@@ -196,12 +196,28 @@ UNKNOWN表示未知状态。
     private Long SupportSecurity;
 
     /**
-    * 计费类型:(0:按带宽计费  1:按流量计费）
+    * 计费类型: 0表示按带宽计费  1表示按流量计费。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingType")
     @Expose
     private Long BillingType;
+
+    /**
+    * 关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelatedGlobalDomains")
+    @Expose
+    private String [] RelatedGlobalDomains;
+
+    /**
+    * 配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyConfigTime")
+    @Expose
+    private Long ModifyConfigTime;
 
     /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
@@ -632,9 +648,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Get 计费类型:(0:按带宽计费  1:按流量计费）
+     * Get 计费类型: 0表示按带宽计费  1表示按流量计费。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingType 计费类型:(0:按带宽计费  1:按流量计费）
+     * @return BillingType 计费类型: 0表示按带宽计费  1表示按流量计费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBillingType() {
@@ -642,13 +658,53 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Set 计费类型:(0:按带宽计费  1:按流量计费）
+     * Set 计费类型: 0表示按带宽计费  1表示按流量计费。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingType 计费类型:(0:按带宽计费  1:按流量计费）
+     * @param BillingType 计费类型: 0表示按带宽计费  1表示按流量计费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingType(Long BillingType) {
         this.BillingType = BillingType;
+    }
+
+    /**
+     * Get 关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelatedGlobalDomains 关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getRelatedGlobalDomains() {
+        return this.RelatedGlobalDomains;
+    }
+
+    /**
+     * Set 关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelatedGlobalDomains 关联了解析的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelatedGlobalDomains(String [] RelatedGlobalDomains) {
+        this.RelatedGlobalDomains = RelatedGlobalDomains;
+    }
+
+    /**
+     * Get 配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyConfigTime 配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getModifyConfigTime() {
+        return this.ModifyConfigTime;
+    }
+
+    /**
+     * Set 配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyConfigTime 配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyConfigTime(Long ModifyConfigTime) {
+        this.ModifyConfigTime = ModifyConfigTime;
     }
 
     /**
@@ -678,6 +734,8 @@ UNKNOWN表示未知状态。
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
+        this.setParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
+        this.setParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
 
     }
 }

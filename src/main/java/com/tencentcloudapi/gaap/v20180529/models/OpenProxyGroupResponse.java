@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamPlayInfoListResponse extends AbstractModel{
+public class OpenProxyGroupResponse extends AbstractModel{
 
     /**
-    * 统计信息列表，时间粒度是1分钟。
+    * 非关闭状态下的通道实例ID列表，不可开启。
     */
-    @SerializedName("DataInfoList")
+    @SerializedName("InvalidStatusInstanceSet")
     @Expose
-    private DayStreamPlayInfo [] DataInfoList;
+    private String [] InvalidStatusInstanceSet;
+
+    /**
+    * 开启操作失败的通道实例ID列表。
+    */
+    @SerializedName("OperationFailedInstanceSet")
+    @Expose
+    private String [] OperationFailedInstanceSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeStreamPlayInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 统计信息列表，时间粒度是1分钟。 
-     * @return DataInfoList 统计信息列表，时间粒度是1分钟。
+     * Get 非关闭状态下的通道实例ID列表，不可开启。 
+     * @return InvalidStatusInstanceSet 非关闭状态下的通道实例ID列表，不可开启。
      */
-    public DayStreamPlayInfo [] getDataInfoList() {
-        return this.DataInfoList;
+    public String [] getInvalidStatusInstanceSet() {
+        return this.InvalidStatusInstanceSet;
     }
 
     /**
-     * Set 统计信息列表，时间粒度是1分钟。
-     * @param DataInfoList 统计信息列表，时间粒度是1分钟。
+     * Set 非关闭状态下的通道实例ID列表，不可开启。
+     * @param InvalidStatusInstanceSet 非关闭状态下的通道实例ID列表，不可开启。
      */
-    public void setDataInfoList(DayStreamPlayInfo [] DataInfoList) {
-        this.DataInfoList = DataInfoList;
+    public void setInvalidStatusInstanceSet(String [] InvalidStatusInstanceSet) {
+        this.InvalidStatusInstanceSet = InvalidStatusInstanceSet;
+    }
+
+    /**
+     * Get 开启操作失败的通道实例ID列表。 
+     * @return OperationFailedInstanceSet 开启操作失败的通道实例ID列表。
+     */
+    public String [] getOperationFailedInstanceSet() {
+        return this.OperationFailedInstanceSet;
+    }
+
+    /**
+     * Set 开启操作失败的通道实例ID列表。
+     * @param OperationFailedInstanceSet 开启操作失败的通道实例ID列表。
+     */
+    public void setOperationFailedInstanceSet(String [] OperationFailedInstanceSet) {
+        this.OperationFailedInstanceSet = OperationFailedInstanceSet;
     }
 
     /**
@@ -72,7 +95,8 @@ public class DescribeStreamPlayInfoListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
+        this.setParamArraySimple(map, prefix + "InvalidStatusInstanceSet.", this.InvalidStatusInstanceSet);
+        this.setParamArraySimple(map, prefix + "OperationFailedInstanceSet.", this.OperationFailedInstanceSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

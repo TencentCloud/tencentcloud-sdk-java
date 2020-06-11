@@ -232,6 +232,14 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     private Long NewFlag;
 
     /**
+    * 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -780,6 +788,26 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     }
 
     /**
+     * Get 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -807,6 +835,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "NewFlag", this.NewFlag);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

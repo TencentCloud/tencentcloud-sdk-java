@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamPlayInfoListResponse extends AbstractModel{
+public class CreateSecurityGroupResponse extends AbstractModel{
 
     /**
-    * 统计信息列表，时间粒度是1分钟。
+    * 安全组对象。
     */
-    @SerializedName("DataInfoList")
+    @SerializedName("SecurityGroup")
     @Expose
-    private DayStreamPlayInfo [] DataInfoList;
+    private SecurityGroup SecurityGroup;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeStreamPlayInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 统计信息列表，时间粒度是1分钟。 
-     * @return DataInfoList 统计信息列表，时间粒度是1分钟。
+     * Get 安全组对象。 
+     * @return SecurityGroup 安全组对象。
      */
-    public DayStreamPlayInfo [] getDataInfoList() {
-        return this.DataInfoList;
+    public SecurityGroup getSecurityGroup() {
+        return this.SecurityGroup;
     }
 
     /**
-     * Set 统计信息列表，时间粒度是1分钟。
-     * @param DataInfoList 统计信息列表，时间粒度是1分钟。
+     * Set 安全组对象。
+     * @param SecurityGroup 安全组对象。
      */
-    public void setDataInfoList(DayStreamPlayInfo [] DataInfoList) {
-        this.DataInfoList = DataInfoList;
+    public void setSecurityGroup(SecurityGroup SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
     }
 
     /**
@@ -72,7 +72,7 @@ public class DescribeStreamPlayInfoListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
+        this.setParamObj(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

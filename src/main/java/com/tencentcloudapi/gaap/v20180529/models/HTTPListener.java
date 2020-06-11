@@ -51,7 +51,7 @@ public class HTTPListener extends AbstractModel{
     private Long CreateTime;
 
     /**
-    * 监听器协议
+    * 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTP
     */
     @SerializedName("Protocol")
     @Expose
@@ -134,16 +134,16 @@ public class HTTPListener extends AbstractModel{
     }
 
     /**
-     * Get 监听器协议 
-     * @return Protocol 监听器协议
+     * Get 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTP 
+     * @return Protocol 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTP
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 监听器协议
-     * @param Protocol 监听器协议
+     * Set 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTP
+     * @param Protocol 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTP
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

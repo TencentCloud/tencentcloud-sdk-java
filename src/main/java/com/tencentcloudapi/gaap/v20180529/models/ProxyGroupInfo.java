@@ -79,6 +79,22 @@ MOVING表示通道迁移中。
     private TagPair [] TagSet;
 
     /**
+    * 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get 通道组id 
      * @return GroupId 通道组id
      */
@@ -219,6 +235,46 @@ MOVING表示通道迁移中。
     }
 
     /**
+     * Get 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -229,6 +285,8 @@ MOVING表示通道迁移中。
         this.setParamObj(map, prefix + "RealServerRegionInfo.", this.RealServerRegionInfo);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

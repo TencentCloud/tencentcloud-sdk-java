@@ -30,6 +30,13 @@ public class LexicalAnalysisRequest extends AbstractModel{
     private String Text;
 
     /**
+    * 指定要加载的自定义词库ID。
+    */
+    @SerializedName("DictId")
+    @Expose
+    private String DictId;
+
+    /**
     * 词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
 2、高性能（单粒度分词能力）；
@@ -52,6 +59,22 @@ public class LexicalAnalysisRequest extends AbstractModel{
      */
     public void setText(String Text) {
         this.Text = Text;
+    }
+
+    /**
+     * Get 指定要加载的自定义词库ID。 
+     * @return DictId 指定要加载的自定义词库ID。
+     */
+    public String getDictId() {
+        return this.DictId;
+    }
+
+    /**
+     * Set 指定要加载的自定义词库ID。
+     * @param DictId 指定要加载的自定义词库ID。
+     */
+    public void setDictId(String DictId) {
+        this.DictId = DictId;
     }
 
     /**
@@ -83,6 +106,7 @@ public class LexicalAnalysisRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "DictId", this.DictId);
         this.setParamSimple(map, prefix + "Flag", this.Flag);
 
     }

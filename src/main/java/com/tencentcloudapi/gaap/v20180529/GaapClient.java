@@ -129,6 +129,24 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloseProxyGroup）用于关闭通道组。通道组关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
+     * @param req CloseProxyGroupRequest
+     * @return CloseProxyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseProxyGroupResponse CloseProxyGroup(CloseProxyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseProxyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseProxyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CloseProxyGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *关闭安全策略
      * @param req CloseSecurityPolicyRequest
      * @return CloseSecurityPolicyResponse
@@ -1456,6 +1474,24 @@ public class GaapClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenProxiesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "OpenProxies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口（OpenProxyGroup）用于开启一条通道组中的所有通道
+     * @param req OpenProxyGroupRequest
+     * @return OpenProxyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenProxyGroupResponse OpenProxyGroup(OpenProxyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenProxyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenProxyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OpenProxyGroup"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

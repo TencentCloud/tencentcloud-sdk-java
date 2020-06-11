@@ -37,7 +37,7 @@ public class GeneralBasicOCRResponse extends AbstractModel{
     private String Language;
 
     /**
-    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
     */
     @SerializedName("Angel")
     @Expose
@@ -83,16 +83,16 @@ public class GeneralBasicOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。 
-     * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a> 
+     * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
      */
     public Float getAngel() {
         return this.Angel;
     }
 
     /**
-     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
-     * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
      */
     public void setAngel(Float Angel) {
         this.Angel = Angel;

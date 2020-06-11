@@ -24,6 +24,7 @@ public class DescribeSecurityPolicyDetailResponse extends AbstractModel{
 
     /**
     * 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyId")
     @Expose
@@ -69,8 +70,10 @@ UNBINDING，安全策略关闭中。
     private String RequestId;
 
     /**
-     * Get 通道ID 
+     * Get 通道ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProxyId 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyId() {
         return this.ProxyId;
@@ -78,7 +81,9 @@ UNBINDING，安全策略关闭中。
 
     /**
      * Set 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyId 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

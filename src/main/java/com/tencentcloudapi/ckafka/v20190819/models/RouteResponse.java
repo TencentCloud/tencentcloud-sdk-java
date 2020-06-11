@@ -13,67 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gaap.v20180529.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseSecurityPolicyRequest extends AbstractModel{
+public class RouteResponse extends AbstractModel{
 
     /**
-    * 通道ID
+    * 路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ProxyId")
+    @SerializedName("Routers")
     @Expose
-    private String ProxyId;
+    private Route [] Routers;
 
     /**
-    * 安全组策略ID
-    */
-    @SerializedName("PolicyId")
-    @Expose
-    private String PolicyId;
-
-    /**
-     * Get 通道ID 
-     * @return ProxyId 通道ID
+     * Get 路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Routers 路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getProxyId() {
-        return this.ProxyId;
+    public Route [] getRouters() {
+        return this.Routers;
     }
 
     /**
-     * Set 通道ID
-     * @param ProxyId 通道ID
+     * Set 路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Routers 路由信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setProxyId(String ProxyId) {
-        this.ProxyId = ProxyId;
-    }
-
-    /**
-     * Get 安全组策略ID 
-     * @return PolicyId 安全组策略ID
-     */
-    public String getPolicyId() {
-        return this.PolicyId;
-    }
-
-    /**
-     * Set 安全组策略ID
-     * @param PolicyId 安全组策略ID
-     */
-    public void setPolicyId(String PolicyId) {
-        this.PolicyId = PolicyId;
+    public void setRouters(Route [] Routers) {
+        this.Routers = Routers;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamArrayObj(map, prefix + "Routers.", this.Routers);
 
     }
 }
