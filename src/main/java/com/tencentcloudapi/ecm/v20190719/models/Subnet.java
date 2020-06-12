@@ -115,6 +115,13 @@ public class Subnet extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * 所在区域
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
@@ -327,6 +334,22 @@ public class Subnet extends AbstractModel{
     }
 
     /**
+     * Get 所在区域 
+     * @return Zone 所在区域
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 所在区域
+     * @param Zone 所在区域
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -343,6 +366,7 @@ public class Subnet extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
         this.setParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

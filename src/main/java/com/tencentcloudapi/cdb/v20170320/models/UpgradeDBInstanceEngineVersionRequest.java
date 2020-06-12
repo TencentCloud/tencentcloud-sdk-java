@@ -44,6 +44,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     private Long WaitSwitch;
 
     /**
+    * 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+    */
+    @SerializedName("UpgradeSubversion")
+    @Expose
+    private Long UpgradeSubversion;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -92,12 +99,29 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。 
+     * @return UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+     */
+    public Long getUpgradeSubversion() {
+        return this.UpgradeSubversion;
+    }
+
+    /**
+     * Set 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+     * @param UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+     */
+    public void setUpgradeSubversion(Long UpgradeSubversion) {
+        this.UpgradeSubversion = UpgradeSubversion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
 
     }
 }

@@ -37,11 +37,32 @@ public class ZoneInstanceCountISP extends AbstractModel{
     private Long InstanceCount;
 
     /**
-    * 运营商。
+    * 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
     */
     @SerializedName("ISP")
     @Expose
     private String ISP;
+
+    /**
+    * 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 指定子网编号，SubnetId与VpcId必须同时指定或不指定
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+    */
+    @SerializedName("PrivateIpAddresses")
+    @Expose
+    private String [] PrivateIpAddresses;
 
     /**
      * Get 创建实例的可用区。 
@@ -76,19 +97,67 @@ public class ZoneInstanceCountISP extends AbstractModel{
     }
 
     /**
-     * Get 运营商。 
-     * @return ISP 运营商。
+     * Get 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。 
+     * @return ISP 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
      */
     public String getISP() {
         return this.ISP;
     }
 
     /**
-     * Set 运营商。
-     * @param ISP 运营商。
+     * Set 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
+     * @param ISP 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
      */
     public void setISP(String ISP) {
         this.ISP = ISP;
+    }
+
+    /**
+     * Get 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定 
+     * @return VpcId 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+     * @param VpcId 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 指定子网编号，SubnetId与VpcId必须同时指定或不指定 
+     * @return SubnetId 指定子网编号，SubnetId与VpcId必须同时指定或不指定
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 指定子网编号，SubnetId与VpcId必须同时指定或不指定
+     * @param SubnetId 指定子网编号，SubnetId与VpcId必须同时指定或不指定
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。 
+     * @return PrivateIpAddresses 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+     */
+    public String [] getPrivateIpAddresses() {
+        return this.PrivateIpAddresses;
+    }
+
+    /**
+     * Set 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+     * @param PrivateIpAddresses 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+     */
+    public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
+        this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
@@ -98,6 +167,9 @@ public class ZoneInstanceCountISP extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "ISP", this.ISP);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
 
     }
 }

@@ -30,7 +30,7 @@ public class CreateApiKeyRequest extends AbstractModel{
     private String SecretName;
 
     /**
-    * 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
+    * 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
     */
     @SerializedName("AccessKeyType")
     @Expose
@@ -67,16 +67,16 @@ public class CreateApiKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。 
-     * @return AccessKeyType 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
+     * Get 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。 
+     * @return AccessKeyType 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
      */
     public String getAccessKeyType() {
         return this.AccessKeyType;
     }
 
     /**
-     * Set 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
-     * @param AccessKeyType 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
+     * Set 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
+     * @param AccessKeyType 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
      */
     public void setAccessKeyType(String AccessKeyType) {
         this.AccessKeyType = AccessKeyType;

@@ -253,6 +253,27 @@ public class CreateInvoiceRequest extends AbstractModel{
     private Long UndoPart;
 
     /**
+    * 订单下单时间（格式 YYYMMDD）
+    */
+    @SerializedName("OrderDate")
+    @Expose
+    private String OrderDate;
+
+    /**
+    * 订单级别（单位为分）
+    */
+    @SerializedName("Discount")
+    @Expose
+    private Long Discount;
+
+    /**
+    * 门店编码
+    */
+    @SerializedName("StoreNo")
+    @Expose
+    private String StoreNo;
+
+    /**
      * Get 开票平台ID。0：高灯 
      * @return InvoicePlatformId 开票平台ID。0：高灯
      */
@@ -789,6 +810,54 @@ public class CreateInvoiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 订单下单时间（格式 YYYMMDD） 
+     * @return OrderDate 订单下单时间（格式 YYYMMDD）
+     */
+    public String getOrderDate() {
+        return this.OrderDate;
+    }
+
+    /**
+     * Set 订单下单时间（格式 YYYMMDD）
+     * @param OrderDate 订单下单时间（格式 YYYMMDD）
+     */
+    public void setOrderDate(String OrderDate) {
+        this.OrderDate = OrderDate;
+    }
+
+    /**
+     * Get 订单级别（单位为分） 
+     * @return Discount 订单级别（单位为分）
+     */
+    public Long getDiscount() {
+        return this.Discount;
+    }
+
+    /**
+     * Set 订单级别（单位为分）
+     * @param Discount 订单级别（单位为分）
+     */
+    public void setDiscount(Long Discount) {
+        this.Discount = Discount;
+    }
+
+    /**
+     * Get 门店编码 
+     * @return StoreNo 门店编码
+     */
+    public String getStoreNo() {
+        return this.StoreNo;
+    }
+
+    /**
+     * Set 门店编码
+     * @param StoreNo 门店编码
+     */
+    public void setStoreNo(String StoreNo) {
+        this.StoreNo = StoreNo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -824,6 +893,9 @@ public class CreateInvoiceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "Profile", this.Profile);
         this.setParamSimple(map, prefix + "UndoPart", this.UndoPart);
+        this.setParamSimple(map, prefix + "OrderDate", this.OrderDate);
+        this.setParamSimple(map, prefix + "Discount", this.Discount);
+        this.setParamSimple(map, prefix + "StoreNo", this.StoreNo);
 
     }
 }

@@ -58,6 +58,7 @@ DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
 InvalidDateWarn，身份证有效日期不合法告警
 Quality，图片质量分数（评价图片的模糊程度）
+MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
 Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
@@ -143,6 +144,7 @@ DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
 InvalidDateWarn，身份证有效日期不合法告警
 Quality，图片质量分数（评价图片的模糊程度）
+MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
 Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
@@ -158,6 +160,7 @@ DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
 InvalidDateWarn，身份证有效日期不合法告警
 Quality，图片质量分数（评价图片的模糊程度）
+MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
 Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
@@ -179,6 +182,7 @@ DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
 InvalidDateWarn，身份证有效日期不合法告警
 Quality，图片质量分数（评价图片的模糊程度）
+MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
 Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
@@ -194,6 +198,7 @@ DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
 InvalidDateWarn，身份证有效日期不合法告警
 Quality，图片质量分数（评价图片的模糊程度）
+MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
 Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})

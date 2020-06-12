@@ -179,6 +179,17 @@ public class UnifiedOrderRequest extends AbstractModel{
     private String WxSubOpenId;
 
     /**
+    * 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+    */
+    @SerializedName("MidasEnvironment")
+    @Expose
+    private String MidasEnvironment;
+
+    /**
      * Get ISO 货币代码，CNY 
      * @return CurrencyType ISO 货币代码，CNY
      */
@@ -539,6 +550,38 @@ public class UnifiedOrderRequest extends AbstractModel{
     }
 
     /**
+     * Get 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release 
+     * @return MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public String getMidasEnvironment() {
+        return this.MidasEnvironment;
+    }
+
+    /**
+     * Set 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     * @param MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public void setMidasEnvironment(String MidasEnvironment) {
+        this.MidasEnvironment = MidasEnvironment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -564,6 +607,7 @@ public class UnifiedOrderRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalPlatformIncome", this.TotalPlatformIncome);
         this.setParamSimple(map, prefix + "WxOpenId", this.WxOpenId);
         this.setParamSimple(map, prefix + "WxSubOpenId", this.WxSubOpenId);
+        this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
 
     }
 }
