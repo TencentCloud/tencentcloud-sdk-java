@@ -47,7 +47,12 @@ public class NotebookInstanceSummary extends AbstractModel{
     private String NotebookInstanceName;
 
     /**
-    * notebook实例状态
+    * notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotebookInstanceStatus")
@@ -63,12 +68,52 @@ public class NotebookInstanceSummary extends AbstractModel{
     private String InstanceType;
 
     /**
-    * 算力Id
+    * 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartupTime")
+    @Expose
+    private String StartupTime;
+
+    /**
+    * 运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private String Deadline;
+
+    /**
+    * 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StoppingCondition")
+    @Expose
+    private StoppingCondition StoppingCondition;
+
+    /**
+    * 是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Prepay")
+    @Expose
+    private Boolean Prepay;
+
+    /**
+    * 计费标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingLabel")
+    @Expose
+    private BillingLabel BillingLabel;
 
     /**
      * Get 创建时间
@@ -131,9 +176,19 @@ public class NotebookInstanceSummary extends AbstractModel{
     }
 
     /**
-     * Get notebook实例状态
+     * Get notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NotebookInstanceStatus notebook实例状态
+     * @return NotebookInstanceStatus notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotebookInstanceStatus() {
@@ -141,9 +196,19 @@ public class NotebookInstanceSummary extends AbstractModel{
     }
 
     /**
-     * Set notebook实例状态
+     * Set notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NotebookInstanceStatus notebook实例状态
+     * @param NotebookInstanceStatus notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotebookInstanceStatus(String NotebookInstanceStatus) {
@@ -171,9 +236,9 @@ public class NotebookInstanceSummary extends AbstractModel{
     }
 
     /**
-     * Get 算力Id
+     * Get 实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 算力Id
+     * @return InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -181,13 +246,113 @@ public class NotebookInstanceSummary extends AbstractModel{
     }
 
     /**
-     * Set 算力Id
+     * Set 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 算力Id
+     * @param InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 启动时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartupTime 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartupTime() {
+        return this.StartupTime;
+    }
+
+    /**
+     * Set 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartupTime 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartupTime(String StartupTime) {
+        this.StartupTime = StartupTime;
+    }
+
+    /**
+     * Get 运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deadline 运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deadline 运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeadline(String Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
+     * Get 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StoppingCondition 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StoppingCondition getStoppingCondition() {
+        return this.StoppingCondition;
+    }
+
+    /**
+     * Set 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StoppingCondition 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStoppingCondition(StoppingCondition StoppingCondition) {
+        this.StoppingCondition = StoppingCondition;
+    }
+
+    /**
+     * Get 是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Prepay 是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPrepay() {
+        return this.Prepay;
+    }
+
+    /**
+     * Set 是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Prepay 是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrepay(Boolean Prepay) {
+        this.Prepay = Prepay;
+    }
+
+    /**
+     * Get 计费标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingLabel 计费标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BillingLabel getBillingLabel() {
+        return this.BillingLabel;
+    }
+
+    /**
+     * Set 计费标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingLabel 计费标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingLabel(BillingLabel BillingLabel) {
+        this.BillingLabel = BillingLabel;
     }
 
     /**
@@ -200,6 +365,11 @@ public class NotebookInstanceSummary extends AbstractModel{
         this.setParamSimple(map, prefix + "NotebookInstanceStatus", this.NotebookInstanceStatus);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "StartupTime", this.StartupTime);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+        this.setParamSimple(map, prefix + "Prepay", this.Prepay);
+        this.setParamObj(map, prefix + "BillingLabel.", this.BillingLabel);
 
     }
 }

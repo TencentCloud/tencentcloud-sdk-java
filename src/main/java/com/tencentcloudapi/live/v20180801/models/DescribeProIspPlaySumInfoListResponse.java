@@ -79,7 +79,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     private ProIspPlaySumInfo [] DataInfoList;
 
     /**
-    * 平均带宽。
+    * 下载速度，单位：MB/s，计算方式：总流量/总时长。
     */
     @SerializedName("AvgFluxPerSecond")
     @Expose
@@ -221,16 +221,16 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     }
 
     /**
-     * Get 平均带宽。 
-     * @return AvgFluxPerSecond 平均带宽。
+     * Get 下载速度，单位：MB/s，计算方式：总流量/总时长。 
+     * @return AvgFluxPerSecond 下载速度，单位：MB/s，计算方式：总流量/总时长。
      */
     public Float getAvgFluxPerSecond() {
         return this.AvgFluxPerSecond;
     }
 
     /**
-     * Set 平均带宽。
-     * @param AvgFluxPerSecond 平均带宽。
+     * Set 下载速度，单位：MB/s，计算方式：总流量/总时长。
+     * @param AvgFluxPerSecond 下载速度，单位：MB/s，计算方式：总流量/总时长。
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
         this.AvgFluxPerSecond = AvgFluxPerSecond;

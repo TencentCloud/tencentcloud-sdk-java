@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
-    * Notebook实例名称
+    * Notebook实例名称，不能超过63个字符
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
     */
     @SerializedName("NotebookInstanceName")
     @Expose
@@ -31,6 +32,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
     * Notebook算力类型
+参考https://cloud.tencent.com/document/product/851/41239
     */
     @SerializedName("InstanceType")
     @Expose
@@ -38,6 +40,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
     * 数据卷大小(GB)
+用户持久化Notebook实例的数据
     */
     @SerializedName("VolumeSizeInGB")
     @Expose
@@ -45,6 +48,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
     * 外网访问权限，可取值Enabled/Disabled
+开启后，Notebook实例可以具有访问外网80，443端口的权限
     */
     @SerializedName("DirectInternetAccess")
     @Expose
@@ -52,6 +56,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
     * Root用户权限，可取值Enabled/Disabled
+开启后，Notebook实例可以切换至root用户执行命令
     */
     @SerializedName("RootAccess")
     @Expose
@@ -59,6 +64,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
     * 子网ID
+如果需要Notebook实例访问VPC内的资源，则需要选择对应的子网
     */
     @SerializedName("SubnetId")
     @Expose
@@ -66,6 +72,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
     * 生命周期脚本名称
+必须是已存在的生命周期脚本，具体参考https://cloud.tencent.com/document/product/851/43140
     */
     @SerializedName("LifecycleScriptsName")
     @Expose
@@ -74,6 +81,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     /**
     * 默认存储库名称
 可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
     */
     @SerializedName("DefaultCodeRepository")
     @Expose
@@ -82,6 +90,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     /**
     * 其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
     */
     @SerializedName("AdditionalCodeRepositories")
     @Expose
@@ -89,30 +98,54 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
     * 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
     */
     @SerializedName("ClsAccess")
     @Expose
     private String ClsAccess;
 
     /**
-     * Get Notebook实例名称 
-     * @return NotebookInstanceName Notebook实例名称
+    * 自动停止配置
+选择定时停止Notebook实例
+    */
+    @SerializedName("StoppingCondition")
+    @Expose
+    private StoppingCondition StoppingCondition;
+
+    /**
+    * 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+    */
+    @SerializedName("AutoStopping")
+    @Expose
+    private String AutoStopping;
+
+    /**
+     * Get Notebook实例名称，不能超过63个字符
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$ 
+     * @return NotebookInstanceName Notebook实例名称，不能超过63个字符
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      */
     public String getNotebookInstanceName() {
         return this.NotebookInstanceName;
     }
 
     /**
-     * Set Notebook实例名称
-     * @param NotebookInstanceName Notebook实例名称
+     * Set Notebook实例名称，不能超过63个字符
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+     * @param NotebookInstanceName Notebook实例名称，不能超过63个字符
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      */
     public void setNotebookInstanceName(String NotebookInstanceName) {
         this.NotebookInstanceName = NotebookInstanceName;
     }
 
     /**
-     * Get Notebook算力类型 
+     * Get Notebook算力类型
+参考https://cloud.tencent.com/document/product/851/41239 
      * @return InstanceType Notebook算力类型
+参考https://cloud.tencent.com/document/product/851/41239
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -120,15 +153,19 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set Notebook算力类型
+参考https://cloud.tencent.com/document/product/851/41239
      * @param InstanceType Notebook算力类型
+参考https://cloud.tencent.com/document/product/851/41239
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 数据卷大小(GB) 
+     * Get 数据卷大小(GB)
+用户持久化Notebook实例的数据 
      * @return VolumeSizeInGB 数据卷大小(GB)
+用户持久化Notebook实例的数据
      */
     public Long getVolumeSizeInGB() {
         return this.VolumeSizeInGB;
@@ -136,15 +173,19 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set 数据卷大小(GB)
+用户持久化Notebook实例的数据
      * @param VolumeSizeInGB 数据卷大小(GB)
+用户持久化Notebook实例的数据
      */
     public void setVolumeSizeInGB(Long VolumeSizeInGB) {
         this.VolumeSizeInGB = VolumeSizeInGB;
     }
 
     /**
-     * Get 外网访问权限，可取值Enabled/Disabled 
+     * Get 外网访问权限，可取值Enabled/Disabled
+开启后，Notebook实例可以具有访问外网80，443端口的权限 
      * @return DirectInternetAccess 外网访问权限，可取值Enabled/Disabled
+开启后，Notebook实例可以具有访问外网80，443端口的权限
      */
     public String getDirectInternetAccess() {
         return this.DirectInternetAccess;
@@ -152,15 +193,19 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set 外网访问权限，可取值Enabled/Disabled
+开启后，Notebook实例可以具有访问外网80，443端口的权限
      * @param DirectInternetAccess 外网访问权限，可取值Enabled/Disabled
+开启后，Notebook实例可以具有访问外网80，443端口的权限
      */
     public void setDirectInternetAccess(String DirectInternetAccess) {
         this.DirectInternetAccess = DirectInternetAccess;
     }
 
     /**
-     * Get Root用户权限，可取值Enabled/Disabled 
+     * Get Root用户权限，可取值Enabled/Disabled
+开启后，Notebook实例可以切换至root用户执行命令 
      * @return RootAccess Root用户权限，可取值Enabled/Disabled
+开启后，Notebook实例可以切换至root用户执行命令
      */
     public String getRootAccess() {
         return this.RootAccess;
@@ -168,15 +213,19 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set Root用户权限，可取值Enabled/Disabled
+开启后，Notebook实例可以切换至root用户执行命令
      * @param RootAccess Root用户权限，可取值Enabled/Disabled
+开启后，Notebook实例可以切换至root用户执行命令
      */
     public void setRootAccess(String RootAccess) {
         this.RootAccess = RootAccess;
     }
 
     /**
-     * Get 子网ID 
+     * Get 子网ID
+如果需要Notebook实例访问VPC内的资源，则需要选择对应的子网 
      * @return SubnetId 子网ID
+如果需要Notebook实例访问VPC内的资源，则需要选择对应的子网
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -184,15 +233,19 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set 子网ID
+如果需要Notebook实例访问VPC内的资源，则需要选择对应的子网
      * @param SubnetId 子网ID
+如果需要Notebook实例访问VPC内的资源，则需要选择对应的子网
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 生命周期脚本名称 
+     * Get 生命周期脚本名称
+必须是已存在的生命周期脚本，具体参考https://cloud.tencent.com/document/product/851/43140 
      * @return LifecycleScriptsName 生命周期脚本名称
+必须是已存在的生命周期脚本，具体参考https://cloud.tencent.com/document/product/851/43140
      */
     public String getLifecycleScriptsName() {
         return this.LifecycleScriptsName;
@@ -200,7 +253,9 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set 生命周期脚本名称
+必须是已存在的生命周期脚本，具体参考https://cloud.tencent.com/document/product/851/43140
      * @param LifecycleScriptsName 生命周期脚本名称
+必须是已存在的生命周期脚本，具体参考https://cloud.tencent.com/document/product/851/43140
      */
     public void setLifecycleScriptsName(String LifecycleScriptsName) {
         this.LifecycleScriptsName = LifecycleScriptsName;
@@ -208,9 +263,11 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Get 默认存储库名称
-可以是已创建的存储库名称或者已https://开头的公共git库 
+可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139 
      * @return DefaultCodeRepository 默认存储库名称
 可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
      */
     public String getDefaultCodeRepository() {
         return this.DefaultCodeRepository;
@@ -219,8 +276,10 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     /**
      * Set 默认存储库名称
 可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
      * @param DefaultCodeRepository 默认存储库名称
 可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
      */
     public void setDefaultCodeRepository(String DefaultCodeRepository) {
         this.DefaultCodeRepository = DefaultCodeRepository;
@@ -228,9 +287,11 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Get 其他存储库列表
-每个元素可以是已创建的存储库名称或者已https://开头的公共git库 
+每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139 
      * @return AdditionalCodeRepositories 其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
      */
     public String [] getAdditionalCodeRepositories() {
         return this.AdditionalCodeRepositories;
@@ -239,16 +300,20 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     /**
      * Set 其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
      * @param AdditionalCodeRepositories 其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+参考https://cloud.tencent.com/document/product/851/43139
      */
     public void setAdditionalCodeRepositories(String [] AdditionalCodeRepositories) {
         this.AdditionalCodeRepositories = AdditionalCodeRepositories;
     }
 
     /**
-     * Get 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled 
+     * Get 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择 
      * @return ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
      */
     public String getClsAccess() {
         return this.ClsAccess;
@@ -256,10 +321,56 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
      * @param ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
      */
     public void setClsAccess(String ClsAccess) {
         this.ClsAccess = ClsAccess;
+    }
+
+    /**
+     * Get 自动停止配置
+选择定时停止Notebook实例 
+     * @return StoppingCondition 自动停止配置
+选择定时停止Notebook实例
+     */
+    public StoppingCondition getStoppingCondition() {
+        return this.StoppingCondition;
+    }
+
+    /**
+     * Set 自动停止配置
+选择定时停止Notebook实例
+     * @param StoppingCondition 自动停止配置
+选择定时停止Notebook实例
+     */
+    public void setStoppingCondition(StoppingCondition StoppingCondition) {
+        this.StoppingCondition = StoppingCondition;
+    }
+
+    /**
+     * Get 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置 
+     * @return AutoStopping 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     */
+    public String getAutoStopping() {
+        return this.AutoStopping;
+    }
+
+    /**
+     * Set 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     * @param AutoStopping 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     */
+    public void setAutoStopping(String AutoStopping) {
+        this.AutoStopping = AutoStopping;
     }
 
     /**
@@ -276,6 +387,8 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
         this.setParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
         this.setParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
+        this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+        this.setParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
 
     }
 }

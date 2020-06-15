@@ -13,48 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNotebookInstanceRequest extends AbstractModel{
+public class ApiDefinitionDescr extends AbstractModel{
 
     /**
-    * Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+    * 对象名称
     */
-    @SerializedName("NotebookInstanceName")
+    @SerializedName("Name")
     @Expose
-    private String NotebookInstanceName;
+    private String Name;
 
     /**
-     * Get Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$ 
-     * @return NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+    * 对象属性列表
+    */
+    @SerializedName("Properties")
+    @Expose
+    private PropertyField [] Properties;
+
+    /**
+     * Get 对象名称 
+     * @return Name 对象名称
      */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-     * @param NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+     * Set 对象名称
+     * @param Name 对象名称
      */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 对象属性列表 
+     * @return Properties 对象属性列表
+     */
+    public PropertyField [] getProperties() {
+        return this.Properties;
+    }
+
+    /**
+     * Set 对象属性列表
+     * @param Properties 对象属性列表
+     */
+    public void setProperties(PropertyField [] Properties) {
+        this.Properties = Properties;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
 
     }
 }

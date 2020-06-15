@@ -290,6 +290,24 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *查询Notebook概览数据
+     * @param req DescribeNotebookSummaryRequest
+     * @return DescribeNotebookSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookSummaryResponse DescribeNotebookSummary(DescribeNotebookSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookSummaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookSummaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNotebookSummary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询训练任务
      * @param req DescribeTrainingJobRequest
      * @return DescribeTrainingJobResponse

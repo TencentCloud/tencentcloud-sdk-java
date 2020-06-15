@@ -30,7 +30,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
+    * 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
     */
     @SerializedName("TypeId")
     @Expose
@@ -65,7 +65,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long BillingMode;
 
     /**
-    * 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+    * 实例密码，8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
     */
     @SerializedName("Password")
     @Expose
@@ -114,35 +114,35 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long VPort;
 
     /**
-    * 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
+    * 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    * 实例副本数量，Redis 2.8标准版、CKV标准版只支持1副本，4.0、5.0标准版和集群版支持1-5个副本。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+    * 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
     */
     @SerializedName("ReplicasReadonly")
     @Expose
     private Boolean ReplicasReadonly;
 
     /**
-    * 实例名称
+    * 实例名称，长度小于60的中文/英文/数字/"-"/"_"
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+    * 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
     */
     @SerializedName("NoAuth")
     @Expose
@@ -165,16 +165,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版， 
-     * @return TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
+     * Get 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）， 
+     * @return TypeId 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
-     * @param TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，8 – Redis5.0主从版，9 – Redis5.0集群版，
+     * Set 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
+     * @param TypeId 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
@@ -245,16 +245,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略） 
-     * @return Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     * Get 实例密码，8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。 
+     * @return Password 实例密码，8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
-     * @param Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     * Set 实例密码，8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
+     * @param Password 实例密码，8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -357,80 +357,80 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写 
-     * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
+     * Get 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128] 
+     * @return RedisShardNum 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
-     * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
+     * Set 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
+     * @param RedisShardNum 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
-     * @return RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 实例副本数量，Redis 2.8标准版、CKV标准版只支持1副本，4.0、5.0标准版和集群版支持1-5个副本。 
+     * @return RedisReplicasNum 实例副本数量，Redis 2.8标准版、CKV标准版只支持1副本，4.0、5.0标准版和集群版支持1-5个副本。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
-     * @param RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 实例副本数量，Redis 2.8标准版、CKV标准版只支持1副本，4.0、5.0标准版和集群版支持1-5个副本。
+     * @param RedisReplicasNum 实例副本数量，Redis 2.8标准版、CKV标准版只支持1副本，4.0、5.0标准版和集群版支持1-5个副本。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
-     * @return ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2. 
+     * @return ReplicasReadonly 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
-     * @param ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
+     * @param ReplicasReadonly 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 实例名称，长度小于60的中文/英文/数字/"-"/"_" 
+     * @return InstanceName 实例名称，长度小于60的中文/英文/数字/"-"/"_"
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称，长度小于60的中文/英文/数字/"-"/"_"
+     * @param InstanceName 实例名称，长度小于60的中文/英文/数字/"-"/"_"
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例 
-     * @return NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     * Get 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。 
+     * @return NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
-     * @param NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     * Set 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
+     * @param NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;

@@ -52,6 +52,9 @@ search-by-name - String - 是否必填：否 -（过滤条件）按照名称检�
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
     */
     @SerializedName("Filters")
     @Expose
@@ -126,13 +129,19 @@ instance-name - String - 是否必填：否 -（过滤条件）按照名称过�
 search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
-additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。 
+additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例 
      * @return Filters 过滤条件。
 instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
 search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -145,12 +154,18 @@ search-by-name - String - 是否必填：否 -（过滤条件）按照名称检�
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
      * @param Filters 过滤条件。
 instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
 search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

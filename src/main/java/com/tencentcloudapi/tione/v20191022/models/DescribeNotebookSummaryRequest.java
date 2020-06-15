@@ -20,41 +20,12 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNotebookInstanceRequest extends AbstractModel{
-
-    /**
-    * Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-    */
-    @SerializedName("NotebookInstanceName")
-    @Expose
-    private String NotebookInstanceName;
-
-    /**
-     * Get Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$ 
-     * @return NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-     */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
-    }
-
-    /**
-     * Set Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-     * @param NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-     */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
-    }
+public class DescribeNotebookSummaryRequest extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
 
     }
 }

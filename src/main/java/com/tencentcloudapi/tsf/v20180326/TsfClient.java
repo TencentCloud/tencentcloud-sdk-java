@@ -525,6 +525,42 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *查询API详情
+     * @param req DescribeApiDetailRequest
+     * @return DescribeApiDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiDetailResponse DescribeApiDetail(DescribeApiDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeApiDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询API 版本
+     * @param req DescribeApiVersionsRequest
+     * @return DescribeApiVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiVersionsResponse DescribeApiVersions(DescribeApiVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiVersionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiVersionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeApiVersions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取应用详情
      * @param req DescribeApplicationRequest
      * @return DescribeApplicationResponse
@@ -879,6 +915,24 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeMicroservicesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMicroservices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询服务API列表
+     * @param req DescribeMsApiListRequest
+     * @return DescribeMsApiListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMsApiListResponse DescribeMsApiList(DescribeMsApiListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMsApiListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMsApiListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMsApiList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

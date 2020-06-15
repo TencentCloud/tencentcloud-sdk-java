@@ -24,14 +24,33 @@ public class StartNotebookInstanceRequest extends AbstractModel{
 
     /**
     * Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
     */
     @SerializedName("NotebookInstanceName")
     @Expose
     private String NotebookInstanceName;
 
     /**
-     * Get Notebook实例名称 
+    * 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+    */
+    @SerializedName("AutoStopping")
+    @Expose
+    private String AutoStopping;
+
+    /**
+    * 自动停止配置，只在AutoStopping为Enabled的时候生效
+    */
+    @SerializedName("StoppingCondition")
+    @Expose
+    private StoppingCondition StoppingCondition;
+
+    /**
+     * Get Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$ 
      * @return NotebookInstanceName Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      */
     public String getNotebookInstanceName() {
         return this.NotebookInstanceName;
@@ -39,10 +58,52 @@ public class StartNotebookInstanceRequest extends AbstractModel{
 
     /**
      * Set Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      * @param NotebookInstanceName Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      */
     public void setNotebookInstanceName(String NotebookInstanceName) {
         this.NotebookInstanceName = NotebookInstanceName;
+    }
+
+    /**
+     * Get 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置 
+     * @return AutoStopping 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     */
+    public String getAutoStopping() {
+        return this.AutoStopping;
+    }
+
+    /**
+     * Set 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     * @param AutoStopping 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     */
+    public void setAutoStopping(String AutoStopping) {
+        this.AutoStopping = AutoStopping;
+    }
+
+    /**
+     * Get 自动停止配置，只在AutoStopping为Enabled的时候生效 
+     * @return StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
+     */
+    public StoppingCondition getStoppingCondition() {
+        return this.StoppingCondition;
+    }
+
+    /**
+     * Set 自动停止配置，只在AutoStopping为Enabled的时候生效
+     * @param StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
+     */
+    public void setStoppingCondition(StoppingCondition StoppingCondition) {
+        this.StoppingCondition = StoppingCondition;
     }
 
     /**
@@ -50,6 +111,8 @@ public class StartNotebookInstanceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
+        this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
 
     }
 }

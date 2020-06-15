@@ -253,14 +253,14 @@ public class CreateInvoiceRequest extends AbstractModel{
     private Long UndoPart;
 
     /**
-    * 订单下单时间（格式 YYYMMDD）
+    * 订单下单时间（格式 YYYYMMDD）
     */
     @SerializedName("OrderDate")
     @Expose
     private String OrderDate;
 
     /**
-    * 订单级别（单位为分）
+    * 订单级别折扣（单位为分）
     */
     @SerializedName("Discount")
     @Expose
@@ -810,32 +810,32 @@ public class CreateInvoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 订单下单时间（格式 YYYMMDD） 
-     * @return OrderDate 订单下单时间（格式 YYYMMDD）
+     * Get 订单下单时间（格式 YYYYMMDD） 
+     * @return OrderDate 订单下单时间（格式 YYYYMMDD）
      */
     public String getOrderDate() {
         return this.OrderDate;
     }
 
     /**
-     * Set 订单下单时间（格式 YYYMMDD）
-     * @param OrderDate 订单下单时间（格式 YYYMMDD）
+     * Set 订单下单时间（格式 YYYYMMDD）
+     * @param OrderDate 订单下单时间（格式 YYYYMMDD）
      */
     public void setOrderDate(String OrderDate) {
         this.OrderDate = OrderDate;
     }
 
     /**
-     * Get 订单级别（单位为分） 
-     * @return Discount 订单级别（单位为分）
+     * Get 订单级别折扣（单位为分） 
+     * @return Discount 订单级别折扣（单位为分）
      */
     public Long getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 订单级别（单位为分）
-     * @param Discount 订单级别（单位为分）
+     * Set 订单级别折扣（单位为分）
+     * @param Discount 订单级别折扣（单位为分）
      */
     public void setDiscount(Long Discount) {
         this.Discount = Discount;
