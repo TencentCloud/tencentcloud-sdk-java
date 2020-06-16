@@ -116,6 +116,22 @@ Failed: 失败
     private BillingLabel BillingLabel;
 
     /**
+    * 运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuntimeInSeconds")
+    @Expose
+    private Long RuntimeInSeconds;
+
+    /**
+    * 剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemainTimeInSeconds")
+    @Expose
+    private Long RemainTimeInSeconds;
+
+    /**
      * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreationTime 创建时间
@@ -356,6 +372,46 @@ Failed: 失败
     }
 
     /**
+     * Get 运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuntimeInSeconds 运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuntimeInSeconds() {
+        return this.RuntimeInSeconds;
+    }
+
+    /**
+     * Set 运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuntimeInSeconds 运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuntimeInSeconds(Long RuntimeInSeconds) {
+        this.RuntimeInSeconds = RuntimeInSeconds;
+    }
+
+    /**
+     * Get 剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemainTimeInSeconds 剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRemainTimeInSeconds() {
+        return this.RemainTimeInSeconds;
+    }
+
+    /**
+     * Set 剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemainTimeInSeconds 剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemainTimeInSeconds(Long RemainTimeInSeconds) {
+        this.RemainTimeInSeconds = RemainTimeInSeconds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -370,6 +426,8 @@ Failed: 失败
         this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
         this.setParamSimple(map, prefix + "Prepay", this.Prepay);
         this.setParamObj(map, prefix + "BillingLabel.", this.BillingLabel);
+        this.setParamSimple(map, prefix + "RuntimeInSeconds", this.RuntimeInSeconds);
+        this.setParamSimple(map, prefix + "RemainTimeInSeconds", this.RemainTimeInSeconds);
 
     }
 }
