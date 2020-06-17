@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class TextDetectionEn extends AbstractModel{
 
     /**
-    * 识别出的文本行内容
+    * 识别出的文本行内容。
     */
     @SerializedName("DetectedText")
     @Expose
     private String DetectedText;
 
     /**
-    * 置信度 0 ~100
+    * 置信度 0 ~100。
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-    * 文本行坐标，以四个顶点坐标表示
+    * 文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Polygon")
@@ -52,41 +52,62 @@ public class TextDetectionEn extends AbstractModel{
     private String AdvancedInfo;
 
     /**
-     * Get 识别出的文本行内容 
-     * @return DetectedText 识别出的文本行内容
+    * 单词在原图中的四点坐标。
+    */
+    @SerializedName("WordCoordPoint")
+    @Expose
+    private WordCoordPoint [] WordCoordPoint;
+
+    /**
+    * 候选字符集(包含候选字Character以及置信度Confidence)。
+    */
+    @SerializedName("CandWord")
+    @Expose
+    private CandWord [] CandWord;
+
+    /**
+    * 识别出来的单词信息（包括单词Character和单词置信度confidence）
+    */
+    @SerializedName("Words")
+    @Expose
+    private Words [] Words;
+
+    /**
+     * Get 识别出的文本行内容。 
+     * @return DetectedText 识别出的文本行内容。
      */
     public String getDetectedText() {
         return this.DetectedText;
     }
 
     /**
-     * Set 识别出的文本行内容
-     * @param DetectedText 识别出的文本行内容
+     * Set 识别出的文本行内容。
+     * @param DetectedText 识别出的文本行内容。
      */
     public void setDetectedText(String DetectedText) {
         this.DetectedText = DetectedText;
     }
 
     /**
-     * Get 置信度 0 ~100 
-     * @return Confidence 置信度 0 ~100
+     * Get 置信度 0 ~100。 
+     * @return Confidence 置信度 0 ~100。
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 置信度 0 ~100
-     * @param Confidence 置信度 0 ~100
+     * Set 置信度 0 ~100。
+     * @param Confidence 置信度 0 ~100。
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 文本行坐标，以四个顶点坐标表示
+     * Get 文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Polygon 文本行坐标，以四个顶点坐标表示
+     * @return Polygon 文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getPolygon() {
@@ -94,9 +115,9 @@ public class TextDetectionEn extends AbstractModel{
     }
 
     /**
-     * Set 文本行坐标，以四个顶点坐标表示
+     * Set 文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Polygon 文本行坐标，以四个顶点坐标表示
+     * @param Polygon 文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolygon(Coord [] Polygon) {
@@ -120,6 +141,54 @@ public class TextDetectionEn extends AbstractModel{
     }
 
     /**
+     * Get 单词在原图中的四点坐标。 
+     * @return WordCoordPoint 单词在原图中的四点坐标。
+     */
+    public WordCoordPoint [] getWordCoordPoint() {
+        return this.WordCoordPoint;
+    }
+
+    /**
+     * Set 单词在原图中的四点坐标。
+     * @param WordCoordPoint 单词在原图中的四点坐标。
+     */
+    public void setWordCoordPoint(WordCoordPoint [] WordCoordPoint) {
+        this.WordCoordPoint = WordCoordPoint;
+    }
+
+    /**
+     * Get 候选字符集(包含候选字Character以及置信度Confidence)。 
+     * @return CandWord 候选字符集(包含候选字Character以及置信度Confidence)。
+     */
+    public CandWord [] getCandWord() {
+        return this.CandWord;
+    }
+
+    /**
+     * Set 候选字符集(包含候选字Character以及置信度Confidence)。
+     * @param CandWord 候选字符集(包含候选字Character以及置信度Confidence)。
+     */
+    public void setCandWord(CandWord [] CandWord) {
+        this.CandWord = CandWord;
+    }
+
+    /**
+     * Get 识别出来的单词信息（包括单词Character和单词置信度confidence） 
+     * @return Words 识别出来的单词信息（包括单词Character和单词置信度confidence）
+     */
+    public Words [] getWords() {
+        return this.Words;
+    }
+
+    /**
+     * Set 识别出来的单词信息（包括单词Character和单词置信度confidence）
+     * @param Words 识别出来的单词信息（包括单词Character和单词置信度confidence）
+     */
+    public void setWords(Words [] Words) {
+        this.Words = Words;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -127,6 +196,9 @@ public class TextDetectionEn extends AbstractModel{
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamArrayObj(map, prefix + "Polygon.", this.Polygon);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamArrayObj(map, prefix + "WordCoordPoint.", this.WordCoordPoint);
+        this.setParamArrayObj(map, prefix + "CandWord.", this.CandWord);
+        this.setParamArrayObj(map, prefix + "Words.", this.Words);
 
     }
 }
