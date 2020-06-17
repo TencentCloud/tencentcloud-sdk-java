@@ -38,14 +38,14 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
     private String PictureUrl;
 
     /**
-    * 显示位置，X轴偏移，默认 0。
+    * 显示位置，X轴偏移，单位是百分比，默认 0。
     */
     @SerializedName("XPosition")
     @Expose
     private Long XPosition;
 
     /**
-    * 显示位置，Y轴偏移，默认 0。
+    * 显示位置，Y轴偏移，单位是百分比，默认 0。
     */
     @SerializedName("YPosition")
     @Expose
@@ -53,6 +53,7 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
 
     /**
     * 水印名称。
+最长16字节。
     */
     @SerializedName("WatermarkName")
     @Expose
@@ -109,40 +110,42 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
     }
 
     /**
-     * Get 显示位置，X轴偏移，默认 0。 
-     * @return XPosition 显示位置，X轴偏移，默认 0。
+     * Get 显示位置，X轴偏移，单位是百分比，默认 0。 
+     * @return XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
      */
     public Long getXPosition() {
         return this.XPosition;
     }
 
     /**
-     * Set 显示位置，X轴偏移，默认 0。
-     * @param XPosition 显示位置，X轴偏移，默认 0。
+     * Set 显示位置，X轴偏移，单位是百分比，默认 0。
+     * @param XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
      */
     public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;
     }
 
     /**
-     * Get 显示位置，Y轴偏移，默认 0。 
-     * @return YPosition 显示位置，Y轴偏移，默认 0。
+     * Get 显示位置，Y轴偏移，单位是百分比，默认 0。 
+     * @return YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
      */
     public Long getYPosition() {
         return this.YPosition;
     }
 
     /**
-     * Set 显示位置，Y轴偏移，默认 0。
-     * @param YPosition 显示位置，Y轴偏移，默认 0。
+     * Set 显示位置，Y轴偏移，单位是百分比，默认 0。
+     * @param YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
      */
     public void setYPosition(Long YPosition) {
         this.YPosition = YPosition;
     }
 
     /**
-     * Get 水印名称。 
+     * Get 水印名称。
+最长16字节。 
      * @return WatermarkName 水印名称。
+最长16字节。
      */
     public String getWatermarkName() {
         return this.WatermarkName;
@@ -150,7 +153,9 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
 
     /**
      * Set 水印名称。
+最长16字节。
      * @param WatermarkName 水印名称。
+最长16字节。
      */
     public void setWatermarkName(String WatermarkName) {
         this.WatermarkName = WatermarkName;

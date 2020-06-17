@@ -13,22 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdatePolicyResponse extends AbstractModel{
+public class DescribeCustomImageTaskResponse extends AbstractModel{
 
     /**
-    * 策略id，入参是PolicyName时，才会返回
+    * 导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("PolicyId")
+    @SerializedName("ImageTaskSet")
     @Expose
-    private Long PolicyId;
+    private ImageTask [] ImageTaskSet;
+
+    /**
+    * 总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +45,39 @@ public class UpdatePolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 策略id，入参是PolicyName时，才会返回
+     * Get 导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyId 策略id，入参是PolicyName时，才会返回
+     * @return ImageTaskSet 导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getPolicyId() {
-        return this.PolicyId;
+    public ImageTask [] getImageTaskSet() {
+        return this.ImageTaskSet;
     }
 
     /**
-     * Set 策略id，入参是PolicyName时，才会返回
+     * Set 导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyId 策略id，入参是PolicyName时，才会返回
+     * @param ImageTaskSet 导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPolicyId(Long PolicyId) {
-        this.PolicyId = PolicyId;
+    public void setImageTaskSet(ImageTask [] ImageTaskSet) {
+        this.ImageTaskSet = ImageTaskSet;
+    }
+
+    /**
+     * Get 总数 
+     * @return TotalCount 总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数
+     * @param TotalCount 总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -77,7 +100,8 @@ public class UpdatePolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamArrayObj(map, prefix + "ImageTaskSet.", this.ImageTaskSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

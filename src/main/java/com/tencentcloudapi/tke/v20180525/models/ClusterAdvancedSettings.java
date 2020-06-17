@@ -79,6 +79,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private Boolean DeletionProtection;
 
     /**
+    * 集群的网络代理模型
+    */
+    @SerializedName("KubeProxyMode")
+    @Expose
+    private String KubeProxyMode;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -207,6 +214,22 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get 集群的网络代理模型 
+     * @return KubeProxyMode 集群的网络代理模型
+     */
+    public String getKubeProxyMode() {
+        return this.KubeProxyMode;
+    }
+
+    /**
+     * Set 集群的网络代理模型
+     * @param KubeProxyMode 集群的网络代理模型
+     */
+    public void setKubeProxyMode(String KubeProxyMode) {
+        this.KubeProxyMode = KubeProxyMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
 
     }
 }

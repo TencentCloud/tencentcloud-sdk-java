@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpdatePolicyRequest extends AbstractModel{
 
     /**
-    * 策略ID
+    * 策略ID，与PolicyName二选一必填
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 策略名
+    * 策略名，与PolicyId二选一必填
     */
     @SerializedName("PolicyName")
     @Expose
@@ -58,32 +58,32 @@ public class UpdatePolicyRequest extends AbstractModel{
     private String Alias;
 
     /**
-     * Get 策略ID 
-     * @return PolicyId 策略ID
+     * Get 策略ID，与PolicyName二选一必填 
+     * @return PolicyId 策略ID，与PolicyName二选一必填
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略ID
-     * @param PolicyId 策略ID
+     * Set 策略ID，与PolicyName二选一必填
+     * @param PolicyId 策略ID，与PolicyName二选一必填
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 策略名 
-     * @return PolicyName 策略名
+     * Get 策略名，与PolicyId二选一必填 
+     * @return PolicyName 策略名，与PolicyId二选一必填
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名
-     * @param PolicyName 策略名
+     * Set 策略名，与PolicyId二选一必填
+     * @param PolicyName 策略名，与PolicyId二选一必填
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;

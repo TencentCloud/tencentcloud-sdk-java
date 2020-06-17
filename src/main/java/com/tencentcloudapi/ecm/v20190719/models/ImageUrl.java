@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveRecordTemplateRequest extends AbstractModel{
+public class ImageUrl extends AbstractModel{
 
     /**
-    * DescribeRecordTemplates接口获取到的模板 ID。
+    * 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
     */
-    @SerializedName("TemplateId")
+    @SerializedName("ImageFile")
     @Expose
-    private Long TemplateId;
+    private String ImageFile;
 
     /**
-     * Get DescribeRecordTemplates接口获取到的模板 ID。 
-     * @return TemplateId DescribeRecordTemplates接口获取到的模板 ID。
+     * Get 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。 
+     * @return ImageFile 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
      */
-    public Long getTemplateId() {
-        return this.TemplateId;
+    public String getImageFile() {
+        return this.ImageFile;
     }
 
     /**
-     * Set DescribeRecordTemplates接口获取到的模板 ID。
-     * @param TemplateId DescribeRecordTemplates接口获取到的模板 ID。
+     * Set 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
+     * @param ImageFile 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
      */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setImageFile(String ImageFile) {
+        this.ImageFile = ImageFile;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "ImageFile", this.ImageFile);
 
     }
 }

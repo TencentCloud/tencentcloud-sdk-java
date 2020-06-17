@@ -25,7 +25,6 @@ public class ModifyMediaInfoResponse extends AbstractModel{
     /**
     * 新的视频封面 URL。
 * 注意：仅当请求携带 CoverData 时此返回值有效。 *
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -40,11 +39,9 @@ public class ModifyMediaInfoResponse extends AbstractModel{
 
     /**
      * Get 新的视频封面 URL。
-* 注意：仅当请求携带 CoverData 时此返回值有效。 *
-注意：此字段可能返回 null，表示取不到有效值。 
+* 注意：仅当请求携带 CoverData 时此返回值有效。 * 
      * @return CoverUrl 新的视频封面 URL。
 * 注意：仅当请求携带 CoverData 时此返回值有效。 *
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCoverUrl() {
         return this.CoverUrl;
@@ -53,10 +50,8 @@ public class ModifyMediaInfoResponse extends AbstractModel{
     /**
      * Set 新的视频封面 URL。
 * 注意：仅当请求携带 CoverData 时此返回值有效。 *
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverUrl 新的视频封面 URL。
 * 注意：仅当请求携带 CoverData 时此返回值有效。 *
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

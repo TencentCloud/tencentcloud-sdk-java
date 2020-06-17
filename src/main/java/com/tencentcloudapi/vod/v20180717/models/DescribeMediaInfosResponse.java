@@ -24,7 +24,6 @@ public class DescribeMediaInfosResponse extends AbstractModel{
 
     /**
     * 媒体文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfoSet")
     @Expose
@@ -32,7 +31,6 @@ public class DescribeMediaInfosResponse extends AbstractModel{
 
     /**
     * 不存在的文件 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotExistFileIdSet")
     @Expose
@@ -46,10 +44,8 @@ public class DescribeMediaInfosResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 媒体文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体文件信息列表。 
      * @return MediaInfoSet 媒体文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
@@ -57,19 +53,15 @@ public class DescribeMediaInfosResponse extends AbstractModel{
 
     /**
      * Set 媒体文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInfoSet 媒体文件信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;
     }
 
     /**
-     * Get 不存在的文件 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不存在的文件 ID 列表。 
      * @return NotExistFileIdSet 不存在的文件 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNotExistFileIdSet() {
         return this.NotExistFileIdSet;
@@ -77,9 +69,7 @@ public class DescribeMediaInfosResponse extends AbstractModel{
 
     /**
      * Set 不存在的文件 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotExistFileIdSet 不存在的文件 ID 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotExistFileIdSet(String [] NotExistFileIdSet) {
         this.NotExistFileIdSet = NotExistFileIdSet;

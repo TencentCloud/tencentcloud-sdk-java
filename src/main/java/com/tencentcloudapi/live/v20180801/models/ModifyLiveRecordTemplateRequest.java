@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLiveRecordTemplateRequest extends AbstractModel{
 
     /**
-    * 模板 ID。
+    * DescribeRecordTemplates接口获取到的模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -86,16 +86,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
-     * Get 模板 ID。 
-     * @return TemplateId 模板 ID。
+     * Get DescribeRecordTemplates接口获取到的模板 ID。 
+     * @return TemplateId DescribeRecordTemplates接口获取到的模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板 ID。
-     * @param TemplateId 模板 ID。
+     * Set DescribeRecordTemplates接口获取到的模板 ID。
+     * @param TemplateId DescribeRecordTemplates接口获取到的模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

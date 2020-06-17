@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
-    * 域名。
+    * 播放域名。
     */
     @SerializedName("DomainName")
     @Expose
@@ -31,6 +31,7 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
     * 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
     */
     @SerializedName("Enable")
     @Expose
@@ -38,6 +39,7 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
     * 鉴权key。
+不传表示不修改当前值。
     */
     @SerializedName("AuthKey")
     @Expose
@@ -45,37 +47,41 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
     * 有效时间，单位：秒。
+不传表示不修改当前值。
     */
     @SerializedName("AuthDelta")
     @Expose
     private Long AuthDelta;
 
     /**
-    * 鉴权backkey。
+    * 鉴权备用key。
+不传表示不修改当前值。
     */
     @SerializedName("AuthBackKey")
     @Expose
     private String AuthBackKey;
 
     /**
-     * Get 域名。 
-     * @return DomainName 域名。
+     * Get 播放域名。 
+     * @return DomainName 播放域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 域名。
-     * @param DomainName 域名。
+     * Set 播放域名。
+     * @param DomainName 播放域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 是否启用，0：关闭，1：启用。 
+     * Get 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。 
      * @return Enable 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      */
     public Long getEnable() {
         return this.Enable;
@@ -83,15 +89,19 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
      * Set 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      * @param Enable 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 鉴权key。 
+     * Get 鉴权key。
+不传表示不修改当前值。 
      * @return AuthKey 鉴权key。
+不传表示不修改当前值。
      */
     public String getAuthKey() {
         return this.AuthKey;
@@ -99,15 +109,19 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
      * Set 鉴权key。
+不传表示不修改当前值。
      * @param AuthKey 鉴权key。
+不传表示不修改当前值。
      */
     public void setAuthKey(String AuthKey) {
         this.AuthKey = AuthKey;
     }
 
     /**
-     * Get 有效时间，单位：秒。 
+     * Get 有效时间，单位：秒。
+不传表示不修改当前值。 
      * @return AuthDelta 有效时间，单位：秒。
+不传表示不修改当前值。
      */
     public Long getAuthDelta() {
         return this.AuthDelta;
@@ -115,23 +129,29 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
      * Set 有效时间，单位：秒。
+不传表示不修改当前值。
      * @param AuthDelta 有效时间，单位：秒。
+不传表示不修改当前值。
      */
     public void setAuthDelta(Long AuthDelta) {
         this.AuthDelta = AuthDelta;
     }
 
     /**
-     * Get 鉴权backkey。 
-     * @return AuthBackKey 鉴权backkey。
+     * Get 鉴权备用key。
+不传表示不修改当前值。 
+     * @return AuthBackKey 鉴权备用key。
+不传表示不修改当前值。
      */
     public String getAuthBackKey() {
         return this.AuthBackKey;
     }
 
     /**
-     * Set 鉴权backkey。
-     * @param AuthBackKey 鉴权backkey。
+     * Set 鉴权备用key。
+不传表示不修改当前值。
+     * @param AuthBackKey 鉴权备用key。
+不传表示不修改当前值。
      */
     public void setAuthBackKey(String AuthBackKey) {
         this.AuthBackKey = AuthBackKey;

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeVpcsRequest extends AbstractModel{
 
     /**
+    * 地域
+    */
+    @SerializedName("EcmRegion")
+    @Expose
+    private String EcmRegion;
+
+    /**
     * VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
     */
     @SerializedName("VpcIds")
@@ -57,11 +64,20 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     private Long Limit;
 
     /**
-    * 地域
-    */
-    @SerializedName("EcmRegion")
-    @Expose
-    private String EcmRegion;
+     * Get 地域 
+     * @return EcmRegion 地域
+     */
+    public String getEcmRegion() {
+        return this.EcmRegion;
+    }
+
+    /**
+     * Set 地域
+     * @param EcmRegion 地域
+     */
+    public void setEcmRegion(String EcmRegion) {
+        this.EcmRegion = EcmRegion;
+    }
 
     /**
      * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
@@ -152,30 +168,14 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     }
 
     /**
-     * Get 地域 
-     * @return EcmRegion 地域
-     */
-    public String getEcmRegion() {
-        return this.EcmRegion;
-    }
-
-    /**
-     * Set 地域
-     * @param EcmRegion 地域
-     */
-    public void setEcmRegion(String EcmRegion) {
-        this.EcmRegion = EcmRegion;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
 
     }
 }

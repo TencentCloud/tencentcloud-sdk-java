@@ -368,6 +368,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *查询导入镜像任务
+     * @param req DescribeCustomImageTaskRequest
+     * @return DescribeCustomImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomImageTaskResponse DescribeCustomImageTask(DescribeCustomImageTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomImageTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomImageTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCustomImageTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询可用区的默认子网
      * @param req DescribeDefaultSubnetRequest
      * @return DescribeDefaultSubnetResponse
@@ -397,6 +415,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
                 Type type = new TypeToken<JsonResponseModel<DescribeImageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询外部导入镜像支持的OS列表
+     * @param req DescribeImportImageOsRequest
+     * @return DescribeImportImageOsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImportImageOsResponse DescribeImportImageOs(DescribeImportImageOsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImportImageOsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImportImageOsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImportImageOs"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -669,6 +705,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<DisassociateAddressResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DisassociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *从腾讯云COS导入自定义镜像
+     * @param req ImportCustomImageRequest
+     * @return ImportCustomImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportCustomImageResponse ImportCustomImage(ImportCustomImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportCustomImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportCustomImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ImportCustomImage"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

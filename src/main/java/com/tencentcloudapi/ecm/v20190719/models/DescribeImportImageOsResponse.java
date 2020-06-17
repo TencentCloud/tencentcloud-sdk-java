@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdatePolicyResponse extends AbstractModel{
+public class DescribeImportImageOsResponse extends AbstractModel{
 
     /**
-    * 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+    * 支持的导入镜像的操作系统类型
     */
-    @SerializedName("PolicyId")
+    @SerializedName("ImportImageOsListSupported")
     @Expose
-    private Long PolicyId;
+    private ImageOsList ImportImageOsListSupported;
+
+    /**
+    * 支持的导入镜像的操作系统版本
+    */
+    @SerializedName("ImportImageOsVersionSet")
+    @Expose
+    private OsVersion [] ImportImageOsVersionSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class UpdatePolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyId 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 支持的导入镜像的操作系统类型 
+     * @return ImportImageOsListSupported 支持的导入镜像的操作系统类型
      */
-    public Long getPolicyId() {
-        return this.PolicyId;
+    public ImageOsList getImportImageOsListSupported() {
+        return this.ImportImageOsListSupported;
     }
 
     /**
-     * Set 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyId 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 支持的导入镜像的操作系统类型
+     * @param ImportImageOsListSupported 支持的导入镜像的操作系统类型
      */
-    public void setPolicyId(Long PolicyId) {
-        this.PolicyId = PolicyId;
+    public void setImportImageOsListSupported(ImageOsList ImportImageOsListSupported) {
+        this.ImportImageOsListSupported = ImportImageOsListSupported;
+    }
+
+    /**
+     * Get 支持的导入镜像的操作系统版本 
+     * @return ImportImageOsVersionSet 支持的导入镜像的操作系统版本
+     */
+    public OsVersion [] getImportImageOsVersionSet() {
+        return this.ImportImageOsVersionSet;
+    }
+
+    /**
+     * Set 支持的导入镜像的操作系统版本
+     * @param ImportImageOsVersionSet 支持的导入镜像的操作系统版本
+     */
+    public void setImportImageOsVersionSet(OsVersion [] ImportImageOsVersionSet) {
+        this.ImportImageOsVersionSet = ImportImageOsVersionSet;
     }
 
     /**
@@ -77,7 +95,8 @@ public class UpdatePolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamObj(map, prefix + "ImportImageOsListSupported.", this.ImportImageOsListSupported);
+        this.setParamArrayObj(map, prefix + "ImportImageOsVersionSet.", this.ImportImageOsVersionSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeLiveCertRequest extends AbstractModel{
 
     /**
-    * 证书Id。
+    * DescribeLiveCerts接口获取到的证书Id。
     */
     @SerializedName("CertId")
     @Expose
     private Long CertId;
 
     /**
-     * Get 证书Id。 
-     * @return CertId 证书Id。
+     * Get DescribeLiveCerts接口获取到的证书Id。 
+     * @return CertId DescribeLiveCerts接口获取到的证书Id。
      */
     public Long getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 证书Id。
-     * @param CertId 证书Id。
+     * Set DescribeLiveCerts接口获取到的证书Id。
+     * @param CertId DescribeLiveCerts接口获取到的证书Id。
      */
     public void setCertId(Long CertId) {
         this.CertId = CertId;

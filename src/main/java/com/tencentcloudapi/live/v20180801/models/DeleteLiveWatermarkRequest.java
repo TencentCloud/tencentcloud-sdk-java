@@ -25,6 +25,7 @@ public class DeleteLiveWatermarkRequest extends AbstractModel{
     /**
     * 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
     */
     @SerializedName("WatermarkId")
     @Expose
@@ -32,9 +33,11 @@ public class DeleteLiveWatermarkRequest extends AbstractModel{
 
     /**
      * Get 水印 ID。
-在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。 
+在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。 
      * @return WatermarkId 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
@@ -43,8 +46,10 @@ public class DeleteLiveWatermarkRequest extends AbstractModel{
     /**
      * Set 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
      * @param WatermarkId 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;

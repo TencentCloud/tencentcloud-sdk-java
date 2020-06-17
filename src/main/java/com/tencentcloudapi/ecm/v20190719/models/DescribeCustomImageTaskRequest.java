@@ -13,43 +13,58 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveRecordTemplateRequest extends AbstractModel{
+public class DescribeCustomImageTaskRequest extends AbstractModel{
 
     /**
-    * DescribeRecordTemplates接口获取到的模板 ID。
+    * 支持key,value查询
+task-id: 异步任务ID
+image-id: 镜像ID
+image-name: 镜像名称
     */
-    @SerializedName("TemplateId")
+    @SerializedName("Filters")
     @Expose
-    private Long TemplateId;
+    private Filter [] Filters;
 
     /**
-     * Get DescribeRecordTemplates接口获取到的模板 ID。 
-     * @return TemplateId DescribeRecordTemplates接口获取到的模板 ID。
+     * Get 支持key,value查询
+task-id: 异步任务ID
+image-id: 镜像ID
+image-name: 镜像名称 
+     * @return Filters 支持key,value查询
+task-id: 异步任务ID
+image-id: 镜像ID
+image-name: 镜像名称
      */
-    public Long getTemplateId() {
-        return this.TemplateId;
+    public Filter [] getFilters() {
+        return this.Filters;
     }
 
     /**
-     * Set DescribeRecordTemplates接口获取到的模板 ID。
-     * @param TemplateId DescribeRecordTemplates接口获取到的模板 ID。
+     * Set 支持key,value查询
+task-id: 异步任务ID
+image-id: 镜像ID
+image-name: 镜像名称
+     * @param Filters 支持key,value查询
+task-id: 异步任务ID
+image-id: 镜像ID
+image-name: 镜像名称
      */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

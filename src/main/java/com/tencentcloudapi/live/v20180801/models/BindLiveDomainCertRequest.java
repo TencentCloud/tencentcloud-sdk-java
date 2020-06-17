@@ -37,7 +37,7 @@ public class BindLiveDomainCertRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * 状态，0： 关闭  1：打开。
+    * HTTPS开启状态，0： 关闭  1：打开。
     */
     @SerializedName("Status")
     @Expose
@@ -76,16 +76,16 @@ public class BindLiveDomainCertRequest extends AbstractModel{
     }
 
     /**
-     * Get 状态，0： 关闭  1：打开。 
-     * @return Status 状态，0： 关闭  1：打开。
+     * Get HTTPS开启状态，0： 关闭  1：打开。 
+     * @return Status HTTPS开启状态，0： 关闭  1：打开。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，0： 关闭  1：打开。
-     * @param Status 状态，0： 关闭  1：打开。
+     * Set HTTPS开启状态，0： 关闭  1：打开。
+     * @param Status HTTPS开启状态，0： 关闭  1：打开。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

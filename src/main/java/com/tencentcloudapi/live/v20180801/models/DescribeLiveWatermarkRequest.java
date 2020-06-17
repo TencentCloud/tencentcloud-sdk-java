@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeLiveWatermarkRequest extends AbstractModel{
 
     /**
-    * 水印 ID。
+    * DescribeLiveWatermarks接口返回的水印 ID。
     */
     @SerializedName("WatermarkId")
     @Expose
     private Long WatermarkId;
 
     /**
-     * Get 水印 ID。 
-     * @return WatermarkId 水印 ID。
+     * Get DescribeLiveWatermarks接口返回的水印 ID。 
+     * @return WatermarkId DescribeLiveWatermarks接口返回的水印 ID。
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
     }
 
     /**
-     * Set 水印 ID。
-     * @param WatermarkId 水印 ID。
+     * Set DescribeLiveWatermarks接口返回的水印 ID。
+     * @param WatermarkId DescribeLiveWatermarks接口返回的水印 ID。
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;

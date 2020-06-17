@@ -51,7 +51,7 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     private String [] ReadonlyPolicy;
 
     /**
-    * 读写策略：填写r、w、rw，表示只读、只写、读写
+    * 读写策略：填写r、rw，表示只读、读写
     */
     @SerializedName("Privilege")
     @Expose
@@ -129,16 +129,16 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get 读写策略：填写r、w、rw，表示只读、只写、读写 
-     * @return Privilege 读写策略：填写r、w、rw，表示只读、只写、读写
+     * Get 读写策略：填写r、rw，表示只读、读写 
+     * @return Privilege 读写策略：填写r、rw，表示只读、读写
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 读写策略：填写r、w、rw，表示只读、只写、读写
-     * @param Privilege 读写策略：填写r、w、rw，表示只读、只写、读写
+     * Set 读写策略：填写r、rw，表示只读、读写
+     * @param Privilege 读写策略：填写r、rw，表示只读、读写
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;

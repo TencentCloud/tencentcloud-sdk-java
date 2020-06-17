@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cam.v20190116.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdatePolicyResponse extends AbstractModel{
+public class ImportCustomImageResponse extends AbstractModel{
 
     /**
-    * 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+    * 镜像ID
     */
-    @SerializedName("PolicyId")
+    @SerializedName("ImageId")
     @Expose
-    private Long PolicyId;
+    private String ImageId;
+
+    /**
+    * 异步任务ID，可根据DescribeCustomImageTask查询任务信息
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class UpdatePolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyId 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像ID 
+     * @return ImageId 镜像ID
      */
-    public Long getPolicyId() {
-        return this.PolicyId;
+    public String getImageId() {
+        return this.ImageId;
     }
 
     /**
-     * Set 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyId 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 镜像ID
+     * @param ImageId 镜像ID
      */
-    public void setPolicyId(Long PolicyId) {
-        this.PolicyId = PolicyId;
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
+     * Get 异步任务ID，可根据DescribeCustomImageTask查询任务信息 
+     * @return TaskId 异步任务ID，可根据DescribeCustomImageTask查询任务信息
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 异步任务ID，可根据DescribeCustomImageTask查询任务信息
+     * @param TaskId 异步任务ID，可根据DescribeCustomImageTask查询任务信息
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -77,7 +95,8 @@ public class UpdatePolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

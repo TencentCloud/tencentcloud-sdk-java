@@ -13,43 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveRecordTemplateRequest extends AbstractModel{
-
-    /**
-    * DescribeRecordTemplates接口获取到的模板 ID。
-    */
-    @SerializedName("TemplateId")
-    @Expose
-    private Long TemplateId;
-
-    /**
-     * Get DescribeRecordTemplates接口获取到的模板 ID。 
-     * @return TemplateId DescribeRecordTemplates接口获取到的模板 ID。
-     */
-    public Long getTemplateId() {
-        return this.TemplateId;
-    }
-
-    /**
-     * Set DescribeRecordTemplates接口获取到的模板 ID。
-     * @param TemplateId DescribeRecordTemplates接口获取到的模板 ID。
-     */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
-    }
+public class DescribeImportImageOsRequest extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

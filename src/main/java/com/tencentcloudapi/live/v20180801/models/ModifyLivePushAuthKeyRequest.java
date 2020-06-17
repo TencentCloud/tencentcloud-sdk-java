@@ -31,6 +31,7 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
     * 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
     */
     @SerializedName("Enable")
     @Expose
@@ -38,6 +39,7 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
     * 主鉴权key。
+不传表示不修改当前值。
     */
     @SerializedName("MasterAuthKey")
     @Expose
@@ -45,6 +47,7 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
     * 备鉴权key。
+不传表示不修改当前值。
     */
     @SerializedName("BackupAuthKey")
     @Expose
@@ -74,8 +77,10 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否启用，0：关闭，1：启用。 
+     * Get 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。 
      * @return Enable 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      */
     public Long getEnable() {
         return this.Enable;
@@ -83,15 +88,19 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
      * Set 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      * @param Enable 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 主鉴权key。 
+     * Get 主鉴权key。
+不传表示不修改当前值。 
      * @return MasterAuthKey 主鉴权key。
+不传表示不修改当前值。
      */
     public String getMasterAuthKey() {
         return this.MasterAuthKey;
@@ -99,15 +108,19 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
      * Set 主鉴权key。
+不传表示不修改当前值。
      * @param MasterAuthKey 主鉴权key。
+不传表示不修改当前值。
      */
     public void setMasterAuthKey(String MasterAuthKey) {
         this.MasterAuthKey = MasterAuthKey;
     }
 
     /**
-     * Get 备鉴权key。 
+     * Get 备鉴权key。
+不传表示不修改当前值。 
      * @return BackupAuthKey 备鉴权key。
+不传表示不修改当前值。
      */
     public String getBackupAuthKey() {
         return this.BackupAuthKey;
@@ -115,7 +128,9 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
      * Set 备鉴权key。
+不传表示不修改当前值。
      * @param BackupAuthKey 备鉴权key。
+不传表示不修改当前值。
      */
     public void setBackupAuthKey(String BackupAuthKey) {
         this.BackupAuthKey = BackupAuthKey;
