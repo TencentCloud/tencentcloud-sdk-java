@@ -30,8 +30,7 @@ public class DeleteLiveRecordRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * 任务ID，全局唯一标识录制任务。
-从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
+    * 任务ID，由CreateLiveRecord接口返回。
     */
     @SerializedName("TaskId")
     @Expose
@@ -54,20 +53,16 @@ public class DeleteLiveRecordRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务ID，全局唯一标识录制任务。
-从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。 
-     * @return TaskId 任务ID，全局唯一标识录制任务。
-从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
+     * Get 任务ID，由CreateLiveRecord接口返回。 
+     * @return TaskId 任务ID，由CreateLiveRecord接口返回。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，全局唯一标识录制任务。
-从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
-     * @param TaskId 任务ID，全局唯一标识录制任务。
-从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
+     * Set 任务ID，由CreateLiveRecord接口返回。
+     * @param TaskId 任务ID，由CreateLiveRecord接口返回。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

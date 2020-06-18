@@ -416,6 +416,24 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *管理终端用户
+     * @param req ModifyEndUserRequest
+     * @return ModifyEndUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEndUserResponse ModifyEndUser(ModifyEndUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEndUserResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEndUserResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyEndUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新环境信息
      * @param req ModifyEnvRequest
      * @return ModifyEnvResponse

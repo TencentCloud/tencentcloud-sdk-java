@@ -44,7 +44,7 @@ public class MainlandPermitOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 是非返回头像。默认不返回。
+    * 是否返回头像。默认不返回。
     */
     @SerializedName("RetProfile")
     @Expose
@@ -111,16 +111,16 @@ public class MainlandPermitOCRRequest extends AbstractModel{
     }
 
     /**
-     * Get 是非返回头像。默认不返回。 
-     * @return RetProfile 是非返回头像。默认不返回。
+     * Get 是否返回头像。默认不返回。 
+     * @return RetProfile 是否返回头像。默认不返回。
      */
     public Boolean getRetProfile() {
         return this.RetProfile;
     }
 
     /**
-     * Set 是非返回头像。默认不返回。
-     * @param RetProfile 是非返回头像。默认不返回。
+     * Set 是否返回头像。默认不返回。
+     * @param RetProfile 是否返回头像。默认不返回。
      */
     public void setRetProfile(Boolean RetProfile) {
         this.RetProfile = RetProfile;

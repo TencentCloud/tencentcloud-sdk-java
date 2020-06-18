@@ -30,7 +30,7 @@ public class StopLiveRecordRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * 任务ID，全局唯一标识录制任务。
+    * 任务ID，由CreateLiveRecord接口返回。
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,16 +53,16 @@ public class StopLiveRecordRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务ID，全局唯一标识录制任务。 
-     * @return TaskId 任务ID，全局唯一标识录制任务。
+     * Get 任务ID，由CreateLiveRecord接口返回。 
+     * @return TaskId 任务ID，由CreateLiveRecord接口返回。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，全局唯一标识录制任务。
-     * @param TaskId 任务ID，全局唯一标识录制任务。
+     * Set 任务ID，由CreateLiveRecord接口返回。
+     * @param TaskId 任务ID，由CreateLiveRecord接口返回。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
