@@ -53,6 +53,18 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private Long MaxBodyNum;
 
     /**
+    * 是否返回年龄、性别、朝向等属性。 
+可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
+如果此参数为空则为不需要返回。 
+需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
+关于各属性的详细描述，参见下文出参。 
+最多返回面积最大的 5 个人体属性信息，超过 5 个人体（第 6 个及以后的人体）的 BodyAttributesInfo 不具备参考意义。
+    */
+    @SerializedName("AttributesOptions")
+    @Expose
+    private AttributesOptions AttributesOptions;
+
+    /**
      * Get 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
 图片分辨率不得超过 2048*2048。
@@ -137,12 +149,49 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
+     * Get 是否返回年龄、性别、朝向等属性。 
+可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
+如果此参数为空则为不需要返回。 
+需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
+关于各属性的详细描述，参见下文出参。 
+最多返回面积最大的 5 个人体属性信息，超过 5 个人体（第 6 个及以后的人体）的 BodyAttributesInfo 不具备参考意义。 
+     * @return AttributesOptions 是否返回年龄、性别、朝向等属性。 
+可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
+如果此参数为空则为不需要返回。 
+需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
+关于各属性的详细描述，参见下文出参。 
+最多返回面积最大的 5 个人体属性信息，超过 5 个人体（第 6 个及以后的人体）的 BodyAttributesInfo 不具备参考意义。
+     */
+    public AttributesOptions getAttributesOptions() {
+        return this.AttributesOptions;
+    }
+
+    /**
+     * Set 是否返回年龄、性别、朝向等属性。 
+可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
+如果此参数为空则为不需要返回。 
+需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
+关于各属性的详细描述，参见下文出参。 
+最多返回面积最大的 5 个人体属性信息，超过 5 个人体（第 6 个及以后的人体）的 BodyAttributesInfo 不具备参考意义。
+     * @param AttributesOptions 是否返回年龄、性别、朝向等属性。 
+可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
+如果此参数为空则为不需要返回。 
+需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
+关于各属性的详细描述，参见下文出参。 
+最多返回面积最大的 5 个人体属性信息，超过 5 个人体（第 6 个及以后的人体）的 BodyAttributesInfo 不具备参考意义。
+     */
+    public void setAttributesOptions(AttributesOptions AttributesOptions) {
+        this.AttributesOptions = AttributesOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "MaxBodyNum", this.MaxBodyNum);
+        this.setParamObj(map, prefix + "AttributesOptions.", this.AttributesOptions);
 
     }
 }

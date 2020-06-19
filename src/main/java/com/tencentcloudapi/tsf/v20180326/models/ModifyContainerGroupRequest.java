@@ -58,6 +58,13 @@ public class ModifyContainerGroupRequest extends AbstractModel{
     private Long UpdateIvl;
 
     /**
+    * 子网ID
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -138,6 +145,22 @@ public class ModifyContainerGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 子网ID 
+     * @return SubnetId 子网ID
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID
+     * @param SubnetId 子网ID
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ModifyContainerGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ProtocolPorts.", this.ProtocolPorts);
         this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
         this.setParamSimple(map, prefix + "UpdateIvl", this.UpdateIvl);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

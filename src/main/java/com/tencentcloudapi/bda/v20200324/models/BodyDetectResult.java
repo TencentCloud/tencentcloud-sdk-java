@@ -39,6 +39,13 @@ public class BodyDetectResult extends AbstractModel{
     private BodyRect BodyRect;
 
     /**
+    * 图中检测出的人体属性信息。
+    */
+    @SerializedName("BodyAttributeInfo")
+    @Expose
+    private BodyAttributeInfo BodyAttributeInfo;
+
+    /**
      * Get 检测出的人体置信度。 
 误识率百分之十对应的阈值是0.14；误识率百分之五对应的阈值是0.32；误识率百分之二对应的阈值是0.62；误识率百分之一对应的阈值是0.81。 
 通常情况建议使用阈值0.32，可适用大多数情况。 
@@ -79,11 +86,28 @@ public class BodyDetectResult extends AbstractModel{
     }
 
     /**
+     * Get 图中检测出的人体属性信息。 
+     * @return BodyAttributeInfo 图中检测出的人体属性信息。
+     */
+    public BodyAttributeInfo getBodyAttributeInfo() {
+        return this.BodyAttributeInfo;
+    }
+
+    /**
+     * Set 图中检测出的人体属性信息。
+     * @param BodyAttributeInfo 图中检测出的人体属性信息。
+     */
+    public void setBodyAttributeInfo(BodyAttributeInfo BodyAttributeInfo) {
+        this.BodyAttributeInfo = BodyAttributeInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamObj(map, prefix + "BodyRect.", this.BodyRect);
+        this.setParamObj(map, prefix + "BodyAttributeInfo.", this.BodyAttributeInfo);
 
     }
 }

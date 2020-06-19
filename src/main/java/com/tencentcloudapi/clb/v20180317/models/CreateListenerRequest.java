@@ -87,6 +87,13 @@ public class CreateListenerRequest extends AbstractModel{
     private Long SniSwitch;
 
     /**
+    * 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
      * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -235,6 +242,22 @@ public class CreateListenerRequest extends AbstractModel{
     }
 
     /**
+     * Get 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。 
+     * @return TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     * @param TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -247,6 +270,7 @@ public class CreateListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
 
     }
 }
