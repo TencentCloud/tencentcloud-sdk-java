@@ -33,8 +33,8 @@ public class ClientProfile {
   private String signMethod;
 
   /**
-   * If payload is NOT involved in signing process, true means will ignore
-   * payload, default is false.
+   * If payload is NOT involved in signing process, true means will ignore payload, default is
+   * false.
    */
   private boolean unsignedPayload;
 
@@ -43,7 +43,6 @@ public class ClientProfile {
    */
   private Language language;
 
-  /* Determine if debugging is required */
   private boolean debug = false;
 
   public ClientProfile(final String signMethod, final HttpProfile httpProfile) {
@@ -94,8 +93,7 @@ public class ClientProfile {
   }
 
   /**
-   * Set the flag of whether payload should be ignored. Only has effect when
-   * request method is POST.
+   * Set the flag of whether payload should be ignored. Only has effect when request method is POST.
    *
    * @param flag
    */
@@ -119,7 +117,7 @@ public class ClientProfile {
   public void setLanguage(Language lang) {
     this.language = lang;
   }
-
+  
   public boolean isDebug() {
     return debug;
   }
