@@ -24,9 +24,10 @@ public class LexicalAnalysisResponse extends AbstractModel{
 
     /**
     * 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+<li>PER：表示人名，如刘德华、贝克汉姆</li>
+<li>LOC：表示地名，如北京、华山</li>
+<li>ORG：表示机构团体名，如腾讯、最高人民法院、人大附中</li>
+<li>PRODUCTION：表示产品名，如QQ、微信、iPhone</li>
     */
     @SerializedName("NerTokens")
     @Expose
@@ -48,13 +49,15 @@ public class LexicalAnalysisResponse extends AbstractModel{
 
     /**
      * Get 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li> 
+<li>PER：表示人名，如刘德华、贝克汉姆</li>
+<li>LOC：表示地名，如北京、华山</li>
+<li>ORG：表示机构团体名，如腾讯、最高人民法院、人大附中</li>
+<li>PRODUCTION：表示产品名，如QQ、微信、iPhone</li> 
      * @return NerTokens 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+<li>PER：表示人名，如刘德华、贝克汉姆</li>
+<li>LOC：表示地名，如北京、华山</li>
+<li>ORG：表示机构团体名，如腾讯、最高人民法院、人大附中</li>
+<li>PRODUCTION：表示产品名，如QQ、微信、iPhone</li>
      */
     public NerToken [] getNerTokens() {
         return this.NerTokens;
@@ -62,13 +65,15 @@ public class LexicalAnalysisResponse extends AbstractModel{
 
     /**
      * Set 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+<li>PER：表示人名，如刘德华、贝克汉姆</li>
+<li>LOC：表示地名，如北京、华山</li>
+<li>ORG：表示机构团体名，如腾讯、最高人民法院、人大附中</li>
+<li>PRODUCTION：表示产品名，如QQ、微信、iPhone</li>
      * @param NerTokens 命名实体识别结果。取值范围：
-<li>PER：表示人名</li>
-<li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+<li>PER：表示人名，如刘德华、贝克汉姆</li>
+<li>LOC：表示地名，如北京、华山</li>
+<li>ORG：表示机构团体名，如腾讯、最高人民法院、人大附中</li>
+<li>PRODUCTION：表示产品名，如QQ、微信、iPhone</li>
      */
     public void setNerTokens(NerToken [] NerTokens) {
         this.NerTokens = NerTokens;

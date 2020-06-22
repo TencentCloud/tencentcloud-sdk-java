@@ -51,6 +51,13 @@ public class EnterQueueRequest extends AbstractModel{
     private Long SetNumber;
 
     /**
+    * 游戏用户IP，用于就近调度，例如125.127.178.228
+    */
+    @SerializedName("UserIp")
+    @Expose
+    private String UserIp;
+
+    /**
      * Get true：第一次请求排队 false：已在排队中，查询当前排名 
      * @return First true：第一次请求排队 false：已在排队中，查询当前排名
      */
@@ -115,6 +122,22 @@ public class EnterQueueRequest extends AbstractModel{
     }
 
     /**
+     * Get 游戏用户IP，用于就近调度，例如125.127.178.228 
+     * @return UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public String getUserIp() {
+        return this.UserIp;
+    }
+
+    /**
+     * Set 游戏用户IP，用于就近调度，例如125.127.178.228
+     * @param UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public void setUserIp(String UserIp) {
+        this.UserIp = UserIp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class EnterQueueRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GameId", this.GameId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "SetNumber", this.SetNumber);
+        this.setParamSimple(map, prefix + "UserIp", this.UserIp);
 
     }
 }

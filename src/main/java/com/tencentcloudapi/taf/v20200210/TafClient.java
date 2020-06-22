@@ -56,7 +56,7 @@ public class TafClient extends AbstractClient{
     }
 
     /**
-     *EnhanceTaDegree
+     *流量反欺诈-虚假TA识别
      * @param req EnhanceTaDegreeRequest
      * @return EnhanceTaDegreeResponse
      * @throws TencentCloudSDKException
@@ -92,7 +92,7 @@ public class TafClient extends AbstractClient{
     }
 
     /**
-     *RecognizePreciseTargetAudience
+     *流量反欺诈-流量验准高级版
      * @param req RecognizePreciseTargetAudienceRequest
      * @return RecognizePreciseTargetAudienceResponse
      * @throws TencentCloudSDKException

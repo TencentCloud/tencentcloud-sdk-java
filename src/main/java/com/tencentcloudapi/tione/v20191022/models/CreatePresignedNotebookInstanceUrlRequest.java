@@ -24,7 +24,7 @@ public class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel{
 
     /**
     * Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
     */
     @SerializedName("NotebookInstanceName")
     @Expose
@@ -39,9 +39,9 @@ public class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel{
 
     /**
      * Get Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$ 
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$” 
      * @return NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      */
     public String getNotebookInstanceName() {
         return this.NotebookInstanceName;
@@ -49,9 +49,9 @@ public class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel{
 
     /**
      * Set Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      * @param NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      */
     public void setNotebookInstanceName(String NotebookInstanceName) {
         this.NotebookInstanceName = NotebookInstanceName;

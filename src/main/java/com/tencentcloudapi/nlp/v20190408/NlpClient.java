@@ -76,6 +76,78 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *根据指定的名称、描述创建自定义词库。
+     * @param req CreateDictRequest
+     * @return CreateDictResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDictResponse CreateDict(CreateDictRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDictResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDictResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDict"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *向指定的词库中添加词条。
+     * @param req CreateWordItemsRequest
+     * @return CreateWordItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWordItemsResponse CreateWordItems(CreateWordItemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWordItemsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWordItemsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateWordItems"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除自定义词库，会附带相应删除词库包含的所有词条。
+     * @param req DeleteDictRequest
+     * @return DeleteDictResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDictResponse DeleteDict(DeleteDictRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDictResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDictResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDict"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于删除自定义词库中的词条。
+     * @param req DeleteWordItemsRequest
+     * @return DeleteWordItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWordItemsResponse DeleteWordItems(DeleteWordItemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWordItemsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWordItemsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWordItems"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *句法依存分析接口能够分析出句子中词与词之间的相互依存关系，并揭示其句法结构，包括主谓关系、动宾关系、核心关系等等，可用于提取句子主干、提取句子核心词等，在机器翻译、自动问答、知识抽取等领域都有很好的应用。
      * @param req DependencyParsingRequest
      * @return DependencyParsingResponse
@@ -87,6 +159,42 @@ public class NlpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DependencyParsingResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DependencyParsing"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据id或名称查询自定义词库信息。
+     * @param req DescribeDictRequest
+     * @return DescribeDictResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDictResponse DescribeDict(DescribeDictRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDictResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDictResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDict"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *返回属于当前用户的所有自定义词库列表。
+     * @param req DescribeDictsRequest
+     * @return DescribeDictsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDictsResponse DescribeDicts(DescribeDictsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDictsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDictsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDicts"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -148,6 +256,24 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *依据自定义词库的ID，查询对应的词条信息。
+     * @param req DescribeWordItemsRequest
+     * @return DescribeWordItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWordItemsResponse DescribeWordItems(DescribeWordItemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWordItemsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWordItemsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWordItems"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
      * @param req KeywordsExtractionRequest
      * @return KeywordsExtractionResponse
@@ -185,6 +311,24 @@ public class NlpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<LexicalAnalysisResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "LexicalAnalysis"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定自定义词库中的词条是否存在。
+     * @param req SearchWordItemsRequest
+     * @return SearchWordItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchWordItemsResponse SearchWordItems(SearchWordItemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchWordItemsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchWordItemsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SearchWordItems"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -331,6 +475,24 @@ public class NlpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TextSimilarityResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "TextSimilarity"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改自定义词库元数据信息，包括名称、描述。
+     * @param req UpdateDictRequest
+     * @return UpdateDictResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDictResponse UpdateDict(UpdateDictRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDictResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDictResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateDict"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

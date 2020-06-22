@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DescribeNodeRequest extends AbstractModel{
 
     /**
+    * 过滤条件，name取值为： InstanceFamily-实例系列
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get 过滤条件，name取值为： InstanceFamily-实例系列 
+     * @return Filters 过滤条件，name取值为： InstanceFamily-实例系列
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件，name取值为： InstanceFamily-实例系列
+     * @param Filters 过滤条件，name取值为： InstanceFamily-实例系列
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

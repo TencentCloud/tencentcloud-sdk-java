@@ -13,48 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNotebookInstanceRequest extends AbstractModel{
+public class DeleteDictRequest extends AbstractModel{
 
     /**
-    * Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+    * 要删除的自定义词库ID。
     */
-    @SerializedName("NotebookInstanceName")
+    @SerializedName("DictId")
     @Expose
-    private String NotebookInstanceName;
+    private String DictId;
 
     /**
-     * Get Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$” 
-     * @return NotebookInstanceName Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+     * Get 要删除的自定义词库ID。 
+     * @return DictId 要删除的自定义词库ID。
      */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
+    public String getDictId() {
+        return this.DictId;
     }
 
     /**
-     * Set Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
-     * @param NotebookInstanceName Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+     * Set 要删除的自定义词库ID。
+     * @param DictId 要删除的自定义词库ID。
      */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
+    public void setDictId(String DictId) {
+        this.DictId = DictId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "DictId", this.DictId);
 
     }
 }

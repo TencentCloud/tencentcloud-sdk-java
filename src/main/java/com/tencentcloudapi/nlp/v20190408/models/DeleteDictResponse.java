@@ -13,48 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNotebookInstanceRequest extends AbstractModel{
+public class DeleteDictResponse extends AbstractModel{
 
     /**
-    * Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("NotebookInstanceName")
+    @SerializedName("RequestId")
     @Expose
-    private String NotebookInstanceName;
+    private String RequestId;
 
     /**
-     * Get Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$” 
-     * @return NotebookInstanceName Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getNotebookInstanceName() {
-        return this.NotebookInstanceName;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
-     * @param NotebookInstanceName Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setNotebookInstanceName(String NotebookInstanceName) {
-        this.NotebookInstanceName = NotebookInstanceName;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }
