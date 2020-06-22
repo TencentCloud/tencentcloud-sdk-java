@@ -33,8 +33,8 @@ public class ClientProfile {
   private String signMethod;
 
   /**
-   * If payload is NOT involved in signing process, true means will ignore payload, default is
-   * false.
+   * If payload is NOT involved in signing process, true means will ignore
+   * payload, default is false.
    */
   private boolean unsignedPayload;
 
@@ -43,7 +43,22 @@ public class ClientProfile {
    */
   private Language language;
 
-  public ClientProfile(String signMethod, HttpProfile httpProfile) {
+  /* Determine if debugging is required */
+  private boolean debug = false;
+
+  public ClientProfile(final String signMethod, final HttpProfile httpProfile) {
+    this(signMethod, httpProfile, false);
+  }
+
+  public ClientProfile(final String signMethod) {
+    this(signMethod, false);
+  }
+
+  public ClientProfile() {
+    this(false);
+  }
+
+  public ClientProfile(String signMethod, final HttpProfile httpProfile, final boolean debug) {
     if (signMethod == null || signMethod.isEmpty()) {
       signMethod = SIGN_TC3_256;
     }
@@ -51,14 +66,15 @@ public class ClientProfile {
     this.httpProfile = httpProfile;
     this.unsignedPayload = false;
     this.language = null;
+    this.setDebug(debug);
   }
 
-  public ClientProfile(String signMethod) {
-    this(signMethod, new HttpProfile());
+  public ClientProfile(final String signMethod, final boolean debug) {
+    this(signMethod, new HttpProfile(), debug);
   }
 
-  public ClientProfile() {
-    this(ClientProfile.SIGN_TC3_256, new HttpProfile());
+  public ClientProfile(final boolean debug) {
+    this(ClientProfile.SIGN_TC3_256, new HttpProfile(), debug);
   }
 
   public void setSignMethod(String signMethod) {
@@ -78,7 +94,8 @@ public class ClientProfile {
   }
 
   /**
-   * Set the flag of whether payload should be ignored. Only has effect when request method is POST.
+   * Set the flag of whether payload should be ignored. Only has effect when
+   * request method is POST.
    *
    * @param flag
    */
@@ -101,5 +118,13 @@ public class ClientProfile {
 
   public void setLanguage(Language lang) {
     this.language = lang;
+  }
+
+  public boolean isDebug() {
+    return debug;
+  }
+
+  public void setDebug(boolean debug) {
+    this.debug = debug;
   }
 }
