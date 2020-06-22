@@ -17,18 +17,18 @@
 
 package com.tencentcloudapi.common.http;
 
-import java.io.IOException;
-import java.net.Proxy;
-import java.util.concurrent.TimeUnit;
-
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.squareup.okhttp.Authenticator;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
-import com.tencentcloudapi.common.exception.TencentCloudSDKException;;
+
+import java.util.concurrent.TimeUnit;
+import java.io.IOException;
+import java.net.Proxy;;
 
 public class HttpConnection {
 
@@ -48,7 +48,11 @@ public class HttpConnection {
   public void setAuthenticator(Authenticator authenticator) {
     this.client.setAuthenticator(authenticator);
   }
-
+  
+  public OkHttpClient getOkHttpClient() {
+    return this.client;
+  }
+  
   public Response doRequest(Request request) throws TencentCloudSDKException {
     Response response = null;
     try {
@@ -57,10 +61,6 @@ public class HttpConnection {
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
     return response;
-  }
-
-  public OkHttpClient getOkHttpClient() {
-    return this.client;
   }
 
   public Response getRequest(String url) throws TencentCloudSDKException {
@@ -97,11 +97,17 @@ public class HttpConnection {
     return this.doRequest(request);
   }
 
-  public Response postRequest(String url, String body, Headers headers) throws TencentCloudSDKException {
+  public Response postRequest(String url, String body, Headers headers)
+      throws TencentCloudSDKException {
     MediaType contentType = MediaType.parse(headers.get("Content-Type"));
     Request request = null;
     try {
-      request = new Request.Builder().url(url).post(RequestBody.create(contentType, body)).headers(headers).build();
+      request =
+          new Request.Builder()
+              .url(url)
+              .post(RequestBody.create(contentType, body))
+              .headers(headers)
+              .build();
     } catch (IllegalArgumentException e) {
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
@@ -109,11 +115,17 @@ public class HttpConnection {
     return this.doRequest(request);
   }
 
-  public Response postRequest(String url, byte[] body, Headers headers) throws TencentCloudSDKException {
+  public Response postRequest(String url, byte[] body, Headers headers)
+      throws TencentCloudSDKException {
     MediaType contentType = MediaType.parse(headers.get("Content-Type"));
     Request request = null;
     try {
-      request = new Request.Builder().url(url).post(RequestBody.create(contentType, body)).headers(headers).build();
+      request =
+          new Request.Builder()
+              .url(url)
+              .post(RequestBody.create(contentType, body))
+              .headers(headers)
+              .build();
     } catch (IllegalArgumentException e) {
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
