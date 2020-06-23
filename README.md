@@ -71,6 +71,32 @@ public class DescribeZones
     
 } 
 ```
+## 支持http
+SDK支持 http协议和https协议，通过设置HttpProfile的setProtocol()方法可以实现协议间的切换。：
+```
+      HttpProfile httpProfile = new HttpProfile();
+      httpProfile.setProtocol("http://"); //http协议
+	  httpProfile.setProtocol("https://"); //https协议
+
+```
+## 支持打印日志
+自\*\*版本开始，SDK支持打印日志
+首先,在创建CLientProfile对象时,设置debug模式为真
+```
+      ClientProfile clientProfile = new ClientProfile();
+      clientProfile.setDebug(true);
+```
+然后在项目根目录上设置log的配置文件,可以参考tencentcloud-sdk-java/log4j.properties。
+若配置文件使用运行程序tencentcloud-sdk-java/log4j.properties，会在根目录下生成两个文件debug.log和info.log。
+debug.log为debug LEVEL中**DEBUG**之上的日志。
+info.log为debug LEVEL中**INFO**之上的日志
+log日志内容为:**日志级别|时间|发起请求的类名|方法名|日志信息**，如：
+```
+DEBUG | 2020-06-23 19:53:45,527 | com.tencentcloudapi.cvm.v20170312.CvmClient | main | send request, request url: http://cvm.ap-shanghai.tencentcloudapi.com/?Nonce=214427340&Action=DescribeInstances&Filters.0.Values.1=ap-shanghai-2&Version=2017-03-12&Filters.0.Values.0=ap-shanghai-1&SecretId=AKIDf6Jcz7nvVHdy7HmsKbcnqhY9mBIdsfM3&Filters.0.Name=zone&RequestClient=SDK_JAVA_3.1.77&Region=ap-shanghai&SignatureMethod=HmacSHA256&Timestamp=1592913225&Signature=4M90tzqzZk2%2Fa6pQv2Tep0gWSO%2FTODAN%2Bb3cLLZW4kw%3D. request headers information: 
+DEBUG | 2020-06-23 19:53:45,685 | com.tencentcloudapi.cvm.v20170312.CvmClient | main | recieve response, response url: http://cvm.ap-shanghai.tencentcloudapi.com/?Nonce=214427340&Action=DescribeInstances&Filters.0.Values.1=ap-shanghai-2&Version=2017-03-12&Filters.0.Values.0=ap-shanghai-1&SecretId=AKIDf6Jcz7nvVHdy7HmsKbcnqhY9mBIdsfM3&Filters.0.Name=zone&RequestClient=SDK_JAVA_3.1.77&Region=ap-shanghai&SignatureMethod=HmacSHA256&Timestamp=1592913225&Signature=4M90tzqzZk2%2Fa6pQv2Tep0gWSO%2FTODAN%2Bb3cLLZW4kw%3D, response headers: Server: nginx;Date: Tue, 23 Jun 2020 11:53:45 GMT;Content-Type: text/html; charset=utf-8;Content-Length: 162;Connection: keep-alive;OkHttp-Selected-Protocol: http/1.1;OkHttp-Sent-Millis: 1592913225648;OkHttp-Received-Millis: 1592913225684;,response body information: com.squareup.okhttp.internal.http.RealResponseBody@86be70a
+ INFO | 2020-06-23 19:53:45,686 | com.tencentcloudapi.cvm.v20170312.CvmClient | main | response code is 403, not 200
+```
+
 
 ## 更多示例
 
