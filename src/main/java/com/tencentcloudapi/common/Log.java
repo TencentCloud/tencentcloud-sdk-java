@@ -20,15 +20,16 @@ class Log implements Interceptor {
   }
 
   public Log(String name, boolean isDebug) {
+    logger = Logger.getLogger(name);
     File file = new File("log4j.properties");
     if (!file.exists()) {
       this.debug = false;
+      BasicConfigurator.configure();
+      logger.warn("The configuration file of log4j does not exist, please refer to tencentcloud-sdk-java/log4j.properties for configuration.");
     } else {
       this.debug = isDebug;
+      PropertyConfigurator.configure("log4j.properties");
     }
-    logger = Logger.getLogger(name);
-    PropertyConfigurator.configure("log4j.properties");
-    logger.setLevel(Level.ALL);
   }
 
   public void info(final String str) {
