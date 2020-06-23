@@ -88,7 +88,7 @@ public abstract class AbstractClient {
     this.sdkVersion = AbstractClient.SDK_VERSION;
     this.apiVersion = version;
     this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    this.log = new Log(profile.isDebug());
+    this.log = new Log(getClass().getName(), profile.isDebug());
     warmup();
   }
 
