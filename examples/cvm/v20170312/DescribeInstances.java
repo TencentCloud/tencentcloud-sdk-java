@@ -26,7 +26,7 @@ public class DescribeInstances {
             ClientProfile clientProfile = new ClientProfile();
             clientProfile.setSignMethod("HmacSHA256"); // 指定签名算法(默认为HmacSHA256)
             clientProfile.setHttpProfile(httpProfile);
-
+            clientProfile.setDebug(true);
             // 实例化要请求产品(以cvm为例)的client对象,clientProfile是可选的
             CvmClient client = new CvmClient(cred, "ap-shanghai", clientProfile);
 
