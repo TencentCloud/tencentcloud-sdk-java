@@ -42,22 +42,9 @@ public class ClientProfile {
    * valid choices: zh-CN, en-US
    */
   private Language language;
-
-  private boolean debug = false;
-
-  public ClientProfile(final String signMethod, final HttpProfile httpProfile) {
-    this(signMethod, httpProfile, false);
-  }
-
-  public ClientProfile(final String signMethod) {
-    this(signMethod, false);
-  }
-
-  public ClientProfile() {
-    this(false);
-  }
-
-  public ClientProfile(String signMethod, final HttpProfile httpProfile, final boolean debug) {
+  private boolean debug;
+  
+  public ClientProfile(String signMethod, HttpProfile httpProfile) {
     if (signMethod == null || signMethod.isEmpty()) {
       signMethod = SIGN_TC3_256;
     }
@@ -65,15 +52,15 @@ public class ClientProfile {
     this.httpProfile = httpProfile;
     this.unsignedPayload = false;
     this.language = null;
-    this.setDebug(debug);
+    this.setDebug(false);
   }
 
-  public ClientProfile(final String signMethod, final boolean debug) {
-    this(signMethod, new HttpProfile(), debug);
+  public ClientProfile(String signMethod) {
+    this(signMethod, new HttpProfile());
   }
 
-  public ClientProfile(final boolean debug) {
-    this(ClientProfile.SIGN_TC3_256, new HttpProfile(), debug);
+  public ClientProfile() {
+    this(ClientProfile.SIGN_TC3_256, new HttpProfile());
   }
 
   public void setSignMethod(String signMethod) {
@@ -117,7 +104,7 @@ public class ClientProfile {
   public void setLanguage(Language lang) {
     this.language = lang;
   }
-  
+
   public boolean isDebug() {
     return debug;
   }
