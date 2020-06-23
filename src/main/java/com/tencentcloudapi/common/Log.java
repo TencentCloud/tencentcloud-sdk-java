@@ -15,18 +15,18 @@ class Log implements Interceptor {
   private boolean debug;
   private Logger logger = null;
   
-  public Log() {
-    this(false);
+  public Log(String name) {
+    this(name, false);
   }
 
-  public Log(boolean isDebug) {
+  public Log(String name, boolean isDebug) {
     File file = new File("log4j.properties");
     if (!file.exists()) {
       this.debug = false;
     } else {
       this.debug = isDebug;
     }
-    logger = Logger.getLogger(this.getClass().getName());
+    logger = Logger.getLogger(name);
     PropertyConfigurator.configure("log4j.properties");
     logger.setLevel(Level.ALL);
   }
