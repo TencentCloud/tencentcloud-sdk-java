@@ -88,7 +88,7 @@ public abstract class AbstractClient {
     this.sdkVersion = AbstractClient.SDK_VERSION;
     this.apiVersion = version;
     this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    this.log = Log.getLog(profile.isDebug());
+    this.log = new Log(profile.isDebug());
     warmup();
   }
 
@@ -197,7 +197,7 @@ public abstract class AbstractClient {
             this.profile.getHttpProfile().getConnTimeout(),
             this.profile.getHttpProfile().getReadTimeout(),
             this.profile.getHttpProfile().getWriteTimeout());
-    conn.addInterceptors(Log.getLog());
+    conn.addInterceptors(log);
     this.trySetProxy(conn);
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
@@ -359,7 +359,7 @@ public abstract class AbstractClient {
             this.profile.getHttpProfile().getConnTimeout(),
             this.profile.getHttpProfile().getReadTimeout(),
             this.profile.getHttpProfile().getWriteTimeout());
-    conn.addInterceptors(Log.getLog());
+    conn.addInterceptors(log);
     this.trySetProxy(conn);
     String reqMethod = this.profile.getHttpProfile().getReqMethod();
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
