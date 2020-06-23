@@ -86,9 +86,9 @@ SDK支持 http协议和https协议，通过设置HttpProfile的setProtocol()方�
       ClientProfile clientProfile = new ClientProfile();
       clientProfile.setDebug(true);
 ```
-然后在项目根目录上设置log的配置文件,可以参考tencentcloud-sdk-java/log4j.properties。  
-若配置文件使用运行程序tencentcloud-sdk-java/log4j.properties，会在根目录下生成两个文件debug.log和info.log。  
-debug.log为debug LEVEL中**DEBUG**之上的日志。  
+然后在项目根目录上设置log的配置文件,可以参考tencentcloud-sdk-java/log4j.properties  
+若配置文件使用运行程序tencentcloud-sdk-java/log4j.properties，会在根目录下生成两个文件debug.log和info.log  
+debug.log为debug LEVEL中**DEBUG**之上的日志  
 info.log为debug LEVEL中**INFO**之上的日志  
 log日志内容为:**日志级别|时间|发起请求的类名|方法名|日志信息**，如：  
 ```
