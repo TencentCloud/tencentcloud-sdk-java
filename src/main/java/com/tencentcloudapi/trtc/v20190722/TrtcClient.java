@@ -56,6 +56,24 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询SDKAppID下用户的异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询24小时内数据，查询起止时间不超过1个小时。支持跨天查询。异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
+     * @param req DescribeAbnormalEventRequest
+     * @return DescribeAbnormalEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAbnormalEventResponse DescribeAbnormalEvent(DescribeAbnormalEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAbnormalEventResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAbnormalEvent"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个，不支持跨天查询。
      * @param req DescribeCallDetailRequest
      * @return DescribeCallDetailResponse

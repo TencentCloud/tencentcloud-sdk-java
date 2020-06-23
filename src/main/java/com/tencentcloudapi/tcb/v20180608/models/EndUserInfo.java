@@ -107,6 +107,13 @@ public class EndUserInfo extends AbstractModel{
     private Boolean IsDisabled;
 
     /**
+    * 是否设置过密码
+    */
+    @SerializedName("HasPassword")
+    @Expose
+    private Boolean HasPassword;
+
+    /**
      * Get 用户唯一ID 
      * @return UUId 用户唯一ID
      */
@@ -299,6 +306,22 @@ public class EndUserInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否设置过密码 
+     * @return HasPassword 是否设置过密码
+     */
+    public Boolean getHasPassword() {
+        return this.HasPassword;
+    }
+
+    /**
+     * Set 是否设置过密码
+     * @param HasPassword 是否设置过密码
+     */
+    public void setHasPassword(Boolean HasPassword) {
+        this.HasPassword = HasPassword;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class EndUserInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "IsAnonymous", this.IsAnonymous);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
+        this.setParamSimple(map, prefix + "HasPassword", this.HasPassword);
 
     }
 }
