@@ -23,6 +23,7 @@ import com.squareup.okhttp.Response;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.squareup.okhttp.Authenticator;
 import com.squareup.okhttp.Headers;
+import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.RequestBody;
 
@@ -41,6 +42,10 @@ public class HttpConnection {
     this.client.setWriteTimeout(writeTimeout, TimeUnit.SECONDS);
   }
 
+  public void addInterceptors(Interceptor interceptor) {
+    this.client.interceptors().add(interceptor);
+  }
+  
   public void setProxy(Proxy proxy) {
     this.client.setProxy(proxy);
   }

@@ -69,7 +69,7 @@ public abstract class AbstractClient {
   private String sdkVersion;
   private String apiVersion;
   public Gson gson;
-
+  private Log log;
   public AbstractClient(String endpoint, String version, Credential credential, String region) {
     this(endpoint, version, credential, region, new ClientProfile());
   }
@@ -88,6 +88,7 @@ public abstract class AbstractClient {
     this.sdkVersion = AbstractClient.SDK_VERSION;
     this.apiVersion = version;
     this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+    this.log = new Log(getClass().getName(), profile.isDebug());
     warmup();
   }
 
@@ -196,6 +197,7 @@ public abstract class AbstractClient {
             this.profile.getHttpProfile().getConnTimeout(),
             this.profile.getHttpProfile().getReadTimeout(),
             this.profile.getHttpProfile().getWriteTimeout());
+    conn.addInterceptors(log);
     this.trySetProxy(conn);
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
@@ -221,12 +223,14 @@ public abstract class AbstractClient {
     Headers headers = hb.build();
     Response resp = conn.postRequest(url, requestPayload, headers);
     if (resp.code() != AbstractClient.HTTP_RSP_OK) {
+      log.info("response code is " + resp.code() + ", not 200");
       throw new TencentCloudSDKException(resp.code() + resp.message());
     }
     String respbody = null;
     try {
       respbody = resp.body().string();
     } catch (IOException e) {
+      log.info("Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.");
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
     JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -234,6 +238,7 @@ public abstract class AbstractClient {
       Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {}.getType();
       errResp = gson.fromJson(respbody, errType);
     } catch (JsonSyntaxException e) {
+      log.info("json is not a valid representation for an object of type");
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
     if (errResp.response.error != null) {
@@ -316,12 +321,14 @@ public abstract class AbstractClient {
     }
 
     if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
+      log.info("response code is " + okRsp.code() + ", not 200");
       throw new TencentCloudSDKException(okRsp.code() + okRsp.message());
     }
     String strResp = null;
     try {
       strResp = okRsp.body().string();
     } catch (IOException e) {
+      log.info("Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.");
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
 
@@ -330,6 +337,7 @@ public abstract class AbstractClient {
       Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {}.getType();
       errResp = gson.fromJson(strResp, errType);
     } catch (JsonSyntaxException e) {
+      log.info("json is not a valid representation for an object of type");
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
     if (errResp.response.error != null) {
@@ -351,6 +359,7 @@ public abstract class AbstractClient {
             this.profile.getHttpProfile().getConnTimeout(),
             this.profile.getHttpProfile().getReadTimeout(),
             this.profile.getHttpProfile().getWriteTimeout());
+    conn.addInterceptors(log);
     this.trySetProxy(conn);
     String reqMethod = this.profile.getHttpProfile().getReqMethod();
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
