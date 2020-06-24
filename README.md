@@ -76,7 +76,7 @@ SDK支持 http协议和https协议，通过设置HttpProfile的setProtocol()方�
 ```
       HttpProfile httpProfile = new HttpProfile();
       httpProfile.setProtocol("http://"); //http协议
-	  httpProfile.setProtocol("https://"); //https协议
+      httpProfile.setProtocol("https://"); //https协议
 
 ```
 ## 支持打印日志
