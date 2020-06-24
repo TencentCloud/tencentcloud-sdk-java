@@ -110,6 +110,24 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建新 LoRa 网关设备接口
+     * @param req CreateLoRaGatewayRequest
+     * @return CreateLoRaGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoRaGatewayResponse CreateLoRaGateway(CreateLoRaGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLoRaGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLoRaGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLoRaGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *为用户提供新建项目的能力，用于集中管理产品和应用。
      * @param req CreateProjectRequest
      * @return CreateProjectResponse
@@ -319,6 +337,24 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetDeviceListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetDeviceList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取 LoRa 网关列表接口
+     * @param req GetLoRaGatewayListRequest
+     * @return GetLoRaGatewayListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLoRaGatewayListResponse GetLoRaGatewayList(GetLoRaGatewayListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLoRaGatewayListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLoRaGatewayListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetLoRaGatewayList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

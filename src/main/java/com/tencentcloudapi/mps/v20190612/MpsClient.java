@@ -74,6 +74,24 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建转自适应码流模板，数量上限：100。
+     * @param req CreateAdaptiveDynamicStreamingTemplateRequest
+     * @return CreateAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义转动图模板，数量上限：16。
      * @param req CreateAnimatedGraphicsTemplateRequest
      * @return CreateAnimatedGraphicsTemplateResponse
@@ -303,6 +321,24 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除转自适应码流模板
+     * @param req DeleteAdaptiveDynamicStreamingTemplateRequest
+     * @return DeleteAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除用户自定义转动图模板。
      * @param req DeleteAnimatedGraphicsTemplateRequest
      * @return DeleteAnimatedGraphicsTemplateResponse
@@ -512,6 +548,24 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeAIRecognitionTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询转自适应码流模板，支持根据条件，分页查询。
+     * @param req DescribeAdaptiveDynamicStreamingTemplatesRequest
+     * @return DescribeAdaptiveDynamicStreamingTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -863,6 +917,24 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAIRecognitionTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改转自适应码流模板
+     * @param req ModifyAdaptiveDynamicStreamingTemplateRequest
+     * @return ModifyAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
