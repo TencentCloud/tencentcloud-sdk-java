@@ -236,6 +236,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *获取指定密钥的设备指纹列表
+     * @param req DescribeWhiteBoxDeviceFingerprintsRequest
+     * @return DescribeWhiteBoxDeviceFingerprintsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprints(DescribeWhiteBoxDeviceFingerprintsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxDeviceFingerprints"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *展示白盒密钥的信息
      * @param req DescribeWhiteBoxKeyRequest
      * @return DescribeWhiteBoxKeyResponse
@@ -680,6 +698,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListKeysResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *覆盖指定密钥的设备指纹信息
+     * @param req OverwriteWhiteBoxDeviceFingerprintsRequest
+     * @return OverwriteWhiteBoxDeviceFingerprintsResponse
+     * @throws TencentCloudSDKException
+     */
+    public OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(OverwriteWhiteBoxDeviceFingerprintsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OverwriteWhiteBoxDeviceFingerprints"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

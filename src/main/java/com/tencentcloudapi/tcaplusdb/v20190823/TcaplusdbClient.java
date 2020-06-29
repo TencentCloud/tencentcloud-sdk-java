@@ -200,6 +200,24 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *删除表格的分布式索引
+     * @param req DeleteTableIndexRequest
+     * @return DeleteTableIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTableIndexResponse DeleteTableIndex(DeleteTableIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTableIndexResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTableIndexResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTableIndex"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
      * @param req DeleteTablesRequest
      * @return DeleteTablesResponse
@@ -607,6 +625,24 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RollbackTablesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RollbackTables"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置表格分布式索引
+     * @param req SetTableIndexRequest
+     * @return SetTableIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetTableIndexResponse SetTableIndex(SetTableIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetTableIndexResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetTableIndexResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetTableIndex"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

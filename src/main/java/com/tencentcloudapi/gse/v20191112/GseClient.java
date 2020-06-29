@@ -326,6 +326,24 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（StartMatchPlacement）用于开始匹配放置游戏服务器会话
+     * @param req StartMatchPlacementRequest
+     * @return StartMatchPlacementResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartMatchPlacementResponse StartMatchPlacement(StartMatchPlacementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartMatchPlacementResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartMatchPlacementResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartMatchPlacement"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话
      * @param req StopGameServerSessionPlacementRequest
      * @return StopGameServerSessionPlacementResponse

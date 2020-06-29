@@ -134,6 +134,7 @@ all：所有协议
 ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
 指定IP协议查询时，不可同时指定省份、运营商查询
+注意：非IPv6白名单用户不可指定ipv4、ipv6进行查询
     */
     @SerializedName("IpProtocol")
     @Expose
@@ -454,12 +455,14 @@ https：指定查询 HTTPS 对应指标
 all：所有协议
 ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
-指定IP协议查询时，不可同时指定省份、运营商查询 
+指定IP协议查询时，不可同时指定省份、运营商查询
+注意：非IPv6白名单用户不可指定ipv4、ipv6进行查询 
      * @return IpProtocol 指定IP协议查询，不填充表示查询所有协议
 all：所有协议
 ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
 指定IP协议查询时，不可同时指定省份、运营商查询
+注意：非IPv6白名单用户不可指定ipv4、ipv6进行查询
      */
     public String getIpProtocol() {
         return this.IpProtocol;
@@ -471,11 +474,13 @@ all：所有协议
 ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
 指定IP协议查询时，不可同时指定省份、运营商查询
+注意：非IPv6白名单用户不可指定ipv4、ipv6进行查询
      * @param IpProtocol 指定IP协议查询，不填充表示查询所有协议
 all：所有协议
 ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
 指定IP协议查询时，不可同时指定省份、运营商查询
+注意：非IPv6白名单用户不可指定ipv4、ipv6进行查询
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;

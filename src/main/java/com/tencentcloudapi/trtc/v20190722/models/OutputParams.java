@@ -30,7 +30,7 @@ public class OutputParams extends AbstractModel{
     private String StreamId;
 
     /**
-    * 填0：直播流为音视频(默认); 填1：直播流为纯音频
+    * 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
     */
     @SerializedName("PureAudioStream")
     @Expose
@@ -44,7 +44,7 @@ public class OutputParams extends AbstractModel{
     private String RecordId;
 
     /**
-    * 填1：纯音频录制为mp3
+    * 取值范围[0,1]，填1：指定录制文件格式为mp3
     */
     @SerializedName("RecordAudioOnly")
     @Expose
@@ -67,16 +67,16 @@ public class OutputParams extends AbstractModel{
     }
 
     /**
-     * Get 填0：直播流为音视频(默认); 填1：直播流为纯音频 
-     * @return PureAudioStream 填0：直播流为音视频(默认); 填1：直播流为纯音频
+     * Get 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频 
+     * @return PureAudioStream 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
      */
     public Long getPureAudioStream() {
         return this.PureAudioStream;
     }
 
     /**
-     * Set 填0：直播流为音视频(默认); 填1：直播流为纯音频
-     * @param PureAudioStream 填0：直播流为音视频(默认); 填1：直播流为纯音频
+     * Set 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
+     * @param PureAudioStream 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
      */
     public void setPureAudioStream(Long PureAudioStream) {
         this.PureAudioStream = PureAudioStream;
@@ -99,16 +99,16 @@ public class OutputParams extends AbstractModel{
     }
 
     /**
-     * Get 填1：纯音频录制为mp3 
-     * @return RecordAudioOnly 填1：纯音频录制为mp3
+     * Get 取值范围[0,1]，填1：指定录制文件格式为mp3 
+     * @return RecordAudioOnly 取值范围[0,1]，填1：指定录制文件格式为mp3
      */
     public Long getRecordAudioOnly() {
         return this.RecordAudioOnly;
     }
 
     /**
-     * Set 填1：纯音频录制为mp3
-     * @param RecordAudioOnly 填1：纯音频录制为mp3
+     * Set 取值范围[0,1]，填1：指定录制文件格式为mp3
+     * @param RecordAudioOnly 取值范围[0,1]，填1：指定录制文件格式为mp3
      */
     public void setRecordAudioOnly(Long RecordAudioOnly) {
         this.RecordAudioOnly = RecordAudioOnly;

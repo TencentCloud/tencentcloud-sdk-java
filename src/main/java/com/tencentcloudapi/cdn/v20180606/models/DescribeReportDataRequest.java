@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeReportDataRequest extends AbstractModel{
 
     /**
-    * 查询起始时间
+    * 查询起始时间：yyyy-MM-dd
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间
+    * 查询结束时间：yyyy-MM-dd
     */
     @SerializedName("EndTime")
     @Expose
@@ -39,8 +39,8 @@ public class DescribeReportDataRequest extends AbstractModel{
     /**
     * 报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
     */
     @SerializedName("ReportType")
     @Expose
@@ -77,32 +77,32 @@ overseas：中国境外
     private Long Project;
 
     /**
-     * Get 查询起始时间 
-     * @return StartTime 查询起始时间
+     * Get 查询起始时间：yyyy-MM-dd 
+     * @return StartTime 查询起始时间：yyyy-MM-dd
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询起始时间
-     * @param StartTime 查询起始时间
+     * Set 查询起始时间：yyyy-MM-dd
+     * @param StartTime 查询起始时间：yyyy-MM-dd
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get 查询结束时间：yyyy-MM-dd 
+     * @return EndTime 查询结束时间：yyyy-MM-dd
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set 查询结束时间：yyyy-MM-dd
+     * @param EndTime 查询结束时间：yyyy-MM-dd
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -111,12 +111,12 @@ overseas：中国境外
     /**
      * Get 报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表 
+weekly：周报表（周一至周日）
+monthly：月报表（自然月） 
      * @return ReportType 报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
      */
     public String getReportType() {
         return this.ReportType;
@@ -125,12 +125,12 @@ monthly：月报表
     /**
      * Set 报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
      * @param ReportType 报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
      */
     public void setReportType(String ReportType) {
         this.ReportType = ReportType;

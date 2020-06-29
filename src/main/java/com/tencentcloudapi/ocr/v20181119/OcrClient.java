@@ -1013,6 +1013,24 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *印章识别已支持各类印章，包括发票章，财务章等，适用于公文，票据等场景。
+     * @param req SealOCRRequest
+     * @return SealOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public SealOCRResponse SealOCR(SealOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SealOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SealOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SealOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价等字段。
      * @param req ShipInvoiceOCRRequest
      * @return ShipInvoiceOCRResponse
