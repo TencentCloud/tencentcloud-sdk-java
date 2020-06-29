@@ -9,6 +9,11 @@
   <url>https://cloud.tencent.com/</url>
   <description>Tencent Cloud Open API SDK for Java</description>
   <dependencies>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
   	<dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

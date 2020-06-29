@@ -1,36 +1,25 @@
 package com.tencentcloudapi.common;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-class Log implements Interceptor {
+class TCLog implements Interceptor {
   private boolean debug;
-  private Logger logger = null;
-  
-  public Log(String name) {
+  private Log logger = null;
+
+  public TCLog(String name) {
     this(name, false);
   }
 
-  public Log(String name, boolean isDebug) {
-    logger = Logger.getLogger(name);
-    File file = new File("log4j.properties");
-    if (!file.exists()) {
-      this.debug = false;
-      BasicConfigurator.configure();
-      logger.warn("The configuration file of log4j does not exist, please refer to tencentcloud-sdk-java/log4j.properties for configuration.");
-    } else {
-      this.debug = isDebug;
-      PropertyConfigurator.configure("log4j.properties");
-    }
+  public TCLog(String name, boolean isDebug) {
+    logger = LogFactory.getLog(name);
+    this.debug = isDebug;
   }
 
   public void info(final String str) {
@@ -54,7 +43,7 @@ class Log implements Interceptor {
 
   public void debug(final String str, final Throwable t) {
     if (debug) {
-      logger.info(str, t);
+      logger.debug(str, t);
     }
   }
 

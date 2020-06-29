@@ -69,7 +69,7 @@ public abstract class AbstractClient {
   private String sdkVersion;
   private String apiVersion;
   public Gson gson;
-  private Log log;
+  private TCLog log;
   public AbstractClient(String endpoint, String version, Credential credential, String region) {
     this(endpoint, version, credential, region, new ClientProfile());
   }
@@ -88,7 +88,7 @@ public abstract class AbstractClient {
     this.sdkVersion = AbstractClient.SDK_VERSION;
     this.apiVersion = version;
     this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    this.log = new Log(getClass().getName(), profile.isDebug());
+    this.log = new TCLog(getClass().getName(), profile.isDebug());
     warmup();
   }
 
