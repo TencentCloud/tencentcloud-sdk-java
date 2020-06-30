@@ -87,6 +87,14 @@ public class Https extends AbstractModel{
     private String SslStatus;
 
     /**
+    * Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Hsts")
+    @Expose
+    private Hsts Hsts;
+
+    /**
      * Get https配置开关，on或off。开启https配置的域名在部署中状态，开关保持off。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Switch https配置开关，on或off。开启https配置的域名在部署中状态，开关保持off。
@@ -247,6 +255,26 @@ public class Https extends AbstractModel{
     }
 
     /**
+     * Get Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Hsts Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Hsts getHsts() {
+        return this.Hsts;
+    }
+
+    /**
+     * Set Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Hsts Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHsts(Hsts Hsts) {
+        this.Hsts = Hsts;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +286,7 @@ public class Https extends AbstractModel{
         this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
         this.setParamSimple(map, prefix + "Spdy", this.Spdy);
         this.setParamSimple(map, prefix + "SslStatus", this.SslStatus);
+        this.setParamObj(map, prefix + "Hsts.", this.Hsts);
 
     }
 }

@@ -44,11 +44,18 @@ public class DescribeDevicesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 设备固件版本号，若不带此参数会返回所有固件版本的设备
+    * 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
     */
     @SerializedName("FirmwareVersion")
     @Expose
     private String FirmwareVersion;
+
+    /**
+    * 需要过滤的设备名称
+    */
+    @SerializedName("DeviceName")
+    @Expose
+    private String DeviceName;
 
     /**
      * Get 需要查看设备列表的产品 ID 
@@ -99,19 +106,35 @@ public class DescribeDevicesRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备固件版本号，若不带此参数会返回所有固件版本的设备 
-     * @return FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备
+     * Get 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备 
+     * @return FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
      */
     public String getFirmwareVersion() {
         return this.FirmwareVersion;
     }
 
     /**
-     * Set 设备固件版本号，若不带此参数会返回所有固件版本的设备
-     * @param FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备
+     * Set 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
+     * @param FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
      */
     public void setFirmwareVersion(String FirmwareVersion) {
         this.FirmwareVersion = FirmwareVersion;
+    }
+
+    /**
+     * Get 需要过滤的设备名称 
+     * @return DeviceName 需要过滤的设备名称
+     */
+    public String getDeviceName() {
+        return this.DeviceName;
+    }
+
+    /**
+     * Set 需要过滤的设备名称
+     * @param DeviceName 需要过滤的设备名称
+     */
+    public void setDeviceName(String DeviceName) {
+        this.DeviceName = DeviceName;
     }
 
     /**
@@ -122,6 +145,7 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
+        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
 
     }
 }

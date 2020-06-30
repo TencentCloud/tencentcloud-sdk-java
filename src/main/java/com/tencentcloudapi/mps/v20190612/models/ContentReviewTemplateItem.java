@@ -71,7 +71,6 @@ public class ContentReviewTemplateItem extends AbstractModel{
     * 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProhibitedConfigure")
@@ -212,12 +211,10 @@ public class ContentReviewTemplateItem extends AbstractModel{
      * Get 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProhibitedConfigureInfo getProhibitedConfigure() {
@@ -228,12 +225,10 @@ public class ContentReviewTemplateItem extends AbstractModel{
      * Set 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {

@@ -20,57 +20,85 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CookieKey extends AbstractModel{
+public class Hsts extends AbstractModel{
 
     /**
-    * on | off 是否使用Cookie作为Cache的一部分
+    * 是否开启，on或off。
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 使用的cookie 逗号分割
+    * MaxAge数值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Value")
+    @SerializedName("MaxAge")
     @Expose
-    private String Value;
+    private Long MaxAge;
 
     /**
-     * Get on | off 是否使用Cookie作为Cache的一部分 
-     * @return Switch on | off 是否使用Cookie作为Cache的一部分
+    * 是否包含子域名，on或off。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IncludeSubDomains")
+    @Expose
+    private String IncludeSubDomains;
+
+    /**
+     * Get 是否开启，on或off。 
+     * @return Switch 是否开启，on或off。
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on | off 是否使用Cookie作为Cache的一部分
-     * @param Switch on | off 是否使用Cookie作为Cache的一部分
+     * Set 是否开启，on或off。
+     * @param Switch 是否开启，on或off。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 使用的cookie 逗号分割
+     * Get MaxAge数值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 使用的cookie 逗号分割
+     * @return MaxAge MaxAge数值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getValue() {
-        return this.Value;
+    public Long getMaxAge() {
+        return this.MaxAge;
     }
 
     /**
-     * Set 使用的cookie 逗号分割
+     * Set MaxAge数值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 使用的cookie 逗号分割
+     * @param MaxAge MaxAge数值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setMaxAge(Long MaxAge) {
+        this.MaxAge = MaxAge;
+    }
+
+    /**
+     * Get 是否包含子域名，on或off。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IncludeSubDomains 是否包含子域名，on或off。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIncludeSubDomains() {
+        return this.IncludeSubDomains;
+    }
+
+    /**
+     * Set 是否包含子域名，on或off。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IncludeSubDomains 是否包含子域名，on或off。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIncludeSubDomains(String IncludeSubDomains) {
+        this.IncludeSubDomains = IncludeSubDomains;
     }
 
     /**
@@ -78,7 +106,8 @@ public class CookieKey extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "MaxAge", this.MaxAge);
+        this.setParamSimple(map, prefix + "IncludeSubDomains", this.IncludeSubDomains);
 
     }
 }

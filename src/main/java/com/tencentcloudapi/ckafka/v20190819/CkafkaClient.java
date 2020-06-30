@@ -56,6 +56,24 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *创建实例(预付费包年包月)
+     * @param req CreateInstancePreRequest
+     * @return CreateInstancePreResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancePreResponse CreateInstancePre(CreateInstancePreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancePreResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancePreResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateInstancePre"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于增加主题中的分区
      * @param req CreatePartitionRequest
      * @return CreatePartitionResponse

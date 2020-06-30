@@ -40,9 +40,11 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+    * 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
+<li>politician：政治人物。</li>
     */
     @SerializedName("Label")
     @Expose
@@ -100,24 +102,32 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
-<li>violation_photo：违规图标。</li> 
-     * @return Label 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * Get 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
+<li>politician：政治人物。</li> 
+     * @return Label 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
+<li>violation_photo：违规图标。</li>
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
+<li>politician：政治人物。</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * Set 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
-     * @param Label 视频鉴政结果标签，取值范围：
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
 <li>politician：政治人物。</li>
+     * @param Label 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
+<li>politician：政治人物。</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

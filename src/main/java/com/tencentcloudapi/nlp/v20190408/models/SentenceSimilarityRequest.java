@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SentenceSimilarityRequest extends AbstractModel{
 
     /**
-    * 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+    * 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
     */
     @SerializedName("SrcText")
     @Expose
     private String SrcText;
 
     /**
-    * 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+    * 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
     */
     @SerializedName("TargetText")
     @Expose
     private String TargetText;
 
     /**
-     * Get 计算相似度的源句子（仅支持UTF-8格式，不超过500字） 
-     * @return SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * Get 计算相似度的源句子（仅支持UTF-8格式，不超过500字符） 
+     * @return SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
      */
     public String getSrcText() {
         return this.SrcText;
     }
 
     /**
-     * Set 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
-     * @param SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * Set 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+     * @param SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
      */
     public void setSrcText(String SrcText) {
         this.SrcText = SrcText;
     }
 
     /**
-     * Get 计算相似度的目标句子（仅支持UTF-8格式，不超过500字） 
-     * @return TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+     * Get 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符） 
+     * @return TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
      */
     public String getTargetText() {
         return this.TargetText;
     }
 
     /**
-     * Set 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
-     * @param TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+     * Set 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
+     * @param TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
      */
     public void setTargetText(String TargetText) {
         this.TargetText = TargetText;

@@ -192,6 +192,14 @@ public class DescribeDeviceResponse extends AbstractModel{
     private String ClientIP;
 
     /**
+    * 设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirmwareUpdateTime")
+    @Expose
+    private Long FirmwareUpdateTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -599,6 +607,26 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
+     * Get 设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirmwareUpdateTime 设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFirmwareUpdateTime() {
+        return this.FirmwareUpdateTime;
+    }
+
+    /**
+     * Set 设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirmwareUpdateTime 设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirmwareUpdateTime(Long FirmwareUpdateTime) {
+        this.FirmwareUpdateTime = FirmwareUpdateTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -641,6 +669,7 @@ public class DescribeDeviceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableState", this.EnableState);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
+        this.setParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

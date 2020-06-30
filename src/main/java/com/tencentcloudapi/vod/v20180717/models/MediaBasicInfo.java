@@ -122,7 +122,7 @@ public class MediaBasicInfo extends AbstractModel{
     private String [] TagSet;
 
     /**
-    * 直播录制文件的唯一标识
+    * 直播录制文件的唯一标识。
     */
     @SerializedName("Vid")
     @Expose
@@ -137,6 +137,13 @@ public class MediaBasicInfo extends AbstractModel{
     @SerializedName("Category")
     @Expose
     private String Category;
+
+    /**
+    * 文件状态：Normal：正常，Forbidden：封禁。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
      * Get 媒体文件名称。 
@@ -367,16 +374,16 @@ public class MediaBasicInfo extends AbstractModel{
     }
 
     /**
-     * Get 直播录制文件的唯一标识 
-     * @return Vid 直播录制文件的唯一标识
+     * Get 直播录制文件的唯一标识。 
+     * @return Vid 直播录制文件的唯一标识。
      */
     public String getVid() {
         return this.Vid;
     }
 
     /**
-     * Set 直播录制文件的唯一标识
-     * @param Vid 直播录制文件的唯一标识
+     * Set 直播录制文件的唯一标识。
+     * @param Vid 直播录制文件的唯一标识。
      */
     public void setVid(String Vid) {
         this.Vid = Vid;
@@ -411,6 +418,22 @@ public class MediaBasicInfo extends AbstractModel{
     }
 
     /**
+     * Get 文件状态：Normal：正常，Forbidden：封禁。 
+     * @return Status 文件状态：Normal：正常，Forbidden：封禁。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 文件状态：Normal：正常，Forbidden：封禁。
+     * @param Status 文件状态：Normal：正常，Forbidden：封禁。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -430,6 +453,7 @@ public class MediaBasicInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Vid", this.Vid);
         this.setParamSimple(map, prefix + "Category", this.Category);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

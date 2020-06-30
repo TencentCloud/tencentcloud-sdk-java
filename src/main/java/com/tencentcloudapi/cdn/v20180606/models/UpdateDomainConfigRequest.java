@@ -30,7 +30,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 项目 ID
+    * 项目 ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -240,6 +240,13 @@ global：全球加速
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
+    * UA黑白名单配置
+    */
+    @SerializedName("UserAgentFilter")
+    @Expose
+    private UserAgentFilter UserAgentFilter;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -256,16 +263,16 @@ global：全球加速
     }
 
     /**
-     * Get 项目 ID 
-     * @return ProjectId 项目 ID
+     * Get 项目 ID 
+     * @return ProjectId 项目 ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID
-     * @param ProjectId 项目 ID
+     * Set 项目 ID
+     * @param ProjectId 项目 ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -748,6 +755,22 @@ global：全球加速
     }
 
     /**
+     * Get UA黑白名单配置 
+     * @return UserAgentFilter UA黑白名单配置
+     */
+    public UserAgentFilter getUserAgentFilter() {
+        return this.UserAgentFilter;
+    }
+
+    /**
+     * Set UA黑白名单配置
+     * @param UserAgentFilter UA黑白名单配置
+     */
+    public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
+        this.UserAgentFilter = UserAgentFilter;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -781,6 +804,7 @@ global：全球加速
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+        this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
 
     }
 }

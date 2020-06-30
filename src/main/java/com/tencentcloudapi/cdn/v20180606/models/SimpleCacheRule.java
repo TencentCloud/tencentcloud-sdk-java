@@ -38,7 +38,7 @@ index：首页
     * CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
     */
@@ -94,13 +94,13 @@ index：首页
      * Get CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 / 
      * @return CacheContents CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
      */
@@ -112,13 +112,13 @@ index 时填充 /
      * Set CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
      * @param CacheContents CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
      */

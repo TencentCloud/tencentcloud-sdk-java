@@ -13,77 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HeaderKey extends AbstractModel{
+public class CreateInstancePreData extends AbstractModel{
 
     /**
-    * 是否组成Cachekey
+    * CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Switch")
+    @SerializedName("FlowId")
     @Expose
-    private String Switch;
+    private Long FlowId;
 
     /**
-    * 组成CacheKey的header 逗号分隔
+    * 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Value")
+    @SerializedName("DealNames")
     @Expose
-    private String Value;
+    private String [] DealNames;
 
     /**
-     * Get 是否组成Cachekey
+     * Get CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 是否组成Cachekey
+     * @return FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSwitch() {
-        return this.Switch;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 是否组成Cachekey
+     * Set CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 是否组成Cachekey
+     * @param FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
-     * Get 组成CacheKey的header 逗号分隔
+     * Get 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 组成CacheKey的header 逗号分隔
+     * @return DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getValue() {
-        return this.Value;
+    public String [] getDealNames() {
+        return this.DealNames;
     }
 
     /**
-     * Set 组成CacheKey的header 逗号分隔
+     * Set 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 组成CacheKey的header 逗号分隔
+     * @param DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setDealNames(String [] DealNames) {
+        this.DealNames = DealNames;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
 
     }
 }

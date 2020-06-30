@@ -167,6 +167,25 @@ public class BdaClient extends AbstractClient{
     }
 
     /**
+     *检测图片中人体的14个关键点。建议用于人体图像清晰、无遮挡的场景。支持一张图片中存在多个人体的识别。
+
+     * @param req DetectBodyJointsRequest
+     * @return DetectBodyJointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectBodyJointsResponse DetectBodyJoints(DetectBodyJointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetectBodyJointsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetectBodyJointsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetectBodyJoints"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取人体库列表。
      * @param req GetGroupListRequest
      * @return GetGroupListResponse

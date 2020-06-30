@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class TextSimilarityRequest extends AbstractModel{
 
     /**
-    * 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+    * 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
     */
     @SerializedName("SrcText")
     @Expose
     private String SrcText;
 
     /**
-    * 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+    * 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
     */
     @SerializedName("TargetText")
@@ -38,25 +38,25 @@ public class TextSimilarityRequest extends AbstractModel{
     private String [] TargetText;
 
     /**
-     * Get 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字） 
-     * @return SrcText 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * Get 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符） 
+     * @return SrcText 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
      */
     public String getSrcText() {
         return this.SrcText;
     }
 
     /**
-     * Set 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
-     * @param SrcText 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * Set 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+     * @param SrcText 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
      */
     public void setSrcText(String SrcText) {
         this.SrcText = SrcText;
     }
 
     /**
-     * Get 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+     * Get 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用 
-     * @return TargetText 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+     * @return TargetText 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
      */
     public String [] getTargetText() {
@@ -64,9 +64,9 @@ public class TextSimilarityRequest extends AbstractModel{
     }
 
     /**
-     * Set 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+     * Set 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
-     * @param TargetText 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+     * @param TargetText 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
      */
     public void setTargetText(String [] TargetText) {

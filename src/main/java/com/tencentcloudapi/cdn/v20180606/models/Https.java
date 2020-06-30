@@ -105,6 +105,14 @@ failed：部署失败
     private String SslStatus;
 
     /**
+    * Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Hsts")
+    @Expose
+    private Hsts Hsts;
+
+    /**
      * Get https 配置开关
 on：开启
 off：关闭
@@ -337,6 +345,26 @@ failed：部署失败
     }
 
     /**
+     * Get Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Hsts Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Hsts getHsts() {
+        return this.Hsts;
+    }
+
+    /**
+     * Set Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Hsts Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHsts(Hsts Hsts) {
+        this.Hsts = Hsts;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -348,6 +376,7 @@ failed：部署失败
         this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
         this.setParamSimple(map, prefix + "Spdy", this.Spdy);
         this.setParamSimple(map, prefix + "SslStatus", this.SslStatus);
+        this.setParamObj(map, prefix + "Hsts.", this.Hsts);
 
     }
 }

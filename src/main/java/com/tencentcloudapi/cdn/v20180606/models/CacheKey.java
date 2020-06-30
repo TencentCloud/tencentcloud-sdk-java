@@ -32,44 +32,12 @@ off：关闭全路径缓存（即开启参数过滤）
     private String FullUrlCache;
 
     /**
-    * 是否使用请求参数作为CacheKey的一部分
+    * 是否忽略大小写缓存
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("QueryString")
+    @SerializedName("IgnoreCase")
     @Expose
-    private QueryStringKey QueryString;
-
-    /**
-    * 是否使用请求头部作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Header")
-    @Expose
-    private HeaderKey Header;
-
-    /**
-    * 是否使用Cookie作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Cookie")
-    @Expose
-    private CookieKey Cookie;
-
-    /**
-    * 是否使用请求协议作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Scheme")
-    @Expose
-    private SchemeKey Scheme;
-
-    /**
-    * 是否使用自定义字符串作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CacheTag")
-    @Expose
-    private CacheTagKey CacheTag;
+    private String IgnoreCase;
 
     /**
      * Get 是否开启全路径缓存
@@ -96,103 +64,23 @@ off：关闭全路径缓存（即开启参数过滤）
     }
 
     /**
-     * Get 是否使用请求参数作为CacheKey的一部分
+     * Get 是否忽略大小写缓存
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QueryString 是否使用请求参数作为CacheKey的一部分
+     * @return IgnoreCase 是否忽略大小写缓存
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public QueryStringKey getQueryString() {
-        return this.QueryString;
+    public String getIgnoreCase() {
+        return this.IgnoreCase;
     }
 
     /**
-     * Set 是否使用请求参数作为CacheKey的一部分
+     * Set 是否忽略大小写缓存
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueryString 是否使用请求参数作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setQueryString(QueryStringKey QueryString) {
-        this.QueryString = QueryString;
-    }
-
-    /**
-     * Get 是否使用请求头部作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Header 是否使用请求头部作为CacheKey的一部分
+     * @param IgnoreCase 是否忽略大小写缓存
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public HeaderKey getHeader() {
-        return this.Header;
-    }
-
-    /**
-     * Set 是否使用请求头部作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Header 是否使用请求头部作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHeader(HeaderKey Header) {
-        this.Header = Header;
-    }
-
-    /**
-     * Get 是否使用Cookie作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cookie 是否使用Cookie作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public CookieKey getCookie() {
-        return this.Cookie;
-    }
-
-    /**
-     * Set 是否使用Cookie作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cookie 是否使用Cookie作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCookie(CookieKey Cookie) {
-        this.Cookie = Cookie;
-    }
-
-    /**
-     * Get 是否使用请求协议作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scheme 是否使用请求协议作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public SchemeKey getScheme() {
-        return this.Scheme;
-    }
-
-    /**
-     * Set 是否使用请求协议作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scheme 是否使用请求协议作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setScheme(SchemeKey Scheme) {
-        this.Scheme = Scheme;
-    }
-
-    /**
-     * Get 是否使用自定义字符串作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheTag 是否使用自定义字符串作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public CacheTagKey getCacheTag() {
-        return this.CacheTag;
-    }
-
-    /**
-     * Set 是否使用自定义字符串作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheTag 是否使用自定义字符串作为CacheKey的一部分
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCacheTag(CacheTagKey CacheTag) {
-        this.CacheTag = CacheTag;
+    public void setIgnoreCase(String IgnoreCase) {
+        this.IgnoreCase = IgnoreCase;
     }
 
     /**
@@ -200,11 +88,7 @@ off：关闭全路径缓存（即开启参数过滤）
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
-        this.setParamObj(map, prefix + "QueryString.", this.QueryString);
-        this.setParamObj(map, prefix + "Header.", this.Header);
-        this.setParamObj(map, prefix + "Cookie.", this.Cookie);
-        this.setParamObj(map, prefix + "Scheme.", this.Scheme);
-        this.setParamObj(map, prefix + "CacheTag.", this.CacheTag);
+        this.setParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
 
     }
 }

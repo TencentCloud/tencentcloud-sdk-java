@@ -79,7 +79,7 @@ public class DeviceInfo extends AbstractModel{
     private Long DeviceType;
 
     /**
-    * IMEI
+    * 国际移动设备识别码 IMEI
     */
     @SerializedName("Imei")
     @Expose
@@ -182,6 +182,22 @@ public class DeviceInfo extends AbstractModel{
     @SerializedName("Labels")
     @Expose
     private DeviceLabel [] Labels;
+
+    /**
+    * MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIP")
+    @Expose
+    private String ClientIP;
+
+    /**
+    * ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirmwareUpdateTime")
+    @Expose
+    private Long FirmwareUpdateTime;
 
     /**
      * Get 设备名 
@@ -312,16 +328,16 @@ public class DeviceInfo extends AbstractModel{
     }
 
     /**
-     * Get IMEI 
-     * @return Imei IMEI
+     * Get 国际移动设备识别码 IMEI 
+     * @return Imei 国际移动设备识别码 IMEI
      */
     public String getImei() {
         return this.Imei;
     }
 
     /**
-     * Set IMEI
-     * @param Imei IMEI
+     * Set 国际移动设备识别码 IMEI
+     * @param Imei 国际移动设备识别码 IMEI
      */
     public void setImei(String Imei) {
         this.Imei = Imei;
@@ -564,6 +580,46 @@ public class DeviceInfo extends AbstractModel{
     }
 
     /**
+     * Get MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIP MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClientIP() {
+        return this.ClientIP;
+    }
+
+    /**
+     * Set MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIP MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIP(String ClientIP) {
+        this.ClientIP = ClientIP;
+    }
+
+    /**
+     * Get ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirmwareUpdateTime ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFirmwareUpdateTime() {
+        return this.FirmwareUpdateTime;
+    }
+
+    /**
+     * Set ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirmwareUpdateTime ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirmwareUpdateTime(Long FirmwareUpdateTime) {
+        this.FirmwareUpdateTime = FirmwareUpdateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -589,6 +645,8 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CertState", this.CertState);
         this.setParamSimple(map, prefix + "EnableState", this.EnableState);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
+        this.setParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
 
     }
 }
