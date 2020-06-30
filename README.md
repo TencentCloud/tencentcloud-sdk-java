@@ -24,6 +24,15 @@
 </dependency>
 ```
 3. 引用方法可参考示例.
+4. 中国大陆地区的用户可以使用镜像源加速下载，编辑 maven 的 settings.xml 配置文件，在 mirrors 段落增加镜像配置：
+```
+    <mirror>
+      <id>tencent</id>
+      <name>tencent maven mirror</name>
+      <url>https://mirrors.tencent.com/nexus/repository/maven-public/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+```
 
 ## 通过源码包安装
 1. 前往 [Github 代码托管地址](https://github.com/tencentcloud/tencentcloud-sdk-java) 下载源码压缩包.
