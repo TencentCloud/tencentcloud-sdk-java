@@ -242,6 +242,7 @@ public abstract class AbstractClient {
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
     if (errResp.response.error != null) {
+      log.info("error code is " + errResp.response.error.code);
       throw new TencentCloudSDKException(
           errResp.response.error.code + "-" + errResp.response.error.message,
           errResp.response.requestId);
@@ -341,6 +342,7 @@ public abstract class AbstractClient {
       throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
     if (errResp.response.error != null) {
+      log.info("error code is " + errResp.response.error.code);
       throw new TencentCloudSDKException(
           errResp.response.error.code + "-" + errResp.response.error.message,
           errResp.response.requestId);
