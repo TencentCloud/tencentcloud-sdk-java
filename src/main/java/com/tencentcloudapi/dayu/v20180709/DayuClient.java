@@ -1929,6 +1929,42 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *修改7层转发规则
+     * @param req ModifyNewDomainRulesRequest
+     * @return ModifyNewDomainRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNewDomainRulesResponse ModifyNewDomainRules(ModifyNewDomainRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNewDomainRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNewDomainRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改4层转发规则
+     * @param req ModifyNewL4RuleRequest
+     * @return ModifyNewL4RuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNewL4RuleResponse ModifyNewL4Rule(ModifyNewL4RuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNewL4RuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNewL4RuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNewL4Rule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *资源实例绑定DDoS高级策略
      * @param req ModifyResBindDDoSPolicyRequest
      * @return ModifyResBindDDoSPolicyResponse

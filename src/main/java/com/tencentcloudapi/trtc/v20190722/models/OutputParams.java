@@ -44,7 +44,7 @@ public class OutputParams extends AbstractModel{
     private String RecordId;
 
     /**
-    * 取值范围[0,1]，填1：指定录制文件格式为mp3
+    * 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
     */
     @SerializedName("RecordAudioOnly")
     @Expose
@@ -99,16 +99,16 @@ public class OutputParams extends AbstractModel{
     }
 
     /**
-     * Get 取值范围[0,1]，填1：指定录制文件格式为mp3 
-     * @return RecordAudioOnly 取值范围[0,1]，填1：指定录制文件格式为mp3
+     * Get 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3 
+     * @return RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
      */
     public Long getRecordAudioOnly() {
         return this.RecordAudioOnly;
     }
 
     /**
-     * Set 取值范围[0,1]，填1：指定录制文件格式为mp3
-     * @param RecordAudioOnly 取值范围[0,1]，填1：指定录制文件格式为mp3
+     * Set 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+     * @param RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
      */
     public void setRecordAudioOnly(Long RecordAudioOnly) {
         this.RecordAudioOnly = RecordAudioOnly;

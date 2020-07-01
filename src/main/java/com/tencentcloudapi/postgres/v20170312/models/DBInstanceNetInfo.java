@@ -30,7 +30,7 @@ public class DBInstanceNetInfo extends AbstractModel{
     private String Address;
 
     /**
-    * Ip
+    * IP地址
     */
     @SerializedName("Ip")
     @Expose
@@ -44,7 +44,7 @@ public class DBInstanceNetInfo extends AbstractModel{
     private Long Port;
 
     /**
-    * 网络类型，1、inner（内网地址）；2、public（外网地址）
+    * 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
     */
     @SerializedName("NetType")
     @Expose
@@ -74,16 +74,16 @@ public class DBInstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get Ip 
-     * @return Ip Ip
+     * Get IP地址 
+     * @return Ip IP地址
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Ip
-     * @param Ip Ip
+     * Set IP地址
+     * @param Ip IP地址
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
@@ -106,16 +106,16 @@ public class DBInstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get 网络类型，1、inner（内网地址）；2、public（外网地址） 
-     * @return NetType 网络类型，1、inner（内网地址）；2、public（外网地址）
+     * Get 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）； 
+     * @return NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型，1、inner（内网地址）；2、public（外网地址）
-     * @param NetType 网络类型，1、inner（内网地址）；2、public（外网地址）
+     * Set 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
+     * @param NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;

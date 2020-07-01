@@ -209,7 +209,7 @@ public class EcdnClient extends AbstractClient{
     }
 
     /**
-     *PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+     *PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
      * @param req PurgePathCacheRequest
      * @return PurgePathCacheResponse
      * @throws TencentCloudSDKException

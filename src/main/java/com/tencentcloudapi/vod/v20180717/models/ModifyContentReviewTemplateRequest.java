@@ -68,7 +68,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     * 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
@@ -203,12 +202,10 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     /**
      * Get 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
-<li>涉毒违法。</li>
-注意：此参数尚未支持。 
+<li>涉毒违法。</li> 
      * @return ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
      */
     public ProhibitedConfigureInfoForUpdate getProhibitedConfigure() {
         return this.ProhibitedConfigure;
@@ -218,11 +215,9 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
      * Set 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
      * @param ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;

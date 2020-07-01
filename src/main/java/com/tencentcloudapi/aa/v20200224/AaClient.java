@@ -55,4 +55,22 @@ public class AaClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *活动防刷高级版，支持对网赚众包、网赚防刷、引流反诈骗场景的检测识别
+     * @param req QueryActivityAntiRushAdvancedRequest
+     * @return QueryActivityAntiRushAdvancedResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryActivityAntiRushAdvancedResponse QueryActivityAntiRushAdvanced(QueryActivityAntiRushAdvancedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryActivityAntiRushAdvancedResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryActivityAntiRushAdvancedResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryActivityAntiRushAdvanced"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

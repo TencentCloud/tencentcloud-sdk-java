@@ -157,6 +157,14 @@ public class L7RuleEntry extends AbstractModel{
     private Long HttpsToHttpEnable;
 
     /**
+    * 接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VirtualPort")
+    @Expose
+    private Long VirtualPort;
+
+    /**
      * Get 转发协议，取值[http, https] 
      * @return Protocol 转发协议，取值[http, https]
      */
@@ -465,6 +473,26 @@ public class L7RuleEntry extends AbstractModel{
     }
 
     /**
+     * Get 接入端口值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VirtualPort 接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVirtualPort() {
+        return this.VirtualPort;
+    }
+
+    /**
+     * Set 接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VirtualPort 接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVirtualPort(Long VirtualPort) {
+        this.VirtualPort = VirtualPort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -487,6 +515,7 @@ public class L7RuleEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
         this.setParamSimple(map, prefix + "CCLevel", this.CCLevel);
         this.setParamSimple(map, prefix + "HttpsToHttpEnable", this.HttpsToHttpEnable);
+        this.setParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
 
     }
 }

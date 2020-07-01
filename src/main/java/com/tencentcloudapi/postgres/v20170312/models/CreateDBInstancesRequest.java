@@ -128,6 +128,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 是否需要支持Ipv6，1：是，0：否
+    */
+    @SerializedName("NeedSupportIpv6")
+    @Expose
+    private Long NeedSupportIpv6;
+
+    /**
      * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
      * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      */
@@ -368,6 +375,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否需要支持Ipv6，1：是，0：否 
+     * @return NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
+     */
+    public Long getNeedSupportIpv6() {
+        return this.NeedSupportIpv6;
+    }
+
+    /**
+     * Set 是否需要支持Ipv6，1：是，0：否
+     * @param NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
+     */
+    public void setNeedSupportIpv6(Long NeedSupportIpv6) {
+        this.NeedSupportIpv6 = NeedSupportIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
 
     }
 }

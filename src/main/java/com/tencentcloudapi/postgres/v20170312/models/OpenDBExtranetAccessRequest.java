@@ -30,6 +30,13 @@ public class OpenDBExtranetAccessRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
+    * 是否开通Ipv6外网，1：是，0：否
+    */
+    @SerializedName("IsIpv6")
+    @Expose
+    private Long IsIpv6;
+
+    /**
      * Get 实例ID，形如postgres-hez4fh0v 
      * @return DBInstanceId 实例ID，形如postgres-hez4fh0v
      */
@@ -46,10 +53,27 @@ public class OpenDBExtranetAccessRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开通Ipv6外网，1：是，0：否 
+     * @return IsIpv6 是否开通Ipv6外网，1：是，0：否
+     */
+    public Long getIsIpv6() {
+        return this.IsIpv6;
+    }
+
+    /**
+     * Set 是否开通Ipv6外网，1：是，0：否
+     * @param IsIpv6 是否开通Ipv6外网，1：是，0：否
+     */
+    public void setIsIpv6(Long IsIpv6) {
+        this.IsIpv6 = IsIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamSimple(map, prefix + "IsIpv6", this.IsIpv6);
 
     }
 }

@@ -51,7 +51,7 @@ public class DBInstance extends AbstractModel{
     private String VpcId;
 
     /**
-    * SubnetId
+    * 子网ID
     */
     @SerializedName("SubnetId")
     @Expose
@@ -72,7 +72,7 @@ public class DBInstance extends AbstractModel{
     private String DBInstanceName;
 
     /**
-    * 实例状态
+    * 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
     */
     @SerializedName("DBInstanceStatus")
     @Expose
@@ -205,6 +205,13 @@ public class DBInstance extends AbstractModel{
     private Long Uid;
 
     /**
+    * 实例是否支持Ipv6，1：支持，0：不支持
+    */
+    @SerializedName("SupportIpv6")
+    @Expose
+    private Long SupportIpv6;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -269,16 +276,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get SubnetId 
-     * @return SubnetId SubnetId
+     * Get 子网ID 
+     * @return SubnetId 子网ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set SubnetId
-     * @param SubnetId SubnetId
+     * Set 子网ID
+     * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -317,16 +324,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 实例状态 
-     * @return DBInstanceStatus 实例状态
+     * Get 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中） 
+     * @return DBInstanceStatus 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
      */
     public String getDBInstanceStatus() {
         return this.DBInstanceStatus;
     }
 
     /**
-     * Set 实例状态
-     * @param DBInstanceStatus 实例状态
+     * Set 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
+     * @param DBInstanceStatus 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
      */
     public void setDBInstanceStatus(String DBInstanceStatus) {
         this.DBInstanceStatus = DBInstanceStatus;
@@ -621,6 +628,22 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例是否支持Ipv6，1：支持，0：不支持 
+     * @return SupportIpv6 实例是否支持Ipv6，1：支持，0：不支持
+     */
+    public Long getSupportIpv6() {
+        return this.SupportIpv6;
+    }
+
+    /**
+     * Set 实例是否支持Ipv6，1：支持，0：不支持
+     * @param SupportIpv6 实例是否支持Ipv6，1：支持，0：不支持
+     */
+    public void setSupportIpv6(Long SupportIpv6) {
+        this.SupportIpv6 = SupportIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -650,6 +673,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uid", this.Uid);
+        this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
 
     }
 }
