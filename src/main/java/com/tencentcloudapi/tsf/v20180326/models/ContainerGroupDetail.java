@@ -295,6 +295,22 @@ public class ContainerGroupDetail extends AbstractModel{
     private Long UpdatedTime;
 
     /**
+    * kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxSurge")
+    @Expose
+    private String MaxSurge;
+
+    /**
+    * kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxUnavailable")
+    @Expose
+    private String MaxUnavailable;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -975,6 +991,46 @@ public class ContainerGroupDetail extends AbstractModel{
     }
 
     /**
+     * Get kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxSurge kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMaxSurge() {
+        return this.MaxSurge;
+    }
+
+    /**
+     * Set kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxSurge kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxSurge(String MaxSurge) {
+        this.MaxSurge = MaxSurge;
+    }
+
+    /**
+     * Get kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxUnavailable kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMaxUnavailable() {
+        return this.MaxUnavailable;
+    }
+
+    /**
+     * Set kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxUnavailable kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxUnavailable(String MaxUnavailable) {
+        this.MaxUnavailable = MaxUnavailable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1012,6 +1068,8 @@ public class ContainerGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
+        this.setParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
 
     }
 }

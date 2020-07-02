@@ -149,6 +149,13 @@ public class RegisterBillRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * Midas环境参数
+    */
+    @SerializedName("MidasEnvironment")
+    @Expose
+    private String MidasEnvironment;
+
+    /**
      * Get 请求类型此接口固定填：RegBillSupportWithdrawReq 
      * @return RequestType 请求类型此接口固定填：RegBillSupportWithdrawReq
      */
@@ -437,6 +444,22 @@ public class RegisterBillRequest extends AbstractModel{
     }
 
     /**
+     * Get Midas环境参数 
+     * @return MidasEnvironment Midas环境参数
+     */
+    public String getMidasEnvironment() {
+        return this.MidasEnvironment;
+    }
+
+    /**
+     * Set Midas环境参数
+     * @param MidasEnvironment Midas环境参数
+     */
+    public void setMidasEnvironment(String MidasEnvironment) {
+        this.MidasEnvironment = MidasEnvironment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class RegisterBillRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TranType", this.TranType);
         this.setParamSimple(map, prefix + "ReservedMessage", this.ReservedMessage);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
 
     }
 }

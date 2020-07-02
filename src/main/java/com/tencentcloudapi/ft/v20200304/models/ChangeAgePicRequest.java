@@ -50,6 +50,13 @@ public class ChangeAgePicRequest extends AbstractModel{
     private String Url;
 
     /**
+    * 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+    */
+    @SerializedName("RspImgType")
+    @Expose
+    private String RspImgType;
+
+    /**
      * Get 人脸变老变年轻信息。 
 您可以输入最多3个 AgeInfo 来实现给一张图中的最多3张人脸变老变年轻。 
      * @return AgeInfos 人脸变老变年轻信息。 
@@ -122,12 +129,29 @@ public class ChangeAgePicRequest extends AbstractModel{
     }
 
     /**
+     * Get 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。 
+     * @return RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     */
+    public String getRspImgType() {
+        return this.RspImgType;
+    }
+
+    /**
+     * Set 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     * @param RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     */
+    public void setRspImgType(String RspImgType) {
+        this.RspImgType = RspImgType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AgeInfos.", this.AgeInfos);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
 
     }
 }

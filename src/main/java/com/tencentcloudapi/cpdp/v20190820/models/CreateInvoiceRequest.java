@@ -274,6 +274,13 @@ public class CreateInvoiceRequest extends AbstractModel{
     private String StoreNo;
 
     /**
+    * 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+    */
+    @SerializedName("InvoiceChannel")
+    @Expose
+    private Long InvoiceChannel;
+
+    /**
      * Get 开票平台ID。0：高灯 
      * @return InvoicePlatformId 开票平台ID。0：高灯
      */
@@ -858,6 +865,22 @@ public class CreateInvoiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道 
+     * @return InvoiceChannel 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     */
+    public Long getInvoiceChannel() {
+        return this.InvoiceChannel;
+    }
+
+    /**
+     * Set 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     * @param InvoiceChannel 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     */
+    public void setInvoiceChannel(Long InvoiceChannel) {
+        this.InvoiceChannel = InvoiceChannel;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -896,6 +919,7 @@ public class CreateInvoiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderDate", this.OrderDate);
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "StoreNo", this.StoreNo);
+        this.setParamSimple(map, prefix + "InvoiceChannel", this.InvoiceChannel);
 
     }
 }

@@ -30,6 +30,20 @@ public class DescribeEndUsersRequest extends AbstractModel{
     private String EnvId;
 
     /**
+    * 可选参数，偏移量，默认 0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 可选参数，拉取数量，默认 20
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
     * 按照 uuid 列表过滤，最大个数为100
     */
     @SerializedName("UUIds")
@@ -53,6 +67,38 @@ public class DescribeEndUsersRequest extends AbstractModel{
     }
 
     /**
+     * Get 可选参数，偏移量，默认 0 
+     * @return Offset 可选参数，偏移量，默认 0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 可选参数，偏移量，默认 0
+     * @param Offset 可选参数，偏移量，默认 0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 可选参数，拉取数量，默认 20 
+     * @return Limit 可选参数，拉取数量，默认 20
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 可选参数，拉取数量，默认 20
+     * @param Limit 可选参数，拉取数量，默认 20
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * Get 按照 uuid 列表过滤，最大个数为100 
      * @return UUIds 按照 uuid 列表过滤，最大个数为100
      */
@@ -73,6 +119,8 @@ public class DescribeEndUsersRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "UUIds.", this.UUIds);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OutputParams extends AbstractModel{
 
     /**
-    * 直播流ID，该流ID不能与用户旁路的流ID相同。
+    * 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
     */
     @SerializedName("StreamId")
     @Expose
@@ -51,16 +51,16 @@ public class OutputParams extends AbstractModel{
     private Long RecordAudioOnly;
 
     /**
-     * Get 直播流ID，该流ID不能与用户旁路的流ID相同。 
-     * @return StreamId 直播流ID，该流ID不能与用户旁路的流ID相同。
+     * Get 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。 
+     * @return StreamId 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set 直播流ID，该流ID不能与用户旁路的流ID相同。
-     * @param StreamId 直播流ID，该流ID不能与用户旁路的流ID相同。
+     * Set 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
+     * @param StreamId 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;

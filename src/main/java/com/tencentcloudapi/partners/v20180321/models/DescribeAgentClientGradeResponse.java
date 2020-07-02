@@ -44,6 +44,13 @@ public class DescribeAgentClientGradeResponse extends AbstractModel{
     private String ClientGrade;
 
     /**
+    * 客户类型：1，个人；2，企业；3，其他
+    */
+    @SerializedName("ClientType")
+    @Expose
+    private Long ClientType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class DescribeAgentClientGradeResponse extends AbstractModel{
     }
 
     /**
+     * Get 客户类型：1，个人；2，企业；3，其他 
+     * @return ClientType 客户类型：1，个人；2，企业；3，其他
+     */
+    public Long getClientType() {
+        return this.ClientType;
+    }
+
+    /**
+     * Set 客户类型：1，个人；2，企业；3，其他
+     * @param ClientType 客户类型：1，个人；2，企业；3，其他
+     */
+    public void setClientType(Long ClientType) {
+        this.ClientType = ClientType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -121,6 +144,7 @@ public class DescribeAgentClientGradeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
         this.setParamSimple(map, prefix + "AuthState", this.AuthState);
         this.setParamSimple(map, prefix + "ClientGrade", this.ClientGrade);
+        this.setParamSimple(map, prefix + "ClientType", this.ClientType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

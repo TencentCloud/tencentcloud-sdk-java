@@ -136,6 +136,13 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
+    * 是否支持IPv6
+    */
+    @SerializedName("Ipv6Flag")
+    @Expose
+    private Long Ipv6Flag;
+
+    /**
      * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。 
      * @return Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
@@ -408,6 +415,22 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否支持IPv6 
+     * @return Ipv6Flag 是否支持IPv6
+     */
+    public Long getIpv6Flag() {
+        return this.Ipv6Flag;
+    }
+
+    /**
+     * Set 是否支持IPv6
+     * @param Ipv6Flag 是否支持IPv6
+     */
+    public void setIpv6Flag(Long Ipv6Flag) {
+        this.Ipv6Flag = Ipv6Flag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -426,6 +449,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
 
     }
 }

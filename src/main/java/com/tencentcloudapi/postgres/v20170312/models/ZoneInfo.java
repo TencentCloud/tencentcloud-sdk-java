@@ -51,6 +51,13 @@ public class ZoneInfo extends AbstractModel{
     private String ZoneState;
 
     /**
+    * 该可用区是否支持Ipv6
+    */
+    @SerializedName("ZoneSupportIpv6")
+    @Expose
+    private Long ZoneSupportIpv6;
+
+    /**
      * Get 该可用区的英文名称 
      * @return Zone 该可用区的英文名称
      */
@@ -115,6 +122,22 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
+     * Get 该可用区是否支持Ipv6 
+     * @return ZoneSupportIpv6 该可用区是否支持Ipv6
+     */
+    public Long getZoneSupportIpv6() {
+        return this.ZoneSupportIpv6;
+    }
+
+    /**
+     * Set 该可用区是否支持Ipv6
+     * @param ZoneSupportIpv6 该可用区是否支持Ipv6
+     */
+    public void setZoneSupportIpv6(Long ZoneSupportIpv6) {
+        this.ZoneSupportIpv6 = ZoneSupportIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneState", this.ZoneState);
+        this.setParamSimple(map, prefix + "ZoneSupportIpv6", this.ZoneSupportIpv6);
 
     }
 }

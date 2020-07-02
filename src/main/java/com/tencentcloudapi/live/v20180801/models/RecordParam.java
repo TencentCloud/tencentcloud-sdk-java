@@ -57,6 +57,24 @@ public class RecordParam extends AbstractModel{
 
     /**
     * 录制文件名。
+支持的特殊占位符有：
+{StreamID}: 流ID
+{StartYear}: 开始时间-年
+{StartMonth}: 开始时间-月
+{StartDay}: 开始时间-日
+{StartHour}: 开始时间-小时
+{StartMinute}: 开始时间-分钟
+{StartSecond}: 开始时间-秒
+{StartMillisecond}: 开始时间-毫秒
+{EndYear}: 结束时间-年
+{EndMonth}: 结束时间-月
+{EndDay}: 结束时间-日
+{EndHour}: 结束时间-小时
+{EndMinute}: 结束时间-分钟
+{EndSecond}: 结束时间-秒
+{EndMillisecond}: 结束时间-毫秒
+
+若未设置默认录制文件名为{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}
     */
     @SerializedName("VodFileName")
     @Expose
@@ -147,8 +165,44 @@ public class RecordParam extends AbstractModel{
     }
 
     /**
-     * Get 录制文件名。 
+     * Get 录制文件名。
+支持的特殊占位符有：
+{StreamID}: 流ID
+{StartYear}: 开始时间-年
+{StartMonth}: 开始时间-月
+{StartDay}: 开始时间-日
+{StartHour}: 开始时间-小时
+{StartMinute}: 开始时间-分钟
+{StartSecond}: 开始时间-秒
+{StartMillisecond}: 开始时间-毫秒
+{EndYear}: 结束时间-年
+{EndMonth}: 结束时间-月
+{EndDay}: 结束时间-日
+{EndHour}: 结束时间-小时
+{EndMinute}: 结束时间-分钟
+{EndSecond}: 结束时间-秒
+{EndMillisecond}: 结束时间-毫秒
+
+若未设置默认录制文件名为{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond} 
      * @return VodFileName 录制文件名。
+支持的特殊占位符有：
+{StreamID}: 流ID
+{StartYear}: 开始时间-年
+{StartMonth}: 开始时间-月
+{StartDay}: 开始时间-日
+{StartHour}: 开始时间-小时
+{StartMinute}: 开始时间-分钟
+{StartSecond}: 开始时间-秒
+{StartMillisecond}: 开始时间-毫秒
+{EndYear}: 结束时间-年
+{EndMonth}: 结束时间-月
+{EndDay}: 结束时间-日
+{EndHour}: 结束时间-小时
+{EndMinute}: 结束时间-分钟
+{EndSecond}: 结束时间-秒
+{EndMillisecond}: 结束时间-毫秒
+
+若未设置默认录制文件名为{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}
      */
     public String getVodFileName() {
         return this.VodFileName;
@@ -156,7 +210,43 @@ public class RecordParam extends AbstractModel{
 
     /**
      * Set 录制文件名。
+支持的特殊占位符有：
+{StreamID}: 流ID
+{StartYear}: 开始时间-年
+{StartMonth}: 开始时间-月
+{StartDay}: 开始时间-日
+{StartHour}: 开始时间-小时
+{StartMinute}: 开始时间-分钟
+{StartSecond}: 开始时间-秒
+{StartMillisecond}: 开始时间-毫秒
+{EndYear}: 结束时间-年
+{EndMonth}: 结束时间-月
+{EndDay}: 结束时间-日
+{EndHour}: 结束时间-小时
+{EndMinute}: 结束时间-分钟
+{EndSecond}: 结束时间-秒
+{EndMillisecond}: 结束时间-毫秒
+
+若未设置默认录制文件名为{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}
      * @param VodFileName 录制文件名。
+支持的特殊占位符有：
+{StreamID}: 流ID
+{StartYear}: 开始时间-年
+{StartMonth}: 开始时间-月
+{StartDay}: 开始时间-日
+{StartHour}: 开始时间-小时
+{StartMinute}: 开始时间-分钟
+{StartSecond}: 开始时间-秒
+{StartMillisecond}: 开始时间-毫秒
+{EndYear}: 结束时间-年
+{EndMonth}: 结束时间-月
+{EndDay}: 结束时间-日
+{EndHour}: 结束时间-小时
+{EndMinute}: 结束时间-分钟
+{EndSecond}: 结束时间-秒
+{EndMillisecond}: 结束时间-毫秒
+
+若未设置默认录制文件名为{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}
      */
     public void setVodFileName(String VodFileName) {
         this.VodFileName = VodFileName;

@@ -30,6 +30,13 @@ public class OpenDBExtranetAccessRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 是否IPv6，默认0
+    */
+    @SerializedName("Ipv6Flag")
+    @Expose
+    private Long Ipv6Flag;
+
+    /**
      * Get 待开放外网访问的实例ID。形如：dcdbt-ow728lmc。 
      * @return InstanceId 待开放外网访问的实例ID。形如：dcdbt-ow728lmc。
      */
@@ -46,10 +53,27 @@ public class OpenDBExtranetAccessRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否IPv6，默认0 
+     * @return Ipv6Flag 是否IPv6，默认0
+     */
+    public Long getIpv6Flag() {
+        return this.Ipv6Flag;
+    }
+
+    /**
+     * Set 是否IPv6，默认0
+     * @param Ipv6Flag 是否IPv6，默认0
+     */
+    public void setIpv6Flag(Long Ipv6Flag) {
+        this.Ipv6Flag = Ipv6Flag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
 
     }
 }

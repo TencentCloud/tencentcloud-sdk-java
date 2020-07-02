@@ -254,6 +254,24 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建仓库
+     * @param req CreateRepositoryRequest
+     * @return CreateRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRepositoryResponse CreateRepository(CreateRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRepositoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRepositoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRepository"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建Serverless部署组
      * @param req CreateServerlessGroupRequest
      * @return CreateServerlessGroupResponse
@@ -446,6 +464,24 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePublicConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeletePublicConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除仓库
+     * @param req DeleteRepositoryRequest
+     * @return DeleteRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRepositoryResponse DeleteRepository(DeleteRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRepositoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRepositoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRepository"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1084,6 +1120,42 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询仓库列表
+     * @param req DescribeRepositoriesRequest
+     * @return DescribeRepositoriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRepositoriesResponse DescribeRepositories(DescribeRepositoriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRepositoriesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRepositoriesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRepositories"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询仓库信息
+     * @param req DescribeRepositoryRequest
+     * @return DescribeRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRepositoryResponse DescribeRepository(DescribeRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRepositoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRepositoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRepository"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询Serverless部署组明细
      * @param req DescribeServerlessGroupRequest
      * @return DescribeServerlessGroupResponse
@@ -1547,6 +1619,24 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<StopGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "StopGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新仓库信息
+     * @param req UpdateRepositoryRequest
+     * @return UpdateRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRepositoryResponse UpdateRepository(UpdateRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRepositoryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateRepositoryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateRepository"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

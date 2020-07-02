@@ -127,6 +127,14 @@ public class GroupPod extends AbstractModel{
     private String InstanceStatus;
 
     /**
+    * 节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeInstanceId")
+    @Expose
+    private String NodeInstanceId;
+
+    /**
      * Get 实例名称(对应到kubernetes的pod名称)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodName 实例名称(对应到kubernetes的pod名称)
@@ -387,6 +395,26 @@ public class GroupPod extends AbstractModel{
     }
 
     /**
+     * Get 节点实例id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeInstanceId 节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeInstanceId() {
+        return this.NodeInstanceId;
+    }
+
+    /**
+     * Set 节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeInstanceId 节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeInstanceId(String NodeInstanceId) {
+        this.NodeInstanceId = NodeInstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -403,6 +431,7 @@ public class GroupPod extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceInstanceStatus", this.ServiceInstanceStatus);
         this.setParamSimple(map, prefix + "InstanceAvailableStatus", this.InstanceAvailableStatus);
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "NodeInstanceId", this.NodeInstanceId);
 
     }
 }

@@ -87,6 +87,14 @@ public class PkgInfo extends AbstractModel{
     private Long PkgPubStatus;
 
     /**
+    * 程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PkgBindInfo")
+    @Expose
+    private PkgBind [] PkgBindInfo;
+
+    /**
      * Get 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgId 程序包ID
@@ -247,6 +255,26 @@ public class PkgInfo extends AbstractModel{
     }
 
     /**
+     * Get 程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PkgBindInfo 程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PkgBind [] getPkgBindInfo() {
+        return this.PkgBindInfo;
+    }
+
+    /**
+     * Set 程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PkgBindInfo 程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPkgBindInfo(PkgBind [] PkgBindInfo) {
+        this.PkgBindInfo = PkgBindInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +286,7 @@ public class PkgInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UploadTime", this.UploadTime);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
         this.setParamSimple(map, prefix + "PkgPubStatus", this.PkgPubStatus);
+        this.setParamArrayObj(map, prefix + "PkgBindInfo.", this.PkgBindInfo);
 
     }
 }

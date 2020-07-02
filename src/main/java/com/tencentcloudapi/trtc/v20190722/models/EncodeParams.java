@@ -86,6 +86,13 @@ public class EncodeParams extends AbstractModel{
     private Long BackgroundColor;
 
     /**
+    * 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
+    */
+    @SerializedName("BackgroundImageId")
+    @Expose
+    private Long BackgroundImageId;
+
+    /**
      * Get 混流-输出流音频采样率。取值为[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。 
      * @return AudioSampleRate 混流-输出流音频采样率。取值为[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
      */
@@ -230,6 +237,22 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
+     * Get 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。 
+     * @return BackgroundImageId 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
+     */
+    public Long getBackgroundImageId() {
+        return this.BackgroundImageId;
+    }
+
+    /**
+     * Set 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
+     * @param BackgroundImageId 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
+     */
+    public void setBackgroundImageId(Long BackgroundImageId) {
+        this.BackgroundImageId = BackgroundImageId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class EncodeParams extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoFramerate", this.VideoFramerate);
         this.setParamSimple(map, prefix + "VideoGop", this.VideoGop);
         this.setParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
+        this.setParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
 
     }
 }

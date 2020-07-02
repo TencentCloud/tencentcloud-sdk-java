@@ -114,6 +114,13 @@ public class EndUserInfo extends AbstractModel{
     private Boolean HasPassword;
 
     /**
+    * 用户名
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
      * Get 用户唯一ID 
      * @return UUId 用户唯一ID
      */
@@ -322,6 +329,22 @@ public class EndUserInfo extends AbstractModel{
     }
 
     /**
+     * Get 用户名 
+     * @return UserName 用户名
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 用户名
+     * @param UserName 用户名
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class EndUserInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAnonymous", this.IsAnonymous);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamSimple(map, prefix + "HasPassword", this.HasPassword);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }

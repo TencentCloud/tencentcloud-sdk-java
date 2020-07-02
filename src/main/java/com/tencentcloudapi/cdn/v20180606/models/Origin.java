@@ -108,6 +108,14 @@ ip：IP 列表作为源站
     private String BackupServerName;
 
     /**
+    * 回源路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BasePath")
+    @Expose
+    private String BasePath;
+
+    /**
      * Get 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -352,6 +360,26 @@ ip：IP 列表作为源站
     }
 
     /**
+     * Get 回源路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BasePath 回源路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBasePath() {
+        return this.BasePath;
+    }
+
+    /**
+     * Set 回源路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BasePath 回源路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBasePath(String BasePath) {
+        this.BasePath = BasePath;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -363,6 +391,7 @@ ip：IP 列表作为源站
         this.setParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
         this.setParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
         this.setParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
+        this.setParamSimple(map, prefix + "BasePath", this.BasePath);
 
     }
 }

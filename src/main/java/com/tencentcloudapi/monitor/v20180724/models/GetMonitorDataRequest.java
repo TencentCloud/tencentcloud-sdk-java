@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetMonitorDataRequest extends AbstractModel{
 
     /**
-    * 命名空间，每个云产品会有一个命名空间
+    * 命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
     */
     @SerializedName("Namespace")
     @Expose
@@ -65,16 +65,16 @@ public class GetMonitorDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get 命名空间，每个云产品会有一个命名空间 
-     * @return Namespace 命名空间，每个云产品会有一个命名空间
+     * Get 命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档 
+     * @return Namespace 命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间，每个云产品会有一个命名空间
-     * @param Namespace 命名空间，每个云产品会有一个命名空间
+     * Set 命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
+     * @param Namespace 命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

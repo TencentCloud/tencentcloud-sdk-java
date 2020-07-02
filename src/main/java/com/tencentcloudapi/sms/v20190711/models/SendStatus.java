@@ -65,6 +65,13 @@ public class SendStatus extends AbstractModel{
     private String Message;
 
     /**
+    * 国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
+    */
+    @SerializedName("IsoCode")
+    @Expose
+    private String IsoCode;
+
+    /**
      * Get 发送流水号。 
      * @return SerialNo 发送流水号。
      */
@@ -161,6 +168,22 @@ public class SendStatus extends AbstractModel{
     }
 
     /**
+     * Get 国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。 
+     * @return IsoCode 国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
+     */
+    public String getIsoCode() {
+        return this.IsoCode;
+    }
+
+    /**
+     * Set 国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
+     * @param IsoCode 国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
+     */
+    public void setIsoCode(String IsoCode) {
+        this.IsoCode = IsoCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class SendStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "IsoCode", this.IsoCode);
 
     }
 }

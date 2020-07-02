@@ -131,6 +131,13 @@ development: 开发环境
     private String MidasEnvironment;
 
     /**
+    * 手续费金额
+    */
+    @SerializedName("CommissionAmount")
+    @Expose
+    private String CommissionAmount;
+
+    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -395,6 +402,22 @@ development: 开发环境
     }
 
     /**
+     * Get 手续费金额 
+     * @return CommissionAmount 手续费金额
+     */
+    public String getCommissionAmount() {
+        return this.CommissionAmount;
+    }
+
+    /**
+     * Set 手续费金额
+     * @param CommissionAmount 手续费金额
+     */
+    public void setCommissionAmount(String CommissionAmount) {
+        this.CommissionAmount = CommissionAmount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -412,6 +435,7 @@ development: 开发环境
         this.setParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+        this.setParamSimple(map, prefix + "CommissionAmount", this.CommissionAmount);
 
     }
 }

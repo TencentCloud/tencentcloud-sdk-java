@@ -79,6 +79,13 @@ public class CreateClusterRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 集群版本
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -207,6 +214,22 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 集群版本 
+     * @return ClusterVersion 集群版本
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set 集群版本
+     * @param ClusterVersion 集群版本
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TsfRegionId", this.TsfRegionId);
         this.setParamSimple(map, prefix + "TsfZoneId", this.TsfZoneId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
 
     }
 }

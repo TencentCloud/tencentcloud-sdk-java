@@ -37,6 +37,20 @@ public class DeletePkgsRequest extends AbstractModel{
     private String [] PkgIds;
 
     /**
+    * 程序包仓库类型
+    */
+    @SerializedName("RepositoryType")
+    @Expose
+    private String RepositoryType;
+
+    /**
+    * 程序包仓库id
+    */
+    @SerializedName("RepositoryId")
+    @Expose
+    private String RepositoryId;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -69,11 +83,45 @@ public class DeletePkgsRequest extends AbstractModel{
     }
 
     /**
+     * Get 程序包仓库类型 
+     * @return RepositoryType 程序包仓库类型
+     */
+    public String getRepositoryType() {
+        return this.RepositoryType;
+    }
+
+    /**
+     * Set 程序包仓库类型
+     * @param RepositoryType 程序包仓库类型
+     */
+    public void setRepositoryType(String RepositoryType) {
+        this.RepositoryType = RepositoryType;
+    }
+
+    /**
+     * Get 程序包仓库id 
+     * @return RepositoryId 程序包仓库id
+     */
+    public String getRepositoryId() {
+        return this.RepositoryId;
+    }
+
+    /**
+     * Set 程序包仓库id
+     * @param RepositoryId 程序包仓库id
+     */
+    public void setRepositoryId(String RepositoryId) {
+        this.RepositoryId = RepositoryId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamArraySimple(map, prefix + "PkgIds.", this.PkgIds);
+        this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+        this.setParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
 
     }
 }

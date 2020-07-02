@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class TryLipstickPicResponse extends AbstractModel{
 
     /**
-    * 结果图片Base64信息。
+    * RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
     */
     @SerializedName("ResultImage")
     @Expose
     private String ResultImage;
+
+    /**
+    * RspImgType 为 url 时，返回处理后的图片 url 数据。
+    */
+    @SerializedName("ResultUrl")
+    @Expose
+    private String ResultUrl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class TryLipstickPicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 结果图片Base64信息。 
-     * @return ResultImage 结果图片Base64信息。
+     * Get RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64 
+     * @return ResultImage RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
      */
     public String getResultImage() {
         return this.ResultImage;
     }
 
     /**
-     * Set 结果图片Base64信息。
-     * @param ResultImage 结果图片Base64信息。
+     * Set RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+     * @param ResultImage RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
      */
     public void setResultImage(String ResultImage) {
         this.ResultImage = ResultImage;
+    }
+
+    /**
+     * Get RspImgType 为 url 时，返回处理后的图片 url 数据。 
+     * @return ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。
+     */
+    public String getResultUrl() {
+        return this.ResultUrl;
+    }
+
+    /**
+     * Set RspImgType 为 url 时，返回处理后的图片 url 数据。
+     * @param ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。
+     */
+    public void setResultUrl(String ResultUrl) {
+        this.ResultUrl = ResultUrl;
     }
 
     /**
@@ -73,6 +96,7 @@ public class TryLipstickPicResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
+        this.setParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

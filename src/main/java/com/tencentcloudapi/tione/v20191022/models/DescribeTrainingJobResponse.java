@@ -165,6 +165,21 @@ Stopped：已停止
     private String TrainingJobStatus;
 
     /**
+    * 训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogUrl")
+    @Expose
+    private String LogUrl;
+
+    /**
+    * 训练任务实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -536,6 +551,42 @@ Stopped：已停止
     }
 
     /**
+     * Get 训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogUrl 训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogUrl() {
+        return this.LogUrl;
+    }
+
+    /**
+     * Set 训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogUrl 训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogUrl(String LogUrl) {
+        this.LogUrl = LogUrl;
+    }
+
+    /**
+     * Get 训练任务实例ID 
+     * @return InstanceId 训练任务实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 训练任务实例ID
+     * @param InstanceId 训练任务实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -572,6 +623,8 @@ Stopped：已停止
         this.setParamArrayObj(map, prefix + "SecondaryStatusTransitions.", this.SecondaryStatusTransitions);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "TrainingJobStatus", this.TrainingJobStatus);
+        this.setParamSimple(map, prefix + "LogUrl", this.LogUrl);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
