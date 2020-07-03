@@ -50,9 +50,9 @@ public class TencentCloudSDKException extends Exception {
    *
    * @return A string represents error code
    */
-  //    public String getErrorCode() {
-  //        return errorCode;
-  //    }
+  public String getErrorCode() {
+    return errorCode;
+  }
 
   public String toString() {
     return "[TencentCloudSDKException]"
