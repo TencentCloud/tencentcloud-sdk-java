@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RechargeByThirdPayRequest extends AbstractModel{
 
     /**
-    * 请求类型
+    * 请求类型 此接口固定填：MemberRechargeThirdPayReq
     */
     @SerializedName("RequestType")
     @Expose
@@ -184,16 +184,16 @@ public class RechargeByThirdPayRequest extends AbstractModel{
     private String Remark;
 
     /**
-     * Get 请求类型 
-     * @return RequestType 请求类型
+     * Get 请求类型 此接口固定填：MemberRechargeThirdPayReq 
+     * @return RequestType 请求类型 此接口固定填：MemberRechargeThirdPayReq
      */
     public String getRequestType() {
         return this.RequestType;
     }
 
     /**
-     * Set 请求类型
-     * @param RequestType 请求类型
+     * Set 请求类型 此接口固定填：MemberRechargeThirdPayReq
+     * @param RequestType 请求类型 此接口固定填：MemberRechargeThirdPayReq
      */
     public void setRequestType(String RequestType) {
         this.RequestType = RequestType;

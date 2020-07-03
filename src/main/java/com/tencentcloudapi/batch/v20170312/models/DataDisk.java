@@ -76,6 +76,16 @@ public class DataDisk extends AbstractModel{
     private Boolean Encrypt;
 
     /**
+    * 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
      * Get 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。 
      * @return DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
@@ -216,6 +226,34 @@ public class DataDisk extends AbstractModel{
     }
 
     /**
+     * Get 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -225,6 +263,7 @@ public class DataDisk extends AbstractModel{
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

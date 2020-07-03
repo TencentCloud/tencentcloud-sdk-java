@@ -25,7 +25,7 @@ public class FaceInfo extends AbstractModel{
     /**
     * 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
     */
     @SerializedName("X")
     @Expose
@@ -34,7 +34,7 @@ public class FaceInfo extends AbstractModel{
     /**
     * 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
     */
     @SerializedName("Y")
     @Expose
@@ -73,10 +73,10 @@ public class FaceInfo extends AbstractModel{
     /**
      * Get 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。 
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
      * @return X 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public Long getX() {
         return this.X;
@@ -85,10 +85,10 @@ public class FaceInfo extends AbstractModel{
     /**
      * Set 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      * @param X 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public void setX(Long X) {
         this.X = X;
@@ -97,10 +97,10 @@ public class FaceInfo extends AbstractModel{
     /**
      * Get 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。 
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
      * @return Y 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public Long getY() {
         return this.Y;
@@ -109,10 +109,10 @@ public class FaceInfo extends AbstractModel{
     /**
      * Set 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      * @param Y 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public void setY(Long Y) {
         this.Y = Y;

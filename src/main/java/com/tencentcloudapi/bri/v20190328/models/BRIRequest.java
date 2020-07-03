@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BRIRequest extends AbstractModel{
 
     /**
-    * 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+    * 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
     */
     @SerializedName("Service")
     @Expose
@@ -79,6 +79,27 @@ public class BRIRequest extends AbstractModel{
     private String PhoneNumber;
 
     /**
+    * QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+    */
+    @SerializedName("QQ")
+    @Expose
+    private String QQ;
+
+    /**
+    * QQ号的可疑标签
+    */
+    @SerializedName("QQTag")
+    @Expose
+    private String QQTag;
+
+    /**
+    * 业务场景 (1-注册, 2-登录, 3-发消息)
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String Scene;
+
+    /**
     * 网址 (业务名为bri_url时必填)
     */
     @SerializedName("Url")
@@ -86,16 +107,30 @@ public class BRIRequest extends AbstractModel{
     private String Url;
 
     /**
-     * Get 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url) 
-     * @return Service 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+    * 微信号 (业务名为bri_social时必填, 除非已填QQ)
+    */
+    @SerializedName("Wechat")
+    @Expose
+    private String Wechat;
+
+    /**
+    * 微信号的可疑标签
+    */
+    @SerializedName("WechatTag")
+    @Expose
+    private String WechatTag;
+
+    /**
+     * Get 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social) 
+     * @return Service 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
-     * @param Service 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+     * Set 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
+     * @param Service 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
      */
     public void setService(String Service) {
         this.Service = Service;
@@ -214,6 +249,54 @@ public class BRIRequest extends AbstractModel{
     }
 
     /**
+     * Get QQ号 (业务名为bri_social时必填, 除非已填Wechat) 
+     * @return QQ QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+     */
+    public String getQQ() {
+        return this.QQ;
+    }
+
+    /**
+     * Set QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+     * @param QQ QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+     */
+    public void setQQ(String QQ) {
+        this.QQ = QQ;
+    }
+
+    /**
+     * Get QQ号的可疑标签 
+     * @return QQTag QQ号的可疑标签
+     */
+    public String getQQTag() {
+        return this.QQTag;
+    }
+
+    /**
+     * Set QQ号的可疑标签
+     * @param QQTag QQ号的可疑标签
+     */
+    public void setQQTag(String QQTag) {
+        this.QQTag = QQTag;
+    }
+
+    /**
+     * Get 业务场景 (1-注册, 2-登录, 3-发消息) 
+     * @return Scene 业务场景 (1-注册, 2-登录, 3-发消息)
+     */
+    public String getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set 业务场景 (1-注册, 2-登录, 3-发消息)
+     * @param Scene 业务场景 (1-注册, 2-登录, 3-发消息)
+     */
+    public void setScene(String Scene) {
+        this.Scene = Scene;
+    }
+
+    /**
      * Get 网址 (业务名为bri_url时必填) 
      * @return Url 网址 (业务名为bri_url时必填)
      */
@@ -230,6 +313,38 @@ public class BRIRequest extends AbstractModel{
     }
 
     /**
+     * Get 微信号 (业务名为bri_social时必填, 除非已填QQ) 
+     * @return Wechat 微信号 (业务名为bri_social时必填, 除非已填QQ)
+     */
+    public String getWechat() {
+        return this.Wechat;
+    }
+
+    /**
+     * Set 微信号 (业务名为bri_social时必填, 除非已填QQ)
+     * @param Wechat 微信号 (业务名为bri_social时必填, 除非已填QQ)
+     */
+    public void setWechat(String Wechat) {
+        this.Wechat = Wechat;
+    }
+
+    /**
+     * Get 微信号的可疑标签 
+     * @return WechatTag 微信号的可疑标签
+     */
+    public String getWechatTag() {
+        return this.WechatTag;
+    }
+
+    /**
+     * Set 微信号的可疑标签
+     * @param WechatTag 微信号的可疑标签
+     */
+    public void setWechatTag(String WechatTag) {
+        this.WechatTag = WechatTag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -241,7 +356,12 @@ public class BRIRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
+        this.setParamSimple(map, prefix + "QQ", this.QQ);
+        this.setParamSimple(map, prefix + "QQTag", this.QQTag);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Wechat", this.Wechat);
+        this.setParamSimple(map, prefix + "WechatTag", this.WechatTag);
 
     }
 }

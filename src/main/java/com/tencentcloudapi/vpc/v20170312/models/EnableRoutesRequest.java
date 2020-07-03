@@ -30,11 +30,18 @@ public class EnableRoutesRequest extends AbstractModel{
     private String RouteTableId;
 
     /**
-    * 路由策略唯一ID。
+    * 路由策略ID。不能和RouteItemIds同时使用。
     */
     @SerializedName("RouteIds")
     @Expose
     private Long [] RouteIds;
+
+    /**
+    * 路由策略唯一ID。不能和RouteIds同时使用。
+    */
+    @SerializedName("RouteItemIds")
+    @Expose
+    private String [] RouteItemIds;
 
     /**
      * Get 路由表唯一ID。 
@@ -53,19 +60,35 @@ public class EnableRoutesRequest extends AbstractModel{
     }
 
     /**
-     * Get 路由策略唯一ID。 
-     * @return RouteIds 路由策略唯一ID。
+     * Get 路由策略ID。不能和RouteItemIds同时使用。 
+     * @return RouteIds 路由策略ID。不能和RouteItemIds同时使用。
      */
     public Long [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set 路由策略唯一ID。
-     * @param RouteIds 路由策略唯一ID。
+     * Set 路由策略ID。不能和RouteItemIds同时使用。
+     * @param RouteIds 路由策略ID。不能和RouteItemIds同时使用。
      */
     public void setRouteIds(Long [] RouteIds) {
         this.RouteIds = RouteIds;
+    }
+
+    /**
+     * Get 路由策略唯一ID。不能和RouteIds同时使用。 
+     * @return RouteItemIds 路由策略唯一ID。不能和RouteIds同时使用。
+     */
+    public String [] getRouteItemIds() {
+        return this.RouteItemIds;
+    }
+
+    /**
+     * Set 路由策略唯一ID。不能和RouteIds同时使用。
+     * @param RouteItemIds 路由策略唯一ID。不能和RouteIds同时使用。
+     */
+    public void setRouteItemIds(String [] RouteItemIds) {
+        this.RouteItemIds = RouteItemIds;
     }
 
     /**
@@ -74,6 +97,7 @@ public class EnableRoutesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamArraySimple(map, prefix + "RouteIds.", this.RouteIds);
+        this.setParamArraySimple(map, prefix + "RouteItemIds.", this.RouteItemIds);
 
     }
 }

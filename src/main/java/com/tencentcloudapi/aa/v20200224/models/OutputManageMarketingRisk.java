@@ -13,106 +13,106 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20191022.models;
+package com.tencentcloudapi.aa.v20200224.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputDataConfig extends AbstractModel{
+public class OutputManageMarketingRisk extends AbstractModel{
 
     /**
-    * cos输出桶
+    * 返回码。0表示成功，非0标识失败错误码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CosOutputBucket")
+    @SerializedName("Code")
     @Expose
-    private String CosOutputBucket;
+    private Long Code;
 
     /**
-    * cos输出key前缀
+    * UTF-8编码，出错消息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CosOutputKeyPrefix")
+    @SerializedName("Message")
     @Expose
-    private String CosOutputKeyPrefix;
+    private String Message;
 
     /**
-    * 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
+    * 业务详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FileSystemDataSource")
+    @SerializedName("Value")
     @Expose
-    private FileSystemDataSource FileSystemDataSource;
+    private OutputManageMarketingRiskValue Value;
 
     /**
-     * Get cos输出桶
+     * Get 返回码。0表示成功，非0标识失败错误码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosOutputBucket cos输出桶
+     * @return Code 返回码。0表示成功，非0标识失败错误码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getCosOutputBucket() {
-        return this.CosOutputBucket;
+    public Long getCode() {
+        return this.Code;
     }
 
     /**
-     * Set cos输出桶
+     * Set 返回码。0表示成功，非0标识失败错误码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosOutputBucket cos输出桶
+     * @param Code 返回码。0表示成功，非0标识失败错误码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCosOutputBucket(String CosOutputBucket) {
-        this.CosOutputBucket = CosOutputBucket;
+    public void setCode(Long Code) {
+        this.Code = Code;
     }
 
     /**
-     * Get cos输出key前缀
+     * Get UTF-8编码，出错消息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosOutputKeyPrefix cos输出key前缀
+     * @return Message UTF-8编码，出错消息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getCosOutputKeyPrefix() {
-        return this.CosOutputKeyPrefix;
+    public String getMessage() {
+        return this.Message;
     }
 
     /**
-     * Set cos输出key前缀
+     * Set UTF-8编码，出错消息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosOutputKeyPrefix cos输出key前缀
+     * @param Message UTF-8编码，出错消息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCosOutputKeyPrefix(String CosOutputKeyPrefix) {
-        this.CosOutputKeyPrefix = CosOutputKeyPrefix;
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
-     * Get 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
+     * Get 业务详情。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileSystemDataSource 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
+     * @return Value 业务详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public FileSystemDataSource getFileSystemDataSource() {
-        return this.FileSystemDataSource;
+    public OutputManageMarketingRiskValue getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
+     * Set 业务详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileSystemDataSource 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
+     * @param Value 业务详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFileSystemDataSource(FileSystemDataSource FileSystemDataSource) {
-        this.FileSystemDataSource = FileSystemDataSource;
+    public void setValue(OutputManageMarketingRiskValue Value) {
+        this.Value = Value;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CosOutputBucket", this.CosOutputBucket);
-        this.setParamSimple(map, prefix + "CosOutputKeyPrefix", this.CosOutputKeyPrefix);
-        this.setParamObj(map, prefix + "FileSystemDataSource.", this.FileSystemDataSource);
+        this.setParamSimple(map, prefix + "Code", this.Code);
+        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamObj(map, prefix + "Value.", this.Value);
 
     }
 }

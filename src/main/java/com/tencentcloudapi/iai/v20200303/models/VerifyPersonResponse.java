@@ -37,7 +37,7 @@ public class VerifyPersonResponse extends AbstractModel{
     private Boolean IsMatch;
 
     /**
-    * 人脸识别所用的算法模型版本。
+    * 人脸识别所用的算法模型版本，是该 Person 所在的人员库的算法模型版本。在创建人员库时设置，详情可参考[算法模型版本](https://cloud.tencent.com/document/product/867/40042)
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -83,16 +83,16 @@ public class VerifyPersonResponse extends AbstractModel{
     }
 
     /**
-     * Get 人脸识别所用的算法模型版本。 
-     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     * Get 人脸识别所用的算法模型版本，是该 Person 所在的人员库的算法模型版本。在创建人员库时设置，详情可参考[算法模型版本](https://cloud.tencent.com/document/product/867/40042) 
+     * @return FaceModelVersion 人脸识别所用的算法模型版本，是该 Person 所在的人员库的算法模型版本。在创建人员库时设置，详情可参考[算法模型版本](https://cloud.tencent.com/document/product/867/40042)
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set 人脸识别所用的算法模型版本。
-     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本，是该 Person 所在的人员库的算法模型版本。在创建人员库时设置，详情可参考[算法模型版本](https://cloud.tencent.com/document/product/867/40042)
+     * @param FaceModelVersion 人脸识别所用的算法模型版本，是该 Person 所在的人员库的算法模型版本。在创建人员库时设置，详情可参考[算法模型版本](https://cloud.tencent.com/document/product/867/40042)
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

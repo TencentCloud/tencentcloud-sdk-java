@@ -38,6 +38,24 @@ public class AaClient extends AbstractClient{
     }
 
     /**
+     *活动防刷、注册保护、登录保护等营销产品的高级版本
+     * @param req ManageMarketingRiskRequest
+     * @return ManageMarketingRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageMarketingRiskResponse ManageMarketingRisk(ManageMarketingRiskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageMarketingRiskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageMarketingRiskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ManageMarketingRisk"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *腾讯云活动防刷（ActivityAntiRush，AA）是针对电商、O2O、P2P、游戏、支付等行业在促销活动中遇到“羊毛党”恶意刷取优惠福利的行为时，通过防刷引擎，精准识别出“薅羊毛”恶意行为的活动防刷服务，避免了企业被刷带来的巨大经济损失。
      * @param req QueryActivityAntiRushRequest
      * @return QueryActivityAntiRushResponse

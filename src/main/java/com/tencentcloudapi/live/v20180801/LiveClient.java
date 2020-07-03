@@ -41,6 +41,7 @@ public class LiveClient extends AbstractClient{
      *对流设置延播时间
 注意：如果在推流前设置延播，需要提前5分钟设置。
 目前该接口只支持流粒度的，域名及应用粒度功能支持当前开发中。
+使用场景：对重要直播，避免出现突发状况，可通过设置延迟播放，提前做好把控。
 
      * @param req AddDelayLiveStreamRequest
      * @return AddDelayLiveStreamResponse
@@ -395,6 +396,32 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建一个在指定时间启动、结束的录制任务，并使用指定录制模板ID对应的配置进行录制。
+- 使用前提
+1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
+2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 对应文档。
+- 注意事项
+1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
+2. 使用上避免创建时间段相互重叠的录制任务。若同一条流当前存在多个时段重叠的任务，为避免重复录制系统将启动最多3个录制任务。
+3. 创建的录制任务记录在平台侧只保留3个月。
+4. 当前录制任务管理API（CreateRecordTask/StopRecordTask/DeleteRecordTask）与旧API（CreateLiveRecord/StopLiveRecord/DeleteLiveRecord）不兼容，两套接口不能混用。
+     * @param req CreateRecordTaskRequest
+     * @return CreateRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecordTaskResponse CreateRecordTask(CreateRecordTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRecordTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRecordTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRecordTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除回调规则。
      * @param req DeleteLiveCallbackRuleRequest
      * @return DeleteLiveCallbackRuleResponse
@@ -641,6 +668,24 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<DeletePullStreamConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeletePullStreamConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除录制任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
+     * @param req DeleteRecordTaskRequest
+     * @return DeleteRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordTaskResponse DeleteRecordTask(DeleteRecordTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRecordTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRecordTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRecordTask"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1854,6 +1899,24 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "StopLiveRecord"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提前结束录制，并中止运行中的录制任务。任务被成功中止后将不再启动。
+     * @param req StopRecordTaskRequest
+     * @return StopRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRecordTaskResponse StopRecordTask(StopRecordTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopRecordTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopRecordTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopRecordTask"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

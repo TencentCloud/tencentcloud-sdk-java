@@ -73,7 +73,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private Long NeedRecordNum;
 
     /**
-    * 查询指定产品信息
+    * 查询指定产品信息（暂时未开放获取）
     */
     @SerializedName("ProductCode")
     @Expose
@@ -217,16 +217,16 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询指定产品信息 
-     * @return ProductCode 查询指定产品信息
+     * Get 查询指定产品信息（暂时未开放获取） 
+     * @return ProductCode 查询指定产品信息（暂时未开放获取）
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 查询指定产品信息
-     * @param ProductCode 查询指定产品信息
+     * Set 查询指定产品信息（暂时未开放获取）
+     * @param ProductCode 查询指定产品信息（暂时未开放获取）
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;

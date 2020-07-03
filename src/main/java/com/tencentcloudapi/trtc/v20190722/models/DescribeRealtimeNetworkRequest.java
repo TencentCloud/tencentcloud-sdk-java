@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRealtimeNetworkRequest extends AbstractModel{
 
     /**
-    * 查询开始时间，24小时内，，本地unix时间戳（1588031999s）
+    * 查询开始时间，24小时内，本地unix时间戳（1588031999s）
     */
     @SerializedName("StartTime")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeRealtimeNetworkRequest extends AbstractModel{
 
     /**
     * 需查询的数据类型
-sendLossRateRaw：上行丢包率；
+sendLossRateRaw：上行丢包率
 recvLossRateRaw：下行丢包率
     */
     @SerializedName("DataType")
@@ -53,16 +53,16 @@ recvLossRateRaw：下行丢包率
     private String [] DataType;
 
     /**
-     * Get 查询开始时间，24小时内，，本地unix时间戳（1588031999s） 
-     * @return StartTime 查询开始时间，24小时内，，本地unix时间戳（1588031999s）
+     * Get 查询开始时间，24小时内，本地unix时间戳（1588031999s） 
+     * @return StartTime 查询开始时间，24小时内，本地unix时间戳（1588031999s）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，24小时内，，本地unix时间戳（1588031999s）
-     * @param StartTime 查询开始时间，24小时内，，本地unix时间戳（1588031999s）
+     * Set 查询开始时间，24小时内，本地unix时间戳（1588031999s）
+     * @param StartTime 查询开始时间，24小时内，本地unix时间戳（1588031999s）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -102,10 +102,10 @@ recvLossRateRaw：下行丢包率
 
     /**
      * Get 需查询的数据类型
-sendLossRateRaw：上行丢包率；
+sendLossRateRaw：上行丢包率
 recvLossRateRaw：下行丢包率 
      * @return DataType 需查询的数据类型
-sendLossRateRaw：上行丢包率；
+sendLossRateRaw：上行丢包率
 recvLossRateRaw：下行丢包率
      */
     public String [] getDataType() {
@@ -114,10 +114,10 @@ recvLossRateRaw：下行丢包率
 
     /**
      * Set 需查询的数据类型
-sendLossRateRaw：上行丢包率；
+sendLossRateRaw：上行丢包率
 recvLossRateRaw：下行丢包率
      * @param DataType 需查询的数据类型
-sendLossRateRaw：上行丢包率；
+sendLossRateRaw：上行丢包率
 recvLossRateRaw：下行丢包率
      */
     public void setDataType(String [] DataType) {

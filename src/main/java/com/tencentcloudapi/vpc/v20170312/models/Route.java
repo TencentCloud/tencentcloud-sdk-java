@@ -93,6 +93,20 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String RouteTableId;
 
     /**
+    * 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+    */
+    @SerializedName("DestinationIpv6CidrBlock")
+    @Expose
+    private String DestinationIpv6CidrBlock;
+
+    /**
+    * 路由唯一策略ID。
+    */
+    @SerializedName("RouteItemId")
+    @Expose
+    private String RouteItemId;
+
+    /**
      * Get 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
      * @return DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
@@ -277,6 +291,38 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
+     * Get 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。 
+     * @return DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     */
+    public String getDestinationIpv6CidrBlock() {
+        return this.DestinationIpv6CidrBlock;
+    }
+
+    /**
+     * Set 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     * @param DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     */
+    public void setDestinationIpv6CidrBlock(String DestinationIpv6CidrBlock) {
+        this.DestinationIpv6CidrBlock = DestinationIpv6CidrBlock;
+    }
+
+    /**
+     * Get 路由唯一策略ID。 
+     * @return RouteItemId 路由唯一策略ID。
+     */
+    public String getRouteItemId() {
+        return this.RouteItemId;
+    }
+
+    /**
+     * Set 路由唯一策略ID。
+     * @param RouteItemId 路由唯一策略ID。
+     */
+    public void setRouteItemId(String RouteItemId) {
+        this.RouteItemId = RouteItemId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -288,6 +334,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+        this.setParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
+        this.setParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
 
     }
 }

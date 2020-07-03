@@ -442,6 +442,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *查询单笔订单交易状态
+     * @param req DescribeOrderStatusRequest
+     * @return DescribeOrderStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrderStatusResponse DescribeOrderStatus(DescribeOrderStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrderStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrderStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeOrderStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
      * @param req DownloadBillRequest
      * @return DownloadBillResponse
