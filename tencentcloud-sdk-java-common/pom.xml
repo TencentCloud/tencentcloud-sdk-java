@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.tencentcloudapi</groupId>
+    <artifactId>tencentcloud-sdk-java</artifactId>
+    <version>3.1.80</version>
+  </parent>
+  <groupId>com.tencentcloudapi</groupId>
+  <artifactId>tencentcloud-sdk-java-common</artifactId>
+  <version>3.1.80</version>
+  <packaging>jar</packaging>
+  <name>tencentcloud-sdk-java-common</name>
+  <url>https://cloud.tencent.com/</url>
+  <description>Tencent Cloud Open API SDK for Java</description>
+    <dependencies>
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp</groupId>
+        <artifactId>logging-interceptor</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okio</groupId>
+        <artifactId>okio</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+      </dependency>
+    </dependencies>
+</project>
