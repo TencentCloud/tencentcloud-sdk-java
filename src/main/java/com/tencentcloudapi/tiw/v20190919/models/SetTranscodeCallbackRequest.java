@@ -30,7 +30,8 @@ public class SetTranscodeCallbackRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+    * 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
     */
     @SerializedName("Callback")
     @Expose
@@ -53,16 +54,20 @@ public class SetTranscodeCallbackRequest extends AbstractModel{
     }
 
     /**
-     * Get 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头 
-     * @return Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+     * Get 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260 
+     * @return Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
      */
     public String getCallback() {
         return this.Callback;
     }
 
     /**
-     * Set 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
-     * @param Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+     * Set 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
+     * @param Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;

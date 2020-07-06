@@ -138,6 +138,13 @@ development: 开发环境
     private String CommissionAmount;
 
     /**
+    * 提现单号，长度32字节
+    */
+    @SerializedName("WithdrawOrderId")
+    @Expose
+    private String WithdrawOrderId;
+
+    /**
      * Get 聚鑫分配的支付主MidasAppId 
      * @return MidasAppId 聚鑫分配的支付主MidasAppId
      */
@@ -418,6 +425,22 @@ development: 开发环境
     }
 
     /**
+     * Get 提现单号，长度32字节 
+     * @return WithdrawOrderId 提现单号，长度32字节
+     */
+    public String getWithdrawOrderId() {
+        return this.WithdrawOrderId;
+    }
+
+    /**
+     * Set 提现单号，长度32字节
+     * @param WithdrawOrderId 提现单号，长度32字节
+     */
+    public void setWithdrawOrderId(String WithdrawOrderId) {
+        this.WithdrawOrderId = WithdrawOrderId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -436,6 +459,7 @@ development: 开发环境
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         this.setParamSimple(map, prefix + "CommissionAmount", this.CommissionAmount);
+        this.setParamSimple(map, prefix + "WithdrawOrderId", this.WithdrawOrderId);
 
     }
 }

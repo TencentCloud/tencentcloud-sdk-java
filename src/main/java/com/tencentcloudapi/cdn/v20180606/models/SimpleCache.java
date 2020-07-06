@@ -76,6 +76,14 @@ off：关闭
     private String CompareMaxAge;
 
     /**
+    * 总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Revalidate")
+    @Expose
+    private Revalidate Revalidate;
+
+    /**
      * Get 缓存过期时间规则
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CacheRules 缓存过期时间规则
@@ -228,6 +236,26 @@ off：关闭
     }
 
     /**
+     * Get 总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Revalidate 总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Revalidate getRevalidate() {
+        return this.Revalidate;
+    }
+
+    /**
+     * Set 总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Revalidate 总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRevalidate(Revalidate Revalidate) {
+        this.Revalidate = Revalidate;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -236,6 +264,7 @@ off：关闭
         this.setParamSimple(map, prefix + "IgnoreCacheControl", this.IgnoreCacheControl);
         this.setParamSimple(map, prefix + "IgnoreSetCookie", this.IgnoreSetCookie);
         this.setParamSimple(map, prefix + "CompareMaxAge", this.CompareMaxAge);
+        this.setParamObj(map, prefix + "Revalidate.", this.Revalidate);
 
     }
 }

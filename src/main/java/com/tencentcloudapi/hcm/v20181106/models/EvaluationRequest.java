@@ -72,6 +72,34 @@ public class EvaluationRequest extends AbstractModel{
     private Long IsAsync;
 
     /**
+    * 是否展开耦合算式中的竖式计算
+    */
+    @SerializedName("EnableDispRelatedVertical")
+    @Expose
+    private Boolean EnableDispRelatedVertical;
+
+    /**
+    * 是否展示竖式算式的中间结果和格式控制字符
+    */
+    @SerializedName("EnableDispMidresult")
+    @Expose
+    private Boolean EnableDispMidresult;
+
+    /**
+    * 是否开启pdf识别，默认开启
+    */
+    @SerializedName("EnablePdfRecognize")
+    @Expose
+    private Boolean EnablePdfRecognize;
+
+    /**
+    * pdf页码，从0开始，默认为0
+    */
+    @SerializedName("PdfPageIndex")
+    @Expose
+    private Long PdfPageIndex;
+
+    /**
      * Get 图片唯一标识，一张图片一个SessionId； 
      * @return SessionId 图片唯一标识，一张图片一个SessionId；
      */
@@ -184,6 +212,70 @@ public class EvaluationRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否展开耦合算式中的竖式计算 
+     * @return EnableDispRelatedVertical 是否展开耦合算式中的竖式计算
+     */
+    public Boolean getEnableDispRelatedVertical() {
+        return this.EnableDispRelatedVertical;
+    }
+
+    /**
+     * Set 是否展开耦合算式中的竖式计算
+     * @param EnableDispRelatedVertical 是否展开耦合算式中的竖式计算
+     */
+    public void setEnableDispRelatedVertical(Boolean EnableDispRelatedVertical) {
+        this.EnableDispRelatedVertical = EnableDispRelatedVertical;
+    }
+
+    /**
+     * Get 是否展示竖式算式的中间结果和格式控制字符 
+     * @return EnableDispMidresult 是否展示竖式算式的中间结果和格式控制字符
+     */
+    public Boolean getEnableDispMidresult() {
+        return this.EnableDispMidresult;
+    }
+
+    /**
+     * Set 是否展示竖式算式的中间结果和格式控制字符
+     * @param EnableDispMidresult 是否展示竖式算式的中间结果和格式控制字符
+     */
+    public void setEnableDispMidresult(Boolean EnableDispMidresult) {
+        this.EnableDispMidresult = EnableDispMidresult;
+    }
+
+    /**
+     * Get 是否开启pdf识别，默认开启 
+     * @return EnablePdfRecognize 是否开启pdf识别，默认开启
+     */
+    public Boolean getEnablePdfRecognize() {
+        return this.EnablePdfRecognize;
+    }
+
+    /**
+     * Set 是否开启pdf识别，默认开启
+     * @param EnablePdfRecognize 是否开启pdf识别，默认开启
+     */
+    public void setEnablePdfRecognize(Boolean EnablePdfRecognize) {
+        this.EnablePdfRecognize = EnablePdfRecognize;
+    }
+
+    /**
+     * Get pdf页码，从0开始，默认为0 
+     * @return PdfPageIndex pdf页码，从0开始，默认为0
+     */
+    public Long getPdfPageIndex() {
+        return this.PdfPageIndex;
+    }
+
+    /**
+     * Set pdf页码，从0开始，默认为0
+     * @param PdfPageIndex pdf页码，从0开始，默认为0
+     */
+    public void setPdfPageIndex(Long PdfPageIndex) {
+        this.PdfPageIndex = PdfPageIndex;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +286,10 @@ public class EvaluationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SupportHorizontalImage", this.SupportHorizontalImage);
         this.setParamSimple(map, prefix + "RejectNonArithmeticImage", this.RejectNonArithmeticImage);
         this.setParamSimple(map, prefix + "IsAsync", this.IsAsync);
+        this.setParamSimple(map, prefix + "EnableDispRelatedVertical", this.EnableDispRelatedVertical);
+        this.setParamSimple(map, prefix + "EnableDispMidresult", this.EnableDispMidresult);
+        this.setParamSimple(map, prefix + "EnablePdfRecognize", this.EnablePdfRecognize);
+        this.setParamSimple(map, prefix + "PdfPageIndex", this.PdfPageIndex);
 
     }
 }

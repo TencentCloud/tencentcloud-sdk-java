@@ -380,6 +380,14 @@ global：全球锁定
     private UserAgentFilter UserAgentFilter;
 
     /**
+    * 访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessControl")
+    @Expose
+    private AccessControl AccessControl;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1292,6 +1300,26 @@ global：全球锁定
     }
 
     /**
+     * Get 访问控制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessControl 访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccessControl getAccessControl() {
+        return this.AccessControl;
+    }
+
+    /**
+     * Set 访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessControl 访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessControl(AccessControl AccessControl) {
+        this.AccessControl = AccessControl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1338,6 +1366,7 @@ global：全球锁定
         this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
         this.setParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
         this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
+        this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
 
     }
 }

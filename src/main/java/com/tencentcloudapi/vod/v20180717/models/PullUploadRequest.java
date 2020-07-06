@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PullUploadRequest extends AbstractModel{
 
     /**
-    * 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+    * 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
     */
     @SerializedName("MediaUrl")
@@ -101,9 +101,16 @@ public class PullUploadRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+    * 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+    */
+    @SerializedName("SourceContext")
+    @Expose
+    private String SourceContext;
+
+    /**
+     * Get 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。 
-     * @return MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+     * @return MediaUrl 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
      */
     public String getMediaUrl() {
@@ -111,9 +118,9 @@ public class PullUploadRequest extends AbstractModel{
     }
 
     /**
-     * Set 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+     * Set 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
-     * @param MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+     * @param MediaUrl 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
      */
     public void setMediaUrl(String MediaUrl) {
@@ -281,6 +288,22 @@ public class PullUploadRequest extends AbstractModel{
     }
 
     /**
+     * Get 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。 
+     * @return SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+     */
+    public String getSourceContext() {
+        return this.SourceContext;
+    }
+
+    /**
+     * Set 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+     * @param SourceContext 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+     */
+    public void setSourceContext(String SourceContext) {
+        this.SourceContext = SourceContext;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -295,6 +318,7 @@ public class PullUploadRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
 
     }
 }

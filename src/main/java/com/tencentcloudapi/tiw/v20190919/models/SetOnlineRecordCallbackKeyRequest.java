@@ -30,7 +30,7 @@ public class SetOnlineRecordCallbackKeyRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
+    * 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥。回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
     */
     @SerializedName("CallbackKey")
     @Expose
@@ -53,16 +53,16 @@ public class SetOnlineRecordCallbackKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥 
-     * @return CallbackKey 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
+     * Get 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥。回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257 
+     * @return CallbackKey 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥。回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
      */
     public String getCallbackKey() {
         return this.CallbackKey;
     }
 
     /**
-     * Set 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
-     * @param CallbackKey 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
+     * Set 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥。回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+     * @param CallbackKey 设置实时录制回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥。回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;
