@@ -65,6 +65,13 @@ public class CreateClusterRequest extends AbstractModel{
     private TagInfoUnit [] ResourceTags;
 
     /**
+    * 集群是否开启IPv6功能
+    */
+    @SerializedName("Ipv6Enable")
+    @Expose
+    private Long Ipv6Enable;
+
+    /**
      * Get 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX` 
      * @return IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      */
@@ -161,6 +168,22 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 集群是否开启IPv6功能 
+     * @return Ipv6Enable 集群是否开启IPv6功能
+     */
+    public Long getIpv6Enable() {
+        return this.Ipv6Enable;
+    }
+
+    /**
+     * Set 集群是否开启IPv6功能
+     * @param Ipv6Enable 集群是否开启IPv6功能
+     */
+    public void setIpv6Enable(Long Ipv6Enable) {
+        this.Ipv6Enable = Ipv6Enable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
 
     }
 }

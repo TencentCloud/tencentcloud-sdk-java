@@ -182,6 +182,24 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *删除  LoRa 网关的接口
+     * @param req DeleteLoRaGatewayRequest
+     * @return DeleteLoRaGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoRaGatewayResponse DeleteLoRaGateway(DeleteLoRaGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoRaGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoRaGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoRaGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提供删除某个项目的能力
      * @param req DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -409,6 +427,24 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListEventHistoryResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListEventHistory"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改 LoRa 网关信息
+     * @param req ModifyLoRaGatewayRequest
+     * @return ModifyLoRaGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoRaGatewayResponse ModifyLoRaGateway(ModifyLoRaGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoRaGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoRaGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLoRaGateway"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

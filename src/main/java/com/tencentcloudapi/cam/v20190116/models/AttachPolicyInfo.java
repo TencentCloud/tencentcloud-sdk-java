@@ -70,7 +70,7 @@ public class AttachPolicyInfo extends AbstractModel{
     private String Remark;
 
     /**
-    * 策略关联操作者主张号
+    * 策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateOwnerUin")
@@ -226,9 +226,9 @@ public class AttachPolicyInfo extends AbstractModel{
     }
 
     /**
-     * Get 策略关联操作者主张号
+     * Get 策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperateOwnerUin 策略关联操作者主张号
+     * @return OperateOwnerUin 策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperateOwnerUin() {
@@ -236,9 +236,9 @@ public class AttachPolicyInfo extends AbstractModel{
     }
 
     /**
-     * Set 策略关联操作者主张号
+     * Set 策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperateOwnerUin 策略关联操作者主张号
+     * @param OperateOwnerUin 策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateOwnerUin(String OperateOwnerUin) {

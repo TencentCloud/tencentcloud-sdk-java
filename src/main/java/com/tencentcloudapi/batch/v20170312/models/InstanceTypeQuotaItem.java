@@ -144,6 +144,27 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     private String CpuType;
 
     /**
+    * 实例的GPU数量。
+    */
+    @SerializedName("Gpu")
+    @Expose
+    private Long Gpu;
+
+    /**
+    * 实例的FPGA数量。
+    */
+    @SerializedName("Fpga")
+    @Expose
+    private Long Fpga;
+
+    /**
+    * 实例备注信息。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -424,6 +445,54 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     }
 
     /**
+     * Get 实例的GPU数量。 
+     * @return Gpu 实例的GPU数量。
+     */
+    public Long getGpu() {
+        return this.Gpu;
+    }
+
+    /**
+     * Set 实例的GPU数量。
+     * @param Gpu 实例的GPU数量。
+     */
+    public void setGpu(Long Gpu) {
+        this.Gpu = Gpu;
+    }
+
+    /**
+     * Get 实例的FPGA数量。 
+     * @return Fpga 实例的FPGA数量。
+     */
+    public Long getFpga() {
+        return this.Fpga;
+    }
+
+    /**
+     * Set 实例的FPGA数量。
+     * @param Fpga 实例的FPGA数量。
+     */
+    public void setFpga(Long Fpga) {
+        this.Fpga = Fpga;
+    }
+
+    /**
+     * Get 实例备注信息。 
+     * @return Remark 实例备注信息。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 实例备注信息。
+     * @param Remark 实例备注信息。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -444,6 +513,9 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.setParamSimple(map, prefix + "InstancePps", this.InstancePps);
         this.setParamSimple(map, prefix + "StorageBlockAmount", this.StorageBlockAmount);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
+        this.setParamSimple(map, prefix + "Gpu", this.Gpu);
+        this.setParamSimple(map, prefix + "Fpga", this.Fpga);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

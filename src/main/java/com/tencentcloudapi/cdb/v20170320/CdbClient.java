@@ -1142,6 +1142,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeRoMinScale)用于获取只读实例购买、升级时的最小规格。
+     * @param req DescribeRoMinScaleRequest
+     * @return DescribeRoMinScaleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoMinScaleResponse DescribeRoMinScale(DescribeRoMinScaleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoMinScaleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoMinScaleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRoMinScale"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeRollbackRangeTime)用于查询云数据库实例可回档的时间范围。
      * @param req DescribeRollbackRangeTimeRequest
      * @return DescribeRollbackRangeTimeResponse

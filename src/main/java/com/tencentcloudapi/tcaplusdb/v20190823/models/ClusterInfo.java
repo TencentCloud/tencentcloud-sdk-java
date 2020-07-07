@@ -122,6 +122,14 @@ public class ClusterInfo extends AbstractModel{
     private String OldPasswordExpireTime;
 
     /**
+    * TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiAccessIpv6")
+    @Expose
+    private String ApiAccessIpv6;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -350,6 +358,26 @@ public class ClusterInfo extends AbstractModel{
     }
 
     /**
+     * Get TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApiAccessIpv6() {
+        return this.ApiAccessIpv6;
+    }
+
+    /**
+     * Set TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiAccessIpv6(String ApiAccessIpv6) {
+        this.ApiAccessIpv6 = ApiAccessIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -367,6 +395,7 @@ public class ClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ApiAccessIp", this.ApiAccessIp);
         this.setParamSimple(map, prefix + "ApiAccessPort", this.ApiAccessPort);
         this.setParamSimple(map, prefix + "OldPasswordExpireTime", this.OldPasswordExpireTime);
+        this.setParamSimple(map, prefix + "ApiAccessIpv6", this.ApiAccessIpv6);
 
     }
 }
