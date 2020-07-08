@@ -37,6 +37,20 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
+    * 模板id，ParamList和TemplateId必须至少传其中之一
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private Long TemplateId;
+
+    /**
+    * 执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
+    */
+    @SerializedName("WaitSwitch")
+    @Expose
+    private Long WaitSwitch;
+
+    /**
      * Get 实例短 ID 列表。 
      * @return InstanceIds 实例短 ID 列表。
      */
@@ -69,11 +83,45 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     }
 
     /**
+     * Get 模板id，ParamList和TemplateId必须至少传其中之一 
+     * @return TemplateId 模板id，ParamList和TemplateId必须至少传其中之一
+     */
+    public Long getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板id，ParamList和TemplateId必须至少传其中之一
+     * @param TemplateId 模板id，ParamList和TemplateId必须至少传其中之一
+     */
+    public void setTemplateId(Long TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get 执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1） 
+     * @return WaitSwitch 执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
+     */
+    public Long getWaitSwitch() {
+        return this.WaitSwitch;
+    }
+
+    /**
+     * Set 执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
+     * @param WaitSwitch 执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
+     */
+    public void setWaitSwitch(Long WaitSwitch) {
+        this.WaitSwitch = WaitSwitch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
 
     }
 }

@@ -74,6 +74,24 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
+     * @param req DescribeDBSpaceStatusRequest
+     * @return DescribeDBSpaceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSpaceStatusResponse DescribeDBSpaceStatus(DescribeDBSpaceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSpaceStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSpaceStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBSpaceStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取慢日志统计柱状图
      * @param req DescribeSlowLogTimeSeriesStatsRequest
      * @return DescribeSlowLogTimeSeriesStatsResponse
@@ -103,6 +121,24 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogTopSqlsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogTopSqls"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取实例Top表的实时空间统计信息，默认返回按大小排序。
+     * @param req DescribeTopSpaceTablesRequest
+     * @return DescribeTopSpaceTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceTablesResponse DescribeTopSpaceTables(DescribeTopSpaceTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceTablesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceTablesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTopSpaceTables"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

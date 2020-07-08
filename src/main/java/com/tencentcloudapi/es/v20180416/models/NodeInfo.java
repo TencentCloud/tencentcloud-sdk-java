@@ -76,6 +76,13 @@ public class NodeInfo extends AbstractModel{
     private Long DiskCount;
 
     /**
+    * 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+    */
+    @SerializedName("DiskEncrypt")
+    @Expose
+    private Long DiskEncrypt;
+
+    /**
      * Get 节点数量 
      * @return NodeNum 节点数量
      */
@@ -204,6 +211,22 @@ public class NodeInfo extends AbstractModel{
     }
 
     /**
+     * Get 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密 
+     * @return DiskEncrypt 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+     */
+    public Long getDiskEncrypt() {
+        return this.DiskEncrypt;
+    }
+
+    /**
+     * Set 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+     * @param DiskEncrypt 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+     */
+    public void setDiskEncrypt(Long DiskEncrypt) {
+        this.DiskEncrypt = DiskEncrypt;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -214,6 +237,7 @@ public class NodeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
+        this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
 
     }
 }

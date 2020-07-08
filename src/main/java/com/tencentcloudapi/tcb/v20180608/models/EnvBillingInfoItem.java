@@ -45,6 +45,7 @@ public class EnvBillingInfoItem extends AbstractModel{
 
     /**
     * 状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
     */
@@ -172,9 +173,11 @@ public class EnvBillingInfoItem extends AbstractModel{
 
     /**
      * Get 状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li> 
      * @return Status 状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
      */
@@ -184,9 +187,11 @@ public class EnvBillingInfoItem extends AbstractModel{
 
     /**
      * Set 状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
      * @param Status 状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
      */

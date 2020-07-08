@@ -37,6 +37,27 @@ public class EsDictionaryInfo extends AbstractModel{
     private DictInfo [] Stopwords;
 
     /**
+    * QQ分词词典列表
+    */
+    @SerializedName("QQDict")
+    @Expose
+    private DictInfo [] QQDict;
+
+    /**
+    * 同义词词典列表
+    */
+    @SerializedName("Synonym")
+    @Expose
+    private DictInfo [] Synonym;
+
+    /**
+    * 更新词典类型
+    */
+    @SerializedName("UpdateType")
+    @Expose
+    private String UpdateType;
+
+    /**
      * Get 启用词词典列表 
      * @return MainDict 启用词词典列表
      */
@@ -69,11 +90,62 @@ public class EsDictionaryInfo extends AbstractModel{
     }
 
     /**
+     * Get QQ分词词典列表 
+     * @return QQDict QQ分词词典列表
+     */
+    public DictInfo [] getQQDict() {
+        return this.QQDict;
+    }
+
+    /**
+     * Set QQ分词词典列表
+     * @param QQDict QQ分词词典列表
+     */
+    public void setQQDict(DictInfo [] QQDict) {
+        this.QQDict = QQDict;
+    }
+
+    /**
+     * Get 同义词词典列表 
+     * @return Synonym 同义词词典列表
+     */
+    public DictInfo [] getSynonym() {
+        return this.Synonym;
+    }
+
+    /**
+     * Set 同义词词典列表
+     * @param Synonym 同义词词典列表
+     */
+    public void setSynonym(DictInfo [] Synonym) {
+        this.Synonym = Synonym;
+    }
+
+    /**
+     * Get 更新词典类型 
+     * @return UpdateType 更新词典类型
+     */
+    public String getUpdateType() {
+        return this.UpdateType;
+    }
+
+    /**
+     * Set 更新词典类型
+     * @param UpdateType 更新词典类型
+     */
+    public void setUpdateType(String UpdateType) {
+        this.UpdateType = UpdateType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MainDict.", this.MainDict);
         this.setParamArrayObj(map, prefix + "Stopwords.", this.Stopwords);
+        this.setParamArrayObj(map, prefix + "QQDict.", this.QQDict);
+        this.setParamArrayObj(map, prefix + "Synonym.", this.Synonym);
+        this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
 
     }
 }

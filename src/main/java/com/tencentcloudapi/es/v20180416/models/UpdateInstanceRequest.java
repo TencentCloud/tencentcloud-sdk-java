@@ -169,6 +169,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private Long KibanaPrivatePort;
 
     /**
+    * 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+    */
+    @SerializedName("ScaleType")
+    @Expose
+    private Long ScaleType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -513,6 +520,22 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启 
+     * @return ScaleType 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+     */
+    public Long getScaleType() {
+        return this.ScaleType;
+    }
+
+    /**
+     * Set 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+     * @param ScaleType 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+     */
+    public void setScaleType(Long ScaleType) {
+        this.ScaleType = ScaleType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -536,6 +559,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
+        this.setParamSimple(map, prefix + "ScaleType", this.ScaleType);
 
     }
 }

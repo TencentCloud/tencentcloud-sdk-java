@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TimeValue extends AbstractModel{
 
     /**
-    * 时间
+    * 时间，unix时间戳（1590065877s)
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-    * 当前时间取值，unix时间戳
+    * 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
     */
     @SerializedName("Value")
     @Expose
     private Float Value;
 
     /**
-     * Get 时间 
-     * @return Time 时间
+     * Get 时间，unix时间戳（1590065877s) 
+     * @return Time 时间，unix时间戳（1590065877s)
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set 时间
-     * @param Time 时间
+     * Set 时间，unix时间戳（1590065877s)
+     * @param Time 时间，unix时间戳（1590065877s)
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 当前时间取值，unix时间戳 
-     * @return Value 当前时间取值，unix时间戳
+     * Get 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ） 
+     * @return Value 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
      */
     public Float getValue() {
         return this.Value;
     }
 
     /**
-     * Set 当前时间取值，unix时间戳
-     * @param Value 当前时间取值，unix时间戳
+     * Set 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
+     * @param Value 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
      */
     public void setValue(Float Value) {
         this.Value = Value;
