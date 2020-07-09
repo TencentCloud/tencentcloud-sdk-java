@@ -30,6 +30,20 @@ public class TextModerationRequest extends AbstractModel{
     private String Content;
 
     /**
+    * 设备相关信息
+    */
+    @SerializedName("Device")
+    @Expose
+    private Device Device;
+
+    /**
+    * 用户相关信息
+    */
+    @SerializedName("User")
+    @Expose
+    private User User;
+
+    /**
     * 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
     */
     @SerializedName("BizType")
@@ -64,6 +78,38 @@ public class TextModerationRequest extends AbstractModel{
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 设备相关信息 
+     * @return Device 设备相关信息
+     */
+    public Device getDevice() {
+        return this.Device;
+    }
+
+    /**
+     * Set 设备相关信息
+     * @param Device 设备相关信息
+     */
+    public void setDevice(Device Device) {
+        this.Device = Device;
+    }
+
+    /**
+     * Get 用户相关信息 
+     * @return User 用户相关信息
+     */
+    public User getUser() {
+        return this.User;
+    }
+
+    /**
+     * Set 用户相关信息
+     * @param User 用户相关信息
+     */
+    public void setUser(User User) {
+        this.User = User;
     }
 
     /**
@@ -119,6 +165,8 @@ public class TextModerationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamObj(map, prefix + "Device.", this.Device);
+        this.setParamObj(map, prefix + "User.", this.User);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);

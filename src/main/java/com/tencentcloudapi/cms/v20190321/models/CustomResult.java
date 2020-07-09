@@ -44,6 +44,13 @@ public class CustomResult extends AbstractModel{
     private String LibName;
 
     /**
+    * 命中的自定义关键词的类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 命中的自定义关键词 
      * @return Keywords 命中的自定义关键词
      */
@@ -92,12 +99,29 @@ public class CustomResult extends AbstractModel{
     }
 
     /**
+     * Get 命中的自定义关键词的类型 
+     * @return Type 命中的自定义关键词的类型
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 命中的自定义关键词的类型
+     * @param Type 命中的自定义关键词的类型
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "LibId", this.LibId);
         this.setParamSimple(map, prefix + "LibName", this.LibName);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

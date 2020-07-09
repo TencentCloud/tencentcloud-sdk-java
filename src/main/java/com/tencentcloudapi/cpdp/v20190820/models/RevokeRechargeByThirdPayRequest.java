@@ -100,7 +100,7 @@ public class RevokeRechargeByThirdPayRequest extends AbstractModel{
     private String TransSequenceNumber;
 
     /**
-    * 申请撤销的手续费金额
+    * 申请撤销的手续费金额,以元为单位
     */
     @SerializedName("TransFee")
     @Expose
@@ -346,16 +346,16 @@ public class RevokeRechargeByThirdPayRequest extends AbstractModel{
     }
 
     /**
-     * Get 申请撤销的手续费金额 
-     * @return TransFee 申请撤销的手续费金额
+     * Get 申请撤销的手续费金额,以元为单位 
+     * @return TransFee 申请撤销的手续费金额,以元为单位
      */
     public String getTransFee() {
         return this.TransFee;
     }
 
     /**
-     * Set 申请撤销的手续费金额
-     * @param TransFee 申请撤销的手续费金额
+     * Set 申请撤销的手续费金额,以元为单位
+     * @param TransFee 申请撤销的手续费金额,以元为单位
      */
     public void setTransFee(String TransFee) {
         this.TransFee = TransFee;

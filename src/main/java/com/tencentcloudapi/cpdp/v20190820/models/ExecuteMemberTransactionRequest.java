@@ -142,7 +142,9 @@ public class ExecuteMemberTransactionRequest extends AbstractModel{
     private String MidasSignature;
 
     /**
-    * 交易流水号
+    * 交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
     */
     @SerializedName("TransSequenceNumber")
     @Expose
@@ -171,7 +173,11 @@ development 开发环境
     private String PlatformShortNumber;
 
     /**
-    * 0,登记挂账，1，撤销挂账
+    * 1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
     */
     @SerializedName("TransType")
     @Expose
@@ -465,15 +471,23 @@ development 开发环境
 
     /**
      * Get 交易流水号 
-     * @return TransSequenceNumber 交易流水号
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798 
+     * @return TransSequenceNumber 交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
      */
     public String getTransSequenceNumber() {
         return this.TransSequenceNumber;
     }
 
     /**
-     * Set 交易流水号
-     * @param TransSequenceNumber 交易流水号
+     * Set 交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
+     * @param TransSequenceNumber 交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
      */
     public void setTransSequenceNumber(String TransSequenceNumber) {
         this.TransSequenceNumber = TransSequenceNumber;
@@ -532,16 +546,32 @@ development 开发环境
     }
 
     /**
-     * Get 0,登记挂账，1，撤销挂账 
-     * @return TransType 0,登记挂账，1，撤销挂账
+     * Get 1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0 
+     * @return TransType 1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
      */
     public String getTransType() {
         return this.TransType;
     }
 
     /**
-     * Set 0,登记挂账，1，撤销挂账
-     * @param TransType 0,登记挂账，1，撤销挂账
+     * Set 1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
+     * @param TransType 1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
      */
     public void setTransType(String TransType) {
         this.TransType = TransType;

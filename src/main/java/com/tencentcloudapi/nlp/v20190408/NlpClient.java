@@ -356,26 +356,6 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
-     *文本相似度接口能够基于深度学习技术来计算两个输入文本的相似度，相似度数值越大的两个文本在语义上越相似。目前仅支持短文本（不超过500字符）的相似度计算，长文本的相似度计算也即将推出。
-
-鉴于文本相似度是一个应用非常广泛的功能，腾讯知文自然语言处理团队在深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于文本相似度，可以轻松实现诸如文本去重、相似推荐等功能。
-     * @param req SentenceSimilarityRequest
-     * @return SentenceSimilarityResponse
-     * @throws TencentCloudSDKException
-     */
-    public SentenceSimilarityResponse SentenceSimilarity(SentenceSimilarityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SentenceSimilarityResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<SentenceSimilarityResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SentenceSimilarity"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *情感分析接口能够对带有情感色彩的主观性文本进行分析、处理、归纳和推理，识别出用户的情感倾向，是积极还是消极，并且提供各自概率。
 
 该功能基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升。

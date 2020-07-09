@@ -72,7 +72,8 @@ public class MaterialBasicInfo extends AbstractModel{
     private String ClassPath;
 
     /**
-    * 素材绑定的标签信息列表。
+    * 素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagInfoSet")
     @Expose
@@ -80,7 +81,6 @@ public class MaterialBasicInfo extends AbstractModel{
 
     /**
     * 素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
     @Expose
@@ -199,26 +199,28 @@ public class MaterialBasicInfo extends AbstractModel{
     }
 
     /**
-     * Get 素材绑定的标签信息列表。 
-     * @return TagInfoSet 素材绑定的标签信息列表。
+     * Get 素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagInfoSet 素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MaterialTagInfo [] getTagInfoSet() {
         return this.TagInfoSet;
     }
 
     /**
-     * Set 素材绑定的标签信息列表。
-     * @param TagInfoSet 素材绑定的标签信息列表。
+     * Set 素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagInfoSet 素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagInfoSet(MaterialTagInfo [] TagInfoSet) {
         this.TagInfoSet = TagInfoSet;
     }
 
     /**
-     * Get 素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 素材媒体文件的预览图。 
      * @return PreviewUrl 素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
@@ -226,9 +228,7 @@ public class MaterialBasicInfo extends AbstractModel{
 
     /**
      * Set 素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewUrl 素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;

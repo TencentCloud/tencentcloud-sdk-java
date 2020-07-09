@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeOrderStatusResponse extends AbstractModel{
 
     /**
-    * 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+    * 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
     */
     @SerializedName("OrderStatus")
     @Expose
@@ -93,16 +93,16 @@ public class DescribeOrderStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中） 
-     * @return OrderStatus 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+     * Get 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中） 
+     * @return OrderStatus 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
      */
     public String getOrderStatus() {
         return this.OrderStatus;
     }
 
     /**
-     * Set 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
-     * @param OrderStatus 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+     * Set 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+     * @param OrderStatus 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
      */
     public void setOrderStatus(String OrderStatus) {
         this.OrderStatus = OrderStatus;

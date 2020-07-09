@@ -107,7 +107,7 @@ public class RechargeByThirdPayRequest extends AbstractModel{
     private String BankSubAccountNumber;
 
     /**
-    * 交易手续费
+    * 交易手续费，以元为单位
     */
     @SerializedName("TransFee")
     @Expose
@@ -376,16 +376,16 @@ public class RechargeByThirdPayRequest extends AbstractModel{
     }
 
     /**
-     * Get 交易手续费 
-     * @return TransFee 交易手续费
+     * Get 交易手续费，以元为单位 
+     * @return TransFee 交易手续费，以元为单位
      */
     public String getTransFee() {
         return this.TransFee;
     }
 
     /**
-     * Set 交易手续费
-     * @param TransFee 交易手续费
+     * Set 交易手续费，以元为单位
+     * @param TransFee 交易手续费，以元为单位
      */
     public void setTransFee(String TransFee) {
         this.TransFee = TransFee;

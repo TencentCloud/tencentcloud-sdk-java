@@ -43,7 +43,7 @@ public class MLIDCardOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 是否返回图片
+    * 是否返回图片，默认false
     */
     @SerializedName("RetImage")
     @Expose
@@ -106,16 +106,16 @@ public class MLIDCardOCRRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否返回图片 
-     * @return RetImage 是否返回图片
+     * Get 是否返回图片，默认false 
+     * @return RetImage 是否返回图片，默认false
      */
     public Boolean getRetImage() {
         return this.RetImage;
     }
 
     /**
-     * Set 是否返回图片
-     * @param RetImage 是否返回图片
+     * Set 是否返回图片，默认false
+     * @param RetImage 是否返回图片，默认false
      */
     public void setRetImage(Boolean RetImage) {
         this.RetImage = RetImage;

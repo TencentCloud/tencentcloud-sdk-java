@@ -65,7 +65,7 @@ public class RefundMemberTransactionRequest extends AbstractModel{
     private String InSubAccountNumber;
 
     /**
-    * 计费秘钥
+    * 聚鑫分配的安全ID
     */
     @SerializedName("MidasSecretId")
     @Expose
@@ -288,16 +288,16 @@ development 开发环境
     }
 
     /**
-     * Get 计费秘钥 
-     * @return MidasSecretId 计费秘钥
+     * Get 聚鑫分配的安全ID 
+     * @return MidasSecretId 聚鑫分配的安全ID
      */
     public String getMidasSecretId() {
         return this.MidasSecretId;
     }
 
     /**
-     * Set 计费秘钥
-     * @param MidasSecretId 计费秘钥
+     * Set 聚鑫分配的安全ID
+     * @param MidasSecretId 聚鑫分配的安全ID
      */
     public void setMidasSecretId(String MidasSecretId) {
         this.MidasSecretId = MidasSecretId;

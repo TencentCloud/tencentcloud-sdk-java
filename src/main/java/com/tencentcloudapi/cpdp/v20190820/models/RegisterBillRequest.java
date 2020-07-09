@@ -107,7 +107,7 @@ public class RegisterBillRequest extends AbstractModel{
     private String TranFee;
 
     /**
-    * 挂账金额
+    * 挂账金额，以元为单位
     */
     @SerializedName("OrderAmt")
     @Expose
@@ -348,16 +348,16 @@ public class RegisterBillRequest extends AbstractModel{
     }
 
     /**
-     * Get 挂账金额 
-     * @return OrderAmt 挂账金额
+     * Get 挂账金额，以元为单位 
+     * @return OrderAmt 挂账金额，以元为单位
      */
     public String getOrderAmt() {
         return this.OrderAmt;
     }
 
     /**
-     * Set 挂账金额
-     * @param OrderAmt 挂账金额
+     * Set 挂账金额，以元为单位
+     * @param OrderAmt 挂账金额，以元为单位
      */
     public void setOrderAmt(String OrderAmt) {
         this.OrderAmt = OrderAmt;

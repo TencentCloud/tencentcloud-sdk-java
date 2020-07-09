@@ -63,7 +63,7 @@ public class DescribeCertificateResponse extends AbstractModel{
     private String PackageType;
 
     /**
-    * 证书办法者名称。
+    * 证书颁发者名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductZhName")
@@ -378,9 +378,9 @@ public class DescribeCertificateResponse extends AbstractModel{
     }
 
     /**
-     * Get 证书办法者名称。
+     * Get 证书颁发者名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductZhName 证书办法者名称。
+     * @return ProductZhName 证书颁发者名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductZhName() {
@@ -388,9 +388,9 @@ public class DescribeCertificateResponse extends AbstractModel{
     }
 
     /**
-     * Set 证书办法者名称。
+     * Set 证书颁发者名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductZhName 证书办法者名称。
+     * @param ProductZhName 证书颁发者名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductZhName(String ProductZhName) {

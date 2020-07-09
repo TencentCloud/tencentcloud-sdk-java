@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceSimilarityResponse extends AbstractModel{
+public class DeleteTopicsResponse extends AbstractModel{
 
     /**
-    * 两个文本的相似度
+    * 被删除的主题数组。
     */
-    @SerializedName("Similarity")
+    @SerializedName("TopicSets")
     @Expose
-    private Float Similarity;
+    private TopicRecord [] TopicSets;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class SentenceSimilarityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 两个文本的相似度 
-     * @return Similarity 两个文本的相似度
+     * Get 被删除的主题数组。 
+     * @return TopicSets 被删除的主题数组。
      */
-    public Float getSimilarity() {
-        return this.Similarity;
+    public TopicRecord [] getTopicSets() {
+        return this.TopicSets;
     }
 
     /**
-     * Set 两个文本的相似度
-     * @param Similarity 两个文本的相似度
+     * Set 被删除的主题数组。
+     * @param TopicSets 被删除的主题数组。
      */
-    public void setSimilarity(Float Similarity) {
-        this.Similarity = Similarity;
+    public void setTopicSets(TopicRecord [] TopicSets) {
+        this.TopicSets = TopicSets;
     }
 
     /**
@@ -72,7 +72,7 @@ public class SentenceSimilarityResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Similarity", this.Similarity);
+        this.setParamArrayObj(map, prefix + "TopicSets.", this.TopicSets);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
