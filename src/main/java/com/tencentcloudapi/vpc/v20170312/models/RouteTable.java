@@ -51,7 +51,7 @@ public class RouteTable extends AbstractModel{
     private RouteTableAssociation [] AssociationSet;
 
     /**
-    * 路由表策略集合。
+    * IPv4路由策略集合。
     */
     @SerializedName("RouteSet")
     @Expose
@@ -143,16 +143,16 @@ public class RouteTable extends AbstractModel{
     }
 
     /**
-     * Get 路由表策略集合。 
-     * @return RouteSet 路由表策略集合。
+     * Get IPv4路由策略集合。 
+     * @return RouteSet IPv4路由策略集合。
      */
     public Route [] getRouteSet() {
         return this.RouteSet;
     }
 
     /**
-     * Set 路由表策略集合。
-     * @param RouteSet 路由表策略集合。
+     * Set IPv4路由策略集合。
+     * @param RouteSet IPv4路由策略集合。
      */
     public void setRouteSet(Route [] RouteSet) {
         this.RouteSet = RouteSet;

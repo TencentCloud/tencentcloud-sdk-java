@@ -157,6 +157,22 @@ public class Deal extends AbstractModel{
     private String BigDealId;
 
     /**
+    * 退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Formula")
+    @Expose
+    private String Formula;
+
+    /**
+    * 退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RefReturnDeals")
+    @Expose
+    private String RefReturnDeals;
+
+    /**
      * Get 订单号 
      * @return OrderId 订单号
      */
@@ -465,6 +481,46 @@ public class Deal extends AbstractModel{
     }
 
     /**
+     * Get 退费公式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Formula 退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFormula() {
+        return this.Formula;
+    }
+
+    /**
+     * Set 退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Formula 退费公式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFormula(String Formula) {
+        this.Formula = Formula;
+    }
+
+    /**
+     * Get 退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RefReturnDeals 退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRefReturnDeals() {
+        return this.RefReturnDeals;
+    }
+
+    /**
+     * Set 退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RefReturnDeals 退费涉及订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRefReturnDeals(String RefReturnDeals) {
+        this.RefReturnDeals = RefReturnDeals;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -487,6 +543,8 @@ public class Deal extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
         this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
+        this.setParamSimple(map, prefix + "Formula", this.Formula);
+        this.setParamSimple(map, prefix + "RefReturnDeals", this.RefReturnDeals);
 
     }
 }

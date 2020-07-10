@@ -37,7 +37,7 @@ public class VideoMaterial extends AbstractModel{
     private MediaImageSpriteInfo ImageSpriteInfo;
 
     /**
-    * 素材媒体文件的 URL 地址
+    * 素材媒体文件的播放 URL 地址。
     */
     @SerializedName("MaterialUrl")
     @Expose
@@ -64,6 +64,20 @@ public class VideoMaterial extends AbstractModel{
     @SerializedName("MaterialStatus")
     @Expose
     private MaterialStatus MaterialStatus;
+
+    /**
+    * 素材媒体文件的原始 URL 地址。
+    */
+    @SerializedName("OriginalUrl")
+    @Expose
+    private String OriginalUrl;
+
+    /**
+    * 云点播媒资 FileId。
+    */
+    @SerializedName("VodFileId")
+    @Expose
+    private String VodFileId;
 
     /**
      * Get 素材元信息。 
@@ -98,16 +112,16 @@ public class VideoMaterial extends AbstractModel{
     }
 
     /**
-     * Get 素材媒体文件的 URL 地址 
-     * @return MaterialUrl 素材媒体文件的 URL 地址
+     * Get 素材媒体文件的播放 URL 地址。 
+     * @return MaterialUrl 素材媒体文件的播放 URL 地址。
      */
     public String getMaterialUrl() {
         return this.MaterialUrl;
     }
 
     /**
-     * Set 素材媒体文件的 URL 地址
-     * @param MaterialUrl 素材媒体文件的 URL 地址
+     * Set 素材媒体文件的播放 URL 地址。
+     * @param MaterialUrl 素材媒体文件的播放 URL 地址。
      */
     public void setMaterialUrl(String MaterialUrl) {
         this.MaterialUrl = MaterialUrl;
@@ -166,6 +180,38 @@ public class VideoMaterial extends AbstractModel{
     }
 
     /**
+     * Get 素材媒体文件的原始 URL 地址。 
+     * @return OriginalUrl 素材媒体文件的原始 URL 地址。
+     */
+    public String getOriginalUrl() {
+        return this.OriginalUrl;
+    }
+
+    /**
+     * Set 素材媒体文件的原始 URL 地址。
+     * @param OriginalUrl 素材媒体文件的原始 URL 地址。
+     */
+    public void setOriginalUrl(String OriginalUrl) {
+        this.OriginalUrl = OriginalUrl;
+    }
+
+    /**
+     * Get 云点播媒资 FileId。 
+     * @return VodFileId 云点播媒资 FileId。
+     */
+    public String getVodFileId() {
+        return this.VodFileId;
+    }
+
+    /**
+     * Set 云点播媒资 FileId。
+     * @param VodFileId 云点播媒资 FileId。
+     */
+    public void setVodFileId(String VodFileId) {
+        this.VodFileId = VodFileId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -175,6 +221,8 @@ public class VideoMaterial extends AbstractModel{
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamObj(map, prefix + "MaterialStatus.", this.MaterialStatus);
+        this.setParamSimple(map, prefix + "OriginalUrl", this.OriginalUrl);
+        this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
 
     }
 }

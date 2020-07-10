@@ -46,7 +46,7 @@ off：关闭
     * 强制缓存
 on：开启
 off：关闭
-默认为关闭状态，开启后，源站发挥的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
+默认为关闭状态，开启后，源站返回的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreCacheControl")
@@ -143,12 +143,12 @@ off：关闭
      * Get 强制缓存
 on：开启
 off：关闭
-默认为关闭状态，开启后，源站发挥的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
+默认为关闭状态，开启后，源站返回的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IgnoreCacheControl 强制缓存
 on：开启
 off：关闭
-默认为关闭状态，开启后，源站发挥的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
+默认为关闭状态，开启后，源站返回的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIgnoreCacheControl() {
@@ -159,12 +159,12 @@ off：关闭
      * Set 强制缓存
 on：开启
 off：关闭
-默认为关闭状态，开启后，源站发挥的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
+默认为关闭状态，开启后，源站返回的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreCacheControl 强制缓存
 on：开启
 off：关闭
-默认为关闭状态，开启后，源站发挥的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
+默认为关闭状态，开启后，源站返回的 no-store、no-cache 资源，也将按照 CacheRules 规则进行缓存
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {

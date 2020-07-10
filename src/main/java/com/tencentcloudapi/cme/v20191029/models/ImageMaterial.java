@@ -37,7 +37,7 @@ public class ImageMaterial extends AbstractModel{
     private Long Width;
 
     /**
-    * 素材媒体文件的 URL 地址。
+    * 素材媒体文件的展示 URL 地址。
     */
     @SerializedName("MaterialUrl")
     @Expose
@@ -49,6 +49,20 @@ public class ImageMaterial extends AbstractModel{
     @SerializedName("Size")
     @Expose
     private Long Size;
+
+    /**
+    * 素材媒体文件的原始 URL 地址。
+    */
+    @SerializedName("OriginalUrl")
+    @Expose
+    private String OriginalUrl;
+
+    /**
+    * 云点播媒资 FileId。
+    */
+    @SerializedName("VodFileId")
+    @Expose
+    private String VodFileId;
 
     /**
      * Get 图片高度，单位：px。 
@@ -83,16 +97,16 @@ public class ImageMaterial extends AbstractModel{
     }
 
     /**
-     * Get 素材媒体文件的 URL 地址。 
-     * @return MaterialUrl 素材媒体文件的 URL 地址。
+     * Get 素材媒体文件的展示 URL 地址。 
+     * @return MaterialUrl 素材媒体文件的展示 URL 地址。
      */
     public String getMaterialUrl() {
         return this.MaterialUrl;
     }
 
     /**
-     * Set 素材媒体文件的 URL 地址。
-     * @param MaterialUrl 素材媒体文件的 URL 地址。
+     * Set 素材媒体文件的展示 URL 地址。
+     * @param MaterialUrl 素材媒体文件的展示 URL 地址。
      */
     public void setMaterialUrl(String MaterialUrl) {
         this.MaterialUrl = MaterialUrl;
@@ -115,6 +129,38 @@ public class ImageMaterial extends AbstractModel{
     }
 
     /**
+     * Get 素材媒体文件的原始 URL 地址。 
+     * @return OriginalUrl 素材媒体文件的原始 URL 地址。
+     */
+    public String getOriginalUrl() {
+        return this.OriginalUrl;
+    }
+
+    /**
+     * Set 素材媒体文件的原始 URL 地址。
+     * @param OriginalUrl 素材媒体文件的原始 URL 地址。
+     */
+    public void setOriginalUrl(String OriginalUrl) {
+        this.OriginalUrl = OriginalUrl;
+    }
+
+    /**
+     * Get 云点播媒资 FileId。 
+     * @return VodFileId 云点播媒资 FileId。
+     */
+    public String getVodFileId() {
+        return this.VodFileId;
+    }
+
+    /**
+     * Set 云点播媒资 FileId。
+     * @param VodFileId 云点播媒资 FileId。
+     */
+    public void setVodFileId(String VodFileId) {
+        this.VodFileId = VodFileId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class ImageMaterial extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "MaterialUrl", this.MaterialUrl);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "OriginalUrl", this.OriginalUrl);
+        this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
 
     }
 }
