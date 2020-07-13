@@ -38,7 +38,7 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
-     *检查域名是否可以注册
+     *检查域名是否可以注册。
      * @param req CheckDomainRequest
      * @return CheckDomainResponse
      * @throws TencentCloudSDKException

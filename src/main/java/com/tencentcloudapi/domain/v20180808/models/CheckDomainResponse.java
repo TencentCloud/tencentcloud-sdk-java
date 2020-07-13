@@ -111,6 +111,13 @@ public class CheckDomainResponse extends AbstractModel{
     private Long Period;
 
     /**
+    * 是否支持北京备案  true 支持  false 不支持
+    */
+    @SerializedName("RecordSupport")
+    @Expose
+    private Boolean RecordSupport;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -326,6 +333,22 @@ public class CheckDomainResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否支持北京备案  true 支持  false 不支持 
+     * @return RecordSupport 是否支持北京备案  true 支持  false 不支持
+     */
+    public Boolean getRecordSupport() {
+        return this.RecordSupport;
+    }
+
+    /**
+     * Set 是否支持北京备案  true 支持  false 不支持
+     * @param RecordSupport 是否支持北京备案  true 支持  false 不支持
+     */
+    public void setRecordSupport(Boolean RecordSupport) {
+        this.RecordSupport = RecordSupport;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -357,6 +380,7 @@ public class CheckDomainResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "FeeTransfer", this.FeeTransfer);
         this.setParamSimple(map, prefix + "FeeRestore", this.FeeRestore);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "RecordSupport", this.RecordSupport);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

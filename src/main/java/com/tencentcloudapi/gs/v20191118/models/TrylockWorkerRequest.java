@@ -58,6 +58,13 @@ public class TrylockWorkerRequest extends AbstractModel{
     private String UserIp;
 
     /**
+    * 分组ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 游戏用户ID 
      * @return UserId 游戏用户ID
      */
@@ -138,6 +145,22 @@ public class TrylockWorkerRequest extends AbstractModel{
     }
 
     /**
+     * Get 分组ID 
+     * @return GroupId 分组ID
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 分组ID
+     * @param GroupId 分组ID
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class TrylockWorkerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GameRegion", this.GameRegion);
         this.setParamSimple(map, prefix + "SetNo", this.SetNo);
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }
