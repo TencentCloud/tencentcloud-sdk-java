@@ -128,6 +128,24 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *获取实例占用空间最大的前几张表在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。
+     * @param req DescribeTopSpaceTableTimeSeriesRequest
+     * @return DescribeTopSpaceTableTimeSeriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceTableTimeSeriesResponse DescribeTopSpaceTableTimeSeries(DescribeTopSpaceTableTimeSeriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTopSpaceTableTimeSeries"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取实例Top表的实时空间统计信息，默认返回按大小排序。
      * @param req DescribeTopSpaceTablesRequest
      * @return DescribeTopSpaceTablesResponse

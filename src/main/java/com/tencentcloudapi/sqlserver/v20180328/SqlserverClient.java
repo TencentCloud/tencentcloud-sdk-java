@@ -38,6 +38,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
+     * @param req CompleteExpansionRequest
+     * @return CompleteExpansionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompleteExpansionResponse CompleteExpansion(CompleteExpansionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CompleteExpansionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CompleteExpansionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CompleteExpansion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateAccount）用于创建实例账号
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -128,6 +146,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreatePublishSubscribe）用于创建两个数据库之间的发布订阅关系。作为订阅者，不能再充当发布者，作为发布者可以有多个订阅者实例。
+     * @param req CreatePublishSubscribeRequest
+     * @return CreatePublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePublishSubscribeResponse CreatePublishSubscribe(CreatePublishSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePublishSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePublishSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePublishSubscribe"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteAccount）用于删除实例账号。
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -175,6 +211,24 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteMigration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeletePublishSubscribe）用于删除两个数据库间的发布订阅关系。
+     * @param req DeletePublishSubscribeRequest
+     * @return DeletePublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePublishSubscribeResponse DeletePublishSubscribe(DeletePublishSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePublishSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePublishSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePublishSubscribe"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -272,6 +326,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
+     * @param req DescribeMaintenanceSpanRequest
+     * @return DescribeMaintenanceSpanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(DescribeMaintenanceSpanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMaintenanceSpanResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMaintenanceSpanResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMaintenanceSpan"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
      * @param req DescribeMigrationDetailRequest
      * @return DescribeMigrationDetailResponse
@@ -337,6 +409,24 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProductConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeProductConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribePublishSubscribe）用于查询发布订阅关系列表。
+     * @param req DescribePublishSubscribeRequest
+     * @return DescribePublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublishSubscribeResponse DescribePublishSubscribe(DescribePublishSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublishSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublishSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePublishSubscribe"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -506,6 +596,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyBackupStrategy）用于修改备份策略
+     * @param req ModifyBackupStrategyRequest
+     * @return ModifyBackupStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupStrategyResponse ModifyBackupStrategy(ModifyBackupStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupStrategyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupStrategyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyBackupStrategy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceName）用于修改实例名字。
      * @param req ModifyDBInstanceNameRequest
      * @return ModifyDBInstanceNameResponse
@@ -596,6 +704,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
+     * @param req ModifyMaintenanceSpanRequest
+     * @return ModifyMaintenanceSpanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintenanceSpanResponse ModifyMaintenanceSpan(ModifyMaintenanceSpanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMaintenanceSpanResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMaintenanceSpanResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMaintenanceSpan"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyMigration）可以修改已有的迁移任务信息
      * @param req ModifyMigrationRequest
      * @return ModifyMigrationResponse
@@ -607,6 +733,42 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyMigration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyPublishSubscribeName）修改发布订阅的名称。
+     * @param req ModifyPublishSubscribeNameRequest
+     * @return ModifyPublishSubscribeNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPublishSubscribeNameResponse ModifyPublishSubscribeName(ModifyPublishSubscribeNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPublishSubscribeNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPublishSubscribeNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPublishSubscribeName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
+     * @param req RemoveBackupsRequest
+     * @return RemoveBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveBackupsResponse RemoveBackups(RemoveBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveBackupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveBackupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RemoveBackups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

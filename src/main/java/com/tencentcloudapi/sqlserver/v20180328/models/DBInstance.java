@@ -247,6 +247,38 @@ public class DBInstance extends AbstractModel{
     private String UniqSubnetId;
 
     /**
+    * 实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateOperator")
+    @Expose
+    private String IsolateOperator;
+
+    /**
+    * 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubFlag")
+    @Expose
+    private String SubFlag;
+
+    /**
+    * 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ROFlag")
+    @Expose
+    private String ROFlag;
+
+    /**
+    * 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HAFlag")
+    @Expose
+    private String HAFlag;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -759,6 +791,86 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateOperator 实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsolateOperator() {
+        return this.IsolateOperator;
+    }
+
+    /**
+     * Set 实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateOperator 实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateOperator(String IsolateOperator) {
+        this.IsolateOperator = IsolateOperator;
+    }
+
+    /**
+     * Get 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubFlag() {
+        return this.SubFlag;
+    }
+
+    /**
+     * Set 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubFlag(String SubFlag) {
+        this.SubFlag = SubFlag;
+    }
+
+    /**
+     * Get 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getROFlag() {
+        return this.ROFlag;
+    }
+
+    /**
+     * Set 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setROFlag(String ROFlag) {
+        this.ROFlag = ROFlag;
+    }
+
+    /**
+     * Get 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHAFlag() {
+        return this.HAFlag;
+    }
+
+    /**
+     * Set 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHAFlag(String HAFlag) {
+        this.HAFlag = HAFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -794,6 +906,10 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "IsolateOperator", this.IsolateOperator);
+        this.setParamSimple(map, prefix + "SubFlag", this.SubFlag);
+        this.setParamSimple(map, prefix + "ROFlag", this.ROFlag);
+        this.setParamSimple(map, prefix + "HAFlag", this.HAFlag);
 
     }
 }

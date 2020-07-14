@@ -44,6 +44,13 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
     private Long Storage;
 
     /**
+    * 实例升级后的CPU核心数，其值不能比当前实例CPU小
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 实例ID，形如mssql-njj2mtpl
      */
@@ -92,12 +99,29 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例升级后的CPU核心数，其值不能比当前实例CPU小 
+     * @return Cpu 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     * @param Cpu 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

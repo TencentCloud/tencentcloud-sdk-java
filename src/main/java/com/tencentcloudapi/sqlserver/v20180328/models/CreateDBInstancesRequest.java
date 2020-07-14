@@ -114,6 +114,48 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * 安全组列表，填写形如sg-xxx的安全组ID
+    */
+    @SerializedName("SecurityGroupList")
+    @Expose
+    private String [] SecurityGroupList;
+
+    /**
+    * 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+    */
+    @SerializedName("Weekly")
+    @Expose
+    private Long [] Weekly;
+
+    /**
+    * 可维护时间窗配置，每天可维护的开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 可维护时间窗配置，持续时间，单位：小时
+    */
+    @SerializedName("Span")
+    @Expose
+    private Long Span;
+
+    /**
+    * 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+    */
+    @SerializedName("HAType")
+    @Expose
+    private String HAType;
+
+    /**
+    * 是否跨可用区部署，默认值为false
+    */
+    @SerializedName("MultiZones")
+    @Expose
+    private Boolean MultiZones;
+
+    /**
      * Get 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取 
      * @return Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
@@ -322,6 +364,102 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全组列表，填写形如sg-xxx的安全组ID 
+     * @return SecurityGroupList 安全组列表，填写形如sg-xxx的安全组ID
+     */
+    public String [] getSecurityGroupList() {
+        return this.SecurityGroupList;
+    }
+
+    /**
+     * Set 安全组列表，填写形如sg-xxx的安全组ID
+     * @param SecurityGroupList 安全组列表，填写形如sg-xxx的安全组ID
+     */
+    public void setSecurityGroupList(String [] SecurityGroupList) {
+        this.SecurityGroupList = SecurityGroupList;
+    }
+
+    /**
+     * Get 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末 
+     * @return Weekly 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+     */
+    public Long [] getWeekly() {
+        return this.Weekly;
+    }
+
+    /**
+     * Set 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+     * @param Weekly 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+     */
+    public void setWeekly(Long [] Weekly) {
+        this.Weekly = Weekly;
+    }
+
+    /**
+     * Get 可维护时间窗配置，每天可维护的开始时间 
+     * @return StartTime 可维护时间窗配置，每天可维护的开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 可维护时间窗配置，每天可维护的开始时间
+     * @param StartTime 可维护时间窗配置，每天可维护的开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 可维护时间窗配置，持续时间，单位：小时 
+     * @return Span 可维护时间窗配置，持续时间，单位：小时
+     */
+    public Long getSpan() {
+        return this.Span;
+    }
+
+    /**
+     * Set 可维护时间窗配置，持续时间，单位：小时
+     * @param Span 可维护时间窗配置，持续时间，单位：小时
+     */
+    public void setSpan(Long Span) {
+        this.Span = Span;
+    }
+
+    /**
+     * Get 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL 
+     * @return HAType 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+     */
+    public String getHAType() {
+        return this.HAType;
+    }
+
+    /**
+     * Set 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+     * @param HAType 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+     */
+    public void setHAType(String HAType) {
+        this.HAType = HAType;
+    }
+
+    /**
+     * Get 是否跨可用区部署，默认值为false 
+     * @return MultiZones 是否跨可用区部署，默认值为false
+     */
+    public Boolean getMultiZones() {
+        return this.MultiZones;
+    }
+
+    /**
+     * Set 是否跨可用区部署，默认值为false
+     * @param MultiZones 是否跨可用区部署，默认值为false
+     */
+    public void setMultiZones(Boolean MultiZones) {
+        this.MultiZones = MultiZones;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +476,12 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamArraySimple(map, prefix + "SecurityGroupList.", this.SecurityGroupList);
+        this.setParamArraySimple(map, prefix + "Weekly.", this.Weekly);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Span", this.Span);
+        this.setParamSimple(map, prefix + "HAType", this.HAType);
+        this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
 
     }
 }

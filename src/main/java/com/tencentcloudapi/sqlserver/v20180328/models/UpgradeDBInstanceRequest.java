@@ -58,6 +58,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
+    * 实例升级后的CPU核心数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
@@ -138,6 +145,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例升级后的CPU核心数 
+     * @return Cpu 实例升级后的CPU核心数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 实例升级后的CPU核心数
+     * @param Cpu 实例升级后的CPU核心数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

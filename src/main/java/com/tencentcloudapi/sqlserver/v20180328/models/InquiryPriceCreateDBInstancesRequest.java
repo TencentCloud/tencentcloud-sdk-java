@@ -72,6 +72,27 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     private String DBVersion;
 
     /**
+    * 预购买实例的CPU核心数
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
      * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
      * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      */
@@ -184,6 +205,54 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 预购买实例的CPU核心数 
+     * @return Cpu 预购买实例的CPU核心数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 预购买实例的CPU核心数
+     * @param Cpu 预购买实例的CPU核心数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA 
+     * @return InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+     * @param InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM 
+     * @return MachineType 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
+     * @param MachineType 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +263,9 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

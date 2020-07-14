@@ -54,7 +54,7 @@ CCN：云联网。
     private String GatewayId;
 
     /**
-    * 路由策略ID。
+    * 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
     */
     @SerializedName("RouteId")
     @Expose
@@ -195,16 +195,16 @@ CCN：云联网。
     }
 
     /**
-     * Get 路由策略ID。 
-     * @return RouteId 路由策略ID。
+     * Get 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。 
+     * @return RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由策略ID。
-     * @param RouteId 路由策略ID。
+     * Set 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+     * @param RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;
