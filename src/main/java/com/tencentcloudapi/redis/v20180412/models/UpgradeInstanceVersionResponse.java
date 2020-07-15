@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyWorkersResponse extends AbstractModel{
+public class UpgradeInstanceVersionResponse extends AbstractModel{
+
+    /**
+    * 订单ID
+    */
+    @SerializedName("DealId")
+    @Expose
+    private String DealId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class ModifyWorkersResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 订单ID 
+     * @return DealId 订单ID
+     */
+    public String getDealId() {
+        return this.DealId;
+    }
+
+    /**
+     * Set 订单ID
+     * @param DealId 订单ID
+     */
+    public void setDealId(String DealId) {
+        this.DealId = DealId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class ModifyWorkersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DealId", this.DealId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

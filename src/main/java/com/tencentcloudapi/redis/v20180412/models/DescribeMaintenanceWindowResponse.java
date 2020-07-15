@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWorkersResponse extends AbstractModel{
+public class DescribeMaintenanceWindowResponse extends AbstractModel{
 
     /**
-    * 空闲机器总数量
+    * 维护时间窗起始时间，如：17:00
     */
-    @SerializedName("Idle")
+    @SerializedName("StartTime")
     @Expose
-    private Long Idle;
+    private String StartTime;
 
     /**
-    * 区域个数
+    * 维护时间窗结束时间，如：19:00
     */
-    @SerializedName("RegionNum")
+    @SerializedName("EndTime")
     @Expose
-    private Long RegionNum;
-
-    /**
-    * 各个区域的机器情况
-    */
-    @SerializedName("RegionDetail")
-    @Expose
-    private WorkerRegionInfo [] RegionDetail;
+    private String EndTime;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeWorkersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 空闲机器总数量 
-     * @return Idle 空闲机器总数量
+     * Get 维护时间窗起始时间，如：17:00 
+     * @return StartTime 维护时间窗起始时间，如：17:00
      */
-    public Long getIdle() {
-        return this.Idle;
+    public String getStartTime() {
+        return this.StartTime;
     }
 
     /**
-     * Set 空闲机器总数量
-     * @param Idle 空闲机器总数量
+     * Set 维护时间窗起始时间，如：17:00
+     * @param StartTime 维护时间窗起始时间，如：17:00
      */
-    public void setIdle(Long Idle) {
-        this.Idle = Idle;
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
     }
 
     /**
-     * Get 区域个数 
-     * @return RegionNum 区域个数
+     * Get 维护时间窗结束时间，如：19:00 
+     * @return EndTime 维护时间窗结束时间，如：19:00
      */
-    public Long getRegionNum() {
-        return this.RegionNum;
+    public String getEndTime() {
+        return this.EndTime;
     }
 
     /**
-     * Set 区域个数
-     * @param RegionNum 区域个数
+     * Set 维护时间窗结束时间，如：19:00
+     * @param EndTime 维护时间窗结束时间，如：19:00
      */
-    public void setRegionNum(Long RegionNum) {
-        this.RegionNum = RegionNum;
-    }
-
-    /**
-     * Get 各个区域的机器情况 
-     * @return RegionDetail 各个区域的机器情况
-     */
-    public WorkerRegionInfo [] getRegionDetail() {
-        return this.RegionDetail;
-    }
-
-    /**
-     * Set 各个区域的机器情况
-     * @param RegionDetail 各个区域的机器情况
-     */
-    public void setRegionDetail(WorkerRegionInfo [] RegionDetail) {
-        this.RegionDetail = RegionDetail;
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DescribeWorkersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Idle", this.Idle);
-        this.setParamSimple(map, prefix + "RegionNum", this.RegionNum);
-        this.setParamArrayObj(map, prefix + "RegionDetail.", this.RegionDetail);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

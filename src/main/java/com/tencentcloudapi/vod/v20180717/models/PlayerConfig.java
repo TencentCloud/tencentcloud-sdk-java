@@ -91,6 +91,23 @@ public class PlayerConfig extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * 播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
+    */
+    @SerializedName("Scheme")
+    @Expose
+    private String Scheme;
+
+    /**
     * 模板描述信息。
     */
     @SerializedName("Comment")
@@ -262,6 +279,50 @@ public class PlayerConfig extends AbstractModel{
     }
 
     /**
+     * Get 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。 
+     * @return Domain 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+     * @param Domain 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get 播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li> 
+     * @return Scheme 播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
+     */
+    public String getScheme() {
+        return this.Scheme;
+    }
+
+    /**
+     * Set 播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
+     * @param Scheme 播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
+     */
+    public void setScheme(String Scheme) {
+        this.Scheme = Scheme;
+    }
+
+    /**
      * Get 模板描述信息。 
      * @return Comment 模板描述信息。
      */
@@ -290,6 +351,8 @@ public class PlayerConfig extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ResolutionNameSet.", this.ResolutionNameSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Scheme", this.Scheme);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }

@@ -506,6 +506,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询实例维护时间窗，在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
+     * @param req DescribeMaintenanceWindowRequest
+     * @return DescribeMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMaintenanceWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMaintenanceWindow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口查询指定可用区和实例类型下 Redis 的售卖规格， 如果用户不在购买白名单中，将不能查询该可用区或该类型的售卖规格详情。申请购买某地域白名单可以提交工单
      * @param req DescribeProductInfoRequest
      * @return DescribeProductInfoResponse
@@ -884,6 +902,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
+     * @param req ModifyMaintenanceWindowRequest
+     * @return ModifyMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMaintenanceWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMaintenanceWindow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改实例网络配置
      * @param req ModifyNetworkConfigRequest
      * @return ModifyNetworkConfigResponse
@@ -1003,6 +1039,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpgradeInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将原本实例升级到高版本实例，或者将主从版实例升级到集群版实例
+     * @param req UpgradeInstanceVersionRequest
+     * @return UpgradeInstanceVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceVersionResponse UpgradeInstanceVersion(UpgradeInstanceVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeInstanceVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeInstanceVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
