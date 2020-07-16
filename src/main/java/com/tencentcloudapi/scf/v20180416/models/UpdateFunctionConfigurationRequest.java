@@ -135,6 +135,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private PublicNetConfigIn PublicNetConfig;
 
     /**
+    * 文件系统配置入参，用于云函数绑定文件系统
+    */
+    @SerializedName("CfsConfig")
+    @Expose
+    private CfsConfig CfsConfig;
+
+    /**
      * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
@@ -391,6 +398,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get 文件系统配置入参，用于云函数绑定文件系统 
+     * @return CfsConfig 文件系统配置入参，用于云函数绑定文件系统
+     */
+    public CfsConfig getCfsConfig() {
+        return this.CfsConfig;
+    }
+
+    /**
+     * Set 文件系统配置入参，用于云函数绑定文件系统
+     * @param CfsConfig 文件系统配置入参，用于云函数绑定文件系统
+     */
+    public void setCfsConfig(CfsConfig CfsConfig) {
+        this.CfsConfig = CfsConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+        this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
 
     }
 }

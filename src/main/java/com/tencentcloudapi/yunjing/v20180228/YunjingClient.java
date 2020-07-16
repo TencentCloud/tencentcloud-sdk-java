@@ -92,6 +92,24 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
+     *根据策略信息创建基线策略
+     * @param req CreateBaselineStrategyRequest
+     * @return CreateBaselineStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBaselineStrategyResponse CreateBaselineStrategy(CreateBaselineStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBaselineStrategyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBaselineStrategyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateBaselineStrategy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
      * @param req CreateOpenPortTaskRequest
      * @return CreateOpenPortTaskResponse

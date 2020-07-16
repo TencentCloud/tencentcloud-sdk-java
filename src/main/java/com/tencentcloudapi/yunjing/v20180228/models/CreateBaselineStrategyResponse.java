@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonListNumRequest extends AbstractModel{
+public class CreateBaselineStrategyResponse extends AbstractModel{
 
     /**
-    * 人员库ID，取值为创建人员库接口中的GroupId
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("GroupId")
+    @SerializedName("RequestId")
     @Expose
-    private String GroupId;
+    private String RequestId;
 
     /**
-     * Get 人员库ID，取值为创建人员库接口中的GroupId 
-     * @return GroupId 人员库ID，取值为创建人员库接口中的GroupId
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getGroupId() {
-        return this.GroupId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 人员库ID，取值为创建人员库接口中的GroupId
-     * @param GroupId 人员库ID，取值为创建人员库接口中的GroupId
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setGroupId(String GroupId) {
-        this.GroupId = GroupId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

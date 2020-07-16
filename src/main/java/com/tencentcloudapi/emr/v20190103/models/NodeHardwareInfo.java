@@ -311,6 +311,14 @@ public class NodeHardwareInfo extends AbstractModel{
     private Long AutoFlag;
 
     /**
+    * 资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1031,6 +1039,26 @@ public class NodeHardwareInfo extends AbstractModel{
     }
 
     /**
+     * Get 资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HardwareResourceType 资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set 资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HardwareResourceType 资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1070,6 +1098,7 @@ public class NodeHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Destroyable", this.Destroyable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
 
     }
 }

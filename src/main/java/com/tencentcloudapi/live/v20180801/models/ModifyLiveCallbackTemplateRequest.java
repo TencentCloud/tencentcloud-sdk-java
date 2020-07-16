@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
-    * 模板 ID。
+    * DescribeLiveCallbackTemplates接口返回的模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -87,16 +87,16 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String CallbackKey;
 
     /**
-     * Get 模板 ID。 
-     * @return TemplateId 模板 ID。
+     * Get DescribeLiveCallbackTemplates接口返回的模板 ID。 
+     * @return TemplateId DescribeLiveCallbackTemplates接口返回的模板 ID。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板 ID。
-     * @param TemplateId 模板 ID。
+     * Set DescribeLiveCallbackTemplates接口返回的模板 ID。
+     * @param TemplateId DescribeLiveCallbackTemplates接口返回的模板 ID。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

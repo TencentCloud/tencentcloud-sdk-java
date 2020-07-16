@@ -63,7 +63,7 @@ public class CcnBandwidthInfo extends AbstractModel{
     private String RenewFlag;
 
     /**
-    * 描述带宽的地域和限速上限信息。
+    * 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnRegionBandwidthLimit")
@@ -171,9 +171,9 @@ public class CcnBandwidthInfo extends AbstractModel{
     }
 
     /**
-     * Get 描述带宽的地域和限速上限信息。
+     * Get 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。
+     * @return CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() {
@@ -181,9 +181,9 @@ public class CcnBandwidthInfo extends AbstractModel{
     }
 
     /**
-     * Set 描述带宽的地域和限速上限信息。
+     * Set 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。
+     * @param CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit CcnRegionBandwidthLimit) {

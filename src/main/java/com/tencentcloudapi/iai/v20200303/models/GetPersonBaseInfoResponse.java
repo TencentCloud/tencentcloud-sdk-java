@@ -30,7 +30,7 @@ public class GetPersonBaseInfoResponse extends AbstractModel{
     private String PersonName;
 
     /**
-    * 人员性别
+    * 人员性别，0代表未填写，1代表男性，2代表女性
     */
     @SerializedName("Gender")
     @Expose
@@ -67,16 +67,16 @@ public class GetPersonBaseInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 人员性别 
-     * @return Gender 人员性别
+     * Get 人员性别，0代表未填写，1代表男性，2代表女性 
+     * @return Gender 人员性别，0代表未填写，1代表男性，2代表女性
      */
     public Long getGender() {
         return this.Gender;
     }
 
     /**
-     * Set 人员性别
-     * @param Gender 人员性别
+     * Set 人员性别，0代表未填写，1代表男性，2代表女性
+     * @param Gender 人员性别，0代表未填写，1代表男性，2代表女性
      */
     public void setGender(Long Gender) {
         this.Gender = Gender;

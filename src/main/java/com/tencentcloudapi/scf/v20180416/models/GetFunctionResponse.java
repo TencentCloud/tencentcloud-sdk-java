@@ -270,6 +270,30 @@ public class GetFunctionResponse extends AbstractModel{
     private String OnsEnable;
 
     /**
+    * 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CfsConfig")
+    @Expose
+    private CfsConfig CfsConfig;
+
+    /**
+    * 函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvailableStatus")
+    @Expose
+    private String AvailableStatus;
+
+    /**
+    * 函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Qualifier")
+    @Expose
+    private String Qualifier;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -845,6 +869,66 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
+     * Get 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CfsConfig getCfsConfig() {
+        return this.CfsConfig;
+    }
+
+    /**
+     * Set 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCfsConfig(CfsConfig CfsConfig) {
+        this.CfsConfig = CfsConfig;
+    }
+
+    /**
+     * Get 函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvailableStatus 函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAvailableStatus() {
+        return this.AvailableStatus;
+    }
+
+    /**
+     * Set 函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvailableStatus 函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvailableStatus(String AvailableStatus) {
+        this.AvailableStatus = AvailableStatus;
+    }
+
+    /**
+     * Get 函数版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Qualifier 函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQualifier() {
+        return this.Qualifier;
+    }
+
+    /**
+     * Set 函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Qualifier 函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualifier(String Qualifier) {
+        this.Qualifier = Qualifier;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -899,6 +983,9 @@ public class GetFunctionResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
+        this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+        this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
+        this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

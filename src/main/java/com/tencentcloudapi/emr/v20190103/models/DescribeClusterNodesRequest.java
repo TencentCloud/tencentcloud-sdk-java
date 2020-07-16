@@ -61,6 +61,20 @@ public class DescribeClusterNodesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 资源类型:支持all/host/pod，默认为all
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
+
+    /**
+    * 支持搜索的字段
+    */
+    @SerializedName("SearchFields")
+    @Expose
+    private SearchItem [] SearchFields;
+
+    /**
      * Get 集群实例ID,实例ID形如: emr-xxxxxxxx 
      * @return InstanceId 集群实例ID,实例ID形如: emr-xxxxxxxx
      */
@@ -165,6 +179,38 @@ public class DescribeClusterNodesRequest extends AbstractModel{
     }
 
     /**
+     * Get 资源类型:支持all/host/pod，默认为all 
+     * @return HardwareResourceType 资源类型:支持all/host/pod，默认为all
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set 资源类型:支持all/host/pod，默认为all
+     * @param HardwareResourceType 资源类型:支持all/host/pod，默认为all
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
+    }
+
+    /**
+     * Get 支持搜索的字段 
+     * @return SearchFields 支持搜索的字段
+     */
+    public SearchItem [] getSearchFields() {
+        return this.SearchFields;
+    }
+
+    /**
+     * Set 支持搜索的字段
+     * @param SearchFields 支持搜索的字段
+     */
+    public void setSearchFields(SearchItem [] SearchFields) {
+        this.SearchFields = SearchFields;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -172,6 +218,8 @@ public class DescribeClusterNodesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamArrayObj(map, prefix + "SearchFields.", this.SearchFields);
 
     }
 }

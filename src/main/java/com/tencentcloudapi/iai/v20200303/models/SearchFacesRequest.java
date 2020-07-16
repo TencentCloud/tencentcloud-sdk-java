@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SearchFacesRequest extends AbstractModel{
 
     /**
-    * 希望搜索的人员库列表，上限100个。
+    * 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
     */
     @SerializedName("GroupIds")
     @Expose
@@ -109,16 +109,16 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     private Long NeedRotateDetection;
 
     /**
-     * Get 希望搜索的人员库列表，上限100个。 
-     * @return GroupIds 希望搜索的人员库列表，上限100个。
+     * Get 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId 
+     * @return GroupIds 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 希望搜索的人员库列表，上限100个。
-     * @param GroupIds 希望搜索的人员库列表，上限100个。
+     * Set 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
+     * @param GroupIds 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;

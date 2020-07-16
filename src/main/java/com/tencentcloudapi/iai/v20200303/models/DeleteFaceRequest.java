@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteFaceRequest extends AbstractModel{
 
     /**
-    * 人员ID
+    * 人员ID，取值为创建人员接口中的PersonId
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * 待删除的人脸ID列表
+    * 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
     */
     @SerializedName("FaceIds")
     @Expose
     private String [] FaceIds;
 
     /**
-     * Get 人员ID 
-     * @return PersonId 人员ID
+     * Get 人员ID，取值为创建人员接口中的PersonId 
+     * @return PersonId 人员ID，取值为创建人员接口中的PersonId
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set 人员ID
-     * @param PersonId 人员ID
+     * Set 人员ID，取值为创建人员接口中的PersonId
+     * @param PersonId 人员ID，取值为创建人员接口中的PersonId
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get 待删除的人脸ID列表 
-     * @return FaceIds 待删除的人脸ID列表
+     * Get 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId 
+     * @return FaceIds 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
      */
     public String [] getFaceIds() {
         return this.FaceIds;
     }
 
     /**
-     * Set 待删除的人脸ID列表
-     * @param FaceIds 待删除的人脸ID列表
+     * Set 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
+     * @param FaceIds 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
      */
     public void setFaceIds(String [] FaceIds) {
         this.FaceIds = FaceIds;

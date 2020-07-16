@@ -149,6 +149,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private PublicNetConfigIn PublicNetConfig;
 
     /**
+    * 文件系统配置参数，用于云函数挂载文件系统
+    */
+    @SerializedName("CfsConfig")
+    @Expose
+    private CfsConfig CfsConfig;
+
+    /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -437,6 +444,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get 文件系统配置参数，用于云函数挂载文件系统 
+     * @return CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+     */
+    public CfsConfig getCfsConfig() {
+        return this.CfsConfig;
+    }
+
+    /**
+     * Set 文件系统配置参数，用于云函数挂载文件系统
+     * @param CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+     */
+    public void setCfsConfig(CfsConfig CfsConfig) {
+        this.CfsConfig = CfsConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+        this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
 
     }
 }

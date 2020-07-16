@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class GetPersonBaseInfoRequest extends AbstractModel{
 
     /**
-    * 人员ID
+    * 人员ID，创建人员接口中的PersonId
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-     * Get 人员ID 
-     * @return PersonId 人员ID
+     * Get 人员ID，创建人员接口中的PersonId 
+     * @return PersonId 人员ID，创建人员接口中的PersonId
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set 人员ID
-     * @param PersonId 人员ID
+     * Set 人员ID，创建人员接口中的PersonId
+     * @param PersonId 人员ID，创建人员接口中的PersonId
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;

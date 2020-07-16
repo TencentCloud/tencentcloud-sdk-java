@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonListNumRequest extends AbstractModel{
+public class CfsConfig extends AbstractModel{
 
     /**
-    * 人员库ID，取值为创建人员库接口中的GroupId
+    * 文件系统信息列表
     */
-    @SerializedName("GroupId")
+    @SerializedName("CfsInsList")
     @Expose
-    private String GroupId;
+    private CfsInsInfo [] CfsInsList;
 
     /**
-     * Get 人员库ID，取值为创建人员库接口中的GroupId 
-     * @return GroupId 人员库ID，取值为创建人员库接口中的GroupId
+     * Get 文件系统信息列表 
+     * @return CfsInsList 文件系统信息列表
      */
-    public String getGroupId() {
-        return this.GroupId;
+    public CfsInsInfo [] getCfsInsList() {
+        return this.CfsInsList;
     }
 
     /**
-     * Set 人员库ID，取值为创建人员库接口中的GroupId
-     * @param GroupId 人员库ID，取值为创建人员库接口中的GroupId
+     * Set 文件系统信息列表
+     * @param CfsInsList 文件系统信息列表
      */
-    public void setGroupId(String GroupId) {
-        this.GroupId = GroupId;
+    public void setCfsInsList(CfsInsInfo [] CfsInsList) {
+        this.CfsInsList = CfsInsList;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamArrayObj(map, prefix + "CfsInsList.", this.CfsInsList);
 
     }
 }

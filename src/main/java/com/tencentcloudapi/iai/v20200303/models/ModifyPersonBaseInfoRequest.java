@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyPersonBaseInfoRequest extends AbstractModel{
 
     /**
-    * 人员ID
+    * 人员ID，取值为创建人员接口中的PersonId
     */
     @SerializedName("PersonId")
     @Expose
@@ -37,23 +37,23 @@ public class ModifyPersonBaseInfoRequest extends AbstractModel{
     private String PersonName;
 
     /**
-    * 需要修改的人员性别
+    * 需要修改的人员性别，1代表男性，2代表女性
     */
     @SerializedName("Gender")
     @Expose
     private Long Gender;
 
     /**
-     * Get 人员ID 
-     * @return PersonId 人员ID
+     * Get 人员ID，取值为创建人员接口中的PersonId 
+     * @return PersonId 人员ID，取值为创建人员接口中的PersonId
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set 人员ID
-     * @param PersonId 人员ID
+     * Set 人员ID，取值为创建人员接口中的PersonId
+     * @param PersonId 人员ID，取值为创建人员接口中的PersonId
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
@@ -76,16 +76,16 @@ public class ModifyPersonBaseInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要修改的人员性别 
-     * @return Gender 需要修改的人员性别
+     * Get 需要修改的人员性别，1代表男性，2代表女性 
+     * @return Gender 需要修改的人员性别，1代表男性，2代表女性
      */
     public Long getGender() {
         return this.Gender;
     }
 
     /**
-     * Set 需要修改的人员性别
-     * @param Gender 需要修改的人员性别
+     * Set 需要修改的人员性别，1代表男性，2代表女性
+     * @param Gender 需要修改的人员性别，1代表男性，2代表女性
      */
     public void setGender(Long Gender) {
         this.Gender = Gender;

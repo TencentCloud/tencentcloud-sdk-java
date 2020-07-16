@@ -37,7 +37,7 @@ public class UpdateResourceTagValueRequest extends AbstractModel{
     private String TagValue;
 
     /**
-    * 资源的六段式描述
+    * [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
     */
     @SerializedName("Resource")
     @Expose
@@ -76,16 +76,16 @@ public class UpdateResourceTagValueRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源的六段式描述 
-     * @return Resource 资源的六段式描述
+     * Get [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606) 
+     * @return Resource [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 资源的六段式描述
-     * @param Resource 资源的六段式描述
+     * Set [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+     * @param Resource [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

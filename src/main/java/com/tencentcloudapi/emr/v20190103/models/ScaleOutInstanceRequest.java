@@ -129,6 +129,20 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
+
+    /**
+    * 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+    */
+    @SerializedName("PodSpec")
+    @Expose
+    private PodSpec PodSpec;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -385,6 +399,38 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源 
+     * @return HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     * @param HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
+    }
+
+    /**
+     * Get 使用Pod资源扩容时，指定的Pod规格以及来源等信息 
+     * @return PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     */
+    public PodSpec getPodSpec() {
+        return this.PodSpec;
+    }
+
+    /**
+     * Set 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     * @param PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     */
+    public void setPodSpec(PodSpec PodSpec) {
+        this.PodSpec = PodSpec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -402,6 +448,8 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ServiceNodeInfo.", this.ServiceNodeInfo);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamObj(map, prefix + "PodSpec.", this.PodSpec);
 
     }
 }

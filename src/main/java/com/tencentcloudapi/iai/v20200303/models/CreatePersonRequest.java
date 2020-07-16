@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePersonRequest extends AbstractModel{
 
     /**
-    * 待加入的人员库ID。
+    * 待加入的人员库ID，取值为创建人员库接口中的GroupId
     */
     @SerializedName("GroupId")
     @Expose
@@ -114,16 +114,16 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private Long NeedRotateDetection;
 
     /**
-     * Get 待加入的人员库ID。 
-     * @return GroupId 待加入的人员库ID。
+     * Get 待加入的人员库ID，取值为创建人员库接口中的GroupId 
+     * @return GroupId 待加入的人员库ID，取值为创建人员库接口中的GroupId
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 待加入的人员库ID。
-     * @param GroupId 待加入的人员库ID。
+     * Set 待加入的人员库ID，取值为创建人员库接口中的GroupId
+     * @param GroupId 待加入的人员库ID，取值为创建人员库接口中的GroupId
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
