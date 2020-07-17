@@ -30,6 +30,17 @@ public class PurgeUrlsCacheRequest extends AbstractModel{
     private String [] Urls;
 
     /**
+    * 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get URL 列表，需要包含协议头部 http:// 或 https:// 
      * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
@@ -46,10 +57,43 @@ public class PurgeUrlsCacheRequest extends AbstractModel{
     }
 
     /**
+     * Get 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配 
+     * @return Area 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+     * @param Area 刷新区域
+无此参数时，默认刷新加速域名所在加速区域
+填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+指定刷新区域时，需要与域名加速区域匹配
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

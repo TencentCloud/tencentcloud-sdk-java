@@ -79,6 +79,13 @@ public class TextData extends AbstractModel{
     private TextOutputRes Res;
 
     /**
+    * 账号风险检测结果
+    */
+    @SerializedName("RiskDetails")
+    @Expose
+    private RiskDetails [] RiskDetails;
+
+    /**
     * 最终使用的BizType
     */
     @SerializedName("BizType")
@@ -254,6 +261,22 @@ public class TextData extends AbstractModel{
     }
 
     /**
+     * Get 账号风险检测结果 
+     * @return RiskDetails 账号风险检测结果
+     */
+    public RiskDetails [] getRiskDetails() {
+        return this.RiskDetails;
+    }
+
+    /**
+     * Set 账号风险检测结果
+     * @param RiskDetails 账号风险检测结果
+     */
+    public void setRiskDetails(RiskDetails [] RiskDetails) {
+        this.RiskDetails = RiskDetails;
+    }
+
+    /**
      * Get 最终使用的BizType 
      * @return BizType 最终使用的BizType
      */
@@ -344,6 +367,7 @@ public class TextData extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DetailResult.", this.DetailResult);
         this.setParamObj(map, prefix + "ID.", this.ID);
         this.setParamObj(map, prefix + "Res.", this.Res);
+        this.setParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);

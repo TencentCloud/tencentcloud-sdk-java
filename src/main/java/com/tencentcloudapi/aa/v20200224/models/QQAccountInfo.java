@@ -55,7 +55,7 @@ public class QQAccountInfo extends AbstractModel{
     */
     @SerializedName("DeviceId")
     @Expose
-    private Boolean DeviceId;
+    private String DeviceId;
 
     /**
      * Get QQ的OpenID。 
@@ -125,7 +125,7 @@ public class QQAccountInfo extends AbstractModel{
      * Get 用户设备号。 
      * @return DeviceId 用户设备号。
      */
-    public Boolean getDeviceId() {
+    public String getDeviceId() {
         return this.DeviceId;
     }
 
@@ -133,7 +133,7 @@ public class QQAccountInfo extends AbstractModel{
      * Set 用户设备号。
      * @param DeviceId 用户设备号。
      */
-    public void setDeviceId(Boolean DeviceId) {
+    public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 

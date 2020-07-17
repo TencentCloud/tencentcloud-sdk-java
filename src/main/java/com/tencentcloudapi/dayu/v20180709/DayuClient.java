@@ -344,6 +344,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *批量上传7层转发规则
+     * @param req CreateNewL7RulesUploadRequest
+     * @return CreateNewL7RulesUploadResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNewL7RulesUploadResponse CreateNewL7RulesUpload(CreateNewL7RulesUploadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNewL7RulesUploadResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesUploadResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNewL7RulesUpload"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *IP解封操作
      * @param req CreateUnblockIpRequest
      * @return CreateUnblockIpResponse

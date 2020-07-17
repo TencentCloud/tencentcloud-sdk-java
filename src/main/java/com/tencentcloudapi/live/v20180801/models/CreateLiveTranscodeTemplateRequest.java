@@ -68,6 +68,7 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * 宽，默认0。
+范围[0-3000]
     */
     @SerializedName("Width")
     @Expose
@@ -89,6 +90,7 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * 高，默认0。
+范围[0-3000]
     */
     @SerializedName("Height")
     @Expose
@@ -263,8 +265,10 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Get 宽，默认0。 
+     * Get 宽，默认0。
+范围[0-3000] 
      * @return Width 宽，默认0。
+范围[0-3000]
      */
     public Long getWidth() {
         return this.Width;
@@ -272,7 +276,9 @@ baseline/main/high。默认baseline
 
     /**
      * Set 宽，默认0。
+范围[0-3000]
      * @param Width 宽，默认0。
+范围[0-3000]
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -311,8 +317,10 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Get 高，默认0。 
+     * Get 高，默认0。
+范围[0-3000] 
      * @return Height 高，默认0。
+范围[0-3000]
      */
     public Long getHeight() {
         return this.Height;
@@ -320,7 +328,9 @@ baseline/main/high。默认baseline
 
     /**
      * Set 高，默认0。
+范围[0-3000]
      * @param Height 高，默认0。
+范围[0-3000]
      */
     public void setHeight(Long Height) {
         this.Height = Height;
