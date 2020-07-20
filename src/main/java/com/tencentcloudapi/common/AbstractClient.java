@@ -20,11 +20,11 @@ package com.tencentcloudapi.common;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.TimeZone;
 import java.util.TreeMap;
 import java.util.UUID;
 
+import java.security.SecureRandom;
 import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
 import javax.xml.bind.DatatypeConverter;
@@ -547,7 +547,7 @@ public abstract class AbstractClient {
       throws TencentCloudSDKException {
     param.put("Action", action);
     param.put("RequestClient", this.sdkVersion);
-    param.put("Nonce", String.valueOf(Math.abs(new Random().nextInt())));
+    param.put("Nonce", String.valueOf(Math.abs(new SecureRandom().nextInt())));
     param.put("Timestamp", String.valueOf(System.currentTimeMillis() / 1000));
     param.put("Version", this.apiVersion);
 
