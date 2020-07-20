@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RiskDetails extends AbstractModel{
 
     /**
-    * 风险关键词
+    * 预留字段，暂时不使用
     */
     @SerializedName("Keywords")
     @Expose
@@ -44,16 +44,16 @@ public class RiskDetails extends AbstractModel{
     private Long Level;
 
     /**
-     * Get 风险关键词 
-     * @return Keywords 风险关键词
+     * Get 预留字段，暂时不使用 
+     * @return Keywords 预留字段，暂时不使用
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 风险关键词
-     * @param Keywords 风险关键词
+     * Set 预留字段，暂时不使用
+     * @param Keywords 预留字段，暂时不使用
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;

@@ -44,7 +44,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long Volume;
 
     /**
-    * 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+    * 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -72,21 +72,21 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * 机器类型，HIO：高IO型；HIO10G：高IO万兆型
+    * 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
     */
     @SerializedName("MachineCode")
     @Expose
     private String MachineCode;
 
     /**
-    * 实例类型，REPLSET-副本集，SHARD-分片集群
+    * 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
+    * 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数；若为单节点实例，该参数设置为0
     */
     @SerializedName("ReplicateSetNum")
     @Expose
@@ -133,6 +133,34 @@ public class CreateDBInstanceRequest extends AbstractModel{
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
+
+    /**
+    * 是否自动选择代金券，可选值为：1 - 是；0 - 否； 默认为0
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Long AutoVoucher;
+
+    /**
+    * 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+    */
+    @SerializedName("Clone")
+    @Expose
+    private Long Clone;
+
+    /**
+    * 若是只读，灾备实例，Father必须填写，即主实例ID
+    */
+    @SerializedName("Father")
+    @Expose
+    private String Father;
+
+    /**
+    * 安全组
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String [] SecurityGroup;
 
     /**
      * Get 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数 
@@ -183,16 +211,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本 
-     * @return MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+     * Get 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本 
+     * @return MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
-     * @param MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+     * Set 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
+     * @param MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
@@ -247,48 +275,48 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 机器类型，HIO：高IO型；HIO10G：高IO万兆型 
-     * @return MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型
+     * Get 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型 
+     * @return MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set 机器类型，HIO：高IO型；HIO10G：高IO万兆型
-     * @param MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型
+     * Set 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+     * @param MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;
     }
 
     /**
-     * Get 实例类型，REPLSET-副本集，SHARD-分片集群 
-     * @return ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群
+     * Get 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点 
+     * @return ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 实例类型，REPLSET-副本集，SHARD-分片集群
-     * @param ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群
+     * Set 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
+     * @param ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数 
-     * @return ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
+     * Get 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数；若为单节点实例，该参数设置为0 
+     * @return ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数；若为单节点实例，该参数设置为0
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
-     * @param ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
+     * Set 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数；若为单节点实例，该参数设置为0
+     * @param ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数；若为单节点实例，该参数设置为0
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
@@ -391,6 +419,70 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否自动选择代金券，可选值为：1 - 是；0 - 否； 默认为0 
+     * @return AutoVoucher 是否自动选择代金券，可选值为：1 - 是；0 - 否； 默认为0
+     */
+    public Long getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set 是否自动选择代金券，可选值为：1 - 是；0 - 否； 默认为0
+     * @param AutoVoucher 是否自动选择代金券，可选值为：1 - 是；0 - 否； 默认为0
+     */
+    public void setAutoVoucher(Long AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
+    }
+
+    /**
+     * Get 1:正式实例,2:临时实例,3:只读实例，4：灾备实例 
+     * @return Clone 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     */
+    public Long getClone() {
+        return this.Clone;
+    }
+
+    /**
+     * Set 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     * @param Clone 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     */
+    public void setClone(Long Clone) {
+        this.Clone = Clone;
+    }
+
+    /**
+     * Get 若是只读，灾备实例，Father必须填写，即主实例ID 
+     * @return Father 若是只读，灾备实例，Father必须填写，即主实例ID
+     */
+    public String getFather() {
+        return this.Father;
+    }
+
+    /**
+     * Set 若是只读，灾备实例，Father必须填写，即主实例ID
+     * @param Father 若是只读，灾备实例，Father必须填写，即主实例ID
+     */
+    public void setFather(String Father) {
+        this.Father = Father;
+    }
+
+    /**
+     * Get 安全组 
+     * @return SecurityGroup 安全组
+     */
+    public String [] getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 安全组
+     * @param SecurityGroup 安全组
+     */
+    public void setSecurityGroup(String [] SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +502,10 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamSimple(map, prefix + "Clone", this.Clone);
+        this.setParamSimple(map, prefix + "Father", this.Father);
+        this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
 
     }
 }

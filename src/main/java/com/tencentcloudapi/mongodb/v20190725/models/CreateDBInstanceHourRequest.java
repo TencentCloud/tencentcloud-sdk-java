@@ -121,6 +121,27 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
+    * 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+    */
+    @SerializedName("Clone")
+    @Expose
+    private Long Clone;
+
+    /**
+    * 父实例Id，当Clone为3或者4时，这个必须填
+    */
+    @SerializedName("Father")
+    @Expose
+    private String Father;
+
+    /**
+    * 安全组
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String [] SecurityGroup;
+
+    /**
      * Get 实例内存大小，单位：GB 
      * @return Memory 实例内存大小，单位：GB
      */
@@ -345,6 +366,54 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get 1:正式实例,2:临时实例,3:只读实例，4：灾备实例 
+     * @return Clone 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     */
+    public Long getClone() {
+        return this.Clone;
+    }
+
+    /**
+     * Set 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     * @param Clone 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     */
+    public void setClone(Long Clone) {
+        this.Clone = Clone;
+    }
+
+    /**
+     * Get 父实例Id，当Clone为3或者4时，这个必须填 
+     * @return Father 父实例Id，当Clone为3或者4时，这个必须填
+     */
+    public String getFather() {
+        return this.Father;
+    }
+
+    /**
+     * Set 父实例Id，当Clone为3或者4时，这个必须填
+     * @param Father 父实例Id，当Clone为3或者4时，这个必须填
+     */
+    public void setFather(String Father) {
+        this.Father = Father;
+    }
+
+    /**
+     * Get 安全组 
+     * @return SecurityGroup 安全组
+     */
+    public String [] getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 安全组
+     * @param SecurityGroup 安全组
+     */
+    public void setSecurityGroup(String [] SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +431,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Clone", this.Clone);
+        this.setParamSimple(map, prefix + "Father", this.Father);
+        this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
 
     }
 }

@@ -47,6 +47,20 @@ public class DescribeAttackLogsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 主机安全客户端ID
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
+    * 云主机机器ID
+    */
+    @SerializedName("Quuid")
+    @Expose
+    private String Quuid;
+
+    /**
      * Get 返回数量，默认为10，最大值为100。 
      * @return Limit 返回数量，默认为10，最大值为100。
      */
@@ -107,12 +121,46 @@ public class DescribeAttackLogsRequest extends AbstractModel{
     }
 
     /**
+     * Get 主机安全客户端ID 
+     * @return Uuid 主机安全客户端ID
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 主机安全客户端ID
+     * @param Uuid 主机安全客户端ID
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
+    /**
+     * Get 云主机机器ID 
+     * @return Quuid 云主机机器ID
+     */
+    public String getQuuid() {
+        return this.Quuid;
+    }
+
+    /**
+     * Set 云主机机器ID
+     * @param Quuid 云主机机器ID
+     */
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
 
     }
 }

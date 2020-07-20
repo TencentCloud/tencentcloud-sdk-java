@@ -114,6 +114,37 @@ public class Machine extends AbstractModel{
     private MachineTag [] Tag;
 
     /**
+    * 基线风险数。
+    */
+    @SerializedName("BaselineNum")
+    @Expose
+    private Long BaselineNum;
+
+    /**
+    * 网络风险数。
+    */
+    @SerializedName("CyberAttackNum")
+    @Expose
+    private Long CyberAttackNum;
+
+    /**
+    * 风险状态。
+<li>SAFE：安全</li>
+<li>RISK：风险</li>
+<li>UNKNOWN：未知</li>
+    */
+    @SerializedName("SecurityStatus")
+    @Expose
+    private String SecurityStatus;
+
+    /**
+    * 入侵事件数
+    */
+    @SerializedName("InvasionNum")
+    @Expose
+    private Long InvasionNum;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -334,6 +365,82 @@ public class Machine extends AbstractModel{
     }
 
     /**
+     * Get 基线风险数。 
+     * @return BaselineNum 基线风险数。
+     */
+    public Long getBaselineNum() {
+        return this.BaselineNum;
+    }
+
+    /**
+     * Set 基线风险数。
+     * @param BaselineNum 基线风险数。
+     */
+    public void setBaselineNum(Long BaselineNum) {
+        this.BaselineNum = BaselineNum;
+    }
+
+    /**
+     * Get 网络风险数。 
+     * @return CyberAttackNum 网络风险数。
+     */
+    public Long getCyberAttackNum() {
+        return this.CyberAttackNum;
+    }
+
+    /**
+     * Set 网络风险数。
+     * @param CyberAttackNum 网络风险数。
+     */
+    public void setCyberAttackNum(Long CyberAttackNum) {
+        this.CyberAttackNum = CyberAttackNum;
+    }
+
+    /**
+     * Get 风险状态。
+<li>SAFE：安全</li>
+<li>RISK：风险</li>
+<li>UNKNOWN：未知</li> 
+     * @return SecurityStatus 风险状态。
+<li>SAFE：安全</li>
+<li>RISK：风险</li>
+<li>UNKNOWN：未知</li>
+     */
+    public String getSecurityStatus() {
+        return this.SecurityStatus;
+    }
+
+    /**
+     * Set 风险状态。
+<li>SAFE：安全</li>
+<li>RISK：风险</li>
+<li>UNKNOWN：未知</li>
+     * @param SecurityStatus 风险状态。
+<li>SAFE：安全</li>
+<li>RISK：风险</li>
+<li>UNKNOWN：未知</li>
+     */
+    public void setSecurityStatus(String SecurityStatus) {
+        this.SecurityStatus = SecurityStatus;
+    }
+
+    /**
+     * Get 入侵事件数 
+     * @return InvasionNum 入侵事件数
+     */
+    public Long getInvasionNum() {
+        return this.InvasionNum;
+    }
+
+    /**
+     * Set 入侵事件数
+     * @param InvasionNum 入侵事件数
+     */
+    public void setInvasionNum(Long InvasionNum) {
+        this.InvasionNum = InvasionNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -349,6 +456,10 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "MalwareNum", this.MalwareNum);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamSimple(map, prefix + "BaselineNum", this.BaselineNum);
+        this.setParamSimple(map, prefix + "CyberAttackNum", this.CyberAttackNum);
+        this.setParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
+        this.setParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
 
     }
 }
