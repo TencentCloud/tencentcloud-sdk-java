@@ -56,7 +56,7 @@ class Log implements Interceptor {
 
   public void debug(final String str, final Throwable t) {
     if (debug) {
-      logger.info(str, t);
+      logger.debug(str, t);
     }
   }
 
