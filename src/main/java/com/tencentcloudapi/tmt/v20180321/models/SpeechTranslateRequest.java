@@ -86,6 +86,13 @@ public class SpeechTranslateRequest extends AbstractModel{
     private String Mode;
 
     /**
+    * 该参数已废弃
+    */
+    @SerializedName("TransType")
+    @Expose
+    private Long TransType;
+
+    /**
      * Get 一段完整的语音对应一个SessionUuid 
      * @return SessionUuid 一段完整的语音对应一个SessionUuid
      */
@@ -230,6 +237,22 @@ public class SpeechTranslateRequest extends AbstractModel{
     }
 
     /**
+     * Get 该参数已废弃 
+     * @return TransType 该参数已废弃
+     */
+    public Long getTransType() {
+        return this.TransType;
+    }
+
+    /**
+     * Set 该参数已废弃
+     * @param TransType 该参数已废弃
+     */
+    public void setTransType(Long TransType) {
+        this.TransType = TransType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class SpeechTranslateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "TransType", this.TransType);
 
     }
 }

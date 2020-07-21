@@ -121,6 +121,13 @@ public class Image extends AbstractModel{
     private SrcImage SrcImage;
 
     /**
+    * 镜像来源类型
+    */
+    @SerializedName("ImageSource")
+    @Expose
+    private String ImageSource;
+
+    /**
      * Get 镜像ID 
      * @return ImageId 镜像ID
      */
@@ -345,6 +352,22 @@ public class Image extends AbstractModel{
     }
 
     /**
+     * Get 镜像来源类型 
+     * @return ImageSource 镜像来源类型
+     */
+    public String getImageSource() {
+        return this.ImageSource;
+    }
+
+    /**
+     * Set 镜像来源类型
+     * @param ImageSource 镜像来源类型
+     */
+    public void setImageSource(String ImageSource) {
+        this.ImageSource = ImageSource;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class Image extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageOwner", this.ImageOwner);
         this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
         this.setParamObj(map, prefix + "SrcImage.", this.SrcImage);
+        this.setParamSimple(map, prefix + "ImageSource", this.ImageSource);
 
     }
 }

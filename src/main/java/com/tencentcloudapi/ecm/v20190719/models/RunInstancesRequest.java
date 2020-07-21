@@ -131,6 +131,13 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     private String [] SecurityGroupIds;
 
     /**
+    * 系统盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+    */
+    @SerializedName("SystemDiskSize")
+    @Expose
+    private Long SystemDiskSize;
+
+    /**
      * Get 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100 
      * @return ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
      */
@@ -395,6 +402,22 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     }
 
     /**
+     * Get 系统盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值 
+     * @return SystemDiskSize 系统盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+     */
+    public Long getSystemDiskSize() {
+        return this.SystemDiskSize;
+    }
+
+    /**
+     * Set 系统盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+     * @param SystemDiskSize 系统盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+     */
+    public void setSystemDiskSize(Long SystemDiskSize) {
+        this.SystemDiskSize = SystemDiskSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -412,6 +435,7 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);
 
     }
 }

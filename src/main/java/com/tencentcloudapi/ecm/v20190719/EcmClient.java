@@ -116,6 +116,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
+     * @param req CreateImageRequest
+     * @return CreateImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageResponse CreateImage(CreateImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建模块
      * @param req CreateModuleRequest
      * @return CreateModuleResponse
@@ -656,6 +674,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *本接口(DescribeTaskStatus)用于获取异步任务状态
+     * @param req DescribeTaskStatusRequest
+     * @return DescribeTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询私有网络列表
      * @param req DescribeVpcsRequest
      * @return DescribeVpcsResponse
@@ -834,6 +870,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ModifyDefaultSubnetResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyDefaultSubnet"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyImageAttribute）用于修改镜像属性。
+     * @param req ModifyImageAttributeRequest
+     * @return ModifyImageAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageAttributeResponse ModifyImageAttribute(ModifyImageAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyImageAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyImageAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyImageAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

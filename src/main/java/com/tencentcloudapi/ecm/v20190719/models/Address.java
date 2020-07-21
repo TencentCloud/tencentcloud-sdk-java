@@ -125,6 +125,22 @@ public class Address extends AbstractModel{
     private String InternetServiceProvider;
 
     /**
+    * 带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
      * Get EIP的ID，是EIP的唯一标识。 
      * @return AddressId EIP的ID，是EIP的唯一标识。
      */
@@ -365,6 +381,46 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get 带宽上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Bandwidth 带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Bandwidth 带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get 计费模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -382,6 +438,8 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
         this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }
