@@ -23,72 +23,95 @@ import java.util.HashMap;
 public class LayoutParams extends AbstractModel{
 
     /**
-    * 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
+    * 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
     */
     @SerializedName("Template")
     @Expose
     private Long Template;
 
     /**
-    * 屏幕分享模板中有效，代表左侧大画面对应的用户ID
+    * 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
     */
     @SerializedName("MainVideoUserId")
     @Expose
     private String MainVideoUserId;
 
     /**
-    * 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+    * 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
     */
     @SerializedName("MainVideoStreamType")
     @Expose
     private Long MainVideoStreamType;
 
     /**
-     * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板 
-     * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
+    * 画中画模板中有效，代表小画面的布局参数。
+    */
+    @SerializedName("SmallVideoLayoutParams")
+    @Expose
+    private SmallVideoLayoutParams SmallVideoLayoutParams;
+
+    /**
+     * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。 
+     * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
      */
     public Long getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
-     * @param Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
+     * Set 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+     * @param Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
      */
     public void setTemplate(Long Template) {
         this.Template = Template;
     }
 
     /**
-     * Get 屏幕分享模板中有效，代表左侧大画面对应的用户ID 
-     * @return MainVideoUserId 屏幕分享模板中有效，代表左侧大画面对应的用户ID
+     * Get 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。 
+     * @return MainVideoUserId 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
      */
     public String getMainVideoUserId() {
         return this.MainVideoUserId;
     }
 
     /**
-     * Set 屏幕分享模板中有效，代表左侧大画面对应的用户ID
-     * @param MainVideoUserId 屏幕分享模板中有效，代表左侧大画面对应的用户ID
+     * Set 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
+     * @param MainVideoUserId 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
      */
     public void setMainVideoUserId(String MainVideoUserId) {
         this.MainVideoUserId = MainVideoUserId;
     }
 
     /**
-     * Get 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0 
-     * @return MainVideoStreamType 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+     * Get 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。 
+     * @return MainVideoStreamType 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
      */
     public Long getMainVideoStreamType() {
         return this.MainVideoStreamType;
     }
 
     /**
-     * Set 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
-     * @param MainVideoStreamType 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+     * Set 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
+     * @param MainVideoStreamType 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
      */
     public void setMainVideoStreamType(Long MainVideoStreamType) {
         this.MainVideoStreamType = MainVideoStreamType;
+    }
+
+    /**
+     * Get 画中画模板中有效，代表小画面的布局参数。 
+     * @return SmallVideoLayoutParams 画中画模板中有效，代表小画面的布局参数。
+     */
+    public SmallVideoLayoutParams getSmallVideoLayoutParams() {
+        return this.SmallVideoLayoutParams;
+    }
+
+    /**
+     * Set 画中画模板中有效，代表小画面的布局参数。
+     * @param SmallVideoLayoutParams 画中画模板中有效，代表小画面的布局参数。
+     */
+    public void setSmallVideoLayoutParams(SmallVideoLayoutParams SmallVideoLayoutParams) {
+        this.SmallVideoLayoutParams = SmallVideoLayoutParams;
     }
 
     /**
@@ -98,6 +121,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "Template", this.Template);
         this.setParamSimple(map, prefix + "MainVideoUserId", this.MainVideoUserId);
         this.setParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
+        this.setParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
 
     }
 }

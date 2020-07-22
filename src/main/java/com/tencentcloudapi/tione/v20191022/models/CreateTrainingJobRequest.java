@@ -30,13 +30,6 @@ public class CreateTrainingJobRequest extends AbstractModel{
     private AlgorithmSpecification AlgorithmSpecification;
 
     /**
-    * 输入数据配置
-    */
-    @SerializedName("InputDataConfig")
-    @Expose
-    private InputDataConfig [] InputDataConfig;
-
-    /**
     * 输出数据配置
     */
     @SerializedName("OutputDataConfig")
@@ -56,6 +49,13 @@ public class CreateTrainingJobRequest extends AbstractModel{
     @SerializedName("TrainingJobName")
     @Expose
     private String TrainingJobName;
+
+    /**
+    * 输入数据配置
+    */
+    @SerializedName("InputDataConfig")
+    @Expose
+    private InputDataConfig [] InputDataConfig;
 
     /**
     * 中止条件
@@ -109,22 +109,6 @@ public class CreateTrainingJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 输入数据配置 
-     * @return InputDataConfig 输入数据配置
-     */
-    public InputDataConfig [] getInputDataConfig() {
-        return this.InputDataConfig;
-    }
-
-    /**
-     * Set 输入数据配置
-     * @param InputDataConfig 输入数据配置
-     */
-    public void setInputDataConfig(InputDataConfig [] InputDataConfig) {
-        this.InputDataConfig = InputDataConfig;
-    }
-
-    /**
      * Get 输出数据配置 
      * @return OutputDataConfig 输出数据配置
      */
@@ -170,6 +154,22 @@ public class CreateTrainingJobRequest extends AbstractModel{
      */
     public void setTrainingJobName(String TrainingJobName) {
         this.TrainingJobName = TrainingJobName;
+    }
+
+    /**
+     * Get 输入数据配置 
+     * @return InputDataConfig 输入数据配置
+     */
+    public InputDataConfig [] getInputDataConfig() {
+        return this.InputDataConfig;
+    }
+
+    /**
+     * Set 输入数据配置
+     * @param InputDataConfig 输入数据配置
+     */
+    public void setInputDataConfig(InputDataConfig [] InputDataConfig) {
+        this.InputDataConfig = InputDataConfig;
     }
 
     /**
@@ -257,10 +257,10 @@ public class CreateTrainingJobRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "AlgorithmSpecification.", this.AlgorithmSpecification);
-        this.setParamArrayObj(map, prefix + "InputDataConfig.", this.InputDataConfig);
         this.setParamObj(map, prefix + "OutputDataConfig.", this.OutputDataConfig);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
         this.setParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
+        this.setParamArrayObj(map, prefix + "InputDataConfig.", this.InputDataConfig);
         this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         this.setParamSimple(map, prefix + "HyperParameters", this.HyperParameters);

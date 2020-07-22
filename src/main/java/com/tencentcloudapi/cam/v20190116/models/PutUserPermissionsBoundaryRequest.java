@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAuditPolicyRequest extends AbstractModel{
+public class PutUserPermissionsBoundaryRequest extends AbstractModel{
 
     /**
-    * 审计策略 ID。
+    * 子账号Uin
+    */
+    @SerializedName("TargetUin")
+    @Expose
+    private Long TargetUin;
+
+    /**
+    * 策略ID
     */
     @SerializedName("PolicyId")
     @Expose
-    private String PolicyId;
+    private Long PolicyId;
 
     /**
-    * 实例 ID。
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-     * Get 审计策略 ID。 
-     * @return PolicyId 审计策略 ID。
+     * Get 子账号Uin 
+     * @return TargetUin 子账号Uin
      */
-    public String getPolicyId() {
+    public Long getTargetUin() {
+        return this.TargetUin;
+    }
+
+    /**
+     * Set 子账号Uin
+     * @param TargetUin 子账号Uin
+     */
+    public void setTargetUin(Long TargetUin) {
+        this.TargetUin = TargetUin;
+    }
+
+    /**
+     * Get 策略ID 
+     * @return PolicyId 策略ID
+     */
+    public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 审计策略 ID。
-     * @param PolicyId 审计策略 ID。
+     * Set 策略ID
+     * @param PolicyId 策略ID
      */
-    public void setPolicyId(String PolicyId) {
+    public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
-    }
-
-    /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

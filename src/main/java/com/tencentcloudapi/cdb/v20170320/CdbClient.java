@@ -308,6 +308,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateRoInstanceIp)用于创建云数据库只读实例的独立VIP。
+     * @param req CreateRoInstanceIpRequest
+     * @return CreateRoInstanceIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoInstanceIpResponse CreateRoInstanceIp(CreateRoInstanceIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRoInstanceIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRoInstanceIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRoInstanceIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DeleteAccounts)用于删除云数据库的账户。
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse
