@@ -37,7 +37,7 @@ public class CreateInvoiceItem extends AbstractModel{
     private String TaxCode;
 
     /**
-    * 不含税商品总价（商品含税价总额/（1+税率））。单位为分
+    * 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
     */
     @SerializedName("TotalPrice")
     @Expose
@@ -86,7 +86,7 @@ public class CreateInvoiceItem extends AbstractModel{
     private String Total;
 
     /**
-    * 不含税商品单价
+    * 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
     */
     @SerializedName("Price")
     @Expose
@@ -158,16 +158,16 @@ public class CreateInvoiceItem extends AbstractModel{
     }
 
     /**
-     * Get 不含税商品总价（商品含税价总额/（1+税率））。单位为分 
-     * @return TotalPrice 不含税商品总价（商品含税价总额/（1+税率））。单位为分
+     * Get 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。 
+     * @return TotalPrice 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
      */
     public Long getTotalPrice() {
         return this.TotalPrice;
     }
 
     /**
-     * Set 不含税商品总价（商品含税价总额/（1+税率））。单位为分
-     * @param TotalPrice 不含税商品总价（商品含税价总额/（1+税率））。单位为分
+     * Set 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
+     * @param TotalPrice 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
      */
     public void setTotalPrice(Long TotalPrice) {
         this.TotalPrice = TotalPrice;
@@ -270,16 +270,16 @@ public class CreateInvoiceItem extends AbstractModel{
     }
 
     /**
-     * Get 不含税商品单价 
-     * @return Price 不含税商品单价
+     * Get 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。 
+     * @return Price 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
      */
     public String getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 不含税商品单价
-     * @param Price 不含税商品单价
+     * Set 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
+     * @param Price 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
      */
     public void setPrice(String Price) {
         this.Price = Price;

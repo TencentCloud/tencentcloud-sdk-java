@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTopicResponse extends AbstractModel{
+public class DescribeReadOnlyGroupListResponse extends AbstractModel{
 
     /**
-    * 分区数
+    * 只读组列表
     */
-    @SerializedName("Partitions")
+    @SerializedName("ReadOnlyGroupSet")
     @Expose
-    private Long Partitions;
-
-    /**
-    * 备注，128字符以内。
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
+    private ReadOnlyGroup [] ReadOnlyGroupSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class ModifyTopicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 分区数 
-     * @return Partitions 分区数
+     * Get 只读组列表 
+     * @return ReadOnlyGroupSet 只读组列表
      */
-    public Long getPartitions() {
-        return this.Partitions;
+    public ReadOnlyGroup [] getReadOnlyGroupSet() {
+        return this.ReadOnlyGroupSet;
     }
 
     /**
-     * Set 分区数
-     * @param Partitions 分区数
+     * Set 只读组列表
+     * @param ReadOnlyGroupSet 只读组列表
      */
-    public void setPartitions(Long Partitions) {
-        this.Partitions = Partitions;
-    }
-
-    /**
-     * Get 备注，128字符以内。 
-     * @return Remark 备注，128字符以内。
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 备注，128字符以内。
-     * @param Remark 备注，128字符以内。
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
+    public void setReadOnlyGroupSet(ReadOnlyGroup [] ReadOnlyGroupSet) {
+        this.ReadOnlyGroupSet = ReadOnlyGroupSet;
     }
 
     /**
@@ -95,8 +72,7 @@ public class ModifyTopicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Partitions", this.Partitions);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "ReadOnlyGroupSet.", this.ReadOnlyGroupSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

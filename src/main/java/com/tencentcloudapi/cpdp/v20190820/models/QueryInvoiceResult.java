@@ -45,6 +45,14 @@ public class QueryInvoiceResult extends AbstractModel{
     private QueryInvoiceResultData Data;
 
     /**
+    * 订单数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Order")
+    @Expose
+    private Order Order;
+
+    /**
      * Get 错误消息 
      * @return Message 错误消息
      */
@@ -97,12 +105,33 @@ public class QueryInvoiceResult extends AbstractModel{
     }
 
     /**
+     * Get 订单数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Order 订单数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Order getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 订单数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Order 订单数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrder(Order Order) {
+        this.Order = Order;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "Order.", this.Order);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FilterSubscription extends AbstractModel{
 
     /**
-    * 是否仅展示包含真实消费者的订。
+    * 是否仅展示包含真实消费者的订阅。
     */
     @SerializedName("ConsumerHasCount")
     @Expose
@@ -44,16 +44,16 @@ public class FilterSubscription extends AbstractModel{
     private Boolean ConsumerHasExpired;
 
     /**
-     * Get 是否仅展示包含真实消费者的订。 
-     * @return ConsumerHasCount 是否仅展示包含真实消费者的订。
+     * Get 是否仅展示包含真实消费者的订阅。 
+     * @return ConsumerHasCount 是否仅展示包含真实消费者的订阅。
      */
     public Boolean getConsumerHasCount() {
         return this.ConsumerHasCount;
     }
 
     /**
-     * Set 是否仅展示包含真实消费者的订。
-     * @param ConsumerHasCount 是否仅展示包含真实消费者的订。
+     * Set 是否仅展示包含真实消费者的订阅。
+     * @param ConsumerHasCount 是否仅展示包含真实消费者的订阅。
      */
     public void setConsumerHasCount(Boolean ConsumerHasCount) {
         this.ConsumerHasCount = ConsumerHasCount;

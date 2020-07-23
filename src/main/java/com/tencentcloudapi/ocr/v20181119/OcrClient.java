@@ -146,6 +146,25 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *支持身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照的智能分类。
+
+     * @param req ClassifyDetectOCRRequest
+     * @return ClassifyDetectOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClassifyDetectOCRResponse ClassifyDetectOCR(ClassifyDetectOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ClassifyDetectOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ClassifyDetectOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ClassifyDetectOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
 
 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限。

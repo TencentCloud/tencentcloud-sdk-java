@@ -37,14 +37,14 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 最大实例数，取值范围为0-2000。
+    * 最小实例数，取值范围为0-2000。
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 最小实例数，取值范围为0-2000。
+    * 最大实例数，取值范围为0-2000。
     */
     @SerializedName("MaxSize")
     @Expose
@@ -97,32 +97,32 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 最大实例数，取值范围为0-2000。 
-     * @return MinSize 最大实例数，取值范围为0-2000。
+     * Get 最小实例数，取值范围为0-2000。 
+     * @return MinSize 最小实例数，取值范围为0-2000。
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 最大实例数，取值范围为0-2000。
-     * @param MinSize 最大实例数，取值范围为0-2000。
+     * Set 最小实例数，取值范围为0-2000。
+     * @param MinSize 最小实例数，取值范围为0-2000。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 最小实例数，取值范围为0-2000。 
-     * @return MaxSize 最小实例数，取值范围为0-2000。
+     * Get 最大实例数，取值范围为0-2000。 
+     * @return MaxSize 最大实例数，取值范围为0-2000。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 最小实例数，取值范围为0-2000。
-     * @param MaxSize 最小实例数，取值范围为0-2000。
+     * Set 最大实例数，取值范围为0-2000。
+     * @param MaxSize 最大实例数，取值范围为0-2000。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

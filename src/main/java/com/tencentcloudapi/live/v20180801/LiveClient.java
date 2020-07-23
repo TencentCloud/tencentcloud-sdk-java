@@ -748,6 +748,24 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询直播转推计费带宽，查询时间范围最大支持3个月内的数据，时间跨度最长31天。
+     * @param req DescribeDeliverBandwidthListRequest
+     * @return DescribeDeliverBandwidthListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(DescribeDeliverBandwidthListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeliverBandwidthListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeliverBandwidthList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询按省份和运营商分组的下行播放数据。
      * @param req DescribeGroupProIspPlayInfoListRequest
      * @return DescribeGroupProIspPlayInfoListResponse

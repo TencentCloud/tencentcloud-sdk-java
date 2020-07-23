@@ -80,6 +80,13 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     private String Channel;
 
     /**
+    * 扩展ID
+    */
+    @SerializedName("ExtensionId")
+    @Expose
+    private String ExtensionId;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -224,6 +231,22 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     }
 
     /**
+     * Get 扩展ID 
+     * @return ExtensionId 扩展ID
+     */
+    public String getExtensionId() {
+        return this.ExtensionId;
+    }
+
+    /**
+     * Set 扩展ID
+     * @param ExtensionId 扩展ID
+     */
+    public void setExtensionId(String ExtensionId) {
+        this.ExtensionId = ExtensionId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -234,6 +257,7 @@ public class CreatePostpayPackageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "EnvSource", this.EnvSource);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
 
     }
 }

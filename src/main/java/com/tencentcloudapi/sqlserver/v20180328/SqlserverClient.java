@@ -434,6 +434,60 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeReadOnlyGroupByReadOnlyInstance）用于通过只读副本实例ID查询其所在的只读组。
+     * @param req DescribeReadOnlyGroupByReadOnlyInstanceRequest
+     * @return DescribeReadOnlyGroupByReadOnlyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupByReadOnlyInstanceResponse DescribeReadOnlyGroupByReadOnlyInstance(DescribeReadOnlyGroupByReadOnlyInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReadOnlyGroupByReadOnlyInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReadOnlyGroupByReadOnlyInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReadOnlyGroupByReadOnlyInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeReadOnlyGroupDetails）用于查询只读组详情。
+     * @param req DescribeReadOnlyGroupDetailsRequest
+     * @return DescribeReadOnlyGroupDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupDetailsResponse DescribeReadOnlyGroupDetails(DescribeReadOnlyGroupDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReadOnlyGroupDetailsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReadOnlyGroupDetailsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReadOnlyGroupDetails"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeReadOnlyGroupList）用于查询只读组列表。
+     * @param req DescribeReadOnlyGroupListRequest
+     * @return DescribeReadOnlyGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupListResponse DescribeReadOnlyGroupList(DescribeReadOnlyGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReadOnlyGroupListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReadOnlyGroupListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReadOnlyGroupList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeRegions) 用于查询售卖地域信息。
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -751,6 +805,24 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyPublishSubscribeNameResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyPublishSubscribeName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyReadOnlyGroupDetails）用于修改只读组详情。
+     * @param req ModifyReadOnlyGroupDetailsRequest
+     * @return ModifyReadOnlyGroupDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReadOnlyGroupDetailsResponse ModifyReadOnlyGroupDetails(ModifyReadOnlyGroupDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyReadOnlyGroupDetailsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyReadOnlyGroupDetailsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyReadOnlyGroupDetails"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

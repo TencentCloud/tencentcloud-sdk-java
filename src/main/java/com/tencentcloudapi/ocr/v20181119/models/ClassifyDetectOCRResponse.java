@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTopicResponse extends AbstractModel{
+public class ClassifyDetectOCRResponse extends AbstractModel{
 
     /**
-    * 分区数
+    * 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
     */
-    @SerializedName("Partitions")
+    @SerializedName("ClassifyDetectInfos")
     @Expose
-    private Long Partitions;
-
-    /**
-    * 备注，128字符以内。
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
+    private ClassifyDetectInfo [] ClassifyDetectInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class ModifyTopicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 分区数 
-     * @return Partitions 分区数
+     * Get 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它" 
+     * @return ClassifyDetectInfos 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
      */
-    public Long getPartitions() {
-        return this.Partitions;
+    public ClassifyDetectInfo [] getClassifyDetectInfos() {
+        return this.ClassifyDetectInfos;
     }
 
     /**
-     * Set 分区数
-     * @param Partitions 分区数
+     * Set 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
+     * @param ClassifyDetectInfos 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
      */
-    public void setPartitions(Long Partitions) {
-        this.Partitions = Partitions;
-    }
-
-    /**
-     * Get 备注，128字符以内。 
-     * @return Remark 备注，128字符以内。
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 备注，128字符以内。
-     * @param Remark 备注，128字符以内。
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
+    public void setClassifyDetectInfos(ClassifyDetectInfo [] ClassifyDetectInfos) {
+        this.ClassifyDetectInfos = ClassifyDetectInfos;
     }
 
     /**
@@ -95,8 +72,7 @@ public class ModifyTopicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Partitions", this.Partitions);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "ClassifyDetectInfos.", this.ClassifyDetectInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateInvoiceRequest extends AbstractModel{
 
     /**
-    * 开票平台ID。0：高灯
+    * 开票平台ID。0：高灯，1：票易通
     */
     @SerializedName("InvoicePlatformId")
     @Expose
@@ -65,7 +65,7 @@ public class CreateInvoiceRequest extends AbstractModel{
     private Long TaxAmount;
 
     /**
-    * 不含税总金额（单位为分）
+    * 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
     */
     @SerializedName("AmountWithoutTax")
     @Expose
@@ -281,16 +281,16 @@ public class CreateInvoiceRequest extends AbstractModel{
     private Long InvoiceChannel;
 
     /**
-     * Get 开票平台ID。0：高灯 
-     * @return InvoicePlatformId 开票平台ID。0：高灯
+     * Get 开票平台ID。0：高灯，1：票易通 
+     * @return InvoicePlatformId 开票平台ID。0：高灯，1：票易通
      */
     public Long getInvoicePlatformId() {
         return this.InvoicePlatformId;
     }
 
     /**
-     * Set 开票平台ID。0：高灯
-     * @param InvoicePlatformId 开票平台ID。0：高灯
+     * Set 开票平台ID。0：高灯，1：票易通
+     * @param InvoicePlatformId 开票平台ID。0：高灯，1：票易通
      */
     public void setInvoicePlatformId(Long InvoicePlatformId) {
         this.InvoicePlatformId = InvoicePlatformId;
@@ -377,16 +377,16 @@ public class CreateInvoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 不含税总金额（单位为分） 
-     * @return AmountWithoutTax 不含税总金额（单位为分）
+     * Get 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1 
+     * @return AmountWithoutTax 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
      */
     public Long getAmountWithoutTax() {
         return this.AmountWithoutTax;
     }
 
     /**
-     * Set 不含税总金额（单位为分）
-     * @param AmountWithoutTax 不含税总金额（单位为分）
+     * Set 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
+     * @param AmountWithoutTax 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
      */
     public void setAmountWithoutTax(Long AmountWithoutTax) {
         this.AmountWithoutTax = AmountWithoutTax;

@@ -37,7 +37,7 @@ public class ModifyTopicRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * 分区数，必须>=原分区数大，不填则不修改分区数，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
+    * 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
     */
     @SerializedName("Partitions")
     @Expose
@@ -83,16 +83,16 @@ public class ModifyTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 分区数，必须>=原分区数大，不填则不修改分区数，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。 
-     * @return Partitions 分区数，必须>=原分区数大，不填则不修改分区数，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
+     * Get 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。 
+     * @return Partitions 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
      */
     public Long getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set 分区数，必须>=原分区数大，不填则不修改分区数，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
-     * @param Partitions 分区数，必须>=原分区数大，不填则不修改分区数，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
+     * Set 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
+     * @param Partitions 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
