@@ -32,6 +32,13 @@ public class RiskDetails extends AbstractModel{
     /**
     * 风险类别，RiskAccount，RiskIP, RiskIMEI
     */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
+    * 预留字段，暂时不用
+    */
     @SerializedName("Lable")
     @Expose
     private String Lable;
@@ -61,15 +68,31 @@ public class RiskDetails extends AbstractModel{
 
     /**
      * Get 风险类别，RiskAccount，RiskIP, RiskIMEI 
-     * @return Lable 风险类别，RiskAccount，RiskIP, RiskIMEI
+     * @return Label 风险类别，RiskAccount，RiskIP, RiskIMEI
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 风险类别，RiskAccount，RiskIP, RiskIMEI
+     * @param Label 风险类别，RiskAccount，RiskIP, RiskIMEI
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
+    /**
+     * Get 预留字段，暂时不用 
+     * @return Lable 预留字段，暂时不用
      */
     public String getLable() {
         return this.Lable;
     }
 
     /**
-     * Set 风险类别，RiskAccount，RiskIP, RiskIMEI
-     * @param Lable 风险类别，RiskAccount，RiskIP, RiskIMEI
+     * Set 预留字段，暂时不用
+     * @param Lable 预留字段，暂时不用
      */
     public void setLable(String Lable) {
         this.Lable = Lable;
@@ -96,6 +119,7 @@ public class RiskDetails extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "Lable", this.Lable);
         this.setParamSimple(map, prefix + "Level", this.Level);
 

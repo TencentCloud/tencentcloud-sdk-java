@@ -44,14 +44,28 @@ public class ImageTranslateRequest extends AbstractModel{
     private String Data;
 
     /**
-    * 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+    * 源语言，支持语言列表：<li> auto：自动识别（识别为一种语言）</li> <li>zh：简体中文</li> <li>zh-TW：繁体中文</li> <li>en：英语</li> <li>ja：日语</li> <li>ko：韩语</li> <li>ru：俄语</li> <li>fr：法语</li> <li>de：德语</li> <li>it：意大利语</li> <li>es：西班牙语</li> <li>pt：葡萄牙语</li> <li>ms：马来西亚语</li> <li>th：泰语</li><li>vi：越南语</li>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+    * 目标语言，各源语言的目标语言支持列表如下：
+<li>zh（简体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>zh-TW（繁体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>en（英语）：zh（中文）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>ja（日语）：zh（中文）、en（英语）、ko（韩语）</li>
+<li>ko（韩语）：zh（中文）、en（英语）、ja（日语）</li>
+<li>ru：俄语：zh（中文）、en（英语）</li>
+<li>fr：法语：zh（中文）、en（英语）</li>
+<li>de：德语：zh（中文）、en（英语）</li>
+<li>it：意大利语：zh（中文）、en（英语）</li>
+<li>es：西班牙语：zh（中文）、en（英语）</li>
+<li>pt：葡萄牙语：zh（中文）、en（英语）</li>
+<li>ms：马来西亚语：zh（中文）、en（英语）</li>
+<li>th：泰语：zh（中文）、en（英语）</li>
+<li>vi：越南语：zh（中文）、en（英语）</li>
     */
     @SerializedName("Target")
     @Expose
@@ -113,32 +127,88 @@ public class ImageTranslateRequest extends AbstractModel{
     }
 
     /**
-     * Get 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
-     * @return Source 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 源语言，支持语言列表：<li> auto：自动识别（识别为一种语言）</li> <li>zh：简体中文</li> <li>zh-TW：繁体中文</li> <li>en：英语</li> <li>ja：日语</li> <li>ko：韩语</li> <li>ru：俄语</li> <li>fr：法语</li> <li>de：德语</li> <li>it：意大利语</li> <li>es：西班牙语</li> <li>pt：葡萄牙语</li> <li>ms：马来西亚语</li> <li>th：泰语</li><li>vi：越南语</li> 
+     * @return Source 源语言，支持语言列表：<li> auto：自动识别（识别为一种语言）</li> <li>zh：简体中文</li> <li>zh-TW：繁体中文</li> <li>en：英语</li> <li>ja：日语</li> <li>ko：韩语</li> <li>ru：俄语</li> <li>fr：法语</li> <li>de：德语</li> <li>it：意大利语</li> <li>es：西班牙语</li> <li>pt：葡萄牙语</li> <li>ms：马来西亚语</li> <li>th：泰语</li><li>vi：越南语</li>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param Source 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 源语言，支持语言列表：<li> auto：自动识别（识别为一种语言）</li> <li>zh：简体中文</li> <li>zh-TW：繁体中文</li> <li>en：英语</li> <li>ja：日语</li> <li>ko：韩语</li> <li>ru：俄语</li> <li>fr：法语</li> <li>de：德语</li> <li>it：意大利语</li> <li>es：西班牙语</li> <li>pt：葡萄牙语</li> <li>ms：马来西亚语</li> <li>th：泰语</li><li>vi：越南语</li>
+     * @param Source 源语言，支持语言列表：<li> auto：自动识别（识别为一种语言）</li> <li>zh：简体中文</li> <li>zh-TW：繁体中文</li> <li>en：英语</li> <li>ja：日语</li> <li>ko：韩语</li> <li>ru：俄语</li> <li>fr：法语</li> <li>de：德语</li> <li>it：意大利语</li> <li>es：西班牙语</li> <li>pt：葡萄牙语</li> <li>ms：马来西亚语</li> <li>th：泰语</li><li>vi：越南语</li>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
-     * @return Target 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 目标语言，各源语言的目标语言支持列表如下：
+<li>zh（简体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>zh-TW（繁体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>en（英语）：zh（中文）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>ja（日语）：zh（中文）、en（英语）、ko（韩语）</li>
+<li>ko（韩语）：zh（中文）、en（英语）、ja（日语）</li>
+<li>ru：俄语：zh（中文）、en（英语）</li>
+<li>fr：法语：zh（中文）、en（英语）</li>
+<li>de：德语：zh（中文）、en（英语）</li>
+<li>it：意大利语：zh（中文）、en（英语）</li>
+<li>es：西班牙语：zh（中文）、en（英语）</li>
+<li>pt：葡萄牙语：zh（中文）、en（英语）</li>
+<li>ms：马来西亚语：zh（中文）、en（英语）</li>
+<li>th：泰语：zh（中文）、en（英语）</li>
+<li>vi：越南语：zh（中文）、en（英语）</li> 
+     * @return Target 目标语言，各源语言的目标语言支持列表如下：
+<li>zh（简体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>zh-TW（繁体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>en（英语）：zh（中文）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>ja（日语）：zh（中文）、en（英语）、ko（韩语）</li>
+<li>ko（韩语）：zh（中文）、en（英语）、ja（日语）</li>
+<li>ru：俄语：zh（中文）、en（英语）</li>
+<li>fr：法语：zh（中文）、en（英语）</li>
+<li>de：德语：zh（中文）、en（英语）</li>
+<li>it：意大利语：zh（中文）、en（英语）</li>
+<li>es：西班牙语：zh（中文）、en（英语）</li>
+<li>pt：葡萄牙语：zh（中文）、en（英语）</li>
+<li>ms：马来西亚语：zh（中文）、en（英语）</li>
+<li>th：泰语：zh（中文）、en（英语）</li>
+<li>vi：越南语：zh（中文）、en（英语）</li>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param Target 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 目标语言，各源语言的目标语言支持列表如下：
+<li>zh（简体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>zh-TW（繁体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>en（英语）：zh（中文）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>ja（日语）：zh（中文）、en（英语）、ko（韩语）</li>
+<li>ko（韩语）：zh（中文）、en（英语）、ja（日语）</li>
+<li>ru：俄语：zh（中文）、en（英语）</li>
+<li>fr：法语：zh（中文）、en（英语）</li>
+<li>de：德语：zh（中文）、en（英语）</li>
+<li>it：意大利语：zh（中文）、en（英语）</li>
+<li>es：西班牙语：zh（中文）、en（英语）</li>
+<li>pt：葡萄牙语：zh（中文）、en（英语）</li>
+<li>ms：马来西亚语：zh（中文）、en（英语）</li>
+<li>th：泰语：zh（中文）、en（英语）</li>
+<li>vi：越南语：zh（中文）、en（英语）</li>
+     * @param Target 目标语言，各源语言的目标语言支持列表如下：
+<li>zh（简体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>zh-TW（繁体中文）：en（英语）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>en（英语）：zh（中文）、ja（日语）、ko（韩语）、ru（俄语）、fr（法语）、de（德语）、it（意大利语）、es（西班牙语）、pt（葡萄牙语）、ms（马来语）、th（泰语）、vi（越南语）</li>
+<li>ja（日语）：zh（中文）、en（英语）、ko（韩语）</li>
+<li>ko（韩语）：zh（中文）、en（英语）、ja（日语）</li>
+<li>ru：俄语：zh（中文）、en（英语）</li>
+<li>fr：法语：zh（中文）、en（英语）</li>
+<li>de：德语：zh（中文）、en（英语）</li>
+<li>it：意大利语：zh（中文）、en（英语）</li>
+<li>es：西班牙语：zh（中文）、en（英语）</li>
+<li>pt：葡萄牙语：zh（中文）、en（英语）</li>
+<li>ms：马来西亚语：zh（中文）、en（英语）</li>
+<li>th：泰语：zh（中文）、en（英语）</li>
+<li>vi：越南语：zh（中文）、en（英语）</li>
      */
     public void setTarget(String Target) {
         this.Target = Target;

@@ -51,14 +51,14 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     private String RoomId;
 
     /**
-    * 分页index（不填默认只返回10个）
+    * 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
     */
     @SerializedName("PageNumber")
     @Expose
     private String PageNumber;
 
     /**
-    * 分页大小（不填默认返回10个,最多不超过100条）
+    * 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
     */
     @SerializedName("PageSize")
     @Expose
@@ -129,32 +129,32 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页index（不填默认只返回10个） 
-     * @return PageNumber 分页index（不填默认只返回10个）
+     * Get 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据） 
+     * @return PageNumber 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
      */
     public String getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页index（不填默认只返回10个）
-     * @param PageNumber 分页index（不填默认只返回10个）
+     * Set 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+     * @param PageNumber 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
      */
     public void setPageNumber(String PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小（不填默认返回10个,最多不超过100条） 
-     * @return PageSize 分页大小（不填默认返回10个,最多不超过100条）
+     * Get 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100） 
+     * @return PageSize 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
      */
     public String getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小（不填默认返回10个,最多不超过100条）
-     * @param PageSize 分页大小（不填默认返回10个,最多不超过100条）
+     * Set 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
+     * @param PageSize 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
      */
     public void setPageSize(String PageSize) {
         this.PageSize = PageSize;

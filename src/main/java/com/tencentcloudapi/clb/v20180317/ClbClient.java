@@ -131,6 +131,24 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *创建clb专有日志集，此日志集用于存储clb的日志。
+     * @param req CreateClsLogSetRequest
+     * @return CreateClsLogSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClsLogSetResponse CreateClsLogSet(CreateClsLogSetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClsLogSetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClsLogSetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClsLogSet"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在一个负载均衡实例下创建监听器。
 本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
      * @param req CreateListenerRequest
@@ -218,6 +236,24 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTargetGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateTargetGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建主题，默认开启全文索引和键值索引。如果不存在clb专有日志集，则创建失败。
+     * @param req CreateTopicRequest
+     * @return CreateTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTopic"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -514,6 +550,24 @@ public class ClbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBTargetsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicalLBTargets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户的clb独占日志集。
+     * @param req DescribeClsLogSetRequest
+     * @return DescribeClsLogSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClsLogSetResponse DescribeClsLogSet(DescribeClsLogSetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClsLogSetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClsLogSetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClsLogSet"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

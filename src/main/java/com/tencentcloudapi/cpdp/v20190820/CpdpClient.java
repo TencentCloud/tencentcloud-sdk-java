@@ -388,6 +388,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *银企直连-单笔支付接口
+     * @param req CreateSinglePayRequest
+     * @return CreateSinglePayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSinglePayResponse CreateSinglePay(CreateSinglePayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSinglePayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSinglePayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSinglePay"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播平台-删除代理商完税信息
      * @param req DeleteAgentTaxPaymentInfoRequest
      * @return DeleteAgentTaxPaymentInfoResponse
@@ -958,6 +976,24 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryRefundResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "QueryRefund"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *银企直连-单笔支付状态查询接口
+     * @param req QuerySinglePayRequest
+     * @return QuerySinglePayResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuerySinglePayResponse QuerySinglePay(QuerySinglePayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QuerySinglePayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QuerySinglePayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QuerySinglePay"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

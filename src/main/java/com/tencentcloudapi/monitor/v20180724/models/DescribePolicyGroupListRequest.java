@@ -121,6 +121,13 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
     private String ReceiverType;
 
     /**
+    * 过滤条件，告警策略是否已启动或停止
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Boolean IsOpen;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -345,6 +352,22 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
     }
 
     /**
+     * Get 过滤条件，告警策略是否已启动或停止 
+     * @return IsOpen 过滤条件，告警策略是否已启动或停止
+     */
+    public Boolean getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set 过滤条件，告警策略是否已启动或停止
+     * @param IsOpen 过滤条件，告警策略是否已启动或停止
+     */
+    public void setIsOpen(Boolean IsOpen) {
+        this.IsOpen = IsOpen;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Dimensions", this.Dimensions);
         this.setParamSimple(map, prefix + "ConditionTempGroupId", this.ConditionTempGroupId);
         this.setParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
 
     }
 }

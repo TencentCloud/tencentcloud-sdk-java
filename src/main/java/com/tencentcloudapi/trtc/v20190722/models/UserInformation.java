@@ -44,7 +44,7 @@ public class UserInformation extends AbstractModel{
     private Long JoinTs;
 
     /**
-    * 用户退房时间
+    * 用户退房时间，用户没有退房则返回当前时间
     */
     @SerializedName("LeaveTs")
     @Expose
@@ -127,16 +127,16 @@ public class UserInformation extends AbstractModel{
     }
 
     /**
-     * Get 用户退房时间 
-     * @return LeaveTs 用户退房时间
+     * Get 用户退房时间，用户没有退房则返回当前时间 
+     * @return LeaveTs 用户退房时间，用户没有退房则返回当前时间
      */
     public Long getLeaveTs() {
         return this.LeaveTs;
     }
 
     /**
-     * Set 用户退房时间
-     * @param LeaveTs 用户退房时间
+     * Set 用户退房时间，用户没有退房则返回当前时间
+     * @param LeaveTs 用户退房时间，用户没有退房则返回当前时间
      */
     public void setLeaveTs(Long LeaveTs) {
         this.LeaveTs = LeaveTs;

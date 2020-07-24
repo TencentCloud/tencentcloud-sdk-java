@@ -30,14 +30,14 @@ public class CreateAudioModerationTaskRequest extends AbstractModel{
     private String BizType;
 
     /**
-    * 回调签名key，具体可以查看签名文档。
+    * 异步检测结果回调通知接收URL。支持HTTP和HTTPS
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+    * 回调签名key，具体可以查看签名文档。
     */
     @SerializedName("Seed")
     @Expose
@@ -74,32 +74,32 @@ public class CreateAudioModerationTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 回调签名key，具体可以查看签名文档。 
-     * @return Type 回调签名key，具体可以查看签名文档。
+     * Get 异步检测结果回调通知接收URL。支持HTTP和HTTPS 
+     * @return Type 异步检测结果回调通知接收URL。支持HTTP和HTTPS
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 回调签名key，具体可以查看签名文档。
-     * @param Type 回调签名key，具体可以查看签名文档。
+     * Set 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+     * @param Type 异步检测结果回调通知接收URL。支持HTTP和HTTPS
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 异步检测结果回调通知接收URL。支持HTTP和HTTPS 
-     * @return Seed 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+     * Get 回调签名key，具体可以查看签名文档。 
+     * @return Seed 回调签名key，具体可以查看签名文档。
      */
     public String getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set 异步检测结果回调通知接收URL。支持HTTP和HTTPS
-     * @param Seed 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+     * Set 回调签名key，具体可以查看签名文档。
+     * @param Seed 回调签名key，具体可以查看签名文档。
      */
     public void setSeed(String Seed) {
         this.Seed = Seed;

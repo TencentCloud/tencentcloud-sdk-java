@@ -176,6 +176,24 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
+     *人工审核对外接口
+     * @param req ManualReviewRequest
+     * @return ManualReviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManualReviewResponse ManualReview(ManualReviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManualReviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManualReviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ManualReview"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
      * @param req TextModerationRequest
      * @return TextModerationResponse
