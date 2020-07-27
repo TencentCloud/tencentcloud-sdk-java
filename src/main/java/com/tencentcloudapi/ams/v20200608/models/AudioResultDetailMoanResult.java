@@ -52,6 +52,13 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     private Float EndTime;
 
     /**
+    * 子标签码
+    */
+    @SerializedName("SubLabelCode")
+    @Expose
+    private String SubLabelCode;
+
+    /**
      * Get 固定为Moan
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Label 固定为Moan
@@ -120,6 +127,22 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     }
 
     /**
+     * Get 子标签码 
+     * @return SubLabelCode 子标签码
+     */
+    public String getSubLabelCode() {
+        return this.SubLabelCode;
+    }
+
+    /**
+     * Set 子标签码
+     * @param SubLabelCode 子标签码
+     */
+    public void setSubLabelCode(String SubLabelCode) {
+        this.SubLabelCode = SubLabelCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -127,6 +150,7 @@ public class AudioResultDetailMoanResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
 
     }
 }

@@ -52,7 +52,7 @@ FailedOperation.UnKnowError：表示识别失败；
     private Long Type;
 
     /**
-    * 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5*Width,Y+0.5*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
+    * 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5\*Width,Y+0.5\*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
     */
     @SerializedName("Rect")
     @Expose
@@ -165,16 +165,16 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5*Width,Y+0.5*Height), (Width, Height), Angle)，详情可参考OpenCV文档。 
-     * @return Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5*Width,Y+0.5*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
+     * Get 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5\*Width,Y+0.5\*Height), (Width, Height), Angle)，详情可参考OpenCV文档。 
+     * @return Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5\*Width,Y+0.5\*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
      */
     public Rect getRect() {
         return this.Rect;
     }
 
     /**
-     * Set 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5*Width,Y+0.5*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
-     * @param Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5*Width,Y+0.5*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
+     * Set 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5\*Width,Y+0.5\*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
+     * @param Rect 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5\*Width,Y+0.5\*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
      */
     public void setRect(Rect Rect) {
         this.Rect = Rect;

@@ -66,7 +66,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+    * 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
     */
     @SerializedName("Url")
     @Expose
@@ -113,6 +113,28 @@ public class CreateRecTaskRequest extends AbstractModel{
     @SerializedName("ConvertNumMode")
     @Expose
     private Long ConvertNumMode;
+
+    /**
+    * 附加参数
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
+    * 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+    */
+    @SerializedName("SpeakerDiarization")
+    @Expose
+    private Long SpeakerDiarization;
+
+    /**
+    * 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+    */
+    @SerializedName("SpeakerNumber")
+    @Expose
+    private Long SpeakerNumber;
 
     /**
      * Get 引擎模型类型。
@@ -227,16 +249,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。 
-     * @return Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+     * Get 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。 
+     * @return Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
-     * @param Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+     * Set 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+     * @param Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -339,6 +361,58 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 附加参数 
+     * @return Extra 附加参数
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set 附加参数
+     * @param Extra 附加参数
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
+    /**
+     * Get 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频) 
+     * @return SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+     */
+    public Long getSpeakerDiarization() {
+        return this.SpeakerDiarization;
+    }
+
+    /**
+     * Set 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+     * @param SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+     */
+    public void setSpeakerDiarization(Long SpeakerDiarization) {
+        this.SpeakerDiarization = SpeakerDiarization;
+    }
+
+    /**
+     * Get 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用 
+     * @return SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+     */
+    public Long getSpeakerNumber() {
+        return this.SpeakerNumber;
+    }
+
+    /**
+     * Set 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+     * @param SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+     */
+    public void setSpeakerNumber(Long SpeakerNumber) {
+        this.SpeakerNumber = SpeakerNumber;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -354,6 +428,9 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
         this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
         this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "SpeakerDiarization", this.SpeakerDiarization);
+        this.setParamSimple(map, prefix + "SpeakerNumber", this.SpeakerNumber);
 
     }
 }

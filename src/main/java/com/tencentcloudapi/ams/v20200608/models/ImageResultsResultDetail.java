@@ -94,6 +94,14 @@ public class ImageResultsResultDetail extends AbstractModel{
     private Long Score;
 
     /**
+    * 子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubLabelCode")
+    @Expose
+    private String SubLabelCode;
+
+    /**
      * Get 位置信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Location 位置信息
@@ -270,6 +278,26 @@ public class ImageResultsResultDetail extends AbstractModel{
     }
 
     /**
+     * Get 子标签码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubLabelCode 子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubLabelCode() {
+        return this.SubLabelCode;
+    }
+
+    /**
+     * Set 子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubLabelCode 子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubLabelCode(String SubLabelCode) {
+        this.SubLabelCode = SubLabelCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -282,6 +310,7 @@ public class ImageResultsResultDetail extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
 
     }
 }

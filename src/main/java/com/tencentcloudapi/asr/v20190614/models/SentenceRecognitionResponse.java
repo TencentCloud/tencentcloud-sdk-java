@@ -30,6 +30,13 @@ public class SentenceRecognitionResponse extends AbstractModel{
     private String Result;
 
     /**
+    * 请求的音频时长，单位为ms
+    */
+    @SerializedName("AudioDuration")
+    @Expose
+    private Long AudioDuration;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class SentenceRecognitionResponse extends AbstractModel{
     }
 
     /**
+     * Get 请求的音频时长，单位为ms 
+     * @return AudioDuration 请求的音频时长，单位为ms
+     */
+    public Long getAudioDuration() {
+        return this.AudioDuration;
+    }
+
+    /**
+     * Set 请求的音频时长，单位为ms
+     * @param AudioDuration 请求的音频时长，单位为ms
+     */
+    public void setAudioDuration(Long AudioDuration) {
+        this.AudioDuration = AudioDuration;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class SentenceRecognitionResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
