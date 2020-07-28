@@ -215,14 +215,14 @@ public class CardInfo extends AbstractModel{
     private Long NeedSms;
 
     /**
-    * 服务
+    * 供应商
     */
     @SerializedName("Provider")
     @Expose
     private Long Provider;
 
     /**
-    * 实名验证(浙江联通)
+    * 实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertificationState")
@@ -698,25 +698,25 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
-     * Get 服务 
-     * @return Provider 服务
+     * Get 供应商 
+     * @return Provider 供应商
      */
     public Long getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set 服务
-     * @param Provider 服务
+     * Set 供应商
+     * @param Provider 供应商
      */
     public void setProvider(Long Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get 实名验证(浙江联通)
+     * Get 实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertificationState 实名验证(浙江联通)
+     * @return CertificationState 实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCertificationState() {
@@ -724,9 +724,9 @@ public class CardInfo extends AbstractModel{
     }
 
     /**
-     * Set 实名验证(浙江联通)
+     * Set 实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertificationState 实名验证(浙江联通)
+     * @param CertificationState 实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertificationState(Long CertificationState) {

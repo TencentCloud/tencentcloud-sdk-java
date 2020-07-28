@@ -13,23 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopContainerGroupResponse extends AbstractModel{
+public class DescribeLoadBalancersDetailResponse extends AbstractModel{
 
     /**
-    * 停止操作是否成功。
-true：停止成功
-false：停止失败
+    * 负载均衡详情列表总数。
     */
-    @SerializedName("Result")
+    @SerializedName("TotalCount")
     @Expose
-    private Boolean Result;
+    private Long TotalCount;
+
+    /**
+    * 负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerDetailSet")
+    @Expose
+    private LoadBalancerDetail [] LoadBalancerDetailSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,27 +45,39 @@ false：停止失败
     private String RequestId;
 
     /**
-     * Get 停止操作是否成功。
-true：停止成功
-false：停止失败 
-     * @return Result 停止操作是否成功。
-true：停止成功
-false：停止失败
+     * Get 负载均衡详情列表总数。 
+     * @return TotalCount 负载均衡详情列表总数。
      */
-    public Boolean getResult() {
-        return this.Result;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 停止操作是否成功。
-true：停止成功
-false：停止失败
-     * @param Result 停止操作是否成功。
-true：停止成功
-false：停止失败
+     * Set 负载均衡详情列表总数。
+     * @param TotalCount 负载均衡详情列表总数。
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerDetailSet 负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LoadBalancerDetail [] getLoadBalancerDetailSet() {
+        return this.LoadBalancerDetailSet;
+    }
+
+    /**
+     * Set 负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerDetailSet 负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerDetailSet(LoadBalancerDetail [] LoadBalancerDetailSet) {
+        this.LoadBalancerDetailSet = LoadBalancerDetailSet;
     }
 
     /**
@@ -82,7 +100,8 @@ false：停止失败
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "LoadBalancerDetailSet.", this.LoadBalancerDetailSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,23 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopContainerGroupResponse extends AbstractModel{
-
-    /**
-    * 停止操作是否成功。
-true：停止成功
-false：停止失败
-    */
-    @SerializedName("Result")
-    @Expose
-    private Boolean Result;
+public class BindCloudResourceResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,30 +28,6 @@ false：停止失败
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 停止操作是否成功。
-true：停止成功
-false：停止失败 
-     * @return Result 停止操作是否成功。
-true：停止成功
-false：停止失败
-     */
-    public Boolean getResult() {
-        return this.Result;
-    }
-
-    /**
-     * Set 停止操作是否成功。
-true：停止成功
-false：停止失败
-     * @param Result 停止操作是否成功。
-true：停止成功
-false：停止失败
-     */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -82,7 +49,6 @@ false：停止失败
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

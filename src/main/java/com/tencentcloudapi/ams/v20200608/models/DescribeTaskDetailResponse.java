@@ -39,7 +39,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String DataId;
 
     /**
-    * 业务类型
+    * 业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
@@ -55,7 +56,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String Name;
 
     /**
-    * 状态，可选值：
+    * 查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
@@ -68,7 +69,7 @@ CANCELLED 已取消
     private String Status;
 
     /**
-    * 类型
+    * 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -76,11 +77,10 @@ CANCELLED 已取消
     private String Type;
 
     /**
-    * 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+    * 智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -88,7 +88,8 @@ Block 确认违规
     private String Suggestion;
 
     /**
-    * 审核结果
+    * 智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -96,7 +97,7 @@ Block 确认违规
     private TaskLabel [] Labels;
 
     /**
-    * 媒体解码信息
+    * 传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfo")
@@ -104,7 +105,7 @@ Block 确认违规
     private MediaInfo MediaInfo;
 
     /**
-    * 任务信息
+    * 审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputInfo")
@@ -112,7 +113,7 @@ Block 确认违规
     private InputInfo InputInfo;
 
     /**
-    * 创建时间
+    * 审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -120,7 +121,7 @@ Block 确认违规
     private String CreatedAt;
 
     /**
-    * 更新时间
+    * 审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -128,7 +129,7 @@ Block 确认违规
     private String UpdatedAt;
 
     /**
-    * 在秒后重试
+    * 在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TryInSeconds")
@@ -136,7 +137,7 @@ Block 确认违规
     private Long TryInSeconds;
 
     /**
-    * 音频结果
+    * 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioSegments")
@@ -144,7 +145,7 @@ Block 确认违规
     private AudioSegments [] AudioSegments;
 
     /**
-    * 图片结果
+    * 视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSegments")
@@ -199,9 +200,11 @@ Block 确认违规
     }
 
     /**
-     * Get 业务类型
+     * Get 业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BizType 业务类型
+     * @return BizType 业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
@@ -209,9 +212,11 @@ Block 确认违规
     }
 
     /**
-     * Set 业务类型
+     * Set 业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BizType 业务类型
+     * @param BizType 业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
@@ -239,14 +244,14 @@ Block 确认违规
     }
 
     /**
-     * Get 状态，可选值：
+     * Get 查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
 ERROR 出错
 CANCELLED 已取消
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态，可选值：
+     * @return Status 查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
@@ -259,14 +264,14 @@ CANCELLED 已取消
     }
 
     /**
-     * Set 状态，可选值：
+     * Set 查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
 ERROR 出错
 CANCELLED 已取消
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态，可选值：
+     * @param Status 查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
@@ -279,9 +284,9 @@ CANCELLED 已取消
     }
 
     /**
-     * Get 类型
+     * Get 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型
+     * @return Type 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -289,9 +294,9 @@ CANCELLED 已取消
     }
 
     /**
-     * Set 类型
+     * Set 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型
+     * @param Type 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -299,17 +304,15 @@ CANCELLED 已取消
     }
 
     /**
-     * Get 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * Get 智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * @return Suggestion 智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -317,17 +320,15 @@ Block 确认违规
     }
 
     /**
-     * Set 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * Set 智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * @param Suggestion 智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -335,9 +336,11 @@ Block 确认违规
     }
 
     /**
-     * Get 审核结果
+     * Get 智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 审核结果
+     * @return Labels 智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLabel [] getLabels() {
@@ -345,9 +348,11 @@ Block 确认违规
     }
 
     /**
-     * Set 审核结果
+     * Set 智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 审核结果
+     * @param Labels 智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TaskLabel [] Labels) {
@@ -355,9 +360,9 @@ Block 确认违规
     }
 
     /**
-     * Get 媒体解码信息
+     * Get 传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaInfo 媒体解码信息
+     * @return MediaInfo 传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo getMediaInfo() {
@@ -365,9 +370,9 @@ Block 确认违规
     }
 
     /**
-     * Set 媒体解码信息
+     * Set 传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaInfo 媒体解码信息
+     * @param MediaInfo 传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfo(MediaInfo MediaInfo) {
@@ -375,9 +380,9 @@ Block 确认违规
     }
 
     /**
-     * Get 任务信息
+     * Get 审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputInfo 任务信息
+     * @return InputInfo 审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputInfo getInputInfo() {
@@ -385,9 +390,9 @@ Block 确认违规
     }
 
     /**
-     * Set 任务信息
+     * Set 审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputInfo 任务信息
+     * @param InputInfo 审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputInfo(InputInfo InputInfo) {
@@ -395,9 +400,9 @@ Block 确认违规
     }
 
     /**
-     * Get 创建时间
+     * Get 审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 创建时间
+     * @return CreatedAt 审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -405,9 +410,9 @@ Block 确认违规
     }
 
     /**
-     * Set 创建时间
+     * Set 审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 创建时间
+     * @param CreatedAt 审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -415,9 +420,9 @@ Block 确认违规
     }
 
     /**
-     * Get 更新时间
+     * Get 审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 更新时间
+     * @return UpdatedAt 审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -425,9 +430,9 @@ Block 确认违规
     }
 
     /**
-     * Set 更新时间
+     * Set 审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 更新时间
+     * @param UpdatedAt 审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -435,9 +440,9 @@ Block 确认违规
     }
 
     /**
-     * Get 在秒后重试
+     * Get 在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TryInSeconds 在秒后重试
+     * @return TryInSeconds 在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTryInSeconds() {
@@ -445,9 +450,9 @@ Block 确认违规
     }
 
     /**
-     * Set 在秒后重试
+     * Set 在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TryInSeconds 在秒后重试
+     * @param TryInSeconds 在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTryInSeconds(Long TryInSeconds) {
@@ -455,9 +460,9 @@ Block 确认违规
     }
 
     /**
-     * Get 音频结果
+     * Get 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioSegments 音频结果
+     * @return AudioSegments 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioSegments [] getAudioSegments() {
@@ -465,9 +470,9 @@ Block 确认违规
     }
 
     /**
-     * Set 音频结果
+     * Set 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioSegments 音频结果
+     * @param AudioSegments 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioSegments(AudioSegments [] AudioSegments) {
@@ -475,9 +480,9 @@ Block 确认违规
     }
 
     /**
-     * Get 图片结果
+     * Get 视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageSegments 图片结果
+     * @return ImageSegments 视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageSegments [] getImageSegments() {
@@ -485,9 +490,9 @@ Block 确认违规
     }
 
     /**
-     * Set 图片结果
+     * Set 视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSegments 图片结果
+     * @param ImageSegments 视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSegments(ImageSegments [] ImageSegments) {

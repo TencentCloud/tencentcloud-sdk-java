@@ -630,6 +630,24 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *查询负载均衡的详细信息，包括监听器，规则及后端目标。
+     * @param req DescribeLoadBalancersDetailRequest
+     * @return DescribeLoadBalancersDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(DescribeLoadBalancersDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancersDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancersDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLoadBalancersDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
      * @param req DescribeRewriteRequest
      * @return DescribeRewriteResponse

@@ -37,7 +37,7 @@ public class RenewCardsRequest extends AbstractModel{
     private String [] Iccids;
 
     /**
-    * 续费的周期
+    * 续费的周期（单位：月）
     */
     @SerializedName("RenewNum")
     @Expose
@@ -76,16 +76,16 @@ public class RenewCardsRequest extends AbstractModel{
     }
 
     /**
-     * Get 续费的周期 
-     * @return RenewNum 续费的周期
+     * Get 续费的周期（单位：月） 
+     * @return RenewNum 续费的周期（单位：月）
      */
     public Long getRenewNum() {
         return this.RenewNum;
     }
 
     /**
-     * Set 续费的周期
-     * @param RenewNum 续费的周期
+     * Set 续费的周期（单位：月）
+     * @param RenewNum 续费的周期（单位：月）
      */
     public void setRenewNum(Long RenewNum) {
         this.RenewNum = RenewNum;

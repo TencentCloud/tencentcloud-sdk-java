@@ -74,6 +74,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *记录当前key被哪个云产品的那个资源所使用。如果当前key设置了自动过期，则取消该设置，确保当前key不会自动失效。如果当前关联关系已经创建，也返回成功。
+     * @param req BindCloudResourceRequest
+     * @return BindCloudResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindCloudResourceResponse BindCloudResource(BindCloudResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindCloudResourceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindCloudResourceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BindCloudResource"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *取消CMK的计划删除操作
      * @param req CancelKeyDeletionRequest
      * @return CancelKeyDeletionResponse
@@ -752,6 +770,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ScheduleKeyDeletionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ScheduleKeyDeletion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除指定（key, 资源，云产品）的记录，以表明：指定的云产品的资源已不再使用当前的key。
+     * @param req UnbindCloudResourceRequest
+     * @return UnbindCloudResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindCloudResourceResponse UnbindCloudResource(UnbindCloudResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindCloudResourceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnbindCloudResource"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

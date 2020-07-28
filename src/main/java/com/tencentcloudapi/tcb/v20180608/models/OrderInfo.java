@@ -85,6 +85,22 @@ public class OrderInfo extends AbstractModel{
     private String PayMode;
 
     /**
+    * 订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtensionId")
+    @Expose
+    private String ExtensionId;
+
+    /**
+    * 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceReady")
+    @Expose
+    private String ResourceReady;
+
+    /**
      * Get 订单号 
      * @return TranId 订单号
      */
@@ -249,6 +265,46 @@ public class OrderInfo extends AbstractModel{
     }
 
     /**
+     * Get 订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtensionId 订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtensionId() {
+        return this.ExtensionId;
+    }
+
+    /**
+     * Set 订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtensionId 订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtensionId(String ExtensionId) {
+        this.ExtensionId = ExtensionId;
+    }
+
+    /**
+     * Get 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceReady 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceReady() {
+        return this.ResourceReady;
+    }
+
+    /**
+     * Set 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceReady 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceReady(String ResourceReady) {
+        this.ResourceReady = ResourceReady;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -259,6 +315,8 @@ public class OrderInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
+        this.setParamSimple(map, prefix + "ResourceReady", this.ResourceReady);
 
     }
 }
