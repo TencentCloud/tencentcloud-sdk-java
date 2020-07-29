@@ -37,6 +37,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private String RegistryType;
 
     /**
+    * 云标签描述
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get 企业版实例名称 
      * @return RegistryName 企业版实例名称
      */
@@ -69,11 +76,28 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 云标签描述 
+     * @return TagSpecification 云标签描述
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 云标签描述
+     * @param TagSpecification 云标签描述
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryName", this.RegistryName);
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

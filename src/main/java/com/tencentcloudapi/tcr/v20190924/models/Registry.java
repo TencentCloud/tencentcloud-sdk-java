@@ -100,6 +100,14 @@ public class Registry extends AbstractModel{
     private String InternalEndpoint;
 
     /**
+    * 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -276,6 +284,26 @@ public class Registry extends AbstractModel{
     }
 
     /**
+     * Get 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +318,7 @@ public class Registry extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableAnonymous", this.EnableAnonymous);
         this.setParamSimple(map, prefix + "TokenValidTime", this.TokenValidTime);
         this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

@@ -55,7 +55,8 @@ public class NodeHardwareInfo extends AbstractModel{
     private String WanIp;
 
     /**
-    * 节点类型
+    * 节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Flag")
@@ -399,9 +400,11 @@ public class NodeHardwareInfo extends AbstractModel{
     }
 
     /**
-     * Get 节点类型
+     * Get 节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Flag 节点类型
+     * @return Flag 节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlag() {
@@ -409,9 +412,11 @@ public class NodeHardwareInfo extends AbstractModel{
     }
 
     /**
-     * Set 节点类型
+     * Set 节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Flag 节点类型
+     * @param Flag 节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlag(Long Flag) {
