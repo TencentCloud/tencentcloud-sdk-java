@@ -230,3 +230,9 @@ DEBUG | 2020-06-23 19:53:45,685 | com.tencentcloudapi.cvm.v20170312.CvmClient | 
       <version>3.1.59</version>
     </dependency>
 ```
+
+## 证书问题
+
+证书问题通常是客户端环境配置错误导致的。SDK 没有对证书进行操作，依赖的是 Java 运行环境本身的处理。出现证书问题后，可以使用`-Djavax.net.debug=ssl`开启详细日志辅助判断。
+
+有用户报告使用 IBM JDK 1.8 出现证书报错：`javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure`，使用 Oracle JDK 后问题消失。
