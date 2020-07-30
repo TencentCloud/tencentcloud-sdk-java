@@ -86,6 +86,20 @@ public class BillTransactionInfo extends AbstractModel{
     private Long Freezing;
 
     /**
+    * 交易渠道
+    */
+    @SerializedName("PayChannel")
+    @Expose
+    private String PayChannel;
+
+    /**
+    * 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
+    */
+    @SerializedName("DeductMode")
+    @Expose
+    private String DeductMode;
+
+    /**
      * Get 收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻 
      * @return ActionType 收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻
      */
@@ -230,6 +244,38 @@ public class BillTransactionInfo extends AbstractModel{
     }
 
     /**
+     * Get 交易渠道 
+     * @return PayChannel 交易渠道
+     */
+    public String getPayChannel() {
+        return this.PayChannel;
+    }
+
+    /**
+     * Set 交易渠道
+     * @param PayChannel 交易渠道
+     */
+    public void setPayChannel(String PayChannel) {
+        this.PayChannel = PayChannel;
+    }
+
+    /**
+     * Get 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结 
+     * @return DeductMode 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
+     */
+    public String getDeductMode() {
+        return this.DeductMode;
+    }
+
+    /**
+     * Set 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
+     * @param DeductMode 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
+     */
+    public void setDeductMode(String DeductMode) {
+        this.DeductMode = DeductMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +288,8 @@ public class BillTransactionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Cash", this.Cash);
         this.setParamSimple(map, prefix + "Incentive", this.Incentive);
         this.setParamSimple(map, prefix + "Freezing", this.Freezing);
+        this.setParamSimple(map, prefix + "PayChannel", this.PayChannel);
+        this.setParamSimple(map, prefix + "DeductMode", this.DeductMode);
 
     }
 }

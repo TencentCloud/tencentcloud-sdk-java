@@ -24,14 +24,17 @@ public class DescribePullStreamConfigsRequest extends AbstractModel{
 
     /**
     * 配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-     * Get 配置 ID。 
+     * Get 配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。 
      * @return ConfigId 配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -39,7 +42,9 @@ public class DescribePullStreamConfigsRequest extends AbstractModel{
 
     /**
      * Set 配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
      * @param ConfigId 配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

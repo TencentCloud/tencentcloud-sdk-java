@@ -30,7 +30,7 @@ public class CreateRepositoryRequest extends AbstractModel{
     private String RepositoryName;
 
     /**
-    * 仓库类型
+    * 仓库类型（默认仓库：default，私有仓库：private）
     */
     @SerializedName("RepositoryType")
     @Expose
@@ -81,16 +81,16 @@ public class CreateRepositoryRequest extends AbstractModel{
     }
 
     /**
-     * Get 仓库类型 
-     * @return RepositoryType 仓库类型
+     * Get 仓库类型（默认仓库：default，私有仓库：private） 
+     * @return RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
      */
     public String getRepositoryType() {
         return this.RepositoryType;
     }
 
     /**
-     * Set 仓库类型
-     * @param RepositoryType 仓库类型
+     * Set 仓库类型（默认仓库：default，私有仓库：private）
+     * @param RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;

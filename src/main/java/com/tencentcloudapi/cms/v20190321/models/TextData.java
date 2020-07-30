@@ -93,11 +93,25 @@ public class TextData extends AbstractModel{
     private Long BizType;
 
     /**
+    * 和请求中的DataId一致，原样返回
+    */
+    @SerializedName("DataId")
+    @Expose
+    private String DataId;
+
+    /**
     * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
     */
     @SerializedName("EvilLabel")
     @Expose
     private String EvilLabel;
+
+    /**
+    * 输出的其他信息，不同客户内容不同
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
 
     /**
     * 命中的关键词
@@ -293,6 +307,22 @@ public class TextData extends AbstractModel{
     }
 
     /**
+     * Get 和请求中的DataId一致，原样返回 
+     * @return DataId 和请求中的DataId一致，原样返回
+     */
+    public String getDataId() {
+        return this.DataId;
+    }
+
+    /**
+     * Set 和请求中的DataId一致，原样返回
+     * @param DataId 和请求中的DataId一致，原样返回
+     */
+    public void setDataId(String DataId) {
+        this.DataId = DataId;
+    }
+
+    /**
      * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
      * @return EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
      */
@@ -306,6 +336,22 @@ public class TextData extends AbstractModel{
      */
     public void setEvilLabel(String EvilLabel) {
         this.EvilLabel = EvilLabel;
+    }
+
+    /**
+     * Get 输出的其他信息，不同客户内容不同 
+     * @return Extra 输出的其他信息，不同客户内容不同
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set 输出的其他信息，不同客户内容不同
+     * @param Extra 输出的其他信息，不同客户内容不同
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
     }
 
     /**
@@ -369,7 +415,9 @@ public class TextData extends AbstractModel{
         this.setParamObj(map, prefix + "Res.", this.Res);
         this.setParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);

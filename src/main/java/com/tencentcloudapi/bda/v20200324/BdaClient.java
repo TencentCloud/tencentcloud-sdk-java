@@ -283,6 +283,24 @@ public class BdaClient extends AbstractClient{
     }
 
     /**
+     *在前后景分割的基础上优化多分类分割，支持对头发、五官等的分割，既作为换发型、挂件等底层技术，也可用于扣人头、扣人脸等玩法
+     * @param req SegmentCustomizedPortraitPicRequest
+     * @return SegmentCustomizedPortraitPicResponse
+     * @throws TencentCloudSDKException
+     */
+    public SegmentCustomizedPortraitPicResponse SegmentCustomizedPortraitPic(SegmentCustomizedPortraitPicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SegmentCustomizedPortraitPicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SegmentCustomizedPortraitPicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SegmentCustomizedPortraitPic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *识别传入图片中人体的完整轮廓，进行抠像。
 
      * @param req SegmentPortraitPicRequest
