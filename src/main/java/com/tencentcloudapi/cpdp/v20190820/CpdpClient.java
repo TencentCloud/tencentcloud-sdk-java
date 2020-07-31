@@ -514,6 +514,42 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
+     * @param req MigrateOrderRefundRequest
+     * @return MigrateOrderRefundResponse
+     * @throws TencentCloudSDKException
+     */
+    public MigrateOrderRefundResponse MigrateOrderRefund(MigrateOrderRefundRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MigrateOrderRefundResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MigrateOrderRefundResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MigrateOrderRefund"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
+     * @param req MigrateOrderRefundQueryRequest
+     * @return MigrateOrderRefundQueryResponse
+     * @throws TencentCloudSDKException
+     */
+    public MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(MigrateOrderRefundQueryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MigrateOrderRefundQueryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MigrateOrderRefundQueryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MigrateOrderRefundQuery"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播平台-修改代理商完税信息
      * @param req ModifyAgentTaxPaymentInfoRequest
      * @return ModifyAgentTaxPaymentInfoResponse
