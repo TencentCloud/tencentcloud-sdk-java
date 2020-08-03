@@ -149,6 +149,13 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel{
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
+    * 高性能计算集群ID。
+    */
+    @SerializedName("HpcClusterId")
+    @Expose
+    private String HpcClusterId;
+
+    /**
      * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
@@ -437,6 +444,22 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 高性能计算集群ID。 
+     * @return HpcClusterId 高性能计算集群ID。
+     */
+    public String getHpcClusterId() {
+        return this.HpcClusterId;
+    }
+
+    /**
+     * Set 高性能计算集群ID。
+     * @param HpcClusterId 高性能计算集群ID。
+     */
+    public void setHpcClusterId(String HpcClusterId) {
+        this.HpcClusterId = HpcClusterId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+        this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
 
     }
 }

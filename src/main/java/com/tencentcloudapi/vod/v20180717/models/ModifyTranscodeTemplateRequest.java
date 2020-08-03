@@ -44,7 +44,7 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 模板描述信息，长度限制：256 个字节。
+    * 模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
     @Expose
@@ -145,16 +145,16 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板描述信息，长度限制：256 个字节。 
-     * @return Comment 模板描述信息，长度限制：256 个字节。
+     * Get 模板描述信息，长度限制：256 个字符。 
+     * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 模板描述信息，长度限制：256 个字节。
-     * @param Comment 模板描述信息，长度限制：256 个字节。
+     * Set 模板描述信息，长度限制：256 个字符。
+     * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

@@ -154,7 +154,10 @@ baseline/main/high。默认baseline
     private Long AiTransCode;
 
     /**
-    * 极速高清相比VideoBitrate少多少码率，0.1到0.5
+    * 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -469,16 +472,28 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Get 极速高清相比VideoBitrate少多少码率，0.1到0.5 
-     * @return AdaptBitratePercent 极速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Get 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5 
+     * @return AdaptBitratePercent 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set 极速高清相比VideoBitrate少多少码率，0.1到0.5
-     * @param AdaptBitratePercent 极速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Set 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
+     * @param AdaptBitratePercent 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

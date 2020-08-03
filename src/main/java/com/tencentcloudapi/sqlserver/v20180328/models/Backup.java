@@ -100,6 +100,13 @@ public class Backup extends AbstractModel{
     private Long BackupWay;
 
     /**
+    * 备份名称，可自定义
+    */
+    @SerializedName("BackupName")
+    @Expose
+    private String BackupName;
+
+    /**
      * Get 文件名 
      * @return FileName 文件名
      */
@@ -276,6 +283,22 @@ public class Backup extends AbstractModel{
     }
 
     /**
+     * Get 备份名称，可自定义 
+     * @return BackupName 备份名称，可自定义
+     */
+    public String getBackupName() {
+        return this.BackupName;
+    }
+
+    /**
+     * Set 备份名称，可自定义
+     * @param BackupName 备份名称，可自定义
+     */
+    public void setBackupName(String BackupName) {
+        this.BackupName = BackupName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class Backup extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
+        this.setParamSimple(map, prefix + "BackupName", this.BackupName);
 
     }
 }

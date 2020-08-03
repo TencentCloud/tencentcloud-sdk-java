@@ -249,6 +249,22 @@ public class Instance extends AbstractModel{
     private String CamRoleName;
 
     /**
+    * 高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HpcClusterId")
+    @Expose
+    private String HpcClusterId;
+
+    /**
+    * 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RdmaIpAddresses")
+    @Expose
+    private String [] RdmaIpAddresses;
+
+    /**
      * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
@@ -781,6 +797,46 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HpcClusterId 高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHpcClusterId() {
+        return this.HpcClusterId;
+    }
+
+    /**
+     * Set 高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HpcClusterId 高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHpcClusterId(String HpcClusterId) {
+        this.HpcClusterId = HpcClusterId;
+    }
+
+    /**
+     * Get 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RdmaIpAddresses 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getRdmaIpAddresses() {
+        return this.RdmaIpAddresses;
+    }
+
+    /**
+     * Set 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RdmaIpAddresses 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRdmaIpAddresses(String [] RdmaIpAddresses) {
+        this.RdmaIpAddresses = RdmaIpAddresses;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -815,6 +871,8 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
         this.setParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+        this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
 
     }
 }

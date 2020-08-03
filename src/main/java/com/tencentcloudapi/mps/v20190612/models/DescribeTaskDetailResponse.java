@@ -117,6 +117,13 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String SessionContext;
 
     /**
+    * 扩展信息字段，仅用于特定场景。
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -356,6 +363,22 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 扩展信息字段，仅用于特定场景。 
+     * @return ExtInfo 扩展信息字段，仅用于特定场景。
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 扩展信息字段，仅用于特定场景。
+     * @param ExtInfo 扩展信息字段，仅用于特定场景。
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -387,6 +410,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -238,6 +238,14 @@ REJECTED:拒绝
     private String TencentBackupAddress;
 
     /**
+    * 专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignLaw")
+    @Expose
+    private Boolean SignLaw;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -762,6 +770,26 @@ REJECTED:拒绝
     }
 
     /**
+     * Get 专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignLaw 专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSignLaw() {
+        return this.SignLaw;
+    }
+
+    /**
+     * Set 专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignLaw 专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignLaw(Boolean SignLaw) {
+        this.SignLaw = SignLaw;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -793,6 +821,7 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
+        this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
 
     }
 }

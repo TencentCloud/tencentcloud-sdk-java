@@ -578,6 +578,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *发布广播消息
+     * @param req PublishBroadcastMessageRequest
+     * @return PublishBroadcastMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishBroadcastMessageResponse PublishBroadcastMessage(PublishBroadcastMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishBroadcastMessageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishBroadcastMessageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PublishBroadcastMessage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（PublishMessage）用于向某个主题发消息。 
      * @param req PublishMessageRequest
      * @return PublishMessageResponse
@@ -589,6 +607,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PublishMessageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PublishMessage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *发布RRPC消息
+     * @param req PublishRRPCMessageRequest
+     * @return PublishRRPCMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishRRPCMessageResponse PublishRRPCMessage(PublishRRPCMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishRRPCMessageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishRRPCMessageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PublishRRPCMessage"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -235,6 +235,14 @@ public class DirectConnect extends AbstractModel{
     private String StartTime;
 
     /**
+    * 物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignLaw")
+    @Expose
+    private Boolean SignLaw;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -759,6 +767,26 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
+     * Get 物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignLaw 物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSignLaw() {
+        return this.SignLaw;
+    }
+
+    /**
+     * Set 物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignLaw 物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignLaw(Boolean SignLaw) {
+        this.SignLaw = SignLaw;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -789,6 +817,7 @@ public class DirectConnect extends AbstractModel{
         this.setParamSimple(map, prefix + "IdcCity", this.IdcCity);
         this.setParamSimple(map, prefix + "ChargeState", this.ChargeState);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
 
     }
 }

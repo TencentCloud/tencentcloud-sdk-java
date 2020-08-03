@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateImageRequest extends AbstractModel{
 
     /**
-    * 镜像名称
+    * 镜像名称。
     */
     @SerializedName("ImageName")
     @Expose
@@ -37,7 +37,7 @@ public class CreateImageRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 镜像描述
+    * 镜像描述。
     */
     @SerializedName("ImageDescription")
     @Expose
@@ -54,16 +54,16 @@ FALSE：表示开机状态制作，目前不支持，需要先手动关机
     private String ForcePoweroff;
 
     /**
-     * Get 镜像名称 
-     * @return ImageName 镜像名称
+     * Get 镜像名称。 
+     * @return ImageName 镜像名称。
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 镜像名称
-     * @param ImageName 镜像名称
+     * Set 镜像名称。
+     * @param ImageName 镜像名称。
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
@@ -86,16 +86,16 @@ FALSE：表示开机状态制作，目前不支持，需要先手动关机
     }
 
     /**
-     * Get 镜像描述 
-     * @return ImageDescription 镜像描述
+     * Get 镜像描述。 
+     * @return ImageDescription 镜像描述。
      */
     public String getImageDescription() {
         return this.ImageDescription;
     }
 
     /**
-     * Set 镜像描述
-     * @param ImageDescription 镜像描述
+     * Set 镜像描述。
+     * @param ImageDescription 镜像描述。
      */
     public void setImageDescription(String ImageDescription) {
         this.ImageDescription = ImageDescription;
