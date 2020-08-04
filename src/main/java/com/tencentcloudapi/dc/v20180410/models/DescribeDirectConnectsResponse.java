@@ -37,6 +37,14 @@ public class DescribeDirectConnectsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * 用户名下物理专线是否都签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllSignLaw")
+    @Expose
+    private Boolean AllSignLaw;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeDirectConnectsResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户名下物理专线是否都签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllSignLaw 用户名下物理专线是否都签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllSignLaw() {
+        return this.AllSignLaw;
+    }
+
+    /**
+     * Set 用户名下物理专线是否都签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllSignLaw 用户名下物理专线是否都签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllSignLaw(Boolean AllSignLaw) {
+        this.AllSignLaw = AllSignLaw;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +125,7 @@ public class DescribeDirectConnectsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DirectConnectSet.", this.DirectConnectSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "AllSignLaw", this.AllSignLaw);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -116,6 +116,14 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     private Boolean EnableBGPCommunity;
 
     /**
+    * 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NatGatewayId")
+    @Expose
+    private String NatGatewayId;
+
+    /**
      * Get 专线网关`ID`。 
      * @return DirectConnectGatewayId 专线网关`ID`。
      */
@@ -344,6 +352,26 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
+     * Get 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NatGatewayId 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNatGatewayId() {
+        return this.NatGatewayId;
+    }
+
+    /**
+     * Set 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NatGatewayId 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNatGatewayId(String NatGatewayId) {
+        this.NatGatewayId = NatGatewayId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -359,6 +387,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         this.setParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
         this.setParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
         this.setParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
+        this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
 
     }
 }

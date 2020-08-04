@@ -143,6 +143,14 @@ public class Service extends AbstractModel{
     private Long TradeIsolateStatus;
 
     /**
+    * 服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 内网访问https端口。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InnerHttpsPort 内网访问https端口。
@@ -443,6 +451,26 @@ public class Service extends AbstractModel{
     }
 
     /**
+     * Get 服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -461,6 +489,7 @@ public class Service extends AbstractModel{
         this.setParamSimple(map, prefix + "InnerHttpPort", this.InnerHttpPort);
         this.setParamSimple(map, prefix + "InnerSubDomain", this.InnerSubDomain);
         this.setParamSimple(map, prefix + "TradeIsolateStatus", this.TradeIsolateStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

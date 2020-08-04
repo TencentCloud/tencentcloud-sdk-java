@@ -25,7 +25,6 @@ public class DescribeHttpStatusInfoListRequest extends AbstractModel{
     /**
     * 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
     */
     @SerializedName("StartTime")
     @Expose
@@ -34,7 +33,7 @@ StartTime不能为3个月前。
     /**
     * 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
     */
     @SerializedName("EndTime")
     @Expose
@@ -49,11 +48,9 @@ StartTime不能为3个月前。
 
     /**
      * Get 起始时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。 
+格式：yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -62,10 +59,8 @@ StartTime不能为3个月前。
     /**
      * Set 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
      * @param StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -74,10 +69,10 @@ StartTime不能为3个月前。
     /**
      * Get 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。 
+注：最大时间跨度支持1天，支持最近3个月的数据查询。 
      * @return EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -86,10 +81,10 @@ StartTime不能为3个月前。
     /**
      * Set 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
      * @param EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

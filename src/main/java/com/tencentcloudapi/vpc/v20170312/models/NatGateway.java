@@ -102,6 +102,22 @@ public class NatGateway extends AbstractModel{
     private String Zone;
 
     /**
+    * 绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DirectConnectGatewayIds")
+    @Expose
+    private String [] DirectConnectGatewayIds;
+
+    /**
+    * 所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -286,6 +302,46 @@ public class NatGateway extends AbstractModel{
     }
 
     /**
+     * Get 绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DirectConnectGatewayIds 绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDirectConnectGatewayIds() {
+        return this.DirectConnectGatewayIds;
+    }
+
+    /**
+     * Set 绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DirectConnectGatewayIds 绑定的专线网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
+        this.DirectConnectGatewayIds = DirectConnectGatewayIds;
+    }
+
+    /**
+     * Get 所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 所属子网ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -300,6 +356,8 @@ public class NatGateway extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DestinationIpPortTranslationNatRuleSet.", this.DestinationIpPortTranslationNatRuleSet);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

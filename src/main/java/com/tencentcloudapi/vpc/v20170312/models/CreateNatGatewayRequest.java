@@ -79,6 +79,13 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * NAT网关所属子网
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get NAT网关名称 
      * @return NatGatewayName NAT网关名称
      */
@@ -207,6 +214,22 @@ public class CreateNatGatewayRequest extends AbstractModel{
     }
 
     /**
+     * Get NAT网关所属子网 
+     * @return SubnetId NAT网关所属子网
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set NAT网关所属子网
+     * @param SubnetId NAT网关所属子网
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

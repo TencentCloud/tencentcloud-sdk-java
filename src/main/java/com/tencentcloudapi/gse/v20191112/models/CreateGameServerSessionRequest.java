@@ -30,7 +30,7 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     private Long MaximumPlayerSessionCount;
 
     /**
-    * 别名ID
+    * 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
     */
     @SerializedName("AliasId")
     @Expose
@@ -44,7 +44,7 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     private String CreatorId;
 
     /**
-    * 舰队ID
+    * 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
     */
     @SerializedName("FleetId")
     @Expose
@@ -102,16 +102,16 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 别名ID 
-     * @return AliasId 别名ID
+     * Get 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID 
+     * @return AliasId 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      */
     public String getAliasId() {
         return this.AliasId;
     }
 
     /**
-     * Set 别名ID
-     * @param AliasId 别名ID
+     * Set 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
+     * @param AliasId 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      */
     public void setAliasId(String AliasId) {
         this.AliasId = AliasId;
@@ -134,16 +134,16 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 舰队ID 
-     * @return FleetId 舰队ID
+     * Get 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID 
+     * @return FleetId 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 舰队ID
-     * @param FleetId 舰队ID
+     * Set 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
+     * @param FleetId 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;

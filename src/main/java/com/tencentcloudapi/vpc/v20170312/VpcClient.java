@@ -259,6 +259,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *将专线网关与NAT网关绑定，专线网关默认路由指向NAT网关
+     * @param req AssociateDirectConnectGatewayNatGatewayRequest
+     * @return AssociateDirectConnectGatewayNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(AssociateDirectConnectGatewayNatGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateDirectConnectGatewayNatGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
      * @param req AssociateNatGatewayAddressRequest
      * @return AssociateNatGatewayAddressResponse
@@ -2733,6 +2751,24 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<DisassociateDhcpIpWithAddressIpResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DisassociateDhcpIpWithAddressIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将专线网关与NAT网关解绑，解绑之后，专线网关将不能通过NAT网关访问公网
+     * @param req DisassociateDirectConnectGatewayNatGatewayRequest
+     * @return DisassociateDirectConnectGatewayNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(DisassociateDirectConnectGatewayNatGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateDirectConnectGatewayNatGateway"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

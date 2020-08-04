@@ -100,6 +100,13 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     private String FaultReportContactNumber;
 
     /**
+    * 物理专线申请者补签用户使用协议
+    */
+    @SerializedName("SignLaw")
+    @Expose
+    private Boolean SignLaw;
+
+    /**
      * Get 物理专线的ID。 
      * @return DirectConnectId 物理专线的ID。
      */
@@ -276,6 +283,22 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 物理专线申请者补签用户使用协议 
+     * @return SignLaw 物理专线申请者补签用户使用协议
+     */
+    public Boolean getSignLaw() {
+        return this.SignLaw;
+    }
+
+    /**
+     * Set 物理专线申请者补签用户使用协议
+     * @param SignLaw 物理专线申请者补签用户使用协议
+     */
+    public void setSignLaw(Boolean SignLaw) {
+        this.SignLaw = SignLaw;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
 
     }
 }

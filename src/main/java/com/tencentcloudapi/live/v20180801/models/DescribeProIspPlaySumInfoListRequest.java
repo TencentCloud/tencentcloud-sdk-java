@@ -40,14 +40,14 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+    * 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
     */
     @SerializedName("StatType")
     @Expose
     private String StatType;
 
     /**
-    * 不填则为总体数据。
+    * 播放域名列表，不填则为全部。
     */
     @SerializedName("PlayDomains")
     @Expose
@@ -126,32 +126,32 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。 
-     * @return StatType 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+     * Get 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。 
+     * @return StatType 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
      */
     public String getStatType() {
         return this.StatType;
     }
 
     /**
-     * Set 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
-     * @param StatType 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+     * Set 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
+     * @param StatType 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
     }
 
     /**
-     * Get 不填则为总体数据。 
-     * @return PlayDomains 不填则为总体数据。
+     * Get 播放域名列表，不填则为全部。 
+     * @return PlayDomains 播放域名列表，不填则为全部。
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set 不填则为总体数据。
-     * @param PlayDomains 不填则为总体数据。
+     * Set 播放域名列表，不填则为全部。
+     * @param PlayDomains 播放域名列表，不填则为全部。
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
