@@ -913,6 +913,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *修改模块配置，已关联实例的模块不支持调整配置。
+     * @param req ModifyModuleConfigRequest
+     * @return ModifyModuleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModuleConfigResponse ModifyModuleConfig(ModifyModuleConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyModuleConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyModuleConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyModuleConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ModifyModuleImage
      * @param req ModifyModuleImageRequest
      * @return ModifyModuleImageResponse

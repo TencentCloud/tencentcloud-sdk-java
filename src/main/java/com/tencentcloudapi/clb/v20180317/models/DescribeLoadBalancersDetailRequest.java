@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoadBalancersDetailRequest extends AbstractModel{
 
     /**
-    * 返回负载均衡列表数目，默认20，最大值1000。
+    * 返回负载均衡列表数目，默认20，最大值100。
     */
     @SerializedName("Limit")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * Get 返回负载均衡列表数目，默认20，最大值1000。 
-     * @return Limit 返回负载均衡列表数目，默认20，最大值1000。
+     * Get 返回负载均衡列表数目，默认20，最大值100。 
+     * @return Limit 返回负载均衡列表数目，默认20，最大值100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回负载均衡列表数目，默认20，最大值1000。
-     * @param Limit 返回负载均衡列表数目，默认20，最大值1000。
+     * Set 返回负载均衡列表数目，默认20，最大值100。
+     * @param Limit 返回负载均衡列表数目，默认20，最大值100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

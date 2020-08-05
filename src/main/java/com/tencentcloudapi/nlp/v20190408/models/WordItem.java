@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class WordItem extends AbstractModel{
 
     /**
-    * 词条创建时间。
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private String CreateTime;
-
-    /**
     * 词条文本内容。
     */
     @SerializedName("Text")
@@ -37,27 +30,18 @@ public class WordItem extends AbstractModel{
     private String Text;
 
     /**
+    * 词条创建时间。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
     * 词条的词性。
     */
     @SerializedName("Pos")
     @Expose
     private String Pos;
-
-    /**
-     * Get 词条创建时间。 
-     * @return CreateTime 词条创建时间。
-     */
-    public String getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set 词条创建时间。
-     * @param CreateTime 词条创建时间。
-     */
-    public void setCreateTime(String CreateTime) {
-        this.CreateTime = CreateTime;
-    }
 
     /**
      * Get 词条文本内容。 
@@ -73,6 +57,22 @@ public class WordItem extends AbstractModel{
      */
     public void setText(String Text) {
         this.Text = Text;
+    }
+
+    /**
+     * Get 词条创建时间。 
+     * @return CreateTime 词条创建时间。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 词条创建时间。
+     * @param CreateTime 词条创建时间。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
@@ -95,8 +95,8 @@ public class WordItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Pos", this.Pos);
 
     }

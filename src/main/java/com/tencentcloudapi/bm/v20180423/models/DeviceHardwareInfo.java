@@ -135,6 +135,13 @@ public class DeviceHardwareInfo extends AbstractModel{
     private Long Cpu;
 
     /**
+    * 机型外部代号
+    */
+    @SerializedName("DeviceClassCode")
+    @Expose
+    private String DeviceClassCode;
+
+    /**
      * Get 设备实例 ID 
      * @return InstanceId 设备实例 ID
      */
@@ -391,6 +398,22 @@ public class DeviceHardwareInfo extends AbstractModel{
     }
 
     /**
+     * Get 机型外部代号 
+     * @return DeviceClassCode 机型外部代号
+     */
+    public String getDeviceClassCode() {
+        return this.DeviceClassCode;
+    }
+
+    /**
+     * Set 机型外部代号
+     * @param DeviceClassCode 机型外部代号
+     */
+    public void setDeviceClassCode(String DeviceClassCode) {
+        this.DeviceClassCode = DeviceClassCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class DeviceHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NicDescription", this.NicDescription);
         this.setParamSimple(map, prefix + "RaidDescription", this.RaidDescription);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "DeviceClassCode", this.DeviceClassCode);
 
     }
 }

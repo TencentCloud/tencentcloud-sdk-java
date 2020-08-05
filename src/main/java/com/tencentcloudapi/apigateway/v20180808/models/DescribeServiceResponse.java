@@ -169,6 +169,14 @@ public class DescribeServiceResponse extends AbstractModel{
     private Long SetId;
 
     /**
+    * 服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -520,6 +528,26 @@ public class DescribeServiceResponse extends AbstractModel{
     }
 
     /**
+     * Get 服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -559,6 +587,7 @@ public class DescribeServiceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "SetId", this.SetId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

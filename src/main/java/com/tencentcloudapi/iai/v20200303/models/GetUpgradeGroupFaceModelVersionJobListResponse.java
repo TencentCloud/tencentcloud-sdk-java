@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotcloud.v20180614.models;
+package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishRRPCMessageResponse extends AbstractModel{
+public class GetUpgradeGroupFaceModelVersionJobListResponse extends AbstractModel{
 
     /**
-    * RRPC消息ID
+    * 人员库升级任务信息列表。
     */
-    @SerializedName("MessageId")
+    @SerializedName("JobInfos")
     @Expose
-    private Long MessageId;
+    private UpgradeJobInfo [] JobInfos;
 
     /**
-    * 设备回复的消息内容，采用base64编码
+    * 升级任务总数量。
     */
-    @SerializedName("PayloadBase64")
+    @SerializedName("JobNum")
     @Expose
-    private String PayloadBase64;
+    private Long JobNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class PublishRRPCMessageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get RRPC消息ID 
-     * @return MessageId RRPC消息ID
+     * Get 人员库升级任务信息列表。 
+     * @return JobInfos 人员库升级任务信息列表。
      */
-    public Long getMessageId() {
-        return this.MessageId;
+    public UpgradeJobInfo [] getJobInfos() {
+        return this.JobInfos;
     }
 
     /**
-     * Set RRPC消息ID
-     * @param MessageId RRPC消息ID
+     * Set 人员库升级任务信息列表。
+     * @param JobInfos 人员库升级任务信息列表。
      */
-    public void setMessageId(Long MessageId) {
-        this.MessageId = MessageId;
+    public void setJobInfos(UpgradeJobInfo [] JobInfos) {
+        this.JobInfos = JobInfos;
     }
 
     /**
-     * Get 设备回复的消息内容，采用base64编码 
-     * @return PayloadBase64 设备回复的消息内容，采用base64编码
+     * Get 升级任务总数量。 
+     * @return JobNum 升级任务总数量。
      */
-    public String getPayloadBase64() {
-        return this.PayloadBase64;
+    public Long getJobNum() {
+        return this.JobNum;
     }
 
     /**
-     * Set 设备回复的消息内容，采用base64编码
-     * @param PayloadBase64 设备回复的消息内容，采用base64编码
+     * Set 升级任务总数量。
+     * @param JobNum 升级任务总数量。
      */
-    public void setPayloadBase64(String PayloadBase64) {
-        this.PayloadBase64 = PayloadBase64;
+    public void setJobNum(Long JobNum) {
+        this.JobNum = JobNum;
     }
 
     /**
@@ -95,8 +95,8 @@ public class PublishRRPCMessageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MessageId", this.MessageId);
-        this.setParamSimple(map, prefix + "PayloadBase64", this.PayloadBase64);
+        this.setParamArrayObj(map, prefix + "JobInfos.", this.JobInfos);
+        this.setParamSimple(map, prefix + "JobNum", this.JobNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

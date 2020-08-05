@@ -38,10 +38,13 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
     /**
     * 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_jp：16k 日语；
     */
     @SerializedName("EngSerViceType")
     @Expose
@@ -158,15 +161,21 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
     /**
      * Get 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语。 
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_jp：16k 日语； 
      * @return EngSerViceType 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_jp：16k 日语；
      */
     public String getEngSerViceType() {
         return this.EngSerViceType;
@@ -174,15 +183,21 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
     /**
      * Set 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_jp：16k 日语；
      * @param EngSerViceType 引擎模型类型。
-8k_zh：电话 8k 中文普通话通用；
-16k_zh：16k 中文普通话通用；
-16k_en：16k 英语；
-16k_ca：16k 粤语。
+电话场景：
+• 8k_zh：电话 8k 中文普通话通用；
+非电话场景：
+• 16k_zh：16k 中文普通话通用；
+• 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_jp：16k 日语；
      */
     public void setEngSerViceType(String EngSerViceType) {
         this.EngSerViceType = EngSerViceType;

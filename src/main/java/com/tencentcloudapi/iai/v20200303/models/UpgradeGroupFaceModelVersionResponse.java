@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotcloud.v20180614.models;
+package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishRRPCMessageResponse extends AbstractModel{
+public class UpgradeGroupFaceModelVersionResponse extends AbstractModel{
 
     /**
-    * RRPC消息ID
+    * 升级任务ID，用于查询、获取升级的进度和结果。
     */
-    @SerializedName("MessageId")
+    @SerializedName("JobId")
     @Expose
-    private Long MessageId;
-
-    /**
-    * 设备回复的消息内容，采用base64编码
-    */
-    @SerializedName("PayloadBase64")
-    @Expose
-    private String PayloadBase64;
+    private String JobId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class PublishRRPCMessageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get RRPC消息ID 
-     * @return MessageId RRPC消息ID
+     * Get 升级任务ID，用于查询、获取升级的进度和结果。 
+     * @return JobId 升级任务ID，用于查询、获取升级的进度和结果。
      */
-    public Long getMessageId() {
-        return this.MessageId;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set RRPC消息ID
-     * @param MessageId RRPC消息ID
+     * Set 升级任务ID，用于查询、获取升级的进度和结果。
+     * @param JobId 升级任务ID，用于查询、获取升级的进度和结果。
      */
-    public void setMessageId(Long MessageId) {
-        this.MessageId = MessageId;
-    }
-
-    /**
-     * Get 设备回复的消息内容，采用base64编码 
-     * @return PayloadBase64 设备回复的消息内容，采用base64编码
-     */
-    public String getPayloadBase64() {
-        return this.PayloadBase64;
-    }
-
-    /**
-     * Set 设备回复的消息内容，采用base64编码
-     * @param PayloadBase64 设备回复的消息内容，采用base64编码
-     */
-    public void setPayloadBase64(String PayloadBase64) {
-        this.PayloadBase64 = PayloadBase64;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class PublishRRPCMessageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MessageId", this.MessageId);
-        this.setParamSimple(map, prefix + "PayloadBase64", this.PayloadBase64);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
