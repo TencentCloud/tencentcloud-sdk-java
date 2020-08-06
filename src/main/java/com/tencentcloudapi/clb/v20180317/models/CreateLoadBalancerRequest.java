@@ -117,6 +117,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private TagInfo [] Tags;
 
     /**
+    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
@@ -337,6 +344,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
+     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -353,6 +376,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

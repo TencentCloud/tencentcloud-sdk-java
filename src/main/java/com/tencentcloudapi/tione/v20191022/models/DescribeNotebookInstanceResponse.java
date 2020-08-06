@@ -190,6 +190,14 @@ Failed: 失败
     private StoppingCondition StoppingCondition;
 
     /**
+    * Cls配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClsConfig")
+    @Expose
+    private ClsConfig ClsConfig;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -625,6 +633,26 @@ Failed: 失败
     }
 
     /**
+     * Get Cls配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClsConfig Cls配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClsConfig getClsConfig() {
+        return this.ClsConfig;
+    }
+
+    /**
+     * Set Cls配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClsConfig Cls配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClsConfig(ClsConfig ClsConfig) {
+        this.ClsConfig = ClsConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -664,6 +692,7 @@ Failed: 失败
         this.setParamSimple(map, prefix + "Prepay", this.Prepay);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+        this.setParamObj(map, prefix + "ClsConfig.", this.ClsConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

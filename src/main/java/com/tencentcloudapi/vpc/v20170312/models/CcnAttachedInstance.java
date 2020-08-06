@@ -105,6 +105,13 @@ public class CcnAttachedInstance extends AbstractModel{
     private String CcnUin;
 
     /**
+    * 关联实例所属的大地域，如: CHINA_MAINLAND
+    */
+    @SerializedName("InstanceArea")
+    @Expose
+    private String InstanceArea;
+
+    /**
      * Get 云联网实例ID。 
      * @return CcnId 云联网实例ID。
      */
@@ -313,6 +320,22 @@ public class CcnAttachedInstance extends AbstractModel{
     }
 
     /**
+     * Get 关联实例所属的大地域，如: CHINA_MAINLAND 
+     * @return InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
+     */
+    public String getInstanceArea() {
+        return this.InstanceArea;
+    }
+
+    /**
+     * Set 关联实例所属的大地域，如: CHINA_MAINLAND
+     * @param InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
+     */
+    public void setInstanceArea(String InstanceArea) {
+        this.InstanceArea = InstanceArea;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -326,6 +349,7 @@ public class CcnAttachedInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "AttachedTime", this.AttachedTime);
         this.setParamSimple(map, prefix + "CcnUin", this.CcnUin);
+        this.setParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SecurityGroupPolicy extends AbstractModel{
 
     /**
-    * 安全组规则索引号。
+    * 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
     */
     @SerializedName("PolicyIndex")
     @Expose
     private Long PolicyIndex;
 
     /**
-    * 协议, 取值: TCP,UDP, ICMP。
+    * 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
     */
     @SerializedName("Protocol")
     @Expose
@@ -100,32 +100,32 @@ public class SecurityGroupPolicy extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * Get 安全组规则索引号。 
-     * @return PolicyIndex 安全组规则索引号。
+     * Get 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。 
+     * @return PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
      */
     public Long getPolicyIndex() {
         return this.PolicyIndex;
     }
 
     /**
-     * Set 安全组规则索引号。
-     * @param PolicyIndex 安全组规则索引号。
+     * Set 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+     * @param PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
      */
     public void setPolicyIndex(Long PolicyIndex) {
         this.PolicyIndex = PolicyIndex;
     }
 
     /**
-     * Get 协议, 取值: TCP,UDP, ICMP。 
-     * @return Protocol 协议, 取值: TCP,UDP, ICMP。
+     * Get 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。 
+     * @return Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议, 取值: TCP,UDP, ICMP。
-     * @param Protocol 协议, 取值: TCP,UDP, ICMP。
+     * Set 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+     * @param Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

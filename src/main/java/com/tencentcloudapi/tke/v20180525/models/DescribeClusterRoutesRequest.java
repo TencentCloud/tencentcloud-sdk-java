@@ -30,6 +30,13 @@ public class DescribeClusterRoutesRequest extends AbstractModel{
     private String RouteTableName;
 
     /**
+    * 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 路由表名称。 
      * @return RouteTableName 路由表名称。
      */
@@ -46,10 +53,27 @@ public class DescribeClusterRoutesRequest extends AbstractModel{
     }
 
     /**
+     * Get 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选） 
+     * @return Filters 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+     * @param Filters 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

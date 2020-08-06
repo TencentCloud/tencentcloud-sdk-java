@@ -31,6 +31,14 @@ public class CommonMixControlParams extends AbstractModel{
     private Long UseMixCropCenter;
 
     /**
+    * 取值范围[0,1]
+填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作
+    */
+    @SerializedName("AllowCopy")
+    @Expose
+    private Long AllowCopy;
+
+    /**
      * Get 取值范围[0,1]。
 填1时，当参数中图层分辨率参数与视频实际分辨率不一致时，自动从视频中按图层设置的分辨率比例进行裁剪。 
      * @return UseMixCropCenter 取值范围[0,1]。
@@ -51,10 +59,31 @@ public class CommonMixControlParams extends AbstractModel{
     }
 
     /**
+     * Get 取值范围[0,1]
+填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作 
+     * @return AllowCopy 取值范围[0,1]
+填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作
+     */
+    public Long getAllowCopy() {
+        return this.AllowCopy;
+    }
+
+    /**
+     * Set 取值范围[0,1]
+填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作
+     * @param AllowCopy 取值范围[0,1]
+填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作
+     */
+    public void setAllowCopy(Long AllowCopy) {
+        this.AllowCopy = AllowCopy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UseMixCropCenter", this.UseMixCropCenter);
+        this.setParamSimple(map, prefix + "AllowCopy", this.AllowCopy);
 
     }
 }

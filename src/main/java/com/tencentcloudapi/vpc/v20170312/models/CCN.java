@@ -95,6 +95,13 @@ public class CCN extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+    */
+    @SerializedName("RoutePriorityFlag")
+    @Expose
+    private Boolean RoutePriorityFlag;
+
+    /**
      * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
@@ -263,6 +270,22 @@ public class CCN extends AbstractModel{
     }
 
     /**
+     * Get 是否支持云联网路由优先级的功能。False：不支持，True：支持。 
+     * @return RoutePriorityFlag 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     */
+    public Boolean getRoutePriorityFlag() {
+        return this.RoutePriorityFlag;
+    }
+
+    /**
+     * Set 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     * @param RoutePriorityFlag 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     */
+    public void setRoutePriorityFlag(Boolean RoutePriorityFlag) {
+        this.RoutePriorityFlag = RoutePriorityFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +299,7 @@ public class CCN extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
 
     }
 }

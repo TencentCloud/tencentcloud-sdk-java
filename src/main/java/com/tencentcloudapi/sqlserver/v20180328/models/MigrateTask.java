@@ -79,7 +79,7 @@ public class MigrateTask extends AbstractModel{
     private String EndTime;
 
     /**
-    * 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+    * 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
     */
     @SerializedName("Status")
     @Expose
@@ -242,16 +242,16 @@ public class MigrateTask extends AbstractModel{
     }
 
     /**
-     * Get 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功） 
-     * @return Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+     * Get 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败） 
+     * @return Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
-     * @param Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+     * Set 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
+     * @param Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
      */
     public void setStatus(Long Status) {
         this.Status = Status;

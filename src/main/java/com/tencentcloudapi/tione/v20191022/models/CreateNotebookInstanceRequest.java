@@ -122,6 +122,13 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     private String AutoStopping;
 
     /**
+    * 接入日志的配置
+    */
+    @SerializedName("ClsConfig")
+    @Expose
+    private ClsConfig ClsConfig;
+
+    /**
      * Get Notebook实例名称，不能超过63个字符
 规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$” 
      * @return NotebookInstanceName Notebook实例名称，不能超过63个字符
@@ -374,6 +381,22 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 接入日志的配置 
+     * @return ClsConfig 接入日志的配置
+     */
+    public ClsConfig getClsConfig() {
+        return this.ClsConfig;
+    }
+
+    /**
+     * Set 接入日志的配置
+     * @param ClsConfig 接入日志的配置
+     */
+    public void setClsConfig(ClsConfig ClsConfig) {
+        this.ClsConfig = ClsConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -389,6 +412,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
         this.setParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
         this.setParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
+        this.setParamObj(map, prefix + "ClsConfig.", this.ClsConfig);
 
     }
 }

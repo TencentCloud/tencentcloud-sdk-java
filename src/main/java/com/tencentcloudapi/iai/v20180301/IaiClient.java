@@ -496,6 +496,44 @@ public class IaiClient extends AbstractClient{
     }
 
     /**
+     *获取人员库升级任务列表
+
+     * @param req GetUpgradeGroupFaceModelVersionJobListRequest
+     * @return GetUpgradeGroupFaceModelVersionJobListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUpgradeGroupFaceModelVersionJobListResponse GetUpgradeGroupFaceModelVersionJobList(GetUpgradeGroupFaceModelVersionJobListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetUpgradeGroupFaceModelVersionJobListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetUpgradeGroupFaceModelVersionJobListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetUpgradeGroupFaceModelVersionJobList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *人员库升级结果查询
+
+     * @param req GetUpgradeGroupFaceModelVersionResultRequest
+     * @return GetUpgradeGroupFaceModelVersionResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUpgradeGroupFaceModelVersionResultResponse GetUpgradeGroupFaceModelVersionResult(GetUpgradeGroupFaceModelVersionResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetUpgradeGroupFaceModelVersionResultResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetUpgradeGroupFaceModelVersionResultResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetUpgradeGroupFaceModelVersionResult"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改人员库名称、备注、自定义描述字段名称。
      * @param req ModifyGroupRequest
      * @return ModifyGroupResponse
@@ -543,6 +581,28 @@ public class IaiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonGroupInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonGroupInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于回滚人员库的人脸识别算法模型版本。单个人员库有且仅有一次回滚机会。
+
+回滚操作会在10s内生效，回滚操作中，您对人员库的操作可能会失效。
+
+注：给客户我会写10s内生效，我们实际上越快越好。待讨论。
+     * @param req RevertGroupFaceModelVersionRequest
+     * @return RevertGroupFaceModelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevertGroupFaceModelVersionResponse RevertGroupFaceModelVersion(RevertGroupFaceModelVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevertGroupFaceModelVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevertGroupFaceModelVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RevertGroupFaceModelVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -659,6 +719,26 @@ public class IaiClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchPersonsReturnsByGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SearchPersonsReturnsByGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *升级人员库。升级过程中，人员库仍然为原算法版本，人员库相关操作仍然支持。升级完成后，人员库为新算法版本。
+单个人员库有且仅支持一次回滚操作。
+注：此处QPS限制为10。
+     * @param req UpgradeGroupFaceModelVersionRequest
+     * @return UpgradeGroupFaceModelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeGroupFaceModelVersionResponse UpgradeGroupFaceModelVersion(UpgradeGroupFaceModelVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeGroupFaceModelVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeGroupFaceModelVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeGroupFaceModelVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

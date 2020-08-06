@@ -86,6 +86,34 @@ public class CcnRoute extends AbstractModel{
     private String InstanceUin;
 
     /**
+    * 路由的扩展状态
+    */
+    @SerializedName("ExtraState")
+    @Expose
+    private String ExtraState;
+
+    /**
+    * 是否动态路由
+    */
+    @SerializedName("IsBgp")
+    @Expose
+    private Boolean IsBgp;
+
+    /**
+    * 路由优先级
+    */
+    @SerializedName("RoutePriority")
+    @Expose
+    private Long RoutePriority;
+
+    /**
+    * 下一跳扩展名称（关联实例的扩展名称）
+    */
+    @SerializedName("InstanceExtraName")
+    @Expose
+    private String InstanceExtraName;
+
+    /**
      * Get 路由策略ID 
      * @return RouteId 路由策略ID
      */
@@ -230,6 +258,70 @@ public class CcnRoute extends AbstractModel{
     }
 
     /**
+     * Get 路由的扩展状态 
+     * @return ExtraState 路由的扩展状态
+     */
+    public String getExtraState() {
+        return this.ExtraState;
+    }
+
+    /**
+     * Set 路由的扩展状态
+     * @param ExtraState 路由的扩展状态
+     */
+    public void setExtraState(String ExtraState) {
+        this.ExtraState = ExtraState;
+    }
+
+    /**
+     * Get 是否动态路由 
+     * @return IsBgp 是否动态路由
+     */
+    public Boolean getIsBgp() {
+        return this.IsBgp;
+    }
+
+    /**
+     * Set 是否动态路由
+     * @param IsBgp 是否动态路由
+     */
+    public void setIsBgp(Boolean IsBgp) {
+        this.IsBgp = IsBgp;
+    }
+
+    /**
+     * Get 路由优先级 
+     * @return RoutePriority 路由优先级
+     */
+    public Long getRoutePriority() {
+        return this.RoutePriority;
+    }
+
+    /**
+     * Set 路由优先级
+     * @param RoutePriority 路由优先级
+     */
+    public void setRoutePriority(Long RoutePriority) {
+        this.RoutePriority = RoutePriority;
+    }
+
+    /**
+     * Get 下一跳扩展名称（关联实例的扩展名称） 
+     * @return InstanceExtraName 下一跳扩展名称（关联实例的扩展名称）
+     */
+    public String getInstanceExtraName() {
+        return this.InstanceExtraName;
+    }
+
+    /**
+     * Set 下一跳扩展名称（关联实例的扩展名称）
+     * @param InstanceExtraName 下一跳扩展名称（关联实例的扩展名称）
+     */
+    public void setInstanceExtraName(String InstanceExtraName) {
+        this.InstanceExtraName = InstanceExtraName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +334,10 @@ public class CcnRoute extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
+        this.setParamSimple(map, prefix + "ExtraState", this.ExtraState);
+        this.setParamSimple(map, prefix + "IsBgp", this.IsBgp);
+        this.setParamSimple(map, prefix + "RoutePriority", this.RoutePriority);
+        this.setParamSimple(map, prefix + "InstanceExtraName", this.InstanceExtraName);
 
     }
 }
