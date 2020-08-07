@@ -58,6 +58,27 @@ public class DescribeBackupsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 按照备份名称筛选，不填则不筛选此项
+    */
+    @SerializedName("BackupName")
+    @Expose
+    private String BackupName;
+
+    /**
+    * 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private Long Strategy;
+
+    /**
+    * 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+    */
+    @SerializedName("BackupWay")
+    @Expose
+    private Long BackupWay;
+
+    /**
      * Get 开始时间(yyyy-MM-dd HH:mm:ss) 
      * @return StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
@@ -138,6 +159,54 @@ public class DescribeBackupsRequest extends AbstractModel{
     }
 
     /**
+     * Get 按照备份名称筛选，不填则不筛选此项 
+     * @return BackupName 按照备份名称筛选，不填则不筛选此项
+     */
+    public String getBackupName() {
+        return this.BackupName;
+    }
+
+    /**
+     * Set 按照备份名称筛选，不填则不筛选此项
+     * @param BackupName 按照备份名称筛选，不填则不筛选此项
+     */
+    public void setBackupName(String BackupName) {
+        this.BackupName = BackupName;
+    }
+
+    /**
+     * Get 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项 
+     * @return Strategy 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
+     */
+    public Long getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
+     * @param Strategy 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
+     */
+    public void setStrategy(Long Strategy) {
+        this.Strategy = Strategy;
+    }
+
+    /**
+     * Get 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项 
+     * @return BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     */
+    public Long getBackupWay() {
+        return this.BackupWay;
+    }
+
+    /**
+     * Set 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     * @param BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     */
+    public void setBackupWay(Long BackupWay) {
+        this.BackupWay = BackupWay;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +215,9 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "BackupName", this.BackupName);
+        this.setParamSimple(map, prefix + "Strategy", this.Strategy);
+        this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
 
     }
 }

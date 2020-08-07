@@ -326,6 +326,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBackupByFlowId)用于通过备份创建流程的ID查询创建的备份详情，流程ID可从接口CreateBackup中获得。
+     * @param req DescribeBackupByFlowIdRequest
+     * @return DescribeBackupByFlowIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupByFlowIdResponse DescribeBackupByFlowId(DescribeBackupByFlowIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupByFlowIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupByFlowIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupByFlowId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeBackups)用于查询备份列表。
      * @param req DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -337,6 +355,24 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeCrossRegionZone)根据主实例查询备机的容灾地域和可用区。
+     * @param req DescribeCrossRegionZoneRequest
+     * @return DescribeCrossRegionZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossRegionZoneResponse DescribeCrossRegionZone(DescribeCrossRegionZoneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCrossRegionZoneResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCrossRegionZoneResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCrossRegionZone"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -769,6 +805,24 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAccountRemark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyBackupName)用于修改备份名称。
+     * @param req ModifyBackupNameRequest
+     * @return ModifyBackupNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupNameResponse ModifyBackupName(ModifyBackupNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyBackupName"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

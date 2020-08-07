@@ -44,6 +44,20 @@ public class PhoneVerificationRequest extends AbstractModel{
     private String Phone;
 
     /**
+    * 有加密需求的用户，接入传入kms的CiphertextBlob
+    */
+    @SerializedName("CiphertextBlob")
+    @Expose
+    private String CiphertextBlob;
+
+    /**
+    * 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+    */
+    @SerializedName("EncryptList")
+    @Expose
+    private String [] EncryptList;
+
+    /**
      * Get 身份证号 
      * @return IdCard 身份证号
      */
@@ -92,12 +106,46 @@ public class PhoneVerificationRequest extends AbstractModel{
     }
 
     /**
+     * Get 有加密需求的用户，接入传入kms的CiphertextBlob 
+     * @return CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob
+     */
+    public String getCiphertextBlob() {
+        return this.CiphertextBlob;
+    }
+
+    /**
+     * Set 有加密需求的用户，接入传入kms的CiphertextBlob
+     * @param CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob
+     */
+    public void setCiphertextBlob(String CiphertextBlob) {
+        this.CiphertextBlob = CiphertextBlob;
+    }
+
+    /**
+     * Get 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个 
+     * @return EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+     */
+    public String [] getEncryptList() {
+        return this.EncryptList;
+    }
+
+    /**
+     * Set 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+     * @param EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+     */
+    public void setEncryptList(String [] EncryptList) {
+        this.EncryptList = EncryptList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
+        this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
+        this.setParamArraySimple(map, prefix + "EncryptList.", this.EncryptList);
 
     }
 }

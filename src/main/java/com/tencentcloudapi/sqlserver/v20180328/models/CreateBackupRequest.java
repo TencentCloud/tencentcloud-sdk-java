@@ -44,6 +44,13 @@ public class CreateBackupRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+    */
+    @SerializedName("BackupName")
+    @Expose
+    private String BackupName;
+
+    /**
      * Get 备份策略(0-实例备份 1-多库备份) 
      * @return Strategy 备份策略(0-实例备份 1-多库备份)
      */
@@ -92,12 +99,29 @@ public class CreateBackupRequest extends AbstractModel{
     }
 
     /**
+     * Get 备份名称，若不填则自动生成“实例ID_备份开始时间戳” 
+     * @return BackupName 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+     */
+    public String getBackupName() {
+        return this.BackupName;
+    }
+
+    /**
+     * Set 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+     * @param BackupName 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+     */
+    public void setBackupName(String BackupName) {
+        this.BackupName = BackupName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamArraySimple(map, prefix + "DBNames.", this.DBNames);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "BackupName", this.BackupName);
 
     }
 }

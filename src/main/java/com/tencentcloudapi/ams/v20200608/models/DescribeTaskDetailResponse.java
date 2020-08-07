@@ -153,6 +153,14 @@ Block 建议屏蔽；
     private ImageSegments [] ImageSegments;
 
     /**
+    * 音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioText")
+    @Expose
+    private String AudioText;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -500,6 +508,26 @@ Block 建议屏蔽；
     }
 
     /**
+     * Get 音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioText 音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAudioText() {
+        return this.AudioText;
+    }
+
+    /**
+     * Set 音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioText 音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioText(String AudioText) {
+        this.AudioText = AudioText;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -534,6 +562,7 @@ Block 建议屏蔽；
         this.setParamSimple(map, prefix + "TryInSeconds", this.TryInSeconds);
         this.setParamArrayObj(map, prefix + "AudioSegments.", this.AudioSegments);
         this.setParamArrayObj(map, prefix + "ImageSegments.", this.ImageSegments);
+        this.setParamSimple(map, prefix + "AudioText", this.AudioText);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
