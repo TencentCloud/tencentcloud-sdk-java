@@ -97,7 +97,8 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     private String [] AdditionalCodeRepositories;
 
     /**
-    * 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+    * 已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
     */
     @SerializedName("ClsAccess")
@@ -122,7 +123,7 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     private String AutoStopping;
 
     /**
-    * 接入日志的配置
+    * 接入日志的配置，默认接入免费日志
     */
     @SerializedName("ClsConfig")
     @Expose
@@ -317,9 +318,11 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     * Get 已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择 
-     * @return ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     * @return ClsAccess 已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
      */
     public String getClsAccess() {
@@ -327,9 +330,11 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Set 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     * Set 已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
-     * @param ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     * @param ClsAccess 已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
      */
     public void setClsAccess(String ClsAccess) {
@@ -381,16 +386,16 @@ public class CreateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 接入日志的配置 
-     * @return ClsConfig 接入日志的配置
+     * Get 接入日志的配置，默认接入免费日志 
+     * @return ClsConfig 接入日志的配置，默认接入免费日志
      */
     public ClsConfig getClsConfig() {
         return this.ClsConfig;
     }
 
     /**
-     * Set 接入日志的配置
-     * @param ClsConfig 接入日志的配置
+     * Set 接入日志的配置，默认接入免费日志
+     * @param ClsConfig 接入日志的配置，默认接入免费日志
      */
     public void setClsConfig(ClsConfig ClsConfig) {
         this.ClsConfig = ClsConfig;

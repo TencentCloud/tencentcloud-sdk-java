@@ -65,6 +65,22 @@ public class CreateModuleRequest extends AbstractModel{
     private Long DefaultDataDiskSize;
 
     /**
+    * 是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+    */
+    @SerializedName("CloseIpDirect")
+    @Expose
+    private Boolean CloseIpDirect;
+
+    /**
+    * 标签列表。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。 
      * @return ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      */
@@ -161,6 +177,46 @@ public class CreateModuleRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通 
+     * @return CloseIpDirect 是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+     */
+    public Boolean getCloseIpDirect() {
+        return this.CloseIpDirect;
+    }
+
+    /**
+     * Set 是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+     * @param CloseIpDirect 是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+     */
+    public void setCloseIpDirect(Boolean CloseIpDirect) {
+        this.CloseIpDirect = CloseIpDirect;
+    }
+
+    /**
+     * Get 标签列表。 
+     * @return TagSpecification 标签列表。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签列表。
+     * @param TagSpecification 标签列表。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +226,8 @@ public class CreateModuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "DefaultSystemDiskSize", this.DefaultSystemDiskSize);
         this.setParamSimple(map, prefix + "DefaultDataDiskSize", this.DefaultDataDiskSize);
+        this.setParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

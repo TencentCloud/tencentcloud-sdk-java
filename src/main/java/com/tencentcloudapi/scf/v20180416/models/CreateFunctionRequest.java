@@ -156,6 +156,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
+    * 函数初始化超时时间
+    */
+    @SerializedName("InitTimeout")
+    @Expose
+    private Long InitTimeout;
+
+    /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -460,6 +467,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get 函数初始化超时时间 
+     * @return InitTimeout 函数初始化超时时间
+     */
+    public Long getInitTimeout() {
+        return this.InitTimeout;
+    }
+
+    /**
+     * Set 函数初始化超时时间
+     * @param InitTimeout 函数初始化超时时间
+     */
+    public void setInitTimeout(Long InitTimeout) {
+        this.InitTimeout = InitTimeout;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +505,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+        this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
 
     }
 }

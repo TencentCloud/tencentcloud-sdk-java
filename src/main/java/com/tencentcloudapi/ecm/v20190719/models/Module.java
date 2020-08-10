@@ -89,6 +89,21 @@ DELETEFAILED：删除失败
     private Long DefaultBandwidth;
 
     /**
+    * 标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
+    * 是否关闭IP直通
+    */
+    @SerializedName("CloseIpDirect")
+    @Expose
+    private Long CloseIpDirect;
+
+    /**
      * Get 模块Id 
      * @return ModuleId 模块Id
      */
@@ -245,6 +260,42 @@ DELETEFAILED：删除失败
     }
 
     /**
+     * Get 标签集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
+     * Get 是否关闭IP直通 
+     * @return CloseIpDirect 是否关闭IP直通
+     */
+    public Long getCloseIpDirect() {
+        return this.CloseIpDirect;
+    }
+
+    /**
+     * Set 是否关闭IP直通
+     * @param CloseIpDirect 是否关闭IP直通
+     */
+    public void setCloseIpDirect(Long CloseIpDirect) {
+        this.CloseIpDirect = CloseIpDirect;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -257,6 +308,8 @@ DELETEFAILED：删除失败
         this.setParamObj(map, prefix + "DefaultImage.", this.DefaultImage);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "DefaultBandwidth", this.DefaultBandwidth);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
 
     }
 }

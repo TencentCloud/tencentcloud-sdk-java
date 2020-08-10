@@ -142,6 +142,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
+    * 函数初始化执行超时时间，默认15秒
+    */
+    @SerializedName("InitTimeout")
+    @Expose
+    private Long InitTimeout;
+
+    /**
      * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
@@ -414,6 +421,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get 函数初始化执行超时时间，默认15秒 
+     * @return InitTimeout 函数初始化执行超时时间，默认15秒
+     */
+    public Long getInitTimeout() {
+        return this.InitTimeout;
+    }
+
+    /**
+     * Set 函数初始化执行超时时间，默认15秒
+     * @param InitTimeout 函数初始化执行超时时间，默认15秒
+     */
+    public void setInitTimeout(Long InitTimeout) {
+        this.InitTimeout = InitTimeout;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+        this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
 
     }
 }

@@ -92,6 +92,24 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与公安权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
+     * @param req CheckIdCardInformationRequest
+     * @return CheckIdCardInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckIdCardInformationResponse CheckIdCardInformation(CheckIdCardInformationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckIdCardInformationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckIdCardInformationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CheckIdCardInformation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
      * @param req DetectAuthRequest
      * @return DetectAuthResponse

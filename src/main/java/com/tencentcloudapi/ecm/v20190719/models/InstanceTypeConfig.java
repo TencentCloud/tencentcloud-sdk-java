@@ -72,7 +72,7 @@ public class InstanceTypeConfig extends AbstractModel{
     private InstanceFamilyTypeConfig InstanceFamilyTypeConfig;
 
     /**
-    * 机型额外信息
+    * 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtInfo")
@@ -192,9 +192,9 @@ public class InstanceTypeConfig extends AbstractModel{
     }
 
     /**
-     * Get 机型额外信息
+     * Get 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtInfo 机型额外信息
+     * @return ExtInfo 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtInfo() {
@@ -202,9 +202,9 @@ public class InstanceTypeConfig extends AbstractModel{
     }
 
     /**
-     * Set 机型额外信息
+     * Set 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtInfo 机型额外信息
+     * @param ExtInfo 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtInfo(String ExtInfo) {

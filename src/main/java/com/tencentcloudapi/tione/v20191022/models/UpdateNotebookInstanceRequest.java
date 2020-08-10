@@ -106,7 +106,7 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     private Boolean DisassociateAdditionalCodeRepositories;
 
     /**
-    * 是否开启CLS日志服务，可取值Enabled/Disabled
+    * 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
     */
     @SerializedName("ClsAccess")
     @Expose
@@ -129,7 +129,7 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     private StoppingCondition StoppingCondition;
 
     /**
-    * 接入日志的配置
+    * 接入日志的配置，默认使用免费日志服务。
     */
     @SerializedName("ClsConfig")
     @Expose
@@ -336,16 +336,16 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启CLS日志服务，可取值Enabled/Disabled 
-     * @return ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled
+     * Get 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled 
+     * @return ClsAccess 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
      */
     public String getClsAccess() {
         return this.ClsAccess;
     }
 
     /**
-     * Set 是否开启CLS日志服务，可取值Enabled/Disabled
-     * @param ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled
+     * Set 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
+     * @param ClsAccess 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
      */
     public void setClsAccess(String ClsAccess) {
         this.ClsAccess = ClsAccess;
@@ -392,16 +392,16 @@ public class UpdateNotebookInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 接入日志的配置 
-     * @return ClsConfig 接入日志的配置
+     * Get 接入日志的配置，默认使用免费日志服务。 
+     * @return ClsConfig 接入日志的配置，默认使用免费日志服务。
      */
     public ClsConfig getClsConfig() {
         return this.ClsConfig;
     }
 
     /**
-     * Set 接入日志的配置
-     * @param ClsConfig 接入日志的配置
+     * Set 接入日志的配置，默认使用免费日志服务。
+     * @param ClsConfig 接入日志的配置，默认使用免费日志服务。
      */
     public void setClsConfig(ClsConfig ClsConfig) {
         this.ClsConfig = ClsConfig;

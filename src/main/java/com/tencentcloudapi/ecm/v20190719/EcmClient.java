@@ -931,7 +931,7 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
-     *ModifyModuleImage
+     *修改模块的默认镜像
      * @param req ModifyModuleImageRequest
      * @return ModifyModuleImageResponse
      * @throws TencentCloudSDKException
@@ -942,6 +942,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ModifyModuleImageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyModuleImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改模块IP直通。
+     * @param req ModifyModuleIpDirectRequest
+     * @return ModifyModuleIpDirectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModuleIpDirectResponse ModifyModuleIpDirect(ModifyModuleIpDirectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyModuleIpDirectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyModuleIpDirectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyModuleIpDirect"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

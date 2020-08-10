@@ -114,7 +114,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long FilterModal;
 
     /**
-    * 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。（该功能灰度上线中）
+    * 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
     */
     @SerializedName("FilterPunc")
     @Expose
@@ -348,16 +348,16 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。（该功能灰度上线中） 
-     * @return FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。（该功能灰度上线中）
+     * Get 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。 
+     * @return FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
      */
     public Long getFilterPunc() {
         return this.FilterPunc;
     }
 
     /**
-     * Set 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。（该功能灰度上线中）
-     * @param FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。（该功能灰度上线中）
+     * Set 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+     * @param FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
      */
     public void setFilterPunc(Long FilterPunc) {
         this.FilterPunc = FilterPunc;

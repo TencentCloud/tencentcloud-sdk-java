@@ -31,6 +31,7 @@ public class SearchFacesReturnsByGroupRequest extends AbstractModel{
 
     /**
     * 图片 base64 数据，base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("Image")
@@ -39,6 +40,7 @@ public class SearchFacesReturnsByGroupRequest extends AbstractModel{
 
     /**
     * 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的Url速度和稳定性可能受一定影响。
@@ -127,8 +129,10 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     /**
      * Get 图片 base64 数据，base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Image 图片 base64 数据，base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getImage() {
@@ -137,8 +141,10 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     /**
      * Set 图片 base64 数据，base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param Image 图片 base64 数据，base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setImage(String Image) {
@@ -147,11 +153,13 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     /**
      * Get 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的Url速度和稳定性可能受一定影响。
@@ -163,11 +171,13 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Set 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的Url速度和稳定性可能受一定影响。

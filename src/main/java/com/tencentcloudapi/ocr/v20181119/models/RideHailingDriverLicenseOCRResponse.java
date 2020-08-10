@@ -30,7 +30,7 @@ public class RideHailingDriverLicenseOCRResponse extends AbstractModel{
     private String Name;
 
     /**
-    * 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
+    * 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
     */
     @SerializedName("LicenseNumber")
     @Expose
@@ -44,14 +44,14 @@ public class RideHailingDriverLicenseOCRResponse extends AbstractModel{
     private String StartDate;
 
     /**
-    * 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
+    * 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-    * 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
+    * 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
     */
     @SerializedName("ReleaseDate")
     @Expose
@@ -81,16 +81,16 @@ public class RideHailingDriverLicenseOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号 
-     * @return LicenseNumber 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
+     * Get 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号 
+     * @return LicenseNumber 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
-     * @param LicenseNumber 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
+     * Set 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
+     * @param LicenseNumber 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
@@ -113,32 +113,32 @@ public class RideHailingDriverLicenseOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止 
-     * @return EndDate 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
+     * Get 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止 
+     * @return EndDate 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
-     * @param EndDate 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
+     * Set 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
+     * @param EndDate 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期 
-     * @return ReleaseDate 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
+     * Get 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期 
+     * @return ReleaseDate 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
      */
     public String getReleaseDate() {
         return this.ReleaseDate;
     }
 
     /**
-     * Set 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
-     * @param ReleaseDate 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
+     * Set 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
+     * @param ReleaseDate 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
      */
     public void setReleaseDate(String ReleaseDate) {
         this.ReleaseDate = ReleaseDate;

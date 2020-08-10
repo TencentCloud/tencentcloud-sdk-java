@@ -163,7 +163,7 @@ public class GetFunctionResponse extends AbstractModel{
     private String InstallDependency;
 
     /**
-    * 函数状态
+    * 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
     */
     @SerializedName("Status")
     @Expose
@@ -278,7 +278,7 @@ public class GetFunctionResponse extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
-    * 函数的计费状态
+    * 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableStatus")
@@ -292,6 +292,13 @@ public class GetFunctionResponse extends AbstractModel{
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
+
+    /**
+    * 函数初始化超时时间
+    */
+    @SerializedName("InitTimeout")
+    @Expose
+    private Long InitTimeout;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -621,16 +628,16 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
-     * Get 函数状态 
-     * @return Status 函数状态
+     * Get 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175) 
+     * @return Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 函数状态
-     * @param Status 函数状态
+     * Set 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+     * @param Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -889,9 +896,9 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
-     * Get 函数的计费状态
+     * Get 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AvailableStatus 函数的计费状态
+     * @return AvailableStatus 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAvailableStatus() {
@@ -899,9 +906,9 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
-     * Set 函数的计费状态
+     * Set 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AvailableStatus 函数的计费状态
+     * @param AvailableStatus 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableStatus(String AvailableStatus) {
@@ -926,6 +933,22 @@ public class GetFunctionResponse extends AbstractModel{
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
+    }
+
+    /**
+     * Get 函数初始化超时时间 
+     * @return InitTimeout 函数初始化超时时间
+     */
+    public Long getInitTimeout() {
+        return this.InitTimeout;
+    }
+
+    /**
+     * Set 函数初始化超时时间
+     * @param InitTimeout 函数初始化超时时间
+     */
+    public void setInitTimeout(Long InitTimeout) {
+        this.InitTimeout = InitTimeout;
     }
 
     /**
@@ -986,6 +1009,7 @@ public class GetFunctionResponse extends AbstractModel{
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
