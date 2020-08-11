@@ -74,6 +74,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（CompleteMigration）作用是完成一个迁移任务
+     * @param req CompleteMigrationRequest
+     * @return CompleteMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompleteMigrationResponse CompleteMigration(CompleteMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CompleteMigrationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CompleteMigrationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CompleteMigration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateAccount）用于创建实例账号
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -463,6 +481,24 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMaintenanceSpanResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMaintenanceSpan"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeMigrationDatabases）的作用是查询待迁移数据库列表
+     * @param req DescribeMigrationDatabasesRequest
+     * @return DescribeMigrationDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigrationDatabasesResponse DescribeMigrationDatabases(DescribeMigrationDatabasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMigrationDatabasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMigrationDatabasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMigrationDatabases"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1028,6 +1064,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（QueryMigrationCheckProcess）的作用是查询迁移检查任务的进度，适用于迁移源的类型为TencentDB for SQLServer 的迁移方式
+     * @param req QueryMigrationCheckProcessRequest
+     * @return QueryMigrationCheckProcessResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMigrationCheckProcessResponse QueryMigrationCheckProcess(QueryMigrationCheckProcessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMigrationCheckProcessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMigrationCheckProcessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryMigrationCheckProcess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
      * @param req RemoveBackupsRequest
      * @return RemoveBackupsResponse
@@ -1165,6 +1219,42 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RunMigrationResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RunMigration"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（StartMigrationCheck）的作用是启动一个迁移前的校验任务，适用于迁移源的类型为TencentDB for SQLServer 的迁移方式
+     * @param req StartMigrationCheckRequest
+     * @return StartMigrationCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartMigrationCheckResponse StartMigrationCheck(StartMigrationCheckRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartMigrationCheckResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartMigrationCheckResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartMigrationCheck"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（StopMigration）作用是中止一个迁移任务
+     * @param req StopMigrationRequest
+     * @return StopMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopMigrationResponse StopMigration(StopMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopMigrationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopMigrationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopMigration"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

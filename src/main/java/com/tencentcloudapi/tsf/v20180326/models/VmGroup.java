@@ -207,6 +207,14 @@ public class VmGroup extends AbstractModel{
     private Long UpdatedTime;
 
     /**
+    * 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployDesc")
+    @Expose
+    private String DeployDesc;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -667,6 +675,26 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
+     * Get 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployDesc 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeployDesc() {
+        return this.DeployDesc;
+    }
+
+    /**
+     * Set 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployDesc 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployDesc(String DeployDesc) {
+        this.DeployDesc = DeployDesc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -693,6 +721,7 @@ public class VmGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
 
     }
 }

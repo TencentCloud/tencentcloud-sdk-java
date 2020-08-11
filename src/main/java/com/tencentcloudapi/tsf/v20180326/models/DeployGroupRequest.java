@@ -44,6 +44,13 @@ public class DeployGroupRequest extends AbstractModel{
     private String StartupParameters;
 
     /**
+    * 部署应用描述信息
+    */
+    @SerializedName("DeployDesc")
+    @Expose
+    private String DeployDesc;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -92,12 +99,29 @@ public class DeployGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 部署应用描述信息 
+     * @return DeployDesc 部署应用描述信息
+     */
+    public String getDeployDesc() {
+        return this.DeployDesc;
+    }
+
+    /**
+     * Set 部署应用描述信息
+     * @param DeployDesc 部署应用描述信息
+     */
+    public void setDeployDesc(String DeployDesc) {
+        this.DeployDesc = DeployDesc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
+        this.setParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
 
     }
 }

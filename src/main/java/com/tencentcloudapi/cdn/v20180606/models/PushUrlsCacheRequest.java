@@ -49,6 +49,13 @@ global：预热全球节点
     private String Area;
 
     /**
+    * 填写"middle"或不填充时预热至中间层节点
+    */
+    @SerializedName("Layer")
+    @Expose
+    private String Layer;
+
+    /**
      * Get URL 列表，需要包含协议头部 http:// 或 https:// 
      * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
@@ -117,12 +124,29 @@ global：预热全球节点
     }
 
     /**
+     * Get 填写"middle"或不填充时预热至中间层节点 
+     * @return Layer 填写"middle"或不填充时预热至中间层节点
+     */
+    public String getLayer() {
+        return this.Layer;
+    }
+
+    /**
+     * Set 填写"middle"或不填充时预热至中间层节点
+     * @param Layer 填写"middle"或不填充时预热至中间层节点
+     */
+    public void setLayer(String Layer) {
+        this.Layer = Layer;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
         this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Layer", this.Layer);
 
     }
 }

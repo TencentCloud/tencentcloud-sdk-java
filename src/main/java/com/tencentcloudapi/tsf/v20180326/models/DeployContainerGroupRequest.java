@@ -191,6 +191,27 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private String MaxUnavailable;
 
     /**
+    * 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+    */
+    @SerializedName("HealthCheckSettings")
+    @Expose
+    private HealthCheckSettings HealthCheckSettings;
+
+    /**
+    * 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+    */
+    @SerializedName("Envs")
+    @Expose
+    private Env [] Envs;
+
+    /**
+    * 容器部署组的网络设置。
+    */
+    @SerializedName("ServiceSetting")
+    @Expose
+    private ServiceSetting ServiceSetting;
+
+    /**
      * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
@@ -575,6 +596,54 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 健康检查配置信息，若不指定该参数，则默认不设置健康检查。 
+     * @return HealthCheckSettings 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+     */
+    public HealthCheckSettings getHealthCheckSettings() {
+        return this.HealthCheckSettings;
+    }
+
+    /**
+     * Set 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+     * @param HealthCheckSettings 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+     */
+    public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
+        this.HealthCheckSettings = HealthCheckSettings;
+    }
+
+    /**
+     * Get 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。 
+     * @return Envs 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+     */
+    public Env [] getEnvs() {
+        return this.Envs;
+    }
+
+    /**
+     * Set 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+     * @param Envs 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+     */
+    public void setEnvs(Env [] Envs) {
+        this.Envs = Envs;
+    }
+
+    /**
+     * Get 容器部署组的网络设置。 
+     * @return ServiceSetting 容器部署组的网络设置。
+     */
+    public ServiceSetting getServiceSetting() {
+        return this.ServiceSetting;
+    }
+
+    /**
+     * Set 容器部署组的网络设置。
+     * @param ServiceSetting 容器部署组的网络设置。
+     */
+    public void setServiceSetting(ServiceSetting ServiceSetting) {
+        this.ServiceSetting = ServiceSetting;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -602,6 +671,9 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IstioMemLimit", this.IstioMemLimit);
         this.setParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
         this.setParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
+        this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+        this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
+        this.setParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
 
     }
 }

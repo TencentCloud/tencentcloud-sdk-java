@@ -272,6 +272,24 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除指定镜像
+     * @param req DeleteImageRequest
+     * @return DeleteImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageResponse DeleteImage(DeleteImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于删除个人版全局镜像版本自动清理策略
      * @param req DeleteImageLifecycleGlobalPersonalRequest
      * @return DeleteImageLifecycleGlobalPersonalResponse

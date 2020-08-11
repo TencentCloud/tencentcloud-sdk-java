@@ -1070,6 +1070,25 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持网约车运输证关键字段的识别，包括交运管许可字号、车辆所有人、车辆号牌、起始日期、截止日期、发证日期。
+           
+     * @param req RideHailingTransportLicenseOCRRequest
+     * @return RideHailingTransportLicenseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RideHailingTransportLicenseOCRResponse RideHailingTransportLicenseOCR(RideHailingTransportLicenseOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RideHailingTransportLicenseOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RideHailingTransportLicenseOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RideHailingTransportLicenseOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *印章识别已支持各类印章，包括发票章，财务章等，适用于公文，票据等场景。
      * @param req SealOCRRequest
      * @return SealOCRResponse
@@ -1208,6 +1227,24 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<VatInvoiceOCRResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "VatInvoiceOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票。
+     * @param req VatInvoiceVerifyRequest
+     * @return VatInvoiceVerifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public VatInvoiceVerifyResponse VatInvoiceVerify(VatInvoiceVerifyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VatInvoiceVerifyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<VatInvoiceVerifyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "VatInvoiceVerify"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

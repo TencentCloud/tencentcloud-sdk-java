@@ -40,6 +40,7 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
     */
     @SerializedName("CosBucket")
     @Expose
@@ -145,8 +146,10 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Cos Bucket名称。 
+     * Get Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。 
      * @return CosBucket Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
      */
     public String getCosBucket() {
         return this.CosBucket;
@@ -154,7 +157,9 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
      * @param CosBucket Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;

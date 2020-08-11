@@ -13,30 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotexplorer.v20190423.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDeviceResponse extends AbstractModel{
+public class QueryMigrationCheckProcessResponse extends AbstractModel{
 
     /**
-    * 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总步骤数量
     */
-    @SerializedName("ResultCode")
+    @SerializedName("TotalStep")
     @Expose
-    private String ResultCode;
+    private Long TotalStep;
 
     /**
-    * 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 当前步骤编号，从1开始
     */
-    @SerializedName("ResultMessage")
+    @SerializedName("CurrentStep")
     @Expose
-    private String ResultMessage;
+    private Long CurrentStep;
+
+    /**
+    * 所有步骤详情
+    */
+    @SerializedName("StepDetails")
+    @Expose
+    private StepDetail [] StepDetails;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +51,51 @@ public class DeleteDeviceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultCode 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总步骤数量 
+     * @return TotalStep 总步骤数量
      */
-    public String getResultCode() {
-        return this.ResultCode;
+    public Long getTotalStep() {
+        return this.TotalStep;
     }
 
     /**
-     * Set 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultCode 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总步骤数量
+     * @param TotalStep 总步骤数量
      */
-    public void setResultCode(String ResultCode) {
-        this.ResultCode = ResultCode;
+    public void setTotalStep(Long TotalStep) {
+        this.TotalStep = TotalStep;
     }
 
     /**
-     * Get 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultMessage 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当前步骤编号，从1开始 
+     * @return CurrentStep 当前步骤编号，从1开始
      */
-    public String getResultMessage() {
-        return this.ResultMessage;
+    public Long getCurrentStep() {
+        return this.CurrentStep;
     }
 
     /**
-     * Set 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultMessage 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 当前步骤编号，从1开始
+     * @param CurrentStep 当前步骤编号，从1开始
      */
-    public void setResultMessage(String ResultMessage) {
-        this.ResultMessage = ResultMessage;
+    public void setCurrentStep(Long CurrentStep) {
+        this.CurrentStep = CurrentStep;
+    }
+
+    /**
+     * Get 所有步骤详情 
+     * @return StepDetails 所有步骤详情
+     */
+    public StepDetail [] getStepDetails() {
+        return this.StepDetails;
+    }
+
+    /**
+     * Set 所有步骤详情
+     * @param StepDetails 所有步骤详情
+     */
+    public void setStepDetails(StepDetail [] StepDetails) {
+        this.StepDetails = StepDetails;
     }
 
     /**
@@ -105,8 +118,9 @@ public class DeleteDeviceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultCode", this.ResultCode);
-        this.setParamSimple(map, prefix + "ResultMessage", this.ResultMessage);
+        this.setParamSimple(map, prefix + "TotalStep", this.TotalStep);
+        this.setParamSimple(map, prefix + "CurrentStep", this.CurrentStep);
+        this.setParamArrayObj(map, prefix + "StepDetails.", this.StepDetails);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

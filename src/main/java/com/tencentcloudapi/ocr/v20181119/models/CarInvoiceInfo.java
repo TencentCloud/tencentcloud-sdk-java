@@ -37,6 +37,13 @@ public class CarInvoiceInfo extends AbstractModel{
     private String Value;
 
     /**
+    * 文本行在旋转纠正之后的图像中的像素坐标。
+    */
+    @SerializedName("Rect")
+    @Expose
+    private Rect Rect;
+
+    /**
      * Get 识别出的字段名称（关键字）。 
      * @return Name 识别出的字段名称（关键字）。
      */
@@ -69,11 +76,28 @@ public class CarInvoiceInfo extends AbstractModel{
     }
 
     /**
+     * Get 文本行在旋转纠正之后的图像中的像素坐标。 
+     * @return Rect 文本行在旋转纠正之后的图像中的像素坐标。
+     */
+    public Rect getRect() {
+        return this.Rect;
+    }
+
+    /**
+     * Set 文本行在旋转纠正之后的图像中的像素坐标。
+     * @param Rect 文本行在旋转纠正之后的图像中的像素坐标。
+     */
+    public void setRect(Rect Rect) {
+        this.Rect = Rect;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamObj(map, prefix + "Rect.", this.Rect);
 
     }
 }

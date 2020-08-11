@@ -81,7 +81,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private String Data;
 
     /**
-    * 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+    * 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
     */
     @SerializedName("DataLen")
     @Expose
@@ -136,6 +136,13 @@ public class CreateRecTaskRequest extends AbstractModel{
     @SerializedName("SpeakerNumber")
     @Expose
     private Long SpeakerNumber;
+
+    /**
+    * 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+    */
+    @SerializedName("FilterPunc")
+    @Expose
+    private Long FilterPunc;
 
     /**
      * Get 引擎模型类型。
@@ -286,16 +293,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。 
-     * @return DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * Get 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。 
+     * @return DataLen 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public Long getDataLen() {
         return this.DataLen;
     }
 
     /**
-     * Set 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
-     * @param DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * Set 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
+     * @param DataLen 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public void setDataLen(Long DataLen) {
         this.DataLen = DataLen;
@@ -418,6 +425,22 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。 
+     * @return FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+     */
+    public Long getFilterPunc() {
+        return this.FilterPunc;
+    }
+
+    /**
+     * Set 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+     * @param FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+     */
+    public void setFilterPunc(Long FilterPunc) {
+        this.FilterPunc = FilterPunc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -436,6 +459,7 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "SpeakerDiarization", this.SpeakerDiarization);
         this.setParamSimple(map, prefix + "SpeakerNumber", this.SpeakerNumber);
+        this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
 
     }
 }
