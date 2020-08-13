@@ -29,7 +29,7 @@ public class AccountInfo extends AbstractModel{
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
     */
     @SerializedName("AccountType")
     @Expose
@@ -63,14 +63,14 @@ public class AccountInfo extends AbstractModel{
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。 
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值） 
      * @return AccountType 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
      */
     public Long getAccountType() {
         return this.AccountType;
@@ -83,14 +83,14 @@ public class AccountInfo extends AbstractModel{
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
      * @param AccountType 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;

@@ -173,6 +173,13 @@ public class Deal extends AbstractModel{
     private String RefReturnDeals;
 
     /**
+    * 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
      * Get 订单号 
      * @return OrderId 订单号
      */
@@ -521,6 +528,22 @@ public class Deal extends AbstractModel{
     }
 
     /**
+     * Get 付费模式：prePay 预付费 postPay后付费 riPay预留实例 
+     * @return PayMode 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+     * @param PayMode 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -545,6 +568,7 @@ public class Deal extends AbstractModel{
         this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
         this.setParamSimple(map, prefix + "Formula", this.Formula);
         this.setParamSimple(map, prefix + "RefReturnDeals", this.RefReturnDeals);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

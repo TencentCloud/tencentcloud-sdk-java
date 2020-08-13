@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePostpayPackageRequest extends AbstractModel{
 
     /**
-    * 环境ID
+    * 环境ID，需要系统自动创建环境时，此字段不传
     */
     @SerializedName("EnvId")
     @Expose
@@ -53,13 +53,6 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     private String FreeQuota;
 
     /**
-    * 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-    */
-    @SerializedName("Alias")
-    @Expose
-    private String Alias;
-
-    /**
     * 环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>
@@ -71,8 +64,15 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     private String EnvSource;
 
     /**
+    * 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
     * 如果envsource为miniapp, channel可以为ide或api;
-如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
     */
     @SerializedName("Channel")
@@ -87,16 +87,16 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     private String ExtensionId;
 
     /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
+     * Get 环境ID，需要系统自动创建环境时，此字段不传 
+     * @return EnvId 环境ID，需要系统自动创建环境时，此字段不传
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvId 环境ID
+     * Set 环境ID，需要系统自动创建环境时，此字段不传
+     * @param EnvId 环境ID，需要系统自动创建环境时，此字段不传
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
@@ -159,22 +159,6 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符 
-     * @return Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-     */
-    public String getAlias() {
-        return this.Alias;
-    }
-
-    /**
-     * Set 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-     * @param Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-     */
-    public void setAlias(String Alias) {
-        this.Alias = Alias;
-    }
-
-    /**
      * Get 环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>
@@ -207,11 +191,27 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     }
 
     /**
+     * Get 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符 
+     * @return Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @param Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
      * Get 如果envsource为miniapp, channel可以为ide或api;
-如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。 
      * @return Channel 如果envsource为miniapp, channel可以为ide或api;
-如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public String getChannel() {
@@ -220,10 +220,10 @@ public class CreatePostpayPackageRequest extends AbstractModel{
 
     /**
      * Set 如果envsource为miniapp, channel可以为ide或api;
-如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      * @param Channel 如果envsource为miniapp, channel可以为ide或api;
-如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      */
     public void setChannel(String Channel) {
@@ -254,8 +254,8 @@ public class CreatePostpayPackageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
-        this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "EnvSource", this.EnvSource);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
 

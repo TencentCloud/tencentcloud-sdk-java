@@ -110,6 +110,42 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *查询曲库包已核验歌曲列表接口
+     * @param req DescribePackageItemsRequest
+     * @return DescribePackageItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePackageItemsResponse DescribePackageItems(DescribePackageItemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePackageItemsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePackageItemsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePackageItems"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询已购曲库包列表接口
+     * @param req DescribePackagesRequest
+     * @return DescribePackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePackagesResponse DescribePackages(DescribePackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePackagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePackagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePackages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取素材库列表时使用
      * @param req DescribeStationsRequest
      * @return DescribeStationsResponse

@@ -132,6 +132,22 @@ public class Listener extends AbstractModel{
     private BasicTargetGroupInfo TargetGroup;
 
     /**
+    * 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionType")
+    @Expose
+    private String SessionType;
+
+    /**
+    * 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeepaliveEnable")
+    @Expose
+    private Long KeepaliveEnable;
+
+    /**
      * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -400,6 +416,46 @@ public class Listener extends AbstractModel{
     }
 
     /**
+     * Get 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionType() {
+        return this.SessionType;
+    }
+
+    /**
+     * Set 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionType(String SessionType) {
+        this.SessionType = SessionType;
+    }
+
+    /**
+     * Get 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeepaliveEnable 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getKeepaliveEnable() {
+        return this.KeepaliveEnable;
+    }
+
+    /**
+     * Set 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeepaliveEnable 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeepaliveEnable(Long KeepaliveEnable) {
+        this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -417,6 +473,8 @@ public class Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "EndPort", this.EndPort);
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
+        this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
 
     }
 }
