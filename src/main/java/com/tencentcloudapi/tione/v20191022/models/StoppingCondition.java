@@ -31,6 +31,14 @@ public class StoppingCondition extends AbstractModel{
     private Long MaxRuntimeInSeconds;
 
     /**
+    * 最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxWaitTimeInSeconds")
+    @Expose
+    private Long MaxWaitTimeInSeconds;
+
+    /**
      * Get 最长运行运行时间（秒）
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxRuntimeInSeconds 最长运行运行时间（秒）
@@ -51,10 +59,31 @@ public class StoppingCondition extends AbstractModel{
     }
 
     /**
+     * Get 最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxWaitTimeInSeconds 最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxWaitTimeInSeconds() {
+        return this.MaxWaitTimeInSeconds;
+    }
+
+    /**
+     * Set 最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxWaitTimeInSeconds 最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxWaitTimeInSeconds(Long MaxWaitTimeInSeconds) {
+        this.MaxWaitTimeInSeconds = MaxWaitTimeInSeconds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MaxRuntimeInSeconds", this.MaxRuntimeInSeconds);
+        this.setParamSimple(map, prefix + "MaxWaitTimeInSeconds", this.MaxWaitTimeInSeconds);
 
     }
 }

@@ -65,7 +65,8 @@ public class CfsInsInfo extends AbstractModel{
     private String RemoteMountDir;
 
     /**
-    * 文件系统ip
+    * 文件系统ip，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpAddress")
@@ -73,7 +74,8 @@ public class CfsInsInfo extends AbstractModel{
     private String IpAddress;
 
     /**
-    * 文件系统所在的私有网络id
+    * 文件系统所在的私有网络id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountVpcId")
@@ -81,7 +83,8 @@ public class CfsInsInfo extends AbstractModel{
     private String MountVpcId;
 
     /**
-    * 文件系统所在私有网络的子网id
+    * 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountSubnetId")
@@ -185,9 +188,11 @@ public class CfsInsInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件系统ip
+     * Get 文件系统ip，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpAddress 文件系统ip
+     * @return IpAddress 文件系统ip，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpAddress() {
@@ -195,9 +200,11 @@ public class CfsInsInfo extends AbstractModel{
     }
 
     /**
-     * Set 文件系统ip
+     * Set 文件系统ip，配置 cfs 时无需填写。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpAddress 文件系统ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpAddress 文件系统ip，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpAddress(String IpAddress) {
@@ -205,9 +212,11 @@ public class CfsInsInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件系统所在的私有网络id
+     * Get 文件系统所在的私有网络id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountVpcId 文件系统所在的私有网络id
+     * @return MountVpcId 文件系统所在的私有网络id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountVpcId() {
@@ -215,9 +224,11 @@ public class CfsInsInfo extends AbstractModel{
     }
 
     /**
-     * Set 文件系统所在的私有网络id
+     * Set 文件系统所在的私有网络id，配置 cfs 时无需填写。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountVpcId 文件系统所在的私有网络id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MountVpcId 文件系统所在的私有网络id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountVpcId(String MountVpcId) {
@@ -225,9 +236,11 @@ public class CfsInsInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件系统所在私有网络的子网id
+     * Get 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountSubnetId 文件系统所在私有网络的子网id
+     * @return MountSubnetId 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountSubnetId() {
@@ -235,9 +248,11 @@ public class CfsInsInfo extends AbstractModel{
     }
 
     /**
-     * Set 文件系统所在私有网络的子网id
+     * Set 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountSubnetId 文件系统所在私有网络的子网id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MountSubnetId 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountSubnetId(String MountSubnetId) {

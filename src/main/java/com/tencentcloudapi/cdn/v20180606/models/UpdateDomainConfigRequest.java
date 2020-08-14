@@ -247,6 +247,27 @@ global：全球加速
     private UserAgentFilter UserAgentFilter;
 
     /**
+    * 访问控制
+    */
+    @SerializedName("AccessControl")
+    @Expose
+    private AccessControl AccessControl;
+
+    /**
+    * URL重定向配置
+    */
+    @SerializedName("UrlRedirect")
+    @Expose
+    private UrlRedirect UrlRedirect;
+
+    /**
+    * 访问端口配置
+    */
+    @SerializedName("AccessPort")
+    @Expose
+    private Long [] AccessPort;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -771,6 +792,54 @@ global：全球加速
     }
 
     /**
+     * Get 访问控制 
+     * @return AccessControl 访问控制
+     */
+    public AccessControl getAccessControl() {
+        return this.AccessControl;
+    }
+
+    /**
+     * Set 访问控制
+     * @param AccessControl 访问控制
+     */
+    public void setAccessControl(AccessControl AccessControl) {
+        this.AccessControl = AccessControl;
+    }
+
+    /**
+     * Get URL重定向配置 
+     * @return UrlRedirect URL重定向配置
+     */
+    public UrlRedirect getUrlRedirect() {
+        return this.UrlRedirect;
+    }
+
+    /**
+     * Set URL重定向配置
+     * @param UrlRedirect URL重定向配置
+     */
+    public void setUrlRedirect(UrlRedirect UrlRedirect) {
+        this.UrlRedirect = UrlRedirect;
+    }
+
+    /**
+     * Get 访问端口配置 
+     * @return AccessPort 访问端口配置
+     */
+    public Long [] getAccessPort() {
+        return this.AccessPort;
+    }
+
+    /**
+     * Set 访问端口配置
+     * @param AccessPort 访问端口配置
+     */
+    public void setAccessPort(Long [] AccessPort) {
+        this.AccessPort = AccessPort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -805,6 +874,9 @@ global：全球加速
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
+        this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
+        this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
+        this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
 
     }
 }

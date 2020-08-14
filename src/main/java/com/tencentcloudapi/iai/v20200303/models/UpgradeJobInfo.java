@@ -61,7 +61,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     private Long StartTime;
 
     /**
-    * 0表示升级中，1表示升级完毕，2表示回滚完毕。
+    * 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
     */
     @SerializedName("Status")
     @Expose
@@ -160,16 +160,16 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Get 0表示升级中，1表示升级完毕，2表示回滚完毕。 
-     * @return Status 0表示升级中，1表示升级完毕，2表示回滚完毕。
+     * Get 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。 
+     * @return Status 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0表示升级中，1表示升级完毕，2表示回滚完毕。
-     * @param Status 0表示升级中，1表示升级完毕，2表示回滚完毕。
+     * Set 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
+     * @param Status 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -388,6 +388,32 @@ global：全球锁定
     private AccessControl AccessControl;
 
     /**
+    * 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Advance")
+    @Expose
+    private String Advance;
+
+    /**
+    * URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UrlRedirect")
+    @Expose
+    private UrlRedirect UrlRedirect;
+
+    /**
+    * 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessPort")
+    @Expose
+    private Long [] AccessPort;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1320,6 +1346,74 @@ global：全球锁定
     }
 
     /**
+     * Get 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Advance 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAdvance() {
+        return this.Advance;
+    }
+
+    /**
+     * Set 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Advance 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvance(String Advance) {
+        this.Advance = Advance;
+    }
+
+    /**
+     * Get URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UrlRedirect URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UrlRedirect getUrlRedirect() {
+        return this.UrlRedirect;
+    }
+
+    /**
+     * Set URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UrlRedirect URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrlRedirect(UrlRedirect UrlRedirect) {
+        this.UrlRedirect = UrlRedirect;
+    }
+
+    /**
+     * Get 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessPort 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getAccessPort() {
+        return this.AccessPort;
+    }
+
+    /**
+     * Set 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessPort 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessPort(Long [] AccessPort) {
+        this.AccessPort = AccessPort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1367,6 +1461,9 @@ global：全球锁定
         this.setParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
         this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
         this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
+        this.setParamSimple(map, prefix + "Advance", this.Advance);
+        this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
+        this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
 
     }
 }

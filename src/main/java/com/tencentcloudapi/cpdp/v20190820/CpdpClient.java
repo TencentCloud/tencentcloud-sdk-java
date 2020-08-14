@@ -406,6 +406,24 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *微信商户发起批量转账
+     * @param req CreateTransferBatchRequest
+     * @return CreateTransferBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTransferBatchResponse CreateTransferBatch(CreateTransferBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTransferBatchResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTransferBatchResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTransferBatch"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播平台-删除代理商完税信息
      * @param req DeleteAgentTaxPaymentInfoRequest
      * @return DeleteAgentTaxPaymentInfoResponse
@@ -1084,6 +1102,42 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryTradeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "QueryTrade"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过商家批次单号或者微信批次号查询批次单
+     * @param req QueryTransferBatchRequest
+     * @return QueryTransferBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryTransferBatchResponse QueryTransferBatch(QueryTransferBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryTransferBatchResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryTransferBatchResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryTransferBatch"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过商家或者微信批次明细单号查询明细单
+     * @param req QueryTransferDetailRequest
+     * @return QueryTransferDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryTransferDetailResponse QueryTransferDetail(QueryTransferDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryTransferDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryTransferDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryTransferDetail"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

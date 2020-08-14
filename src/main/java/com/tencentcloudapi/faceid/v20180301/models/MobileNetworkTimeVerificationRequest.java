@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class MobileNetworkTimeVerificationRequest extends AbstractModel{
 
     /**
-    * 手机号码。不支持电信手机号。
+    * 手机号码
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-     * Get 手机号码。不支持电信手机号。 
-     * @return Mobile 手机号码。不支持电信手机号。
+     * Get 手机号码 
+     * @return Mobile 手机号码
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 手机号码。不支持电信手机号。
-     * @param Mobile 手机号码。不支持电信手机号。
+     * Set 手机号码
+     * @param Mobile 手机号码
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

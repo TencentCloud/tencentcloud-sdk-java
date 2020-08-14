@@ -100,6 +100,13 @@ public class EvaluationRequest extends AbstractModel{
     private Long PdfPageIndex;
 
     /**
+    * 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
+    */
+    @SerializedName("LaTex")
+    @Expose
+    private Long LaTex;
+
+    /**
      * Get 图片唯一标识，一张图片一个SessionId； 
      * @return SessionId 图片唯一标识，一张图片一个SessionId；
      */
@@ -276,6 +283,22 @@ public class EvaluationRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式 
+     * @return LaTex 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
+     */
+    public Long getLaTex() {
+        return this.LaTex;
+    }
+
+    /**
+     * Set 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
+     * @param LaTex 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
+     */
+    public void setLaTex(Long LaTex) {
+        this.LaTex = LaTex;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class EvaluationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableDispMidresult", this.EnableDispMidresult);
         this.setParamSimple(map, prefix + "EnablePdfRecognize", this.EnablePdfRecognize);
         this.setParamSimple(map, prefix + "PdfPageIndex", this.PdfPageIndex);
+        this.setParamSimple(map, prefix + "LaTex", this.LaTex);
 
     }
 }

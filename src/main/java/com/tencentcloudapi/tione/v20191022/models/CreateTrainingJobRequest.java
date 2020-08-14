@@ -93,6 +93,14 @@ public class CreateTrainingJobRequest extends AbstractModel{
     private String RoleName;
 
     /**
+    * 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
+    */
+    @SerializedName("RetryWhenResourceInsufficient")
+    @Expose
+    private String RetryWhenResourceInsufficient;
+
+    /**
      * Get 算法镜像配置 
      * @return AlgorithmSpecification 算法镜像配置
      */
@@ -253,6 +261,26 @@ public class CreateTrainingJobRequest extends AbstractModel{
     }
 
     /**
+     * Get 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。 
+     * @return RetryWhenResourceInsufficient 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
+     */
+    public String getRetryWhenResourceInsufficient() {
+        return this.RetryWhenResourceInsufficient;
+    }
+
+    /**
+     * Set 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
+     * @param RetryWhenResourceInsufficient 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
+     */
+    public void setRetryWhenResourceInsufficient(String RetryWhenResourceInsufficient) {
+        this.RetryWhenResourceInsufficient = RetryWhenResourceInsufficient;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +294,7 @@ public class CreateTrainingJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HyperParameters", this.HyperParameters);
         this.setParamArrayObj(map, prefix + "EnvConfig.", this.EnvConfig);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "RetryWhenResourceInsufficient", this.RetryWhenResourceInsufficient);
 
     }
 }

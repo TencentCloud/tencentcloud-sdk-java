@@ -37,6 +37,13 @@ public class DestroyEnvRequest extends AbstractModel{
     private Boolean IsForce;
 
     /**
+    * 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
+    */
+    @SerializedName("BypassCheck")
+    @Expose
+    private Boolean BypassCheck;
+
+    /**
      * Get 环境Id 
      * @return EnvId 环境Id
      */
@@ -69,11 +76,28 @@ public class DestroyEnvRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。 
+     * @return BypassCheck 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
+     */
+    public Boolean getBypassCheck() {
+        return this.BypassCheck;
+    }
+
+    /**
+     * Set 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
+     * @param BypassCheck 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
+     */
+    public void setBypassCheck(Boolean BypassCheck) {
+        this.BypassCheck = BypassCheck;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "IsForce", this.IsForce);
+        this.setParamSimple(map, prefix + "BypassCheck", this.BypassCheck);
 
     }
 }

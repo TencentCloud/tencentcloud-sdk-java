@@ -118,6 +118,13 @@ public class NatGateway extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 标签键值对。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -342,6 +349,22 @@ public class NatGateway extends AbstractModel{
     }
 
     /**
+     * Get 标签键值对。 
+     * @return TagSet 标签键值对。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。
+     * @param TagSet 标签键值对。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -358,6 +381,7 @@ public class NatGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

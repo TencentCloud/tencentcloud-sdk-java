@@ -93,7 +93,7 @@ public class FileSystemInfo extends AbstractModel{
     private String StorageType;
 
     /**
-    * 文件系统绑定的预付费存储包（暂未支持）
+    * 文件系统绑定的预付费存储包
     */
     @SerializedName("StorageResourcePkg")
     @Expose
@@ -140,6 +140,13 @@ public class FileSystemInfo extends AbstractModel{
     @SerializedName("AppId")
     @Expose
     private Long AppId;
+
+    /**
+    * 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+    */
+    @SerializedName("BandwidthLimit")
+    @Expose
+    private Float BandwidthLimit;
 
     /**
      * Get 创建时间 
@@ -302,16 +309,16 @@ public class FileSystemInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件系统绑定的预付费存储包（暂未支持） 
-     * @return StorageResourcePkg 文件系统绑定的预付费存储包（暂未支持）
+     * Get 文件系统绑定的预付费存储包 
+     * @return StorageResourcePkg 文件系统绑定的预付费存储包
      */
     public String getStorageResourcePkg() {
         return this.StorageResourcePkg;
     }
 
     /**
-     * Set 文件系统绑定的预付费存储包（暂未支持）
-     * @param StorageResourcePkg 文件系统绑定的预付费存储包（暂未支持）
+     * Set 文件系统绑定的预付费存储包
+     * @param StorageResourcePkg 文件系统绑定的预付费存储包
      */
     public void setStorageResourcePkg(String StorageResourcePkg) {
         this.StorageResourcePkg = StorageResourcePkg;
@@ -414,6 +421,22 @@ public class FileSystemInfo extends AbstractModel{
     }
 
     /**
+     * Get 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定 
+     * @return BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+     */
+    public Float getBandwidthLimit() {
+        return this.BandwidthLimit;
+    }
+
+    /**
+     * Set 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+     * @param BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+     */
+    public void setBandwidthLimit(Float BandwidthLimit) {
+        this.BandwidthLimit = BandwidthLimit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
 
     }
 }

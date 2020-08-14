@@ -59,6 +59,14 @@ public class Item extends AbstractModel{
     private String ExpressionType;
 
     /**
+    * 文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ItemConf")
+    @Expose
+    private Float ItemConf;
+
+    /**
      * Get 识别的算式是否正确 
      * @return Item 识别的算式是否正确
      */
@@ -143,6 +151,26 @@ public class Item extends AbstractModel{
     }
 
     /**
+     * Get 文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ItemConf 文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getItemConf() {
+        return this.ItemConf;
+    }
+
+    /**
+     * Set 文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ItemConf 文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItemConf(Float ItemConf) {
+        this.ItemConf = ItemConf;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +179,7 @@ public class Item extends AbstractModel{
         this.setParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
         this.setParamSimple(map, prefix + "Answer", this.Answer);
         this.setParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
+        this.setParamSimple(map, prefix + "ItemConf", this.ItemConf);
 
     }
 }
