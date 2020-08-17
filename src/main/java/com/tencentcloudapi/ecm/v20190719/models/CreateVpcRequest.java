@@ -30,7 +30,7 @@ public class CreateVpcRequest extends AbstractModel{
     private String VpcName;
 
     /**
-    * vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+    * vpc的cidr，只能为10.*.0.0/16，172.[16-31].0.0/16，192.168.0.0/16这三个内网网段内。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -44,21 +44,21 @@ public class CreateVpcRequest extends AbstractModel{
     private String EcmRegion;
 
     /**
-    * 是否开启组播。true: 开启, false: 不开启。
+    * 是否开启组播。true: 开启, false: 不开启。暂不支持
     */
     @SerializedName("EnableMulticast")
     @Expose
     private String EnableMulticast;
 
     /**
-    * DNS地址，最多支持4个
+    * DNS地址，最多支持4个，暂不支持
     */
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
 
     /**
-    * 域名
+    * 域名，暂不支持
     */
     @SerializedName("DomainName")
     @Expose
@@ -70,6 +70,13 @@ public class CreateVpcRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 描述信息
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
      * Get vpc名称，最大长度不能超过60个字节。 
@@ -88,16 +95,16 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。 
-     * @return CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Get vpc的cidr，只能为10.*.0.0/16，172.[16-31].0.0/16，192.168.0.0/16这三个内网网段内。 
+     * @return CidrBlock vpc的cidr，只能为10.*.0.0/16，172.[16-31].0.0/16，192.168.0.0/16这三个内网网段内。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
-     * @param CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Set vpc的cidr，只能为10.*.0.0/16，172.[16-31].0.0/16，192.168.0.0/16这三个内网网段内。
+     * @param CidrBlock vpc的cidr，只能为10.*.0.0/16，172.[16-31].0.0/16，192.168.0.0/16这三个内网网段内。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -120,48 +127,48 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启组播。true: 开启, false: 不开启。 
-     * @return EnableMulticast 是否开启组播。true: 开启, false: 不开启。
+     * Get 是否开启组播。true: 开启, false: 不开启。暂不支持 
+     * @return EnableMulticast 是否开启组播。true: 开启, false: 不开启。暂不支持
      */
     public String getEnableMulticast() {
         return this.EnableMulticast;
     }
 
     /**
-     * Set 是否开启组播。true: 开启, false: 不开启。
-     * @param EnableMulticast 是否开启组播。true: 开启, false: 不开启。
+     * Set 是否开启组播。true: 开启, false: 不开启。暂不支持
+     * @param EnableMulticast 是否开启组播。true: 开启, false: 不开启。暂不支持
      */
     public void setEnableMulticast(String EnableMulticast) {
         this.EnableMulticast = EnableMulticast;
     }
 
     /**
-     * Get DNS地址，最多支持4个 
-     * @return DnsServers DNS地址，最多支持4个
+     * Get DNS地址，最多支持4个，暂不支持 
+     * @return DnsServers DNS地址，最多支持4个，暂不支持
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set DNS地址，最多支持4个
-     * @param DnsServers DNS地址，最多支持4个
+     * Set DNS地址，最多支持4个，暂不支持
+     * @param DnsServers DNS地址，最多支持4个，暂不支持
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;
     }
 
     /**
-     * Get 域名 
-     * @return DomainName 域名
+     * Get 域名，暂不支持 
+     * @return DomainName 域名，暂不支持
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 域名
-     * @param DomainName 域名
+     * Set 域名，暂不支持
+     * @param DomainName 域名，暂不支持
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
@@ -184,6 +191,22 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
+     * Get 描述信息 
+     * @return Description 描述信息
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述信息
+     * @param Description 描述信息
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateVpcRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

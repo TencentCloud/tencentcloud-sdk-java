@@ -30,6 +30,14 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
     private WhiteboxKeyInfo [] KeyInfos;
 
     /**
+    * key总数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +61,26 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
     }
 
     /**
+     * Get key总数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount key总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set key总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount key总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +101,7 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "KeyInfos.", this.KeyInfos);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

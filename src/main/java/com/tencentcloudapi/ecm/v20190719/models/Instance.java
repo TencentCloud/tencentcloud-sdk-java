@@ -240,6 +240,14 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     private String [] SecurityGroupIds;
 
     /**
+    * VPC属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VirtualPrivateCloud")
+    @Expose
+    private VirtualPrivateCloud VirtualPrivateCloud;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -808,6 +816,26 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     }
 
     /**
+     * Get VPC属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VirtualPrivateCloud VPC属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VirtualPrivateCloud getVirtualPrivateCloud() {
+        return this.VirtualPrivateCloud;
+    }
+
+    /**
+     * Set VPC属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VirtualPrivateCloud VPC属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
+        this.VirtualPrivateCloud = VirtualPrivateCloud;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -836,6 +864,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "NewFlag", this.NewFlag);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
 
     }
 }

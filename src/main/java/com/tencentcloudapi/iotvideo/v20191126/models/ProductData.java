@@ -103,6 +103,28 @@ public class ProductData extends AbstractModel{
     private String ChipId;
 
     /**
+    * 产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCate")
+    @Expose
+    private Long ProductCate;
+
+    /**
+    * 产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductRegion")
+    @Expose
+    private String ProductRegion;
+
+    /**
      * Get 产品ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 产品ID
@@ -303,6 +325,70 @@ public class ProductData extends AbstractModel{
     }
 
     /**
+     * Get 产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCate 产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProductCate() {
+        return this.ProductCate;
+    }
+
+    /**
+     * Set 产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCate 产品类别，0：普通视频设备；1：NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCate(Long ProductCate) {
+        this.ProductCate = ProductCate;
+    }
+
+    /**
+     * Get 产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductRegion 产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductRegion() {
+        return this.ProductRegion;
+    }
+
+    /**
+     * Set 产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductRegion 产品地区
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductRegion(String ProductRegion) {
+        this.ProductRegion = ProductRegion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -316,6 +402,8 @@ public class ProductData extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductModel", this.ProductModel);
         this.setParamSimple(map, prefix + "ChipManufactureId", this.ChipManufactureId);
         this.setParamSimple(map, prefix + "ChipId", this.ChipId);
+        this.setParamSimple(map, prefix + "ProductCate", this.ProductCate);
+        this.setParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
 
     }
 }

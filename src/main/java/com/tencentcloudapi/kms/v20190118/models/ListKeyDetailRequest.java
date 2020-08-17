@@ -79,6 +79,13 @@ public class ListKeyDetailRequest extends AbstractModel{
     private String KeyUsage;
 
     /**
+    * 标签过滤条件
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0 
      * @return Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      */
@@ -207,6 +214,22 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签过滤条件 
+     * @return TagFilters 标签过滤条件
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set 标签过滤条件
+     * @param TagFilters 标签过滤条件
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class ListKeyDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

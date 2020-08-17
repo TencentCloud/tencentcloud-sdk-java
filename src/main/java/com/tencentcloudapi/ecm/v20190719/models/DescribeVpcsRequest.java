@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeVpcsRequest extends AbstractModel{
 
     /**
-    * 地域
-    */
-    @SerializedName("EcmRegion")
-    @Expose
-    private String EcmRegion;
-
-    /**
     * VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
     */
     @SerializedName("VpcIds")
@@ -38,12 +31,12 @@ public class DescribeVpcsRequest extends AbstractModel{
 
     /**
     * 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
     */
     @SerializedName("Filters")
     @Expose
@@ -64,20 +57,18 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     private Long Limit;
 
     /**
-     * Get 地域 
-     * @return EcmRegion 地域
-     */
-    public String getEcmRegion() {
-        return this.EcmRegion;
-    }
+    * 地域
+    */
+    @SerializedName("EcmRegion")
+    @Expose
+    private String EcmRegion;
 
     /**
-     * Set 地域
-     * @param EcmRegion 地域
-     */
-    public void setEcmRegion(String EcmRegion) {
-        this.EcmRegion = EcmRegion;
-    }
+    * 排序方式：time时间倒序, default按照网络规划排序
+    */
+    @SerializedName("Sort")
+    @Expose
+    private String Sort;
 
     /**
      * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
@@ -97,19 +88,19 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
     /**
      * Get 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例 
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。 
      * @return Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -117,19 +108,19 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
     /**
      * Set 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      * @param Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -168,14 +159,47 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     }
 
     /**
+     * Get 地域 
+     * @return EcmRegion 地域
+     */
+    public String getEcmRegion() {
+        return this.EcmRegion;
+    }
+
+    /**
+     * Set 地域
+     * @param EcmRegion 地域
+     */
+    public void setEcmRegion(String EcmRegion) {
+        this.EcmRegion = EcmRegion;
+    }
+
+    /**
+     * Get 排序方式：time时间倒序, default按照网络规划排序 
+     * @return Sort 排序方式：time时间倒序, default按照网络规划排序
+     */
+    public String getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序方式：time时间倒序, default按照网络规划排序
+     * @param Sort 排序方式：time时间倒序, default按照网络规划排序
+     */
+    public void setSort(String Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
+        this.setParamSimple(map, prefix + "Sort", this.Sort);
 
     }
 }

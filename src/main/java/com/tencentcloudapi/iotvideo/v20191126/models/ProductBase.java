@@ -72,6 +72,42 @@ public class ProductBase extends AbstractModel{
     private String SecretKey;
 
     /**
+    * 设备功能码
+ypsxth : 音频双向通话;	
+spdxth : 视频单向通话(监控);
+NVR0824 : NVR设备,大于8路，小于等于24路;
+WifiKeepalive : Wifi保活(低功耗产品);
+Alexa : Alexa接入;
+Google : Google接入;
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FuncCode")
+    @Expose
+    private String [] FuncCode;
+
+    /**
+    * 产品类别，0 : 普通视频设备；1 : NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCate")
+    @Expose
+    private Long ProductCate;
+
+    /**
+    * 产品地域
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductRegion")
+    @Expose
+    private String ProductRegion;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -184,6 +220,114 @@ public class ProductBase extends AbstractModel{
     }
 
     /**
+     * Get 设备功能码
+ypsxth : 音频双向通话;	
+spdxth : 视频单向通话(监控);
+NVR0824 : NVR设备,大于8路，小于等于24路;
+WifiKeepalive : Wifi保活(低功耗产品);
+Alexa : Alexa接入;
+Google : Google接入;
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FuncCode 设备功能码
+ypsxth : 音频双向通话;	
+spdxth : 视频单向通话(监控);
+NVR0824 : NVR设备,大于8路，小于等于24路;
+WifiKeepalive : Wifi保活(低功耗产品);
+Alexa : Alexa接入;
+Google : Google接入;
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFuncCode() {
+        return this.FuncCode;
+    }
+
+    /**
+     * Set 设备功能码
+ypsxth : 音频双向通话;	
+spdxth : 视频单向通话(监控);
+NVR0824 : NVR设备,大于8路，小于等于24路;
+WifiKeepalive : Wifi保活(低功耗产品);
+Alexa : Alexa接入;
+Google : Google接入;
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FuncCode 设备功能码
+ypsxth : 音频双向通话;	
+spdxth : 视频单向通话(监控);
+NVR0824 : NVR设备,大于8路，小于等于24路;
+WifiKeepalive : Wifi保活(低功耗产品);
+Alexa : Alexa接入;
+Google : Google接入;
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFuncCode(String [] FuncCode) {
+        this.FuncCode = FuncCode;
+    }
+
+    /**
+     * Get 产品类别，0 : 普通视频设备；1 : NVR设备
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCate 产品类别，0 : 普通视频设备；1 : NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProductCate() {
+        return this.ProductCate;
+    }
+
+    /**
+     * Set 产品类别，0 : 普通视频设备；1 : NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCate 产品类别，0 : 普通视频设备；1 : NVR设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCate(Long ProductCate) {
+        this.ProductCate = ProductCate;
+    }
+
+    /**
+     * Get 产品地域
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductRegion 产品地域
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductRegion() {
+        return this.ProductRegion;
+    }
+
+    /**
+     * Set 产品地域
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductRegion 产品地域
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductRegion(String ProductRegion) {
+        this.ProductRegion = ProductRegion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +338,9 @@ public class ProductBase extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "IotModelRevision", this.IotModelRevision);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
+        this.setParamArraySimple(map, prefix + "FuncCode.", this.FuncCode);
+        this.setParamSimple(map, prefix + "ProductCate", this.ProductCate);
+        this.setParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
 
     }
 }

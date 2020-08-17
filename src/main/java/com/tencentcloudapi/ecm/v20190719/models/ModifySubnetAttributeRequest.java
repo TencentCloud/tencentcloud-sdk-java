@@ -51,6 +51,13 @@ public class ModifySubnetAttributeRequest extends AbstractModel{
     private String EnableBroadcast;
 
     /**
+    * 子网的标签键值
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 子网实例ID。形如：subnet-pxir56ns。 
      * @return SubnetId 子网实例ID。形如：subnet-pxir56ns。
      */
@@ -115,6 +122,22 @@ public class ModifySubnetAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 子网的标签键值 
+     * @return Tags 子网的标签键值
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 子网的标签键值
+     * @param Tags 子网的标签键值
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ModifySubnetAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
         this.setParamSimple(map, prefix + "EnableBroadcast", this.EnableBroadcast);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

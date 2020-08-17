@@ -100,6 +100,14 @@ public class WhiteboxKeyInfo extends AbstractModel{
     private String ResourceId;
 
     /**
+    * 是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceFingerprintBind")
+    @Expose
+    private Boolean DeviceFingerprintBind;
+
+    /**
      * Get 白盒密钥的全局唯一标识符 
      * @return KeyId 白盒密钥的全局唯一标识符
      */
@@ -276,6 +284,26 @@ public class WhiteboxKeyInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceFingerprintBind 是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeviceFingerprintBind() {
+        return this.DeviceFingerprintBind;
+    }
+
+    /**
+     * Set 是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceFingerprintBind 是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceFingerprintBind(Boolean DeviceFingerprintBind) {
+        this.DeviceFingerprintBind = DeviceFingerprintBind;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +318,7 @@ public class WhiteboxKeyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
         this.setParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "DeviceFingerprintBind", this.DeviceFingerprintBind);
 
     }
 }

@@ -122,6 +122,46 @@ public class Subnet extends AbstractModel{
     private String Zone;
 
     /**
+    * 可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
+    * 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceCount")
+    @Expose
+    private Long InstanceCount;
+
+    /**
+    * VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcCidrBlock")
+    @Expose
+    private String VpcCidrBlock;
+
+    /**
+    * VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcIpv6CidrBlock")
+    @Expose
+    private String VpcIpv6CidrBlock;
+
+    /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
@@ -350,6 +390,106 @@ public class Subnet extends AbstractModel{
     }
 
     /**
+     * Get 可用区名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneName 可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneName 可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get 实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceCount 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceCount() {
+        return this.InstanceCount;
+    }
+
+    /**
+     * Set 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceCount 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceCount(Long InstanceCount) {
+        this.InstanceCount = InstanceCount;
+    }
+
+    /**
+     * Get VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcCidrBlock VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcCidrBlock() {
+        return this.VpcCidrBlock;
+    }
+
+    /**
+     * Set VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcCidrBlock VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcCidrBlock(String VpcCidrBlock) {
+        this.VpcCidrBlock = VpcCidrBlock;
+    }
+
+    /**
+     * Get VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcIpv6CidrBlock VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcIpv6CidrBlock() {
+        return this.VpcIpv6CidrBlock;
+    }
+
+    /**
+     * Set VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcIpv6CidrBlock VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcIpv6CidrBlock(String VpcIpv6CidrBlock) {
+        this.VpcIpv6CidrBlock = VpcIpv6CidrBlock;
+    }
+
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -367,6 +507,11 @@ public class Subnet extends AbstractModel{
         this.setParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
+        this.setParamSimple(map, prefix + "VpcIpv6CidrBlock", this.VpcIpv6CidrBlock);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

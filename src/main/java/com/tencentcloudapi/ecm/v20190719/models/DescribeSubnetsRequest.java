@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeSubnetsRequest extends AbstractModel{
 
     /**
-    * ECM 地域
-    */
-    @SerializedName("EcmRegion")
-    @Expose
-    private String EcmRegion;
-
-    /**
     * 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
     */
     @SerializedName("SubnetIds")
@@ -38,15 +31,15 @@ public class DescribeSubnetsRequest extends AbstractModel{
 
     /**
     * 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
     */
     @SerializedName("Filters")
     @Expose
@@ -67,20 +60,18 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     private String Limit;
 
     /**
-     * Get ECM 地域 
-     * @return EcmRegion ECM 地域
-     */
-    public String getEcmRegion() {
-        return this.EcmRegion;
-    }
+    * ECM 地域
+    */
+    @SerializedName("EcmRegion")
+    @Expose
+    private String EcmRegion;
 
     /**
-     * Set ECM 地域
-     * @param EcmRegion ECM 地域
-     */
-    public void setEcmRegion(String EcmRegion) {
-        this.EcmRegion = EcmRegion;
-    }
+    * 排序方式：time时间倒序, default按照网络规划排序
+    */
+    @SerializedName("Sort")
+    @Expose
+    private String Sort;
 
     /**
      * Get 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。 
@@ -100,25 +91,25 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
     /**
      * Get 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例 
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。 
      * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -126,25 +117,25 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
     /**
      * Set 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      * @param Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -183,14 +174,47 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     }
 
     /**
+     * Get ECM 地域 
+     * @return EcmRegion ECM 地域
+     */
+    public String getEcmRegion() {
+        return this.EcmRegion;
+    }
+
+    /**
+     * Set ECM 地域
+     * @param EcmRegion ECM 地域
+     */
+    public void setEcmRegion(String EcmRegion) {
+        this.EcmRegion = EcmRegion;
+    }
+
+    /**
+     * Get 排序方式：time时间倒序, default按照网络规划排序 
+     * @return Sort 排序方式：time时间倒序, default按照网络规划排序
+     */
+    public String getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序方式：time时间倒序, default按照网络规划排序
+     * @param Sort 排序方式：time时间倒序, default按照网络规划排序
+     */
+    public void setSort(String Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
+        this.setParamSimple(map, prefix + "Sort", this.Sort);
 
     }
 }

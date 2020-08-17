@@ -30,13 +30,6 @@ public class CreateProductRequest extends AbstractModel{
     private String ProductModel;
 
     /**
-    * 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
-    */
-    @SerializedName("Features")
-    @Expose
-    private String [] Features;
-
-    /**
     * 产品名称
 仅支持中文、英文、数字、下划线，不超过32个字符
     */
@@ -53,6 +46,13 @@ public class CreateProductRequest extends AbstractModel{
     private String ProductDescription;
 
     /**
+    * 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
+    */
+    @SerializedName("Features")
+    @Expose
+    private String [] Features;
+
+    /**
     * 主芯片产商ID
     */
     @SerializedName("ChipManufactureId")
@@ -65,6 +65,26 @@ public class CreateProductRequest extends AbstractModel{
     @SerializedName("ChipId")
     @Expose
     private String ChipId;
+
+    /**
+    * 地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+    */
+    @SerializedName("ProductRegion")
+    @Expose
+    private String ProductRegion;
+
+    /**
+    * 设备类型, 0-普通视频设备，1-NVR设备
+    */
+    @SerializedName("ProductCate")
+    @Expose
+    private Long ProductCate;
 
     /**
      * Get 产器型号(APP产品,为APP包名) 
@@ -80,22 +100,6 @@ public class CreateProductRequest extends AbstractModel{
      */
     public void setProductModel(String ProductModel) {
         this.ProductModel = ProductModel;
-    }
-
-    /**
-     * Get 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话） 
-     * @return Features 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
-     */
-    public String [] getFeatures() {
-        return this.Features;
-    }
-
-    /**
-     * Set 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
-     * @param Features 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
-     */
-    public void setFeatures(String [] Features) {
-        this.Features = Features;
     }
 
     /**
@@ -139,6 +143,22 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
+     * Get 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话） 
+     * @return Features 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
+     */
+    public String [] getFeatures() {
+        return this.Features;
+    }
+
+    /**
+     * Set 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
+     * @param Features 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
+     */
+    public void setFeatures(String [] Features) {
+        this.Features = Features;
+    }
+
+    /**
      * Get 主芯片产商ID 
      * @return ChipManufactureId 主芯片产商ID
      */
@@ -171,15 +191,73 @@ public class CreateProductRequest extends AbstractModel{
     }
 
     /**
+     * Get 地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区） 
+     * @return ProductRegion 地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+     */
+    public String getProductRegion() {
+        return this.ProductRegion;
+    }
+
+    /**
+     * Set 地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+     * @param ProductRegion 地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+     */
+    public void setProductRegion(String ProductRegion) {
+        this.ProductRegion = ProductRegion;
+    }
+
+    /**
+     * Get 设备类型, 0-普通视频设备，1-NVR设备 
+     * @return ProductCate 设备类型, 0-普通视频设备，1-NVR设备
+     */
+    public Long getProductCate() {
+        return this.ProductCate;
+    }
+
+    /**
+     * Set 设备类型, 0-普通视频设备，1-NVR设备
+     * @param ProductCate 设备类型, 0-普通视频设备，1-NVR设备
+     */
+    public void setProductCate(Long ProductCate) {
+        this.ProductCate = ProductCate;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductModel", this.ProductModel);
-        this.setParamArraySimple(map, prefix + "Features.", this.Features);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
+        this.setParamArraySimple(map, prefix + "Features.", this.Features);
         this.setParamSimple(map, prefix + "ChipManufactureId", this.ChipManufactureId);
         this.setParamSimple(map, prefix + "ChipId", this.ChipId);
+        this.setParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
+        this.setParamSimple(map, prefix + "ProductCate", this.ProductCate);
 
     }
 }

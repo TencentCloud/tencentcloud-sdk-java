@@ -44,6 +44,20 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     private String VpcName;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 私有网络描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get VPC实例ID。形如：vpc-f49l6u0z。 
      * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。
      */
@@ -92,12 +106,46 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 私有网络描述 
+     * @return Description 私有网络描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 私有网络描述
+     * @param Description 私有网络描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

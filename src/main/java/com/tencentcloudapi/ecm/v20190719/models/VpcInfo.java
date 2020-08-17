@@ -118,6 +118,46 @@ public class VpcInfo extends AbstractModel{
     private AssistantCidr [] AssistantCidrSet;
 
     /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 地域中文名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
+    * 包含子网数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetCount")
+    @Expose
+    private Long SubnetCount;
+
+    /**
+    * 包含实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceCount")
+    @Expose
+    private Long InstanceCount;
+
+    /**
      * Get VPC名称。 
      * @return VpcName VPC名称。
      */
@@ -342,6 +382,106 @@ public class VpcInfo extends AbstractModel{
     }
 
     /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 地域中文名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionName 地域中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set 地域中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionName 地域中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
+    /**
+     * Get 包含子网数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetCount 包含子网数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubnetCount() {
+        return this.SubnetCount;
+    }
+
+    /**
+     * Set 包含子网数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetCount 包含子网数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetCount(Long SubnetCount) {
+        this.SubnetCount = SubnetCount;
+    }
+
+    /**
+     * Get 包含实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceCount 包含实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceCount() {
+        return this.InstanceCount;
+    }
+
+    /**
+     * Set 包含实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceCount 包含实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceCount(Long InstanceCount) {
+        this.InstanceCount = InstanceCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -358,6 +498,11 @@ public class VpcInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "SubnetCount", this.SubnetCount);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
 
     }
 }
