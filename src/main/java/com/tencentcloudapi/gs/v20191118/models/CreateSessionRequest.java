@@ -100,7 +100,7 @@ public class CreateSessionRequest extends AbstractModel{
     private Long MinBitrate;
 
     /**
-    * 帧率，可设置为30、45或60
+    * 帧率，可设置为30、45、60、90、120、144
     */
     @SerializedName("Fps")
     @Expose
@@ -119,6 +119,13 @@ public class CreateSessionRequest extends AbstractModel{
     @SerializedName("Optimization")
     @Expose
     private Long Optimization;
+
+    /**
+    * 用于多人游戏，游戏主机用户ID
+    */
+    @SerializedName("HostUserId")
+    @Expose
+    private String HostUserId;
 
     /**
      * Get 客户端session信息，从JSSDK请求中获得 
@@ -297,16 +304,16 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 帧率，可设置为30、45或60 
-     * @return Fps 帧率，可设置为30、45或60
+     * Get 帧率，可设置为30、45、60、90、120、144 
+     * @return Fps 帧率，可设置为30、45、60、90、120、144
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 帧率，可设置为30、45或60
-     * @param Fps 帧率，可设置为30、45或60
+     * Set 帧率，可设置为30、45、60、90、120、144
+     * @param Fps 帧率，可设置为30、45、60、90、120、144
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
@@ -345,6 +352,22 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
+     * Get 用于多人游戏，游戏主机用户ID 
+     * @return HostUserId 用于多人游戏，游戏主机用户ID
+     */
+    public String getHostUserId() {
+        return this.HostUserId;
+    }
+
+    /**
+     * Set 用于多人游戏，游戏主机用户ID
+     * @param HostUserId 用于多人游戏，游戏主机用户ID
+     */
+    public void setHostUserId(String HostUserId) {
+        this.HostUserId = HostUserId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class CreateSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "Optimization", this.Optimization);
+        this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
 
     }
 }

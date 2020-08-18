@@ -13,67 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotcloud.v20180614.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoraDeviceRequest extends AbstractModel{
+public class FlushBinlogRequest extends AbstractModel{
 
     /**
-    * 产品ID
+    * 实例ID
     */
-    @SerializedName("ProductId")
+    @SerializedName("InstanceId")
     @Expose
-    private String ProductId;
+    private String InstanceId;
 
     /**
-    * 设备名称
-    */
-    @SerializedName("DeviceName")
-    @Expose
-    private String DeviceName;
-
-    /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
-    public String getProductId() {
-        return this.ProductId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
-    public void setProductId(String ProductId) {
-        this.ProductId = ProductId;
-    }
-
-    /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
-     */
-    public String getDeviceName() {
-        return this.DeviceName;
-    }
-
-    /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
-     */
-    public void setDeviceName(String DeviceName) {
-        this.DeviceName = DeviceName;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
-        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

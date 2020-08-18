@@ -128,6 +128,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] ExclusterIds;
 
     /**
+    * 按标签key查询
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
+
+    /**
      * Get 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。 
      * @return InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
      */
@@ -368,6 +375,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 按标签key查询 
+     * @return TagKeys 按标签key查询
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set 按标签key查询
+     * @param TagKeys 按标签key查询
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
 
     }
 }

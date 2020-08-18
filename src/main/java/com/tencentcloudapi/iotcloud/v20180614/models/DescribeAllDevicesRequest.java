@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopGameRequest extends AbstractModel{
+public class DescribeAllDevicesRequest extends AbstractModel{
 
     /**
-    * 游戏用户ID
+    * 查询偏移量。
     */
-    @SerializedName("UserId")
+    @SerializedName("Offset")
     @Expose
-    private String UserId;
+    private Long Offset;
 
     /**
-    * 用于多人游戏，游戏主机用户ID
+    * 查询设备数量。最大支持250个
     */
-    @SerializedName("HostUserId")
+    @SerializedName("Limit")
     @Expose
-    private String HostUserId;
+    private Long Limit;
 
     /**
-     * Get 游戏用户ID 
-     * @return UserId 游戏用户ID
+     * Get 查询偏移量。 
+     * @return Offset 查询偏移量。
      */
-    public String getUserId() {
-        return this.UserId;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set 游戏用户ID
-     * @param UserId 游戏用户ID
+     * Set 查询偏移量。
+     * @param Offset 查询偏移量。
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
-     * Get 用于多人游戏，游戏主机用户ID 
-     * @return HostUserId 用于多人游戏，游戏主机用户ID
+     * Get 查询设备数量。最大支持250个 
+     * @return Limit 查询设备数量。最大支持250个
      */
-    public String getHostUserId() {
-        return this.HostUserId;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 用于多人游戏，游戏主机用户ID
-     * @param HostUserId 用于多人游戏，游戏主机用户ID
+     * Set 查询设备数量。最大支持250个
+     * @param Limit 查询设备数量。最大支持250个
      */
-    public void setHostUserId(String HostUserId) {
-        this.HostUserId = HostUserId;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
-        this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

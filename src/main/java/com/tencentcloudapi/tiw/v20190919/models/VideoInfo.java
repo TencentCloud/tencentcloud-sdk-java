@@ -84,6 +84,20 @@ public class VideoInfo extends AbstractModel{
     private String UserId;
 
     /**
+    * 视频分辨率的宽
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * 视频分辨率的高
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
      * Get 视频开始播放的时间（单位：毫秒） 
      * @return VideoPlayTime 视频开始播放的时间（单位：毫秒）
      */
@@ -232,6 +246,38 @@ public class VideoInfo extends AbstractModel{
     }
 
     /**
+     * Get 视频分辨率的宽 
+     * @return Width 视频分辨率的宽
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set 视频分辨率的宽
+     * @param Width 视频分辨率的宽
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get 视频分辨率的高 
+     * @return Height 视频分辨率的高
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 视频分辨率的高
+     * @param Height 视频分辨率的高
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -243,6 +289,8 @@ public class VideoInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoId", this.VideoId);
         this.setParamSimple(map, prefix + "VideoType", this.VideoType);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
 
     }
 }

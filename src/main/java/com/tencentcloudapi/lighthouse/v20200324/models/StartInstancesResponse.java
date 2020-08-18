@@ -13,67 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotcloud.v20180614.models;
+package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoraDeviceRequest extends AbstractModel{
+public class StartInstancesResponse extends AbstractModel{
 
     /**
-    * 产品ID
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("ProductId")
+    @SerializedName("RequestId")
     @Expose
-    private String ProductId;
+    private String RequestId;
 
     /**
-    * 设备名称
-    */
-    @SerializedName("DeviceName")
-    @Expose
-    private String DeviceName;
-
-    /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getProductId() {
-        return this.ProductId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setProductId(String ProductId) {
-        this.ProductId = ProductId;
-    }
-
-    /**
-     * Get 设备名称 
-     * @return DeviceName 设备名称
-     */
-    public String getDeviceName() {
-        return this.DeviceName;
-    }
-
-    /**
-     * Set 设备名称
-     * @param DeviceName 设备名称
-     */
-    public void setDeviceName(String DeviceName) {
-        this.DeviceName = DeviceName;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
-        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

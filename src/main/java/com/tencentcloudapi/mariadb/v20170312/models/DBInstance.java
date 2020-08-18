@@ -299,6 +299,62 @@ public class DBInstance extends AbstractModel{
     private Long Cpu;
 
     /**
+    * 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6Flag")
+    @Expose
+    private Long Ipv6Flag;
+
+    /**
+    * 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vipv6")
+    @Expose
+    private String Vipv6;
+
+    /**
+    * 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanVipv6")
+    @Expose
+    private String WanVipv6;
+
+    /**
+    * 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanPortIpv6")
+    @Expose
+    private Long WanPortIpv6;
+
+    /**
+    * 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanStatusIpv6")
+    @Expose
+    private Long WanStatusIpv6;
+
+    /**
+    * 数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbEngine")
+    @Expose
+    private String DbEngine;
+
+    /**
+    * 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get 实例 ID，唯一标识一个 TDSQL 实例 
      * @return InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      */
@@ -935,6 +991,146 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6Flag 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIpv6Flag() {
+        return this.Ipv6Flag;
+    }
+
+    /**
+     * Set 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Flag 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6Flag(Long Ipv6Flag) {
+        this.Ipv6Flag = Ipv6Flag;
+    }
+
+    /**
+     * Get 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vipv6 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipv6() {
+        return this.Vipv6;
+    }
+
+    /**
+     * Set 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vipv6 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipv6(String Vipv6) {
+        this.Vipv6 = Vipv6;
+    }
+
+    /**
+     * Get 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanVipv6 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWanVipv6() {
+        return this.WanVipv6;
+    }
+
+    /**
+     * Set 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanVipv6 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanVipv6(String WanVipv6) {
+        this.WanVipv6 = WanVipv6;
+    }
+
+    /**
+     * Get 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanPortIpv6 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWanPortIpv6() {
+        return this.WanPortIpv6;
+    }
+
+    /**
+     * Set 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanPortIpv6 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanPortIpv6(Long WanPortIpv6) {
+        this.WanPortIpv6 = WanPortIpv6;
+    }
+
+    /**
+     * Get 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanStatusIpv6 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWanStatusIpv6() {
+        return this.WanStatusIpv6;
+    }
+
+    /**
+     * Set 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanStatusIpv6 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanStatusIpv6(Long WanStatusIpv6) {
+        this.WanStatusIpv6 = WanStatusIpv6;
+    }
+
+    /**
+     * Get 数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbEngine 数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbEngine() {
+        return this.DbEngine;
+    }
+
+    /**
+     * Set 数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbEngine 数据库引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbEngine(String DbEngine) {
+        this.DbEngine = DbEngine;
+    }
+
+    /**
+     * Get 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbVersion 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbVersion 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -977,6 +1173,13 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Machine", this.Machine);
         this.setParamSimple(map, prefix + "IsEncryptSupported", this.IsEncryptSupported);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+        this.setParamSimple(map, prefix + "Vipv6", this.Vipv6);
+        this.setParamSimple(map, prefix + "WanVipv6", this.WanVipv6);
+        this.setParamSimple(map, prefix + "WanPortIpv6", this.WanPortIpv6);
+        this.setParamSimple(map, prefix + "WanStatusIpv6", this.WanStatusIpv6);
+        this.setParamSimple(map, prefix + "DbEngine", this.DbEngine);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

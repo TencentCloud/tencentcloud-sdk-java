@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopGameRequest extends AbstractModel{
+public class ResetInstanceRequest extends AbstractModel{
 
     /**
-    * 游戏用户ID
+    * 实例 ID。
     */
-    @SerializedName("UserId")
+    @SerializedName("InstanceId")
     @Expose
-    private String UserId;
+    private String InstanceId;
 
     /**
-    * 用于多人游戏，游戏主机用户ID
+    * 镜像 ID。
     */
-    @SerializedName("HostUserId")
+    @SerializedName("BlueprintId")
     @Expose
-    private String HostUserId;
+    private String BlueprintId;
 
     /**
-     * Get 游戏用户ID 
-     * @return UserId 游戏用户ID
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
-    public String getUserId() {
-        return this.UserId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 游戏用户ID
-     * @param UserId 游戏用户ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用于多人游戏，游戏主机用户ID 
-     * @return HostUserId 用于多人游戏，游戏主机用户ID
+     * Get 镜像 ID。 
+     * @return BlueprintId 镜像 ID。
      */
-    public String getHostUserId() {
-        return this.HostUserId;
+    public String getBlueprintId() {
+        return this.BlueprintId;
     }
 
     /**
-     * Set 用于多人游戏，游戏主机用户ID
-     * @param HostUserId 用于多人游戏，游戏主机用户ID
+     * Set 镜像 ID。
+     * @param BlueprintId 镜像 ID。
      */
-    public void setHostUserId(String HostUserId) {
-        this.HostUserId = HostUserId;
+    public void setBlueprintId(String BlueprintId) {
+        this.BlueprintId = BlueprintId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
-        this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
 
     }
 }

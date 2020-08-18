@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopGameRequest extends AbstractModel{
+public class ResourceTag extends AbstractModel{
 
     /**
-    * 游戏用户ID
+    * 标签键key
     */
-    @SerializedName("UserId")
+    @SerializedName("TagKey")
     @Expose
-    private String UserId;
+    private String TagKey;
 
     /**
-    * 用于多人游戏，游戏主机用户ID
+    * 标签值value
     */
-    @SerializedName("HostUserId")
+    @SerializedName("TagValue")
     @Expose
-    private String HostUserId;
+    private String TagValue;
 
     /**
-     * Get 游戏用户ID 
-     * @return UserId 游戏用户ID
+     * Get 标签键key 
+     * @return TagKey 标签键key
      */
-    public String getUserId() {
-        return this.UserId;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set 游戏用户ID
-     * @param UserId 游戏用户ID
+     * Set 标签键key
+     * @param TagKey 标签键key
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
     /**
-     * Get 用于多人游戏，游戏主机用户ID 
-     * @return HostUserId 用于多人游戏，游戏主机用户ID
+     * Get 标签值value 
+     * @return TagValue 标签值value
      */
-    public String getHostUserId() {
-        return this.HostUserId;
+    public String getTagValue() {
+        return this.TagValue;
     }
 
     /**
-     * Set 用于多人游戏，游戏主机用户ID
-     * @param HostUserId 用于多人游戏，游戏主机用户ID
+     * Set 标签值value
+     * @param TagValue 标签值value
      */
-    public void setHostUserId(String HostUserId) {
-        this.HostUserId = HostUserId;
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
-        this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

@@ -13,67 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopGameRequest extends AbstractModel{
+public class Filter extends AbstractModel{
 
     /**
-    * 游戏用户ID
+    * 需要过滤的字段。
     */
-    @SerializedName("UserId")
+    @SerializedName("Name")
     @Expose
-    private String UserId;
+    private String Name;
 
     /**
-    * 用于多人游戏，游戏主机用户ID
+    * 字段的过滤值。
     */
-    @SerializedName("HostUserId")
+    @SerializedName("Values")
     @Expose
-    private String HostUserId;
+    private String [] Values;
 
     /**
-     * Get 游戏用户ID 
-     * @return UserId 游戏用户ID
+     * Get 需要过滤的字段。 
+     * @return Name 需要过滤的字段。
      */
-    public String getUserId() {
-        return this.UserId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 游戏用户ID
-     * @param UserId 游戏用户ID
+     * Set 需要过滤的字段。
+     * @param Name 需要过滤的字段。
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 用于多人游戏，游戏主机用户ID 
-     * @return HostUserId 用于多人游戏，游戏主机用户ID
+     * Get 字段的过滤值。 
+     * @return Values 字段的过滤值。
      */
-    public String getHostUserId() {
-        return this.HostUserId;
+    public String [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set 用于多人游戏，游戏主机用户ID
-     * @param HostUserId 用于多人游戏，游戏主机用户ID
+     * Set 字段的过滤值。
+     * @param Values 字段的过滤值。
      */
-    public void setHostUserId(String HostUserId) {
-        this.HostUserId = HostUserId;
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
-        this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

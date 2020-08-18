@@ -308,6 +308,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *查询所有设备列表
+     * @param req DescribeAllDevicesRequest
+     * @return DescribeAllDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllDevicesResponse DescribeAllDevices(DescribeAllDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDevice）用于查看设备信息
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse
@@ -380,7 +398,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *获取lora类型设备的详细信息
+     *获取lora类型设备的详细信息 
      * @param req DescribeLoraDeviceRequest
      * @return DescribeLoraDeviceResponse
      * @throws TencentCloudSDKException

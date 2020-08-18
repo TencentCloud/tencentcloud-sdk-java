@@ -473,6 +473,24 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *相当于在所有分片的mysqld中执行flush logs，完成切分的binlog将展示在各个分片控制台binlog列表里。
+     * @param req FlushBinlogRequest
+     * @return FlushBinlogResponse
+     * @throws TencentCloudSDKException
+     */
+    public FlushBinlogResponse FlushBinlog(FlushBinlogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FlushBinlogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FlushBinlogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FlushBinlog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
 注意：相同用户名，不同Host是不同的账号。
      * @param req GrantAccountPrivilegesRequest

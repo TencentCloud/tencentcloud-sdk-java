@@ -79,6 +79,13 @@ public class MigrateOrderRefundRequest extends AbstractModel{
     private String Profile;
 
     /**
+    * 退款原因
+    */
+    @SerializedName("RefundReason")
+    @Expose
+    private String RefundReason;
+
+    /**
      * Get 商户代码 
      * @return MerchantId 商户代码
      */
@@ -207,6 +214,22 @@ public class MigrateOrderRefundRequest extends AbstractModel{
     }
 
     /**
+     * Get 退款原因 
+     * @return RefundReason 退款原因
+     */
+    public String getRefundReason() {
+        return this.RefundReason;
+    }
+
+    /**
+     * Set 退款原因
+     * @param RefundReason 退款原因
+     */
+    public void setRefundReason(String RefundReason) {
+        this.RefundReason = RefundReason;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class MigrateOrderRefundRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ThirdChannelOrderId", this.ThirdChannelOrderId);
         this.setParamSimple(map, prefix + "PayAmt", this.PayAmt);
         this.setParamSimple(map, prefix + "Profile", this.Profile);
+        this.setParamSimple(map, prefix + "RefundReason", this.RefundReason);
 
     }
 }

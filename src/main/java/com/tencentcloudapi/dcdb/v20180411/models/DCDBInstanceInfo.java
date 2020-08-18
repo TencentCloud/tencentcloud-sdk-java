@@ -37,7 +37,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private String InstanceName;
 
     /**
-    * AppID
+    * 应用ID
     */
     @SerializedName("AppId")
     @Expose
@@ -156,7 +156,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private String IsolatedTimestamp;
 
     /**
-    * UIN
+    * 账号ID
     */
     @SerializedName("Uin")
     @Expose
@@ -297,6 +297,46 @@ public class DCDBInstanceInfo extends AbstractModel{
     private Long Cpu;
 
     /**
+    * 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6Flag")
+    @Expose
+    private Long Ipv6Flag;
+
+    /**
+    * 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vipv6")
+    @Expose
+    private String Vipv6;
+
+    /**
+    * 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanVipv6")
+    @Expose
+    private String WanVipv6;
+
+    /**
+    * 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanPortIpv6")
+    @Expose
+    private Long WanPortIpv6;
+
+    /**
+    * 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanStatusIpv6")
+    @Expose
+    private Long WanStatusIpv6;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -329,16 +369,16 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get AppID 
-     * @return AppId AppID
+     * Get 应用ID 
+     * @return AppId 应用ID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set AppID
-     * @param AppId AppID
+     * Set 应用ID
+     * @param AppId 应用ID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -601,16 +641,16 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get UIN 
-     * @return Uin UIN
+     * Get 账号ID 
+     * @return Uin 账号ID
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set UIN
-     * @param Uin UIN
+     * Set 账号ID
+     * @param Uin 账号ID
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -925,6 +965,106 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
+     * Get 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6Flag 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIpv6Flag() {
+        return this.Ipv6Flag;
+    }
+
+    /**
+     * Set 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Flag 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6Flag(Long Ipv6Flag) {
+        this.Ipv6Flag = Ipv6Flag;
+    }
+
+    /**
+     * Get 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vipv6 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipv6() {
+        return this.Vipv6;
+    }
+
+    /**
+     * Set 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vipv6 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipv6(String Vipv6) {
+        this.Vipv6 = Vipv6;
+    }
+
+    /**
+     * Get 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanVipv6 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWanVipv6() {
+        return this.WanVipv6;
+    }
+
+    /**
+     * Set 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanVipv6 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanVipv6(String WanVipv6) {
+        this.WanVipv6 = WanVipv6;
+    }
+
+    /**
+     * Get 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanPortIpv6 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWanPortIpv6() {
+        return this.WanPortIpv6;
+    }
+
+    /**
+     * Set 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanPortIpv6 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanPortIpv6(Long WanPortIpv6) {
+        this.WanPortIpv6 = WanPortIpv6;
+    }
+
+    /**
+     * Get 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanStatusIpv6 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWanStatusIpv6() {
+        return this.WanStatusIpv6;
+    }
+
+    /**
+     * Set 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanStatusIpv6 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanStatusIpv6(Long WanStatusIpv6) {
+        this.WanStatusIpv6 = WanStatusIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -967,6 +1107,11 @@ public class DCDBInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+        this.setParamSimple(map, prefix + "Vipv6", this.Vipv6);
+        this.setParamSimple(map, prefix + "WanVipv6", this.WanVipv6);
+        this.setParamSimple(map, prefix + "WanPortIpv6", this.WanPortIpv6);
+        this.setParamSimple(map, prefix + "WanStatusIpv6", this.WanStatusIpv6);
 
     }
 }

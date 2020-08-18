@@ -182,6 +182,24 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *查询挂载该文件系统的客户端。此功能需要客户端安装CFS监控插件。
+     * @param req DescribeCfsFileSystemClientsRequest
+     * @return DescribeCfsFileSystemClientsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClients(DescribeCfsFileSystemClientsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCfsFileSystemClientsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCfsFileSystemClientsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCfsFileSystemClients"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeCfsFileSystems）用于查询文件系统
      * @param req DescribeCfsFileSystemsRequest
      * @return DescribeCfsFileSystemsResponse
