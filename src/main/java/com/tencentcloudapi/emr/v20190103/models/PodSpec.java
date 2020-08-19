@@ -58,11 +58,25 @@ public class PodSpec extends AbstractModel{
     private Long Memory;
 
     /**
-    * 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
+    * 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
     */
     @SerializedName("DataVolumes")
     @Expose
     private String [] DataVolumes;
+
+    /**
+    * Eks集群-CPU类型，当前支持"intel"和"amd"
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
+    * Pod节点数据目录挂载信息。
+    */
+    @SerializedName("PodVolumes")
+    @Expose
+    private PodVolume [] PodVolumes;
 
     /**
      * Get 外部资源提供者的标识符，例如"cls-a1cd23fa"。 
@@ -145,19 +159,51 @@ public class PodSpec extends AbstractModel{
     }
 
     /**
-     * Get 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。 
-     * @return DataVolumes 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
+     * Get 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用 
+     * @return DataVolumes 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
      */
     public String [] getDataVolumes() {
         return this.DataVolumes;
     }
 
     /**
-     * Set 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
-     * @param DataVolumes 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
+     * Set 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
+     * @param DataVolumes 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
      */
     public void setDataVolumes(String [] DataVolumes) {
         this.DataVolumes = DataVolumes;
+    }
+
+    /**
+     * Get Eks集群-CPU类型，当前支持"intel"和"amd" 
+     * @return CpuType Eks集群-CPU类型，当前支持"intel"和"amd"
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set Eks集群-CPU类型，当前支持"intel"和"amd"
+     * @param CpuType Eks集群-CPU类型，当前支持"intel"和"amd"
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
+    /**
+     * Get Pod节点数据目录挂载信息。 
+     * @return PodVolumes Pod节点数据目录挂载信息。
+     */
+    public PodVolume [] getPodVolumes() {
+        return this.PodVolumes;
+    }
+
+    /**
+     * Set Pod节点数据目录挂载信息。
+     * @param PodVolumes Pod节点数据目录挂载信息。
+     */
+    public void setPodVolumes(PodVolume [] PodVolumes) {
+        this.PodVolumes = PodVolumes;
     }
 
     /**
@@ -170,6 +216,8 @@ public class PodSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamArraySimple(map, prefix + "DataVolumes.", this.DataVolumes);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
+        this.setParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
 
     }
 }

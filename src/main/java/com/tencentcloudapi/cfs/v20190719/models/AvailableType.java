@@ -30,11 +30,18 @@ public class AvailableType extends AbstractModel{
     private AvailableProtoStatus [] Protocols;
 
     /**
-    * 存储类型。可选值有 SD 标准型存储、HP性能型存储
+    * 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
     */
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 是否支持预付费。返回值中 true 为支持、false 为不支持
+    */
+    @SerializedName("Prepayment")
+    @Expose
+    private Boolean Prepayment;
 
     /**
      * Get 协议与售卖详情 
@@ -53,19 +60,35 @@ public class AvailableType extends AbstractModel{
     }
 
     /**
-     * Get 存储类型。可选值有 SD 标准型存储、HP性能型存储 
-     * @return Type 存储类型。可选值有 SD 标准型存储、HP性能型存储
+     * Get 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储 
+     * @return Type 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 存储类型。可选值有 SD 标准型存储、HP性能型存储
-     * @param Type 存储类型。可选值有 SD 标准型存储、HP性能型存储
+     * Set 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+     * @param Type 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 是否支持预付费。返回值中 true 为支持、false 为不支持 
+     * @return Prepayment 是否支持预付费。返回值中 true 为支持、false 为不支持
+     */
+    public Boolean getPrepayment() {
+        return this.Prepayment;
+    }
+
+    /**
+     * Set 是否支持预付费。返回值中 true 为支持、false 为不支持
+     * @param Prepayment 是否支持预付费。返回值中 true 为支持、false 为不支持
+     */
+    public void setPrepayment(Boolean Prepayment) {
+        this.Prepayment = Prepayment;
     }
 
     /**
@@ -74,6 +97,7 @@ public class AvailableType extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Protocols.", this.Protocols);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Prepayment", this.Prepayment);
 
     }
 }

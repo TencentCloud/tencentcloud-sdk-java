@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ClusterExtraArgs extends AbstractModel{
 
     /**
-    * kube-apiserver自定义参数
+    * kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KubeAPIServer")
@@ -47,9 +47,9 @@ public class ClusterExtraArgs extends AbstractModel{
     private String [] KubeScheduler;
 
     /**
-     * Get kube-apiserver自定义参数
+     * Get kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KubeAPIServer kube-apiserver自定义参数
+     * @return KubeAPIServer kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKubeAPIServer() {
@@ -57,9 +57,9 @@ public class ClusterExtraArgs extends AbstractModel{
     }
 
     /**
-     * Set kube-apiserver自定义参数
+     * Set kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KubeAPIServer kube-apiserver自定义参数
+     * @param KubeAPIServer kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKubeAPIServer(String [] KubeAPIServer) {

@@ -86,6 +86,27 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private String KubeProxyMode;
 
     /**
+    * 是否开启审计开关
+    */
+    @SerializedName("AuditEnabled")
+    @Expose
+    private Boolean AuditEnabled;
+
+    /**
+    * 审计日志上传到的logset日志集
+    */
+    @SerializedName("AuditLogsetId")
+    @Expose
+    private String AuditLogsetId;
+
+    /**
+    * 审计日志上传到的topic
+    */
+    @SerializedName("AuditLogTopicId")
+    @Expose
+    private String AuditLogTopicId;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -230,6 +251,54 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get 是否开启审计开关 
+     * @return AuditEnabled 是否开启审计开关
+     */
+    public Boolean getAuditEnabled() {
+        return this.AuditEnabled;
+    }
+
+    /**
+     * Set 是否开启审计开关
+     * @param AuditEnabled 是否开启审计开关
+     */
+    public void setAuditEnabled(Boolean AuditEnabled) {
+        this.AuditEnabled = AuditEnabled;
+    }
+
+    /**
+     * Get 审计日志上传到的logset日志集 
+     * @return AuditLogsetId 审计日志上传到的logset日志集
+     */
+    public String getAuditLogsetId() {
+        return this.AuditLogsetId;
+    }
+
+    /**
+     * Set 审计日志上传到的logset日志集
+     * @param AuditLogsetId 审计日志上传到的logset日志集
+     */
+    public void setAuditLogsetId(String AuditLogsetId) {
+        this.AuditLogsetId = AuditLogsetId;
+    }
+
+    /**
+     * Get 审计日志上传到的topic 
+     * @return AuditLogTopicId 审计日志上传到的topic
+     */
+    public String getAuditLogTopicId() {
+        return this.AuditLogTopicId;
+    }
+
+    /**
+     * Set 审计日志上传到的topic
+     * @param AuditLogTopicId 审计日志上传到的topic
+     */
+    public void setAuditLogTopicId(String AuditLogTopicId) {
+        this.AuditLogTopicId = AuditLogTopicId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +311,9 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
+        this.setParamSimple(map, prefix + "AuditEnabled", this.AuditEnabled);
+        this.setParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
+        this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
 
     }
 }

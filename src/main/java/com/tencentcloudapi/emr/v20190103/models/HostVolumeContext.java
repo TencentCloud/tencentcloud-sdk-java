@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceExtraArgs extends AbstractModel{
+public class HostVolumeContext extends AbstractModel{
 
     /**
-    * kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+    * Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Kubelet")
+    @SerializedName("VolumePath")
     @Expose
-    private String [] Kubelet;
+    private String VolumePath;
 
     /**
-     * Get kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+     * Get Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Kubelet kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+     * @return VolumePath Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getKubelet() {
-        return this.Kubelet;
+    public String getVolumePath() {
+        return this.VolumePath;
     }
 
     /**
-     * Set kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+     * Set Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Kubelet kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+     * @param VolumePath Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKubelet(String [] Kubelet) {
-        this.Kubelet = Kubelet;
+    public void setVolumePath(String VolumePath) {
+        this.VolumePath = VolumePath;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Kubelet.", this.Kubelet);
+        this.setParamSimple(map, prefix + "VolumePath", this.VolumePath);
 
     }
 }

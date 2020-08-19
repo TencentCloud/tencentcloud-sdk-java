@@ -93,6 +93,9 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
     */
     @SerializedName("CosPrefix")
     @Expose
@@ -100,6 +103,9 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
     */
     @SerializedName("CosFileName")
     @Expose
@@ -274,8 +280,14 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Cos Bucket文件夹前缀。 
+     * Get Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效 
      * @return CosPrefix Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
      */
     public String getCosPrefix() {
         return this.CosPrefix;
@@ -283,15 +295,27 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
      * @param CosPrefix Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
      */
     public void setCosPrefix(String CosPrefix) {
         this.CosPrefix = CosPrefix;
     }
 
     /**
-     * Get Cos 文件名称。 
+     * Get Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效 
      * @return CosFileName Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
      */
     public String getCosFileName() {
         return this.CosFileName;
@@ -299,7 +323,13 @@ public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
      * @param CosFileName Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
      */
     public void setCosFileName(String CosFileName) {
         this.CosFileName = CosFileName;

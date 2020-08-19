@@ -89,6 +89,14 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
     private String CallbackKey;
 
     /**
+    * 混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+    */
+    @SerializedName("StreamMixNotifyUrl")
+    @Expose
+    private String StreamMixNotifyUrl;
+
+    /**
      * Get 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。 
@@ -257,6 +265,26 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get 混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。 
+     * @return StreamMixNotifyUrl 混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     */
+    public String getStreamMixNotifyUrl() {
+        return this.StreamMixNotifyUrl;
+    }
+
+    /**
+     * Set 混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param StreamMixNotifyUrl 混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     */
+    public void setStreamMixNotifyUrl(String StreamMixNotifyUrl) {
+        this.StreamMixNotifyUrl = StreamMixNotifyUrl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -268,6 +296,7 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
 
     }
 }
