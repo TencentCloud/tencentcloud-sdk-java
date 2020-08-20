@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
-    * 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
+    * 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
     */
     @SerializedName("Filters")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String OrderByType;
 
     /**
-     * Get 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。 
-     * @return Filters 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
+     * Get 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。 
+     * @return Filters 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
-     * @param Filters 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
+     * Set 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
+     * @param Filters 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

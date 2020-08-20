@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class VideoEditProjectOutput extends AbstractModel{
 
     /**
+    * 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+    */
+    @SerializedName("MaterialId")
+    @Expose
+    private String MaterialId;
+
+    /**
     * 云点播媒资 FileId。
     */
     @SerializedName("VodFileId")
@@ -43,6 +50,22 @@ public class VideoEditProjectOutput extends AbstractModel{
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
+
+    /**
+     * Get 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。 
+     * @return MaterialId 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     */
+    public String getMaterialId() {
+        return this.MaterialId;
+    }
+
+    /**
+     * Set 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     * @param MaterialId 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     */
+    public void setMaterialId(String MaterialId) {
+        this.MaterialId = MaterialId;
+    }
 
     /**
      * Get 云点播媒资 FileId。 
@@ -100,6 +123,7 @@ public class VideoEditProjectOutput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
         this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
         this.setParamSimple(map, prefix + "URL", this.URL);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);

@@ -44,6 +44,20 @@ public class DescribeServerlessDBInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 排序指标，目前支持实例创建时间CreateTime
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 排序方式，包括升序、降序
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get 查询条件 
      * @return Filter 查询条件
      */
@@ -92,12 +106,46 @@ public class DescribeServerlessDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 排序指标，目前支持实例创建时间CreateTime 
+     * @return OrderBy 排序指标，目前支持实例创建时间CreateTime
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 排序指标，目前支持实例创建时间CreateTime
+     * @param OrderBy 排序指标，目前支持实例创建时间CreateTime
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 排序方式，包括升序、降序 
+     * @return OrderByType 排序方式，包括升序、降序
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 排序方式，包括升序、降序
+     * @param OrderByType 排序方式，包括升序、降序
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filter.", this.Filter);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

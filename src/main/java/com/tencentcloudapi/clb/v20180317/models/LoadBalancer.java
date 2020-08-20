@@ -332,7 +332,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String IPv6Mode;
 
     /**
-    * 是否开启SnatPro
+    * 是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnatPro")
@@ -340,7 +340,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Boolean SnatPro;
 
     /**
-    * 开启SnatPro负载均衡后，SnatIp列表
+    * 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnatIps")
@@ -378,6 +378,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     @SerializedName("LocalBgp")
     @Expose
     private Boolean LocalBgp;
+
+    /**
+    * 7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterTag")
+    @Expose
+    private String ClusterTag;
+
+    /**
+    * 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MixIpTarget")
+    @Expose
+    private Boolean MixIpTarget;
 
     /**
      * Get 负载均衡实例 ID。 
@@ -1148,9 +1164,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 是否开启SnatPro
+     * Get 是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnatPro 是否开启SnatPro
+     * @return SnatPro 是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSnatPro() {
@@ -1158,9 +1174,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 是否开启SnatPro
+     * Set 是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnatPro 是否开启SnatPro
+     * @param SnatPro 是否开启SnatPro。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnatPro(Boolean SnatPro) {
@@ -1168,9 +1184,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 开启SnatPro负载均衡后，SnatIp列表
+     * Get 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnatIps 开启SnatPro负载均衡后，SnatIp列表
+     * @return SnatIps 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnatIp [] getSnatIps() {
@@ -1178,9 +1194,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 开启SnatPro负载均衡后，SnatIp列表
+     * Set 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnatIps 开启SnatPro负载均衡后，SnatIp列表
+     * @param SnatIps 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnatIps(SnatIp [] SnatIps) {
@@ -1268,6 +1284,46 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterTag 7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterTag() {
+        return this.ClusterTag;
+    }
+
+    /**
+     * Set 7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterTag 7层独占标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterTag(String ClusterTag) {
+        this.ClusterTag = ClusterTag;
+    }
+
+    /**
+     * Get 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getMixIpTarget() {
+        return this.MixIpTarget;
+    }
+
+    /**
+     * Set 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMixIpTarget(Boolean MixIpTarget) {
+        this.MixIpTarget = MixIpTarget;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1316,6 +1372,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
         this.setParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
         this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+        this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+        this.setParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
 
     }
 }

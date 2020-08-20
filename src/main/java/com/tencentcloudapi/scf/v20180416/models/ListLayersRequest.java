@@ -30,14 +30,14 @@ public class ListLayersRequest extends AbstractModel{
     private String CompatibleRuntime;
 
     /**
-    * Offset
+    * 偏移位置
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit
+    * 查询数目限制
     */
     @SerializedName("Limit")
     @Expose
@@ -67,32 +67,32 @@ public class ListLayersRequest extends AbstractModel{
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get 偏移位置 
+     * @return Offset 偏移位置
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set 偏移位置
+     * @param Offset 偏移位置
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit 
-     * @return Limit Limit
+     * Get 查询数目限制 
+     * @return Limit 查询数目限制
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit
-     * @param Limit Limit
+     * Set 查询数目限制
+     * @param Limit 查询数目限制
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

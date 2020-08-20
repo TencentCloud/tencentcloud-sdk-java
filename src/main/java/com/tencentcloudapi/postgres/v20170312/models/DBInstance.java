@@ -212,6 +212,14 @@ public class DBInstance extends AbstractModel{
     private Long SupportIpv6;
 
     /**
+    * 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -644,6 +652,26 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -674,6 +702,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

@@ -38,6 +38,13 @@ public class BusinessCardInfo extends AbstractModel{
     private String Value;
 
     /**
+    * 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+    */
+    @SerializedName("ItemCoord")
+    @Expose
+    private ItemCoord ItemCoord;
+
+    /**
      * Get 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
 姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。 
      * @return Name 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
@@ -74,11 +81,28 @@ public class BusinessCardInfo extends AbstractModel{
     }
 
     /**
+     * Get 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height） 
+     * @return ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public ItemCoord getItemCoord() {
+        return this.ItemCoord;
+    }
+
+    /**
+     * Set 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public void setItemCoord(ItemCoord ItemCoord) {
+        this.ItemCoord = ItemCoord;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
 
     }
 }

@@ -37,6 +37,13 @@ public class BusinessCardOCRResponse extends AbstractModel{
     private String RetImageBase64;
 
     /**
+    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+    */
+    @SerializedName("Angle")
+    @Expose
+    private Float Angle;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class BusinessCardOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a> 
+     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     */
+    public Float getAngle() {
+        return this.Angle;
+    }
+
+    /**
+     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     */
+    public void setAngle(Float Angle) {
+        this.Angle = Angle;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +120,7 @@ public class BusinessCardOCRResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "BusinessCardInfos.", this.BusinessCardInfos);
         this.setParamSimple(map, prefix + "RetImageBase64", this.RetImageBase64);
+        this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

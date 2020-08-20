@@ -135,6 +135,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long NeedSupportIpv6;
 
     /**
+    * 实例需要绑定的Tag信息，默认为空
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
      * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      */
@@ -391,6 +398,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例需要绑定的Tag信息，默认为空 
+     * @return TagList 实例需要绑定的Tag信息，默认为空
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 实例需要绑定的Tag信息，默认为空
+     * @param TagList 实例需要绑定的Tag信息，默认为空
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

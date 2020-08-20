@@ -38,7 +38,7 @@ public class DescribePeakNetworkOverviewRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
     */
     @SerializedName("Filters")
     @Expose
@@ -78,9 +78,9 @@ region    String      是否必填：否     （过滤条件）按照region过�
 
     /**
      * Get 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。 
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。 
      * @return Filters 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -88,9 +88,9 @@ region    String      是否必填：否     （过滤条件）按照region过�
 
     /**
      * Set 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
      * @param Filters 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

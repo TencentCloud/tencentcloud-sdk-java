@@ -72,6 +72,13 @@ public class CreateServerlessDBInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 实例需要绑定的标签数组信息
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2. 
      * @return Zone 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
      */
@@ -184,6 +191,22 @@ public class CreateServerlessDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例需要绑定的标签数组信息 
+     * @return TagList 实例需要绑定的标签数组信息
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 实例需要绑定的标签数组信息
+     * @param TagList 实例需要绑定的标签数组信息
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateServerlessDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

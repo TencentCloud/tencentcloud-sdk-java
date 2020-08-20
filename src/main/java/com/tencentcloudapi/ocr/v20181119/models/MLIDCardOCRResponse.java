@@ -68,7 +68,7 @@ public class MLIDCardOCRResponse extends AbstractModel{
     private String Image;
 
     /**
-    * 扩展字段:
+    * 扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -94,6 +94,13 @@ IKAD   劳工证
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 出生日期（目前该字段仅支持IKAD劳工证）
+    */
+    @SerializedName("Birthday")
+    @Expose
+    private String Birthday;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -211,7 +218,7 @@ IKAD   劳工证
     }
 
     /**
-     * Get 扩展字段:
+     * Get 扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -220,7 +227,7 @@ IKAD   劳工证
         Confidence:0.9996
     }
 } 
-     * @return AdvancedInfo 扩展字段:
+     * @return AdvancedInfo 扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -235,7 +242,7 @@ IKAD   劳工证
     }
 
     /**
-     * Set 扩展字段:
+     * Set 扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -244,7 +251,7 @@ IKAD   劳工证
         Confidence:0.9996
     }
 }
-     * @param AdvancedInfo 扩展字段:
+     * @param AdvancedInfo 扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -299,6 +306,22 @@ IKAD   劳工证
     }
 
     /**
+     * Get 出生日期（目前该字段仅支持IKAD劳工证） 
+     * @return Birthday 出生日期（目前该字段仅支持IKAD劳工证）
+     */
+    public String getBirthday() {
+        return this.Birthday;
+    }
+
+    /**
+     * Set 出生日期（目前该字段仅支持IKAD劳工证）
+     * @param Birthday 出生日期（目前该字段仅支持IKAD劳工证）
+     */
+    public void setBirthday(String Birthday) {
+        this.Birthday = Birthday;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -326,6 +349,7 @@ IKAD   劳工证
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Birthday", this.Birthday);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

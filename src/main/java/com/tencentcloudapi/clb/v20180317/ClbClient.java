@@ -557,7 +557,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *获取用户的clb独占日志集。
+     *获取用户的clb专有日志集
      * @param req DescribeClsLogSetRequest
      * @return DescribeClsLogSetResponse
      * @throws TencentCloudSDKException
