@@ -44,7 +44,7 @@ public class RuleInput extends AbstractModel{
     private Long SessionExpireTime;
 
     /**
-    * 健康检查信息
+    * 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -163,16 +163,16 @@ public class RuleInput extends AbstractModel{
     }
 
     /**
-     * Get 健康检查信息 
-     * @return HealthCheck 健康检查信息
+     * Get 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097) 
+     * @return HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查信息
-     * @param HealthCheck 健康检查信息
+     * Set 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
+     * @param HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;

@@ -52,7 +52,7 @@ public class StartOnlineRecordRequest extends AbstractModel{
     private String RecordUserSig;
 
     /**
-    * 白板的 IM 群组 Id，默认同房间号
+    * （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
     */
     @SerializedName("GroupId")
     @Expose
@@ -97,6 +97,13 @@ MIX_STREAM - 混流功能
     @SerializedName("AudioFileNeeded")
     @Expose
     private Boolean AudioFileNeeded;
+
+    /**
+    * 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+    */
+    @SerializedName("RecordControl")
+    @Expose
+    private RecordControl RecordControl;
 
     /**
      * Get 客户的SdkAppId 
@@ -167,16 +174,16 @@ MIX_STREAM - 混流功能
     }
 
     /**
-     * Get 白板的 IM 群组 Id，默认同房间号 
-     * @return GroupId 白板的 IM 群组 Id，默认同房间号
+     * Get （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号 
+     * @return GroupId （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 白板的 IM 群组 Id，默认同房间号
-     * @param GroupId 白板的 IM 群组 Id，默认同房间号
+     * Set （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
+     * @param GroupId （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -283,6 +290,22 @@ MIX_STREAM - 混流功能
     }
 
     /**
+     * Get 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等 
+     * @return RecordControl 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+     */
+    public RecordControl getRecordControl() {
+        return this.RecordControl;
+    }
+
+    /**
+     * Set 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+     * @param RecordControl 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+     */
+    public void setRecordControl(RecordControl RecordControl) {
+        this.RecordControl = RecordControl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -296,6 +319,7 @@ MIX_STREAM - 混流功能
         this.setParamObj(map, prefix + "MixStream.", this.MixStream);
         this.setParamArraySimple(map, prefix + "Extras.", this.Extras);
         this.setParamSimple(map, prefix + "AudioFileNeeded", this.AudioFileNeeded);
+        this.setParamObj(map, prefix + "RecordControl.", this.RecordControl);
 
     }
 }

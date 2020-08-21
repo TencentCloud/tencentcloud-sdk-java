@@ -38,6 +38,24 @@ public class TmsClient extends AbstractClient{
     }
 
     /**
+     *举报恶意账号
+     * @param req AccountTipoffAccessRequest
+     * @return AccountTipoffAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public AccountTipoffAccessResponse AccountTipoffAccess(AccountTipoffAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AccountTipoffAccessResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AccountTipoffAccessResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AccountTipoffAccess"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
      * @param req TextModerationRequest
      * @return TextModerationResponse

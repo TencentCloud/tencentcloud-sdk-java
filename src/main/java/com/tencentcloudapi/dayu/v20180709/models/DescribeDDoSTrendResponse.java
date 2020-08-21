@@ -73,7 +73,7 @@ public class DescribeDDoSTrendResponse extends AbstractModel{
     private String EndTime;
 
     /**
-    * 值数组
+    * 值数组，攻击流量带宽单位为Mbps，包速率单位为pps
     */
     @SerializedName("Data")
     @Expose
@@ -210,16 +210,16 @@ public class DescribeDDoSTrendResponse extends AbstractModel{
     }
 
     /**
-     * Get 值数组 
-     * @return Data 值数组
+     * Get 值数组，攻击流量带宽单位为Mbps，包速率单位为pps 
+     * @return Data 值数组，攻击流量带宽单位为Mbps，包速率单位为pps
      */
     public Long [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 值数组
-     * @param Data 值数组
+     * Set 值数组，攻击流量带宽单位为Mbps，包速率单位为pps
+     * @param Data 值数组，攻击流量带宽单位为Mbps，包速率单位为pps
      */
     public void setData(Long [] Data) {
         this.Data = Data;

@@ -98,6 +98,24 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *绑定安全组
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *弹性网卡绑定云主机
      * @param req AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
@@ -188,6 +206,35 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *在 SecurityGroupPolicySet 参数中：
+
+Version 安全组规则版本号，用户每次更新安全规则版本会自动加1，防止您更新的路由规则已过期，不填不考虑冲突。
+在创建出站和入站规则（Egress 和 Ingress）时：
+Protocol 字段支持输入TCP, UDP, ICMP, ICMPV6, GRE, ALL。
+CidrBlock 字段允许输入符合cidr格式标准的任意字符串。(展开)在基础网络中，如果 CidrBlock 包含您的账户内的云服务器之外的设备在腾讯云的内网 IP，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+Ipv6CidrBlock 字段允许输入符合IPv6 cidr格式标准的任意字符串。(展开)在基础网络中，如果Ipv6CidrBlock 包含您的账户内的云服务器之外的设备在腾讯云的内网 IPv6，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+SecurityGroupId 字段允许输入与待修改的安全组位于相同项目中的安全组 ID，包括这个安全组 ID 本身，代表安全组下所有云服务器的内网 IP。使用这个字段时，这条规则用来匹配网络报文的过程中会随着被使用的这个 ID 所关联的云服务器变化而变化，不需要重新修改。
+Port 字段允许输入一个单独端口号，或者用减号分隔的两个端口号代表端口范围，例如80或8000-8010。只有当 Protocol 字段是 TCP 或 UDP 时，Port 字段才被接受，即 Protocol 字段不是 TCP 或 UDP 时，Protocol 和 Port 排他关系，不允许同时输入，否则会接口报错。
+Action 字段只允许输入 ACCEPT 或 DROP。
+CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系，不允许同时输入，Protocol + Port 和 ServiceTemplate 二者是排他关系，不允许同时输入。
+一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。
+     * @param req CreateSecurityGroupPoliciesRequest
+     * @return CreateSecurityGroupPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityGroupPoliciesResponse CreateSecurityGroupPolicies(CreateSecurityGroupPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSecurityGroupPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSecurityGroupPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSecurityGroupPolicies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建子网，若创建成功，则此子网会成为此可用区的默认子网。
      * @param req CreateSubnetRequest
      * @return CreateSubnetResponse
@@ -271,6 +318,44 @@ EIP 如果欠费或被封堵，则不能被绑定。
                 Type type = new TypeToken<JsonResponseModel<DeleteNetworkInterfaceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *只有当前账号下的安全组允许被删除。
+安全组实例ID如果在其他安全组的规则中被引用，则无法直接删除。这种情况下，需要先进行规则修改，再删除安全组。
+删除的安全组无法再找回，请谨慎调用。
+     * @param req DeleteSecurityGroupRequest
+     * @return DeleteSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityGroupResponse DeleteSecurityGroup(DeleteSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSecurityGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSecurityGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSecurityGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
+     * @param req DeleteSecurityGroupPoliciesRequest
+     * @return DeleteSecurityGroupPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityGroupPoliciesResponse DeleteSecurityGroupPolicies(DeleteSecurityGroupPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSecurityGroupPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSecurityGroupPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSecurityGroupPolicies"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -638,6 +723,78 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *查询安全组关联实例统计
+     * @param req DescribeSecurityGroupAssociationStatisticsRequest
+     * @return DescribeSecurityGroupAssociationStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatistics(DescribeSecurityGroupAssociationStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSecurityGroupAssociationStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户安全组配额
+     * @param req DescribeSecurityGroupLimitsRequest
+     * @return DescribeSecurityGroupLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupLimitsResponse DescribeSecurityGroupLimits(DescribeSecurityGroupLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityGroupLimitsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityGroupLimitsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSecurityGroupLimits"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询安全组规则
+     * @param req DescribeSecurityGroupPoliciesRequest
+     * @return DescribeSecurityGroupPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPolicies(DescribeSecurityGroupPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityGroupPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityGroupPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSecurityGroupPolicies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看安全组
+     * @param req DescribeSecurityGroupsRequest
+     * @return DescribeSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupsResponse DescribeSecurityGroups(DescribeSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询子网列表
      * @param req DescribeSubnetsRequest
      * @return DescribeSubnetsResponse
@@ -741,6 +898,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<DisassociateAddressResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DisassociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑安全组
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1003,6 +1178,60 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *修改模块默认安全组
+     * @param req ModifyModuleSecurityGroupsRequest
+     * @return ModifyModuleSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModuleSecurityGroupsResponse ModifyModuleSecurityGroups(ModifyModuleSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyModuleSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyModuleSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyModuleSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改安全组属性
+     * @param req ModifySecurityGroupAttributeRequest
+     * @return ModifySecurityGroupAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityGroupAttributeResponse ModifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySecurityGroupAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySecurityGroupAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySecurityGroupAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改安全组出站和入站规则
+     * @param req ModifySecurityGroupPoliciesRequest
+     * @return ModifySecurityGroupPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityGroupPoliciesResponse ModifySecurityGroupPolicies(ModifySecurityGroupPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySecurityGroupPoliciesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySecurityGroupPoliciesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySecurityGroupPolicies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改子网属性
      * @param req ModifySubnetAttributeRequest
      * @return ModifySubnetAttributeResponse
@@ -1089,6 +1318,24 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<RemovePrivateIpAddressesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RemovePrivateIpAddresses"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *替换单条安全组路由规则, 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
+     * @param req ReplaceSecurityGroupPolicyRequest
+     * @return ReplaceSecurityGroupPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceSecurityGroupPolicyResponse ReplaceSecurityGroupPolicy(ReplaceSecurityGroupPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceSecurityGroupPolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceSecurityGroupPolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReplaceSecurityGroupPolicy"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

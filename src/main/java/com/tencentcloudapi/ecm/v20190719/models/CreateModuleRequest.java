@@ -81,6 +81,13 @@ public class CreateModuleRequest extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
+    * 模块默认安全组列表
+    */
+    @SerializedName("SecurityGroups")
+    @Expose
+    private String [] SecurityGroups;
+
+    /**
      * Get 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。 
      * @return ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      */
@@ -217,6 +224,22 @@ public class CreateModuleRequest extends AbstractModel{
     }
 
     /**
+     * Get 模块默认安全组列表 
+     * @return SecurityGroups 模块默认安全组列表
+     */
+    public String [] getSecurityGroups() {
+        return this.SecurityGroups;
+    }
+
+    /**
+     * Set 模块默认安全组列表
+     * @param SecurityGroups 模块默认安全组列表
+     */
+    public void setSecurityGroups(String [] SecurityGroups) {
+        this.SecurityGroups = SecurityGroups;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -228,6 +251,7 @@ public class CreateModuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultDataDiskSize", this.DefaultDataDiskSize);
         this.setParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
 
     }
 }

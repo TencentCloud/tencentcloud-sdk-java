@@ -104,6 +104,13 @@ DELETEFAILED：删除失败
     private Long CloseIpDirect;
 
     /**
+    * 默认安全组id列表
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 模块Id 
      * @return ModuleId 模块Id
      */
@@ -296,6 +303,22 @@ DELETEFAILED：删除失败
     }
 
     /**
+     * Get 默认安全组id列表 
+     * @return SecurityGroupIds 默认安全组id列表
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 默认安全组id列表
+     * @param SecurityGroupIds 默认安全组id列表
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -310,6 +333,7 @@ DELETEFAILED：删除失败
         this.setParamSimple(map, prefix + "DefaultBandwidth", this.DefaultBandwidth);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }
