@@ -53,11 +53,12 @@ public class TencentCloudSDKException extends Exception {
     return errorCode;
   }
 
+  @Override
   public String toString() {
     return "[TencentCloudSDKException]"
-        + " code:"
-        +this.getErrorCode()
-        + "message:"
+        + "code:"
+        + this.getErrorCode()
+        + " message:"
         + this.getMessage()
         + " requestId:"
         + this.getRequestId();
