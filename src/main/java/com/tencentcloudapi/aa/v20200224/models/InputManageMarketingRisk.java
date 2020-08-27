@@ -30,17 +30,6 @@ public class InputManageMarketingRisk extends AbstractModel{
     private AccountInfo Account;
 
     /**
-    * 场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚）
-    */
-    @SerializedName("SceneType")
-    @Expose
-    private Long SceneType;
-
-    /**
     * 登录来源的外网IP
     */
     @SerializedName("UserIp")
@@ -53,6 +42,17 @@ public class InputManageMarketingRisk extends AbstractModel{
     @SerializedName("PostTime")
     @Expose
     private Long PostTime;
+
+    /**
+    * 场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚）
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private Long SceneType;
 
     /**
     * 用户唯一标识。
@@ -155,6 +155,20 @@ public class InputManageMarketingRisk extends AbstractModel{
     private CrowdAntiRushInfo CrowdAntiRush;
 
     /**
+    * 场景Code，控制台上获取
+    */
+    @SerializedName("SceneCode")
+    @Expose
+    private String SceneCode;
+
+    /**
+    * 详细信息
+    */
+    @SerializedName("Details")
+    @Expose
+    private InputDetails [] Details;
+
+    /**
      * Get 账号信息。 
      * @return Account 账号信息。
      */
@@ -168,38 +182,6 @@ public class InputManageMarketingRisk extends AbstractModel{
      */
     public void setAccount(AccountInfo Account) {
         this.Account = Account;
-    }
-
-    /**
-     * Get 场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚） 
-     * @return SceneType 场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚）
-     */
-    public Long getSceneType() {
-        return this.SceneType;
-    }
-
-    /**
-     * Set 场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚）
-     * @param SceneType 场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚）
-     */
-    public void setSceneType(Long SceneType) {
-        this.SceneType = SceneType;
     }
 
     /**
@@ -232,6 +214,38 @@ public class InputManageMarketingRisk extends AbstractModel{
      */
     public void setPostTime(Long PostTime) {
         this.PostTime = PostTime;
+    }
+
+    /**
+     * Get 场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚） 
+     * @return SceneType 场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚）
+     */
+    public Long getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set 场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚）
+     * @param SceneType 场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚）
+     */
+    public void setSceneType(Long SceneType) {
+        this.SceneType = SceneType;
     }
 
     /**
@@ -467,13 +481,45 @@ public class InputManageMarketingRisk extends AbstractModel{
     }
 
     /**
+     * Get 场景Code，控制台上获取 
+     * @return SceneCode 场景Code，控制台上获取
+     */
+    public String getSceneCode() {
+        return this.SceneCode;
+    }
+
+    /**
+     * Set 场景Code，控制台上获取
+     * @param SceneCode 场景Code，控制台上获取
+     */
+    public void setSceneCode(String SceneCode) {
+        this.SceneCode = SceneCode;
+    }
+
+    /**
+     * Get 详细信息 
+     * @return Details 详细信息
+     */
+    public InputDetails [] getDetails() {
+        return this.Details;
+    }
+
+    /**
+     * Set 详细信息
+     * @param Details 详细信息
+     */
+    public void setDetails(InputDetails [] Details) {
+        this.Details = Details;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Account.", this.Account);
-        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "PostTime", this.PostTime);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "DeviceToken", this.DeviceToken);
         this.setParamSimple(map, prefix + "DeviceBusinessId", this.DeviceBusinessId);
@@ -488,6 +534,8 @@ public class InputManageMarketingRisk extends AbstractModel{
         this.setParamSimple(map, prefix + "MacAddress", this.MacAddress);
         this.setParamSimple(map, prefix + "VendorId", this.VendorId);
         this.setParamObj(map, prefix + "CrowdAntiRush.", this.CrowdAntiRush);
+        this.setParamSimple(map, prefix + "SceneCode", this.SceneCode);
+        this.setParamArrayObj(map, prefix + "Details.", this.Details);
 
     }
 }

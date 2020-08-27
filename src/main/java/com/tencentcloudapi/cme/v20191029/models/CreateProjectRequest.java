@@ -32,6 +32,7 @@ public class CreateProjectRequest extends AbstractModel{
     /**
     * 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
     */
     @SerializedName("Category")
     @Expose
@@ -61,6 +62,20 @@ public class CreateProjectRequest extends AbstractModel{
     private Entity Owner;
 
     /**
+    * 项目描述信息。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 导播台信息，仅当项目类型为 SWITCHER 时有效。
+    */
+    @SerializedName("SwitcherProjectInput")
+    @Expose
+    private SwitcherProjectInput SwitcherProjectInput;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -78,9 +93,11 @@ public class CreateProjectRequest extends AbstractModel{
 
     /**
      * Get 项目类别，取值有：
-<li>VIDEO_EDIT：视频编辑。</li> 
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li> 
      * @return Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
      */
     public String getCategory() {
         return this.Category;
@@ -89,8 +106,10 @@ public class CreateProjectRequest extends AbstractModel{
     /**
      * Set 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
      * @param Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;
@@ -153,6 +172,38 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 项目描述信息。 
+     * @return Description 项目描述信息。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 项目描述信息。
+     * @param Description 项目描述信息。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 导播台信息，仅当项目类型为 SWITCHER 时有效。 
+     * @return SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     */
+    public SwitcherProjectInput getSwitcherProjectInput() {
+        return this.SwitcherProjectInput;
+    }
+
+    /**
+     * Set 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     * @param SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     */
+    public void setSwitcherProjectInput(SwitcherProjectInput SwitcherProjectInput) {
+        this.SwitcherProjectInput = SwitcherProjectInput;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -161,6 +212,8 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
 
     }
 }

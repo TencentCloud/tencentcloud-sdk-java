@@ -37,7 +37,7 @@ public class CreateTriggerRequest extends AbstractModel{
     private String TriggerName;
 
     /**
-    * 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+    * 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型
     */
     @SerializedName("Type")
     @Expose
@@ -104,16 +104,16 @@ public class CreateTriggerRequest extends AbstractModel{
     }
 
     /**
-     * Get 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型 
-     * @return Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+     * Get 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型 
+     * @return Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
-     * @param Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+     * Set 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型
+     * @param Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型
      */
     public void setType(String Type) {
         this.Type = Type;

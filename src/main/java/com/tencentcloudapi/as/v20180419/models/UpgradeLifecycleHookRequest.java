@@ -58,7 +58,7 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     private Long HeartbeatTimeout;
 
     /**
-    * 弹性伸缩向通知目标发送的附加信息，默认值为''
+    * 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
     */
     @SerializedName("NotificationMetadata")
     @Expose
@@ -159,16 +159,16 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     }
 
     /**
-     * Get 弹性伸缩向通知目标发送的附加信息，默认值为'' 
-     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为''
+     * Get 弹性伸缩向通知目标发送的附加信息，默认值为空字符串"" 
+     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set 弹性伸缩向通知目标发送的附加信息，默认值为''
-     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为''
+     * Set 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
+     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;

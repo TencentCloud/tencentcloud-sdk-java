@@ -30,7 +30,7 @@ public class DisassociateNatGatewayAddressRequest extends AbstractModel{
     private String NatGatewayId;
 
     /**
-    * 绑定NAT网关的弹性IP数组。
+    * 待解绑NAT网关的弹性IP数组。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -53,16 +53,16 @@ public class DisassociateNatGatewayAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get 绑定NAT网关的弹性IP数组。 
-     * @return PublicIpAddresses 绑定NAT网关的弹性IP数组。
+     * Get 待解绑NAT网关的弹性IP数组。 
+     * @return PublicIpAddresses 待解绑NAT网关的弹性IP数组。
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set 绑定NAT网关的弹性IP数组。
-     * @param PublicIpAddresses 绑定NAT网关的弹性IP数组。
+     * Set 待解绑NAT网关的弹性IP数组。
+     * @param PublicIpAddresses 待解绑NAT网关的弹性IP数组。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;

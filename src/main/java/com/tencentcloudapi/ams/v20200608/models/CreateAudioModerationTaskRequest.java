@@ -30,7 +30,7 @@ public class CreateAudioModerationTaskRequest extends AbstractModel{
     private String BizType;
 
     /**
-    * 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+    * 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
     */
     @SerializedName("Type")
     @Expose
@@ -74,16 +74,16 @@ public class CreateAudioModerationTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 异步检测结果回调通知接收URL。支持HTTP和HTTPS 
-     * @return Type 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+     * Get 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频） 
+     * @return Type 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 异步检测结果回调通知接收URL。支持HTTP和HTTPS
-     * @param Type 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+     * Set 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
+     * @param Type 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
      */
     public void setType(String Type) {
         this.Type = Type;

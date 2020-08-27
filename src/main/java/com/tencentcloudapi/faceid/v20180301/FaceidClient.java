@@ -92,6 +92,24 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *银行卡基础信息查询
+     * @param req CheckBankCardInformationRequest
+     * @return CheckBankCardInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckBankCardInformationResponse CheckBankCardInformation(CheckBankCardInformationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckBankCardInformationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckBankCardInformationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CheckBankCardInformation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与公安权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
      * @param req CheckIdCardInformationRequest
      * @return CheckIdCardInformationResponse

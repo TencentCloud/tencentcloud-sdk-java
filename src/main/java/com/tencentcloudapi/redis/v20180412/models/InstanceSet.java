@@ -334,6 +334,22 @@ public class InstanceSet extends AbstractModel{
     private String RemainBandwidthDuration;
 
     /**
+    * Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+    * 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorVersion")
+    @Expose
+    private String MonitorVersion;
+
+    /**
      * Get 实例名称 
      * @return InstanceName 实例名称
      */
@@ -1062,6 +1078,46 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
+     * Get Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskSize Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskSize Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMonitorVersion() {
+        return this.MonitorVersion;
+    }
+
+    /**
+     * Set 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorVersion(String MonitorVersion) {
+        this.MonitorVersion = MonitorVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1108,6 +1164,8 @@ public class InstanceSet extends AbstractModel{
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
         this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
 
     }
 }

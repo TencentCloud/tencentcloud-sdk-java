@@ -211,6 +211,14 @@ public class InstanceAttributesResponse extends AbstractModel{
     private Long Cvm;
 
     /**
+    * 类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -651,6 +659,26 @@ public class InstanceAttributesResponse extends AbstractModel{
     }
 
     /**
+     * Get 类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -680,6 +708,7 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "MaxGroupNum", this.MaxGroupNum);
         this.setParamSimple(map, prefix + "Cvm", this.Cvm);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -51,6 +51,13 @@ public class LayoutParams extends AbstractModel{
     private SmallVideoLayoutParams SmallVideoLayoutParams;
 
     /**
+    * 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+    */
+    @SerializedName("MainVideoRightAlign")
+    @Expose
+    private Long MainVideoRightAlign;
+
+    /**
      * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。 
      * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
      */
@@ -115,6 +122,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。 
+     * @return MainVideoRightAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     */
+    public Long getMainVideoRightAlign() {
+        return this.MainVideoRightAlign;
+    }
+
+    /**
+     * Set 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     * @param MainVideoRightAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     */
+    public void setMainVideoRightAlign(Long MainVideoRightAlign) {
+        this.MainVideoRightAlign = MainVideoRightAlign;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "MainVideoUserId", this.MainVideoUserId);
         this.setParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
         this.setParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
+        this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
 
     }
 }

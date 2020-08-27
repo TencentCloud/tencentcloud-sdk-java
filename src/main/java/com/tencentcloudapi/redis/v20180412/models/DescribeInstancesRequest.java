@@ -170,6 +170,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long [] TypeList;
 
     /**
+    * 内部参数，用户可忽略
+    */
+    @SerializedName("MonitorVersion")
+    @Expose
+    private String MonitorVersion;
+
+    /**
      * Get 实例列表的大小，参数默认值20 
      * @return Limit 实例列表的大小，参数默认值20
      */
@@ -506,6 +513,22 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 内部参数，用户可忽略 
+     * @return MonitorVersion 内部参数，用户可忽略
+     */
+    public String getMonitorVersion() {
+        return this.MonitorVersion;
+    }
+
+    /**
+     * Set 内部参数，用户可忽略
+     * @param MonitorVersion 内部参数，用户可忽略
+     */
+    public void setMonitorVersion(String MonitorVersion) {
+        this.MonitorVersion = MonitorVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +553,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
         this.setParamArraySimple(map, prefix + "TypeList.", this.TypeList);
+        this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
 
     }
 }

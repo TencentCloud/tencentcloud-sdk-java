@@ -30,7 +30,7 @@ public class ResetInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 镜像 ID。
+    * 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
     */
     @SerializedName("BlueprintId")
     @Expose
@@ -53,16 +53,16 @@ public class ResetInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 镜像 ID。 
-     * @return BlueprintId 镜像 ID。
+     * Get 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。 
+     * @return BlueprintId 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      */
     public String getBlueprintId() {
         return this.BlueprintId;
     }
 
     /**
-     * Set 镜像 ID。
-     * @param BlueprintId 镜像 ID。
+     * Set 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
+     * @param BlueprintId 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      */
     public void setBlueprintId(String BlueprintId) {
         this.BlueprintId = BlueprintId;

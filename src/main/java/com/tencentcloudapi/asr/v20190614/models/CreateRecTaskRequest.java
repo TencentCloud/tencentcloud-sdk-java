@@ -33,6 +33,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_wuu-SH：16k 上海话方言；
     */
     @SerializedName("EngineModelType")
     @Expose
@@ -46,7 +47,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ChannelNum;
 
     /**
-    * 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
+    * 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
     */
     @SerializedName("ResTextFormat")
     @Expose
@@ -154,7 +155,8 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_ja：16k 日语； 
+• 16k_ja：16k 日语；
+• 16k_wuu-SH：16k 上海话方言； 
      * @return EngineModelType 引擎模型类型。
 电话场景：
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
@@ -165,6 +167,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_wuu-SH：16k 上海话方言；
      */
     public String getEngineModelType() {
         return this.EngineModelType;
@@ -181,6 +184,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_wuu-SH：16k 上海话方言；
      * @param EngineModelType 引擎模型类型。
 电话场景：
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
@@ -191,6 +195,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_wuu-SH：16k 上海话方言；
      */
     public void setEngineModelType(String EngineModelType) {
         this.EngineModelType = EngineModelType;
@@ -213,16 +218,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。 
-     * @return ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
+     * Get 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。 
+     * @return ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
      */
     public Long getResTextFormat() {
         return this.ResTextFormat;
     }
 
     /**
-     * Set 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
-     * @param ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
+     * Set 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
+     * @param ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
      */
     public void setResTextFormat(Long ResTextFormat) {
         this.ResTextFormat = ResTextFormat;

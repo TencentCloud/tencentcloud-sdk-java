@@ -56,6 +56,42 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
+     *视频美颜
+     * @param req BeautifyVideoRequest
+     * @return BeautifyVideoResponse
+     * @throws TencentCloudSDKException
+     */
+    public BeautifyVideoResponse BeautifyVideo(BeautifyVideoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BeautifyVideoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BeautifyVideoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BeautifyVideo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *撤销视频美颜任务请求
+     * @param req CancelBeautifyVideoJobRequest
+     * @return CancelBeautifyVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelBeautifyVideoJobResponse CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelBeautifyVideoJobResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelBeautifyVideoJobResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelBeautifyVideoJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
 
 注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
@@ -106,6 +142,24 @@ public class FmuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetModelListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetModelList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询视频美颜处理进度
+     * @param req QueryBeautifyVideoJobRequest
+     * @return QueryBeautifyVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryBeautifyVideoJobResponse QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryBeautifyVideoJobResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryBeautifyVideoJobResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryBeautifyVideoJob"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

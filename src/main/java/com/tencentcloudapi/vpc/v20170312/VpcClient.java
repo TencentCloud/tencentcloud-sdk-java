@@ -392,6 +392,27 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口用于服务商操作跨境专线合规化资质审批。
+* 服务商只能操作提交到本服务商的审批单，后台会校验身份。即只授权给服务商的`APPID` 调用本接口。
+* 只有当审批单为 `PENDING` 状态时，才能审批操作。
+* `APPROVED` 状态的审批单，可以再次操作为 `DENY`；`DENY` 状态的审批单，也可以再次操作为 `APPROVED`。
+     * @param req AuditCrossBorderComplianceRequest
+     * @return AuditCrossBorderComplianceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuditCrossBorderComplianceResponse AuditCrossBorderCompliance(AuditCrossBorderComplianceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AuditCrossBorderComplianceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AuditCrossBorderComplianceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AuditCrossBorderCompliance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。（接口灰度中，如需使用请提工单。）
 * 检测辅助CIDR是否与当前VPC的主CIDR和辅助CIDR存在重叠。
 * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
@@ -1830,6 +1851,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicLinkInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicLinkInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于查询用户创建跨境专线合规化资质审批单。
+服务商可以查询服务名下的任意 `APPID` 创建的审批单；非服务商，只能查询自己审批单。
+     * @param req DescribeCrossBorderComplianceRequest
+     * @return DescribeCrossBorderComplianceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossBorderComplianceResponse DescribeCrossBorderCompliance(DescribeCrossBorderComplianceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCrossBorderComplianceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCrossBorderComplianceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCrossBorderCompliance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -632,6 +632,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *获取支持的地域列表
+     * @param req GetRegionsRequest
+     * @return GetRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRegionsResponse GetRegions(GetRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRegionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRegionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetRegions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询该用户是否已开通KMS服务
      * @param req GetServiceStatusRequest
      * @return GetServiceStatusResponse

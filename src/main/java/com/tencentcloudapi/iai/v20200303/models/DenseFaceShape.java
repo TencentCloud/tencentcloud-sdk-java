@@ -121,7 +121,7 @@ public class DenseFaceShape extends AbstractModel{
     private Point [] CentralAxis;
 
     /**
-    * 下轮廓的 XX 个点。
+    * 下巴轮廓的 XX 个点。
     */
     @SerializedName("Chin")
     @Expose
@@ -373,16 +373,16 @@ public class DenseFaceShape extends AbstractModel{
     }
 
     /**
-     * Get 下轮廓的 XX 个点。 
-     * @return Chin 下轮廓的 XX 个点。
+     * Get 下巴轮廓的 XX 个点。 
+     * @return Chin 下巴轮廓的 XX 个点。
      */
     public Point [] getChin() {
         return this.Chin;
     }
 
     /**
-     * Set 下轮廓的 XX 个点。
-     * @param Chin 下轮廓的 XX 个点。
+     * Set 下巴轮廓的 XX 个点。
+     * @param Chin 下巴轮廓的 XX 个点。
      */
     public void setChin(Point [] Chin) {
         this.Chin = Chin;

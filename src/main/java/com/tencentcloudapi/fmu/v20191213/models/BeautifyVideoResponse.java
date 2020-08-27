@@ -1,0 +1,104 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.fmu.v20191213.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class BeautifyVideoResponse extends AbstractModel{
+
+    /**
+    * 视频美颜任务的Job id
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+
+    /**
+    * 预估处理时间，粒度为秒
+    */
+    @SerializedName("EstimatedProcessTime")
+    @Expose
+    private Long EstimatedProcessTime;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 视频美颜任务的Job id 
+     * @return JobId 视频美颜任务的Job id
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * Set 视频美颜任务的Job id
+     * @param JobId 视频美颜任务的Job id
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
+    }
+
+    /**
+     * Get 预估处理时间，粒度为秒 
+     * @return EstimatedProcessTime 预估处理时间，粒度为秒
+     */
+    public Long getEstimatedProcessTime() {
+        return this.EstimatedProcessTime;
+    }
+
+    /**
+     * Set 预估处理时间，粒度为秒
+     * @param EstimatedProcessTime 预估处理时间，粒度为秒
+     */
+    public void setEstimatedProcessTime(Long EstimatedProcessTime) {
+        this.EstimatedProcessTime = EstimatedProcessTime;
+    }
+
+    /**
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "EstimatedProcessTime", this.EstimatedProcessTime);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+
