@@ -17,6 +17,17 @@
 
 package com.tencentcloudapi.common;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Type;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,23 +35,14 @@ import java.util.TimeZone;
 import java.util.TreeMap;
 import java.util.UUID;
 
-import java.security.SecureRandom;
 import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
 import javax.xml.bind.DatatypeConverter;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Type;
-import java.lang.Math;
-import java.net.InetSocketAddress;
-import java.net.Proxy;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
 import com.squareup.okhttp.Authenticator;
 import com.squareup.okhttp.Credentials;
 import com.squareup.okhttp.Headers;
@@ -51,10 +53,6 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.http.HttpConnection;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.profile.HttpProfile;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonSyntaxException;
 
 public abstract class AbstractClient {
 
@@ -150,16 +148,16 @@ public abstract class AbstractClient {
     }
     String canonicalRequest =
         HttpProfile.REQ_POST
-            + "\n"
-            + canonicalUri
-            + "\n"
-            + canonicalQueryString
-            + "\n"
-            + canonicalHeaders
-            + "\n"
-            + signedHeaders
-            + "\n"
-            + hashedRequestPayload;
+        + "\n"
+        + canonicalUri
+        + "\n"
+        + canonicalQueryString
+        + "\n"
+        + canonicalHeaders
+        + "\n"
+        + signedHeaders
+        + "\n"
+        + hashedRequestPayload;
 
     String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -202,13 +200,13 @@ public abstract class AbstractClient {
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
     hb.add("Content-Type", contentType)
-        .add("Host", endpoint)
-        .add("Authorization", authorization)
-        .add("X-TC-Action", action)
-        .add("X-TC-Timestamp", timestamp)
-        .add("X-TC-Version", this.apiVersion)
-        .add("X-TC-Region", this.getRegion())
-        .add("X-TC-RequestClient", SDK_VERSION);
+    .add("Host", endpoint)
+    .add("Authorization", authorization)
+    .add("X-TC-Action", action)
+    .add("X-TC-Timestamp", timestamp)
+    .add("X-TC-Version", this.apiVersion)
+    .add("X-TC-Region", this.getRegion())
+    .add("X-TC-RequestClient", SDK_VERSION);
     String token = this.credential.getToken();
     if (token != null && !token.isEmpty()) {
       hb.add("X-TC-Token", token);
@@ -224,14 +222,15 @@ public abstract class AbstractClient {
     Response resp = conn.postRequest(url, requestPayload, headers);
     if (resp.code() != AbstractClient.HTTP_RSP_OK) {
       log.info("response code is " + resp.code() + ", not 200");
-      throw new TencentCloudSDKException(resp.code() + resp.message());
+      throw new TencentCloudSDKException(resp.message(), "", String.valueOf(resp.code()));
     }
     String respbody = null;
     try {
       respbody = resp.body().string();
     } catch (IOException e) {
       log.info("Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = e.getClass().getName() + "-" + e.getMessage();
+      throw new TencentCloudSDKException(msg, "", String.valueOf(resp.code()));
     }
     JsonResponseModel<JsonResponseErrModel> errResp = null;
     try {
@@ -239,12 +238,14 @@ public abstract class AbstractClient {
       errResp = gson.fromJson(respbody, errType);
     } catch (JsonSyntaxException e) {
       log.info("json is not a valid representation for an object of type");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = e.getClass().getName() + "-" + e.getMessage();
+      throw new TencentCloudSDKException(msg, "", String.valueOf(resp.code()));
     }
     if (errResp.response.error != null) {
       throw new TencentCloudSDKException(
-          errResp.response.error.code + "-" + errResp.response.error.message,
-          errResp.response.requestId);
+          errResp.response.error.message,
+          errResp.response.requestId,
+          errResp.response.error.code);
     }
     return respbody;
   }
@@ -322,14 +323,15 @@ public abstract class AbstractClient {
 
     if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
       log.info("response code is " + okRsp.code() + ", not 200");
-      throw new TencentCloudSDKException(okRsp.code() + okRsp.message());
+      throw new TencentCloudSDKException(okRsp.message(), "", String.valueOf(okRsp.code()));
     }
     String strResp = null;
     try {
       strResp = okRsp.body().string();
     } catch (IOException e) {
       log.info("Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = e.getClass().getName() + "-" + e.getMessage();
+      throw new TencentCloudSDKException(msg, "", String.valueOf(okRsp.code()));
     }
 
     JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -338,12 +340,14 @@ public abstract class AbstractClient {
       errResp = gson.fromJson(strResp, errType);
     } catch (JsonSyntaxException e) {
       log.info("json is not a valid representation for an object of type");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = e.getClass().getName() + "-" + e.getMessage();
+      throw new TencentCloudSDKException(msg, "", String.valueOf(okRsp.code()));
     }
     if (errResp.response.error != null) {
       throw new TencentCloudSDKException(
-          errResp.response.error.code + "-" + errResp.response.error.message,
-          errResp.response.requestId);
+          errResp.response.error.message,
+          errResp.response.requestId,
+          errResp.response.error.code);
     }
 
     return strResp;
@@ -414,16 +418,16 @@ public abstract class AbstractClient {
     }
     String canonicalRequest =
         httpRequestMethod
-            + "\n"
-            + canonicalUri
-            + "\n"
-            + canonicalQueryString
-            + "\n"
-            + canonicalHeaders
-            + "\n"
-            + signedHeaders
-            + "\n"
-            + hashedRequestPayload;
+        + "\n"
+        + canonicalUri
+        + "\n"
+        + canonicalQueryString
+        + "\n"
+        + canonicalHeaders
+        + "\n"
+        + signedHeaders
+        + "\n"
+        + hashedRequestPayload;
 
     String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -465,12 +469,12 @@ public abstract class AbstractClient {
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
     hb.add("Content-Type", contentType)
-        .add("Host", endpoint)
-        .add("Authorization", authorization)
-        .add("X-TC-Action", action)
-        .add("X-TC-Timestamp", timestamp)
-        .add("X-TC-Version", this.apiVersion)
-        .add("X-TC-RequestClient", SDK_VERSION);
+    .add("Host", endpoint)
+    .add("Authorization", authorization)
+    .add("X-TC-Action", action)
+    .add("X-TC-Timestamp", timestamp)
+    .add("X-TC-Version", this.apiVersion)
+    .add("X-TC-RequestClient", SDK_VERSION);
     if (null != this.getRegion()) {
       hb.add("X-TC-Region", this.getRegion());
     }
