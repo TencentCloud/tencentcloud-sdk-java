@@ -223,28 +223,32 @@ public abstract class AbstractClient {
     Headers headers = hb.build();
     Response resp = conn.postRequest(url, requestPayload, headers);
     if (resp.code() != AbstractClient.HTTP_RSP_OK) {
-      log.info("response code is " + resp.code() + ", not 200");
-      throw new TencentCloudSDKException(resp.code() + resp.message());
+      String msg = "response code is " + resp.code() + ", not 200";
+      log.info(msg);
+      throw new TencentCloudSDKException(msg, "", "ServerSideError");
     }
     String respbody = null;
     try {
       respbody = resp.body().string();
     } catch (IOException e) {
-      log.info("Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+      log.info(msg);
+      throw new TencentCloudSDKException(msg, "", e.getClass().getName());
     }
     JsonResponseModel<JsonResponseErrModel> errResp = null;
     try {
       Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {}.getType();
       errResp = gson.fromJson(respbody, errType);
     } catch (JsonSyntaxException e) {
-      log.info("json is not a valid representation for an object of type");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = "json is not a valid representation for an object of type";
+      log.info(msg);
+      throw new TencentCloudSDKException(msg, "", e.getClass().getName());
     }
     if (errResp.response.error != null) {
       throw new TencentCloudSDKException(
-          errResp.response.error.code + "-" + errResp.response.error.message,
-          errResp.response.requestId);
+          errResp.response.error.message,
+          errResp.response.requestId,
+          errResp.response.error.code);
     }
     return respbody;
   }
@@ -321,15 +325,17 @@ public abstract class AbstractClient {
     }
 
     if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
-      log.info("response code is " + okRsp.code() + ", not 200");
-      throw new TencentCloudSDKException(okRsp.code() + okRsp.message());
+      String msg = "response code is " + okRsp.code() + ", not 200";
+      log.info(msg);
+      throw new TencentCloudSDKException(msg, "", "ServerSideError");
     }
     String strResp = null;
     try {
       strResp = okRsp.body().string();
     } catch (IOException e) {
-      log.info("Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+      log.info(msg);
+      throw new TencentCloudSDKException(msg, "", endpoint.getClass().getName());
     }
 
     JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -337,13 +343,15 @@ public abstract class AbstractClient {
       Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {}.getType();
       errResp = gson.fromJson(strResp, errType);
     } catch (JsonSyntaxException e) {
-      log.info("json is not a valid representation for an object of type");
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+      String msg = "json is not a valid representation for an object of type";
+      log.info(msg);
+      throw new TencentCloudSDKException(msg, "", e.getClass().getName());
     }
     if (errResp.response.error != null) {
       throw new TencentCloudSDKException(
-          errResp.response.error.code + "-" + errResp.response.error.message,
-          errResp.response.requestId);
+          errResp.response.error.message,
+          errResp.response.requestId,
+          errResp.response.error.code);
     }
 
     return strResp;
