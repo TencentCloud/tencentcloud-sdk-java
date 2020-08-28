@@ -400,6 +400,24 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *修改订阅实例自动续费标识
+     * @param req ModifySubscribeAutoRenewFlagRequest
+     * @return ModifySubscribeAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlag(ModifySubscribeAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeAutoRenewFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeAutoRenewFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeAutoRenewFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifySubscribeConsumeTime)用于修改数据订阅通道的消费时间点
      * @param req ModifySubscribeConsumeTimeRequest
      * @return ModifySubscribeConsumeTimeResponse

@@ -30,14 +30,14 @@ public class SecurityGroupPolicySet extends AbstractModel{
     private String Version;
 
     /**
-    * 出站规则。
+    * 出站规则。其中出站规则和入站规则必须选一个。
     */
     @SerializedName("Egress")
     @Expose
     private SecurityGroupPolicy [] Egress;
 
     /**
-    * 入站规则。
+    * 入站规则。其中出站规则和入站规则必须选一个。
     */
     @SerializedName("Ingress")
     @Expose
@@ -60,32 +60,32 @@ public class SecurityGroupPolicySet extends AbstractModel{
     }
 
     /**
-     * Get 出站规则。 
-     * @return Egress 出站规则。
+     * Get 出站规则。其中出站规则和入站规则必须选一个。 
+     * @return Egress 出站规则。其中出站规则和入站规则必须选一个。
      */
     public SecurityGroupPolicy [] getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 出站规则。
-     * @param Egress 出站规则。
+     * Set 出站规则。其中出站规则和入站规则必须选一个。
+     * @param Egress 出站规则。其中出站规则和入站规则必须选一个。
      */
     public void setEgress(SecurityGroupPolicy [] Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get 入站规则。 
-     * @return Ingress 入站规则。
+     * Get 入站规则。其中出站规则和入站规则必须选一个。 
+     * @return Ingress 入站规则。其中出站规则和入站规则必须选一个。
      */
     public SecurityGroupPolicy [] getIngress() {
         return this.Ingress;
     }
 
     /**
-     * Set 入站规则。
-     * @param Ingress 入站规则。
+     * Set 入站规则。其中出站规则和入站规则必须选一个。
+     * @param Ingress 入站规则。其中出站规则和入站规则必须选一个。
      */
     public void setIngress(SecurityGroupPolicy [] Ingress) {
         this.Ingress = Ingress;

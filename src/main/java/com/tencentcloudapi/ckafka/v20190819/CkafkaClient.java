@@ -472,6 +472,60 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *根据指定offset位置的消息
+     * @param req FetchMessageByOffsetRequest
+     * @return FetchMessageByOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageByOffsetResponse FetchMessageByOffset(FetchMessageByOffsetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageByOffsetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FetchMessageByOffset"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据位点查询消息列表
+     * @param req FetchMessageListByOffsetRequest
+     * @return FetchMessageListByOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByOffsetResponse FetchMessageListByOffset(FetchMessageListByOffsetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageListByOffsetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FetchMessageListByOffset"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据时间戳查询消息列表
+     * @param req FetchMessageListByTimestampRequest
+     * @return FetchMessageListByTimestampResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByTimestampResponse FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageListByTimestampResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageListByTimestampResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FetchMessageListByTimestamp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *设置Groups 消费分组offset
      * @param req ModifyGroupOffsetsRequest
      * @return ModifyGroupOffsetsResponse

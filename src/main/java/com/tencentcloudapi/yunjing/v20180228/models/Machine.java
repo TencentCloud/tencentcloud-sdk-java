@@ -145,6 +145,13 @@ public class Machine extends AbstractModel{
     private Long InvasionNum;
 
     /**
+    * 地域信息
+    */
+    @SerializedName("RegionInfo")
+    @Expose
+    private RegionInfo RegionInfo;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -441,6 +448,22 @@ public class Machine extends AbstractModel{
     }
 
     /**
+     * Get 地域信息 
+     * @return RegionInfo 地域信息
+     */
+    public RegionInfo getRegionInfo() {
+        return this.RegionInfo;
+    }
+
+    /**
+     * Set 地域信息
+     * @param RegionInfo 地域信息
+     */
+    public void setRegionInfo(RegionInfo RegionInfo) {
+        this.RegionInfo = RegionInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -460,6 +483,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "CyberAttackNum", this.CyberAttackNum);
         this.setParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
         this.setParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
+        this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
 
     }
 }

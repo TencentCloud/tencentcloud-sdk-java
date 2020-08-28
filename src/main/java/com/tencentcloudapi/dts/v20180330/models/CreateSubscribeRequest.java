@@ -58,6 +58,13 @@ public class CreateSubscribeRequest extends AbstractModel{
     private Long AutoRenew;
 
     /**
+    * 实例资源标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
+
+    /**
      * Get 订阅的数据库类型，目前支持的有 mysql 
      * @return Product 订阅的数据库类型，目前支持的有 mysql
      */
@@ -138,6 +145,22 @@ public class CreateSubscribeRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例资源标签 
+     * @return Tags 实例资源标签
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 实例资源标签
+     * @param Tags 实例资源标签
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateSubscribeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
