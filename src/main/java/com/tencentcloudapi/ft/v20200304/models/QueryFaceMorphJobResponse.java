@@ -20,21 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceCartoonPicResponse extends AbstractModel{
+public class QueryFaceMorphJobResponse extends AbstractModel{
 
     /**
-    * 结果图片Base64信息。
+    * 当前任务状态：排队中、处理中、处理失败或者处理完成
     */
-    @SerializedName("ResultImage")
+    @SerializedName("JobStatus")
     @Expose
-    private String ResultImage;
+    private String JobStatus;
 
     /**
-    * RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+    * 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ResultUrl")
+    @SerializedName("FaceMorphOutput")
     @Expose
-    private String ResultUrl;
+    private FaceMorphOutput FaceMorphOutput;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +45,39 @@ public class FaceCartoonPicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 结果图片Base64信息。 
-     * @return ResultImage 结果图片Base64信息。
+     * Get 当前任务状态：排队中、处理中、处理失败或者处理完成 
+     * @return JobStatus 当前任务状态：排队中、处理中、处理失败或者处理完成
      */
-    public String getResultImage() {
-        return this.ResultImage;
+    public String getJobStatus() {
+        return this.JobStatus;
     }
 
     /**
-     * Set 结果图片Base64信息。
-     * @param ResultImage 结果图片Base64信息。
+     * Set 当前任务状态：排队中、处理中、处理失败或者处理完成
+     * @param JobStatus 当前任务状态：排队中、处理中、处理失败或者处理完成
      */
-    public void setResultImage(String ResultImage) {
-        this.ResultImage = ResultImage;
+    public void setJobStatus(String JobStatus) {
+        this.JobStatus = JobStatus;
     }
 
     /**
-     * Get RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64) 
-     * @return ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * Get 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FaceMorphOutput 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getResultUrl() {
-        return this.ResultUrl;
+    public FaceMorphOutput getFaceMorphOutput() {
+        return this.FaceMorphOutput;
     }
 
     /**
-     * Set RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     * @param ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * Set 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FaceMorphOutput 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResultUrl(String ResultUrl) {
-        this.ResultUrl = ResultUrl;
+    public void setFaceMorphOutput(FaceMorphOutput FaceMorphOutput) {
+        this.FaceMorphOutput = FaceMorphOutput;
     }
 
     /**
@@ -95,8 +100,8 @@ public class FaceCartoonPicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
-        this.setParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
+        this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
+        this.setParamObj(map, prefix + "FaceMorphOutput.", this.FaceMorphOutput);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

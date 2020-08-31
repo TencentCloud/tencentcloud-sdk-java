@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ft.v20200304.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceCartoonPicResponse extends AbstractModel{
+public class CreateScdnLogTaskResponse extends AbstractModel{
 
     /**
-    * 结果图片Base64信息。
+    * 创建结果, 
+"0" -> 创建成功
     */
-    @SerializedName("ResultImage")
+    @SerializedName("Result")
     @Expose
-    private String ResultImage;
-
-    /**
-    * RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-    */
-    @SerializedName("ResultUrl")
-    @Expose
-    private String ResultUrl;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class FaceCartoonPicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 结果图片Base64信息。 
-     * @return ResultImage 结果图片Base64信息。
+     * Get 创建结果, 
+"0" -> 创建成功 
+     * @return Result 创建结果, 
+"0" -> 创建成功
      */
-    public String getResultImage() {
-        return this.ResultImage;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 结果图片Base64信息。
-     * @param ResultImage 结果图片Base64信息。
+     * Set 创建结果, 
+"0" -> 创建成功
+     * @param Result 创建结果, 
+"0" -> 创建成功
      */
-    public void setResultImage(String ResultImage) {
-        this.ResultImage = ResultImage;
-    }
-
-    /**
-     * Get RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64) 
-     * @return ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     */
-    public String getResultUrl() {
-        return this.ResultUrl;
-    }
-
-    /**
-     * Set RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     * @param ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     */
-    public void setResultUrl(String ResultUrl) {
-        this.ResultUrl = ResultUrl;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -95,8 +77,7 @@ public class FaceCartoonPicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
-        this.setParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

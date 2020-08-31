@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceCartoonPicResponse extends AbstractModel{
-
-    /**
-    * 结果图片Base64信息。
-    */
-    @SerializedName("ResultImage")
-    @Expose
-    private String ResultImage;
-
-    /**
-    * RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-    */
-    @SerializedName("ResultUrl")
-    @Expose
-    private String ResultUrl;
+public class CancelFaceMorphJobResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class FaceCartoonPicResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 结果图片Base64信息。 
-     * @return ResultImage 结果图片Base64信息。
-     */
-    public String getResultImage() {
-        return this.ResultImage;
-    }
-
-    /**
-     * Set 结果图片Base64信息。
-     * @param ResultImage 结果图片Base64信息。
-     */
-    public void setResultImage(String ResultImage) {
-        this.ResultImage = ResultImage;
-    }
-
-    /**
-     * Get RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64) 
-     * @return ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     */
-    public String getResultUrl() {
-        return this.ResultUrl;
-    }
-
-    /**
-     * Set RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     * @param ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     */
-    public void setResultUrl(String ResultUrl) {
-        this.ResultUrl = ResultUrl;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class FaceCartoonPicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
-        this.setParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

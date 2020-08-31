@@ -38,6 +38,24 @@ public class FtClient extends AbstractClient{
     }
 
     /**
+     *撤销人像渐变任务请求
+     * @param req CancelFaceMorphJobRequest
+     * @return CancelFaceMorphJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelFaceMorphJobResponse CancelFaceMorphJob(CancelFaceMorphJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelFaceMorphJobResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelFaceMorphJobResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelFaceMorphJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸变老或变年轻的图片，支持实现人脸不同年龄的变化。
      * @param req ChangeAgePicRequest
      * @return ChangeAgePicResponse
@@ -67,6 +85,42 @@ public class FtClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<FaceCartoonPicResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "FaceCartoonPic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户上传2-5张人脸照片，输出一段人脸变换特效视频
+     * @param req MorphFaceRequest
+     * @return MorphFaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public MorphFaceResponse MorphFace(MorphFaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MorphFaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<MorphFaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "MorphFace"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询人像渐变处理进度
+     * @param req QueryFaceMorphJobRequest
+     * @return QueryFaceMorphJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFaceMorphJobResponse QueryFaceMorphJob(QueryFaceMorphJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryFaceMorphJobResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryFaceMorphJobResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryFaceMorphJob"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

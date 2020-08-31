@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel{
 
     /**
-    * 安全实例ID，例如esg-33ocnj9n，可通过DescribeSecurityGroups获取。
+    * 安全实例ID，例如esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 安全实例ID，例如esg-33ocnj9n，可通过DescribeSecurityGroups获取。 
-     * @return SecurityGroupIds 安全实例ID，例如esg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get 安全实例ID，例如esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。 
+     * @return SecurityGroupIds 安全实例ID，例如esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全实例ID，例如esg-33ocnj9n，可通过DescribeSecurityGroups获取。
-     * @param SecurityGroupIds 安全实例ID，例如esg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set 安全实例ID，例如esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。
+     * @param SecurityGroupIds 安全实例ID，例如esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

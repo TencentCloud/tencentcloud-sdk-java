@@ -141,13 +141,6 @@ public class InputManageMarketingRisk extends AbstractModel{
     private String MacAddress;
 
     /**
-    * 手机制造商ID，如果手机注册，请带上此信息。
-    */
-    @SerializedName("VendorId")
-    @Expose
-    private String VendorId;
-
-    /**
     * 网赚防刷相关信息。SceneType为4时填写。
     */
     @SerializedName("CrowdAntiRush")
@@ -167,6 +160,15 @@ public class InputManageMarketingRisk extends AbstractModel{
     @SerializedName("Details")
     @Expose
     private InputDetails [] Details;
+
+    /**
+    * 设备类型：
+1：Android
+2：IOS
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private Long DeviceType;
 
     /**
      * Get 账号信息。 
@@ -449,22 +451,6 @@ public class InputManageMarketingRisk extends AbstractModel{
     }
 
     /**
-     * Get 手机制造商ID，如果手机注册，请带上此信息。 
-     * @return VendorId 手机制造商ID，如果手机注册，请带上此信息。
-     */
-    public String getVendorId() {
-        return this.VendorId;
-    }
-
-    /**
-     * Set 手机制造商ID，如果手机注册，请带上此信息。
-     * @param VendorId 手机制造商ID，如果手机注册，请带上此信息。
-     */
-    public void setVendorId(String VendorId) {
-        this.VendorId = VendorId;
-    }
-
-    /**
      * Get 网赚防刷相关信息。SceneType为4时填写。 
      * @return CrowdAntiRush 网赚防刷相关信息。SceneType为4时填写。
      */
@@ -513,6 +499,30 @@ public class InputManageMarketingRisk extends AbstractModel{
     }
 
     /**
+     * Get 设备类型：
+1：Android
+2：IOS 
+     * @return DeviceType 设备类型：
+1：Android
+2：IOS
+     */
+    public Long getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 设备类型：
+1：Android
+2：IOS
+     * @param DeviceType 设备类型：
+1：Android
+2：IOS
+     */
+    public void setDeviceType(Long DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -532,10 +542,10 @@ public class InputManageMarketingRisk extends AbstractModel{
         this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
         this.setParamSimple(map, prefix + "XForwardedFor", this.XForwardedFor);
         this.setParamSimple(map, prefix + "MacAddress", this.MacAddress);
-        this.setParamSimple(map, prefix + "VendorId", this.VendorId);
         this.setParamObj(map, prefix + "CrowdAntiRush.", this.CrowdAntiRush);
         this.setParamSimple(map, prefix + "SceneCode", this.SceneCode);
         this.setParamArrayObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

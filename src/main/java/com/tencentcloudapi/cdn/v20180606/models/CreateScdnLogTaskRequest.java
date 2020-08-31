@@ -1,0 +1,334 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.cdn.v20180606.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreateScdnLogTaskRequest extends AbstractModel{
+
+    /**
+    * 防护类型
+Mode 映射如下：
+  waf = "Web攻击"
+  cc = "CC攻击"
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 指定域名查询, 不填默认查询全部域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * 指定攻击类型, 不填默认查询全部攻击类型
+AttackType 映射如下:
+  other = '未知类型'
+  malicious_scan = "恶意扫描"
+  sql_inject = "SQL注入攻击"
+  xss = "XSS攻击"
+  cmd_inject = "命令注入攻击"
+  ldap_inject = "LDAP注入攻击"
+  ssi_inject = "SSI注入攻击"
+  xml_inject = "XML注入攻击"
+  web_service = "WEB服务漏洞攻击"
+  web_app = "WEB应用漏洞攻击"
+  path_traversal = "路径跨越攻击"
+  illegal_access_core_file = "核心文件非法访问"
+  trojan_horse = "木马后门攻击"
+  csrf = "CSRF攻击"
+  malicious_file_upload= '恶意文件上传'
+    */
+    @SerializedName("AttackType")
+    @Expose
+    private String AttackType;
+
+    /**
+    * 指定执行动作, 不填默认查询全部执行动作
+DefenceMode 映射如下：
+  observe = '观察模式'
+  intercept = '拦截模式'
+    */
+    @SerializedName("DefenceMode")
+    @Expose
+    private String DefenceMode;
+
+    /**
+    * 不填为全部ip
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
+
+    /**
+    * 指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
+
+    /**
+     * Get 防护类型
+Mode 映射如下：
+  waf = "Web攻击"
+  cc = "CC攻击" 
+     * @return Mode 防护类型
+Mode 映射如下：
+  waf = "Web攻击"
+  cc = "CC攻击"
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 防护类型
+Mode 映射如下：
+  waf = "Web攻击"
+  cc = "CC攻击"
+     * @param Mode 防护类型
+Mode 映射如下：
+  waf = "Web攻击"
+  cc = "CC攻击"
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间 
+     * @return StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
+     * @param StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间 
+     * @return EndTime 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
+     * @param EndTime 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 指定域名查询, 不填默认查询全部域名 
+     * @return Domain 指定域名查询, 不填默认查询全部域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 指定域名查询, 不填默认查询全部域名
+     * @param Domain 指定域名查询, 不填默认查询全部域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get 指定攻击类型, 不填默认查询全部攻击类型
+AttackType 映射如下:
+  other = '未知类型'
+  malicious_scan = "恶意扫描"
+  sql_inject = "SQL注入攻击"
+  xss = "XSS攻击"
+  cmd_inject = "命令注入攻击"
+  ldap_inject = "LDAP注入攻击"
+  ssi_inject = "SSI注入攻击"
+  xml_inject = "XML注入攻击"
+  web_service = "WEB服务漏洞攻击"
+  web_app = "WEB应用漏洞攻击"
+  path_traversal = "路径跨越攻击"
+  illegal_access_core_file = "核心文件非法访问"
+  trojan_horse = "木马后门攻击"
+  csrf = "CSRF攻击"
+  malicious_file_upload= '恶意文件上传' 
+     * @return AttackType 指定攻击类型, 不填默认查询全部攻击类型
+AttackType 映射如下:
+  other = '未知类型'
+  malicious_scan = "恶意扫描"
+  sql_inject = "SQL注入攻击"
+  xss = "XSS攻击"
+  cmd_inject = "命令注入攻击"
+  ldap_inject = "LDAP注入攻击"
+  ssi_inject = "SSI注入攻击"
+  xml_inject = "XML注入攻击"
+  web_service = "WEB服务漏洞攻击"
+  web_app = "WEB应用漏洞攻击"
+  path_traversal = "路径跨越攻击"
+  illegal_access_core_file = "核心文件非法访问"
+  trojan_horse = "木马后门攻击"
+  csrf = "CSRF攻击"
+  malicious_file_upload= '恶意文件上传'
+     */
+    public String getAttackType() {
+        return this.AttackType;
+    }
+
+    /**
+     * Set 指定攻击类型, 不填默认查询全部攻击类型
+AttackType 映射如下:
+  other = '未知类型'
+  malicious_scan = "恶意扫描"
+  sql_inject = "SQL注入攻击"
+  xss = "XSS攻击"
+  cmd_inject = "命令注入攻击"
+  ldap_inject = "LDAP注入攻击"
+  ssi_inject = "SSI注入攻击"
+  xml_inject = "XML注入攻击"
+  web_service = "WEB服务漏洞攻击"
+  web_app = "WEB应用漏洞攻击"
+  path_traversal = "路径跨越攻击"
+  illegal_access_core_file = "核心文件非法访问"
+  trojan_horse = "木马后门攻击"
+  csrf = "CSRF攻击"
+  malicious_file_upload= '恶意文件上传'
+     * @param AttackType 指定攻击类型, 不填默认查询全部攻击类型
+AttackType 映射如下:
+  other = '未知类型'
+  malicious_scan = "恶意扫描"
+  sql_inject = "SQL注入攻击"
+  xss = "XSS攻击"
+  cmd_inject = "命令注入攻击"
+  ldap_inject = "LDAP注入攻击"
+  ssi_inject = "SSI注入攻击"
+  xml_inject = "XML注入攻击"
+  web_service = "WEB服务漏洞攻击"
+  web_app = "WEB应用漏洞攻击"
+  path_traversal = "路径跨越攻击"
+  illegal_access_core_file = "核心文件非法访问"
+  trojan_horse = "木马后门攻击"
+  csrf = "CSRF攻击"
+  malicious_file_upload= '恶意文件上传'
+     */
+    public void setAttackType(String AttackType) {
+        this.AttackType = AttackType;
+    }
+
+    /**
+     * Get 指定执行动作, 不填默认查询全部执行动作
+DefenceMode 映射如下：
+  observe = '观察模式'
+  intercept = '拦截模式' 
+     * @return DefenceMode 指定执行动作, 不填默认查询全部执行动作
+DefenceMode 映射如下：
+  observe = '观察模式'
+  intercept = '拦截模式'
+     */
+    public String getDefenceMode() {
+        return this.DefenceMode;
+    }
+
+    /**
+     * Set 指定执行动作, 不填默认查询全部执行动作
+DefenceMode 映射如下：
+  observe = '观察模式'
+  intercept = '拦截模式'
+     * @param DefenceMode 指定执行动作, 不填默认查询全部执行动作
+DefenceMode 映射如下：
+  observe = '观察模式'
+  intercept = '拦截模式'
+     */
+    public void setDefenceMode(String DefenceMode) {
+        this.DefenceMode = DefenceMode;
+    }
+
+    /**
+     * Get 不填为全部ip 
+     * @return Ip 不填为全部ip
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set 不填为全部ip
+     * @param Ip 不填为全部ip
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
+    /**
+     * Get 指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询 
+     * @return Domains 指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询
+     * @param Domains 指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "AttackType", this.AttackType);
+        this.setParamSimple(map, prefix + "DefenceMode", this.DefenceMode);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+
+    }
+}
+

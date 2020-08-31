@@ -51,7 +51,7 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     private String UniformSocialCreditCode;
 
     /**
-    * （模糊查询）法人。
+    * （模糊查询）法定代表人。
     */
     @SerializedName("LegalPerson")
     @Expose
@@ -114,14 +114,14 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     private String Email;
 
     /**
-    * （精确匹配）服务开始时间。
+    * （精确匹配）服务开始日期，如：`2020-07-28`。
     */
     @SerializedName("ServiceStartDate")
     @Expose
     private String ServiceStartDate;
 
     /**
-    * （精确匹配）服务开始时间。
+    * （精确匹配）服务结束日期，如：`2021-07-28`。
     */
     @SerializedName("ServiceEndDate")
     @Expose
@@ -199,16 +199,16 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     }
 
     /**
-     * Get （模糊查询）法人。 
-     * @return LegalPerson （模糊查询）法人。
+     * Get （模糊查询）法定代表人。 
+     * @return LegalPerson （模糊查询）法定代表人。
      */
     public String getLegalPerson() {
         return this.LegalPerson;
     }
 
     /**
-     * Set （模糊查询）法人。
-     * @param LegalPerson （模糊查询）法人。
+     * Set （模糊查询）法定代表人。
+     * @param LegalPerson （模糊查询）法定代表人。
      */
     public void setLegalPerson(String LegalPerson) {
         this.LegalPerson = LegalPerson;
@@ -343,32 +343,32 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     }
 
     /**
-     * Get （精确匹配）服务开始时间。 
-     * @return ServiceStartDate （精确匹配）服务开始时间。
+     * Get （精确匹配）服务开始日期，如：`2020-07-28`。 
+     * @return ServiceStartDate （精确匹配）服务开始日期，如：`2020-07-28`。
      */
     public String getServiceStartDate() {
         return this.ServiceStartDate;
     }
 
     /**
-     * Set （精确匹配）服务开始时间。
-     * @param ServiceStartDate （精确匹配）服务开始时间。
+     * Set （精确匹配）服务开始日期，如：`2020-07-28`。
+     * @param ServiceStartDate （精确匹配）服务开始日期，如：`2020-07-28`。
      */
     public void setServiceStartDate(String ServiceStartDate) {
         this.ServiceStartDate = ServiceStartDate;
     }
 
     /**
-     * Get （精确匹配）服务开始时间。 
-     * @return ServiceEndDate （精确匹配）服务开始时间。
+     * Get （精确匹配）服务结束日期，如：`2021-07-28`。 
+     * @return ServiceEndDate （精确匹配）服务结束日期，如：`2021-07-28`。
      */
     public String getServiceEndDate() {
         return this.ServiceEndDate;
     }
 
     /**
-     * Set （精确匹配）服务开始时间。
-     * @param ServiceEndDate （精确匹配）服务开始时间。
+     * Set （精确匹配）服务结束日期，如：`2021-07-28`。
+     * @param ServiceEndDate （精确匹配）服务结束日期，如：`2021-07-28`。
      */
     public void setServiceEndDate(String ServiceEndDate) {
         this.ServiceEndDate = ServiceEndDate;

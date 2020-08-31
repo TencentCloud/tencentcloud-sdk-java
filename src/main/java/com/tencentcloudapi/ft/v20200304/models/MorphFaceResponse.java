@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceCartoonPicResponse extends AbstractModel{
+public class MorphFaceResponse extends AbstractModel{
 
     /**
-    * 结果图片Base64信息。
+    * 人像渐变任务的Job id
     */
-    @SerializedName("ResultImage")
+    @SerializedName("JobId")
     @Expose
-    private String ResultImage;
+    private String JobId;
 
     /**
-    * RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+    * 预估处理时间，粒度为秒
     */
-    @SerializedName("ResultUrl")
+    @SerializedName("EstimatedProcessTime")
     @Expose
-    private String ResultUrl;
+    private Long EstimatedProcessTime;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class FaceCartoonPicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 结果图片Base64信息。 
-     * @return ResultImage 结果图片Base64信息。
+     * Get 人像渐变任务的Job id 
+     * @return JobId 人像渐变任务的Job id
      */
-    public String getResultImage() {
-        return this.ResultImage;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 结果图片Base64信息。
-     * @param ResultImage 结果图片Base64信息。
+     * Set 人像渐变任务的Job id
+     * @param JobId 人像渐变任务的Job id
      */
-    public void setResultImage(String ResultImage) {
-        this.ResultImage = ResultImage;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
-     * Get RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64) 
-     * @return ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * Get 预估处理时间，粒度为秒 
+     * @return EstimatedProcessTime 预估处理时间，粒度为秒
      */
-    public String getResultUrl() {
-        return this.ResultUrl;
+    public Long getEstimatedProcessTime() {
+        return this.EstimatedProcessTime;
     }
 
     /**
-     * Set RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
-     * @param ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * Set 预估处理时间，粒度为秒
+     * @param EstimatedProcessTime 预估处理时间，粒度为秒
      */
-    public void setResultUrl(String ResultUrl) {
-        this.ResultUrl = ResultUrl;
+    public void setEstimatedProcessTime(Long EstimatedProcessTime) {
+        this.EstimatedProcessTime = EstimatedProcessTime;
     }
 
     /**
@@ -95,8 +95,8 @@ public class FaceCartoonPicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultImage", this.ResultImage);
-        this.setParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "EstimatedProcessTime", this.EstimatedProcessTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

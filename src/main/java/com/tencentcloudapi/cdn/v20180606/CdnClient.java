@@ -74,6 +74,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *CreateScdnLogTask 用于创建事件日志任务
+     * @param req CreateScdnLogTaskRequest
+     * @return CreateScdnLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScdnLogTaskResponse CreateScdnLogTask(CreateScdnLogTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScdnLogTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScdnLogTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateScdnLogTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DeleteCdnDomain 用于删除指定加速域名
      * @param req DeleteCdnDomainRequest
      * @return DeleteCdnDomainResponse
@@ -470,6 +488,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeReportDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeReportData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取SCDN的Top数据
+     * @param req DescribeScdnTopDataRequest
+     * @return DescribeScdnTopDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScdnTopDataResponse DescribeScdnTopData(DescribeScdnTopDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScdnTopDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScdnTopDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeScdnTopData"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

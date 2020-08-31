@@ -51,7 +51,7 @@ public class CrossBorderCompliance extends AbstractModel{
     private String UniformSocialCreditCode;
 
     /**
-    * 法人。
+    * 法定代表人。
     */
     @SerializedName("LegalPerson")
     @Expose
@@ -128,7 +128,7 @@ public class CrossBorderCompliance extends AbstractModel{
     private String Email;
 
     /**
-    * 跨境专线服务受理单。
+    * 服务受理单。
     */
     @SerializedName("ServiceHandlingForm")
     @Expose
@@ -241,16 +241,16 @@ public class CrossBorderCompliance extends AbstractModel{
     }
 
     /**
-     * Get 法人。 
-     * @return LegalPerson 法人。
+     * Get 法定代表人。 
+     * @return LegalPerson 法定代表人。
      */
     public String getLegalPerson() {
         return this.LegalPerson;
     }
 
     /**
-     * Set 法人。
-     * @param LegalPerson 法人。
+     * Set 法定代表人。
+     * @param LegalPerson 法定代表人。
      */
     public void setLegalPerson(String LegalPerson) {
         this.LegalPerson = LegalPerson;
@@ -417,16 +417,16 @@ public class CrossBorderCompliance extends AbstractModel{
     }
 
     /**
-     * Get 跨境专线服务受理单。 
-     * @return ServiceHandlingForm 跨境专线服务受理单。
+     * Get 服务受理单。 
+     * @return ServiceHandlingForm 服务受理单。
      */
     public String getServiceHandlingForm() {
         return this.ServiceHandlingForm;
     }
 
     /**
-     * Set 跨境专线服务受理单。
-     * @param ServiceHandlingForm 跨境专线服务受理单。
+     * Set 服务受理单。
+     * @param ServiceHandlingForm 服务受理单。
      */
     public void setServiceHandlingForm(String ServiceHandlingForm) {
         this.ServiceHandlingForm = ServiceHandlingForm;
