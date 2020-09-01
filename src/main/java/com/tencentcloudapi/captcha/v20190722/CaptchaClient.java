@@ -128,6 +128,24 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
+     *验证码控制台票据验证信息
+     * @param req DescribeCaptchaTicketDataRequest
+     * @return DescribeCaptchaTicketDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaptchaTicketDataResponse DescribeCaptchaTicketData(DescribeCaptchaTicketDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCaptchaTicketDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCaptchaTicketDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCaptchaTicketData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *安全验证码获取用户注册所有APPId和应用名称
      * @param req DescribeCaptchaUserAllAppIdRequest
      * @return DescribeCaptchaUserAllAppIdResponse

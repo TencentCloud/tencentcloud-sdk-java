@@ -51,7 +51,7 @@ public class KeyMetadata extends AbstractModel{
     private String Description;
 
     /**
-    * CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+    * CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
     */
     @SerializedName("KeyState")
     @Expose
@@ -195,16 +195,16 @@ public class KeyMetadata extends AbstractModel{
     }
 
     /**
-     * Get CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport 
-     * @return KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * Get CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived 
+     * @return KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
-     * @param KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * Set CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
+     * @param KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;

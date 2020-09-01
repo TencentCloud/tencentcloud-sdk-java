@@ -20,99 +20,99 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Cache extends AbstractModel{
+public class RuleQueryString extends AbstractModel{
 
     /**
-    * 基础缓存过期时间配置
+    * on | off CacheKey是否由QueryString组成
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("SimpleCache")
+    @SerializedName("Switch")
     @Expose
-    private SimpleCache SimpleCache;
+    private String Switch;
 
     /**
-    * 高级缓存过期时间配置（功能灰度中，尚未全量）
+    * includeCustom 包含部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AdvancedCache")
+    @SerializedName("Action")
     @Expose
-    private AdvancedCache AdvancedCache;
+    private String Action;
 
     /**
-    * 高级路径缓存配置
+    * 使用/排除的url参数数组，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RuleCache")
+    @SerializedName("Value")
     @Expose
-    private RuleCache [] RuleCache;
+    private String Value;
 
     /**
-     * Get 基础缓存过期时间配置
+     * Get on | off CacheKey是否由QueryString组成
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SimpleCache 基础缓存过期时间配置
+     * @return Switch on | off CacheKey是否由QueryString组成
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public SimpleCache getSimpleCache() {
-        return this.SimpleCache;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set 基础缓存过期时间配置
+     * Set on | off CacheKey是否由QueryString组成
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SimpleCache 基础缓存过期时间配置
+     * @param Switch on | off CacheKey是否由QueryString组成
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSimpleCache(SimpleCache SimpleCache) {
-        this.SimpleCache = SimpleCache;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
     /**
-     * Get 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * Get includeCustom 包含部分url参数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedCache 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * @return Action includeCustom 包含部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AdvancedCache getAdvancedCache() {
-        return this.AdvancedCache;
+    public String getAction() {
+        return this.Action;
     }
 
     /**
-     * Set 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * Set includeCustom 包含部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedCache 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * @param Action includeCustom 包含部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAdvancedCache(AdvancedCache AdvancedCache) {
-        this.AdvancedCache = AdvancedCache;
+    public void setAction(String Action) {
+        this.Action = Action;
     }
 
     /**
-     * Get 高级路径缓存配置
+     * Get 使用/排除的url参数数组，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleCache 高级路径缓存配置
+     * @return Value 使用/排除的url参数数组，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RuleCache [] getRuleCache() {
-        return this.RuleCache;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 高级路径缓存配置
+     * Set 使用/排除的url参数数组，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleCache 高级路径缓存配置
+     * @param Value 使用/排除的url参数数组，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRuleCache(RuleCache [] RuleCache) {
-        this.RuleCache = RuleCache;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
-        this.setParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
-        this.setParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

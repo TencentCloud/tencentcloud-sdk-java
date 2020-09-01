@@ -20,99 +20,99 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Cache extends AbstractModel{
+public class RuleCacheConfig extends AbstractModel{
 
     /**
-    * 基础缓存过期时间配置
+    * 缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("SimpleCache")
+    @SerializedName("Cache")
     @Expose
-    private SimpleCache SimpleCache;
+    private CacheConfigCache Cache;
 
     /**
-    * 高级缓存过期时间配置（功能灰度中，尚未全量）
+    * 不缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AdvancedCache")
+    @SerializedName("NoCache")
     @Expose
-    private AdvancedCache AdvancedCache;
+    private CacheConfigNoCache NoCache;
 
     /**
-    * 高级路径缓存配置
+    * 遵循源站配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RuleCache")
+    @SerializedName("FollowOrigin")
     @Expose
-    private RuleCache [] RuleCache;
+    private CacheConfigFollowOrigin FollowOrigin;
 
     /**
-     * Get 基础缓存过期时间配置
+     * Get 缓存配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SimpleCache 基础缓存过期时间配置
+     * @return Cache 缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public SimpleCache getSimpleCache() {
-        return this.SimpleCache;
+    public CacheConfigCache getCache() {
+        return this.Cache;
     }
 
     /**
-     * Set 基础缓存过期时间配置
+     * Set 缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SimpleCache 基础缓存过期时间配置
+     * @param Cache 缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSimpleCache(SimpleCache SimpleCache) {
-        this.SimpleCache = SimpleCache;
+    public void setCache(CacheConfigCache Cache) {
+        this.Cache = Cache;
     }
 
     /**
-     * Get 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * Get 不缓存配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedCache 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * @return NoCache 不缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AdvancedCache getAdvancedCache() {
-        return this.AdvancedCache;
+    public CacheConfigNoCache getNoCache() {
+        return this.NoCache;
     }
 
     /**
-     * Set 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * Set 不缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedCache 高级缓存过期时间配置（功能灰度中，尚未全量）
+     * @param NoCache 不缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAdvancedCache(AdvancedCache AdvancedCache) {
-        this.AdvancedCache = AdvancedCache;
+    public void setNoCache(CacheConfigNoCache NoCache) {
+        this.NoCache = NoCache;
     }
 
     /**
-     * Get 高级路径缓存配置
+     * Get 遵循源站配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleCache 高级路径缓存配置
+     * @return FollowOrigin 遵循源站配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RuleCache [] getRuleCache() {
-        return this.RuleCache;
+    public CacheConfigFollowOrigin getFollowOrigin() {
+        return this.FollowOrigin;
     }
 
     /**
-     * Set 高级路径缓存配置
+     * Set 遵循源站配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleCache 高级路径缓存配置
+     * @param FollowOrigin 遵循源站配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRuleCache(RuleCache [] RuleCache) {
-        this.RuleCache = RuleCache;
+    public void setFollowOrigin(CacheConfigFollowOrigin FollowOrigin) {
+        this.FollowOrigin = FollowOrigin;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
-        this.setParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
-        this.setParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
+        this.setParamObj(map, prefix + "Cache.", this.Cache);
+        this.setParamObj(map, prefix + "NoCache.", this.NoCache);
+        this.setParamObj(map, prefix + "FollowOrigin.", this.FollowOrigin);
 
     }
 }

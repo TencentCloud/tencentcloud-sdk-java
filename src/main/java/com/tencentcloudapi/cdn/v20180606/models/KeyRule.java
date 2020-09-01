@@ -20,12 +20,37 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CacheKey extends AbstractModel{
+public class KeyRule extends AbstractModel{
+
+    /**
+    * CacheType 对应类型下的匹配内容：
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RulePaths")
+    @Expose
+    private String [] RulePaths;
+
+    /**
+    * 规则类型：
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+index：首页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
 
     /**
     * 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullUrlCache")
     @Expose
@@ -45,55 +70,97 @@ off：关闭全路径缓存（即开启参数过滤）
     */
     @SerializedName("QueryString")
     @Expose
-    private QueryStringKey QueryString;
+    private RuleQueryString QueryString;
 
     /**
-    * CacheKey中包含Cookie
+    * 路径缓存键标签，传 user
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Cookie")
+    @SerializedName("RuleTag")
     @Expose
-    private CookieKey Cookie;
+    private String RuleTag;
 
     /**
-    * CacheKey中包含请求头部
+     * Get CacheType 对应类型下的匹配内容：
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RulePaths CacheType 对应类型下的匹配内容：
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Header")
-    @Expose
-    private HeaderKey Header;
+     */
+    public String [] getRulePaths() {
+        return this.RulePaths;
+    }
 
     /**
-    * CacheKey中包含自定义字符串
+     * Set CacheType 对应类型下的匹配内容：
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CacheTag")
-    @Expose
-    private CacheTagKey CacheTag;
+     * @param RulePaths CacheType 对应类型下的匹配内容：
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRulePaths(String [] RulePaths) {
+        this.RulePaths = RulePaths;
+    }
 
     /**
-    * CacheKey中包含请求协议
+     * Get 规则类型：
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+index：首页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleType 规则类型：
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+index：首页
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Scheme")
-    @Expose
-    private SchemeKey Scheme;
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
 
     /**
-    * 分路径缓存键配置
+     * Set 规则类型：
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+index：首页
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("KeyRules")
-    @Expose
-    private KeyRule [] KeyRules;
+     * @param RuleType 规则类型：
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+index：首页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
 
     /**
      * Get 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
-off：关闭全路径缓存（即开启参数过滤） 
+off：关闭全路径缓存（即开启参数过滤）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FullUrlCache 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFullUrlCache() {
         return this.FullUrlCache;
@@ -103,9 +170,11 @@ off：关闭全路径缓存（即开启参数过滤）
      * Set 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FullUrlCache 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullUrlCache(String FullUrlCache) {
         this.FullUrlCache = FullUrlCache;
@@ -137,7 +206,7 @@ off：关闭全路径缓存（即开启参数过滤）
      * @return QueryString CacheKey中包含请求参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public QueryStringKey getQueryString() {
+    public RuleQueryString getQueryString() {
         return this.QueryString;
     }
 
@@ -147,122 +216,40 @@ off：关闭全路径缓存（即开启参数过滤）
      * @param QueryString CacheKey中包含请求参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setQueryString(QueryStringKey QueryString) {
+    public void setQueryString(RuleQueryString QueryString) {
         this.QueryString = QueryString;
     }
 
     /**
-     * Get CacheKey中包含Cookie
+     * Get 路径缓存键标签，传 user
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cookie CacheKey中包含Cookie
+     * @return RuleTag 路径缓存键标签，传 user
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public CookieKey getCookie() {
-        return this.Cookie;
+    public String getRuleTag() {
+        return this.RuleTag;
     }
 
     /**
-     * Set CacheKey中包含Cookie
+     * Set 路径缓存键标签，传 user
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cookie CacheKey中包含Cookie
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCookie(CookieKey Cookie) {
-        this.Cookie = Cookie;
-    }
-
-    /**
-     * Get CacheKey中包含请求头部
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Header CacheKey中包含请求头部
+     * @param RuleTag 路径缓存键标签，传 user
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public HeaderKey getHeader() {
-        return this.Header;
-    }
-
-    /**
-     * Set CacheKey中包含请求头部
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Header CacheKey中包含请求头部
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHeader(HeaderKey Header) {
-        this.Header = Header;
-    }
-
-    /**
-     * Get CacheKey中包含自定义字符串
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheTag CacheKey中包含自定义字符串
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public CacheTagKey getCacheTag() {
-        return this.CacheTag;
-    }
-
-    /**
-     * Set CacheKey中包含自定义字符串
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheTag CacheKey中包含自定义字符串
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCacheTag(CacheTagKey CacheTag) {
-        this.CacheTag = CacheTag;
-    }
-
-    /**
-     * Get CacheKey中包含请求协议
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scheme CacheKey中包含请求协议
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public SchemeKey getScheme() {
-        return this.Scheme;
-    }
-
-    /**
-     * Set CacheKey中包含请求协议
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scheme CacheKey中包含请求协议
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setScheme(SchemeKey Scheme) {
-        this.Scheme = Scheme;
-    }
-
-    /**
-     * Get 分路径缓存键配置
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyRules 分路径缓存键配置
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public KeyRule [] getKeyRules() {
-        return this.KeyRules;
-    }
-
-    /**
-     * Set 分路径缓存键配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyRules 分路径缓存键配置
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setKeyRules(KeyRule [] KeyRules) {
-        this.KeyRules = KeyRules;
+    public void setRuleTag(String RuleTag) {
+        this.RuleTag = RuleTag;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
         this.setParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
         this.setParamObj(map, prefix + "QueryString.", this.QueryString);
-        this.setParamObj(map, prefix + "Cookie.", this.Cookie);
-        this.setParamObj(map, prefix + "Header.", this.Header);
-        this.setParamObj(map, prefix + "CacheTag.", this.CacheTag);
-        this.setParamObj(map, prefix + "Scheme.", this.Scheme);
-        this.setParamArrayObj(map, prefix + "KeyRules.", this.KeyRules);
+        this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
 
     }
 }

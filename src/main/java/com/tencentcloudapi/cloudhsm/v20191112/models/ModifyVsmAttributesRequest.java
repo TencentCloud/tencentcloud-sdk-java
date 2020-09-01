@@ -54,7 +54,7 @@ Default-默认不修改
     private String [] SgIds;
 
     /**
-    * VpcId
+    * 虚拟专网Id
     */
     @SerializedName("VpcId")
     @Expose
@@ -144,16 +144,16 @@ Default-默认不修改
     }
 
     /**
-     * Get VpcId 
-     * @return VpcId VpcId
+     * Get 虚拟专网Id 
+     * @return VpcId 虚拟专网Id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VpcId
-     * @param VpcId VpcId
+     * Set 虚拟专网Id
+     * @param VpcId 虚拟专网Id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

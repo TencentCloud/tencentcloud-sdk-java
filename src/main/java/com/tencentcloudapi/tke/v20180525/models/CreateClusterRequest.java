@@ -79,6 +79,13 @@ public class CreateClusterRequest extends AbstractModel{
     private InstanceDataDiskMountSetting [] InstanceDataDiskMountSettings;
 
     /**
+    * 需要安装的扩展组件信息
+    */
+    @SerializedName("ExtensionAddons")
+    @Expose
+    private ExtensionAddon [] ExtensionAddons;
+
+    /**
      * Get 集群容器网络配置信息 
      * @return ClusterCIDRSettings 集群容器网络配置信息
      */
@@ -207,6 +214,22 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要安装的扩展组件信息 
+     * @return ExtensionAddons 需要安装的扩展组件信息
+     */
+    public ExtensionAddon [] getExtensionAddons() {
+        return this.ExtensionAddons;
+    }
+
+    /**
+     * Set 需要安装的扩展组件信息
+     * @param ExtensionAddons 需要安装的扩展组件信息
+     */
+    public void setExtensionAddons(ExtensionAddon [] ExtensionAddons) {
+        this.ExtensionAddons = ExtensionAddons;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
         this.setParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
+        this.setParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
 
     }
 }

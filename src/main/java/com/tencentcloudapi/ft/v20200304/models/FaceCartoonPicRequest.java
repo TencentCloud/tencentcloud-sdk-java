@@ -49,6 +49,13 @@ public class FaceCartoonPicRequest extends AbstractModel{
     private String RspImgType;
 
     /**
+    * 是否取消全图动漫化效果。
+    */
+    @SerializedName("DisableGlobalEffect")
+    @Expose
+    private String DisableGlobalEffect;
+
+    /**
      * Get 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Image 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -117,12 +124,29 @@ public class FaceCartoonPicRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否取消全图动漫化效果。 
+     * @return DisableGlobalEffect 是否取消全图动漫化效果。
+     */
+    public String getDisableGlobalEffect() {
+        return this.DisableGlobalEffect;
+    }
+
+    /**
+     * Set 是否取消全图动漫化效果。
+     * @param DisableGlobalEffect 是否取消全图动漫化效果。
+     */
+    public void setDisableGlobalEffect(String DisableGlobalEffect) {
+        this.DisableGlobalEffect = DisableGlobalEffect;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
+        this.setParamSimple(map, prefix + "DisableGlobalEffect", this.DisableGlobalEffect);
 
     }
 }

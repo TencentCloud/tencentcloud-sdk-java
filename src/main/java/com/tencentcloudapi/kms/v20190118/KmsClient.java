@@ -38,6 +38,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *对密钥进行归档，被归档的密钥只能用于解密，不能加密
+     * @param req ArchiveKeyRequest
+     * @return ArchiveKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ArchiveKeyResponse ArchiveKey(ArchiveKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ArchiveKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ArchiveKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ArchiveKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
      * @param req AsymmetricRsaDecryptRequest
      * @return AsymmetricRsaDecryptResponse
@@ -85,6 +103,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<BindCloudResourceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "BindCloudResource"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *取消密钥归档，取消后密钥的状态变为Enabled。
+     * @param req CancelKeyArchiveRequest
+     * @return CancelKeyArchiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelKeyArchiveResponse CancelKeyArchive(CancelKeyArchiveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelKeyArchiveResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelKeyArchive"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
