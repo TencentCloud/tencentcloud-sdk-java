@@ -128,6 +128,29 @@ public class Address extends AbstractModel{
     private String InternetServiceProvider;
 
     /**
+    * 是否本地带宽EIP
+    */
+    @SerializedName("LocalBgp")
+    @Expose
+    private Boolean LocalBgp;
+
+    /**
+    * 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternetChargeType")
+    @Expose
+    private String InternetChargeType;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -368,6 +391,62 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get 是否本地带宽EIP 
+     * @return LocalBgp 是否本地带宽EIP
+     */
+    public Boolean getLocalBgp() {
+        return this.LocalBgp;
+    }
+
+    /**
+     * Set 是否本地带宽EIP
+     * @param LocalBgp 是否本地带宽EIP
+     */
+    public void setLocalBgp(Boolean LocalBgp) {
+        this.LocalBgp = LocalBgp;
+    }
+
+    /**
+     * Get 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Bandwidth 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Bandwidth 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternetChargeType 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInternetChargeType() {
+        return this.InternetChargeType;
+    }
+
+    /**
+     * Set 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternetChargeType 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternetChargeType(String InternetChargeType) {
+        this.InternetChargeType = InternetChargeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +465,9 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
         this.setParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
         this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+        this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
 
     }
 }

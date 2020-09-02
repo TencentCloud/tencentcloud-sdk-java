@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class FlushBinlogRequest extends AbstractModel{
 
     /**
-    * 无
+    * 实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 无 
-     * @return InstanceId 无
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 无
-     * @param InstanceId 无
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

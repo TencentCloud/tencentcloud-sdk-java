@@ -49,7 +49,7 @@ public class FaceCartoonPicRequest extends AbstractModel{
     private String RspImgType;
 
     /**
-    * 是否取消全图动漫化效果。
+    * 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
     */
     @SerializedName("DisableGlobalEffect")
     @Expose
@@ -124,16 +124,16 @@ public class FaceCartoonPicRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否取消全图动漫化效果。 
-     * @return DisableGlobalEffect 是否取消全图动漫化效果。
+     * Get 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。 
+     * @return DisableGlobalEffect 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
      */
     public String getDisableGlobalEffect() {
         return this.DisableGlobalEffect;
     }
 
     /**
-     * Set 是否取消全图动漫化效果。
-     * @param DisableGlobalEffect 是否取消全图动漫化效果。
+     * Set 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
+     * @param DisableGlobalEffect 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
      */
     public void setDisableGlobalEffect(String DisableGlobalEffect) {
         this.DisableGlobalEffect = DisableGlobalEffect;
