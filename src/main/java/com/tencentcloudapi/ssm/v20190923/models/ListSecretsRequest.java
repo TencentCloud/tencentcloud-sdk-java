@@ -58,6 +58,13 @@ public class ListSecretsRequest extends AbstractModel{
     private String SearchSecretName;
 
     /**
+    * 标签过滤条件
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get 查询列表的起始位置，以0开始，不设置默认为0。 
      * @return Offset 查询列表的起始位置，以0开始，不设置默认为0。
      */
@@ -138,6 +145,22 @@ public class ListSecretsRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签过滤条件 
+     * @return TagFilters 标签过滤条件
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set 标签过滤条件
+     * @param TagFilters 标签过滤条件
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ListSecretsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

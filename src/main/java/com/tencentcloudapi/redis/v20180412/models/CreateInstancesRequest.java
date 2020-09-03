@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * 实例所属的可用区ID
+    * 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
+    * 实例类型：2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）。
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
 
     /**
-    * 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
+    * 实例容量，单位MB， 数值需为1024的整数倍，取值大小以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
+    * 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+    * 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
     */
     @SerializedName("Period")
     @Expose
@@ -72,49 +72,49 @@ public class CreateInstancesRequest extends AbstractModel{
     private String Password;
 
     /**
-    * 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
+    * 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
+    * 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
+    * 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费。
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 安全组id数组
+    * 安全组id数组。
     */
     @SerializedName("SecurityGroupIdList")
     @Expose
     private String [] SecurityGroupIdList;
 
     /**
-    * 用户自定义的端口 不填则默认为6379，范围[1024,65535]
+    * 用户自定义的端口 不填则默认为6379，范围[1024,65535]。
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
+    * 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]。
     */
     @SerializedName("RedisShardNum")
     @Expose
@@ -128,14 +128,14 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long RedisReplicasNum;
 
     /**
-    * 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
+    * 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2。
     */
     @SerializedName("ReplicasReadonly")
     @Expose
     private Boolean ReplicasReadonly;
 
     /**
-    * 实例名称，长度小于60的中文/英文/数字/"-"/"_"
+    * 实例名称，长度小于60的中文/英文/数字/"-"/"_"。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -149,80 +149,80 @@ public class CreateInstancesRequest extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * Get 实例所属的可用区ID 
-     * @return ZoneId 实例所属的可用区ID
+     * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
+     * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所属的可用区ID
-     * @param ZoneId 实例所属的可用区ID
+     * Set 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @param ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）， 
-     * @return TypeId 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
+     * Get 实例类型：2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）。 
+     * @return TypeId 实例类型：2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）。
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
-     * @param TypeId 实例类型：2 – Redis2.8内存版（标准架构），3 – Redis3.2内存版（标准架构），4 – CKV 3.2内存版(标准架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构），
+     * Set 实例类型：2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）。
+     * @param TypeId 实例类型：2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）。
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准 
-     * @return MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
+     * Get 实例容量，单位MB， 数值需为1024的整数倍，取值大小以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。 
+     * @return MemSize 实例容量，单位MB， 数值需为1024的整数倍，取值大小以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
-     * @param MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
+     * Set 实例容量，单位MB， 数值需为1024的整数倍，取值大小以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
+     * @param MemSize 实例容量，单位MB， 数值需为1024的整数倍，取值大小以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准 
-     * @return GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
+     * Get 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。 
+     * @return GoodsNum 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
-     * @param GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
+     * Set 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
+     * @param GoodsNum 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36] 
-     * @return Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * Get 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。 
+     * @return Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
-     * @param Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * Set 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @param Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -261,112 +261,112 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk 
-     * @return VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
+     * Get 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk。 
+     * @return VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
-     * @param VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
+     * Set 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk。
+     * @param VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2 
-     * @return SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
+     * Get 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2。 
+     * @return SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
-     * @param SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
+     * Set 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2。
+     * @param SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准 
-     * @return ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
+     * Get 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。 
+     * @return ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
-     * @param ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
+     * Set 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
+     * @param ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
-     * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费。 
+     * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费。
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
-     * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费。
+     * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费。
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 安全组id数组 
-     * @return SecurityGroupIdList 安全组id数组
+     * Get 安全组id数组。 
+     * @return SecurityGroupIdList 安全组id数组。
      */
     public String [] getSecurityGroupIdList() {
         return this.SecurityGroupIdList;
     }
 
     /**
-     * Set 安全组id数组
-     * @param SecurityGroupIdList 安全组id数组
+     * Set 安全组id数组。
+     * @param SecurityGroupIdList 安全组id数组。
      */
     public void setSecurityGroupIdList(String [] SecurityGroupIdList) {
         this.SecurityGroupIdList = SecurityGroupIdList;
     }
 
     /**
-     * Get 用户自定义的端口 不填则默认为6379，范围[1024,65535] 
-     * @return VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]
+     * Get 用户自定义的端口 不填则默认为6379，范围[1024,65535]。 
+     * @return VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]。
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 用户自定义的端口 不填则默认为6379，范围[1024,65535]
-     * @param VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]
+     * Set 用户自定义的端口 不填则默认为6379，范围[1024,65535]。
+     * @param VPort 用户自定义的端口 不填则默认为6379，范围[1024,65535]。
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128] 
-     * @return RedisShardNum 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
+     * Get 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]。 
+     * @return RedisShardNum 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
-     * @param RedisShardNum 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]
+     * Set 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]。
+     * @param RedisShardNum 实例分片数量，购买标准版实例不需要填写，集群版分片数量范围[3,5,8,12,16,24,32,64,96,128]。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
@@ -389,32 +389,32 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2. 
-     * @return ReplicasReadonly 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
+     * Get 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2。 
+     * @return ReplicasReadonly 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2。
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
-     * @param ReplicasReadonly 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2.
+     * Set 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2。
+     * @param ReplicasReadonly 是否支持副本只读，Redis 2.8标准版、CKV标准版不支持副本只读，开启副本只读，实例将自动读写分离，写请求路由到主节点，读请求路由到副本节点，如需开启副本只读建议副本数>=2。
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;
     }
 
     /**
-     * Get 实例名称，长度小于60的中文/英文/数字/"-"/"_" 
-     * @return InstanceName 实例名称，长度小于60的中文/英文/数字/"-"/"_"
+     * Get 实例名称，长度小于60的中文/英文/数字/"-"/"_"。 
+     * @return InstanceName 实例名称，长度小于60的中文/英文/数字/"-"/"_"。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，长度小于60的中文/英文/数字/"-"/"_"
-     * @param InstanceName 实例名称，长度小于60的中文/英文/数字/"-"/"_"
+     * Set 实例名称，长度小于60的中文/英文/数字/"-"/"_"。
+     * @param InstanceName 实例名称，长度小于60的中文/英文/数字/"-"/"_"。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

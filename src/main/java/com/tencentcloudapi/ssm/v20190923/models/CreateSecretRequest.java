@@ -65,6 +65,13 @@ public class CreateSecretRequest extends AbstractModel{
     private String SecretString;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。 
      * @return SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
      */
@@ -161,6 +168,22 @@ public class CreateSecretRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateSecretRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
         this.setParamSimple(map, prefix + "SecretString", this.SecretString);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -110,7 +110,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *创建redis实例
+     *本接口(CreateInstances)用于创建redis实例。
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
      * @throws TencentCloudSDKException
@@ -884,7 +884,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *修改实例参数
+     *本接口(ModifyInstanceParams)用于修改实例参数。
      * @param req ModifyInstanceParamsRequest
      * @return ModifyInstanceParamsResponse
      * @throws TencentCloudSDKException

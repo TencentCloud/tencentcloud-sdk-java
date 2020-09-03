@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+    * 数据库引擎名称，本接口取值：redis。
     */
     @SerializedName("Product")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。 
-     * @return Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * Get 数据库引擎名称，本接口取值：redis。 
+     * @return Product 数据库引擎名称，本接口取值：redis。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
-     * @param Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * Set 数据库引擎名称，本接口取值：redis。
+     * @param Product 数据库引擎名称，本接口取值：redis。
      */
     public void setProduct(String Product) {
         this.Product = Product;

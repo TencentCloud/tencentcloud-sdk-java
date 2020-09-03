@@ -53,7 +53,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。图片存储�
     private GradientInfo [] GradientInfos;
 
     /**
-    * 视频帧率，取值[1,60]。默认10
+    * 视频帧率，取值[1,25]。默认10
     */
     @SerializedName("Fps")
     @Expose
@@ -165,16 +165,16 @@ Url、Image必须提供一个，如果都提供，只使用 Url。图片存储�
     }
 
     /**
-     * Get 视频帧率，取值[1,60]。默认10 
-     * @return Fps 视频帧率，取值[1,60]。默认10
+     * Get 视频帧率，取值[1,25]。默认10 
+     * @return Fps 视频帧率，取值[1,25]。默认10
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 视频帧率，取值[1,60]。默认10
-     * @param Fps 视频帧率，取值[1,60]。默认10
+     * Set 视频帧率，取值[1,25]。默认10
+     * @param Fps 视频帧率，取值[1,25]。默认10
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

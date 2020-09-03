@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpgradeInstanceVersionRequest extends AbstractModel{
 
     /**
-    * 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
+    * 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
     */
     @SerializedName("TargetInstanceType")
     @Expose
@@ -44,16 +44,16 @@ public class UpgradeInstanceVersionRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型 
-     * @return TargetInstanceType 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
+     * Get 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型 
+     * @return TargetInstanceType 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
      */
     public String getTargetInstanceType() {
         return this.TargetInstanceType;
     }
 
     /**
-     * Set 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
-     * @param TargetInstanceType 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
+     * Set 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
+     * @param TargetInstanceType 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
      */
     public void setTargetInstanceType(String TargetInstanceType) {
         this.TargetInstanceType = TargetInstanceType;

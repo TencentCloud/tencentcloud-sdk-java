@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class GradientInfo extends AbstractModel{
 
     /**
-    * 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片2s
+    * 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片0.5s。最大取值1s。
     */
     @SerializedName("Tempo")
     @Expose
     private Float Tempo;
 
     /**
-    * 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s
+    * 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s。最大取值1s。
     */
     @SerializedName("MorphTime")
     @Expose
     private Float MorphTime;
 
     /**
-     * Get 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片2s 
-     * @return Tempo 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片2s
+     * Get 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片0.5s。最大取值1s。 
+     * @return Tempo 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片0.5s。最大取值1s。
      */
     public Float getTempo() {
         return this.Tempo;
     }
 
     /**
-     * Set 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片2s
-     * @param Tempo 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片2s
+     * Set 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片0.5s。最大取值1s。
+     * @param Tempo 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片0.5s。最大取值1s。
      */
     public void setTempo(Float Tempo) {
         this.Tempo = Tempo;
     }
 
     /**
-     * Get 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s 
-     * @return MorphTime 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s
+     * Get 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s。最大取值1s。 
+     * @return MorphTime 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s。最大取值1s。
      */
     public Float getMorphTime() {
         return this.MorphTime;
     }
 
     /**
-     * Set 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s
-     * @param MorphTime 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s
+     * Set 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s。最大取值1s。
+     * @param MorphTime 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s。最大取值1s。
      */
     public void setMorphTime(Float MorphTime) {
         this.MorphTime = MorphTime;
