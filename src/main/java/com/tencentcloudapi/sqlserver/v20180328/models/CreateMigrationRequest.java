@@ -65,6 +65,13 @@ public class CreateMigrationRequest extends AbstractModel{
     private MigrateDB [] MigrateDBSet;
 
     /**
+    * 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
+    */
+    @SerializedName("RenameRestore")
+    @Expose
+    private RenameRestoreDatabase [] RenameRestore;
+
+    /**
      * Get 迁移任务的名称 
      * @return MigrateName 迁移任务的名称
      */
@@ -161,6 +168,22 @@ public class CreateMigrationRequest extends AbstractModel{
     }
 
     /**
+     * Get 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。 
+     * @return RenameRestore 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
+     */
+    public RenameRestoreDatabase [] getRenameRestore() {
+        return this.RenameRestore;
+    }
+
+    /**
+     * Set 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
+     * @param RenameRestore 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
+     */
+    public void setRenameRestore(RenameRestoreDatabase [] RenameRestore) {
+        this.RenameRestore = RenameRestore;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateMigrationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Source.", this.Source);
         this.setParamObj(map, prefix + "Target.", this.Target);
         this.setParamArrayObj(map, prefix + "MigrateDBSet.", this.MigrateDBSet);
+        this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
 
     }
 }

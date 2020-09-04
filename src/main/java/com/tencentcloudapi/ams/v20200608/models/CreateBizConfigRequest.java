@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class CreateBizConfigRequest extends AbstractModel{
 
     /**
-    * 业务ID
+    * 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
     */
     @SerializedName("BizType")
     @Expose
     private String BizType;
 
     /**
-    * 审核分类信息
+    * 配置信息，
     */
     @SerializedName("MediaModeration")
     @Expose
     private MediaModerationConfig MediaModeration;
 
     /**
-    * 页面名称
+    * 业务名称，用于标识业务场景，长度不超过32位
     */
     @SerializedName("BizName")
     @Expose
@@ -51,48 +51,48 @@ public class CreateBizConfigRequest extends AbstractModel{
     private String [] ModerationCategories;
 
     /**
-     * Get 业务ID 
-     * @return BizType 业务ID
+     * Get 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位 
+     * @return BizType 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
      */
     public String getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 业务ID
-     * @param BizType 业务ID
+     * Set 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
+     * @param BizType 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 审核分类信息 
-     * @return MediaModeration 审核分类信息
+     * Get 配置信息， 
+     * @return MediaModeration 配置信息，
      */
     public MediaModerationConfig getMediaModeration() {
         return this.MediaModeration;
     }
 
     /**
-     * Set 审核分类信息
-     * @param MediaModeration 审核分类信息
+     * Set 配置信息，
+     * @param MediaModeration 配置信息，
      */
     public void setMediaModeration(MediaModerationConfig MediaModeration) {
         this.MediaModeration = MediaModeration;
     }
 
     /**
-     * Get 页面名称 
-     * @return BizName 页面名称
+     * Get 业务名称，用于标识业务场景，长度不超过32位 
+     * @return BizName 业务名称，用于标识业务场景，长度不超过32位
      */
     public String getBizName() {
         return this.BizName;
     }
 
     /**
-     * Set 页面名称
-     * @param BizName 页面名称
+     * Set 业务名称，用于标识业务场景，长度不超过32位
+     * @param BizName 业务名称，用于标识业务场景，长度不超过32位
      */
     public void setBizName(String BizName) {
         this.BizName = BizName;

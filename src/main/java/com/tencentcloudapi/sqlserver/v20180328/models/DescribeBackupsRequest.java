@@ -79,6 +79,13 @@ public class DescribeBackupsRequest extends AbstractModel{
     private Long BackupWay;
 
     /**
+    * 按照备份ID筛选，不填则不筛选此项
+    */
+    @SerializedName("BackupId")
+    @Expose
+    private Long BackupId;
+
+    /**
      * Get 开始时间(yyyy-MM-dd HH:mm:ss) 
      * @return StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
@@ -207,6 +214,22 @@ public class DescribeBackupsRequest extends AbstractModel{
     }
 
     /**
+     * Get 按照备份ID筛选，不填则不筛选此项 
+     * @return BackupId 按照备份ID筛选，不填则不筛选此项
+     */
+    public Long getBackupId() {
+        return this.BackupId;
+    }
+
+    /**
+     * Set 按照备份ID筛选，不填则不筛选此项
+     * @param BackupId 按照备份ID筛选，不填则不筛选此项
+     */
+    public void setBackupId(Long BackupId) {
+        this.BackupId = BackupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
+        this.setParamSimple(map, prefix + "BackupId", this.BackupId);
 
     }
 }

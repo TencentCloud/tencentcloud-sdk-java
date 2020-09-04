@@ -165,7 +165,25 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持7天内的备份查询。
+     *本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
+     * @param req DescribeCurrentOpRequest
+     * @return DescribeCurrentOpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurrentOpResponse DescribeCurrentOp(DescribeCurrentOpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCurrentOpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCurrentOpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCurrentOp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
      * @param req DescribeDBBackupsRequest
      * @return DescribeDBBackupsResponse
      * @throws TencentCloudSDKException
@@ -356,6 +374,24 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<IsolateDBInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "IsolateDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
+     * @param req KillOpsRequest
+     * @return KillOpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillOpsResponse KillOps(KillOpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillOpsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillOpsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "KillOps"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

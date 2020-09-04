@@ -44,7 +44,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String GameId;
 
     /**
-    * 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+    * 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
     */
     @SerializedName("GameRegion")
     @Expose
@@ -72,7 +72,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 资源池编号，1表示正式，2表示测试
+    * 【将废弃】资源池编号，比如1表示正式，2表示测试
     */
     @SerializedName("SetNo")
     @Expose
@@ -121,11 +121,18 @@ public class CreateSessionRequest extends AbstractModel{
     private Long Optimization;
 
     /**
-    * 用于多人游戏，游戏主机用户ID
+    * 【多人云游】游戏主机用户ID
     */
     @SerializedName("HostUserId")
     @Expose
     private String HostUserId;
+
+    /**
+    * 【多人云游】角色；Player表示玩家；Viewer表示观察者
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
 
     /**
      * Get 客户端session信息，从JSSDK请求中获得 
@@ -176,16 +183,16 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等 
-     * @return GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+     * Get 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等 
+     * @return GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
      */
     public String getGameRegion() {
         return this.GameRegion;
     }
 
     /**
-     * Set 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
-     * @param GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+     * Set 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+     * @param GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
      */
     public void setGameRegion(String GameRegion) {
         this.GameRegion = GameRegion;
@@ -240,16 +247,16 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源池编号，1表示正式，2表示测试 
-     * @return SetNo 资源池编号，1表示正式，2表示测试
+     * Get 【将废弃】资源池编号，比如1表示正式，2表示测试 
+     * @return SetNo 【将废弃】资源池编号，比如1表示正式，2表示测试
      */
     public Long getSetNo() {
         return this.SetNo;
     }
 
     /**
-     * Set 资源池编号，1表示正式，2表示测试
-     * @param SetNo 资源池编号，1表示正式，2表示测试
+     * Set 【将废弃】资源池编号，比如1表示正式，2表示测试
+     * @param SetNo 【将废弃】资源池编号，比如1表示正式，2表示测试
      */
     public void setSetNo(Long SetNo) {
         this.SetNo = SetNo;
@@ -352,19 +359,35 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 用于多人游戏，游戏主机用户ID 
-     * @return HostUserId 用于多人游戏，游戏主机用户ID
+     * Get 【多人云游】游戏主机用户ID 
+     * @return HostUserId 【多人云游】游戏主机用户ID
      */
     public String getHostUserId() {
         return this.HostUserId;
     }
 
     /**
-     * Set 用于多人游戏，游戏主机用户ID
-     * @param HostUserId 用于多人游戏，游戏主机用户ID
+     * Set 【多人云游】游戏主机用户ID
+     * @param HostUserId 【多人云游】游戏主机用户ID
      */
     public void setHostUserId(String HostUserId) {
         this.HostUserId = HostUserId;
+    }
+
+    /**
+     * Get 【多人云游】角色；Player表示玩家；Viewer表示观察者 
+     * @return Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @param Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     /**
@@ -386,6 +409,7 @@ public class CreateSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "Optimization", this.Optimization);
         this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

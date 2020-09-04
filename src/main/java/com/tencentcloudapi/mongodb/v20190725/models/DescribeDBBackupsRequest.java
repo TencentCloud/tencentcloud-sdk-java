@@ -30,6 +30,27 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private Long BackupMethod;
+
+    /**
+    * 分页大小，最大值为100，不设置默认查询所有。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 分页偏移量，最小值为0，默认值为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
@@ -46,10 +67,61 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     }
 
     /**
+     * Get 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。 
+     * @return BackupMethod 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     */
+    public Long getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * Set 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     * @param BackupMethod 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     */
+    public void setBackupMethod(Long BackupMethod) {
+        this.BackupMethod = BackupMethod;
+    }
+
+    /**
+     * Get 分页大小，最大值为100，不设置默认查询所有。 
+     * @return Limit 分页大小，最大值为100，不设置默认查询所有。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页大小，最大值为100，不设置默认查询所有。
+     * @param Limit 分页大小，最大值为100，不设置默认查询所有。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 分页偏移量，最小值为0，默认值为0。 
+     * @return Offset 分页偏移量，最小值为0，默认值为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移量，最小值为0，默认值为0。
+     * @param Offset 分页偏移量，最小值为0，默认值为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -93,6 +93,24 @@ public class BizLicenseOCRResponse extends AbstractModel{
     private String SetDate;
 
     /**
+    * Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+    */
+    @SerializedName("RecognizeWarnCode")
+    @Expose
+    private Long [] RecognizeWarnCode;
+
+    /**
+    * 告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
+    */
+    @SerializedName("RecognizeWarnMsg")
+    @Expose
+    private String [] RecognizeWarnMsg;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +278,54 @@ public class BizLicenseOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个 
+     * @return RecognizeWarnCode Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+     */
+    public Long [] getRecognizeWarnCode() {
+        return this.RecognizeWarnCode;
+    }
+
+    /**
+     * Set Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+     * @param RecognizeWarnCode Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+     */
+    public void setRecognizeWarnCode(Long [] RecognizeWarnCode) {
+        this.RecognizeWarnCode = RecognizeWarnCode;
+    }
+
+    /**
+     * Get 告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个 
+     * @return RecognizeWarnMsg 告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
+     */
+    public String [] getRecognizeWarnMsg() {
+        return this.RecognizeWarnMsg;
+    }
+
+    /**
+     * Set 告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
+     * @param RecognizeWarnMsg 告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
+     */
+    public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {
+        this.RecognizeWarnMsg = RecognizeWarnMsg;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -289,6 +355,8 @@ public class BizLicenseOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "ComposingForm", this.ComposingForm);
         this.setParamSimple(map, prefix + "SetDate", this.SetDate);
+        this.setParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
+        this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

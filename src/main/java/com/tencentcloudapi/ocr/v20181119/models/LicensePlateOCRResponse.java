@@ -37,6 +37,13 @@ public class LicensePlateOCRResponse extends AbstractModel{
     private Long Confidence;
 
     /**
+    * 文本行在原图片中的像素坐标框。
+    */
+    @SerializedName("Rect")
+    @Expose
+    private Rect Rect;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class LicensePlateOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 文本行在原图片中的像素坐标框。 
+     * @return Rect 文本行在原图片中的像素坐标框。
+     */
+    public Rect getRect() {
+        return this.Rect;
+    }
+
+    /**
+     * Set 文本行在原图片中的像素坐标框。
+     * @param Rect 文本行在原图片中的像素坐标框。
+     */
+    public void setRect(Rect Rect) {
+        this.Rect = Rect;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +120,7 @@ public class LicensePlateOCRResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamObj(map, prefix + "Rect.", this.Rect);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

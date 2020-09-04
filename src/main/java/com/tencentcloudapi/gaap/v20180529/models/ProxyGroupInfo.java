@@ -95,6 +95,14 @@ MOVING表示通道迁移中。
     private Long CreateTime;
 
     /**
+    * 通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyType")
+    @Expose
+    private Long ProxyType;
+
+    /**
      * Get 通道组id 
      * @return GroupId 通道组id
      */
@@ -275,6 +283,26 @@ MOVING表示通道迁移中。
     }
 
     /**
+     * Get 通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyType 通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProxyType() {
+        return this.ProxyType;
+    }
+
+    /**
+     * Set 通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyType 通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyType(Long ProxyType) {
+        this.ProxyType = ProxyType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +315,7 @@ MOVING表示通道迁移中。
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
 
     }
 }

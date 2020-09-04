@@ -37,6 +37,13 @@ public class BandwidthPriceGradient extends AbstractModel{
     private Float BandwidthUnitPrice;
 
     /**
+    * 带宽折扣价，单位：元/Mbps/天。
+    */
+    @SerializedName("DiscountBandwidthUnitPrice")
+    @Expose
+    private Float DiscountBandwidthUnitPrice;
+
+    /**
      * Get 带宽范围。 
      * @return BandwidthRange 带宽范围。
      */
@@ -69,11 +76,28 @@ public class BandwidthPriceGradient extends AbstractModel{
     }
 
     /**
+     * Get 带宽折扣价，单位：元/Mbps/天。 
+     * @return DiscountBandwidthUnitPrice 带宽折扣价，单位：元/Mbps/天。
+     */
+    public Float getDiscountBandwidthUnitPrice() {
+        return this.DiscountBandwidthUnitPrice;
+    }
+
+    /**
+     * Set 带宽折扣价，单位：元/Mbps/天。
+     * @param DiscountBandwidthUnitPrice 带宽折扣价，单位：元/Mbps/天。
+     */
+    public void setDiscountBandwidthUnitPrice(Float DiscountBandwidthUnitPrice) {
+        this.DiscountBandwidthUnitPrice = DiscountBandwidthUnitPrice;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "BandwidthRange.", this.BandwidthRange);
         this.setParamSimple(map, prefix + "BandwidthUnitPrice", this.BandwidthUnitPrice);
+        this.setParamSimple(map, prefix + "DiscountBandwidthUnitPrice", this.DiscountBandwidthUnitPrice);
 
     }
 }

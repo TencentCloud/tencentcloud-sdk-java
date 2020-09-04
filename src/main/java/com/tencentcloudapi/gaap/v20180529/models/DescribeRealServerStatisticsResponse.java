@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class DescribeRealServerStatisticsResponse extends AbstractModel{
 
     /**
-    * 源站状态统计数据
+    * 指定监听器的源站状态统计数据
     */
     @SerializedName("StatisticsData")
     @Expose
     private StatisticsDataInfo [] StatisticsData;
+
+    /**
+    * 多个源站状态统计数据
+    */
+    @SerializedName("RsStatisticsData")
+    @Expose
+    private MetricStatisticsInfo [] RsStatisticsData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeRealServerStatisticsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 源站状态统计数据 
-     * @return StatisticsData 源站状态统计数据
+     * Get 指定监听器的源站状态统计数据 
+     * @return StatisticsData 指定监听器的源站状态统计数据
      */
     public StatisticsDataInfo [] getStatisticsData() {
         return this.StatisticsData;
     }
 
     /**
-     * Set 源站状态统计数据
-     * @param StatisticsData 源站状态统计数据
+     * Set 指定监听器的源站状态统计数据
+     * @param StatisticsData 指定监听器的源站状态统计数据
      */
     public void setStatisticsData(StatisticsDataInfo [] StatisticsData) {
         this.StatisticsData = StatisticsData;
+    }
+
+    /**
+     * Get 多个源站状态统计数据 
+     * @return RsStatisticsData 多个源站状态统计数据
+     */
+    public MetricStatisticsInfo [] getRsStatisticsData() {
+        return this.RsStatisticsData;
+    }
+
+    /**
+     * Set 多个源站状态统计数据
+     * @param RsStatisticsData 多个源站状态统计数据
+     */
+    public void setRsStatisticsData(MetricStatisticsInfo [] RsStatisticsData) {
+        this.RsStatisticsData = RsStatisticsData;
     }
 
     /**
@@ -73,6 +96,7 @@ public class DescribeRealServerStatisticsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "StatisticsData.", this.StatisticsData);
+        this.setParamArrayObj(map, prefix + "RsStatisticsData.", this.RsStatisticsData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

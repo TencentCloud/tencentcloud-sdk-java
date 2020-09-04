@@ -30,6 +30,13 @@ public class CreateSessionResponse extends AbstractModel{
     private String ServerSession;
 
     /**
+    * 【多人游戏】角色编号；比如Player1、Player2、Viewer1
+    */
+    @SerializedName("RoleNumber")
+    @Expose
+    private String RoleNumber;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class CreateSessionResponse extends AbstractModel{
     }
 
     /**
+     * Get 【多人游戏】角色编号；比如Player1、Player2、Viewer1 
+     * @return RoleNumber 【多人游戏】角色编号；比如Player1、Player2、Viewer1
+     */
+    public String getRoleNumber() {
+        return this.RoleNumber;
+    }
+
+    /**
+     * Set 【多人游戏】角色编号；比如Player1、Player2、Viewer1
+     * @param RoleNumber 【多人游戏】角色编号；比如Player1、Player2、Viewer1
+     */
+    public void setRoleNumber(String RoleNumber) {
+        this.RoleNumber = RoleNumber;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class CreateSessionResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServerSession", this.ServerSession);
+        this.setParamSimple(map, prefix + "RoleNumber", this.RoleNumber);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

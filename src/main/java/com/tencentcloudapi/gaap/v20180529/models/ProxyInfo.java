@@ -220,6 +220,14 @@ UNKNOWN表示未知状态。
     private Long ModifyConfigTime;
 
     /**
+    * 通道类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyType")
+    @Expose
+    private Long ProxyType;
+
+    /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -708,6 +716,26 @@ UNKNOWN表示未知状态。
     }
 
     /**
+     * Get 通道类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyType 通道类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProxyType() {
+        return this.ProxyType;
+    }
+
+    /**
+     * Set 通道类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyType 通道类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyType(Long ProxyType) {
+        this.ProxyType = ProxyType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -736,6 +764,7 @@ UNKNOWN表示未知状态。
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
         this.setParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
+        this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
 
     }
 }

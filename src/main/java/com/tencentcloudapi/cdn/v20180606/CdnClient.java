@@ -92,6 +92,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
+     * @param req CreateVerifyRecordRequest
+     * @return CreateVerifyRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVerifyRecordResponse CreateVerifyRecord(CreateVerifyRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVerifyRecordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVerifyRecordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateVerifyRecord"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DeleteCdnDomain 用于删除指定加速域名
      * @param req DeleteCdnDomainRequest
      * @return DeleteCdnDomainResponse
@@ -882,6 +900,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdatePayTypeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdatePayType"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *验证域名解析值
+     * @param req VerifyDomainRecordRequest
+     * @return VerifyDomainRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyDomainRecordResponse VerifyDomainRecord(VerifyDomainRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyDomainRecordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "VerifyDomainRecord"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

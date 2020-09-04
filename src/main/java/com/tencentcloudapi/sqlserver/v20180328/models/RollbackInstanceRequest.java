@@ -51,6 +51,20 @@ public class RollbackInstanceRequest extends AbstractModel{
     private String Time;
 
     /**
+    * 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+    */
+    @SerializedName("TargetInstanceId")
+    @Expose
+    private String TargetInstanceId;
+
+    /**
+    * 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
+    */
+    @SerializedName("RenameRestore")
+    @Expose
+    private RenameRestoreDatabase [] RenameRestore;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -115,6 +129,38 @@ public class RollbackInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID 
+     * @return TargetInstanceId 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+     */
+    public String getTargetInstanceId() {
+        return this.TargetInstanceId;
+    }
+
+    /**
+     * Set 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+     * @param TargetInstanceId 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+     */
+    public void setTargetInstanceId(String TargetInstanceId) {
+        this.TargetInstanceId = TargetInstanceId;
+    }
+
+    /**
+     * Get 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库 
+     * @return RenameRestore 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
+     */
+    public RenameRestoreDatabase [] getRenameRestore() {
+        return this.RenameRestore;
+    }
+
+    /**
+     * Set 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
+     * @param RenameRestore 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
+     */
+    public void setRenameRestore(RenameRestoreDatabase [] RenameRestore) {
+        this.RenameRestore = RenameRestore;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class RollbackInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
+        this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
 
     }
 }
