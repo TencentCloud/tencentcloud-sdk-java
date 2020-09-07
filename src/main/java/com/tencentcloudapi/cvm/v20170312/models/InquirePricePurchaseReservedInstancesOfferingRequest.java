@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
+public class InquirePricePurchaseReservedInstancesOfferingRequest extends AbstractModel{
 
     /**
     * 购买预留实例计费数量

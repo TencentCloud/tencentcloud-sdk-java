@@ -1,0 +1,368 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.cvm.v20170312.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ReservedInstanceTypeItem extends AbstractModel{
+
+    /**
+    * 实例类型。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * CPU核数。
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * 内存大小。
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Long Memory;
+
+    /**
+    * GPU核数。
+    */
+    @SerializedName("Gpu")
+    @Expose
+    private Long Gpu;
+
+    /**
+    * FPGA核数。
+    */
+    @SerializedName("Fpga")
+    @Expose
+    private Long Fpga;
+
+    /**
+    * 存储块数。
+    */
+    @SerializedName("StorageBlock")
+    @Expose
+    private Long StorageBlock;
+
+    /**
+    * 网卡数。
+    */
+    @SerializedName("NetworkCard")
+    @Expose
+    private Long NetworkCard;
+
+    /**
+    * 最大带宽。
+    */
+    @SerializedName("MaxBandwidth")
+    @Expose
+    private Float MaxBandwidth;
+
+    /**
+    * 主频。
+    */
+    @SerializedName("Frequency")
+    @Expose
+    private String Frequency;
+
+    /**
+    * CPU型号名称。
+    */
+    @SerializedName("CpuModelName")
+    @Expose
+    private String CpuModelName;
+
+    /**
+    * 包转发率。
+    */
+    @SerializedName("Pps")
+    @Expose
+    private Long Pps;
+
+    /**
+    * 外部信息。
+    */
+    @SerializedName("Externals")
+    @Expose
+    private Externals Externals;
+
+    /**
+    * 备注信息。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 预留实例配置价格信息。
+    */
+    @SerializedName("Prices")
+    @Expose
+    private ReservedInstancePriceItem [] Prices;
+
+    /**
+     * Get 实例类型。 
+     * @return InstanceType 实例类型。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型。
+     * @param InstanceType 实例类型。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get CPU核数。 
+     * @return Cpu CPU核数。
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set CPU核数。
+     * @param Cpu CPU核数。
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get 内存大小。 
+     * @return Memory 内存大小。
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 内存大小。
+     * @param Memory 内存大小。
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get GPU核数。 
+     * @return Gpu GPU核数。
+     */
+    public Long getGpu() {
+        return this.Gpu;
+    }
+
+    /**
+     * Set GPU核数。
+     * @param Gpu GPU核数。
+     */
+    public void setGpu(Long Gpu) {
+        this.Gpu = Gpu;
+    }
+
+    /**
+     * Get FPGA核数。 
+     * @return Fpga FPGA核数。
+     */
+    public Long getFpga() {
+        return this.Fpga;
+    }
+
+    /**
+     * Set FPGA核数。
+     * @param Fpga FPGA核数。
+     */
+    public void setFpga(Long Fpga) {
+        this.Fpga = Fpga;
+    }
+
+    /**
+     * Get 存储块数。 
+     * @return StorageBlock 存储块数。
+     */
+    public Long getStorageBlock() {
+        return this.StorageBlock;
+    }
+
+    /**
+     * Set 存储块数。
+     * @param StorageBlock 存储块数。
+     */
+    public void setStorageBlock(Long StorageBlock) {
+        this.StorageBlock = StorageBlock;
+    }
+
+    /**
+     * Get 网卡数。 
+     * @return NetworkCard 网卡数。
+     */
+    public Long getNetworkCard() {
+        return this.NetworkCard;
+    }
+
+    /**
+     * Set 网卡数。
+     * @param NetworkCard 网卡数。
+     */
+    public void setNetworkCard(Long NetworkCard) {
+        this.NetworkCard = NetworkCard;
+    }
+
+    /**
+     * Get 最大带宽。 
+     * @return MaxBandwidth 最大带宽。
+     */
+    public Float getMaxBandwidth() {
+        return this.MaxBandwidth;
+    }
+
+    /**
+     * Set 最大带宽。
+     * @param MaxBandwidth 最大带宽。
+     */
+    public void setMaxBandwidth(Float MaxBandwidth) {
+        this.MaxBandwidth = MaxBandwidth;
+    }
+
+    /**
+     * Get 主频。 
+     * @return Frequency 主频。
+     */
+    public String getFrequency() {
+        return this.Frequency;
+    }
+
+    /**
+     * Set 主频。
+     * @param Frequency 主频。
+     */
+    public void setFrequency(String Frequency) {
+        this.Frequency = Frequency;
+    }
+
+    /**
+     * Get CPU型号名称。 
+     * @return CpuModelName CPU型号名称。
+     */
+    public String getCpuModelName() {
+        return this.CpuModelName;
+    }
+
+    /**
+     * Set CPU型号名称。
+     * @param CpuModelName CPU型号名称。
+     */
+    public void setCpuModelName(String CpuModelName) {
+        this.CpuModelName = CpuModelName;
+    }
+
+    /**
+     * Get 包转发率。 
+     * @return Pps 包转发率。
+     */
+    public Long getPps() {
+        return this.Pps;
+    }
+
+    /**
+     * Set 包转发率。
+     * @param Pps 包转发率。
+     */
+    public void setPps(Long Pps) {
+        this.Pps = Pps;
+    }
+
+    /**
+     * Get 外部信息。 
+     * @return Externals 外部信息。
+     */
+    public Externals getExternals() {
+        return this.Externals;
+    }
+
+    /**
+     * Set 外部信息。
+     * @param Externals 外部信息。
+     */
+    public void setExternals(Externals Externals) {
+        this.Externals = Externals;
+    }
+
+    /**
+     * Get 备注信息。 
+     * @return Remark 备注信息。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注信息。
+     * @param Remark 备注信息。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 预留实例配置价格信息。 
+     * @return Prices 预留实例配置价格信息。
+     */
+    public ReservedInstancePriceItem [] getPrices() {
+        return this.Prices;
+    }
+
+    /**
+     * Set 预留实例配置价格信息。
+     * @param Prices 预留实例配置价格信息。
+     */
+    public void setPrices(ReservedInstancePriceItem [] Prices) {
+        this.Prices = Prices;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Gpu", this.Gpu);
+        this.setParamSimple(map, prefix + "Fpga", this.Fpga);
+        this.setParamSimple(map, prefix + "StorageBlock", this.StorageBlock);
+        this.setParamSimple(map, prefix + "NetworkCard", this.NetworkCard);
+        this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
+        this.setParamSimple(map, prefix + "Frequency", this.Frequency);
+        this.setParamSimple(map, prefix + "CpuModelName", this.CpuModelName);
+        this.setParamSimple(map, prefix + "Pps", this.Pps);
+        this.setParamObj(map, prefix + "Externals.", this.Externals);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "Prices.", this.Prices);
+
+    }
+}
+

@@ -72,6 +72,13 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String FlowLogDescription;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
@@ -184,6 +191,22 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateFlowLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
         this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

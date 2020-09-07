@@ -578,6 +578,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置
+     * @param req DescribeReservedInstancesConfigInfosRequest
+     * @return DescribeReservedInstancesConfigInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfos(DescribeReservedInstancesConfigInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReservedInstancesConfigInfosResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstancesConfigInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
      * @param req DescribeReservedInstancesOfferingsRequest
      * @return DescribeReservedInstancesOfferingsResponse
@@ -725,6 +743,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ImportKeyPairResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImportKeyPair"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价,
+     * @param req InquirePricePurchaseReservedInstancesOfferingRequest
+     * @return InquirePricePurchaseReservedInstancesOfferingResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(InquirePricePurchaseReservedInstancesOfferingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePricePurchaseReservedInstancesOffering"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
