@@ -1,38 +1,25 @@
 package com.tencentcloudapi.common;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-class Log implements Interceptor {
+class TCLog implements Interceptor {
   private boolean debug;
-  private Logger logger = null;
-  
-  public Log(String name) {
+  private Log logger = null;
+
+  public TCLog(String name) {
     this(name, false);
   }
 
-  public Log(String name, boolean isDebug) {
-    logger = Logger.getLogger(name);
-    if(isDebug){
-      File file = new File("log4j.properties");
-      if (!file.exists()){
-        this.debug = false;
-        BasicConfigurator.configure();
-        logger.warn("The configuration file of log4j does not exist, please refer to tencentcloud-sdk-java/log4j.properties for configuration.");
-      } else {
-        this.debug = isDebug;
-        PropertyConfigurator.configure("log4j.properties");
-      }
-    }
+  public TCLog(String name, boolean isDebug) {
+    logger = LogFactory.getLog(name);
+    this.debug = isDebug;
   }
 
   public void info(final String str) {
@@ -65,11 +52,11 @@ class Log implements Interceptor {
     Request request = chain.request();
     String req = ("send request, request url: " + request.urlString() + ". request headers information: " + request.headers().toString());
     req = req.replaceAll("\n", ";");
-    this.debug(req);
+    this.info(req);
     Response response = chain.proceed(request);
     String resp = ("recieve response, response url: " + response.request().urlString() + ", response headers: " + response.headers().toString() + ",response body information: " + response.body().toString());
     resp = resp.replaceAll("\n", ";");
-    this.debug(resp);
+    this.info(resp);
     return response;
   }
 
