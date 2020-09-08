@@ -44,14 +44,14 @@ public class TextModerationRequest extends AbstractModel{
     private String BizType;
 
     /**
-    * 用户相关信息
+    * 账号相关信息字段，填入后可识别违规风险账号。
     */
     @SerializedName("User")
     @Expose
     private User User;
 
     /**
-    * 设备相关信息
+    * 设备相关信息字段，填入后可识别违规风险设备。
     */
     @SerializedName("Device")
     @Expose
@@ -106,32 +106,32 @@ public class TextModerationRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户相关信息 
-     * @return User 用户相关信息
+     * Get 账号相关信息字段，填入后可识别违规风险账号。 
+     * @return User 账号相关信息字段，填入后可识别违规风险账号。
      */
     public User getUser() {
         return this.User;
     }
 
     /**
-     * Set 用户相关信息
-     * @param User 用户相关信息
+     * Set 账号相关信息字段，填入后可识别违规风险账号。
+     * @param User 账号相关信息字段，填入后可识别违规风险账号。
      */
     public void setUser(User User) {
         this.User = User;
     }
 
     /**
-     * Get 设备相关信息 
-     * @return Device 设备相关信息
+     * Get 设备相关信息字段，填入后可识别违规风险设备。 
+     * @return Device 设备相关信息字段，填入后可识别违规风险设备。
      */
     public Device getDevice() {
         return this.Device;
     }
 
     /**
-     * Set 设备相关信息
-     * @param Device 设备相关信息
+     * Set 设备相关信息字段，填入后可识别违规风险设备。
+     * @param Device 设备相关信息字段，填入后可识别违规风险设备。
      */
     public void setDevice(Device Device) {
         this.Device = Device;

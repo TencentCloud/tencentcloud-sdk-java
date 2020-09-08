@@ -44,14 +44,14 @@ public class CreateRecordTaskRequest extends AbstractModel{
     private String AppName;
 
     /**
-    * 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+    * 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+    * 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
     */
     @SerializedName("StartTime")
     @Expose
@@ -74,7 +74,7 @@ public class CreateRecordTaskRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * 扩展字段，默认空。
+    * 扩展字段，暂无定义。默认为空。
     */
     @SerializedName("Extension")
     @Expose
@@ -129,32 +129,32 @@ public class CreateRecordTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。 
-     * @return EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+     * Get 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。 
+     * @return EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
-     * @param EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+     * Set 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
+     * @param EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。 
-     * @return StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+     * Get 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。 
+     * @return StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
-     * @param StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+     * Set 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
+     * @param StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -201,16 +201,16 @@ public class CreateRecordTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 扩展字段，默认空。 
-     * @return Extension 扩展字段，默认空。
+     * Get 扩展字段，暂无定义。默认为空。 
+     * @return Extension 扩展字段，暂无定义。默认为空。
      */
     public String getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set 扩展字段，默认空。
-     * @param Extension 扩展字段，默认空。
+     * Set 扩展字段，暂无定义。默认为空。
+     * @param Extension 扩展字段，暂无定义。默认为空。
      */
     public void setExtension(String Extension) {
         this.Extension = Extension;

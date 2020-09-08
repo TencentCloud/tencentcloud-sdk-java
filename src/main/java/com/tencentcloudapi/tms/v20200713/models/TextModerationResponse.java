@@ -23,35 +23,39 @@ import java.util.HashMap;
 public class TextModerationResponse extends AbstractModel{
 
     /**
-    * 最终使用的BizType
+    * 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
     */
     @SerializedName("BizType")
     @Expose
     private String BizType;
 
     /**
-    * 是否恶意 0：正常 1：可疑
+    * 数据是否属于恶意类型。
+ 0：正常 1：可疑
     */
     @SerializedName("EvilFlag")
     @Expose
     private Long EvilFlag;
 
     /**
-    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    * 机器识别后判断违规所属类型。
+Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 建议值,Block：打击,Review：待复审,Normal：正常
+    * 建议您拿到判断结果后的执行操作。
+Block：建议打击，Review：建议复审，Normal：建议通过。
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 命中的关键词
+    * 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
@@ -59,14 +63,15 @@ public class TextModerationResponse extends AbstractModel{
     private String [] Keywords;
 
     /**
-    * 命中的模型分值
+    * 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
+（如：色情 99.99，则该样本属于色情的置信度非常高。）
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 返回的详细结果
+    * 接口识别样本后返回的详细结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetailResults")
@@ -74,7 +79,7 @@ public class TextModerationResponse extends AbstractModel{
     private DetailResults [] DetailResults;
 
     /**
-    * 账号风险检测结果
+    * 接口识别样本中存在违规账号风险的检测结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDetails")
@@ -82,7 +87,7 @@ public class TextModerationResponse extends AbstractModel{
     private RiskDetails [] RiskDetails;
 
     /**
-    * 预留字段，不同客户返回结果不同
+    * 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -97,73 +102,87 @@ public class TextModerationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 最终使用的BizType 
-     * @return BizType 最终使用的BizType
+     * Get 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。 
+     * @return BizType 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
      */
     public String getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 最终使用的BizType
-     * @param BizType 最终使用的BizType
+     * Set 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
+     * @param BizType 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 是否恶意 0：正常 1：可疑 
-     * @return EvilFlag 是否恶意 0：正常 1：可疑
+     * Get 数据是否属于恶意类型。
+ 0：正常 1：可疑 
+     * @return EvilFlag 数据是否属于恶意类型。
+ 0：正常 1：可疑
      */
     public Long getEvilFlag() {
         return this.EvilFlag;
     }
 
     /**
-     * Set 是否恶意 0：正常 1：可疑
-     * @param EvilFlag 是否恶意 0：正常 1：可疑
+     * Set 数据是否属于恶意类型。
+ 0：正常 1：可疑
+     * @param EvilFlag 数据是否属于恶意类型。
+ 0：正常 1：可疑
      */
     public void setEvilFlag(Long EvilFlag) {
         this.EvilFlag = EvilFlag;
     }
 
     /**
-     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
-     * @return Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Get 机器识别后判断违规所属类型。
+Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
+     * @return Label 机器识别后判断违规所属类型。
+Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Set 机器识别后判断违规所属类型。
+Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @param Label 机器识别后判断违规所属类型。
+Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 建议值,Block：打击,Review：待复审,Normal：正常 
-     * @return Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
+     * Get 建议您拿到判断结果后的执行操作。
+Block：建议打击，Review：建议复审，Normal：建议通过。 
+     * @return Suggestion 建议您拿到判断结果后的执行操作。
+Block：建议打击，Review：建议复审，Normal：建议通过。
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议值,Block：打击,Review：待复审,Normal：正常
-     * @param Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
+     * Set 建议您拿到判断结果后的执行操作。
+Block：建议打击，Review：建议复审，Normal：建议通过。
+     * @param Suggestion 建议您拿到判断结果后的执行操作。
+Block：建议打击，Review：建议复审，Normal：建议通过。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 命中的关键词
+     * Get 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Keywords 命中的关键词
+     * @return Keywords 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywords() {
@@ -171,9 +190,11 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
-     * Set 命中的关键词
+     * Set 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Keywords 命中的关键词
+     * @param Keywords 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(String [] Keywords) {
@@ -181,25 +202,29 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
-     * Get 命中的模型分值 
-     * @return Score 命中的模型分值
+     * Get 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
+（如：色情 99.99，则该样本属于色情的置信度非常高。） 
+     * @return Score 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
+（如：色情 99.99，则该样本属于色情的置信度非常高。）
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 命中的模型分值
-     * @param Score 命中的模型分值
+     * Set 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
+（如：色情 99.99，则该样本属于色情的置信度非常高。）
+     * @param Score 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
+（如：色情 99.99，则该样本属于色情的置信度非常高。）
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 返回的详细结果
+     * Get 接口识别样本后返回的详细结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DetailResults 返回的详细结果
+     * @return DetailResults 接口识别样本后返回的详细结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailResults [] getDetailResults() {
@@ -207,9 +232,9 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
-     * Set 返回的详细结果
+     * Set 接口识别样本后返回的详细结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DetailResults 返回的详细结果
+     * @param DetailResults 接口识别样本后返回的详细结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetailResults(DetailResults [] DetailResults) {
@@ -217,9 +242,9 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
-     * Get 账号风险检测结果
+     * Get 接口识别样本中存在违规账号风险的检测结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskDetails 账号风险检测结果
+     * @return RiskDetails 接口识别样本中存在违规账号风险的检测结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskDetails [] getRiskDetails() {
@@ -227,9 +252,9 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
-     * Set 账号风险检测结果
+     * Set 接口识别样本中存在违规账号风险的检测结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskDetails 账号风险检测结果
+     * @param RiskDetails 接口识别样本中存在违规账号风险的检测结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDetails(RiskDetails [] RiskDetails) {
@@ -237,9 +262,9 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
-     * Get 预留字段，不同客户返回结果不同
+     * Get 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 预留字段，不同客户返回结果不同
+     * @return Extra 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -247,9 +272,9 @@ public class TextModerationResponse extends AbstractModel{
     }
 
     /**
-     * Set 预留字段，不同客户返回结果不同
+     * Set 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 预留字段，不同客户返回结果不同
+     * @param Extra 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecordTaskResponse extends AbstractModel{
+public class DescribeClusterKubeconfigResponse extends AbstractModel{
 
     /**
-    * 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+    * 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
     */
-    @SerializedName("TaskId")
+    @SerializedName("Kubeconfig")
     @Expose
-    private String TaskId;
+    private String Kubeconfig;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateRecordTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。 
-     * @return TaskId 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+     * Get 子账户kubeconfig文件，可用于直接访问集群kube-apiserver 
+     * @return Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getKubeconfig() {
+        return this.Kubeconfig;
     }
 
     /**
-     * Set 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
-     * @param TaskId 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+     * Set 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+     * @param Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setKubeconfig(String Kubeconfig) {
+        this.Kubeconfig = Kubeconfig;
     }
 
     /**
@@ -72,7 +72,7 @@ public class CreateRecordTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
