@@ -30,13 +30,6 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * 镜像server
-    */
-    @SerializedName("Server")
-    @Expose
-    private String Server;
-
-    /**
     * 镜像版本名称,如v1
     */
     @SerializedName("TagName")
@@ -49,6 +42,13 @@ public class DeployContainerGroupRequest extends AbstractModel{
     @SerializedName("InstanceNum")
     @Expose
     private Long InstanceNum;
+
+    /**
+    * 镜像server
+    */
+    @SerializedName("Server")
+    @Expose
+    private String Server;
 
     /**
     * 旧版镜像名，如/tsf/nginx
@@ -228,22 +228,6 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 镜像server 
-     * @return Server 镜像server
-     */
-    public String getServer() {
-        return this.Server;
-    }
-
-    /**
-     * Set 镜像server
-     * @param Server 镜像server
-     */
-    public void setServer(String Server) {
-        this.Server = Server;
-    }
-
-    /**
      * Get 镜像版本名称,如v1 
      * @return TagName 镜像版本名称,如v1
      */
@@ -273,6 +257,22 @@ public class DeployContainerGroupRequest extends AbstractModel{
      */
     public void setInstanceNum(Long InstanceNum) {
         this.InstanceNum = InstanceNum;
+    }
+
+    /**
+     * Get 镜像server 
+     * @return Server 镜像server
+     */
+    public String getServer() {
+        return this.Server;
+    }
+
+    /**
+     * Set 镜像server
+     * @param Server 镜像server
+     */
+    public void setServer(String Server) {
+        this.Server = Server;
     }
 
     /**
@@ -648,9 +648,9 @@ public class DeployContainerGroupRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
-        this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "TagName", this.TagName);
         this.setParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
+        this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "Reponame", this.Reponame);
         this.setParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
         this.setParamSimple(map, prefix + "MemLimit", this.MemLimit);

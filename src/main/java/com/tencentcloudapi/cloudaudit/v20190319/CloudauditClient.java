@@ -186,6 +186,24 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
+     *根据地域获取KMS密钥别名
+     * @param req ListKeyAliasByRegionRequest
+     * @return ListKeyAliasByRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListKeyAliasByRegionResponse ListKeyAliasByRegion(ListKeyAliasByRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListKeyAliasByRegionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListKeyAliasByRegionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListKeyAliasByRegion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于对操作日志进行检索，便于用户进行查询相关的操作信息。
      * @param req LookUpEventsRequest
      * @return LookUpEventsResponse

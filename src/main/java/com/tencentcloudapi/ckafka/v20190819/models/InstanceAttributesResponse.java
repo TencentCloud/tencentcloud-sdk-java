@@ -219,6 +219,14 @@ public class InstanceAttributesResponse extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Features")
+    @Expose
+    private String [] Features;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -679,6 +687,26 @@ public class InstanceAttributesResponse extends AbstractModel{
     }
 
     /**
+     * Get 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFeatures() {
+        return this.Features;
+    }
+
+    /**
+     * Set 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeatures(String [] Features) {
+        this.Features = Features;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -709,6 +737,7 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxGroupNum", this.MaxGroupNum);
         this.setParamSimple(map, prefix + "Cvm", this.Cvm);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArraySimple(map, prefix + "Features.", this.Features);
 
     }
 }
