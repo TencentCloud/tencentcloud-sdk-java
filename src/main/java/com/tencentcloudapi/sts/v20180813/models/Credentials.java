@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class Credentials extends AbstractModel{
 
     /**
-    * token
+    * token。token长度和绑定的策略有关，最长不超过4096字节。
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * 临时证书密钥ID
+    * 临时证书密钥ID。最长不超过1024字节。
     */
     @SerializedName("TmpSecretId")
     @Expose
     private String TmpSecretId;
 
     /**
-    * 临时证书密钥Key
+    * 临时证书密钥Key。最长不超过1024字节。
     */
     @SerializedName("TmpSecretKey")
     @Expose
     private String TmpSecretKey;
 
     /**
-     * Get token 
-     * @return Token token
+     * Get token。token长度和绑定的策略有关，最长不超过4096字节。 
+     * @return Token token。token长度和绑定的策略有关，最长不超过4096字节。
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set token
-     * @param Token token
+     * Set token。token长度和绑定的策略有关，最长不超过4096字节。
+     * @param Token token。token长度和绑定的策略有关，最长不超过4096字节。
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 临时证书密钥ID 
-     * @return TmpSecretId 临时证书密钥ID
+     * Get 临时证书密钥ID。最长不超过1024字节。 
+     * @return TmpSecretId 临时证书密钥ID。最长不超过1024字节。
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
     }
 
     /**
-     * Set 临时证书密钥ID
-     * @param TmpSecretId 临时证书密钥ID
+     * Set 临时证书密钥ID。最长不超过1024字节。
+     * @param TmpSecretId 临时证书密钥ID。最长不超过1024字节。
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get 临时证书密钥Key 
-     * @return TmpSecretKey 临时证书密钥Key
+     * Get 临时证书密钥Key。最长不超过1024字节。 
+     * @return TmpSecretKey 临时证书密钥Key。最长不超过1024字节。
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
     }
 
     /**
-     * Set 临时证书密钥Key
-     * @param TmpSecretKey 临时证书密钥Key
+     * Set 临时证书密钥Key。最长不超过1024字节。
+     * @param TmpSecretKey 临时证书密钥Key。最长不超过1024字节。
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;

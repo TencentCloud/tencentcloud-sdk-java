@@ -38,6 +38,50 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
+
+* Protocol 字段支持输入 TCP，UDP，或 ALL。
+
+* Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+     * @param req CreateFirewallRulesRequest
+     * @return CreateFirewallRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFirewallRulesResponse CreateFirewallRules(CreateFirewallRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFirewallRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFirewallRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateFirewallRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
+
+* Protocol 字段支持输入 TCP，UDP，或 ALL。
+
+* Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+     * @param req DeleteFirewallRulesRequest
+     * @return DeleteFirewallRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFirewallRulesResponse DeleteFirewallRules(DeleteFirewallRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFirewallRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFirewallRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteFirewallRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeBlueprints）用于查询镜像信息。
      * @param req DescribeBlueprintsRequest
      * @return DescribeBlueprintsResponse
@@ -67,6 +111,24 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBundlesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBundles"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
+     * @param req DescribeFirewallRulesRequest
+     * @return DescribeFirewallRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirewallRulesResponse DescribeFirewallRules(DescribeFirewallRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirewallRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirewallRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFirewallRules"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

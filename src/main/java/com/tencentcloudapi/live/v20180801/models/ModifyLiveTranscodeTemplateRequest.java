@@ -132,21 +132,27 @@ baseline/main/high。
     private String Profile;
 
     /**
-    * 是否不超过原始码率。0：否，1：是。默认0。
+    * 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
     */
     @SerializedName("BitrateToOrig")
     @Expose
     private Long BitrateToOrig;
 
     /**
-    * 是否不超过原始高。0：否，1：是。默认0。
+    * 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
     */
     @SerializedName("HeightToOrig")
     @Expose
     private Long HeightToOrig;
 
     /**
-    * 是否不超过原始帧率。0：否，1：是。默认0。
+    * 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
     */
     @SerializedName("FpsToOrig")
     @Expose
@@ -438,48 +444,72 @@ baseline/main/high。
     }
 
     /**
-     * Get 是否不超过原始码率。0：否，1：是。默认0。 
-     * @return BitrateToOrig 是否不超过原始码率。0：否，1：是。默认0。
+     * Get 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。 
+     * @return BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
      */
     public Long getBitrateToOrig() {
         return this.BitrateToOrig;
     }
 
     /**
-     * Set 是否不超过原始码率。0：否，1：是。默认0。
-     * @param BitrateToOrig 是否不超过原始码率。0：否，1：是。默认0。
+     * Set 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+     * @param BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
      */
     public void setBitrateToOrig(Long BitrateToOrig) {
         this.BitrateToOrig = BitrateToOrig;
     }
 
     /**
-     * Get 是否不超过原始高。0：否，1：是。默认0。 
-     * @return HeightToOrig 是否不超过原始高。0：否，1：是。默认0。
+     * Get 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。 
+     * @return HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
      */
     public Long getHeightToOrig() {
         return this.HeightToOrig;
     }
 
     /**
-     * Set 是否不超过原始高。0：否，1：是。默认0。
-     * @param HeightToOrig 是否不超过原始高。0：否，1：是。默认0。
+     * Set 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+     * @param HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
      */
     public void setHeightToOrig(Long HeightToOrig) {
         this.HeightToOrig = HeightToOrig;
     }
 
     /**
-     * Get 是否不超过原始帧率。0：否，1：是。默认0。 
-     * @return FpsToOrig 是否不超过原始帧率。0：否，1：是。默认0。
+     * Get 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。 
+     * @return FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
      */
     public Long getFpsToOrig() {
         return this.FpsToOrig;
     }
 
     /**
-     * Set 是否不超过原始帧率。0：否，1：是。默认0。
-     * @param FpsToOrig 是否不超过原始帧率。0：否，1：是。默认0。
+     * Set 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
+     * @param FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
      */
     public void setFpsToOrig(Long FpsToOrig) {
         this.FpsToOrig = FpsToOrig;

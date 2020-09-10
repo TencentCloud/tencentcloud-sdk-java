@@ -41,7 +41,7 @@ public class GetFederationTokenRequest extends AbstractModel{
     private String Policy;
 
     /**
-    * 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+    * 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
     */
     @SerializedName("DurationSeconds")
     @Expose
@@ -96,16 +96,16 @@ public class GetFederationTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。 
-     * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * Get 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。 
+     * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
      */
     public Long getDurationSeconds() {
         return this.DurationSeconds;
     }
 
     /**
-     * Set 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
-     * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * Set 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
+     * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
      */
     public void setDurationSeconds(Long DurationSeconds) {
         this.DurationSeconds = DurationSeconds;

@@ -164,6 +164,24 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeInstanceDetail)用于查询实例详情。
+     * @param req DescribeInstanceDetailRequest
+     * @return DescribeInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDetailResponse DescribeInstanceDetail(DescribeInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeInstanceSpecs）用于查询实例规格
      * @param req DescribeInstanceSpecsRequest
      * @return DescribeInstanceSpecsResponse
@@ -254,7 +272,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(IsolateInstance)用于隔离实例访问。
+     *本接口(IsolateInstance)用于隔离实例。
      * @param req IsolateInstanceRequest
      * @return IsolateInstanceResponse
      * @throws TencentCloudSDKException
@@ -337,6 +355,24 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OfflineClusterResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "OfflineCluster"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *下线实例
+     * @param req OfflineInstanceRequest
+     * @return OfflineInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineInstanceResponse OfflineInstance(OfflineInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OfflineInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OfflineInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OfflineInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
