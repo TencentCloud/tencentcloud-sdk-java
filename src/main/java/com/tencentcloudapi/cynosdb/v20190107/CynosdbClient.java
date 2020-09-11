@@ -146,6 +146,24 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeClusterInstanceGrps）用于查询实例组
+     * @param req DescribeClusterInstanceGrpsRequest
+     * @return DescribeClusterInstanceGrpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterInstanceGrpsResponse DescribeClusterInstanceGrps(DescribeClusterInstanceGrpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterInstanceGrpsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterInstanceGrpsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterInstanceGrps"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群列表
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse
@@ -157,6 +175,24 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusters"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例安全组信息
+     * @param req DescribeDBSecurityGroupsRequest
+     * @return DescribeDBSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -211,6 +247,24 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeMaintainPeriodResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMaintainPeriod"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询项目安全组信息
+     * @param req DescribeProjectSecurityGroupsRequest
+     * @return DescribeProjectSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProjectSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
