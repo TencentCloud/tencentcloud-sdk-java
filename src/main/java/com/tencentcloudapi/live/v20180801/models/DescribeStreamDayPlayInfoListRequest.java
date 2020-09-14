@@ -24,7 +24,7 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
 
     /**
     * 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
     */
     @SerializedName("DayTime")
     @Expose
@@ -53,9 +53,9 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
 
     /**
      * Get 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。 
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。 
      * @return DayTime 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
      */
     public String getDayTime() {
         return this.DayTime;
@@ -63,9 +63,9 @@ public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
 
     /**
      * Set 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
      * @param DayTime 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
      */
     public void setDayTime(String DayTime) {
         this.DayTime = DayTime;

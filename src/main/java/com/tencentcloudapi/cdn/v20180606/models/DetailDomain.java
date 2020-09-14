@@ -414,6 +414,14 @@ off：不支持
     private Long [] AccessPort;
 
     /**
+    * 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1414,6 +1422,26 @@ off：不支持
     }
 
     /**
+     * Get 标签配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1464,6 +1492,7 @@ off：不支持
         this.setParamSimple(map, prefix + "Advance", this.Advance);
         this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

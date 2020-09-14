@@ -115,6 +115,14 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
     private VideoInfo [] VideoInfos;
 
     /**
+    * 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplayUrl")
+    @Expose
+    private String ReplayUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -346,6 +354,26 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
     }
 
     /**
+     * Get 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplayUrl 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReplayUrl() {
+        return this.ReplayUrl;
+    }
+
+    /**
+     * Set 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplayUrl 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplayUrl(String ReplayUrl) {
+        this.ReplayUrl = ReplayUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -377,6 +405,7 @@ public class DescribeOnlineRecordResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ExceptionCnt", this.ExceptionCnt);
         this.setParamArrayObj(map, prefix + "OmittedDurations.", this.OmittedDurations);
         this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
+        this.setParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

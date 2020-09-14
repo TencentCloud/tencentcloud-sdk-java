@@ -241,6 +241,13 @@ global：全球加速
     private OriginPullTimeout OriginPullTimeout;
 
     /**
+    * 标签配置
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -753,6 +760,22 @@ global：全球加速
     }
 
     /**
+     * Get 标签配置 
+     * @return Tag 标签配置
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签配置
+     * @param Tag 标签配置
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -786,6 +809,7 @@ global：全球加速
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

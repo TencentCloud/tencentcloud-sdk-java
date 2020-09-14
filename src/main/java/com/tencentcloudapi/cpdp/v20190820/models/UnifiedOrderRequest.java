@@ -190,6 +190,20 @@ development: 开发环境
     private String MidasEnvironment;
 
     /**
+    * 微信商户应用ID
+    */
+    @SerializedName("WxAppId")
+    @Expose
+    private String WxAppId;
+
+    /**
+    * 微信商户子应用ID
+    */
+    @SerializedName("WxSubAppId")
+    @Expose
+    private String WxSubAppId;
+
+    /**
      * Get ISO 货币代码，CNY 
      * @return CurrencyType ISO 货币代码，CNY
      */
@@ -582,6 +596,38 @@ development: 开发环境
     }
 
     /**
+     * Get 微信商户应用ID 
+     * @return WxAppId 微信商户应用ID
+     */
+    public String getWxAppId() {
+        return this.WxAppId;
+    }
+
+    /**
+     * Set 微信商户应用ID
+     * @param WxAppId 微信商户应用ID
+     */
+    public void setWxAppId(String WxAppId) {
+        this.WxAppId = WxAppId;
+    }
+
+    /**
+     * Get 微信商户子应用ID 
+     * @return WxSubAppId 微信商户子应用ID
+     */
+    public String getWxSubAppId() {
+        return this.WxSubAppId;
+    }
+
+    /**
+     * Set 微信商户子应用ID
+     * @param WxSubAppId 微信商户子应用ID
+     */
+    public void setWxSubAppId(String WxSubAppId) {
+        this.WxSubAppId = WxSubAppId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -608,6 +654,8 @@ development: 开发环境
         this.setParamSimple(map, prefix + "WxOpenId", this.WxOpenId);
         this.setParamSimple(map, prefix + "WxSubOpenId", this.WxSubOpenId);
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+        this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
+        this.setParamSimple(map, prefix + "WxSubAppId", this.WxSubAppId);
 
     }
 }

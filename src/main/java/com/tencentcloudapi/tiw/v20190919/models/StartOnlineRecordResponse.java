@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StartOnlineRecordResponse extends AbstractModel{
 
     /**
-    * 实时录制的任务Id
+    * 录制任务Id
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class StartOnlineRecordResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实时录制的任务Id 
-     * @return TaskId 实时录制的任务Id
+     * Get 录制任务Id 
+     * @return TaskId 录制任务Id
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 实时录制的任务Id
-     * @param TaskId 实时录制的任务Id
+     * Set 录制任务Id
+     * @param TaskId 录制任务Id
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
