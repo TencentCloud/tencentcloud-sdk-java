@@ -56,6 +56,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *取消设备升级任务
+     * @param req CancelDeviceFirmwareTaskRequest
+     * @return CancelDeviceFirmwareTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelDeviceFirmwareTaskResponse CancelDeviceFirmwareTask(CancelDeviceFirmwareTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelDeviceFirmwareTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelDeviceFirmwareTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelDeviceFirmwareTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CancelTask）用于取消一个未被调度的任务。 
      * @param req CancelTaskRequest
      * @return CancelTaskResponse
@@ -398,6 +416,114 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *查询固件信息
+     * @param req DescribeFirmwareRequest
+     * @return DescribeFirmwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareResponse DescribeFirmware(DescribeFirmwareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirmwareResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirmwareResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFirmware"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询固件升级任务列表
+     * @param req DescribeFirmwareTaskRequest
+     * @return DescribeFirmwareTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareTaskResponse DescribeFirmwareTask(DescribeFirmwareTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirmwareTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirmwareTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFirmwareTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询固件升级任务的设备列表
+     * @param req DescribeFirmwareTaskDevicesRequest
+     * @return DescribeFirmwareTaskDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareTaskDevicesResponse DescribeFirmwareTaskDevices(DescribeFirmwareTaskDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirmwareTaskDevicesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirmwareTaskDevicesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFirmwareTaskDevices"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询固件升级任务状态分布
+     * @param req DescribeFirmwareTaskDistributionRequest
+     * @return DescribeFirmwareTaskDistributionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareTaskDistributionResponse DescribeFirmwareTaskDistribution(DescribeFirmwareTaskDistributionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirmwareTaskDistributionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirmwareTaskDistributionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFirmwareTaskDistribution"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询固件升级任务统计信息
+     * @param req DescribeFirmwareTaskStatisticsRequest
+     * @return DescribeFirmwareTaskStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareTaskStatisticsResponse DescribeFirmwareTaskStatistics(DescribeFirmwareTaskStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirmwareTaskStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirmwareTaskStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFirmwareTaskStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询固件升级任务列表
+     * @param req DescribeFirmwareTasksRequest
+     * @return DescribeFirmwareTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareTasksResponse DescribeFirmwareTasks(DescribeFirmwareTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirmwareTasksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirmwareTasksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFirmwareTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取lora类型设备的详细信息 
      * @param req DescribeLoraDeviceRequest
      * @return DescribeLoraDeviceResponse
@@ -560,6 +686,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *编辑固件信息
+     * @param req EditFirmwareRequest
+     * @return EditFirmwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditFirmwareResponse EditFirmware(EditFirmwareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EditFirmwareResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EditFirmwareResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EditFirmware"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（EnableTopicRule）用于启用规则 
      * @param req EnableTopicRuleRequest
      * @return EnableTopicRuleResponse
@@ -704,6 +848,24 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *重试设备升级任务
+     * @param req RetryDeviceFirmwareTaskRequest
+     * @return RetryDeviceFirmwareTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryDeviceFirmwareTaskResponse RetryDeviceFirmwareTask(RetryDeviceFirmwareTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RetryDeviceFirmwareTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RetryDeviceFirmwareTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RetryDeviceFirmwareTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UnbindDevices）用于网关设备批量解绑子设备
      * @param req UnbindDevicesRequest
      * @return UnbindDevicesResponse
@@ -769,6 +931,24 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateTopicPolicyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdateTopicPolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UploadFirmware）用于上传设备固件信息 
+     * @param req UploadFirmwareRequest
+     * @return UploadFirmwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadFirmwareResponse UploadFirmware(UploadFirmwareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadFirmwareResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadFirmwareResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UploadFirmware"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

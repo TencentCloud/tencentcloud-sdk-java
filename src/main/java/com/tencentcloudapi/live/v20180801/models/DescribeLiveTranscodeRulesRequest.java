@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeRulesRequest extends AbstractModel{
 
     /**
+    * 要筛选的模板ID数组。
+    */
+    @SerializedName("TemplateIds")
+    @Expose
+    private Long [] TemplateIds;
+
+    /**
+    * 要筛选的域名数组。
+    */
+    @SerializedName("DomainNames")
+    @Expose
+    private String [] DomainNames;
+
+    /**
+     * Get 要筛选的模板ID数组。 
+     * @return TemplateIds 要筛选的模板ID数组。
+     */
+    public Long [] getTemplateIds() {
+        return this.TemplateIds;
+    }
+
+    /**
+     * Set 要筛选的模板ID数组。
+     * @param TemplateIds 要筛选的模板ID数组。
+     */
+    public void setTemplateIds(Long [] TemplateIds) {
+        this.TemplateIds = TemplateIds;
+    }
+
+    /**
+     * Get 要筛选的域名数组。 
+     * @return DomainNames 要筛选的域名数组。
+     */
+    public String [] getDomainNames() {
+        return this.DomainNames;
+    }
+
+    /**
+     * Set 要筛选的域名数组。
+     * @param DomainNames 要筛选的域名数组。
+     */
+    public void setDomainNames(String [] DomainNames) {
+        this.DomainNames = DomainNames;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
+        this.setParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
 
     }
 }

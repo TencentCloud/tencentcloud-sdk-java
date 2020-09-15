@@ -13,130 +13,135 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ckafka.v20190819.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubscribedInfo extends AbstractModel{
+public class FirmwareTaskInfo extends AbstractModel{
 
     /**
-    * 订阅的主题名
-    */
-    @SerializedName("TopicName")
-    @Expose
-    private String TopicName;
-
-    /**
-    * 订阅的分区
+    * 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Partition")
+    @SerializedName("TaskId")
     @Expose
-    private Long [] Partition;
+    private Long TaskId;
 
     /**
-    * 分区offset信息
+    * 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("PartitionOffset")
+    @SerializedName("Status")
     @Expose
-    private PartitionOffset [] PartitionOffset;
+    private Long Status;
 
     /**
-    * 订阅的主题ID
+    * 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TopicId")
+    @SerializedName("Type")
     @Expose
-    private String TopicId;
+    private Long Type;
 
     /**
-     * Get 订阅的主题名 
-     * @return TopicName 订阅的主题名
-     */
-    public String getTopicName() {
-        return this.TopicName;
-    }
+    * 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
 
     /**
-     * Set 订阅的主题名
-     * @param TopicName 订阅的主题名
-     */
-    public void setTopicName(String TopicName) {
-        this.TopicName = TopicName;
-    }
-
-    /**
-     * Get 订阅的分区
+     * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Partition 订阅的分区
+     * @return TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long [] getPartition() {
-        return this.Partition;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 订阅的分区
+     * Set 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Partition 订阅的分区
+     * @param TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPartition(Long [] Partition) {
-        this.Partition = Partition;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
-     * Get 分区offset信息
+     * Get 任务状态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PartitionOffset 分区offset信息
+     * @return Status 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public PartitionOffset [] getPartitionOffset() {
-        return this.PartitionOffset;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 分区offset信息
+     * Set 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PartitionOffset 分区offset信息
+     * @param Status 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPartitionOffset(PartitionOffset [] PartitionOffset) {
-        this.PartitionOffset = PartitionOffset;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get 订阅的主题ID
+     * Get 任务类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId 订阅的主题ID
+     * @return Type 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTopicId() {
-        return this.TopicId;
+    public Long getType() {
+        return this.Type;
     }
 
     /**
-     * Set 订阅的主题ID
+     * Set 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId 订阅的主题ID
+     * @param Type 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
-        this.setParamArraySimple(map, prefix + "Partition.", this.Partition);
-        this.setParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

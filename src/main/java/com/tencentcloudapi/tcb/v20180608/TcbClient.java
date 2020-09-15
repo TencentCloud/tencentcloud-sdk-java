@@ -182,6 +182,24 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取云托管代码上传url
+     * @param req DescribeCloudBaseBuildServiceRequest
+     * @return DescribeCloudBaseBuildServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(DescribeCloudBaseBuildServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseBuildServiceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseBuildServiceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCloudBaseBuildService"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取数据库权限
      * @param req DescribeDatabaseACLRequest
      * @return DescribeDatabaseACLResponse

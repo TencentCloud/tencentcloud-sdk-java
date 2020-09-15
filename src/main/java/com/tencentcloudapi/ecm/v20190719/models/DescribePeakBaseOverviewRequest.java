@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribePeakBaseOverviewRequest extends AbstractModel{
 
     /**
-    * 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
+    * 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+    * 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。 
-     * @return StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
+     * Get 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。 
+     * @return StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
-     * @param StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
+     * Set 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
+     * @param StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。 
-     * @return EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+     * Get 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。 
+     * @return EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
-     * @param EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+     * Set 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
+     * @param EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

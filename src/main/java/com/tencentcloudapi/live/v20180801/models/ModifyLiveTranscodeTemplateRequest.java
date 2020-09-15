@@ -62,7 +62,8 @@ origin: 保持原始编码格式
     private String Description;
 
     /**
-    * 视频码率。范围：100kbps - 8000kbps。
+    * 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
     */
     @SerializedName("VideoBitrate")
@@ -272,9 +273,11 @@ origin: 保持原始编码格式
     }
 
     /**
-     * Get 视频码率。范围：100kbps - 8000kbps。
+     * Get 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。 
-     * @return VideoBitrate 视频码率。范围：100kbps - 8000kbps。
+     * @return VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public Long getVideoBitrate() {
@@ -282,9 +285,11 @@ origin: 保持原始编码格式
     }
 
     /**
-     * Set 视频码率。范围：100kbps - 8000kbps。
+     * Set 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
-     * @param VideoBitrate 视频码率。范围：100kbps - 8000kbps。
+     * @param VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public void setVideoBitrate(Long VideoBitrate) {

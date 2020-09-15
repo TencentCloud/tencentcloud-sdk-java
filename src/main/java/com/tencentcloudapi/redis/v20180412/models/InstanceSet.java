@@ -149,7 +149,7 @@ public class InstanceSet extends AbstractModel{
     private String Engine;
 
     /**
-    * 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+    * 产品类型：standalone – 标准版，cluster – 集群版
     */
     @SerializedName("ProductType")
     @Expose
@@ -638,16 +638,16 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版 
-     * @return ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * Get 产品类型：standalone – 标准版，cluster – 集群版 
+     * @return ProductType 产品类型：standalone – 标准版，cluster – 集群版
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
-     * @param ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * Set 产品类型：standalone – 标准版，cluster – 集群版
+     * @param ProductType 产品类型：standalone – 标准版，cluster – 集群版
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;

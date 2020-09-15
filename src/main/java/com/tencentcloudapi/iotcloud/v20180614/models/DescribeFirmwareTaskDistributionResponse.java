@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.yunjing.v20180228.models;
+package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportAttackLogsResponse extends AbstractModel{
+public class DescribeFirmwareTaskDistributionResponse extends AbstractModel{
 
     /**
-    * 导出文件下载链接地址。
+    * 固件升级任务状态分布信息
     */
-    @SerializedName("DownloadUrl")
+    @SerializedName("StatusInfos")
     @Expose
-    private String DownloadUrl;
-
-    /**
-    * 导出任务ID
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
+    private StatusStatistic [] StatusInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class ExportAttackLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 导出文件下载链接地址。 
-     * @return DownloadUrl 导出文件下载链接地址。
+     * Get 固件升级任务状态分布信息 
+     * @return StatusInfos 固件升级任务状态分布信息
      */
-    public String getDownloadUrl() {
-        return this.DownloadUrl;
+    public StatusStatistic [] getStatusInfos() {
+        return this.StatusInfos;
     }
 
     /**
-     * Set 导出文件下载链接地址。
-     * @param DownloadUrl 导出文件下载链接地址。
+     * Set 固件升级任务状态分布信息
+     * @param StatusInfos 固件升级任务状态分布信息
      */
-    public void setDownloadUrl(String DownloadUrl) {
-        this.DownloadUrl = DownloadUrl;
-    }
-
-    /**
-     * Get 导出任务ID 
-     * @return TaskId 导出任务ID
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 导出任务ID
-     * @param TaskId 导出任务ID
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setStatusInfos(StatusStatistic [] StatusInfos) {
+        this.StatusInfos = StatusInfos;
     }
 
     /**
@@ -95,8 +72,7 @@ public class ExportAttackLogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "StatusInfos.", this.StatusInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

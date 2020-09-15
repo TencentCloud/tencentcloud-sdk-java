@@ -37,7 +37,8 @@ public class DescribeMusicRequest extends AbstractModel{
     private String IdentityId;
 
     /**
-    * 填 MP3-64K-FTD-P 获取歌曲热门片段
+    * 基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
+高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
     */
     @SerializedName("SubItemType")
     @Expose
@@ -84,16 +85,20 @@ Values:Y , N(default)
     }
 
     /**
-     * Get 填 MP3-64K-FTD-P 获取歌曲热门片段 
-     * @return SubItemType 填 MP3-64K-FTD-P 获取歌曲热门片段
+     * Get 基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
+高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。 
+     * @return SubItemType 基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
+高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
      */
     public String getSubItemType() {
         return this.SubItemType;
     }
 
     /**
-     * Set 填 MP3-64K-FTD-P 获取歌曲热门片段
-     * @param SubItemType 填 MP3-64K-FTD-P 获取歌曲热门片段
+     * Set 基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
+高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
+     * @param SubItemType 基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
+高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
      */
     public void setSubItemType(String SubItemType) {
         this.SubItemType = SubItemType;

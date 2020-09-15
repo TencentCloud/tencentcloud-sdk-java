@@ -33,7 +33,8 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
     private String TemplateName;
 
     /**
-    * 视频码率。范围：100-8000。
+    * 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
     */
     @SerializedName("VideoBitrate")
@@ -106,14 +107,15 @@ origin: 保持原始编码格式
 
     /**
     * 帧率，默认0。
-范围0-60
+范围0-60fps
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 关键帧间隔，单位：秒。默认原始的间隔
+    * 关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
     */
     @SerializedName("Gop")
@@ -216,9 +218,11 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Get 视频码率。范围：100-8000。
+     * Get 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。 
-     * @return VideoBitrate 视频码率。范围：100-8000。
+     * @return VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public Long getVideoBitrate() {
@@ -226,9 +230,11 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Set 视频码率。范围：100-8000。
+     * Set 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
-     * @param VideoBitrate 视频码率。范围：100-8000。
+     * @param VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public void setVideoBitrate(Long VideoBitrate) {
@@ -397,9 +403,9 @@ origin: 保持原始编码格式
 
     /**
      * Get 帧率，默认0。
-范围0-60 
+范围0-60fps 
      * @return Fps 帧率，默认0。
-范围0-60
+范围0-60fps
      */
     public Long getFps() {
         return this.Fps;
@@ -407,18 +413,20 @@ origin: 保持原始编码格式
 
     /**
      * Set 帧率，默认0。
-范围0-60
+范围0-60fps
      * @param Fps 帧率，默认0。
-范围0-60
+范围0-60fps
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 关键帧间隔，单位：秒。默认原始的间隔
+     * Get 关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6 
-     * @return Gop 关键帧间隔，单位：秒。默认原始的间隔
+     * @return Gop 关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
      */
     public Long getGop() {
@@ -426,9 +434,11 @@ origin: 保持原始编码格式
     }
 
     /**
-     * Set 关键帧间隔，单位：秒。默认原始的间隔
+     * Set 关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
-     * @param Gop 关键帧间隔，单位：秒。默认原始的间隔
+     * @param Gop 关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
      */
     public void setGop(Long Gop) {

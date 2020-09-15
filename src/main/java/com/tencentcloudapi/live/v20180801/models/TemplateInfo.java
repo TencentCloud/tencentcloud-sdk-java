@@ -23,22 +23,26 @@ import java.util.HashMap;
 public class TemplateInfo extends AbstractModel{
 
     /**
-    * 视频编码：
-h264/h265。
+    * 视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
     */
     @SerializedName("Vcodec")
     @Expose
     private String Vcodec;
 
     /**
-    * 视频码率，取值范围：100kbps - 8000kbps。
+    * 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * 音频编码，可选 aac 或 mp3。
+    * 音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
     */
     @SerializedName("Acodec")
     @Expose
@@ -46,70 +50,85 @@ h264/h265。
 
     /**
     * 音频码率。取值范围：0kbps - 500kbps。
+默认0。
     */
     @SerializedName("AudioBitrate")
     @Expose
     private Long AudioBitrate;
 
     /**
-    * 宽，取值范围：0-3000。
+    * 宽，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 高，取值范围：0-3000。
+    * 高，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 帧率。取值范围：0fps - 200fps。
+    * 帧率，默认0。
+范围0-60fps
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 关键帧间隔，取值范围：1秒 - 50秒。
+    * 关键帧间隔，单位：秒。
+默认原始的间隔
+范围2-6
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * 旋转角度。可选择：0 90 180 270。
+    * 旋转角度，默认0。
+可取值：0，90，180，270
     */
     @SerializedName("Rotate")
     @Expose
     private Long Rotate;
 
     /**
-    * 编码质量，可选择：
-baseline，main，high。
+    * 编码质量：
+baseline/main/high。默认baseline
     */
     @SerializedName("Profile")
     @Expose
     private String Profile;
 
     /**
-    * 是否不超过原始码率。0：否，1：是。
+    * 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
     */
     @SerializedName("BitrateToOrig")
     @Expose
     private Long BitrateToOrig;
 
     /**
-    * 是否不超过原始高度。0：否，1：是。
+    * 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
     */
     @SerializedName("HeightToOrig")
     @Expose
     private Long HeightToOrig;
 
     /**
-    * 是否不超过原始帧率。0：否，1：是。
+    * 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
     */
     @SerializedName("FpsToOrig")
     @Expose
@@ -158,67 +177,96 @@ baseline，main，high。
     private Long AiTransCode;
 
     /**
-    * 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+    * 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
     private Float AdaptBitratePercent;
 
     /**
-     * Get 视频编码：
-h264/h265。 
-     * @return Vcodec 视频编码：
-h264/h265。
+    * 是否以短边作为高度，0：否，1：是。默认0。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShortEdgeAsHeight")
+    @Expose
+    private Long ShortEdgeAsHeight;
+
+    /**
+     * Get 视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式 
+     * @return Vcodec 视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
      */
     public String getVcodec() {
         return this.Vcodec;
     }
 
     /**
-     * Set 视频编码：
-h264/h265。
-     * @param Vcodec 视频编码：
-h264/h265。
+     * Set 视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
+     * @param Vcodec 视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
      */
     public void setVcodec(String Vcodec) {
         this.Vcodec = Vcodec;
     }
 
     /**
-     * Get 视频码率，取值范围：100kbps - 8000kbps。 
-     * @return VideoBitrate 视频码率，取值范围：100kbps - 8000kbps。
+     * Get 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。 
+     * @return VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set 视频码率，取值范围：100kbps - 8000kbps。
-     * @param VideoBitrate 视频码率，取值范围：100kbps - 8000kbps。
+     * Set 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * @param VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get 音频编码，可选 aac 或 mp3。 
-     * @return Acodec 音频编码，可选 aac 或 mp3。
+     * Get 音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！ 
+     * @return Acodec 音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set 音频编码，可选 aac 或 mp3。
-     * @param Acodec 音频编码，可选 aac 或 mp3。
+     * Set 音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
+     * @param Acodec 音频编码：aac，默认aac。
+注意：当前该参数未生效，待后续支持！
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
     }
 
     /**
-     * Get 音频码率。取值范围：0kbps - 500kbps。 
+     * Get 音频码率。取值范围：0kbps - 500kbps。
+默认0。 
      * @return AudioBitrate 音频码率。取值范围：0kbps - 500kbps。
+默认0。
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
@@ -226,155 +274,213 @@ h264/h265。
 
     /**
      * Set 音频码率。取值范围：0kbps - 500kbps。
+默认0。
      * @param AudioBitrate 音频码率。取值范围：0kbps - 500kbps。
+默认0。
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
     }
 
     /**
-     * Get 宽，取值范围：0-3000。 
-     * @return Width 宽，取值范围：0-3000。
+     * Get 宽，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度 
+     * @return Width 宽，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽，取值范围：0-3000。
-     * @param Width 宽，取值范围：0-3000。
+     * Set 宽，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
+     * @param Width 宽，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高，取值范围：0-3000。 
-     * @return Height 高，取值范围：0-3000。
+     * Get 高，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度 
+     * @return Height 高，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高，取值范围：0-3000。
-     * @param Height 高，取值范围：0-3000。
+     * Set 高，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
+     * @param Height 高，默认0。
+范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 帧率。取值范围：0fps - 200fps。 
-     * @return Fps 帧率。取值范围：0fps - 200fps。
+     * Get 帧率，默认0。
+范围0-60fps 
+     * @return Fps 帧率，默认0。
+范围0-60fps
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 帧率。取值范围：0fps - 200fps。
-     * @param Fps 帧率。取值范围：0fps - 200fps。
+     * Set 帧率，默认0。
+范围0-60fps
+     * @param Fps 帧率，默认0。
+范围0-60fps
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 关键帧间隔，取值范围：1秒 - 50秒。 
-     * @return Gop 关键帧间隔，取值范围：1秒 - 50秒。
+     * Get 关键帧间隔，单位：秒。
+默认原始的间隔
+范围2-6 
+     * @return Gop 关键帧间隔，单位：秒。
+默认原始的间隔
+范围2-6
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set 关键帧间隔，取值范围：1秒 - 50秒。
-     * @param Gop 关键帧间隔，取值范围：1秒 - 50秒。
+     * Set 关键帧间隔，单位：秒。
+默认原始的间隔
+范围2-6
+     * @param Gop 关键帧间隔，单位：秒。
+默认原始的间隔
+范围2-6
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get 旋转角度。可选择：0 90 180 270。 
-     * @return Rotate 旋转角度。可选择：0 90 180 270。
+     * Get 旋转角度，默认0。
+可取值：0，90，180，270 
+     * @return Rotate 旋转角度，默认0。
+可取值：0，90，180，270
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set 旋转角度。可选择：0 90 180 270。
-     * @param Rotate 旋转角度。可选择：0 90 180 270。
+     * Set 旋转角度，默认0。
+可取值：0，90，180，270
+     * @param Rotate 旋转角度，默认0。
+可取值：0，90，180，270
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
     /**
-     * Get 编码质量，可选择：
-baseline，main，high。 
-     * @return Profile 编码质量，可选择：
-baseline，main，high。
+     * Get 编码质量：
+baseline/main/high。默认baseline 
+     * @return Profile 编码质量：
+baseline/main/high。默认baseline
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set 编码质量，可选择：
-baseline，main，high。
-     * @param Profile 编码质量，可选择：
-baseline，main，high。
+     * Set 编码质量：
+baseline/main/high。默认baseline
+     * @param Profile 编码质量：
+baseline/main/high。默认baseline
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get 是否不超过原始码率。0：否，1：是。 
-     * @return BitrateToOrig 是否不超过原始码率。0：否，1：是。
+     * Get 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。 
+     * @return BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
      */
     public Long getBitrateToOrig() {
         return this.BitrateToOrig;
     }
 
     /**
-     * Set 是否不超过原始码率。0：否，1：是。
-     * @param BitrateToOrig 是否不超过原始码率。0：否，1：是。
+     * Set 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+     * @param BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
      */
     public void setBitrateToOrig(Long BitrateToOrig) {
         this.BitrateToOrig = BitrateToOrig;
     }
 
     /**
-     * Get 是否不超过原始高度。0：否，1：是。 
-     * @return HeightToOrig 是否不超过原始高度。0：否，1：是。
+     * Get 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。 
+     * @return HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
      */
     public Long getHeightToOrig() {
         return this.HeightToOrig;
     }
 
     /**
-     * Set 是否不超过原始高度。0：否，1：是。
-     * @param HeightToOrig 是否不超过原始高度。0：否，1：是。
+     * Set 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+     * @param HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
      */
     public void setHeightToOrig(Long HeightToOrig) {
         this.HeightToOrig = HeightToOrig;
     }
 
     /**
-     * Get 是否不超过原始帧率。0：否，1：是。 
-     * @return FpsToOrig 是否不超过原始帧率。0：否，1：是。
+     * Get 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。 
+     * @return FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
      */
     public Long getFpsToOrig() {
         return this.FpsToOrig;
     }
 
     /**
-     * Set 是否不超过原始帧率。0：否，1：是。
-     * @param FpsToOrig 是否不超过原始帧率。0：否，1：是。
+     * Set 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
+     * @param FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
      */
     public void setFpsToOrig(Long FpsToOrig) {
         this.FpsToOrig = FpsToOrig;
@@ -477,19 +583,51 @@ baseline，main，high。
     }
 
     /**
-     * Get 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。 
-     * @return AdaptBitratePercent 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+     * Get 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5 
+     * @return AdaptBitratePercent 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
-     * @param AdaptBitratePercent 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+     * Set 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
+     * @param AdaptBitratePercent 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;
+    }
+
+    /**
+     * Get 是否以短边作为高度，0：否，1：是。默认0。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getShortEdgeAsHeight() {
+        return this.ShortEdgeAsHeight;
+    }
+
+    /**
+     * Set 是否以短边作为高度，0：否，1：是。默认0。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShortEdgeAsHeight(Long ShortEdgeAsHeight) {
+        this.ShortEdgeAsHeight = ShortEdgeAsHeight;
     }
 
     /**
@@ -516,6 +654,7 @@ baseline，main，high。
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
         this.setParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
+        this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
 
     }
 }
