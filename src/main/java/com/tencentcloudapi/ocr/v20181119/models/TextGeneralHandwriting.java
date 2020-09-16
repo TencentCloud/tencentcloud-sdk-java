@@ -53,6 +53,14 @@ public class TextGeneralHandwriting extends AbstractModel{
     private String AdvancedInfo;
 
     /**
+    * 字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WordPolygon")
+    @Expose
+    private Polygon [] WordPolygon;
+
+    /**
      * Get 识别出的文本行内容 
      * @return DetectedText 识别出的文本行内容
      */
@@ -125,6 +133,26 @@ public class TextGeneralHandwriting extends AbstractModel{
     }
 
     /**
+     * Get 字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WordPolygon 字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Polygon [] getWordPolygon() {
+        return this.WordPolygon;
+    }
+
+    /**
+     * Set 字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WordPolygon 字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWordPolygon(Polygon [] WordPolygon) {
+        this.WordPolygon = WordPolygon;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +160,7 @@ public class TextGeneralHandwriting extends AbstractModel{
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamArrayObj(map, prefix + "Polygon.", this.Polygon);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamArrayObj(map, prefix + "WordPolygon.", this.WordPolygon);
 
     }
 }

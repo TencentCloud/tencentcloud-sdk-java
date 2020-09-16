@@ -301,6 +301,14 @@ public class GetFunctionResponse extends AbstractModel{
     private Long InitTimeout;
 
     /**
+    * 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusReasons")
+    @Expose
+    private StatusReason [] StatusReasons;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -952,6 +960,26 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
+     * Get 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusReasons 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StatusReason [] getStatusReasons() {
+        return this.StatusReasons;
+    }
+
+    /**
+     * Set 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusReasons 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusReasons(StatusReason [] StatusReasons) {
+        this.StatusReasons = StatusReasons;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1010,6 +1038,7 @@ public class GetFunctionResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+        this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

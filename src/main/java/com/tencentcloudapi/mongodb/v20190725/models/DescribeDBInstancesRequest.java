@@ -44,7 +44,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long ClusterType;
 
     /**
-    * 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+    * 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
     */
     @SerializedName("Status")
     @Expose
@@ -107,11 +107,18 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long [] ProjectIds;
 
     /**
-    * 搜索关键词，支持实例Id、实例名称、完整IP
+    * 搜索关键词，支持实例ID、实例名称、完整IP
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
+
+    /**
+    * Tag信息
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo Tags;
 
     /**
      * Get 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
@@ -162,16 +169,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期 
-     * @return Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+     * Get 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例） 
+     * @return Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
-     * @param Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+     * Set 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
+     * @param Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
@@ -306,19 +313,35 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索关键词，支持实例Id、实例名称、完整IP 
-     * @return SearchKey 搜索关键词，支持实例Id、实例名称、完整IP
+     * Get 搜索关键词，支持实例ID、实例名称、完整IP 
+     * @return SearchKey 搜索关键词，支持实例ID、实例名称、完整IP
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键词，支持实例Id、实例名称、完整IP
-     * @param SearchKey 搜索关键词，支持实例Id、实例名称、完整IP
+     * Set 搜索关键词，支持实例ID、实例名称、完整IP
+     * @param SearchKey 搜索关键词，支持实例ID、实例名称、完整IP
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
+    }
+
+    /**
+     * Get Tag信息 
+     * @return Tags Tag信息
+     */
+    public TagInfo getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag信息
+     * @param Tags Tag信息
+     */
+    public void setTags(TagInfo Tags) {
+        this.Tags = Tags;
     }
 
     /**
@@ -338,6 +361,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
+        this.setParamObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

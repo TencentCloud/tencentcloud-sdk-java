@@ -37,6 +37,13 @@ public class VatInvoiceOCRResponse extends AbstractModel{
     private VatInvoiceItem [] Items;
 
     /**
+    * 图片为PDF时，返回PDF的总页数，默认为0
+    */
+    @SerializedName("PdfPageSize")
+    @Expose
+    private Long PdfPageSize;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class VatInvoiceOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 图片为PDF时，返回PDF的总页数，默认为0 
+     * @return PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     */
+    public Long getPdfPageSize() {
+        return this.PdfPageSize;
+    }
+
+    /**
+     * Set 图片为PDF时，返回PDF的总页数，默认为0
+     * @param PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     */
+    public void setPdfPageSize(Long PdfPageSize) {
+        this.PdfPageSize = PdfPageSize;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +120,7 @@ public class VatInvoiceOCRResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VatInvoiceInfos.", this.VatInvoiceInfos);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

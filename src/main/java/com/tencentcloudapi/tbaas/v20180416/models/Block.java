@@ -30,7 +30,7 @@ public class Block extends AbstractModel{
     private Long BlockNum;
 
     /**
-    * 区块Hash数值
+    * 区块数据Hash数值
     */
     @SerializedName("DataHash")
     @Expose
@@ -44,7 +44,7 @@ public class Block extends AbstractModel{
     private Long BlockId;
 
     /**
-    * 前一个区块Hash（未使用）,与区块Hash数值一致
+    * 前一个区块Hash
     */
     @SerializedName("PreHash")
     @Expose
@@ -74,16 +74,16 @@ public class Block extends AbstractModel{
     }
 
     /**
-     * Get 区块Hash数值 
-     * @return DataHash 区块Hash数值
+     * Get 区块数据Hash数值 
+     * @return DataHash 区块数据Hash数值
      */
     public String getDataHash() {
         return this.DataHash;
     }
 
     /**
-     * Set 区块Hash数值
-     * @param DataHash 区块Hash数值
+     * Set 区块数据Hash数值
+     * @param DataHash 区块数据Hash数值
      */
     public void setDataHash(String DataHash) {
         this.DataHash = DataHash;
@@ -106,16 +106,16 @@ public class Block extends AbstractModel{
     }
 
     /**
-     * Get 前一个区块Hash（未使用）,与区块Hash数值一致 
-     * @return PreHash 前一个区块Hash（未使用）,与区块Hash数值一致
+     * Get 前一个区块Hash 
+     * @return PreHash 前一个区块Hash
      */
     public String getPreHash() {
         return this.PreHash;
     }
 
     /**
-     * Set 前一个区块Hash（未使用）,与区块Hash数值一致
-     * @param PreHash 前一个区块Hash（未使用）,与区块Hash数值一致
+     * Set 前一个区块Hash
+     * @param PreHash 前一个区块Hash
      */
     public void setPreHash(String PreHash) {
         this.PreHash = PreHash;

@@ -867,6 +867,24 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *本接口仅用于定制开发的特殊场景，除非云视频处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
+     * @param req ExecuteFunctionRequest
+     * @return ExecuteFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExecuteFunctionResponse ExecuteFunction(ExecuteFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExecuteFunctionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ExecuteFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对已发起的任务进行管理。
 > 注意：目前仅支持终止执行中的直播流处理任务。
      * @param req ManageTaskRequest

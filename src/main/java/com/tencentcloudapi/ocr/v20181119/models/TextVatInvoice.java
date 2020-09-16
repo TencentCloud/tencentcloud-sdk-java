@@ -37,6 +37,15 @@ public class TextVatInvoice extends AbstractModel{
     private String Value;
 
     /**
+    * 字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Polygon")
+    @Expose
+    private Polygon Polygon;
+
+    /**
      * Get 识别出的字段名称（关键字）。 
      * @return Name 识别出的字段名称（关键字）。
      */
@@ -69,11 +78,36 @@ public class TextVatInvoice extends AbstractModel{
     }
 
     /**
+     * Get 字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Polygon 字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Polygon getPolygon() {
+        return this.Polygon;
+    }
+
+    /**
+     * Set 字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Polygon 字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolygon(Polygon Polygon) {
+        this.Polygon = Polygon;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamObj(map, prefix + "Polygon.", this.Polygon);
 
     }
 }

@@ -30,7 +30,7 @@ public class DeployDynamicContractHandlerRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 操作名，固定字段：deploy_by_dynamic_contract
+    * 操作名，固定字段：deploy_dynamic_contract
     */
     @SerializedName("Operation")
     @Expose
@@ -88,16 +88,16 @@ public class DeployDynamicContractHandlerRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作名，固定字段：deploy_by_dynamic_contract 
-     * @return Operation 操作名，固定字段：deploy_by_dynamic_contract
+     * Get 操作名，固定字段：deploy_dynamic_contract 
+     * @return Operation 操作名，固定字段：deploy_dynamic_contract
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 操作名，固定字段：deploy_by_dynamic_contract
-     * @param Operation 操作名，固定字段：deploy_by_dynamic_contract
+     * Set 操作名，固定字段：deploy_dynamic_contract
+     * @param Operation 操作名，固定字段：deploy_dynamic_contract
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

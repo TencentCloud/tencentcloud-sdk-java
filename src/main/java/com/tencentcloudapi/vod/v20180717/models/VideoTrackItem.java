@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class VideoTrackItem extends AbstractModel{
 
     /**
-    * 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+    * 视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
     */
     @SerializedName("SourceMedia")
     @Expose
@@ -111,16 +114,28 @@ public class VideoTrackItem extends AbstractModel{
     private AudioTransform [] AudioOperations;
 
     /**
-     * Get 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。 
-     * @return SourceMedia 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+     * Get 视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。 
+     * @return SourceMedia 视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      */
     public String getSourceMedia() {
         return this.SourceMedia;
     }
 
     /**
-     * Set 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
-     * @param SourceMedia 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+     * Set 视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
+     * @param SourceMedia 视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      */
     public void setSourceMedia(String SourceMedia) {
         this.SourceMedia = SourceMedia;
