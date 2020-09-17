@@ -34,7 +34,7 @@ public class UrlInfo extends AbstractModel{
     * 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
     */
     @SerializedName("Format")
     @Expose
@@ -71,11 +71,11 @@ public class UrlInfo extends AbstractModel{
      * Get 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。 
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。 
      * @return Format 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
      */
     public Long getFormat() {
         return this.Format;
@@ -85,11 +85,11 @@ public class UrlInfo extends AbstractModel{
      * Set 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
      * @param Format 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
      */
     public void setFormat(Long Format) {
         this.Format = Format;

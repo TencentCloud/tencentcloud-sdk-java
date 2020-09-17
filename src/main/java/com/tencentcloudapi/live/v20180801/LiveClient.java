@@ -713,6 +713,24 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *海外分区直播计费带宽和流量数据查询。
+     * @param req DescribeAreaBillBandwidthAndFluxListRequest
+     * @return DescribeAreaBillBandwidthAndFluxListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(DescribeAreaBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAreaBillBandwidthAndFluxList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播计费带宽和流量数据查询。
      * @param req DescribeBillBandwidthAndFluxListRequest
      * @return DescribeBillBandwidthAndFluxListResponse

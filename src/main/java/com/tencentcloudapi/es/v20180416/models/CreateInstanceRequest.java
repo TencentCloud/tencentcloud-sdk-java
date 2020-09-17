@@ -220,6 +220,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long BasicSecurityType;
 
     /**
+    * 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private Long SceneType;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -684,6 +691,22 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索 
+     * @return SceneType 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+     */
+    public Long getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+     * @param SceneType 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+     */
+    public void setSceneType(Long SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -714,6 +737,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }

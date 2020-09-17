@@ -134,6 +134,60 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *批量解绑后端服务。
+     * @param req BatchDeregisterTargetsRequest
+     * @return BatchDeregisterTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeregisterTargetsResponse BatchDeregisterTargets(BatchDeregisterTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeregisterTargetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeregisterTargetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BatchDeregisterTargets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量修改监听器绑定的后端机器的转发权重。
+     * @param req BatchModifyTargetWeightRequest
+     * @return BatchModifyTargetWeightResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyTargetWeightResponse BatchModifyTargetWeight(BatchModifyTargetWeightRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyTargetWeightResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyTargetWeightResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BatchModifyTargetWeight"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量绑定后端目标。
+     * @param req BatchRegisterTargetsRequest
+     * @return BatchRegisterTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchRegisterTargetsResponse BatchRegisterTargets(BatchRegisterTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchRegisterTargetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchRegisterTargetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BatchRegisterTargets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
      * @param req CreateImageRequest
      * @return CreateImageResponse
@@ -145,6 +199,42 @@ EIP 如果欠费或被封堵，则不能被绑定。
                 Type type = new TypeToken<JsonResponseModel<CreateImageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建负载均衡监听器。
+     * @param req CreateListenerRequest
+     * @return CreateListenerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateListenerResponse CreateListener(CreateListenerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateListenerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateListenerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateListener"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *购买负载均衡实例。
+     * @param req CreateLoadBalancerRequest
+     * @return CreateLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoadBalancerResponse CreateLoadBalancer(CreateLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLoadBalancerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLoadBalancer"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -282,6 +372,60 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
                 Type type = new TypeToken<JsonResponseModel<DeleteImageResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteImage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除负载均衡监听器。
+     * @param req DeleteListenerRequest
+     * @return DeleteListenerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteListenerResponse DeleteListener(DeleteListenerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteListenerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteListenerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteListener"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除负载均衡实例。
+     * @param req DeleteLoadBalancerRequest
+     * @return DeleteLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerResponse DeleteLoadBalancer(DeleteLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoadBalancerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancer"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除负载均衡多个监听器
+     * @param req DeleteLoadBalancerListenersRequest
+     * @return DeleteLoadBalancerListenersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerListenersResponse DeleteLoadBalancerListeners(DeleteLoadBalancerListenersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoadBalancerListenersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerListenersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancerListeners"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -615,6 +759,60 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
     }
 
     /**
+     *查询负载均衡的监听器列表。
+     * @param req DescribeListenersRequest
+     * @return DescribeListenersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeListenersResponse DescribeListeners(DescribeListenersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeListenersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeListenersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeListeners"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询负载均衡相关的任务状态
+     * @param req DescribeLoadBalanceTaskStatusRequest
+     * @return DescribeLoadBalanceTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalanceTaskStatusResponse DescribeLoadBalanceTaskStatus(DescribeLoadBalanceTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalanceTaskStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalanceTaskStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLoadBalanceTaskStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询负载均衡实例列表。
+     * @param req DescribeLoadBalancersRequest
+     * @return DescribeLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancersResponse DescribeLoadBalancers(DescribeLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLoadBalancers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取模块列表
      * @param req DescribeModuleRequest
      * @return DescribeModuleResponse
@@ -806,6 +1004,42 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubnets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取负载均衡后端服务的健康检查状态。
+     * @param req DescribeTargetHealthRequest
+     * @return DescribeTargetHealthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTargetHealthResponse DescribeTargetHealth(DescribeTargetHealthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTargetHealthResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTargetHealthResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTargetHealth"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询负载均衡绑定的后端服务列表。
+     * @param req DescribeTargetsRequest
+     * @return DescribeTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTargetsResponse DescribeTargets(DescribeTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTargetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTargetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTargets"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1088,6 +1322,42 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *修改负载均衡监听器属性。
+     * @param req ModifyListenerRequest
+     * @return ModifyListenerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyListenerResponse ModifyListener(ModifyListenerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyListenerResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyListenerResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyListener"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改负载均衡实例的属性。
+     * @param req ModifyLoadBalancerAttributesRequest
+     * @return ModifyLoadBalancerAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(ModifyLoadBalancerAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancerAttributesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerAttributesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLoadBalancerAttributes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改模块配置，已关联实例的模块不支持调整配置。
      * @param req ModifyModuleConfigRequest
      * @return ModifyModuleConfigResponse
@@ -1243,6 +1513,42 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ModifySubnetAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifySubnetAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改监听器绑定的后端机器的端口。
+     * @param req ModifyTargetPortRequest
+     * @return ModifyTargetPortResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTargetPortResponse ModifyTargetPort(ModifyTargetPortRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTargetPortResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTargetPortResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTargetPort"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改监听器绑定的后端机器的转发权重。
+     * @param req ModifyTargetWeightRequest
+     * @return ModifyTargetWeightResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTargetWeightResponse ModifyTargetWeight(ModifyTargetWeightRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTargetWeightResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTargetWeightResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyTargetWeight"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

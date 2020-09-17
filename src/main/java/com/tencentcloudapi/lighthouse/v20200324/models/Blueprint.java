@@ -86,6 +86,13 @@ public class Blueprint extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 镜像所需系统盘大小
+    */
+    @SerializedName("RequiredSystemDiskSize")
+    @Expose
+    private Long RequiredSystemDiskSize;
+
+    /**
      * Get 镜像 ID  ，是 blueprint 的唯一标识。 
      * @return BlueprintId 镜像 ID  ，是 blueprint 的唯一标识。
      */
@@ -230,6 +237,22 @@ public class Blueprint extends AbstractModel{
     }
 
     /**
+     * Get 镜像所需系统盘大小 
+     * @return RequiredSystemDiskSize 镜像所需系统盘大小
+     */
+    public Long getRequiredSystemDiskSize() {
+        return this.RequiredSystemDiskSize;
+    }
+
+    /**
+     * Set 镜像所需系统盘大小
+     * @param RequiredSystemDiskSize 镜像所需系统盘大小
+     */
+    public void setRequiredSystemDiskSize(Long RequiredSystemDiskSize) {
+        this.RequiredSystemDiskSize = RequiredSystemDiskSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class Blueprint extends AbstractModel{
         this.setParamSimple(map, prefix + "PlatformType", this.PlatformType);
         this.setParamSimple(map, prefix + "BlueprintType", this.BlueprintType);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "RequiredSystemDiskSize", this.RequiredSystemDiskSize);
 
     }
 }

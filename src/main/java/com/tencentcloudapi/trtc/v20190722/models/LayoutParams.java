@@ -58,6 +58,13 @@ public class LayoutParams extends AbstractModel{
     private Long MainVideoRightAlign;
 
     /**
+    * 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+    */
+    @SerializedName("MixVideoUids")
+    @Expose
+    private String [] MixVideoUids;
+
+    /**
      * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。 
      * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
      */
@@ -138,6 +145,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。 
+     * @return MixVideoUids 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+     */
+    public String [] getMixVideoUids() {
+        return this.MixVideoUids;
+    }
+
+    /**
+     * Set 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+     * @param MixVideoUids 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+     */
+    public void setMixVideoUids(String [] MixVideoUids) {
+        this.MixVideoUids = MixVideoUids;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
         this.setParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
         this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
+        this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
 
     }
 }

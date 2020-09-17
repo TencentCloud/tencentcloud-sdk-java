@@ -146,6 +146,24 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *用于重启集群节点
+     * @param req RestartNodesRequest
+     * @return RestartNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartNodesResponse RestartNodes(RestartNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartNodesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartNodesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RestartNodes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对集群进行节点规格变更，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
 - InstanceName：修改实例名称(仅用于标识实例)
 - NodeInfoList: 修改节点配置（节点横向扩缩容，纵向扩缩容，增加主节点，增加冷节点等）

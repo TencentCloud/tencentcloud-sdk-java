@@ -1034,6 +1034,26 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码。
+本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+
+     * @param req RecognizeThaiIDCardOCRRequest
+     * @return RecognizeThaiIDCardOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RecognizeThaiIDCardOCR"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
      * @param req ResidenceBookletOCRRequest
      * @return ResidenceBookletOCRResponse

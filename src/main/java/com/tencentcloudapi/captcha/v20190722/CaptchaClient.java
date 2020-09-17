@@ -92,6 +92,60 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
+     *安全验证码小程序插件分类查询数据接口（内测中），请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+     * @param req DescribeCaptchaMiniDataRequest
+     * @return DescribeCaptchaMiniDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaptchaMiniDataResponse DescribeCaptchaMiniData(DescribeCaptchaMiniDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCaptchaMiniDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCaptchaMiniDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCaptchaMiniData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *安全验证码小程序插件查询请求数据概况（内测中）
+     * @param req DescribeCaptchaMiniDataSumRequest
+     * @return DescribeCaptchaMiniDataSumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaptchaMiniDataSumResponse DescribeCaptchaMiniDataSum(DescribeCaptchaMiniDataSumRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCaptchaMiniDataSumResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCaptchaMiniDataSumResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCaptchaMiniDataSum"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *安全验证码小程序插件用户操作数据查询（内测中）
+     * @param req DescribeCaptchaMiniOperDataRequest
+     * @return DescribeCaptchaMiniOperDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaptchaMiniOperDataResponse DescribeCaptchaMiniOperData(DescribeCaptchaMiniOperDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCaptchaMiniOperDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCaptchaMiniOperDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCaptchaMiniOperData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
      * @param req DescribeCaptchaOperDataRequest
      * @return DescribeCaptchaOperDataResponse
@@ -128,7 +182,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *验证码控制台票据验证信息
+     *安全验证码用户操作票据数据查询
      * @param req DescribeCaptchaTicketDataRequest
      * @return DescribeCaptchaTicketDataResponse
      * @throws TencentCloudSDKException

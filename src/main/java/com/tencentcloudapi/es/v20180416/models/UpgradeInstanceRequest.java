@@ -58,6 +58,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long BasicSecurityType;
 
     /**
+    * 升级方式：<li>scale 蓝绿变更</li><li>restart 滚动重启</li>默认值为scale
+    */
+    @SerializedName("UpgradeMode")
+    @Expose
+    private String UpgradeMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -138,6 +145,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 升级方式：<li>scale 蓝绿变更</li><li>restart 滚动重启</li>默认值为scale 
+     * @return UpgradeMode 升级方式：<li>scale 蓝绿变更</li><li>restart 滚动重启</li>默认值为scale
+     */
+    public String getUpgradeMode() {
+        return this.UpgradeMode;
+    }
+
+    /**
+     * Set 升级方式：<li>scale 蓝绿变更</li><li>restart 滚动重启</li>默认值为scale
+     * @param UpgradeMode 升级方式：<li>scale 蓝绿变更</li><li>restart 滚动重启</li>默认值为scale
+     */
+    public void setUpgradeMode(String UpgradeMode) {
+        this.UpgradeMode = UpgradeMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CheckOnly", this.CheckOnly);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+        this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
 
     }
 }

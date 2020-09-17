@@ -176,6 +176,20 @@ public class UpdateInstanceRequest extends AbstractModel{
     private Long ScaleType;
 
     /**
+    * 多可用区部署
+    */
+    @SerializedName("MultiZoneInfo")
+    @Expose
+    private ZoneDetail [] MultiZoneInfo;
+
+    /**
+    * 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private Long SceneType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -536,6 +550,38 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 多可用区部署 
+     * @return MultiZoneInfo 多可用区部署
+     */
+    public ZoneDetail [] getMultiZoneInfo() {
+        return this.MultiZoneInfo;
+    }
+
+    /**
+     * Set 多可用区部署
+     * @param MultiZoneInfo 多可用区部署
+     */
+    public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
+        this.MultiZoneInfo = MultiZoneInfo;
+    }
+
+    /**
+     * Get 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索 
+     * @return SceneType 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+     */
+    public Long getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+     * @param SceneType 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+     */
+    public void setSceneType(Long SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -560,6 +606,8 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
         this.setParamSimple(map, prefix + "ScaleType", this.ScaleType);
+        this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }
