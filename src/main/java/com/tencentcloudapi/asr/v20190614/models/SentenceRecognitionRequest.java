@@ -39,10 +39,14 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
     * 引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
 非电话场景：
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_ja：16k 日语；
+•16k_wuu-SH：16k 上海话方言。
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。
@@ -129,6 +133,13 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long ConvertNumMode;
 
     /**
+    * 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。支持引擎8k_zh，16k_zh，16k_en，16k_ca，16k_ja，16k_wuu-SH
+    */
+    @SerializedName("WordInfo")
+    @Expose
+    private Long WordInfo;
+
+    /**
      * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
@@ -163,19 +174,27 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Get 引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
 非电话场景：
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+•16k_wuu-SH：16k 上海话方言。
+• 16k_ca：16k 粤语；
+• 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。 
      * @return EngSerViceType 引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
 非电话场景：
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_ja：16k 日语；
+•16k_wuu-SH：16k 上海话方言。
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。
@@ -187,6 +206,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Set 引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
 非电话场景：
 • 16k_zh：16k 中文普通话通用；
@@ -194,12 +214,19 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。
+• 16k_ca：16k 粤语；
+• 16k_ja：16k 日语；
+•16k_wuu-SH：16k 上海话方言。
      * @param EngSerViceType 引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
 非电话场景：
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
+• 16k_ca：16k 粤语；
+• 16k_ja：16k 日语；
+•16k_wuu-SH：16k 上海话方言。
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。
@@ -385,6 +412,22 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。支持引擎8k_zh，16k_zh，16k_en，16k_ca，16k_ja，16k_wuu-SH 
+     * @return WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。支持引擎8k_zh，16k_zh，16k_en，16k_ca，16k_ja，16k_wuu-SH
+     */
+    public Long getWordInfo() {
+        return this.WordInfo;
+    }
+
+    /**
+     * Set 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。支持引擎8k_zh，16k_zh，16k_en，16k_ca，16k_ja，16k_wuu-SH
+     * @param WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。支持引擎8k_zh，16k_zh，16k_en，16k_ca，16k_ja，16k_wuu-SH
+     */
+    public void setWordInfo(Long WordInfo) {
+        this.WordInfo = WordInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -402,6 +445,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
         this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
         this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
+        this.setParamSimple(map, prefix + "WordInfo", this.WordInfo);
 
     }
 }

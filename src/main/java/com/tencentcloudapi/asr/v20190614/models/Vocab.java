@@ -72,6 +72,14 @@ public class Vocab extends AbstractModel{
     private Long State;
 
     /**
+    * 标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagInfos")
+    @Expose
+    private String [] TagInfos;
+
+    /**
      * Get 热词表名称 
      * @return Name 热词表名称
      */
@@ -184,6 +192,26 @@ public class Vocab extends AbstractModel{
     }
 
     /**
+     * Get 标签数组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagInfos 标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTagInfos() {
+        return this.TagInfos;
+    }
+
+    /**
+     * Set 标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagInfos 标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagInfos(String [] TagInfos) {
+        this.TagInfos = TagInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +222,7 @@ public class Vocab extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamArraySimple(map, prefix + "TagInfos.", this.TagInfos);
 
     }
 }

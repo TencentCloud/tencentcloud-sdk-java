@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.asr.v20190614.models;
+package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAsrVocabListResponse extends AbstractModel{
+public class DetectLiveFaceAccurateResponse extends AbstractModel{
 
     /**
-    * 热词表列表
+    * 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
     */
-    @SerializedName("VocabList")
+    @SerializedName("Score")
     @Expose
-    private Vocab [] VocabList;
+    private Float Score;
 
     /**
-    * 热词列表总数
+    * 人脸识别所用的算法模型版本。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("FaceModelVersion")
     @Expose
-    private Long TotalCount;
+    private String FaceModelVersion;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class GetAsrVocabListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 热词表列表 
-     * @return VocabList 热词表列表
+     * Get 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。 
+     * @return Score 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
      */
-    public Vocab [] getVocabList() {
-        return this.VocabList;
+    public Float getScore() {
+        return this.Score;
     }
 
     /**
-     * Set 热词表列表
-     * @param VocabList 热词表列表
+     * Set 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
+     * @param Score 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
      */
-    public void setVocabList(Vocab [] VocabList) {
-        this.VocabList = VocabList;
+    public void setScore(Float Score) {
+        this.Score = Score;
     }
 
     /**
-     * Get 热词列表总数 
-     * @return TotalCount 热词列表总数
+     * Get 人脸识别所用的算法模型版本。 
+     * @return FaceModelVersion 人脸识别所用的算法模型版本。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getFaceModelVersion() {
+        return this.FaceModelVersion;
     }
 
     /**
-     * Set 热词列表总数
-     * @param TotalCount 热词列表总数
+     * Set 人脸识别所用的算法模型版本。
+     * @param FaceModelVersion 人脸识别所用的算法模型版本。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setFaceModelVersion(String FaceModelVersion) {
+        this.FaceModelVersion = FaceModelVersion;
     }
 
     /**
@@ -95,8 +95,8 @@ public class GetAsrVocabListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "VocabList.", this.VocabList);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

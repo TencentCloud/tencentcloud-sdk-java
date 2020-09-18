@@ -146,6 +146,24 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
+     *核查验证码小程序插件票据结果（内测中）
+     * @param req DescribeCaptchaMiniResultRequest
+     * @return DescribeCaptchaMiniResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaptchaMiniResultResponse DescribeCaptchaMiniResult(DescribeCaptchaMiniResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCaptchaMiniResultResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCaptchaMiniResultResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCaptchaMiniResult"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
      * @param req DescribeCaptchaOperDataRequest
      * @return DescribeCaptchaOperDataResponse

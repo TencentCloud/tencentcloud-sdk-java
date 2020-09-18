@@ -44,7 +44,7 @@ public class DescribeCallDetailRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 用户sdkappid（1400188366）
+    * 用户SDKAppID（1400188366）
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -78,14 +78,14 @@ bigvHeight：上/下行分辨率高
     private String [] DataType;
 
     /**
-    * 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+    * 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
     */
     @SerializedName("PageNumber")
     @Expose
     private String PageNumber;
 
     /**
-    * 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
+    * 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
     */
     @SerializedName("PageSize")
     @Expose
@@ -140,16 +140,16 @@ bigvHeight：上/下行分辨率高
     }
 
     /**
-     * Get 用户sdkappid（1400188366） 
-     * @return SdkAppId 用户sdkappid（1400188366）
+     * Get 用户SDKAppID（1400188366） 
+     * @return SdkAppId 用户SDKAppID（1400188366）
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 用户sdkappid（1400188366）
-     * @param SdkAppId 用户sdkappid（1400188366）
+     * Set 用户SDKAppID（1400188366）
+     * @param SdkAppId 用户SDKAppID（1400188366）
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -240,32 +240,32 @@ bigvHeight：上/下行分辨率高
     }
 
     /**
-     * Get 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据） 
-     * @return PageNumber 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+     * Get 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据） 
+     * @return PageNumber 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
      */
     public String getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
-     * @param PageNumber 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+     * Set 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+     * @param PageNumber 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
      */
     public void setPageNumber(String PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100） 
-     * @return PageSize 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
+     * Get 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100） 
+     * @return PageSize 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
      */
     public String getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
-     * @param PageSize 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
+     * Set 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
+     * @param PageSize 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
      */
     public void setPageSize(String PageSize) {
         this.PageSize = PageSize;

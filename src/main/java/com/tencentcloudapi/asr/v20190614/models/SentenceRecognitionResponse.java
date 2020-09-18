@@ -37,6 +37,22 @@ public class SentenceRecognitionResponse extends AbstractModel{
     private Long AudioDuration;
 
     /**
+    * 词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WordSize")
+    @Expose
+    private Long WordSize;
+
+    /**
+    * 词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WordList")
+    @Expose
+    private SentenceWord [] WordList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +92,46 @@ public class SentenceRecognitionResponse extends AbstractModel{
     }
 
     /**
+     * Get 词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WordSize 词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWordSize() {
+        return this.WordSize;
+    }
+
+    /**
+     * Set 词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WordSize 词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWordSize(Long WordSize) {
+        this.WordSize = WordSize;
+    }
+
+    /**
+     * Get 词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WordList 词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SentenceWord [] getWordList() {
+        return this.WordList;
+    }
+
+    /**
+     * Set 词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WordList 词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWordList(SentenceWord [] WordList) {
+        this.WordList = WordList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +153,8 @@ public class SentenceRecognitionResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+        this.setParamSimple(map, prefix + "WordSize", this.WordSize);
+        this.setParamArrayObj(map, prefix + "WordList.", this.WordList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

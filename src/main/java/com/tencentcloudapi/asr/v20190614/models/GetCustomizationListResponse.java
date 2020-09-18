@@ -20,17 +20,19 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAsrVocabListResponse extends AbstractModel{
+public class GetCustomizationListResponse extends AbstractModel{
 
     /**
-    * 热词表列表
+    * 自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("VocabList")
+    @SerializedName("Data")
     @Expose
-    private Vocab [] VocabList;
+    private Model [] Data;
 
     /**
-    * 热词列表总数
+    * 自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +46,40 @@ public class GetAsrVocabListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 热词表列表 
-     * @return VocabList 热词表列表
+     * Get 自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Vocab [] getVocabList() {
-        return this.VocabList;
+    public Model [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 热词表列表
-     * @param VocabList 热词表列表
+     * Set 自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setVocabList(Vocab [] VocabList) {
-        this.VocabList = VocabList;
+    public void setData(Model [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 热词列表总数 
-     * @return TotalCount 热词列表总数
+     * Get 自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 热词列表总数
-     * @param TotalCount 热词列表总数
+     * Set 自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -95,7 +105,7 @@ public class GetAsrVocabListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "VocabList.", this.VocabList);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

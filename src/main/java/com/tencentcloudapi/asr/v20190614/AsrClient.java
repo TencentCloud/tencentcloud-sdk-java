@@ -183,6 +183,24 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *查询自学习模型列表
+     * @param req GetCustomizationListRequest
+     * @return GetCustomizationListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCustomizationListResponse GetCustomizationList(GetCustomizationListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCustomizationListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCustomizationListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetCustomizationList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于对60秒之内的短音频文件进行识别。
 <br>•   支持中文普通话、英语、粤语、日语、上海话方言。
 <br>•   支持本地语音文件上传和语音URL上传两种请求方式，音频时长不能超过60s。

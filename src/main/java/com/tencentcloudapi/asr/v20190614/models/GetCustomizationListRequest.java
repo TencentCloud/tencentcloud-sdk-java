@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAsrVocabListRequest extends AbstractModel{
+public class GetCustomizationListRequest extends AbstractModel{
 
     /**
     * 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
@@ -30,18 +30,18 @@ public class GetAsrVocabListRequest extends AbstractModel{
     private String [] TagInfos;
 
     /**
-    * 分页Offset
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * 分页Limit
+    * 分页大小
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 分页offset
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格” 
@@ -60,35 +60,35 @@ public class GetAsrVocabListRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页Offset 
-     * @return Offset 分页Offset
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 分页Offset
-     * @param Offset 分页Offset
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
-     * Get 分页Limit 
-     * @return Limit 分页Limit
+     * Get 分页大小 
+     * @return Limit 分页大小
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页Limit
-     * @param Limit 分页Limit
+     * Set 分页大小
+     * @param Limit 分页大小
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get 分页offset 
+     * @return Offset 分页offset
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页offset
+     * @param Offset 分页offset
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -96,8 +96,8 @@ public class GetAsrVocabListRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TagInfos.", this.TagInfos);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

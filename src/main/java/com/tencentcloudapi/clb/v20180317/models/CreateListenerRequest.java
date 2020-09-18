@@ -101,6 +101,13 @@ public class CreateListenerRequest extends AbstractModel{
     private String SessionType;
 
     /**
+    * 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+    */
+    @SerializedName("KeepaliveEnable")
+    @Expose
+    private Long KeepaliveEnable;
+
+    /**
      * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -281,6 +288,22 @@ public class CreateListenerRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器 
+     * @return KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+     */
+    public Long getKeepaliveEnable() {
+        return this.KeepaliveEnable;
+    }
+
+    /**
+     * Set 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+     * @param KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+     */
+    public void setKeepaliveEnable(Long KeepaliveEnable) {
+        this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -295,6 +318,7 @@ public class CreateListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
 
     }
 }
