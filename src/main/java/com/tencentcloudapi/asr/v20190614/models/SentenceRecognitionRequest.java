@@ -47,9 +47,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-•16k_wuu-SH：16k 上海话方言。
     */
     @SerializedName("EngSerViceType")
     @Expose
@@ -181,9 +178,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
-•16k_wuu-SH：16k 上海话方言。
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。 
      * @return EngSerViceType 引擎模型类型。
 电话场景：
@@ -192,9 +186,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 非电话场景：
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-•16k_wuu-SH：16k 上海话方言。
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。
@@ -214,9 +205,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-•16k_wuu-SH：16k 上海话方言。
      * @param EngSerViceType 引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -224,9 +212,6 @@ public class SentenceRecognitionRequest extends AbstractModel{
 非电话场景：
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-•16k_wuu-SH：16k 上海话方言。
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 •16k_wuu-SH：16k 上海话方言。

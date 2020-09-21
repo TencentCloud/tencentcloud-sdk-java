@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAsyncRequestInfoRequest extends AbstractModel{
+public class CloudBaseCodeRepoDetail extends AbstractModel{
 
     /**
-    * 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+    * repo的名字
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("Name")
     @Expose
-    private String AsyncRequestId;
+    private CloudBaseCodeRepoName Name;
 
     /**
-     * Get 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance 
-     * @return AsyncRequestId 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+    * repo的url
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+     * Get repo的名字 
+     * @return Name repo的名字
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public CloudBaseCodeRepoName getName() {
+        return this.Name;
     }
 
     /**
-     * Set 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
-     * @param AsyncRequestId 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+     * Set repo的名字
+     * @param Name repo的名字
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setName(CloudBaseCodeRepoName Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get repo的url 
+     * @return Url repo的url
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set repo的url
+     * @param Url repo的url
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamObj(map, prefix + "Name.", this.Name);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

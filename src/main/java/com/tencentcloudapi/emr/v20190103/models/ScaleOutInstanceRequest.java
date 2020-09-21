@@ -143,6 +143,27 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private PodSpec PodSpec;
 
     /**
+    * 使用clickhouse集群扩容时，选择的机器分组名称
+    */
+    @SerializedName("ClickHouseClusterName")
+    @Expose
+    private String ClickHouseClusterName;
+
+    /**
+    * 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+    */
+    @SerializedName("ClickHouseClusterType")
+    @Expose
+    private String ClickHouseClusterType;
+
+    /**
+    * 规则扩容指定 yarn node label
+    */
+    @SerializedName("YarnNodeLabel")
+    @Expose
+    private String YarnNodeLabel;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -431,6 +452,54 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 使用clickhouse集群扩容时，选择的机器分组名称 
+     * @return ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     */
+    public String getClickHouseClusterName() {
+        return this.ClickHouseClusterName;
+    }
+
+    /**
+     * Set 使用clickhouse集群扩容时，选择的机器分组名称
+     * @param ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     */
+    public void setClickHouseClusterName(String ClickHouseClusterName) {
+        this.ClickHouseClusterName = ClickHouseClusterName;
+    }
+
+    /**
+     * Get 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组 
+     * @return ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     */
+    public String getClickHouseClusterType() {
+        return this.ClickHouseClusterType;
+    }
+
+    /**
+     * Set 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * @param ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     */
+    public void setClickHouseClusterType(String ClickHouseClusterType) {
+        this.ClickHouseClusterType = ClickHouseClusterType;
+    }
+
+    /**
+     * Get 规则扩容指定 yarn node label 
+     * @return YarnNodeLabel 规则扩容指定 yarn node label
+     */
+    public String getYarnNodeLabel() {
+        return this.YarnNodeLabel;
+    }
+
+    /**
+     * Set 规则扩容指定 yarn node label
+     * @param YarnNodeLabel 规则扩容指定 yarn node label
+     */
+    public void setYarnNodeLabel(String YarnNodeLabel) {
+        this.YarnNodeLabel = YarnNodeLabel;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -450,6 +519,9 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         this.setParamObj(map, prefix + "PodSpec.", this.PodSpec);
+        this.setParamSimple(map, prefix + "ClickHouseClusterName", this.ClickHouseClusterName);
+        this.setParamSimple(map, prefix + "ClickHouseClusterType", this.ClickHouseClusterType);
+        this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
 
     }
 }

@@ -39,6 +39,14 @@ public class PersistentVolumeContext extends AbstractModel{
     private String DiskType;
 
     /**
+    * 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskNum")
+    @Expose
+    private Long DiskNum;
+
+    /**
      * Get 磁盘大小，单位为GB。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskSize 磁盘大小，单位为GB。
@@ -79,11 +87,32 @@ public class PersistentVolumeContext extends AbstractModel{
     }
 
     /**
+     * Get 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskNum 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDiskNum() {
+        return this.DiskNum;
+    }
+
+    /**
+     * Set 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskNum 磁盘数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskNum(Long DiskNum) {
+        this.DiskNum = DiskNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
 
     }
 }

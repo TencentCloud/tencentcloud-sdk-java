@@ -24,6 +24,7 @@ public class InstanceChargePrepaid extends AbstractModel{
 
     /**
     * 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
     */
     @SerializedName("Period")
     @Expose
@@ -36,14 +37,17 @@ NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费
 DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
 
 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-     * Get 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。 
+     * Get 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填） 
      * @return Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
      */
     public Long getPeriod() {
         return this.Period;
@@ -51,7 +55,9 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
 
     /**
      * Set 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
      * @param Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -63,13 +69,15 @@ NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费
 DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
 
-默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。 
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填） 
      * @return RenewFlag 自动续费标识。取值范围：
 NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费
 DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
 
 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -82,12 +90,14 @@ NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费
 DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
 
 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
      * @param RenewFlag 自动续费标识。取值范围：
 NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费
 DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
 
 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+（InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
