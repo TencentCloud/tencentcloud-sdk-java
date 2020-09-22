@@ -51,7 +51,7 @@ public class CreateDDoSPolicyRequest extends AbstractModel{
     private DDoSPolicyPortLimit [] PortLimits;
 
     /**
-    * IP黑白名单，当没有IP黑白名单时填空数组
+    * 请求源IP黑白名单，当没有IP黑白名单时填空数组
     */
     @SerializedName("IpAllowDenys")
     @Expose
@@ -136,16 +136,16 @@ public class CreateDDoSPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get IP黑白名单，当没有IP黑白名单时填空数组 
-     * @return IpAllowDenys IP黑白名单，当没有IP黑白名单时填空数组
+     * Get 请求源IP黑白名单，当没有IP黑白名单时填空数组 
+     * @return IpAllowDenys 请求源IP黑白名单，当没有IP黑白名单时填空数组
      */
     public IpBlackWhite [] getIpAllowDenys() {
         return this.IpAllowDenys;
     }
 
     /**
-     * Set IP黑白名单，当没有IP黑白名单时填空数组
-     * @param IpAllowDenys IP黑白名单，当没有IP黑白名单时填空数组
+     * Set 请求源IP黑白名单，当没有IP黑白名单时填空数组
+     * @param IpAllowDenys 请求源IP黑白名单，当没有IP黑白名单时填空数组
      */
     public void setIpAllowDenys(IpBlackWhite [] IpAllowDenys) {
         this.IpAllowDenys = IpAllowDenys;

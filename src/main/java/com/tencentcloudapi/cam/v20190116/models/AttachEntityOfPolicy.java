@@ -53,6 +53,14 @@ public class AttachEntityOfPolicy extends AbstractModel{
     private Long RelatedType;
 
     /**
+    * 策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachmentTime")
+    @Expose
+    private String AttachmentTime;
+
+    /**
      * Get 实体ID 
      * @return Id 实体ID
      */
@@ -125,6 +133,26 @@ public class AttachEntityOfPolicy extends AbstractModel{
     }
 
     /**
+     * Get 策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachmentTime 策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAttachmentTime() {
+        return this.AttachmentTime;
+    }
+
+    /**
+     * Set 策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachmentTime 策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachmentTime(String AttachmentTime) {
+        this.AttachmentTime = AttachmentTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +160,7 @@ public class AttachEntityOfPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "RelatedType", this.RelatedType);
+        this.setParamSimple(map, prefix + "AttachmentTime", this.AttachmentTime);
 
     }
 }

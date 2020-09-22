@@ -56,6 +56,24 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *创建视频生成任务
+     * @param req CreateVideoGenerationTaskRequest
+     * @return CreateVideoGenerationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoGenerationTaskResponse CreateVideoGenerationTask(CreateVideoGenerationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVideoGenerationTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVideoGenerationTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateVideoGenerationTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询录制任务状态与结果
      * @param req DescribeOnlineRecordRequest
      * @return DescribeOnlineRecordResponse
@@ -121,6 +139,42 @@ public class TiwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeCallbackResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTranscodeCallback"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询录制视频生成任务状态与结果
+     * @param req DescribeVideoGenerationTaskRequest
+     * @return DescribeVideoGenerationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoGenerationTaskResponse DescribeVideoGenerationTask(DescribeVideoGenerationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVideoGenerationTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVideoGenerationTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVideoGenerationTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询录制视频生成回调地址
+     * @param req DescribeVideoGenerationTaskCallbackRequest
+     * @return DescribeVideoGenerationTaskCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoGenerationTaskCallbackResponse DescribeVideoGenerationTaskCallback(DescribeVideoGenerationTaskCallbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVideoGenerationTaskCallbackResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVideoGenerationTaskCallbackResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVideoGenerationTaskCallback"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -229,6 +283,42 @@ public class TiwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetTranscodeCallbackKeyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SetTranscodeCallbackKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置录制视频生成回调地址
+     * @param req SetVideoGenerationTaskCallbackRequest
+     * @return SetVideoGenerationTaskCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetVideoGenerationTaskCallbackResponse SetVideoGenerationTaskCallback(SetVideoGenerationTaskCallbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetVideoGenerationTaskCallbackResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetVideoGenerationTaskCallbackResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetVideoGenerationTaskCallback"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置视频生成回调鉴权密钥
+     * @param req SetVideoGenerationTaskCallbackKeyRequest
+     * @return SetVideoGenerationTaskCallbackKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetVideoGenerationTaskCallbackKeyResponse SetVideoGenerationTaskCallbackKey(SetVideoGenerationTaskCallbackKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetVideoGenerationTaskCallbackKey"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

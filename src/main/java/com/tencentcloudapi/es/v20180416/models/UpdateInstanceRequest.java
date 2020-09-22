@@ -45,7 +45,7 @@ public class UpdateInstanceRequest extends AbstractModel{
     private Long NodeNum;
 
     /**
-    * 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+    * 配置项（JSON格式字符串）
     */
     @SerializedName("EsConfig")
     @Expose
@@ -242,16 +242,16 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li> 
-     * @return EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * Get 配置项（JSON格式字符串） 
+     * @return EsConfig 配置项（JSON格式字符串）
      */
     public String getEsConfig() {
         return this.EsConfig;
     }
 
     /**
-     * Set 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
-     * @param EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * Set 配置项（JSON格式字符串）
+     * @param EsConfig 配置项（JSON格式字符串）
      */
     public void setEsConfig(String EsConfig) {
         this.EsConfig = EsConfig;

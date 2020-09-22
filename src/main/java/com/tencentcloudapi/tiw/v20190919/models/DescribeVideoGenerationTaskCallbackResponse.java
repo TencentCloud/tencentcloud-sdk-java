@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ckafka.v20190819.models;
+package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FetchMessageListByOffsetResponse extends AbstractModel{
+public class DescribeVideoGenerationTaskCallbackResponse extends AbstractModel{
 
     /**
-    * 返回结果
+    * 录制视频生成回调地址
     */
-    @SerializedName("Result")
+    @SerializedName("Callback")
     @Expose
-    private ConsumerRecord [] Result;
+    private String Callback;
+
+    /**
+    * 录制视频生成回调鉴权密钥
+    */
+    @SerializedName("CallbackKey")
+    @Expose
+    private String CallbackKey;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class FetchMessageListByOffsetResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果 
-     * @return Result 返回结果
+     * Get 录制视频生成回调地址 
+     * @return Callback 录制视频生成回调地址
      */
-    public ConsumerRecord [] getResult() {
-        return this.Result;
+    public String getCallback() {
+        return this.Callback;
     }
 
     /**
-     * Set 返回结果
-     * @param Result 返回结果
+     * Set 录制视频生成回调地址
+     * @param Callback 录制视频生成回调地址
      */
-    public void setResult(ConsumerRecord [] Result) {
-        this.Result = Result;
+    public void setCallback(String Callback) {
+        this.Callback = Callback;
+    }
+
+    /**
+     * Get 录制视频生成回调鉴权密钥 
+     * @return CallbackKey 录制视频生成回调鉴权密钥
+     */
+    public String getCallbackKey() {
+        return this.CallbackKey;
+    }
+
+    /**
+     * Set 录制视频生成回调鉴权密钥
+     * @param CallbackKey 录制视频生成回调鉴权密钥
+     */
+    public void setCallbackKey(String CallbackKey) {
+        this.CallbackKey = CallbackKey;
     }
 
     /**
@@ -72,7 +95,8 @@ public class FetchMessageListByOffsetResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "Callback", this.Callback);
+        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

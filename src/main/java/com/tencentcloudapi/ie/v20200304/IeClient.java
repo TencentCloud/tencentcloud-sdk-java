@@ -38,7 +38,7 @@ public class IeClient extends AbstractClient{
     }
 
     /**
-     *创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
+     *创建编辑理解任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
      * @param req CreateEditingTaskRequest
      * @return CreateEditingTaskResponse
      * @throws TencentCloudSDKException
@@ -92,7 +92,7 @@ public class IeClient extends AbstractClient{
     }
 
     /**
-     *获取智能编辑任务结果。
+     *获取编辑理解任务结果。
      * @param req DescribeEditingTaskResultRequest
      * @return DescribeEditingTaskResultResponse
      * @throws TencentCloudSDKException
@@ -128,7 +128,7 @@ public class IeClient extends AbstractClient{
     }
 
     /**
-     *获取质检任务结果
+     *获取媒体质检任务结果
      * @param req DescribeQualityControlTaskResultRequest
      * @return DescribeQualityControlTaskResultResponse
      * @throws TencentCloudSDKException

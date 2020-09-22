@@ -30,7 +30,7 @@ public class AccountTipoffAccessRequest extends AbstractModel{
     private String ReportedAccount;
 
     /**
-    * 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+    * 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
     */
     @SerializedName("ReportedAccountType")
     @Expose
@@ -51,7 +51,7 @@ public class AccountTipoffAccessRequest extends AbstractModel{
     private String SenderAccount;
 
     /**
-    * 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+    * 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
     */
     @SerializedName("SenderAccountType")
     @Expose
@@ -88,16 +88,16 @@ public class AccountTipoffAccessRequest extends AbstractModel{
     }
 
     /**
-     * Get 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string) 
-     * @return ReportedAccountType 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * Get 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它) 
+     * @return ReportedAccountType 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      */
     public Long getReportedAccountType() {
         return this.ReportedAccountType;
     }
 
     /**
-     * Set 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
-     * @param ReportedAccountType 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * Set 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
+     * @param ReportedAccountType 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      */
     public void setReportedAccountType(Long ReportedAccountType) {
         this.ReportedAccountType = ReportedAccountType;
@@ -136,16 +136,16 @@ public class AccountTipoffAccessRequest extends AbstractModel{
     }
 
     /**
-     * Get 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string) 
-     * @return SenderAccountType 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * Get 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它) 
+     * @return SenderAccountType 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      */
     public Long getSenderAccountType() {
         return this.SenderAccountType;
     }
 
     /**
-     * Set 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
-     * @param SenderAccountType 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * Set 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
+     * @param SenderAccountType 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      */
     public void setSenderAccountType(Long SenderAccountType) {
         this.SenderAccountType = SenderAccountType;

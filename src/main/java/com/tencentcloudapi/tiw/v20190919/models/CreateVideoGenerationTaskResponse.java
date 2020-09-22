@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ckafka.v20190819.models;
+package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FetchMessageByOffsetResponse extends AbstractModel{
+public class CreateVideoGenerationTaskResponse extends AbstractModel{
 
     /**
-    * 返回结果
+    * 视频生成的任务Id
     */
-    @SerializedName("Result")
+    @SerializedName("TaskId")
     @Expose
-    private ConsumerRecord Result;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class FetchMessageByOffsetResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果 
-     * @return Result 返回结果
+     * Get 视频生成的任务Id 
+     * @return TaskId 视频生成的任务Id
      */
-    public ConsumerRecord getResult() {
-        return this.Result;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 返回结果
-     * @param Result 返回结果
+     * Set 视频生成的任务Id
+     * @param TaskId 视频生成的任务Id
      */
-    public void setResult(ConsumerRecord Result) {
-        this.Result = Result;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class FetchMessageByOffsetResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
