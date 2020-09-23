@@ -198,6 +198,13 @@ public class CynosdbCluster extends AbstractModel{
     private ObjectTask [] Tasks;
 
     /**
+    * 集群绑定的tag数组
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
      * Get 集群状态 
      * @return Status 集群状态
      */
@@ -598,6 +605,22 @@ public class CynosdbCluster extends AbstractModel{
     }
 
     /**
+     * Get 集群绑定的tag数组 
+     * @return ResourceTags 集群绑定的tag数组
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 集群绑定的tag数组
+     * @param ResourceTags 集群绑定的tag数组
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -626,6 +649,7 @@ public class CynosdbCluster extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

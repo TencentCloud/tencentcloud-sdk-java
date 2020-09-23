@@ -177,6 +177,13 @@ public class CynosdbClusterDetail extends AbstractModel{
     private String Zone;
 
     /**
+    * 实例绑定的tag数组信息
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -529,6 +536,22 @@ public class CynosdbClusterDetail extends AbstractModel{
     }
 
     /**
+     * Get 实例绑定的tag数组信息 
+     * @return ResourceTags 实例绑定的tag数组信息
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 实例绑定的tag数组信息
+     * @param ResourceTags 实例绑定的tag数组信息
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +577,7 @@ public class CynosdbClusterDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

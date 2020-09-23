@@ -452,6 +452,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *查询安全设置
+     * @param req DescribeSafeAuthFlagCollRequest
+     * @return DescribeSafeAuthFlagCollResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(DescribeSafeAuthFlagCollRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSafeAuthFlagCollResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSafeAuthFlagCollResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSafeAuthFlagColl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
      * @param req DetachGroupPolicyRequest
      * @return DetachGroupPolicyResponse

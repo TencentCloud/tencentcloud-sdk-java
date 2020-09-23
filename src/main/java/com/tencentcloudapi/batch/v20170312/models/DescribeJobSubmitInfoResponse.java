@@ -65,6 +65,14 @@ public class DescribeJobSubmitInfoResponse extends AbstractModel{
     private Dependence [] Dependences;
 
     /**
+    * 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +176,26 @@ public class DescribeJobSubmitInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -193,6 +221,7 @@ public class DescribeJobSubmitInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamArrayObj(map, prefix + "Dependences.", this.Dependences);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -416,6 +416,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询实例节点信息
+     * @param req DescribeInstanceNodeInfoRequest
+     * @return DescribeInstanceNodeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceNodeInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询参数修改历史列表
      * @param req DescribeInstanceParamRecordsRequest
      * @return DescribeInstanceParamRecordsResponse

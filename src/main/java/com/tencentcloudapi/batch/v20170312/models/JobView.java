@@ -81,6 +81,14 @@ public class JobView extends AbstractModel{
     private TaskMetrics TaskMetrics;
 
     /**
+    * 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 作业ID 
      * @return JobId 作业ID
      */
@@ -217,6 +225,26 @@ public class JobView extends AbstractModel{
     }
 
     /**
+     * Get 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -228,6 +256,7 @@ public class JobView extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "TaskMetrics.", this.TaskMetrics);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

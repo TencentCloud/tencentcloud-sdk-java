@@ -93,6 +93,13 @@ public class NamedCpmComputeEnv extends AbstractModel{
     private Long ResourceMaxRetryCount;
 
     /**
+    * 标签列表。通过指定该参数可以支持绑定标签到黑石计算环境。每个黑石计算环境最多绑定10个标签。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 计算环境名称 
      * @return EnvName 计算环境名称
      */
@@ -253,6 +260,22 @@ public class NamedCpmComputeEnv extends AbstractModel{
     }
 
     /**
+     * Get 标签列表。通过指定该参数可以支持绑定标签到黑石计算环境。每个黑石计算环境最多绑定10个标签。 
+     * @return Tags 标签列表。通过指定该参数可以支持绑定标签到黑石计算环境。每个黑石计算环境最多绑定10个标签。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表。通过指定该参数可以支持绑定标签到黑石计算环境。每个黑石计算环境最多绑定10个标签。
+     * @param Tags 标签列表。通过指定该参数可以支持绑定标签到黑石计算环境。每个黑石计算环境最多绑定10个标签。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class NamedCpmComputeEnv extends AbstractModel{
         this.setParamObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
         this.setParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

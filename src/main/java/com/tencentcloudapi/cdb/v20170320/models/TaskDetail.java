@@ -60,6 +60,7 @@ public class TaskDetail extends AbstractModel{
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -186,7 +187,8 @@ public class TaskDetail extends AbstractModel{
 "FAILED" - 执行失败；
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
-"PAUSED" - 已暂停。 
+"PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销） 
      * @return TaskStatus 实例任务状态，可能的值包括：
 "UNDEFINED" - 未定义；
 "INITIAL" - 初始化；
@@ -196,6 +198,7 @@ public class TaskDetail extends AbstractModel{
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -211,6 +214,7 @@ public class TaskDetail extends AbstractModel{
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
      * @param TaskStatus 实例任务状态，可能的值包括：
 "UNDEFINED" - 未定义；
 "INITIAL" - 初始化；
@@ -220,6 +224,7 @@ public class TaskDetail extends AbstractModel{
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

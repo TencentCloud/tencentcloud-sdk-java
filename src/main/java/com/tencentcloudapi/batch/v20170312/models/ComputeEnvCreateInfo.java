@@ -99,6 +99,14 @@ public class ComputeEnvCreateInfo extends AbstractModel{
     private Long DesiredComputeNodeCount;
 
     /**
+    * 计算环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 计算环境 ID 
      * @return EnvId 计算环境 ID
      */
@@ -283,6 +291,26 @@ public class ComputeEnvCreateInfo extends AbstractModel{
     }
 
     /**
+     * Get 计算环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 计算环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 计算环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 计算环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -296,6 +324,7 @@ public class ComputeEnvCreateInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
         this.setParamArrayObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -61,6 +61,24 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *用户使用该接口可以创建自学习模型，以供识别调用
+     * @param req CreateCustomizationRequest
+     * @return CreateCustomizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomizationResponse CreateCustomization(CreateCustomizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomizationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomizationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCustomization"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口服务对时长5小时以内的录音文件进行识别，异步返回识别全部结果。
 <br>• 支持中文普通话、英语、粤语、日语和上海话方言
 <br>• 支持通用、音视频领域
@@ -107,6 +125,24 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *用户通过该接口可以删除自学习模型
+     * @param req DeleteCustomizationRequest
+     * @return DeleteCustomizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomizationResponse DeleteCustomization(DeleteCustomizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomizationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomizationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCustomization"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在调用录音文件识别请求接口后，有回调和轮询两种方式获取识别结果。
 <br>• 当采用回调方式时，识别完成后会将结果通过 POST 请求的形式通知到用户在请求时填写的回调 URL，具体请参见[ 录音识别结果回调 ](https://cloud.tencent.com/document/product/1093/37139#callback)。
 <br>• 当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见下文说明。
@@ -141,6 +177,24 @@ public class AsrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadAsrVocabResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DownloadAsrVocab"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过该接口可以下载自学习模型的语料
+     * @param req DownloadCustomizationRequest
+     * @return DownloadCustomizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadCustomizationResponse DownloadCustomization(DownloadCustomizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadCustomizationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadCustomizationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DownloadCustomization"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -195,6 +249,42 @@ public class AsrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetCustomizationListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetCustomizationList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
+     * @param req ModifyCustomizationRequest
+     * @return ModifyCustomizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomizationResponse ModifyCustomization(ModifyCustomizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomizationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomizationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCustomization"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过该接口，用户可以修改自学习模型状态，上下线自学习模型
+     * @param req ModifyCustomizationStateRequest
+     * @return ModifyCustomizationStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomizationStateResponse ModifyCustomizationState(ModifyCustomizationStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomizationStateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomizationStateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCustomizationState"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

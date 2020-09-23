@@ -217,6 +217,13 @@ timeRollback，时间点回档
     private String OrderSource;
 
     /**
+    * 集群创建需要绑定的tag数组信息
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -669,6 +676,22 @@ timeRollback，时间点回档
     }
 
     /**
+     * Get 集群创建需要绑定的tag数组信息 
+     * @return ResourceTags 集群创建需要绑定的tag数组信息
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 集群创建需要绑定的tag数组信息
+     * @param ResourceTags 集群创建需要绑定的tag数组信息
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -699,6 +722,7 @@ timeRollback，时间点回档
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "HaCount", this.HaCount);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

@@ -58,6 +58,14 @@ public class TaskTemplateView extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 任务模板ID 
      * @return TaskTemplateId 任务模板ID
      */
@@ -138,6 +146,26 @@ public class TaskTemplateView extends AbstractModel{
     }
 
     /**
+     * Get 任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class TaskTemplateView extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
         this.setParamObj(map, prefix + "TaskTemplateInfo.", this.TaskTemplateInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

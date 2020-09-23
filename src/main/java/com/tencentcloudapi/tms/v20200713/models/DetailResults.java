@@ -30,7 +30,7 @@ public class DetailResults extends AbstractModel{
     private String Label;
 
     /**
-    * 建议值,Block：打击,Review：待复审,Normal：正常
+    * 建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -94,9 +94,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Get 建议值,Block：打击,Review：待复审,Normal：正常
+     * Get 建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
+     * @return Suggestion 建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -104,9 +104,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Set 建议值,Block：打击,Review：待复审,Normal：正常
+     * Set 建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
+     * @param Suggestion 建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
