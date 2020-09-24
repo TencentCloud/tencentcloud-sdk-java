@@ -183,6 +183,46 @@ public class MsInstance extends AbstractModel{
     private String ApplicationType;
 
     /**
+    * 服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceStatus")
+    @Expose
+    private String ServiceStatus;
+
+    /**
+    * 注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegistrationTime")
+    @Expose
+    private Long RegistrationTime;
+
+    /**
+    * 上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastHeartbeatTime")
+    @Expose
+    private Long LastHeartbeatTime;
+
+    /**
+    * 实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegistrationId")
+    @Expose
+    private Long RegistrationId;
+
+    /**
+    * 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HiddenStatus")
+    @Expose
+    private String HiddenStatus;
+
+    /**
      * Get 机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID信息
@@ -583,6 +623,106 @@ public class MsInstance extends AbstractModel{
     }
 
     /**
+     * Get 服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceStatus 服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceStatus() {
+        return this.ServiceStatus;
+    }
+
+    /**
+     * Set 服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceStatus 服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceStatus(String ServiceStatus) {
+        this.ServiceStatus = ServiceStatus;
+    }
+
+    /**
+     * Get 注册时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegistrationTime 注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRegistrationTime() {
+        return this.RegistrationTime;
+    }
+
+    /**
+     * Set 注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegistrationTime 注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegistrationTime(Long RegistrationTime) {
+        this.RegistrationTime = RegistrationTime;
+    }
+
+    /**
+     * Get 上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastHeartbeatTime 上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastHeartbeatTime() {
+        return this.LastHeartbeatTime;
+    }
+
+    /**
+     * Set 上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastHeartbeatTime 上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastHeartbeatTime(Long LastHeartbeatTime) {
+        this.LastHeartbeatTime = LastHeartbeatTime;
+    }
+
+    /**
+     * Get 实例注册id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegistrationId 实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRegistrationId() {
+        return this.RegistrationId;
+    }
+
+    /**
+     * Set 实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegistrationId 实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegistrationId(Long RegistrationId) {
+        this.RegistrationId = RegistrationId;
+    }
+
+    /**
+     * Get 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HiddenStatus 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHiddenStatus() {
+        return this.HiddenStatus;
+    }
+
+    /**
+     * Set 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HiddenStatus 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHiddenStatus(String HiddenStatus) {
+        this.HiddenStatus = HiddenStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -606,6 +746,11 @@ public class MsInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "ApplicationPackageVersion", this.ApplicationPackageVersion);
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+        this.setParamSimple(map, prefix + "RegistrationTime", this.RegistrationTime);
+        this.setParamSimple(map, prefix + "LastHeartbeatTime", this.LastHeartbeatTime);
+        this.setParamSimple(map, prefix + "RegistrationId", this.RegistrationId);
+        this.setParamSimple(map, prefix + "HiddenStatus", this.HiddenStatus);
 
     }
 }

@@ -76,6 +76,24 @@ public class FacefusionClient extends AbstractClient{
     }
 
     /**
+     *人脸融合活动专用版
+     * @param req FaceFusionLiteRequest
+     * @return FaceFusionLiteResponse
+     * @throws TencentCloudSDKException
+     */
+    public FaceFusionLiteResponse FaceFusionLite(FaceFusionLiteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FaceFusionLiteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FaceFusionLiteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FaceFusionLite"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于单脸、多脸融合，用户上传人脸图片，获取与模板融合后的人脸图片。查看 <a href="https://cloud.tencent.com/document/product/670/38247" target="_blank">选脸融合接入指引</a>。
 
 未发布的活动请求频率限制为1次/秒，已发布的活动请求频率限制50次/秒。如有需要提高活动的请求频率限制，请在控制台中申请。

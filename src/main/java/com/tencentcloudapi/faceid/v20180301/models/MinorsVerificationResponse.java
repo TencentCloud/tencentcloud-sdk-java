@@ -27,10 +27,10 @@ public class MinorsVerificationResponse extends AbstractModel{
 收费结果码：
 0: 成年
 -1: 未成年
--2: 未查询到手机号信息
 -3: 姓名和身份证号不一致
 
 不收费结果码：
+-2: 未查询到手机号信息
 -4: 非法身份证号（长度、校验位等不正确）
 -5: 非法姓名（长度、格式等不正确）
 -6: 权威数据源服务异常
@@ -71,10 +71,10 @@ public class MinorsVerificationResponse extends AbstractModel{
 收费结果码：
 0: 成年
 -1: 未成年
--2: 未查询到手机号信息
 -3: 姓名和身份证号不一致
 
 不收费结果码：
+-2: 未查询到手机号信息
 -4: 非法身份证号（长度、校验位等不正确）
 -5: 非法姓名（长度、格式等不正确）
 -6: 权威数据源服务异常
@@ -84,10 +84,10 @@ public class MinorsVerificationResponse extends AbstractModel{
 收费结果码：
 0: 成年
 -1: 未成年
--2: 未查询到手机号信息
 -3: 姓名和身份证号不一致
 
 不收费结果码：
+-2: 未查询到手机号信息
 -4: 非法身份证号（长度、校验位等不正确）
 -5: 非法姓名（长度、格式等不正确）
 -6: 权威数据源服务异常
@@ -103,10 +103,10 @@ public class MinorsVerificationResponse extends AbstractModel{
 收费结果码：
 0: 成年
 -1: 未成年
--2: 未查询到手机号信息
 -3: 姓名和身份证号不一致
 
 不收费结果码：
+-2: 未查询到手机号信息
 -4: 非法身份证号（长度、校验位等不正确）
 -5: 非法姓名（长度、格式等不正确）
 -6: 权威数据源服务异常
@@ -116,10 +116,10 @@ public class MinorsVerificationResponse extends AbstractModel{
 收费结果码：
 0: 成年
 -1: 未成年
--2: 未查询到手机号信息
 -3: 姓名和身份证号不一致
 
 不收费结果码：
+-2: 未查询到手机号信息
 -4: 非法身份证号（长度、校验位等不正确）
 -5: 非法姓名（长度、格式等不正确）
 -6: 权威数据源服务异常

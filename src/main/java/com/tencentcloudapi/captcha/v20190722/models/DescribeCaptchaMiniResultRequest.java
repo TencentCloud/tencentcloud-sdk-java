@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCaptchaMiniResultRequest extends AbstractModel{
 
     /**
-    * 验证码类型，9：滑块验证码
+    * 固定填值：9（滑块验证码）
     */
     @SerializedName("CaptchaType")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeCaptchaMiniResultRequest extends AbstractModel{
     private String UserIp;
 
     /**
-    * 验证码应用ID
+    * 验证码应用APPID
     */
     @SerializedName("CaptchaAppId")
     @Expose
@@ -86,16 +86,16 @@ public class DescribeCaptchaMiniResultRequest extends AbstractModel{
     private String Imei;
 
     /**
-     * Get 验证码类型，9：滑块验证码 
-     * @return CaptchaType 验证码类型，9：滑块验证码
+     * Get 固定填值：9（滑块验证码） 
+     * @return CaptchaType 固定填值：9（滑块验证码）
      */
     public Long getCaptchaType() {
         return this.CaptchaType;
     }
 
     /**
-     * Set 验证码类型，9：滑块验证码
-     * @param CaptchaType 验证码类型，9：滑块验证码
+     * Set 固定填值：9（滑块验证码）
+     * @param CaptchaType 固定填值：9（滑块验证码）
      */
     public void setCaptchaType(Long CaptchaType) {
         this.CaptchaType = CaptchaType;
@@ -134,16 +134,16 @@ public class DescribeCaptchaMiniResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 验证码应用ID 
-     * @return CaptchaAppId 验证码应用ID
+     * Get 验证码应用APPID 
+     * @return CaptchaAppId 验证码应用APPID
      */
     public Long getCaptchaAppId() {
         return this.CaptchaAppId;
     }
 
     /**
-     * Set 验证码应用ID
-     * @param CaptchaAppId 验证码应用ID
+     * Set 验证码应用APPID
+     * @param CaptchaAppId 验证码应用APPID
      */
     public void setCaptchaAppId(Long CaptchaAppId) {
         this.CaptchaAppId = CaptchaAppId;

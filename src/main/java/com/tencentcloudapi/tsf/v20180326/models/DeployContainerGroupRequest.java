@@ -212,6 +212,13 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private ServiceSetting ServiceSetting;
 
     /**
+    * 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+    */
+    @SerializedName("DeployAgent")
+    @Expose
+    private Boolean DeployAgent;
+
+    /**
      * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
@@ -644,6 +651,22 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。 
+     * @return DeployAgent 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+     */
+    public Boolean getDeployAgent() {
+        return this.DeployAgent;
+    }
+
+    /**
+     * Set 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+     * @param DeployAgent 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+     */
+    public void setDeployAgent(Boolean DeployAgent) {
+        this.DeployAgent = DeployAgent;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -674,6 +697,7 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
         this.setParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
+        this.setParamSimple(map, prefix + "DeployAgent", this.DeployAgent);
 
     }
 }

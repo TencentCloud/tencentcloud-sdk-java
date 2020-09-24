@@ -110,6 +110,42 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *告警2.0-告警历史列表
+     * @param req DescribeAlarmHistoriesRequest
+     * @return DescribeAlarmHistoriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmHistoriesResponse DescribeAlarmHistories(DescribeAlarmHistoriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmHistoriesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmHistoriesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAlarmHistories"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取所有名字空间
+     * @param req DescribeAllNamespacesRequest
+     * @return DescribeAllNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllNamespacesResponse DescribeAllNamespaces(DescribeAllNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllNamespacesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllNamespacesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllNamespaces"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取基础指标详情
      * @param req DescribeBaseMetricsRequest
      * @return DescribeBaseMetricsResponse

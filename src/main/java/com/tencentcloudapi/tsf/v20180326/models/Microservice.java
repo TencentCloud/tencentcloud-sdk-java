@@ -79,6 +79,14 @@ public class Microservice extends AbstractModel{
     private Long RunInstanceCount;
 
     /**
+    * 微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CriticalInstanceCount")
+    @Expose
+    private Long CriticalInstanceCount;
+
+    /**
      * Get 微服务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceId 微服务ID
@@ -219,6 +227,26 @@ public class Microservice extends AbstractModel{
     }
 
     /**
+     * Get 微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CriticalInstanceCount 微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCriticalInstanceCount() {
+        return this.CriticalInstanceCount;
+    }
+
+    /**
+     * Set 微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CriticalInstanceCount 微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCriticalInstanceCount(Long CriticalInstanceCount) {
+        this.CriticalInstanceCount = CriticalInstanceCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -229,6 +257,7 @@ public class Microservice extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "RunInstanceCount", this.RunInstanceCount);
+        this.setParamSimple(map, prefix + "CriticalInstanceCount", this.CriticalInstanceCount);
 
     }
 }

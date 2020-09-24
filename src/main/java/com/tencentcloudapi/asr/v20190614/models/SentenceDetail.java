@@ -71,6 +71,14 @@ public class SentenceDetail extends AbstractModel{
     private SentenceWords [] Words;
 
     /**
+    * 单句语速
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpeechSpeed")
+    @Expose
+    private Float SpeechSpeed;
+
+    /**
      * Get 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinalSentence 单句最终识别结果
@@ -191,6 +199,26 @@ public class SentenceDetail extends AbstractModel{
     }
 
     /**
+     * Get 单句语速
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpeechSpeed 单句语速
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getSpeechSpeed() {
+        return this.SpeechSpeed;
+    }
+
+    /**
+     * Set 单句语速
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpeechSpeed 单句语速
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpeechSpeed(Float SpeechSpeed) {
+        this.SpeechSpeed = SpeechSpeed;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +228,7 @@ public class SentenceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "EndMs", this.EndMs);
         this.setParamSimple(map, prefix + "WordsNum", this.WordsNum);
         this.setParamArrayObj(map, prefix + "Words.", this.Words);
+        this.setParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
 
     }
 }

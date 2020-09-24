@@ -64,7 +64,7 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     private String EnvSource;
 
     /**
-    * 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+    * 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
     */
     @SerializedName("Alias")
     @Expose
@@ -85,6 +85,15 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     @SerializedName("ExtensionId")
     @Expose
     private String ExtensionId;
+
+    /**
+    * 订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+    */
+    @SerializedName("Flag")
+    @Expose
+    private String Flag;
 
     /**
      * Get 环境ID，需要系统自动创建环境时，此字段不传 
@@ -191,16 +200,16 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符 
-     * @return Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Get 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符 
+     * @return Alias 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-     * @param Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Set 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
+     * @param Alias 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
@@ -247,6 +256,30 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     }
 
     /**
+     * Get 订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li> 
+     * @return Flag 订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+     */
+    public String getFlag() {
+        return this.Flag;
+    }
+
+    /**
+     * Set 订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+     * @param Flag 订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+     */
+    public void setFlag(String Flag) {
+        this.Flag = Flag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +291,7 @@ public class CreatePostpayPackageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
+        this.setParamSimple(map, prefix + "Flag", this.Flag);
 
     }
 }

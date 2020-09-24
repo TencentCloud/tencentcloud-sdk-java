@@ -163,6 +163,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private Long InitTimeout;
 
     /**
+    * 函数 Tag 参数，以键值对数组形式传入
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -483,6 +490,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get 函数 Tag 参数，以键值对数组形式传入 
+     * @return Tags 函数 Tag 参数，以键值对数组形式传入
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 函数 Tag 参数，以键值对数组形式传入
+     * @param Tags 函数 Tag 参数，以键值对数组形式传入
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -506,6 +529,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -159,6 +159,24 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
+     * @param req DescribeInstancesTrafficPackagesRequest
+     * @return DescribeInstancesTrafficPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackages(DescribeInstancesTrafficPackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesTrafficPackagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesTrafficPackagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstancesTrafficPackages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RebootInstances）用于重启实例。
 
 * 只有状态为 RUNNING 的实例才可以进行此操作。
