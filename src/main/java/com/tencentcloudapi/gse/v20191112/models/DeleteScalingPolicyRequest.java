@@ -30,7 +30,7 @@ public class DeleteScalingPolicyRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 名称
+    * 策略名称
     */
     @SerializedName("Name")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteScalingPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 策略名称 
+     * @return Name 策略名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 策略名称
+     * @param Name 策略名称
      */
     public void setName(String Name) {
         this.Name = Name;

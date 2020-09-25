@@ -37,7 +37,7 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 游戏服务器会话ID
+    * 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
     */
     @SerializedName("GameServerSessionId")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 页偏移，用于查询下一页
+    * 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
     */
     @SerializedName("NextToken")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏服务器会话ID 
-     * @return GameServerSessionId 游戏服务器会话ID
+     * Get 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符 
+     * @return GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set 游戏服务器会话ID
-     * @param GameServerSessionId 游戏服务器会话ID
+     * Set 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
+     * @param GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
@@ -129,16 +129,16 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 页偏移，用于查询下一页 
-     * @return NextToken 页偏移，用于查询下一页
+     * Get 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符 
+     * @return NextToken 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 页偏移，用于查询下一页
-     * @param NextToken 页偏移，用于查询下一页
+     * Set 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param NextToken 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;

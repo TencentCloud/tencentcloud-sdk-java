@@ -56,6 +56,27 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
+
+默认接口请求频率限制：20次/秒。
+
+     * @param req DescribeDomainBaseInfoRequest
+     * @return DescribeDomainBaseInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainBaseInfoResponse DescribeDomainBaseInfo(DescribeDomainBaseInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainBaseInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainBaseInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainBaseInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *按照域名后缀获取对应的价格列表
      * @param req DescribeDomainPriceListRequest
      * @return DescribeDomainPriceListResponse

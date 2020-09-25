@@ -31,7 +31,7 @@ public class DescribeGameServerSessionQueuesResponse extends AbstractModel{
     private GameServerSessionQueue [] GameServerSessionQueues;
 
     /**
-    * 总数
+    * 游戏服务器会话队列总数
     */
     @SerializedName("TotalCount")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeGameServerSessionQueuesResponse extends AbstractModel{
     }
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get 游戏服务器会话队列总数 
+     * @return TotalCount 游戏服务器会话队列总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set 游戏服务器会话队列总数
+     * @param TotalCount 游戏服务器会话队列总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

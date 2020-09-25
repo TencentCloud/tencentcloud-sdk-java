@@ -31,6 +31,14 @@ public class GameServerSessionQueueDestination extends AbstractModel{
     private String DestinationArn;
 
     /**
+    * 服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FleetStatus")
+    @Expose
+    private String FleetStatus;
+
+    /**
      * Get 服务部署组目的的资源描述
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DestinationArn 服务部署组目的的资源描述
@@ -51,10 +59,31 @@ public class GameServerSessionQueueDestination extends AbstractModel{
     }
 
     /**
+     * Get 服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FleetStatus 服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFleetStatus() {
+        return this.FleetStatus;
+    }
+
+    /**
+     * Set 服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FleetStatus 服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFleetStatus(String FleetStatus) {
+        this.FleetStatus = FleetStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DestinationArn", this.DestinationArn);
+        this.setParamSimple(map, prefix + "FleetStatus", this.FleetStatus);
 
     }
 }

@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class AddressChargePrepaid extends AbstractModel{
 
     /**
-    * 购买实例的时长
+    * 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 自动续费标志
+    * 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
     */
-    @SerializedName("RenewFlag")
+    @SerializedName("AutoRenewFlag")
     @Expose
-    private String RenewFlag;
+    private Long AutoRenewFlag;
 
     /**
-     * Get 购买实例的时长 
-     * @return Period 购买实例的时长
+     * Get 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36 
+     * @return Period 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买实例的时长
-     * @param Period 购买实例的时长
+     * Set 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+     * @param Period 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 自动续费标志 
-     * @return RenewFlag 自动续费标志
+     * Get 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费 
+     * @return AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
      */
-    public String getRenewFlag() {
-        return this.RenewFlag;
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标志
-     * @param RenewFlag 自动续费标志
+     * Set 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+     * @param AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
      */
-    public void setRenewFlag(String RenewFlag) {
-        this.RenewFlag = RenewFlag;
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
@@ -73,7 +73,7 @@ public class AddressChargePrepaid extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);
-        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

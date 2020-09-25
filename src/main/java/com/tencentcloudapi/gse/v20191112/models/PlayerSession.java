@@ -45,7 +45,7 @@ public class PlayerSession extends AbstractModel{
     private String FleetId;
 
     /**
-    * 游戏服务器会话ID
+    * 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
     */
     @SerializedName("GameServerSessionId")
     @Expose
@@ -59,7 +59,7 @@ public class PlayerSession extends AbstractModel{
     private String IpAddress;
 
     /**
-    * 玩家相关信息
+    * 玩家自定义数据，最大长度2048个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlayerData")
@@ -67,7 +67,7 @@ public class PlayerSession extends AbstractModel{
     private String PlayerData;
 
     /**
-    * 玩家ID
+    * 玩家ID，最大长度1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlayerId")
@@ -82,14 +82,14 @@ public class PlayerSession extends AbstractModel{
     private String PlayerSessionId;
 
     /**
-    * 端口号
+    * 端口号，最小值不小于1，最大值不超过60000
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 玩家会话的状态
+    * 玩家会话的状态（RESERVED = 1,ACTIVE = 2,COMPLETED = 3,TIMEDOUT = 4）
     */
     @SerializedName("Status")
     @Expose
@@ -156,16 +156,16 @@ public class PlayerSession extends AbstractModel{
     }
 
     /**
-     * Get 游戏服务器会话ID 
-     * @return GameServerSessionId 游戏服务器会话ID
+     * Get 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符 
+     * @return GameServerSessionId 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set 游戏服务器会话ID
-     * @param GameServerSessionId 游戏服务器会话ID
+     * Set 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+     * @param GameServerSessionId 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
@@ -188,9 +188,9 @@ public class PlayerSession extends AbstractModel{
     }
 
     /**
-     * Get 玩家相关信息
+     * Get 玩家自定义数据，最大长度2048个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PlayerData 玩家相关信息
+     * @return PlayerData 玩家自定义数据，最大长度2048个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlayerData() {
@@ -198,9 +198,9 @@ public class PlayerSession extends AbstractModel{
     }
 
     /**
-     * Set 玩家相关信息
+     * Set 玩家自定义数据，最大长度2048个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PlayerData 玩家相关信息
+     * @param PlayerData 玩家自定义数据，最大长度2048个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlayerData(String PlayerData) {
@@ -208,9 +208,9 @@ public class PlayerSession extends AbstractModel{
     }
 
     /**
-     * Get 玩家ID
+     * Get 玩家ID，最大长度1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PlayerId 玩家ID
+     * @return PlayerId 玩家ID，最大长度1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlayerId() {
@@ -218,9 +218,9 @@ public class PlayerSession extends AbstractModel{
     }
 
     /**
-     * Set 玩家ID
+     * Set 玩家ID，最大长度1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PlayerId 玩家ID
+     * @param PlayerId 玩家ID，最大长度1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlayerId(String PlayerId) {
@@ -244,32 +244,32 @@ public class PlayerSession extends AbstractModel{
     }
 
     /**
-     * Get 端口号 
-     * @return Port 端口号
+     * Get 端口号，最小值不小于1，最大值不超过60000 
+     * @return Port 端口号，最小值不小于1，最大值不超过60000
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口号
-     * @param Port 端口号
+     * Set 端口号，最小值不小于1，最大值不超过60000
+     * @param Port 端口号，最小值不小于1，最大值不超过60000
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 玩家会话的状态 
-     * @return Status 玩家会话的状态
+     * Get 玩家会话的状态（RESERVED = 1,ACTIVE = 2,COMPLETED = 3,TIMEDOUT = 4） 
+     * @return Status 玩家会话的状态（RESERVED = 1,ACTIVE = 2,COMPLETED = 3,TIMEDOUT = 4）
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 玩家会话的状态
-     * @param Status 玩家会话的状态
+     * Set 玩家会话的状态（RESERVED = 1,ACTIVE = 2,COMPLETED = 3,TIMEDOUT = 4）
+     * @param Status 玩家会话的状态（RESERVED = 1,ACTIVE = 2,COMPLETED = 3,TIMEDOUT = 4）
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePlayerSessionsRequest extends AbstractModel{
 
     /**
-    * 游戏服务器会话ID
+    * 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
     */
     @SerializedName("GameServerSessionId")
     @Expose
@@ -37,21 +37,21 @@ public class DescribePlayerSessionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 页偏移，用于查询下一页
+    * 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * 玩家ID
+    * 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
     */
     @SerializedName("PlayerId")
     @Expose
     private String PlayerId;
 
     /**
-    * 玩家会话ID
+    * 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
     */
     @SerializedName("PlayerSessionId")
     @Expose
@@ -65,16 +65,16 @@ public class DescribePlayerSessionsRequest extends AbstractModel{
     private String PlayerSessionStatusFilter;
 
     /**
-     * Get 游戏服务器会话ID 
-     * @return GameServerSessionId 游戏服务器会话ID
+     * Get 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符 
+     * @return GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set 游戏服务器会话ID
-     * @param GameServerSessionId 游戏服务器会话ID
+     * Set 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
+     * @param GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
@@ -97,48 +97,48 @@ public class DescribePlayerSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 页偏移，用于查询下一页 
-     * @return NextToken 页偏移，用于查询下一页
+     * Get 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符 
+     * @return NextToken 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set 页偏移，用于查询下一页
-     * @param NextToken 页偏移，用于查询下一页
+     * Set 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param NextToken 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 玩家ID 
-     * @return PlayerId 玩家ID
+     * Get 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符 
+     * @return PlayerId 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public String getPlayerId() {
         return this.PlayerId;
     }
 
     /**
-     * Set 玩家ID
-     * @param PlayerId 玩家ID
+     * Set 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param PlayerId 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public void setPlayerId(String PlayerId) {
         this.PlayerId = PlayerId;
     }
 
     /**
-     * Get 玩家会话ID 
-     * @return PlayerSessionId 玩家会话ID
+     * Get 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符 
+     * @return PlayerSessionId 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public String getPlayerSessionId() {
         return this.PlayerSessionId;
     }
 
     /**
-     * Set 玩家会话ID
-     * @param PlayerSessionId 玩家会话ID
+     * Set 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param PlayerSessionId 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public void setPlayerSessionId(String PlayerSessionId) {
         this.PlayerSessionId = PlayerSessionId;

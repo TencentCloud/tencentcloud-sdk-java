@@ -30,21 +30,21 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 实例ID
+    * CVM实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 结果返回最大数量
+    * 结果返回最大数量，最小值0，最大值100
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回结果偏移
+    * 返回结果偏移，最小值0
     */
     @SerializedName("Limit")
     @Expose
@@ -67,48 +67,48 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get CVM实例ID 
+     * @return InstanceId CVM实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set CVM实例ID
+     * @param InstanceId CVM实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 结果返回最大数量 
-     * @return Offset 结果返回最大数量
+     * Get 结果返回最大数量，最小值0，最大值100 
+     * @return Offset 结果返回最大数量，最小值0，最大值100
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 结果返回最大数量
-     * @param Offset 结果返回最大数量
+     * Set 结果返回最大数量，最小值0，最大值100
+     * @param Offset 结果返回最大数量，最小值0，最大值100
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回结果偏移 
-     * @return Limit 返回结果偏移
+     * Get 返回结果偏移，最小值0 
+     * @return Limit 返回结果偏移，最小值0
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回结果偏移
-     * @param Limit 返回结果偏移
+     * Set 返回结果偏移，最小值0
+     * @param Limit 返回结果偏移，最小值0
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeScalingPoliciesResponse extends AbstractModel{
 
     /**
-    * 动态扩缩容配置
+    * 动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalingPolicies")
@@ -31,7 +31,7 @@ public class DescribeScalingPoliciesResponse extends AbstractModel{
     private ScalingPolicy [] ScalingPolicies;
 
     /**
-    * 返回总数
+    * 动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -46,9 +46,9 @@ public class DescribeScalingPoliciesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 动态扩缩容配置
+     * Get 动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScalingPolicies 动态扩缩容配置
+     * @return ScalingPolicies 动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScalingPolicy [] getScalingPolicies() {
@@ -56,9 +56,9 @@ public class DescribeScalingPoliciesResponse extends AbstractModel{
     }
 
     /**
-     * Set 动态扩缩容配置
+     * Set 动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScalingPolicies 动态扩缩容配置
+     * @param ScalingPolicies 动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalingPolicies(ScalingPolicy [] ScalingPolicies) {
@@ -66,9 +66,9 @@ public class DescribeScalingPoliciesResponse extends AbstractModel{
     }
 
     /**
-     * Get 返回总数
+     * Get 动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 返回总数
+     * @return TotalCount 动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -76,9 +76,9 @@ public class DescribeScalingPoliciesResponse extends AbstractModel{
     }
 
     /**
-     * Set 返回总数
+     * Set 动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 返回总数
+     * @param TotalCount 动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

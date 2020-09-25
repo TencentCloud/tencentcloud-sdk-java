@@ -30,21 +30,21 @@ public class DescribeScalingPoliciesRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 状态过滤条件
+    * 状态过滤条件，取值：ACTIVE表示活跃
     */
     @SerializedName("StatusFilter")
     @Expose
     private String StatusFilter;
 
     /**
-    * 结果返回最大数量
+    * 返回结果偏移，最小值0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回结果偏移
+    * 结果返回最大数量，最小值0，最大值100
     */
     @SerializedName("Limit")
     @Expose
@@ -67,48 +67,48 @@ public class DescribeScalingPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 状态过滤条件 
-     * @return StatusFilter 状态过滤条件
+     * Get 状态过滤条件，取值：ACTIVE表示活跃 
+     * @return StatusFilter 状态过滤条件，取值：ACTIVE表示活跃
      */
     public String getStatusFilter() {
         return this.StatusFilter;
     }
 
     /**
-     * Set 状态过滤条件
-     * @param StatusFilter 状态过滤条件
+     * Set 状态过滤条件，取值：ACTIVE表示活跃
+     * @param StatusFilter 状态过滤条件，取值：ACTIVE表示活跃
      */
     public void setStatusFilter(String StatusFilter) {
         this.StatusFilter = StatusFilter;
     }
 
     /**
-     * Get 结果返回最大数量 
-     * @return Offset 结果返回最大数量
+     * Get 返回结果偏移，最小值0 
+     * @return Offset 返回结果偏移，最小值0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 结果返回最大数量
-     * @param Offset 结果返回最大数量
+     * Set 返回结果偏移，最小值0
+     * @param Offset 返回结果偏移，最小值0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回结果偏移 
-     * @return Limit 返回结果偏移
+     * Get 结果返回最大数量，最小值0，最大值100 
+     * @return Limit 结果返回最大数量，最小值0，最大值100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回结果偏移
-     * @param Limit 返回结果偏移
+     * Set 结果返回最大数量，最小值0，最大值100
+     * @param Limit 结果返回最大数量，最小值0，最大值100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -37,7 +37,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private Long GroupId;
 
     /**
-    * 待删除对象实例的唯一id列表
+    * 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
     */
     @SerializedName("UniqueId")
     @Expose
@@ -83,16 +83,16 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 待删除对象实例的唯一id列表 
-     * @return UniqueId 待删除对象实例的唯一id列表
+     * Get 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到 
+     * @return UniqueId 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
      */
     public String [] getUniqueId() {
         return this.UniqueId;
     }
 
     /**
-     * Set 待删除对象实例的唯一id列表
-     * @param UniqueId 待删除对象实例的唯一id列表
+     * Set 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
+     * @param UniqueId 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
      */
     public void setUniqueId(String [] UniqueId) {
         this.UniqueId = UniqueId;

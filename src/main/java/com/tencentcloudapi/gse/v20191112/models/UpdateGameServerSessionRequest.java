@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class UpdateGameServerSessionRequest extends AbstractModel{
 
     /**
-    * 游戏服务器会话ID
+    * 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
     */
     @SerializedName("GameServerSessionId")
     @Expose
     private String GameServerSessionId;
 
     /**
-    * 最大玩家数量
+    * 最大玩家数量，最小值不小于0
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
     private Long MaximumPlayerSessionCount;
 
     /**
-    * 游戏服务器会话名称
+    * 游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
     */
     @SerializedName("Name")
     @Expose
@@ -58,48 +58,48 @@ public class UpdateGameServerSessionRequest extends AbstractModel{
     private String ProtectionPolicy;
 
     /**
-     * Get 游戏服务器会话ID 
-     * @return GameServerSessionId 游戏服务器会话ID
+     * Get 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符 
+     * @return GameServerSessionId 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set 游戏服务器会话ID
-     * @param GameServerSessionId 游戏服务器会话ID
+     * Set 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+     * @param GameServerSessionId 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
     }
 
     /**
-     * Get 最大玩家数量 
-     * @return MaximumPlayerSessionCount 最大玩家数量
+     * Get 最大玩家数量，最小值不小于0 
+     * @return MaximumPlayerSessionCount 最大玩家数量，最小值不小于0
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set 最大玩家数量
-     * @param MaximumPlayerSessionCount 最大玩家数量
+     * Set 最大玩家数量，最小值不小于0
+     * @param MaximumPlayerSessionCount 最大玩家数量，最小值不小于0
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
     }
 
     /**
-     * Get 游戏服务器会话名称 
-     * @return Name 游戏服务器会话名称
+     * Get 游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符 
+     * @return Name 游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 游戏服务器会话名称
-     * @param Name 游戏服务器会话名称
+     * Set 游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param Name 游戏服务器会话名称，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class PutScalingPolicyRequest extends AbstractModel{
 
     /**
-    * 基于规则的扩缩容配置
+    * 基于规则的扩缩容配置服务部署ID
     */
     @SerializedName("FleetId")
     @Expose
     private String FleetId;
 
     /**
-    * 名称
+    * 策略名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 调整值
+    * 扩缩容调整值
     */
     @SerializedName("ScalingAdjustment")
     @Expose
     private Long ScalingAdjustment;
 
     /**
-    * 调整类型
+    * 扩缩容调整类型
     */
     @SerializedName("ScalingAdjustmentType")
     @Expose
     private String ScalingAdjustmentType;
 
     /**
-    * 指标阈值
+    * 扩缩容指标阈值
     */
     @SerializedName("Threshold")
     @Expose
     private Float Threshold;
 
     /**
-    * 比较符
+    * 策略比较符，取值：>,>=,<,<=
     */
     @SerializedName("ComparisonOperator")
     @Expose
     private String ComparisonOperator;
 
     /**
-    * 时间长度（分钟）
+    * 持续时间长度（分钟）
     */
     @SerializedName("EvaluationPeriods")
     @Expose
@@ -79,7 +79,7 @@ public class PutScalingPolicyRequest extends AbstractModel{
     private String MetricName;
 
     /**
-    * 策略类型
+    * 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
     */
     @SerializedName("PolicyType")
     @Expose
@@ -93,112 +93,112 @@ public class PutScalingPolicyRequest extends AbstractModel{
     private TargetConfiguration TargetConfiguration;
 
     /**
-     * Get 基于规则的扩缩容配置 
-     * @return FleetId 基于规则的扩缩容配置
+     * Get 基于规则的扩缩容配置服务部署ID 
+     * @return FleetId 基于规则的扩缩容配置服务部署ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 基于规则的扩缩容配置
-     * @param FleetId 基于规则的扩缩容配置
+     * Set 基于规则的扩缩容配置服务部署ID
+     * @param FleetId 基于规则的扩缩容配置服务部署ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 策略名称 
+     * @return Name 策略名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 策略名称
+     * @param Name 策略名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 调整值 
-     * @return ScalingAdjustment 调整值
+     * Get 扩缩容调整值 
+     * @return ScalingAdjustment 扩缩容调整值
      */
     public Long getScalingAdjustment() {
         return this.ScalingAdjustment;
     }
 
     /**
-     * Set 调整值
-     * @param ScalingAdjustment 调整值
+     * Set 扩缩容调整值
+     * @param ScalingAdjustment 扩缩容调整值
      */
     public void setScalingAdjustment(Long ScalingAdjustment) {
         this.ScalingAdjustment = ScalingAdjustment;
     }
 
     /**
-     * Get 调整类型 
-     * @return ScalingAdjustmentType 调整类型
+     * Get 扩缩容调整类型 
+     * @return ScalingAdjustmentType 扩缩容调整类型
      */
     public String getScalingAdjustmentType() {
         return this.ScalingAdjustmentType;
     }
 
     /**
-     * Set 调整类型
-     * @param ScalingAdjustmentType 调整类型
+     * Set 扩缩容调整类型
+     * @param ScalingAdjustmentType 扩缩容调整类型
      */
     public void setScalingAdjustmentType(String ScalingAdjustmentType) {
         this.ScalingAdjustmentType = ScalingAdjustmentType;
     }
 
     /**
-     * Get 指标阈值 
-     * @return Threshold 指标阈值
+     * Get 扩缩容指标阈值 
+     * @return Threshold 扩缩容指标阈值
      */
     public Float getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set 指标阈值
-     * @param Threshold 指标阈值
+     * Set 扩缩容指标阈值
+     * @param Threshold 扩缩容指标阈值
      */
     public void setThreshold(Float Threshold) {
         this.Threshold = Threshold;
     }
 
     /**
-     * Get 比较符 
-     * @return ComparisonOperator 比较符
+     * Get 策略比较符，取值：>,>=,<,<= 
+     * @return ComparisonOperator 策略比较符，取值：>,>=,<,<=
      */
     public String getComparisonOperator() {
         return this.ComparisonOperator;
     }
 
     /**
-     * Set 比较符
-     * @param ComparisonOperator 比较符
+     * Set 策略比较符，取值：>,>=,<,<=
+     * @param ComparisonOperator 策略比较符，取值：>,>=,<,<=
      */
     public void setComparisonOperator(String ComparisonOperator) {
         this.ComparisonOperator = ComparisonOperator;
     }
 
     /**
-     * Get 时间长度（分钟） 
-     * @return EvaluationPeriods 时间长度（分钟）
+     * Get 持续时间长度（分钟） 
+     * @return EvaluationPeriods 持续时间长度（分钟）
      */
     public Long getEvaluationPeriods() {
         return this.EvaluationPeriods;
     }
 
     /**
-     * Set 时间长度（分钟）
-     * @param EvaluationPeriods 时间长度（分钟）
+     * Set 持续时间长度（分钟）
+     * @param EvaluationPeriods 持续时间长度（分钟）
      */
     public void setEvaluationPeriods(Long EvaluationPeriods) {
         this.EvaluationPeriods = EvaluationPeriods;
@@ -221,16 +221,16 @@ public class PutScalingPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略类型 
-     * @return PolicyType 策略类型
+     * Get 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略 
+     * @return PolicyType 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set 策略类型
-     * @param PolicyType 策略类型
+     * Set 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
+     * @param PolicyType 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateGameServerSessionRequest extends AbstractModel{
 
     /**
-    * 最大玩家数量
+    * 最大玩家数量，最小值不小于0
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
@@ -37,7 +37,7 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     private String AliasId;
 
     /**
-    * 创建者ID
+    * 创建者ID，最大长度不超过1024个ASCII字符
     */
     @SerializedName("CreatorId")
     @Expose
@@ -51,51 +51,51 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 游戏属性
+    * 游戏属性，最大长度不超过16组
     */
     @SerializedName("GameProperties")
     @Expose
     private GameProperty [] GameProperties;
 
     /**
-    * 游戏服务器会话属性详情
+    * 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
     */
     @SerializedName("GameServerSessionData")
     @Expose
     private String GameServerSessionData;
 
     /**
-    * 游戏服务器会话自定义ID
+    * 游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
     */
     @SerializedName("GameServerSessionId")
     @Expose
     private String GameServerSessionId;
 
     /**
-    * 幂等token
+    * 幂等token，最大长度不超过48个ASCII字符
     */
     @SerializedName("IdempotencyToken")
     @Expose
     private String IdempotencyToken;
 
     /**
-    * 游戏服务器会话名称
+    * 游戏服务器会话名称，最大长度不超过1024个ASCII字符
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 最大玩家数量 
-     * @return MaximumPlayerSessionCount 最大玩家数量
+     * Get 最大玩家数量，最小值不小于0 
+     * @return MaximumPlayerSessionCount 最大玩家数量，最小值不小于0
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set 最大玩家数量
-     * @param MaximumPlayerSessionCount 最大玩家数量
+     * Set 最大玩家数量，最小值不小于0
+     * @param MaximumPlayerSessionCount 最大玩家数量，最小值不小于0
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
@@ -118,16 +118,16 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 创建者ID 
-     * @return CreatorId 创建者ID
+     * Get 创建者ID，最大长度不超过1024个ASCII字符 
+     * @return CreatorId 创建者ID，最大长度不超过1024个ASCII字符
      */
     public String getCreatorId() {
         return this.CreatorId;
     }
 
     /**
-     * Set 创建者ID
-     * @param CreatorId 创建者ID
+     * Set 创建者ID，最大长度不超过1024个ASCII字符
+     * @param CreatorId 创建者ID，最大长度不超过1024个ASCII字符
      */
     public void setCreatorId(String CreatorId) {
         this.CreatorId = CreatorId;
@@ -150,80 +150,80 @@ public class CreateGameServerSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏属性 
-     * @return GameProperties 游戏属性
+     * Get 游戏属性，最大长度不超过16组 
+     * @return GameProperties 游戏属性，最大长度不超过16组
      */
     public GameProperty [] getGameProperties() {
         return this.GameProperties;
     }
 
     /**
-     * Set 游戏属性
-     * @param GameProperties 游戏属性
+     * Set 游戏属性，最大长度不超过16组
+     * @param GameProperties 游戏属性，最大长度不超过16组
      */
     public void setGameProperties(GameProperty [] GameProperties) {
         this.GameProperties = GameProperties;
     }
 
     /**
-     * Get 游戏服务器会话属性详情 
-     * @return GameServerSessionData 游戏服务器会话属性详情
+     * Get 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符 
+     * @return GameServerSessionData 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
      */
     public String getGameServerSessionData() {
         return this.GameServerSessionData;
     }
 
     /**
-     * Set 游戏服务器会话属性详情
-     * @param GameServerSessionData 游戏服务器会话属性详情
+     * Set 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
+     * @param GameServerSessionData 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
      */
     public void setGameServerSessionData(String GameServerSessionData) {
         this.GameServerSessionData = GameServerSessionData;
     }
 
     /**
-     * Get 游戏服务器会话自定义ID 
-     * @return GameServerSessionId 游戏服务器会话自定义ID
+     * Get 游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符 
+     * @return GameServerSessionId 游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set 游戏服务器会话自定义ID
-     * @param GameServerSessionId 游戏服务器会话自定义ID
+     * Set 游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
+     * @param GameServerSessionId 游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
     }
 
     /**
-     * Get 幂等token 
-     * @return IdempotencyToken 幂等token
+     * Get 幂等token，最大长度不超过48个ASCII字符 
+     * @return IdempotencyToken 幂等token，最大长度不超过48个ASCII字符
      */
     public String getIdempotencyToken() {
         return this.IdempotencyToken;
     }
 
     /**
-     * Set 幂等token
-     * @param IdempotencyToken 幂等token
+     * Set 幂等token，最大长度不超过48个ASCII字符
+     * @param IdempotencyToken 幂等token，最大长度不超过48个ASCII字符
      */
     public void setIdempotencyToken(String IdempotencyToken) {
         this.IdempotencyToken = IdempotencyToken;
     }
 
     /**
-     * Get 游戏服务器会话名称 
-     * @return Name 游戏服务器会话名称
+     * Get 游戏服务器会话名称，最大长度不超过1024个ASCII字符 
+     * @return Name 游戏服务器会话名称，最大长度不超过1024个ASCII字符
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 游戏服务器会话名称
-     * @param Name 游戏服务器会话名称
+     * Set 游戏服务器会话名称，最大长度不超过1024个ASCII字符
+     * @param Name 游戏服务器会话名称，最大长度不超过1024个ASCII字符
      */
     public void setName(String Name) {
         this.Name = Name;

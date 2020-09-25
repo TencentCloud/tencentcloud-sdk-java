@@ -72,6 +72,13 @@ public class ModifyGroupOffsetsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
+    */
+    @SerializedName("Partitions")
+    @Expose
+    private Long [] Partitions;
+
+    /**
      * Get kafka实例id 
      * @return InstanceId kafka实例id
      */
@@ -184,6 +191,22 @@ public class ModifyGroupOffsetsRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。 
+     * @return Partitions 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
+     */
+    public Long [] getPartitions() {
+        return this.Partitions;
+    }
+
+    /**
+     * Set 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
+     * @param Partitions 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
+     */
+    public void setPartitions(Long [] Partitions) {
+        this.Partitions = Partitions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyGroupOffsetsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Shift", this.Shift);
         this.setParamSimple(map, prefix + "ShiftTimestamp", this.ShiftTimestamp);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArraySimple(map, prefix + "Partitions.", this.Partitions);
 
     }
 }

@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeGameServerSessionQueuesRequest extends AbstractModel{
 
     /**
-    * 游戏服务器会话队列数组
+    * 游戏服务器会话队列名称数组，单个名字长度1~128
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 要返回的最大结果数
+    * 结果返回最大数量，最小值0，最大值100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移
+    * 返回结果偏移，最小值0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 游戏服务器会话队列数组 
-     * @return Names 游戏服务器会话队列数组
+     * Get 游戏服务器会话队列名称数组，单个名字长度1~128 
+     * @return Names 游戏服务器会话队列名称数组，单个名字长度1~128
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 游戏服务器会话队列数组
-     * @param Names 游戏服务器会话队列数组
+     * Set 游戏服务器会话队列名称数组，单个名字长度1~128
+     * @param Names 游戏服务器会话队列名称数组，单个名字长度1~128
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get 要返回的最大结果数 
-     * @return Limit 要返回的最大结果数
+     * Get 结果返回最大数量，最小值0，最大值100 
+     * @return Limit 结果返回最大数量，最小值0，最大值100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 要返回的最大结果数
-     * @param Limit 要返回的最大结果数
+     * Set 结果返回最大数量，最小值0，最大值100
+     * @param Limit 结果返回最大数量，最小值0，最大值100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移 
-     * @return Offset 偏移
+     * Get 返回结果偏移，最小值0 
+     * @return Offset 返回结果偏移，最小值0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移
-     * @param Offset 偏移
+     * Set 返回结果偏移，最小值0
+     * @param Offset 返回结果偏移，最小值0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

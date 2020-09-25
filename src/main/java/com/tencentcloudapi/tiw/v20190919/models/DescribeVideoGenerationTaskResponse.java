@@ -44,7 +44,7 @@ public class DescribeVideoGenerationTaskResponse extends AbstractModel{
     private String TaskId;
 
     /**
-    * 录制视频生成进度（0-100，100表示视频生成完成 ）
+    * 已废弃
     */
     @SerializedName("Progress")
     @Expose
@@ -68,11 +68,18 @@ public class DescribeVideoGenerationTaskResponse extends AbstractModel{
     private Long TotalTime;
 
     /**
-    * 录制视频生成列表
+    * 已废弃，请使用`VideoInfoList`参数
     */
     @SerializedName("VideoInfos")
     @Expose
     private VideoInfo VideoInfos;
+
+    /**
+    * 录制视频生成视频列表
+    */
+    @SerializedName("VideoInfoList")
+    @Expose
+    private VideoInfo [] VideoInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -130,16 +137,16 @@ public class DescribeVideoGenerationTaskResponse extends AbstractModel{
     }
 
     /**
-     * Get 录制视频生成进度（0-100，100表示视频生成完成 ） 
-     * @return Progress 录制视频生成进度（0-100，100表示视频生成完成 ）
+     * Get 已废弃 
+     * @return Progress 已废弃
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 录制视频生成进度（0-100，100表示视频生成完成 ）
-     * @param Progress 录制视频生成进度（0-100，100表示视频生成完成 ）
+     * Set 已废弃
+     * @param Progress 已废弃
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -190,19 +197,35 @@ public class DescribeVideoGenerationTaskResponse extends AbstractModel{
     }
 
     /**
-     * Get 录制视频生成列表 
-     * @return VideoInfos 录制视频生成列表
+     * Get 已废弃，请使用`VideoInfoList`参数 
+     * @return VideoInfos 已废弃，请使用`VideoInfoList`参数
      */
     public VideoInfo getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set 录制视频生成列表
-     * @param VideoInfos 录制视频生成列表
+     * Set 已废弃，请使用`VideoInfoList`参数
+     * @param VideoInfos 已废弃，请使用`VideoInfoList`参数
      */
     public void setVideoInfos(VideoInfo VideoInfos) {
         this.VideoInfos = VideoInfos;
+    }
+
+    /**
+     * Get 录制视频生成视频列表 
+     * @return VideoInfoList 录制视频生成视频列表
+     */
+    public VideoInfo [] getVideoInfoList() {
+        return this.VideoInfoList;
+    }
+
+    /**
+     * Set 录制视频生成视频列表
+     * @param VideoInfoList 录制视频生成视频列表
+     */
+    public void setVideoInfoList(VideoInfo [] VideoInfoList) {
+        this.VideoInfoList = VideoInfoList;
     }
 
     /**
@@ -232,6 +255,7 @@ public class DescribeVideoGenerationTaskResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
         this.setParamObj(map, prefix + "VideoInfos.", this.VideoInfos);
+        this.setParamArrayObj(map, prefix + "VideoInfoList.", this.VideoInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

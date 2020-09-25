@@ -855,6 +855,25 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     ** 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
+
+     * @param req DescribeEventsStateRequest
+     * @return DescribeEventsStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventsStateResponse DescribeEventsState(DescribeEventsStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventsStateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventsStateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEventsState"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询雪碧图模板，支持根据条件，分页查询。
      * @param req DescribeImageSpriteTemplatesRequest
      * @return DescribeImageSpriteTemplatesResponse

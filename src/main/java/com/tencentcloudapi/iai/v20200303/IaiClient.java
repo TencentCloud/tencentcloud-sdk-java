@@ -697,6 +697,9 @@ public class IaiClient extends AbstractClient{
 
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+
+>     
+- 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
      * @param req SearchFacesRequest
      * @return SearchFacesResponse
      * @throws TencentCloudSDKException
@@ -727,6 +730,8 @@ public class IaiClient extends AbstractClient{
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
 
+>     
+- 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
 
      * @param req SearchFacesReturnsByGroupRequest
      * @return SearchFacesReturnsByGroupResponse

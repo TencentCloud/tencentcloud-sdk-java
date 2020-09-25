@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class GameProperty extends AbstractModel{
 
     /**
-    * 属性名称
+    * 属性名称，最大长度不超过32个ASCII字符
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 属性值
+    * 属性值，最大长度不超过96个ASCII字符
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 属性名称 
-     * @return Key 属性名称
+     * Get 属性名称，最大长度不超过32个ASCII字符 
+     * @return Key 属性名称，最大长度不超过32个ASCII字符
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 属性名称
-     * @param Key 属性名称
+     * Set 属性名称，最大长度不超过32个ASCII字符
+     * @param Key 属性名称，最大长度不超过32个ASCII字符
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 属性值 
-     * @return Value 属性值
+     * Get 属性值，最大长度不超过96个ASCII字符 
+     * @return Value 属性值，最大长度不超过96个ASCII字符
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 属性值
-     * @param Value 属性值
+     * Set 属性值，最大长度不超过96个ASCII字符
+     * @param Value 属性值，最大长度不超过96个ASCII字符
      */
     public void setValue(String Value) {
         this.Value = Value;
