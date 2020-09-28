@@ -37,7 +37,7 @@ public class GetFunctionLogsResponse extends AbstractModel{
     private FunctionLog [] Data;
 
     /**
-    * 日志服务分页参数
+    * 该字段已下线
     */
     @SerializedName("SearchContext")
     @Expose
@@ -83,16 +83,16 @@ public class GetFunctionLogsResponse extends AbstractModel{
     }
 
     /**
-     * Get 日志服务分页参数 
-     * @return SearchContext 日志服务分页参数
+     * Get 该字段已下线 
+     * @return SearchContext 该字段已下线
      */
     public LogSearchContext getSearchContext() {
         return this.SearchContext;
     }
 
     /**
-     * Set 日志服务分页参数
-     * @param SearchContext 日志服务分页参数
+     * Set 该字段已下线
+     * @param SearchContext 该字段已下线
      */
     public void setSearchContext(LogSearchContext SearchContext) {
         this.SearchContext = SearchContext;

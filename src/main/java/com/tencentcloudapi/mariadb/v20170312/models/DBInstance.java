@@ -355,6 +355,30 @@ public class DBInstance extends AbstractModel{
     private String DbVersion;
 
     /**
+    * DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DcnFlag")
+    @Expose
+    private Long DcnFlag;
+
+    /**
+    * DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DcnStatus")
+    @Expose
+    private Long DcnStatus;
+
+    /**
+    * DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DcnDstNum")
+    @Expose
+    private Long DcnDstNum;
+
+    /**
      * Get 实例 ID，唯一标识一个 TDSQL 实例 
      * @return InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      */
@@ -1131,6 +1155,66 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDcnFlag() {
+        return this.DcnFlag;
+    }
+
+    /**
+     * Set DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDcnFlag(Long DcnFlag) {
+        this.DcnFlag = DcnFlag;
+    }
+
+    /**
+     * Get DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDcnStatus() {
+        return this.DcnStatus;
+    }
+
+    /**
+     * Set DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDcnStatus(Long DcnStatus) {
+        this.DcnStatus = DcnStatus;
+    }
+
+    /**
+     * Get DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DcnDstNum DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDcnDstNum() {
+        return this.DcnDstNum;
+    }
+
+    /**
+     * Set DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DcnDstNum DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDcnDstNum(Long DcnDstNum) {
+        this.DcnDstNum = DcnDstNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1180,6 +1264,9 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "WanStatusIpv6", this.WanStatusIpv6);
         this.setParamSimple(map, prefix + "DbEngine", this.DbEngine);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
+        this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+        this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+        this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
 
     }
 }

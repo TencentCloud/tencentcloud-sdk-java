@@ -507,6 +507,24 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *删除任务
+     * @param req DeleteTaskRequest
+     * @return DeleteTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *部署容器应用
      * @param req DeployContainerGroupRequest
      * @return DeployContainerGroupResponse

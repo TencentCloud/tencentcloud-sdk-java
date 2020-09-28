@@ -101,7 +101,7 @@ public class CreateListenerRequest extends AbstractModel{
     private String SessionType;
 
     /**
-    * 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+    * 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
     */
     @SerializedName("KeepaliveEnable")
     @Expose
@@ -288,16 +288,16 @@ public class CreateListenerRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器 
-     * @return KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+     * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭 
+     * @return KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
      */
     public Long getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
-     * @param KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+     * Set 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
+     * @param KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;

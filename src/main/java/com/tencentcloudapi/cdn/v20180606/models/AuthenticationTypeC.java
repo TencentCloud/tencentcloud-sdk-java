@@ -56,6 +56,16 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
     private String FilterType;
 
     /**
+    * 时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeFormat")
+    @Expose
+    private String TimeFormat;
+
+    /**
      * Get 计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -140,6 +150,34 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
     }
 
     /**
+     * Get 时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimeFormat 时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTimeFormat() {
+        return this.TimeFormat;
+    }
+
+    /**
+     * Set 时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeFormat 时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeFormat(String TimeFormat) {
+        this.TimeFormat = TimeFormat;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +185,7 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
+        this.setParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
 
     }
 }

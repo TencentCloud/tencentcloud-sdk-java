@@ -135,6 +135,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] TagKeys;
 
     /**
+    * 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+    */
+    @SerializedName("FilterInstanceType")
+    @Expose
+    private String FilterInstanceType;
+
+    /**
      * Get 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。 
      * @return InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
      */
@@ -391,6 +398,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔 
+     * @return FilterInstanceType 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+     */
+    public String getFilterInstanceType() {
+        return this.FilterInstanceType;
+    }
+
+    /**
+     * Set 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+     * @param FilterInstanceType 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+     */
+    public void setFilterInstanceType(String FilterInstanceType) {
+        this.FilterInstanceType = FilterInstanceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
 
     }
 }

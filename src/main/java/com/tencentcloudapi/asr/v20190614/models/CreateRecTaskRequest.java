@@ -48,7 +48,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ChannelNum;
 
     /**
-    * 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
+    * 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
     */
     @SerializedName("ResTextFormat")
     @Expose
@@ -223,16 +223,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。 
-     * @return ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
+     * Get 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点） 
+     * @return ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
      */
     public Long getResTextFormat() {
         return this.ResTextFormat;
     }
 
     /**
-     * Set 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
-     * @param ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
+     * Set 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
+     * @param ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
      */
     public void setResTextFormat(Long ResTextFormat) {
         this.ResTextFormat = ResTextFormat;

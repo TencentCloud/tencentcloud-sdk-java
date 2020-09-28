@@ -51,6 +51,13 @@ public class DeviceDiskInfo extends AbstractModel{
     private Long [] Write;
 
     /**
+    * 磁盘空间容量，每两个一组，第一个为已使用容量，第二个为磁盘总容量
+    */
+    @SerializedName("CapacityRatio")
+    @Expose
+    private Long [] CapacityRatio;
+
+    /**
      * Get 平均每秒有百分之几的时间用于IO操作 
      * @return IoRatioPerSec 平均每秒有百分之几的时间用于IO操作
      */
@@ -115,6 +122,22 @@ public class DeviceDiskInfo extends AbstractModel{
     }
 
     /**
+     * Get 磁盘空间容量，每两个一组，第一个为已使用容量，第二个为磁盘总容量 
+     * @return CapacityRatio 磁盘空间容量，每两个一组，第一个为已使用容量，第二个为磁盘总容量
+     */
+    public Long [] getCapacityRatio() {
+        return this.CapacityRatio;
+    }
+
+    /**
+     * Set 磁盘空间容量，每两个一组，第一个为已使用容量，第二个为磁盘总容量
+     * @param CapacityRatio 磁盘空间容量，每两个一组，第一个为已使用容量，第二个为磁盘总容量
+     */
+    public void setCapacityRatio(Long [] CapacityRatio) {
+        this.CapacityRatio = CapacityRatio;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DeviceDiskInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "IoWaitTime.", this.IoWaitTime);
         this.setParamArraySimple(map, prefix + "Read.", this.Read);
         this.setParamArraySimple(map, prefix + "Write.", this.Write);
+        this.setParamArraySimple(map, prefix + "CapacityRatio.", this.CapacityRatio);
 
     }
 }

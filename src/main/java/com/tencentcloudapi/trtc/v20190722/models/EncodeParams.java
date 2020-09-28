@@ -65,7 +65,7 @@ public class EncodeParams extends AbstractModel{
     private Long VideoBitrate;
 
     /**
-    * 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+    * 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
     */
     @SerializedName("VideoFramerate")
     @Expose
@@ -189,16 +189,16 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。 
-     * @return VideoFramerate 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+     * Get 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。 
+     * @return VideoFramerate 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
      */
     public Long getVideoFramerate() {
         return this.VideoFramerate;
     }
 
     /**
-     * Set 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
-     * @param VideoFramerate 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+     * Set 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
+     * @param VideoFramerate 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
      */
     public void setVideoFramerate(Long VideoFramerate) {
         this.VideoFramerate = VideoFramerate;

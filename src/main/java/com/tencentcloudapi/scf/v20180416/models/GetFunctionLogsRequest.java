@@ -100,7 +100,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+    * 该字段已下线
     */
     @SerializedName("SearchContext")
     @Expose
@@ -283,16 +283,16 @@ public class GetFunctionLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写 
-     * @return SearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * Get 该字段已下线 
+     * @return SearchContext 该字段已下线
      */
     public LogSearchContext getSearchContext() {
         return this.SearchContext;
     }
 
     /**
-     * Set 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
-     * @param SearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * Set 该字段已下线
+     * @param SearchContext 该字段已下线
      */
     public void setSearchContext(LogSearchContext SearchContext) {
         this.SearchContext = SearchContext;

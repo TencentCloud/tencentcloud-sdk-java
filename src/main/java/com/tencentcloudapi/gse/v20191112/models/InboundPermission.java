@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InboundPermission extends AbstractModel{
 
     /**
-    * 起始端口号
+    * 起始端口号，最小值1025
     */
     @SerializedName("FromPort")
     @Expose
@@ -44,23 +44,23 @@ public class InboundPermission extends AbstractModel{
     private String Protocol;
 
     /**
-    * 终止端口号
+    * 终止端口号，最大值60000
     */
     @SerializedName("ToPort")
     @Expose
     private Long ToPort;
 
     /**
-     * Get 起始端口号 
-     * @return FromPort 起始端口号
+     * Get 起始端口号，最小值1025 
+     * @return FromPort 起始端口号，最小值1025
      */
     public Long getFromPort() {
         return this.FromPort;
     }
 
     /**
-     * Set 起始端口号
-     * @param FromPort 起始端口号
+     * Set 起始端口号，最小值1025
+     * @param FromPort 起始端口号，最小值1025
      */
     public void setFromPort(Long FromPort) {
         this.FromPort = FromPort;
@@ -99,16 +99,16 @@ public class InboundPermission extends AbstractModel{
     }
 
     /**
-     * Get 终止端口号 
-     * @return ToPort 终止端口号
+     * Get 终止端口号，最大值60000 
+     * @return ToPort 终止端口号，最大值60000
      */
     public Long getToPort() {
         return this.ToPort;
     }
 
     /**
-     * Set 终止端口号
-     * @param ToPort 终止端口号
+     * Set 终止端口号，最大值60000
+     * @param ToPort 终止端口号，最大值60000
      */
     public void setToPort(Long ToPort) {
         this.ToPort = ToPort;

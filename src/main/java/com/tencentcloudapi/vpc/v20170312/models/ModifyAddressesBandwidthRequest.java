@@ -37,14 +37,14 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 包月带宽起始时间
+    * 包月带宽起始时间(已废弃，输入无效)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 包月带宽结束时间
+    * 包月带宽结束时间(已废弃，输入无效)
     */
     @SerializedName("EndTime")
     @Expose
@@ -83,32 +83,32 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     }
 
     /**
-     * Get 包月带宽起始时间 
-     * @return StartTime 包月带宽起始时间
+     * Get 包月带宽起始时间(已废弃，输入无效) 
+     * @return StartTime 包月带宽起始时间(已废弃，输入无效)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 包月带宽起始时间
-     * @param StartTime 包月带宽起始时间
+     * Set 包月带宽起始时间(已废弃，输入无效)
+     * @param StartTime 包月带宽起始时间(已废弃，输入无效)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 包月带宽结束时间 
-     * @return EndTime 包月带宽结束时间
+     * Get 包月带宽结束时间(已废弃，输入无效) 
+     * @return EndTime 包月带宽结束时间(已废弃，输入无效)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 包月带宽结束时间
-     * @param EndTime 包月带宽结束时间
+     * Set 包月带宽结束时间(已废弃，输入无效)
+     * @param EndTime 包月带宽结束时间(已废弃，输入无效)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

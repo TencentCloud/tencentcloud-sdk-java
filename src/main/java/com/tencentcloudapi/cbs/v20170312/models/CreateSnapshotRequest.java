@@ -37,6 +37,13 @@ public class CreateSnapshotRequest extends AbstractModel{
     private String SnapshotName;
 
     /**
+    * 快照的到期时间，到期后该快照将会自动删除
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private String Deadline;
+
+    /**
      * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
      * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
@@ -69,11 +76,28 @@ public class CreateSnapshotRequest extends AbstractModel{
     }
 
     /**
+     * Get 快照的到期时间，到期后该快照将会自动删除 
+     * @return Deadline 快照的到期时间，到期后该快照将会自动删除
+     */
+    public String getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 快照的到期时间，到期后该快照将会自动删除
+     * @param Deadline 快照的到期时间，到期后该快照将会自动删除
+     */
+    public void setDeadline(String Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }
