@@ -90,8 +90,6 @@ public class ClientProfile {
 
   /**
    * Get the flag of whether payload is ignored.
-   *
-   * @return
    */
   public boolean isUnsignedPayload() {
     return this.unsignedPayload;

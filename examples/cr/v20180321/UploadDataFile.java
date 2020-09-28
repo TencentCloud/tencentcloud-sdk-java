@@ -21,7 +21,7 @@ public class UploadDataFile {
             udfreq.setModule("Data");
             udfreq.setOperation("Upload");
             udfreq.setFileName("中文文件名unicodeFileName.xlsx");
-            udfreq.setFile(Files.readAllBytes(Paths.get("E:\\data.xlsx"));
+            udfreq.setFile(Files.readAllBytes(Paths.get("E:\\data.xlsx")));
             UploadDataFileResponse udfresp = crclient.UploadDataFile(udfreq);
 
             System.out.println(UploadDataFileResponse.toJsonString(udfresp));
