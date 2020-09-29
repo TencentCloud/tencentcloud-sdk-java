@@ -44,7 +44,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private String BandwidthPackageName;
 
     /**
-    * 带宽包数量(非上移账户只能填1)
+    * 带宽包数量(传统账户类型只能填1)
     */
     @SerializedName("BandwidthPackageCount")
     @Expose
@@ -120,16 +120,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get 带宽包数量(非上移账户只能填1) 
-     * @return BandwidthPackageCount 带宽包数量(非上移账户只能填1)
+     * Get 带宽包数量(传统账户类型只能填1) 
+     * @return BandwidthPackageCount 带宽包数量(传统账户类型只能填1)
      */
     public Long getBandwidthPackageCount() {
         return this.BandwidthPackageCount;
     }
 
     /**
-     * Set 带宽包数量(非上移账户只能填1)
-     * @param BandwidthPackageCount 带宽包数量(非上移账户只能填1)
+     * Set 带宽包数量(传统账户类型只能填1)
+     * @param BandwidthPackageCount 带宽包数量(传统账户类型只能填1)
      */
     public void setBandwidthPackageCount(Long BandwidthPackageCount) {
         this.BandwidthPackageCount = BandwidthPackageCount;

@@ -58,6 +58,13 @@ public class PhoneVerificationRequest extends AbstractModel{
     private String [] EncryptList;
 
     /**
+    * 有加密需求的用户，传入CBC加密的初试向量
+    */
+    @SerializedName("Iv")
+    @Expose
+    private String Iv;
+
+    /**
      * Get 身份证号 
      * @return IdCard 身份证号
      */
@@ -138,6 +145,22 @@ public class PhoneVerificationRequest extends AbstractModel{
     }
 
     /**
+     * Get 有加密需求的用户，传入CBC加密的初试向量 
+     * @return Iv 有加密需求的用户，传入CBC加密的初试向量
+     */
+    public String getIv() {
+        return this.Iv;
+    }
+
+    /**
+     * Set 有加密需求的用户，传入CBC加密的初试向量
+     * @param Iv 有加密需求的用户，传入CBC加密的初试向量
+     */
+    public void setIv(String Iv) {
+        this.Iv = Iv;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class PhoneVerificationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
         this.setParamArraySimple(map, prefix + "EncryptList.", this.EncryptList);
+        this.setParamSimple(map, prefix + "Iv", this.Iv);
 
     }
 }

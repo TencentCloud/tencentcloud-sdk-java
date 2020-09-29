@@ -231,6 +231,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
+     * @param req CreateImageProcessingTemplateRequest
+     * @return CreateImageProcessingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(CreateImageProcessingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageProcessingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateImageProcessingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义雪碧图模板，数量上限：16。
      * @param req CreateImageSpriteTemplateRequest
      * @return CreateImageSpriteTemplateResponse
@@ -515,6 +533,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义图片处理模板。
+     * @param req DeleteImageProcessingTemplateRequest
+     * @return DeleteImageProcessingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(DeleteImageProcessingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageProcessingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteImageProcessingTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -867,6 +903,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEventsStateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeEventsState"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取图片处理模板列表，支持根据条件，分页查询。
+     * @param req DescribeImageProcessingTemplatesRequest
+     * @return DescribeImageProcessingTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplates(DescribeImageProcessingTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImageProcessingTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

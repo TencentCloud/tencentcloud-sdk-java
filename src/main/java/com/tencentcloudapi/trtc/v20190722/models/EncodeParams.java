@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EncodeParams extends AbstractModel{
 
     /**
-    * 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]。
+    * 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
     */
     @SerializedName("AudioSampleRate")
     @Expose
@@ -37,7 +37,7 @@ public class EncodeParams extends AbstractModel{
     private Long AudioBitrate;
 
     /**
-    * 混流-输出流音频声道数，取值范围[1,2]。
+    * 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
     */
     @SerializedName("AudioChannels")
     @Expose
@@ -65,7 +65,7 @@ public class EncodeParams extends AbstractModel{
     private Long VideoBitrate;
 
     /**
-    * 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
+    * 混流-输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
     */
     @SerializedName("VideoFramerate")
     @Expose
@@ -93,16 +93,16 @@ public class EncodeParams extends AbstractModel{
     private Long BackgroundImageId;
 
     /**
-     * Get 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]。 
-     * @return AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]。
+     * Get 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。 
+     * @return AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
      */
     public Long getAudioSampleRate() {
         return this.AudioSampleRate;
     }
 
     /**
-     * Set 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]。
-     * @param AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]。
+     * Set 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
+     * @param AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
      */
     public void setAudioSampleRate(Long AudioSampleRate) {
         this.AudioSampleRate = AudioSampleRate;
@@ -125,16 +125,16 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get 混流-输出流音频声道数，取值范围[1,2]。 
-     * @return AudioChannels 混流-输出流音频声道数，取值范围[1,2]。
+     * Get 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。 
+     * @return AudioChannels 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
      */
     public Long getAudioChannels() {
         return this.AudioChannels;
     }
 
     /**
-     * Set 混流-输出流音频声道数，取值范围[1,2]。
-     * @param AudioChannels 混流-输出流音频声道数，取值范围[1,2]。
+     * Set 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
+     * @param AudioChannels 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
      */
     public void setAudioChannels(Long AudioChannels) {
         this.AudioChannels = AudioChannels;
@@ -189,16 +189,16 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。 
-     * @return VideoFramerate 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
+     * Get 混流-输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。 
+     * @return VideoFramerate 混流-输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
      */
     public Long getVideoFramerate() {
         return this.VideoFramerate;
     }
 
     /**
-     * Set 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
-     * @param VideoFramerate 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
+     * Set 混流-输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
+     * @param VideoFramerate 混流-输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
      */
     public void setVideoFramerate(Long VideoFramerate) {
         this.VideoFramerate = VideoFramerate;
