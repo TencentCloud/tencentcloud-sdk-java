@@ -85,7 +85,7 @@ public class CallbackStatusStatistics {
             req.setStartDateTime(startdatetime);
             /* 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
              * 注：EndDataTime 必须大于 StartDateTime */
-            String enddatatime = "2019071123"
+            String enddatatime = "2019071123";
             req.setEndDataTime(enddatatime);
 
             /* 通过 client 对象调用 CallbackStatusStatistics 方法发起请求。注意请求方法名与请求对象是对应的

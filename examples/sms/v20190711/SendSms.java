@@ -21,7 +21,7 @@ import com.tencentcloudapi.sms.v20190711.models.SendSmsResponse;
  */
 public class SendSms
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
         try {
             /* 必要步骤：
