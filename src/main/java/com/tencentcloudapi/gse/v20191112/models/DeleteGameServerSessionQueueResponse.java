@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveRecordTemplateRequest extends AbstractModel{
+public class DeleteGameServerSessionQueueResponse extends AbstractModel{
 
     /**
-    * [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("TemplateId")
+    @SerializedName("RequestId")
     @Expose
-    private Long TemplateId;
+    private String RequestId;
 
     /**
-     * Get [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。 
-     * @return TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getTemplateId() {
-        return this.TemplateId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
-     * @param TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

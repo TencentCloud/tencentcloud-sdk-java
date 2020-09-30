@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveRecordTemplateRequest extends AbstractModel{
+public class DescribeBandwidthPackageBillUsageRequest extends AbstractModel{
 
     /**
-    * [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+    * 后付费共享带宽包的唯一ID
     */
-    @SerializedName("TemplateId")
+    @SerializedName("BandwidthPackageId")
     @Expose
-    private Long TemplateId;
+    private String BandwidthPackageId;
 
     /**
-     * Get [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。 
-     * @return TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * Get 后付费共享带宽包的唯一ID 
+     * @return BandwidthPackageId 后付费共享带宽包的唯一ID
      */
-    public Long getTemplateId() {
-        return this.TemplateId;
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
     }
 
     /**
-     * Set [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
-     * @param TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * Set 后付费共享带宽包的唯一ID
+     * @param BandwidthPackageId 后付费共享带宽包的唯一ID
      */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
 
     }
 }

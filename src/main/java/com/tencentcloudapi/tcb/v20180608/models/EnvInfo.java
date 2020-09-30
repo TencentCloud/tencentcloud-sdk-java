@@ -138,6 +138,32 @@ public class EnvInfo extends AbstractModel{
     private String EnvChannel;
 
     /**
+    * 支付方式。包含以下取值：
+<li> prepayment：预付费</li>
+<li> postpaid：后付费</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * 是否为默认环境
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
+    * 环境所属地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
@@ -418,6 +444,74 @@ public class EnvInfo extends AbstractModel{
     }
 
     /**
+     * Get 支付方式。包含以下取值：
+<li> prepayment：预付费</li>
+<li> postpaid：后付费</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode 支付方式。包含以下取值：
+<li> prepayment：预付费</li>
+<li> postpaid：后付费</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 支付方式。包含以下取值：
+<li> prepayment：预付费</li>
+<li> postpaid：后付费</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode 支付方式。包含以下取值：
+<li> prepayment：预付费</li>
+<li> postpaid：后付费</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 是否为默认环境
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDefault 是否为默认环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否为默认环境
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDefault 是否为默认环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get 环境所属地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 环境所属地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 环境所属地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 环境所属地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -436,6 +530,9 @@ public class EnvInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "StaticStorages.", this.StaticStorages);
         this.setParamSimple(map, prefix + "IsAutoDegrade", this.IsAutoDegrade);
         this.setParamSimple(map, prefix + "EnvChannel", this.EnvChannel);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

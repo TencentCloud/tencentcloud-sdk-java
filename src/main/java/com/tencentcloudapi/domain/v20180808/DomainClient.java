@@ -38,6 +38,26 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
+
+默认接口请求频率限制：20次/秒。
+     * @param req CheckBatchStatusRequest
+     * @return CheckBatchStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckBatchStatusResponse CheckBatchStatus(CheckBatchStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckBatchStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckBatchStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CheckBatchStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *检查域名是否可以注册。
      * @param req CheckDomainRequest
      * @return CheckDomainResponse
@@ -49,6 +69,26 @@ public class DomainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CheckDomainResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CheckDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 ( CreateDomainBatch ) 用于批量注册域名 。
+
+默认接口请求频率限制：20次/秒。
+     * @param req CreateDomainBatchRequest
+     * @return CreateDomainBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainBatchResponse CreateDomainBatch(CreateDomainBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDomainBatchResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDomainBatchResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDomainBatch"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -77,6 +117,27 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口 (  DescribeDomainNameList ) 获取域名列表。
+
+默认接口请求频率限制：20次/秒。
+
+     * @param req DescribeDomainNameListRequest
+     * @return DescribeDomainNameListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainNameListResponse DescribeDomainNameList(DescribeDomainNameListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainNameListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainNameListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainNameList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *按照域名后缀获取对应的价格列表
      * @param req DescribeDomainPriceListRequest
      * @return DescribeDomainPriceListResponse
@@ -88,6 +149,27 @@ public class DomainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainPriceListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainPriceList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeTemplateList) 用于获取模板列表。
+
+默认接口请求频率限制：20次/秒。
+
+     * @param req DescribeTemplateListRequest
+     * @return DescribeTemplateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTemplateListResponse DescribeTemplateList(DescribeTemplateListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTemplateListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTemplateListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTemplateList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

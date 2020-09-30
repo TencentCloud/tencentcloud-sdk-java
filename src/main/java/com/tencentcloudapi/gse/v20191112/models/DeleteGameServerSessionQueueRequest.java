@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveRecordTemplateRequest extends AbstractModel{
+public class DeleteGameServerSessionQueueRequest extends AbstractModel{
 
     /**
-    * [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+    * 游戏服务器会话队列名字，长度1~128
     */
-    @SerializedName("TemplateId")
+    @SerializedName("Name")
     @Expose
-    private Long TemplateId;
+    private String Name;
 
     /**
-     * Get [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。 
-     * @return TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * Get 游戏服务器会话队列名字，长度1~128 
+     * @return Name 游戏服务器会话队列名字，长度1~128
      */
-    public Long getTemplateId() {
-        return this.TemplateId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
-     * @param TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * Set 游戏服务器会话队列名字，长度1~128
+     * @param Name 游戏服务器会话队列名字，长度1~128
      */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

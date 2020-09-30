@@ -132,7 +132,7 @@ public class FleetAttributes extends AbstractModel{
     private String TerminationTime;
 
     /**
-    * 时限保护时间
+    * 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GameServerSessionProtectionTimeLimit")
@@ -140,7 +140,7 @@ public class FleetAttributes extends AbstractModel{
     private Long GameServerSessionProtectionTimeLimit;
 
     /**
-    * 计费状态
+    * 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingStatus")
@@ -416,9 +416,9 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
-     * Get 时限保护时间
+     * Get 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GameServerSessionProtectionTimeLimit 时限保护时间
+     * @return GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGameServerSessionProtectionTimeLimit() {
@@ -426,9 +426,9 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
-     * Set 时限保护时间
+     * Set 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GameServerSessionProtectionTimeLimit 时限保护时间
+     * @param GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGameServerSessionProtectionTimeLimit(Long GameServerSessionProtectionTimeLimit) {
@@ -436,9 +436,9 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
-     * Get 计费状态
+     * Get 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingStatus 计费状态
+     * @return BillingStatus 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingStatus() {
@@ -446,9 +446,9 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
-     * Set 计费状态
+     * Set 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingStatus 计费状态
+     * @param BillingStatus 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingStatus(String BillingStatus) {

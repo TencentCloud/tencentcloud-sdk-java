@@ -1731,6 +1731,24 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeBandwidthPackageBillUsage) 用于查询后付费共享带宽包当前的计费用量.
+     * @param req DescribeBandwidthPackageBillUsageRequest
+     * @return DescribeBandwidthPackageBillUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthPackageBillUsageResponse DescribeBandwidthPackageBillUsage(DescribeBandwidthPackageBillUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBandwidthPackageBillUsageResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthPackageBillUsageResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBandwidthPackageBillUsage"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口用于查询账户在当前地域的带宽包上限数量以及使用数量
      * @param req DescribeBandwidthPackageQuotaRequest
      * @return DescribeBandwidthPackageQuotaResponse
@@ -1742,6 +1760,25 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBandwidthPackageQuotaResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBandwidthPackageQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeBandwidthPackageResources) 用于根据共享带宽包唯一ID查询共享带宽包内的资源列表，支持按条件过滤查询结果和分页查询。
+
+     * @param req DescribeBandwidthPackageResourcesRequest
+     * @return DescribeBandwidthPackageResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResources(DescribeBandwidthPackageResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBandwidthPackageResourcesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthPackageResourcesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBandwidthPackageResources"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

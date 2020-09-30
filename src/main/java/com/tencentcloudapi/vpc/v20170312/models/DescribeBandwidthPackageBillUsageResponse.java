@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gse.v20191112.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartMatchPlacementResponse extends AbstractModel{
+public class DescribeBandwidthPackageBillUsageResponse extends AbstractModel{
 
     /**
-    * 游戏服务器会话放置
+    * 当前计费用量
     */
-    @SerializedName("GameServerSessionPlacement")
+    @SerializedName("BandwidthPackageBillBandwidthSet")
     @Expose
-    private GameServerSessionPlacement GameServerSessionPlacement;
+    private BandwidthPackageBillBandwidth [] BandwidthPackageBillBandwidthSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class StartMatchPlacementResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 游戏服务器会话放置 
-     * @return GameServerSessionPlacement 游戏服务器会话放置
+     * Get 当前计费用量 
+     * @return BandwidthPackageBillBandwidthSet 当前计费用量
      */
-    public GameServerSessionPlacement getGameServerSessionPlacement() {
-        return this.GameServerSessionPlacement;
+    public BandwidthPackageBillBandwidth [] getBandwidthPackageBillBandwidthSet() {
+        return this.BandwidthPackageBillBandwidthSet;
     }
 
     /**
-     * Set 游戏服务器会话放置
-     * @param GameServerSessionPlacement 游戏服务器会话放置
+     * Set 当前计费用量
+     * @param BandwidthPackageBillBandwidthSet 当前计费用量
      */
-    public void setGameServerSessionPlacement(GameServerSessionPlacement GameServerSessionPlacement) {
-        this.GameServerSessionPlacement = GameServerSessionPlacement;
+    public void setBandwidthPackageBillBandwidthSet(BandwidthPackageBillBandwidth [] BandwidthPackageBillBandwidthSet) {
+        this.BandwidthPackageBillBandwidthSet = BandwidthPackageBillBandwidthSet;
     }
 
     /**
@@ -72,7 +72,7 @@ public class StartMatchPlacementResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "GameServerSessionPlacement.", this.GameServerSessionPlacement);
+        this.setParamArrayObj(map, prefix + "BandwidthPackageBillBandwidthSet.", this.BandwidthPackageBillBandwidthSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
