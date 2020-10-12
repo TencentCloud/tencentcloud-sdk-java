@@ -45,12 +45,14 @@ public class RkpClient extends AbstractClient{
      */
     public GetOpenIdResponse GetOpenId(GetOpenIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetOpenIdResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GetOpenIdResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetOpenId"), type);
+                rspStr = this.internalRequest(req, "GetOpenId");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class RkpClient extends AbstractClient{
      */
     public GetTokenResponse GetToken(GetTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTokenResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTokenResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetToken"), type);
+                rspStr = this.internalRequest(req, "GetToken");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class RkpClient extends AbstractClient{
      */
     public QueryDevAndRiskResponse QueryDevAndRisk(QueryDevAndRiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryDevAndRiskResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryDevAndRiskResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryDevAndRisk"), type);
+                rspStr = this.internalRequest(req, "QueryDevAndRisk");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

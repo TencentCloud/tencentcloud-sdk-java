@@ -45,12 +45,14 @@ public class AaClient extends AbstractClient{
      */
     public ManageMarketingRiskResponse ManageMarketingRisk(ManageMarketingRiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ManageMarketingRiskResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ManageMarketingRiskResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ManageMarketingRisk"), type);
+                rspStr = this.internalRequest(req, "ManageMarketingRisk");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class AaClient extends AbstractClient{
      */
     public QueryActivityAntiRushResponse QueryActivityAntiRush(QueryActivityAntiRushRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryActivityAntiRushResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryActivityAntiRushResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryActivityAntiRush"), type);
+                rspStr = this.internalRequest(req, "QueryActivityAntiRush");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class AaClient extends AbstractClient{
      */
     public QueryActivityAntiRushAdvancedResponse QueryActivityAntiRushAdvanced(QueryActivityAntiRushAdvancedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryActivityAntiRushAdvancedResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryActivityAntiRushAdvancedResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryActivityAntiRushAdvanced"), type);
+                rspStr = this.internalRequest(req, "QueryActivityAntiRushAdvanced");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

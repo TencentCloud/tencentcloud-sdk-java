@@ -45,12 +45,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ApplyApplicationMaterialResponse ApplyApplicationMaterial(ApplyApplicationMaterialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyApplicationMaterialResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyApplicationMaterialResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ApplyApplicationMaterial"), type);
+                rspStr = this.internalRequest(req, "ApplyApplicationMaterial");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ApplyOutwardOrderResponse ApplyOutwardOrder(ApplyOutwardOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyOutwardOrderResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyOutwardOrderResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ApplyOutwardOrder"), type);
+                rspStr = this.internalRequest(req, "ApplyOutwardOrder");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ApplyPayerInfoResponse ApplyPayerInfo(ApplyPayerInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyPayerInfoResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyPayerInfoResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ApplyPayerInfo"), type);
+                rspStr = this.internalRequest(req, "ApplyPayerInfo");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -99,12 +105,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ApplyReWithdrawalResponse ApplyReWithdrawal(ApplyReWithdrawalRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyReWithdrawalResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyReWithdrawalResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ApplyReWithdrawal"), type);
+                rspStr = this.internalRequest(req, "ApplyReWithdrawal");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -117,12 +125,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ApplyTradeResponse ApplyTrade(ApplyTradeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyTradeResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyTradeResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ApplyTrade"), type);
+                rspStr = this.internalRequest(req, "ApplyTrade");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -135,12 +145,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ApplyWithdrawalResponse ApplyWithdrawal(ApplyWithdrawalRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyWithdrawalResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyWithdrawalResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ApplyWithdrawal"), type);
+                rspStr = this.internalRequest(req, "ApplyWithdrawal");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -153,12 +165,14 @@ public class CpdpClient extends AbstractClient{
      */
     public BindAcctResponse BindAcct(BindAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindAcctResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BindAcctResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BindAcct"), type);
+                rspStr = this.internalRequest(req, "BindAcct");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -171,12 +185,14 @@ public class CpdpClient extends AbstractClient{
      */
     public BindRelateAccReUnionPayResponse BindRelateAccReUnionPay(BindRelateAccReUnionPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRelateAccReUnionPayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRelateAccReUnionPayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BindRelateAccReUnionPay"), type);
+                rspStr = this.internalRequest(req, "BindRelateAccReUnionPay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -192,12 +208,14 @@ public class CpdpClient extends AbstractClient{
      */
     public BindRelateAcctSmallAmountResponse BindRelateAcctSmallAmount(BindRelateAcctSmallAmountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRelateAcctSmallAmountResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRelateAcctSmallAmountResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BindRelateAcctSmallAmount"), type);
+                rspStr = this.internalRequest(req, "BindRelateAcctSmallAmount");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -214,12 +232,14 @@ public class CpdpClient extends AbstractClient{
      */
     public BindRelateAcctUnionPayResponse BindRelateAcctUnionPay(BindRelateAcctUnionPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRelateAcctUnionPayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRelateAcctUnionPayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BindRelateAcctUnionPay"), type);
+                rspStr = this.internalRequest(req, "BindRelateAcctUnionPay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -232,12 +252,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CheckAcctResponse CheckAcct(CheckAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckAcctResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckAcctResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CheckAcct"), type);
+                rspStr = this.internalRequest(req, "CheckAcct");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -250,12 +272,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CheckAmountResponse CheckAmount(CheckAmountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckAmountResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckAmountResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CheckAmount"), type);
+                rspStr = this.internalRequest(req, "CheckAmount");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -268,12 +292,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CloseOrderResponse CloseOrder(CloseOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseOrderResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseOrderResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CloseOrder"), type);
+                rspStr = this.internalRequest(req, "CloseOrder");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -286,12 +312,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateAcctResponse CreateAcct(CreateAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAcctResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAcctResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateAcct"), type);
+                rspStr = this.internalRequest(req, "CreateAcct");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -304,12 +332,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(CreateAgentTaxPaymentInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAgentTaxPaymentInfosResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAgentTaxPaymentInfosResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateAgentTaxPaymentInfos"), type);
+                rspStr = this.internalRequest(req, "CreateAgentTaxPaymentInfos");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -323,12 +353,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateCustAcctIdResponse CreateCustAcctId(CreateCustAcctIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustAcctIdResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustAcctIdResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateCustAcctId"), type);
+                rspStr = this.internalRequest(req, "CreateCustAcctId");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -341,12 +373,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateInvoiceResponse CreateInvoice(CreateInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInvoiceResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInvoiceResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateInvoice"), type);
+                rspStr = this.internalRequest(req, "CreateInvoice");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -359,12 +393,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateMerchantResponse CreateMerchant(CreateMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMerchantResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMerchantResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateMerchant"), type);
+                rspStr = this.internalRequest(req, "CreateMerchant");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -377,12 +413,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateRedInvoiceResponse CreateRedInvoice(CreateRedInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRedInvoiceResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRedInvoiceResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateRedInvoice"), type);
+                rspStr = this.internalRequest(req, "CreateRedInvoice");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -395,12 +433,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateSinglePayResponse CreateSinglePay(CreateSinglePayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSinglePayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSinglePayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateSinglePay"), type);
+                rspStr = this.internalRequest(req, "CreateSinglePay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -413,12 +453,14 @@ public class CpdpClient extends AbstractClient{
      */
     public CreateTransferBatchResponse CreateTransferBatch(CreateTransferBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTransferBatchResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTransferBatchResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateTransferBatch"), type);
+                rspStr = this.internalRequest(req, "CreateTransferBatch");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -431,12 +473,14 @@ public class CpdpClient extends AbstractClient{
      */
     public DeleteAgentTaxPaymentInfoResponse DeleteAgentTaxPaymentInfo(DeleteAgentTaxPaymentInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAgentTaxPaymentInfoResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAgentTaxPaymentInfoResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAgentTaxPaymentInfo"), type);
+                rspStr = this.internalRequest(req, "DeleteAgentTaxPaymentInfo");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -449,12 +493,14 @@ public class CpdpClient extends AbstractClient{
      */
     public DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfos(DeleteAgentTaxPaymentInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAgentTaxPaymentInfosResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAgentTaxPaymentInfosResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAgentTaxPaymentInfos"), type);
+                rspStr = this.internalRequest(req, "DeleteAgentTaxPaymentInfos");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -467,12 +513,14 @@ public class CpdpClient extends AbstractClient{
      */
     public DescribeChargeDetailResponse DescribeChargeDetail(DescribeChargeDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChargeDetailResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChargeDetailResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeChargeDetail"), type);
+                rspStr = this.internalRequest(req, "DescribeChargeDetail");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -485,12 +533,14 @@ public class CpdpClient extends AbstractClient{
      */
     public DescribeOrderStatusResponse DescribeOrderStatus(DescribeOrderStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrderStatusResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrderStatusResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeOrderStatus"), type);
+                rspStr = this.internalRequest(req, "DescribeOrderStatus");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -503,12 +553,14 @@ public class CpdpClient extends AbstractClient{
      */
     public DownloadBillResponse DownloadBill(DownloadBillRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadBillResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadBillResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DownloadBill"), type);
+                rspStr = this.internalRequest(req, "DownloadBill");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -521,12 +573,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ExecuteMemberTransactionResponse ExecuteMemberTransaction(ExecuteMemberTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteMemberTransactionResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteMemberTransactionResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ExecuteMemberTransaction"), type);
+                rspStr = this.internalRequest(req, "ExecuteMemberTransaction");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -539,12 +593,14 @@ public class CpdpClient extends AbstractClient{
      */
     public MigrateOrderRefundResponse MigrateOrderRefund(MigrateOrderRefundRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MigrateOrderRefundResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<MigrateOrderRefundResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "MigrateOrderRefund"), type);
+                rspStr = this.internalRequest(req, "MigrateOrderRefund");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -557,12 +613,14 @@ public class CpdpClient extends AbstractClient{
      */
     public MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(MigrateOrderRefundQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MigrateOrderRefundQueryResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<MigrateOrderRefundQueryResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "MigrateOrderRefundQuery"), type);
+                rspStr = this.internalRequest(req, "MigrateOrderRefundQuery");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -575,12 +633,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(ModifyAgentTaxPaymentInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAgentTaxPaymentInfoResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAgentTaxPaymentInfoResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAgentTaxPaymentInfo"), type);
+                rspStr = this.internalRequest(req, "ModifyAgentTaxPaymentInfo");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -593,12 +653,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ModifyMntMbrBindRelateAcctBankCodeResponse ModifyMntMbrBindRelateAcctBankCode(ModifyMntMbrBindRelateAcctBankCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMntMbrBindRelateAcctBankCodeResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMntMbrBindRelateAcctBankCodeResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMntMbrBindRelateAcctBankCode"), type);
+                rspStr = this.internalRequest(req, "ModifyMntMbrBindRelateAcctBankCode");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -611,12 +673,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryAcctBindingResponse QueryAcctBinding(QueryAcctBindingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAcctBindingResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAcctBindingResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctBinding"), type);
+                rspStr = this.internalRequest(req, "QueryAcctBinding");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -629,12 +693,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryAcctInfoResponse QueryAcctInfo(QueryAcctInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAcctInfoResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAcctInfoResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctInfo"), type);
+                rspStr = this.internalRequest(req, "QueryAcctInfo");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -647,12 +713,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryAcctInfoListResponse QueryAcctInfoList(QueryAcctInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAcctInfoListResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAcctInfoListResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryAcctInfoList"), type);
+                rspStr = this.internalRequest(req, "QueryAcctInfoList");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -665,12 +733,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryAgentStatementsResponse QueryAgentStatements(QueryAgentStatementsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAgentStatementsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAgentStatementsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryAgentStatements"), type);
+                rspStr = this.internalRequest(req, "QueryAgentStatements");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -683,12 +753,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryAgentTaxPaymentBatchResponse QueryAgentTaxPaymentBatch(QueryAgentTaxPaymentBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAgentTaxPaymentBatchResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAgentTaxPaymentBatchResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryAgentTaxPaymentBatch"), type);
+                rspStr = this.internalRequest(req, "QueryAgentTaxPaymentBatch");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -701,12 +773,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryAnchorContractInfoResponse QueryAnchorContractInfo(QueryAnchorContractInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAnchorContractInfoResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAnchorContractInfoResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryAnchorContractInfo"), type);
+                rspStr = this.internalRequest(req, "QueryAnchorContractInfo");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -719,12 +793,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryApplicationMaterialResponse QueryApplicationMaterial(QueryApplicationMaterialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryApplicationMaterialResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryApplicationMaterialResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryApplicationMaterial"), type);
+                rspStr = this.internalRequest(req, "QueryApplicationMaterial");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -737,12 +813,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryBalanceResponse QueryBalance(QueryBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBalanceResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBalanceResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryBalance"), type);
+                rspStr = this.internalRequest(req, "QueryBalance");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -755,12 +833,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryBankClearResponse QueryBankClear(QueryBankClearRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBankClearResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBankClearResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryBankClear"), type);
+                rspStr = this.internalRequest(req, "QueryBankClear");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -773,12 +853,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryBankTransactionDetailsResponse QueryBankTransactionDetails(QueryBankTransactionDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBankTransactionDetailsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBankTransactionDetailsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryBankTransactionDetails"), type);
+                rspStr = this.internalRequest(req, "QueryBankTransactionDetails");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -791,12 +873,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryBankWithdrawCashDetailsResponse QueryBankWithdrawCashDetails(QueryBankWithdrawCashDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBankWithdrawCashDetailsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBankWithdrawCashDetailsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryBankWithdrawCashDetails"), type);
+                rspStr = this.internalRequest(req, "QueryBankWithdrawCashDetails");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -809,12 +893,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryCommonTransferRechargeResponse QueryCommonTransferRecharge(QueryCommonTransferRechargeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCommonTransferRechargeResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCommonTransferRechargeResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryCommonTransferRecharge"), type);
+                rspStr = this.internalRequest(req, "QueryCommonTransferRecharge");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -827,12 +913,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryCustAcctIdBalanceResponse QueryCustAcctIdBalance(QueryCustAcctIdBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCustAcctIdBalanceResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCustAcctIdBalanceResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryCustAcctIdBalance"), type);
+                rspStr = this.internalRequest(req, "QueryCustAcctIdBalance");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -845,12 +933,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryExchangeRateResponse QueryExchangeRate(QueryExchangeRateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryExchangeRateResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryExchangeRateResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryExchangeRate"), type);
+                rspStr = this.internalRequest(req, "QueryExchangeRate");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -863,12 +953,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryInvoiceResponse QueryInvoice(QueryInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryInvoiceResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryInvoiceResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryInvoice"), type);
+                rspStr = this.internalRequest(req, "QueryInvoice");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -882,12 +974,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryMemberBindResponse QueryMemberBind(QueryMemberBindRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMemberBindResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMemberBindResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryMemberBind"), type);
+                rspStr = this.internalRequest(req, "QueryMemberBind");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -900,12 +994,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryMemberTransactionResponse QueryMemberTransaction(QueryMemberTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMemberTransactionResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMemberTransactionResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryMemberTransaction"), type);
+                rspStr = this.internalRequest(req, "QueryMemberTransaction");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -918,12 +1014,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryMerchantBalanceResponse QueryMerchantBalance(QueryMerchantBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantBalanceResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantBalanceResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryMerchantBalance"), type);
+                rspStr = this.internalRequest(req, "QueryMerchantBalance");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -936,12 +1034,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(QueryMerchantInfoForManagementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantInfoForManagementResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryMerchantInfoForManagement"), type);
+                rspStr = this.internalRequest(req, "QueryMerchantInfoForManagement");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -954,12 +1054,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryOrderResponse QueryOrder(QueryOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOrderResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOrderResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryOrder"), type);
+                rspStr = this.internalRequest(req, "QueryOrder");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -972,12 +1074,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryOutwardOrderResponse QueryOutwardOrder(QueryOutwardOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOutwardOrderResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOutwardOrderResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryOutwardOrder"), type);
+                rspStr = this.internalRequest(req, "QueryOutwardOrder");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -990,12 +1094,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryPayerInfoResponse QueryPayerInfo(QueryPayerInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryPayerInfoResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryPayerInfoResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryPayerInfo"), type);
+                rspStr = this.internalRequest(req, "QueryPayerInfo");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1008,12 +1114,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryReconciliationDocumentResponse QueryReconciliationDocument(QueryReconciliationDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryReconciliationDocumentResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryReconciliationDocumentResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryReconciliationDocument"), type);
+                rspStr = this.internalRequest(req, "QueryReconciliationDocument");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1026,12 +1134,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryRefundResponse QueryRefund(QueryRefundRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryRefundResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryRefundResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryRefund"), type);
+                rspStr = this.internalRequest(req, "QueryRefund");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1044,12 +1154,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QuerySinglePayResponse QuerySinglePay(QuerySinglePayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuerySinglePayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QuerySinglePayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QuerySinglePay"), type);
+                rspStr = this.internalRequest(req, "QuerySinglePay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1062,12 +1174,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QuerySingleTransactionStatusResponse QuerySingleTransactionStatus(QuerySingleTransactionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuerySingleTransactionStatusResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QuerySingleTransactionStatusResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QuerySingleTransactionStatus"), type);
+                rspStr = this.internalRequest(req, "QuerySingleTransactionStatus");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1080,12 +1194,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QuerySmallAmountTransferResponse QuerySmallAmountTransfer(QuerySmallAmountTransferRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuerySmallAmountTransferResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QuerySmallAmountTransferResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QuerySmallAmountTransfer"), type);
+                rspStr = this.internalRequest(req, "QuerySmallAmountTransfer");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1098,12 +1214,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryTradeResponse QueryTrade(QueryTradeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryTradeResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryTradeResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryTrade"), type);
+                rspStr = this.internalRequest(req, "QueryTrade");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1116,12 +1234,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryTransferBatchResponse QueryTransferBatch(QueryTransferBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryTransferBatchResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryTransferBatchResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryTransferBatch"), type);
+                rspStr = this.internalRequest(req, "QueryTransferBatch");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1134,12 +1254,14 @@ public class CpdpClient extends AbstractClient{
      */
     public QueryTransferDetailResponse QueryTransferDetail(QueryTransferDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryTransferDetailResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryTransferDetailResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryTransferDetail"), type);
+                rspStr = this.internalRequest(req, "QueryTransferDetail");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1152,12 +1274,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RechargeByThirdPayResponse RechargeByThirdPay(RechargeByThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RechargeByThirdPayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RechargeByThirdPayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RechargeByThirdPay"), type);
+                rspStr = this.internalRequest(req, "RechargeByThirdPay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1170,12 +1294,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RechargeMemberThirdPayResponse RechargeMemberThirdPay(RechargeMemberThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RechargeMemberThirdPayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RechargeMemberThirdPayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RechargeMemberThirdPay"), type);
+                rspStr = this.internalRequest(req, "RechargeMemberThirdPay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1188,12 +1314,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RefundResponse Refund(RefundRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "Refund"), type);
+                rspStr = this.internalRequest(req, "Refund");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1206,12 +1334,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RefundMemberTransactionResponse RefundMemberTransaction(RefundMemberTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundMemberTransactionResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundMemberTransactionResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RefundMemberTransaction"), type);
+                rspStr = this.internalRequest(req, "RefundMemberTransaction");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1224,12 +1354,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RegisterBillResponse RegisterBill(RegisterBillRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterBillResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterBillResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RegisterBill"), type);
+                rspStr = this.internalRequest(req, "RegisterBill");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1242,12 +1374,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RegisterBillSupportWithdrawResponse RegisterBillSupportWithdraw(RegisterBillSupportWithdrawRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterBillSupportWithdrawResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterBillSupportWithdrawResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RegisterBillSupportWithdraw"), type);
+                rspStr = this.internalRequest(req, "RegisterBillSupportWithdraw");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1260,12 +1394,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RevResigterBillSupportWithdrawResponse RevResigterBillSupportWithdraw(RevResigterBillSupportWithdrawRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevResigterBillSupportWithdrawResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RevResigterBillSupportWithdrawResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RevResigterBillSupportWithdraw"), type);
+                rspStr = this.internalRequest(req, "RevResigterBillSupportWithdraw");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1278,12 +1414,14 @@ public class CpdpClient extends AbstractClient{
      */
     public ReviseMbrPropertyResponse ReviseMbrProperty(ReviseMbrPropertyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReviseMbrPropertyResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ReviseMbrPropertyResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ReviseMbrProperty"), type);
+                rspStr = this.internalRequest(req, "ReviseMbrProperty");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1296,12 +1434,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RevokeMemberRechargeThirdPayResponse RevokeMemberRechargeThirdPay(RevokeMemberRechargeThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevokeMemberRechargeThirdPayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RevokeMemberRechargeThirdPayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RevokeMemberRechargeThirdPay"), type);
+                rspStr = this.internalRequest(req, "RevokeMemberRechargeThirdPay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1314,12 +1454,14 @@ public class CpdpClient extends AbstractClient{
      */
     public RevokeRechargeByThirdPayResponse RevokeRechargeByThirdPay(RevokeRechargeByThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevokeRechargeByThirdPayResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RevokeRechargeByThirdPayResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RevokeRechargeByThirdPay"), type);
+                rspStr = this.internalRequest(req, "RevokeRechargeByThirdPay");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1332,12 +1474,14 @@ public class CpdpClient extends AbstractClient{
      */
     public UnBindAcctResponse UnBindAcct(UnBindAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindAcctResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindAcctResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UnBindAcct"), type);
+                rspStr = this.internalRequest(req, "UnBindAcct");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1350,12 +1494,14 @@ public class CpdpClient extends AbstractClient{
      */
     public UnbindRelateAcctResponse UnbindRelateAcct(UnbindRelateAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindRelateAcctResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindRelateAcctResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UnbindRelateAcct"), type);
+                rspStr = this.internalRequest(req, "UnbindRelateAcct");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1368,12 +1514,14 @@ public class CpdpClient extends AbstractClient{
      */
     public UnifiedOrderResponse UnifiedOrder(UnifiedOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnifiedOrderResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<UnifiedOrderResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UnifiedOrder"), type);
+                rspStr = this.internalRequest(req, "UnifiedOrder");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1386,12 +1534,14 @@ public class CpdpClient extends AbstractClient{
      */
     public WithdrawCashMembershipResponse WithdrawCashMembership(WithdrawCashMembershipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WithdrawCashMembershipResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<WithdrawCashMembershipResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "WithdrawCashMembership"), type);
+                rspStr = this.internalRequest(req, "WithdrawCashMembership");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

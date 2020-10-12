@@ -46,12 +46,14 @@ public class DrmClient extends AbstractClient{
      */
     public AddFairPlayPemResponse AddFairPlayPem(AddFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddFairPlayPemResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<AddFairPlayPemResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "AddFairPlayPem"), type);
+                rspStr = this.internalRequest(req, "AddFairPlayPem");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -64,12 +66,14 @@ public class DrmClient extends AbstractClient{
      */
     public CreateEncryptKeysResponse CreateEncryptKeys(CreateEncryptKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEncryptKeysResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEncryptKeysResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateEncryptKeys"), type);
+                rspStr = this.internalRequest(req, "CreateEncryptKeys");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -83,12 +87,14 @@ public class DrmClient extends AbstractClient{
      */
     public CreateLicenseResponse CreateLicense(CreateLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLicenseResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLicenseResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateLicense"), type);
+                rspStr = this.internalRequest(req, "CreateLicense");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -103,12 +109,14 @@ public class DrmClient extends AbstractClient{
      */
     public DeleteFairPlayPemResponse DeleteFairPlayPem(DeleteFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFairPlayPemResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFairPlayPemResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteFairPlayPem"), type);
+                rspStr = this.internalRequest(req, "DeleteFairPlayPem");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -122,12 +130,14 @@ public class DrmClient extends AbstractClient{
      */
     public DescribeAllKeysResponse DescribeAllKeys(DescribeAllKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllKeysResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllKeysResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllKeys"), type);
+                rspStr = this.internalRequest(req, "DescribeAllKeys");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -140,12 +150,14 @@ public class DrmClient extends AbstractClient{
      */
     public DescribeFairPlayPemResponse DescribeFairPlayPem(DescribeFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFairPlayPemResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFairPlayPemResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeFairPlayPem"), type);
+                rspStr = this.internalRequest(req, "DescribeFairPlayPem");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -160,12 +172,14 @@ public class DrmClient extends AbstractClient{
      */
     public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeysResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeKeys"), type);
+                rspStr = this.internalRequest(req, "DescribeKeys");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -179,12 +193,14 @@ public class DrmClient extends AbstractClient{
      */
     public ModifyFairPlayPemResponse ModifyFairPlayPem(ModifyFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFairPlayPemResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFairPlayPemResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyFairPlayPem"), type);
+                rspStr = this.internalRequest(req, "ModifyFairPlayPem");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -197,12 +213,14 @@ public class DrmClient extends AbstractClient{
      */
     public StartEncryptionResponse StartEncryption(StartEncryptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartEncryptionResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<StartEncryptionResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "StartEncryption"), type);
+                rspStr = this.internalRequest(req, "StartEncryption");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

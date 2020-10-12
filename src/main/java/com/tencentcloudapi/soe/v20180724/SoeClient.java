@@ -45,12 +45,14 @@ public class SoeClient extends AbstractClient{
      */
     public InitOralProcessResponse InitOralProcess(InitOralProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitOralProcessResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<InitOralProcessResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "InitOralProcess"), type);
+                rspStr = this.internalRequest(req, "InitOralProcess");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class SoeClient extends AbstractClient{
      */
     public KeywordEvaluateResponse KeywordEvaluate(KeywordEvaluateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KeywordEvaluateResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<KeywordEvaluateResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "KeywordEvaluate"), type);
+                rspStr = this.internalRequest(req, "KeywordEvaluate");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class SoeClient extends AbstractClient{
      */
     public TransmitOralProcessResponse TransmitOralProcess(TransmitOralProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransmitOralProcessResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TransmitOralProcessResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TransmitOralProcess"), type);
+                rspStr = this.internalRequest(req, "TransmitOralProcess");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -99,12 +105,14 @@ public class SoeClient extends AbstractClient{
      */
     public TransmitOralProcessWithInitResponse TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransmitOralProcessWithInitResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TransmitOralProcessWithInitResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TransmitOralProcessWithInit"), type);
+                rspStr = this.internalRequest(req, "TransmitOralProcessWithInit");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

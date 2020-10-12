@@ -44,21 +44,21 @@ public class ReservedInstanceTypeItem extends AbstractModel{
     private Long Memory;
 
     /**
-    * GPU核数。
+    * GPU数量。
     */
     @SerializedName("Gpu")
     @Expose
     private Long Gpu;
 
     /**
-    * FPGA核数。
+    * FPGA数量。
     */
     @SerializedName("Fpga")
     @Expose
     private Long Fpga;
 
     /**
-    * 存储块数。
+    * 本地存储块数量。
     */
     @SerializedName("StorageBlock")
     @Expose
@@ -169,48 +169,48 @@ public class ReservedInstanceTypeItem extends AbstractModel{
     }
 
     /**
-     * Get GPU核数。 
-     * @return Gpu GPU核数。
+     * Get GPU数量。 
+     * @return Gpu GPU数量。
      */
     public Long getGpu() {
         return this.Gpu;
     }
 
     /**
-     * Set GPU核数。
-     * @param Gpu GPU核数。
+     * Set GPU数量。
+     * @param Gpu GPU数量。
      */
     public void setGpu(Long Gpu) {
         this.Gpu = Gpu;
     }
 
     /**
-     * Get FPGA核数。 
-     * @return Fpga FPGA核数。
+     * Get FPGA数量。 
+     * @return Fpga FPGA数量。
      */
     public Long getFpga() {
         return this.Fpga;
     }
 
     /**
-     * Set FPGA核数。
-     * @param Fpga FPGA核数。
+     * Set FPGA数量。
+     * @param Fpga FPGA数量。
      */
     public void setFpga(Long Fpga) {
         this.Fpga = Fpga;
     }
 
     /**
-     * Get 存储块数。 
-     * @return StorageBlock 存储块数。
+     * Get 本地存储块数量。 
+     * @return StorageBlock 本地存储块数量。
      */
     public Long getStorageBlock() {
         return this.StorageBlock;
     }
 
     /**
-     * Set 存储块数。
-     * @param StorageBlock 存储块数。
+     * Set 本地存储块数量。
+     * @param StorageBlock 本地存储块数量。
      */
     public void setStorageBlock(Long StorageBlock) {
         this.StorageBlock = StorageBlock;

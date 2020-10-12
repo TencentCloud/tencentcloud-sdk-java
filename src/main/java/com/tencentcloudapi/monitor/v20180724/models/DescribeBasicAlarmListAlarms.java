@@ -46,7 +46,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     private String ProjectName;
 
     /**
-    * 告警状态ID
+    * 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -54,7 +54,7 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     private Long Status;
 
     /**
-    * 告警状态
+    * 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmStatus")
@@ -254,9 +254,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     }
 
     /**
-     * Get 告警状态ID
+     * Get 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 告警状态ID
+     * @return Status 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -264,9 +264,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     }
 
     /**
-     * Set 告警状态ID
+     * Set 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 告警状态ID
+     * @param Status 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -274,9 +274,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     }
 
     /**
-     * Get 告警状态
+     * Get 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmStatus 告警状态
+     * @return AlarmStatus 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmStatus() {
@@ -284,9 +284,9 @@ public class DescribeBasicAlarmListAlarms extends AbstractModel{
     }
 
     /**
-     * Set 告警状态
+     * Set 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmStatus 告警状态
+     * @param AlarmStatus 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmStatus(String AlarmStatus) {

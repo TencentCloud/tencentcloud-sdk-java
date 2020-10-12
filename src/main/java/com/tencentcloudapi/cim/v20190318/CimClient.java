@@ -45,12 +45,14 @@ public class CimClient extends AbstractClient{
      */
     public DescribeSdkAppidResponse DescribeSdkAppid(DescribeSdkAppidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSdkAppidResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSdkAppidResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSdkAppid"), type);
+                rspStr = this.internalRequest(req, "DescribeSdkAppid");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

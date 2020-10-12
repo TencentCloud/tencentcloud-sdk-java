@@ -27,6 +27,7 @@ public class CreateScdnLogTaskRequest extends AbstractModel{
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
     */
     @SerializedName("Mode")
     @Expose
@@ -71,6 +72,8 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
     */
     @SerializedName("AttackType")
     @Expose
@@ -81,6 +84,8 @@ AttackType 映射如下:
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
     */
     @SerializedName("DefenceMode")
     @Expose
@@ -104,11 +109,13 @@ DefenceMode 映射如下：
      * Get 防护类型
 Mode 映射如下：
   waf = "Web攻击"
-  cc = "CC攻击" 
+  cc = "CC攻击"
+  bot = "Bot攻击" 
      * @return Mode 防护类型
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
      */
     public String getMode() {
         return this.Mode;
@@ -119,10 +126,12 @@ Mode 映射如下：
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
      * @param Mode 防护类型
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -193,7 +202,9 @@ AttackType 映射如下:
   illegal_access_core_file = "核心文件非法访问"
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
-  malicious_file_upload= '恶意文件上传' 
+  malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹" 
      * @return AttackType 指定攻击类型, 不填默认查询全部攻击类型
 AttackType 映射如下:
   other = '未知类型'
@@ -211,6 +222,8 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
      */
     public String getAttackType() {
         return this.AttackType;
@@ -234,6 +247,8 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
      * @param AttackType 指定攻击类型, 不填默认查询全部攻击类型
 AttackType 映射如下:
   other = '未知类型'
@@ -251,6 +266,8 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;
@@ -260,11 +277,15 @@ AttackType 映射如下:
      * Get 指定执行动作, 不填默认查询全部执行动作
 DefenceMode 映射如下：
   observe = '观察模式'
-  intercept = '拦截模式' 
+  intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向" 
      * @return DefenceMode 指定执行动作, 不填默认查询全部执行动作
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
      */
     public String getDefenceMode() {
         return this.DefenceMode;
@@ -275,10 +296,14 @@ DefenceMode 映射如下：
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
      * @param DefenceMode 指定执行动作, 不填默认查询全部执行动作
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
      */
     public void setDefenceMode(String DefenceMode) {
         this.DefenceMode = DefenceMode;

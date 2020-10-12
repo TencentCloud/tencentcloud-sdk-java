@@ -49,12 +49,14 @@ public class IirClient extends AbstractClient{
      */
     public RecognizeProductResponse RecognizeProduct(RecognizeProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeProductResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeProductResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RecognizeProduct"), type);
+                rspStr = this.internalRequest(req, "RecognizeProduct");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

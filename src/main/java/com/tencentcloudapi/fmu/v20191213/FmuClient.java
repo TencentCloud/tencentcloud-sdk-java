@@ -45,12 +45,14 @@ public class FmuClient extends AbstractClient{
      */
     public BeautifyPicResponse BeautifyPic(BeautifyPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BeautifyPicResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BeautifyPicResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BeautifyPic"), type);
+                rspStr = this.internalRequest(req, "BeautifyPic");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class FmuClient extends AbstractClient{
      */
     public BeautifyVideoResponse BeautifyVideo(BeautifyVideoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BeautifyVideoResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BeautifyVideoResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BeautifyVideo"), type);
+                rspStr = this.internalRequest(req, "BeautifyVideo");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class FmuClient extends AbstractClient{
      */
     public CancelBeautifyVideoJobResponse CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelBeautifyVideoJobResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelBeautifyVideoJobResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CancelBeautifyVideoJob"), type);
+                rspStr = this.internalRequest(req, "CancelBeautifyVideoJob");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -102,12 +108,14 @@ public class FmuClient extends AbstractClient{
      */
     public CreateModelResponse CreateModel(CreateModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateModelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateModelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateModel"), type);
+                rspStr = this.internalRequest(req, "CreateModel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -120,12 +128,14 @@ public class FmuClient extends AbstractClient{
      */
     public DeleteModelResponse DeleteModel(DeleteModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteModelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteModelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteModel"), type);
+                rspStr = this.internalRequest(req, "DeleteModel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -138,12 +148,14 @@ public class FmuClient extends AbstractClient{
      */
     public GetModelListResponse GetModelList(GetModelListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetModelListResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GetModelListResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetModelList"), type);
+                rspStr = this.internalRequest(req, "GetModelList");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -156,12 +168,14 @@ public class FmuClient extends AbstractClient{
      */
     public QueryBeautifyVideoJobResponse QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBeautifyVideoJobResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBeautifyVideoJobResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryBeautifyVideoJob"), type);
+                rspStr = this.internalRequest(req, "QueryBeautifyVideoJob");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -181,12 +195,14 @@ public class FmuClient extends AbstractClient{
      */
     public TryLipstickPicResponse TryLipstickPic(TryLipstickPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TryLipstickPicResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TryLipstickPicResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TryLipstickPic"), type);
+                rspStr = this.internalRequest(req, "TryLipstickPic");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

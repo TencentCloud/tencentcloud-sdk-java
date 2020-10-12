@@ -45,12 +45,14 @@ public class LpClient extends AbstractClient{
      */
     public QueryLoginProtectionResponse QueryLoginProtection(QueryLoginProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryLoginProtectionResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryLoginProtectionResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryLoginProtection"), type);
+                rspStr = this.internalRequest(req, "QueryLoginProtection");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

@@ -45,12 +45,14 @@ public class NppClient extends AbstractClient{
      */
     public CreateCallBackResponse CreateCallBack(CreateCallBackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCallBackResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCallBackResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateCallBack"), type);
+                rspStr = this.internalRequest(req, "CreateCallBack");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class NppClient extends AbstractClient{
      */
     public DelVirtualNumResponse DelVirtualNum(DelVirtualNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DelVirtualNumResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DelVirtualNumResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DelVirtualNum"), type);
+                rspStr = this.internalRequest(req, "DelVirtualNum");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class NppClient extends AbstractClient{
      */
     public DeleteCallBackResponse DeleteCallBack(DeleteCallBackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCallBackResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCallBackResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCallBack"), type);
+                rspStr = this.internalRequest(req, "DeleteCallBack");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -99,12 +105,14 @@ public class NppClient extends AbstractClient{
      */
     public DescribeCallBackCdrResponse DescribeCallBackCdr(DescribeCallBackCdrRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallBackCdrResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallBackCdrResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCallBackCdr"), type);
+                rspStr = this.internalRequest(req, "DescribeCallBackCdr");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -117,12 +125,14 @@ public class NppClient extends AbstractClient{
      */
     public DescribeCallBackStatusResponse DescribeCallBackStatus(DescribeCallBackStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallBackStatusResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallBackStatusResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCallBackStatus"), type);
+                rspStr = this.internalRequest(req, "DescribeCallBackStatus");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -135,12 +145,14 @@ public class NppClient extends AbstractClient{
      */
     public DescribeCallerDisplayListResponse DescribeCallerDisplayList(DescribeCallerDisplayListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallerDisplayListResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallerDisplayListResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCallerDisplayList"), type);
+                rspStr = this.internalRequest(req, "DescribeCallerDisplayList");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -153,12 +165,14 @@ public class NppClient extends AbstractClient{
      */
     public Get400CdrResponse Get400Cdr(Get400CdrRequest req) throws TencentCloudSDKException{
         JsonResponseModel<Get400CdrResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<Get400CdrResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "Get400Cdr"), type);
+                rspStr = this.internalRequest(req, "Get400Cdr");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -171,12 +185,14 @@ public class NppClient extends AbstractClient{
      */
     public GetVirtualNumResponse GetVirtualNum(GetVirtualNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetVirtualNumResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GetVirtualNumResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetVirtualNum"), type);
+                rspStr = this.internalRequest(req, "GetVirtualNum");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

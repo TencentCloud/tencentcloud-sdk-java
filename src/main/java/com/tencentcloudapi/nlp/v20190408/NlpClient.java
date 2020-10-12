@@ -45,12 +45,14 @@ public class NlpClient extends AbstractClient{
      */
     public AutoSummarizationResponse AutoSummarization(AutoSummarizationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AutoSummarizationResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<AutoSummarizationResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "AutoSummarization"), type);
+                rspStr = this.internalRequest(req, "AutoSummarization");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -65,12 +67,14 @@ public class NlpClient extends AbstractClient{
      */
     public ChatBotResponse ChatBot(ChatBotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChatBotResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ChatBotResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ChatBot"), type);
+                rspStr = this.internalRequest(req, "ChatBot");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -83,12 +87,14 @@ public class NlpClient extends AbstractClient{
      */
     public CreateDictResponse CreateDict(CreateDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDictResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDictResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateDict"), type);
+                rspStr = this.internalRequest(req, "CreateDict");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -101,12 +107,14 @@ public class NlpClient extends AbstractClient{
      */
     public CreateWordItemsResponse CreateWordItems(CreateWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWordItemsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWordItemsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateWordItems"), type);
+                rspStr = this.internalRequest(req, "CreateWordItems");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -119,12 +127,14 @@ public class NlpClient extends AbstractClient{
      */
     public DeleteDictResponse DeleteDict(DeleteDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDictResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDictResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDict"), type);
+                rspStr = this.internalRequest(req, "DeleteDict");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -137,12 +147,14 @@ public class NlpClient extends AbstractClient{
      */
     public DeleteWordItemsResponse DeleteWordItems(DeleteWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWordItemsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWordItemsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWordItems"), type);
+                rspStr = this.internalRequest(req, "DeleteWordItems");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -155,12 +167,14 @@ public class NlpClient extends AbstractClient{
      */
     public DependencyParsingResponse DependencyParsing(DependencyParsingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DependencyParsingResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DependencyParsingResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DependencyParsing"), type);
+                rspStr = this.internalRequest(req, "DependencyParsing");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -173,12 +187,14 @@ public class NlpClient extends AbstractClient{
      */
     public DescribeDictResponse DescribeDict(DescribeDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDictResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDictResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDict"), type);
+                rspStr = this.internalRequest(req, "DescribeDict");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -191,12 +207,14 @@ public class NlpClient extends AbstractClient{
      */
     public DescribeDictsResponse DescribeDicts(DescribeDictsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDictsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDictsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDicts"), type);
+                rspStr = this.internalRequest(req, "DescribeDicts");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -209,12 +227,14 @@ public class NlpClient extends AbstractClient{
      */
     public DescribeEntityResponse DescribeEntity(DescribeEntityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEntityResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEntityResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeEntity"), type);
+                rspStr = this.internalRequest(req, "DescribeEntity");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -227,12 +247,14 @@ public class NlpClient extends AbstractClient{
      */
     public DescribeRelationResponse DescribeRelation(DescribeRelationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRelationResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRelationResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRelation"), type);
+                rspStr = this.internalRequest(req, "DescribeRelation");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -245,12 +267,14 @@ public class NlpClient extends AbstractClient{
      */
     public DescribeTripleResponse DescribeTriple(DescribeTripleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTripleResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTripleResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTriple"), type);
+                rspStr = this.internalRequest(req, "DescribeTriple");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -263,12 +287,14 @@ public class NlpClient extends AbstractClient{
      */
     public DescribeWordItemsResponse DescribeWordItems(DescribeWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWordItemsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWordItemsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWordItems"), type);
+                rspStr = this.internalRequest(req, "DescribeWordItems");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -281,12 +307,14 @@ public class NlpClient extends AbstractClient{
      */
     public KeywordsExtractionResponse KeywordsExtraction(KeywordsExtractionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KeywordsExtractionResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<KeywordsExtractionResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "KeywordsExtraction"), type);
+                rspStr = this.internalRequest(req, "KeywordsExtraction");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -307,12 +335,14 @@ public class NlpClient extends AbstractClient{
      */
     public LexicalAnalysisResponse LexicalAnalysis(LexicalAnalysisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LexicalAnalysisResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<LexicalAnalysisResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "LexicalAnalysis"), type);
+                rspStr = this.internalRequest(req, "LexicalAnalysis");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -325,12 +355,14 @@ public class NlpClient extends AbstractClient{
      */
     public SearchWordItemsResponse SearchWordItems(SearchWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchWordItemsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchWordItemsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SearchWordItems"), type);
+                rspStr = this.internalRequest(req, "SearchWordItems");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -345,12 +377,14 @@ public class NlpClient extends AbstractClient{
      */
     public SentenceEmbeddingResponse SentenceEmbedding(SentenceEmbeddingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SentenceEmbeddingResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<SentenceEmbeddingResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SentenceEmbedding"), type);
+                rspStr = this.internalRequest(req, "SentenceEmbedding");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -365,12 +399,14 @@ public class NlpClient extends AbstractClient{
      */
     public SentimentAnalysisResponse SentimentAnalysis(SentimentAnalysisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SentimentAnalysisResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<SentimentAnalysisResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SentimentAnalysis"), type);
+                rspStr = this.internalRequest(req, "SentimentAnalysis");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -383,12 +419,14 @@ public class NlpClient extends AbstractClient{
      */
     public SimilarWordsResponse SimilarWords(SimilarWordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SimilarWordsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<SimilarWordsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SimilarWords"), type);
+                rspStr = this.internalRequest(req, "SimilarWords");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -411,12 +449,14 @@ public class NlpClient extends AbstractClient{
      */
     public TextClassificationResponse TextClassification(TextClassificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextClassificationResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TextClassificationResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TextClassification"), type);
+                rspStr = this.internalRequest(req, "TextClassification");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -431,12 +471,14 @@ public class NlpClient extends AbstractClient{
      */
     public TextCorrectionResponse TextCorrection(TextCorrectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextCorrectionResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TextCorrectionResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TextCorrection"), type);
+                rspStr = this.internalRequest(req, "TextCorrection");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -451,12 +493,14 @@ public class NlpClient extends AbstractClient{
      */
     public TextSimilarityResponse TextSimilarity(TextSimilarityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextSimilarityResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TextSimilarityResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TextSimilarity"), type);
+                rspStr = this.internalRequest(req, "TextSimilarity");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -469,12 +513,14 @@ public class NlpClient extends AbstractClient{
      */
     public UpdateDictResponse UpdateDict(UpdateDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDictResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDictResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "UpdateDict"), type);
+                rspStr = this.internalRequest(req, "UpdateDict");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -495,12 +541,14 @@ https://ai.tencent.com/ailab/nlp/zh/embedding.html
      */
     public WordEmbeddingResponse WordEmbedding(WordEmbeddingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WordEmbeddingResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<WordEmbeddingResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "WordEmbedding"), type);
+                rspStr = this.internalRequest(req, "WordEmbedding");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -513,12 +561,14 @@ https://ai.tencent.com/ailab/nlp/zh/embedding.html
      */
     public WordSimilarityResponse WordSimilarity(WordSimilarityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WordSimilarityResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<WordSimilarityResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "WordSimilarity"), type);
+                rspStr = this.internalRequest(req, "WordSimilarity");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

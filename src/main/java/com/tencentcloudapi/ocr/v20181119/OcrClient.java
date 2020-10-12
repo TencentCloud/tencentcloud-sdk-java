@@ -45,12 +45,14 @@ public class OcrClient extends AbstractClient{
      */
     public ArithmeticOCRResponse ArithmeticOCR(ArithmeticOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ArithmeticOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ArithmeticOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ArithmeticOCR"), type);
+                rspStr = this.internalRequest(req, "ArithmeticOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class OcrClient extends AbstractClient{
      */
     public BankCardOCRResponse BankCardOCR(BankCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BankCardOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BankCardOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BankCardOCR"), type);
+                rspStr = this.internalRequest(req, "BankCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class OcrClient extends AbstractClient{
      */
     public BizLicenseOCRResponse BizLicenseOCR(BizLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BizLicenseOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BizLicenseOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BizLicenseOCR"), type);
+                rspStr = this.internalRequest(req, "BizLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -99,12 +105,14 @@ public class OcrClient extends AbstractClient{
      */
     public BusInvoiceOCRResponse BusInvoiceOCR(BusInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BusInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BusInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BusInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "BusInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -117,12 +125,14 @@ public class OcrClient extends AbstractClient{
      */
     public BusinessCardOCRResponse BusinessCardOCR(BusinessCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BusinessCardOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<BusinessCardOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "BusinessCardOCR"), type);
+                rspStr = this.internalRequest(req, "BusinessCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -135,12 +145,14 @@ public class OcrClient extends AbstractClient{
      */
     public CarInvoiceOCRResponse CarInvoiceOCR(CarInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CarInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CarInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CarInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "CarInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -154,12 +166,14 @@ public class OcrClient extends AbstractClient{
      */
     public ClassifyDetectOCRResponse ClassifyDetectOCR(ClassifyDetectOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClassifyDetectOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ClassifyDetectOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ClassifyDetectOCR"), type);
+                rspStr = this.internalRequest(req, "ClassifyDetectOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -178,12 +192,14 @@ public class OcrClient extends AbstractClient{
      */
     public DriverLicenseOCRResponse DriverLicenseOCR(DriverLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DriverLicenseOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DriverLicenseOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DriverLicenseOCR"), type);
+                rspStr = this.internalRequest(req, "DriverLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -196,12 +212,14 @@ public class OcrClient extends AbstractClient{
      */
     public DutyPaidProofOCRResponse DutyPaidProofOCR(DutyPaidProofOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DutyPaidProofOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DutyPaidProofOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DutyPaidProofOCR"), type);
+                rspStr = this.internalRequest(req, "DutyPaidProofOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -214,12 +232,14 @@ public class OcrClient extends AbstractClient{
      */
     public EduPaperOCRResponse EduPaperOCR(EduPaperOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EduPaperOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<EduPaperOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "EduPaperOCR"), type);
+                rspStr = this.internalRequest(req, "EduPaperOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -232,12 +252,14 @@ public class OcrClient extends AbstractClient{
      */
     public EnglishOCRResponse EnglishOCR(EnglishOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnglishOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<EnglishOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "EnglishOCR"), type);
+                rspStr = this.internalRequest(req, "EnglishOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -250,12 +272,14 @@ public class OcrClient extends AbstractClient{
      */
     public EnterpriseLicenseOCRResponse EnterpriseLicenseOCR(EnterpriseLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnterpriseLicenseOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<EnterpriseLicenseOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "EnterpriseLicenseOCR"), type);
+                rspStr = this.internalRequest(req, "EnterpriseLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -271,12 +295,14 @@ public class OcrClient extends AbstractClient{
      */
     public EstateCertOCRResponse EstateCertOCR(EstateCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EstateCertOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<EstateCertOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "EstateCertOCR"), type);
+                rspStr = this.internalRequest(req, "EstateCertOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -289,12 +315,14 @@ public class OcrClient extends AbstractClient{
      */
     public FinanBillOCRResponse FinanBillOCR(FinanBillOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FinanBillOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<FinanBillOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "FinanBillOCR"), type);
+                rspStr = this.internalRequest(req, "FinanBillOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -307,12 +335,14 @@ public class OcrClient extends AbstractClient{
      */
     public FinanBillSliceOCRResponse FinanBillSliceOCR(FinanBillSliceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FinanBillSliceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<FinanBillSliceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "FinanBillSliceOCR"), type);
+                rspStr = this.internalRequest(req, "FinanBillSliceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -325,12 +355,14 @@ public class OcrClient extends AbstractClient{
      */
     public FlightInvoiceOCRResponse FlightInvoiceOCR(FlightInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FlightInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<FlightInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "FlightInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "FlightInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -343,12 +375,14 @@ public class OcrClient extends AbstractClient{
      */
     public FormulaOCRResponse FormulaOCR(FormulaOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FormulaOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<FormulaOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "FormulaOCR"), type);
+                rspStr = this.internalRequest(req, "FormulaOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -421,12 +455,14 @@ public class OcrClient extends AbstractClient{
      */
     public GeneralAccurateOCRResponse GeneralAccurateOCR(GeneralAccurateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralAccurateOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GeneralAccurateOCR"), type);
+                rspStr = this.internalRequest(req, "GeneralAccurateOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -499,12 +535,14 @@ public class OcrClient extends AbstractClient{
      */
     public GeneralBasicOCRResponse GeneralBasicOCR(GeneralBasicOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralBasicOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralBasicOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GeneralBasicOCR"), type);
+                rspStr = this.internalRequest(req, "GeneralBasicOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -591,12 +629,14 @@ public class OcrClient extends AbstractClient{
      */
     public GeneralEfficientOCRResponse GeneralEfficientOCR(GeneralEfficientOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralEfficientOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralEfficientOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GeneralEfficientOCR"), type);
+                rspStr = this.internalRequest(req, "GeneralEfficientOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -609,12 +649,14 @@ public class OcrClient extends AbstractClient{
      */
     public GeneralFastOCRResponse GeneralFastOCR(GeneralFastOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralFastOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralFastOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GeneralFastOCR"), type);
+                rspStr = this.internalRequest(req, "GeneralFastOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -627,12 +669,14 @@ public class OcrClient extends AbstractClient{
      */
     public GeneralHandwritingOCRResponse GeneralHandwritingOCR(GeneralHandwritingOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralHandwritingOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralHandwritingOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GeneralHandwritingOCR"), type);
+                rspStr = this.internalRequest(req, "GeneralHandwritingOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -647,12 +691,14 @@ public class OcrClient extends AbstractClient{
      */
     public HKIDCardOCRResponse HKIDCardOCR(HKIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<HKIDCardOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<HKIDCardOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "HKIDCardOCR"), type);
+                rspStr = this.internalRequest(req, "HKIDCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -665,12 +711,14 @@ public class OcrClient extends AbstractClient{
      */
     public HmtResidentPermitOCRResponse HmtResidentPermitOCR(HmtResidentPermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<HmtResidentPermitOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "HmtResidentPermitOCR"), type);
+                rspStr = this.internalRequest(req, "HmtResidentPermitOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -728,12 +776,14 @@ public class OcrClient extends AbstractClient{
      */
     public IDCardOCRResponse IDCardOCR(IDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IDCardOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<IDCardOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "IDCardOCR"), type);
+                rspStr = this.internalRequest(req, "IDCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -746,12 +796,14 @@ public class OcrClient extends AbstractClient{
      */
     public InstitutionOCRResponse InstitutionOCR(InstitutionOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InstitutionOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<InstitutionOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "InstitutionOCR"), type);
+                rspStr = this.internalRequest(req, "InstitutionOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -764,12 +816,14 @@ public class OcrClient extends AbstractClient{
      */
     public InsuranceBillOCRResponse InsuranceBillOCR(InsuranceBillOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InsuranceBillOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<InsuranceBillOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "InsuranceBillOCR"), type);
+                rspStr = this.internalRequest(req, "InsuranceBillOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -782,12 +836,14 @@ public class OcrClient extends AbstractClient{
      */
     public InvoiceGeneralOCRResponse InvoiceGeneralOCR(InvoiceGeneralOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvoiceGeneralOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<InvoiceGeneralOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "InvoiceGeneralOCR"), type);
+                rspStr = this.internalRequest(req, "InvoiceGeneralOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -800,12 +856,14 @@ public class OcrClient extends AbstractClient{
      */
     public LicensePlateOCRResponse LicensePlateOCR(LicensePlateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LicensePlateOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<LicensePlateOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "LicensePlateOCR"), type);
+                rspStr = this.internalRequest(req, "LicensePlateOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -820,12 +878,14 @@ public class OcrClient extends AbstractClient{
      */
     public MLIDCardOCRResponse MLIDCardOCR(MLIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MLIDCardOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<MLIDCardOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "MLIDCardOCR"), type);
+                rspStr = this.internalRequest(req, "MLIDCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -839,12 +899,14 @@ public class OcrClient extends AbstractClient{
      */
     public MLIDPassportOCRResponse MLIDPassportOCR(MLIDPassportOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MLIDPassportOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<MLIDPassportOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "MLIDPassportOCR"), type);
+                rspStr = this.internalRequest(req, "MLIDPassportOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -857,12 +919,14 @@ public class OcrClient extends AbstractClient{
      */
     public MainlandPermitOCRResponse MainlandPermitOCR(MainlandPermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<MainlandPermitOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "MainlandPermitOCR"), type);
+                rspStr = this.internalRequest(req, "MainlandPermitOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -875,12 +939,14 @@ public class OcrClient extends AbstractClient{
      */
     public MixedInvoiceDetectResponse MixedInvoiceDetect(MixedInvoiceDetectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MixedInvoiceDetectResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<MixedInvoiceDetectResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "MixedInvoiceDetect"), type);
+                rspStr = this.internalRequest(req, "MixedInvoiceDetect");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -893,12 +959,14 @@ public class OcrClient extends AbstractClient{
      */
     public MixedInvoiceOCRResponse MixedInvoiceOCR(MixedInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MixedInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<MixedInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "MixedInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "MixedInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -911,12 +979,14 @@ public class OcrClient extends AbstractClient{
      */
     public OrgCodeCertOCRResponse OrgCodeCertOCR(OrgCodeCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OrgCodeCertOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<OrgCodeCertOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "OrgCodeCertOCR"), type);
+                rspStr = this.internalRequest(req, "OrgCodeCertOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -929,12 +999,14 @@ public class OcrClient extends AbstractClient{
      */
     public PassportOCRResponse PassportOCR(PassportOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PassportOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<PassportOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "PassportOCR"), type);
+                rspStr = this.internalRequest(req, "PassportOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -947,12 +1019,14 @@ public class OcrClient extends AbstractClient{
      */
     public PermitOCRResponse PermitOCR(PermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PermitOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<PermitOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "PermitOCR"), type);
+                rspStr = this.internalRequest(req, "PermitOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -965,12 +1039,14 @@ public class OcrClient extends AbstractClient{
      */
     public PropOwnerCertOCRResponse PropOwnerCertOCR(PropOwnerCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PropOwnerCertOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<PropOwnerCertOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "PropOwnerCertOCR"), type);
+                rspStr = this.internalRequest(req, "PropOwnerCertOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -985,12 +1061,14 @@ public class OcrClient extends AbstractClient{
      */
     public QrcodeOCRResponse QrcodeOCR(QrcodeOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QrcodeOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QrcodeOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QrcodeOCR"), type);
+                rspStr = this.internalRequest(req, "QrcodeOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1007,12 +1085,14 @@ public class OcrClient extends AbstractClient{
      */
     public QueryBarCodeResponse QueryBarCode(QueryBarCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBarCodeResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBarCodeResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryBarCode"), type);
+                rspStr = this.internalRequest(req, "QueryBarCode");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1025,12 +1105,14 @@ public class OcrClient extends AbstractClient{
      */
     public QuotaInvoiceOCRResponse QuotaInvoiceOCR(QuotaInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuotaInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QuotaInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QuotaInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "QuotaInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1045,12 +1127,14 @@ public class OcrClient extends AbstractClient{
      */
     public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RecognizeThaiIDCardOCR"), type);
+                rspStr = this.internalRequest(req, "RecognizeThaiIDCardOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1063,12 +1147,14 @@ public class OcrClient extends AbstractClient{
      */
     public ResidenceBookletOCRResponse ResidenceBookletOCR(ResidenceBookletOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResidenceBookletOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ResidenceBookletOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ResidenceBookletOCR"), type);
+                rspStr = this.internalRequest(req, "ResidenceBookletOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1081,12 +1167,14 @@ public class OcrClient extends AbstractClient{
      */
     public RideHailingDriverLicenseOCRResponse RideHailingDriverLicenseOCR(RideHailingDriverLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RideHailingDriverLicenseOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RideHailingDriverLicenseOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RideHailingDriverLicenseOCR"), type);
+                rspStr = this.internalRequest(req, "RideHailingDriverLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1100,12 +1188,14 @@ public class OcrClient extends AbstractClient{
      */
     public RideHailingTransportLicenseOCRResponse RideHailingTransportLicenseOCR(RideHailingTransportLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RideHailingTransportLicenseOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<RideHailingTransportLicenseOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "RideHailingTransportLicenseOCR"), type);
+                rspStr = this.internalRequest(req, "RideHailingTransportLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1118,12 +1208,14 @@ public class OcrClient extends AbstractClient{
      */
     public SealOCRResponse SealOCR(SealOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SealOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<SealOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SealOCR"), type);
+                rspStr = this.internalRequest(req, "SealOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1136,12 +1228,14 @@ public class OcrClient extends AbstractClient{
      */
     public ShipInvoiceOCRResponse ShipInvoiceOCR(ShipInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ShipInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ShipInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ShipInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "ShipInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1154,12 +1248,14 @@ public class OcrClient extends AbstractClient{
      */
     public TableOCRResponse TableOCR(TableOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TableOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TableOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TableOCR"), type);
+                rspStr = this.internalRequest(req, "TableOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1172,12 +1268,14 @@ public class OcrClient extends AbstractClient{
      */
     public TaxiInvoiceOCRResponse TaxiInvoiceOCR(TaxiInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TaxiInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TaxiInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TaxiInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "TaxiInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1192,12 +1290,14 @@ public class OcrClient extends AbstractClient{
      */
     public TextDetectResponse TextDetect(TextDetectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextDetectResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TextDetectResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TextDetect"), type);
+                rspStr = this.internalRequest(req, "TextDetect");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1210,12 +1310,14 @@ public class OcrClient extends AbstractClient{
      */
     public TollInvoiceOCRResponse TollInvoiceOCR(TollInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TollInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TollInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TollInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "TollInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1229,12 +1331,14 @@ public class OcrClient extends AbstractClient{
      */
     public TrainTicketOCRResponse TrainTicketOCR(TrainTicketOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TrainTicketOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<TrainTicketOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "TrainTicketOCR"), type);
+                rspStr = this.internalRequest(req, "TrainTicketOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1247,12 +1351,14 @@ public class OcrClient extends AbstractClient{
      */
     public VatInvoiceOCRResponse VatInvoiceOCR(VatInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VatInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VatInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VatInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "VatInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1265,12 +1371,14 @@ public class OcrClient extends AbstractClient{
      */
     public VatInvoiceVerifyResponse VatInvoiceVerify(VatInvoiceVerifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VatInvoiceVerifyResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VatInvoiceVerifyResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VatInvoiceVerify"), type);
+                rspStr = this.internalRequest(req, "VatInvoiceVerify");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1283,12 +1391,14 @@ public class OcrClient extends AbstractClient{
      */
     public VatRollInvoiceOCRResponse VatRollInvoiceOCR(VatRollInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VatRollInvoiceOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VatRollInvoiceOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VatRollInvoiceOCR"), type);
+                rspStr = this.internalRequest(req, "VatRollInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1307,12 +1417,14 @@ public class OcrClient extends AbstractClient{
      */
     public VehicleLicenseOCRResponse VehicleLicenseOCR(VehicleLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VehicleLicenseOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VehicleLicenseOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VehicleLicenseOCR"), type);
+                rspStr = this.internalRequest(req, "VehicleLicenseOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1325,12 +1437,14 @@ public class OcrClient extends AbstractClient{
      */
     public VehicleRegCertOCRResponse VehicleRegCertOCR(VehicleRegCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VehicleRegCertOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VehicleRegCertOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VehicleRegCertOCR"), type);
+                rspStr = this.internalRequest(req, "VehicleRegCertOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1343,12 +1457,14 @@ public class OcrClient extends AbstractClient{
      */
     public VerifyBasicBizLicenseResponse VerifyBasicBizLicense(VerifyBasicBizLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyBasicBizLicenseResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyBasicBizLicenseResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VerifyBasicBizLicense"), type);
+                rspStr = this.internalRequest(req, "VerifyBasicBizLicense");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1362,12 +1478,14 @@ public class OcrClient extends AbstractClient{
      */
     public VerifyBizLicenseResponse VerifyBizLicense(VerifyBizLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyBizLicenseResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyBizLicenseResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VerifyBizLicense"), type);
+                rspStr = this.internalRequest(req, "VerifyBizLicense");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1380,12 +1498,14 @@ public class OcrClient extends AbstractClient{
      */
     public VinOCRResponse VinOCR(VinOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VinOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<VinOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "VinOCR"), type);
+                rspStr = this.internalRequest(req, "VinOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -1398,12 +1518,14 @@ public class OcrClient extends AbstractClient{
      */
     public WaybillOCRResponse WaybillOCR(WaybillOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WaybillOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<WaybillOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "WaybillOCR"), type);
+                rspStr = this.internalRequest(req, "WaybillOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

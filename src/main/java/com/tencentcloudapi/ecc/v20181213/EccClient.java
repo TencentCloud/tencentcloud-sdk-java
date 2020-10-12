@@ -46,12 +46,14 @@ public class EccClient extends AbstractClient{
      */
     public CorrectMultiImageResponse CorrectMultiImage(CorrectMultiImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CorrectMultiImageResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CorrectMultiImageResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CorrectMultiImage"), type);
+                rspStr = this.internalRequest(req, "CorrectMultiImage");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -64,12 +66,14 @@ public class EccClient extends AbstractClient{
      */
     public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTask"), type);
+                rspStr = this.internalRequest(req, "DescribeTask");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -83,12 +87,14 @@ public class EccClient extends AbstractClient{
      */
     public ECCResponse ECC(ECCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ECCResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ECCResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ECC"), type);
+                rspStr = this.internalRequest(req, "ECC");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -102,12 +108,14 @@ public class EccClient extends AbstractClient{
      */
     public EHOCRResponse EHOCR(EHOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EHOCRResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<EHOCRResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "EHOCR"), type);
+                rspStr = this.internalRequest(req, "EHOCR");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

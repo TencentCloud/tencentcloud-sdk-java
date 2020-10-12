@@ -45,12 +45,14 @@ public class StsClient extends AbstractClient{
      */
     public AssumeRoleResponse AssumeRole(AssumeRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssumeRoleResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<AssumeRoleResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "AssumeRole"), type);
+                rspStr = this.internalRequest(req, "AssumeRole");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class StsClient extends AbstractClient{
      */
     public AssumeRoleWithSAMLResponse AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<AssumeRoleWithSAMLResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "AssumeRoleWithSAML"), type);
+                rspStr = this.internalRequest(req, "AssumeRoleWithSAML");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class StsClient extends AbstractClient{
      */
     public GetFederationTokenResponse GetFederationToken(GetFederationTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFederationTokenResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFederationTokenResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "GetFederationToken"), type);
+                rspStr = this.internalRequest(req, "GetFederationToken");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -99,12 +105,14 @@ public class StsClient extends AbstractClient{
      */
     public QueryApiKeyResponse QueryApiKey(QueryApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryApiKeyResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryApiKeyResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "QueryApiKey"), type);
+                rspStr = this.internalRequest(req, "QueryApiKey");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
