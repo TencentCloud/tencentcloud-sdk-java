@@ -58,6 +58,13 @@ public class CreateAssetRequest extends AbstractModel{
     private String OperateSystem;
 
     /**
+    * 生成包支持的操作系统镜像id
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
      * Get 生成包的ZIP包名，例如：server.zip 
      * @return BucketKey 生成包的ZIP包名，例如：server.zip
      */
@@ -138,6 +145,22 @@ public class CreateAssetRequest extends AbstractModel{
     }
 
     /**
+     * Get 生成包支持的操作系统镜像id 
+     * @return ImageId 生成包支持的操作系统镜像id
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set 生成包支持的操作系统镜像id
+     * @param ImageId 生成包支持的操作系统镜像id
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateAssetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AssetVersion", this.AssetVersion);
         this.setParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
         this.setParamSimple(map, prefix + "OperateSystem", this.OperateSystem);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gse.v20191112.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetResponse extends AbstractModel{
+public class DescribeEnvironmentRolesResponse extends AbstractModel{
 
     /**
-    * 生成包ID
+    * 记录数。
     */
-    @SerializedName("AssetId")
+    @SerializedName("TotalCount")
     @Expose
-    private String AssetId;
+    private Long TotalCount;
 
     /**
-    * 生成包的全局唯一资源标识符
+    * 环境角色集合。
     */
-    @SerializedName("AssetArn")
+    @SerializedName("EnvironmentRoleSets")
     @Expose
-    private String AssetArn;
+    private EnvironmentRole [] EnvironmentRoleSets;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class CreateAssetResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 生成包ID 
-     * @return AssetId 生成包ID
+     * Get 记录数。 
+     * @return TotalCount 记录数。
      */
-    public String getAssetId() {
-        return this.AssetId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 生成包ID
-     * @param AssetId 生成包ID
+     * Set 记录数。
+     * @param TotalCount 记录数。
      */
-    public void setAssetId(String AssetId) {
-        this.AssetId = AssetId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 生成包的全局唯一资源标识符 
-     * @return AssetArn 生成包的全局唯一资源标识符
+     * Get 环境角色集合。 
+     * @return EnvironmentRoleSets 环境角色集合。
      */
-    public String getAssetArn() {
-        return this.AssetArn;
+    public EnvironmentRole [] getEnvironmentRoleSets() {
+        return this.EnvironmentRoleSets;
     }
 
     /**
-     * Set 生成包的全局唯一资源标识符
-     * @param AssetArn 生成包的全局唯一资源标识符
+     * Set 环境角色集合。
+     * @param EnvironmentRoleSets 环境角色集合。
      */
-    public void setAssetArn(String AssetArn) {
-        this.AssetArn = AssetArn;
+    public void setEnvironmentRoleSets(EnvironmentRole [] EnvironmentRoleSets) {
+        this.EnvironmentRoleSets = EnvironmentRoleSets;
     }
 
     /**
@@ -95,8 +95,8 @@ public class CreateAssetResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AssetId", this.AssetId);
-        this.setParamSimple(map, prefix + "AssetArn", this.AssetArn);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

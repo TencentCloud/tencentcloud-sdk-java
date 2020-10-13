@@ -58,9 +58,9 @@ public class CertInfo extends AbstractModel{
     private String HttpsCrt;
 
     /**
-    * 证书类型:
-0：腾讯云托管证书。
-1：用户添加证书。
+    * 证书类型。
+0：用户添加证书，
+1：腾讯云托管证书。
     */
     @SerializedName("CertType")
     @Expose
@@ -161,24 +161,24 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get 证书类型:
-0：腾讯云托管证书。
-1：用户添加证书。 
-     * @return CertType 证书类型:
-0：腾讯云托管证书。
-1：用户添加证书。
+     * Get 证书类型。
+0：用户添加证书，
+1：腾讯云托管证书。 
+     * @return CertType 证书类型。
+0：用户添加证书，
+1：腾讯云托管证书。
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书类型:
-0：腾讯云托管证书。
-1：用户添加证书。
-     * @param CertType 证书类型:
-0：腾讯云托管证书。
-1：用户添加证书。
+     * Set 证书类型。
+0：用户添加证书，
+1：腾讯云托管证书。
+     * @param CertType 证书类型。
+0：用户添加证书，
+1：腾讯云托管证书。
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;

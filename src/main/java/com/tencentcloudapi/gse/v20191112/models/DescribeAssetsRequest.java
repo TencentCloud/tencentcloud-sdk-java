@@ -44,7 +44,7 @@ public class DescribeAssetsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 搜索条件，支持包ID或包名字过滤
+    * 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
     */
     @SerializedName("Filter")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeAssetsRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索条件，支持包ID或包名字过滤 
-     * @return Filter 搜索条件，支持包ID或包名字过滤
+     * Get 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段 
+     * @return Filter 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 搜索条件，支持包ID或包名字过滤
-     * @param Filter 搜索条件，支持包ID或包名字过滤
+     * Set 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
+     * @param Filter 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;

@@ -258,6 +258,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取下载文件信息
+     * @param req DescribeDownloadFileRequest
+     * @return DescribeDownloadFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDownloadFileResponse DescribeDownloadFile(DescribeDownloadFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDownloadFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDownloadFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDownloadFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取环境终端用户新增与登录信息
      * @param req DescribeEndUserLoginStatisticRequest
      * @return DescribeEndUserLoginStatisticResponse

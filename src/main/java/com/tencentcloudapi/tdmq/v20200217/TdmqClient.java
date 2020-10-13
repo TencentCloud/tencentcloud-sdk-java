@@ -178,6 +178,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取环境角色列表
+     * @param req DescribeEnvironmentRolesRequest
+     * @return DescribeEnvironmentRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentRolesResponse DescribeEnvironmentRoles(DescribeEnvironmentRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvironmentRolesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvironmentRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取租户下环境列表
      * @param req DescribeEnvironmentsRequest
      * @return DescribeEnvironmentsResponse

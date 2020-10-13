@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gse.v20191112.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetResponse extends AbstractModel{
+public class ModifyTableStatusResponse extends AbstractModel{
 
     /**
-    * 生成包ID
+    * 0：正常，-1：不正常
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AssetId")
+    @SerializedName("Status")
     @Expose
-    private String AssetId;
-
-    /**
-    * 生成包的全局唯一资源标识符
-    */
-    @SerializedName("AssetArn")
-    @Expose
-    private String AssetArn;
+    private Long Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class CreateAssetResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 生成包ID 
-     * @return AssetId 生成包ID
+     * Get 0：正常，-1：不正常
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 0：正常，-1：不正常
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getAssetId() {
-        return this.AssetId;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 生成包ID
-     * @param AssetId 生成包ID
+     * Set 0：正常，-1：不正常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 0：正常，-1：不正常
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAssetId(String AssetId) {
-        this.AssetId = AssetId;
-    }
-
-    /**
-     * Get 生成包的全局唯一资源标识符 
-     * @return AssetArn 生成包的全局唯一资源标识符
-     */
-    public String getAssetArn() {
-        return this.AssetArn;
-    }
-
-    /**
-     * Set 生成包的全局唯一资源标识符
-     * @param AssetArn 生成包的全局唯一资源标识符
-     */
-    public void setAssetArn(String AssetArn) {
-        this.AssetArn = AssetArn;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
@@ -95,8 +77,7 @@ public class CreateAssetResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AssetId", this.AssetId);
-        this.setParamSimple(map, prefix + "AssetArn", this.AssetArn);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

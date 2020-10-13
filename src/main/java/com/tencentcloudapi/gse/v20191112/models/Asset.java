@@ -79,6 +79,27 @@ public class Asset extends AbstractModel{
     private Long BindFleetNum;
 
     /**
+    * 生成包的全局唯一资源标识符
+    */
+    @SerializedName("AssetArn")
+    @Expose
+    private String AssetArn;
+
+    /**
+    * 生成包支持的操作系统镜像id
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
+    * 生成包支持的操作系统类型
+    */
+    @SerializedName("OsType")
+    @Expose
+    private String OsType;
+
+    /**
      * Get 生成包ID 
      * @return AssetId 生成包ID
      */
@@ -207,6 +228,54 @@ public class Asset extends AbstractModel{
     }
 
     /**
+     * Get 生成包的全局唯一资源标识符 
+     * @return AssetArn 生成包的全局唯一资源标识符
+     */
+    public String getAssetArn() {
+        return this.AssetArn;
+    }
+
+    /**
+     * Set 生成包的全局唯一资源标识符
+     * @param AssetArn 生成包的全局唯一资源标识符
+     */
+    public void setAssetArn(String AssetArn) {
+        this.AssetArn = AssetArn;
+    }
+
+    /**
+     * Get 生成包支持的操作系统镜像id 
+     * @return ImageId 生成包支持的操作系统镜像id
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set 生成包支持的操作系统镜像id
+     * @param ImageId 生成包支持的操作系统镜像id
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
+     * Get 生成包支持的操作系统类型 
+     * @return OsType 生成包支持的操作系统类型
+     */
+    public String getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * Set 生成包支持的操作系统类型
+     * @param OsType 生成包支持的操作系统类型
+     */
+    public void setOsType(String OsType) {
+        this.OsType = OsType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +287,9 @@ public class Asset extends AbstractModel{
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BindFleetNum", this.BindFleetNum);
+        this.setParamSimple(map, prefix + "AssetArn", this.AssetArn);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
 
     }
 }

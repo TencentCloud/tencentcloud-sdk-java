@@ -24,16 +24,19 @@ public class TaskStatData extends AbstractModel{
 
     /**
     * 任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
+    * 任务数统计数据概览，用量单位为秒。
     */
     @SerializedName("Summary")
     @Expose
@@ -82,11 +85,19 @@ public class TaskStatData extends AbstractModel{
 
     /**
      * Get 任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li> 
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li> 
      * @return TaskType 任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -94,31 +105,35 @@ public class TaskStatData extends AbstractModel{
 
     /**
      * Set 任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      * @param TaskType 任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li> 
-     * @return Summary 任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
+     * Get 任务数统计数据概览，用量单位为秒。 
+     * @return Summary 任务数统计数据概览，用量单位为秒。
      */
     public TaskStatDataItem [] getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
-     * @param Summary 任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
+     * Set 任务数统计数据概览，用量单位为秒。
+     * @param Summary 任务数统计数据概览，用量单位为秒。
      */
     public void setSummary(TaskStatDataItem [] Summary) {
         this.Summary = Summary;

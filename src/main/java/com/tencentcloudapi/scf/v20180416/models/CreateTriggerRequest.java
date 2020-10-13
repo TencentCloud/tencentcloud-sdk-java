@@ -72,6 +72,13 @@ public class CreateTriggerRequest extends AbstractModel{
     private String Enable;
 
     /**
+    * 用户自定义参数，仅支持timer触发器
+    */
+    @SerializedName("CustomArgument")
+    @Expose
+    private String CustomArgument;
+
+    /**
      * Get 新建触发器绑定的函数名称 
      * @return FunctionName 新建触发器绑定的函数名称
      */
@@ -184,6 +191,22 @@ public class CreateTriggerRequest extends AbstractModel{
     }
 
     /**
+     * Get 用户自定义参数，仅支持timer触发器 
+     * @return CustomArgument 用户自定义参数，仅支持timer触发器
+     */
+    public String getCustomArgument() {
+        return this.CustomArgument;
+    }
+
+    /**
+     * Set 用户自定义参数，仅支持timer触发器
+     * @param CustomArgument 用户自定义参数，仅支持timer触发器
+     */
+    public void setCustomArgument(String CustomArgument) {
+        this.CustomArgument = CustomArgument;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateTriggerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
 
     }
 }
