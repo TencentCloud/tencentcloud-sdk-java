@@ -163,6 +163,26 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
+     * @param req DescribeDirectConnectTunnelExtraRequest
+     * @return DescribeDirectConnectTunnelExtraResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtra(DescribeDirectConnectTunnelExtraRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDirectConnectTunnelExtraResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectTunnelExtraResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDirectConnectTunnelExtra");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询专用通道列表。
      * @param req DescribeDirectConnectTunnelsRequest
      * @return DescribeDirectConnectTunnelsResponse
@@ -203,6 +223,26 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+     * @param req DescribePublicDirectConnectTunnelRoutesRequest
+     * @return DescribePublicDirectConnectTunnelRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutes(DescribePublicDirectConnectTunnelRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePublicDirectConnectTunnelRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改物理专线的属性。
      * @param req ModifyDirectConnectAttributeRequest
      * @return ModifyDirectConnectAttributeResponse
@@ -235,6 +275,26 @@ public class DcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDirectConnectTunnelAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
+     * @param req ModifyDirectConnectTunnelExtraRequest
+     * @return ModifyDirectConnectTunnelExtraResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtra(ModifyDirectConnectTunnelExtraRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDirectConnectTunnelExtraResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectTunnelExtraResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDirectConnectTunnelExtra");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

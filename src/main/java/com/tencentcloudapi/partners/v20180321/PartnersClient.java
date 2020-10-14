@@ -238,6 +238,26 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *可以查询代理商下指定客户的自付订单
+     * @param req DescribeAgentSelfPayDealsRequest
+     * @return DescribeAgentSelfPayDealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDeals(DescribeAgentSelfPayDealsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentSelfPayDealsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentSelfPayDealsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAgentSelfPayDeals");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
      * @param req DescribeClientBalanceRequest
      * @return DescribeClientBalanceResponse

@@ -117,11 +117,25 @@ OPEN：公网属性， INTERNAL：内网属性。
     private TagInfo [] Tags;
 
     /**
+    * 独占集群信息
+    */
+    @SerializedName("ExclusiveCluster")
+    @Expose
+    private ExclusiveCluster ExclusiveCluster;
+
+    /**
     * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+    * Stgw独占集群的标签。
+    */
+    @SerializedName("ClusterTag")
+    @Expose
+    private String ClusterTag;
 
     /**
      * Get 负载均衡实例的网络类型：
@@ -344,6 +358,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 独占集群信息 
+     * @return ExclusiveCluster 独占集群信息
+     */
+    public ExclusiveCluster getExclusiveCluster() {
+        return this.ExclusiveCluster;
+    }
+
+    /**
+     * Set 独占集群信息
+     * @param ExclusiveCluster 独占集群信息
+     */
+    public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
+        this.ExclusiveCluster = ExclusiveCluster;
+    }
+
+    /**
      * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
@@ -357,6 +387,22 @@ OPEN：公网属性， INTERNAL：内网属性。
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get Stgw独占集群的标签。 
+     * @return ClusterTag Stgw独占集群的标签。
+     */
+    public String getClusterTag() {
+        return this.ClusterTag;
+    }
+
+    /**
+     * Set Stgw独占集群的标签。
+     * @param ClusterTag Stgw独占集群的标签。
+     */
+    public void setClusterTag(String ClusterTag) {
+        this.ClusterTag = ClusterTag;
     }
 
     /**
@@ -376,7 +422,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
 
     }
 }

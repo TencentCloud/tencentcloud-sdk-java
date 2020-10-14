@@ -71,7 +71,7 @@ public class SentenceDetail extends AbstractModel{
     private SentenceWords [] Words;
 
     /**
-    * 单句语速
+    * 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpeechSpeed")
@@ -199,9 +199,9 @@ public class SentenceDetail extends AbstractModel{
     }
 
     /**
-     * Get 单句语速
+     * Get 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpeechSpeed 单句语速
+     * @return SpeechSpeed 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSpeechSpeed() {
@@ -209,9 +209,9 @@ public class SentenceDetail extends AbstractModel{
     }
 
     /**
-     * Set 单句语速
+     * Set 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpeechSpeed 单句语速
+     * @param SpeechSpeed 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpeechSpeed(Float SpeechSpeed) {

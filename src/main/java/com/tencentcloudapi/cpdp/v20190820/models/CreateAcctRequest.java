@@ -52,7 +52,7 @@ public class CreateAcctRequest extends AbstractModel{
 
     /**
     * 子商户联系人
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("Contact")
     @Expose
@@ -60,7 +60,7 @@ public class CreateAcctRequest extends AbstractModel{
 
     /**
     * 联系人手机号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("Mobile")
     @Expose
@@ -68,7 +68,7 @@ public class CreateAcctRequest extends AbstractModel{
 
     /**
     * 邮箱 
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("Email")
     @Expose
@@ -117,7 +117,7 @@ merchant: 商户子账户
 
     /**
     * 子商户密钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("SubMerchantKey")
     @Expose
@@ -125,7 +125,7 @@ merchant: 商户子账户
 
     /**
     * 子商户私钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("SubMerchantPrivateKey")
     @Expose
@@ -225,9 +225,9 @@ development: 开发环境
 
     /**
      * Get 子商户联系人
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return Contact 子商户联系人
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getContact() {
         return this.Contact;
@@ -235,9 +235,9 @@ development: 开发环境
 
     /**
      * Set 子商户联系人
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param Contact 子商户联系人
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setContact(String Contact) {
         this.Contact = Contact;
@@ -245,9 +245,9 @@ development: 开发环境
 
     /**
      * Get 联系人手机号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return Mobile 联系人手机号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getMobile() {
         return this.Mobile;
@@ -255,9 +255,9 @@ development: 开发环境
 
     /**
      * Set 联系人手机号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param Mobile 联系人手机号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
@@ -265,9 +265,9 @@ development: 开发环境
 
     /**
      * Get 邮箱 
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return Email 邮箱 
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getEmail() {
         return this.Email;
@@ -275,9 +275,9 @@ development: 开发环境
 
     /**
      * Set 邮箱 
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param Email 邮箱 
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setEmail(String Email) {
         this.Email = Email;
@@ -389,9 +389,9 @@ merchant: 商户子账户
 
     /**
      * Get 子商户密钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return SubMerchantKey 子商户密钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getSubMerchantKey() {
         return this.SubMerchantKey;
@@ -399,9 +399,9 @@ merchant: 商户子账户
 
     /**
      * Set 子商户密钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param SubMerchantKey 子商户密钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setSubMerchantKey(String SubMerchantKey) {
         this.SubMerchantKey = SubMerchantKey;
@@ -409,9 +409,9 @@ merchant: 商户子账户
 
     /**
      * Get 子商户私钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return SubMerchantPrivateKey 子商户私钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getSubMerchantPrivateKey() {
         return this.SubMerchantPrivateKey;
@@ -419,9 +419,9 @@ merchant: 商户子账户
 
     /**
      * Set 子商户私钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param SubMerchantPrivateKey 子商户私钥
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setSubMerchantPrivateKey(String SubMerchantPrivateKey) {
         this.SubMerchantPrivateKey = SubMerchantPrivateKey;

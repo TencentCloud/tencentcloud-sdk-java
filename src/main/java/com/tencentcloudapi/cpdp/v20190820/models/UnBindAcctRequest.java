@@ -38,7 +38,7 @@ public class UnBindAcctRequest extends AbstractModel{
 
     /**
     * 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("SettleAcctNo")
     @Expose
@@ -113,9 +113,9 @@ development: 开发环境
 
     /**
      * Get 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return SettleAcctNo 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getSettleAcctNo() {
         return this.SettleAcctNo;
@@ -123,9 +123,9 @@ development: 开发环境
 
     /**
      * Set 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param SettleAcctNo 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setSettleAcctNo(String SettleAcctNo) {
         this.SettleAcctNo = SettleAcctNo;

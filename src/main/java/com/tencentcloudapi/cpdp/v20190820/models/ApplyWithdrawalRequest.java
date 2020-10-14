@@ -38,7 +38,7 @@ public class ApplyWithdrawalRequest extends AbstractModel{
 
     /**
     * 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("SettleAcctNo")
     @Expose
@@ -46,7 +46,7 @@ public class ApplyWithdrawalRequest extends AbstractModel{
 
     /**
     * 结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("SettleAcctName")
     @Expose
@@ -89,7 +89,7 @@ public class ApplyWithdrawalRequest extends AbstractModel{
 
     /**
     * 会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
     */
     @SerializedName("IdCode")
     @Expose
@@ -178,9 +178,9 @@ development: 开发环境
 
     /**
      * Get 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return SettleAcctNo 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getSettleAcctNo() {
         return this.SettleAcctNo;
@@ -188,9 +188,9 @@ development: 开发环境
 
     /**
      * Set 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param SettleAcctNo 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setSettleAcctNo(String SettleAcctNo) {
         this.SettleAcctNo = SettleAcctNo;
@@ -198,9 +198,9 @@ development: 开发环境
 
     /**
      * Get 结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return SettleAcctName 结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getSettleAcctName() {
         return this.SettleAcctName;
@@ -208,9 +208,9 @@ development: 开发环境
 
     /**
      * Set 结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param SettleAcctName 结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setSettleAcctName(String SettleAcctName) {
         this.SettleAcctName = SettleAcctName;
@@ -298,9 +298,9 @@ development: 开发环境
 
     /**
      * Get 会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》 
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a> 
      * @return IdCode 会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public String getIdCode() {
         return this.IdCode;
@@ -308,9 +308,9 @@ development: 开发环境
 
     /**
      * Set 会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param IdCode 会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public void setIdCode(String IdCode) {
         this.IdCode = IdCode;

@@ -30,7 +30,7 @@ public class InboundPermission extends AbstractModel{
     private Long FromPort;
 
     /**
-    * IP 段范围，CIDR 方式划分
+    * IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
     */
     @SerializedName("IpRange")
     @Expose
@@ -67,16 +67,16 @@ public class InboundPermission extends AbstractModel{
     }
 
     /**
-     * Get IP 段范围，CIDR 方式划分 
-     * @return IpRange IP 段范围，CIDR 方式划分
+     * Get IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0 
+     * @return IpRange IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
      */
     public String getIpRange() {
         return this.IpRange;
     }
 
     /**
-     * Set IP 段范围，CIDR 方式划分
-     * @param IpRange IP 段范围，CIDR 方式划分
+     * Set IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
+     * @param IpRange IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
      */
     public void setIpRange(String IpRange) {
         this.IpRange = IpRange;
