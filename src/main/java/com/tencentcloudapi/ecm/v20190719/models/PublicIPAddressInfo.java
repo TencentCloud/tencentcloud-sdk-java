@@ -44,7 +44,7 @@ public class PublicIPAddressInfo extends AbstractModel{
     private ISP ISP;
 
     /**
-    * 实例的最大出带宽上限。
+    * 实例的最大出带宽上限，单位为Mbps。
     */
     @SerializedName("MaxBandwidthOut")
     @Expose
@@ -99,16 +99,16 @@ public class PublicIPAddressInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例的最大出带宽上限。 
-     * @return MaxBandwidthOut 实例的最大出带宽上限。
+     * Get 实例的最大出带宽上限，单位为Mbps。 
+     * @return MaxBandwidthOut 实例的最大出带宽上限，单位为Mbps。
      */
     public Long getMaxBandwidthOut() {
         return this.MaxBandwidthOut;
     }
 
     /**
-     * Set 实例的最大出带宽上限。
-     * @param MaxBandwidthOut 实例的最大出带宽上限。
+     * Set 实例的最大出带宽上限，单位为Mbps。
+     * @param MaxBandwidthOut 实例的最大出带宽上限，单位为Mbps。
      */
     public void setMaxBandwidthOut(Long MaxBandwidthOut) {
         this.MaxBandwidthOut = MaxBandwidthOut;

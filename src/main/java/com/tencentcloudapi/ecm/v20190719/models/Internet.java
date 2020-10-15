@@ -39,6 +39,14 @@ public class Internet extends AbstractModel{
     private PublicIPAddressInfo [] PublicIPAddressSet;
 
     /**
+    * 实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceNetworkInfoSet")
+    @Expose
+    private InstanceNetworkInfo [] InstanceNetworkInfoSet;
+
+    /**
      * Get 实例的内网相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PrivateIPAddressSet 实例的内网相关信息列表。
@@ -79,11 +87,32 @@ public class Internet extends AbstractModel{
     }
 
     /**
+     * Get 实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceNetworkInfoSet 实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceNetworkInfo [] getInstanceNetworkInfoSet() {
+        return this.InstanceNetworkInfoSet;
+    }
+
+    /**
+     * Set 实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceNetworkInfoSet 实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceNetworkInfoSet(InstanceNetworkInfo [] InstanceNetworkInfoSet) {
+        this.InstanceNetworkInfoSet = InstanceNetworkInfoSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "PrivateIPAddressSet.", this.PrivateIPAddressSet);
         this.setParamArrayObj(map, prefix + "PublicIPAddressSet.", this.PublicIPAddressSet);
+        this.setParamArrayObj(map, prefix + "InstanceNetworkInfoSet.", this.InstanceNetworkInfoSet);
 
     }
 }

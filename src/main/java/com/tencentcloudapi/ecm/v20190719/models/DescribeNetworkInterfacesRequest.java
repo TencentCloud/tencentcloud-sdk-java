@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeNetworkInterfacesRequest extends AbstractModel{
 
     /**
-    * ECM 地域
-    */
-    @SerializedName("EcmRegion")
-    @Expose
-    private String EcmRegion;
-
-    /**
     * 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
     */
     @SerializedName("NetworkInterfaceIds")
@@ -69,20 +62,11 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
     private Long Limit;
 
     /**
-     * Get ECM 地域 
-     * @return EcmRegion ECM 地域
-     */
-    public String getEcmRegion() {
-        return this.EcmRegion;
-    }
-
-    /**
-     * Set ECM 地域
-     * @param EcmRegion ECM 地域
-     */
-    public void setEcmRegion(String EcmRegion) {
-        this.EcmRegion = EcmRegion;
-    }
+    * ECM 地域
+    */
+    @SerializedName("EcmRegion")
+    @Expose
+    private String EcmRegion;
 
     /**
      * Get 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。 
@@ -193,14 +177,30 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
     }
 
     /**
+     * Get ECM 地域 
+     * @return EcmRegion ECM 地域
+     */
+    public String getEcmRegion() {
+        return this.EcmRegion;
+    }
+
+    /**
+     * Set ECM 地域
+     * @param EcmRegion ECM 地域
+     */
+    public void setEcmRegion(String EcmRegion) {
+        this.EcmRegion = EcmRegion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         this.setParamArraySimple(map, prefix + "NetworkInterfaceIds.", this.NetworkInterfaceIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
 
     }
 }

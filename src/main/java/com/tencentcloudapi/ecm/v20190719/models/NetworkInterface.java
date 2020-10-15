@@ -146,6 +146,13 @@ DELETING：删除中
     private Long EniType;
 
     /**
+    * EcmRegion ecm区域
+    */
+    @SerializedName("EcmRegion")
+    @Expose
+    private String EcmRegion;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -446,6 +453,22 @@ DELETING：删除中
     }
 
     /**
+     * Get EcmRegion ecm区域 
+     * @return EcmRegion EcmRegion ecm区域
+     */
+    public String getEcmRegion() {
+        return this.EcmRegion;
+    }
+
+    /**
+     * Set EcmRegion ecm区域
+     * @param EcmRegion EcmRegion ecm区域
+     */
+    public void setEcmRegion(String EcmRegion) {
+        this.EcmRegion = EcmRegion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -465,6 +488,7 @@ DELETING：删除中
         this.setParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "EniType", this.EniType);
+        this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
 
     }
 }

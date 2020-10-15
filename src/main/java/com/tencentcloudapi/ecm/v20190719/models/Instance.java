@@ -248,6 +248,14 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     private VirtualPrivateCloud VirtualPrivateCloud;
 
     /**
+    * 实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ISP")
+    @Expose
+    private String ISP;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -836,6 +844,26 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     }
 
     /**
+     * Get 实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ISP 实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getISP() {
+        return this.ISP;
+    }
+
+    /**
+     * Set 实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ISP 实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setISP(String ISP) {
+        this.ISP = ISP;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -865,6 +893,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         this.setParamSimple(map, prefix + "NewFlag", this.NewFlag);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
+        this.setParamSimple(map, prefix + "ISP", this.ISP);
 
     }
 }

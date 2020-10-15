@@ -116,6 +116,14 @@ ip：IP 列表作为源站
     private String BasePath;
 
     /**
+    * 分路径回源配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PathRules")
+    @Expose
+    private PathRule [] PathRules;
+
+    /**
      * Get 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -380,6 +388,26 @@ ip：IP 列表作为源站
     }
 
     /**
+     * Get 分路径回源配置规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PathRules 分路径回源配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PathRule [] getPathRules() {
+        return this.PathRules;
+    }
+
+    /**
+     * Set 分路径回源配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PathRules 分路径回源配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPathRules(PathRule [] PathRules) {
+        this.PathRules = PathRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -392,6 +420,7 @@ ip：IP 列表作为源站
         this.setParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
         this.setParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
         this.setParamSimple(map, prefix + "BasePath", this.BasePath);
+        this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
 
     }
 }
