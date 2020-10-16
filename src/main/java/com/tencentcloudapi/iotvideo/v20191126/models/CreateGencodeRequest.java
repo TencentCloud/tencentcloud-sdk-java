@@ -30,7 +30,7 @@ public class CreateGencodeRequest extends AbstractModel{
     private String ProductId;
 
     /**
-    * 物模型发布版本号，-1代表最新编辑（未发布）的版本
+    * 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
     */
     @SerializedName("Revision")
     @Expose
@@ -53,16 +53,16 @@ public class CreateGencodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 物模型发布版本号，-1代表最新编辑（未发布）的版本 
-     * @return Revision 物模型发布版本号，-1代表最新编辑（未发布）的版本
+     * Get 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。 
+     * @return Revision 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
      */
     public Long getRevision() {
         return this.Revision;
     }
 
     /**
-     * Set 物模型发布版本号，-1代表最新编辑（未发布）的版本
-     * @param Revision 物模型发布版本号，-1代表最新编辑（未发布）的版本
+     * Set 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+     * @param Revision 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
      */
     public void setRevision(Long Revision) {
         this.Revision = Revision;

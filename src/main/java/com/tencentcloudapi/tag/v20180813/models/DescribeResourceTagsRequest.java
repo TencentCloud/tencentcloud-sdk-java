@@ -72,7 +72,7 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 是否是Cos的资源id
+    * 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
     */
     @SerializedName("CosResourceId")
     @Expose
@@ -191,16 +191,16 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否是Cos的资源id 
-     * @return CosResourceId 是否是Cos的资源id
+     * Get 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填 
+     * @return CosResourceId 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
      */
     public Long getCosResourceId() {
         return this.CosResourceId;
     }
 
     /**
-     * Set 是否是Cos的资源id
-     * @param CosResourceId 是否是Cos的资源id
+     * Set 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
+     * @param CosResourceId 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
      */
     public void setCosResourceId(Long CosResourceId) {
         this.CosResourceId = CosResourceId;

@@ -187,6 +187,26 @@ public class EcdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeIpStatus 用于查询域名所在加速平台的所有节点明细。
+     * @param req DescribeIpStatusRequest
+     * @return DescribeIpStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpStatusResponse DescribeIpStatus(DescribeIpStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIpStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询刷新接口的用量配额。
      * @param req DescribePurgeQuotaRequest
      * @return DescribePurgeQuotaResponse

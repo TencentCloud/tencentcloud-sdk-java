@@ -38,6 +38,28 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
+
+默认接口请求频率限制：20次/秒。
+     * @param req BatchModifyDomainInfoRequest
+     * @return BatchModifyDomainInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyDomainInfoResponse BatchModifyDomainInfo(BatchModifyDomainInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyDomainInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyDomainInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchModifyDomainInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
 
 默认接口请求频率限制：20次/秒。
@@ -183,6 +205,94 @@ public class DomainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplateListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTemplateList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
+
+默认接口请求频率限制：20次/秒。
+     * @param req ModifyDomainOwnerBatchRequest
+     * @return ModifyDomainOwnerBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(ModifyDomainOwnerBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDomainOwnerBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDomainOwnerBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDomainOwnerBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
+
+默认接口请求频率限制：20次/秒。
+     * @param req TransferInDomainBatchRequest
+     * @return TransferInDomainBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferInDomainBatchResponse TransferInDomainBatch(TransferInDomainBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TransferInDomainBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TransferInDomainBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TransferInDomainBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 ( TransferInDomainBatch ) 用于批量禁止域名转移 。
+
+默认接口请求频率限制：20次/秒。
+     * @param req TransferProhibitionBatchRequest
+     * @return TransferProhibitionBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferProhibitionBatchResponse TransferProhibitionBatch(TransferProhibitionBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TransferProhibitionBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TransferProhibitionBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TransferProhibitionBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
+
+默认接口请求频率限制：20次/秒。
+     * @param req UpdateProhibitionBatchRequest
+     * @return UpdateProhibitionBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProhibitionBatchResponse UpdateProhibitionBatch(UpdateProhibitionBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateProhibitionBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateProhibitionBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateProhibitionBatch");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

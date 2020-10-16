@@ -218,6 +218,46 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *完成验证后，用FaceIdToken调用本接口获取结果信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+     * @param req GetFaceIdResultRequest
+     * @return GetFaceIdResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFaceIdResultResponse GetFaceIdResult(GetFaceIdResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFaceIdResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFaceIdResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFaceIdResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *每次调用人脸核身SaaS化服务前，需先调用本接口获取FaceIdToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
+     * @param req GetFaceIdTokenRequest
+     * @return GetFaceIdTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFaceIdTokenResponse GetFaceIdToken(GetFaceIdTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFaceIdTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFaceIdTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFaceIdToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用数字活体检测模式前，需调用本接口获取数字验证码。
      * @param req GetLiveCodeRequest
      * @return GetLiveCodeResponse

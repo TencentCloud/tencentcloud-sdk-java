@@ -37,7 +37,7 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel{
     private String ResourcePrefix;
 
     /**
-    * 资源唯一标记
+    * 资源ID数组，大小不超过50
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源唯一标记 
-     * @return ResourceIds 资源唯一标记
+     * Get 资源ID数组，大小不超过50 
+     * @return ResourceIds 资源ID数组，大小不超过50
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源唯一标记
-     * @param ResourceIds 资源唯一标记
+     * Set 资源ID数组，大小不超过50
+     * @param ResourceIds 资源ID数组，大小不超过50
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

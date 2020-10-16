@@ -64,6 +64,14 @@ unknown：服务地域无法获取
     private String Area;
 
     /**
+    * 节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("City")
+    @Expose
+    private String City;
+
+    /**
      * Get 指定查询的 IP 
      * @return Ip 指定查询的 IP
      */
@@ -168,6 +176,26 @@ unknown：服务地域无法获取
     }
 
     /**
+     * Get 节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return City 节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCity() {
+        return this.City;
+    }
+
+    /**
+     * Set 节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param City 节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCity(String City) {
+        this.City = City;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -176,6 +204,7 @@ unknown：服务地域无法获取
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamArrayObj(map, prefix + "History.", this.History);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "City", this.City);
 
     }
 }

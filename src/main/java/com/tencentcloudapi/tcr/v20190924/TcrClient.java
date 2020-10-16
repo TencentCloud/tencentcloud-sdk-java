@@ -778,6 +778,46 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询创建从实例任务状态
+     * @param req DescribeReplicationInstanceCreateTasksRequest
+     * @return DescribeReplicationInstanceCreateTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasks(DescribeReplicationInstanceCreateTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReplicationInstanceCreateTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询从实例列表
+     * @param req DescribeReplicationInstancesRequest
+     * @return DescribeReplicationInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationInstancesResponse DescribeReplicationInstances(DescribeReplicationInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReplicationInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReplicationInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReplicationInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询镜像仓库列表或指定镜像仓库信息
      * @param req DescribeRepositoriesRequest
      * @return DescribeRepositoriesResponse
