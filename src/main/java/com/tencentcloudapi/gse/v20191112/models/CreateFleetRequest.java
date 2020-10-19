@@ -44,7 +44,7 @@ public class CreateFleetRequest extends AbstractModel{
     private InboundPermission [] InboundPermissions;
 
     /**
-    * 服务器类型，例如S5.LARGE8
+    * 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -72,7 +72,7 @@ public class CreateFleetRequest extends AbstractModel{
     private String NewGameServerSessionProtectionPolicy;
 
     /**
-    * VPC 网络 Id，弃用，对等链接已不再使用
+    * VPC 网络 Id，对等连接已不再使用
     */
     @SerializedName("PeerVpcId")
     @Expose
@@ -93,14 +93,14 @@ public class CreateFleetRequest extends AbstractModel{
     private RuntimeConfiguration RuntimeConfiguration;
 
     /**
-    * VPC 子网，弃用，对等链接已不再使用
+    * VPC 子网，对等连接已不再使用
     */
     @SerializedName("SubNetId")
     @Expose
     private String SubNetId;
 
     /**
-    * 时限保护超时时间，默认60分钟，最小值5，最大值1440
+    * 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
     */
     @SerializedName("GameServerSessionProtectionTimeLimit")
     @Expose
@@ -155,16 +155,16 @@ public class CreateFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务器类型，例如S5.LARGE8 
-     * @return InstanceType 服务器类型，例如S5.LARGE8
+     * Get 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。 
+     * @return InstanceType 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 服务器类型，例如S5.LARGE8
-     * @param InstanceType 服务器类型，例如S5.LARGE8
+     * Set 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
+     * @param InstanceType 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -219,16 +219,16 @@ public class CreateFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC 网络 Id，弃用，对等链接已不再使用 
-     * @return PeerVpcId VPC 网络 Id，弃用，对等链接已不再使用
+     * Get VPC 网络 Id，对等连接已不再使用 
+     * @return PeerVpcId VPC 网络 Id，对等连接已不再使用
      */
     public String getPeerVpcId() {
         return this.PeerVpcId;
     }
 
     /**
-     * Set VPC 网络 Id，弃用，对等链接已不再使用
-     * @param PeerVpcId VPC 网络 Id，弃用，对等链接已不再使用
+     * Set VPC 网络 Id，对等连接已不再使用
+     * @param PeerVpcId VPC 网络 Id，对等连接已不再使用
      */
     public void setPeerVpcId(String PeerVpcId) {
         this.PeerVpcId = PeerVpcId;
@@ -267,32 +267,32 @@ public class CreateFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC 子网，弃用，对等链接已不再使用 
-     * @return SubNetId VPC 子网，弃用，对等链接已不再使用
+     * Get VPC 子网，对等连接已不再使用 
+     * @return SubNetId VPC 子网，对等连接已不再使用
      */
     public String getSubNetId() {
         return this.SubNetId;
     }
 
     /**
-     * Set VPC 子网，弃用，对等链接已不再使用
-     * @param SubNetId VPC 子网，弃用，对等链接已不再使用
+     * Set VPC 子网，对等连接已不再使用
+     * @param SubNetId VPC 子网，对等连接已不再使用
      */
     public void setSubNetId(String SubNetId) {
         this.SubNetId = SubNetId;
     }
 
     /**
-     * Get 时限保护超时时间，默认60分钟，最小值5，最大值1440 
-     * @return GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440
+     * Get 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效 
+     * @return GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     public Long getGameServerSessionProtectionTimeLimit() {
         return this.GameServerSessionProtectionTimeLimit;
     }
 
     /**
-     * Set 时限保护超时时间，默认60分钟，最小值5，最大值1440
-     * @param GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440
+     * Set 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
+     * @param GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     public void setGameServerSessionProtectionTimeLimit(Long GameServerSessionProtectionTimeLimit) {
         this.GameServerSessionProtectionTimeLimit = GameServerSessionProtectionTimeLimit;

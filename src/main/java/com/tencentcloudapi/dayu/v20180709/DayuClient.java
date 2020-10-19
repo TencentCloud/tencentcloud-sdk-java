@@ -679,6 +679,26 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取业务流量曲线
+     * @param req DescribeBizTrendRequest
+     * @return DescribeBizTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBizTrendResponse DescribeBizTrend(DescribeBizTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBizTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBizTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBizTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
      * @param req DescribeCCAlarmThresholdRequest
      * @return DescribeCCAlarmThresholdResponse

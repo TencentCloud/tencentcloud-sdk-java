@@ -82,7 +82,7 @@ DELETEFAILED：删除失败
     private String CreateTime;
 
     /**
-    * 默认带宽
+    * 默认出带宽
     */
     @SerializedName("DefaultBandwidth")
     @Expose
@@ -109,6 +109,13 @@ DELETEFAILED：删除失败
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * 默认入带宽
+    */
+    @SerializedName("DefaultBandwidthIn")
+    @Expose
+    private Long DefaultBandwidthIn;
 
     /**
      * Get 模块Id 
@@ -251,16 +258,16 @@ DELETEFAILED：删除失败
     }
 
     /**
-     * Get 默认带宽 
-     * @return DefaultBandwidth 默认带宽
+     * Get 默认出带宽 
+     * @return DefaultBandwidth 默认出带宽
      */
     public Long getDefaultBandwidth() {
         return this.DefaultBandwidth;
     }
 
     /**
-     * Set 默认带宽
-     * @param DefaultBandwidth 默认带宽
+     * Set 默认出带宽
+     * @param DefaultBandwidth 默认出带宽
      */
     public void setDefaultBandwidth(Long DefaultBandwidth) {
         this.DefaultBandwidth = DefaultBandwidth;
@@ -319,6 +326,22 @@ DELETEFAILED：删除失败
     }
 
     /**
+     * Get 默认入带宽 
+     * @return DefaultBandwidthIn 默认入带宽
+     */
+    public Long getDefaultBandwidthIn() {
+        return this.DefaultBandwidthIn;
+    }
+
+    /**
+     * Set 默认入带宽
+     * @param DefaultBandwidthIn 默认入带宽
+     */
+    public void setDefaultBandwidthIn(Long DefaultBandwidthIn) {
+        this.DefaultBandwidthIn = DefaultBandwidthIn;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -334,6 +357,7 @@ DELETEFAILED：删除失败
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DefaultBandwidthIn", this.DefaultBandwidthIn);
 
     }
 }

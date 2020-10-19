@@ -30,7 +30,7 @@ public class ListAliasesRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 路由策略类型，有效值SIMPLE|TERMINAL
+    * 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
     */
     @SerializedName("RoutingStrategyType")
     @Expose
@@ -81,16 +81,16 @@ public class ListAliasesRequest extends AbstractModel{
     }
 
     /**
-     * Get 路由策略类型，有效值SIMPLE|TERMINAL 
-     * @return RoutingStrategyType 路由策略类型，有效值SIMPLE|TERMINAL
+     * Get 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL) 
+     * @return RoutingStrategyType 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      */
     public String getRoutingStrategyType() {
         return this.RoutingStrategyType;
     }
 
     /**
-     * Set 路由策略类型，有效值SIMPLE|TERMINAL
-     * @param RoutingStrategyType 路由策略类型，有效值SIMPLE|TERMINAL
+     * Set 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
+     * @param RoutingStrategyType 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      */
     public void setRoutingStrategyType(String RoutingStrategyType) {
         this.RoutingStrategyType = RoutingStrategyType;

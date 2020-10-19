@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CheckBatchStatusRequest extends AbstractModel{
 
     /**
-    * 批量任务id数组，最多 200 个
+    * 操作日志 ID数组，最多 200 个
     */
     @SerializedName("LogIds")
     @Expose
     private Long [] LogIds;
 
     /**
-     * Get 批量任务id数组，最多 200 个 
-     * @return LogIds 批量任务id数组，最多 200 个
+     * Get 操作日志 ID数组，最多 200 个 
+     * @return LogIds 操作日志 ID数组，最多 200 个
      */
     public Long [] getLogIds() {
         return this.LogIds;
     }
 
     /**
-     * Set 批量任务id数组，最多 200 个
-     * @param LogIds 批量任务id数组，最多 200 个
+     * Set 操作日志 ID数组，最多 200 个
+     * @param LogIds 操作日志 ID数组，最多 200 个
      */
     public void setLogIds(Long [] LogIds) {
         this.LogIds = LogIds;

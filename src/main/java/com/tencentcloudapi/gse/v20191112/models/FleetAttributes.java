@@ -116,7 +116,7 @@ public class FleetAttributes extends AbstractModel{
     private String Status;
 
     /**
-    * 服务器舰队停止状态
+    * 服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StoppedActions")
@@ -376,9 +376,9 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
-     * Get 服务器舰队停止状态
+     * Get 服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StoppedActions 服务器舰队停止状态
+     * @return StoppedActions 服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStoppedActions() {
@@ -386,9 +386,9 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
-     * Set 服务器舰队停止状态
+     * Set 服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StoppedActions 服务器舰队停止状态
+     * @param StoppedActions 服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStoppedActions(String [] StoppedActions) {

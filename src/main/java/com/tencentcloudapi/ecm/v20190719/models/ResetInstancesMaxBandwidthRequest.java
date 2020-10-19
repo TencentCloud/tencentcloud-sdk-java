@@ -30,11 +30,18 @@ public class ResetInstancesMaxBandwidthRequest extends AbstractModel{
     private String [] InstanceIdSet;
 
     /**
-    * 修改后的最大带宽上限。
+    * 修改后的最大出带宽上限。
     */
     @SerializedName("MaxBandwidthOut")
     @Expose
     private Long MaxBandwidthOut;
+
+    /**
+    * 修改后的最大入带宽上限。
+    */
+    @SerializedName("MaxBandwidthIn")
+    @Expose
+    private Long MaxBandwidthIn;
 
     /**
      * Get 待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。 
@@ -53,19 +60,35 @@ public class ResetInstancesMaxBandwidthRequest extends AbstractModel{
     }
 
     /**
-     * Get 修改后的最大带宽上限。 
-     * @return MaxBandwidthOut 修改后的最大带宽上限。
+     * Get 修改后的最大出带宽上限。 
+     * @return MaxBandwidthOut 修改后的最大出带宽上限。
      */
     public Long getMaxBandwidthOut() {
         return this.MaxBandwidthOut;
     }
 
     /**
-     * Set 修改后的最大带宽上限。
-     * @param MaxBandwidthOut 修改后的最大带宽上限。
+     * Set 修改后的最大出带宽上限。
+     * @param MaxBandwidthOut 修改后的最大出带宽上限。
      */
     public void setMaxBandwidthOut(Long MaxBandwidthOut) {
         this.MaxBandwidthOut = MaxBandwidthOut;
+    }
+
+    /**
+     * Get 修改后的最大入带宽上限。 
+     * @return MaxBandwidthIn 修改后的最大入带宽上限。
+     */
+    public Long getMaxBandwidthIn() {
+        return this.MaxBandwidthIn;
+    }
+
+    /**
+     * Set 修改后的最大入带宽上限。
+     * @param MaxBandwidthIn 修改后的最大入带宽上限。
+     */
+    public void setMaxBandwidthIn(Long MaxBandwidthIn) {
+        this.MaxBandwidthIn = MaxBandwidthIn;
     }
 
     /**
@@ -74,6 +97,7 @@ public class ResetInstancesMaxBandwidthRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+        this.setParamSimple(map, prefix + "MaxBandwidthIn", this.MaxBandwidthIn);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RoutingStrategy extends AbstractModel{
 
     /**
-    * 别名的路由策略的类型SIMPLE/TERMINAL
+    * 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
     */
     @SerializedName("Type")
     @Expose
@@ -38,7 +38,7 @@ public class RoutingStrategy extends AbstractModel{
     private String FleetId;
 
     /**
-    * 与终端路由策略一起使用的消息文本
+    * 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -46,16 +46,16 @@ public class RoutingStrategy extends AbstractModel{
     private String Message;
 
     /**
-     * Get 别名的路由策略的类型SIMPLE/TERMINAL 
-     * @return Type 别名的路由策略的类型SIMPLE/TERMINAL
+     * Get 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL) 
+     * @return Type 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 别名的路由策略的类型SIMPLE/TERMINAL
-     * @param Type 别名的路由策略的类型SIMPLE/TERMINAL
+     * Set 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
+     * @param Type 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -82,9 +82,9 @@ public class RoutingStrategy extends AbstractModel{
     }
 
     /**
-     * Get 与终端路由策略一起使用的消息文本
+     * Get 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 与终端路由策略一起使用的消息文本
+     * @return Message 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -92,9 +92,9 @@ public class RoutingStrategy extends AbstractModel{
     }
 
     /**
-     * Set 与终端路由策略一起使用的消息文本
+     * Set 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 与终端路由策略一起使用的消息文本
+     * @param Message 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {

@@ -30,21 +30,21 @@ public class UpdateFleetAttributesRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 服务器舰队描述
+    * 服务器舰队描述，最小长度0，最大长度100
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 服务器舰队名称
+    * 服务器舰队名称，最小长度1，最大长度50
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 新建游戏会话保护策略
+    * 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
     */
     @SerializedName("NewGameSessionProtectionPolicy")
     @Expose
@@ -58,7 +58,7 @@ public class UpdateFleetAttributesRequest extends AbstractModel{
     private ResourceCreationLimitPolicy ResourceCreationLimitPolicy;
 
     /**
-    * 时限保护超时时间，默认60分钟
+    * 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
     */
     @SerializedName("GameServerSessionProtectionTimeLimit")
     @Expose
@@ -81,48 +81,48 @@ public class UpdateFleetAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务器舰队描述 
-     * @return Description 服务器舰队描述
+     * Get 服务器舰队描述，最小长度0，最大长度100 
+     * @return Description 服务器舰队描述，最小长度0，最大长度100
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 服务器舰队描述
-     * @param Description 服务器舰队描述
+     * Set 服务器舰队描述，最小长度0，最大长度100
+     * @param Description 服务器舰队描述，最小长度0，最大长度100
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 服务器舰队名称 
-     * @return Name 服务器舰队名称
+     * Get 服务器舰队名称，最小长度1，最大长度50 
+     * @return Name 服务器舰队名称，最小长度1，最大长度50
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 服务器舰队名称
-     * @param Name 服务器舰队名称
+     * Set 服务器舰队名称，最小长度1，最大长度50
+     * @param Name 服务器舰队名称，最小长度1，最大长度50
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 新建游戏会话保护策略 
-     * @return NewGameSessionProtectionPolicy 新建游戏会话保护策略
+     * Get 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection 
+     * @return NewGameSessionProtectionPolicy 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
      */
     public String getNewGameSessionProtectionPolicy() {
         return this.NewGameSessionProtectionPolicy;
     }
 
     /**
-     * Set 新建游戏会话保护策略
-     * @param NewGameSessionProtectionPolicy 新建游戏会话保护策略
+     * Set 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
+     * @param NewGameSessionProtectionPolicy 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
      */
     public void setNewGameSessionProtectionPolicy(String NewGameSessionProtectionPolicy) {
         this.NewGameSessionProtectionPolicy = NewGameSessionProtectionPolicy;
@@ -145,16 +145,16 @@ public class UpdateFleetAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 时限保护超时时间，默认60分钟 
-     * @return GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟
+     * Get 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效 
+     * @return GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     public Long getGameServerSessionProtectionTimeLimit() {
         return this.GameServerSessionProtectionTimeLimit;
     }
 
     /**
-     * Set 时限保护超时时间，默认60分钟
-     * @param GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟
+     * Set 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
+     * @param GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     public void setGameServerSessionProtectionTimeLimit(Long GameServerSessionProtectionTimeLimit) {
         this.GameServerSessionProtectionTimeLimit = GameServerSessionProtectionTimeLimit;

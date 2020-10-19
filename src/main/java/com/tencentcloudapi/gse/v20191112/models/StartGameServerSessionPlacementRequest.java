@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StartGameServerSessionPlacementRequest extends AbstractModel{
 
     /**
-    * 开始部署游戏服务器会话的唯一标识符
+    * 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
     */
     @SerializedName("PlacementId")
     @Expose
@@ -37,7 +37,7 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     private String GameServerSessionQueueName;
 
     /**
-    * 游戏服务器允许同时连接到游戏会话的最大玩家数量
+    * 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
@@ -58,14 +58,14 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     private GameProperty [] GameProperties;
 
     /**
-    * 游戏服务器会话数据
+    * 游戏服务器会话数据，最大长度不超过4096个ASCII字符
     */
     @SerializedName("GameServerSessionData")
     @Expose
     private String GameServerSessionData;
 
     /**
-    * 游戏服务器会话名称
+    * 游戏服务器会话名称，最大长度不超过4096个ASCII字符
     */
     @SerializedName("GameServerSessionName")
     @Expose
@@ -79,16 +79,16 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     private PlayerLatency [] PlayerLatencies;
 
     /**
-     * Get 开始部署游戏服务器会话的唯一标识符 
-     * @return PlacementId 开始部署游戏服务器会话的唯一标识符
+     * Get 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+ 
+     * @return PlacementId 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
      */
     public String getPlacementId() {
         return this.PlacementId;
     }
 
     /**
-     * Set 开始部署游戏服务器会话的唯一标识符
-     * @param PlacementId 开始部署游戏服务器会话的唯一标识符
+     * Set 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
+     * @param PlacementId 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
      */
     public void setPlacementId(String PlacementId) {
         this.PlacementId = PlacementId;
@@ -111,16 +111,16 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏服务器允许同时连接到游戏会话的最大玩家数量 
-     * @return MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量
+     * Get 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额 
+     * @return MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set 游戏服务器允许同时连接到游戏会话的最大玩家数量
-     * @param MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量
+     * Set 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
+     * @param MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
@@ -159,32 +159,32 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏服务器会话数据 
-     * @return GameServerSessionData 游戏服务器会话数据
+     * Get 游戏服务器会话数据，最大长度不超过4096个ASCII字符 
+     * @return GameServerSessionData 游戏服务器会话数据，最大长度不超过4096个ASCII字符
      */
     public String getGameServerSessionData() {
         return this.GameServerSessionData;
     }
 
     /**
-     * Set 游戏服务器会话数据
-     * @param GameServerSessionData 游戏服务器会话数据
+     * Set 游戏服务器会话数据，最大长度不超过4096个ASCII字符
+     * @param GameServerSessionData 游戏服务器会话数据，最大长度不超过4096个ASCII字符
      */
     public void setGameServerSessionData(String GameServerSessionData) {
         this.GameServerSessionData = GameServerSessionData;
     }
 
     /**
-     * Get 游戏服务器会话名称 
-     * @return GameServerSessionName 游戏服务器会话名称
+     * Get 游戏服务器会话名称，最大长度不超过4096个ASCII字符 
+     * @return GameServerSessionName 游戏服务器会话名称，最大长度不超过4096个ASCII字符
      */
     public String getGameServerSessionName() {
         return this.GameServerSessionName;
     }
 
     /**
-     * Set 游戏服务器会话名称
-     * @param GameServerSessionName 游戏服务器会话名称
+     * Set 游戏服务器会话名称，最大长度不超过4096个ASCII字符
+     * @param GameServerSessionName 游戏服务器会话名称，最大长度不超过4096个ASCII字符
      */
     public void setGameServerSessionName(String GameServerSessionName) {
         this.GameServerSessionName = GameServerSessionName;

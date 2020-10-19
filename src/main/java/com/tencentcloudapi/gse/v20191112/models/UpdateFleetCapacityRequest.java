@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateFleetCapacityRequest extends AbstractModel{
 
     /**
-    * 服务部署ID
+    * 服务器舰队ID
     */
     @SerializedName("FleetId")
     @Expose
@@ -37,37 +37,37 @@ public class UpdateFleetCapacityRequest extends AbstractModel{
     private Long DesiredInstances;
 
     /**
-    * 服务器实例数最小限制
+    * 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 服务器实例数最大限制
+    * 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 服务器伸缩容间隔
+    * 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
     */
     @SerializedName("ScalingInterval")
     @Expose
     private Long ScalingInterval;
 
     /**
-     * Get 服务部署ID 
-     * @return FleetId 服务部署ID
+     * Get 服务器舰队ID 
+     * @return FleetId 服务器舰队ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 服务部署ID
-     * @param FleetId 服务部署ID
+     * Set 服务器舰队ID
+     * @param FleetId 服务器舰队ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;
@@ -90,48 +90,48 @@ public class UpdateFleetCapacityRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务器实例数最小限制 
-     * @return MinSize 服务器实例数最小限制
+     * Get 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1 
+     * @return MinSize 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 服务器实例数最小限制
-     * @param MinSize 服务器实例数最小限制
+     * Set 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
+     * @param MinSize 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 服务器实例数最大限制 
-     * @return MaxSize 服务器实例数最大限制
+     * Get 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额 
+     * @return MaxSize 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 服务器实例数最大限制
-     * @param MaxSize 服务器实例数最大限制
+     * Set 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
+     * @param MaxSize 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 服务器伸缩容间隔 
-     * @return ScalingInterval 服务器伸缩容间隔
+     * Get 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10 
+     * @return ScalingInterval 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
      */
     public Long getScalingInterval() {
         return this.ScalingInterval;
     }
 
     /**
-     * Set 服务器伸缩容间隔
-     * @param ScalingInterval 服务器伸缩容间隔
+     * Set 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
+     * @param ScalingInterval 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
      */
     public void setScalingInterval(Long ScalingInterval) {
         this.ScalingInterval = ScalingInterval;

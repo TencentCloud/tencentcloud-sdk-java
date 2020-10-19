@@ -30,7 +30,7 @@ public class UpdateGameServerSessionQueueRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 目的服务部署（可为别名）列表
+    * 目的服务器舰队（可为别名）列表
     */
     @SerializedName("Destinations")
     @Expose
@@ -67,16 +67,16 @@ public class UpdateGameServerSessionQueueRequest extends AbstractModel{
     }
 
     /**
-     * Get 目的服务部署（可为别名）列表 
-     * @return Destinations 目的服务部署（可为别名）列表
+     * Get 目的服务器舰队（可为别名）列表 
+     * @return Destinations 目的服务器舰队（可为别名）列表
      */
     public GameServerSessionQueueDestination [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set 目的服务部署（可为别名）列表
-     * @param Destinations 目的服务部署（可为别名）列表
+     * Set 目的服务器舰队（可为别名）列表
+     * @param Destinations 目的服务器舰队（可为别名）列表
      */
     public void setDestinations(GameServerSessionQueueDestination [] Destinations) {
         this.Destinations = Destinations;

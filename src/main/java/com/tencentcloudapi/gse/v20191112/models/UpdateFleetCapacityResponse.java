@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateFleetCapacityResponse extends AbstractModel{
 
     /**
-    * 服务部署ID
+    * 服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FleetId")
@@ -38,9 +38,9 @@ public class UpdateFleetCapacityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务部署ID
+     * Get 服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FleetId 服务部署ID
+     * @return FleetId 服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFleetId() {
@@ -48,9 +48,9 @@ public class UpdateFleetCapacityResponse extends AbstractModel{
     }
 
     /**
-     * Set 服务部署ID
+     * Set 服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FleetId 服务部署ID
+     * @param FleetId 服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFleetId(String FleetId) {

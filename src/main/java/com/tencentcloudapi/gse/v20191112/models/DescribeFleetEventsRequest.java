@@ -30,7 +30,7 @@ public class DescribeFleetEventsRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 分页时返回服务部署事件的数量，默认为20，最大值为100
+    * 分页时返回服务器舰队事件的数量，默认为20，最大值为100
     */
     @SerializedName("Limit")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeFleetEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页时返回服务部署事件的数量，默认为20，最大值为100 
-     * @return Limit 分页时返回服务部署事件的数量，默认为20，最大值为100
+     * Get 分页时返回服务器舰队事件的数量，默认为20，最大值为100 
+     * @return Limit 分页时返回服务器舰队事件的数量，默认为20，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页时返回服务部署事件的数量，默认为20，最大值为100
-     * @param Limit 分页时返回服务部署事件的数量，默认为20，最大值为100
+     * Set 分页时返回服务器舰队事件的数量，默认为20，最大值为100
+     * @param Limit 分页时返回服务器舰队事件的数量，默认为20，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

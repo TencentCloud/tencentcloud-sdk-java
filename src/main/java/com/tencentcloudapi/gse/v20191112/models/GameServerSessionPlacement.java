@@ -92,7 +92,7 @@ public class GameServerSessionPlacement extends AbstractModel{
     private GameProperty [] GameProperties;
 
     /**
-    * 最大玩家数量
+    * 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
@@ -322,16 +322,16 @@ public class GameServerSessionPlacement extends AbstractModel{
     }
 
     /**
-     * Get 最大玩家数量 
-     * @return MaximumPlayerSessionCount 最大玩家数量
+     * Get 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额 
+     * @return MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set 最大玩家数量
-     * @param MaximumPlayerSessionCount 最大玩家数量
+     * Set 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
+     * @param MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;

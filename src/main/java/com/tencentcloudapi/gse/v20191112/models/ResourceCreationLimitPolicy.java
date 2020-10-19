@@ -30,7 +30,7 @@ public class ResourceCreationLimitPolicy extends AbstractModel{
     private Long NewGameServerSessionsPerCreator;
 
     /**
-    * 单位时间，最小值1，默认3
+    * 单位时间，最小值1，默认3，单位分钟
     */
     @SerializedName("PolicyPeriodInMinutes")
     @Expose
@@ -53,16 +53,16 @@ public class ResourceCreationLimitPolicy extends AbstractModel{
     }
 
     /**
-     * Get 单位时间，最小值1，默认3 
-     * @return PolicyPeriodInMinutes 单位时间，最小值1，默认3
+     * Get 单位时间，最小值1，默认3，单位分钟 
+     * @return PolicyPeriodInMinutes 单位时间，最小值1，默认3，单位分钟
      */
     public Long getPolicyPeriodInMinutes() {
         return this.PolicyPeriodInMinutes;
     }
 
     /**
-     * Set 单位时间，最小值1，默认3
-     * @param PolicyPeriodInMinutes 单位时间，最小值1，默认3
+     * Set 单位时间，最小值1，默认3，单位分钟
+     * @param PolicyPeriodInMinutes 单位时间，最小值1，默认3，单位分钟
      */
     public void setPolicyPeriodInMinutes(Long PolicyPeriodInMinutes) {
         this.PolicyPeriodInMinutes = PolicyPeriodInMinutes;

@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class RuntimeConfiguration extends AbstractModel{
 
     /**
-    * 游戏会话进程超时
+    * 游戏会话进程超时，最小值1，最大值600，单位秒
     */
     @SerializedName("GameServerSessionActivationTimeoutSeconds")
     @Expose
     private Long GameServerSessionActivationTimeoutSeconds;
 
     /**
-    * 最大游戏会话数
+    * 最大游戏会话数，最小值1，最大值2147483647
     */
     @SerializedName("MaxConcurrentGameServerSessionActivations")
     @Expose
     private Long MaxConcurrentGameServerSessionActivations;
 
     /**
-    * 服务进程配置
+    * 服务进程配置，至少有一个进程配置
     */
     @SerializedName("ServerProcesses")
     @Expose
     private ServerProcesse [] ServerProcesses;
 
     /**
-     * Get 游戏会话进程超时 
-     * @return GameServerSessionActivationTimeoutSeconds 游戏会话进程超时
+     * Get 游戏会话进程超时，最小值1，最大值600，单位秒 
+     * @return GameServerSessionActivationTimeoutSeconds 游戏会话进程超时，最小值1，最大值600，单位秒
      */
     public Long getGameServerSessionActivationTimeoutSeconds() {
         return this.GameServerSessionActivationTimeoutSeconds;
     }
 
     /**
-     * Set 游戏会话进程超时
-     * @param GameServerSessionActivationTimeoutSeconds 游戏会话进程超时
+     * Set 游戏会话进程超时，最小值1，最大值600，单位秒
+     * @param GameServerSessionActivationTimeoutSeconds 游戏会话进程超时，最小值1，最大值600，单位秒
      */
     public void setGameServerSessionActivationTimeoutSeconds(Long GameServerSessionActivationTimeoutSeconds) {
         this.GameServerSessionActivationTimeoutSeconds = GameServerSessionActivationTimeoutSeconds;
     }
 
     /**
-     * Get 最大游戏会话数 
-     * @return MaxConcurrentGameServerSessionActivations 最大游戏会话数
+     * Get 最大游戏会话数，最小值1，最大值2147483647 
+     * @return MaxConcurrentGameServerSessionActivations 最大游戏会话数，最小值1，最大值2147483647
      */
     public Long getMaxConcurrentGameServerSessionActivations() {
         return this.MaxConcurrentGameServerSessionActivations;
     }
 
     /**
-     * Set 最大游戏会话数
-     * @param MaxConcurrentGameServerSessionActivations 最大游戏会话数
+     * Set 最大游戏会话数，最小值1，最大值2147483647
+     * @param MaxConcurrentGameServerSessionActivations 最大游戏会话数，最小值1，最大值2147483647
      */
     public void setMaxConcurrentGameServerSessionActivations(Long MaxConcurrentGameServerSessionActivations) {
         this.MaxConcurrentGameServerSessionActivations = MaxConcurrentGameServerSessionActivations;
     }
 
     /**
-     * Get 服务进程配置 
-     * @return ServerProcesses 服务进程配置
+     * Get 服务进程配置，至少有一个进程配置 
+     * @return ServerProcesses 服务进程配置，至少有一个进程配置
      */
     public ServerProcesse [] getServerProcesses() {
         return this.ServerProcesses;
     }
 
     /**
-     * Set 服务进程配置
-     * @param ServerProcesses 服务进程配置
+     * Set 服务进程配置，至少有一个进程配置
+     * @param ServerProcesses 服务进程配置，至少有一个进程配置
      */
     public void setServerProcesses(ServerProcesse [] ServerProcesses) {
         this.ServerProcesses = ServerProcesses;

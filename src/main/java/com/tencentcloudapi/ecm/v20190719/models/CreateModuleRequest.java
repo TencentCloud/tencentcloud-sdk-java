@@ -88,6 +88,13 @@ public class CreateModuleRequest extends AbstractModel{
     private String [] SecurityGroups;
 
     /**
+    * 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+    */
+    @SerializedName("DefaultBandWidthIn")
+    @Expose
+    private Long DefaultBandWidthIn;
+
+    /**
      * Get 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。 
      * @return ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      */
@@ -240,6 +247,22 @@ public class CreateModuleRequest extends AbstractModel{
     }
 
     /**
+     * Get 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。 
+     * @return DefaultBandWidthIn 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     */
+    public Long getDefaultBandWidthIn() {
+        return this.DefaultBandWidthIn;
+    }
+
+    /**
+     * Set 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     * @param DefaultBandWidthIn 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     */
+    public void setDefaultBandWidthIn(Long DefaultBandWidthIn) {
+        this.DefaultBandWidthIn = DefaultBandWidthIn;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +275,7 @@ public class CreateModuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "DefaultBandWidthIn", this.DefaultBandWidthIn);
 
     }
 }

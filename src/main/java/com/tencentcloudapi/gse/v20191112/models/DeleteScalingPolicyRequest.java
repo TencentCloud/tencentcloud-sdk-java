@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteScalingPolicyRequest extends AbstractModel{
 
     /**
-    * 服务部署ID
+    * 服务器舰队ID
     */
     @SerializedName("FleetId")
     @Expose
     private String FleetId;
 
     /**
-    * 策略名称
+    * 扩缩容策略名称，最小长度为0，最大长度为1024
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 服务部署ID 
-     * @return FleetId 服务部署ID
+     * Get 服务器舰队ID 
+     * @return FleetId 服务器舰队ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 服务部署ID
-     * @param FleetId 服务部署ID
+     * Set 服务器舰队ID
+     * @param FleetId 服务器舰队ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;
     }
 
     /**
-     * Get 策略名称 
-     * @return Name 策略名称
+     * Get 扩缩容策略名称，最小长度为0，最大长度为1024 
+     * @return Name 扩缩容策略名称，最小长度为0，最大长度为1024
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 策略名称
-     * @param Name 策略名称
+     * Set 扩缩容策略名称，最小长度为0，最大长度为1024
+     * @param Name 扩缩容策略名称，最小长度为0，最大长度为1024
      */
     public void setName(String Name) {
         this.Name = Name;

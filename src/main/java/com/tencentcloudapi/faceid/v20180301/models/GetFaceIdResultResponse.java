@@ -37,7 +37,7 @@ public class GetFaceIdResultResponse extends AbstractModel{
     private String Name;
 
     /**
-    * 业务核验结果，如下几个结果码会计费
+    * 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
     */
     @SerializedName("Result")
     @Expose
@@ -121,16 +121,16 @@ public class GetFaceIdResultResponse extends AbstractModel{
     }
 
     /**
-     * Get 业务核验结果，如下几个结果码会计费 
-     * @return Result 业务核验结果，如下几个结果码会计费
+     * Get 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912 
+     * @return Result 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 业务核验结果，如下几个结果码会计费
-     * @param Result 业务核验结果，如下几个结果码会计费
+     * Set 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
+     * @param Result 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
      */
     public void setResult(String Result) {
         this.Result = Result;

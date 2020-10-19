@@ -30,55 +30,6 @@ public class BRIRequest extends AbstractModel{
     private String Service;
 
     /**
-    * Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
-    */
-    @SerializedName("CertMd5")
-    @Expose
-    private String CertMd5;
-
-    /**
-    * Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
-    */
-    @SerializedName("FileMd5")
-    @Expose
-    private String FileMd5;
-
-    /**
-    * Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
-    */
-    @SerializedName("FileSize")
-    @Expose
-    private Long FileSize;
-
-    /**
-    * 安卓设备的Imei (业务名为bri_dev时必填)
-    */
-    @SerializedName("Imei")
-    @Expose
-    private String Imei;
-
-    /**
-    * 点分格式的IP (业务名为bri_ip时必填)
-    */
-    @SerializedName("Ip")
-    @Expose
-    private String Ip;
-
-    /**
-    * Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
-    */
-    @SerializedName("PackageName")
-    @Expose
-    private String PackageName;
-
-    /**
-    * 电话号码 (业务名为bri_num时必填)
-    */
-    @SerializedName("PhoneNumber")
-    @Expose
-    private String PhoneNumber;
-
-    /**
     * QQ号 (业务名为bri_social时必填, 除非已填Wechat)
     */
     @SerializedName("QQ")
@@ -93,6 +44,34 @@ public class BRIRequest extends AbstractModel{
     private String QQTag;
 
     /**
+    * 网址 (业务名为bri_url时必填)
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
+    */
+    @SerializedName("CertMd5")
+    @Expose
+    private String CertMd5;
+
+    /**
+    * Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
+    */
+    @SerializedName("PackageName")
+    @Expose
+    private String PackageName;
+
+    /**
+    * Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
+    */
+    @SerializedName("FileMd5")
+    @Expose
+    private String FileMd5;
+
+    /**
     * 业务场景 (1-注册, 2-登录, 3-发消息)
     */
     @SerializedName("Scene")
@@ -100,11 +79,33 @@ public class BRIRequest extends AbstractModel{
     private String Scene;
 
     /**
-    * 网址 (业务名为bri_url时必填)
+    * 电话号码 (业务名为bri_num时必填)
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Url")
+    @SerializedName("PhoneNumber")
     @Expose
-    private String Url;
+    private String PhoneNumber;
+
+    /**
+    * Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Long FileSize;
+
+    /**
+    * 点分格式的IP (业务名为bri_ip时必填)
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
+
+    /**
+    * 安卓设备的Imei (业务名为bri_dev时必填)
+    */
+    @SerializedName("Imei")
+    @Expose
+    private String Imei;
 
     /**
     * 微信号 (业务名为bri_social时必填, 除非已填QQ)
@@ -134,118 +135,6 @@ public class BRIRequest extends AbstractModel{
      */
     public void setService(String Service) {
         this.Service = Service;
-    }
-
-    /**
-     * Get Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5) 
-     * @return CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
-     */
-    public String getCertMd5() {
-        return this.CertMd5;
-    }
-
-    /**
-     * Set Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
-     * @param CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
-     */
-    public void setCertMd5(String CertMd5) {
-        this.CertMd5 = CertMd5;
-    }
-
-    /**
-     * Get Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize) 
-     * @return FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
-     */
-    public String getFileMd5() {
-        return this.FileMd5;
-    }
-
-    /**
-     * Set Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
-     * @param FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
-     */
-    public void setFileMd5(String FileMd5) {
-        this.FileMd5 = FileMd5;
-    }
-
-    /**
-     * Get Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5) 
-     * @return FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
-     */
-    public Long getFileSize() {
-        return this.FileSize;
-    }
-
-    /**
-     * Set Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
-     * @param FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
-     */
-    public void setFileSize(Long FileSize) {
-        this.FileSize = FileSize;
-    }
-
-    /**
-     * Get 安卓设备的Imei (业务名为bri_dev时必填) 
-     * @return Imei 安卓设备的Imei (业务名为bri_dev时必填)
-     */
-    public String getImei() {
-        return this.Imei;
-    }
-
-    /**
-     * Set 安卓设备的Imei (业务名为bri_dev时必填)
-     * @param Imei 安卓设备的Imei (业务名为bri_dev时必填)
-     */
-    public void setImei(String Imei) {
-        this.Imei = Imei;
-    }
-
-    /**
-     * Get 点分格式的IP (业务名为bri_ip时必填) 
-     * @return Ip 点分格式的IP (业务名为bri_ip时必填)
-     */
-    public String getIp() {
-        return this.Ip;
-    }
-
-    /**
-     * Set 点分格式的IP (业务名为bri_ip时必填)
-     * @param Ip 点分格式的IP (业务名为bri_ip时必填)
-     */
-    public void setIp(String Ip) {
-        this.Ip = Ip;
-    }
-
-    /**
-     * Get Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5) 
-     * @return PackageName Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
-     */
-    public String getPackageName() {
-        return this.PackageName;
-    }
-
-    /**
-     * Set Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
-     * @param PackageName Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
-     */
-    public void setPackageName(String PackageName) {
-        this.PackageName = PackageName;
-    }
-
-    /**
-     * Get 电话号码 (业务名为bri_num时必填) 
-     * @return PhoneNumber 电话号码 (业务名为bri_num时必填)
-     */
-    public String getPhoneNumber() {
-        return this.PhoneNumber;
-    }
-
-    /**
-     * Set 电话号码 (业务名为bri_num时必填)
-     * @param PhoneNumber 电话号码 (业务名为bri_num时必填)
-     */
-    public void setPhoneNumber(String PhoneNumber) {
-        this.PhoneNumber = PhoneNumber;
     }
 
     /**
@@ -281,6 +170,70 @@ public class BRIRequest extends AbstractModel{
     }
 
     /**
+     * Get 网址 (业务名为bri_url时必填) 
+     * @return Url 网址 (业务名为bri_url时必填)
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 网址 (业务名为bri_url时必填)
+     * @param Url 网址 (业务名为bri_url时必填)
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5) 
+     * @return CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
+     */
+    public String getCertMd5() {
+        return this.CertMd5;
+    }
+
+    /**
+     * Set Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
+     * @param CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
+     */
+    public void setCertMd5(String CertMd5) {
+        this.CertMd5 = CertMd5;
+    }
+
+    /**
+     * Get Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5) 
+     * @return PackageName Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
+     */
+    public String getPackageName() {
+        return this.PackageName;
+    }
+
+    /**
+     * Set Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
+     * @param PackageName Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
+     */
+    public void setPackageName(String PackageName) {
+        this.PackageName = PackageName;
+    }
+
+    /**
+     * Get Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize) 
+     * @return FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
+     */
+    public String getFileMd5() {
+        return this.FileMd5;
+    }
+
+    /**
+     * Set Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
+     * @param FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
+     */
+    public void setFileMd5(String FileMd5) {
+        this.FileMd5 = FileMd5;
+    }
+
+    /**
      * Get 业务场景 (1-注册, 2-登录, 3-发消息) 
      * @return Scene 业务场景 (1-注册, 2-登录, 3-发消息)
      */
@@ -297,19 +250,71 @@ public class BRIRequest extends AbstractModel{
     }
 
     /**
-     * Get 网址 (业务名为bri_url时必填) 
-     * @return Url 网址 (业务名为bri_url时必填)
+     * Get 电话号码 (业务名为bri_num时必填)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhoneNumber 电话号码 (业务名为bri_num时必填)
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUrl() {
-        return this.Url;
+    public String getPhoneNumber() {
+        return this.PhoneNumber;
     }
 
     /**
-     * Set 网址 (业务名为bri_url时必填)
-     * @param Url 网址 (业务名为bri_url时必填)
+     * Set 电话号码 (业务名为bri_num时必填)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhoneNumber 电话号码 (业务名为bri_num时必填)
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setPhoneNumber(String PhoneNumber) {
+        this.PhoneNumber = PhoneNumber;
+    }
+
+    /**
+     * Get Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5) 
+     * @return FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
+     */
+    public Long getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
+     * @param FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
+     */
+    public void setFileSize(Long FileSize) {
+        this.FileSize = FileSize;
+    }
+
+    /**
+     * Get 点分格式的IP (业务名为bri_ip时必填) 
+     * @return Ip 点分格式的IP (业务名为bri_ip时必填)
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set 点分格式的IP (业务名为bri_ip时必填)
+     * @param Ip 点分格式的IP (业务名为bri_ip时必填)
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
+    /**
+     * Get 安卓设备的Imei (业务名为bri_dev时必填) 
+     * @return Imei 安卓设备的Imei (业务名为bri_dev时必填)
+     */
+    public String getImei() {
+        return this.Imei;
+    }
+
+    /**
+     * Set 安卓设备的Imei (业务名为bri_dev时必填)
+     * @param Imei 安卓设备的Imei (业务名为bri_dev时必填)
+     */
+    public void setImei(String Imei) {
+        this.Imei = Imei;
     }
 
     /**
@@ -349,17 +354,17 @@ public class BRIRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);
-        this.setParamSimple(map, prefix + "CertMd5", this.CertMd5);
-        this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
-        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
-        this.setParamSimple(map, prefix + "Imei", this.Imei);
-        this.setParamSimple(map, prefix + "Ip", this.Ip);
-        this.setParamSimple(map, prefix + "PackageName", this.PackageName);
-        this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "QQ", this.QQ);
         this.setParamSimple(map, prefix + "QQTag", this.QQTag);
-        this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "CertMd5", this.CertMd5);
+        this.setParamSimple(map, prefix + "PackageName", this.PackageName);
+        this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
+        this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "Imei", this.Imei);
         this.setParamSimple(map, prefix + "Wechat", this.Wechat);
         this.setParamSimple(map, prefix + "WechatTag", this.WechatTag);
 

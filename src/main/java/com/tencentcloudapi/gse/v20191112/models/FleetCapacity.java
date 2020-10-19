@@ -31,7 +31,7 @@ public class FleetCapacity extends AbstractModel{
     private String FleetId;
 
     /**
-    * 服务器类型
+    * 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -47,7 +47,7 @@ public class FleetCapacity extends AbstractModel{
     private InstanceCounts InstanceCounts;
 
     /**
-    * 服务器伸缩容间隔
+    * 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScalingInterval")
@@ -75,9 +75,9 @@ public class FleetCapacity extends AbstractModel{
     }
 
     /**
-     * Get 服务器类型
+     * Get 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType 服务器类型
+     * @return InstanceType 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -85,9 +85,9 @@ public class FleetCapacity extends AbstractModel{
     }
 
     /**
-     * Set 服务器类型
+     * Set 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType 服务器类型
+     * @param InstanceType 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -115,9 +115,9 @@ public class FleetCapacity extends AbstractModel{
     }
 
     /**
-     * Get 服务器伸缩容间隔
+     * Get 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScalingInterval 服务器伸缩容间隔
+     * @return ScalingInterval 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScalingInterval() {
@@ -125,9 +125,9 @@ public class FleetCapacity extends AbstractModel{
     }
 
     /**
-     * Set 服务器伸缩容间隔
+     * Set 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScalingInterval 服务器伸缩容间隔
+     * @param ScalingInterval 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScalingInterval(Long ScalingInterval) {

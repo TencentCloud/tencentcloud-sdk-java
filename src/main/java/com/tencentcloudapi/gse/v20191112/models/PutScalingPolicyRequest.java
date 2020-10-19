@@ -23,28 +23,29 @@ import java.util.HashMap;
 public class PutScalingPolicyRequest extends AbstractModel{
 
     /**
-    * 基于规则的扩缩容配置服务部署ID
+    * 扩缩容配置服务器舰队ID
     */
     @SerializedName("FleetId")
     @Expose
     private String FleetId;
 
     /**
-    * 策略名称
+    * 扩缩容策略名称，最小长度为1，最大长度为1024
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 扩缩容调整值
+    * 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
     */
     @SerializedName("ScalingAdjustment")
     @Expose
     private Long ScalingAdjustment;
 
     /**
-    * 扩缩容调整类型
+    * 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
     */
     @SerializedName("ScalingAdjustmentType")
     @Expose
@@ -58,21 +59,23 @@ public class PutScalingPolicyRequest extends AbstractModel{
     private Float Threshold;
 
     /**
-    * 策略比较符，取值：>,>=,<,<=
+    * 扩缩容策略比较符，取值：>,>=,<,<=
     */
     @SerializedName("ComparisonOperator")
     @Expose
     private String ComparisonOperator;
 
     /**
-    * 持续时间长度（分钟）
+    * 单个策略持续时间长度（分钟）
     */
     @SerializedName("EvaluationPeriods")
     @Expose
     private Long EvaluationPeriods;
 
     /**
-    * 指标名称
+    * 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
     */
     @SerializedName("MetricName")
     @Expose
@@ -86,71 +89,75 @@ public class PutScalingPolicyRequest extends AbstractModel{
     private String PolicyType;
 
     /**
-    * 扩缩容配置类型
+    * 扩缩容目标值配置，只有TargetBased类型的策略生效
     */
     @SerializedName("TargetConfiguration")
     @Expose
     private TargetConfiguration TargetConfiguration;
 
     /**
-     * Get 基于规则的扩缩容配置服务部署ID 
-     * @return FleetId 基于规则的扩缩容配置服务部署ID
+     * Get 扩缩容配置服务器舰队ID 
+     * @return FleetId 扩缩容配置服务器舰队ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 基于规则的扩缩容配置服务部署ID
-     * @param FleetId 基于规则的扩缩容配置服务部署ID
+     * Set 扩缩容配置服务器舰队ID
+     * @param FleetId 扩缩容配置服务器舰队ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;
     }
 
     /**
-     * Get 策略名称 
-     * @return Name 策略名称
+     * Get 扩缩容策略名称，最小长度为1，最大长度为1024 
+     * @return Name 扩缩容策略名称，最小长度为1，最大长度为1024
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 策略名称
-     * @param Name 策略名称
+     * Set 扩缩容策略名称，最小长度为1，最大长度为1024
+     * @param Name 扩缩容策略名称，最小长度为1，最大长度为1024
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 扩缩容调整值 
-     * @return ScalingAdjustment 扩缩容调整值
+     * Get 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额 
+     * @return ScalingAdjustment 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
      */
     public Long getScalingAdjustment() {
         return this.ScalingAdjustment;
     }
 
     /**
-     * Set 扩缩容调整值
-     * @param ScalingAdjustment 扩缩容调整值
+     * Set 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
+     * @param ScalingAdjustment 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
      */
     public void setScalingAdjustment(Long ScalingAdjustment) {
         this.ScalingAdjustment = ScalingAdjustment;
     }
 
     /**
-     * Get 扩缩容调整类型 
-     * @return ScalingAdjustmentType 扩缩容调整类型
+     * Get 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity） 
+     * @return ScalingAdjustmentType 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
      */
     public String getScalingAdjustmentType() {
         return this.ScalingAdjustmentType;
     }
 
     /**
-     * Set 扩缩容调整类型
-     * @param ScalingAdjustmentType 扩缩容调整类型
+     * Set 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
+     * @param ScalingAdjustmentType 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
      */
     public void setScalingAdjustmentType(String ScalingAdjustmentType) {
         this.ScalingAdjustmentType = ScalingAdjustmentType;
@@ -173,48 +180,56 @@ public class PutScalingPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略比较符，取值：>,>=,<,<= 
-     * @return ComparisonOperator 策略比较符，取值：>,>=,<,<=
+     * Get 扩缩容策略比较符，取值：>,>=,<,<= 
+     * @return ComparisonOperator 扩缩容策略比较符，取值：>,>=,<,<=
      */
     public String getComparisonOperator() {
         return this.ComparisonOperator;
     }
 
     /**
-     * Set 策略比较符，取值：>,>=,<,<=
-     * @param ComparisonOperator 策略比较符，取值：>,>=,<,<=
+     * Set 扩缩容策略比较符，取值：>,>=,<,<=
+     * @param ComparisonOperator 扩缩容策略比较符，取值：>,>=,<,<=
      */
     public void setComparisonOperator(String ComparisonOperator) {
         this.ComparisonOperator = ComparisonOperator;
     }
 
     /**
-     * Get 持续时间长度（分钟） 
-     * @return EvaluationPeriods 持续时间长度（分钟）
+     * Get 单个策略持续时间长度（分钟） 
+     * @return EvaluationPeriods 单个策略持续时间长度（分钟）
      */
     public Long getEvaluationPeriods() {
         return this.EvaluationPeriods;
     }
 
     /**
-     * Set 持续时间长度（分钟）
-     * @param EvaluationPeriods 持续时间长度（分钟）
+     * Set 单个策略持续时间长度（分钟）
+     * @param EvaluationPeriods 单个策略持续时间长度（分钟）
      */
     public void setEvaluationPeriods(Long EvaluationPeriods) {
         this.EvaluationPeriods = EvaluationPeriods;
     }
 
     /**
-     * Get 指标名称 
-     * @return MetricName 指标名称
+     * Get 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions 
+     * @return MetricName 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名称
-     * @param MetricName 指标名称
+     * Set 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
+     * @param MetricName 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
@@ -237,16 +252,16 @@ public class PutScalingPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 扩缩容配置类型 
-     * @return TargetConfiguration 扩缩容配置类型
+     * Get 扩缩容目标值配置，只有TargetBased类型的策略生效 
+     * @return TargetConfiguration 扩缩容目标值配置，只有TargetBased类型的策略生效
      */
     public TargetConfiguration getTargetConfiguration() {
         return this.TargetConfiguration;
     }
 
     /**
-     * Set 扩缩容配置类型
-     * @param TargetConfiguration 扩缩容配置类型
+     * Set 扩缩容目标值配置，只有TargetBased类型的策略生效
+     * @param TargetConfiguration 扩缩容目标值配置，只有TargetBased类型的策略生效
      */
     public void setTargetConfiguration(TargetConfiguration TargetConfiguration) {
         this.TargetConfiguration = TargetConfiguration;

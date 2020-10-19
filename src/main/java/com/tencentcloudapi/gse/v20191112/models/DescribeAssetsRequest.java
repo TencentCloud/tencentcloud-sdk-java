@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAssetsRequest extends AbstractModel{
 
     /**
-    * 生成包可部署地域
+    * 生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
     */
     @SerializedName("AssetRegion")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeAssetsRequest extends AbstractModel{
     private String Filter;
 
     /**
-     * Get 生成包可部署地域 
-     * @return AssetRegion 生成包可部署地域
+     * Get 生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 
+     * @return AssetRegion 生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      */
     public String getAssetRegion() {
         return this.AssetRegion;
     }
 
     /**
-     * Set 生成包可部署地域
-     * @param AssetRegion 生成包可部署地域
+     * Set 生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
+     * @param AssetRegion 生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      */
     public void setAssetRegion(String AssetRegion) {
         this.AssetRegion = AssetRegion;

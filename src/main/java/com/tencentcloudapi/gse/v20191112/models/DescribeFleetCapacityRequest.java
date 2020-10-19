@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeFleetCapacityRequest extends AbstractModel{
 
     /**
-    * 服务部署 Id列表
+    * 服务器舰队ID列表
     */
     @SerializedName("FleetIds")
     @Expose
     private String [] FleetIds;
 
     /**
-    * 结果返回最大数量
+    * 结果返回最大数量，最大值 100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 返回结果偏移
+    * 返回结果偏移，最小值 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 服务部署 Id列表 
-     * @return FleetIds 服务部署 Id列表
+     * Get 服务器舰队ID列表 
+     * @return FleetIds 服务器舰队ID列表
      */
     public String [] getFleetIds() {
         return this.FleetIds;
     }
 
     /**
-     * Set 服务部署 Id列表
-     * @param FleetIds 服务部署 Id列表
+     * Set 服务器舰队ID列表
+     * @param FleetIds 服务器舰队ID列表
      */
     public void setFleetIds(String [] FleetIds) {
         this.FleetIds = FleetIds;
     }
 
     /**
-     * Get 结果返回最大数量 
-     * @return Limit 结果返回最大数量
+     * Get 结果返回最大数量，最大值 100 
+     * @return Limit 结果返回最大数量，最大值 100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 结果返回最大数量
-     * @param Limit 结果返回最大数量
+     * Set 结果返回最大数量，最大值 100
+     * @param Limit 结果返回最大数量，最大值 100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 返回结果偏移 
-     * @return Offset 返回结果偏移
+     * Get 返回结果偏移，最小值 0 
+     * @return Offset 返回结果偏移，最小值 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回结果偏移
-     * @param Offset 返回结果偏移
+     * Set 返回结果偏移，最小值 0
+     * @param Offset 返回结果偏移，最小值 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

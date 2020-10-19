@@ -30,14 +30,14 @@ public class ListFleetsRequest extends AbstractModel{
     private String AssetId;
 
     /**
-    * 结果返回最大值，最小值0，最大值1000
+    * 结果返回最大值，暂未使用
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 结果返回偏移，最小值0
+    * 结果返回偏移，暂未使用
     */
     @SerializedName("Offset")
     @Expose
@@ -60,32 +60,32 @@ public class ListFleetsRequest extends AbstractModel{
     }
 
     /**
-     * Get 结果返回最大值，最小值0，最大值1000 
-     * @return Limit 结果返回最大值，最小值0，最大值1000
+     * Get 结果返回最大值，暂未使用 
+     * @return Limit 结果返回最大值，暂未使用
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 结果返回最大值，最小值0，最大值1000
-     * @param Limit 结果返回最大值，最小值0，最大值1000
+     * Set 结果返回最大值，暂未使用
+     * @param Limit 结果返回最大值，暂未使用
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 结果返回偏移，最小值0 
-     * @return Offset 结果返回偏移，最小值0
+     * Get 结果返回偏移，暂未使用 
+     * @return Offset 结果返回偏移，暂未使用
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 结果返回偏移，最小值0
-     * @param Offset 结果返回偏移，最小值0
+     * Set 结果返回偏移，暂未使用
+     * @param Offset 结果返回偏移，暂未使用
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

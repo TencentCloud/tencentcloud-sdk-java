@@ -44,7 +44,8 @@ public class GetFaceIdTokenRequest extends AbstractModel{
     private String Name;
 
     /**
-    * CompareLib为上传照片比对时必传，base64后图片最大8MB。
+    * CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -113,16 +114,20 @@ public class GetFaceIdTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get CompareLib为上传照片比对时必传，base64后图片最大8MB。 
-     * @return ImageBase64 CompareLib为上传照片比对时必传，base64后图片最大8MB。
+     * Get CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
+     * @return ImageBase64 CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set CompareLib为上传照片比对时必传，base64后图片最大8MB。
-     * @param ImageBase64 CompareLib为上传照片比对时必传，base64后图片最大8MB。
+     * Set CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @param ImageBase64 CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;

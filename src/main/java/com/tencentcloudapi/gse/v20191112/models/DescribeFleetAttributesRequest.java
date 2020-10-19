@@ -30,7 +30,7 @@ public class DescribeFleetAttributesRequest extends AbstractModel{
     private String [] FleetIds;
 
     /**
-    * 结果返回最大数量，最小值0，最大值1000
+    * 结果返回最大数量，默认值20，最大值100
     */
     @SerializedName("Limit")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeFleetAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 结果返回最大数量，最小值0，最大值1000 
-     * @return Limit 结果返回最大数量，最小值0，最大值1000
+     * Get 结果返回最大数量，默认值20，最大值100 
+     * @return Limit 结果返回最大数量，默认值20，最大值100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 结果返回最大数量，最小值0，最大值1000
-     * @param Limit 结果返回最大数量，最小值0，最大值1000
+     * Set 结果返回最大数量，默认值20，最大值100
+     * @param Limit 结果返回最大数量，默认值20，最大值100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

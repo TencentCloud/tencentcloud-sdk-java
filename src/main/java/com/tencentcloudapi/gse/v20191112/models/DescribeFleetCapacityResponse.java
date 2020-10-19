@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFleetCapacityResponse extends AbstractModel{
 
     /**
-    * 服务部署容量配置
+    * 服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FleetCapacity")
@@ -46,9 +46,9 @@ public class DescribeFleetCapacityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务部署容量配置
+     * Get 服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FleetCapacity 服务部署容量配置
+     * @return FleetCapacity 服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FleetCapacity [] getFleetCapacity() {
@@ -56,9 +56,9 @@ public class DescribeFleetCapacityResponse extends AbstractModel{
     }
 
     /**
-     * Set 服务部署容量配置
+     * Set 服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FleetCapacity 服务部署容量配置
+     * @param FleetCapacity 服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFleetCapacity(FleetCapacity [] FleetCapacity) {

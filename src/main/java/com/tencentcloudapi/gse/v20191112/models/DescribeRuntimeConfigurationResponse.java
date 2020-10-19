@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRuntimeConfigurationResponse extends AbstractModel{
 
     /**
-    * 服务部署运行配置信息
+    * 服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeConfiguration")
@@ -38,9 +38,9 @@ public class DescribeRuntimeConfigurationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务部署运行配置信息
+     * Get 服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeConfiguration 服务部署运行配置信息
+     * @return RuntimeConfiguration 服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuntimeConfiguration getRuntimeConfiguration() {
@@ -48,9 +48,9 @@ public class DescribeRuntimeConfigurationResponse extends AbstractModel{
     }
 
     /**
-     * Set 服务部署运行配置信息
+     * Set 服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeConfiguration 服务部署运行配置信息
+     * @param RuntimeConfiguration 服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeConfiguration(RuntimeConfiguration RuntimeConfiguration) {

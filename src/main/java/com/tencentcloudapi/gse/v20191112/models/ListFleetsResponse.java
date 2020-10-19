@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ListFleetsResponse extends AbstractModel{
 
     /**
-    * 服务部署 Id 列表
+    * 服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FleetIds")
@@ -31,7 +31,7 @@ public class ListFleetsResponse extends AbstractModel{
     private String [] FleetIds;
 
     /**
-    * 服务部署 Id 总数，最小值0
+    * 服务器舰队 Id 总数，最小值0
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,9 +45,9 @@ public class ListFleetsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务部署 Id 列表
+     * Get 服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FleetIds 服务部署 Id 列表
+     * @return FleetIds 服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFleetIds() {
@@ -55,9 +55,9 @@ public class ListFleetsResponse extends AbstractModel{
     }
 
     /**
-     * Set 服务部署 Id 列表
+     * Set 服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FleetIds 服务部署 Id 列表
+     * @param FleetIds 服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFleetIds(String [] FleetIds) {
@@ -65,16 +65,16 @@ public class ListFleetsResponse extends AbstractModel{
     }
 
     /**
-     * Get 服务部署 Id 总数，最小值0 
-     * @return TotalCount 服务部署 Id 总数，最小值0
+     * Get 服务器舰队 Id 总数，最小值0 
+     * @return TotalCount 服务器舰队 Id 总数，最小值0
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 服务部署 Id 总数，最小值0
-     * @param TotalCount 服务部署 Id 总数，最小值0
+     * Set 服务器舰队 Id 总数，最小值0
+     * @param TotalCount 服务器舰队 Id 总数，最小值0
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

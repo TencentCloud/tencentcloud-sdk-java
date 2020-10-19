@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstancesExtendRequest extends AbstractModel{
 
     /**
-    * 服务部署ID
+    * 服务器舰队ID
     */
     @SerializedName("FleetId")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeInstancesExtendRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 服务部署ID 
-     * @return FleetId 服务部署ID
+     * Get 服务器舰队ID 
+     * @return FleetId 服务器舰队ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 服务部署ID
-     * @param FleetId 服务部署ID
+     * Set 服务器舰队ID
+     * @param FleetId 服务器舰队ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;

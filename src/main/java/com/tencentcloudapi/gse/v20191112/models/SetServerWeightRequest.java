@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SetServerWeightRequest extends AbstractModel{
 
     /**
-    * 服务舰队ID
+    * 服务器舰队ID
     */
     @SerializedName("FleetId")
     @Expose
@@ -37,23 +37,23 @@ public class SetServerWeightRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 权重
+    * 权重，最小值0，最大值10，默认值5
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get 服务舰队ID 
-     * @return FleetId 服务舰队ID
+     * Get 服务器舰队ID 
+     * @return FleetId 服务器舰队ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 服务舰队ID
-     * @param FleetId 服务舰队ID
+     * Set 服务器舰队ID
+     * @param FleetId 服务器舰队ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;
@@ -76,16 +76,16 @@ public class SetServerWeightRequest extends AbstractModel{
     }
 
     /**
-     * Get 权重 
-     * @return Weight 权重
+     * Get 权重，最小值0，最大值10，默认值5 
+     * @return Weight 权重，最小值0，最大值10，默认值5
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重
-     * @param Weight 权重
+     * Set 权重，最小值0，最大值10，默认值5
+     * @param Weight 权重，最小值0，最大值10，默认值5
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

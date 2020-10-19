@@ -51,6 +51,13 @@ public class PublicIPAddressInfo extends AbstractModel{
     private Long MaxBandwidthOut;
 
     /**
+    * 实例的最大入带宽上限，单位为Mbps。
+    */
+    @SerializedName("MaxBandwidthIn")
+    @Expose
+    private Long MaxBandwidthIn;
+
+    /**
      * Get 计费模式。 
      * @return ChargeMode 计费模式。
      */
@@ -115,6 +122,22 @@ public class PublicIPAddressInfo extends AbstractModel{
     }
 
     /**
+     * Get 实例的最大入带宽上限，单位为Mbps。 
+     * @return MaxBandwidthIn 实例的最大入带宽上限，单位为Mbps。
+     */
+    public Long getMaxBandwidthIn() {
+        return this.MaxBandwidthIn;
+    }
+
+    /**
+     * Set 实例的最大入带宽上限，单位为Mbps。
+     * @param MaxBandwidthIn 实例的最大入带宽上限，单位为Mbps。
+     */
+    public void setMaxBandwidthIn(Long MaxBandwidthIn) {
+        this.MaxBandwidthIn = MaxBandwidthIn;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class PublicIPAddressInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicIPAddress", this.PublicIPAddress);
         this.setParamObj(map, prefix + "ISP.", this.ISP);
         this.setParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+        this.setParamSimple(map, prefix + "MaxBandwidthIn", this.MaxBandwidthIn);
 
     }
 }

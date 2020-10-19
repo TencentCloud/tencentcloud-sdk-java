@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeFleetStatisticSummaryRequest extends AbstractModel{
 
     /**
-    * 服务部署 Id
+    * 服务器舰队ID
     */
     @SerializedName("FleetId")
     @Expose
     private String FleetId;
 
     /**
-    * 查询开始时间
+    * 查询开始时间，时间格式: YYYY-MM-DD hh:mm:ss
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 查询结束时间
+    * 查询结束时间，时间格式: YYYY-MM-DD hh:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 服务部署 Id 
-     * @return FleetId 服务部署 Id
+     * Get 服务器舰队ID 
+     * @return FleetId 服务器舰队ID
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set 服务部署 Id
-     * @param FleetId 服务部署 Id
+     * Set 服务器舰队ID
+     * @param FleetId 服务器舰队ID
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;
     }
 
     /**
-     * Get 查询开始时间 
-     * @return BeginTime 查询开始时间
+     * Get 查询开始时间，时间格式: YYYY-MM-DD hh:mm:ss 
+     * @return BeginTime 查询开始时间，时间格式: YYYY-MM-DD hh:mm:ss
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 查询开始时间
-     * @param BeginTime 查询开始时间
+     * Set 查询开始时间，时间格式: YYYY-MM-DD hh:mm:ss
+     * @param BeginTime 查询开始时间，时间格式: YYYY-MM-DD hh:mm:ss
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get 查询结束时间，时间格式: YYYY-MM-DD hh:mm:ss 
+     * @return EndTime 查询结束时间，时间格式: YYYY-MM-DD hh:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set 查询结束时间，时间格式: YYYY-MM-DD hh:mm:ss
+     * @param EndTime 查询结束时间，时间格式: YYYY-MM-DD hh:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

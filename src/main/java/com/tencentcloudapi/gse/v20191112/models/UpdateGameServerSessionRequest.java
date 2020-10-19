@@ -44,14 +44,14 @@ public class UpdateGameServerSessionRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
+    * 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
     */
     @SerializedName("PlayerSessionCreationPolicy")
     @Expose
     private String PlayerSessionCreationPolicy;
 
     /**
-    * 保护策略(NoProtection,TimeLimitProtection,FullProtection)
+    * 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
     */
     @SerializedName("ProtectionPolicy")
     @Expose
@@ -106,32 +106,32 @@ public class UpdateGameServerSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 玩家会话创建策略（ACCEPT_ALL,DENY_ALL） 
-     * @return PlayerSessionCreationPolicy 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
+     * Get 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL） 
+     * @return PlayerSessionCreationPolicy 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
      */
     public String getPlayerSessionCreationPolicy() {
         return this.PlayerSessionCreationPolicy;
     }
 
     /**
-     * Set 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
-     * @param PlayerSessionCreationPolicy 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
+     * Set 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
+     * @param PlayerSessionCreationPolicy 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
      */
     public void setPlayerSessionCreationPolicy(String PlayerSessionCreationPolicy) {
         this.PlayerSessionCreationPolicy = PlayerSessionCreationPolicy;
     }
 
     /**
-     * Get 保护策略(NoProtection,TimeLimitProtection,FullProtection) 
-     * @return ProtectionPolicy 保护策略(NoProtection,TimeLimitProtection,FullProtection)
+     * Get 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection) 
+     * @return ProtectionPolicy 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
      */
     public String getProtectionPolicy() {
         return this.ProtectionPolicy;
     }
 
     /**
-     * Set 保护策略(NoProtection,TimeLimitProtection,FullProtection)
-     * @param ProtectionPolicy 保护策略(NoProtection,TimeLimitProtection,FullProtection)
+     * Set 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
+     * @param ProtectionPolicy 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
      */
     public void setProtectionPolicy(String ProtectionPolicy) {
         this.ProtectionPolicy = ProtectionPolicy;

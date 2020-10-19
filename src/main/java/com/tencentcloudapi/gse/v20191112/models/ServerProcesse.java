@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ServerProcesse extends AbstractModel{
 
     /**
-    * 并发执行数量
+    * 并发执行数量，所有进程并发执行总数最小值1，最大值50
     */
     @SerializedName("ConcurrentExecutions")
     @Expose
     private Long ConcurrentExecutions;
 
     /**
-    * 启动路径：/local/game/ 或 C:\game\
+    * 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
     */
     @SerializedName("LaunchPath")
     @Expose
     private String LaunchPath;
 
     /**
-    * 启动参数
+    * 启动参数，最小长度0，最大长度1024
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-     * Get 并发执行数量 
-     * @return ConcurrentExecutions 并发执行数量
+     * Get 并发执行数量，所有进程并发执行总数最小值1，最大值50 
+     * @return ConcurrentExecutions 并发执行数量，所有进程并发执行总数最小值1，最大值50
      */
     public Long getConcurrentExecutions() {
         return this.ConcurrentExecutions;
     }
 
     /**
-     * Set 并发执行数量
-     * @param ConcurrentExecutions 并发执行数量
+     * Set 并发执行数量，所有进程并发执行总数最小值1，最大值50
+     * @param ConcurrentExecutions 并发执行数量，所有进程并发执行总数最小值1，最大值50
      */
     public void setConcurrentExecutions(Long ConcurrentExecutions) {
         this.ConcurrentExecutions = ConcurrentExecutions;
     }
 
     /**
-     * Get 启动路径：/local/game/ 或 C:\game\ 
-     * @return LaunchPath 启动路径：/local/game/ 或 C:\game\
+     * Get 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024 
+     * @return LaunchPath 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
      */
     public String getLaunchPath() {
         return this.LaunchPath;
     }
 
     /**
-     * Set 启动路径：/local/game/ 或 C:\game\
-     * @param LaunchPath 启动路径：/local/game/ 或 C:\game\
+     * Set 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
+     * @param LaunchPath 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
      */
     public void setLaunchPath(String LaunchPath) {
         this.LaunchPath = LaunchPath;
     }
 
     /**
-     * Get 启动参数 
-     * @return Parameters 启动参数
+     * Get 启动参数，最小长度0，最大长度1024 
+     * @return Parameters 启动参数，最小长度0，最大长度1024
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 启动参数
-     * @param Parameters 启动参数
+     * Set 启动参数，最小长度0，最大长度1024
+     * @param Parameters 启动参数，最小长度0，最大长度1024
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;

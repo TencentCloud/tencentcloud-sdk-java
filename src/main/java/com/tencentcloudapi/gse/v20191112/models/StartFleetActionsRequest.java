@@ -30,7 +30,7 @@ public class StartFleetActionsRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * 扩展策略，为空或者AUTO_SCALING
+    * 服务器舰队扩展策略，值为["AUTO_SCALING"]
     */
     @SerializedName("Actions")
     @Expose
@@ -53,16 +53,16 @@ public class StartFleetActionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 扩展策略，为空或者AUTO_SCALING 
-     * @return Actions 扩展策略，为空或者AUTO_SCALING
+     * Get 服务器舰队扩展策略，值为["AUTO_SCALING"] 
+     * @return Actions 服务器舰队扩展策略，值为["AUTO_SCALING"]
      */
     public String [] getActions() {
         return this.Actions;
     }
 
     /**
-     * Set 扩展策略，为空或者AUTO_SCALING
-     * @param Actions 扩展策略，为空或者AUTO_SCALING
+     * Set 服务器舰队扩展策略，值为["AUTO_SCALING"]
+     * @param Actions 服务器舰队扩展策略，值为["AUTO_SCALING"]
      */
     public void setActions(String [] Actions) {
         this.Actions = Actions;
