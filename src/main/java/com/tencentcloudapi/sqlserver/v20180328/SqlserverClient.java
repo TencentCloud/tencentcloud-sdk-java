@@ -1198,6 +1198,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（RecycleDBInstance）用于主动回收已下线的SQLSERVER实例
+     * @param req RecycleDBInstanceRequest
+     * @return RecycleDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecycleDBInstanceResponse RecycleDBInstance(RecycleDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecycleDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecycleDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecycleDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
      * @param req RemoveBackupsRequest
      * @return RemoveBackupsResponse

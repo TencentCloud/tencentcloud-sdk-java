@@ -38,6 +38,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建 SDK 登录 Token。
+     * @param req CreateSDKLoginTokenRequest
+     * @return CreateSDKLoginTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSDKLoginTokenResponse CreateSDKLoginToken(CreateSDKLoginTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSDKLoginTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSDKLoginTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSDKLoginToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取电话服务记录与录音
      * @param req DescribeTelCdrRequest
      * @return DescribeTelCdrResponse

@@ -72,6 +72,13 @@ public class ListEventHistoryRequest extends AbstractModel{
     private Long Size;
 
     /**
+    * 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -184,6 +191,22 @@ public class ListEventHistoryRequest extends AbstractModel{
     }
 
     /**
+     * Get 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。 
+     * @return EventId 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+     * @param EventId 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ListEventHistoryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

@@ -97,7 +97,7 @@ public class DescribeJobResponse extends AbstractModel{
     */
     @SerializedName("TaskInstanceMetrics")
     @Expose
-    private TaskInstanceView TaskInstanceMetrics;
+    private TaskInstanceMetrics TaskInstanceMetrics;
 
     /**
     * 作业失败原因
@@ -113,6 +113,14 @@ public class DescribeJobResponse extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 下一步动作
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NextAction")
+    @Expose
+    private String NextAction;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -285,7 +293,7 @@ public class DescribeJobResponse extends AbstractModel{
      * Get 任务实例统计指标 
      * @return TaskInstanceMetrics 任务实例统计指标
      */
-    public TaskInstanceView getTaskInstanceMetrics() {
+    public TaskInstanceMetrics getTaskInstanceMetrics() {
         return this.TaskInstanceMetrics;
     }
 
@@ -293,7 +301,7 @@ public class DescribeJobResponse extends AbstractModel{
      * Set 任务实例统计指标
      * @param TaskInstanceMetrics 任务实例统计指标
      */
-    public void setTaskInstanceMetrics(TaskInstanceView TaskInstanceMetrics) {
+    public void setTaskInstanceMetrics(TaskInstanceMetrics TaskInstanceMetrics) {
         this.TaskInstanceMetrics = TaskInstanceMetrics;
     }
 
@@ -334,6 +342,26 @@ public class DescribeJobResponse extends AbstractModel{
     }
 
     /**
+     * Get 下一步动作
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextAction 下一步动作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNextAction() {
+        return this.NextAction;
+    }
+
+    /**
+     * Set 下一步动作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextAction 下一步动作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNextAction(String NextAction) {
+        this.NextAction = NextAction;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -366,6 +394,7 @@ public class DescribeJobResponse extends AbstractModel{
         this.setParamObj(map, prefix + "TaskInstanceMetrics.", this.TaskInstanceMetrics);
         this.setParamSimple(map, prefix + "StateReason", this.StateReason);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NextAction", this.NextAction);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
