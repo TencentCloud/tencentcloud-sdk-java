@@ -219,6 +219,13 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private Boolean DeployAgent;
 
     /**
+    * 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+    */
+    @SerializedName("SchedulingStrategy")
+    @Expose
+    private SchedulingStrategy SchedulingStrategy;
+
+    /**
      * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
@@ -667,6 +674,22 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 节点调度策略。若不指定改参数，则默认不使用节点调度策略。 
+     * @return SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     */
+    public SchedulingStrategy getSchedulingStrategy() {
+        return this.SchedulingStrategy;
+    }
+
+    /**
+     * Set 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     * @param SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     */
+    public void setSchedulingStrategy(SchedulingStrategy SchedulingStrategy) {
+        this.SchedulingStrategy = SchedulingStrategy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -698,6 +721,7 @@ public class DeployContainerGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
         this.setParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
         this.setParamSimple(map, prefix + "DeployAgent", this.DeployAgent);
+        this.setParamObj(map, prefix + "SchedulingStrategy.", this.SchedulingStrategy);
 
     }
 }

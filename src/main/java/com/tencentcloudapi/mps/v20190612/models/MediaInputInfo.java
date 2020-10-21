@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * 输入来源对象的类型，现在仅支持 COS。
+    * 输入来源对象的类型，可以支持 COS 和 URL 两种。
     */
     @SerializedName("Type")
     @Expose
@@ -37,16 +37,24 @@ public class MediaInputInfo extends AbstractModel{
     private CosInputInfo CosInputInfo;
 
     /**
-     * Get 输入来源对象的类型，现在仅支持 COS。 
-     * @return Type 输入来源对象的类型，现在仅支持 COS。
+    * 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UrlInputInfo")
+    @Expose
+    private UrlInputInfo UrlInputInfo;
+
+    /**
+     * Get 输入来源对象的类型，可以支持 COS 和 URL 两种。 
+     * @return Type 输入来源对象的类型，可以支持 COS 和 URL 两种。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 输入来源对象的类型，现在仅支持 COS。
-     * @param Type 输入来源对象的类型，现在仅支持 COS。
+     * Set 输入来源对象的类型，可以支持 COS 和 URL 两种。
+     * @param Type 输入来源对象的类型，可以支持 COS 和 URL 两种。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -69,11 +77,32 @@ public class MediaInputInfo extends AbstractModel{
     }
 
     /**
+     * Get 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UrlInputInfo getUrlInputInfo() {
+        return this.UrlInputInfo;
+    }
+
+    /**
+     * Set 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {
+        this.UrlInputInfo = UrlInputInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
+        this.setParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
 
     }
 }

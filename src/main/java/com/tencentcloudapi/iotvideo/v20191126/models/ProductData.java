@@ -125,6 +125,14 @@ Other-Overseas（其他境外地区）
     private String ProductRegion;
 
     /**
+    * 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private Long AccessMode;
+
+    /**
      * Get 产品ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 产品ID
@@ -389,6 +397,26 @@ Other-Overseas（其他境外地区）
     }
 
     /**
+     * Get 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessMode(Long AccessMode) {
+        this.AccessMode = AccessMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -404,6 +432,7 @@ Other-Overseas（其他境外地区）
         this.setParamSimple(map, prefix + "ChipId", this.ChipId);
         this.setParamSimple(map, prefix + "ProductCate", this.ProductCate);
         this.setParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
 
     }
 }

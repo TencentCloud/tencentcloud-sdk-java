@@ -218,6 +218,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建grafana监控面板
+     * @param req CreatePrometheusDashboardRequest
+     * @return CreatePrometheusDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusDashboardResponse CreatePrometheusDashboard(CreatePrometheusDashboardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusDashboardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusDashboardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusDashboard");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除集群(YUNAPI V3版本)
      * @param req DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -590,6 +610,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeImages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取关联目标集群的实例列表
+     * @param req DescribePrometheusAgentInstancesRequest
+     * @return DescribePrometheusAgentInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(DescribePrometheusAgentInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusAgentInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusAgentInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

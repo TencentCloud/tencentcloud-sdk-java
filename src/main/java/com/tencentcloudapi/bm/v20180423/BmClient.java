@@ -280,7 +280,7 @@ public class BmClient extends AbstractClient{
     }
 
     /**
-     *获取获取设备类型
+     *获取设备类型
      * @param req DescribeDeviceClassRequest
      * @return DescribeDeviceClassResponse
      * @throws TencentCloudSDKException

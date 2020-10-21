@@ -94,6 +94,14 @@ public class VideoTemplateInfo extends AbstractModel{
     private String FillType;
 
     /**
+    * 视频恒定码率控制因子，取值范围为[1, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+    */
+    @SerializedName("Vcrf")
+    @Expose
+    private Long Vcrf;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
@@ -294,6 +302,26 @@ public class VideoTemplateInfo extends AbstractModel{
     }
 
     /**
+     * Get 视频恒定码率控制因子，取值范围为[1, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。 
+     * @return Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+     */
+    public Long getVcrf() {
+        return this.Vcrf;
+    }
+
+    /**
+     * Set 视频恒定码率控制因子，取值范围为[1, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+     * @param Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+     */
+    public void setVcrf(Long Vcrf) {
+        this.Vcrf = Vcrf;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -304,6 +332,7 @@ public class VideoTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
 
     }
 }

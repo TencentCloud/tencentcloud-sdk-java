@@ -239,6 +239,14 @@ public class Cluster extends AbstractModel{
     private OperationInfo OperationInfo;
 
     /**
+    * 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
+
+    /**
      * Get 集群ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
@@ -779,6 +787,26 @@ public class Cluster extends AbstractModel{
     }
 
     /**
+     * Get 集群版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterVersion 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterVersion 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -809,6 +837,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "RunServiceInstanceCount", this.RunServiceInstanceCount);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamObj(map, prefix + "OperationInfo.", this.OperationInfo);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
 
     }
 }

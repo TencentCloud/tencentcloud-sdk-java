@@ -107,6 +107,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private String AuditLogTopicId;
 
     /**
+    * 区分单网卡多IP模式和独立网卡模式
+    */
+    @SerializedName("VpcCniType")
+    @Expose
+    private String VpcCniType;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -299,6 +306,22 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get 区分单网卡多IP模式和独立网卡模式 
+     * @return VpcCniType 区分单网卡多IP模式和独立网卡模式
+     */
+    public String getVpcCniType() {
+        return this.VpcCniType;
+    }
+
+    /**
+     * Set 区分单网卡多IP模式和独立网卡模式
+     * @param VpcCniType 区分单网卡多IP模式和独立网卡模式
+     */
+    public void setVpcCniType(String VpcCniType) {
+        this.VpcCniType = VpcCniType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "AuditEnabled", this.AuditEnabled);
         this.setParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
         this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
+        this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
 
     }
 }

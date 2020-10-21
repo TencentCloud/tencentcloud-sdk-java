@@ -51,6 +51,13 @@ public class DeployGroupRequest extends AbstractModel{
     private String DeployDesc;
 
     /**
+    * 是否允许强制启动
+    */
+    @SerializedName("ForceStart")
+    @Expose
+    private Boolean ForceStart;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -115,6 +122,22 @@ public class DeployGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否允许强制启动 
+     * @return ForceStart 是否允许强制启动
+     */
+    public Boolean getForceStart() {
+        return this.ForceStart;
+    }
+
+    /**
+     * Set 是否允许强制启动
+     * @param ForceStart 是否允许强制启动
+     */
+    public void setForceStart(Boolean ForceStart) {
+        this.ForceStart = ForceStart;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
         this.setParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+        this.setParamSimple(map, prefix + "ForceStart", this.ForceStart);
 
     }
 }

@@ -65,6 +65,13 @@ public class CreateNamespaceRequest extends AbstractModel{
     private String NamespaceId;
 
     /**
+    * 是否开启高可用
+    */
+    @SerializedName("IsHaEnable")
+    @Expose
+    private String IsHaEnable;
+
+    /**
      * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
      */
@@ -161,6 +168,22 @@ public class CreateNamespaceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启高可用 
+     * @return IsHaEnable 是否开启高可用
+     */
+    public String getIsHaEnable() {
+        return this.IsHaEnable;
+    }
+
+    /**
+     * Set 是否开启高可用
+     * @param IsHaEnable 是否开启高可用
+     */
+    public void setIsHaEnable(String IsHaEnable) {
+        this.IsHaEnable = IsHaEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
         this.setParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
 
     }
 }

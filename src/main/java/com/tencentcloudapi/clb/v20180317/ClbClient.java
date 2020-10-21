@@ -633,6 +633,46 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
+     *查询独占集群中资源列表，支持按集群ID、vip、负载均衡ID、是否闲置为过滤条件检索
+     * @param req DescribeClusterResourcesRequest
+     * @return DescribeClusterResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterResourcesResponse DescribeClusterResources(DescribeClusterResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群信息列表，支持以集群类型、集群唯一ID、集群名字、集群标签、集群内vip、集群内负载均衡唯一id、集群网络类型、可用区等条件进行检索
+     * @param req DescribeExclusiveClustersRequest
+     * @return DescribeExclusiveClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExclusiveClustersResponse DescribeExclusiveClusters(DescribeExclusiveClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExclusiveClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExclusiveClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExclusiveClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse

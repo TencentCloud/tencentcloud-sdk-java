@@ -32,6 +32,7 @@ public class WatermarkInput extends AbstractModel{
     /**
     * 水印自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+水印自定义参数不支持截图打水印。
     */
     @SerializedName("RawParameter")
     @Expose
@@ -39,6 +40,7 @@ public class WatermarkInput extends AbstractModel{
 
     /**
     * 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+文字水印不支持截图打水印。
     */
     @SerializedName("TextContent")
     @Expose
@@ -46,6 +48,7 @@ public class WatermarkInput extends AbstractModel{
 
     /**
     * SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+SVG 水印不支持截图打水印。
     */
     @SerializedName("SvgContent")
     @Expose
@@ -89,9 +92,11 @@ public class WatermarkInput extends AbstractModel{
 
     /**
      * Get 水印自定义参数，当 Definition 填 0 时有效。
-该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。 
+该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+水印自定义参数不支持截图打水印。 
      * @return RawParameter 水印自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+水印自定义参数不支持截图打水印。
      */
     public RawWatermarkParameter getRawParameter() {
         return this.RawParameter;
@@ -100,16 +105,20 @@ public class WatermarkInput extends AbstractModel{
     /**
      * Set 水印自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+水印自定义参数不支持截图打水印。
      * @param RawParameter 水印自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+水印自定义参数不支持截图打水印。
      */
     public void setRawParameter(RawWatermarkParameter RawParameter) {
         this.RawParameter = RawParameter;
     }
 
     /**
-     * Get 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。 
+     * Get 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+文字水印不支持截图打水印。 
      * @return TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+文字水印不支持截图打水印。
      */
     public String getTextContent() {
         return this.TextContent;
@@ -117,15 +126,19 @@ public class WatermarkInput extends AbstractModel{
 
     /**
      * Set 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+文字水印不支持截图打水印。
      * @param TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+文字水印不支持截图打水印。
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
     }
 
     /**
-     * Get SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。 
+     * Get SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+SVG 水印不支持截图打水印。 
      * @return SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+SVG 水印不支持截图打水印。
      */
     public String getSvgContent() {
         return this.SvgContent;
@@ -133,7 +146,9 @@ public class WatermarkInput extends AbstractModel{
 
     /**
      * Set SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+SVG 水印不支持截图打水印。
      * @param SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+SVG 水印不支持截图打水印。
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;

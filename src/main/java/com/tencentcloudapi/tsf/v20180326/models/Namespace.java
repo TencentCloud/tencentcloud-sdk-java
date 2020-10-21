@@ -127,6 +127,14 @@ public class Namespace extends AbstractModel{
     private String NamespaceType;
 
     /**
+    * 是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsHaEnable")
+    @Expose
+    private String IsHaEnable;
+
+    /**
      * Get 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
@@ -387,6 +395,26 @@ public class Namespace extends AbstractModel{
     }
 
     /**
+     * Get 是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsHaEnable 是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsHaEnable() {
+        return this.IsHaEnable;
+    }
+
+    /**
+     * Set 是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsHaEnable 是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsHaEnable(String IsHaEnable) {
+        this.IsHaEnable = IsHaEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -403,6 +431,7 @@ public class Namespace extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
         this.setParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
+        this.setParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
 
     }
 }
