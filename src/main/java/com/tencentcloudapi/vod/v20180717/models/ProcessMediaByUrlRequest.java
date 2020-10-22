@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProcessMediaByUrlRequest extends AbstractModel{
 
     /**
-    * 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+    * API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
     */
     @SerializedName("InputInfo")
     @Expose
@@ -93,16 +93,16 @@ public class ProcessMediaByUrlRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。 
-     * @return InputInfo 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+     * Get API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。 
+     * @return InputInfo API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
-     * @param InputInfo 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+     * Set API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
+     * @param InputInfo API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;

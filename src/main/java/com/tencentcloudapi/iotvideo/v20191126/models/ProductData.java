@@ -133,6 +133,14 @@ Other-Overseas（其他境外地区）
     private Long AccessMode;
 
     /**
+    * linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Os")
+    @Expose
+    private String Os;
+
+    /**
      * Get 产品ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 产品ID
@@ -417,6 +425,26 @@ Other-Overseas（其他境外地区）
     }
 
     /**
+     * Get linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Os linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOs() {
+        return this.Os;
+    }
+
+    /**
+     * Set linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Os linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOs(String Os) {
+        this.Os = Os;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -433,6 +461,7 @@ Other-Overseas（其他境外地区）
         this.setParamSimple(map, prefix + "ProductCate", this.ProductCate);
         this.setParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "Os", this.Os);
 
     }
 }

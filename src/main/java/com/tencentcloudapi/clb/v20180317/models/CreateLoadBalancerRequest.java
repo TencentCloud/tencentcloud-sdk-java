@@ -117,6 +117,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private TagInfo [] Tags;
 
     /**
+    * 指定Vip申请负载均衡
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
     * 独占集群信息
     */
     @SerializedName("ExclusiveCluster")
@@ -358,6 +365,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 指定Vip申请负载均衡 
+     * @return Vip 指定Vip申请负载均衡
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set 指定Vip申请负载均衡
+     * @param Vip 指定Vip申请负载均衡
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
      * Get 独占集群信息 
      * @return ExclusiveCluster 独占集群信息
      */
@@ -422,6 +445,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
