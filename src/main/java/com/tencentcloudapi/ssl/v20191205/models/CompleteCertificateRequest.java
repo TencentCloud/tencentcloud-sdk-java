@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tts.v20190823.models;
+package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class CompleteCertificateRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 证书ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("CertificateId")
     @Expose
-    private String RequestId;
+    private String CertificateId;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 证书ID 
+     * @return CertificateId 证书ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getCertificateId() {
+        return this.CertificateId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 证书ID
+     * @param CertificateId 证书ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setCertificateId(String CertificateId) {
+        this.CertificateId = CertificateId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
 
     }
 }

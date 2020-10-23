@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tts.v20190823.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class DescribeDiagnoseReportRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 报告ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("ReportId")
     @Expose
-    private String RequestId;
+    private String ReportId;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 报告ID 
+     * @return ReportId 报告ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getReportId() {
+        return this.ReportId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 报告ID
+     * @param ReportId 报告ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setReportId(String ReportId) {
+        this.ReportId = ReportId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "ReportId", this.ReportId);
 
     }
 }

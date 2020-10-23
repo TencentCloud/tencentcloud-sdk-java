@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tts.v20190823.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class ListDiagnoseReportResponse extends AbstractModel{
+
+    /**
+    * 诊断信息。
+    */
+    @SerializedName("Data")
+    @Expose
+    private DiagnoseInfo [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class TextToVoiceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 诊断信息。 
+     * @return Data 诊断信息。
+     */
+    public DiagnoseInfo [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 诊断信息。
+     * @param Data 诊断信息。
+     */
+    public void setData(DiagnoseInfo [] Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class TextToVoiceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

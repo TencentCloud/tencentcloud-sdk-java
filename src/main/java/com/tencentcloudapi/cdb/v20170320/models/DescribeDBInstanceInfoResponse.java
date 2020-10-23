@@ -60,6 +60,14 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel{
     private String KeyRegion;
 
     /**
+    * 当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultKmsRegion")
+    @Expose
+    private String DefaultKmsRegion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -155,6 +163,26 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultKmsRegion 当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultKmsRegion() {
+        return this.DefaultKmsRegion;
+    }
+
+    /**
+     * Set 当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultKmsRegion 当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultKmsRegion(String DefaultKmsRegion) {
+        this.DefaultKmsRegion = DefaultKmsRegion;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -179,6 +207,7 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
+        this.setParamSimple(map, prefix + "DefaultKmsRegion", this.DefaultKmsRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

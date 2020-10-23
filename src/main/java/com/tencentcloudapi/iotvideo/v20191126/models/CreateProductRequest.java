@@ -87,6 +87,20 @@ Other-Overseas（其他境外地区）
     private Long ProductCate;
 
     /**
+    * 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private Long AccessMode;
+
+    /**
+    * linux,android,liteos
+    */
+    @SerializedName("Os")
+    @Expose
+    private String Os;
+
+    /**
      * Get 产器型号(APP产品,为APP包名) 
      * @return ProductModel 产器型号(APP产品,为APP包名)
      */
@@ -247,6 +261,38 @@ Other-Overseas（其他境外地区）
     }
 
     /**
+     * Get 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入 
+     * @return AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+     */
+    public Long getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+     * @param AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+     */
+    public void setAccessMode(Long AccessMode) {
+        this.AccessMode = AccessMode;
+    }
+
+    /**
+     * Get linux,android,liteos 
+     * @return Os linux,android,liteos
+     */
+    public String getOs() {
+        return this.Os;
+    }
+
+    /**
+     * Set linux,android,liteos
+     * @param Os linux,android,liteos
+     */
+    public void setOs(String Os) {
+        this.Os = Os;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +304,8 @@ Other-Overseas（其他境外地区）
         this.setParamSimple(map, prefix + "ChipId", this.ChipId);
         this.setParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
         this.setParamSimple(map, prefix + "ProductCate", this.ProductCate);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "Os", this.Os);
 
     }
 }

@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tts.v20190823.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class ListDiagnoseReportRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
     */
-    @SerializedName("RequestId")
+    @SerializedName("KeyWords")
     @Expose
-    private String RequestId;
+    private String KeyWords;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。 
+     * @return KeyWords 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getKeyWords() {
+        return this.KeyWords;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
+     * @param KeyWords 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setKeyWords(String KeyWords) {
+        this.KeyWords = KeyWords;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "KeyWords", this.KeyWords);
 
     }
 }

@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tts.v20190823.models;
+package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class CheckCertificateChainRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 待检查的证书链
     */
-    @SerializedName("RequestId")
+    @SerializedName("CertificateChain")
     @Expose
-    private String RequestId;
+    private String CertificateChain;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 待检查的证书链 
+     * @return CertificateChain 待检查的证书链
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getCertificateChain() {
+        return this.CertificateChain;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 待检查的证书链
+     * @param CertificateChain 待检查的证书链
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setCertificateChain(String CertificateChain) {
+        this.CertificateChain = CertificateChain;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "CertificateChain", this.CertificateChain);
 
     }
 }

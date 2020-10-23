@@ -78,6 +78,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *CreateDiagnoseUrl 用于添加域名诊断任务URL
+     * @param req CreateDiagnoseUrlRequest
+     * @return CreateDiagnoseUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDiagnoseUrlResponse CreateDiagnoseUrl(CreateDiagnoseUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDiagnoseUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDiagnoseUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDiagnoseUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *CreateScdnLogTask 用于创建事件日志任务
      * @param req CreateScdnLogTaskRequest
      * @return CreateScdnLogTaskResponse
@@ -280,6 +300,26 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCertDomainsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCertDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeDiagnoseReport 用于获取指定报告id的内容
+     * @param req DescribeDiagnoseReportRequest
+     * @return DescribeDiagnoseReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiagnoseReportResponse DescribeDiagnoseReport(DescribeDiagnoseReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiagnoseReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiagnoseReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiagnoseReport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -777,6 +817,26 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListClsTopicDomainsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ListClsTopicDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
+     * @param req ListDiagnoseReportRequest
+     * @return ListDiagnoseReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDiagnoseReportResponse ListDiagnoseReport(ListDiagnoseReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListDiagnoseReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListDiagnoseReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListDiagnoseReport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

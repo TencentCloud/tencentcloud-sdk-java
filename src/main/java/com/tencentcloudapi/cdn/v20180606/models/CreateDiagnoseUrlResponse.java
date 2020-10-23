@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tts.v20190823.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class CreateDiagnoseUrlResponse extends AbstractModel{
+
+    /**
+    * 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+    */
+    @SerializedName("DiagnoseLink")
+    @Expose
+    private String DiagnoseLink;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class TextToVoiceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。 
+     * @return DiagnoseLink 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+     */
+    public String getDiagnoseLink() {
+        return this.DiagnoseLink;
+    }
+
+    /**
+     * Set 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+     * @param DiagnoseLink 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+     */
+    public void setDiagnoseLink(String DiagnoseLink) {
+        this.DiagnoseLink = DiagnoseLink;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class TextToVoiceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DiagnoseLink", this.DiagnoseLink);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

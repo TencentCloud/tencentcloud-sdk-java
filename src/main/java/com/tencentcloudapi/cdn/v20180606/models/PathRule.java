@@ -31,7 +31,7 @@ public class PathRule extends AbstractModel{
     private Boolean Regex;
 
     /**
-    * URL路径。
+    * 匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -39,7 +39,7 @@ public class PathRule extends AbstractModel{
     private String Path;
 
     /**
-    * 路径匹配时的回源源站。
+    * 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Origin")
@@ -47,7 +47,7 @@ public class PathRule extends AbstractModel{
     private String Origin;
 
     /**
-    * 路径匹配时的回源Host头部。
+    * 路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerName")
@@ -63,7 +63,7 @@ public class PathRule extends AbstractModel{
     private String OriginArea;
 
     /**
-    * 路径匹配时的回源URI路径。
+    * 路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardUri")
@@ -71,7 +71,7 @@ public class PathRule extends AbstractModel{
     private String ForwardUri;
 
     /**
-    * 路径匹配时的回源头部设置。
+    * 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestHeaders")
@@ -99,9 +99,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get URL路径。
+     * Get 匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path URL路径。
+     * @return Path 匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -109,9 +109,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set URL路径。
+     * Set 匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path URL路径。
+     * @param Path 匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -119,9 +119,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时的回源源站。
+     * Get 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Origin 路径匹配时的回源源站。
+     * @return Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrigin() {
@@ -129,9 +129,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时的回源源站。
+     * Set 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Origin 路径匹配时的回源源站。
+     * @param Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrigin(String Origin) {
@@ -139,9 +139,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时的回源Host头部。
+     * Get 路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServerName 路径匹配时的回源Host头部。
+     * @return ServerName 路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerName() {
@@ -149,9 +149,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时的回源Host头部。
+     * Set 路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServerName 路径匹配时的回源Host头部。
+     * @param ServerName 路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerName(String ServerName) {
@@ -179,9 +179,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时的回源URI路径。
+     * Get 路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForwardUri 路径匹配时的回源URI路径。
+     * @return ForwardUri 路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardUri() {
@@ -189,9 +189,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时的回源URI路径。
+     * Set 路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForwardUri 路径匹配时的回源URI路径。
+     * @param ForwardUri 路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardUri(String ForwardUri) {
@@ -199,9 +199,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时的回源头部设置。
+     * Get 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestHeaders 路径匹配时的回源头部设置。
+     * @return RequestHeaders 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HttpHeaderRule [] getRequestHeaders() {
@@ -209,9 +209,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时的回源头部设置。
+     * Set 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestHeaders 路径匹配时的回源头部设置。
+     * @param RequestHeaders 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestHeaders(HttpHeaderRule [] RequestHeaders) {

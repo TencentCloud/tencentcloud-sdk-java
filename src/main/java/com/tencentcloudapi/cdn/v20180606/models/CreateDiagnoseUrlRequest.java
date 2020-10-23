@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tts.v20190823.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class CreateDiagnoseUrlRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 需诊断的url，形如：http://www.test.com/test.txt。
     */
-    @SerializedName("RequestId")
+    @SerializedName("Url")
     @Expose
-    private String RequestId;
+    private String Url;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 需诊断的url，形如：http://www.test.com/test.txt。 
+     * @return Url 需诊断的url，形如：http://www.test.com/test.txt。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 需诊断的url，形如：http://www.test.com/test.txt。
+     * @param Url 需诊断的url，形如：http://www.test.com/test.txt。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

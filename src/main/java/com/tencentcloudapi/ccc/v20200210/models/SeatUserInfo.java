@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class SeatUserInfo extends AbstractModel{
 
     /**
-    * 坐席电话号码
-    */
-    @SerializedName("Phone")
-    @Expose
-    private String Phone;
-
-    /**
     * 坐席名称
     */
     @SerializedName("Name")
@@ -42,6 +35,13 @@ public class SeatUserInfo extends AbstractModel{
     @SerializedName("Mail")
     @Expose
     private String Mail;
+
+    /**
+    * 坐席电话号码
+    */
+    @SerializedName("Phone")
+    @Expose
+    private String Phone;
 
     /**
     * 坐席昵称
@@ -66,20 +66,12 @@ public class SeatUserInfo extends AbstractModel{
     private String [] SkillGroupNameList;
 
     /**
-     * Get 坐席电话号码 
-     * @return Phone 坐席电话号码
-     */
-    public String getPhone() {
-        return this.Phone;
-    }
-
-    /**
-     * Set 坐席电话号码
-     * @param Phone 坐席电话号码
-     */
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
-    }
+    * 工号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StaffNumber")
+    @Expose
+    private String StaffNumber;
 
     /**
      * Get 坐席名称 
@@ -111,6 +103,22 @@ public class SeatUserInfo extends AbstractModel{
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
+    }
+
+    /**
+     * Get 坐席电话号码 
+     * @return Phone 坐席电话号码
+     */
+    public String getPhone() {
+        return this.Phone;
+    }
+
+    /**
+     * Set 坐席电话号码
+     * @param Phone 坐席电话号码
+     */
+    public void setPhone(String Phone) {
+        this.Phone = Phone;
     }
 
     /**
@@ -166,15 +174,36 @@ public class SeatUserInfo extends AbstractModel{
     }
 
     /**
+     * Get 工号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StaffNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStaffNumber() {
+        return this.StaffNumber;
+    }
+
+    /**
+     * Set 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StaffNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStaffNumber(String StaffNumber) {
+        this.StaffNumber = StaffNumber;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mail", this.Mail);
+        this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
+        this.setParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
 
     }
 }

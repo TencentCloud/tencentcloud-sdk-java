@@ -78,6 +78,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *本接口（CheckCertificateChain）用于检查证书链是否完整。
+     * @param req CheckCertificateChainRequest
+     * @return CheckCertificateChainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCertificateChainResponse CheckCertificateChain(CheckCertificateChainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckCertificateChainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckCertificateChainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckCertificateChain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提交证书订单。
      * @param req CommitCertificateInformationRequest
      * @return CommitCertificateInformationResponse
@@ -90,6 +110,26 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CommitCertificateInformationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CommitCertificateInformation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CompleteCertificate）用于主动触发证书验证。
+     * @param req CompleteCertificateRequest
+     * @return CompleteCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompleteCertificateResponse CompleteCertificate(CompleteCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CompleteCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CompleteCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CompleteCertificate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

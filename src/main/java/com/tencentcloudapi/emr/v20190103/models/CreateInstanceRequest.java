@@ -232,6 +232,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private CustomMetaInfo MetaDBInfo;
 
     /**
+    * 自定义应用角色。
+    */
+    @SerializedName("ApplicationRole")
+    @Expose
+    private String ApplicationRole;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -756,6 +763,22 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 自定义应用角色。 
+     * @return ApplicationRole 自定义应用角色。
+     */
+    public String getApplicationRole() {
+        return this.ApplicationRole;
+    }
+
+    /**
+     * Set 自定义应用角色。
+     * @param ApplicationRole 自定义应用角色。
+     */
+    public void setApplicationRole(String ApplicationRole) {
+        this.ApplicationRole = ApplicationRole;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -785,6 +808,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
         this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
+        this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
 
     }
 }

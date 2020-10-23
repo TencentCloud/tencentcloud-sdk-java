@@ -98,7 +98,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *安全验证码小程序插件分类查询数据接口（内测中），请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+     *安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
      * @param req DescribeCaptchaMiniDataRequest
      * @return DescribeCaptchaMiniDataResponse
      * @throws TencentCloudSDKException
@@ -118,7 +118,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *安全验证码小程序插件查询请求数据概况（内测中）
+     *安全验证码小程序插件查询请求数据概况
      * @param req DescribeCaptchaMiniDataSumRequest
      * @return DescribeCaptchaMiniDataSumResponse
      * @throws TencentCloudSDKException
@@ -138,7 +138,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *安全验证码小程序插件用户操作数据查询（内测中）
+     *安全验证码小程序插件用户操作数据查询
      * @param req DescribeCaptchaMiniOperDataRequest
      * @return DescribeCaptchaMiniOperDataResponse
      * @throws TencentCloudSDKException
@@ -158,7 +158,7 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
-     *核查验证码小程序插件票据结果（内测中）
+     *核查验证码小程序插件票据结果
      * @param req DescribeCaptchaMiniResultRequest
      * @return DescribeCaptchaMiniResultResponse
      * @throws TencentCloudSDKException
