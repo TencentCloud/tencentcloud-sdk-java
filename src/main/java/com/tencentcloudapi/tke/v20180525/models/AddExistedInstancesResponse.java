@@ -47,6 +47,14 @@ public class AddExistedInstancesResponse extends AbstractModel{
     private String [] TimeoutInstanceIds;
 
     /**
+    * 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailedReasons")
+    @Expose
+    private String [] FailedReasons;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -114,6 +122,26 @@ public class AddExistedInstancesResponse extends AbstractModel{
     }
 
     /**
+     * Get 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailedReasons 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFailedReasons() {
+        return this.FailedReasons;
+    }
+
+    /**
+     * Set 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailedReasons 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailedReasons(String [] FailedReasons) {
+        this.FailedReasons = FailedReasons;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -136,6 +164,7 @@ public class AddExistedInstancesResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
         this.setParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
         this.setParamArraySimple(map, prefix + "TimeoutInstanceIds.", this.TimeoutInstanceIds);
+        this.setParamArraySimple(map, prefix + "FailedReasons.", this.FailedReasons);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

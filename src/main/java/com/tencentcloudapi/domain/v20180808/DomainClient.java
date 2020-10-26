@@ -168,6 +168,46 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
+     * @param req DescribeBatchOperationLogDetailsRequest
+     * @return DescribeBatchOperationLogDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchOperationLogDetailsResponse DescribeBatchOperationLogDetails(DescribeBatchOperationLogDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBatchOperationLogDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBatchOperationLogDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBatchOperationLogDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 ( DescribeBatchOperationLogs ) 用于获取批量操作日志 。
+     * @param req DescribeBatchOperationLogsRequest
+     * @return DescribeBatchOperationLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(DescribeBatchOperationLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBatchOperationLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBatchOperationLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBatchOperationLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
 
 默认接口请求频率限制：20次/秒。
@@ -391,8 +431,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
-
-默认接口请求频率限制：20次/秒。
      * @param req UpdateProhibitionBatchRequest
      * @return UpdateProhibitionBatchResponse
      * @throws TencentCloudSDKException
