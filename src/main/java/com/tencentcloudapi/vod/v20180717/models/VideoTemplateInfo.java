@@ -97,7 +97,8 @@ public class VideoTemplateInfo extends AbstractModel{
 
     /**
     * 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
     */
     @SerializedName("Vcrf")
     @Expose
@@ -313,9 +314,11 @@ public class VideoTemplateInfo extends AbstractModel{
 
     /**
      * Get 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。 
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。 
      * @return Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
      */
     public Long getVcrf() {
         return this.Vcrf;
@@ -323,9 +326,11 @@ public class VideoTemplateInfo extends AbstractModel{
 
     /**
      * Set 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
      * @param Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
      */
     public void setVcrf(Long Vcrf) {
         this.Vcrf = Vcrf;

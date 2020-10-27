@@ -198,6 +198,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询Redis实例列表信息
+     * @param req DescribeCommonDBInstancesRequest
+     * @return DescribeCommonDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCommonDBInstancesResponse DescribeCommonDBInstances(DescribeCommonDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCommonDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCommonDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse

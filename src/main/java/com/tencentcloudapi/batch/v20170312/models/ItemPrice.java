@@ -55,7 +55,7 @@ public class ItemPrice extends AbstractModel{
     private Float DiscountPrice;
 
     /**
-    * 折扣，如20.0代表2折
+    * 折扣，如20.0代表2折。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Discount")
@@ -101,6 +101,87 @@ public class ItemPrice extends AbstractModel{
     @SerializedName("UnitPriceDiscountThirdStep")
     @Expose
     private Float UnitPriceDiscountThirdStep;
+
+    /**
+    * 预支三年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalPriceThreeYear")
+    @Expose
+    private Float OriginalPriceThreeYear;
+
+    /**
+    * 预支三年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountPriceThreeYear")
+    @Expose
+    private Float DiscountPriceThreeYear;
+
+    /**
+    * 预支三年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountThreeYear")
+    @Expose
+    private Float DiscountThreeYear;
+
+    /**
+    * 预支五年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalPriceFiveYear")
+    @Expose
+    private Float OriginalPriceFiveYear;
+
+    /**
+    * 预支五年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountPriceFiveYear")
+    @Expose
+    private Float DiscountPriceFiveYear;
+
+    /**
+    * 预支五年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountFiveYear")
+    @Expose
+    private Float DiscountFiveYear;
+
+    /**
+    * 预支一年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalPriceOneYear")
+    @Expose
+    private Float OriginalPriceOneYear;
+
+    /**
+    * 预支一年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountPriceOneYear")
+    @Expose
+    private Float DiscountPriceOneYear;
+
+    /**
+    * 预支一年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountOneYear")
+    @Expose
+    private Float DiscountOneYear;
 
     /**
      * Get 后续合计费用的原价，后付费模式使用，单位：元。<br><li>如返回了其他时间区间项，如UnitPriceSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时
@@ -183,9 +264,9 @@ public class ItemPrice extends AbstractModel{
     }
 
     /**
-     * Get 折扣，如20.0代表2折
+     * Get 折扣，如20.0代表2折。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Discount 折扣，如20.0代表2折
+     * @return Discount 折扣，如20.0代表2折。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscount() {
@@ -193,9 +274,9 @@ public class ItemPrice extends AbstractModel{
     }
 
     /**
-     * Set 折扣，如20.0代表2折
+     * Set 折扣，如20.0代表2折。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Discount 折扣，如20.0代表2折
+     * @param Discount 折扣，如20.0代表2折。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscount(Float Discount) {
@@ -303,6 +384,222 @@ public class ItemPrice extends AbstractModel{
     }
 
     /**
+     * Get 预支三年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalPriceThreeYear 预支三年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getOriginalPriceThreeYear() {
+        return this.OriginalPriceThreeYear;
+    }
+
+    /**
+     * Set 预支三年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalPriceThreeYear 预支三年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalPriceThreeYear(Float OriginalPriceThreeYear) {
+        this.OriginalPriceThreeYear = OriginalPriceThreeYear;
+    }
+
+    /**
+     * Get 预支三年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountPriceThreeYear 预支三年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountPriceThreeYear() {
+        return this.DiscountPriceThreeYear;
+    }
+
+    /**
+     * Set 预支三年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountPriceThreeYear 预支三年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountPriceThreeYear(Float DiscountPriceThreeYear) {
+        this.DiscountPriceThreeYear = DiscountPriceThreeYear;
+    }
+
+    /**
+     * Get 预支三年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountThreeYear 预支三年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountThreeYear() {
+        return this.DiscountThreeYear;
+    }
+
+    /**
+     * Set 预支三年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountThreeYear 预支三年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountThreeYear(Float DiscountThreeYear) {
+        this.DiscountThreeYear = DiscountThreeYear;
+    }
+
+    /**
+     * Get 预支五年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalPriceFiveYear 预支五年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getOriginalPriceFiveYear() {
+        return this.OriginalPriceFiveYear;
+    }
+
+    /**
+     * Set 预支五年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalPriceFiveYear 预支五年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalPriceFiveYear(Float OriginalPriceFiveYear) {
+        this.OriginalPriceFiveYear = OriginalPriceFiveYear;
+    }
+
+    /**
+     * Get 预支五年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountPriceFiveYear 预支五年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountPriceFiveYear() {
+        return this.DiscountPriceFiveYear;
+    }
+
+    /**
+     * Set 预支五年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountPriceFiveYear 预支五年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountPriceFiveYear(Float DiscountPriceFiveYear) {
+        this.DiscountPriceFiveYear = DiscountPriceFiveYear;
+    }
+
+    /**
+     * Get 预支五年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountFiveYear 预支五年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountFiveYear() {
+        return this.DiscountFiveYear;
+    }
+
+    /**
+     * Set 预支五年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountFiveYear 预支五年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountFiveYear(Float DiscountFiveYear) {
+        this.DiscountFiveYear = DiscountFiveYear;
+    }
+
+    /**
+     * Get 预支一年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalPriceOneYear 预支一年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getOriginalPriceOneYear() {
+        return this.OriginalPriceOneYear;
+    }
+
+    /**
+     * Set 预支一年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalPriceOneYear 预支一年合计费用的原价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalPriceOneYear(Float OriginalPriceOneYear) {
+        this.OriginalPriceOneYear = OriginalPriceOneYear;
+    }
+
+    /**
+     * Get 预支一年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountPriceOneYear 预支一年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountPriceOneYear() {
+        return this.DiscountPriceOneYear;
+    }
+
+    /**
+     * Set 预支一年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountPriceOneYear 预支一年合计费用的折扣价，预付费模式使用，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountPriceOneYear(Float DiscountPriceOneYear) {
+        this.DiscountPriceOneYear = DiscountPriceOneYear;
+    }
+
+    /**
+     * Get 预支一年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountOneYear 预支一年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDiscountOneYear() {
+        return this.DiscountOneYear;
+    }
+
+    /**
+     * Set 预支一年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountOneYear 预支一年应用的折扣，如20.0代表2折。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountOneYear(Float DiscountOneYear) {
+        this.DiscountOneYear = DiscountOneYear;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -316,6 +613,15 @@ public class ItemPrice extends AbstractModel{
         this.setParamSimple(map, prefix + "UnitPriceDiscountSecondStep", this.UnitPriceDiscountSecondStep);
         this.setParamSimple(map, prefix + "UnitPriceThirdStep", this.UnitPriceThirdStep);
         this.setParamSimple(map, prefix + "UnitPriceDiscountThirdStep", this.UnitPriceDiscountThirdStep);
+        this.setParamSimple(map, prefix + "OriginalPriceThreeYear", this.OriginalPriceThreeYear);
+        this.setParamSimple(map, prefix + "DiscountPriceThreeYear", this.DiscountPriceThreeYear);
+        this.setParamSimple(map, prefix + "DiscountThreeYear", this.DiscountThreeYear);
+        this.setParamSimple(map, prefix + "OriginalPriceFiveYear", this.OriginalPriceFiveYear);
+        this.setParamSimple(map, prefix + "DiscountPriceFiveYear", this.DiscountPriceFiveYear);
+        this.setParamSimple(map, prefix + "DiscountFiveYear", this.DiscountFiveYear);
+        this.setParamSimple(map, prefix + "OriginalPriceOneYear", this.OriginalPriceOneYear);
+        this.setParamSimple(map, prefix + "DiscountPriceOneYear", this.DiscountPriceOneYear);
+        this.setParamSimple(map, prefix + "DiscountOneYear", this.DiscountOneYear);
 
     }
 }

@@ -138,6 +138,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateCertificate）用于创建付费证书。
+     * @param req CreateCertificateRequest
+     * @return CreateCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCertificateResponse CreateCertificate(CreateCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteCertificate）用于删除证书。
      * @param req DeleteCertificateRequest
      * @return DeleteCertificateResponse
@@ -318,6 +338,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *本接口（RevokeCertificate）用于吊销证书。
+     * @param req RevokeCertificateRequest
+     * @return RevokeCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeCertificateResponse RevokeCertificate(RevokeCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevokeCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevokeCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RevokeCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提交证书资料。
      * @param req SubmitCertificateInformationRequest
      * @return SubmitCertificateInformationResponse
@@ -350,6 +390,46 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UploadCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UploadCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UploadConfirmLetter）用于上传证书确认函。
+     * @param req UploadConfirmLetterRequest
+     * @return UploadConfirmLetterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadConfirmLetterResponse UploadConfirmLetter(UploadConfirmLetterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadConfirmLetterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadConfirmLetter");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UploadRevokeLetter）用于上传证书吊销确认函。
+     * @param req UploadRevokeLetterRequest
+     * @return UploadRevokeLetterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadRevokeLetterResponse UploadRevokeLetter(UploadRevokeLetterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadRevokeLetterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadRevokeLetterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadRevokeLetter");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

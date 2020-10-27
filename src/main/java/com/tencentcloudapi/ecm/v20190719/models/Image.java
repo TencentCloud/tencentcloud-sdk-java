@@ -128,6 +128,13 @@ public class Image extends AbstractModel{
     private String ImageSource;
 
     /**
+    * 中间态和失败时候的任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
      * Get 镜像ID 
      * @return ImageId 镜像ID
      */
@@ -368,6 +375,22 @@ public class Image extends AbstractModel{
     }
 
     /**
+     * Get 中间态和失败时候的任务ID 
+     * @return TaskId 中间态和失败时候的任务ID
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 中间态和失败时候的任务ID
+     * @param TaskId 中间态和失败时候的任务ID
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class Image extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
         this.setParamObj(map, prefix + "SrcImage.", this.SrcImage);
         this.setParamSimple(map, prefix + "ImageSource", this.ImageSource);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

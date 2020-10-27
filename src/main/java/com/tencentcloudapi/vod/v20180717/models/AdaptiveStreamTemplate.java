@@ -46,6 +46,15 @@ public class AdaptiveStreamTemplate extends AbstractModel{
     private Long RemoveAudio;
 
     /**
+    * 是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
+    */
+    @SerializedName("RemoveVideo")
+    @Expose
+    private Long RemoveVideo;
+
+    /**
      * Get 视频参数信息。 
      * @return Video 视频参数信息。
      */
@@ -102,12 +111,37 @@ public class AdaptiveStreamTemplate extends AbstractModel{
     }
 
     /**
+     * Get 是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li> 
+     * @return RemoveVideo 是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
+     */
+    public Long getRemoveVideo() {
+        return this.RemoveVideo;
+    }
+
+    /**
+     * Set 是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
+     * @param RemoveVideo 是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
+     */
+    public void setRemoveVideo(Long RemoveVideo) {
+        this.RemoveVideo = RemoveVideo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Video.", this.Video);
         this.setParamObj(map, prefix + "Audio.", this.Audio);
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
+        this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
 
     }
 }

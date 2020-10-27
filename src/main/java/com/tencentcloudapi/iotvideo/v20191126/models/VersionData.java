@@ -143,6 +143,22 @@ public class VersionData extends AbstractModel{
     private Long ModifyTimes;
 
     /**
+    * 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Contents")
+    @Expose
+    private Contents Contents;
+
+    /**
      * Get 产品ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 产品ID
@@ -443,6 +459,46 @@ public class VersionData extends AbstractModel{
     }
 
     /**
+     * Get 备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Contents 版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Contents getContents() {
+        return this.Contents;
+    }
+
+    /**
+     * Set 版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Contents 版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContents(Contents Contents) {
+        this.Contents = Contents;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -461,6 +517,8 @@ public class VersionData extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "UploadTime", this.UploadTime);
         this.setParamSimple(map, prefix + "ModifyTimes", this.ModifyTimes);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamObj(map, prefix + "Contents.", this.Contents);
 
     }
 }

@@ -167,6 +167,30 @@ public class ResourceInfo extends AbstractModel{
     private String VpcName;
 
     /**
+    * 创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUin")
+    @Expose
+    private String CreateUin;
+
+    /**
+    * 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
+    * 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 资源Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceId 资源Id
@@ -527,6 +551,66 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
+     * Get 创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUin 创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateUin() {
+        return this.CreateUin;
+    }
+
+    /**
+     * Set 创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUin 创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUin(String CreateUin) {
+        this.CreateUin = CreateUin;
+    }
+
+    /**
+     * Get 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -548,6 +632,9 @@ public class ResourceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Expired", this.Expired);
         this.setParamSimple(map, prefix + "RemainSeconds", this.RemainSeconds);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

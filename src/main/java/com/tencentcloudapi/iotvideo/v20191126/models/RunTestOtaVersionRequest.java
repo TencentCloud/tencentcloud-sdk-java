@@ -51,6 +51,13 @@ public class RunTestOtaVersionRequest extends AbstractModel{
     private String Operator;
 
     /**
+    * 备注信息
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -115,6 +122,22 @@ public class RunTestOtaVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 备注信息 
+     * @return Remark 备注信息
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注信息
+     * @param Remark 备注信息
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class RunTestOtaVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OtaVersion", this.OtaVersion);
         this.setParamArraySimple(map, prefix + "Tids.", this.Tids);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

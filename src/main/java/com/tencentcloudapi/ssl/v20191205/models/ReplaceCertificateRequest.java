@@ -58,6 +58,13 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String CsrkeyPassword;
 
     /**
+    * 重颁发原因。
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get 证书 ID。 
      * @return CertificateId 证书 ID。
      */
@@ -138,6 +145,22 @@ public class ReplaceCertificateRequest extends AbstractModel{
     }
 
     /**
+     * Get 重颁发原因。 
+     * @return Reason 重颁发原因。
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 重颁发原因。
+     * @param Reason 重颁发原因。
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ReplaceCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CsrType", this.CsrType);
         this.setParamSimple(map, prefix + "CsrContent", this.CsrContent);
         this.setParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }
