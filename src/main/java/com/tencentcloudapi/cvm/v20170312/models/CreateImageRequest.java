@@ -52,7 +52,7 @@ public class CreateImageRequest extends AbstractModel{
     private String ForcePoweroff;
 
     /**
-    * 创建Windows镜像时是否启用Sysprep
+    * 创建Windows镜像时是否启用Sysprep，关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)
     */
     @SerializedName("Sysprep")
     @Expose
@@ -148,16 +148,16 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 创建Windows镜像时是否启用Sysprep 
-     * @return Sysprep 创建Windows镜像时是否启用Sysprep
+     * Get 创建Windows镜像时是否启用Sysprep，关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498) 
+     * @return Sysprep 创建Windows镜像时是否启用Sysprep，关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)
      */
     public String getSysprep() {
         return this.Sysprep;
     }
 
     /**
-     * Set 创建Windows镜像时是否启用Sysprep
-     * @param Sysprep 创建Windows镜像时是否启用Sysprep
+     * Set 创建Windows镜像时是否启用Sysprep，关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)
+     * @param Sysprep 创建Windows镜像时是否启用Sysprep，关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)
      */
     public void setSysprep(String Sysprep) {
         this.Sysprep = Sysprep;

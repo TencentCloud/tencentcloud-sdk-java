@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * 输入来源对象的类型，可以支持 COS 和 URL 两种。
+    * 输入来源对象的类型，目前仅支持 COS。
     */
     @SerializedName("Type")
     @Expose
@@ -38,6 +38,8 @@ public class MediaInputInfo extends AbstractModel{
 
     /**
     * 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+
+目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrlInputInfo")
@@ -45,16 +47,16 @@ public class MediaInputInfo extends AbstractModel{
     private UrlInputInfo UrlInputInfo;
 
     /**
-     * Get 输入来源对象的类型，可以支持 COS 和 URL 两种。 
-     * @return Type 输入来源对象的类型，可以支持 COS 和 URL 两种。
+     * Get 输入来源对象的类型，目前仅支持 COS。 
+     * @return Type 输入来源对象的类型，目前仅支持 COS。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 输入来源对象的类型，可以支持 COS 和 URL 两种。
-     * @param Type 输入来源对象的类型，可以支持 COS 和 URL 两种。
+     * Set 输入来源对象的类型，目前仅支持 COS。
+     * @param Type 输入来源对象的类型，目前仅支持 COS。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -78,8 +80,12 @@ public class MediaInputInfo extends AbstractModel{
 
     /**
      * Get 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+
+目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+
+目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UrlInputInfo getUrlInputInfo() {
@@ -88,8 +94,12 @@ public class MediaInputInfo extends AbstractModel{
 
     /**
      * Set 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+
+目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+
+目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {

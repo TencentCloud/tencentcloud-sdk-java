@@ -30,7 +30,7 @@ public class ModifyLiveTranscodeTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * 视频编码：h264/h265/origin，默认h264。
+    * 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
     */
@@ -193,10 +193,10 @@ baseline/main/high。
     }
 
     /**
-     * Get 视频编码：h264/h265/origin，默认h264。
+     * Get 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式 
-     * @return Vcodec 视频编码：h264/h265/origin，默认h264。
+     * @return Vcodec 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
      */
@@ -205,10 +205,10 @@ origin: 保持原始编码格式
     }
 
     /**
-     * Set 视频编码：h264/h265/origin，默认h264。
+     * Set 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
-     * @param Vcodec 视频编码：h264/h265/origin，默认h264。
+     * @param Vcodec 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
      */

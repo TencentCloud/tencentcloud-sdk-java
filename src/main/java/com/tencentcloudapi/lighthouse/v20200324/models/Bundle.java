@@ -109,6 +109,15 @@ public class Bundle extends AbstractModel{
     private String BundleSalesState;
 
     /**
+    * 套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+    */
+    @SerializedName("BundleType")
+    @Expose
+    private String BundleType;
+
+    /**
      * Get 套餐 ID。 
      * @return BundleId 套餐 ID。
      */
@@ -309,6 +318,30 @@ public class Bundle extends AbstractModel{
     }
 
     /**
+     * Get 套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li> 
+     * @return BundleType 套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+     */
+    public String getBundleType() {
+        return this.BundleType;
+    }
+
+    /**
+     * Set 套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+     * @param BundleType 套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+     */
+    public void setBundleType(String BundleType) {
+        this.BundleType = BundleType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -324,6 +357,7 @@ public class Bundle extends AbstractModel{
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         this.setParamSimple(map, prefix + "BundleSalesState", this.BundleSalesState);
+        this.setParamSimple(map, prefix + "BundleType", this.BundleType);
 
     }
 }

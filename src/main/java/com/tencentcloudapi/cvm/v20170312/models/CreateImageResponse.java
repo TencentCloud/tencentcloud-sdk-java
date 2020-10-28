@@ -23,39 +23,11 @@ import java.util.HashMap;
 public class CreateImageResponse extends AbstractModel{
 
     /**
-    * 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ImageId")
-    @Expose
-    private String ImageId;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getImageId() {
-        return this.ImageId;
-    }
-
-    /**
-     * Set 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageId 镜像ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setImageId(String ImageId) {
-        this.ImageId = ImageId;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -77,7 +49,6 @@ public class CreateImageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

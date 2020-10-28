@@ -23,57 +23,11 @@ import java.util.HashMap;
 public class QueryBarCodeResponse extends AbstractModel{
 
     /**
-    * 条码
-    */
-    @SerializedName("BarCode")
-    @Expose
-    private String BarCode;
-
-    /**
-    * 条码信息数组
-    */
-    @SerializedName("ProductDataRecords")
-    @Expose
-    private ProductDataRecord [] ProductDataRecords;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 条码 
-     * @return BarCode 条码
-     */
-    public String getBarCode() {
-        return this.BarCode;
-    }
-
-    /**
-     * Set 条码
-     * @param BarCode 条码
-     */
-    public void setBarCode(String BarCode) {
-        this.BarCode = BarCode;
-    }
-
-    /**
-     * Get 条码信息数组 
-     * @return ProductDataRecords 条码信息数组
-     */
-    public ProductDataRecord [] getProductDataRecords() {
-        return this.ProductDataRecords;
-    }
-
-    /**
-     * Set 条码信息数组
-     * @param ProductDataRecords 条码信息数组
-     */
-    public void setProductDataRecords(ProductDataRecord [] ProductDataRecords) {
-        this.ProductDataRecords = ProductDataRecords;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class QueryBarCodeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BarCode", this.BarCode);
-        this.setParamArrayObj(map, prefix + "ProductDataRecords.", this.ProductDataRecords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

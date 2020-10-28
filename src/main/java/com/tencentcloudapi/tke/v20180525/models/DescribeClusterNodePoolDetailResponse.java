@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeClusterNodePoolDetailResponse extends AbstractModel{
 
     /**
+    * 节点池详情
+    */
+    @SerializedName("NodePool")
+    @Expose
+    private NodePool NodePool;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 节点池详情 
+     * @return NodePool 节点池详情
+     */
+    public NodePool getNodePool() {
+        return this.NodePool;
+    }
+
+    /**
+     * Set 节点池详情
+     * @param NodePool 节点池详情
+     */
+    public void setNodePool(NodePool NodePool) {
+        this.NodePool = NodePool;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class DescribeClusterNodePoolDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "NodePool.", this.NodePool);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

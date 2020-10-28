@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Backend extends AbstractModel{
 
     /**
-    * 后端服务的类型，可取：CVM、ENI（即将支持）
+    * 后端服务的类型，可取：CVM、ENI
     */
     @SerializedName("Type")
     @Expose
@@ -91,16 +91,16 @@ public class Backend extends AbstractModel{
     private String EniId;
 
     /**
-     * Get 后端服务的类型，可取：CVM、ENI（即将支持） 
-     * @return Type 后端服务的类型，可取：CVM、ENI（即将支持）
+     * Get 后端服务的类型，可取：CVM、ENI 
+     * @return Type 后端服务的类型，可取：CVM、ENI
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 后端服务的类型，可取：CVM、ENI（即将支持）
-     * @param Type 后端服务的类型，可取：CVM、ENI（即将支持）
+     * Set 后端服务的类型，可取：CVM、ENI
+     * @param Type 后端服务的类型，可取：CVM、ENI
      */
     public void setType(String Type) {
         this.Type = Type;
