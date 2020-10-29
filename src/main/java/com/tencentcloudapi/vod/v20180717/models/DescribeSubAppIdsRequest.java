@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DescribeSubAppIdsRequest extends AbstractModel{
 
     /**
+    * 标签信息，查询指定标签的子应用列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
+     * Get 标签信息，查询指定标签的子应用列表。 
+     * @return Tags 标签信息，查询指定标签的子应用列表。
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签信息，查询指定标签的子应用列表。
+     * @param Tags 标签信息，查询指定标签的子应用列表。
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

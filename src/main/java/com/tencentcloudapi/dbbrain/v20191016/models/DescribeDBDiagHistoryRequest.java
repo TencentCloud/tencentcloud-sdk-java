@@ -30,14 +30,14 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 开始时间。如“2019-09-10 12:13:14”。
+    * 开始时间，如“2019-09-10 12:13:14”。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。如“2019-09-11 12:13:14”。
+    * 结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
     }
 
     /**
-     * Get 开始时间。如“2019-09-10 12:13:14”。 
-     * @return StartTime 开始时间。如“2019-09-10 12:13:14”。
+     * Get 开始时间，如“2019-09-10 12:13:14”。 
+     * @return StartTime 开始时间，如“2019-09-10 12:13:14”。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。如“2019-09-10 12:13:14”。
-     * @param StartTime 开始时间。如“2019-09-10 12:13:14”。
+     * Set 开始时间，如“2019-09-10 12:13:14”。
+     * @param StartTime 开始时间，如“2019-09-10 12:13:14”。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。如“2019-09-11 12:13:14”。 
-     * @return EndTime 结束时间。如“2019-09-11 12:13:14”。
+     * Get 结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。 
+     * @return EndTime 结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。如“2019-09-11 12:13:14”。
-     * @param EndTime 结束时间。如“2019-09-11 12:13:14”。
+     * Set 结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
+     * @param EndTime 结束时间，如“2019-09-11 12:13:14”，结束时间与开始时间的间隔最大可为2天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

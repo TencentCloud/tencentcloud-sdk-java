@@ -44,14 +44,14 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String SortBy;
 
     /**
-    * 开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
+    * 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 截止日期，最早为当日的前第6天，默认为当日。
+    * 截止日期，最早为当日的前第29天，默认为当日。
     */
     @SerializedName("EndDate")
     @Expose
@@ -106,32 +106,32 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 开始日期，最早为当日的前第6天，默认为截止日期的前第6天。 
-     * @return StartDate 开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
+     * Get 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。 
+     * @return StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
-     * @param StartDate 开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
+     * Set 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
+     * @param StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 截止日期，最早为当日的前第6天，默认为当日。 
-     * @return EndDate 截止日期，最早为当日的前第6天，默认为当日。
+     * Get 截止日期，最早为当日的前第29天，默认为当日。 
+     * @return EndDate 截止日期，最早为当日的前第29天，默认为当日。
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 截止日期，最早为当日的前第6天，默认为当日。
-     * @param EndDate 截止日期，最早为当日的前第6天，默认为当日。
+     * Set 截止日期，最早为当日的前第29天，默认为当日。
+     * @param EndDate 截止日期，最早为当日的前第29天，默认为当日。
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;

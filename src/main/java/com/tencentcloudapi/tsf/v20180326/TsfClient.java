@@ -1060,6 +1060,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *镜像仓库列表 
+     * @param req DescribeImageRepositoryRequest
+     * @return DescribeImageRepositoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageRepositoryResponse DescribeImageRepository(DescribeImageRepositoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageRepositoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageRepositoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImageRepository");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *镜像版本列表
      * @param req DescribeImageTagsRequest
      * @return DescribeImageTagsResponse

@@ -745,6 +745,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *查看操作系统支持的芯片列表
+     * @param req DescribeOsListRequest
+     * @return DescribeOsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOsListResponse DescribeOsList(DescribeOsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOsListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOsListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOsList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeOtaVersions）用于查询固件版本信息列表。
      * @param req DescribeOtaVersionsRequest
      * @return DescribeOtaVersionsResponse
@@ -1049,6 +1069,26 @@ ProWritable.Pos.setVal.x;
                 Type type = new TypeToken<JsonResponseModel<ModifyProductResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑版本描述信息
+     * @param req ModifyVerContentRequest
+     * @return ModifyVerContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVerContentResponse ModifyVerContent(ModifyVerContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVerContentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVerContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVerContent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

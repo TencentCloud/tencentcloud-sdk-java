@@ -30,14 +30,14 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 开始时间。
+    * 开始时间，如“2019-09-10 12:13:14”。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 截止时间。
+    * 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -88,32 +88,32 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+     * Get 开始时间，如“2019-09-10 12:13:14”。 
+     * @return StartTime 开始时间，如“2019-09-10 12:13:14”。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set 开始时间，如“2019-09-10 12:13:14”。
+     * @param StartTime 开始时间，如“2019-09-10 12:13:14”。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 截止时间。 
-     * @return EndTime 截止时间。
+     * Get 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。 
+     * @return EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 截止时间。
-     * @param EndTime 截止时间。
+     * Set 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+     * @param EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

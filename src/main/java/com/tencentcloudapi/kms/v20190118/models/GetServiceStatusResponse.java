@@ -38,6 +38,37 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long InvalidType;
 
     /**
+    * 0-普通版，1-旗舰版
+    */
+    @SerializedName("UserLevel")
+    @Expose
+    private Long UserLevel;
+
+    /**
+    * 旗舰版到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProExpireTime")
+    @Expose
+    private Long ProExpireTime;
+
+    /**
+    * 旗舰版是否自动续费：0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProRenewFlag")
+    @Expose
+    private Long ProRenewFlag;
+
+    /**
+    * 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProResourceId")
+    @Expose
+    private String ProResourceId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +112,82 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get 0-普通版，1-旗舰版 
+     * @return UserLevel 0-普通版，1-旗舰版
+     */
+    public Long getUserLevel() {
+        return this.UserLevel;
+    }
+
+    /**
+     * Set 0-普通版，1-旗舰版
+     * @param UserLevel 0-普通版，1-旗舰版
+     */
+    public void setUserLevel(Long UserLevel) {
+        this.UserLevel = UserLevel;
+    }
+
+    /**
+     * Get 旗舰版到期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProExpireTime 旗舰版到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProExpireTime() {
+        return this.ProExpireTime;
+    }
+
+    /**
+     * Set 旗舰版到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProExpireTime 旗舰版到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProExpireTime(Long ProExpireTime) {
+        this.ProExpireTime = ProExpireTime;
+    }
+
+    /**
+     * Get 旗舰版是否自动续费：0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProRenewFlag 旗舰版是否自动续费：0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProRenewFlag() {
+        return this.ProRenewFlag;
+    }
+
+    /**
+     * Set 旗舰版是否自动续费：0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProRenewFlag 旗舰版是否自动续费：0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProRenewFlag(Long ProRenewFlag) {
+        this.ProRenewFlag = ProRenewFlag;
+    }
+
+    /**
+     * Get 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProResourceId 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProResourceId() {
+        return this.ProResourceId;
+    }
+
+    /**
+     * Set 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProResourceId 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProResourceId(String ProResourceId) {
+        this.ProResourceId = ProResourceId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -102,6 +209,10 @@ public class GetServiceStatusResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
         this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
+        this.setParamSimple(map, prefix + "UserLevel", this.UserLevel);
+        this.setParamSimple(map, prefix + "ProExpireTime", this.ProExpireTime);
+        this.setParamSimple(map, prefix + "ProRenewFlag", this.ProRenewFlag);
+        this.setParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

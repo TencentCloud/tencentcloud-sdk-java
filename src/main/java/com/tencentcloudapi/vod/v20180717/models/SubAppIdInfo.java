@@ -54,6 +54,8 @@ public class SubAppIdInfo extends AbstractModel{
     * 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
     */
     @SerializedName("Status")
     @Expose
@@ -126,10 +128,14 @@ public class SubAppIdInfo extends AbstractModel{
     /**
      * Get 子应用状态，有效值：
 <li>On：启用；</li>
-<li>Off：停用。</li> 
+<li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li> 
      * @return Status 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
      */
     public String getStatus() {
         return this.Status;
@@ -139,9 +145,13 @@ public class SubAppIdInfo extends AbstractModel{
      * Set 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
      * @param Status 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

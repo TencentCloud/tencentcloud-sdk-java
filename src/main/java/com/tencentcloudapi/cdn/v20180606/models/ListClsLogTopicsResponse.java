@@ -23,62 +23,11 @@ import java.util.HashMap;
 public class ListClsLogTopicsResponse extends AbstractModel{
 
     /**
-    * 日志集信息
-    */
-    @SerializedName("Logset")
-    @Expose
-    private LogSetInfo Logset;
-
-    /**
-    * 日志主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Topics")
-    @Expose
-    private TopicInfo [] Topics;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 日志集信息 
-     * @return Logset 日志集信息
-     */
-    public LogSetInfo getLogset() {
-        return this.Logset;
-    }
-
-    /**
-     * Set 日志集信息
-     * @param Logset 日志集信息
-     */
-    public void setLogset(LogSetInfo Logset) {
-        this.Logset = Logset;
-    }
-
-    /**
-     * Get 日志主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Topics 日志主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public TopicInfo [] getTopics() {
-        return this.Topics;
-    }
-
-    /**
-     * Set 日志主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Topics 日志主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTopics(TopicInfo [] Topics) {
-        this.Topics = Topics;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -100,8 +49,6 @@ public class ListClsLogTopicsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Logset.", this.Logset);
-        this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

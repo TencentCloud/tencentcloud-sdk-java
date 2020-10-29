@@ -38,6 +38,28 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持广告商品图片内文字的检测和识别，返回文本框位置与文字内容。
+
+产品优势：针对广告商品图片普遍存在较多繁体字、艺术字的特点，进行了识别能力的增强。支持中英文、横排、竖排以及倾斜场景文字识别。文字识别的召回率和准确率能达到96%以上。
+     * @param req AdvertiseOCRRequest
+     * @return AdvertiseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public AdvertiseOCRResponse AdvertiseOCR(AdvertiseOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AdvertiseOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AdvertiseOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AdvertiseOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持作业算式题目的自动识别，目前覆盖 K12 学力范围内的 14 种题型，包括加减乘除四则运算、分数四则运算、竖式四则运算、脱式计算等。
      * @param req ArithmeticOCRRequest
      * @return ArithmeticOCRResponse
@@ -1106,6 +1128,26 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QuotaInvoiceOCRResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QuotaInvoiceOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持图片/ PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持对0度至180度旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
+     * @param req RecognizeTableOCRRequest
+     * @return RecognizeTableOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeTableOCRResponse RecognizeTableOCR(RecognizeTableOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeTableOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeTableOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeTableOCR");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

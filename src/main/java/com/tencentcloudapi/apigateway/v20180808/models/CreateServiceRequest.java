@@ -79,6 +79,13 @@ public class CreateServiceRequest extends AbstractModel{
     private String AppIdType;
 
     /**
+    * 标签。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。 
      * @return ServiceName 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
      */
@@ -207,6 +214,22 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签。 
+     * @return Tags 标签。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签。
+     * @param Tags 标签。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
         this.setParamSimple(map, prefix + "SetServerName", this.SetServerName);
         this.setParamSimple(map, prefix + "AppIdType", this.AppIdType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

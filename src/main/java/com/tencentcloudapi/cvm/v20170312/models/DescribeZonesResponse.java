@@ -23,57 +23,11 @@ import java.util.HashMap;
 public class DescribeZonesResponse extends AbstractModel{
 
     /**
-    * 可用区数量。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 可用区列表信息。
-    */
-    @SerializedName("ZoneSet")
-    @Expose
-    private ZoneInfo [] ZoneSet;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 可用区数量。 
-     * @return TotalCount 可用区数量。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 可用区数量。
-     * @param TotalCount 可用区数量。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 可用区列表信息。 
-     * @return ZoneSet 可用区列表信息。
-     */
-    public ZoneInfo [] getZoneSet() {
-        return this.ZoneSet;
-    }
-
-    /**
-     * Set 可用区列表信息。
-     * @param ZoneSet 可用区列表信息。
-     */
-    public void setZoneSet(ZoneInfo [] ZoneSet) {
-        this.ZoneSet = ZoneSet;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class DescribeZonesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "ZoneSet.", this.ZoneSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

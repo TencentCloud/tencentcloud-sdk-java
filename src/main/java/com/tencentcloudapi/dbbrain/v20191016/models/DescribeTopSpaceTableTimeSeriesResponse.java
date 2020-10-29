@@ -23,34 +23,11 @@ import java.util.HashMap;
 public class DescribeTopSpaceTableTimeSeriesResponse extends AbstractModel{
 
     /**
-    * 返回的Top表空间统计信息的时序数据列表。
-    */
-    @SerializedName("TopSpaceTableTimeSeries")
-    @Expose
-    private TableSpaceTimeSeries [] TopSpaceTableTimeSeries;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 返回的Top表空间统计信息的时序数据列表。 
-     * @return TopSpaceTableTimeSeries 返回的Top表空间统计信息的时序数据列表。
-     */
-    public TableSpaceTimeSeries [] getTopSpaceTableTimeSeries() {
-        return this.TopSpaceTableTimeSeries;
-    }
-
-    /**
-     * Set 返回的Top表空间统计信息的时序数据列表。
-     * @param TopSpaceTableTimeSeries 返回的Top表空间统计信息的时序数据列表。
-     */
-    public void setTopSpaceTableTimeSeries(TableSpaceTimeSeries [] TopSpaceTableTimeSeries) {
-        this.TopSpaceTableTimeSeries = TopSpaceTableTimeSeries;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class DescribeTopSpaceTableTimeSeriesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TopSpaceTableTimeSeries.", this.TopSpaceTableTimeSeries);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

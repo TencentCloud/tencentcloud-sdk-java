@@ -31,8 +31,10 @@ public class ModifySubAppIdStatusRequest extends AbstractModel{
 
     /**
     * 子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
     */
     @SerializedName("Status")
     @Expose
@@ -56,11 +58,15 @@ public class ModifySubAppIdStatusRequest extends AbstractModel{
 
     /**
      * Get 子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li> 
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。 
      * @return Status 子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
      */
     public String getStatus() {
         return this.Status;
@@ -68,11 +74,15 @@ public class ModifySubAppIdStatusRequest extends AbstractModel{
 
     /**
      * Set 子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
      * @param Status 子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
      */
     public void setStatus(String Status) {
         this.Status = Status;

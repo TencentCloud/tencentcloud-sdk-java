@@ -98,6 +98,26 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *批量创建生命周期规则，生命周期规则ID和创建时间无需填写。
+     * @param req CreateLifeCycleRulesRequest
+     * @return CreateLifeCycleRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifeCycleRulesResponse CreateLifeCycleRules(CreateLifeCycleRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLifeCycleRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLifeCycleRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLifeCycleRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建文件系统挂载点，仅限于创建成功的文件系统。
      * @param req CreateMountPointRequest
      * @return CreateMountPointResponse
@@ -110,6 +130,26 @@ public class ChdfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMountPointResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMountPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量创建回热任务，回热任务ID、状态和创建时间无需填写。
+     * @param req CreateRestoreTasksRequest
+     * @return CreateRestoreTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRestoreTasksResponse CreateRestoreTasks(CreateRestoreTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRestoreTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRestoreTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRestoreTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -170,6 +210,26 @@ public class ChdfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteFileSystemResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteFileSystem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除生命周期规则。
+     * @param req DeleteLifeCycleRulesRequest
+     * @return DeleteLifeCycleRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLifeCycleRulesResponse DeleteLifeCycleRules(DeleteLifeCycleRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLifeCycleRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLifeCycleRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLifeCycleRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -278,6 +338,26 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *通过文件系统ID查看生命周期规则列表。
+     * @param req DescribeLifeCycleRulesRequest
+     * @return DescribeLifeCycleRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLifeCycleRulesResponse DescribeLifeCycleRules(DescribeLifeCycleRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLifeCycleRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLifeCycleRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLifeCycleRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查看挂载点详细信息。
      * @param req DescribeMountPointRequest
      * @return DescribeMountPointResponse
@@ -318,6 +398,46 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *通过文件系统ID查看资源标签列表。
+     * @param req DescribeResourceTagsRequest
+     * @return DescribeResourceTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceTagsResponse DescribeResourceTags(DescribeResourceTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过文件系统ID查看回热任务列表。
+     * @param req DescribeRestoreTasksRequest
+     * @return DescribeRestoreTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRestoreTasksResponse DescribeRestoreTasks(DescribeRestoreTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRestoreTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRestoreTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRestoreTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改权限组属性。
      * @param req ModifyAccessGroupRequest
      * @return ModifyAccessGroupResponse
@@ -338,7 +458,7 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
-     *批量修改权限规则属性，需要指定权限规则ID。
+     *批量修改权限规则属性，需要指定权限规则ID，支持修改权限规则地址、访问模式和优先级。
      * @param req ModifyAccessRulesRequest
      * @return ModifyAccessRulesResponse
      * @throws TencentCloudSDKException
@@ -378,6 +498,26 @@ public class ChdfsClient extends AbstractClient{
     }
 
     /**
+     *批量修改生命周期规则属性，需要指定生命周期规则ID，支持修改生命周期规则名称、路径、转换列表和状态。
+     * @param req ModifyLifeCycleRulesRequest
+     * @return ModifyLifeCycleRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLifeCycleRulesResponse ModifyLifeCycleRules(ModifyLifeCycleRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLifeCycleRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLifeCycleRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLifeCycleRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改挂载点属性。
      * @param req ModifyMountPointRequest
      * @return ModifyMountPointResponse
@@ -390,6 +530,26 @@ public class ChdfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMountPointResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMountPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改资源标签列表，全量覆盖。
+     * @param req ModifyResourceTagsRequest
+     * @return ModifyResourceTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceTagsResponse ModifyResourceTags(ModifyResourceTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourceTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyResourceTags");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

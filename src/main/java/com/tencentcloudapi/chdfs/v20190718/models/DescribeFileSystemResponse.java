@@ -30,7 +30,7 @@ public class DescribeFileSystemResponse extends AbstractModel{
     private FileSystem FileSystem;
 
     /**
-    * 文件系统已使用容量（byte）
+    * 文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSystemCapacityUsed")
@@ -38,12 +38,20 @@ public class DescribeFileSystemResponse extends AbstractModel{
     private Long FileSystemCapacityUsed;
 
     /**
-    * 已使用容量（byte）
+    * 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CapacityUsed")
     @Expose
     private Long CapacityUsed;
+
+    /**
+    * 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArchiveCapacityUsed")
+    @Expose
+    private Long ArchiveCapacityUsed;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -69,9 +77,9 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Get 文件系统已使用容量（byte）
+     * Get 文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileSystemCapacityUsed 文件系统已使用容量（byte）
+     * @return FileSystemCapacityUsed 文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSystemCapacityUsed() {
@@ -79,9 +87,9 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Set 文件系统已使用容量（byte）
+     * Set 文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileSystemCapacityUsed 文件系统已使用容量（byte）
+     * @param FileSystemCapacityUsed 文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSystemCapacityUsed(Long FileSystemCapacityUsed) {
@@ -89,9 +97,9 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Get 已使用容量（byte）
+     * Get 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CapacityUsed 已使用容量（byte）
+     * @return CapacityUsed 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCapacityUsed() {
@@ -99,13 +107,33 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Set 已使用容量（byte）
+     * Set 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CapacityUsed 已使用容量（byte）
+     * @param CapacityUsed 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapacityUsed(Long CapacityUsed) {
         this.CapacityUsed = CapacityUsed;
+    }
+
+    /**
+     * Get 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArchiveCapacityUsed 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getArchiveCapacityUsed() {
+        return this.ArchiveCapacityUsed;
+    }
+
+    /**
+     * Set 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArchiveCapacityUsed 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchiveCapacityUsed(Long ArchiveCapacityUsed) {
+        this.ArchiveCapacityUsed = ArchiveCapacityUsed;
     }
 
     /**
@@ -131,6 +159,7 @@ public class DescribeFileSystemResponse extends AbstractModel{
         this.setParamObj(map, prefix + "FileSystem.", this.FileSystem);
         this.setParamSimple(map, prefix + "FileSystemCapacityUsed", this.FileSystemCapacityUsed);
         this.setParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
+        this.setParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
