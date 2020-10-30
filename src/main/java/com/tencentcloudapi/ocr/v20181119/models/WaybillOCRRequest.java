@@ -44,6 +44,13 @@ public class WaybillOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 预检测开关，当待识别运单占整个输入图像的比例较小时，建议打开预检测开关。默认值为false。
+    */
+    @SerializedName("EnablePreDetect")
+    @Expose
+    private Boolean EnablePreDetect;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -104,11 +111,28 @@ public class WaybillOCRRequest extends AbstractModel{
     }
 
     /**
+     * Get 预检测开关，当待识别运单占整个输入图像的比例较小时，建议打开预检测开关。默认值为false。 
+     * @return EnablePreDetect 预检测开关，当待识别运单占整个输入图像的比例较小时，建议打开预检测开关。默认值为false。
+     */
+    public Boolean getEnablePreDetect() {
+        return this.EnablePreDetect;
+    }
+
+    /**
+     * Set 预检测开关，当待识别运单占整个输入图像的比例较小时，建议打开预检测开关。默认值为false。
+     * @param EnablePreDetect 预检测开关，当待识别运单占整个输入图像的比例较小时，建议打开预检测开关。默认值为false。
+     */
+    public void setEnablePreDetect(Boolean EnablePreDetect) {
+        this.EnablePreDetect = EnablePreDetect;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "EnablePreDetect", this.EnablePreDetect);
 
     }
 }

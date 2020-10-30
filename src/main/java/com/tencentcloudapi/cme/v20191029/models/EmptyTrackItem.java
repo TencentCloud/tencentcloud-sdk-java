@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PassportOCRResponse extends AbstractModel{
+public class EmptyTrackItem extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 持续时间，单位为秒。
     */
-    @SerializedName("RequestId")
+    @SerializedName("Duration")
     @Expose
-    private String RequestId;
+    private Float Duration;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 持续时间，单位为秒。 
+     * @return Duration 持续时间，单位为秒。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public Float getDuration() {
+        return this.Duration;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 持续时间，单位为秒。
+     * @param Duration 持续时间，单位为秒。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setDuration(Float Duration) {
+        this.Duration = Duration;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
 
     }
 }

@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageRepositoryResponse extends AbstractModel{
+public class DescribeUserInformationResponse extends AbstractModel{
 
     /**
-    * 查询的权限数据对象
+    * 返回的用户总条数
     */
-    @SerializedName("Result")
+    @SerializedName("Total")
     @Expose
-    private ImageRepositoryResult Result;
+    private Long Total;
+
+    /**
+    * 用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserList")
+    @Expose
+    private UserInformation [] UserList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class DescribeImageRepositoryResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询的权限数据对象 
-     * @return Result 查询的权限数据对象
+     * Get 返回的用户总条数 
+     * @return Total 返回的用户总条数
      */
-    public ImageRepositoryResult getResult() {
-        return this.Result;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 查询的权限数据对象
-     * @param Result 查询的权限数据对象
+     * Set 返回的用户总条数
+     * @param Total 返回的用户总条数
      */
-    public void setResult(ImageRepositoryResult Result) {
-        this.Result = Result;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserList 用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UserInformation [] getUserList() {
+        return this.UserList;
+    }
+
+    /**
+     * Set 用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserList 用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserList(UserInformation [] UserList) {
+        this.UserList = UserList;
     }
 
     /**
@@ -72,7 +100,8 @@ public class DescribeImageRepositoryResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "UserList.", this.UserList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

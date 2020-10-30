@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.mgobe.v20201014.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageRepositoryResponse extends AbstractModel{
-
-    /**
-    * 查询的权限数据对象
-    */
-    @SerializedName("Result")
-    @Expose
-    private ImageRepositoryResult Result;
+public class DismissRoomResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class DescribeImageRepositoryResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 查询的权限数据对象 
-     * @return Result 查询的权限数据对象
-     */
-    public ImageRepositoryResult getResult() {
-        return this.Result;
-    }
-
-    /**
-     * Set 查询的权限数据对象
-     * @param Result 查询的权限数据对象
-     */
-    public void setResult(ImageRepositoryResult Result) {
-        this.Result = Result;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class DescribeImageRepositoryResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

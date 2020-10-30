@@ -218,6 +218,26 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询指定时间内的用户列表，可查询14天内数据。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。
+     * @param req DescribeUserInformationRequest
+     * @return DescribeUserInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserInformationResponse DescribeUserInformation(DescribeUserInformationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserInformationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserInformationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserInformation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
      * @param req DismissRoomRequest
      * @return DismissRoomResponse

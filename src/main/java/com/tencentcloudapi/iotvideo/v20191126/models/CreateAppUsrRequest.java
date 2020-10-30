@@ -30,6 +30,13 @@ public class CreateAppUsrRequest extends AbstractModel{
     private String CunionId;
 
     /**
+    * 用于小程序关联手机号
+    */
+    @SerializedName("Mobile")
+    @Expose
+    private String Mobile;
+
+    /**
      * Get 标识用户的唯一ID，防止同一个用户多次注册 
      * @return CunionId 标识用户的唯一ID，防止同一个用户多次注册
      */
@@ -46,10 +53,27 @@ public class CreateAppUsrRequest extends AbstractModel{
     }
 
     /**
+     * Get 用于小程序关联手机号 
+     * @return Mobile 用于小程序关联手机号
+     */
+    public String getMobile() {
+        return this.Mobile;
+    }
+
+    /**
+     * Set 用于小程序关联手机号
+     * @param Mobile 用于小程序关联手机号
+     */
+    public void setMobile(String Mobile) {
+        this.Mobile = Mobile;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CunionId", this.CunionId);
+        this.setParamSimple(map, prefix + "Mobile", this.Mobile);
 
     }
 }

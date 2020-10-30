@@ -76,6 +76,20 @@ public class CreateProjectRequest extends AbstractModel{
     private SwitcherProjectInput SwitcherProjectInput;
 
     /**
+    * 直播剪辑信息，暂未开放，请勿使用。
+    */
+    @SerializedName("LiveStreamClipProjectInput")
+    @Expose
+    private LiveStreamClipProjectInput LiveStreamClipProjectInput;
+
+    /**
+    * 视频编辑信息。
+    */
+    @SerializedName("VideoEditProjectInput")
+    @Expose
+    private VideoEditProjectInput VideoEditProjectInput;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -204,6 +218,38 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 直播剪辑信息，暂未开放，请勿使用。 
+     * @return LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     */
+    public LiveStreamClipProjectInput getLiveStreamClipProjectInput() {
+        return this.LiveStreamClipProjectInput;
+    }
+
+    /**
+     * Set 直播剪辑信息，暂未开放，请勿使用。
+     * @param LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     */
+    public void setLiveStreamClipProjectInput(LiveStreamClipProjectInput LiveStreamClipProjectInput) {
+        this.LiveStreamClipProjectInput = LiveStreamClipProjectInput;
+    }
+
+    /**
+     * Get 视频编辑信息。 
+     * @return VideoEditProjectInput 视频编辑信息。
+     */
+    public VideoEditProjectInput getVideoEditProjectInput() {
+        return this.VideoEditProjectInput;
+    }
+
+    /**
+     * Set 视频编辑信息。
+     * @param VideoEditProjectInput 视频编辑信息。
+     */
+    public void setVideoEditProjectInput(VideoEditProjectInput VideoEditProjectInput) {
+        this.VideoEditProjectInput = VideoEditProjectInput;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -214,6 +260,8 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
+        this.setParamObj(map, prefix + "LiveStreamClipProjectInput.", this.LiveStreamClipProjectInput);
+        this.setParamObj(map, prefix + "VideoEditProjectInput.", this.VideoEditProjectInput);
 
     }
 }
