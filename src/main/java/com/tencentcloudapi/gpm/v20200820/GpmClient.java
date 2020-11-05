@@ -278,6 +278,26 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
+     *查询匹配Token，Token用于push消息验证。
+     * @param req DescribeTokenRequest
+     * @return DescribeTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenResponse DescribeToken(DescribeTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改匹配
      * @param req ModifyMatchRequest
      * @return ModifyMatchResponse
@@ -310,6 +330,26 @@ public class GpmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改匹配Token。
+     * @param req ModifyTokenRequest
+     * @return ModifyTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTokenResponse ModifyToken(ModifyTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyToken");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

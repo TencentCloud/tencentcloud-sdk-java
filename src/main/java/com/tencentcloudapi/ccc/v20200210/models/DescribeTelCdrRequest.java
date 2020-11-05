@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeTelCdrRequest extends AbstractModel{
 
     /**
-    * 实例 ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private Long InstanceId;
-
-    /**
     * 起始时间戳，Unix 时间戳
     */
     @SerializedName("StartTimeStamp")
@@ -44,7 +37,7 @@ public class DescribeTelCdrRequest extends AbstractModel{
     private Long EndTimeStamp;
 
     /**
-    * 返回记录条数
+    * 返回记录条数，上限 100
     */
     @SerializedName("Limit")
     @Expose
@@ -58,20 +51,18 @@ public class DescribeTelCdrRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
-     */
-    public Long getInstanceId() {
-        return this.InstanceId;
-    }
+    * 实例 ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private Long InstanceId;
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
-     */
-    public void setInstanceId(Long InstanceId) {
-        this.InstanceId = InstanceId;
-    }
+    * 应用ID。
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
 
     /**
      * Get 起始时间戳，Unix 时间戳 
@@ -106,16 +97,16 @@ public class DescribeTelCdrRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回记录条数 
-     * @return Limit 返回记录条数
+     * Get 返回记录条数，上限 100 
+     * @return Limit 返回记录条数，上限 100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数
-     * @param Limit 返回记录条数
+     * Set 返回记录条数，上限 100
+     * @param Limit 返回记录条数，上限 100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -138,14 +129,47 @@ public class DescribeTelCdrRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
+     */
+    public Long getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
+     */
+    public void setInstanceId(Long InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 应用ID。 
+     * @return SdkAppId 应用ID。
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set 应用ID。
+     * @param SdkAppId 应用ID。
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StartTimeStamp", this.StartTimeStamp);
         this.setParamSimple(map, prefix + "EndTimeStamp", this.EndTimeStamp);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
 
     }
 }

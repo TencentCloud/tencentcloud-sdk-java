@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class VerifyPersonRequest extends AbstractModel{
 
     /**
+    * 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+    */
+    @SerializedName("PersonId")
+    @Expose
+    private String PersonId;
+
+    /**
     * 图片 base64 数据。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -41,13 +48,6 @@ public class VerifyPersonRequest extends AbstractModel{
     @SerializedName("Url")
     @Expose
     private String Url;
-
-    /**
-    * 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
-    */
-    @SerializedName("PersonId")
-    @Expose
-    private String PersonId;
 
     /**
     * 图片质量控制。 
@@ -69,6 +69,22 @@ public class VerifyPersonRequest extends AbstractModel{
     @SerializedName("NeedRotateDetection")
     @Expose
     private Long NeedRotateDetection;
+
+    /**
+     * Get 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。 
+     * @return PersonId 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+     */
+    public String getPersonId() {
+        return this.PersonId;
+    }
+
+    /**
+     * Set 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+     * @param PersonId 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+     */
+    public void setPersonId(String PersonId) {
+        this.PersonId = PersonId;
+    }
 
     /**
      * Get 图片 base64 数据。
@@ -124,22 +140,6 @@ public class VerifyPersonRequest extends AbstractModel{
      */
     public void setUrl(String Url) {
         this.Url = Url;
-    }
-
-    /**
-     * Get 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。 
-     * @return PersonId 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
-     */
-    public String getPersonId() {
-        return this.PersonId;
-    }
-
-    /**
-     * Set 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
-     * @param PersonId 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
-     */
-    public void setPersonId(String PersonId) {
-        this.PersonId = PersonId;
     }
 
     /**
@@ -206,9 +206,9 @@ public class VerifyPersonRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "QualityControl", this.QualityControl);
         this.setParamSimple(map, prefix + "NeedRotateDetection", this.NeedRotateDetection);
 

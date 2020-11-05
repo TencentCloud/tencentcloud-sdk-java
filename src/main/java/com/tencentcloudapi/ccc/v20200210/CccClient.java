@@ -58,6 +58,66 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建客服账号。
+     * @param req CreateStaffRequest
+     * @return CreateStaffResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStaffResponse CreateStaff(CreateStaffRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStaffResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStaffResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStaff");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *包括具体聊天内容
+     * @param req DescribeChatMessagesRequest
+     * @return DescribeChatMessagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChatMessagesResponse DescribeChatMessages(DescribeChatMessagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChatMessagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChatMessagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChatMessages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *包括全媒体和文本两种类型
+     * @param req DescribeIMCdrsRequest
+     * @return DescribeIMCdrsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIMCdrsResponse DescribeIMCdrs(DescribeIMCdrsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIMCdrsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIMCdrsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIMCdrs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取电话服务记录与录音
      * @param req DescribeTelCdrRequest
      * @return DescribeTelCdrResponse

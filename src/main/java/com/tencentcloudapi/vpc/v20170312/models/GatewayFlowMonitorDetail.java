@@ -44,14 +44,14 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
     private Long OutPkg;
 
     /**
-    * 入带宽，单位：`Byte`。
+    * 入流量，单位：`Byte`。
     */
     @SerializedName("InTraffic")
     @Expose
     private Long InTraffic;
 
     /**
-    * 出带宽，单位：`Byte`。
+    * 出流量，单位：`Byte`。
     */
     @SerializedName("OutTraffic")
     @Expose
@@ -106,32 +106,32 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
     }
 
     /**
-     * Get 入带宽，单位：`Byte`。 
-     * @return InTraffic 入带宽，单位：`Byte`。
+     * Get 入流量，单位：`Byte`。 
+     * @return InTraffic 入流量，单位：`Byte`。
      */
     public Long getInTraffic() {
         return this.InTraffic;
     }
 
     /**
-     * Set 入带宽，单位：`Byte`。
-     * @param InTraffic 入带宽，单位：`Byte`。
+     * Set 入流量，单位：`Byte`。
+     * @param InTraffic 入流量，单位：`Byte`。
      */
     public void setInTraffic(Long InTraffic) {
         this.InTraffic = InTraffic;
     }
 
     /**
-     * Get 出带宽，单位：`Byte`。 
-     * @return OutTraffic 出带宽，单位：`Byte`。
+     * Get 出流量，单位：`Byte`。 
+     * @return OutTraffic 出流量，单位：`Byte`。
      */
     public Long getOutTraffic() {
         return this.OutTraffic;
     }
 
     /**
-     * Set 出带宽，单位：`Byte`。
-     * @param OutTraffic 出带宽，单位：`Byte`。
+     * Set 出流量，单位：`Byte`。
+     * @param OutTraffic 出流量，单位：`Byte`。
      */
     public void setOutTraffic(Long OutTraffic) {
         this.OutTraffic = OutTraffic;

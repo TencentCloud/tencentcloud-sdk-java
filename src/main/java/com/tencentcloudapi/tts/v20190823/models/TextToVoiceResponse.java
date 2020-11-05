@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class TextToVoiceResponse extends AbstractModel{
 
     /**
+    * base64编码的wav/mp3音频数据
+    */
+    @SerializedName("Audio")
+    @Expose
+    private String Audio;
+
+    /**
+    * 一次请求对应一个SessionId
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get base64编码的wav/mp3音频数据 
+     * @return Audio base64编码的wav/mp3音频数据
+     */
+    public String getAudio() {
+        return this.Audio;
+    }
+
+    /**
+     * Set base64编码的wav/mp3音频数据
+     * @param Audio base64编码的wav/mp3音频数据
+     */
+    public void setAudio(String Audio) {
+        this.Audio = Audio;
+    }
+
+    /**
+     * Get 一次请求对应一个SessionId 
+     * @return SessionId 一次请求对应一个SessionId
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 一次请求对应一个SessionId
+     * @param SessionId 一次请求对应一个SessionId
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +95,8 @@ public class TextToVoiceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Audio", this.Audio);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

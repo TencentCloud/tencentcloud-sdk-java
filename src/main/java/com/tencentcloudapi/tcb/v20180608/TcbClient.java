@@ -98,6 +98,46 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *开通容器托管的资源，包括集群创建，VPC配置，异步任务创建，镜像托管，Coding等，查看创建结果需要根据DescribeCloudBaseRunResource接口来查看
+     * @param req CreateCloudBaseRunResourceRequest
+     * @return CreateCloudBaseRunResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudBaseRunResourceResponse CreateCloudBaseRunResource(CreateCloudBaseRunResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudBaseRunResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudBaseRunResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudBaseRunResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建服务版本
+     * @param req CreateCloudBaseRunServerVersionRequest
+     * @return CreateCloudBaseRunServerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudBaseRunServerVersionResponse CreateCloudBaseRunServerVersion(CreateCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudBaseRunServerVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudBaseRunServerVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudBaseRunServerVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建托管域名
      * @param req CreateHostingDomainRequest
      * @return CreateHostingDomainResponse
@@ -490,6 +530,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DestroyStaticStoreResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DestroyStaticStore");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建云应用服务
+     * @param req EstablishCloudBaseRunServerRequest
+     * @return EstablishCloudBaseRunServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(EstablishCloudBaseRunServerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EstablishCloudBaseRunServerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EstablishCloudBaseRunServerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EstablishCloudBaseRunServer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -100,6 +100,13 @@ public class AddEcdnDomainRequest extends AbstractModel{
     private ForceRedirect ForceRedirect;
 
     /**
+    * 域名绑定的标签
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
      * Get 域名。 
      * @return Domain 域名。
      */
@@ -276,6 +283,22 @@ public class AddEcdnDomainRequest extends AbstractModel{
     }
 
     /**
+     * Get 域名绑定的标签 
+     * @return Tag 域名绑定的标签
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 域名绑定的标签
+     * @param Tag 域名绑定的标签
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class AddEcdnDomainRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Cache.", this.Cache);
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

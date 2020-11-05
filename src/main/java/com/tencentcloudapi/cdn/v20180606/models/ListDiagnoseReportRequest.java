@@ -30,6 +30,13 @@ public class ListDiagnoseReportRequest extends AbstractModel{
     private String KeyWords;
 
     /**
+    * 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+    */
+    @SerializedName("DiagnoseLink")
+    @Expose
+    private String DiagnoseLink;
+
+    /**
      * Get 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。 
      * @return KeyWords 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
      */
@@ -46,10 +53,27 @@ public class ListDiagnoseReportRequest extends AbstractModel{
     }
 
     /**
+     * Get 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx 
+     * @return DiagnoseLink 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+     */
+    public String getDiagnoseLink() {
+        return this.DiagnoseLink;
+    }
+
+    /**
+     * Set 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+     * @param DiagnoseLink 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+     */
+    public void setDiagnoseLink(String DiagnoseLink) {
+        this.DiagnoseLink = DiagnoseLink;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyWords", this.KeyWords);
+        this.setParamSimple(map, prefix + "DiagnoseLink", this.DiagnoseLink);
 
     }
 }

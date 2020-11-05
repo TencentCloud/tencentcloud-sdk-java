@@ -725,6 +725,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *拷贝参考域名的配置至新域名。暂不支持自有证书以及定制化配置
+     * @param req DuplicateDomainConfigRequest
+     * @return DuplicateDomainConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DuplicateDomainConfigResponse DuplicateDomainConfig(DuplicateDomainConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DuplicateDomainConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DuplicateDomainConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DuplicateDomainConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
      * @param req EnableCachesRequest
      * @return EnableCachesResponse

@@ -44,7 +44,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 云主机实例ID。
+    * 云服务器实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -134,16 +134,16 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 云主机实例ID。 
-     * @return InstanceId 云主机实例ID。
+     * Get 云服务器实例ID。 
+     * @return InstanceId 云服务器实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 云主机实例ID。
-     * @param InstanceId 云主机实例ID。
+     * Set 云服务器实例ID。
+     * @param InstanceId 云服务器实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

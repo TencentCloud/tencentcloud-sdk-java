@@ -212,6 +212,20 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private String DeviceType;
 
     /**
+    * 参数模板id。
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private Long ParamTemplateId;
+
+    /**
+    * 告警策略id数组。
+    */
+    @SerializedName("AlarmPolicyList")
+    @Expose
+    private Long [] AlarmPolicyList;
+
+    /**
      * Get 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。 
      * @return Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
@@ -644,6 +658,38 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 参数模板id。 
+     * @return ParamTemplateId 参数模板id。
+     */
+    public Long getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 参数模板id。
+     * @param ParamTemplateId 参数模板id。
+     */
+    public void setParamTemplateId(Long ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
+    /**
+     * Get 告警策略id数组。 
+     * @return AlarmPolicyList 告警策略id数组。
+     */
+    public Long [] getAlarmPolicyList() {
+        return this.AlarmPolicyList;
+    }
+
+    /**
+     * Set 告警策略id数组。
+     * @param AlarmPolicyList 告警策略id数组。
+     */
+    public void setAlarmPolicyList(Long [] AlarmPolicyList) {
+        this.AlarmPolicyList = AlarmPolicyList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -674,6 +720,8 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
 
     }
 }

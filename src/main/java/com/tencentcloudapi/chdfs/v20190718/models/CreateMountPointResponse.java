@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateMountPointResponse extends AbstractModel{
 
     /**
+    * 挂载点
+    */
+    @SerializedName("MountPoint")
+    @Expose
+    private MountPoint MountPoint;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 挂载点 
+     * @return MountPoint 挂载点
+     */
+    public MountPoint getMountPoint() {
+        return this.MountPoint;
+    }
+
+    /**
+     * Set 挂载点
+     * @param MountPoint 挂载点
+     */
+    public void setMountPoint(MountPoint MountPoint) {
+        this.MountPoint = MountPoint;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class CreateMountPointResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "MountPoint.", this.MountPoint);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

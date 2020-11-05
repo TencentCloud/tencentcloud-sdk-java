@@ -236,7 +236,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ExpireTime;
 
     /**
-    * 负载均衡实例的计费类型
+    * 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
@@ -924,9 +924,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡实例的计费类型
+     * Get 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeType 负载均衡实例的计费类型
+     * @return ChargeType 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeType() {
@@ -934,9 +934,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 负载均衡实例的计费类型
+     * Set 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeType 负载均衡实例的计费类型
+     * @param ChargeType 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(String ChargeType) {

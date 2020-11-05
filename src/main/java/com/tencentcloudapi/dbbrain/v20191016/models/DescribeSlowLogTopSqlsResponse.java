@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeSlowLogTopSqlsResponse extends AbstractModel{
 
     /**
+    * 符合条件的记录总数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 慢日志 top sql 列表
+    */
+    @SerializedName("Rows")
+    @Expose
+    private SlowLogTopSqlItem [] Rows;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 符合条件的记录总数。 
+     * @return TotalCount 符合条件的记录总数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合条件的记录总数。
+     * @param TotalCount 符合条件的记录总数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 慢日志 top sql 列表 
+     * @return Rows 慢日志 top sql 列表
+     */
+    public SlowLogTopSqlItem [] getRows() {
+        return this.Rows;
+    }
+
+    /**
+     * Set 慢日志 top sql 列表
+     * @param Rows 慢日志 top sql 列表
+     */
+    public void setRows(SlowLogTopSqlItem [] Rows) {
+        this.Rows = Rows;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +95,8 @@ public class DescribeSlowLogTopSqlsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Rows.", this.Rows);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

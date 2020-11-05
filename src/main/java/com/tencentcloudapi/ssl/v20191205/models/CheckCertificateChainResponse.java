@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CheckCertificateChainResponse extends AbstractModel{
 
     /**
-    * 1为通过检查，0为未通过检查。
+    * true为通过检查，false为未通过检查。
     */
     @SerializedName("IsValid")
     @Expose
     private Boolean IsValid;
 
     /**
-    * 1为可信CA，0为不可信CA。
+    * true为可信CA，false为不可信CA。
     */
     @SerializedName("IsTrustedCA")
     @Expose
@@ -51,32 +51,32 @@ public class CheckCertificateChainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 1为通过检查，0为未通过检查。 
-     * @return IsValid 1为通过检查，0为未通过检查。
+     * Get true为通过检查，false为未通过检查。 
+     * @return IsValid true为通过检查，false为未通过检查。
      */
     public Boolean getIsValid() {
         return this.IsValid;
     }
 
     /**
-     * Set 1为通过检查，0为未通过检查。
-     * @param IsValid 1为通过检查，0为未通过检查。
+     * Set true为通过检查，false为未通过检查。
+     * @param IsValid true为通过检查，false为未通过检查。
      */
     public void setIsValid(Boolean IsValid) {
         this.IsValid = IsValid;
     }
 
     /**
-     * Get 1为可信CA，0为不可信CA。 
-     * @return IsTrustedCA 1为可信CA，0为不可信CA。
+     * Get true为可信CA，false为不可信CA。 
+     * @return IsTrustedCA true为可信CA，false为不可信CA。
      */
     public Boolean getIsTrustedCA() {
         return this.IsTrustedCA;
     }
 
     /**
-     * Set 1为可信CA，0为不可信CA。
-     * @param IsTrustedCA 1为可信CA，0为不可信CA。
+     * Set true为可信CA，false为不可信CA。
+     * @param IsTrustedCA true为可信CA，false为不可信CA。
      */
     public void setIsTrustedCA(Boolean IsTrustedCA) {
         this.IsTrustedCA = IsTrustedCA;

@@ -152,6 +152,13 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Boolean NoAuth;
 
     /**
+    * 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+    */
+    @SerializedName("NodeSet")
+    @Expose
+    private RedisNodeInfo [] NodeSet;
+
+    /**
      * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
      * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      */
@@ -452,6 +459,22 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
+     * Get 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。 
+     * @return NodeSet 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+     */
+    public RedisNodeInfo [] getNodeSet() {
+        return this.NodeSet;
+    }
+
+    /**
+     * Set 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+     * @param NodeSet 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+     */
+    public void setNodeSet(RedisNodeInfo [] NodeSet) {
+        this.NodeSet = NodeSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -473,6 +496,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.setParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
+        this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
 
     }
 }

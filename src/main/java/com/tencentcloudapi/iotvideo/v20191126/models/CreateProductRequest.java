@@ -94,7 +94,7 @@ Other-Overseas（其他境外地区）
     private Long AccessMode;
 
     /**
-    * linux,android,liteos
+    * Linux,Android,Liteos等系统
     */
     @SerializedName("Os")
     @Expose
@@ -277,16 +277,16 @@ Other-Overseas（其他境外地区）
     }
 
     /**
-     * Get linux,android,liteos 
-     * @return Os linux,android,liteos
+     * Get Linux,Android,Liteos等系统 
+     * @return Os Linux,Android,Liteos等系统
      */
     public String getOs() {
         return this.Os;
     }
 
     /**
-     * Set linux,android,liteos
-     * @param Os linux,android,liteos
+     * Set Linux,Android,Liteos等系统
+     * @param Os Linux,Android,Liteos等系统
      */
     public void setOs(String Os) {
         this.Os = Os;

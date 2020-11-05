@@ -978,6 +978,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *修改实例的连接配置，包括带宽和最大连接数
+     * @param req ModifyConnectionConfigRequest
+     * @return ModifyConnectionConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConnectionConfigResponse ModifyConnectionConfig(ModifyConnectionConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyConnectionConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyConnectionConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyConnectionConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse

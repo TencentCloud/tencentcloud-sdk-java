@@ -181,6 +181,46 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
+     *上传一张照片，输出滤镜处理后的图片。
+     * @param req StyleImageRequest
+     * @return StyleImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public StyleImageResponse StyleImage(StyleImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StyleImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StyleImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StyleImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上传一张照片，输出滤镜处理后的图片。
+     * @param req StyleImageProRequest
+     * @return StyleImageProResponse
+     * @throws TencentCloudSDKException
+     */
+    public StyleImageProResponse StyleImagePro(StyleImageProRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StyleImageProResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StyleImageProResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StyleImagePro");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对图片中的人脸嘴唇进行着色，最多支持同时对一张图中的3张人脸进行试唇色。
 
 您可以通过事先注册在腾讯云的唇色素材（LUT文件）改变图片中的人脸唇色，也可以输入RGBA模型数值。

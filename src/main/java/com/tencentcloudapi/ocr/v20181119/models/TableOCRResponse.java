@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TableOCRResponse extends AbstractModel{
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
+    * 检测到的文本信息，具体内容请点击左侧链接
     */
     @SerializedName("TextDetections")
     @Expose
@@ -44,16 +44,16 @@ public class TableOCRResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 检测到的文本信息，具体内容请点击左侧链接。 
-     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * Get 检测到的文本信息，具体内容请点击左侧链接 
+     * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接
      */
     public TextTable [] getTextDetections() {
         return this.TextDetections;
     }
 
     /**
-     * Set 检测到的文本信息，具体内容请点击左侧链接。
-     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * Set 检测到的文本信息，具体内容请点击左侧链接
+     * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接
      */
     public void setTextDetections(TextTable [] TextDetections) {
         this.TextDetections = TextDetections;

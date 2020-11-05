@@ -167,6 +167,14 @@ public class DomainDetailInfo extends AbstractModel{
     private String Readonly;
 
     /**
+    * 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
      * Get 域名ID。 
      * @return ResourceId 域名ID。
      */
@@ -515,6 +523,26 @@ public class DomainDetailInfo extends AbstractModel{
     }
 
     /**
+     * Get 域名标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -537,6 +565,7 @@ public class DomainDetailInfo extends AbstractModel{
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

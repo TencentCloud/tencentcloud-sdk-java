@@ -1,0 +1,176 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.ccc.v20200210.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeChatMessagesRequest extends AbstractModel{
+
+    /**
+    * 服务记录ID
+    */
+    @SerializedName("CdrId")
+    @Expose
+    private String CdrId;
+
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private Long InstanceId;
+
+    /**
+    * 应用ID
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
+
+    /**
+    * 返回记录条数 最大为100默认20
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 返回记录偏移 默认为0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 1为从早到晚，2为从晚到早，默认为2
+    */
+    @SerializedName("Order")
+    @Expose
+    private Long Order;
+
+    /**
+     * Get 服务记录ID 
+     * @return CdrId 服务记录ID
+     */
+    public String getCdrId() {
+        return this.CdrId;
+    }
+
+    /**
+     * Set 服务记录ID
+     * @param CdrId 服务记录ID
+     */
+    public void setCdrId(String CdrId) {
+        this.CdrId = CdrId;
+    }
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public Long getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(Long InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 应用ID 
+     * @return SdkAppId 应用ID
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set 应用ID
+     * @param SdkAppId 应用ID
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 返回记录条数 最大为100默认20 
+     * @return Limit 返回记录条数 最大为100默认20
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 返回记录条数 最大为100默认20
+     * @param Limit 返回记录条数 最大为100默认20
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 返回记录偏移 默认为0 
+     * @return Offset 返回记录偏移 默认为0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 返回记录偏移 默认为0
+     * @param Offset 返回记录偏移 默认为0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 1为从早到晚，2为从晚到早，默认为2 
+     * @return Order 1为从早到晚，2为从晚到早，默认为2
+     */
+    public Long getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 1为从早到晚，2为从晚到早，默认为2
+     * @param Order 1为从早到晚，2为从晚到早，默认为2
+     */
+    public void setOrder(Long Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CdrId", this.CdrId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+
+    }
+}
+

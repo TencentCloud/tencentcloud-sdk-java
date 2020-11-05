@@ -39,6 +39,16 @@ public class TranscodeTaskInput extends AbstractModel{
     private RawTranscodeParameter RawParameter;
 
     /**
+    * 视频转码自定义参数，当 Definition 不填 0 时有效。
+当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
+该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OverrideParameter")
+    @Expose
+    private OverrideTranscodeParameter OverrideParameter;
+
+    /**
     * 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -121,6 +131,34 @@ public class TranscodeTaskInput extends AbstractModel{
      */
     public void setRawParameter(RawTranscodeParameter RawParameter) {
         this.RawParameter = RawParameter;
+    }
+
+    /**
+     * Get 视频转码自定义参数，当 Definition 不填 0 时有效。
+当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
+该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OverrideParameter 视频转码自定义参数，当 Definition 不填 0 时有效。
+当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
+该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OverrideTranscodeParameter getOverrideParameter() {
+        return this.OverrideParameter;
+    }
+
+    /**
+     * Set 视频转码自定义参数，当 Definition 不填 0 时有效。
+当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
+该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OverrideParameter 视频转码自定义参数，当 Definition 不填 0 时有效。
+当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
+该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOverrideParameter(OverrideTranscodeParameter OverrideParameter) {
+        this.OverrideParameter = OverrideParameter;
     }
 
     /**
@@ -237,6 +275,7 @@ public class TranscodeTaskInput extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
+        this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

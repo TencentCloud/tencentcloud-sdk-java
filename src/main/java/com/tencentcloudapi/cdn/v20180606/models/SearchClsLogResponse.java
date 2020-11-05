@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class SearchClsLogResponse extends AbstractModel{
 
     /**
+    * 查询结果
+    */
+    @SerializedName("Logs")
+    @Expose
+    private ClsSearchLogs Logs;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 查询结果 
+     * @return Logs 查询结果
+     */
+    public ClsSearchLogs getLogs() {
+        return this.Logs;
+    }
+
+    /**
+     * Set 查询结果
+     * @param Logs 查询结果
+     */
+    public void setLogs(ClsSearchLogs Logs) {
+        this.Logs = Logs;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class SearchClsLogResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Logs.", this.Logs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
