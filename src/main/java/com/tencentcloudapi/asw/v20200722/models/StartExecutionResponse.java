@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.asw.v20200722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAcRuleResponse extends AbstractModel{
+public class StartExecutionResponse extends AbstractModel{
 
     /**
-    * 状态值，0:操作成功
+    * 执行资源名
     */
-    @SerializedName("Status")
+    @SerializedName("ExecutionResourceName")
     @Expose
-    private Long Status;
+    private String ExecutionResourceName;
 
     /**
-    * 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 执行开始时间
     */
-    @SerializedName("Info")
+    @SerializedName("StartDate")
     @Expose
-    private String Info;
+    private String StartDate;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class ModifyAcRuleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态值，0:操作成功 
-     * @return Status 状态值，0:操作成功
+     * Get 执行资源名 
+     * @return ExecutionResourceName 执行资源名
      */
-    public Long getStatus() {
-        return this.Status;
+    public String getExecutionResourceName() {
+        return this.ExecutionResourceName;
     }
 
     /**
-     * Set 状态值，0:操作成功
-     * @param Status 状态值，0:操作成功
+     * Set 执行资源名
+     * @param ExecutionResourceName 执行资源名
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
+    public void setExecutionResourceName(String ExecutionResourceName) {
+        this.ExecutionResourceName = ExecutionResourceName;
     }
 
     /**
-     * Get 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 执行开始时间 
+     * @return StartDate 执行开始时间
      */
-    public String getInfo() {
-        return this.Info;
+    public String getStartDate() {
+        return this.StartDate;
     }
 
     /**
-     * Set 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 执行开始时间
+     * @param StartDate 执行开始时间
      */
-    public void setInfo(String Info) {
-        this.Info = Info;
+    public void setStartDate(String StartDate) {
+        this.StartDate = StartDate;
     }
 
     /**
@@ -100,8 +95,8 @@ public class ModifyAcRuleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamSimple(map, prefix + "ExecutionResourceName", this.ExecutionResourceName);
+        this.setParamSimple(map, prefix + "StartDate", this.StartDate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

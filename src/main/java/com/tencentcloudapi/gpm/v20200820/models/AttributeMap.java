@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AttributeMap extends AbstractModel{
 
     /**
-    * 属性字典 key
+    * 属性字典 key [a-zA-Z0-9-\.]*
     */
     @SerializedName("Key")
     @Expose
@@ -37,16 +37,16 @@ public class AttributeMap extends AbstractModel{
     private Long Value;
 
     /**
-     * Get 属性字典 key 
-     * @return Key 属性字典 key
+     * Get 属性字典 key [a-zA-Z0-9-\.]* 
+     * @return Key 属性字典 key [a-zA-Z0-9-\.]*
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 属性字典 key
-     * @param Key 属性字典 key
+     * Set 属性字典 key [a-zA-Z0-9-\.]*
+     * @param Key 属性字典 key [a-zA-Z0-9-\.]*
      */
     public void setKey(String Key) {
         this.Key = Key;

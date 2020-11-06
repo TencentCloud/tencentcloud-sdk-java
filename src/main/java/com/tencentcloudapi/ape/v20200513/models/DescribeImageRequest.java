@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sqlserver.v20180328.models;
+package com.tencentcloudapi.ape.v20200513.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
+public class DescribeImageRequest extends AbstractModel{
 
     /**
-    * 项目ID，可通过控制台项目管理中查看
+    * 图片ID
     */
-    @SerializedName("ProjectId")
+    @SerializedName("ImageId")
     @Expose
-    private Long ProjectId;
+    private Long ImageId;
 
     /**
-     * Get 项目ID，可通过控制台项目管理中查看 
-     * @return ProjectId 项目ID，可通过控制台项目管理中查看
+     * Get 图片ID 
+     * @return ImageId 图片ID
      */
-    public Long getProjectId() {
-        return this.ProjectId;
+    public Long getImageId() {
+        return this.ImageId;
     }
 
     /**
-     * Set 项目ID，可通过控制台项目管理中查看
-     * @param ProjectId 项目ID，可通过控制台项目管理中查看
+     * Set 图片ID
+     * @param ImageId 图片ID
      */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
+    public void setImageId(Long ImageId) {
+        this.ImageId = ImageId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

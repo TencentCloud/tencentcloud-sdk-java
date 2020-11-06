@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MatchAttribute extends AbstractModel{
 
     /**
-    * 属性名 长度 128
+    * 属性名 长度 128 [a-zA-Z0-9-\.]*
     */
     @SerializedName("Name")
     @Expose
@@ -65,16 +65,16 @@ public class MatchAttribute extends AbstractModel{
     private AttributeMap [] MapValue;
 
     /**
-     * Get 属性名 长度 128 
-     * @return Name 属性名 长度 128
+     * Get 属性名 长度 128 [a-zA-Z0-9-\.]* 
+     * @return Name 属性名 长度 128 [a-zA-Z0-9-\.]*
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 属性名 长度 128
-     * @param Name 属性名 长度 128
+     * Set 属性名 长度 128 [a-zA-Z0-9-\.]*
+     * @param Name 属性名 长度 128 [a-zA-Z0-9-\.]*
      */
     public void setName(String Name) {
         this.Name = Name;

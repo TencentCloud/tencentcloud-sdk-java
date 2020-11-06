@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Player extends AbstractModel{
 
     /**
-    * 玩家 PlayerId 长度 128
+    * 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
     */
     @SerializedName("Id")
     @Expose
@@ -44,7 +44,7 @@ public class Player extends AbstractModel{
     private MatchAttribute [] MatchAttributes;
 
     /**
-    * 队伍名，可以传递不同队伍名，长度 128
+    * 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
     */
     @SerializedName("Team")
     @Expose
@@ -72,16 +72,16 @@ public class Player extends AbstractModel{
     private RegionLatency [] RegionLatencies;
 
     /**
-     * Get 玩家 PlayerId 长度 128 
-     * @return Id 玩家 PlayerId 长度 128
+     * Get 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]* 
+     * @return Id 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 玩家 PlayerId 长度 128
-     * @param Id 玩家 PlayerId 长度 128
+     * Set 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
+     * @param Id 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -120,16 +120,16 @@ public class Player extends AbstractModel{
     }
 
     /**
-     * Get 队伍名，可以传递不同队伍名，长度 128 
-     * @return Team 队伍名，可以传递不同队伍名，长度 128
+     * Get 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]* 
+     * @return Team 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
      */
     public String getTeam() {
         return this.Team;
     }
 
     /**
-     * Set 队伍名，可以传递不同队伍名，长度 128
-     * @param Team 队伍名，可以传递不同队伍名，长度 128
+     * Set 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
+     * @param Team 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
      */
     public void setTeam(String Team) {
         this.Team = Team;

@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.asw.v20200722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAcRuleResponse extends AbstractModel{
+public class CreateFlowServiceResponse extends AbstractModel{
 
     /**
-    * 状态值，0:操作成功
+    * 状态机所属服务资源
     */
-    @SerializedName("Status")
+    @SerializedName("FlowServiceResource")
     @Expose
-    private Long Status;
+    private String FlowServiceResource;
 
     /**
-    * 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 生成日期
     */
-    @SerializedName("Info")
+    @SerializedName("CreateDate")
     @Expose
-    private String Info;
+    private String CreateDate;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class ModifyAcRuleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态值，0:操作成功 
-     * @return Status 状态值，0:操作成功
+     * Get 状态机所属服务资源 
+     * @return FlowServiceResource 状态机所属服务资源
      */
-    public Long getStatus() {
-        return this.Status;
+    public String getFlowServiceResource() {
+        return this.FlowServiceResource;
     }
 
     /**
-     * Set 状态值，0:操作成功
-     * @param Status 状态值，0:操作成功
+     * Set 状态机所属服务资源
+     * @param FlowServiceResource 状态机所属服务资源
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
+    public void setFlowServiceResource(String FlowServiceResource) {
+        this.FlowServiceResource = FlowServiceResource;
     }
 
     /**
-     * Get 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 生成日期 
+     * @return CreateDate 生成日期
      */
-    public String getInfo() {
-        return this.Info;
+    public String getCreateDate() {
+        return this.CreateDate;
     }
 
     /**
-     * Set 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 生成日期
+     * @param CreateDate 生成日期
      */
-    public void setInfo(String Info) {
-        this.Info = Info;
+    public void setCreateDate(String CreateDate) {
+        this.CreateDate = CreateDate;
     }
 
     /**
@@ -100,8 +95,8 @@ public class ModifyAcRuleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamSimple(map, prefix + "FlowServiceResource", this.FlowServiceResource);
+        this.setParamSimple(map, prefix + "CreateDate", this.CreateDate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

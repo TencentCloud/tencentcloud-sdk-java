@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RuleBriefInfo extends AbstractModel{
 
     /**
-    * 规则名称
+    * 规则名称 [a-zA-Z\d-\.]*
     */
     @SerializedName("RuleName")
     @Expose
@@ -51,16 +51,16 @@ public class RuleBriefInfo extends AbstractModel{
     private String RuleCode;
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get 规则名称 [a-zA-Z\d-\.]* 
+     * @return RuleName 规则名称 [a-zA-Z\d-\.]*
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set 规则名称 [a-zA-Z\d-\.]*
+     * @param RuleName 规则名称 [a-zA-Z\d-\.]*
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

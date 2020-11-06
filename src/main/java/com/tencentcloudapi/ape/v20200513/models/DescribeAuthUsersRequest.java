@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sqlserver.v20180328.models;
+package com.tencentcloudapi.ape.v20200513.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
+public class DescribeAuthUsersRequest extends AbstractModel{
 
     /**
-    * 项目ID，可通过控制台项目管理中查看
+    * 分页大小
     */
-    @SerializedName("ProjectId")
+    @SerializedName("Limit")
     @Expose
-    private Long ProjectId;
+    private Long Limit;
 
     /**
-     * Get 项目ID，可通过控制台项目管理中查看 
-     * @return ProjectId 项目ID，可通过控制台项目管理中查看
+    * 页偏移量
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get 分页大小 
+     * @return Limit 分页大小
      */
-    public Long getProjectId() {
-        return this.ProjectId;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 项目ID，可通过控制台项目管理中查看
-     * @param ProjectId 项目ID，可通过控制台项目管理中查看
+     * Set 分页大小
+     * @param Limit 分页大小
      */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 页偏移量 
+     * @return Offset 页偏移量
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 页偏移量
+     * @param Offset 页偏移量
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeBackupByFlowIdRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 创建备份流程ID
+    * 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
     */
     @SerializedName("FlowId")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeBackupByFlowIdRequest extends AbstractModel{
     }
 
     /**
-     * Get 创建备份流程ID 
-     * @return FlowId 创建备份流程ID
+     * Get 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取 
+     * @return FlowId 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 创建备份流程ID
-     * @param FlowId 创建备份流程ID
+     * Set 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
+     * @param FlowId 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

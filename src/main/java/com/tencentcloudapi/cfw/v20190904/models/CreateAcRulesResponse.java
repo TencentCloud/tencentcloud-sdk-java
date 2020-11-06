@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAcRulesResponse extends AbstractModel{
 
     /**
-    * 状态值
+    * 状态值，0:操作成功
     */
     @SerializedName("Status")
     @Expose
@@ -45,16 +45,16 @@ public class CreateAcRulesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态值 
-     * @return Status 状态值
+     * Get 状态值，0:操作成功 
+     * @return Status 状态值，0:操作成功
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值
-     * @param Status 状态值
+     * Set 状态值，0:操作成功
+     * @param Status 状态值，0:操作成功
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -30,7 +30,7 @@ public class DeleteAllAccessControlRuleRequest extends AbstractModel{
     private Long Direction;
 
     /**
-    * 边ID
+    * VPC间防火墙开关ID
     */
     @SerializedName("EdgeId")
     @Expose
@@ -60,16 +60,16 @@ public class DeleteAllAccessControlRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 边ID 
-     * @return EdgeId 边ID
+     * Get VPC间防火墙开关ID 
+     * @return EdgeId VPC间防火墙开关ID
      */
     public String getEdgeId() {
         return this.EdgeId;
     }
 
     /**
-     * Set 边ID
-     * @param EdgeId 边ID
+     * Set VPC间防火墙开关ID
+     * @param EdgeId VPC间防火墙开关ID
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;

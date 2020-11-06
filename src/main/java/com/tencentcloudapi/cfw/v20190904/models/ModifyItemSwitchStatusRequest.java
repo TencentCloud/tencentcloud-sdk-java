@@ -30,7 +30,7 @@ public class ModifyItemSwitchStatusRequest extends AbstractModel{
     private Long Id;
 
     /**
-    * 状态值
+    * 状态值，0: 关闭 ,1:开启
     */
     @SerializedName("Status")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyItemSwitchStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 状态值 
-     * @return Status 状态值
+     * Get 状态值，0: 关闭 ,1:开启 
+     * @return Status 状态值，0: 关闭 ,1:开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值
-     * @param Status 状态值
+     * Set 状态值，0: 关闭 ,1:开启
+     * @param Status 状态值，0: 关闭 ,1:开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;

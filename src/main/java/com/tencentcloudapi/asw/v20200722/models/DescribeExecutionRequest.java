@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sqlserver.v20180328.models;
+package com.tencentcloudapi.asw.v20200722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
+public class DescribeExecutionRequest extends AbstractModel{
 
     /**
-    * 项目ID，可通过控制台项目管理中查看
+    * 执行资源名
     */
-    @SerializedName("ProjectId")
+    @SerializedName("ExecutionResourceName")
     @Expose
-    private Long ProjectId;
+    private String ExecutionResourceName;
 
     /**
-     * Get 项目ID，可通过控制台项目管理中查看 
-     * @return ProjectId 项目ID，可通过控制台项目管理中查看
+     * Get 执行资源名 
+     * @return ExecutionResourceName 执行资源名
      */
-    public Long getProjectId() {
-        return this.ProjectId;
+    public String getExecutionResourceName() {
+        return this.ExecutionResourceName;
     }
 
     /**
-     * Set 项目ID，可通过控制台项目管理中查看
-     * @param ProjectId 项目ID，可通过控制台项目管理中查看
+     * Set 执行资源名
+     * @param ExecutionResourceName 执行资源名
      */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
+    public void setExecutionResourceName(String ExecutionResourceName) {
+        this.ExecutionResourceName = ExecutionResourceName;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ExecutionResourceName", this.ExecutionResourceName);
 
     }
 }

@@ -111,6 +111,26 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateAssetWithImage）用于创建生成包镜像信息。
+     * @param req CreateAssetWithImageRequest
+     * @return CreateAssetWithImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAssetWithImageResponse CreateAssetWithImage(CreateAssetWithImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAssetWithImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAssetWithImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAssetWithImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateFleet）用于创建服务器舰队。
      * @param req CreateFleetRequest
      * @return CreateFleetResponse

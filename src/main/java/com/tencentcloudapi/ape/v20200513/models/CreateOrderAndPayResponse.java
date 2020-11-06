@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.ape.v20200513.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAcRuleResponse extends AbstractModel{
+public class CreateOrderAndPayResponse extends AbstractModel{
 
     /**
-    * 状态值，0:操作成功
+    * 订单ID
     */
-    @SerializedName("Status")
+    @SerializedName("OrderId")
     @Expose
-    private Long Status;
-
-    /**
-    * 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Info")
-    @Expose
-    private String Info;
+    private String OrderId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class ModifyAcRuleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态值，0:操作成功 
-     * @return Status 状态值，0:操作成功
+     * Get 订单ID 
+     * @return OrderId 订单ID
      */
-    public Long getStatus() {
-        return this.Status;
+    public String getOrderId() {
+        return this.OrderId;
     }
 
     /**
-     * Set 状态值，0:操作成功
-     * @param Status 状态值，0:操作成功
+     * Set 订单ID
+     * @param OrderId 订单ID
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getInfo() {
-        return this.Info;
-    }
-
-    /**
-     * Set 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setInfo(String Info) {
-        this.Info = Info;
+    public void setOrderId(String OrderId) {
+        this.OrderId = OrderId;
     }
 
     /**
@@ -100,8 +72,7 @@ public class ModifyAcRuleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamSimple(map, prefix + "OrderId", this.OrderId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

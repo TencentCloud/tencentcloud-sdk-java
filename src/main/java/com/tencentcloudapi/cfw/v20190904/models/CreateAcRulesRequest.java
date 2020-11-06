@@ -58,7 +58,7 @@ public class CreateAcRulesRequest extends AbstractModel{
     private Long Overwrite;
 
     /**
-    * NAT实例ID, Area存在的时候这个必传
+    * NAT实例ID, 参数Area存在的时候这个必传
     */
     @SerializedName("InstanceId")
     @Expose
@@ -159,16 +159,16 @@ public class CreateAcRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get NAT实例ID, Area存在的时候这个必传 
-     * @return InstanceId NAT实例ID, Area存在的时候这个必传
+     * Get NAT实例ID, 参数Area存在的时候这个必传 
+     * @return InstanceId NAT实例ID, 参数Area存在的时候这个必传
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set NAT实例ID, Area存在的时候这个必传
-     * @param InstanceId NAT实例ID, Area存在的时候这个必传
+     * Set NAT实例ID, 参数Area存在的时候这个必传
+     * @param InstanceId NAT实例ID, 参数Area存在的时候这个必传
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
