@@ -27,6 +27,7 @@ import com.tencentcloudapi.memcached.v20190318.models.*;
 
 public class MemcachedClient extends AbstractClient{
     private static String endpoint = "memcached.tencentcloudapi.com";
+    private static String service = "memcached";
     private static String version = "2019-03-18";
 
     public MemcachedClient(Credential credential, String region) {

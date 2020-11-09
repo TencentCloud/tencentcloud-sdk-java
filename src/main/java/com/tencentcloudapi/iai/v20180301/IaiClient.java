@@ -27,6 +27,7 @@ import com.tencentcloudapi.iai.v20180301.models.*;
 
 public class IaiClient extends AbstractClient{
     private static String endpoint = "iai.tencentcloudapi.com";
+    private static String service = "iai";
     private static String version = "2018-03-01";
 
     public IaiClient(Credential credential, String region) {

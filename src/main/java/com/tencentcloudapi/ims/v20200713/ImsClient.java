@@ -27,6 +27,7 @@ import com.tencentcloudapi.ims.v20200713.models.*;
 
 public class ImsClient extends AbstractClient{
     private static String endpoint = "ims.tencentcloudapi.com";
+    private static String service = "ims";
     private static String version = "2020-07-13";
 
     public ImsClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.taf.v20200210.models.*;
 
 public class TafClient extends AbstractClient{
     private static String endpoint = "taf.tencentcloudapi.com";
+    private static String service = "taf";
     private static String version = "2020-02-10";
 
     public TafClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.gse.v20191112.models.*;
 
 public class GseClient extends AbstractClient{
     private static String endpoint = "gse.tencentcloudapi.com";
+    private static String service = "gse";
     private static String version = "2019-11-12";
 
     public GseClient(Credential credential, String region) {

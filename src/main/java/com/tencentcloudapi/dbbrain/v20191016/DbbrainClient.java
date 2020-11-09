@@ -27,6 +27,7 @@ import com.tencentcloudapi.dbbrain.v20191016.models.*;
 
 public class DbbrainClient extends AbstractClient{
     private static String endpoint = "dbbrain.tencentcloudapi.com";
+    private static String service = "dbbrain";
     private static String version = "2019-10-16";
 
     public DbbrainClient(Credential credential, String region) {

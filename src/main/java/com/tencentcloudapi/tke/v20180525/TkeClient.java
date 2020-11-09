@@ -27,6 +27,7 @@ import com.tencentcloudapi.tke.v20180525.models.*;
 
 public class TkeClient extends AbstractClient{
     private static String endpoint = "tke.tencentcloudapi.com";
+    private static String service = "tke";
     private static String version = "2018-05-25";
 
     public TkeClient(Credential credential, String region) {

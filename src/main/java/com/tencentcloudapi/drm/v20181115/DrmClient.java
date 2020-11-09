@@ -27,6 +27,7 @@ import com.tencentcloudapi.drm.v20181115.models.*;
 
 public class DrmClient extends AbstractClient{
     private static String endpoint = "drm.tencentcloudapi.com";
+    private static String service = "drm";
     private static String version = "2018-11-15";
 
     public DrmClient(Credential credential, String region) {

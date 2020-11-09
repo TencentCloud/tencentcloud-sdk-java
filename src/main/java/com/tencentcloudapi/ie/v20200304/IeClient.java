@@ -27,6 +27,7 @@ import com.tencentcloudapi.ie.v20200304.models.*;
 
 public class IeClient extends AbstractClient{
     private static String endpoint = "ie.tencentcloudapi.com";
+    private static String service = "ie";
     private static String version = "2020-03-04";
 
     public IeClient(Credential credential, String region) {

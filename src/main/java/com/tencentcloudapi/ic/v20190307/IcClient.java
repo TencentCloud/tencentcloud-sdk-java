@@ -27,6 +27,7 @@ import com.tencentcloudapi.ic.v20190307.models.*;
 
 public class IcClient extends AbstractClient{
     private static String endpoint = "ic.tencentcloudapi.com";
+    private static String service = "ic";
     private static String version = "2019-03-07";
 
     public IcClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.lp.v20200224.models.*;
 
 public class LpClient extends AbstractClient{
     private static String endpoint = "lp.tencentcloudapi.com";
+    private static String service = "lp";
     private static String version = "2020-02-24";
 
     public LpClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.partners.v20180321.models.*;
 
 public class PartnersClient extends AbstractClient{
     private static String endpoint = "partners.tencentcloudapi.com";
+    private static String service = "partners";
     private static String version = "2018-03-21";
 
     public PartnersClient(Credential credential, String region) {

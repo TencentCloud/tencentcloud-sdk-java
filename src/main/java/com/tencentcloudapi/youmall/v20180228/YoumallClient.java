@@ -27,6 +27,7 @@ import com.tencentcloudapi.youmall.v20180228.models.*;
 
 public class YoumallClient extends AbstractClient{
     private static String endpoint = "youmall.tencentcloudapi.com";
+    private static String service = "youmall";
     private static String version = "2018-02-28";
 
     public YoumallClient(Credential credential, String region) {

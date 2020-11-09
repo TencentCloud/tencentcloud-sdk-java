@@ -27,6 +27,7 @@ import com.tencentcloudapi.hcm.v20181106.models.*;
 
 public class HcmClient extends AbstractClient{
     private static String endpoint = "hcm.tencentcloudapi.com";
+    private static String service = "hcm";
     private static String version = "2018-11-06";
 
     public HcmClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.nlp.v20190408.models.*;
 
 public class NlpClient extends AbstractClient{
     private static String endpoint = "nlp.tencentcloudapi.com";
+    private static String service = "nlp";
     private static String version = "2019-04-08";
 
     public NlpClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.fmu.v20191213.models.*;
 
 public class FmuClient extends AbstractClient{
     private static String endpoint = "fmu.tencentcloudapi.com";
+    private static String service = "fmu";
     private static String version = "2019-12-13";
 
     public FmuClient(Credential credential, String region) {

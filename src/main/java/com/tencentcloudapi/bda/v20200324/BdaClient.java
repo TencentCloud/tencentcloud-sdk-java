@@ -27,6 +27,7 @@ import com.tencentcloudapi.bda.v20200324.models.*;
 
 public class BdaClient extends AbstractClient{
     private static String endpoint = "bda.tencentcloudapi.com";
+    private static String service = "bda";
     private static String version = "2020-03-24";
 
     public BdaClient(Credential credential, String region) {

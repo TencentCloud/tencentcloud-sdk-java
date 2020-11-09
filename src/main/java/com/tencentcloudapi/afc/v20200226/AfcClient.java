@@ -27,6 +27,7 @@ import com.tencentcloudapi.afc.v20200226.models.*;
 
 public class AfcClient extends AbstractClient{
     private static String endpoint = "afc.tencentcloudapi.com";
+    private static String service = "afc";
     private static String version = "2020-02-26";
 
     public AfcClient(Credential credential, String region) {

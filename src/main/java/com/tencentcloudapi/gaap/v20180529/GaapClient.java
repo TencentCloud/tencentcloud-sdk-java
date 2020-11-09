@@ -27,6 +27,7 @@ import com.tencentcloudapi.gaap.v20180529.models.*;
 
 public class GaapClient extends AbstractClient{
     private static String endpoint = "gaap.tencentcloudapi.com";
+    private static String service = "gaap";
     private static String version = "2018-05-29";
 
     public GaapClient(Credential credential, String region) {
@@ -1060,7 +1061,7 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeRealServers）用于查询源站信息，可以根据项目名查询所有的源站信息，此外支持指定IP机或者域名的源站模糊查询。
+     *本接口（DescribeRealServers）用于查询源站信息，可以根据项目名查询所有的源站信息，此外支持指定IP或者域名的源站模糊查询。
      * @param req DescribeRealServersRequest
      * @return DescribeRealServersResponse
      * @throws TencentCloudSDKException
@@ -1340,7 +1341,7 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifyCertificateAttributes）用于修改证书，包括证明名字以及证书内容。
+     *本接口（ModifyCertificateAttributes）用于修改证书，包括证书名字以及证书内容。
      * @param req ModifyCertificateAttributesRequest
      * @return ModifyCertificateAttributesResponse
      * @throws TencentCloudSDKException

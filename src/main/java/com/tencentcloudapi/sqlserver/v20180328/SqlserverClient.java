@@ -27,6 +27,7 @@ import com.tencentcloudapi.sqlserver.v20180328.models.*;
 
 public class SqlserverClient extends AbstractClient{
     private static String endpoint = "sqlserver.tencentcloudapi.com";
+    private static String service = "sqlserver";
     private static String version = "2018-03-28";
 
     public SqlserverClient(Credential credential, String region) {

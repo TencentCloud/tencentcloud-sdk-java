@@ -27,6 +27,7 @@ import com.tencentcloudapi.smpn.v20190822.models.*;
 
 public class SmpnClient extends AbstractClient{
     private static String endpoint = "smpn.tencentcloudapi.com";
+    private static String service = "smpn";
     private static String version = "2019-08-22";
 
     public SmpnClient(Credential credential, String region) {

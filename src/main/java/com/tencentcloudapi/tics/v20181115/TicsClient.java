@@ -27,6 +27,7 @@ import com.tencentcloudapi.tics.v20181115.models.*;
 
 public class TicsClient extends AbstractClient{
     private static String endpoint = "tics.tencentcloudapi.com";
+    private static String service = "tics";
     private static String version = "2018-11-15";
 
     public TicsClient(Credential credential, String region) {

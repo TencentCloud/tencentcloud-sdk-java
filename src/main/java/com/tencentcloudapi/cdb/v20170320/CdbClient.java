@@ -27,6 +27,7 @@ import com.tencentcloudapi.cdb.v20170320.models.*;
 
 public class CdbClient extends AbstractClient{
     private static String endpoint = "cdb.tencentcloudapi.com";
+    private static String service = "cdb";
     private static String version = "2017-03-20";
 
     public CdbClient(Credential credential, String region) {

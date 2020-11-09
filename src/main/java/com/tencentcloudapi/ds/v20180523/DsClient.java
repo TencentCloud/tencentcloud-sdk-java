@@ -27,6 +27,7 @@ import com.tencentcloudapi.ds.v20180523.models.*;
 
 public class DsClient extends AbstractClient{
     private static String endpoint = "ds.tencentcloudapi.com";
+    private static String service = "ds";
     private static String version = "2018-05-23";
 
     public DsClient(Credential credential, String region) {

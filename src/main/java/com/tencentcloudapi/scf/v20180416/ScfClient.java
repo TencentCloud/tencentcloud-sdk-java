@@ -27,6 +27,7 @@ import com.tencentcloudapi.scf.v20180416.models.*;
 
 public class ScfClient extends AbstractClient{
     private static String endpoint = "scf.tencentcloudapi.com";
+    private static String service = "scf";
     private static String version = "2018-04-16";
 
     public ScfClient(Credential credential, String region) {

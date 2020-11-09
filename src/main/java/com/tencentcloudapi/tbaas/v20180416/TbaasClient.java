@@ -27,6 +27,7 @@ import com.tencentcloudapi.tbaas.v20180416.models.*;
 
 public class TbaasClient extends AbstractClient{
     private static String endpoint = "tbaas.tencentcloudapi.com";
+    private static String service = "tbaas";
     private static String version = "2018-04-16";
 
     public TbaasClient(Credential credential, String region) {

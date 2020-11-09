@@ -27,6 +27,7 @@ import com.tencentcloudapi.chdfs.v20190718.models.*;
 
 public class ChdfsClient extends AbstractClient{
     private static String endpoint = "chdfs.tencentcloudapi.com";
+    private static String service = "chdfs";
     private static String version = "2019-07-18";
 
     public ChdfsClient(Credential credential, String region) {

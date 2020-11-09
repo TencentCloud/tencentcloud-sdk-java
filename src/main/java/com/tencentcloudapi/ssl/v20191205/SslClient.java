@@ -27,6 +27,7 @@ import com.tencentcloudapi.ssl.v20191205.models.*;
 
 public class SslClient extends AbstractClient{
     private static String endpoint = "ssl.tencentcloudapi.com";
+    private static String service = "ssl";
     private static String version = "2019-12-05";
 
     public SslClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.cis.v20180408.models.*;
 
 public class CisClient extends AbstractClient{
     private static String endpoint = "cis.tencentcloudapi.com";
+    private static String service = "cis";
     private static String version = "2018-04-08";
 
     public CisClient(Credential credential, String region) {

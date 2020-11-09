@@ -27,6 +27,7 @@ import com.tencentcloudapi.tmt.v20180321.models.*;
 
 public class TmtClient extends AbstractClient{
     private static String endpoint = "tmt.tencentcloudapi.com";
+    private static String service = "tmt";
     private static String version = "2018-03-21";
 
     public TmtClient(Credential credential, String region) {

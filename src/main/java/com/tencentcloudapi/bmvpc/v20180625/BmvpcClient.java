@@ -27,6 +27,7 @@ import com.tencentcloudapi.bmvpc.v20180625.models.*;
 
 public class BmvpcClient extends AbstractClient{
     private static String endpoint = "bmvpc.tencentcloudapi.com";
+    private static String service = "bmvpc";
     private static String version = "2018-06-25";
 
     public BmvpcClient(Credential credential, String region) {

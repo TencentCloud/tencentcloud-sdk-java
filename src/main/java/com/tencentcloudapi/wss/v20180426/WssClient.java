@@ -27,6 +27,7 @@ import com.tencentcloudapi.wss.v20180426.models.*;
 
 public class WssClient extends AbstractClient{
     private static String endpoint = "wss.tencentcloudapi.com";
+    private static String service = "wss";
     private static String version = "2018-04-26";
 
     public WssClient(Credential credential, String region) {

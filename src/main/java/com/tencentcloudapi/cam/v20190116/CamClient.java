@@ -27,6 +27,7 @@ import com.tencentcloudapi.cam.v20190116.models.*;
 
 public class CamClient extends AbstractClient{
     private static String endpoint = "cam.tencentcloudapi.com";
+    private static String service = "cam";
     private static String version = "2019-01-16";
 
     public CamClient(Credential credential, String region) {

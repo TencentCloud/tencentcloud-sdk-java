@@ -27,6 +27,7 @@ import com.tencentcloudapi.habo.v20181203.models.*;
 
 public class HaboClient extends AbstractClient{
     private static String endpoint = "habo.tencentcloudapi.com";
+    private static String service = "habo";
     private static String version = "2018-12-03";
 
     public HaboClient(Credential credential, String region) {

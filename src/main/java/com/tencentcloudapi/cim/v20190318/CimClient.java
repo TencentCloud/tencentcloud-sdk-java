@@ -27,6 +27,7 @@ import com.tencentcloudapi.cim.v20190318.models.*;
 
 public class CimClient extends AbstractClient{
     private static String endpoint = "cim.tencentcloudapi.com";
+    private static String service = "cim";
     private static String version = "2019-03-18";
 
     public CimClient(Credential credential, String region) {

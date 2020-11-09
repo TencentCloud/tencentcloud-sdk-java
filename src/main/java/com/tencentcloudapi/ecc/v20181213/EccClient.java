@@ -27,6 +27,7 @@ import com.tencentcloudapi.ecc.v20181213.models.*;
 
 public class EccClient extends AbstractClient{
     private static String endpoint = "ecc.tencentcloudapi.com";
+    private static String service = "ecc";
     private static String version = "2018-12-13";
 
     public EccClient(Credential credential, String region) {

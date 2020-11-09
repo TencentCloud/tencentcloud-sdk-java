@@ -27,6 +27,7 @@ import com.tencentcloudapi.bm.v20180423.models.*;
 
 public class BmClient extends AbstractClient{
     private static String endpoint = "bm.tencentcloudapi.com";
+    private static String service = "bm";
     private static String version = "2018-04-23";
 
     public BmClient(Credential credential, String region) {

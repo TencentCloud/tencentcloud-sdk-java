@@ -27,6 +27,7 @@ import com.tencentcloudapi.iottid.v20190411.models.*;
 
 public class IottidClient extends AbstractClient{
     private static String endpoint = "iottid.tencentcloudapi.com";
+    private static String service = "iottid";
     private static String version = "2019-04-11";
 
     public IottidClient(Credential credential, String region) {

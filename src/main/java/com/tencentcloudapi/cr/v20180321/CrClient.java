@@ -27,6 +27,7 @@ import com.tencentcloudapi.cr.v20180321.models.*;
 
 public class CrClient extends AbstractClient{
     private static String endpoint = "cr.tencentcloudapi.com";
+    private static String service = "cr";
     private static String version = "2018-03-21";
 
     public CrClient(Credential credential, String region) {

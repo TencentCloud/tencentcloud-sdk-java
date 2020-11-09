@@ -27,6 +27,7 @@ import com.tencentcloudapi.tione.v20191022.models.*;
 
 public class TioneClient extends AbstractClient{
     private static String endpoint = "tione.tencentcloudapi.com";
+    private static String service = "tione";
     private static String version = "2019-10-22";
 
     public TioneClient(Credential credential, String region) {

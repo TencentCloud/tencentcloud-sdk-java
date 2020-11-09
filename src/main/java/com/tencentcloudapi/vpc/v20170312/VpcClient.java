@@ -27,6 +27,7 @@ import com.tencentcloudapi.vpc.v20170312.models.*;
 
 public class VpcClient extends AbstractClient{
     private static String endpoint = "vpc.tencentcloudapi.com";
+    private static String service = "vpc";
     private static String version = "2017-03-12";
 
     public VpcClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.cme.v20191029.models.*;
 
 public class CmeClient extends AbstractClient{
     private static String endpoint = "cme.tencentcloudapi.com";
+    private static String service = "cme";
     private static String version = "2019-10-29";
 
     public CmeClient(Credential credential, String region) {

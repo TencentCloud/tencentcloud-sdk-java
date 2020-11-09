@@ -27,6 +27,7 @@ import com.tencentcloudapi.ckafka.v20190819.models.*;
 
 public class CkafkaClient extends AbstractClient{
     private static String endpoint = "ckafka.tencentcloudapi.com";
+    private static String service = "ckafka";
     private static String version = "2019-08-19";
 
     public CkafkaClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.cdn.v20180606.models.*;
 
 public class CdnClient extends AbstractClient{
     private static String endpoint = "cdn.tencentcloudapi.com";
+    private static String service = "cdn";
     private static String version = "2018-06-06";
 
     public CdnClient(Credential credential, String region) {

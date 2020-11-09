@@ -27,6 +27,7 @@ import com.tencentcloudapi.asr.v20190614.models.*;
 
 public class AsrClient extends AbstractClient{
     private static String endpoint = "asr.tencentcloudapi.com";
+    private static String service = "asr";
     private static String version = "2019-06-14";
 
     public AsrClient(Credential credential, String region) {

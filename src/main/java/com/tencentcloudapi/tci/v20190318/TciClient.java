@@ -27,6 +27,7 @@ import com.tencentcloudapi.tci.v20190318.models.*;
 
 public class TciClient extends AbstractClient{
     private static String endpoint = "tci.tencentcloudapi.com";
+    private static String service = "tci";
     private static String version = "2019-03-18";
 
     public TciClient(Credential credential, String region) {

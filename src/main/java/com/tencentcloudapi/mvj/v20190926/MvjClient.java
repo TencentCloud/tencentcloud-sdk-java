@@ -27,6 +27,7 @@ import com.tencentcloudapi.mvj.v20190926.models.*;
 
 public class MvjClient extends AbstractClient{
     private static String endpoint = "mvj.tencentcloudapi.com";
+    private static String service = "mvj";
     private static String version = "2019-09-26";
 
     public MvjClient(Credential credential, String region) {

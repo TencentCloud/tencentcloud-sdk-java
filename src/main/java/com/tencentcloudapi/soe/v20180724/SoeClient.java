@@ -27,6 +27,7 @@ import com.tencentcloudapi.soe.v20180724.models.*;
 
 public class SoeClient extends AbstractClient{
     private static String endpoint = "soe.tencentcloudapi.com";
+    private static String service = "soe";
     private static String version = "2018-07-24";
 
     public SoeClient(Credential credential, String region) {

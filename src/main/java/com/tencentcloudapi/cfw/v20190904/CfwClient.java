@@ -27,6 +27,7 @@ import com.tencentcloudapi.cfw.v20190904.models.*;
 
 public class CfwClient extends AbstractClient{
     private static String endpoint = "cfw.tencentcloudapi.com";
+    private static String service = "cfw";
     private static String version = "2019-09-04";
 
     public CfwClient(Credential credential, String region) {

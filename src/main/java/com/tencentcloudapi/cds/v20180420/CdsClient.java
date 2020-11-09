@@ -27,6 +27,7 @@ import com.tencentcloudapi.cds.v20180420.models.*;
 
 public class CdsClient extends AbstractClient{
     private static String endpoint = "cds.tencentcloudapi.com";
+    private static String service = "cds";
     private static String version = "2018-04-20";
 
     public CdsClient(Credential credential, String region) {

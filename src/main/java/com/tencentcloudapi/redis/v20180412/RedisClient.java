@@ -27,6 +27,7 @@ import com.tencentcloudapi.redis.v20180412.models.*;
 
 public class RedisClient extends AbstractClient{
     private static String endpoint = "redis.tencentcloudapi.com";
+    private static String service = "redis";
     private static String version = "2018-04-12";
 
     public RedisClient(Credential credential, String region) {

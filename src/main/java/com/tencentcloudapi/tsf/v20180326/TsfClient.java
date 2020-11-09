@@ -27,6 +27,7 @@ import com.tencentcloudapi.tsf.v20180326.models.*;
 
 public class TsfClient extends AbstractClient{
     private static String endpoint = "tsf.tencentcloudapi.com";
+    private static String service = "tsf";
     private static String version = "2018-03-26";
 
     public TsfClient(Credential credential, String region) {

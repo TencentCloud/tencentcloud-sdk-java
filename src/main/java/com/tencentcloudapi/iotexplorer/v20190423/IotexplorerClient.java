@@ -27,6 +27,7 @@ import com.tencentcloudapi.iotexplorer.v20190423.models.*;
 
 public class IotexplorerClient extends AbstractClient{
     private static String endpoint = "iotexplorer.tencentcloudapi.com";
+    private static String service = "iotexplorer";
     private static String version = "2019-04-23";
 
     public IotexplorerClient(Credential credential, String region) {

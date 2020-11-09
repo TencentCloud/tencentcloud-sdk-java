@@ -27,6 +27,7 @@ import com.tencentcloudapi.tiia.v20190529.models.*;
 
 public class TiiaClient extends AbstractClient{
     private static String endpoint = "tiia.tencentcloudapi.com";
+    private static String service = "tiia";
     private static String version = "2019-05-29";
 
     public TiiaClient(Credential credential, String region) {

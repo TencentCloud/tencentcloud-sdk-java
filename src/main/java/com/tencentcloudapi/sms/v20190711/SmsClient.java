@@ -27,6 +27,7 @@ import com.tencentcloudapi.sms.v20190711.models.*;
 
 public class SmsClient extends AbstractClient{
     private static String endpoint = "sms.tencentcloudapi.com";
+    private static String service = "sms";
     private static String version = "2019-07-11";
 
     public SmsClient(Credential credential, String region) {

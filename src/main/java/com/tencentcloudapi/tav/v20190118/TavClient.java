@@ -27,6 +27,7 @@ import com.tencentcloudapi.tav.v20190118.models.*;
 
 public class TavClient extends AbstractClient{
     private static String endpoint = "tav.tencentcloudapi.com";
+    private static String service = "tav";
     private static String version = "2019-01-18";
 
     public TavClient(Credential credential, String region) {

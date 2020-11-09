@@ -27,6 +27,7 @@ import com.tencentcloudapi.tbm.v20180129.models.*;
 
 public class TbmClient extends AbstractClient{
     private static String endpoint = "tbm.tencentcloudapi.com";
+    private static String service = "tbm";
     private static String version = "2018-01-29";
 
     public TbmClient(Credential credential, String region) {

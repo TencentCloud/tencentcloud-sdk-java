@@ -27,6 +27,7 @@ import com.tencentcloudapi.tkgdq.v20190411.models.*;
 
 public class TkgdqClient extends AbstractClient{
     private static String endpoint = "tkgdq.tencentcloudapi.com";
+    private static String service = "tkgdq";
     private static String version = "2019-04-11";
 
     public TkgdqClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.npp.v20190823.models.*;
 
 public class NppClient extends AbstractClient{
     private static String endpoint = "npp.tencentcloudapi.com";
+    private static String service = "npp";
     private static String version = "2019-08-23";
 
     public NppClient(Credential credential, String region) {

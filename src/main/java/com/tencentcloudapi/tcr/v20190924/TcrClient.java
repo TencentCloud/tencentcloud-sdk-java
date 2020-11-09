@@ -27,6 +27,7 @@ import com.tencentcloudapi.tcr.v20190924.models.*;
 
 public class TcrClient extends AbstractClient{
     private static String endpoint = "tcr.tencentcloudapi.com";
+    private static String service = "tcr";
     private static String version = "2019-09-24";
 
     public TcrClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.bri.v20190328.models.*;
 
 public class BriClient extends AbstractClient{
     private static String endpoint = "bri.tencentcloudapi.com";
+    private static String service = "bri";
     private static String version = "2019-03-28";
 
     public BriClient(Credential credential, String region) {

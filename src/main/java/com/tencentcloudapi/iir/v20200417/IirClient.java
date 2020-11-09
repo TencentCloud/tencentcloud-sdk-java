@@ -27,6 +27,7 @@ import com.tencentcloudapi.iir.v20200417.models.*;
 
 public class IirClient extends AbstractClient{
     private static String endpoint = "iir.tencentcloudapi.com";
+    private static String service = "iir";
     private static String version = "2020-04-17";
 
     public IirClient(Credential credential, String region) {

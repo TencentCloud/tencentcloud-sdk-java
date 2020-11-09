@@ -27,6 +27,7 @@ import com.tencentcloudapi.ft.v20200304.models.*;
 
 public class FtClient extends AbstractClient{
     private static String endpoint = "ft.tencentcloudapi.com";
+    private static String service = "ft";
     private static String version = "2020-03-04";
 
     public FtClient(Credential credential, String region) {

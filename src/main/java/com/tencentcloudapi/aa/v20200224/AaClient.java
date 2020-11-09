@@ -27,6 +27,7 @@ import com.tencentcloudapi.aa.v20200224.models.*;
 
 public class AaClient extends AbstractClient{
     private static String endpoint = "aa.tencentcloudapi.com";
+    private static String service = "aa";
     private static String version = "2020-02-24";
 
     public AaClient(Credential credential, String region) {

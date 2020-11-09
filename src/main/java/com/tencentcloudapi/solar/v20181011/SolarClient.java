@@ -27,6 +27,7 @@ import com.tencentcloudapi.solar.v20181011.models.*;
 
 public class SolarClient extends AbstractClient{
     private static String endpoint = "solar.tencentcloudapi.com";
+    private static String service = "solar";
     private static String version = "2018-10-11";
 
     public SolarClient(Credential credential, String region) {

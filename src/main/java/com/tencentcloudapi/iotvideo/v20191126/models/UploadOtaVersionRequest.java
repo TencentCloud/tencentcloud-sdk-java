@@ -65,6 +65,20 @@ public class UploadOtaVersionRequest extends AbstractModel{
     private String Operator;
 
     /**
+    * 备注信息
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 版本发布的描述信息，需要国际化，可以为空
+    */
+    @SerializedName("Contents")
+    @Expose
+    private Contents Contents;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -161,6 +175,38 @@ public class UploadOtaVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 备注信息 
+     * @return Remark 备注信息
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注信息
+     * @param Remark 备注信息
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 版本发布的描述信息，需要国际化，可以为空 
+     * @return Contents 版本发布的描述信息，需要国际化，可以为空
+     */
+    public Contents getContents() {
+        return this.Contents;
+    }
+
+    /**
+     * Set 版本发布的描述信息，需要国际化，可以为空
+     * @param Contents 版本发布的描述信息，需要国际化，可以为空
+     */
+    public void setContents(Contents Contents) {
+        this.Contents = Contents;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +216,8 @@ public class UploadOtaVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamObj(map, prefix + "Contents.", this.Contents);
 
     }
 }

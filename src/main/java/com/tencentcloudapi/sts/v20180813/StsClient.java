@@ -27,6 +27,7 @@ import com.tencentcloudapi.sts.v20180813.models.*;
 
 public class StsClient extends AbstractClient{
     private static String endpoint = "sts.tencentcloudapi.com";
+    private static String service = "sts";
     private static String version = "2018-08-13";
 
     public StsClient(Credential credential, String region) {

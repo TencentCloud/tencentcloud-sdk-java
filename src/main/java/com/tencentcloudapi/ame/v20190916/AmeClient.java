@@ -27,6 +27,7 @@ import com.tencentcloudapi.ame.v20190916.models.*;
 
 public class AmeClient extends AbstractClient{
     private static String endpoint = "ame.tencentcloudapi.com";
+    private static String service = "ame";
     private static String version = "2019-09-16";
 
     public AmeClient(Credential credential, String region) {

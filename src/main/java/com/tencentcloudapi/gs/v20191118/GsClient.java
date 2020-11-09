@@ -27,6 +27,7 @@ import com.tencentcloudapi.gs.v20191118.models.*;
 
 public class GsClient extends AbstractClient{
     private static String endpoint = "gs.tencentcloudapi.com";
+    private static String service = "gs";
     private static String version = "2019-11-18";
 
     public GsClient(Credential credential, String region) {

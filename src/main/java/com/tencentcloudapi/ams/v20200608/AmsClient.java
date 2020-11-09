@@ -27,6 +27,7 @@ import com.tencentcloudapi.ams.v20200608.models.*;
 
 public class AmsClient extends AbstractClient{
     private static String endpoint = "ams.tencentcloudapi.com";
+    private static String service = "ams";
     private static String version = "2020-06-08";
 
     public AmsClient(Credential credential, String region) {

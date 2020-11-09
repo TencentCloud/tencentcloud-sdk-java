@@ -72,6 +72,13 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 数据库名称数组。
+    */
+    @SerializedName("SchemaList")
+    @Expose
+    private SchemaItem [] SchemaList;
+
+    /**
      * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
@@ -184,6 +191,22 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
+     * Get 数据库名称数组。 
+     * @return SchemaList 数据库名称数组。
+     */
+    public SchemaItem [] getSchemaList() {
+        return this.SchemaList;
+    }
+
+    /**
+     * Set 数据库名称数组。
+     * @param SchemaList 数据库名称数组。
+     */
+    public void setSchemaList(SchemaItem [] SchemaList) {
+        this.SchemaList = SchemaList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "SchemaList.", this.SchemaList);
 
     }
 }

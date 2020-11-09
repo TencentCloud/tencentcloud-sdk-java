@@ -27,6 +27,7 @@ import com.tencentcloudapi.cat.v20180409.models.*;
 
 public class CatClient extends AbstractClient{
     private static String endpoint = "cat.tencentcloudapi.com";
+    private static String service = "cat";
     private static String version = "2018-04-09";
 
     public CatClient(Credential credential, String region) {

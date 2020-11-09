@@ -27,6 +27,7 @@ import com.tencentcloudapi.cpdp.v20190820.models.*;
 
 public class CpdpClient extends AbstractClient{
     private static String endpoint = "cpdp.tencentcloudapi.com";
+    private static String service = "cpdp";
     private static String version = "2019-08-20";
 
     public CpdpClient(Credential credential, String region) {

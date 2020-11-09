@@ -27,6 +27,7 @@ import com.tencentcloudapi.cloudhsm.v20191112.models.*;
 
 public class CloudhsmClient extends AbstractClient{
     private static String endpoint = "cloudhsm.tencentcloudapi.com";
+    private static String service = "cloudhsm";
     private static String version = "2019-11-12";
 
     public CloudhsmClient(Credential credential, String region) {

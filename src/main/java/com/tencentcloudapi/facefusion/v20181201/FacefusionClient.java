@@ -27,6 +27,7 @@ import com.tencentcloudapi.facefusion.v20181201.models.*;
 
 public class FacefusionClient extends AbstractClient{
     private static String endpoint = "facefusion.tencentcloudapi.com";
+    private static String service = "facefusion";
     private static String version = "2018-12-01";
 
     public FacefusionClient(Credential credential, String region) {

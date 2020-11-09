@@ -27,6 +27,7 @@ import com.tencentcloudapi.kms.v20190118.models.*;
 
 public class KmsClient extends AbstractClient{
     private static String endpoint = "kms.tencentcloudapi.com";
+    private static String service = "kms";
     private static String version = "2019-01-18";
 
     public KmsClient(Credential credential, String region) {

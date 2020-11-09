@@ -27,6 +27,7 @@ import com.tencentcloudapi.asw.v20200722.models.*;
 
 public class AswClient extends AbstractClient{
     private static String endpoint = "asw.tencentcloudapi.com";
+    private static String service = "asw";
     private static String version = "2020-07-22";
 
     public AswClient(Credential credential, String region) {

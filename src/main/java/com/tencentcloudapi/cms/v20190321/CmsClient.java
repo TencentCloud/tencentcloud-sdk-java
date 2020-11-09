@@ -27,6 +27,7 @@ import com.tencentcloudapi.cms.v20190321.models.*;
 
 public class CmsClient extends AbstractClient{
     private static String endpoint = "cms.tencentcloudapi.com";
+    private static String service = "cms";
     private static String version = "2019-03-21";
 
     public CmsClient(Credential credential, String region) {

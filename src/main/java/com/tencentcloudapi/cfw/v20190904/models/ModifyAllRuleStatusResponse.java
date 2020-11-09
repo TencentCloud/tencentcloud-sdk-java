@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAllRuleStatusResponse extends AbstractModel{
 
     /**
-    * 0: 修改成功, !0: 修改失败
+    * 0: 修改成功, 其他: 修改失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -38,9 +38,9 @@ public class ModifyAllRuleStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 0: 修改成功, !0: 修改失败
+     * Get 0: 修改成功, 其他: 修改失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 0: 修改成功, !0: 修改失败
+     * @return Status 0: 修改成功, 其他: 修改失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -48,9 +48,9 @@ public class ModifyAllRuleStatusResponse extends AbstractModel{
     }
 
     /**
-     * Set 0: 修改成功, !0: 修改失败
+     * Set 0: 修改成功, 其他: 修改失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 0: 修改成功, !0: 修改失败
+     * @param Status 0: 修改成功, 其他: 修改失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.domain.v20180808.models.*;
 
 public class DomainClient extends AbstractClient{
     private static String endpoint = "domain.tencentcloudapi.com";
+    private static String service = "domain";
     private static String version = "2018-08-08";
 
     public DomainClient(Credential credential, String region) {

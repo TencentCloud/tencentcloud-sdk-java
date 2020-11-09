@@ -27,6 +27,7 @@ import com.tencentcloudapi.ticm.v20181127.models.*;
 
 public class TicmClient extends AbstractClient{
     private static String endpoint = "ticm.tencentcloudapi.com";
+    private static String service = "ticm";
     private static String version = "2018-11-27";
 
     public TicmClient(Credential credential, String region) {

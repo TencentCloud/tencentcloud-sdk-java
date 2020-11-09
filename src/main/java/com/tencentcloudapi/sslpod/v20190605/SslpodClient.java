@@ -27,6 +27,7 @@ import com.tencentcloudapi.sslpod.v20190605.models.*;
 
 public class SslpodClient extends AbstractClient{
     private static String endpoint = "sslpod.tencentcloudapi.com";
+    private static String service = "sslpod";
     private static String version = "2019-06-05";
 
     public SslpodClient(Credential credential, String region) {

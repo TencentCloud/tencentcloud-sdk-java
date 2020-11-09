@@ -27,6 +27,7 @@ import com.tencentcloudapi.ms.v20180408.models.*;
 
 public class MsClient extends AbstractClient{
     private static String endpoint = "ms.tencentcloudapi.com";
+    private static String service = "ms";
     private static String version = "2018-04-08";
 
     public MsClient(Credential credential, String region) {

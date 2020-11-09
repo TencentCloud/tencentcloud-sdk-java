@@ -27,6 +27,7 @@ import com.tencentcloudapi.cfs.v20190719.models.*;
 
 public class CfsClient extends AbstractClient{
     private static String endpoint = "cfs.tencentcloudapi.com";
+    private static String service = "cfs";
     private static String version = "2019-07-19";
 
     public CfsClient(Credential credential, String region) {

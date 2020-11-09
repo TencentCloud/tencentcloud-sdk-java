@@ -27,6 +27,7 @@ import com.tencentcloudapi.rkp.v20191209.models.*;
 
 public class RkpClient extends AbstractClient{
     private static String endpoint = "rkp.tencentcloudapi.com";
+    private static String service = "rkp";
     private static String version = "2019-12-09";
 
     public RkpClient(Credential credential, String region) {

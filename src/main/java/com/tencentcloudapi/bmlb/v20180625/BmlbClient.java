@@ -27,6 +27,7 @@ import com.tencentcloudapi.bmlb.v20180625.models.*;
 
 public class BmlbClient extends AbstractClient{
     private static String endpoint = "bmlb.tencentcloudapi.com";
+    private static String service = "bmlb";
     private static String version = "2018-06-25";
 
     public BmlbClient(Credential credential, String region) {

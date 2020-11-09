@@ -27,6 +27,7 @@ import com.tencentcloudapi.iot.v20180123.models.*;
 
 public class IotClient extends AbstractClient{
     private static String endpoint = "iot.tencentcloudapi.com";
+    private static String service = "iot";
     private static String version = "2018-01-23";
 
     public IotClient(Credential credential, String region) {

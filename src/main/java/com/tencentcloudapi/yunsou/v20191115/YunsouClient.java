@@ -27,6 +27,7 @@ import com.tencentcloudapi.yunsou.v20191115.models.*;
 
 public class YunsouClient extends AbstractClient{
     private static String endpoint = "yunsou.tencentcloudapi.com";
+    private static String service = "yunsou";
     private static String version = "2019-11-15";
 
     public YunsouClient(Credential credential, String region) {

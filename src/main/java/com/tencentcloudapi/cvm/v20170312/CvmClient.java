@@ -27,6 +27,7 @@ import com.tencentcloudapi.cvm.v20170312.models.*;
 
 public class CvmClient extends AbstractClient{
     private static String endpoint = "cvm.tencentcloudapi.com";
+    private static String service = "cvm";
     private static String version = "2017-03-12";
 
     public CvmClient(Credential credential, String region) {

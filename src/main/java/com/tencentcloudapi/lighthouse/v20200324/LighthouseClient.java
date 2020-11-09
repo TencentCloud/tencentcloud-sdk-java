@@ -27,6 +27,7 @@ import com.tencentcloudapi.lighthouse.v20200324.models.*;
 
 public class LighthouseClient extends AbstractClient{
     private static String endpoint = "lighthouse.tencentcloudapi.com";
+    private static String service = "lighthouse";
     private static String version = "2020-03-24";
 
     public LighthouseClient(Credential credential, String region) {

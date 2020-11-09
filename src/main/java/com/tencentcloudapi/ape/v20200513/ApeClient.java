@@ -27,6 +27,7 @@ import com.tencentcloudapi.ape.v20200513.models.*;
 
 public class ApeClient extends AbstractClient{
     private static String endpoint = "ape.tencentcloudapi.com";
+    private static String service = "ape";
     private static String version = "2020-05-13";
 
     public ApeClient(Credential credential, String region) {

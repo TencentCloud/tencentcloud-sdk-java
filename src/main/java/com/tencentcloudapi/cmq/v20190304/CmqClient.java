@@ -27,6 +27,7 @@ import com.tencentcloudapi.cmq.v20190304.models.*;
 
 public class CmqClient extends AbstractClient{
     private static String endpoint = "cmq.tencentcloudapi.com";
+    private static String service = "cmq";
     private static String version = "2019-03-04";
 
     public CmqClient(Credential credential, String region) {

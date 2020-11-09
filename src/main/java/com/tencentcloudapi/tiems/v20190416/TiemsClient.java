@@ -27,6 +27,7 @@ import com.tencentcloudapi.tiems.v20190416.models.*;
 
 public class TiemsClient extends AbstractClient{
     private static String endpoint = "tiems.tencentcloudapi.com";
+    private static String service = "tiems";
     private static String version = "2019-04-16";
 
     public TiemsClient(Credential credential, String region) {

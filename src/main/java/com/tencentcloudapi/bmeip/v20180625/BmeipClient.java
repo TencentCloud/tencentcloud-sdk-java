@@ -27,6 +27,7 @@ import com.tencentcloudapi.bmeip.v20180625.models.*;
 
 public class BmeipClient extends AbstractClient{
     private static String endpoint = "bmeip.tencentcloudapi.com";
+    private static String service = "bmeip";
     private static String version = "2018-06-25";
 
     public BmeipClient(Credential credential, String region) {

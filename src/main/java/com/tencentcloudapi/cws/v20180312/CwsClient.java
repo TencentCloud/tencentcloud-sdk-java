@@ -27,6 +27,7 @@ import com.tencentcloudapi.cws.v20180312.models.*;
 
 public class CwsClient extends AbstractClient{
     private static String endpoint = "cws.tencentcloudapi.com";
+    private static String service = "cws";
     private static String version = "2018-03-12";
 
     public CwsClient(Credential credential, String region) {

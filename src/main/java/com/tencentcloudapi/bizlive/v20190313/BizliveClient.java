@@ -27,6 +27,7 @@ import com.tencentcloudapi.bizlive.v20190313.models.*;
 
 public class BizliveClient extends AbstractClient{
     private static String endpoint = "bizlive.tencentcloudapi.com";
+    private static String service = "bizlive";
     private static String version = "2019-03-13";
 
     public BizliveClient(Credential credential, String region) {

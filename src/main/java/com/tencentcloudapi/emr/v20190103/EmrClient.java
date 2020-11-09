@@ -27,6 +27,7 @@ import com.tencentcloudapi.emr.v20190103.models.*;
 
 public class EmrClient extends AbstractClient{
     private static String endpoint = "emr.tencentcloudapi.com";
+    private static String service = "emr";
     private static String version = "2019-01-03";
 
     public EmrClient(Credential credential, String region) {

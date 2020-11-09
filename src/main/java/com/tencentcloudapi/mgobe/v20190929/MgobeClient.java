@@ -27,6 +27,7 @@ import com.tencentcloudapi.mgobe.v20190929.models.*;
 
 public class MgobeClient extends AbstractClient{
     private static String endpoint = "mgobe.tencentcloudapi.com";
+    private static String service = "mgobe";
     private static String version = "2019-09-29";
 
     public MgobeClient(Credential credential, String region) {

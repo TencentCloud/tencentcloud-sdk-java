@@ -27,6 +27,7 @@ import com.tencentcloudapi.msp.v20180319.models.*;
 
 public class MspClient extends AbstractClient{
     private static String endpoint = "msp.tencentcloudapi.com";
+    private static String service = "msp";
     private static String version = "2018-03-19";
 
     public MspClient(Credential credential, String region) {

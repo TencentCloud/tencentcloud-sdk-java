@@ -27,6 +27,7 @@ import com.tencentcloudapi.rp.v20200224.models.*;
 
 public class RpClient extends AbstractClient{
     private static String endpoint = "rp.tencentcloudapi.com";
+    private static String service = "rp";
     private static String version = "2020-02-24";
 
     public RpClient(Credential credential, String region) {

@@ -27,6 +27,7 @@ import com.tencentcloudapi.iotvideo.v20191126.models.*;
 
 public class IotvideoClient extends AbstractClient{
     private static String endpoint = "iotvideo.tencentcloudapi.com";
+    private static String service = "iotvideo";
     private static String version = "2019-11-26";
 
     public IotvideoClient(Credential credential, String region) {

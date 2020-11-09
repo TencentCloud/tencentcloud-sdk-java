@@ -27,6 +27,7 @@ import com.tencentcloudapi.es.v20180416.models.*;
 
 public class EsClient extends AbstractClient{
     private static String endpoint = "es.tencentcloudapi.com";
+    private static String service = "es";
     private static String version = "2018-04-16";
 
     public EsClient(Credential credential, String region) {

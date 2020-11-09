@@ -27,6 +27,7 @@ import com.tencentcloudapi.live.v20180801.models.*;
 
 public class LiveClient extends AbstractClient{
     private static String endpoint = "live.tencentcloudapi.com";
+    private static String service = "live";
     private static String version = "2018-08-01";
 
     public LiveClient(Credential credential, String region) {

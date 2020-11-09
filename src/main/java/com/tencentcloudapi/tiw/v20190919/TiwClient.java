@@ -27,6 +27,7 @@ import com.tencentcloudapi.tiw.v20190919.models.*;
 
 public class TiwClient extends AbstractClient{
     private static String endpoint = "tiw.tencentcloudapi.com";
+    private static String service = "tiw";
     private static String version = "2019-09-19";
 
     public TiwClient(Credential credential, String region) {

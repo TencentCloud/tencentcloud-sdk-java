@@ -27,6 +27,7 @@ import com.tencentcloudapi.dts.v20180330.models.*;
 
 public class DtsClient extends AbstractClient{
     private static String endpoint = "dts.tencentcloudapi.com";
+    private static String service = "dts";
     private static String version = "2018-03-30";
 
     public DtsClient(Credential credential, String region) {
