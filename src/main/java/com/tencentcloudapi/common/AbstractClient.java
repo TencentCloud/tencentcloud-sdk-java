@@ -64,6 +64,7 @@ public abstract class AbstractClient {
   private Credential credential;
   private ClientProfile profile;
   private String endpoint;
+  private String service;
   private String region;
   private String path;
   private String sdkVersion;
@@ -83,6 +84,7 @@ public abstract class AbstractClient {
     this.credential = credential;
     this.profile = profile;
     this.endpoint = endpoint;
+    this.service = endpoint.split("\\.")[0];
     this.region = region;
     this.path = "/";
     this.sdkVersion = AbstractClient.SDK_VERSION;
@@ -127,11 +129,7 @@ public abstract class AbstractClient {
    * @throws TencentCloudSDKException
    */
   public String call(String action, String jsonPayload) throws TencentCloudSDKException {
-    String endpoint = this.endpoint;
-    // in case user has reset endpoint after init this client
-    if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
-      endpoint = this.profile.getHttpProfile().getEndpoint();
-    }
+    String endpoint = this.getEndpoint();
     // always use post tc3-hmac-sha256 signature process
     // okhttp always set charset even we don't specify it,
     // to ensure signature be correct, we have to set it here as well.
@@ -290,10 +288,7 @@ public abstract class AbstractClient {
   protected String internalRequest(AbstractModel request, String actionName)
       throws TencentCloudSDKException {
     Response okRsp = null;
-    String endpoint = this.endpoint;
-    if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
-      endpoint = this.profile.getHttpProfile().getEndpoint();
-    }
+    String endpoint = this.getEndpoint();
     String[] binaryParams = request.getBinaryParams();
     String sm = this.profile.getSignMethod();
     String reqMethod = this.profile.getHttpProfile().getReqMethod();
@@ -579,10 +574,7 @@ public abstract class AbstractClient {
       param.put("Language", this.profile.getLanguage().getValue());
     }
 
-    String endpoint = this.endpoint;
-    if (!(this.profile.getHttpProfile().getEndpoint() == null)) {
-      endpoint = this.profile.getHttpProfile().getEndpoint();
-    }
+    String endpoint = this.getEndpoint();
 
     String sigInParam =
         Sign.makeSignPlainText(
@@ -624,5 +616,16 @@ public abstract class AbstractClient {
       // ignore but print message to console
       e.printStackTrace();
     }
+  }
+
+  private String getEndpoint() {
+    // in case user has reset endpoint after init this client
+	endpoint = this.profile.getHttpProfile().getEndpoint();
+    if (null == endpoint) {
+      // protected abstract String getService();
+      // use this.getService() from overrided subclass will be better
+      endpoint = this.service + "." + this.profile.getHttpProfile().getRootDomain();
+    }
+    return endpoint;
   }
 }

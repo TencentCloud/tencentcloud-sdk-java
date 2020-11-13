@@ -35,6 +35,9 @@ public class HttpProfile {
   /** Endpoint means the domain which this request is sent to, such as cvm.tencentcloudapi.com. */
   private String endpoint;
 
+  /** root domain means endpoint without service name, such as tencentcloudapi.com. */
+  private String rootDomain;
+
   /** HTTPS or HTTP, currently only HTTPS is valid. */
   private String protocol;
 
@@ -62,6 +65,7 @@ public class HttpProfile {
   public HttpProfile() {
     this.reqMethod = HttpProfile.REQ_POST;
     this.endpoint = null;
+    this.rootDomain = "tencentcloudapi.com";
     this.protocol = HttpProfile.REQ_HTTPS;
     this.readTimeout = 0;
     this.writeTimeout = 0;
@@ -182,5 +186,13 @@ public class HttpProfile {
 
   public void setProxyPassword(String proxyPassword) {
     this.proxyPassword = proxyPassword;
+  }
+
+  public String getRootDomain() {
+    return rootDomain;
+  }
+
+  public void setRootDomain(String rootDomain) {
+    this.rootDomain = rootDomain;
   }
 }
