@@ -163,7 +163,7 @@ public class DBInstance extends AbstractModel{
     private Long RenewFlag;
 
     /**
-    * 实例高可用， 1-双机高可用，2-单机
+    * 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
     */
     @SerializedName("Model")
     @Expose
@@ -599,16 +599,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 实例高可用， 1-双机高可用，2-单机 
-     * @return Model 实例高可用， 1-双机高可用，2-单机
+     * Get 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房 
+     * @return Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
      */
     public Long getModel() {
         return this.Model;
     }
 
     /**
-     * Set 实例高可用， 1-双机高可用，2-单机
-     * @param Model 实例高可用， 1-双机高可用，2-单机
+     * Set 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+     * @param Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
      */
     public void setModel(Long Model) {
         this.Model = Model;

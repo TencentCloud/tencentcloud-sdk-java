@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LayoutParams extends AbstractModel{
 
     /**
-    * 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+    * 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
     */
     @SerializedName("Template")
     @Expose
@@ -65,16 +65,23 @@ public class LayoutParams extends AbstractModel{
     private String [] MixVideoUids;
 
     /**
-     * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。 
-     * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+    * 自定义模板中有效，指定用户视频在混合画面中的位置。
+    */
+    @SerializedName("PresetLayoutConfig")
+    @Expose
+    private PresetLayoutConfig [] PresetLayoutConfig;
+
+    /**
+     * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。 
+     * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
      */
     public Long getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
-     * @param Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+     * Set 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
+     * @param Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
      */
     public void setTemplate(Long Template) {
         this.Template = Template;
@@ -161,6 +168,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get 自定义模板中有效，指定用户视频在混合画面中的位置。 
+     * @return PresetLayoutConfig 自定义模板中有效，指定用户视频在混合画面中的位置。
+     */
+    public PresetLayoutConfig [] getPresetLayoutConfig() {
+        return this.PresetLayoutConfig;
+    }
+
+    /**
+     * Set 自定义模板中有效，指定用户视频在混合画面中的位置。
+     * @param PresetLayoutConfig 自定义模板中有效，指定用户视频在混合画面中的位置。
+     */
+    public void setPresetLayoutConfig(PresetLayoutConfig [] PresetLayoutConfig) {
+        this.PresetLayoutConfig = PresetLayoutConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
         this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
         this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
+        this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
 
     }
 }

@@ -44,6 +44,7 @@ public class ModifyAuditConfigRequest extends AbstractModel{
     /**
     * 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
     */
     @SerializedName("CloseAudit")
     @Expose
@@ -103,9 +104,11 @@ public class ModifyAuditConfigRequest extends AbstractModel{
 
     /**
      * Get 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
-当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。 
+当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。 
      * @return CloseAudit 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
      */
     public Boolean getCloseAudit() {
         return this.CloseAudit;
@@ -114,8 +117,10 @@ public class ModifyAuditConfigRequest extends AbstractModel{
     /**
      * Set 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
      * @param CloseAudit 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
      */
     public void setCloseAudit(Boolean CloseAudit) {
         this.CloseAudit = CloseAudit;

@@ -215,6 +215,46 @@ public class VmGroup extends AbstractModel{
     private String DeployDesc;
 
     /**
+    * 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateType")
+    @Expose
+    private Long UpdateType;
+
+    /**
+    * 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployBetaEnable")
+    @Expose
+    private Boolean DeployBetaEnable;
+
+    /**
+    * 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployBatch")
+    @Expose
+    private Float [] DeployBatch;
+
+    /**
+    * 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployExeMode")
+    @Expose
+    private String DeployExeMode;
+
+    /**
+    * 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployWaitTime")
+    @Expose
+    private Long DeployWaitTime;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -695,6 +735,106 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
+     * Get 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateType 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpdateType() {
+        return this.UpdateType;
+    }
+
+    /**
+     * Set 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateType 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateType(Long UpdateType) {
+        this.UpdateType = UpdateType;
+    }
+
+    /**
+     * Get 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployBetaEnable 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeployBetaEnable() {
+        return this.DeployBetaEnable;
+    }
+
+    /**
+     * Set 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployBetaEnable 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployBetaEnable(Boolean DeployBetaEnable) {
+        this.DeployBetaEnable = DeployBetaEnable;
+    }
+
+    /**
+     * Get 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployBatch 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getDeployBatch() {
+        return this.DeployBatch;
+    }
+
+    /**
+     * Set 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployBatch 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployBatch(Float [] DeployBatch) {
+        this.DeployBatch = DeployBatch;
+    }
+
+    /**
+     * Get 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployExeMode 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeployExeMode() {
+        return this.DeployExeMode;
+    }
+
+    /**
+     * Set 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployExeMode 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployExeMode(String DeployExeMode) {
+        this.DeployExeMode = DeployExeMode;
+    }
+
+    /**
+     * Get 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployWaitTime 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeployWaitTime() {
+        return this.DeployWaitTime;
+    }
+
+    /**
+     * Set 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployWaitTime 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployWaitTime(Long DeployWaitTime) {
+        this.DeployWaitTime = DeployWaitTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -722,6 +862,11 @@ public class VmGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+        this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
+        this.setParamSimple(map, prefix + "DeployBetaEnable", this.DeployBetaEnable);
+        this.setParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
+        this.setParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
+        this.setParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
 
     }
 }

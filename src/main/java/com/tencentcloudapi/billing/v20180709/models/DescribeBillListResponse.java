@@ -72,6 +72,41 @@ public class DescribeBillListResponse extends AbstractModel{
     private Float DeductAmount;
 
     /**
+    * 资金转入总额，单位（分）
+    */
+    @SerializedName("AgentInAmount")
+    @Expose
+    private Float AgentInAmount;
+
+    /**
+    * 垫付充值总额，单位（分）
+    */
+    @SerializedName("AdvanceRechargeAmount")
+    @Expose
+    private Float AdvanceRechargeAmount;
+
+    /**
+    * 提现扣减总额，单位（分）
+    */
+    @SerializedName("WithdrawAmount")
+    @Expose
+    private Float WithdrawAmount;
+
+    /**
+    * 资金转出总额，单位（分）
+    */
+    @SerializedName("AgentOutAmount")
+    @Expose
+    private Float AgentOutAmount;
+
+    /**
+    * 还垫付总额，单位（分）
+    */
+    @SerializedName("AdvancePayAmount")
+    @Expose
+    private Float AdvancePayAmount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +226,86 @@ public class DescribeBillListResponse extends AbstractModel{
     }
 
     /**
+     * Get 资金转入总额，单位（分） 
+     * @return AgentInAmount 资金转入总额，单位（分）
+     */
+    public Float getAgentInAmount() {
+        return this.AgentInAmount;
+    }
+
+    /**
+     * Set 资金转入总额，单位（分）
+     * @param AgentInAmount 资金转入总额，单位（分）
+     */
+    public void setAgentInAmount(Float AgentInAmount) {
+        this.AgentInAmount = AgentInAmount;
+    }
+
+    /**
+     * Get 垫付充值总额，单位（分） 
+     * @return AdvanceRechargeAmount 垫付充值总额，单位（分）
+     */
+    public Float getAdvanceRechargeAmount() {
+        return this.AdvanceRechargeAmount;
+    }
+
+    /**
+     * Set 垫付充值总额，单位（分）
+     * @param AdvanceRechargeAmount 垫付充值总额，单位（分）
+     */
+    public void setAdvanceRechargeAmount(Float AdvanceRechargeAmount) {
+        this.AdvanceRechargeAmount = AdvanceRechargeAmount;
+    }
+
+    /**
+     * Get 提现扣减总额，单位（分） 
+     * @return WithdrawAmount 提现扣减总额，单位（分）
+     */
+    public Float getWithdrawAmount() {
+        return this.WithdrawAmount;
+    }
+
+    /**
+     * Set 提现扣减总额，单位（分）
+     * @param WithdrawAmount 提现扣减总额，单位（分）
+     */
+    public void setWithdrawAmount(Float WithdrawAmount) {
+        this.WithdrawAmount = WithdrawAmount;
+    }
+
+    /**
+     * Get 资金转出总额，单位（分） 
+     * @return AgentOutAmount 资金转出总额，单位（分）
+     */
+    public Float getAgentOutAmount() {
+        return this.AgentOutAmount;
+    }
+
+    /**
+     * Set 资金转出总额，单位（分）
+     * @param AgentOutAmount 资金转出总额，单位（分）
+     */
+    public void setAgentOutAmount(Float AgentOutAmount) {
+        this.AgentOutAmount = AgentOutAmount;
+    }
+
+    /**
+     * Get 还垫付总额，单位（分） 
+     * @return AdvancePayAmount 还垫付总额，单位（分）
+     */
+    public Float getAdvancePayAmount() {
+        return this.AdvancePayAmount;
+    }
+
+    /**
+     * Set 还垫付总额，单位（分）
+     * @param AdvancePayAmount 还垫付总额，单位（分）
+     */
+    public void setAdvancePayAmount(Float AdvancePayAmount) {
+        this.AdvancePayAmount = AdvancePayAmount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +332,11 @@ public class DescribeBillListResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BlockAmount", this.BlockAmount);
         this.setParamSimple(map, prefix + "UnblockAmount", this.UnblockAmount);
         this.setParamSimple(map, prefix + "DeductAmount", this.DeductAmount);
+        this.setParamSimple(map, prefix + "AgentInAmount", this.AgentInAmount);
+        this.setParamSimple(map, prefix + "AdvanceRechargeAmount", this.AdvanceRechargeAmount);
+        this.setParamSimple(map, prefix + "WithdrawAmount", this.WithdrawAmount);
+        this.setParamSimple(map, prefix + "AgentOutAmount", this.AgentOutAmount);
+        this.setParamSimple(map, prefix + "AdvancePayAmount", this.AdvancePayAmount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

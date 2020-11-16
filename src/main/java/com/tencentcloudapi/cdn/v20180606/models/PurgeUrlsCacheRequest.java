@@ -41,6 +41,13 @@ public class PurgeUrlsCacheRequest extends AbstractModel{
     private String Area;
 
     /**
+    * 是否对中文字符进行编码后刷新
+    */
+    @SerializedName("UrlEncode")
+    @Expose
+    private Boolean UrlEncode;
+
+    /**
      * Get URL 列表，需要包含协议头部 http:// 或 https:// 
      * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
@@ -89,11 +96,28 @@ public class PurgeUrlsCacheRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否对中文字符进行编码后刷新 
+     * @return UrlEncode 是否对中文字符进行编码后刷新
+     */
+    public Boolean getUrlEncode() {
+        return this.UrlEncode;
+    }
+
+    /**
+     * Set 是否对中文字符进行编码后刷新
+     * @param UrlEncode 是否对中文字符进行编码后刷新
+     */
+    public void setUrlEncode(Boolean UrlEncode) {
+        this.UrlEncode = UrlEncode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
 
     }
 }

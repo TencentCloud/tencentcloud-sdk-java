@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ccc.v20200210.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSDKLoginTokenResponse extends AbstractModel{
+public class DescribeDosageCosDetailByDateResponse extends AbstractModel{
 
     /**
-    * SDK 登录 Token。
+    * 用量数组
     */
-    @SerializedName("Token")
+    @SerializedName("DetailSets")
     @Expose
-    private String Token;
-
-    /**
-    * 过期时间戳，Unix 时间戳。
-    */
-    @SerializedName("ExpiredTime")
-    @Expose
-    private Long ExpiredTime;
-
-    /**
-    * SDK 加载路径会随着 SDK 的发布而变动。
-    */
-    @SerializedName("SdkURL")
-    @Expose
-    private String SdkURL;
+    private CosDetailSets [] DetailSets;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class CreateSDKLoginTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get SDK 登录 Token。 
-     * @return Token SDK 登录 Token。
+     * Get 用量数组 
+     * @return DetailSets 用量数组
      */
-    public String getToken() {
-        return this.Token;
+    public CosDetailSets [] getDetailSets() {
+        return this.DetailSets;
     }
 
     /**
-     * Set SDK 登录 Token。
-     * @param Token SDK 登录 Token。
+     * Set 用量数组
+     * @param DetailSets 用量数组
      */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get 过期时间戳，Unix 时间戳。 
-     * @return ExpiredTime 过期时间戳，Unix 时间戳。
-     */
-    public Long getExpiredTime() {
-        return this.ExpiredTime;
-    }
-
-    /**
-     * Set 过期时间戳，Unix 时间戳。
-     * @param ExpiredTime 过期时间戳，Unix 时间戳。
-     */
-    public void setExpiredTime(Long ExpiredTime) {
-        this.ExpiredTime = ExpiredTime;
-    }
-
-    /**
-     * Get SDK 加载路径会随着 SDK 的发布而变动。 
-     * @return SdkURL SDK 加载路径会随着 SDK 的发布而变动。
-     */
-    public String getSdkURL() {
-        return this.SdkURL;
-    }
-
-    /**
-     * Set SDK 加载路径会随着 SDK 的发布而变动。
-     * @param SdkURL SDK 加载路径会随着 SDK 的发布而变动。
-     */
-    public void setSdkURL(String SdkURL) {
-        this.SdkURL = SdkURL;
+    public void setDetailSets(CosDetailSets [] DetailSets) {
+        this.DetailSets = DetailSets;
     }
 
     /**
@@ -118,9 +72,7 @@ public class CreateSDKLoginTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
-        this.setParamSimple(map, prefix + "SdkURL", this.SdkURL);
+        this.setParamArrayObj(map, prefix + "DetailSets.", this.DetailSets);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

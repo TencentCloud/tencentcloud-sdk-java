@@ -30,6 +30,13 @@ public class CreateStaticStoreRequest extends AbstractModel{
     private String EnvId;
 
     /**
+    * 是否启用统一域名
+    */
+    @SerializedName("EnableUnion")
+    @Expose
+    private Boolean EnableUnion;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -46,10 +53,27 @@ public class CreateStaticStoreRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否启用统一域名 
+     * @return EnableUnion 是否启用统一域名
+     */
+    public Boolean getEnableUnion() {
+        return this.EnableUnion;
+    }
+
+    /**
+     * Set 是否启用统一域名
+     * @param EnableUnion 是否启用统一域名
+     */
+    public void setEnableUnion(Boolean EnableUnion) {
+        this.EnableUnion = EnableUnion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
 
     }
 }

@@ -339,6 +339,26 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *获取COS产品用量明细
+     * @param req DescribeDosageCosDetailByDateRequest
+     * @return DescribeDosageCosDetailByDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(DescribeDosageCosDetailByDateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDosageCosDetailByDateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDosageCosDetailByDate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *按日期获取产品用量明细
      * @param req DescribeDosageDetailByDateRequest
      * @return DescribeDosageDetailByDateResponse

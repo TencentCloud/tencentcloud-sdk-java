@@ -2371,6 +2371,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *该接口用于获取ip地理位置库下载链接
+     * @param req DescribeIpGeolocationDatabaseUrlRequest
+     * @return DescribeIpGeolocationDatabaseUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrl(DescribeIpGeolocationDatabaseUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIpGeolocationDatabaseUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查询NAT网关端口转发规则对象数组。
      * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
      * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse

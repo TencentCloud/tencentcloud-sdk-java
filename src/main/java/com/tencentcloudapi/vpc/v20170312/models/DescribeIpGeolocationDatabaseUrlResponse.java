@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ccc.v20200210.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSDKLoginTokenResponse extends AbstractModel{
+public class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel{
 
     /**
-    * SDK 登录 Token。
+    * IP地址库下载链接地址
     */
-    @SerializedName("Token")
+    @SerializedName("DownLoadUrl")
     @Expose
-    private String Token;
+    private String DownLoadUrl;
 
     /**
-    * 过期时间戳，Unix 时间戳。
+    * 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
     */
-    @SerializedName("ExpiredTime")
+    @SerializedName("ExpiredAt")
     @Expose
-    private Long ExpiredTime;
-
-    /**
-    * SDK 加载路径会随着 SDK 的发布而变动。
-    */
-    @SerializedName("SdkURL")
-    @Expose
-    private String SdkURL;
+    private String ExpiredAt;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class CreateSDKLoginTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get SDK 登录 Token。 
-     * @return Token SDK 登录 Token。
+     * Get IP地址库下载链接地址 
+     * @return DownLoadUrl IP地址库下载链接地址
      */
-    public String getToken() {
-        return this.Token;
+    public String getDownLoadUrl() {
+        return this.DownLoadUrl;
     }
 
     /**
-     * Set SDK 登录 Token。
-     * @param Token SDK 登录 Token。
+     * Set IP地址库下载链接地址
+     * @param DownLoadUrl IP地址库下载链接地址
      */
-    public void setToken(String Token) {
-        this.Token = Token;
+    public void setDownLoadUrl(String DownLoadUrl) {
+        this.DownLoadUrl = DownLoadUrl;
     }
 
     /**
-     * Get 过期时间戳，Unix 时间戳。 
-     * @return ExpiredTime 过期时间戳，Unix 时间戳。
+     * Get 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。 
+     * @return ExpiredAt 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
      */
-    public Long getExpiredTime() {
-        return this.ExpiredTime;
+    public String getExpiredAt() {
+        return this.ExpiredAt;
     }
 
     /**
-     * Set 过期时间戳，Unix 时间戳。
-     * @param ExpiredTime 过期时间戳，Unix 时间戳。
+     * Set 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
+     * @param ExpiredAt 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
      */
-    public void setExpiredTime(Long ExpiredTime) {
-        this.ExpiredTime = ExpiredTime;
-    }
-
-    /**
-     * Get SDK 加载路径会随着 SDK 的发布而变动。 
-     * @return SdkURL SDK 加载路径会随着 SDK 的发布而变动。
-     */
-    public String getSdkURL() {
-        return this.SdkURL;
-    }
-
-    /**
-     * Set SDK 加载路径会随着 SDK 的发布而变动。
-     * @param SdkURL SDK 加载路径会随着 SDK 的发布而变动。
-     */
-    public void setSdkURL(String SdkURL) {
-        this.SdkURL = SdkURL;
+    public void setExpiredAt(String ExpiredAt) {
+        this.ExpiredAt = ExpiredAt;
     }
 
     /**
@@ -118,9 +95,8 @@ public class CreateSDKLoginTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
-        this.setParamSimple(map, prefix + "SdkURL", this.SdkURL);
+        this.setParamSimple(map, prefix + "DownLoadUrl", this.DownLoadUrl);
+        this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
