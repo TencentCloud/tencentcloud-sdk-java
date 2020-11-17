@@ -119,6 +119,26 @@ public class AswClient extends AbstractClient{
     }
 
     /**
+     *查询指定用户下所有状态机，以列表形式返回
+     * @param req DescribeFlowServicesRequest
+     * @return DescribeFlowServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowServicesResponse DescribeFlowServices(DescribeFlowServicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowServicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowServicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlowServices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于修改状态机
      * @param req ModifyFlowServiceRequest
      * @return ModifyFlowServiceResponse

@@ -58,7 +58,7 @@ public class CreateMatchRequest extends AbstractModel{
     private String MatchDesc;
 
     /**
-    * 只支持https协议
+    * 只支持https 和 http 协议
     */
     @SerializedName("NotifyUrl")
     @Expose
@@ -194,16 +194,16 @@ public class CreateMatchRequest extends AbstractModel{
     }
 
     /**
-     * Get 只支持https协议 
-     * @return NotifyUrl 只支持https协议
+     * Get 只支持https 和 http 协议 
+     * @return NotifyUrl 只支持https 和 http 协议
      */
     public String getNotifyUrl() {
         return this.NotifyUrl;
     }
 
     /**
-     * Set 只支持https协议
-     * @param NotifyUrl 只支持https协议
+     * Set 只支持https 和 http 协议
+     * @param NotifyUrl 只支持https 和 http 协议
      */
     public void setNotifyUrl(String NotifyUrl) {
         this.NotifyUrl = NotifyUrl;

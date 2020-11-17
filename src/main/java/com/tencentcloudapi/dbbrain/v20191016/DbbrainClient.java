@@ -99,7 +99,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *获取慢日志统计柱状图
+     *获取慢日志统计柱状图。
      * @param req DescribeSlowLogTimeSeriesStatsRequest
      * @return DescribeSlowLogTimeSeriesStatsResponse
      * @throws TencentCloudSDKException

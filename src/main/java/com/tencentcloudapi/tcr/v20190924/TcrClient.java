@@ -379,6 +379,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除镜像仓库企业版实例
+     * @param req DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除长期访问凭证
      * @param req DeleteInstanceTokenRequest
      * @return DeleteInstanceTokenResponse

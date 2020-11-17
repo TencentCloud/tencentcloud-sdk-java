@@ -1773,6 +1773,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *直播上行路数查询
+     * @param req DescribeUploadStreamNumsRequest
+     * @return DescribeUploadStreamNumsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUploadStreamNumsResponse DescribeUploadStreamNums(DescribeUploadStreamNumsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUploadStreamNumsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUploadStreamNums");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询某时间段top n的域名或流id信息（暂支持top 1000）。
      * @param req DescribeVisitTopSumInfoListRequest
      * @return DescribeVisitTopSumInfoListResponse

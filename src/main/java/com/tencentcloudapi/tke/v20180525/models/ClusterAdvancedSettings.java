@@ -79,7 +79,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private Boolean DeletionProtection;
 
     /**
-    * 集群的网络代理模型
+    * 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
     */
     @SerializedName("KubeProxyMode")
     @Expose
@@ -112,6 +118,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     @SerializedName("VpcCniType")
     @Expose
     private String VpcCniType;
+
+    /**
+    * 运行时版本
+    */
+    @SerializedName("RuntimeVersion")
+    @Expose
+    private String RuntimeVersion;
 
     /**
      * Get 是否启用IPVS 
@@ -242,16 +255,40 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get 集群的网络代理模型 
-     * @return KubeProxyMode 集群的网络代理模型
+     * Get 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized； 
+     * @return KubeProxyMode 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
      */
     public String getKubeProxyMode() {
         return this.KubeProxyMode;
     }
 
     /**
-     * Set 集群的网络代理模型
-     * @param KubeProxyMode 集群的网络代理模型
+     * Set 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
+     * @param KubeProxyMode 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
      */
     public void setKubeProxyMode(String KubeProxyMode) {
         this.KubeProxyMode = KubeProxyMode;
@@ -322,6 +359,22 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get 运行时版本 
+     * @return RuntimeVersion 运行时版本
+     */
+    public String getRuntimeVersion() {
+        return this.RuntimeVersion;
+    }
+
+    /**
+     * Set 运行时版本
+     * @param RuntimeVersion 运行时版本
+     */
+    public void setRuntimeVersion(String RuntimeVersion) {
+        this.RuntimeVersion = RuntimeVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +391,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
         this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
         this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
+        this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
 
     }
 }

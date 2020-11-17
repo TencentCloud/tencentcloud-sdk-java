@@ -120,6 +120,30 @@ public class ProxyGroupDetail extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
+    * 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
+    * 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIPMethod")
+    @Expose
+    private Long [] ClientIPMethod;
+
+    /**
      * Get 创建时间 
      * @return CreateTime 创建时间
      */
@@ -352,6 +376,66 @@ public class ProxyGroupDetail extends AbstractModel{
     }
 
     /**
+     * Get 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
+     * Get 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getClientIPMethod() {
+        return this.ClientIPMethod;
+    }
+
+    /**
+     * Set 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIPMethod(Long [] ClientIPMethod) {
+        this.ClientIPMethod = ClientIPMethod;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -368,6 +452,9 @@ public class ProxyGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "IsOldGroup", this.IsOldGroup);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
 
     }
 }

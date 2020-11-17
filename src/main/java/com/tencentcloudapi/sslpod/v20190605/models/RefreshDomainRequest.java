@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class RefreshDomainRequest extends AbstractModel{
 
     /**
-    * 域名列表中的ID
+    * 域名列表中的ID，可通过搜索域名接口获得
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-     * Get 域名列表中的ID 
-     * @return DomainId 域名列表中的ID
+     * Get 域名列表中的ID，可通过搜索域名接口获得 
+     * @return DomainId 域名列表中的ID，可通过搜索域名接口获得
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名列表中的ID
-     * @param DomainId 域名列表中的ID
+     * Set 域名列表中的ID，可通过搜索域名接口获得
+     * @param DomainId 域名列表中的ID，可通过搜索域名接口获得
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

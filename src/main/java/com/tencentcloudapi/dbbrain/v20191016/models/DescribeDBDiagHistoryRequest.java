@@ -44,6 +44,13 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
@@ -92,12 +99,29 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

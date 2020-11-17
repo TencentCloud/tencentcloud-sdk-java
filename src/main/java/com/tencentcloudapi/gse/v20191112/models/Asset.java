@@ -100,6 +100,20 @@ public class Asset extends AbstractModel{
     private String OsType;
 
     /**
+    * 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+    */
+    @SerializedName("SharingStatus")
+    @Expose
+    private String SharingStatus;
+
+    /**
      * Get 生成包ID 
      * @return AssetId 生成包ID
      */
@@ -276,6 +290,38 @@ public class Asset extends AbstractModel{
     }
 
     /**
+     * Get 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型 
+     * @return ResourceType 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+     * @param ResourceType 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位 
+     * @return SharingStatus 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+     */
+    public String getSharingStatus() {
+        return this.SharingStatus;
+    }
+
+    /**
+     * Set 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+     * @param SharingStatus 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+     */
+    public void setSharingStatus(String SharingStatus) {
+        this.SharingStatus = SharingStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class Asset extends AbstractModel{
         this.setParamSimple(map, prefix + "AssetArn", this.AssetArn);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "OsType", this.OsType);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "SharingStatus", this.SharingStatus);
 
     }
 }

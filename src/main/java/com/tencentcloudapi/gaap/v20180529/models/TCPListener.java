@@ -135,6 +135,14 @@ lc表示最小连接数。
     private Long CreateTime;
 
     /**
+    * 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIPMethod")
+    @Expose
+    private Long ClientIPMethod;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -415,6 +423,26 @@ lc表示最小连接数。
     }
 
     /**
+     * Get 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIPMethod 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientIPMethod() {
+        return this.ClientIPMethod;
+    }
+
+    /**
+     * Set 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIPMethod 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIPMethod(Long ClientIPMethod) {
+        this.ClientIPMethod = ClientIPMethod;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -432,6 +460,7 @@ lc表示最小连接数。
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
 
     }
 }

@@ -207,7 +207,7 @@ public class MatchInfo extends AbstractModel{
     private String RuleName;
 
     /**
-    * 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+    * 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogStatus")
@@ -663,9 +663,9 @@ public class MatchInfo extends AbstractModel{
     }
 
     /**
-     * Get 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+     * Get 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogStatus 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+     * @return LogStatus 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogStatus() {
@@ -673,9 +673,9 @@ public class MatchInfo extends AbstractModel{
     }
 
     /**
-     * Set 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+     * Set 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogStatus 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+     * @param LogStatus 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogStatus(Long LogStatus) {

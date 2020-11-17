@@ -138,6 +138,20 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ClientToken;
 
     /**
+    * 是否支持绑定跨地域/跨Vpc绑定IP的功能。
+    */
+    @SerializedName("SnatPro")
+    @Expose
+    private Boolean SnatPro;
+
+    /**
+    * 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
+    */
+    @SerializedName("SnatIps")
+    @Expose
+    private SnatIp [] SnatIps;
+
+    /**
     * Stgw独占集群的标签。
     */
     @SerializedName("ClusterTag")
@@ -413,6 +427,38 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 是否支持绑定跨地域/跨Vpc绑定IP的功能。 
+     * @return SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
+     */
+    public Boolean getSnatPro() {
+        return this.SnatPro;
+    }
+
+    /**
+     * Set 是否支持绑定跨地域/跨Vpc绑定IP的功能。
+     * @param SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
+     */
+    public void setSnatPro(Boolean SnatPro) {
+        this.SnatPro = SnatPro;
+    }
+
+    /**
+     * Get 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。 
+     * @return SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
+     */
+    public SnatIp [] getSnatIps() {
+        return this.SnatIps;
+    }
+
+    /**
+     * Set 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
+     * @param SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
+     */
+    public void setSnatIps(SnatIp [] SnatIps) {
+        this.SnatIps = SnatIps;
+    }
+
+    /**
      * Get Stgw独占集群的标签。 
      * @return ClusterTag Stgw独占集群的标签。
      */
@@ -448,6 +494,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
+        this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
 
     }

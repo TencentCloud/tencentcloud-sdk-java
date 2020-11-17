@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeDomainCertsRequest extends AbstractModel{
 
     /**
-    * 域名ID
+    * 域名ID，可通过搜索域名接口获得
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-     * Get 域名ID 
-     * @return DomainId 域名ID
+     * Get 域名ID，可通过搜索域名接口获得 
+     * @return DomainId 域名ID，可通过搜索域名接口获得
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID
-     * @param DomainId 域名ID
+     * Set 域名ID，可通过搜索域名接口获得
+     * @param DomainId 域名ID，可通过搜索域名接口获得
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

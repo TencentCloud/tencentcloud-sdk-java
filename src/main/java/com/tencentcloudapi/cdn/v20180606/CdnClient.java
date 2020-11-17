@@ -99,6 +99,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *动态打包任务提交接口
+     * @param req CreateEdgePackTaskRequest
+     * @return CreateEdgePackTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdgePackTaskResponse CreateEdgePackTask(CreateEdgePackTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEdgePackTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEdgePackTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEdgePackTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *CreateScdnLogTask 用于创建事件日志任务
      * @param req CreateScdnLogTaskRequest
      * @return CreateScdnLogTaskResponse

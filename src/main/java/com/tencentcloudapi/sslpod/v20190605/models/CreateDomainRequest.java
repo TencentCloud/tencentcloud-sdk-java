@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDomainRequest extends AbstractModel{
 
     /**
-    * 监控的服务器类型 Enums(0,1,2,3)
+    * 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
     */
     @SerializedName("ServerType")
     @Expose
@@ -65,16 +65,16 @@ public class CreateDomainRequest extends AbstractModel{
     private String Tags;
 
     /**
-     * Get 监控的服务器类型 Enums(0,1,2,3) 
-     * @return ServerType 监控的服务器类型 Enums(0,1,2,3)
+     * Get 监控的服务器类型（0：web，1：smtp，2：imap，3：pops） 
+     * @return ServerType 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
      */
     public Long getServerType() {
         return this.ServerType;
     }
 
     /**
-     * Set 监控的服务器类型 Enums(0,1,2,3)
-     * @param ServerType 监控的服务器类型 Enums(0,1,2,3)
+     * Set 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
+     * @param ServerType 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
      */
     public void setServerType(Long ServerType) {
         this.ServerType = ServerType;

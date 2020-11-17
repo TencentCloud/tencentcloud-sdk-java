@@ -30,7 +30,7 @@ public class DescribeDetailEventRequest extends AbstractModel{
     private String CommId;
 
     /**
-    * 查询开始时间，5天内。本地unix时间戳（1588031999s）
+    * 查询开始时间，14天内。本地unix时间戳（1588031999s）
     */
     @SerializedName("StartTime")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeDetailEventRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间，5天内。本地unix时间戳（1588031999s） 
-     * @return StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * Get 查询开始时间，14天内。本地unix时间戳（1588031999s） 
+     * @return StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，5天内。本地unix时间戳（1588031999s）
-     * @param StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * Set 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * @param StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;

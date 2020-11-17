@@ -23,21 +23,14 @@ import java.util.HashMap;
 public class DescribeCostSummaryByProductRequest extends AbstractModel{
 
     /**
-    * 查询账单数据的用户UIN
-    */
-    @SerializedName("PayerUin")
-    @Expose
-    private String PayerUin;
-
-    /**
-    * 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
+    * 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
+    * 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
     */
     @SerializedName("EndTime")
     @Expose
@@ -58,6 +51,13 @@ public class DescribeCostSummaryByProductRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 查询账单数据的用户UIN
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
     * 是否需要返回记录数量，0不需要，1需要，默认不需要
     */
     @SerializedName("NeedRecordNum")
@@ -65,48 +65,32 @@ public class DescribeCostSummaryByProductRequest extends AbstractModel{
     private Long NeedRecordNum;
 
     /**
-     * Get 查询账单数据的用户UIN 
-     * @return PayerUin 查询账单数据的用户UIN
-     */
-    public String getPayerUin() {
-        return this.PayerUin;
-    }
-
-    /**
-     * Set 查询账单数据的用户UIN
-     * @param PayerUin 查询账单数据的用户UIN
-     */
-    public void setPayerUin(String PayerUin) {
-        this.PayerUin = PayerUin;
-    }
-
-    /**
-     * Get 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。 
-     * @return BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
+     * Get 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
+     * @return BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
-     * @param BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
+     * Set 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @param BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。 
-     * @return EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
+     * Get 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
+     * @return EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
-     * @param EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
+     * Set 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @param EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -145,6 +129,22 @@ public class DescribeCostSummaryByProductRequest extends AbstractModel{
     }
 
     /**
+     * Get 查询账单数据的用户UIN 
+     * @return PayerUin 查询账单数据的用户UIN
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 查询账单数据的用户UIN
+     * @param PayerUin 查询账单数据的用户UIN
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
+    /**
      * Get 是否需要返回记录数量，0不需要，1需要，默认不需要 
      * @return NeedRecordNum 是否需要返回记录数量，0不需要，1需要，默认不需要
      */
@@ -164,11 +164,11 @@ public class DescribeCostSummaryByProductRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
 
     }

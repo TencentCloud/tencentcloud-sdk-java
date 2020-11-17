@@ -23,6 +23,20 @@ import java.util.HashMap;
 public class DescribeBillSummaryByRegionRequest extends AbstractModel{
 
     /**
+    * 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private String BeginTime;
+
+    /**
+    * 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
     * 查询账单数据的用户UIN
     */
     @SerializedName("PayerUin")
@@ -30,18 +44,36 @@ public class DescribeBillSummaryByRegionRequest extends AbstractModel{
     private String PayerUin;
 
     /**
-    * 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
-    */
-    @SerializedName("BeginTime")
-    @Expose
-    private String BeginTime;
+     * Get 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
+     * @return BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     */
+    public String getBeginTime() {
+        return this.BeginTime;
+    }
 
     /**
-    * 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private String EndTime;
+     * Set 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @param BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     */
+    public void setBeginTime(String BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。 
+     * @return EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @param EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
 
     /**
      * Get 查询账单数据的用户UIN 
@@ -60,44 +92,12 @@ public class DescribeBillSummaryByRegionRequest extends AbstractModel{
     }
 
     /**
-     * Get 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00 
-     * @return BeginTime 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
-     */
-    public String getBeginTime() {
-        return this.BeginTime;
-    }
-
-    /**
-     * Set 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
-     * @param BeginTime 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
-     */
-    public void setBeginTime(String BeginTime) {
-        this.BeginTime = BeginTime;
-    }
-
-    /**
-     * Get 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59 
-     * @return EndTime 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
-     */
-    public String getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
-     * @param EndTime 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
-     */
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

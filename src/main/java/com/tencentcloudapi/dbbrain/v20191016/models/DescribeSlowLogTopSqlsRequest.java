@@ -79,6 +79,13 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private SchemaItem [] SchemaList;
 
     /**
+    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
@@ -207,6 +214,22 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "SchemaList.", this.SchemaList);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

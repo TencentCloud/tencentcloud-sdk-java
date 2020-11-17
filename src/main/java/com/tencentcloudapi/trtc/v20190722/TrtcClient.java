@@ -199,6 +199,31 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询云端录制计费时长。
+
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+     * @param req DescribeRecordStatisticRequest
+     * @return DescribeRecordStatisticResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordStatisticResponse DescribeRecordStatistic(DescribeRecordStatisticRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordStatisticResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordStatistic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
      * @param req DescribeRoomInformationRequest
      * @return DescribeRoomInformationResponse
@@ -211,6 +236,54 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomInformationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRoomInformation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询音视频互动计费时长。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+     * @param req DescribeTrtcInteractiveTimeRequest
+     * @return DescribeTrtcInteractiveTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrtcInteractiveTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询旁路转码计费时长。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+     * @param req DescribeTrtcMcuTranscodeTimeRequest
+     * @return DescribeTrtcMcuTranscodeTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(DescribeTrtcMcuTranscodeTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrtcMcuTranscodeTime");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -259,6 +332,26 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+     * @param req DismissRoomByStrRoomIdRequest
+     * @return DismissRoomByStrRoomIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(DismissRoomByStrRoomIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DismissRoomByStrRoomIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DismissRoomByStrRoomIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DismissRoomByStrRoomId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
      * @param req RemoveUserRequest
      * @return RemoveUserResponse
@@ -271,6 +364,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+     * @param req RemoveUserByStrRoomIdRequest
+     * @return RemoveUserByStrRoomIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(RemoveUserByStrRoomIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveUserByStrRoomIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveUserByStrRoomIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveUserByStrRoomId");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

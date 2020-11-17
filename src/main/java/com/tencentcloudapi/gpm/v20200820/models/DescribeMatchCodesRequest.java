@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeMatchCodesRequest extends AbstractModel{
 
     /**
-    * 偏移量
+    * 偏移量，页码
     */
     @SerializedName("Offset")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeMatchCodesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，页码 
+     * @return Offset 偏移量，页码
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，页码
+     * @param Offset 偏移量，页码
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

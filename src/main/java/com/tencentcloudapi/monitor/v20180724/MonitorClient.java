@@ -263,6 +263,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *云监控支持多种类型的监控，此接口列出支持的所有类型
+     * @param req DescribeMonitorTypesRequest
+     * @return DescribeMonitorTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMonitorTypesResponse DescribeMonitorTypes(DescribeMonitorTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMonitorTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMonitorTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMonitorTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取基础告警策略条件
      * @param req DescribePolicyConditionListRequest
      * @return DescribePolicyConditionListResponse

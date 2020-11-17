@@ -58,6 +58,13 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String EndDate;
 
     /**
+    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
@@ -138,6 +145,22 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "StartDate", this.StartDate);
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

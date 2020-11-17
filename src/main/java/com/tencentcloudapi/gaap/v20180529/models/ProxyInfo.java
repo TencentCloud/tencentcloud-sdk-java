@@ -228,6 +228,14 @@ UNKNOWN表示未知状态。
     private Long ProxyType;
 
     /**
+    * 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientIPMethod")
+    @Expose
+    private Long [] ClientIPMethod;
+
+    /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -736,6 +744,26 @@ UNKNOWN表示未知状态。
     }
 
     /**
+     * Get 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getClientIPMethod() {
+        return this.ClientIPMethod;
+    }
+
+    /**
+     * Set 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientIPMethod(Long [] ClientIPMethod) {
+        this.ClientIPMethod = ClientIPMethod;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -765,6 +793,7 @@ UNKNOWN表示未知状态。
         this.setParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
         this.setParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
+        this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
 
     }
 }

@@ -30,7 +30,7 @@ public class ModifyRuleRequest extends AbstractModel{
     private String RuleCode;
 
     /**
-    * 规则名称
+    * 规则名称，只能包含数字、字母、. 和 -
     */
     @SerializedName("RuleName")
     @Expose
@@ -67,16 +67,16 @@ public class ModifyRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 规则名称 
-     * @return RuleName 规则名称
+     * Get 规则名称，只能包含数字、字母、. 和 - 
+     * @return RuleName 规则名称，只能包含数字、字母、. 和 -
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名称
-     * @param RuleName 规则名称
+     * Set 规则名称，只能包含数字、字母、. 和 -
+     * @param RuleName 规则名称，只能包含数字、字母、. 和 -
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

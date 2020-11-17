@@ -44,7 +44,7 @@ public class DescribeDomainsRequest extends AbstractModel{
     private String SearchType;
 
     /**
-    * 标签
+    * 标签，多个标签用逗号分隔
     */
     @SerializedName("Tag")
     @Expose
@@ -141,16 +141,16 @@ public class DescribeDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Get 标签 
-     * @return Tag 标签
+     * Get 标签，多个标签用逗号分隔 
+     * @return Tag 标签，多个标签用逗号分隔
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签
-     * @param Tag 标签
+     * Set 标签，多个标签用逗号分隔
+     * @param Tag 标签，多个标签用逗号分隔
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
