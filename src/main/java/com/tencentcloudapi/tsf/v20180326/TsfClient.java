@@ -2183,6 +2183,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *更新健康检查配置
+     * @param req UpdateHealthCheckSettingsRequest
+     * @return UpdateHealthCheckSettingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateHealthCheckSettingsResponse UpdateHealthCheckSettings(UpdateHealthCheckSettingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateHealthCheckSettingsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateHealthCheckSettingsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateHealthCheckSettings");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新仓库信息
      * @param req UpdateRepositoryRequest
      * @return UpdateRepositoryResponse

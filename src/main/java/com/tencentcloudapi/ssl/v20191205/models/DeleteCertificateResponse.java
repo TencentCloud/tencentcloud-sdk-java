@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteCertificateResponse extends AbstractModel{
 
     /**
-    * 删除结果。
+    * 删除结果（true：删除成功，false：删除失败）
     */
     @SerializedName("DeleteResult")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteCertificateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 删除结果。 
-     * @return DeleteResult 删除结果。
+     * Get 删除结果（true：删除成功，false：删除失败） 
+     * @return DeleteResult 删除结果（true：删除成功，false：删除失败）
      */
     public Boolean getDeleteResult() {
         return this.DeleteResult;
     }
 
     /**
-     * Set 删除结果。
-     * @param DeleteResult 删除结果。
+     * Set 删除结果（true：删除成功，false：删除失败）
+     * @param DeleteResult 删除结果（true：删除成功，false：删除失败）
      */
     public void setDeleteResult(Boolean DeleteResult) {
         this.DeleteResult = DeleteResult;

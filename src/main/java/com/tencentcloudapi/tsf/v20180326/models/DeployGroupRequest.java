@@ -58,6 +58,55 @@ public class DeployGroupRequest extends AbstractModel{
     private Boolean ForceStart;
 
     /**
+    * 是否开启健康检查
+    */
+    @SerializedName("EnableHealthCheck")
+    @Expose
+    private Boolean EnableHealthCheck;
+
+    /**
+    * 开启健康检查时，配置健康检查
+    */
+    @SerializedName("HealthCheckSettings")
+    @Expose
+    private HealthCheckSettings HealthCheckSettings;
+
+    /**
+    * 部署方式，0表示快速更新，1表示滚动更新
+    */
+    @SerializedName("UpdateType")
+    @Expose
+    private Long UpdateType;
+
+    /**
+    * 是否启用beta批次
+    */
+    @SerializedName("DeployBetaEnable")
+    @Expose
+    private Boolean DeployBetaEnable;
+
+    /**
+    * 滚动发布每个批次参与的实例比率
+    */
+    @SerializedName("DeployBatch")
+    @Expose
+    private Float [] DeployBatch;
+
+    /**
+    * 滚动发布的执行方式
+    */
+    @SerializedName("DeployExeMode")
+    @Expose
+    private String DeployExeMode;
+
+    /**
+    * 滚动发布每个批次的时间间隔
+    */
+    @SerializedName("DeployWaitTime")
+    @Expose
+    private Long DeployWaitTime;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -138,6 +187,118 @@ public class DeployGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启健康检查 
+     * @return EnableHealthCheck 是否开启健康检查
+     */
+    public Boolean getEnableHealthCheck() {
+        return this.EnableHealthCheck;
+    }
+
+    /**
+     * Set 是否开启健康检查
+     * @param EnableHealthCheck 是否开启健康检查
+     */
+    public void setEnableHealthCheck(Boolean EnableHealthCheck) {
+        this.EnableHealthCheck = EnableHealthCheck;
+    }
+
+    /**
+     * Get 开启健康检查时，配置健康检查 
+     * @return HealthCheckSettings 开启健康检查时，配置健康检查
+     */
+    public HealthCheckSettings getHealthCheckSettings() {
+        return this.HealthCheckSettings;
+    }
+
+    /**
+     * Set 开启健康检查时，配置健康检查
+     * @param HealthCheckSettings 开启健康检查时，配置健康检查
+     */
+    public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
+        this.HealthCheckSettings = HealthCheckSettings;
+    }
+
+    /**
+     * Get 部署方式，0表示快速更新，1表示滚动更新 
+     * @return UpdateType 部署方式，0表示快速更新，1表示滚动更新
+     */
+    public Long getUpdateType() {
+        return this.UpdateType;
+    }
+
+    /**
+     * Set 部署方式，0表示快速更新，1表示滚动更新
+     * @param UpdateType 部署方式，0表示快速更新，1表示滚动更新
+     */
+    public void setUpdateType(Long UpdateType) {
+        this.UpdateType = UpdateType;
+    }
+
+    /**
+     * Get 是否启用beta批次 
+     * @return DeployBetaEnable 是否启用beta批次
+     */
+    public Boolean getDeployBetaEnable() {
+        return this.DeployBetaEnable;
+    }
+
+    /**
+     * Set 是否启用beta批次
+     * @param DeployBetaEnable 是否启用beta批次
+     */
+    public void setDeployBetaEnable(Boolean DeployBetaEnable) {
+        this.DeployBetaEnable = DeployBetaEnable;
+    }
+
+    /**
+     * Get 滚动发布每个批次参与的实例比率 
+     * @return DeployBatch 滚动发布每个批次参与的实例比率
+     */
+    public Float [] getDeployBatch() {
+        return this.DeployBatch;
+    }
+
+    /**
+     * Set 滚动发布每个批次参与的实例比率
+     * @param DeployBatch 滚动发布每个批次参与的实例比率
+     */
+    public void setDeployBatch(Float [] DeployBatch) {
+        this.DeployBatch = DeployBatch;
+    }
+
+    /**
+     * Get 滚动发布的执行方式 
+     * @return DeployExeMode 滚动发布的执行方式
+     */
+    public String getDeployExeMode() {
+        return this.DeployExeMode;
+    }
+
+    /**
+     * Set 滚动发布的执行方式
+     * @param DeployExeMode 滚动发布的执行方式
+     */
+    public void setDeployExeMode(String DeployExeMode) {
+        this.DeployExeMode = DeployExeMode;
+    }
+
+    /**
+     * Get 滚动发布每个批次的时间间隔 
+     * @return DeployWaitTime 滚动发布每个批次的时间间隔
+     */
+    public Long getDeployWaitTime() {
+        return this.DeployWaitTime;
+    }
+
+    /**
+     * Set 滚动发布每个批次的时间间隔
+     * @param DeployWaitTime 滚动发布每个批次的时间间隔
+     */
+    public void setDeployWaitTime(Long DeployWaitTime) {
+        this.DeployWaitTime = DeployWaitTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +307,13 @@ public class DeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
         this.setParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
         this.setParamSimple(map, prefix + "ForceStart", this.ForceStart);
+        this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+        this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+        this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
+        this.setParamSimple(map, prefix + "DeployBetaEnable", this.DeployBetaEnable);
+        this.setParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
+        this.setParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
+        this.setParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
 
     }
 }

@@ -47,7 +47,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ChannelNum;
 
     /**
-    * 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点）
+    * 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
     */
     @SerializedName("ResTextFormat")
     @Expose
@@ -59,6 +59,21 @@ public class CreateRecTaskRequest extends AbstractModel{
     @SerializedName("SourceType")
     @Expose
     private Long SourceType;
+
+    /**
+    * 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+    */
+    @SerializedName("SpeakerDiarization")
+    @Expose
+    private Long SpeakerDiarization;
+
+    /**
+    * 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+    */
+    @SerializedName("SpeakerNumber")
+    @Expose
+    private Long SpeakerNumber;
 
     /**
     * 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
@@ -122,21 +137,6 @@ public class CreateRecTaskRequest extends AbstractModel{
     @SerializedName("Extra")
     @Expose
     private String Extra;
-
-    /**
-    * 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
-    */
-    @SerializedName("SpeakerDiarization")
-    @Expose
-    private Long SpeakerDiarization;
-
-    /**
-    * 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
-    */
-    @SerializedName("SpeakerNumber")
-    @Expose
-    private Long SpeakerNumber;
 
     /**
     * 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
@@ -218,16 +218,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点） 
-     * @return ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点）
+     * Get 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值） 
+     * @return ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
      */
     public Long getResTextFormat() {
         return this.ResTextFormat;
     }
 
     /**
-     * Set 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点）
-     * @param ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点）
+     * Set 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
+     * @param ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
      */
     public void setResTextFormat(Long ResTextFormat) {
         this.ResTextFormat = ResTextFormat;
@@ -247,6 +247,42 @@ public class CreateRecTaskRequest extends AbstractModel{
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
+    }
+
+    /**
+     * Get 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频) 
+     * @return SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+     */
+    public Long getSpeakerDiarization() {
+        return this.SpeakerDiarization;
+    }
+
+    /**
+     * Set 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+     * @param SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+     */
+    public void setSpeakerDiarization(Long SpeakerDiarization) {
+        this.SpeakerDiarization = SpeakerDiarization;
+    }
+
+    /**
+     * Get 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用 
+     * @return SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+     */
+    public Long getSpeakerNumber() {
+        return this.SpeakerNumber;
+    }
+
+    /**
+     * Set 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+     * @param SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+注：话者分离目前是beta版本，请根据您的需要谨慎使用
+     */
+    public void setSpeakerNumber(Long SpeakerNumber) {
+        this.SpeakerNumber = SpeakerNumber;
     }
 
     /**
@@ -394,42 +430,6 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频) 
-     * @return SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
-     */
-    public Long getSpeakerDiarization() {
-        return this.SpeakerDiarization;
-    }
-
-    /**
-     * Set 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
-     * @param SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
-     */
-    public void setSpeakerDiarization(Long SpeakerDiarization) {
-        this.SpeakerDiarization = SpeakerDiarization;
-    }
-
-    /**
-     * Get 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
-注：话者分离目前是beta版本，请根据您的需要谨慎使用 
-     * @return SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
-     */
-    public Long getSpeakerNumber() {
-        return this.SpeakerNumber;
-    }
-
-    /**
-     * Set 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
-     * @param SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
-     */
-    public void setSpeakerNumber(Long SpeakerNumber) {
-        this.SpeakerNumber = SpeakerNumber;
-    }
-
-    /**
      * Get 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。 
      * @return FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
      */
@@ -453,6 +453,8 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelNum", this.ChannelNum);
         this.setParamSimple(map, prefix + "ResTextFormat", this.ResTextFormat);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "SpeakerDiarization", this.SpeakerDiarization);
+        this.setParamSimple(map, prefix + "SpeakerNumber", this.SpeakerNumber);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Data", this.Data);
@@ -462,8 +464,6 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
         this.setParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
-        this.setParamSimple(map, prefix + "SpeakerDiarization", this.SpeakerDiarization);
-        this.setParamSimple(map, prefix + "SpeakerNumber", this.SpeakerNumber);
         this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
 
     }

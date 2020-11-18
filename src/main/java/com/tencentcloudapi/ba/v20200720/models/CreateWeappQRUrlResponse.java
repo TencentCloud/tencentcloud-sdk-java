@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.ba.v20200720.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCertificateResponse extends AbstractModel{
+public class CreateWeappQRUrlResponse extends AbstractModel{
 
     /**
-    * 证书ID列表
+    * 渠道备案小程序二维码
     */
-    @SerializedName("CertificateIds")
+    @SerializedName("Url")
     @Expose
-    private String [] CertificateIds;
-
-    /**
-    * 订单号列表
-    */
-    @SerializedName("DealIds")
-    @Expose
-    private String [] DealIds;
+    private String Url;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class CreateCertificateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 证书ID列表 
-     * @return CertificateIds 证书ID列表
+     * Get 渠道备案小程序二维码 
+     * @return Url 渠道备案小程序二维码
      */
-    public String [] getCertificateIds() {
-        return this.CertificateIds;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set 证书ID列表
-     * @param CertificateIds 证书ID列表
+     * Set 渠道备案小程序二维码
+     * @param Url 渠道备案小程序二维码
      */
-    public void setCertificateIds(String [] CertificateIds) {
-        this.CertificateIds = CertificateIds;
-    }
-
-    /**
-     * Get 订单号列表 
-     * @return DealIds 订单号列表
-     */
-    public String [] getDealIds() {
-        return this.DealIds;
-    }
-
-    /**
-     * Set 订单号列表
-     * @param DealIds 订单号列表
-     */
-    public void setDealIds(String [] DealIds) {
-        this.DealIds = DealIds;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
@@ -95,8 +72,7 @@ public class CreateCertificateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "CertificateIds.", this.CertificateIds);
-        this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

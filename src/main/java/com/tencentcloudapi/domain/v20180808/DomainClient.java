@@ -267,6 +267,26 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeTemplate) 用于获取模板信息。
+     * @param req DescribeTemplateRequest
+     * @return DescribeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTemplateResponse DescribeTemplate(DescribeTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeTemplateList) 用于获取模板列表。
 
      * @param req DescribeTemplateListRequest

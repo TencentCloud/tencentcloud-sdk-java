@@ -167,7 +167,7 @@ public class DomainDetailInfo extends AbstractModel{
     private String Readonly;
 
     /**
-    * 域名标签
+    * 域名标签。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
@@ -523,9 +523,9 @@ public class DomainDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 域名标签
+     * Get 域名标签。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tag 域名标签
+     * @return Tag 域名标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
@@ -533,9 +533,9 @@ public class DomainDetailInfo extends AbstractModel{
     }
 
     /**
-     * Set 域名标签
+     * Set 域名标签。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tag 域名标签
+     * @param Tag 域名标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {

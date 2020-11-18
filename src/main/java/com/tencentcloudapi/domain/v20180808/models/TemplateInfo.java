@@ -30,7 +30,7 @@ public class TemplateInfo extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 认证状态
+    * 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
     */
     @SerializedName("AuditStatus")
     @Expose
@@ -58,7 +58,7 @@ public class TemplateInfo extends AbstractModel{
     private String UserUin;
 
     /**
-    * 是否是默认模板
+    * 是否是默认模板: 是:yes，否:no
     */
     @SerializedName("IsDefault")
     @Expose
@@ -116,16 +116,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 认证状态 
-     * @return AuditStatus 认证状态
+     * Get 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject 
+     * @return AuditStatus 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
      */
     public String getAuditStatus() {
         return this.AuditStatus;
     }
 
     /**
-     * Set 认证状态
-     * @param AuditStatus 认证状态
+     * Set 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+     * @param AuditStatus 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
      */
     public void setAuditStatus(String AuditStatus) {
         this.AuditStatus = AuditStatus;
@@ -180,16 +180,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否是默认模板 
-     * @return IsDefault 是否是默认模板
+     * Get 是否是默认模板: 是:yes，否:no 
+     * @return IsDefault 是否是默认模板: 是:yes，否:no
      */
     public String getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否是默认模板
-     * @param IsDefault 是否是默认模板
+     * Set 是否是默认模板: 是:yes，否:no
+     * @param IsDefault 是否是默认模板: 是:yes，否:no
      */
     public void setIsDefault(String IsDefault) {
         this.IsDefault = IsDefault;

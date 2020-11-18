@@ -58,7 +58,7 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String [] DomainList;
 
     /**
-    * 私钥密码。
+    * 私钥密码（非必填）。
     */
     @SerializedName("KeyPassword")
     @Expose
@@ -128,7 +128,7 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String PhoneNumber;
 
     /**
-    * 证书验证方式。
+    * 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
     */
     @SerializedName("VerifyType")
     @Expose
@@ -285,16 +285,16 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 私钥密码。 
-     * @return KeyPassword 私钥密码。
+     * Get 私钥密码（非必填）。 
+     * @return KeyPassword 私钥密码（非必填）。
      */
     public String getKeyPassword() {
         return this.KeyPassword;
     }
 
     /**
-     * Set 私钥密码。
-     * @param KeyPassword 私钥密码。
+     * Set 私钥密码（非必填）。
+     * @param KeyPassword 私钥密码（非必填）。
      */
     public void setKeyPassword(String KeyPassword) {
         this.KeyPassword = KeyPassword;
@@ -445,16 +445,16 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书验证方式。 
-     * @return VerifyType 证书验证方式。
+     * Get 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。 
+     * @return VerifyType 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set 证书验证方式。
-     * @param VerifyType 证书验证方式。
+     * Set 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
+     * @param VerifyType 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;

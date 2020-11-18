@@ -255,6 +255,22 @@ public class VmGroup extends AbstractModel{
     private Long DeployWaitTime;
 
     /**
+    * 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableHealthCheck")
+    @Expose
+    private Boolean EnableHealthCheck;
+
+    /**
+    * 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCheckSettings")
+    @Expose
+    private HealthCheckSettings HealthCheckSettings;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -835,6 +851,46 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
+     * Get 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableHealthCheck 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableHealthCheck() {
+        return this.EnableHealthCheck;
+    }
+
+    /**
+     * Set 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableHealthCheck 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableHealthCheck(Boolean EnableHealthCheck) {
+        this.EnableHealthCheck = EnableHealthCheck;
+    }
+
+    /**
+     * Get 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCheckSettings 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HealthCheckSettings getHealthCheckSettings() {
+        return this.HealthCheckSettings;
+    }
+
+    /**
+     * Set 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckSettings 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
+        this.HealthCheckSettings = HealthCheckSettings;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -867,6 +923,8 @@ public class VmGroup extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
         this.setParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
         this.setParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
+        this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+        this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
 
     }
 }
