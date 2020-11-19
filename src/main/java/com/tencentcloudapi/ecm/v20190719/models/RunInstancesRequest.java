@@ -38,7 +38,9 @@ Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [
     private String Password;
 
     /**
-    * 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+    * 公网出带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用模块下的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthIn的值
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -138,6 +140,15 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     private Long SystemDiskSize;
 
     /**
+    * 公网入带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用对应模块的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthOut
+    */
+    @SerializedName("InternetMaxBandwidthIn")
+    @Expose
+    private Long InternetMaxBandwidthIn;
+
+    /**
      * Get 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100 
      * @return ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
      */
@@ -174,16 +185,24 @@ Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [
     }
 
     /**
-     * Get 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值 
-     * @return InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+     * Get 公网出带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用模块下的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthIn的值 
+     * @return InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用模块下的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthIn的值
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
-     * @param InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+     * Set 公网出带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用模块下的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthIn的值
+     * @param InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用模块下的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthIn的值
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
@@ -418,6 +437,30 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     }
 
     /**
+     * Get 公网入带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用对应模块的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthOut 
+     * @return InternetMaxBandwidthIn 公网入带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用对应模块的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthOut
+     */
+    public Long getInternetMaxBandwidthIn() {
+        return this.InternetMaxBandwidthIn;
+    }
+
+    /**
+     * Set 公网入带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用对应模块的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthOut
+     * @param InternetMaxBandwidthIn 公网入带宽上限，单位：Mbps。
+1.如果未传该参数或者传的值为0，则使用对应模块的默认值。
+2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthOut
+     */
+    public void setInternetMaxBandwidthIn(Long InternetMaxBandwidthIn) {
+        this.InternetMaxBandwidthIn = InternetMaxBandwidthIn;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -436,6 +479,7 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         this.setParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);
+        this.setParamSimple(map, prefix + "InternetMaxBandwidthIn", this.InternetMaxBandwidthIn);
 
     }
 }

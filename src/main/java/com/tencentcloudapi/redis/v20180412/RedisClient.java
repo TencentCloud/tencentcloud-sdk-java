@@ -759,6 +759,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询Tendis慢查询
+     * @param req DescribeTendisSlowLogRequest
+     * @return DescribeTendisSlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTendisSlowLogResponse DescribeTendisSlowLog(DescribeTendisSlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTendisSlowLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTendisSlowLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *按量计费实例销毁
      * @param req DestroyPostpaidInstanceRequest
      * @return DestroyPostpaidInstanceResponse

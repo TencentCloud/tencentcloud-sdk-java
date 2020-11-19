@@ -36,7 +36,7 @@ public class ServiceSetting extends AbstractModel{
     */
     @SerializedName("ProtocolPorts")
     @Expose
-    private ProtocolPort ProtocolPorts;
+    private ProtocolPort [] ProtocolPorts;
 
     /**
     * 子网ID
@@ -72,7 +72,7 @@ public class ServiceSetting extends AbstractModel{
      * @return ProtocolPorts 容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ProtocolPort getProtocolPorts() {
+    public ProtocolPort [] getProtocolPorts() {
         return this.ProtocolPorts;
     }
 
@@ -82,7 +82,7 @@ public class ServiceSetting extends AbstractModel{
      * @param ProtocolPorts 容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setProtocolPorts(ProtocolPort ProtocolPorts) {
+    public void setProtocolPorts(ProtocolPort [] ProtocolPorts) {
         this.ProtocolPorts = ProtocolPorts;
     }
 
@@ -111,7 +111,7 @@ public class ServiceSetting extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessType", this.AccessType);
-        this.setParamObj(map, prefix + "ProtocolPorts.", this.ProtocolPorts);
+        this.setParamArrayObj(map, prefix + "ProtocolPorts.", this.ProtocolPorts);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }

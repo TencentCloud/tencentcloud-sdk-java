@@ -359,6 +359,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建工作流
+     * @param req CreateTaskFlowRequest
+     * @return CreateTaskFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFlowResponse CreateTaskFlow(CreateTaskFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTaskFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTaskFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTaskFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除应用
      * @param req DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -1802,6 +1822,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *修改任务
+     * @param req ModifyTaskRequest
+     * @return ModifyTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTaskResponse ModifyTask(ModifyTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
      * @param req ModifyUploadInfoRequest
@@ -1855,6 +1895,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<RedoTaskBatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RedoTaskBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重新执行在某个节点上执行任务。
+     * @param req RedoTaskExecuteRequest
+     * @return RedoTaskExecuteResponse
+     * @throws TencentCloudSDKException
+     */
+    public RedoTaskExecuteResponse RedoTaskExecute(RedoTaskExecuteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RedoTaskExecuteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RedoTaskExecuteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RedoTaskExecute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
