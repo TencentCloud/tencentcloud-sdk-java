@@ -87,6 +87,14 @@ public class Listener extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 监听器的会话类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionType")
+    @Expose
+    private String SessionType;
+
+    /**
      * Get 负载均衡监听器 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListenerId 负载均衡监听器 ID
@@ -247,6 +255,26 @@ public class Listener extends AbstractModel{
     }
 
     /**
+     * Get 监听器的会话类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionType 监听器的会话类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionType() {
+        return this.SessionType;
+    }
+
+    /**
+     * Set 监听器的会话类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionType 监听器的会话类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionType(String SessionType) {
+        this.SessionType = SessionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +286,7 @@ public class Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SessionType", this.SessionType);
 
     }
 }

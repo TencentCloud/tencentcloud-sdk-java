@@ -44,7 +44,7 @@ public class PhoneVerificationRequest extends AbstractModel{
     private String Phone;
 
     /**
-    * 有加密需求的用户，接入传入kms的CiphertextBlob
+    * 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -113,16 +113,16 @@ public class PhoneVerificationRequest extends AbstractModel{
     }
 
     /**
-     * Get 有加密需求的用户，接入传入kms的CiphertextBlob 
-     * @return CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob
+     * Get 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。 
+     * @return CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * Set 有加密需求的用户，接入传入kms的CiphertextBlob
-     * @param CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob
+     * Set 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @param CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

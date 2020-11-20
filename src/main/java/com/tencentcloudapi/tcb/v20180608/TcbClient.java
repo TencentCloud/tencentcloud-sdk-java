@@ -259,6 +259,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查看容器托管的集群状态
+     * @param req DescribeCloudBaseRunResourceRequest
+     * @return DescribeCloudBaseRunResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(DescribeCloudBaseRunResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
      * @param req DescribeCloudBaseRunServerVersionRequest
      * @return DescribeCloudBaseRunServerVersionResponse

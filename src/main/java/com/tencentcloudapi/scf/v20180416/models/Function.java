@@ -65,7 +65,7 @@ public class Function extends AbstractModel{
     private String Namespace;
 
     /**
-    * 函数状态
+    * 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
     */
     @SerializedName("Status")
     @Expose
@@ -98,6 +98,29 @@ public class Function extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 函数状态失败原因
+    */
+    @SerializedName("StatusReasons")
+    @Expose
+    private StatusReason [] StatusReasons;
+
+    /**
+    * 函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalProvisionedConcurrencyMem")
+    @Expose
+    private Long TotalProvisionedConcurrencyMem;
+
+    /**
+    * 函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReservedConcurrencyMem")
+    @Expose
+    private Long ReservedConcurrencyMem;
 
     /**
      * Get 修改时间 
@@ -196,16 +219,16 @@ public class Function extends AbstractModel{
     }
 
     /**
-     * Get 函数状态 
-     * @return Status 函数状态
+     * Get 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175) 
+     * @return Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 函数状态
-     * @param Status 函数状态
+     * Set 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+     * @param Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -276,6 +299,62 @@ public class Function extends AbstractModel{
     }
 
     /**
+     * Get 函数状态失败原因 
+     * @return StatusReasons 函数状态失败原因
+     */
+    public StatusReason [] getStatusReasons() {
+        return this.StatusReasons;
+    }
+
+    /**
+     * Set 函数状态失败原因
+     * @param StatusReasons 函数状态失败原因
+     */
+    public void setStatusReasons(StatusReason [] StatusReasons) {
+        this.StatusReasons = StatusReasons;
+    }
+
+    /**
+     * Get 函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalProvisionedConcurrencyMem 函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalProvisionedConcurrencyMem() {
+        return this.TotalProvisionedConcurrencyMem;
+    }
+
+    /**
+     * Set 函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalProvisionedConcurrencyMem 函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalProvisionedConcurrencyMem(Long TotalProvisionedConcurrencyMem) {
+        this.TotalProvisionedConcurrencyMem = TotalProvisionedConcurrencyMem;
+    }
+
+    /**
+     * Get 函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReservedConcurrencyMem 函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReservedConcurrencyMem() {
+        return this.ReservedConcurrencyMem;
+    }
+
+    /**
+     * Set 函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReservedConcurrencyMem 函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReservedConcurrencyMem(Long ReservedConcurrencyMem) {
+        this.ReservedConcurrencyMem = ReservedConcurrencyMem;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +369,9 @@ public class Function extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+        this.setParamSimple(map, prefix + "TotalProvisionedConcurrencyMem", this.TotalProvisionedConcurrencyMem);
+        this.setParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
 
     }
 }

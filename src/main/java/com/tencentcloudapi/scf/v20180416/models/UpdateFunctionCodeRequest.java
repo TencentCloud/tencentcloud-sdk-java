@@ -93,7 +93,7 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     private Code Code;
 
     /**
-    * 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+    * 代码来源方式，支持 ZipFile, Cos, Inline 之一
     */
     @SerializedName("CodeSource")
     @Expose
@@ -260,16 +260,16 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段 
-     * @return CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * Get 代码来源方式，支持 ZipFile, Cos, Inline 之一 
+     * @return CodeSource 代码来源方式，支持 ZipFile, Cos, Inline 之一
      */
     public String getCodeSource() {
         return this.CodeSource;
     }
 
     /**
-     * Set 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
-     * @param CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * Set 代码来源方式，支持 ZipFile, Cos, Inline 之一
+     * @param CodeSource 代码来源方式，支持 ZipFile, Cos, Inline 之一
      */
     public void setCodeSource(String CodeSource) {
         this.CodeSource = CodeSource;

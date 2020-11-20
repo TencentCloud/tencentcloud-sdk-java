@@ -51,7 +51,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private Long Timeout;
 
     /**
-    * 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Golang1 ， Java8和CustomRuntime
+    * 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime
     */
     @SerializedName("Runtime")
     @Expose
@@ -100,7 +100,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String ClsTopicId;
 
     /**
-    * 在更新时是否同步发布新版本，默认为：FALSE，不发布
+    * 在更新时是否同步发布新版本，默认为：FALSE，不发布新版本
     */
     @SerializedName("Publish")
     @Expose
@@ -135,7 +135,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private PublicNetConfigIn PublicNetConfig;
 
     /**
-    * 文件系统配置入参，用于云函数绑定文件系统
+    * 文件系统配置入参，用于云函数绑定CFS文件系统
     */
     @SerializedName("CfsConfig")
     @Expose
@@ -213,16 +213,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Golang1 ， Java8和CustomRuntime 
-     * @return Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Golang1 ， Java8和CustomRuntime
+     * Get 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime 
+     * @return Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Golang1 ， Java8和CustomRuntime
-     * @param Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Golang1 ， Java8和CustomRuntime
+     * Set 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime
+     * @param Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
@@ -325,16 +325,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 在更新时是否同步发布新版本，默认为：FALSE，不发布 
-     * @return Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * Get 在更新时是否同步发布新版本，默认为：FALSE，不发布新版本 
+     * @return Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布新版本
      */
     public String getPublish() {
         return this.Publish;
     }
 
     /**
-     * Set 在更新时是否同步发布新版本，默认为：FALSE，不发布
-     * @param Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * Set 在更新时是否同步发布新版本，默认为：FALSE，不发布新版本
+     * @param Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布新版本
      */
     public void setPublish(String Publish) {
         this.Publish = Publish;
@@ -405,16 +405,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件系统配置入参，用于云函数绑定文件系统 
-     * @return CfsConfig 文件系统配置入参，用于云函数绑定文件系统
+     * Get 文件系统配置入参，用于云函数绑定CFS文件系统 
+     * @return CfsConfig 文件系统配置入参，用于云函数绑定CFS文件系统
      */
     public CfsConfig getCfsConfig() {
         return this.CfsConfig;
     }
 
     /**
-     * Set 文件系统配置入参，用于云函数绑定文件系统
-     * @param CfsConfig 文件系统配置入参，用于云函数绑定文件系统
+     * Set 文件系统配置入参，用于云函数绑定CFS文件系统
+     * @param CfsConfig 文件系统配置入参，用于云函数绑定CFS文件系统
      */
     public void setCfsConfig(CfsConfig CfsConfig) {
         this.CfsConfig = CfsConfig;

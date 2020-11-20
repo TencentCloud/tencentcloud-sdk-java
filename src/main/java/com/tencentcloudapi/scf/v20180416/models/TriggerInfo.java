@@ -87,6 +87,27 @@ public class TriggerInfo extends AbstractModel{
     private String ModTime;
 
     /**
+    * 触发器最小资源ID
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * 触发器和云函数绑定状态
+    */
+    @SerializedName("BindStatus")
+    @Expose
+    private String BindStatus;
+
+    /**
+    * 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+    */
+    @SerializedName("TriggerAttribute")
+    @Expose
+    private String TriggerAttribute;
+
+    /**
      * Get 使能开关 
      * @return Enable 使能开关
      */
@@ -235,6 +256,54 @@ public class TriggerInfo extends AbstractModel{
     }
 
     /**
+     * Get 触发器最小资源ID 
+     * @return ResourceId 触发器最小资源ID
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 触发器最小资源ID
+     * @param ResourceId 触发器最小资源ID
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get 触发器和云函数绑定状态 
+     * @return BindStatus 触发器和云函数绑定状态
+     */
+    public String getBindStatus() {
+        return this.BindStatus;
+    }
+
+    /**
+     * Set 触发器和云函数绑定状态
+     * @param BindStatus 触发器和云函数绑定状态
+     */
+    public void setBindStatus(String BindStatus) {
+        this.BindStatus = BindStatus;
+    }
+
+    /**
+     * Get 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建 
+     * @return TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     */
+    public String getTriggerAttribute() {
+        return this.TriggerAttribute;
+    }
+
+    /**
+     * Set 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     * @param TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     */
+    public void setTriggerAttribute(String TriggerAttribute) {
+        this.TriggerAttribute = TriggerAttribute;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -247,6 +316,9 @@ public class TriggerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "ModTime", this.ModTime);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
+        this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
 
     }
 }

@@ -30,49 +30,49 @@ public class AddTimeWindowRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
+    * 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
     */
     @SerializedName("Monday")
     @Expose
     private String [] Monday;
 
     /**
-    * 星期二的可维护时间窗口。
+    * 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
     */
     @SerializedName("Tuesday")
     @Expose
     private String [] Tuesday;
 
     /**
-    * 星期三的可维护时间窗口。
+    * 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
     */
     @SerializedName("Wednesday")
     @Expose
     private String [] Wednesday;
 
     /**
-    * 星期四的可维护时间窗口。
+    * 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
     */
     @SerializedName("Thursday")
     @Expose
     private String [] Thursday;
 
     /**
-    * 星期五的可维护时间窗口。
+    * 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
     */
     @SerializedName("Friday")
     @Expose
     private String [] Friday;
 
     /**
-    * 星期六的可维护时间窗口。
+    * 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
     */
     @SerializedName("Saturday")
     @Expose
     private String [] Saturday;
 
     /**
-    * 星期日的可维护时间窗口。
+    * 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
     */
     @SerializedName("Sunday")
     @Expose
@@ -95,112 +95,112 @@ public class AddTimeWindowRequest extends AbstractModel{
     }
 
     /**
-     * Get 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。 
-     * @return Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
+     * Get 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。 
+     * @return Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
      */
     public String [] getMonday() {
         return this.Monday;
     }
 
     /**
-     * Set 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
-     * @param Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
+     * Set 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
+     * @param Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
      */
     public void setMonday(String [] Monday) {
         this.Monday = Monday;
     }
 
     /**
-     * Get 星期二的可维护时间窗口。 
-     * @return Tuesday 星期二的可维护时间窗口。
+     * Get 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。 
+     * @return Tuesday 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public String [] getTuesday() {
         return this.Tuesday;
     }
 
     /**
-     * Set 星期二的可维护时间窗口。
-     * @param Tuesday 星期二的可维护时间窗口。
+     * Set 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param Tuesday 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public void setTuesday(String [] Tuesday) {
         this.Tuesday = Tuesday;
     }
 
     /**
-     * Get 星期三的可维护时间窗口。 
-     * @return Wednesday 星期三的可维护时间窗口。
+     * Get 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。 
+     * @return Wednesday 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public String [] getWednesday() {
         return this.Wednesday;
     }
 
     /**
-     * Set 星期三的可维护时间窗口。
-     * @param Wednesday 星期三的可维护时间窗口。
+     * Set 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param Wednesday 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public void setWednesday(String [] Wednesday) {
         this.Wednesday = Wednesday;
     }
 
     /**
-     * Get 星期四的可维护时间窗口。 
-     * @return Thursday 星期四的可维护时间窗口。
+     * Get 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。 
+     * @return Thursday 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public String [] getThursday() {
         return this.Thursday;
     }
 
     /**
-     * Set 星期四的可维护时间窗口。
-     * @param Thursday 星期四的可维护时间窗口。
+     * Set 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param Thursday 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public void setThursday(String [] Thursday) {
         this.Thursday = Thursday;
     }
 
     /**
-     * Get 星期五的可维护时间窗口。 
-     * @return Friday 星期五的可维护时间窗口。
+     * Get 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。 
+     * @return Friday 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public String [] getFriday() {
         return this.Friday;
     }
 
     /**
-     * Set 星期五的可维护时间窗口。
-     * @param Friday 星期五的可维护时间窗口。
+     * Set 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param Friday 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public void setFriday(String [] Friday) {
         this.Friday = Friday;
     }
 
     /**
-     * Get 星期六的可维护时间窗口。 
-     * @return Saturday 星期六的可维护时间窗口。
+     * Get 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。 
+     * @return Saturday 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public String [] getSaturday() {
         return this.Saturday;
     }
 
     /**
-     * Set 星期六的可维护时间窗口。
-     * @param Saturday 星期六的可维护时间窗口。
+     * Set 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param Saturday 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public void setSaturday(String [] Saturday) {
         this.Saturday = Saturday;
     }
 
     /**
-     * Get 星期日的可维护时间窗口。 
-     * @return Sunday 星期日的可维护时间窗口。
+     * Get 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。 
+     * @return Sunday 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public String [] getSunday() {
         return this.Sunday;
     }
 
     /**
-     * Set 星期日的可维护时间窗口。
-     * @param Sunday 星期日的可维护时间窗口。
+     * Set 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param Sunday 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public void setSunday(String [] Sunday) {
         this.Sunday = Sunday;
