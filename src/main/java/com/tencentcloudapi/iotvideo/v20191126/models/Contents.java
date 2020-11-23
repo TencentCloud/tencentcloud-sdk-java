@@ -47,6 +47,14 @@ public class Contents extends AbstractModel{
     private String Tc;
 
     /**
+    * 默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Default")
+    @Expose
+    private String Default;
+
+    /**
      * Get 英文，长度不超过300个字符
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return En 英文，长度不超过300个字符
@@ -107,12 +115,33 @@ public class Contents extends AbstractModel{
     }
 
     /**
+     * Get 默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Default 默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefault() {
+        return this.Default;
+    }
+
+    /**
+     * Set 默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Default 默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefault(String Default) {
+        this.Default = Default;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "En", this.En);
         this.setParamSimple(map, prefix + "Cn", this.Cn);
         this.setParamSimple(map, prefix + "Tc", this.Tc);
+        this.setParamSimple(map, prefix + "Default", this.Default);
 
     }
 }

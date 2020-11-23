@@ -175,6 +175,14 @@ public class DomainDetailInfo extends AbstractModel{
     private Tag [] Tag;
 
     /**
+    * WebSocket配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get 域名ID。 
      * @return ResourceId 域名ID。
      */
@@ -543,6 +551,26 @@ public class DomainDetailInfo extends AbstractModel{
     }
 
     /**
+     * Get WebSocket配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebSocket WebSocket配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set WebSocket配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebSocket WebSocket配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -566,6 +594,7 @@ public class DomainDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

@@ -37,6 +37,13 @@ public class ReplaceSecurityGroupPolicyRequest extends AbstractModel{
     private SecurityGroupPolicySet SecurityGroupPolicySet;
 
     /**
+    * 旧的安全组规则集合对象，可选，日志记录用。
+    */
+    @SerializedName("OriginalSecurityGroupPolicySet")
+    @Expose
+    private SecurityGroupPolicySet OriginalSecurityGroupPolicySet;
+
+    /**
      * Get 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
      * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
@@ -69,11 +76,28 @@ public class ReplaceSecurityGroupPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get 旧的安全组规则集合对象，可选，日志记录用。 
+     * @return OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
+     */
+    public SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() {
+        return this.OriginalSecurityGroupPolicySet;
+    }
+
+    /**
+     * Set 旧的安全组规则集合对象，可选，日志记录用。
+     * @param OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
+     */
+    public void setOriginalSecurityGroupPolicySet(SecurityGroupPolicySet OriginalSecurityGroupPolicySet) {
+        this.OriginalSecurityGroupPolicySet = OriginalSecurityGroupPolicySet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
+        this.setParamObj(map, prefix + "OriginalSecurityGroupPolicySet.", this.OriginalSecurityGroupPolicySet);
 
     }
 }

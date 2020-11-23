@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class BusInvoiceInfo extends AbstractModel{
 
     /**
-    * 识别出的字段名称（关键字）。
+    * 识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
     */
     @SerializedName("Name")
     @Expose
@@ -44,16 +45,20 @@ public class BusInvoiceInfo extends AbstractModel{
     private Rect Rect;
 
     /**
-     * Get 识别出的字段名称（关键字）。 
-     * @return Name 识别出的字段名称（关键字）。
+     * Get 识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。 
+     * @return Name 识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 识别出的字段名称（关键字）。
-     * @param Name 识别出的字段名称（关键字）。
+     * Set 识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
+     * @param Name 识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
      */
     public void setName(String Name) {
         this.Name = Name;

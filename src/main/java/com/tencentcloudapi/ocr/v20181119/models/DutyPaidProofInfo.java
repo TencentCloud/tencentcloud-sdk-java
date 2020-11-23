@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DutyPaidProofInfo extends AbstractModel{
 
     /**
-    * 识别出的字段名称（关键字）。
+    * 识别出的字段名称(关键字)，支持以下字段：
+税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。
     */
     @SerializedName("Name")
     @Expose
@@ -44,16 +45,20 @@ public class DutyPaidProofInfo extends AbstractModel{
     private Rect Rect;
 
     /**
-     * Get 识别出的字段名称（关键字）。 
-     * @return Name 识别出的字段名称（关键字）。
+     * Get 识别出的字段名称(关键字)，支持以下字段：
+税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。 
+     * @return Name 识别出的字段名称(关键字)，支持以下字段：
+税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 识别出的字段名称（关键字）。
-     * @param Name 识别出的字段名称（关键字）。
+     * Set 识别出的字段名称(关键字)，支持以下字段：
+税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。
+     * @param Name 识别出的字段名称(关键字)，支持以下字段：
+税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。
      */
     public void setName(String Name) {
         this.Name = Name;

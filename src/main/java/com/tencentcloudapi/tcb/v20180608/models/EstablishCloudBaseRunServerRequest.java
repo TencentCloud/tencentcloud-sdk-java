@@ -72,6 +72,20 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
     private String LogType;
 
     /**
+    * 操作备注
+    */
+    @SerializedName("OperatorRemark")
+    @Expose
+    private String OperatorRemark;
+
+    /**
+    * 来源方（默认值：qcloud，微信侧来源miniapp)
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -184,6 +198,38 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作备注 
+     * @return OperatorRemark 操作备注
+     */
+    public String getOperatorRemark() {
+        return this.OperatorRemark;
+    }
+
+    /**
+     * Set 操作备注
+     * @param OperatorRemark 操作备注
+     */
+    public void setOperatorRemark(String OperatorRemark) {
+        this.OperatorRemark = OperatorRemark;
+    }
+
+    /**
+     * Get 来源方（默认值：qcloud，微信侧来源miniapp) 
+     * @return Source 来源方（默认值：qcloud，微信侧来源miniapp)
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 来源方（默认值：qcloud，微信侧来源miniapp)
+     * @param Source 来源方（默认值：qcloud，微信侧来源miniapp)
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "EsInfo.", this.EsInfo);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

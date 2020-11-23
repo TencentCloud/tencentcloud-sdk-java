@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class FinanBillSliceInfo extends AbstractModel{
 
     /**
-    * 识别出的字段名称。
+    * 识别出的字段名称(关键字)，支持以下字段：
+大写金额、小写金额、账号、票号1、票号2、收款人、大写日期、同城交换号、地址-省份、地址-城市、付款行全称、支票密码、支票用途。
     */
     @SerializedName("Name")
     @Expose
@@ -37,16 +38,20 @@ public class FinanBillSliceInfo extends AbstractModel{
     private String Value;
 
     /**
-     * Get 识别出的字段名称。 
-     * @return Name 识别出的字段名称。
+     * Get 识别出的字段名称(关键字)，支持以下字段：
+大写金额、小写金额、账号、票号1、票号2、收款人、大写日期、同城交换号、地址-省份、地址-城市、付款行全称、支票密码、支票用途。 
+     * @return Name 识别出的字段名称(关键字)，支持以下字段：
+大写金额、小写金额、账号、票号1、票号2、收款人、大写日期、同城交换号、地址-省份、地址-城市、付款行全称、支票密码、支票用途。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 识别出的字段名称。
-     * @param Name 识别出的字段名称。
+     * Set 识别出的字段名称(关键字)，支持以下字段：
+大写金额、小写金额、账号、票号1、票号2、收款人、大写日期、同城交换号、地址-省份、地址-城市、付款行全称、支票密码、支票用途。
+     * @param Name 识别出的字段名称(关键字)，支持以下字段：
+大写金额、小写金额、账号、票号1、票号2、收款人、大写日期、同城交换号、地址-省份、地址-城市、付款行全称、支票密码、支票用途。
      */
     public void setName(String Name) {
         this.Name = Name;

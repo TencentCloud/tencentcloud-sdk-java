@@ -58,7 +58,7 @@ public class CreateFlowServiceRequest extends AbstractModel{
     private String FlowServiceChineseName;
 
     /**
-    * 角色资源名
+    * 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
     */
     @SerializedName("RoleResource")
     @Expose
@@ -152,16 +152,16 @@ public class CreateFlowServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 角色资源名 
-     * @return RoleResource 角色资源名
+     * Get 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine 
+     * @return RoleResource 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
      */
     public String getRoleResource() {
         return this.RoleResource;
     }
 
     /**
-     * Set 角色资源名
-     * @param RoleResource 角色资源名
+     * Set 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
+     * @param RoleResource 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
      */
     public void setRoleResource(String RoleResource) {
         this.RoleResource = RoleResource;

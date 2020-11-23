@@ -233,6 +233,13 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private Boolean EnableUnion;
 
     /**
+    * 操作备注
+    */
+    @SerializedName("OperatorRemark")
+    @Expose
+    private String OperatorRemark;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -713,6 +720,22 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作备注 
+     * @return OperatorRemark 操作备注
+     */
+    public String getOperatorRemark() {
+        return this.OperatorRemark;
+    }
+
+    /**
+     * Set 操作备注
+     * @param OperatorRemark 操作备注
+     */
+    public void setOperatorRemark(String OperatorRemark) {
+        this.OperatorRemark = OperatorRemark;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -746,6 +769,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AccessType", this.AccessType);
         this.setParamObj(map, prefix + "EsInfo.", this.EsInfo);
         this.setParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
+        this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
 
     }
 }

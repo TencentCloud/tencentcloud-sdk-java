@@ -205,6 +205,26 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+     * @param req CreateHaVipRequest
+     * @return CreateHaVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHaVipResponse CreateHaVip(CreateHaVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHaVipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHaVipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateHaVip");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
      * @param req CreateImageRequest
      * @return CreateImageResponse
@@ -305,6 +325,46 @@ EIP 如果欠费或被封堵，则不能被绑定。
     }
 
     /**
+     *创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
+     * @param req CreateRouteTableRequest
+     * @return CreateRouteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRouteTableResponse CreateRouteTable(CreateRouteTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRouteTableResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRouteTableResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRouteTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建路由策略
+     * @param req CreateRoutesRequest
+     * @return CreateRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoutesResponse CreateRoutes(CreateRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建安全组
      * @param req CreateSecurityGroupRequest
      * @return CreateSecurityGroupResponse
@@ -388,6 +448,26 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
                 Type type = new TypeToken<JsonResponseModel<CreateVpcResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于删除高可用虚拟IP（HAVIP）
+     * @param req DeleteHaVipRequest
+     * @return DeleteHaVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHaVipResponse DeleteHaVip(DeleteHaVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteHaVipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteHaVipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteHaVip");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -508,6 +588,46 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
                 Type type = new TypeToken<JsonResponseModel<DeleteNetworkInterfaceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNetworkInterface");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除路由表
+     * @param req DeleteRouteTableRequest
+     * @return DeleteRouteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRouteTableResponse DeleteRouteTable(DeleteRouteTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRouteTableResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRouteTableResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRouteTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对某个路由表批量删除路由策略
+     * @param req DeleteRoutesRequest
+     * @return DeleteRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoutesResponse DeleteRoutes(DeleteRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -710,6 +830,26 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
                 Type type = new TypeToken<JsonResponseModel<DescribeDefaultSubnetResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDefaultSubnet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询高可用虚拟IP（HAVIP）列表。
+     * @param req DescribeHaVipsRequest
+     * @return DescribeHaVipsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHaVipsResponse DescribeHaVips(DescribeHaVipsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHaVipsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHaVipsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHaVips");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1018,6 +1158,46 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
     }
 
     /**
+     *查询自定义路由策略与云联网路由策略冲突列表
+     * @param req DescribeRouteConflictsRequest
+     * @return DescribeRouteConflictsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteConflictsResponse DescribeRouteConflicts(DescribeRouteConflictsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRouteConflictsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRouteConflictsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRouteConflicts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询路由表对象列表
+     * @param req DescribeRouteTablesRequest
+     * @return DescribeRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRouteTablesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRouteTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询安全组关联实例统计
      * @param req DescribeSecurityGroupAssociationStatisticsRequest
      * @return DescribeSecurityGroupAssociationStatisticsResponse
@@ -1238,6 +1418,26 @@ CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系
     }
 
     /**
+     *禁用已启用的子网路由
+     * @param req DisableRoutesRequest
+     * @return DisableRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableRoutesResponse DisableRoutes(DisableRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解绑弹性公网IP（简称 EIP）
 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
 EIP 如果被封堵，则不能进行解绑定操作。
@@ -1272,6 +1472,27 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisassociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用已禁用的子网路由。
+本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+     * @param req EnableRoutesRequest
+     * @return EnableRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableRoutesResponse EnableRoutes(EnableRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1415,6 +1636,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ModifyDefaultSubnetResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDefaultSubnet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于修改高可用虚拟IP（HAVIP）属性
+     * @param req ModifyHaVipAttributeRequest
+     * @return ModifyHaVipAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHaVipAttributeResponse ModifyHaVipAttribute(ModifyHaVipAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyHaVipAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyHaVipAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyHaVipAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1623,6 +1864,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *修改路由表属性
+     * @param req ModifyRouteTableAttributeRequest
+     * @return ModifyRouteTableAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(ModifyRouteTableAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRouteTableAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRouteTableAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRouteTableAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改安全组属性
      * @param req ModifySecurityGroupAttributeRequest
      * @return ModifySecurityGroupAttributeResponse
@@ -1806,6 +2067,46 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *修改子网关联的路由表，一个子网只能关联一个路由表。
+     * @param req ReplaceRouteTableAssociationRequest
+     * @return ReplaceRouteTableAssociationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociation(ReplaceRouteTableAssociationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceRouteTableAssociationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceRouteTableAssociationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReplaceRouteTableAssociation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *替换路由策略
+     * @param req ReplaceRoutesRequest
+     * @return ReplaceRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRoutesResponse ReplaceRoutes(ReplaceRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReplaceRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *替换单条安全组路由规则, 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
      * @param req ReplaceSecurityGroupPolicyRequest
      * @return ReplaceSecurityGroupPolicyResponse
@@ -1878,6 +2179,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ResetInstancesPasswordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetInstancesPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对某个路由表名称和所有路由策略（Route）进行重新设置
+     * @param req ResetRoutesRequest
+     * @return ResetRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetRoutesResponse ResetRoutes(ResetRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

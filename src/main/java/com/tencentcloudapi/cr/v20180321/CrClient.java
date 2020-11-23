@@ -220,6 +220,26 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *查询产品列表
+     * @param req QueryProductsRequest
+     * @return QueryProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryProductsResponse QueryProducts(QueryProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryProducts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。
      * @param req UploadDataFileRequest
      * @return UploadDataFileResponse

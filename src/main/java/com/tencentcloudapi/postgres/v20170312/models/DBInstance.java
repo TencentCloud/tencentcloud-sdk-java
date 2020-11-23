@@ -220,6 +220,30 @@ public class DBInstance extends AbstractModel{
     private Tag [] TagList;
 
     /**
+    * 主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MasterDBInstanceId")
+    @Expose
+    private String MasterDBInstanceId;
+
+    /**
+    * 只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadOnlyInstanceNum")
+    @Expose
+    private Long ReadOnlyInstanceNum;
+
+    /**
+    * 只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusInReadonlyGroup")
+    @Expose
+    private String StatusInReadonlyGroup;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -672,6 +696,66 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MasterDBInstanceId 主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMasterDBInstanceId() {
+        return this.MasterDBInstanceId;
+    }
+
+    /**
+     * Set 主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MasterDBInstanceId 主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMasterDBInstanceId(String MasterDBInstanceId) {
+        this.MasterDBInstanceId = MasterDBInstanceId;
+    }
+
+    /**
+     * Get 只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadOnlyInstanceNum 只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadOnlyInstanceNum() {
+        return this.ReadOnlyInstanceNum;
+    }
+
+    /**
+     * Set 只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadOnlyInstanceNum 只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadOnlyInstanceNum(Long ReadOnlyInstanceNum) {
+        this.ReadOnlyInstanceNum = ReadOnlyInstanceNum;
+    }
+
+    /**
+     * Get 只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusInReadonlyGroup 只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatusInReadonlyGroup() {
+        return this.StatusInReadonlyGroup;
+    }
+
+    /**
+     * Set 只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusInReadonlyGroup 只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusInReadonlyGroup(String StatusInReadonlyGroup) {
+        this.StatusInReadonlyGroup = StatusInReadonlyGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -703,6 +787,9 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
+        this.setParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
+        this.setParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
 
     }
 }

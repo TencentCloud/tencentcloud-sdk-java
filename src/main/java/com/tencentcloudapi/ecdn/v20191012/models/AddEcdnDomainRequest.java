@@ -107,6 +107,13 @@ public class AddEcdnDomainRequest extends AbstractModel{
     private Tag [] Tag;
 
     /**
+    * WebSocket配置
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get 域名。 
      * @return Domain 域名。
      */
@@ -299,6 +306,22 @@ public class AddEcdnDomainRequest extends AbstractModel{
     }
 
     /**
+     * Get WebSocket配置 
+     * @return WebSocket WebSocket配置
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set WebSocket配置
+     * @param WebSocket WebSocket配置
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class AddEcdnDomainRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

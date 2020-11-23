@@ -1260,7 +1260,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价等字段。
+     *本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价、始发地、目的地、姓名、时间、发票消费类型、省、市、币种字段。
      * @param req ShipInvoiceOCRRequest
      * @return ShipInvoiceOCRResponse
      * @throws TencentCloudSDKException

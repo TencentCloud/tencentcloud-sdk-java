@@ -100,6 +100,13 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private String Area;
 
     /**
+    * WebSocket配置
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get 域名。 
      * @return Domain 域名。
      */
@@ -276,6 +283,22 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     }
 
     /**
+     * Get WebSocket配置 
+     * @return WebSocket WebSocket配置
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set WebSocket配置
+     * @param WebSocket WebSocket配置
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

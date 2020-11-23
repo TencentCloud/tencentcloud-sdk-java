@@ -119,6 +119,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取电话呼叫统计信息
+     * @param req DescribeTelCallInfoRequest
+     * @return DescribeTelCallInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTelCallInfoResponse DescribeTelCallInfo(DescribeTelCallInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTelCallInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTelCallInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTelCallInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取电话服务记录与录音
      * @param req DescribeTelCdrRequest
      * @return DescribeTelCdrResponse

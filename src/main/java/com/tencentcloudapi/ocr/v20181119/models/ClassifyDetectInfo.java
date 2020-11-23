@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ClassifyDetectInfo extends AbstractModel{
 
     /**
-    * 分类名称
+    * 分类名称，包括：身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +45,16 @@ public class ClassifyDetectInfo extends AbstractModel{
     private Rect Rect;
 
     /**
-     * Get 分类名称 
-     * @return Name 分类名称
+     * Get 分类名称，包括：身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照 
+     * @return Name 分类名称，包括：身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分类名称
-     * @param Name 分类名称
+     * Set 分类名称，包括：身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照
+     * @param Name 分类名称，包括：身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照
      */
     public void setName(String Name) {
         this.Name = Name;
