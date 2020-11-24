@@ -159,6 +159,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *重启Kibana 
+     * @param req RestartKibanaRequest
+     * @return RestartKibanaResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartKibanaResponse RestartKibana(RestartKibanaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartKibanaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartKibanaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartKibana");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于重启集群节点
      * @param req RestartNodesRequest
      * @return RestartNodesResponse

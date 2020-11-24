@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHaVipRequest extends AbstractModel{
+public class GetTopicRuleListRequest extends AbstractModel{
 
     /**
-    * HAVIP唯一ID，形如：havip-9o233uri。
+    * 请求的页数
     */
-    @SerializedName("HaVipId")
+    @SerializedName("PageNum")
     @Expose
-    private String HaVipId;
+    private Long PageNum;
 
     /**
-     * Get HAVIP唯一ID，形如：havip-9o233uri。 
-     * @return HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+    * 分页的大小
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+     * Get 请求的页数 
+     * @return PageNum 请求的页数
      */
-    public String getHaVipId() {
-        return this.HaVipId;
+    public Long getPageNum() {
+        return this.PageNum;
     }
 
     /**
-     * Set HAVIP唯一ID，形如：havip-9o233uri。
-     * @param HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Set 请求的页数
+     * @param PageNum 请求的页数
      */
-    public void setHaVipId(String HaVipId) {
-        this.HaVipId = HaVipId;
+    public void setPageNum(Long PageNum) {
+        this.PageNum = PageNum;
+    }
+
+    /**
+     * Get 分页的大小 
+     * @return PageSize 分页的大小
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 分页的大小
+     * @param PageSize 分页的大小
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
+        this.setParamSimple(map, prefix + "PageNum", this.PageNum);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

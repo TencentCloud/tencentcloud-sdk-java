@@ -23,11 +23,62 @@ import java.util.HashMap;
 public class DescribeHaVipsResponse extends AbstractModel{
 
     /**
+    * 符合条件的对象数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HaVipSet")
+    @Expose
+    private HaVip [] HaVipSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 符合条件的对象数。 
+     * @return TotalCount 符合条件的对象数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合条件的对象数。
+     * @param TotalCount 符合条件的对象数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HaVipSet HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HaVip [] getHaVipSet() {
+        return this.HaVipSet;
+    }
+
+    /**
+     * Set HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HaVipSet HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHaVipSet(HaVip [] HaVipSet) {
+        this.HaVipSet = HaVipSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +100,8 @@ public class DescribeHaVipsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "HaVipSet.", this.HaVipSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

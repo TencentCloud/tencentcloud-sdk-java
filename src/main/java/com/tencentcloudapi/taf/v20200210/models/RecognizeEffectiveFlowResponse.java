@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.taf.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHaVipResponse extends AbstractModel{
+public class RecognizeEffectiveFlowResponse extends AbstractModel{
 
     /**
-    * HAVIP对象。
+    * 业务出参
     */
-    @SerializedName("HaVip")
+    @SerializedName("Data")
     @Expose
-    private HaVip HaVip;
+    private OutputRecognizeEffectiveFlow Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateHaVipResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get HAVIP对象。 
-     * @return HaVip HAVIP对象。
+     * Get 业务出参 
+     * @return Data 业务出参
      */
-    public HaVip getHaVip() {
-        return this.HaVip;
+    public OutputRecognizeEffectiveFlow getData() {
+        return this.Data;
     }
 
     /**
-     * Set HAVIP对象。
-     * @param HaVip HAVIP对象。
+     * Set 业务出参
+     * @param Data 业务出参
      */
-    public void setHaVip(HaVip HaVip) {
-        this.HaVip = HaVip;
+    public void setData(OutputRecognizeEffectiveFlow Data) {
+        this.Data = Data;
     }
 
     /**
@@ -72,7 +72,7 @@ public class CreateHaVipResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "HaVip.", this.HaVip);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

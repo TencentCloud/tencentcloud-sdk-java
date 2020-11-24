@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHaVipResponse extends AbstractModel{
+public class SearchTopicRuleResponse extends AbstractModel{
 
     /**
-    * HAVIP对象。
+    * 搜索到的规则总数
     */
-    @SerializedName("HaVip")
+    @SerializedName("TotalCnt")
     @Expose
-    private HaVip HaVip;
+    private Long TotalCnt;
+
+    /**
+    * 规则信息列表
+    */
+    @SerializedName("Rules")
+    @Expose
+    private TopicRuleInfo [] Rules;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateHaVipResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get HAVIP对象。 
-     * @return HaVip HAVIP对象。
+     * Get 搜索到的规则总数 
+     * @return TotalCnt 搜索到的规则总数
      */
-    public HaVip getHaVip() {
-        return this.HaVip;
+    public Long getTotalCnt() {
+        return this.TotalCnt;
     }
 
     /**
-     * Set HAVIP对象。
-     * @param HaVip HAVIP对象。
+     * Set 搜索到的规则总数
+     * @param TotalCnt 搜索到的规则总数
      */
-    public void setHaVip(HaVip HaVip) {
-        this.HaVip = HaVip;
+    public void setTotalCnt(Long TotalCnt) {
+        this.TotalCnt = TotalCnt;
+    }
+
+    /**
+     * Get 规则信息列表 
+     * @return Rules 规则信息列表
+     */
+    public TopicRuleInfo [] getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 规则信息列表
+     * @param Rules 规则信息列表
+     */
+    public void setRules(TopicRuleInfo [] Rules) {
+        this.Rules = Rules;
     }
 
     /**
@@ -72,7 +95,8 @@ public class CreateHaVipResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "HaVip.", this.HaVip);
+        this.setParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
+        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

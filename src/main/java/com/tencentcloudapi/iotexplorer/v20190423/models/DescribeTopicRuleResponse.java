@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHaVipResponse extends AbstractModel{
+public class DescribeTopicRuleResponse extends AbstractModel{
 
     /**
-    * HAVIP对象。
+    * 规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("HaVip")
+    @SerializedName("Rule")
     @Expose
-    private HaVip HaVip;
+    private TopicRule Rule;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class CreateHaVipResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get HAVIP对象。 
-     * @return HaVip HAVIP对象。
+     * Get 规则描述。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Rule 规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public HaVip getHaVip() {
-        return this.HaVip;
+    public TopicRule getRule() {
+        return this.Rule;
     }
 
     /**
-     * Set HAVIP对象。
-     * @param HaVip HAVIP对象。
+     * Set 规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Rule 规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHaVip(HaVip HaVip) {
-        this.HaVip = HaVip;
+    public void setRule(TopicRule Rule) {
+        this.Rule = Rule;
     }
 
     /**
@@ -72,7 +77,7 @@ public class CreateHaVipResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "HaVip.", this.HaVip);
+        this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

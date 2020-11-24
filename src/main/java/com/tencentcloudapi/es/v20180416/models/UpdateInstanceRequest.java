@@ -45,7 +45,7 @@ public class UpdateInstanceRequest extends AbstractModel{
     private Long NodeNum;
 
     /**
-    * 配置项（JSON格式字符串）
+    * ES配置项（JSON格式字符串）
     */
     @SerializedName("EsConfig")
     @Expose
@@ -190,6 +190,13 @@ public class UpdateInstanceRequest extends AbstractModel{
     private Long SceneType;
 
     /**
+    * Kibana配置项（JSON格式字符串）
+    */
+    @SerializedName("KibanaConfig")
+    @Expose
+    private String KibanaConfig;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -242,16 +249,16 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 配置项（JSON格式字符串） 
-     * @return EsConfig 配置项（JSON格式字符串）
+     * Get ES配置项（JSON格式字符串） 
+     * @return EsConfig ES配置项（JSON格式字符串）
      */
     public String getEsConfig() {
         return this.EsConfig;
     }
 
     /**
-     * Set 配置项（JSON格式字符串）
-     * @param EsConfig 配置项（JSON格式字符串）
+     * Set ES配置项（JSON格式字符串）
+     * @param EsConfig ES配置项（JSON格式字符串）
      */
     public void setEsConfig(String EsConfig) {
         this.EsConfig = EsConfig;
@@ -582,6 +589,22 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Kibana配置项（JSON格式字符串） 
+     * @return KibanaConfig Kibana配置项（JSON格式字符串）
+     */
+    public String getKibanaConfig() {
+        return this.KibanaConfig;
+    }
+
+    /**
+     * Set Kibana配置项（JSON格式字符串）
+     * @param KibanaConfig Kibana配置项（JSON格式字符串）
+     */
+    public void setKibanaConfig(String KibanaConfig) {
+        this.KibanaConfig = KibanaConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -608,6 +631,7 @@ public class UpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ScaleType", this.ScaleType);
         this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
 
     }
 }

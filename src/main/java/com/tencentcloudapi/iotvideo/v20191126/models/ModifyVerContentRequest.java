@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class ModifyVerContentRequest extends AbstractModel{
 
     /**
-    * 产品id,大于0的有符号长整型
+    * 产品id
     */
     @SerializedName("ProductId")
     @Expose
-    private Long ProductId;
+    private String ProductId;
 
     /**
     * 需要修改的版本号
@@ -58,18 +58,18 @@ public class ModifyVerContentRequest extends AbstractModel{
     private Contents Contents;
 
     /**
-     * Get 产品id,大于0的有符号长整型 
-     * @return ProductId 产品id,大于0的有符号长整型
+     * Get 产品id 
+     * @return ProductId 产品id
      */
-    public Long getProductId() {
+    public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品id,大于0的有符号长整型
-     * @param ProductId 产品id,大于0的有符号长整型
+     * Set 产品id
+     * @param ProductId 产品id
      */
-    public void setProductId(Long ProductId) {
+    public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 

@@ -13,43 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.taf.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHaVipRequest extends AbstractModel{
-
-    /**
-    * HAVIP唯一ID，形如：havip-9o233uri。
-    */
-    @SerializedName("HaVipId")
-    @Expose
-    private String HaVipId;
-
-    /**
-     * Get HAVIP唯一ID，形如：havip-9o233uri。 
-     * @return HaVipId HAVIP唯一ID，形如：havip-9o233uri。
-     */
-    public String getHaVipId() {
-        return this.HaVipId;
-    }
-
-    /**
-     * Set HAVIP唯一ID，形如：havip-9o233uri。
-     * @param HaVipId HAVIP唯一ID，形如：havip-9o233uri。
-     */
-    public void setHaVipId(String HaVipId) {
-        this.HaVipId = HaVipId;
-    }
+public class InputRecognizeEffectiveFlow extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
 
     }
 }

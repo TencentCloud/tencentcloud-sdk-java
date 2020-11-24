@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHaVipRequest extends AbstractModel{
+public class DescribeTopicRuleRequest extends AbstractModel{
 
     /**
-    * HAVIP唯一ID，形如：havip-9o233uri。
+    * 规则名称。
     */
-    @SerializedName("HaVipId")
+    @SerializedName("RuleName")
     @Expose
-    private String HaVipId;
+    private String RuleName;
 
     /**
-     * Get HAVIP唯一ID，形如：havip-9o233uri。 
-     * @return HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Get 规则名称。 
+     * @return RuleName 规则名称。
      */
-    public String getHaVipId() {
-        return this.HaVipId;
+    public String getRuleName() {
+        return this.RuleName;
     }
 
     /**
-     * Set HAVIP唯一ID，形如：havip-9o233uri。
-     * @param HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Set 规则名称。
+     * @param RuleName 规则名称。
      */
-    public void setHaVipId(String HaVipId) {
-        this.HaVipId = HaVipId;
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }
 }

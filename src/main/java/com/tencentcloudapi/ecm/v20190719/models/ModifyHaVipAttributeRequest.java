@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class ModifyHaVipAttributeRequest extends AbstractModel{
 
     /**
+    * HAVIP唯一ID，形如：havip-9o233uri。
+    */
+    @SerializedName("HaVipId")
+    @Expose
+    private String HaVipId;
+
+    /**
+    * HAVIP名称，可任意命名，但不得超过60个字符。
+    */
+    @SerializedName("HaVipName")
+    @Expose
+    private String HaVipName;
+
+    /**
+     * Get HAVIP唯一ID，形如：havip-9o233uri。 
+     * @return HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     */
+    public String getHaVipId() {
+        return this.HaVipId;
+    }
+
+    /**
+     * Set HAVIP唯一ID，形如：havip-9o233uri。
+     * @param HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     */
+    public void setHaVipId(String HaVipId) {
+        this.HaVipId = HaVipId;
+    }
+
+    /**
+     * Get HAVIP名称，可任意命名，但不得超过60个字符。 
+     * @return HaVipName HAVIP名称，可任意命名，但不得超过60个字符。
+     */
+    public String getHaVipName() {
+        return this.HaVipName;
+    }
+
+    /**
+     * Set HAVIP名称，可任意命名，但不得超过60个字符。
+     * @param HaVipName HAVIP名称，可任意命名，但不得超过60个字符。
+     */
+    public void setHaVipName(String HaVipName) {
+        this.HaVipName = HaVipName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
+        this.setParamSimple(map, prefix + "HaVipName", this.HaVipName);
 
     }
 }

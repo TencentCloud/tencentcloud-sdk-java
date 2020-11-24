@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHaVipResponse extends AbstractModel{
+public class DescribeIpGeolocationInfosResponse extends AbstractModel{
 
     /**
-    * HAVIP对象。
+    * IP地址信息列表
     */
-    @SerializedName("HaVip")
+    @SerializedName("AddressInfo")
     @Expose
-    private HaVip HaVip;
+    private IpGeolocationInfo [] AddressInfo;
+
+    /**
+    * IP地址信息个数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateHaVipResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get HAVIP对象。 
-     * @return HaVip HAVIP对象。
+     * Get IP地址信息列表 
+     * @return AddressInfo IP地址信息列表
      */
-    public HaVip getHaVip() {
-        return this.HaVip;
+    public IpGeolocationInfo [] getAddressInfo() {
+        return this.AddressInfo;
     }
 
     /**
-     * Set HAVIP对象。
-     * @param HaVip HAVIP对象。
+     * Set IP地址信息列表
+     * @param AddressInfo IP地址信息列表
      */
-    public void setHaVip(HaVip HaVip) {
-        this.HaVip = HaVip;
+    public void setAddressInfo(IpGeolocationInfo [] AddressInfo) {
+        this.AddressInfo = AddressInfo;
+    }
+
+    /**
+     * Get IP地址信息个数 
+     * @return Total IP地址信息个数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set IP地址信息个数
+     * @param Total IP地址信息个数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -72,7 +95,8 @@ public class CreateHaVipResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "HaVip.", this.HaVip);
+        this.setParamArrayObj(map, prefix + "AddressInfo.", this.AddressInfo);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

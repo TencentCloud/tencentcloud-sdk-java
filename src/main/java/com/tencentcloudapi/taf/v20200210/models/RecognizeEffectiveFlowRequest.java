@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.taf.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHaVipRequest extends AbstractModel{
+public class RecognizeEffectiveFlowRequest extends AbstractModel{
 
     /**
-    * HAVIP唯一ID，形如：havip-9o233uri。
+    * 业务入参
     */
-    @SerializedName("HaVipId")
+    @SerializedName("BusinessSecurityData")
     @Expose
-    private String HaVipId;
+    private InputRecognizeEffectiveFlow BusinessSecurityData;
 
     /**
-     * Get HAVIP唯一ID，形如：havip-9o233uri。 
-     * @return HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Get 业务入参 
+     * @return BusinessSecurityData 业务入参
      */
-    public String getHaVipId() {
-        return this.HaVipId;
+    public InputRecognizeEffectiveFlow getBusinessSecurityData() {
+        return this.BusinessSecurityData;
     }
 
     /**
-     * Set HAVIP唯一ID，形如：havip-9o233uri。
-     * @param HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Set 业务入参
+     * @param BusinessSecurityData 业务入参
      */
-    public void setHaVipId(String HaVipId) {
-        this.HaVipId = HaVipId;
+    public void setBusinessSecurityData(InputRecognizeEffectiveFlow BusinessSecurityData) {
+        this.BusinessSecurityData = BusinessSecurityData;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
+        this.setParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
 
     }
 }

@@ -101,6 +101,13 @@ Other-Overseas（其他境外地区）
     private String Os;
 
     /**
+    * 芯片架构，只是针对操作系统为android的
+    */
+    @SerializedName("ChipArch")
+    @Expose
+    private String ChipArch;
+
+    /**
      * Get 产器型号(APP产品,为APP包名) 
      * @return ProductModel 产器型号(APP产品,为APP包名)
      */
@@ -293,6 +300,22 @@ Other-Overseas（其他境外地区）
     }
 
     /**
+     * Get 芯片架构，只是针对操作系统为android的 
+     * @return ChipArch 芯片架构，只是针对操作系统为android的
+     */
+    public String getChipArch() {
+        return this.ChipArch;
+    }
+
+    /**
+     * Set 芯片架构，只是针对操作系统为android的
+     * @param ChipArch 芯片架构，只是针对操作系统为android的
+     */
+    public void setChipArch(String ChipArch) {
+        this.ChipArch = ChipArch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -306,6 +329,7 @@ Other-Overseas（其他境外地区）
         this.setParamSimple(map, prefix + "ProductCate", this.ProductCate);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamSimple(map, prefix + "Os", this.Os);
+        this.setParamSimple(map, prefix + "ChipArch", this.ChipArch);
 
     }
 }

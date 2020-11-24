@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHaVipRequest extends AbstractModel{
+public class DisableTopicRuleResponse extends AbstractModel{
 
     /**
-    * HAVIP唯一ID，形如：havip-9o233uri。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("HaVipId")
+    @SerializedName("RequestId")
     @Expose
-    private String HaVipId;
+    private String RequestId;
 
     /**
-     * Get HAVIP唯一ID，形如：havip-9o233uri。 
-     * @return HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getHaVipId() {
-        return this.HaVipId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set HAVIP唯一ID，形如：havip-9o233uri。
-     * @param HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setHaVipId(String HaVipId) {
-        this.HaVipId = HaVipId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

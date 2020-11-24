@@ -23,9 +23,105 @@ import java.util.HashMap;
 public class CreateHaVipRequest extends AbstractModel{
 
     /**
+    * HAVIP所在私有网络ID。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * HAVIP所在子网ID。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * HAVIP名称。
+    */
+    @SerializedName("HaVipName")
+    @Expose
+    private String HaVipName;
+
+    /**
+    * 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+     * Get HAVIP所在私有网络ID。 
+     * @return VpcId HAVIP所在私有网络ID。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set HAVIP所在私有网络ID。
+     * @param VpcId HAVIP所在私有网络ID。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get HAVIP所在子网ID。 
+     * @return SubnetId HAVIP所在子网ID。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set HAVIP所在子网ID。
+     * @param SubnetId HAVIP所在子网ID。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get HAVIP名称。 
+     * @return HaVipName HAVIP名称。
+     */
+    public String getHaVipName() {
+        return this.HaVipName;
+    }
+
+    /**
+     * Set HAVIP名称。
+     * @param HaVipName HAVIP名称。
+     */
+    public void setHaVipName(String HaVipName) {
+        this.HaVipName = HaVipName;
+    }
+
+    /**
+     * Get 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。 
+     * @return Vip 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
+     * @param Vip 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "HaVipName", this.HaVipName);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
 
     }
 }

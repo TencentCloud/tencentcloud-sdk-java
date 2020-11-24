@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHaVipRequest extends AbstractModel{
+public class RestartKibanaRequest extends AbstractModel{
 
     /**
-    * HAVIP唯一ID，形如：havip-9o233uri。
+    * ES实例ID
     */
-    @SerializedName("HaVipId")
+    @SerializedName("InstanceId")
     @Expose
-    private String HaVipId;
+    private String InstanceId;
 
     /**
-     * Get HAVIP唯一ID，形如：havip-9o233uri。 
-     * @return HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Get ES实例ID 
+     * @return InstanceId ES实例ID
      */
-    public String getHaVipId() {
-        return this.HaVipId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set HAVIP唯一ID，形如：havip-9o233uri。
-     * @param HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * Set ES实例ID
+     * @param InstanceId ES实例ID
      */
-    public void setHaVipId(String HaVipId) {
-        this.HaVipId = HaVipId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }
