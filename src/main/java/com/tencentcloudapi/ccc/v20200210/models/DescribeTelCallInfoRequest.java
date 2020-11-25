@@ -30,7 +30,7 @@ public class DescribeTelCallInfoRequest extends AbstractModel{
     private Long StartTimeStamp;
 
     /**
-    * 结束时间戳，Unix 时间戳
+    * 结束时间戳，Unix 时间戳，查询时间范围最大为90天
     */
     @SerializedName("EndTimeStamp")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeTelCallInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 结束时间戳，Unix 时间戳 
-     * @return EndTimeStamp 结束时间戳，Unix 时间戳
+     * Get 结束时间戳，Unix 时间戳，查询时间范围最大为90天 
+     * @return EndTimeStamp 结束时间戳，Unix 时间戳，查询时间范围最大为90天
      */
     public Long getEndTimeStamp() {
         return this.EndTimeStamp;
     }
 
     /**
-     * Set 结束时间戳，Unix 时间戳
-     * @param EndTimeStamp 结束时间戳，Unix 时间戳
+     * Set 结束时间戳，Unix 时间戳，查询时间范围最大为90天
+     * @param EndTimeStamp 结束时间戳，Unix 时间戳，查询时间范围最大为90天
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;

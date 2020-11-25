@@ -39,7 +39,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（BindDevices）用于网关设备批量绑定子设备
+     *本接口（BindDevices）用于网关设备批量绑定子设备 
      * @param req BindDevicesRequest
      * @return BindDevicesResponse
      * @throws TencentCloudSDKException
@@ -399,7 +399,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
+     *获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次 
      * @param req DescribeDeviceClientKeyRequest
      * @return DescribeDeviceClientKeyResponse
      * @throws TencentCloudSDKException
@@ -959,7 +959,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（UnbindDevices）用于网关设备批量解绑子设备
+     *本接口（UnbindDevices）用于网关设备批量解绑子设备 
      * @param req UnbindDevicesRequest
      * @return UnbindDevicesResponse
      * @throws TencentCloudSDKException
@@ -979,7 +979,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *启用或者禁用设备
+     *启用或者禁用设备 
      * @param req UpdateDeviceAvailableStateRequest
      * @return UpdateDeviceAvailableStateResponse
      * @throws TencentCloudSDKException

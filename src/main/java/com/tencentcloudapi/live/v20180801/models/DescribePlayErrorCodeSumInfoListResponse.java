@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
 
     /**
-    * 分省份分运营商错误码为4或5开头的状态码数据信息。
+    * 分省份分运营商错误码为2或3或4或5开头的状态码数据信息。
     */
     @SerializedName("ProIspInfoList")
     @Expose
@@ -107,16 +107,16 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 分省份分运营商错误码为4或5开头的状态码数据信息。 
-     * @return ProIspInfoList 分省份分运营商错误码为4或5开头的状态码数据信息。
+     * Get 分省份分运营商错误码为2或3或4或5开头的状态码数据信息。 
+     * @return ProIspInfoList 分省份分运营商错误码为2或3或4或5开头的状态码数据信息。
      */
     public ProIspPlayCodeDataInfo [] getProIspInfoList() {
         return this.ProIspInfoList;
     }
 
     /**
-     * Set 分省份分运营商错误码为4或5开头的状态码数据信息。
-     * @param ProIspInfoList 分省份分运营商错误码为4或5开头的状态码数据信息。
+     * Set 分省份分运营商错误码为2或3或4或5开头的状态码数据信息。
+     * @param ProIspInfoList 分省份分运营商错误码为2或3或4或5开头的状态码数据信息。
      */
     public void setProIspInfoList(ProIspPlayCodeDataInfo [] ProIspInfoList) {
         this.ProIspInfoList = ProIspInfoList;

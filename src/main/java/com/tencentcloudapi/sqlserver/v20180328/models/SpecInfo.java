@@ -122,6 +122,20 @@ public class SpecInfo extends AbstractModel{
     private String PayModeStatus;
 
     /**
+    * 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+    */
+    @SerializedName("MultiZonesStatus")
+    @Expose
+    private String MultiZonesStatus;
+
+    /**
      * Get 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例 
      * @return SpecId 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
      */
@@ -350,6 +364,38 @@ public class SpecInfo extends AbstractModel{
     }
 
     /**
+     * Get 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型 
+     * @return InstanceType 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+     * @param InstanceType 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有 
+     * @return MultiZonesStatus 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+     */
+    public String getMultiZonesStatus() {
+        return this.MultiZonesStatus;
+    }
+
+    /**
+     * Set 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+     * @param MultiZonesStatus 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+     */
+    public void setMultiZonesStatus(String MultiZonesStatus) {
+        this.MultiZonesStatus = MultiZonesStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -367,6 +413,8 @@ public class SpecInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamArraySimple(map, prefix + "PostPid.", this.PostPid);
         this.setParamSimple(map, prefix + "PayModeStatus", this.PayModeStatus);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "MultiZonesStatus", this.MultiZonesStatus);
 
     }
 }

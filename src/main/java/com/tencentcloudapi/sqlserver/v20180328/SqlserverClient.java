@@ -1219,6 +1219,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（RecycleReadOnlyGroup）立即回收只读组的资源，只读组占用的vip等资源将立即释放且不可找回。
+     * @param req RecycleReadOnlyGroupRequest
+     * @return RecycleReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecycleReadOnlyGroupResponse RecycleReadOnlyGroup(RecycleReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecycleReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecycleReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecycleReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
      * @param req RemoveBackupsRequest
      * @return RemoveBackupsResponse
@@ -1419,7 +1439,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口(TerminateDBInstance)用于主动销毁按量计费实例。
+     *本接口(TerminateDBInstance)用于主动隔离实例，使得实例进入回收站。
      * @param req TerminateDBInstanceRequest
      * @return TerminateDBInstanceResponse
      * @throws TencentCloudSDKException

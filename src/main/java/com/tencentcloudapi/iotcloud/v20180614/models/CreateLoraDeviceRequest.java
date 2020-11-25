@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLoraDeviceRequest extends AbstractModel{
 
     /**
-    * 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+    * 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
     */
     @SerializedName("ProductId")
     @Expose
@@ -79,16 +79,16 @@ public class CreateLoraDeviceRequest extends AbstractModel{
     private String Memo;
 
     /**
-     * Get 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID 
-     * @return ProductId 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Get 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id 
+     * @return ProductId 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
-     * @param ProductId 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Set 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
+     * @param ProductId 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
