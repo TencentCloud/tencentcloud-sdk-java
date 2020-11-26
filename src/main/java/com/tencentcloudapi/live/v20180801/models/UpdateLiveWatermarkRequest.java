@@ -32,6 +32,8 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
 
     /**
     * 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
     */
     @SerializedName("PictureUrl")
     @Expose
@@ -94,8 +96,12 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
     }
 
     /**
-     * Get 水印图片 URL。 
+     * Get 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'| 
      * @return PictureUrl 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      */
     public String getPictureUrl() {
         return this.PictureUrl;
@@ -103,7 +109,11 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
 
     /**
      * Set 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      * @param PictureUrl 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      */
     public void setPictureUrl(String PictureUrl) {
         this.PictureUrl = PictureUrl;

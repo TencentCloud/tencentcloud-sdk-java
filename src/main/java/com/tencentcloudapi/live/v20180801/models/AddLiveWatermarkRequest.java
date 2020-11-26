@@ -24,6 +24,8 @@ public class AddLiveWatermarkRequest extends AbstractModel{
 
     /**
     * 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
     */
     @SerializedName("PictureUrl")
     @Expose
@@ -59,15 +61,19 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     private Long Width;
 
     /**
-    * 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+    * 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 水印图片 URL。 
+     * Get 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'| 
      * @return PictureUrl 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      */
     public String getPictureUrl() {
         return this.PictureUrl;
@@ -75,7 +81,11 @@ public class AddLiveWatermarkRequest extends AbstractModel{
 
     /**
      * Set 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      * @param PictureUrl 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      */
     public void setPictureUrl(String PictureUrl) {
         this.PictureUrl = PictureUrl;
@@ -150,16 +160,16 @@ public class AddLiveWatermarkRequest extends AbstractModel{
     }
 
     /**
-     * Get 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。 
-     * @return Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * Get 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。 
+     * @return Height 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
-     * @param Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * Set 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * @param Height 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

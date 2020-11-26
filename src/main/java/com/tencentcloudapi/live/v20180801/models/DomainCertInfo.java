@@ -88,6 +88,23 @@ public class DomainCertInfo extends AbstractModel{
     private Long Status;
 
     /**
+    * 证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertDomains")
+    @Expose
+    private String [] CertDomains;
+
+    /**
+    * 腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudCertId")
+    @Expose
+    private String CloudCertId;
+
+    /**
      * Get 证书Id。 
      * @return CertId 证书Id。
      */
@@ -240,6 +257,50 @@ public class DomainCertInfo extends AbstractModel{
     }
 
     /**
+     * Get 证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertDomains 证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCertDomains() {
+        return this.CertDomains;
+    }
+
+    /**
+     * Set 证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertDomains 证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertDomains(String [] CertDomains) {
+        this.CertDomains = CertDomains;
+    }
+
+    /**
+     * Get 腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudCertId 腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudCertId() {
+        return this.CloudCertId;
+    }
+
+    /**
+     * Set 腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudCertId 腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudCertId(String CloudCertId) {
+        this.CloudCertId = CloudCertId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +313,8 @@ public class DomainCertInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CertExpireTime", this.CertExpireTime);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "CertDomains.", this.CertDomains);
+        this.setParamSimple(map, prefix + "CloudCertId", this.CloudCertId);
 
     }
 }

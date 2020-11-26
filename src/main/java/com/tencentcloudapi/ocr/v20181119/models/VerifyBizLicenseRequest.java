@@ -23,20 +23,18 @@ import java.util.HashMap;
 public class VerifyBizLicenseRequest extends AbstractModel{
 
     /**
-    * 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+    * 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+    * 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -56,7 +54,7 @@ Config = {"Name":true,"Address":true}
     private String ImageConfig;
 
     /**
-    * 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
+    * 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
     */
     @SerializedName("RegNum")
     @Expose
@@ -70,63 +68,55 @@ Config = {"Name":true,"Address":true}
     private String Name;
 
     /**
-    * 用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
+    * 用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-     * Get 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * Get 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
+支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
+支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。 
+     * @return ImageBase64 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
-     * @return ImageBase64 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * Set 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param ImageBase64 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * @param ImageBase64 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * Get 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
+支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
+支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。 
+     * @return ImageUrl 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
-     * @return ImageUrl 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
-支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * Set 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param ImageUrl 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * @param ImageUrl 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
@@ -173,16 +163,16 @@ Config = {"Name":true,"Address":true}
     }
 
     /**
-     * Get 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。 
-     * @return RegNum 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
+     * Get 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。 
+     * @return RegNum 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
      */
     public String getRegNum() {
         return this.RegNum;
     }
 
     /**
-     * Set 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
-     * @param RegNum 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
+     * Set 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
+     * @param RegNum 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
      */
     public void setRegNum(String RegNum) {
         this.RegNum = RegNum;
@@ -205,16 +195,16 @@ Config = {"Name":true,"Address":true}
     }
 
     /**
-     * Get 用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。 
-     * @return Address 用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
+     * Get 用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。 
+     * @return Address 用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
-     * @param Address 用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
+     * Set 用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
+     * @param Address 用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
      */
     public void setAddress(String Address) {
         this.Address = Address;

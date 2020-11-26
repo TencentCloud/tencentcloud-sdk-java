@@ -240,6 +240,13 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private String OperatorRemark;
 
     /**
+    * 服务路劲
+    */
+    @SerializedName("ServerPath")
+    @Expose
+    private String ServerPath;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -736,6 +743,22 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务路劲 
+     * @return ServerPath 服务路劲
+     */
+    public String getServerPath() {
+        return this.ServerPath;
+    }
+
+    /**
+     * Set 服务路劲
+     * @param ServerPath 服务路劲
+     */
+    public void setServerPath(String ServerPath) {
+        this.ServerPath = ServerPath;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -770,6 +793,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "EsInfo.", this.EsInfo);
         this.setParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
         this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
+        this.setParamSimple(map, prefix + "ServerPath", this.ServerPath);
 
     }
 }

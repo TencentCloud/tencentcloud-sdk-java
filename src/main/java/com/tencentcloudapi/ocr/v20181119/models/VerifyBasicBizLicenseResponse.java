@@ -72,7 +72,7 @@ public class VerifyBasicBizLicenseResponse extends AbstractModel{
     private String Zsopscope;
 
     /**
-    * 状态信息
+    * 查询的状态信息
     */
     @SerializedName("Reason")
     @Expose
@@ -261,16 +261,16 @@ public class VerifyBasicBizLicenseResponse extends AbstractModel{
     }
 
     /**
-     * Get 状态信息 
-     * @return Reason 状态信息
+     * Get 查询的状态信息 
+     * @return Reason 查询的状态信息
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 状态信息
-     * @param Reason 状态信息
+     * Set 查询的状态信息
+     * @param Reason 查询的状态信息
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
