@@ -99,6 +99,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *检查给定节点列表中哪些是可升级的 
+     * @param req CheckInstancesUpgradeAbleRequest
+     * @return CheckInstancesUpgradeAbleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckInstancesUpgradeAbleResponse CheckInstancesUpgradeAble(CheckInstancesUpgradeAbleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckInstancesUpgradeAbleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckInstancesUpgradeAbleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckInstancesUpgradeAble");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建集群
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -891,6 +911,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveNodeFromNodePoolResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveNodeFromNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *给集群的一批work节点进行升级 
+     * @param req UpgradeClusterInstancesRequest
+     * @return UpgradeClusterInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeClusterInstancesResponse UpgradeClusterInstances(UpgradeClusterInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeClusterInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeClusterInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeClusterInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

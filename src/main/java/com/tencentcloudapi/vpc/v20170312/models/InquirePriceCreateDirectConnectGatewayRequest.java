@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSpotTypeConfigRequest extends AbstractModel{
+public class InquirePriceCreateDirectConnectGatewayRequest extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.

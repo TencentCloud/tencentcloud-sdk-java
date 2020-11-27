@@ -3411,6 +3411,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（DescribePriceCreateDirectConnectGateway）用于创建专线网关询价。
+     * @param req InquirePriceCreateDirectConnectGatewayRequest
+     * @return InquirePriceCreateDirectConnectGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateDirectConnectGatewayResponse InquirePriceCreateDirectConnectGateway(InquirePriceCreateDirectConnectGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceCreateDirectConnectGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
      * @param req InquiryPriceCreateVpnGatewayRequest
      * @return InquiryPriceCreateVpnGatewayResponse

@@ -673,26 +673,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *查询用户可购买的竞价机型信息列表
-     * @param req DescribeSpotTypeConfigRequest
-     * @return DescribeSpotTypeConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSpotTypeConfigResponse DescribeSpotTypeConfig(DescribeSpotTypeConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSpotTypeConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSpotTypeConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
      * @param req DescribeZoneInstanceConfigInfosRequest
      * @return DescribeZoneInstanceConfigInfosResponse

@@ -92,6 +92,26 @@ public class BdaClient extends AbstractClient{
     }
 
     /**
+     *本接口为离线人像分割处理接口组中的提交任务接口，可以对提交的资源进行处理视频流/图片流识别视频作品中的人像区域，进行一键抠像、背景替换、人像虚化等后期处理。
+     * @param req CreateSegmentationTaskRequest
+     * @return CreateSegmentationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSegmentationTaskResponse CreateSegmentationTask(CreateSegmentationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSegmentationTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSegmentationTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSegmentationTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *将一个人体轨迹添加到一个人员中。一个人员最多允许包含 5 个人体轨迹。同一人的人体轨迹越多，搜索识别效果越好。
 
 >请注意：
@@ -151,6 +171,26 @@ public class BdaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePersonResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeletePerson");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *可以查看单条任务的处理情况，包括处理状态，处理结果。
+     * @param req DescribeSegmentationTaskRequest
+     * @return DescribeSegmentationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSegmentationTaskResponse DescribeSegmentationTask(DescribeSegmentationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSegmentationTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSegmentationTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSegmentationTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -341,6 +381,26 @@ public class BdaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SegmentPortraitPicResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SegmentPortraitPic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *终止指定视频人像分割处理任务
+     * @param req TerminateSegmentationTaskRequest
+     * @return TerminateSegmentationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateSegmentationTaskResponse TerminateSegmentationTask(TerminateSegmentationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateSegmentationTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateSegmentationTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateSegmentationTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

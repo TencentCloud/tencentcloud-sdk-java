@@ -119,6 +119,18 @@ public class DetectDetail extends AbstractModel{
     private String Comparemsg;
 
     /**
+    * 比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CompareLibType")
+    @Expose
+    private String CompareLibType;
+
+    /**
      * Get 请求时间戳。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReqTime 请求时间戳。
@@ -359,6 +371,42 @@ public class DetectDetail extends AbstractModel{
     }
 
     /**
+     * Get 比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CompareLibType 比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCompareLibType() {
+        return this.CompareLibType;
+    }
+
+    /**
+     * Set 比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompareLibType 比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompareLibType(String CompareLibType) {
+        this.CompareLibType = CompareLibType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -374,6 +422,7 @@ public class DetectDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Livemsg", this.Livemsg);
         this.setParamSimple(map, prefix + "Comparestatus", this.Comparestatus);
         this.setParamSimple(map, prefix + "Comparemsg", this.Comparemsg);
+        this.setParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
 
     }
 }

@@ -399,6 +399,14 @@ public class ApiInfo extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Environments")
+    @Expose
+    private String [] Environments;
+
+    /**
      * Get API 所在的服务唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceId API 所在的服务唯一 ID。
@@ -1339,6 +1347,26 @@ public class ApiInfo extends AbstractModel{
     }
 
     /**
+     * Get API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Environments API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getEnvironments() {
+        return this.Environments;
+    }
+
+    /**
+     * Set API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Environments API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvironments(String [] Environments) {
+        this.Environments = Environments;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1389,6 +1417,7 @@ public class ApiInfo extends AbstractModel{
         this.setParamObj(map, prefix + "ServiceTsfHealthCheckConf.", this.ServiceTsfHealthCheckConf);
         this.setParamSimple(map, prefix + "EnableCORS", this.EnableCORS);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "Environments.", this.Environments);
 
     }
 }

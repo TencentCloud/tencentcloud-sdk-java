@@ -139,6 +139,26 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *本接口用于校验手机号和姓名的真实性和一致性。
+     * @param req CheckPhoneAndNameRequest
+     * @return CheckPhoneAndNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckPhoneAndNameResponse CheckPhoneAndName(CheckPhoneAndNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckPhoneAndNameResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckPhoneAndNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckPhoneAndName");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
      * @param req DetectAuthRequest
      * @return DetectAuthResponse

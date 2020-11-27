@@ -191,6 +191,18 @@ public class DetectInfoText extends AbstractModel{
     private String Mobile;
 
     /**
+    * 本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CompareLibType")
+    @Expose
+    private String CompareLibType;
+
+    /**
      * Get 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 本次流程最终验证结果。0为成功
@@ -611,6 +623,42 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
+     * Get 本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CompareLibType 本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCompareLibType() {
+        return this.CompareLibType;
+    }
+
+    /**
+     * Set 本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompareLibType 本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompareLibType(String CompareLibType) {
+        this.CompareLibType = CompareLibType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -635,6 +683,7 @@ public class DetectInfoText extends AbstractModel{
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamArrayObj(map, prefix + "LivenessDetail.", this.LivenessDetail);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
 
     }
 }
