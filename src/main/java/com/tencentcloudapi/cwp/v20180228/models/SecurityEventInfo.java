@@ -20,36 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportBashEventsRequest extends AbstractModel{
+public class SecurityEventInfo extends AbstractModel{
 
     /**
-    * 过滤参数
+    * 安全事件数
     */
-    @SerializedName("Filters")
+    @SerializedName("EventCnt")
     @Expose
-    private Filters [] Filters;
+    private Long EventCnt;
 
     /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
+    * 受影响机器数
+    */
+    @SerializedName("UuidCnt")
+    @Expose
+    private Long UuidCnt;
+
+    /**
+     * Get 安全事件数 
+     * @return EventCnt 安全事件数
      */
-    public Filters [] getFilters() {
-        return this.Filters;
+    public Long getEventCnt() {
+        return this.EventCnt;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
+     * Set 安全事件数
+     * @param EventCnt 安全事件数
      */
-    public void setFilters(Filters [] Filters) {
-        this.Filters = Filters;
+    public void setEventCnt(Long EventCnt) {
+        this.EventCnt = EventCnt;
+    }
+
+    /**
+     * Get 受影响机器数 
+     * @return UuidCnt 受影响机器数
+     */
+    public Long getUuidCnt() {
+        return this.UuidCnt;
+    }
+
+    /**
+     * Set 受影响机器数
+     * @param UuidCnt 受影响机器数
+     */
+    public void setUuidCnt(Long UuidCnt) {
+        this.UuidCnt = UuidCnt;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "EventCnt", this.EventCnt);
+        this.setParamSimple(map, prefix + "UuidCnt", this.UuidCnt);
 
     }
 }

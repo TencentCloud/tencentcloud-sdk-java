@@ -1160,6 +1160,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *概览页抽屉侧边弹窗：安全概览“立即处理”页面中的相关事件数统计接口。
+     * @param req DescribeSecurityEventsCntRequest
+     * @return DescribeSecurityEventsCntResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(DescribeSecurityEventsCntRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityEventsCntResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityEventsCntResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSecurityEventsCnt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
      * @param req DescribeSecurityTrendsRequest
      * @return DescribeSecurityTrendsResponse

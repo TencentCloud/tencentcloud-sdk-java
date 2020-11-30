@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportBashEventsRequest extends AbstractModel{
+public class StopRollbackRequest extends AbstractModel{
 
     /**
-    * 过滤参数
+    * 撤销回档任务对应的实例Id。
     */
-    @SerializedName("Filters")
+    @SerializedName("InstanceId")
     @Expose
-    private Filters [] Filters;
+    private String InstanceId;
 
     /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
+     * Get 撤销回档任务对应的实例Id。 
+     * @return InstanceId 撤销回档任务对应的实例Id。
      */
-    public Filters [] getFilters() {
-        return this.Filters;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
+     * Set 撤销回档任务对应的实例Id。
+     * @param InstanceId 撤销回档任务对应的实例Id。
      */
-    public void setFilters(Filters [] Filters) {
-        this.Filters = Filters;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

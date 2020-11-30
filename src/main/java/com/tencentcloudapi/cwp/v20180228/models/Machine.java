@@ -152,6 +152,20 @@ public class Machine extends AbstractModel{
     private RegionInfo RegionInfo;
 
     /**
+    * 实例状态 TERMINATED_PRO_VERSION 已销毁
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
+
+    /**
+    * 授权状态 1 授权 0 未授权
+    */
+    @SerializedName("LicenseStatus")
+    @Expose
+    private Long LicenseStatus;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -464,6 +478,38 @@ public class Machine extends AbstractModel{
     }
 
     /**
+     * Get 实例状态 TERMINATED_PRO_VERSION 已销毁 
+     * @return InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * @param InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
+    /**
+     * Get 授权状态 1 授权 0 未授权 
+     * @return LicenseStatus 授权状态 1 授权 0 未授权
+     */
+    public Long getLicenseStatus() {
+        return this.LicenseStatus;
+    }
+
+    /**
+     * Set 授权状态 1 授权 0 未授权
+     * @param LicenseStatus 授权状态 1 授权 0 未授权
+     */
+    public void setLicenseStatus(Long LicenseStatus) {
+        this.LicenseStatus = LicenseStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -484,6 +530,8 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
         this.setParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
 
     }
 }

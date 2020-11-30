@@ -86,7 +86,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 一次性返回的记录数量，最大为400。
+    * 一次性返回的记录数量，默认为100，最大为400。
     */
     @SerializedName("Limit")
     @Expose
@@ -237,16 +237,16 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 一次性返回的记录数量，最大为400。 
-     * @return Limit 一次性返回的记录数量，最大为400。
+     * Get 一次性返回的记录数量，默认为100，最大为400。 
+     * @return Limit 一次性返回的记录数量，默认为100，最大为400。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 一次性返回的记录数量，最大为400。
-     * @param Limit 一次性返回的记录数量，最大为400。
+     * Set 一次性返回的记录数量，默认为100，最大为400。
+     * @param Limit 一次性返回的记录数量，默认为100，最大为400。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

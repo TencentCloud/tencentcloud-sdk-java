@@ -20,36 +20,12 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportBashEventsRequest extends AbstractModel{
-
-    /**
-    * 过滤参数
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filters [] Filters;
-
-    /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
-     */
-    public Filters [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
-     */
-    public void setFilters(Filters [] Filters) {
-        this.Filters = Filters;
-    }
+public class DescribeSecurityEventsCntRequest extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

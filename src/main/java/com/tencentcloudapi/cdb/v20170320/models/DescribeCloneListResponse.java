@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportBashEventsResponse extends AbstractModel{
+public class DescribeCloneListResponse extends AbstractModel{
 
     /**
-    * 导出文件下载链接地址。
+    * 满足条件的条目数。
     */
-    @SerializedName("DownloadUrl")
+    @SerializedName("TotalCount")
     @Expose
-    private String DownloadUrl;
+    private Long TotalCount;
 
     /**
-    * 导出任务ID
+    * 克隆任务列表。
     */
-    @SerializedName("TaskId")
+    @SerializedName("Items")
     @Expose
-    private String TaskId;
+    private CloneItem [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class ExportBashEventsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 导出文件下载链接地址。 
-     * @return DownloadUrl 导出文件下载链接地址。
+     * Get 满足条件的条目数。 
+     * @return TotalCount 满足条件的条目数。
      */
-    public String getDownloadUrl() {
-        return this.DownloadUrl;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 导出文件下载链接地址。
-     * @param DownloadUrl 导出文件下载链接地址。
+     * Set 满足条件的条目数。
+     * @param TotalCount 满足条件的条目数。
      */
-    public void setDownloadUrl(String DownloadUrl) {
-        this.DownloadUrl = DownloadUrl;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 导出任务ID 
-     * @return TaskId 导出任务ID
+     * Get 克隆任务列表。 
+     * @return Items 克隆任务列表。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public CloneItem [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 导出任务ID
-     * @param TaskId 导出任务ID
+     * Set 克隆任务列表。
+     * @param Items 克隆任务列表。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setItems(CloneItem [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -95,8 +95,8 @@ public class ExportBashEventsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

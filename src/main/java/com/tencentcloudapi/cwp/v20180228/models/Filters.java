@@ -20,36 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportBashEventsRequest extends AbstractModel{
+public class Filters extends AbstractModel{
 
     /**
-    * 过滤参数
+    * 过滤键的名称。
     */
-    @SerializedName("Filters")
+    @SerializedName("Name")
     @Expose
-    private Filters [] Filters;
+    private String Name;
 
     /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
+    * 一个或者多个过滤值。
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
+     * Get 过滤键的名称。 
+     * @return Name 过滤键的名称。
      */
-    public Filters [] getFilters() {
-        return this.Filters;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
+     * Set 过滤键的名称。
+     * @param Name 过滤键的名称。
      */
-    public void setFilters(Filters [] Filters) {
-        this.Filters = Filters;
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 一个或者多个过滤值。 
+     * @return Values 一个或者多个过滤值。
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set 一个或者多个过滤值。
+     * @param Values 一个或者多个过滤值。
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

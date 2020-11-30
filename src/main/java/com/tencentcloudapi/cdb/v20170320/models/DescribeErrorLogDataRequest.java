@@ -51,7 +51,7 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     private String [] KeyWords;
 
     /**
-    * 分页的返回数量，最大为400。
+    * 分页的返回数量，默认为100，最大为400。
     */
     @SerializedName("Limit")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页的返回数量，最大为400。 
-     * @return Limit 分页的返回数量，最大为400。
+     * Get 分页的返回数量，默认为100，最大为400。 
+     * @return Limit 分页的返回数量，默认为100，最大为400。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页的返回数量，最大为400。
-     * @param Limit 分页的返回数量，最大为400。
+     * Set 分页的返回数量，默认为100，最大为400。
+     * @param Limit 分页的返回数量，默认为100，最大为400。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class ExportNonlocalLoginPlacesRequest extends AbstractModel{
 
     /**
+    * <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li> 
+     * @return Filters <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
+     * @param Filters <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

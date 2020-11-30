@@ -143,6 +143,20 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     private Long FreeVulsLeft;
 
     /**
+    * agent版本号
+    */
+    @SerializedName("AgentVersion")
+    @Expose
+    private String AgentVersion;
+
+    /**
+    * 专业版到期时间(仅预付费)
+    */
+    @SerializedName("ProVersionDeadline")
+    @Expose
+    private String ProVersionDeadline;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -438,6 +452,38 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get agent版本号 
+     * @return AgentVersion agent版本号
+     */
+    public String getAgentVersion() {
+        return this.AgentVersion;
+    }
+
+    /**
+     * Set agent版本号
+     * @param AgentVersion agent版本号
+     */
+    public void setAgentVersion(String AgentVersion) {
+        this.AgentVersion = AgentVersion;
+    }
+
+    /**
+     * Get 专业版到期时间(仅预付费) 
+     * @return ProVersionDeadline 专业版到期时间(仅预付费)
+     */
+    public String getProVersionDeadline() {
+        return this.ProVersionDeadline;
+    }
+
+    /**
+     * Set 专业版到期时间(仅预付费)
+     * @param ProVersionDeadline 专业版到期时间(仅预付费)
+     */
+    public void setProVersionDeadline(String ProVersionDeadline) {
+        this.ProVersionDeadline = ProVersionDeadline;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -473,6 +519,8 @@ public class DescribeMachineInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "FreeMalwaresLeft", this.FreeMalwaresLeft);
         this.setParamSimple(map, prefix + "FreeVulsLeft", this.FreeVulsLeft);
+        this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
+        this.setParamSimple(map, prefix + "ProVersionDeadline", this.ProVersionDeadline);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
