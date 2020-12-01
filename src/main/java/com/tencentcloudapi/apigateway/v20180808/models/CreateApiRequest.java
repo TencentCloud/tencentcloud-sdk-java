@@ -30,7 +30,7 @@ public class CreateApiRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
+    * API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
     */
     @SerializedName("ServiceType")
     @Expose
@@ -44,7 +44,7 @@ public class CreateApiRequest extends AbstractModel{
     private Long ServiceTimeout;
 
     /**
-    * API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+    * API 的前端请求协议，支持HTTP和WEBSOCKET。
     */
     @SerializedName("Protocol")
     @Expose
@@ -354,16 +354,16 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。 
-     * @return ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
+     * Get API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。 
+     * @return ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
-     * @param ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
+     * Set API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
+     * @param ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -386,16 +386,16 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。 
-     * @return Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * Get API 的前端请求协议，支持HTTP和WEBSOCKET。 
+     * @return Protocol API 的前端请求协议，支持HTTP和WEBSOCKET。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
-     * @param Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * Set API 的前端请求协议，支持HTTP和WEBSOCKET。
+     * @param Protocol API 的前端请求协议，支持HTTP和WEBSOCKET。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

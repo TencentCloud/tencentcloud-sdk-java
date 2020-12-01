@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateServiceRequest extends AbstractModel{
 
     /**
-    * 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
+    * 用户自定义的服务名称。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -86,16 +86,16 @@ public class CreateServiceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。 
-     * @return ServiceName 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
+     * Get 用户自定义的服务名称。 
+     * @return ServiceName 用户自定义的服务名称。
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
-     * @param ServiceName 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
+     * Set 用户自定义的服务名称。
+     * @param ServiceName 用户自定义的服务名称。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

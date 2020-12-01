@@ -30,14 +30,14 @@ public class UrlRedirectRule extends AbstractModel{
     private Long RedirectStatusCode;
 
     /**
-    * 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
+    * 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * 目标URL，必须以“/”开头，最大长度1024字符。
+    * 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
     */
     @SerializedName("RedirectUrl")
     @Expose
@@ -60,32 +60,32 @@ public class UrlRedirectRule extends AbstractModel{
     }
 
     /**
-     * Get 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。 
-     * @return Pattern 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
+     * Get 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。 
+     * @return Pattern 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
-     * @param Pattern 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
+     * Set 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
+     * @param Pattern 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get 目标URL，必须以“/”开头，最大长度1024字符。 
-     * @return RedirectUrl 目标URL，必须以“/”开头，最大长度1024字符。
+     * Get 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。 
+     * @return RedirectUrl 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set 目标URL，必须以“/”开头，最大长度1024字符。
-     * @param RedirectUrl 目标URL，必须以“/”开头，最大长度1024字符。
+     * Set 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
+     * @param RedirectUrl 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

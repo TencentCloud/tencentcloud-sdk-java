@@ -140,6 +140,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *拉取用户在房间得进出时间
+     * @param req DescribeUserInAndOutTimeRequest
+     * @return DescribeUserInAndOutTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserInAndOutTimeResponse DescribeUserInAndOutTime(DescribeUserInAndOutTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserInAndOutTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserInAndOutTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserInAndOutTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyAppStatus)用于修改应用总开关状态。
      * @param req ModifyAppStatusRequest
      * @return ModifyAppStatusResponse

@@ -268,6 +268,20 @@ global：全球加速
     private Long [] AccessPort;
 
     /**
+    * 时间戳防盗链高级版配置，白名单功能
+    */
+    @SerializedName("AdvancedAuthentication")
+    @Expose
+    private AdvancedAuthentication AdvancedAuthentication;
+
+    /**
+    * 回源鉴权高级版配置，白名单功能
+    */
+    @SerializedName("OriginAuthentication")
+    @Expose
+    private OriginAuthentication OriginAuthentication;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -840,6 +854,38 @@ global：全球加速
     }
 
     /**
+     * Get 时间戳防盗链高级版配置，白名单功能 
+     * @return AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
+     */
+    public AdvancedAuthentication getAdvancedAuthentication() {
+        return this.AdvancedAuthentication;
+    }
+
+    /**
+     * Set 时间戳防盗链高级版配置，白名单功能
+     * @param AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
+     */
+    public void setAdvancedAuthentication(AdvancedAuthentication AdvancedAuthentication) {
+        this.AdvancedAuthentication = AdvancedAuthentication;
+    }
+
+    /**
+     * Get 回源鉴权高级版配置，白名单功能 
+     * @return OriginAuthentication 回源鉴权高级版配置，白名单功能
+     */
+    public OriginAuthentication getOriginAuthentication() {
+        return this.OriginAuthentication;
+    }
+
+    /**
+     * Set 回源鉴权高级版配置，白名单功能
+     * @param OriginAuthentication 回源鉴权高级版配置，白名单功能
+     */
+    public void setOriginAuthentication(OriginAuthentication OriginAuthentication) {
+        this.OriginAuthentication = OriginAuthentication;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -877,6 +923,8 @@ global：全球加速
         this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
         this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
+        this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
+        this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
 
     }
 }

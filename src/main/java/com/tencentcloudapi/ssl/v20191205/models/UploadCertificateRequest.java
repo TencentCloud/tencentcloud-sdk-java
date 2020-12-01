@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UploadCertificateRequest extends AbstractModel{
 
     /**
-    * 证书公钥。
+    * 证书内容。
     */
     @SerializedName("CertificatePublicKey")
     @Expose
@@ -58,16 +58,16 @@ public class UploadCertificateRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-     * Get 证书公钥。 
-     * @return CertificatePublicKey 证书公钥。
+     * Get 证书内容。 
+     * @return CertificatePublicKey 证书内容。
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set 证书公钥。
-     * @param CertificatePublicKey 证书公钥。
+     * Set 证书内容。
+     * @param CertificatePublicKey 证书内容。
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;

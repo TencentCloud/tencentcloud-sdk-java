@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeRulesRequest extends AbstractModel{
 
     /**
-    * 当前页号，不传则获取所有有权限的资源。
+    * 当前页号，不传则返回第一页
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 单页大小，不传则获取所有有权限的资源。
+    * 单页大小，最大 30，不填默认30
     */
     @SerializedName("PageSize")
     @Expose
@@ -58,32 +58,32 @@ public class DescribeRulesRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get 当前页号，不传则获取所有有权限的资源。 
-     * @return PageNumber 当前页号，不传则获取所有有权限的资源。
+     * Get 当前页号，不传则返回第一页 
+     * @return PageNumber 当前页号，不传则返回第一页
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 当前页号，不传则获取所有有权限的资源。
-     * @param PageNumber 当前页号，不传则获取所有有权限的资源。
+     * Set 当前页号，不传则返回第一页
+     * @param PageNumber 当前页号，不传则返回第一页
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 单页大小，不传则获取所有有权限的资源。 
-     * @return PageSize 单页大小，不传则获取所有有权限的资源。
+     * Get 单页大小，最大 30，不填默认30 
+     * @return PageSize 单页大小，最大 30，不填默认30
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 单页大小，不传则获取所有有权限的资源。
-     * @param PageSize 单页大小，不传则获取所有有权限的资源。
+     * Set 单页大小，最大 30，不填默认30
+     * @param PageSize 单页大小，最大 30，不填默认30
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

@@ -31,7 +31,7 @@ public class PathRule extends AbstractModel{
     private Boolean Regex;
 
     /**
-    * 匹配的URL路径。
+    * 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -39,7 +39,7 @@ public class PathRule extends AbstractModel{
     private String Path;
 
     /**
-    * 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+    * 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Origin")
@@ -47,7 +47,7 @@ public class PathRule extends AbstractModel{
     private String Origin;
 
     /**
-    * 路径匹配时回源的Host头部。
+    * 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerName")
@@ -55,7 +55,7 @@ public class PathRule extends AbstractModel{
     private String ServerName;
 
     /**
-    * 源站所属区域，支持CN，OV。分别表示国内或海外。
+    * 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginArea")
@@ -63,7 +63,7 @@ public class PathRule extends AbstractModel{
     private String OriginArea;
 
     /**
-    * 路径匹配时回源的URI路径。
+    * 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardUri")
@@ -99,9 +99,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 匹配的URL路径。
+     * Get 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 匹配的URL路径。
+     * @return Path 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -109,9 +109,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 匹配的URL路径。
+     * Set 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 匹配的URL路径。
+     * @param Path 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -119,9 +119,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+     * Get 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+     * @return Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrigin() {
@@ -129,9 +129,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+     * Set 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+     * @param Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrigin(String Origin) {
@@ -139,9 +139,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时回源的Host头部。
+     * Get 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServerName 路径匹配时回源的Host头部。
+     * @return ServerName 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerName() {
@@ -149,9 +149,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时回源的Host头部。
+     * Set 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServerName 路径匹配时回源的Host头部。
+     * @param ServerName 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerName(String ServerName) {
@@ -159,9 +159,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 源站所属区域，支持CN，OV。分别表示国内或海外。
+     * Get 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。
+     * @return OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginArea() {
@@ -169,9 +169,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 源站所属区域，支持CN，OV。分别表示国内或海外。
+     * Set 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。
+     * @param OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginArea(String OriginArea) {
@@ -179,9 +179,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时回源的URI路径。
+     * Get 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForwardUri 路径匹配时回源的URI路径。
+     * @return ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardUri() {
@@ -189,9 +189,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时回源的URI路径。
+     * Set 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForwardUri 路径匹配时回源的URI路径。
+     * @param ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardUri(String ForwardUri) {

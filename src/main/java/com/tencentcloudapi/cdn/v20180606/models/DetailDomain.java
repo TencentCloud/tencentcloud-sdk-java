@@ -293,7 +293,7 @@ readonly：域名存在特殊配置，被锁定
     private MaxAge MaxAge;
 
     /**
-    * Ipv6 配置（功能灰度中，敬请期待）
+    * Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6")
@@ -420,6 +420,22 @@ off：不支持
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
+
+    /**
+    * 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedAuthentication")
+    @Expose
+    private AdvancedAuthentication AdvancedAuthentication;
+
+    /**
+    * 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginAuthentication")
+    @Expose
+    private OriginAuthentication OriginAuthentication;
 
     /**
      * Get 域名 ID 
@@ -1106,9 +1122,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Get Ipv6 配置（功能灰度中，敬请期待）
+     * Get Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ipv6 Ipv6 配置（功能灰度中，敬请期待）
+     * @return Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Ipv6 getIpv6() {
@@ -1116,9 +1132,9 @@ readonly：域名存在特殊配置，被锁定
     }
 
     /**
-     * Set Ipv6 配置（功能灰度中，敬请期待）
+     * Set Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6 Ipv6 配置（功能灰度中，敬请期待）
+     * @param Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6(Ipv6 Ipv6) {
@@ -1442,6 +1458,46 @@ off：不支持
     }
 
     /**
+     * Get 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvancedAuthentication getAdvancedAuthentication() {
+        return this.AdvancedAuthentication;
+    }
+
+    /**
+     * Set 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedAuthentication(AdvancedAuthentication AdvancedAuthentication) {
+        this.AdvancedAuthentication = AdvancedAuthentication;
+    }
+
+    /**
+     * Get 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginAuthentication 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OriginAuthentication getOriginAuthentication() {
+        return this.OriginAuthentication;
+    }
+
+    /**
+     * Set 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginAuthentication 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginAuthentication(OriginAuthentication OriginAuthentication) {
+        this.OriginAuthentication = OriginAuthentication;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1493,6 +1549,8 @@ off：不支持
         this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
+        this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
 
     }
 }

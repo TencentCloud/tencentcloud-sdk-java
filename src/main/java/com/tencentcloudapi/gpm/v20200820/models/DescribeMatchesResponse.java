@@ -38,14 +38,14 @@ public class DescribeMatchesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 当前页号
+    * 当前页号，不填默认返回第一页
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 单页大小
+    * 单页大小，不填默认取 30，最大值不能超过 30
     */
     @SerializedName("PageSize")
     @Expose
@@ -109,32 +109,32 @@ public class DescribeMatchesResponse extends AbstractModel{
     }
 
     /**
-     * Get 当前页号 
-     * @return PageNumber 当前页号
+     * Get 当前页号，不填默认返回第一页 
+     * @return PageNumber 当前页号，不填默认返回第一页
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 当前页号
-     * @param PageNumber 当前页号
+     * Set 当前页号，不填默认返回第一页
+     * @param PageNumber 当前页号，不填默认返回第一页
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 单页大小 
-     * @return PageSize 单页大小
+     * Get 单页大小，不填默认取 30，最大值不能超过 30 
+     * @return PageSize 单页大小，不填默认取 30，最大值不能超过 30
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 单页大小
-     * @param PageSize 单页大小
+     * Set 单页大小，不填默认取 30，最大值不能超过 30
+     * @param PageSize 单页大小，不填默认取 30，最大值不能超过 30
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

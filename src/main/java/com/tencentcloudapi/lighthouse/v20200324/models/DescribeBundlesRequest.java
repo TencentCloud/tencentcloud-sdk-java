@@ -45,7 +45,7 @@ public class DescribeBundlesRequest extends AbstractModel{
 
     /**
     * 过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
@@ -108,7 +108,7 @@ public class DescribeBundlesRequest extends AbstractModel{
 
     /**
      * Get 过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
@@ -117,7 +117,7 @@ public class DescribeBundlesRequest extends AbstractModel{
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。 
      * @return Filters 过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
@@ -132,7 +132,7 @@ public class DescribeBundlesRequest extends AbstractModel{
 
     /**
      * Set 过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
@@ -141,7 +141,7 @@ public class DescribeBundlesRequest extends AbstractModel{
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
      * @param Filters 过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
