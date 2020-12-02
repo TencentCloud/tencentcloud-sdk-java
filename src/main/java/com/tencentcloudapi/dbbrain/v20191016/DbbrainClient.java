@@ -39,6 +39,86 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *创建健康报告，并可以选择是否发送邮件。
+     * @param req CreateDBDiagReportTaskRequest
+     * @return CreateDBDiagReportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBDiagReportTaskResponse CreateDBDiagReportTask(CreateDBDiagReportTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBDiagReportTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBDiagReportTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDBDiagReportTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成邮件配置）。
+     * @param req CreateMailProfileRequest
+     * @return CreateMailProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMailProfileResponse CreateMailProfile(CreateMailProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMailProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMailProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMailProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取邮件发送中联系人的相关信息。
+     * @param req DescribeAllUserContactRequest
+     * @return DescribeAllUserContactResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllUserContactResponse DescribeAllUserContact(DescribeAllUserContactRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllUserContactResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllUserContactResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllUserContact");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取邮件发送联系组的相关信息。
+     * @param req DescribeAllUserGroupRequest
+     * @return DescribeAllUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllUserGroupResponse DescribeAllUserGroup(DescribeAllUserGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllUserGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllUserGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllUserGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取实例异常诊断事件的详情信息。
      * @param req DescribeDBDiagEventRequest
      * @return DescribeDBDiagEventResponse
@@ -171,6 +251,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTopSpaceTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改实例巡检开关。
+     * @param req ModifyDiagDBInstanceConfRequest
+     * @return ModifyDiagDBInstanceConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(ModifyDiagDBInstanceConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDiagDBInstanceConfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDiagDBInstanceConfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDiagDBInstanceConf");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

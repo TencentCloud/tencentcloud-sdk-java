@@ -20,10 +20,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStorageDetailsResponse extends AbstractModel{
+public class DescribeCDNStatDetailsResponse extends AbstractModel{
 
     /**
-    * 存储统计数据，每5分钟或每天一条数据。
+    * 每条数据的时间粒度，单位：分钟。
+    */
+    @SerializedName("DataInterval")
+    @Expose
+    private Long DataInterval;
+
+    /**
+    * CDN 用量数据。
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +44,32 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 存储统计数据，每5分钟或每天一条数据。 
-     * @return Data 存储统计数据，每5分钟或每天一条数据。
+     * Get 每条数据的时间粒度，单位：分钟。 
+     * @return DataInterval 每条数据的时间粒度，单位：分钟。
+     */
+    public Long getDataInterval() {
+        return this.DataInterval;
+    }
+
+    /**
+     * Set 每条数据的时间粒度，单位：分钟。
+     * @param DataInterval 每条数据的时间粒度，单位：分钟。
+     */
+    public void setDataInterval(Long DataInterval) {
+        this.DataInterval = DataInterval;
+    }
+
+    /**
+     * Get CDN 用量数据。 
+     * @return Data CDN 用量数据。
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 存储统计数据，每5分钟或每天一条数据。
-     * @param Data 存储统计数据，每5分钟或每天一条数据。
+     * Set CDN 用量数据。
+     * @param Data CDN 用量数据。
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;
@@ -72,6 +95,7 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DataInterval", this.DataInterval);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

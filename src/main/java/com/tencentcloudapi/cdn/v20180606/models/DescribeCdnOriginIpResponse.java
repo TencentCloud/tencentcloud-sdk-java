@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStorageDetailsResponse extends AbstractModel{
+public class DescribeCdnOriginIpResponse extends AbstractModel{
 
     /**
-    * 存储统计数据，每5分钟或每天一条数据。
+    * 回源节点IP详情。
     */
-    @SerializedName("Data")
+    @SerializedName("Ips")
     @Expose
-    private StatDataItem [] Data;
+    private OriginIp [] Ips;
+
+    /**
+    * 回源节点IP总个数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 存储统计数据，每5分钟或每天一条数据。 
-     * @return Data 存储统计数据，每5分钟或每天一条数据。
+     * Get 回源节点IP详情。 
+     * @return Ips 回源节点IP详情。
      */
-    public StatDataItem [] getData() {
-        return this.Data;
+    public OriginIp [] getIps() {
+        return this.Ips;
     }
 
     /**
-     * Set 存储统计数据，每5分钟或每天一条数据。
-     * @param Data 存储统计数据，每5分钟或每天一条数据。
+     * Set 回源节点IP详情。
+     * @param Ips 回源节点IP详情。
      */
-    public void setData(StatDataItem [] Data) {
-        this.Data = Data;
+    public void setIps(OriginIp [] Ips) {
+        this.Ips = Ips;
+    }
+
+    /**
+     * Get 回源节点IP总个数。 
+     * @return TotalCount 回源节点IP总个数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 回源节点IP总个数。
+     * @param TotalCount 回源节点IP总个数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -72,7 +95,8 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Ips.", this.Ips);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

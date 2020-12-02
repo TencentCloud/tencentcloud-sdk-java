@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStorageDetailsResponse extends AbstractModel{
+public class CreateDBDiagReportTaskResponse extends AbstractModel{
 
     /**
-    * 存储统计数据，每5分钟或每天一条数据。
+    * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("AsyncRequestId")
     @Expose
-    private StatDataItem [] Data;
+    private Long AsyncRequestId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 存储统计数据，每5分钟或每天一条数据。 
-     * @return Data 存储统计数据，每5分钟或每天一条数据。
+     * Get 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public StatDataItem [] getData() {
-        return this.Data;
+    public Long getAsyncRequestId() {
+        return this.AsyncRequestId;
     }
 
     /**
-     * Set 存储统计数据，每5分钟或每天一条数据。
-     * @param Data 存储统计数据，每5分钟或每天一条数据。
+     * Set 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(StatDataItem [] Data) {
-        this.Data = Data;
+    public void setAsyncRequestId(Long AsyncRequestId) {
+        this.AsyncRequestId = AsyncRequestId;
     }
 
     /**
@@ -72,7 +77,7 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

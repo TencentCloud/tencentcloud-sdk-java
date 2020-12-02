@@ -20,14 +20,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStorageDataResponse extends AbstractModel{
+public class StorageStatData extends AbstractModel{
 
     /**
-    * 当前媒体总量。
+    * 点播存储的计费区域，可能值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
     */
-    @SerializedName("MediaCount")
+    @SerializedName("Area")
     @Expose
-    private Long MediaCount;
+    private String Area;
 
     /**
     * 当前总存储量，单位是字节。
@@ -51,33 +53,27 @@ public class DescribeStorageDataResponse extends AbstractModel{
     private Long StandardStorage;
 
     /**
-    * 各计费区域的存储用量。
-    */
-    @SerializedName("StorageStat")
-    @Expose
-    private StorageStatData [] StorageStat;
-
-    /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
-
-    /**
-     * Get 当前媒体总量。 
-     * @return MediaCount 当前媒体总量。
+     * Get 点播存储的计费区域，可能值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li> 
+     * @return Area 点播存储的计费区域，可能值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
      */
-    public Long getMediaCount() {
-        return this.MediaCount;
+    public String getArea() {
+        return this.Area;
     }
 
     /**
-     * Set 当前媒体总量。
-     * @param MediaCount 当前媒体总量。
+     * Set 点播存储的计费区域，可能值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
+     * @param Area 点播存储的计费区域，可能值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
      */
-    public void setMediaCount(Long MediaCount) {
-        this.MediaCount = MediaCount;
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
     /**
@@ -129,47 +125,13 @@ public class DescribeStorageDataResponse extends AbstractModel{
     }
 
     /**
-     * Get 各计费区域的存储用量。 
-     * @return StorageStat 各计费区域的存储用量。
-     */
-    public StorageStatData [] getStorageStat() {
-        return this.StorageStat;
-    }
-
-    /**
-     * Set 各计费区域的存储用量。
-     * @param StorageStat 各计费区域的存储用量。
-     */
-    public void setStorageStat(StorageStatData [] StorageStat) {
-        this.StorageStat = StorageStat;
-    }
-
-    /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MediaCount", this.MediaCount);
+        this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
         this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
         this.setParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
-        this.setParamArrayObj(map, prefix + "StorageStat.", this.StorageStat);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

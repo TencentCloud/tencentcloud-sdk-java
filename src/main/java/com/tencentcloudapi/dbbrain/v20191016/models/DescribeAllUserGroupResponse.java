@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStorageDetailsResponse extends AbstractModel{
+public class DescribeAllUserGroupResponse extends AbstractModel{
 
     /**
-    * 存储统计数据，每5分钟或每天一条数据。
+    * 组总数。
     */
-    @SerializedName("Data")
+    @SerializedName("TotalCount")
     @Expose
-    private StatDataItem [] Data;
+    private Long TotalCount;
+
+    /**
+    * 组信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Groups")
+    @Expose
+    private GroupItem [] Groups;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 存储统计数据，每5分钟或每天一条数据。 
-     * @return Data 存储统计数据，每5分钟或每天一条数据。
+     * Get 组总数。 
+     * @return TotalCount 组总数。
      */
-    public StatDataItem [] getData() {
-        return this.Data;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 存储统计数据，每5分钟或每天一条数据。
-     * @param Data 存储统计数据，每5分钟或每天一条数据。
+     * Set 组总数。
+     * @param TotalCount 组总数。
      */
-    public void setData(StatDataItem [] Data) {
-        this.Data = Data;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 组信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Groups 组信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GroupItem [] getGroups() {
+        return this.Groups;
+    }
+
+    /**
+     * Set 组信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Groups 组信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroups(GroupItem [] Groups) {
+        this.Groups = Groups;
     }
 
     /**
@@ -72,7 +100,8 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

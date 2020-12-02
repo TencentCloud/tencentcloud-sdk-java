@@ -917,6 +917,29 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询点播域名的 CDN 带宽、流量等统计数据。
+* 查询的起始时间和结束时间跨度不超过90天。
+* 可以查询不同服务区域的数据。
+* 中国境内的数据支持查询指定地区、运营商的统计数据。
+     * @param req DescribeCDNStatDetailsRequest
+     * @return DescribeCDNStatDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCDNStatDetailsResponse DescribeCDNStatDetails(DescribeCDNStatDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCDNStatDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCDNStatDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCDNStatDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于查询点播 CDN 的流量、带宽等统计数据。
    1. 可以查询最近365天内的 CDN 用量数据。
    2.  查询时间跨度不超过90天。
@@ -1223,10 +1246,9 @@ public class VodClient extends AbstractClient{
 
     /**
      *该接口返回查询时间范围内使用的点播存储空间，单位：字节。
-   1. 可以查询最近365天内的存储空间数据；
-   2. 查询时间跨度不超过90天；
-   3. 分钟粒度查询跨度不超过5天；
-   4. 小时粒度查询跨度不超过10天。
+    1. 可以查询最近365天内的存储空间数据；
+    2. 查询时间跨度不超过90天；
+    3. 分钟粒度查询跨度不超过7天；
      * @param req DescribeStorageDetailsRequest
      * @return DescribeStorageDetailsResponse
      * @throws TencentCloudSDKException

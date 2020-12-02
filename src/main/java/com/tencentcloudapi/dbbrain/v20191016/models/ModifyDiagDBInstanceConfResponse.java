@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStorageDetailsResponse extends AbstractModel{
-
-    /**
-    * 存储统计数据，每5分钟或每天一条数据。
-    */
-    @SerializedName("Data")
-    @Expose
-    private StatDataItem [] Data;
+public class ModifyDiagDBInstanceConfResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 存储统计数据，每5分钟或每天一条数据。 
-     * @return Data 存储统计数据，每5分钟或每天一条数据。
-     */
-    public StatDataItem [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 存储统计数据，每5分钟或每天一条数据。
-     * @param Data 存储统计数据，每5分钟或每天一条数据。
-     */
-    public void setData(StatDataItem [] Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -72,7 +49,6 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

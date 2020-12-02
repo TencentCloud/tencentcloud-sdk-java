@@ -309,6 +309,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：使用此接口需开启对应白名单）
+     * @param req DescribeCdnOriginIpRequest
+     * @return DescribeCdnOriginIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdnOriginIpResponse DescribeCdnOriginIp(DescribeCdnOriginIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCdnOriginIpResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCdnOriginIpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCdnOriginIp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
      * @param req DescribeCertDomainsRequest
      * @return DescribeCertDomainsResponse

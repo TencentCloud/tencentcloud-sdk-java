@@ -23,25 +23,24 @@ import java.util.HashMap;
 public class DescribeStorageDetailsRequest extends AbstractModel{
 
     /**
-    * 起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+    * 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+    * 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 查询时间间隔，有效值：
-<li>Minute：每分钟一个统计数据。</li>
-<li>Hour：每小时一个统计数据。</li>
-<li>Day：每天一个统计数据。</li>
-默认按时间跨度决定，小于1小时按分钟，小于等于7天按小时，大于7天按天展示。
+    * 统计时间粒度，有效值：
+<li>Minute：以5分钟为粒度。</li>
+<li>Day：以天为粒度。</li>
+默认按时间跨度决定，小于等于1天以5分钟为粒度，大于1天则以天为粒度。
     */
     @SerializedName("Interval")
     @Expose
@@ -67,64 +66,70 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。 
-     * @return StartTime 起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+    * 查询的存储区域，有效值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
+默认值为 Chinese Mainland。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+     * Get 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。 
+     * @return StartTime 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-     * @param StartTime 起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * Set 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * @param StartTime 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。 
-     * @return EndTime 结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * Get 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。 
+     * @return EndTime 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
-     * @param EndTime 结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * Set 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * @param EndTime 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 查询时间间隔，有效值：
-<li>Minute：每分钟一个统计数据。</li>
-<li>Hour：每小时一个统计数据。</li>
-<li>Day：每天一个统计数据。</li>
-默认按时间跨度决定，小于1小时按分钟，小于等于7天按小时，大于7天按天展示。 
-     * @return Interval 查询时间间隔，有效值：
-<li>Minute：每分钟一个统计数据。</li>
-<li>Hour：每小时一个统计数据。</li>
-<li>Day：每天一个统计数据。</li>
-默认按时间跨度决定，小于1小时按分钟，小于等于7天按小时，大于7天按天展示。
+     * Get 统计时间粒度，有效值：
+<li>Minute：以5分钟为粒度。</li>
+<li>Day：以天为粒度。</li>
+默认按时间跨度决定，小于等于1天以5分钟为粒度，大于1天则以天为粒度。 
+     * @return Interval 统计时间粒度，有效值：
+<li>Minute：以5分钟为粒度。</li>
+<li>Day：以天为粒度。</li>
+默认按时间跨度决定，小于等于1天以5分钟为粒度，大于1天则以天为粒度。
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 查询时间间隔，有效值：
-<li>Minute：每分钟一个统计数据。</li>
-<li>Hour：每小时一个统计数据。</li>
-<li>Day：每天一个统计数据。</li>
-默认按时间跨度决定，小于1小时按分钟，小于等于7天按小时，大于7天按天展示。
-     * @param Interval 查询时间间隔，有效值：
-<li>Minute：每分钟一个统计数据。</li>
-<li>Hour：每小时一个统计数据。</li>
-<li>Day：每天一个统计数据。</li>
-默认按时间跨度决定，小于1小时按分钟，小于等于7天按小时，大于7天按天展示。
+     * Set 统计时间粒度，有效值：
+<li>Minute：以5分钟为粒度。</li>
+<li>Day：以天为粒度。</li>
+默认按时间跨度决定，小于等于1天以5分钟为粒度，大于1天则以天为粒度。
+     * @param Interval 统计时间粒度，有效值：
+<li>Minute：以5分钟为粒度。</li>
+<li>Day：以天为粒度。</li>
+默认按时间跨度决定，小于等于1天以5分钟为粒度，大于1天则以天为粒度。
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -183,6 +188,34 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
     }
 
     /**
+     * Get 查询的存储区域，有效值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
+默认值为 Chinese Mainland。 
+     * @return Area 查询的存储区域，有效值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
+默认值为 Chinese Mainland。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 查询的存储区域，有效值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
+默认值为 Chinese Mainland。
+     * @param Area 查询的存储区域，有效值：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>outside Chinese Mainland：中国境外。</li>
+默认值为 Chinese Mainland。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -191,6 +224,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }
