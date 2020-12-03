@@ -86,6 +86,13 @@ public class AddClusterInstancesRequest extends AbstractModel{
     private String OsCustomizeType;
 
     /**
+    * 镜像特征ID列表
+    */
+    @SerializedName("FeatureIdList")
+    @Expose
+    private String [] FeatureIdList;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -230,6 +237,22 @@ public class AddClusterInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 镜像特征ID列表 
+     * @return FeatureIdList 镜像特征ID列表
+     */
+    public String [] getFeatureIdList() {
+        return this.FeatureIdList;
+    }
+
+    /**
+     * Set 镜像特征ID列表
+     * @param FeatureIdList 镜像特征ID列表
+     */
+    public void setFeatureIdList(String [] FeatureIdList) {
+        this.FeatureIdList = FeatureIdList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class AddClusterInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SgId", this.SgId);
         this.setParamSimple(map, prefix + "InstanceImportMode", this.InstanceImportMode);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamArraySimple(map, prefix + "FeatureIdList.", this.FeatureIdList);
 
     }
 }

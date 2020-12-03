@@ -1946,6 +1946,46 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *修改延迟只读实例的延迟复制时间。
+     * @param req ModifyRoReplicationDelayRequest
+     * @return ModifyRoReplicationDelayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoReplicationDelayResponse ModifyRoReplicationDelay(ModifyRoReplicationDelayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoReplicationDelayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoReplicationDelay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改只读实例类型，可以将普通只读实例变为延迟只读实例，或者将延迟只读实例变为普通只读实例。
+     * @param req ModifyRoTypeRequest
+     * @return ModifyRoTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoTypeResponse ModifyRoType(ModifyRoTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoTypeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
      * @param req ModifyTimeWindowRequest
      * @return ModifyTimeWindowResponse
@@ -2116,6 +2156,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *启动延迟只读实例的延迟复制。
+     * @param req StartDelayReplicationRequest
+     * @return StartDelayReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartDelayReplicationResponse StartDelayReplication(StartDelayReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartDelayReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartDelayReplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(StopDBImportJob)用于终止数据导入任务。
      * @param req StopDBImportJobRequest
      * @return StopDBImportJobResponse
@@ -2128,6 +2188,26 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopDBImportJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopDBImportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止延迟只读实例的延迟复制。
+     * @param req StopDelayReplicationRequest
+     * @return StopDelayReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopDelayReplicationResponse StopDelayReplication(StopDelayReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopDelayReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopDelayReplication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

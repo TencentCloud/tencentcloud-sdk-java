@@ -79,6 +79,46 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *网关与API分组批量绑定
+     * @param req BindApiGroupRequest
+     * @return BindApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindApiGroupResponse BindApiGroup(BindApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindApiGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用或禁用API
+     * @param req ChangeApiUsableStatusRequest
+     * @return ChangeApiUsableStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeApiUsableStatusResponse ChangeApiUsableStatus(ChangeApiUsableStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeApiUsableStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeApiUsableStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeApiUsableStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对执行失败的任务批次执行续跑
      * @param req ContinueRunFailedTaskBatchRequest
      * @return ContinueRunFailedTaskBatchResponse
@@ -91,6 +131,66 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ContinueRunFailedTaskBatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ContinueRunFailedTaskBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *一键导入API分组
+     * @param req CreateAllGatewayApiAsyncRequest
+     * @return CreateAllGatewayApiAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAllGatewayApiAsyncResponse CreateAllGatewayApiAsync(CreateAllGatewayApiAsyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAllGatewayApiAsyncResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAllGatewayApiAsyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAllGatewayApiAsync");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建API分组
+     * @param req CreateApiGroupRequest
+     * @return CreateApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiGroupResponse CreateApiGroup(CreateApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApiGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建API限流规则
+     * @param req CreateApiRateLimitRuleRequest
+     * @return CreateApiRateLimitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiRateLimitRuleResponse CreateApiRateLimitRule(CreateApiRateLimitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApiRateLimitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApiRateLimitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApiRateLimitRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -171,6 +271,26 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateContainGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateContainGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量导入API至api分组(也支持新建API到分组)
+     * @param req CreateGatewayApiRequest
+     * @return CreateGatewayApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGatewayApiResponse CreateGatewayApi(CreateGatewayApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGatewayApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGatewayApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGatewayApi");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -371,6 +491,26 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTaskFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTaskFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除Api分组
+     * @param req DeleteApiGroupRequest
+     * @return DeleteApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApiGroupResponse DeleteApiGroup(DeleteApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApiGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -720,6 +860,86 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *查询API分组
+     * @param req DescribeApiGroupRequest
+     * @return DescribeApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiGroupResponse DescribeApiGroup(DescribeApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询API 分组信息列表
+     * @param req DescribeApiGroupsRequest
+     * @return DescribeApiGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiGroupsResponse DescribeApiGroups(DescribeApiGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询API限流规则
+     * @param req DescribeApiRateLimitRulesRequest
+     * @return DescribeApiRateLimitRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiRateLimitRulesResponse DescribeApiRateLimitRules(DescribeApiRateLimitRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiRateLimitRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiRateLimitRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiRateLimitRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询网关API监控明细数据
+     * @param req DescribeApiUseDetailRequest
+     * @return DescribeApiUseDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiUseDetailResponse DescribeApiUseDetail(DescribeApiUseDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiUseDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiUseDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiUseDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询API 版本
      * @param req DescribeApiVersionsRequest
      * @return DescribeApiVersionsResponse
@@ -980,6 +1200,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *查询一键导入API分组任务的状态
+     * @param req DescribeCreateGatewayApiStatusRequest
+     * @return DescribeCreateGatewayApiStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(DescribeCreateGatewayApiStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCreateGatewayApiStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCreateGatewayApiStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCreateGatewayApiStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
      * @param req DescribeDownloadInfoRequest
@@ -1021,6 +1261,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询网关所有分组下Api列表
+     * @param req DescribeGatewayAllGroupApisRequest
+     * @return DescribeGatewayAllGroupApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApis(DescribeGatewayAllGroupApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewayAllGroupApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewayAllGroupApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGatewayAllGroupApis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询网关监控概览
+     * @param req DescribeGatewayMonitorOverviewRequest
+     * @return DescribeGatewayMonitorOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverview(DescribeGatewayMonitorOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewayMonitorOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewayMonitorOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGatewayMonitorOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询虚拟机部署组详情
      * @param req DescribeGroupRequest
      * @return DescribeGroupResponse
@@ -1041,6 +1321,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询某个API分组已绑定的网关部署组信息列表
+     * @param req DescribeGroupBindedGatewaysRequest
+     * @return DescribeGroupBindedGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupBindedGatewaysResponse DescribeGroupBindedGateways(DescribeGroupBindedGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupBindedGatewaysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupBindedGatewaysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupBindedGateways");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询某个网关绑定的API 分组信息列表
+     * @param req DescribeGroupGatewaysRequest
+     * @return DescribeGroupGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupGatewaysResponse DescribeGroupGateways(DescribeGroupGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupGatewaysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupGatewaysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupGateways");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询虚拟机部署组云主机列表
      * @param req DescribeGroupInstancesRequest
      * @return DescribeGroupInstancesResponse
@@ -1053,6 +1373,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeGroupInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询网关分组监控明细数据
+     * @param req DescribeGroupUseDetailRequest
+     * @return DescribeGroupUseDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupUseDetailResponse DescribeGroupUseDetail(DescribeGroupUseDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupUseDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupUseDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupUseDetail");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1622,6 +1962,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *下线Api分组
+     * @param req DraftApiGroupRequest
+     * @return DraftApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DraftApiGroupResponse DraftApiGroup(DraftApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DraftApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DraftApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DraftApiGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启用任务
      * @param req EnableTaskRequest
      * @return EnableTaskResponse
@@ -1943,6 +2303,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *发布Api分组
+     * @param req ReleaseApiGroupRequest
+     * @return ReleaseApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseApiGroupResponse ReleaseApiGroup(ReleaseApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseApiGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *发布配置
      * @param req ReleaseConfigRequest
      * @return ReleaseConfigResponse
@@ -2235,6 +2615,106 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<TerminateTaskFlowBatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TerminateTaskFlowBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *API分组批量与网关解绑
+     * @param req UnbindApiGroupRequest
+     * @return UnbindApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindApiGroupResponse UnbindApiGroup(UnbindApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindApiGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新Api分组
+     * @param req UpdateApiGroupRequest
+     * @return UpdateApiGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApiGroupResponse UpdateApiGroup(UpdateApiGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateApiGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateApiGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateApiGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新API限流规则
+     * @param req UpdateApiRateLimitRuleRequest
+     * @return UpdateApiRateLimitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApiRateLimitRuleResponse UpdateApiRateLimitRule(UpdateApiRateLimitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateApiRateLimitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateApiRateLimitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateApiRateLimitRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量更新API限流规则
+     * @param req UpdateApiRateLimitRulesRequest
+     * @return UpdateApiRateLimitRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApiRateLimitRulesResponse UpdateApiRateLimitRules(UpdateApiRateLimitRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateApiRateLimitRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateApiRateLimitRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateApiRateLimitRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新API
+     * @param req UpdateGatewayApiRequest
+     * @return UpdateGatewayApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGatewayApiResponse UpdateGatewayApi(UpdateGatewayApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateGatewayApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateGatewayApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateGatewayApi");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

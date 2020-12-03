@@ -479,7 +479,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *查询固件升级任务列表
+     *查询固件升级任务详情
      * @param req DescribeFirmwareTaskRequest
      * @return DescribeFirmwareTaskResponse
      * @throws TencentCloudSDKException

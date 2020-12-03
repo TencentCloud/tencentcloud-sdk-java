@@ -71,6 +71,14 @@ public class DiagnoseInfo extends AbstractModel{
     private DiagnoseList [] ClientList;
 
     /**
+    * 域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 待诊断的URL。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiagnoseUrl 待诊断的URL。
@@ -191,6 +199,26 @@ public class DiagnoseInfo extends AbstractModel{
     }
 
     /**
+     * Get 域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Area 域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Area 域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +228,7 @@ public class DiagnoseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpireDate", this.ExpireDate);
         this.setParamSimple(map, prefix + "VisitCount", this.VisitCount);
         this.setParamArrayObj(map, prefix + "ClientList.", this.ClientList);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }
