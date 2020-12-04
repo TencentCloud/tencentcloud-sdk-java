@@ -61,6 +61,26 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
+     *场内抓拍上报接口
+     * @param req CreateCaptureRequest
+     * @return CreateCaptureResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCaptureResponse CreateCapture(CreateCaptureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCaptureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCaptureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCapture");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *集团广场的多经点位告警
      * @param req CreateMultiBizAlertRequest
      * @return CreateMultiBizAlertResponse

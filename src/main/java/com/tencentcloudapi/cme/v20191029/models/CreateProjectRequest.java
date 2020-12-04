@@ -69,7 +69,7 @@ public class CreateProjectRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 导播台信息，仅当项目类型为 SWITCHER 时有效。
+    * 导播台信息，仅当项目类型为 SWITCHER 时必填。
     */
     @SerializedName("SwitcherProjectInput")
     @Expose
@@ -83,7 +83,7 @@ public class CreateProjectRequest extends AbstractModel{
     private LiveStreamClipProjectInput LiveStreamClipProjectInput;
 
     /**
-    * 视频编辑信息。
+    * 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
     */
     @SerializedName("VideoEditProjectInput")
     @Expose
@@ -202,16 +202,16 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 导播台信息，仅当项目类型为 SWITCHER 时有效。 
-     * @return SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     * Get 导播台信息，仅当项目类型为 SWITCHER 时必填。 
+     * @return SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
      */
     public SwitcherProjectInput getSwitcherProjectInput() {
         return this.SwitcherProjectInput;
     }
 
     /**
-     * Set 导播台信息，仅当项目类型为 SWITCHER 时有效。
-     * @param SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     * Set 导播台信息，仅当项目类型为 SWITCHER 时必填。
+     * @param SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
      */
     public void setSwitcherProjectInput(SwitcherProjectInput SwitcherProjectInput) {
         this.SwitcherProjectInput = SwitcherProjectInput;
@@ -234,16 +234,16 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频编辑信息。 
-     * @return VideoEditProjectInput 视频编辑信息。
+     * Get 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。 
+     * @return VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
      */
     public VideoEditProjectInput getVideoEditProjectInput() {
         return this.VideoEditProjectInput;
     }
 
     /**
-     * Set 视频编辑信息。
-     * @param VideoEditProjectInput 视频编辑信息。
+     * Set 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+     * @param VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
      */
     public void setVideoEditProjectInput(VideoEditProjectInput VideoEditProjectInput) {
         this.VideoEditProjectInput = VideoEditProjectInput;

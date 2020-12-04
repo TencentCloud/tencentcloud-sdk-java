@@ -37,6 +37,13 @@ public class VODExportInfo extends AbstractModel{
     private Long ClassId;
 
     /**
+    * 第三方平台发布信息列表。
+    */
+    @SerializedName("ThirdPartyPublishInfos")
+    @Expose
+    private ThirdPartyPublishInfo [] ThirdPartyPublishInfos;
+
+    /**
      * Get 导出的媒资名称。 
      * @return Name 导出的媒资名称。
      */
@@ -69,11 +76,28 @@ public class VODExportInfo extends AbstractModel{
     }
 
     /**
+     * Get 第三方平台发布信息列表。 
+     * @return ThirdPartyPublishInfos 第三方平台发布信息列表。
+     */
+    public ThirdPartyPublishInfo [] getThirdPartyPublishInfos() {
+        return this.ThirdPartyPublishInfos;
+    }
+
+    /**
+     * Set 第三方平台发布信息列表。
+     * @param ThirdPartyPublishInfos 第三方平台发布信息列表。
+     */
+    public void setThirdPartyPublishInfos(ThirdPartyPublishInfo [] ThirdPartyPublishInfos) {
+        this.ThirdPartyPublishInfos = ThirdPartyPublishInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
+        this.setParamArrayObj(map, prefix + "ThirdPartyPublishInfos.", this.ThirdPartyPublishInfos);
 
     }
 }

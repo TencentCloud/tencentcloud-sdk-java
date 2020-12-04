@@ -58,6 +58,13 @@ public class CMEExportInfo extends AbstractModel{
     private String [] TagSet;
 
     /**
+    * 第三方平台发布信息列表。
+    */
+    @SerializedName("ThirdPartyPublishInfos")
+    @Expose
+    private ThirdPartyPublishInfo [] ThirdPartyPublishInfos;
+
+    /**
      * Get 导出的归属者。 
      * @return Owner 导出的归属者。
      */
@@ -138,6 +145,22 @@ public class CMEExportInfo extends AbstractModel{
     }
 
     /**
+     * Get 第三方平台发布信息列表。 
+     * @return ThirdPartyPublishInfos 第三方平台发布信息列表。
+     */
+    public ThirdPartyPublishInfo [] getThirdPartyPublishInfos() {
+        return this.ThirdPartyPublishInfos;
+    }
+
+    /**
+     * Set 第三方平台发布信息列表。
+     * @param ThirdPartyPublishInfos 第三方平台发布信息列表。
+     */
+    public void setThirdPartyPublishInfos(ThirdPartyPublishInfo [] ThirdPartyPublishInfos) {
+        this.ThirdPartyPublishInfos = ThirdPartyPublishInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CMEExportInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ClassPath", this.ClassPath);
         this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArrayObj(map, prefix + "ThirdPartyPublishInfos.", this.ThirdPartyPublishInfos);
 
     }
 }
