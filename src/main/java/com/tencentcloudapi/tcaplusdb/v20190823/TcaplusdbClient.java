@@ -319,6 +319,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *查询独占集群可以申请的剩余机器
+     * @param req DescribeMachineRequest
+     * @return DescribeMachineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMachineResponse DescribeMachine(DescribeMachineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMachineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMachineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMachine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询TcaplusDB服务支持的地域列表
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -471,6 +491,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUinInWhitelistResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUinInWhitelist");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改独占集群机器
+     * @param req ModifyClusterMachineRequest
+     * @return ModifyClusterMachineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterMachineResponse ModifyClusterMachine(ModifyClusterMachineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterMachineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterMachine");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -102,7 +102,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangdong：广东。</li>
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
-<li>Hongkong Macao And Taiwan：港澳台。</li>
+<li>Hong Kong, Macao and Taiwan：港澳台。</li>
 <li>outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
     */
@@ -303,7 +303,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangdong：广东。</li>
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
-<li>Hongkong Macao And Taiwan：港澳台。</li>
+<li>Hong Kong, Macao and Taiwan：港澳台。</li>
 <li>outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li> 
      * @return Districts 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
@@ -338,7 +338,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangdong：广东。</li>
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
-<li>Hongkong Macao And Taiwan：港澳台。</li>
+<li>Hong Kong, Macao and Taiwan：港澳台。</li>
 <li>outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      */
@@ -379,7 +379,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangdong：广东。</li>
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
-<li>Hongkong Macao And Taiwan：港澳台。</li>
+<li>Hong Kong, Macao and Taiwan：港澳台。</li>
 <li>outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      * @param Districts 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
@@ -414,7 +414,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangdong：广东。</li>
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
-<li>Hongkong Macao And Taiwan：港澳台。</li>
+<li>Hong Kong, Macao and Taiwan：港澳台。</li>
 <li>outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      */

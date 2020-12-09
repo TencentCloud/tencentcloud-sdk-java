@@ -41,6 +41,7 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
     */
     @SerializedName("MaxAgeContents")
     @Expose
@@ -48,10 +49,19 @@ index 时填充 /
 
     /**
     * MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
     */
     @SerializedName("MaxAgeTime")
     @Expose
     private Long MaxAgeTime;
+
+    /**
+    * 是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FollowOrigin")
+    @Expose
+    private String FollowOrigin;
 
     /**
      * Get 规则类型：
@@ -95,13 +105,15 @@ all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
-index 时填充 / 
+index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。 
      * @return MaxAgeContents MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
      */
     public String [] getMaxAgeContents() {
         return this.MaxAgeContents;
@@ -114,20 +126,24 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
      * @param MaxAgeContents MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+注意：all规则不可删除，默认遵循源站，可修改。
      */
     public void setMaxAgeContents(String [] MaxAgeContents) {
         this.MaxAgeContents = MaxAgeContents;
     }
 
     /**
-     * Get MaxAge 时间设置，单位秒 
+     * Get MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。 
      * @return MaxAgeTime MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
@@ -135,10 +151,32 @@ index 时填充 /
 
     /**
      * Set MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
      * @param MaxAgeTime MaxAge 时间设置，单位秒
+注意：时间为0，即不缓存。
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;
+    }
+
+    /**
+     * Get 是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FollowOrigin 是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFollowOrigin() {
+        return this.FollowOrigin;
+    }
+
+    /**
+     * Set 是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FollowOrigin 是否遵循源站，on或off，开启时忽略时间设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFollowOrigin(String FollowOrigin) {
+        this.FollowOrigin = FollowOrigin;
     }
 
     /**
@@ -148,6 +186,7 @@ index 时填充 /
         this.setParamSimple(map, prefix + "MaxAgeType", this.MaxAgeType);
         this.setParamArraySimple(map, prefix + "MaxAgeContents.", this.MaxAgeContents);
         this.setParamSimple(map, prefix + "MaxAgeTime", this.MaxAgeTime);
+        this.setParamSimple(map, prefix + "FollowOrigin", this.FollowOrigin);
 
     }
 }

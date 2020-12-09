@@ -86,6 +86,20 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
     private String Source;
 
     /**
+    * vpc信息
+    */
+    @SerializedName("VpcInfo")
+    @Expose
+    private CloudBaseRunVpcInfo VpcInfo;
+
+    /**
+    * 0/1=允许公网访问;2=关闭公网访问
+    */
+    @SerializedName("PublicAccess")
+    @Expose
+    private Long PublicAccess;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -230,6 +244,38 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
     }
 
     /**
+     * Get vpc信息 
+     * @return VpcInfo vpc信息
+     */
+    public CloudBaseRunVpcInfo getVpcInfo() {
+        return this.VpcInfo;
+    }
+
+    /**
+     * Set vpc信息
+     * @param VpcInfo vpc信息
+     */
+    public void setVpcInfo(CloudBaseRunVpcInfo VpcInfo) {
+        this.VpcInfo = VpcInfo;
+    }
+
+    /**
+     * Get 0/1=允许公网访问;2=关闭公网访问 
+     * @return PublicAccess 0/1=允许公网访问;2=关闭公网访问
+     */
+    public Long getPublicAccess() {
+        return this.PublicAccess;
+    }
+
+    /**
+     * Set 0/1=允许公网访问;2=关闭公网访问
+     * @param PublicAccess 0/1=允许公网访问;2=关闭公网访问
+     */
+    public void setPublicAccess(Long PublicAccess) {
+        this.PublicAccess = PublicAccess;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +288,8 @@ public class EstablishCloudBaseRunServerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
+        this.setParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
 
     }
 }

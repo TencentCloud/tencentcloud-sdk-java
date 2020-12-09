@@ -44,6 +44,13 @@ public class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel{
     private String CcnRouteType;
 
     /**
+    * 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持修改`ModeType`。
+    */
+    @SerializedName("ModeType")
+    @Expose
+    private String ModeType;
+
+    /**
      * Get 专线网关唯一`ID`，形如：`dcg-9o233uri`。 
      * @return DirectConnectGatewayId 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
@@ -92,12 +99,29 @@ public class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持修改`ModeType`。 
+     * @return ModeType 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持修改`ModeType`。
+     */
+    public String getModeType() {
+        return this.ModeType;
+    }
+
+    /**
+     * Set 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持修改`ModeType`。
+     * @param ModeType 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持修改`ModeType`。
+     */
+    public void setModeType(String ModeType) {
+        this.ModeType = ModeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
         this.setParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
         this.setParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
+        this.setParamSimple(map, prefix + "ModeType", this.ModeType);
 
     }
 }

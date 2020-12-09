@@ -79,7 +79,7 @@ public class InvokeRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * 被调用的函数参数列表
+    * 被调用的函数参数列表，参数列表大小总和要求小于2M
     */
     @SerializedName("Args")
     @Expose
@@ -221,16 +221,16 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get 被调用的函数参数列表 
-     * @return Args 被调用的函数参数列表
+     * Get 被调用的函数参数列表，参数列表大小总和要求小于2M 
+     * @return Args 被调用的函数参数列表，参数列表大小总和要求小于2M
      */
     public String [] getArgs() {
         return this.Args;
     }
 
     /**
-     * Set 被调用的函数参数列表
-     * @param Args 被调用的函数参数列表
+     * Set 被调用的函数参数列表，参数列表大小总和要求小于2M
+     * @param Args 被调用的函数参数列表，参数列表大小总和要求小于2M
      */
     public void setArgs(String [] Args) {
         this.Args = Args;

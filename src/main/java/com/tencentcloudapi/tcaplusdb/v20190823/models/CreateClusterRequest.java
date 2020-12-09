@@ -72,6 +72,27 @@ public class CreateClusterRequest extends AbstractModel{
     private Long Ipv6Enable;
 
     /**
+    * 独占集群占用的svr机器
+    */
+    @SerializedName("ServerList")
+    @Expose
+    private MachineInfo [] ServerList;
+
+    /**
+    * 独占集群占用的proxy机器
+    */
+    @SerializedName("ProxyList")
+    @Expose
+    private MachineInfo [] ProxyList;
+
+    /**
+    * 集群类型1共享2独占
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
      * Get 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX` 
      * @return IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      */
@@ -184,6 +205,54 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 独占集群占用的svr机器 
+     * @return ServerList 独占集群占用的svr机器
+     */
+    public MachineInfo [] getServerList() {
+        return this.ServerList;
+    }
+
+    /**
+     * Set 独占集群占用的svr机器
+     * @param ServerList 独占集群占用的svr机器
+     */
+    public void setServerList(MachineInfo [] ServerList) {
+        this.ServerList = ServerList;
+    }
+
+    /**
+     * Get 独占集群占用的proxy机器 
+     * @return ProxyList 独占集群占用的proxy机器
+     */
+    public MachineInfo [] getProxyList() {
+        return this.ProxyList;
+    }
+
+    /**
+     * Set 独占集群占用的proxy机器
+     * @param ProxyList 独占集群占用的proxy机器
+     */
+    public void setProxyList(MachineInfo [] ProxyList) {
+        this.ProxyList = ProxyList;
+    }
+
+    /**
+     * Get 集群类型1共享2独占 
+     * @return ClusterType 集群类型1共享2独占
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型1共享2独占
+     * @param ClusterType 集群类型1共享2独占
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +263,9 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+        this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+        this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

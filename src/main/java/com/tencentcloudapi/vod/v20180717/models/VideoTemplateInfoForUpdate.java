@@ -96,6 +96,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     private Long Vcrf;
 
     /**
+    * 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+    */
+    @SerializedName("Gop")
+    @Expose
+    private Long Gop;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
@@ -292,6 +300,26 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     }
 
     /**
+     * Get 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。 
+     * @return Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+     */
+    public Long getGop() {
+        return this.Gop;
+    }
+
+    /**
+     * Set 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+     * @param Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+     */
+    public void setGop(Long Gop) {
+        this.Gop = Gop;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -303,6 +331,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
+        this.setParamSimple(map, prefix + "Gop", this.Gop);
 
     }
 }

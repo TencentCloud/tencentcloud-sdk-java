@@ -44,6 +44,14 @@ public class UrlRedirectRule extends AbstractModel{
     private String RedirectUrl;
 
     /**
+    * 目标host，必须以http://或https://开头，并填写标准格式域名，如果不填写，默认为http:// + 当前域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RedirectHost")
+    @Expose
+    private String RedirectHost;
+
+    /**
      * Get 重定向状态码，301 | 302 
      * @return RedirectStatusCode 重定向状态码，301 | 302
      */
@@ -92,12 +100,33 @@ public class UrlRedirectRule extends AbstractModel{
     }
 
     /**
+     * Get 目标host，必须以http://或https://开头，并填写标准格式域名，如果不填写，默认为http:// + 当前域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RedirectHost 目标host，必须以http://或https://开头，并填写标准格式域名，如果不填写，默认为http:// + 当前域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRedirectHost() {
+        return this.RedirectHost;
+    }
+
+    /**
+     * Set 目标host，必须以http://或https://开头，并填写标准格式域名，如果不填写，默认为http:// + 当前域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RedirectHost 目标host，必须以http://或https://开头，并填写标准格式域名，如果不填写，默认为http:// + 当前域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRedirectHost(String RedirectHost) {
+        this.RedirectHost = RedirectHost;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+        this.setParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
 
     }
 }

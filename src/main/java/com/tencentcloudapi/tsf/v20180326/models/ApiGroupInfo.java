@@ -47,7 +47,7 @@ public class ApiGroupInfo extends AbstractModel{
     private String GroupContext;
 
     /**
-    * 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+    * 鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthType")
@@ -179,9 +179,9 @@ public class ApiGroupInfo extends AbstractModel{
     }
 
     /**
-     * Get 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * Get 鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthType 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * @return AuthType 鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthType() {
@@ -189,9 +189,9 @@ public class ApiGroupInfo extends AbstractModel{
     }
 
     /**
-     * Set 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * Set 鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthType 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * @param AuthType 鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthType(String AuthType) {

@@ -37,6 +37,13 @@ public class Filter extends AbstractModel{
     private String [] Values;
 
     /**
+    * 模糊搜索
+    */
+    @SerializedName("ExactMatch")
+    @Expose
+    private Boolean ExactMatch;
+
+    /**
      * Get 过滤键的名称。 
      * @return Name 过滤键的名称。
      */
@@ -69,11 +76,28 @@ public class Filter extends AbstractModel{
     }
 
     /**
+     * Get 模糊搜索 
+     * @return ExactMatch 模糊搜索
+     */
+    public Boolean getExactMatch() {
+        return this.ExactMatch;
+    }
+
+    /**
+     * Set 模糊搜索
+     * @param ExactMatch 模糊搜索
+     */
+    public void setExactMatch(Boolean ExactMatch) {
+        this.ExactMatch = ExactMatch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
 
     }
 }

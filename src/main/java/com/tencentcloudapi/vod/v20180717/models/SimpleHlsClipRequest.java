@@ -44,6 +44,13 @@ public class SimpleHlsClipRequest extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
+    * 是否固化。0 不固化，1 固化。默认不固化。
+    */
+    @SerializedName("IsPersistence")
+    @Expose
+    private Long IsPersistence;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
@@ -99,6 +106,22 @@ public class SimpleHlsClipRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否固化。0 不固化，1 固化。默认不固化。 
+     * @return IsPersistence 是否固化。0 不固化，1 固化。默认不固化。
+     */
+    public Long getIsPersistence() {
+        return this.IsPersistence;
+    }
+
+    /**
+     * Set 是否固化。0 不固化，1 固化。默认不固化。
+     * @param IsPersistence 是否固化。0 不固化，1 固化。默认不固化。
+     */
+    public void setIsPersistence(Long IsPersistence) {
+        this.IsPersistence = IsPersistence;
+    }
+
+    /**
      * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
@@ -121,6 +144,7 @@ public class SimpleHlsClipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

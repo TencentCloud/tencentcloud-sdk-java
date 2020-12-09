@@ -58,7 +58,7 @@ public class ApiInfo extends AbstractModel{
     private String PathMapping;
 
     /**
-    * api所在服务host
+    * api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
     */
     @SerializedName("Host")
     @Expose
@@ -152,16 +152,16 @@ public class ApiInfo extends AbstractModel{
     }
 
     /**
-     * Get api所在服务host 
-     * @return Host api所在服务host
+     * Get api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080" 
+     * @return Host api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set api所在服务host
-     * @param Host api所在服务host
+     * Set api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
+     * @param Host api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
      */
     public void setHost(String Host) {
         this.Host = Host;

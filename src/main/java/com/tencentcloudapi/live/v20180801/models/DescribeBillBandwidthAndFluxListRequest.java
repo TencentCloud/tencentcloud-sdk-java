@@ -66,7 +66,7 @@ Oversea：则查询国外数据，
     private Long Granularity;
 
     /**
-    * 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+    * 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -185,16 +185,16 @@ Oversea：则查询国外数据，
     }
 
     /**
-     * Get 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。 
-     * @return ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     * Get 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。 
+     * @return ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
-     * @param ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     * Set 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     * @param ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

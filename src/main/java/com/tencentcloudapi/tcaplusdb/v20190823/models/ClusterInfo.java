@@ -130,6 +130,62 @@ public class ClusterInfo extends AbstractModel{
     private String ApiAccessIpv6;
 
     /**
+    * 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
+    * 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterStatus")
+    @Expose
+    private Long ClusterStatus;
+
+    /**
+    * 读CU
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadCapacityUnit")
+    @Expose
+    private Long ReadCapacityUnit;
+
+    /**
+    * 写CU
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WriteCapacityUnit")
+    @Expose
+    private Long WriteCapacityUnit;
+
+    /**
+    * 磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskVolume")
+    @Expose
+    private Long DiskVolume;
+
+    /**
+    * 独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServerList")
+    @Expose
+    private ServerDetailInfo [] ServerList;
+
+    /**
+    * 独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyList")
+    @Expose
+    private ProxyDetailInfo [] ProxyList;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -378,6 +434,146 @@ public class ClusterInfo extends AbstractModel{
     }
 
     /**
+     * Get 集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get 集群状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterStatus 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClusterStatus() {
+        return this.ClusterStatus;
+    }
+
+    /**
+     * Set 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterStatus 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterStatus(Long ClusterStatus) {
+        this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
+     * Get 读CU
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadCapacityUnit 读CU
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadCapacityUnit() {
+        return this.ReadCapacityUnit;
+    }
+
+    /**
+     * Set 读CU
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadCapacityUnit 读CU
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadCapacityUnit(Long ReadCapacityUnit) {
+        this.ReadCapacityUnit = ReadCapacityUnit;
+    }
+
+    /**
+     * Get 写CU
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WriteCapacityUnit 写CU
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWriteCapacityUnit() {
+        return this.WriteCapacityUnit;
+    }
+
+    /**
+     * Set 写CU
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WriteCapacityUnit 写CU
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWriteCapacityUnit(Long WriteCapacityUnit) {
+        this.WriteCapacityUnit = WriteCapacityUnit;
+    }
+
+    /**
+     * Get 磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskVolume 磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDiskVolume() {
+        return this.DiskVolume;
+    }
+
+    /**
+     * Set 磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskVolume 磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskVolume(Long DiskVolume) {
+        this.DiskVolume = DiskVolume;
+    }
+
+    /**
+     * Get 独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServerList 独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServerDetailInfo [] getServerList() {
+        return this.ServerList;
+    }
+
+    /**
+     * Set 独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServerList 独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServerList(ServerDetailInfo [] ServerList) {
+        this.ServerList = ServerList;
+    }
+
+    /**
+     * Get 独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyList 独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProxyDetailInfo [] getProxyList() {
+        return this.ProxyList;
+    }
+
+    /**
+     * Set 独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyList 独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyList(ProxyDetailInfo [] ProxyList) {
+        this.ProxyList = ProxyList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -396,6 +592,13 @@ public class ClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ApiAccessPort", this.ApiAccessPort);
         this.setParamSimple(map, prefix + "OldPasswordExpireTime", this.OldPasswordExpireTime);
         this.setParamSimple(map, prefix + "ApiAccessIpv6", this.ApiAccessIpv6);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "ReadCapacityUnit", this.ReadCapacityUnit);
+        this.setParamSimple(map, prefix + "WriteCapacityUnit", this.WriteCapacityUnit);
+        this.setParamSimple(map, prefix + "DiskVolume", this.DiskVolume);
+        this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+        this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
 
     }
 }

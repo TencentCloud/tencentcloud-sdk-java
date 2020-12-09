@@ -759,6 +759,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询实例内网访问VPC链接
+     * @param req DescribeInternalEndpointsRequest
+     * @return DescribeInternalEndpointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternalEndpointsResponse DescribeInternalEndpoints(DescribeInternalEndpointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternalEndpointsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternalEndpointsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternalEndpoints");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询个人版命名空间信息
      * @param req DescribeNamespacePersonalRequest
      * @return DescribeNamespacePersonalResponse
@@ -1011,6 +1031,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ManageImageLifecycleGlobalPersonal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *管理实例内网访问VPC链接
+     * @param req ManageInternalEndpointRequest
+     * @return ManageInternalEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageInternalEndpointResponse ManageInternalEndpoint(ManageInternalEndpointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageInternalEndpointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageInternalEndpointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ManageInternalEndpoint");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

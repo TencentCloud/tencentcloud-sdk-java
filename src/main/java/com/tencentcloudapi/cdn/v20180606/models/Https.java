@@ -113,6 +113,14 @@ failed：部署失败
     private Hsts Hsts;
 
     /**
+    * Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TlsVersion")
+    @Expose
+    private String [] TlsVersion;
+
+    /**
      * Get https 配置开关
 on：开启
 off：关闭
@@ -365,6 +373,26 @@ failed：部署失败
     }
 
     /**
+     * Get Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TlsVersion Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTlsVersion() {
+        return this.TlsVersion;
+    }
+
+    /**
+     * Set Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TlsVersion Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTlsVersion(String [] TlsVersion) {
+        this.TlsVersion = TlsVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -377,6 +405,7 @@ failed：部署失败
         this.setParamSimple(map, prefix + "Spdy", this.Spdy);
         this.setParamSimple(map, prefix + "SslStatus", this.SslStatus);
         this.setParamObj(map, prefix + "Hsts.", this.Hsts);
+        this.setParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
 
     }
 }

@@ -1159,6 +1159,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *UpdateScdnDomain 用于修改 SCDN 加速域名安全相关配置
+     * @param req UpdateScdnDomainRequest
+     * @return UpdateScdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateScdnDomainResponse UpdateScdnDomain(UpdateScdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateScdnDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateScdnDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateScdnDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *验证域名解析值
      * @param req VerifyDomainRecordRequest
      * @return VerifyDomainRecordResponse

@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class PathRule extends AbstractModel{
 
     /**
-    * 是否是正则匹配。
+    * 是否开启通配符“*”匹配：
+false：关闭
+true：开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Regex")
@@ -31,7 +33,7 @@ public class PathRule extends AbstractModel{
     private Boolean Regex;
 
     /**
-    * 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
+    * 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，开启通配符“*”匹配后，最多支持5个通配符，最大长度为1024个字符。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -55,7 +57,10 @@ public class PathRule extends AbstractModel{
     private String ServerName;
 
     /**
-    * 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
+    * 源站所属区域，支持CN，OV：
+CN：中国境内
+OV：中国境外
+默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginArea")
@@ -63,7 +68,7 @@ public class PathRule extends AbstractModel{
     private String OriginArea;
 
     /**
-    * 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
+    * 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度为1024个字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号“*”，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardUri")
@@ -79,9 +84,13 @@ public class PathRule extends AbstractModel{
     private HttpHeaderRule [] RequestHeaders;
 
     /**
-     * Get 是否是正则匹配。
+     * Get 是否开启通配符“*”匹配：
+false：关闭
+true：开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Regex 是否是正则匹配。
+     * @return Regex 是否开启通配符“*”匹配：
+false：关闭
+true：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRegex() {
@@ -89,9 +98,13 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 是否是正则匹配。
+     * Set 是否开启通配符“*”匹配：
+false：关闭
+true：开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Regex 是否是正则匹配。
+     * @param Regex 是否开启通配符“*”匹配：
+false：关闭
+true：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegex(Boolean Regex) {
@@ -99,9 +112,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
+     * Get 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，开启通配符“*”匹配后，最多支持5个通配符，最大长度为1024个字符。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
+     * @return Path 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，开启通配符“*”匹配后，最多支持5个通配符，最大长度为1024个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -109,9 +122,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
+     * Set 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，开启通配符“*”匹配后，最多支持5个通配符，最大长度为1024个字符。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
+     * @param Path 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，开启通配符“*”匹配后，最多支持5个通配符，最大长度为1024个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -159,9 +172,15 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
+     * Get 源站所属区域，支持CN，OV：
+CN：中国境内
+OV：中国境外
+默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
+     * @return OriginArea 源站所属区域，支持CN，OV：
+CN：中国境内
+OV：中国境外
+默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginArea() {
@@ -169,9 +188,15 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
+     * Set 源站所属区域，支持CN，OV：
+CN：中国境内
+OV：中国境外
+默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
+     * @param OriginArea 源站所属区域，支持CN，OV：
+CN：中国境内
+OV：中国境外
+默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginArea(String OriginArea) {
@@ -179,9 +204,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Get 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
+     * Get 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度为1024个字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号“*”，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
+     * @return ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度为1024个字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号“*”，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardUri() {
@@ -189,9 +214,9 @@ public class PathRule extends AbstractModel{
     }
 
     /**
-     * Set 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
+     * Set 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度为1024个字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号“*”，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
+     * @param ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度为1024个字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号“*”，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardUri(String ForwardUri) {

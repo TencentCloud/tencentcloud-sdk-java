@@ -51,7 +51,6 @@ public class DescribeCDNUsageDataRequest extends AbstractModel{
 <li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
 <li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
 默认值为1440，返回天粒度的数据。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
     */
     @SerializedName("DataInterval")
     @Expose
@@ -133,14 +132,12 @@ public class DescribeCDNUsageDataRequest extends AbstractModel{
 <li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
 <li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
 <li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
-默认值为1440，返回天粒度的数据。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。 
+默认值为1440，返回天粒度的数据。 
      * @return DataInterval 用量数据的时间粒度，单位：分钟，取值有：
 <li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
 <li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
 <li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
 默认值为1440，返回天粒度的数据。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
      */
     public Long getDataInterval() {
         return this.DataInterval;
@@ -152,13 +149,11 @@ public class DescribeCDNUsageDataRequest extends AbstractModel{
 <li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
 <li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
 默认值为1440，返回天粒度的数据。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
      * @param DataInterval 用量数据的时间粒度，单位：分钟，取值有：
 <li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
 <li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
 <li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
 默认值为1440，返回天粒度的数据。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
      */
     public void setDataInterval(Long DataInterval) {
         this.DataInterval = DataInterval;

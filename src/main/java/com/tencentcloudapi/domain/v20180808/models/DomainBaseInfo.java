@@ -140,6 +140,13 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
     private String RegistrarType;
 
     /**
+    * 域名绑定的ns
+    */
+    @SerializedName("NameServer")
+    @Expose
+    private String [] NameServer;
+
+    /**
      * Get 域名资源ID。 
      * @return DomainId 域名资源ID。
      */
@@ -476,6 +483,22 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
     }
 
     /**
+     * Get 域名绑定的ns 
+     * @return NameServer 域名绑定的ns
+     */
+    public String [] getNameServer() {
+        return this.NameServer;
+    }
+
+    /**
+     * Set 域名绑定的ns
+     * @param NameServer 域名绑定的ns
+     */
+    public void setNameServer(String [] NameServer) {
+        this.NameServer = NameServer;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -490,6 +513,7 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
         this.setParamArraySimple(map, prefix + "DomainStatus.", this.DomainStatus);
         this.setParamSimple(map, prefix + "BuyStatus", this.BuyStatus);
         this.setParamSimple(map, prefix + "RegistrarType", this.RegistrarType);
+        this.setParamArraySimple(map, prefix + "NameServer.", this.NameServer);
 
     }
 }

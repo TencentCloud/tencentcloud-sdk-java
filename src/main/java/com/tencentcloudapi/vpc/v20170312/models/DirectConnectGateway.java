@@ -124,6 +124,22 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     private String NatGatewayId;
 
     /**
+    * 专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VXLANSupport")
+    @Expose
+    private Boolean [] VXLANSupport;
+
+    /**
+    * 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModeType")
+    @Expose
+    private String ModeType;
+
+    /**
      * Get 专线网关`ID`。 
      * @return DirectConnectGatewayId 专线网关`ID`。
      */
@@ -372,6 +388,46 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
+     * Get 专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VXLANSupport 专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean [] getVXLANSupport() {
+        return this.VXLANSupport;
+    }
+
+    /**
+     * Set 专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VXLANSupport 专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVXLANSupport(Boolean [] VXLANSupport) {
+        this.VXLANSupport = VXLANSupport;
+    }
+
+    /**
+     * Get 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModeType 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModeType() {
+        return this.ModeType;
+    }
+
+    /**
+     * Set 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModeType 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModeType(String ModeType) {
+        this.ModeType = ModeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -388,6 +444,8 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         this.setParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
         this.setParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+        this.setParamArraySimple(map, prefix + "VXLANSupport.", this.VXLANSupport);
+        this.setParamSimple(map, prefix + "ModeType", this.ModeType);
 
     }
 }

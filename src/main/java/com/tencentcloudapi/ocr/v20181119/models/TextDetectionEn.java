@@ -37,7 +37,7 @@ public class TextDetectionEn extends AbstractModel{
     private Long Confidence;
 
     /**
-    * 文本行坐标，以四个顶点坐标表示。
+    * 文本行在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Polygon")
@@ -52,7 +52,7 @@ public class TextDetectionEn extends AbstractModel{
     private String AdvancedInfo;
 
     /**
-    * 单词在原图中的四点坐标。
+    * 英文单词在原图中的四点坐标。
     */
     @SerializedName("WordCoordPoint")
     @Expose
@@ -105,9 +105,9 @@ public class TextDetectionEn extends AbstractModel{
     }
 
     /**
-     * Get 文本行坐标，以四个顶点坐标表示。
+     * Get 文本行在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Polygon 文本行坐标，以四个顶点坐标表示。
+     * @return Polygon 文本行在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getPolygon() {
@@ -115,9 +115,9 @@ public class TextDetectionEn extends AbstractModel{
     }
 
     /**
-     * Set 文本行坐标，以四个顶点坐标表示。
+     * Set 文本行在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Polygon 文本行坐标，以四个顶点坐标表示。
+     * @param Polygon 文本行在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolygon(Coord [] Polygon) {
@@ -141,16 +141,16 @@ public class TextDetectionEn extends AbstractModel{
     }
 
     /**
-     * Get 单词在原图中的四点坐标。 
-     * @return WordCoordPoint 单词在原图中的四点坐标。
+     * Get 英文单词在原图中的四点坐标。 
+     * @return WordCoordPoint 英文单词在原图中的四点坐标。
      */
     public WordCoordPoint [] getWordCoordPoint() {
         return this.WordCoordPoint;
     }
 
     /**
-     * Set 单词在原图中的四点坐标。
-     * @param WordCoordPoint 单词在原图中的四点坐标。
+     * Set 英文单词在原图中的四点坐标。
+     * @param WordCoordPoint 英文单词在原图中的四点坐标。
      */
     public void setWordCoordPoint(WordCoordPoint [] WordCoordPoint) {
         this.WordCoordPoint = WordCoordPoint;
