@@ -52,7 +52,6 @@ import com.tencentcloudapi.cvm.v20170312.CvmClient;
 import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesRequest;
 import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesResponse;
 
-
 public class DescribeInstances {
     public static void main(String[] args) {
         try {
@@ -63,7 +62,6 @@ public class DescribeInstances {
             DescribeInstancesResponse resp = client.DescribeInstances(req);
 
             System.out.println(DescribeInstancesResponse.toJsonString(resp));
-
         } catch (TencentCloudSDKException e) {
             System.out.println(e.toString());
         }
