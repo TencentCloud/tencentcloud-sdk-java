@@ -127,6 +127,46 @@ public class AmsClient extends AbstractClient{
     }
 
     /**
+     *音频审核明细列表
+     * @param req DescribeAmsListRequest
+     * @return DescribeAmsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAmsListResponse DescribeAmsList(DescribeAmsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAmsListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAmsListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAmsList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *控制台识别统计
+     * @param req DescribeAudioStatRequest
+     * @return DescribeAudioStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAudioStatResponse DescribeAudioStat(DescribeAudioStatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAudioStatResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAudioStatResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAudioStat");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查看单个配置
      * @param req DescribeBizConfigRequest
      * @return DescribeBizConfigResponse

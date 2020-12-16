@@ -525,6 +525,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *客户可通过本接口获取账户余额信息, 默认接口请求频率限制：1次/秒
+     * @param req DescribeAccountBalanceRequest
+     * @return DescribeAccountBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountBalanceResponse DescribeAccountBalance(DescribeAccountBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountBalanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccountBalance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeBindDev）用于查询终端用户绑定的设备列表。
      * @param req DescribeBindDevRequest
      * @return DescribeBindDevResponse
@@ -838,6 +858,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePubVersionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePubVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *客户可通过本接口获取充值记录信息, 一次最多返回50条记录。
+     * @param req DescribeRechargeRecordsRequest
+     * @return DescribeRechargeRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRechargeRecordsResponse DescribeRechargeRecords(DescribeRechargeRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRechargeRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRechargeRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRechargeRecords");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

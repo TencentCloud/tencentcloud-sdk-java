@@ -282,6 +282,29 @@ public class CynosdbInstance extends AbstractModel{
     private Long RenewFlag;
 
     /**
+    * serverless实例cpu下限
+    */
+    @SerializedName("MinCpu")
+    @Expose
+    private Float MinCpu;
+
+    /**
+    * serverless实例cpu上限
+    */
+    @SerializedName("MaxCpu")
+    @Expose
+    private Float MaxCpu;
+
+    /**
+    * serverless实例状态, 可选值：
+resume
+pause
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -874,6 +897,62 @@ public class CynosdbInstance extends AbstractModel{
     }
 
     /**
+     * Get serverless实例cpu下限 
+     * @return MinCpu serverless实例cpu下限
+     */
+    public Float getMinCpu() {
+        return this.MinCpu;
+    }
+
+    /**
+     * Set serverless实例cpu下限
+     * @param MinCpu serverless实例cpu下限
+     */
+    public void setMinCpu(Float MinCpu) {
+        this.MinCpu = MinCpu;
+    }
+
+    /**
+     * Get serverless实例cpu上限 
+     * @return MaxCpu serverless实例cpu上限
+     */
+    public Float getMaxCpu() {
+        return this.MaxCpu;
+    }
+
+    /**
+     * Set serverless实例cpu上限
+     * @param MaxCpu serverless实例cpu上限
+     */
+    public void setMaxCpu(Float MaxCpu) {
+        this.MaxCpu = MaxCpu;
+    }
+
+    /**
+     * Get serverless实例状态, 可选值：
+resume
+pause 
+     * @return ServerlessStatus serverless实例状态, 可选值：
+resume
+pause
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set serverless实例状态, 可选值：
+resume
+pause
+     * @param ServerlessStatus serverless实例状态, 可选值：
+resume
+pause
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -914,6 +993,9 @@ public class CynosdbInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
         this.setParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
+        this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }

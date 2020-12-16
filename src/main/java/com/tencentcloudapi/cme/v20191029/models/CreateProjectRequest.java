@@ -33,6 +33,7 @@ public class CreateProjectRequest extends AbstractModel{
     * 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
     */
     @SerializedName("Category")
     @Expose
@@ -90,6 +91,13 @@ public class CreateProjectRequest extends AbstractModel{
     private VideoEditProjectInput VideoEditProjectInput;
 
     /**
+    * 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+    */
+    @SerializedName("VideoSegmentationProjectInput")
+    @Expose
+    private VideoSegmentationProjectInput VideoSegmentationProjectInput;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -108,10 +116,12 @@ public class CreateProjectRequest extends AbstractModel{
     /**
      * Get 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
-<li>SWITCHER：导播台。</li> 
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li> 
      * @return Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      */
     public String getCategory() {
         return this.Category;
@@ -121,9 +131,11 @@ public class CreateProjectRequest extends AbstractModel{
      * Set 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      * @param Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;
@@ -250,6 +262,22 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。 
+     * @return VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     */
+    public VideoSegmentationProjectInput getVideoSegmentationProjectInput() {
+        return this.VideoSegmentationProjectInput;
+    }
+
+    /**
+     * Set 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     * @param VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     */
+    public void setVideoSegmentationProjectInput(VideoSegmentationProjectInput VideoSegmentationProjectInput) {
+        this.VideoSegmentationProjectInput = VideoSegmentationProjectInput;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -262,6 +290,7 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
         this.setParamObj(map, prefix + "LiveStreamClipProjectInput.", this.LiveStreamClipProjectInput);
         this.setParamObj(map, prefix + "VideoEditProjectInput.", this.VideoEditProjectInput);
+        this.setParamObj(map, prefix + "VideoSegmentationProjectInput.", this.VideoSegmentationProjectInput);
 
     }
 }

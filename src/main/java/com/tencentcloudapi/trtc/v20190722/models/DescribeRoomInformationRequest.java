@@ -44,7 +44,7 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 数字房间号
+    * 字符串房间号
     */
     @SerializedName("RoomId")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get 数字房间号 
-     * @return RoomId 数字房间号
+     * Get 字符串房间号 
+     * @return RoomId 字符串房间号
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 数字房间号
-     * @param RoomId 数字房间号
+     * Set 字符串房间号
+     * @param RoomId 字符串房间号
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;

@@ -65,6 +65,13 @@ public class ZoneInstanceCountISP extends AbstractModel{
     private String [] PrivateIpAddresses;
 
     /**
+    * 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+    */
+    @SerializedName("Ipv6AddressCount")
+    @Expose
+    private Long Ipv6AddressCount;
+
+    /**
      * Get 创建实例的可用区。 
      * @return Zone 创建实例的可用区。
      */
@@ -161,6 +168,22 @@ public class ZoneInstanceCountISP extends AbstractModel{
     }
 
     /**
+     * Get 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。 
+     * @return Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     */
+    public Long getIpv6AddressCount() {
+        return this.Ipv6AddressCount;
+    }
+
+    /**
+     * Set 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     * @param Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     */
+    public void setIpv6AddressCount(Long Ipv6AddressCount) {
+        this.Ipv6AddressCount = Ipv6AddressCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class ZoneInstanceCountISP extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+        this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
 
     }
 }

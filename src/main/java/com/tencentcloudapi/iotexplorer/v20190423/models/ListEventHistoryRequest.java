@@ -65,7 +65,7 @@ public class ListEventHistoryRequest extends AbstractModel{
     private String Context;
 
     /**
-    * 单次获取的历史数据项目的最大数量
+    * 单次获取的历史数据项目的最大数量, 缺省10
     */
     @SerializedName("Size")
     @Expose
@@ -175,16 +175,16 @@ public class ListEventHistoryRequest extends AbstractModel{
     }
 
     /**
-     * Get 单次获取的历史数据项目的最大数量 
-     * @return Size 单次获取的历史数据项目的最大数量
+     * Get 单次获取的历史数据项目的最大数量, 缺省10 
+     * @return Size 单次获取的历史数据项目的最大数量, 缺省10
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 单次获取的历史数据项目的最大数量
-     * @param Size 单次获取的历史数据项目的最大数量
+     * Set 单次获取的历史数据项目的最大数量, 缺省10
+     * @param Size 单次获取的历史数据项目的最大数量, 缺省10
      */
     public void setSize(Long Size) {
         this.Size = Size;

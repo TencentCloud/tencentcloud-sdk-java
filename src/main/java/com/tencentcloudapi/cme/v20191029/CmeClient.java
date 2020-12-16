@@ -508,6 +508,26 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
+     * @param req ExportVideoByVideoSegmentationDataRequest
+     * @return ExportVideoByVideoSegmentationDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(ExportVideoByVideoSegmentationDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportVideoByVideoSegmentationDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportVideoByVideoSegmentationDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportVideoByVideoSegmentationData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *导出视频编辑项目，支持指定输出的模板。
      * @param req ExportVideoEditProjectRequest
      * @return ExportVideoEditProjectResponse
@@ -540,6 +560,26 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<FlattenListMediaResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "FlattenListMedia");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。
+     * @param req GenerateVideoSegmentationSchemeByAiRequest
+     * @return GenerateVideoSegmentationSchemeByAiResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAi(GenerateVideoSegmentationSchemeByAiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateVideoSegmentationSchemeByAiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateVideoSegmentationSchemeByAiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateVideoSegmentationSchemeByAi");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

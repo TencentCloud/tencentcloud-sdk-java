@@ -30,6 +30,13 @@ public class DescribeSubAppIdsResponse extends AbstractModel{
     private SubAppIdInfo [] SubAppIdInfoSet;
 
     /**
+    * 子应用总数量。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class DescribeSubAppIdsResponse extends AbstractModel{
     }
 
     /**
+     * Get 子应用总数量。 
+     * @return TotalCount 子应用总数量。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 子应用总数量。
+     * @param TotalCount 子应用总数量。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class DescribeSubAppIdsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SubAppIdInfoSet.", this.SubAppIdInfoSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

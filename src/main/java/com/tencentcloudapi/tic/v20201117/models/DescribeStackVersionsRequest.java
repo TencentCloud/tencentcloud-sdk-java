@@ -44,12 +44,16 @@ public class DescribeStackVersionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * # Name
-按照名称进行过滤，可选
+    * <li>**Name**</li>
+按照【**版本名称**】进行过滤
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+类型：string
+
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
 类型：string
     */
     @SerializedName("Filters")
@@ -105,19 +109,27 @@ public class DescribeStackVersionsRequest extends AbstractModel{
     }
 
     /**
-     * Get # Name
-按照名称进行过滤，可选
+     * Get <li>**Name**</li>
+按照【**版本名称**】进行过滤
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+类型：string
+
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
 类型：string 
-     * @return Filters # Name
-按照名称进行过滤，可选
+     * @return Filters <li>**Name**</li>
+按照【**版本名称**】进行过滤
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+类型：string
+
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
 类型：string
      */
     public Filter [] getFilters() {
@@ -125,19 +137,27 @@ public class DescribeStackVersionsRequest extends AbstractModel{
     }
 
     /**
-     * Set # Name
-按照名称进行过滤，可选
+     * Set <li>**Name**</li>
+按照【**版本名称**】进行过滤
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
-类型：string
-     * @param Filters # Name
-按照名称进行过滤，可选
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
+类型：string
+     * @param Filters <li>**Name**</li>
+按照【**版本名称**】进行过滤
+类型：string
+
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+类型：string
+
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
 类型：string
      */
     public void setFilters(Filter [] Filters) {

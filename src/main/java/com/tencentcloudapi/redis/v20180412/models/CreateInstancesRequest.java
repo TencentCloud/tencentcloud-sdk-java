@@ -159,6 +159,13 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private RedisNodeInfo [] NodeSet;
 
     /**
+    * 购买实例绑定标签
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
      * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
      * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      */
@@ -475,6 +482,22 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
+     * Get 购买实例绑定标签 
+     * @return ResourceTags 购买实例绑定标签
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 购买实例绑定标签
+     * @param ResourceTags 购买实例绑定标签
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -497,6 +520,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
         this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

@@ -86,7 +86,7 @@ public class DescribeCaptchaMiniRiskResultRequest extends AbstractModel{
     private String Imei;
 
     /**
-    * 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
+    * 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
     */
     @SerializedName("SceneCode")
     @Expose
@@ -244,16 +244,16 @@ public class DescribeCaptchaMiniRiskResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。 
-     * @return SceneCode 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
+     * Get 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。 
+     * @return SceneCode 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
      */
     public Long getSceneCode() {
         return this.SceneCode;
     }
 
     /**
-     * Set 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
-     * @param SceneCode 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
+     * Set 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
+     * @param SceneCode 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
      */
     public void setSceneCode(Long SceneCode) {
         this.SceneCode = SceneCode;

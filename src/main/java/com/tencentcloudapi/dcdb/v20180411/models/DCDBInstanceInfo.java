@@ -361,6 +361,14 @@ public class DCDBInstanceInfo extends AbstractModel{
     private Long DcnDstNum;
 
     /**
+    * 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1149,6 +1157,26 @@ public class DCDBInstanceInfo extends AbstractModel{
     }
 
     /**
+     * Get 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1199,6 +1227,7 @@ public class DCDBInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
         this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
         this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

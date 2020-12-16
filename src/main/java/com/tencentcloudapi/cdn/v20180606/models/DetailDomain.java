@@ -438,6 +438,14 @@ off：不支持
     private OriginAuthentication OriginAuthentication;
 
     /**
+    * Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6Access")
+    @Expose
+    private Ipv6Access Ipv6Access;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1498,6 +1506,26 @@ off：不支持
     }
 
     /**
+     * Get Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6Access Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Ipv6Access getIpv6Access() {
+        return this.Ipv6Access;
+    }
+
+    /**
+     * Set Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Access Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6Access(Ipv6Access Ipv6Access) {
+        this.Ipv6Access = Ipv6Access;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1551,6 +1579,7 @@ off：不支持
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
         this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
+        this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
 
     }
 }

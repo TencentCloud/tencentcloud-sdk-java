@@ -99,6 +99,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询流程任务
+     * @param req DescribeJobFlowRequest
+     * @return DescribeJobFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobFlowResponse DescribeJobFlow(DescribeJobFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJobFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJobFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJobFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建实例询价
      * @param req InquiryPriceCreateInstanceRequest
      * @return InquiryPriceCreateInstanceResponse
@@ -171,6 +191,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquiryPriceUpdateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建流程作业
+     * @param req RunJobFlowRequest
+     * @return RunJobFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunJobFlowResponse RunJobFlow(RunJobFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RunJobFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RunJobFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RunJobFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -205,6 +205,22 @@ public class CynosdbCluster extends AbstractModel{
     private Tag [] ResourceTags;
 
     /**
+    * Db类型(NORMAL, SERVERLESS)
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
+    * 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
      * Get 集群状态 
      * @return Status 集群状态
      */
@@ -621,6 +637,46 @@ public class CynosdbCluster extends AbstractModel{
     }
 
     /**
+     * Get Db类型(NORMAL, SERVERLESS) 
+     * @return DbMode Db类型(NORMAL, SERVERLESS)
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set Db类型(NORMAL, SERVERLESS)
+     * @param DbMode Db类型(NORMAL, SERVERLESS)
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
+     * Get 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause 
+     * @return ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
+     * @param ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -650,6 +706,8 @@ public class CynosdbCluster extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }

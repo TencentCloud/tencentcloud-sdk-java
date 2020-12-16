@@ -224,6 +224,46 @@ timeRollback，时间点回档
     private Tag [] ResourceTags;
 
     /**
+    * Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
+    * 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    */
+    @SerializedName("MinCpu")
+    @Expose
+    private Float MinCpu;
+
+    /**
+    * 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    */
+    @SerializedName("MaxCpu")
+    @Expose
+    private Float MaxCpu;
+
+    /**
+    * 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+    */
+    @SerializedName("AutoPause")
+    @Expose
+    private String AutoPause;
+
+    /**
+    * 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+    */
+    @SerializedName("AutoPauseDelay")
+    @Expose
+    private Long AutoPauseDelay;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -692,6 +732,106 @@ timeRollback，时间点回档
     }
 
     /**
+     * Get Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li> 
+     * @return DbMode Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+     * @param DbMode Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
+     * Get 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
+     * @return MinCpu 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     */
+    public Float getMinCpu() {
+        return this.MinCpu;
+    }
+
+    /**
+     * Set 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param MinCpu 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     */
+    public void setMinCpu(Float MinCpu) {
+        this.MinCpu = MinCpu;
+    }
+
+    /**
+     * Get 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
+     * @return MaxCpu 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     */
+    public Float getMaxCpu() {
+        return this.MaxCpu;
+    }
+
+    /**
+     * Set 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param MaxCpu 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     */
+    public void setMaxCpu(Float MaxCpu) {
+        this.MaxCpu = MaxCpu;
+    }
+
+    /**
+     * Get 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li> 
+     * @return AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+     */
+    public String getAutoPause() {
+        return this.AutoPause;
+    }
+
+    /**
+     * Set 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+     * @param AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+     */
+    public void setAutoPause(String AutoPause) {
+        this.AutoPause = AutoPause;
+    }
+
+    /**
+     * Get 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF] 
+     * @return AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+     */
+    public Long getAutoPauseDelay() {
+        return this.AutoPauseDelay;
+    }
+
+    /**
+     * Set 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+     * @param AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+     */
+    public void setAutoPauseDelay(Long AutoPauseDelay) {
+        this.AutoPauseDelay = AutoPauseDelay;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -723,6 +863,11 @@ timeRollback，时间点回档
         this.setParamSimple(map, prefix + "HaCount", this.HaCount);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
+        this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+        this.setParamSimple(map, prefix + "AutoPause", this.AutoPause);
+        this.setParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
 
     }
 }

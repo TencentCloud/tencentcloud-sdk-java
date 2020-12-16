@@ -514,6 +514,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
+     * @param req CloneSecurityGroupRequest
+     * @return CloneSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneSecurityGroupResponse CloneSecurityGroup(CloneSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateAddressTemplate）用于创建IP地址模版
      * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse

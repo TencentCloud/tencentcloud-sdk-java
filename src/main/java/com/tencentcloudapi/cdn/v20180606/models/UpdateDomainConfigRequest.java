@@ -282,6 +282,13 @@ global：全球加速
     private OriginAuthentication OriginAuthentication;
 
     /**
+    * Ipv6 访问配置
+    */
+    @SerializedName("Ipv6Access")
+    @Expose
+    private Ipv6Access Ipv6Access;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -886,6 +893,22 @@ global：全球加速
     }
 
     /**
+     * Get Ipv6 访问配置 
+     * @return Ipv6Access Ipv6 访问配置
+     */
+    public Ipv6Access getIpv6Access() {
+        return this.Ipv6Access;
+    }
+
+    /**
+     * Set Ipv6 访问配置
+     * @param Ipv6Access Ipv6 访问配置
+     */
+    public void setIpv6Access(Ipv6Access Ipv6Access) {
+        this.Ipv6Access = Ipv6Access;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -925,6 +948,7 @@ global：全球加速
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
         this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
         this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
+        this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
 
     }
 }

@@ -79,6 +79,46 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *创建机器人任务
+     * @param req CreateBotTaskRequest
+     * @return CreateBotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBotTaskResponse CreateBotTask(CreateBotTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBotTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBotTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBotTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询机器人对话流
+     * @param req DescribeBotFlowRequest
+     * @return DescribeBotFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBotFlowResponse DescribeBotFlow(DescribeBotFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBotFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBotFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBotFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据信审任务ID和请求日期，获取相关信审结果。
      * @param req DescribeCreditResultRequest
      * @return DescribeCreditResultResponse
@@ -91,6 +131,26 @@ public class CrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCreditResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCreditResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询机器人文件模板
+     * @param req DescribeFileModelRequest
+     * @return DescribeFileModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileModelResponse DescribeFileModel(DescribeFileModelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileModelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileModelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileModel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -232,6 +292,26 @@ public class CrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryProductsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryProducts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上传机器人文件
+     * @param req UploadBotFileRequest
+     * @return UploadBotFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadBotFileResponse UploadBotFile(UploadBotFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadBotFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadBotFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadBotFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

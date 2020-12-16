@@ -699,6 +699,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（PublishMessage）用于使用自定义透传协议进行设备远控
+     * @param req PublishMessageRequest
+     * @return PublishMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishMessageResponse PublishMessage(PublishMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PublishMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
      * @param req ReleaseStudioProductRequest
      * @return ReleaseStudioProductResponse

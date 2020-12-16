@@ -59,6 +59,26 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（CopyFleet）用于复制服务器舰队。
+     * @param req CopyFleetRequest
+     * @return CopyFleetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyFleetResponse CopyFleet(CopyFleetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CopyFleetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CopyFleetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CopyFleet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateAlias）用于创建别名。
      * @param req CreateAliasRequest
      * @return CreateAliasResponse

@@ -65,7 +65,7 @@ public class ImportCustomImageRequest extends AbstractModel{
     private String InitFlag;
 
     /**
-    * 镜像描述，多层镜像按顺序传入
+    * 镜像文件描述，多层镜像按顺序传入
     */
     @SerializedName("ImageUrls")
     @Expose
@@ -168,16 +168,16 @@ public class ImportCustomImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 镜像描述，多层镜像按顺序传入 
-     * @return ImageUrls 镜像描述，多层镜像按顺序传入
+     * Get 镜像文件描述，多层镜像按顺序传入 
+     * @return ImageUrls 镜像文件描述，多层镜像按顺序传入
      */
     public ImageUrl [] getImageUrls() {
         return this.ImageUrls;
     }
 
     /**
-     * Set 镜像描述，多层镜像按顺序传入
-     * @param ImageUrls 镜像描述，多层镜像按顺序传入
+     * Set 镜像文件描述，多层镜像按顺序传入
+     * @param ImageUrls 镜像文件描述，多层镜像按顺序传入
      */
     public void setImageUrls(ImageUrl [] ImageUrls) {
         this.ImageUrls = ImageUrls;

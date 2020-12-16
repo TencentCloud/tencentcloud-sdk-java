@@ -30,27 +30,21 @@ public class DescribeStackEventsRequest extends AbstractModel{
     private String [] EventIds;
 
     /**
-    * 过滤条件
-
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+    * <li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
     */
     @SerializedName("Filters")
     @Expose
@@ -87,96 +81,72 @@ public class DescribeStackEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件
-
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+     * Get <li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
+类型：string 
+     * @return Filters <li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
 类型：string
-必选：否 
-     * @return Filters 过滤条件
 
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
-
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
-类型：string
-必选：否
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+     * Set <li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
-     * @param Filters 过滤条件
+     * @param Filters <li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
+类型：string
 
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
-
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
-类型：string
-必选：否
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

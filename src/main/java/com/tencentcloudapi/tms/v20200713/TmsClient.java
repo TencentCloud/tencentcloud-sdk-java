@@ -59,6 +59,46 @@ public class TmsClient extends AbstractClient{
     }
 
     /**
+     *控制台获取用户词库列表
+     * @param req DescribeTextLibRequest
+     * @return DescribeTextLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTextLibResponse DescribeTextLib(DescribeTextLibRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTextLibResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTextLibResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTextLib");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *控制台识别统计
+     * @param req DescribeTextStatRequest
+     * @return DescribeTextStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTextStatResponse DescribeTextStat(DescribeTextStatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTextStatResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTextStatResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTextStat");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
      * @param req TextModerationRequest
      * @return TextModerationResponse

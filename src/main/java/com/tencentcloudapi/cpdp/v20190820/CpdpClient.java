@@ -1268,6 +1268,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *智能代发-单笔代发转账查询接口
+     * @param req QueryTransferResultRequest
+     * @return QueryTransferResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryTransferResultResponse QueryTransferResult(QueryTransferResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryTransferResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryTransferResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryTransferResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员在途充值(经第三方支付渠道)接口
      * @param req RechargeByThirdPayRequest
      * @return RechargeByThirdPayResponse
@@ -1460,6 +1480,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RevokeRechargeByThirdPayResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RevokeRechargeByThirdPay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智能代发-单笔代发转账接口
+     * @param req TransferSinglePayRequest
+     * @return TransferSinglePayResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferSinglePayResponse TransferSinglePay(TransferSinglePayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TransferSinglePayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TransferSinglePayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TransferSinglePay");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
