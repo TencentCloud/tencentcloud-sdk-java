@@ -19,8 +19,8 @@
     <groupId>com.tencentcloudapi</groupId>
     <artifactId>tencentcloud-sdk-java</artifactId>
     <!-- go to https://search.maven.org/search?q=tencentcloud-sdk-java and get the latest version. -->
-    <!-- 请到https://search.maven.org/search?q=tencentcloud-sdk-java查询最新版本 -->
-    <version>3.1.178</version>
+    <!-- 请到https://search.maven.org/search?q=tencentcloud-sdk-java查询所有版本，最新版本如下 -->
+    <version>3.1.180</version>
 </dependency>
 ```
 3. 引用方法可参考示例。
