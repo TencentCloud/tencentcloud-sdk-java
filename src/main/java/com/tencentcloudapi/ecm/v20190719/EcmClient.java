@@ -59,6 +59,26 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *本接口（AssignIpv6Addresses）用于弹性网卡申请IPv6地址。
+     * @param req AssignIpv6AddressesRequest
+     * @return AssignIpv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignIpv6AddressesResponse AssignIpv6Addresses(AssignIpv6AddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignIpv6AddressesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignIpv6AddressesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssignIpv6Addresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *弹性网卡申请内网 IP
      * @param req AssignPrivateIpAddressesRequest
      * @return AssignPrivateIpAddressesResponse
@@ -1704,6 +1724,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *本接口（ModifyIpv6AddressesAttribute）用于修改弹性网卡IPv6地址属性。
+     * @param req ModifyIpv6AddressesAttributeRequest
+     * @return ModifyIpv6AddressesAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIpv6AddressesAttributeResponse ModifyIpv6AddressesAttribute(ModifyIpv6AddressesAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyIpv6AddressesAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyIpv6AddressesAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyIpv6AddressesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改负载均衡监听器属性。
      * @param req ModifyListenerRequest
      * @return ModifyListenerResponse
@@ -2038,6 +2078,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ReleaseAddressesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseAddresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UnassignIpv6Addresses）用于释放弹性网卡IPv6地址。
+     * @param req ReleaseIpv6AddressesRequest
+     * @return ReleaseIpv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseIpv6AddressesResponse ReleaseIpv6Addresses(ReleaseIpv6AddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseIpv6AddressesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseIpv6AddressesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseIpv6Addresses");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

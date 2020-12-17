@@ -58,11 +58,11 @@ public class RuleInfoData extends AbstractModel{
     private String Strategy;
 
     /**
-    * 描述
+    * 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
     */
-    @SerializedName("Detail")
+    @SerializedName("SourceType")
     @Expose
-    private String Detail;
+    private Long SourceType;
 
     /**
     * 方向，0：出站，1：入站
@@ -72,14 +72,14 @@ public class RuleInfoData extends AbstractModel{
     private Long Direction;
 
     /**
-    * 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+    * 描述
     */
-    @SerializedName("SourceType")
+    @SerializedName("Detail")
     @Expose
-    private Long SourceType;
+    private String Detail;
 
     /**
-    * 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+    * 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
     */
     @SerializedName("TargetType")
     @Expose
@@ -100,7 +100,7 @@ public class RuleInfoData extends AbstractModel{
     private Long Id;
 
     /**
-    * log
+    * 日志id，从告警处创建必传，其它为空
     */
     @SerializedName("LogId")
     @Expose
@@ -121,7 +121,7 @@ public class RuleInfoData extends AbstractModel{
     private Long Country;
 
     /**
-    * 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+    * 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
     */
     @SerializedName("CloudCode")
     @Expose
@@ -135,14 +135,14 @@ public class RuleInfoData extends AbstractModel{
     private Long IsRegion;
 
     /**
-    * 地域名
+    * 城市名
     */
     @SerializedName("CityName")
     @Expose
     private String CityName;
 
     /**
-    * 地域名
+    * 国家名
     */
     @SerializedName("CountryName")
     @Expose
@@ -229,19 +229,19 @@ public class RuleInfoData extends AbstractModel{
     }
 
     /**
-     * Get 描述 
-     * @return Detail 描述
+     * Get 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版 
+     * @return SourceType 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      */
-    public String getDetail() {
-        return this.Detail;
+    public Long getSourceType() {
+        return this.SourceType;
     }
 
     /**
-     * Set 描述
-     * @param Detail 描述
+     * Set 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * @param SourceType 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      */
-    public void setDetail(String Detail) {
-        this.Detail = Detail;
+    public void setSourceType(Long SourceType) {
+        this.SourceType = SourceType;
     }
 
     /**
@@ -261,32 +261,32 @@ public class RuleInfoData extends AbstractModel{
     }
 
     /**
-     * Get 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿 
-     * @return SourceType 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+     * Get 描述 
+     * @return Detail 描述
      */
-    public Long getSourceType() {
-        return this.SourceType;
+    public String getDetail() {
+        return this.Detail;
     }
 
     /**
-     * Set 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
-     * @param SourceType 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+     * Set 描述
+     * @param Detail 描述
      */
-    public void setSourceType(Long SourceType) {
-        this.SourceType = SourceType;
+    public void setDetail(String Detail) {
+        this.Detail = Detail;
     }
 
     /**
-     * Get 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿 
-     * @return TargetType 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+     * Get 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版 
+     * @return TargetType 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      */
     public Long getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
-     * @param TargetType 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+     * Set 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * @param TargetType 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
@@ -325,16 +325,16 @@ public class RuleInfoData extends AbstractModel{
     }
 
     /**
-     * Get log 
-     * @return LogId log
+     * Get 日志id，从告警处创建必传，其它为空 
+     * @return LogId 日志id，从告警处创建必传，其它为空
      */
     public String getLogId() {
         return this.LogId;
     }
 
     /**
-     * Set log
-     * @param LogId log
+     * Set 日志id，从告警处创建必传，其它为空
+     * @param LogId 日志id，从告警处创建必传，其它为空
      */
     public void setLogId(String LogId) {
         this.LogId = LogId;
@@ -373,16 +373,16 @@ public class RuleInfoData extends AbstractModel{
     }
 
     /**
-     * Get 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云 
-     * @return CloudCode 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+     * Get 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云 
+     * @return CloudCode 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
      */
     public String getCloudCode() {
         return this.CloudCode;
     }
 
     /**
-     * Set 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
-     * @param CloudCode 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+     * Set 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+     * @param CloudCode 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
      */
     public void setCloudCode(String CloudCode) {
         this.CloudCode = CloudCode;
@@ -405,32 +405,32 @@ public class RuleInfoData extends AbstractModel{
     }
 
     /**
-     * Get 地域名 
-     * @return CityName 地域名
+     * Get 城市名 
+     * @return CityName 城市名
      */
     public String getCityName() {
         return this.CityName;
     }
 
     /**
-     * Set 地域名
-     * @param CityName 地域名
+     * Set 城市名
+     * @param CityName 城市名
      */
     public void setCityName(String CityName) {
         this.CityName = CityName;
     }
 
     /**
-     * Get 地域名 
-     * @return CountryName 地域名
+     * Get 国家名 
+     * @return CountryName 国家名
      */
     public String getCountryName() {
         return this.CountryName;
     }
 
     /**
-     * Set 地域名
-     * @param CountryName 地域名
+     * Set 国家名
+     * @param CountryName 国家名
      */
     public void setCountryName(String CountryName) {
         this.CountryName = CountryName;
@@ -445,9 +445,9 @@ public class RuleInfoData extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetIp", this.TargetIp);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
-        this.setParamSimple(map, prefix + "Detail", this.Detail);
-        this.setParamSimple(map, prefix + "Direction", this.Direction);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
+        this.setParamSimple(map, prefix + "Detail", this.Detail);
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Id", this.Id);

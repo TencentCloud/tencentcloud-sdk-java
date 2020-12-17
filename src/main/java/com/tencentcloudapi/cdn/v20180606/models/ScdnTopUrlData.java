@@ -44,6 +44,14 @@ public class ScdnTopUrlData extends AbstractModel{
     private String Time;
 
     /**
+    * 域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get Top数据的URL 
      * @return Url Top数据的URL
      */
@@ -92,12 +100,33 @@ public class ScdnTopUrlData extends AbstractModel{
     }
 
     /**
+     * Get 域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

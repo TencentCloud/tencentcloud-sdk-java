@@ -119,6 +119,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取 PSTN 活动会话列表。
+     * @param req DescribePSTNActiveSessionListRequest
+     * @return DescribePSTNActiveSessionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePSTNActiveSessionListResponse DescribePSTNActiveSessionList(DescribePSTNActiveSessionListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePSTNActiveSessionListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePSTNActiveSessionListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePSTNActiveSessionList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *按实例获取电话消耗统计
      * @param req DescribeTelCallInfoRequest
      * @return DescribeTelCallInfoResponse

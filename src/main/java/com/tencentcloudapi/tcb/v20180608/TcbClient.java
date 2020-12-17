@@ -199,6 +199,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *删除云项目
+     * @param req DeleteCloudBaseProjectLatestVersionRequest
+     * @return DeleteCloudBaseProjectLatestVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersion(DeleteCloudBaseProjectLatestVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCloudBaseProjectLatestVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCloudBaseProjectLatestVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCloudBaseProjectLatestVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除终端用户
      * @param req DeleteEndUserRequest
      * @return DeleteEndUserResponse

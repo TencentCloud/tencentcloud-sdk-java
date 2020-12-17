@@ -26,9 +26,10 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     * 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
+<li>SplitMedia：视频拆条任务；</li>
+<li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
 兼容 2017 版的任务类型：
@@ -106,6 +107,22 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private ComposeMediaTask ComposeMediaTask;
 
     /**
+    * 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SplitMediaTask")
+    @Expose
+    private SplitMediaTask SplitMediaTask;
+
+    /**
+    * 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WechatMiniProgramPublishTask")
+    @Expose
+    private WechatMiniProgramPublishTask WechatMiniProgramPublishTask;
+
+    /**
     * 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -120,14 +137,6 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     @SerializedName("TranscodeTask")
     @Expose
     private TranscodeTask2017 TranscodeTask;
-
-    /**
-    * 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SnapshotByTimeOffsetTask")
-    @Expose
-    private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask;
 
     /**
     * 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
@@ -154,12 +163,12 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private CreateImageSpriteTask2017 CreateImageSpriteTask;
 
     /**
-    * 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+    * 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("WechatMiniProgramPublishTask")
+    @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
-    private WechatMiniProgramPublishTask WechatMiniProgramPublishTask;
+    private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -172,9 +181,10 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      * Get 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
+<li>SplitMedia：视频拆条任务；</li>
+<li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
 兼容 2017 版的任务类型：
@@ -186,9 +196,10 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      * @return TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
+<li>SplitMedia：视频拆条任务；</li>
+<li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
 兼容 2017 版的任务类型：
@@ -206,9 +217,10 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      * Set 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
+<li>SplitMedia：视频拆条任务；</li>
+<li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
 兼容 2017 版的任务类型：
@@ -220,9 +232,10 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      * @param TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
+<li>SplitMedia：视频拆条任务；</li>
+<li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>ComposeMedia：制作媒体文件任务；</li>
 <li>PullUpload：拉取上传媒体文件任务。</li>
 
 兼容 2017 版的任务类型：
@@ -393,6 +406,46 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SplitMediaTask 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SplitMediaTask getSplitMediaTask() {
+        return this.SplitMediaTask;
+    }
+
+    /**
+     * Set 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SplitMediaTask 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSplitMediaTask(SplitMediaTask SplitMediaTask) {
+        this.SplitMediaTask = SplitMediaTask;
+    }
+
+    /**
+     * Get 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
+        return this.WechatMiniProgramPublishTask;
+    }
+
+    /**
+     * Set 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {
+        this.WechatMiniProgramPublishTask = WechatMiniProgramPublishTask;
+    }
+
+    /**
      * Get 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PullUploadTask 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
@@ -430,26 +483,6 @@ public class DescribeTaskDetailResponse extends AbstractModel{
      */
     public void setTranscodeTask(TranscodeTask2017 TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
-    }
-
-    /**
-     * Get 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() {
-        return this.SnapshotByTimeOffsetTask;
-    }
-
-    /**
-     * Set 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask) {
-        this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
@@ -513,23 +546,23 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * Get 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * @return SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
-        return this.WechatMiniProgramPublishTask;
+    public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() {
+        return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * Set 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * @param SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {
-        this.WechatMiniProgramPublishTask = WechatMiniProgramPublishTask;
+    public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask) {
+        this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
@@ -561,13 +594,14 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
         this.setParamObj(map, prefix + "WechatPublishTask.", this.WechatPublishTask);
         this.setParamObj(map, prefix + "ComposeMediaTask.", this.ComposeMediaTask);
+        this.setParamObj(map, prefix + "SplitMediaTask.", this.SplitMediaTask);
+        this.setParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
         this.setParamObj(map, prefix + "PullUploadTask.", this.PullUploadTask);
         this.setParamObj(map, prefix + "TranscodeTask.", this.TranscodeTask);
-        this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamObj(map, prefix + "ConcatTask.", this.ConcatTask);
         this.setParamObj(map, prefix + "ClipTask.", this.ClipTask);
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
-        this.setParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
+        this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

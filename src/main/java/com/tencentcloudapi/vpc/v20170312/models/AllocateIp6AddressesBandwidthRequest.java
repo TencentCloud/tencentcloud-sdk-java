@@ -44,6 +44,13 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel{
     private String InternetChargeType;
 
     /**
+    * 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+    */
+    @SerializedName("BandwidthPackageId")
+    @Expose
+    private String BandwidthPackageId;
+
+    /**
      * Get 需要开通公网访问能力的IPV6地址 
      * @return Ip6Addresses 需要开通公网访问能力的IPV6地址
      */
@@ -92,12 +99,29 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel{
     }
 
     /**
+     * Get 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入. 
+     * @return BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+     */
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
+    }
+
+    /**
+     * Set 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+     * @param BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+     */
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ip6Addresses.", this.Ip6Addresses);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
 
     }
 }

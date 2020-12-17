@@ -1,0 +1,382 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.ses.v20201002;
+
+import java.lang.reflect.Type;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.AbstractClient;
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.JsonResponseModel;
+import com.tencentcloudapi.common.Credential;
+import com.tencentcloudapi.ses.v20201002.models.*;
+
+public class SesClient extends AbstractClient{
+    private static String endpoint = "ses.tencentcloudapi.com";
+    private static String service = "ses";
+    private static String version = "2020-10-02";
+
+    public SesClient(Credential credential, String region) {
+        this(credential, region, new ClientProfile());
+    }
+
+    public SesClient(Credential credential, String region, ClientProfile profile) {
+        super(SesClient.endpoint, SesClient.version, credential, region, profile);
+    }
+
+    /**
+     *在验证了发信域名之后，您需要一个发信地址来发送邮件。比如发信域名是mail.qcloud.com，那么发信地址可以为 service@mail.qcloud.com。如果您想要收件人在收件箱列表中显示您的别名，比如"腾讯云邮件通知"。那么发信地址为： 别名 空格 尖括号 邮箱地址。请注意中间需要有空格
+     * @param req CreateEmailAddressRequest
+     * @return CreateEmailAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEmailAddressResponse CreateEmailAddress(CreateEmailAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEmailAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEmailAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEmailAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在使用身份发送电子邮件之前，您需要有一个电子邮件域名，该域名可以是你的网站或者移动应用的域名。您首先必须进行验证，证明自己是该域名的所有者，并且授权给腾讯云SES发送许可，才可以从该域名发送电子邮件。
+     * @param req CreateEmailIdentityRequest
+     * @return CreateEmailIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEmailIdentityResponse CreateEmailIdentity(CreateEmailIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEmailIdentityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEmailIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEmailIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建模板，该模板可以是TXT或者HTML，请注意如果HTML不要包含外部文件的CSS。模板中的变量使用 {{变量名}} 表示。
+注意：模版需要审核通过才可以使用。
+     * @param req CreateEmailTemplateRequest
+     * @return CreateEmailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEmailTemplateResponse CreateEmailTemplate(CreateEmailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEmailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEmailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEmailTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
+     * @param req DeleteBlackListRequest
+     * @return DeleteBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlackListResponse DeleteBlackList(DeleteBlackListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBlackListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBlackListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBlackList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除发信人地址
+     * @param req DeleteEmailAddressRequest
+     * @return DeleteEmailAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEmailAddressResponse DeleteEmailAddress(DeleteEmailAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEmailAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEmailAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEmailAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除发信域名，删除后，将不可再使用该域名进行发信
+     * @param req DeleteEmailIdentityRequest
+     * @return DeleteEmailIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEmailIdentityResponse DeleteEmailIdentity(DeleteEmailIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEmailIdentityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEmailIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEmailIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除发信模版
+     * @param req DeleteEmailTemplateRequest
+     * @return DeleteEmailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEmailTemplateResponse DeleteEmailTemplate(DeleteEmailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEmailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEmailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEmailTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取某个发信域名的配置详情
+     * @param req GetEmailIdentityRequest
+     * @return GetEmailIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetEmailIdentityResponse GetEmailIdentity(GetEmailIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetEmailIdentityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetEmailIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetEmailIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据模板ID获取模板详情
+     * @param req GetEmailTemplateRequest
+     * @return GetEmailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetEmailTemplateResponse GetEmailTemplate(GetEmailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetEmailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetEmailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetEmailTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。最大跨度为14天。
+     * @param req GetStatisticsReportRequest
+     * @return GetStatisticsReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetStatisticsReportResponse GetStatisticsReport(GetStatisticsReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetStatisticsReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetStatisticsReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetStatisticsReport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *腾讯云发送的邮件一旦被收件方判断为硬退(Hard Bounce)，腾讯云会拉黑该地址，并不允许所有用户向该地址发送邮件。成为邮箱黑名单。如果业务方确认是误判，可以从黑名单中删除。
+     * @param req ListBlackEmailAddressRequest
+     * @return ListBlackEmailAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListBlackEmailAddressResponse ListBlackEmailAddress(ListBlackEmailAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListBlackEmailAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListBlackEmailAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListBlackEmailAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取发信地址列表
+     * @param req ListEmailAddressRequest
+     * @return ListEmailAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListEmailAddressResponse ListEmailAddress(ListEmailAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListEmailAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListEmailAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListEmailAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取当前发信域名列表，包含已验证通过与未验证的域名
+     * @param req ListEmailIdentitiesRequest
+     * @return ListEmailIdentitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListEmailIdentitiesResponse ListEmailIdentities(ListEmailIdentitiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListEmailIdentitiesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListEmailIdentitiesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListEmailIdentities");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取当前邮件模板列表
+     * @param req ListEmailTemplatesRequest
+     * @return ListEmailTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListEmailTemplatesResponse ListEmailTemplates(ListEmailTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListEmailTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListEmailTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListEmailTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *您可以通过此API发送TEXT或者HTML邮件，默认仅支持使用模板发送邮件，如需发送自定义内容，请单独联系商务开通此功能。
+     * @param req SendEmailRequest
+     * @return SendEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendEmailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendEmailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendEmail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *您已经成功配置好了您的DNS，接下来请求腾讯云验证您的DNS配置是否正确
+     * @param req UpdateEmailIdentityRequest
+     * @return UpdateEmailIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEmailIdentityResponse UpdateEmailIdentity(UpdateEmailIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEmailIdentityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEmailIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEmailIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新邮件模板，更新后需再次审核
+     * @param req UpdateEmailTemplateRequest
+     * @return UpdateEmailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEmailTemplateResponse UpdateEmailTemplate(UpdateEmailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEmailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEmailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEmailTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+}

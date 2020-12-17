@@ -346,6 +346,29 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *<li>支持获取所创建的所有平台列表信息；</li>
+<li>支持获取指定的平台列表信息。</li>
+
+
+     * @param req DescribePlatformsRequest
+     * @return DescribePlatformsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlatformsResponse DescribePlatforms(DescribePlatformsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePlatformsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePlatformsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePlatforms");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *支持根据多种条件过滤出项目列表。
      * @param req DescribeProjectsRequest
      * @return DescribeProjectsResponse

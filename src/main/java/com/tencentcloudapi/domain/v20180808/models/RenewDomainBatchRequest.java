@@ -44,6 +44,16 @@ public class RenewDomainBatchRequest extends AbstractModel{
     private Long PayMode;
 
     /**
+    * 自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get 域名续费的年限。 
      * @return Period 域名续费的年限。
      */
@@ -92,12 +102,41 @@ public class RenewDomainBatchRequest extends AbstractModel{
     }
 
     /**
+     * Get 自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值） 
+     * @return AutoRenewFlag 自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
+     * @param AutoRenewFlag 自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

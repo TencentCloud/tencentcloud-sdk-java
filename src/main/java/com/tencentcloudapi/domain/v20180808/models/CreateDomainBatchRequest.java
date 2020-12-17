@@ -51,6 +51,15 @@ public class CreateDomainBatchRequest extends AbstractModel{
     private Long PayMode;
 
     /**
+    * 自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -115,6 +124,30 @@ public class CreateDomainBatchRequest extends AbstractModel{
     }
 
     /**
+     * Get 自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费 
+     * @return AutoRenewFlag 自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
+     * @param AutoRenewFlag 自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +155,7 @@ public class CreateDomainBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

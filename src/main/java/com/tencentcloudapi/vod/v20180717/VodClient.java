@@ -2175,6 +2175,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *对点播视频进行拆条，生成多个新的点播视频。
+     * @param req SplitMediaRequest
+     * @return SplitMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public SplitMediaResponse SplitMedia(SplitMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SplitMediaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SplitMediaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SplitMedia");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *将点播视频发布到微信小程序，供微信小程序播放器播放。
      * @param req WeChatMiniProgramPublishRequest
      * @return WeChatMiniProgramPublishResponse
