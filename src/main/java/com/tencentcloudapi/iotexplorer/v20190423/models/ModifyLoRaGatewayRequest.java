@@ -72,6 +72,13 @@ public class ModifyLoRaGatewayRequest extends AbstractModel{
     private String PositionDetails;
 
     /**
+    * 频点ID
+    */
+    @SerializedName("FrequencyId")
+    @Expose
+    private String FrequencyId;
+
+    /**
      * Get 描述信息 
      * @return Description 描述信息
      */
@@ -184,6 +191,22 @@ public class ModifyLoRaGatewayRequest extends AbstractModel{
     }
 
     /**
+     * Get 频点ID 
+     * @return FrequencyId 频点ID
+     */
+    public String getFrequencyId() {
+        return this.FrequencyId;
+    }
+
+    /**
+     * Set 频点ID
+     * @param FrequencyId 频点ID
+     */
+    public void setFrequencyId(String FrequencyId) {
+        this.FrequencyId = FrequencyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyLoRaGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
         this.setParamSimple(map, prefix + "Position", this.Position);
         this.setParamSimple(map, prefix + "PositionDetails", this.PositionDetails);
+        this.setParamSimple(map, prefix + "FrequencyId", this.FrequencyId);
 
     }
 }

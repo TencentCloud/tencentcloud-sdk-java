@@ -30,21 +30,22 @@ public class OcrTextDetail extends AbstractModel{
     private String Text;
 
     /**
-    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+    * 仅当Label为Custom自定义关键词时有效，表示自定义库id
     */
     @SerializedName("LibId")
     @Expose
     private String LibId;
 
     /**
-    * 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+    * 仅当Label为Custom自定义关键词时有效，表示自定义库名称
     */
     @SerializedName("LibName")
     @Expose
@@ -88,48 +89,52 @@ public class OcrTextDetail extends AbstractModel{
     }
 
     /**
-     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
-     * @return Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。 
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 仅当Lable为Custom自定义关键词时有效，表示自定义库id 
-     * @return LibId 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * Get 仅当Label为Custom自定义关键词时有效，表示自定义库id 
+     * @return LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
      */
     public String getLibId() {
         return this.LibId;
     }
 
     /**
-     * Set 仅当Lable为Custom自定义关键词时有效，表示自定义库id
-     * @param LibId 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * Set 仅当Label为Custom自定义关键词时有效，表示自定义库id
+     * @param LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
      */
     public void setLibId(String LibId) {
         this.LibId = LibId;
     }
 
     /**
-     * Get 仅当Lable为Custom自定义关键词时有效，表示自定义库名称 
-     * @return LibName 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * Get 仅当Label为Custom自定义关键词时有效，表示自定义库名称 
+     * @return LibName 仅当Label为Custom自定义关键词时有效，表示自定义库名称
      */
     public String getLibName() {
         return this.LibName;
     }
 
     /**
-     * Set 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
-     * @param LibName 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * Set 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+     * @param LibName 仅当Label为Custom自定义关键词时有效，表示自定义库名称
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;

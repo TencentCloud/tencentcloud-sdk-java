@@ -55,8 +55,6 @@ public class CreateTranscodeRequest extends AbstractModel{
 
     /**
     * 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
     */
     @SerializedName("ThumbnailResolution")
     @Expose
@@ -149,12 +147,8 @@ tar.gz： 生成`.tar.gz`压缩包
     }
 
     /**
-     * Get 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用 
+     * Get 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution 
      * @return ThumbnailResolution 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
      */
     public String getThumbnailResolution() {
         return this.ThumbnailResolution;
@@ -162,11 +156,7 @@ tar.gz： 生成`.tar.gz`压缩包
 
     /**
      * Set 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
      * @param ThumbnailResolution 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
      */
     public void setThumbnailResolution(String ThumbnailResolution) {
         this.ThumbnailResolution = ThumbnailResolution;

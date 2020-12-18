@@ -13,29 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.facefusion.v20181201.models;
+package com.tencentcloudapi.chdfs.v20201112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FuseFaceResponse extends AbstractModel{
+public class DescribeFileSystemResponse extends AbstractModel{
 
     /**
-    * RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+    * 文件系统
     */
-    @SerializedName("FusedImage")
+    @SerializedName("FileSystem")
     @Expose
-    private String FusedImage;
+    private FileSystem FileSystem;
 
     /**
-    * 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+    * 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ReviewResultSet")
+    @SerializedName("CapacityUsed")
     @Expose
-    private FuseFaceReviewResult [] ReviewResultSet;
+    private Long CapacityUsed;
+
+    /**
+    * 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArchiveCapacityUsed")
+    @Expose
+    private Long ArchiveCapacityUsed;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +53,59 @@ public class FuseFaceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。 
-     * @return FusedImage RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Get 文件系统 
+     * @return FileSystem 文件系统
      */
-    public String getFusedImage() {
-        return this.FusedImage;
+    public FileSystem getFileSystem() {
+        return this.FileSystem;
     }
 
     /**
-     * Set RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
-     * @param FusedImage RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Set 文件系统
+     * @param FileSystem 文件系统
      */
-    public void setFusedImage(String FusedImage) {
-        this.FusedImage = FusedImage;
+    public void setFileSystem(FileSystem FileSystem) {
+        this.FileSystem = FileSystem;
     }
 
     /**
-     * Get 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+     * Get 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReviewResultSet 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+     * @return CapacityUsed 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public FuseFaceReviewResult [] getReviewResultSet() {
-        return this.ReviewResultSet;
+    public Long getCapacityUsed() {
+        return this.CapacityUsed;
     }
 
     /**
-     * Set 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+     * Set 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReviewResultSet 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+     * @param CapacityUsed 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setReviewResultSet(FuseFaceReviewResult [] ReviewResultSet) {
-        this.ReviewResultSet = ReviewResultSet;
+    public void setCapacityUsed(Long CapacityUsed) {
+        this.CapacityUsed = CapacityUsed;
+    }
+
+    /**
+     * Get 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArchiveCapacityUsed 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getArchiveCapacityUsed() {
+        return this.ArchiveCapacityUsed;
+    }
+
+    /**
+     * Set 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArchiveCapacityUsed 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchiveCapacityUsed(Long ArchiveCapacityUsed) {
+        this.ArchiveCapacityUsed = ArchiveCapacityUsed;
     }
 
     /**
@@ -100,8 +128,9 @@ public class FuseFaceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FusedImage", this.FusedImage);
-        this.setParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
+        this.setParamObj(map, prefix + "FileSystem.", this.FileSystem);
+        this.setParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
+        this.setParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

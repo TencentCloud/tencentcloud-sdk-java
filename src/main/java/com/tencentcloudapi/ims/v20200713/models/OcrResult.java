@@ -30,14 +30,16 @@ public class OcrResult extends AbstractModel{
     private String Scene;
 
     /**
-    * 建议值，Block：打击，Review：待复审，Pass：正常
+    * 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
@@ -65,6 +67,13 @@ public class OcrResult extends AbstractModel{
     private OcrTextDetail [] Details;
 
     /**
+    * ocr识别出的文本结果
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
      * Get 场景识别结果 
      * @return Scene 场景识别结果
      */
@@ -81,32 +90,40 @@ public class OcrResult extends AbstractModel{
     }
 
     /**
-     * Get 建议值，Block：打击，Review：待复审，Pass：正常 
-     * @return Suggestion 建议值，Block：打击，Review：待复审，Pass：正常
+     * Get 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过 
+     * @return Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议值，Block：打击，Review：待复审，Pass：正常
-     * @param Suggestion 建议值，Block：打击，Review：待复审，Pass：正常
+     * Set 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * @param Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告 
-     * @return Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。 
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告
-     * @param Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -161,6 +178,22 @@ public class OcrResult extends AbstractModel{
     }
 
     /**
+     * Get ocr识别出的文本结果 
+     * @return Text ocr识别出的文本结果
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set ocr识别出的文本结果
+     * @param Text ocr识别出的文本结果
+     */
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +203,7 @@ public class OcrResult extends AbstractModel{
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamArrayObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "Text", this.Text);
 
     }
 }

@@ -93,6 +93,13 @@ public class LoRaGatewayItem extends AbstractModel{
     private String LastSeenAt;
 
     /**
+    * 频点ID
+    */
+    @SerializedName("FrequencyId")
+    @Expose
+    private String FrequencyId;
+
+    /**
      * Get LoRa 网关Id 
      * @return GatewayId LoRa 网关Id
      */
@@ -253,6 +260,22 @@ public class LoRaGatewayItem extends AbstractModel{
     }
 
     /**
+     * Get 频点ID 
+     * @return FrequencyId 频点ID
+     */
+    public String getFrequencyId() {
+        return this.FrequencyId;
+    }
+
+    /**
+     * Set 频点ID
+     * @param FrequencyId 频点ID
+     */
+    public void setFrequencyId(String FrequencyId) {
+        this.FrequencyId = FrequencyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class LoRaGatewayItem extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "LastSeenAt", this.LastSeenAt);
+        this.setParamSimple(map, prefix + "FrequencyId", this.FrequencyId);
 
     }
 }

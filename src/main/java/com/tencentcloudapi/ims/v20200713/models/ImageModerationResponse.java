@@ -39,7 +39,8 @@ public class ImageModerationResponse extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
@@ -61,7 +62,7 @@ public class ImageModerationResponse extends AbstractModel{
     private Long Score;
 
     /**
-    * 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+    * 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelResults")
@@ -69,7 +70,7 @@ public class ImageModerationResponse extends AbstractModel{
     private LabelResult [] LabelResults;
 
     /**
-    * 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+    * 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectResults")
@@ -77,7 +78,7 @@ public class ImageModerationResponse extends AbstractModel{
     private ObjectResult [] ObjectResults;
 
     /**
-    * OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+    * OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrResults")
@@ -86,7 +87,7 @@ public class ImageModerationResponse extends AbstractModel{
 
     /**
     * 基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibResults")
@@ -164,16 +165,20 @@ public class ImageModerationResponse extends AbstractModel{
     }
 
     /**
-     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。 
-     * @return Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。 
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
-     * @param Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -216,9 +221,9 @@ public class ImageModerationResponse extends AbstractModel{
     }
 
     /**
-     * Get 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+     * Get 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LabelResults 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+     * @return LabelResults 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LabelResult [] getLabelResults() {
@@ -226,9 +231,9 @@ public class ImageModerationResponse extends AbstractModel{
     }
 
     /**
-     * Set 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+     * Set 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LabelResults 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+     * @param LabelResults 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelResults(LabelResult [] LabelResults) {
@@ -236,9 +241,9 @@ public class ImageModerationResponse extends AbstractModel{
     }
 
     /**
-     * Get 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+     * Get 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjectResults 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+     * @return ObjectResults 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectResult [] getObjectResults() {
@@ -246,9 +251,9 @@ public class ImageModerationResponse extends AbstractModel{
     }
 
     /**
-     * Set 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+     * Set 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjectResults 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+     * @param ObjectResults 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectResults(ObjectResult [] ObjectResults) {
@@ -256,9 +261,9 @@ public class ImageModerationResponse extends AbstractModel{
     }
 
     /**
-     * Get OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+     * Get OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrResults OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+     * @return OcrResults OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OcrResult [] getOcrResults() {
@@ -266,9 +271,9 @@ public class ImageModerationResponse extends AbstractModel{
     }
 
     /**
-     * Set OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+     * Set OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrResults OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+     * @param OcrResults OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrResults(OcrResult [] OcrResults) {
@@ -277,10 +282,10 @@ public class ImageModerationResponse extends AbstractModel{
 
     /**
      * Get 基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LibResults 基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LibResult [] getLibResults() {
@@ -289,10 +294,10 @@ public class ImageModerationResponse extends AbstractModel{
 
     /**
      * Set 基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LibResults 基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibResults(LibResult [] LibResults) {

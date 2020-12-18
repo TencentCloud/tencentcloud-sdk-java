@@ -137,6 +137,13 @@ STATIC：静态
     private String TencentBackupAddress;
 
     /**
+    * 高速上云服务ID
+    */
+    @SerializedName("CloudAttachId")
+    @Expose
+    private String CloudAttachId;
+
+    /**
      * Get 专线 ID，例如：dc-kd7d06of 
      * @return DirectConnectId 专线 ID，例如：dc-kd7d06of
      */
@@ -413,6 +420,22 @@ STATIC：静态
     }
 
     /**
+     * Get 高速上云服务ID 
+     * @return CloudAttachId 高速上云服务ID
+     */
+    public String getCloudAttachId() {
+        return this.CloudAttachId;
+    }
+
+    /**
+     * Set 高速上云服务ID
+     * @param CloudAttachId 高速上云服务ID
+     */
+    public void setCloudAttachId(String CloudAttachId) {
+        this.CloudAttachId = CloudAttachId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -431,6 +454,7 @@ STATIC：静态
         this.setParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
+        this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
 
     }
 }

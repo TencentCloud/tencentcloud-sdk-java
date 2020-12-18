@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRoomInformationResponse extends AbstractModel{
 
     /**
-    * 返回的数据总条数
+    * 返回当页数据总数
     */
     @SerializedName("Total")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeRoomInformationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的数据总条数 
-     * @return Total 返回的数据总条数
+     * Get 返回当页数据总数 
+     * @return Total 返回当页数据总数
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 返回的数据总条数
-     * @param Total 返回的数据总条数
+     * Set 返回当页数据总数
+     * @param Total 返回当页数据总数
      */
     public void setTotal(Long Total) {
         this.Total = Total;

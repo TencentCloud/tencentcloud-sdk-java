@@ -246,6 +246,14 @@ REJECTED:拒绝
     private Boolean SignLaw;
 
     /**
+    * 高速上云服务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudAttachId")
+    @Expose
+    private String CloudAttachId;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -790,6 +798,26 @@ REJECTED:拒绝
     }
 
     /**
+     * Get 高速上云服务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudAttachId 高速上云服务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudAttachId() {
+        return this.CloudAttachId;
+    }
+
+    /**
+     * Set 高速上云服务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudAttachId 高速上云服务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudAttachId(String CloudAttachId) {
+        this.CloudAttachId = CloudAttachId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -822,6 +850,7 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
 
     }
 }

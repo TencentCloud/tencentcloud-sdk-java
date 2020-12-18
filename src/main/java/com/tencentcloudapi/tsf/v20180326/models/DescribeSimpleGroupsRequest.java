@@ -79,7 +79,7 @@ public class DescribeSimpleGroupsRequest extends AbstractModel{
     private String SearchWord;
 
     /**
-    * 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+    * 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
     */
     @SerializedName("AppMicroServiceType")
     @Expose
@@ -214,16 +214,16 @@ public class DescribeSimpleGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用 
-     * @return AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     * Get 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用 
+     * @return AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
      */
     public String getAppMicroServiceType() {
         return this.AppMicroServiceType;
     }
 
     /**
-     * Set 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
-     * @param AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     * Set 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
+     * @param AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
      */
     public void setAppMicroServiceType(String AppMicroServiceType) {
         this.AppMicroServiceType = AppMicroServiceType;

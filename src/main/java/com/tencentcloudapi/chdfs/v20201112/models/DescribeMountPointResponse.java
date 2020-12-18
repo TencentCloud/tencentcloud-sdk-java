@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.facefusion.v20181201.models;
+package com.tencentcloudapi.chdfs.v20201112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceFusionResponse extends AbstractModel{
+public class DescribeMountPointResponse extends AbstractModel{
 
     /**
-    * RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+    * 挂载点
     */
-    @SerializedName("Image")
+    @SerializedName("MountPoint")
     @Expose
-    private String Image;
-
-    /**
-    * 不适宜内容识别结果
-    */
-    @SerializedName("ReviewResultSet")
-    @Expose
-    private FuseFaceReviewResult [] ReviewResultSet;
+    private MountPoint MountPoint;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class FaceFusionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。 
-     * @return Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Get 挂载点 
+     * @return MountPoint 挂载点
      */
-    public String getImage() {
-        return this.Image;
+    public MountPoint getMountPoint() {
+        return this.MountPoint;
     }
 
     /**
-     * Set RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
-     * @param Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Set 挂载点
+     * @param MountPoint 挂载点
      */
-    public void setImage(String Image) {
-        this.Image = Image;
-    }
-
-    /**
-     * Get 不适宜内容识别结果 
-     * @return ReviewResultSet 不适宜内容识别结果
-     */
-    public FuseFaceReviewResult [] getReviewResultSet() {
-        return this.ReviewResultSet;
-    }
-
-    /**
-     * Set 不适宜内容识别结果
-     * @param ReviewResultSet 不适宜内容识别结果
-     */
-    public void setReviewResultSet(FuseFaceReviewResult [] ReviewResultSet) {
-        this.ReviewResultSet = ReviewResultSet;
+    public void setMountPoint(MountPoint MountPoint) {
+        this.MountPoint = MountPoint;
     }
 
     /**
@@ -95,8 +72,7 @@ public class FaceFusionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Image", this.Image);
-        this.setParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
+        this.setParamObj(map, prefix + "MountPoint.", this.MountPoint);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
