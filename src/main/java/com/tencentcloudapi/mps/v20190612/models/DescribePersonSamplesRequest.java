@@ -23,33 +23,33 @@ import java.util.HashMap;
 public class DescribePersonSamplesRequest extends AbstractModel{
 
     /**
-    * 拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+    * 拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 人物 ID，数组长度限制：100。
+    * 素材 ID，数组长度限制：100。
     */
     @SerializedName("PersonIds")
     @Expose
     private String [] PersonIds;
 
     /**
-    * 人物名称，数组长度限制：20。
+    * 素材名称，数组长度限制：20。
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 人物标签，数组长度限制：20。
+    * 素材标签，数组长度限制：20。
     */
     @SerializedName("Tags")
     @Expose
@@ -70,84 +70,84 @@ public class DescribePersonSamplesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+     * Get 拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。 
-     * @return Type 拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。 
+     * @return Type 拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+     * Set 拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
-     * @param Type 拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
+     * @param Type 拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 人物 ID，数组长度限制：100。 
-     * @return PersonIds 人物 ID，数组长度限制：100。
+     * Get 素材 ID，数组长度限制：100。 
+     * @return PersonIds 素材 ID，数组长度限制：100。
      */
     public String [] getPersonIds() {
         return this.PersonIds;
     }
 
     /**
-     * Set 人物 ID，数组长度限制：100。
-     * @param PersonIds 人物 ID，数组长度限制：100。
+     * Set 素材 ID，数组长度限制：100。
+     * @param PersonIds 素材 ID，数组长度限制：100。
      */
     public void setPersonIds(String [] PersonIds) {
         this.PersonIds = PersonIds;
     }
 
     /**
-     * Get 人物名称，数组长度限制：20。 
-     * @return Names 人物名称，数组长度限制：20。
+     * Get 素材名称，数组长度限制：20。 
+     * @return Names 素材名称，数组长度限制：20。
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 人物名称，数组长度限制：20。
-     * @param Names 人物名称，数组长度限制：20。
+     * Set 素材名称，数组长度限制：20。
+     * @param Names 素材名称，数组长度限制：20。
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get 人物标签，数组长度限制：20。 
-     * @return Tags 人物标签，数组长度限制：20。
+     * Get 素材标签，数组长度限制：20。 
+     * @return Tags 素材标签，数组长度限制：20。
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 人物标签，数组长度限制：20。
-     * @param Tags 人物标签，数组长度限制：20。
+     * Set 素材标签，数组长度限制：20。
+     * @param Tags 素材标签，数组长度限制：20。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

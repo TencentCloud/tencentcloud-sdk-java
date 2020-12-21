@@ -30,18 +30,18 @@ public class TextModerationRequest extends AbstractModel{
     private String Content;
 
     /**
-    * 数据ID，英文字母、下划线、-组成，不超过64个字符
-    */
-    @SerializedName("DataId")
-    @Expose
-    private String DataId;
-
-    /**
     * 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
     */
     @SerializedName("BizType")
     @Expose
     private String BizType;
+
+    /**
+    * 数据ID，英文字母、下划线、-组成，不超过64个字符
+    */
+    @SerializedName("DataId")
+    @Expose
+    private String DataId;
 
     /**
     * 账号相关信息字段，填入后可识别违规风险账号。
@@ -74,22 +74,6 @@ public class TextModerationRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据ID，英文字母、下划线、-组成，不超过64个字符 
-     * @return DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
-     */
-    public String getDataId() {
-        return this.DataId;
-    }
-
-    /**
-     * Set 数据ID，英文字母、下划线、-组成，不超过64个字符
-     * @param DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
-     */
-    public void setDataId(String DataId) {
-        this.DataId = DataId;
-    }
-
-    /**
      * Get 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。 
      * @return BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
      */
@@ -103,6 +87,22 @@ public class TextModerationRequest extends AbstractModel{
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
+    }
+
+    /**
+     * Get 数据ID，英文字母、下划线、-组成，不超过64个字符 
+     * @return DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
+     */
+    public String getDataId() {
+        return this.DataId;
+    }
+
+    /**
+     * Set 数据ID，英文字母、下划线、-组成，不超过64个字符
+     * @param DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
+     */
+    public void setDataId(String DataId) {
+        this.DataId = DataId;
     }
 
     /**
@@ -142,8 +142,8 @@ public class TextModerationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
-        this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamObj(map, prefix + "User.", this.User);
         this.setParamObj(map, prefix + "Device.", this.Device);
 

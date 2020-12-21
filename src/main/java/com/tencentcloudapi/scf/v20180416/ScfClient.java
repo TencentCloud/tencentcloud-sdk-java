@@ -226,6 +226,46 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *删除函数版本的预置并发配置。
+     * @param req DeleteProvisionedConcurrencyConfigRequest
+     * @return DeleteProvisionedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(DeleteProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteProvisionedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除函数的保留并发配置。
+     * @param req DeleteReservedConcurrencyConfigRequest
+     * @return DeleteReservedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfig(DeleteReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReservedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReservedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReservedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据参数传入删除已有的触发方式。
      * @param req DeleteTriggerRequest
      * @return DeleteTriggerResponse
@@ -338,6 +378,46 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetLayerVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetLayerVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取函数或函数某一版本的预置并发详情。
+     * @param req GetProvisionedConcurrencyConfigRequest
+     * @return GetProvisionedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(GetProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetProvisionedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetProvisionedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取函数的保留并发详情。
+     * @param req GetReservedConcurrencyConfigRequest
+     * @return GetReservedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(GetReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetReservedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetReservedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetReservedConcurrencyConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -538,6 +618,66 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PublishVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置函数某一非$LATEST版本的预置并发。
+     * @param req PutProvisionedConcurrencyConfigRequest
+     * @return PutProvisionedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutProvisionedConcurrencyConfigResponse PutProvisionedConcurrencyConfig(PutProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutProvisionedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutProvisionedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutProvisionedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置函数保留并发
+     * @param req PutReservedConcurrencyConfigRequest
+     * @return PutReservedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutReservedConcurrencyConfigResponse PutReservedConcurrencyConfig(PutReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutReservedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutReservedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutReservedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改账号并发限制配额
+     * @param req PutTotalConcurrencyConfigRequest
+     * @return PutTotalConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutTotalConcurrencyConfigResponse PutTotalConcurrencyConfig(PutTotalConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutTotalConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutTotalConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutTotalConcurrencyConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

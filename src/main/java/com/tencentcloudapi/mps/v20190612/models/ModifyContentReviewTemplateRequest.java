@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class ModifyContentReviewTemplateRequest extends AbstractModel{
 
     /**
-    * 内容审核模板唯一标识。
+    * 内容智能识别模板唯一标识。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 内容审核模板名称，长度限制：64 个字符。
+    * 内容智能识别模板名称，长度限制：64 个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 内容审核模板描述信息，长度限制：256 个字符。
+    * 内容智能识别模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 鉴黄控制参数。
+    * 令人反感的信息的控制参数。
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfoForUpdate PornConfigure;
 
     /**
-    * 鉴恐控制参数。
+    * 令人不安全的信息的控制参数。
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfoForUpdate TerrorismConfigure;
 
     /**
-    * 鉴政控制参数。
+    * 令人不适宜的控制参数。
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -75,103 +75,103 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
 
     /**
-    * 用户自定义内容审核控制参数。
+    * 用户自定义内容智能识别控制参数。
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfoForUpdate UserDefineConfigure;
 
     /**
-     * Get 内容审核模板唯一标识。 
-     * @return Definition 内容审核模板唯一标识。
+     * Get 内容智能识别模板唯一标识。 
+     * @return Definition 内容智能识别模板唯一标识。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 内容审核模板唯一标识。
-     * @param Definition 内容审核模板唯一标识。
+     * Set 内容智能识别模板唯一标识。
+     * @param Definition 内容智能识别模板唯一标识。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 内容审核模板名称，长度限制：64 个字符。 
-     * @return Name 内容审核模板名称，长度限制：64 个字符。
+     * Get 内容智能识别模板名称，长度限制：64 个字符。 
+     * @return Name 内容智能识别模板名称，长度限制：64 个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 内容审核模板名称，长度限制：64 个字符。
-     * @param Name 内容审核模板名称，长度限制：64 个字符。
+     * Set 内容智能识别模板名称，长度限制：64 个字符。
+     * @param Name 内容智能识别模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 内容审核模板描述信息，长度限制：256 个字符。 
-     * @return Comment 内容审核模板描述信息，长度限制：256 个字符。
+     * Get 内容智能识别模板描述信息，长度限制：256 个字符。 
+     * @return Comment 内容智能识别模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 内容审核模板描述信息，长度限制：256 个字符。
-     * @param Comment 内容审核模板描述信息，长度限制：256 个字符。
+     * Set 内容智能识别模板描述信息，长度限制：256 个字符。
+     * @param Comment 内容智能识别模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 鉴黄控制参数。 
-     * @return PornConfigure 鉴黄控制参数。
+     * Get 令人反感的信息的控制参数。 
+     * @return PornConfigure 令人反感的信息的控制参数。
      */
     public PornConfigureInfoForUpdate getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set 鉴黄控制参数。
-     * @param PornConfigure 鉴黄控制参数。
+     * Set 令人反感的信息的控制参数。
+     * @param PornConfigure 令人反感的信息的控制参数。
      */
     public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get 鉴恐控制参数。 
-     * @return TerrorismConfigure 鉴恐控制参数。
+     * Get 令人不安全的信息的控制参数。 
+     * @return TerrorismConfigure 令人不安全的信息的控制参数。
      */
     public TerrorismConfigureInfoForUpdate getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set 鉴恐控制参数。
-     * @param TerrorismConfigure 鉴恐控制参数。
+     * Set 令人不安全的信息的控制参数。
+     * @param TerrorismConfigure 令人不安全的信息的控制参数。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfoForUpdate TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get 鉴政控制参数。 
-     * @return PoliticalConfigure 鉴政控制参数。
+     * Get 令人不适宜的控制参数。 
+     * @return PoliticalConfigure 令人不适宜的控制参数。
      */
     public PoliticalConfigureInfoForUpdate getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set 鉴政控制参数。
-     * @param PoliticalConfigure 鉴政控制参数。
+     * Set 令人不适宜的控制参数。
+     * @param PoliticalConfigure 令人不适宜的控制参数。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfoForUpdate PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -206,16 +206,16 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户自定义内容审核控制参数。 
-     * @return UserDefineConfigure 用户自定义内容审核控制参数。
+     * Get 用户自定义内容智能识别控制参数。 
+     * @return UserDefineConfigure 用户自定义内容智能识别控制参数。
      */
     public UserDefineConfigureInfoForUpdate getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set 用户自定义内容审核控制参数。
-     * @param UserDefineConfigure 用户自定义内容审核控制参数。
+     * Set 用户自定义内容智能识别控制参数。
+     * @param UserDefineConfigure 用户自定义内容智能识别控制参数。
      */
     public void setUserDefineConfigure(UserDefineConfigureInfoForUpdate UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;

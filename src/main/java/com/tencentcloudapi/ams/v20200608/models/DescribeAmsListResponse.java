@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAmsListResponse extends AbstractModel{
 
     /**
-    * 返回列表数据
+    * 返回列表数据----非必选，该参数暂未对外开放
     */
     @SerializedName("AmsDetailSet")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeAmsListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回列表数据 
-     * @return AmsDetailSet 返回列表数据
+     * Get 返回列表数据----非必选，该参数暂未对外开放 
+     * @return AmsDetailSet 返回列表数据----非必选，该参数暂未对外开放
      */
     public AmsDetailInfo [] getAmsDetailSet() {
         return this.AmsDetailSet;
     }
 
     /**
-     * Set 返回列表数据
-     * @param AmsDetailSet 返回列表数据
+     * Set 返回列表数据----非必选，该参数暂未对外开放
+     * @param AmsDetailSet 返回列表数据----非必选，该参数暂未对外开放
      */
     public void setAmsDetailSet(AmsDetailInfo [] AmsDetailSet) {
         this.AmsDetailSet = AmsDetailSet;

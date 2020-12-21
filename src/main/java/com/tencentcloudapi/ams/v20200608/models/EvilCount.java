@@ -23,15 +23,7 @@ import java.util.HashMap;
 public class EvilCount extends AbstractModel{
 
     /**
-    * 违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
+    * ----非必选，该参数功能暂未对外开放
     */
     @SerializedName("EvilType")
     @Expose
@@ -45,48 +37,16 @@ Moan	26001
     private Long Count;
 
     /**
-     * Get 违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001 
-     * @return EvilType 违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
+     * Get ----非必选，该参数功能暂未对外开放 
+     * @return EvilType ----非必选，该参数功能暂未对外开放
      */
     public String getEvilType() {
         return this.EvilType;
     }
 
     /**
-     * Set 违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
-     * @param EvilType 违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
+     * Set ----非必选，该参数功能暂未对外开放
+     * @param EvilType ----非必选，该参数功能暂未对外开放
      */
     public void setEvilType(String EvilType) {
         this.EvilType = EvilType;

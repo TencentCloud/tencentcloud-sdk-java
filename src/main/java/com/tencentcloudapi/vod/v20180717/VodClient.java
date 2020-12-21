@@ -232,7 +232,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建用户自定义视频内容审核模板，数量上限：50。
+     *创建用户自定义视频内容智能识别模板，数量上限：50。
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -292,7 +292,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
+     *该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、不适宜视频识别等视频处理。
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
      * @throws TencentCloudSDKException
@@ -452,7 +452,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行内容审核、内容识别等视频处理。
+     *该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行不适宜内容识别、内容识别等视频处理。
      * @param req CreateWordSamplesRequest
      * @return CreateWordSamplesResponse
      * @throws TencentCloudSDKException
@@ -575,7 +575,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *删除用户自定义视频内容审核模板。
+     *删除用户自定义视频内容智能识别模板。
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -656,7 +656,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *该接口用于根据人物 ID，删除人物样本。
+     *该接口用于根据人物 ID，删除素材样本。
      * @param req DeletePersonSampleRequest
      * @return DeletePersonSampleResponse
      * @throws TencentCloudSDKException
@@ -987,7 +987,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
+     *根据视频内容智能识别模板唯一标识，获取视频内容智能识别模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容智能识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1147,7 +1147,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
+     *该接口用于查询素材样本信息，支持根据素材 ID、名称、标签，分页查询。
      * @param req DescribePersonSamplesRequest
      * @return DescribePersonSamplesResponse
      * @throws TencentCloudSDKException
@@ -1189,9 +1189,9 @@ public class VodClient extends AbstractClient{
     /**
      *<b>本接口已不推荐使用，用 [DescribeMediaProcessUsageData](/document/product/266/41464) 替代</b>
 
-该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
+该接口返回查询时间范围内每天使用的视频内容智能识别时长数据，单位： 秒。
 
-1. 可以查询最近365天内的视频内容审核时长统计数据。
+1. 可以查询最近365天内的视频内容智能识别时长统计数据。
 2. 查询时间跨度不超过90天。
      * @param req DescribeReviewDetailsRequest
      * @return DescribeReviewDetailsResponse
@@ -1658,7 +1658,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *修改用户自定义视频内容审核模板。
+     *修改用户自定义视频内容智能识别模板。
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -1718,7 +1718,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *该接口用于根据人物 ID，修改人物样本信息，包括名称、描述的修改，以及人脸、标签的添加、删除、重置操作。人脸删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
+     *该接口用于根据素材 ID，修改素材样本信息，包括名称、描述的修改，以及五官、标签的添加、删除、重置操作。五官删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
      * @param req ModifyPersonSampleRequest
      * @return ModifyPersonSampleResponse
      * @throws TencentCloudSDKException

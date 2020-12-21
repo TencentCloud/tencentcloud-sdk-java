@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioResultDetailMoanResult extends AbstractModel{
 
     /**
-    * 固定为Moan
+    * 固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -59,9 +59,9 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     private String SubLabelCode;
 
     /**
-     * Get 固定为Moan
+     * Get 固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 固定为Moan
+     * @return Label 固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -69,9 +69,9 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     }
 
     /**
-     * Set 固定为Moan
+     * Set 固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 固定为Moan
+     * @param Label 固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {

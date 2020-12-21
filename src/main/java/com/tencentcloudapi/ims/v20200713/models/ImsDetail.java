@@ -44,7 +44,7 @@ public class ImsDetail extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * 机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
+    * ----非必选，该参数暂未对外开放
     */
     @SerializedName("EvilType")
     @Expose
@@ -127,16 +127,16 @@ public class ImsDetail extends AbstractModel{
     }
 
     /**
-     * Get 机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感 
-     * @return EvilType 机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
+     * Get ----非必选，该参数暂未对外开放 
+     * @return EvilType ----非必选，该参数暂未对外开放
      */
     public Long getEvilType() {
         return this.EvilType;
     }
 
     /**
-     * Set 机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
-     * @param EvilType 机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
+     * Set ----非必选，该参数暂未对外开放
+     * @param EvilType ----非必选，该参数暂未对外开放
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;

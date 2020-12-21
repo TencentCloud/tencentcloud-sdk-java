@@ -52,6 +52,13 @@ public class MediaInfo extends AbstractModel{
     private Long Height;
 
     /**
+    * 缩略图
+    */
+    @SerializedName("Thumbnail")
+    @Expose
+    private String Thumbnail;
+
+    /**
      * Get 编码格式 
      * @return Codecs 编码格式
      */
@@ -120,6 +127,22 @@ public class MediaInfo extends AbstractModel{
     }
 
     /**
+     * Get 缩略图 
+     * @return Thumbnail 缩略图
+     */
+    public String getThumbnail() {
+        return this.Thumbnail;
+    }
+
+    /**
+     * Set 缩略图
+     * @param Thumbnail 缩略图
+     */
+    public void setThumbnail(String Thumbnail) {
+        this.Thumbnail = Thumbnail;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -127,6 +150,7 @@ public class MediaInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
 
     }
 }

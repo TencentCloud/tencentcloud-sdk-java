@@ -33,29 +33,21 @@ public class ImageResult extends AbstractModel{
     private Long HitFlag;
 
     /**
-    * 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+    * 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+    */
+    @SerializedName("Suggestion")
+    @Expose
+    private String Suggestion;
+
+    /**
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
-
-    /**
-    * 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
-    */
-    @SerializedName("Suggestion")
-    @Expose
-    private String Suggestion;
 
     /**
     * 得分
@@ -114,23 +106,31 @@ Block 确认违规
     }
 
     /**
-     * Get 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * Get 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过 
+     * @return Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     */
+    public String getSuggestion() {
+        return this.Suggestion;
+    }
+
+    /**
+     * Set 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * @param Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     */
+    public void setSuggestion(String Suggestion) {
+        this.Suggestion = Suggestion;
+    }
+
+    /**
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -138,55 +138,15 @@ Ad 广告
     }
 
     /**
-     * Set 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
-    }
-
-    /**
-     * Get 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规 
-     * @return Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
-     */
-    public String getSuggestion() {
-        return this.Suggestion;
-    }
-
-    /**
-     * Set 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
-     * @param Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
-     */
-    public void setSuggestion(String Suggestion) {
-        this.Suggestion = Suggestion;
     }
 
     /**
@@ -258,8 +218,8 @@ Block 确认违规
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
-        this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
+        this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "Url", this.Url);

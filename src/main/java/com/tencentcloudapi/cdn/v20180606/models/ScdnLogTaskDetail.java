@@ -122,6 +122,14 @@ DefenceMode映射如下：
     private String DefenceMode;
 
     /**
+    * 查询条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Conditions")
+    @Expose
+    private ScdnEventLogConditions [] Conditions;
+
+    /**
      * Get scdn域名 
      * @return Domain scdn域名
      */
@@ -398,6 +406,26 @@ DefenceMode映射如下：
     }
 
     /**
+     * Get 查询条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Conditions 查询条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScdnEventLogConditions [] getConditions() {
+        return this.Conditions;
+    }
+
+    /**
+     * Set 查询条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Conditions 查询条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConditions(ScdnEventLogConditions [] Conditions) {
+        this.Conditions = Conditions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -411,6 +439,7 @@ DefenceMode映射如下：
         this.setParamSimple(map, prefix + "TaskID", this.TaskID);
         this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamSimple(map, prefix + "DefenceMode", this.DefenceMode);
+        this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
 
     }
 }

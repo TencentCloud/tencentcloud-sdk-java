@@ -60,7 +60,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     private VPCSettings VPCSettings;
 
     /**
-    * 实例登陆配置。
+    * 实例登录配置。
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -116,7 +116,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     private Boolean CbsEncryptFlag;
 
     /**
-    * 是否使用远程登陆，默认为false。
+    * 是否使用远程登录，默认为false。
     */
     @SerializedName("RemoteTcpDefaultPort")
     @Expose
@@ -211,16 +211,16 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     }
 
     /**
-     * Get 实例登陆配置。 
-     * @return LoginSettings 实例登陆配置。
+     * Get 实例登录配置。 
+     * @return LoginSettings 实例登录配置。
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 实例登陆配置。
-     * @param LoginSettings 实例登陆配置。
+     * Set 实例登录配置。
+     * @param LoginSettings 实例登录配置。
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
@@ -339,16 +339,16 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     }
 
     /**
-     * Get 是否使用远程登陆，默认为false。 
-     * @return RemoteTcpDefaultPort 是否使用远程登陆，默认为false。
+     * Get 是否使用远程登录，默认为false。 
+     * @return RemoteTcpDefaultPort 是否使用远程登录，默认为false。
      */
     public Boolean getRemoteTcpDefaultPort() {
         return this.RemoteTcpDefaultPort;
     }
 
     /**
-     * Set 是否使用远程登陆，默认为false。
-     * @param RemoteTcpDefaultPort 是否使用远程登陆，默认为false。
+     * Set 是否使用远程登录，默认为false。
+     * @param RemoteTcpDefaultPort 是否使用远程登录，默认为false。
      */
     public void setRemoteTcpDefaultPort(Boolean RemoteTcpDefaultPort) {
         this.RemoteTcpDefaultPort = RemoteTcpDefaultPort;

@@ -59,6 +59,26 @@ public class IeClient extends AbstractClient{
     }
 
     /**
+     *用于创建编辑处理任务，如媒体截取、媒体编辑、媒体拼接、媒体字幕。
+     * @param req CreateMediaProcessTaskRequest
+     * @return CreateMediaProcessTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMediaProcessTaskResponse CreateMediaProcessTask(CreateMediaProcessTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMediaProcessTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMediaProcessTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMediaProcessTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建画质重生任务，对视频进行转码、去噪、去划痕、去毛刺、超分、细节增强和色彩增强。
      * @param req CreateMediaQualityRestorationTaskRequest
      * @return CreateMediaQualityRestorationTaskResponse
@@ -119,6 +139,26 @@ public class IeClient extends AbstractClient{
     }
 
     /**
+     *用于获取编辑处理任务的结果。
+     * @param req DescribeMediaProcessTaskResultRequest
+     * @return DescribeMediaProcessTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaProcessTaskResultResponse DescribeMediaProcessTaskResult(DescribeMediaProcessTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaProcessTaskResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessTaskResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMediaProcessTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取画质重生任务结果，查看结束后的文件信息
      * @param req DescribeMediaQualityRestorationTaskRusultRequest
      * @return DescribeMediaQualityRestorationTaskRusultResponse
@@ -151,6 +191,26 @@ public class IeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeQualityControlTaskResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeQualityControlTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于停止正在进行中的编辑处理任务。
+     * @param req StopMediaProcessTaskRequest
+     * @return StopMediaProcessTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopMediaProcessTaskResponse StopMediaProcessTask(StopMediaProcessTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopMediaProcessTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopMediaProcessTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopMediaProcessTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

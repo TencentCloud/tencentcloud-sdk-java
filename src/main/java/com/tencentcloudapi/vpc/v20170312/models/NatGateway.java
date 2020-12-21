@@ -125,6 +125,14 @@ public class NatGateway extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupSet")
+    @Expose
+    private String [] SecurityGroupSet;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -365,6 +373,26 @@ public class NatGateway extends AbstractModel{
     }
 
     /**
+     * Get NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupSet NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroupSet() {
+        return this.SecurityGroupSet;
+    }
+
+    /**
+     * Set NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupSet NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupSet(String [] SecurityGroupSet) {
+        this.SecurityGroupSet = SecurityGroupSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -382,6 +410,7 @@ public class NatGateway extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArraySimple(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
 
     }
 }

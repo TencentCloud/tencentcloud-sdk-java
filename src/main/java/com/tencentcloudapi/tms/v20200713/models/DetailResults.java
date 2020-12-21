@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class DetailResults extends AbstractModel{
 
     /**
-    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 建议值,Block：打击,Review：待复审,Pass：正常
+    * 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -54,7 +56,7 @@ public class DetailResults extends AbstractModel{
     private Long Score;
 
     /**
-    * 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+    * 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibType")
@@ -62,7 +64,7 @@ public class DetailResults extends AbstractModel{
     private Long LibType;
 
     /**
-    * 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+    * 仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibId")
@@ -70,7 +72,7 @@ public class DetailResults extends AbstractModel{
     private String LibId;
 
     /**
-    * 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+    * 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibName")
@@ -78,25 +80,31 @@ public class DetailResults extends AbstractModel{
     private String LibName;
 
     /**
-     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
-     * @return Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。 
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 建议值,Block：打击,Review：待复审,Pass：正常
+     * Get 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 建议值,Block：打击,Review：待复审,Pass：正常
+     * @return Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -104,9 +112,11 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Set 建议值,Block：打击,Review：待复审,Pass：正常
+     * Set 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 建议值,Block：打击,Review：待复审,Pass：正常
+     * @param Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -154,9 +164,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Get 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+     * Get 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LibType 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+     * @return LibType 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLibType() {
@@ -164,9 +174,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Set 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+     * Set 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LibType 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+     * @param LibType 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibType(Long LibType) {
@@ -174,9 +184,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Get 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * Get 仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LibId 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * @return LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibId() {
@@ -184,9 +194,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Set 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * Set 仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LibId 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * @param LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibId(String LibId) {
@@ -194,9 +204,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Get 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * Get 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LibName 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * @return LibName 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibName() {
@@ -204,9 +214,9 @@ public class DetailResults extends AbstractModel{
     }
 
     /**
-     * Set 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * Set 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LibName 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * @param LibName 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibName(String LibName) {

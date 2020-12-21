@@ -446,6 +446,14 @@ off：不支持
     private Ipv6Access Ipv6Access;
 
     /**
+    * 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvanceSet")
+    @Expose
+    private AdvanceConfig [] AdvanceSet;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1526,6 +1534,26 @@ off：不支持
     }
 
     /**
+     * Get 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvanceSet 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvanceConfig [] getAdvanceSet() {
+        return this.AdvanceSet;
+    }
+
+    /**
+     * Set 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvanceSet 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvanceSet(AdvanceConfig [] AdvanceSet) {
+        this.AdvanceSet = AdvanceSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1580,6 +1608,7 @@ off：不支持
         this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
         this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+        this.setParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
 
     }
 }

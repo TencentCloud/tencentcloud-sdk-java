@@ -33,14 +33,8 @@ public class AudioResult extends AbstractModel{
     private Long HitFlag;
 
     /**
-    * 命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -48,10 +42,8 @@ Moan 呻吟
     private String Label;
 
     /**
-    * 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+    * 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
@@ -97,21 +89,21 @@ Block 确认违规
     private String Extra;
 
     /**
-    * 文本审核结果
+    * 文本识别结果
     */
     @SerializedName("TextResults")
     @Expose
     private AudioResultDetailTextResult [] TextResults;
 
     /**
-    * 音频呻吟审核结果
+    * 音频呻吟检测结果
     */
     @SerializedName("MoanResults")
     @Expose
     private AudioResultDetailMoanResult [] MoanResults;
 
     /**
-    * 音频语种检测结果
+    * 音频语言检测结果
     */
     @SerializedName("LanguageResults")
     @Expose
@@ -146,23 +138,11 @@ Block 确认违规
     }
 
     /**
-     * Get 命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -170,23 +150,11 @@ Moan 呻吟
     }
 
     /**
-     * Set 命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
@@ -194,15 +162,11 @@ Moan 呻吟
     }
 
     /**
-     * Get 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Get 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @return Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
@@ -210,15 +174,11 @@ Block 确认违规
     }
 
     /**
-     * Set 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * Set 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @param Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
@@ -318,48 +278,48 @@ Block 确认违规
     }
 
     /**
-     * Get 文本审核结果 
-     * @return TextResults 文本审核结果
+     * Get 文本识别结果 
+     * @return TextResults 文本识别结果
      */
     public AudioResultDetailTextResult [] getTextResults() {
         return this.TextResults;
     }
 
     /**
-     * Set 文本审核结果
-     * @param TextResults 文本审核结果
+     * Set 文本识别结果
+     * @param TextResults 文本识别结果
      */
     public void setTextResults(AudioResultDetailTextResult [] TextResults) {
         this.TextResults = TextResults;
     }
 
     /**
-     * Get 音频呻吟审核结果 
-     * @return MoanResults 音频呻吟审核结果
+     * Get 音频呻吟检测结果 
+     * @return MoanResults 音频呻吟检测结果
      */
     public AudioResultDetailMoanResult [] getMoanResults() {
         return this.MoanResults;
     }
 
     /**
-     * Set 音频呻吟审核结果
-     * @param MoanResults 音频呻吟审核结果
+     * Set 音频呻吟检测结果
+     * @param MoanResults 音频呻吟检测结果
      */
     public void setMoanResults(AudioResultDetailMoanResult [] MoanResults) {
         this.MoanResults = MoanResults;
     }
 
     /**
-     * Get 音频语种检测结果 
-     * @return LanguageResults 音频语种检测结果
+     * Get 音频语言检测结果 
+     * @return LanguageResults 音频语言检测结果
      */
     public AudioResultDetailLanguageResult [] getLanguageResults() {
         return this.LanguageResults;
     }
 
     /**
-     * Set 音频语种检测结果
-     * @param LanguageResults 音频语种检测结果
+     * Set 音频语言检测结果
+     * @param LanguageResults 音频语言检测结果
      */
     public void setLanguageResults(AudioResultDetailLanguageResult [] LanguageResults) {
         this.LanguageResults = LanguageResults;

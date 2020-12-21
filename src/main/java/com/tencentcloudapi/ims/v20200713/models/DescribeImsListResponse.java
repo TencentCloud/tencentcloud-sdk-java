@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeImsListResponse extends AbstractModel{
 
     /**
-    * 返回列表数据
+    * 返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImsDetailSet")
@@ -45,9 +45,9 @@ public class DescribeImsListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回列表数据
+     * Get 返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImsDetailSet 返回列表数据
+     * @return ImsDetailSet 返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImsDetail [] getImsDetailSet() {
@@ -55,9 +55,9 @@ public class DescribeImsListResponse extends AbstractModel{
     }
 
     /**
-     * Set 返回列表数据
+     * Set 返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImsDetailSet 返回列表数据
+     * @param ImsDetailSet 返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImsDetailSet(ImsDetail [] ImsDetailSet) {

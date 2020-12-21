@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioResultDetailLanguageResult extends AbstractModel{
 
     /**
-    * 语种
+    * 语言信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -63,9 +63,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private String SubLabelCode;
 
     /**
-     * Get 语种
+     * Get 语言信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 语种
+     * @return Label 语言信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -73,9 +73,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 语种
+     * Set 语言信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 语种
+     * @param Label 语言信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {

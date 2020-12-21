@@ -106,6 +106,20 @@ DefenceMode 映射如下：
     private String [] Domains;
 
     /**
+    * 指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型
+    */
+    @SerializedName("AttackTypes")
+    @Expose
+    private String [] AttackTypes;
+
+    /**
+    * 查询条件
+    */
+    @SerializedName("Conditions")
+    @Expose
+    private ScdnEventLogConditions [] Conditions;
+
+    /**
      * Get 防护类型
 Mode 映射如下：
   waf = "Web攻击"
@@ -342,6 +356,38 @@ DefenceMode 映射如下：
     }
 
     /**
+     * Get 指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型 
+     * @return AttackTypes 指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型
+     */
+    public String [] getAttackTypes() {
+        return this.AttackTypes;
+    }
+
+    /**
+     * Set 指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型
+     * @param AttackTypes 指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型
+     */
+    public void setAttackTypes(String [] AttackTypes) {
+        this.AttackTypes = AttackTypes;
+    }
+
+    /**
+     * Get 查询条件 
+     * @return Conditions 查询条件
+     */
+    public ScdnEventLogConditions [] getConditions() {
+        return this.Conditions;
+    }
+
+    /**
+     * Set 查询条件
+     * @param Conditions 查询条件
+     */
+    public void setConditions(ScdnEventLogConditions [] Conditions) {
+        this.Conditions = Conditions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -353,6 +399,8 @@ DefenceMode 映射如下：
         this.setParamSimple(map, prefix + "DefenceMode", this.DefenceMode);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamArraySimple(map, prefix + "AttackTypes.", this.AttackTypes);
+        this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
 
     }
 }

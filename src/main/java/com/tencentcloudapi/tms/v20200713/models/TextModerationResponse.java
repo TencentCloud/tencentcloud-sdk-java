@@ -38,8 +38,8 @@ public class TextModerationResponse extends AbstractModel{
     private Long EvilFlag;
 
     /**
-    * 机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
     */
     @SerializedName("Label")
     @Expose
@@ -47,7 +47,7 @@ Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：�
 
     /**
     * 建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
     */
     @SerializedName("Suggestion")
     @Expose
@@ -95,6 +95,14 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
     private String Extra;
 
     /**
+    * 请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataId")
+    @Expose
+    private String DataId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -138,20 +146,20 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
     }
 
     /**
-     * Get 机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
-     * @return Label 机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。 
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param Label 机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -159,9 +167,9 @@ Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：�
 
     /**
      * Get 建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。 
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过 
      * @return Suggestion 建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -169,9 +177,9 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
 
     /**
      * Set 建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      * @param Suggestion 建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -282,6 +290,26 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
     }
 
     /**
+     * Get 请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataId 请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataId() {
+        return this.DataId;
+    }
+
+    /**
+     * Set 请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataId 请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataId(String DataId) {
+        this.DataId = DataId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -310,6 +338,7 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
         this.setParamArrayObj(map, prefix + "DetailResults.", this.DetailResults);
         this.setParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
