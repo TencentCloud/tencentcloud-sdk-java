@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateVpnGatewayRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -79,16 +79,16 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。 
+     * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+     * @param VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

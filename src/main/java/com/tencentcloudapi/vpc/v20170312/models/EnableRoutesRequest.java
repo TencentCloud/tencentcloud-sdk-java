@@ -30,14 +30,14 @@ public class EnableRoutesRequest extends AbstractModel{
     private String RouteTableId;
 
     /**
-    * 路由策略ID。不能和RouteItemIds同时使用。
+    * 路由策略ID。不能和RouteItemIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
     */
     @SerializedName("RouteIds")
     @Expose
     private Long [] RouteIds;
 
     /**
-    * 路由策略唯一ID。不能和RouteIds同时使用。
+    * 路由策略唯一ID。不能和RouteIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
     */
     @SerializedName("RouteItemIds")
     @Expose
@@ -60,32 +60,32 @@ public class EnableRoutesRequest extends AbstractModel{
     }
 
     /**
-     * Get 路由策略ID。不能和RouteItemIds同时使用。 
-     * @return RouteIds 路由策略ID。不能和RouteItemIds同时使用。
+     * Get 路由策略ID。不能和RouteItemIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。 
+     * @return RouteIds 路由策略ID。不能和RouteItemIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
      */
     public Long [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set 路由策略ID。不能和RouteItemIds同时使用。
-     * @param RouteIds 路由策略ID。不能和RouteItemIds同时使用。
+     * Set 路由策略ID。不能和RouteItemIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
+     * @param RouteIds 路由策略ID。不能和RouteItemIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
      */
     public void setRouteIds(Long [] RouteIds) {
         this.RouteIds = RouteIds;
     }
 
     /**
-     * Get 路由策略唯一ID。不能和RouteIds同时使用。 
-     * @return RouteItemIds 路由策略唯一ID。不能和RouteIds同时使用。
+     * Get 路由策略唯一ID。不能和RouteIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。 
+     * @return RouteItemIds 路由策略唯一ID。不能和RouteIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
      */
     public String [] getRouteItemIds() {
         return this.RouteItemIds;
     }
 
     /**
-     * Set 路由策略唯一ID。不能和RouteIds同时使用。
-     * @param RouteItemIds 路由策略唯一ID。不能和RouteIds同时使用。
+     * Set 路由策略唯一ID。不能和RouteIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
+     * @param RouteItemIds 路由策略唯一ID。不能和RouteIds同时使用，但至少输入一个。该参数取值可通过查询路由列表（[DescribeRouteTables](https://cloud.tencent.com/document/product/215/15763)）获取。
      */
     public void setRouteItemIds(String [] RouteItemIds) {
         this.RouteItemIds = RouteItemIds;

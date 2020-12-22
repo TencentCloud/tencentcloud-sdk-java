@@ -31,6 +31,23 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     private LivePackageInfo [] LivePackageInfoList;
 
     /**
+    * 套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PackageBillMode")
+    @Expose
+    private Long PackageBillMode;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -58,6 +75,62 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PackageBillMode 套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPackageBillMode() {
+        return this.PackageBillMode;
+    }
+
+    /**
+     * Set 套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PackageBillMode 套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPackageBillMode(Long PackageBillMode) {
+        this.PackageBillMode = PackageBillMode;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -78,6 +151,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LivePackageInfoList.", this.LivePackageInfoList);
+        this.setParamSimple(map, prefix + "PackageBillMode", this.PackageBillMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Simple extends AbstractModel{
 
     /**
-    * Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+    * base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
     */
     @SerializedName("Html")
     @Expose
     private String Html;
 
     /**
-    * 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+    * base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱 
-     * @return Html Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+     * Get base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱 
+     * @return Html base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
      */
     public String getHtml() {
         return this.Html;
     }
 
     /**
-     * Set Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
-     * @param Html Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+     * Set base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+     * @param Html base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
      */
     public void setHtml(String Html) {
         this.Html = Html;
     }
 
     /**
-     * Get 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式 
-     * @return Text 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+     * Get base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式 
+     * @return Text base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
-     * @param Text 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+     * Set base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+     * @param Text base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
      */
     public void setText(String Text) {
         this.Text = Text;

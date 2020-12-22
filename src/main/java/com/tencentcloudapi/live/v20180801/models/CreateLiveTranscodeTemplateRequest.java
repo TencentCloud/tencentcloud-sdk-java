@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
-    * 模板名称，例：900 900p 仅支持字母和数字的组合。
+    * 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
@@ -190,11 +190,11 @@ baseline/main/high。默认baseline
     private Long ShortEdgeAsHeight;
 
     /**
-     * Get 模板名称，例：900 900p 仅支持字母和数字的组合。
+     * Get 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符 
-     * @return TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
+     * @return TemplateName 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
@@ -204,11 +204,11 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Set 模板名称，例：900 900p 仅支持字母和数字的组合。
+     * Set 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
-     * @param TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
+     * @param TemplateName 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符

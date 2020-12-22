@@ -79,6 +79,20 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private Boolean EnableAutoscale;
 
     /**
+    * 操作系统名称
+    */
+    @SerializedName("OsName")
+    @Expose
+    private String OsName;
+
+    /**
+    * 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -207,6 +221,38 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作系统名称 
+     * @return OsName 操作系统名称
+     */
+    public String getOsName() {
+        return this.OsName;
+    }
+
+    /**
+     * Set 操作系统名称
+     * @param OsName 操作系统名称
+     */
+    public void setOsName(String OsName) {
+        this.OsName = OsName;
+    }
+
+    /**
+     * Get 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值) 
+     * @return OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @param OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +264,8 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
+        this.setParamSimple(map, prefix + "OsName", this.OsName);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
 
     }
 }

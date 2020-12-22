@@ -116,7 +116,7 @@ ip：IP 列表作为源站
     private String BasePath;
 
     /**
-    * 分路径回源配置规则
+    * 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathRules")
@@ -388,9 +388,9 @@ ip：IP 列表作为源站
     }
 
     /**
-     * Get 分路径回源配置规则
+     * Get 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PathRules 分路径回源配置规则
+     * @return PathRules 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PathRule [] getPathRules() {
@@ -398,9 +398,9 @@ ip：IP 列表作为源站
     }
 
     /**
-     * Set 分路径回源配置规则
+     * Set 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PathRules 分路径回源配置规则
+     * @param PathRules 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathRules(PathRule [] PathRules) {

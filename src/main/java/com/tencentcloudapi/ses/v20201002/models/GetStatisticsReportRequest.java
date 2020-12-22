@@ -44,7 +44,7 @@ public class GetStatisticsReportRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 收件方邮箱类型，比如gmail.com
+    * 收件方邮箱类型，例如gmail.com
     */
     @SerializedName("ReceivingMailboxType")
     @Expose
@@ -99,16 +99,16 @@ public class GetStatisticsReportRequest extends AbstractModel{
     }
 
     /**
-     * Get 收件方邮箱类型，比如gmail.com 
-     * @return ReceivingMailboxType 收件方邮箱类型，比如gmail.com
+     * Get 收件方邮箱类型，例如gmail.com 
+     * @return ReceivingMailboxType 收件方邮箱类型，例如gmail.com
      */
     public String getReceivingMailboxType() {
         return this.ReceivingMailboxType;
     }
 
     /**
-     * Set 收件方邮箱类型，比如gmail.com
-     * @param ReceivingMailboxType 收件方邮箱类型，比如gmail.com
+     * Set 收件方邮箱类型，例如gmail.com
+     * @param ReceivingMailboxType 收件方邮箱类型，例如gmail.com
      */
     public void setReceivingMailboxType(String ReceivingMailboxType) {
         this.ReceivingMailboxType = ReceivingMailboxType;

@@ -26,6 +26,7 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
     * 包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
     */
     @SerializedName("PackageType")
     @Expose
@@ -34,10 +35,12 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
     /**
      * Get 包类型，可选值：
 0：流量包；
-1：转码包。 
+1：转码包。
+2: 连麦包。 
      * @return PackageType 包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
      */
     public Long getPackageType() {
         return this.PackageType;
@@ -47,9 +50,11 @@ public class DescribeLivePackageInfoRequest extends AbstractModel{
      * Set 包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
      * @param PackageType 包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
      */
     public void setPackageType(Long PackageType) {
         this.PackageType = PackageType;

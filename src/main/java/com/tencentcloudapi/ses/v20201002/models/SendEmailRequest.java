@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendEmailRequest extends AbstractModel{
 
     /**
-    * 发信邮件地址。比如：noreply@mail.qcloud.com。
+    * 发信邮件地址。例如：noreply@mail.qcloud.com。
     */
     @SerializedName("FromEmailAddress")
     @Expose
@@ -65,16 +65,16 @@ public class SendEmailRequest extends AbstractModel{
     private Simple Simple;
 
     /**
-     * Get 发信邮件地址。比如：noreply@mail.qcloud.com。 
-     * @return FromEmailAddress 发信邮件地址。比如：noreply@mail.qcloud.com。
+     * Get 发信邮件地址。例如：noreply@mail.qcloud.com。 
+     * @return FromEmailAddress 发信邮件地址。例如：noreply@mail.qcloud.com。
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set 发信邮件地址。比如：noreply@mail.qcloud.com。
-     * @param FromEmailAddress 发信邮件地址。比如：noreply@mail.qcloud.com。
+     * Set 发信邮件地址。例如：noreply@mail.qcloud.com。
+     * @param FromEmailAddress 发信邮件地址。例如：noreply@mail.qcloud.com。
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;

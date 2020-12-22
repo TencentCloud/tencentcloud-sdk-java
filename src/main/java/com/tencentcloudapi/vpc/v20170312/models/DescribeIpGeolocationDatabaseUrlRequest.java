@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeIpGeolocationDatabaseUrlRequest extends AbstractModel{
 
     /**
-    * ip地址库协议类型，目前支持"ipv4"和"ipv6"。
+    * IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get ip地址库协议类型，目前支持"ipv4"和"ipv6"。 
-     * @return Type ip地址库协议类型，目前支持"ipv4"和"ipv6"。
+     * Get IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。 
+     * @return Type IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set ip地址库协议类型，目前支持"ipv4"和"ipv6"。
-     * @param Type ip地址库协议类型，目前支持"ipv4"和"ipv6"。
+     * Set IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
+     * @param Type IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
      */
     public void setType(String Type) {
         this.Type = Type;

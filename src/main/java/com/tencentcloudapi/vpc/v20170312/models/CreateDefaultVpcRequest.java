@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateDefaultVpcRequest extends AbstractModel{
 
     /**
-    * 子网所在的可用区ID，不指定将随机选择可用区
+    * 子网所在的可用区，该参数可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)接口获取，例如ap-guangzhou-1，不指定时将随机选择可用区。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 是否强制返回默认VPC
+    * 是否强制返回默认VPC。
     */
     @SerializedName("Force")
     @Expose
     private Boolean Force;
 
     /**
-     * Get 子网所在的可用区ID，不指定将随机选择可用区 
-     * @return Zone 子网所在的可用区ID，不指定将随机选择可用区
+     * Get 子网所在的可用区，该参数可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)接口获取，例如ap-guangzhou-1，不指定时将随机选择可用区。 
+     * @return Zone 子网所在的可用区，该参数可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)接口获取，例如ap-guangzhou-1，不指定时将随机选择可用区。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 子网所在的可用区ID，不指定将随机选择可用区
-     * @param Zone 子网所在的可用区ID，不指定将随机选择可用区
+     * Set 子网所在的可用区，该参数可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)接口获取，例如ap-guangzhou-1，不指定时将随机选择可用区。
+     * @param Zone 子网所在的可用区，该参数可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)接口获取，例如ap-guangzhou-1，不指定时将随机选择可用区。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 是否强制返回默认VPC 
-     * @return Force 是否强制返回默认VPC
+     * Get 是否强制返回默认VPC。 
+     * @return Force 是否强制返回默认VPC。
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set 是否强制返回默认VPC
-     * @param Force 是否强制返回默认VPC
+     * Set 是否强制返回默认VPC。
+     * @param Force 是否强制返回默认VPC。
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

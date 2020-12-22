@@ -30,7 +30,7 @@ public class CreateVpcRequest extends AbstractModel{
     private String VpcName;
 
     /**
-    * vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+    * vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -44,21 +44,21 @@ public class CreateVpcRequest extends AbstractModel{
     private String EnableMulticast;
 
     /**
-    * DNS地址，最多支持4个
+    * DNS地址，最多支持4个。
     */
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
 
     /**
-    * 域名
+    * DHCP使用的域名。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
     */
     @SerializedName("Tags")
     @Expose
@@ -81,16 +81,16 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。 
-     * @return CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Get vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。 
+     * @return CidrBlock vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
-     * @param CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Set vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * @param CidrBlock vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -113,48 +113,48 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get DNS地址，最多支持4个 
-     * @return DnsServers DNS地址，最多支持4个
+     * Get DNS地址，最多支持4个。 
+     * @return DnsServers DNS地址，最多支持4个。
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set DNS地址，最多支持4个
-     * @param DnsServers DNS地址，最多支持4个
+     * Set DNS地址，最多支持4个。
+     * @param DnsServers DNS地址，最多支持4个。
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;
     }
 
     /**
-     * Get 域名 
-     * @return DomainName 域名
+     * Get DHCP使用的域名。 
+     * @return DomainName DHCP使用的域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 域名
-     * @param DomainName 域名
+     * Set DHCP使用的域名。
+     * @param DomainName DHCP使用的域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
-     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
-     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

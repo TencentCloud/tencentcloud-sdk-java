@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RechargeRecord extends AbstractModel{
 
     /**
-    * 流水记录号
+    * 流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterId")
@@ -31,7 +31,7 @@ public class RechargeRecord extends AbstractModel{
     private Long WaterId;
 
     /**
-    * 充值前的余额
+    * 充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BalanceBeforeRecharge")
@@ -39,7 +39,7 @@ public class RechargeRecord extends AbstractModel{
     private Long BalanceBeforeRecharge;
 
     /**
-    * 充值金额
+    * 充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Money")
@@ -47,7 +47,7 @@ public class RechargeRecord extends AbstractModel{
     private Long Money;
 
     /**
-    * 充值时间, UTC值
+    * 充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateTime")
@@ -55,9 +55,9 @@ public class RechargeRecord extends AbstractModel{
     private Long OperateTime;
 
     /**
-     * Get 流水记录号
+     * Get 流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaterId 流水记录号
+     * @return WaterId 流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWaterId() {
@@ -65,9 +65,9 @@ public class RechargeRecord extends AbstractModel{
     }
 
     /**
-     * Set 流水记录号
+     * Set 流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaterId 流水记录号
+     * @param WaterId 流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterId(Long WaterId) {
@@ -75,9 +75,9 @@ public class RechargeRecord extends AbstractModel{
     }
 
     /**
-     * Get 充值前的余额
+     * Get 充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BalanceBeforeRecharge 充值前的余额
+     * @return BalanceBeforeRecharge 充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBalanceBeforeRecharge() {
@@ -85,9 +85,9 @@ public class RechargeRecord extends AbstractModel{
     }
 
     /**
-     * Set 充值前的余额
+     * Set 充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BalanceBeforeRecharge 充值前的余额
+     * @param BalanceBeforeRecharge 充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBalanceBeforeRecharge(Long BalanceBeforeRecharge) {
@@ -95,9 +95,9 @@ public class RechargeRecord extends AbstractModel{
     }
 
     /**
-     * Get 充值金额
+     * Get 充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Money 充值金额
+     * @return Money 充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMoney() {
@@ -105,9 +105,9 @@ public class RechargeRecord extends AbstractModel{
     }
 
     /**
-     * Set 充值金额
+     * Set 充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Money 充值金额
+     * @param Money 充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMoney(Long Money) {
@@ -115,9 +115,9 @@ public class RechargeRecord extends AbstractModel{
     }
 
     /**
-     * Get 充值时间, UTC值
+     * Get 充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperateTime 充值时间, UTC值
+     * @return OperateTime 充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperateTime() {
@@ -125,9 +125,9 @@ public class RechargeRecord extends AbstractModel{
     }
 
     /**
-     * Set 充值时间, UTC值
+     * Set 充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperateTime 充值时间, UTC值
+     * @param OperateTime 充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateTime(Long OperateTime) {

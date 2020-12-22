@@ -59,6 +59,46 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *云监控告警创建告警通知模板
+     * @param req CreateAlarmNoticeRequest
+     * @return CreateAlarmNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlarmNoticeResponse CreateAlarmNotice(CreateAlarmNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAlarmNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAlarmNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAlarmNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建告警策略
+     * @param req CreateAlarmPolicyRequest
+     * @return CreateAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlarmPolicyResponse CreateAlarmPolicy(CreateAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAlarmPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *增加策略组
      * @param req CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -93,6 +133,46 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateServiceDiscoveryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateServiceDiscovery");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云监控告警删除告警通知模板
+     * @param req DeleteAlarmNoticesRequest
+     * @return DeleteAlarmNoticesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmNoticesResponse DeleteAlarmNotices(DeleteAlarmNoticesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAlarmNoticesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAlarmNoticesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAlarmNotices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除告警策略
+     * @param req DeleteAlarmPolicyRequest
+     * @return DeleteAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmPolicyResponse DeleteAlarmPolicy(DeleteAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAlarmPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -163,7 +243,27 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *告警2.0-告警历史列表
+     *查询告警事件列表
+     * @param req DescribeAlarmEventsRequest
+     * @return DescribeAlarmEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmEventsResponse DescribeAlarmEvents(DescribeAlarmEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *告警历史列表
      * @param req DescribeAlarmHistoriesRequest
      * @return DescribeAlarmHistoriesResponse
      * @throws TencentCloudSDKException
@@ -175,6 +275,126 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmHistoriesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAlarmHistories");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询告警指标列表
+     * @param req DescribeAlarmMetricsRequest
+     * @return DescribeAlarmMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmMetricsResponse DescribeAlarmMetrics(DescribeAlarmMetricsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmMetricsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmMetricsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmMetrics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云监控告警获取告警通知模板详情
+     * @param req DescribeAlarmNoticeRequest
+     * @return DescribeAlarmNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticeResponse DescribeAlarmNotice(DescribeAlarmNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云监控告警获取告警通知模板所有回调URL
+     * @param req DescribeAlarmNoticeCallbacksRequest
+     * @return DescribeAlarmNoticeCallbacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacks(DescribeAlarmNoticeCallbacksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmNoticeCallbacksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeCallbacksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmNoticeCallbacks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云监控告警查询告警通知模板列表
+     * @param req DescribeAlarmNoticesRequest
+     * @return DescribeAlarmNoticesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticesResponse DescribeAlarmNotices(DescribeAlarmNoticesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmNoticesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmNotices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *告警策略列表
+     * @param req DescribeAlarmPoliciesRequest
+     * @return DescribeAlarmPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmPoliciesResponse DescribeAlarmPolicies(DescribeAlarmPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *告警策略详情
+     * @param req DescribeAlarmPolicyRequest
+     * @return DescribeAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmPolicyResponse DescribeAlarmPolicy(DescribeAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -427,6 +647,126 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *云监控告警编辑告警通知模板
+     * @param req ModifyAlarmNoticeRequest
+     * @return ModifyAlarmNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmNoticeResponse ModifyAlarmNotice(ModifyAlarmNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑告警策略触发条件
+     * @param req ModifyAlarmPolicyConditionRequest
+     * @return ModifyAlarmPolicyConditionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyConditionResponse ModifyAlarmPolicyCondition(ModifyAlarmPolicyConditionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyConditionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyConditionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyCondition");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *告警2.0编辑告警策略基本信息，包括策略名、备注
+     * @param req ModifyAlarmPolicyInfoRequest
+     * @return ModifyAlarmPolicyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyInfoResponse ModifyAlarmPolicyInfo(ModifyAlarmPolicyInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云监控告警修改告警策略绑定的告警通知模板
+     * @param req ModifyAlarmPolicyNoticeRequest
+     * @return ModifyAlarmPolicyNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyNoticeResponse ModifyAlarmPolicyNotice(ModifyAlarmPolicyNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改告警策略的启停状态
+     * @param req ModifyAlarmPolicyStatusRequest
+     * @return ModifyAlarmPolicyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyStatusResponse ModifyAlarmPolicyStatus(ModifyAlarmPolicyStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云监控告警修改告警策略的触发任务，TriggerTasks字段放触发任务列表，TriggerTasks传空数组时，代表解绑该策略的所有触发任务。
+     * @param req ModifyAlarmPolicyTasksRequest
+     * @return ModifyAlarmPolicyTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyTasksResponse ModifyAlarmPolicyTasks(ModifyAlarmPolicyTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改告警接收人
      * @param req ModifyAlarmReceiversRequest
      * @return ModifyAlarmReceiversResponse
@@ -505,6 +845,27 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SendCustomAlarmMsgResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SendCustomAlarmMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置一个策略为该告警策略类型、该项目的默认告警策略。
+同一项目下相同的告警策略类型，就会被设置为非默认。
+     * @param req SetDefaultAlarmPolicyRequest
+     * @return SetDefaultAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetDefaultAlarmPolicyResponse SetDefaultAlarmPolicy(SetDefaultAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetDefaultAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetDefaultAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetDefaultAlarmPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

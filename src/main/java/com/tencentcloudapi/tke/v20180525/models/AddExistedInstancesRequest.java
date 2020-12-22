@@ -30,7 +30,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 实例列表
+    * 实例列表，不支持竞价实例
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -72,6 +72,13 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String HostName;
 
     /**
+    * 节点池选项
+    */
+    @SerializedName("NodePool")
+    @Expose
+    private NodePoolOption NodePool;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -88,16 +95,16 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例列表 
-     * @return InstanceIds 实例列表
+     * Get 实例列表，不支持竞价实例 
+     * @return InstanceIds 实例列表，不支持竞价实例
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例列表
-     * @param InstanceIds 实例列表
+     * Set 实例列表，不支持竞价实例
+     * @param InstanceIds 实例列表，不支持竞价实例
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -184,6 +191,22 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 节点池选项 
+     * @return NodePool 节点池选项
+     */
+    public NodePoolOption getNodePool() {
+        return this.NodePool;
+    }
+
+    /**
+     * Set 节点池选项
+     * @param NodePool 节点池选项
+     */
+    public void setNodePool(NodePoolOption NodePool) {
+        this.NodePool = NodePool;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamObj(map, prefix + "NodePool.", this.NodePool);
 
     }
 }

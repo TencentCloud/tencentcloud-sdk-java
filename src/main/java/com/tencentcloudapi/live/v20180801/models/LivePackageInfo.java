@@ -42,6 +42,7 @@ public class LivePackageInfo extends AbstractModel{
     * 使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
     */
     @SerializedName("Used")
     @Expose
@@ -51,6 +52,7 @@ public class LivePackageInfo extends AbstractModel{
     * 剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
     */
     @SerializedName("Left")
     @Expose
@@ -75,6 +77,7 @@ public class LivePackageInfo extends AbstractModel{
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
     */
     @SerializedName("Type")
     @Expose
@@ -85,6 +88,9 @@ public class LivePackageInfo extends AbstractModel{
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
     */
     @SerializedName("Status")
     @Expose
@@ -133,10 +139,12 @@ public class LivePackageInfo extends AbstractModel{
     /**
      * Get 使用量。
 注意：当为流量包时单位为字节。
-当为转码包时单位为分钟。 
+当为转码包时单位为分钟。
+当为连麦包时单位为小时。 
      * @return Used 使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      */
     public Long getUsed() {
         return this.Used;
@@ -146,9 +154,11 @@ public class LivePackageInfo extends AbstractModel{
      * Set 使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      * @param Used 使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      */
     public void setUsed(Long Used) {
         this.Used = Used;
@@ -157,10 +167,12 @@ public class LivePackageInfo extends AbstractModel{
     /**
      * Get 剩余量。
 注意：当为流量包时单位为字节。
-当为转码包时单位为分钟。 
+当为转码包时单位为分钟。
+当为连麦包时单位为小时。 
      * @return Left 剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      */
     public Long getLeft() {
         return this.Left;
@@ -170,9 +182,11 @@ public class LivePackageInfo extends AbstractModel{
      * Set 剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      * @param Left 剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      */
     public void setLeft(Long Left) {
         this.Left = Left;
@@ -214,11 +228,13 @@ public class LivePackageInfo extends AbstractModel{
      * Get 包类型，可选值:
 0: 流量包。
 1: 普通转码包。
-2: 极速高清包。 
+2: 极速高清包。
+3: 连麦包。 
      * @return Type 包类型，可选值:
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
      */
     public Long getType() {
         return this.Type;
@@ -229,10 +245,12 @@ public class LivePackageInfo extends AbstractModel{
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
      * @param Type 包类型，可选值:
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -242,11 +260,17 @@ public class LivePackageInfo extends AbstractModel{
      * Get 包状态，可选值:
 0: 未使用。
 1: 使用中。
-2: 已过期。 
+2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款 
      * @return Status 包状态，可选值:
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
      */
     public Long getStatus() {
         return this.Status;
@@ -257,10 +281,16 @@ public class LivePackageInfo extends AbstractModel{
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
      * @param Status 包状态，可选值:
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
      */
     public void setStatus(Long Status) {
         this.Status = Status;

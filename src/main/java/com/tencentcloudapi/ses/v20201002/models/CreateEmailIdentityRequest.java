@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateEmailIdentityRequest extends AbstractModel{
 
     /**
-    * 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
+    * 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
     */
     @SerializedName("EmailIdentity")
     @Expose
     private String EmailIdentity;
 
     /**
-     * Get 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。 
-     * @return EmailIdentity 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
+     * Get 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。 
+     * @return EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
      */
     public String getEmailIdentity() {
         return this.EmailIdentity;
     }
 
     /**
-     * Set 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
-     * @param EmailIdentity 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
+     * Set 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+     * @param EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
      */
     public void setEmailIdentity(String EmailIdentity) {
         this.EmailIdentity = EmailIdentity;

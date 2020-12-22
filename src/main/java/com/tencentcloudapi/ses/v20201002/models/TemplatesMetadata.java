@@ -37,7 +37,7 @@ public class TemplatesMetadata extends AbstractModel{
     private String TemplateName;
 
     /**
-    * 模板状态。1-审核中|0-已通过|其它-不可用
+    * 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
     */
     @SerializedName("TemplateStatus")
     @Expose
@@ -49,6 +49,13 @@ public class TemplatesMetadata extends AbstractModel{
     @SerializedName("TemplateID")
     @Expose
     private Long TemplateID;
+
+    /**
+    * 审核原因
+    */
+    @SerializedName("ReviewReason")
+    @Expose
+    private String ReviewReason;
 
     /**
      * Get 创建时间 
@@ -83,16 +90,16 @@ public class TemplatesMetadata extends AbstractModel{
     }
 
     /**
-     * Get 模板状态。1-审核中|0-已通过|其它-不可用 
-     * @return TemplateStatus 模板状态。1-审核中|0-已通过|其它-不可用
+     * Get 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用 
+     * @return TemplateStatus 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
      */
     public Long getTemplateStatus() {
         return this.TemplateStatus;
     }
 
     /**
-     * Set 模板状态。1-审核中|0-已通过|其它-不可用
-     * @param TemplateStatus 模板状态。1-审核中|0-已通过|其它-不可用
+     * Set 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
+     * @param TemplateStatus 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
      */
     public void setTemplateStatus(Long TemplateStatus) {
         this.TemplateStatus = TemplateStatus;
@@ -115,6 +122,22 @@ public class TemplatesMetadata extends AbstractModel{
     }
 
     /**
+     * Get 审核原因 
+     * @return ReviewReason 审核原因
+     */
+    public String getReviewReason() {
+        return this.ReviewReason;
+    }
+
+    /**
+     * Set 审核原因
+     * @param ReviewReason 审核原因
+     */
+    public void setReviewReason(String ReviewReason) {
+        this.ReviewReason = ReviewReason;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class TemplatesMetadata extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
         this.setParamSimple(map, prefix + "TemplateID", this.TemplateID);
+        this.setParamSimple(map, prefix + "ReviewReason", this.ReviewReason);
 
     }
 }

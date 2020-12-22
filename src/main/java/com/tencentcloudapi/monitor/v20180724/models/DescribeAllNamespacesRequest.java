@@ -37,7 +37,7 @@ public class DescribeAllNamespacesRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控
+    * 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控
     */
     @SerializedName("MonitorTypes")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeAllNamespacesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 
-     * @return MonitorTypes 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控
+     * Get 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控 
+     * @return MonitorTypes 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控
      */
     public String [] getMonitorTypes() {
         return this.MonitorTypes;
     }
 
     /**
-     * Set 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控
-     * @param MonitorTypes 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控
+     * Set 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控
+     * @param MonitorTypes 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;

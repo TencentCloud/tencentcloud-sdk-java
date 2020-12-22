@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeMonitorTypesRequest extends AbstractModel{
 
     /**
-    * 固定值，为"monitor"
+    * 模块名，固定值 monitor
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-     * Get 固定值，为"monitor" 
-     * @return Module 固定值，为"monitor"
+     * Get 模块名，固定值 monitor 
+     * @return Module 模块名，固定值 monitor
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 固定值，为"monitor"
-     * @param Module 固定值，为"monitor"
+     * Set 模块名，固定值 monitor
+     * @param Module 模块名，固定值 monitor
      */
     public void setModule(String Module) {
         this.Module = Module;

@@ -23,18 +23,32 @@ import java.util.HashMap;
 public class DescribeAllNamespacesResponse extends AbstractModel{
 
     /**
-    * 云产品的名字空间
+    * 云产品的告警策略类型，已废弃
     */
     @SerializedName("QceNamespaces")
     @Expose
     private CommonNamespace QceNamespaces;
 
     /**
-    * 自定义监控的命名空间
+    * 其他告警策略类型，已废弃
     */
     @SerializedName("CustomNamespaces")
     @Expose
     private CommonNamespace CustomNamespaces;
+
+    /**
+    * 云产品的告警策略类型
+    */
+    @SerializedName("QceNamespacesNew")
+    @Expose
+    private CommonNamespace [] QceNamespacesNew;
+
+    /**
+    * 其他告警策略类型，暂不支持
+    */
+    @SerializedName("CustomNamespacesNew")
+    @Expose
+    private CommonNamespace [] CustomNamespacesNew;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +58,67 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 云产品的名字空间 
-     * @return QceNamespaces 云产品的名字空间
+     * Get 云产品的告警策略类型，已废弃 
+     * @return QceNamespaces 云产品的告警策略类型，已废弃
      */
     public CommonNamespace getQceNamespaces() {
         return this.QceNamespaces;
     }
 
     /**
-     * Set 云产品的名字空间
-     * @param QceNamespaces 云产品的名字空间
+     * Set 云产品的告警策略类型，已废弃
+     * @param QceNamespaces 云产品的告警策略类型，已废弃
      */
     public void setQceNamespaces(CommonNamespace QceNamespaces) {
         this.QceNamespaces = QceNamespaces;
     }
 
     /**
-     * Get 自定义监控的命名空间 
-     * @return CustomNamespaces 自定义监控的命名空间
+     * Get 其他告警策略类型，已废弃 
+     * @return CustomNamespaces 其他告警策略类型，已废弃
      */
     public CommonNamespace getCustomNamespaces() {
         return this.CustomNamespaces;
     }
 
     /**
-     * Set 自定义监控的命名空间
-     * @param CustomNamespaces 自定义监控的命名空间
+     * Set 其他告警策略类型，已废弃
+     * @param CustomNamespaces 其他告警策略类型，已废弃
      */
     public void setCustomNamespaces(CommonNamespace CustomNamespaces) {
         this.CustomNamespaces = CustomNamespaces;
+    }
+
+    /**
+     * Get 云产品的告警策略类型 
+     * @return QceNamespacesNew 云产品的告警策略类型
+     */
+    public CommonNamespace [] getQceNamespacesNew() {
+        return this.QceNamespacesNew;
+    }
+
+    /**
+     * Set 云产品的告警策略类型
+     * @param QceNamespacesNew 云产品的告警策略类型
+     */
+    public void setQceNamespacesNew(CommonNamespace [] QceNamespacesNew) {
+        this.QceNamespacesNew = QceNamespacesNew;
+    }
+
+    /**
+     * Get 其他告警策略类型，暂不支持 
+     * @return CustomNamespacesNew 其他告警策略类型，暂不支持
+     */
+    public CommonNamespace [] getCustomNamespacesNew() {
+        return this.CustomNamespacesNew;
+    }
+
+    /**
+     * Set 其他告警策略类型，暂不支持
+     * @param CustomNamespacesNew 其他告警策略类型，暂不支持
+     */
+    public void setCustomNamespacesNew(CommonNamespace [] CustomNamespacesNew) {
+        this.CustomNamespacesNew = CustomNamespacesNew;
     }
 
     /**
@@ -97,6 +143,8 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "QceNamespaces.", this.QceNamespaces);
         this.setParamObj(map, prefix + "CustomNamespaces.", this.CustomNamespaces);
+        this.setParamArrayObj(map, prefix + "QceNamespacesNew.", this.QceNamespacesNew);
+        this.setParamArrayObj(map, prefix + "CustomNamespacesNew.", this.CustomNamespacesNew);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

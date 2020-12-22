@@ -37,7 +37,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     private Long CVM;
 
     /**
-    * 数据库实例数。
+    * MySQL数据库实例数。
     */
     @SerializedName("CDB")
     @Expose
@@ -111,16 +111,16 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     }
 
     /**
-     * Get 数据库实例数。 
-     * @return CDB 数据库实例数。
+     * Get MySQL数据库实例数。 
+     * @return CDB MySQL数据库实例数。
      */
     public Long getCDB() {
         return this.CDB;
     }
 
     /**
-     * Set 数据库实例数。
-     * @param CDB 数据库实例数。
+     * Set MySQL数据库实例数。
+     * @param CDB MySQL数据库实例数。
      */
     public void setCDB(Long CDB) {
         this.CDB = CDB;

@@ -65,7 +65,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
+    * 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
     */
     @SerializedName("MonitorTypes")
     @Expose
@@ -86,7 +86,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String [] AlarmStatus;
 
     /**
-    * 根据项目ID过滤，-1=“-“项目 0=默认项目
+    * 根据项目ID过滤，-1=无项目 0=默认项目
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -245,16 +245,16 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控 
-     * @return MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
+     * Get 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 " 
+     * @return MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
      */
     public String [] getMonitorTypes() {
         return this.MonitorTypes;
     }
 
     /**
-     * Set 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
-     * @param MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
+     * Set 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
+     * @param MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;
@@ -293,16 +293,16 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据项目ID过滤，-1=“-“项目 0=默认项目 
-     * @return ProjectIds 根据项目ID过滤，-1=“-“项目 0=默认项目
+     * Get 根据项目ID过滤，-1=无项目 0=默认项目 
+     * @return ProjectIds 根据项目ID过滤，-1=无项目 0=默认项目
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 根据项目ID过滤，-1=“-“项目 0=默认项目
-     * @param ProjectIds 根据项目ID过滤，-1=“-“项目 0=默认项目
+     * Set 根据项目ID过滤，-1=无项目 0=默认项目
+     * @param ProjectIds 根据项目ID过滤，-1=无项目 0=默认项目
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;

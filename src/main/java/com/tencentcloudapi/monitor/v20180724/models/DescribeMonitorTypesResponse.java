@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeMonitorTypesResponse extends AbstractModel{
 
     /**
-    * 监控类型
+    * 监控类型，云产品监控为 MT_QCE
     */
     @SerializedName("MonitorTypes")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 监控类型 
-     * @return MonitorTypes 监控类型
+     * Get 监控类型，云产品监控为 MT_QCE 
+     * @return MonitorTypes 监控类型，云产品监控为 MT_QCE
      */
     public String [] getMonitorTypes() {
         return this.MonitorTypes;
     }
 
     /**
-     * Set 监控类型
-     * @param MonitorTypes 监控类型
+     * Set 监控类型，云产品监控为 MT_QCE
+     * @param MonitorTypes 监控类型，云产品监控为 MT_QCE
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;

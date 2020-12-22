@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel{
 
     /**
-    * IP地址库下载链接地址
+    * IP地理位置库下载链接地址。
     */
     @SerializedName("DownLoadUrl")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get IP地址库下载链接地址 
-     * @return DownLoadUrl IP地址库下载链接地址
+     * Get IP地理位置库下载链接地址。 
+     * @return DownLoadUrl IP地理位置库下载链接地址。
      */
     public String getDownLoadUrl() {
         return this.DownLoadUrl;
     }
 
     /**
-     * Set IP地址库下载链接地址
-     * @param DownLoadUrl IP地址库下载链接地址
+     * Set IP地理位置库下载链接地址。
+     * @param DownLoadUrl IP地理位置库下载链接地址。
      */
     public void setDownLoadUrl(String DownLoadUrl) {
         this.DownLoadUrl = DownLoadUrl;

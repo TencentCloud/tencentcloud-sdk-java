@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAccountBalanceResponse extends AbstractModel{
 
     /**
-    * 账户类型 1=设备接入;2=云存
+    * 账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountType")
@@ -31,7 +31,7 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     private Long AccountType;
 
     /**
-    * 余额
+    * 余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Balance")
@@ -39,7 +39,7 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     private Long Balance;
 
     /**
-    * 账户状态，1=正常；8=冻结；9=销户
+    * 账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -47,7 +47,7 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     private Long State;
 
     /**
-    * 最后修改时间，UTC值
+    * 最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
@@ -62,9 +62,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 账户类型 1=设备接入;2=云存
+     * Get 账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountType 账户类型 1=设备接入;2=云存
+     * @return AccountType 账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccountType() {
@@ -72,9 +72,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 账户类型 1=设备接入;2=云存
+     * Set 账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountType 账户类型 1=设备接入;2=云存
+     * @param AccountType 账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountType(Long AccountType) {
@@ -82,9 +82,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 余额
+     * Get 余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Balance 余额
+     * @return Balance 余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBalance() {
@@ -92,9 +92,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 余额
+     * Set 余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Balance 余额
+     * @param Balance 余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBalance(Long Balance) {
@@ -102,9 +102,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 账户状态，1=正常；8=冻结；9=销户
+     * Get 账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 账户状态，1=正常；8=冻结；9=销户
+     * @return State 账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getState() {
@@ -112,9 +112,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 账户状态，1=正常；8=冻结；9=销户
+     * Set 账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 账户状态，1=正常；8=冻结；9=销户
+     * @param State 账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Long State) {
@@ -122,9 +122,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 最后修改时间，UTC值
+     * Get 最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastUpdateTime 最后修改时间，UTC值
+     * @return LastUpdateTime 最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastUpdateTime() {
@@ -132,9 +132,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 最后修改时间，UTC值
+     * Set 最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastUpdateTime 最后修改时间，UTC值
+     * @param LastUpdateTime 最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(Long LastUpdateTime) {

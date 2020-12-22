@@ -170,6 +170,13 @@ public class AlarmHistory extends AbstractModel{
     private String Region;
 
     /**
+    * 策略是否存在 0=不存在 1=存在
+    */
+    @SerializedName("PolicyExists")
+    @Expose
+    private Long PolicyExists;
+
+    /**
      * Get 告警历史Id 
      * @return AlarmId 告警历史Id
      */
@@ -506,6 +513,22 @@ public class AlarmHistory extends AbstractModel{
     }
 
     /**
+     * Get 策略是否存在 0=不存在 1=存在 
+     * @return PolicyExists 策略是否存在 0=不存在 1=存在
+     */
+    public Long getPolicyExists() {
+        return this.PolicyExists;
+    }
+
+    /**
+     * Set 策略是否存在 0=不存在 1=存在
+     * @param PolicyExists 策略是否存在 0=不存在 1=存在
+     */
+    public void setPolicyExists(Long PolicyExists) {
+        this.PolicyExists = PolicyExists;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +553,7 @@ public class AlarmHistory extends AbstractModel{
         this.setParamSimple(map, prefix + "AlarmType", this.AlarmType);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
 
     }
 }
