@@ -72,7 +72,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 【将废弃】资源池编号，比如1表示正式，2表示测试
+    * 【废弃】资源池编号
     */
     @SerializedName("SetNo")
     @Expose
@@ -247,16 +247,16 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 【将废弃】资源池编号，比如1表示正式，2表示测试 
-     * @return SetNo 【将废弃】资源池编号，比如1表示正式，2表示测试
+     * Get 【废弃】资源池编号 
+     * @return SetNo 【废弃】资源池编号
      */
     public Long getSetNo() {
         return this.SetNo;
     }
 
     /**
-     * Set 【将废弃】资源池编号，比如1表示正式，2表示测试
-     * @param SetNo 【将废弃】资源池编号，比如1表示正式，2表示测试
+     * Set 【废弃】资源池编号
+     * @param SetNo 【废弃】资源池编号
      */
     public void setSetNo(Long SetNo) {
         this.SetNo = SetNo;

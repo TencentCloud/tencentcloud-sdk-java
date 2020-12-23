@@ -664,6 +664,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
+     * @param req DescribeScdnConfigRequest
+     * @return DescribeScdnConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScdnConfigResponse DescribeScdnConfig(DescribeScdnConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScdnConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScdnConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScdnConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取SCDN的Top数据
      * @param req DescribeScdnTopDataRequest
      * @return DescribeScdnTopDataResponse
@@ -906,6 +926,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
+     * @param req ListScdnDomainsRequest
+     * @return ListScdnDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListScdnDomainsResponse ListScdnDomains(ListScdnDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListScdnDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListScdnDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListScdnDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
      * @param req ListScdnLogTasksRequest
      * @return ListScdnLogTasksResponse
@@ -1077,6 +1117,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *StartScdnDomain 用于开启域名的安全防护配置
+     * @param req StartScdnDomainRequest
+     * @return StartScdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartScdnDomainResponse StartScdnDomain(StartScdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartScdnDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartScdnDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartScdnDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *StopCdnDomain 用于停止域名的加速服务。
 注意：停止加速服务后，访问至加速节点的请求将会直接返回 404。为避免对您的业务造成影响，请在停止加速服务前将解析切走。
      * @param req StopCdnDomainRequest
@@ -1090,6 +1150,26 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopCdnDomainResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopCdnDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *StopScdnDomain 用于关闭域名的安全防护配置
+     * @param req StopScdnDomainRequest
+     * @return StopScdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopScdnDomainResponse StopScdnDomain(StopScdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopScdnDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopScdnDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopScdnDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

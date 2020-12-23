@@ -30,11 +30,18 @@ public class CreateSessionResponse extends AbstractModel{
     private String ServerSession;
 
     /**
-    * 【多人游戏】角色编号；比如Player1、Player2、Viewer1
+    * 【多人游戏】角色编号；比如1、2、3、4
     */
     @SerializedName("RoleNumber")
     @Expose
     private String RoleNumber;
+
+    /**
+    * 【多人云游】角色；Player表示玩家；Viewer表示观察者
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -60,19 +67,35 @@ public class CreateSessionResponse extends AbstractModel{
     }
 
     /**
-     * Get 【多人游戏】角色编号；比如Player1、Player2、Viewer1 
-     * @return RoleNumber 【多人游戏】角色编号；比如Player1、Player2、Viewer1
+     * Get 【多人游戏】角色编号；比如1、2、3、4 
+     * @return RoleNumber 【多人游戏】角色编号；比如1、2、3、4
      */
     public String getRoleNumber() {
         return this.RoleNumber;
     }
 
     /**
-     * Set 【多人游戏】角色编号；比如Player1、Player2、Viewer1
-     * @param RoleNumber 【多人游戏】角色编号；比如Player1、Player2、Viewer1
+     * Set 【多人游戏】角色编号；比如1、2、3、4
+     * @param RoleNumber 【多人游戏】角色编号；比如1、2、3、4
      */
     public void setRoleNumber(String RoleNumber) {
         this.RoleNumber = RoleNumber;
+    }
+
+    /**
+     * Get 【多人云游】角色；Player表示玩家；Viewer表示观察者 
+     * @return Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @param Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     /**
@@ -97,6 +120,7 @@ public class CreateSessionResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServerSession", this.ServerSession);
         this.setParamSimple(map, prefix + "RoleNumber", this.RoleNumber);
+        this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

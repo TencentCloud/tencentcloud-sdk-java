@@ -522,6 +522,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeUserTasks）用于拉取用户任务列表
+     * @param req DescribeUserTasksRequest
+     * @return DescribeUserTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserTasksResponse DescribeUserTasks(DescribeUserTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *相当于在所有分片的mysqld中执行flush logs，完成切分的binlog将展示在各个分片控制台binlog列表里。
      * @param req FlushBinlogRequest
      * @return FlushBinlogResponse

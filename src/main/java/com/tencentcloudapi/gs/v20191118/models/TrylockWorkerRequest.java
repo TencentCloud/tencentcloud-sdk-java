@@ -37,14 +37,14 @@ public class TrylockWorkerRequest extends AbstractModel{
     private String GameId;
 
     /**
-    * 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+    * 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
     */
     @SerializedName("GameRegion")
     @Expose
     private String GameRegion;
 
     /**
-    * 资源池编号，1表示共用，2表示测试
+    * 【废弃】资源池编号
     */
     @SerializedName("SetNo")
     @Expose
@@ -97,32 +97,32 @@ public class TrylockWorkerRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等 
-     * @return GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+     * Get 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器 
+     * @return GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
      */
     public String getGameRegion() {
         return this.GameRegion;
     }
 
     /**
-     * Set 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
-     * @param GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+     * Set 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
+     * @param GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
      */
     public void setGameRegion(String GameRegion) {
         this.GameRegion = GameRegion;
     }
 
     /**
-     * Get 资源池编号，1表示共用，2表示测试 
-     * @return SetNo 资源池编号，1表示共用，2表示测试
+     * Get 【废弃】资源池编号 
+     * @return SetNo 【废弃】资源池编号
      */
     public Long getSetNo() {
         return this.SetNo;
     }
 
     /**
-     * Set 资源池编号，1表示共用，2表示测试
-     * @param SetNo 资源池编号，1表示共用，2表示测试
+     * Set 【废弃】资源池编号
+     * @param SetNo 【废弃】资源池编号
      */
     public void setSetNo(Long SetNo) {
         this.SetNo = SetNo;

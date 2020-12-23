@@ -825,6 +825,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *回调事件查询
+     * @param req DescribeCallbackRecordsListRequest
+     * @return DescribeCallbackRecordsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallbackRecordsListResponse DescribeCallbackRecordsList(DescribeCallbackRecordsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCallbackRecordsListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCallbackRecordsListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCallbackRecordsList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询并发录制路数，对慢直播和普通直播适用。
      * @param req DescribeConcurrentRecordStreamNumRequest
      * @return DescribeConcurrentRecordStreamNumResponse
