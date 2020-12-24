@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeAssetDetailResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
+    * 资产详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("Data")
     @Expose
-    private Boolean Result;
+    private AssetDetail Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
+     * Get 资产详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
+     * @return Data 资产详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Boolean getResult() {
-        return this.Result;
+    public AssetDetail getData() {
+        return this.Data;
     }
 
     /**
-     * Set 绑定操作是否成功。
+     * Set 资产详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
+     * @param Data 资产详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setData(AssetDetail Data) {
+        this.Data = Data;
     }
 
     /**
@@ -77,7 +77,7 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

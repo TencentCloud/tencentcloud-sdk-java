@@ -159,6 +159,14 @@ public class VersionData extends AbstractModel{
     private Contents Contents;
 
     /**
+    * 月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AliveInMonthCnt")
+    @Expose
+    private Long AliveInMonthCnt;
+
+    /**
      * Get 产品ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 产品ID
@@ -499,6 +507,26 @@ public class VersionData extends AbstractModel{
     }
 
     /**
+     * Get 月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AliveInMonthCnt 月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAliveInMonthCnt() {
+        return this.AliveInMonthCnt;
+    }
+
+    /**
+     * Set 月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AliveInMonthCnt 月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAliveInMonthCnt(Long AliveInMonthCnt) {
+        this.AliveInMonthCnt = AliveInMonthCnt;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -519,6 +547,7 @@ public class VersionData extends AbstractModel{
         this.setParamSimple(map, prefix + "ModifyTimes", this.ModifyTimes);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "Contents.", this.Contents);
+        this.setParamSimple(map, prefix + "AliveInMonthCnt", this.AliveInMonthCnt);
 
     }
 }

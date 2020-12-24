@@ -13,22 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeAssetListResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 资产列表
     */
-    @SerializedName("Result")
+    @SerializedName("AssetList")
     @Expose
-    private Boolean Result;
+    private AssetList AssetList;
+
+    /**
+    * 聚合数据
+    */
+    @SerializedName("AggregationData")
+    @Expose
+    private AggregationObj [] AggregationData;
+
+    /**
+    * 命名空间数据
+    */
+    @SerializedName("NamespaceData")
+    @Expose
+    private String [] NamespaceData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +51,51 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资产列表 
+     * @return AssetList 资产列表
      */
-    public Boolean getResult() {
-        return this.Result;
+    public AssetList getAssetList() {
+        return this.AssetList;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 资产列表
+     * @param AssetList 资产列表
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setAssetList(AssetList AssetList) {
+        this.AssetList = AssetList;
+    }
+
+    /**
+     * Get 聚合数据 
+     * @return AggregationData 聚合数据
+     */
+    public AggregationObj [] getAggregationData() {
+        return this.AggregationData;
+    }
+
+    /**
+     * Set 聚合数据
+     * @param AggregationData 聚合数据
+     */
+    public void setAggregationData(AggregationObj [] AggregationData) {
+        this.AggregationData = AggregationData;
+    }
+
+    /**
+     * Get 命名空间数据 
+     * @return NamespaceData 命名空间数据
+     */
+    public String [] getNamespaceData() {
+        return this.NamespaceData;
+    }
+
+    /**
+     * Set 命名空间数据
+     * @param NamespaceData 命名空间数据
+     */
+    public void setNamespaceData(String [] NamespaceData) {
+        this.NamespaceData = NamespaceData;
     }
 
     /**
@@ -77,7 +118,9 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamObj(map, prefix + "AssetList.", this.AssetList);
+        this.setParamArrayObj(map, prefix + "AggregationData.", this.AggregationData);
+        this.setParamArraySimple(map, prefix + "NamespaceData.", this.NamespaceData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

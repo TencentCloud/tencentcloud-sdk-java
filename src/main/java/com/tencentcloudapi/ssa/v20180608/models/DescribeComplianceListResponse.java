@@ -13,22 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeComplianceListResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
+    * 检查项列表
+    */
+    @SerializedName("Data")
+    @Expose
+    private DataCompliance [] Data;
+
+    /**
+    * 总检查资产数
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("AssetTotalNum")
     @Expose
-    private Boolean Result;
+    private Long AssetTotalNum;
+
+    /**
+    * 总检查项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigTotalNum")
+    @Expose
+    private Long ConfigTotalNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +53,59 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 检查项列表 
+     * @return Data 检查项列表
      */
-    public Boolean getResult() {
-        return this.Result;
+    public DataCompliance [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
+     * Set 检查项列表
+     * @param Data 检查项列表
+     */
+    public void setData(DataCompliance [] Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 总检查资产数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetTotalNum 总检查资产数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public Long getAssetTotalNum() {
+        return this.AssetTotalNum;
+    }
+
+    /**
+     * Set 总检查资产数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetTotalNum 总检查资产数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetTotalNum(Long AssetTotalNum) {
+        this.AssetTotalNum = AssetTotalNum;
+    }
+
+    /**
+     * Get 总检查项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigTotalNum 总检查项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigTotalNum() {
+        return this.ConfigTotalNum;
+    }
+
+    /**
+     * Set 总检查项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigTotalNum 总检查项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigTotalNum(Long ConfigTotalNum) {
+        this.ConfigTotalNum = ConfigTotalNum;
     }
 
     /**
@@ -77,7 +128,9 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "AssetTotalNum", this.AssetTotalNum);
+        this.setParamSimple(map, prefix + "ConfigTotalNum", this.ConfigTotalNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

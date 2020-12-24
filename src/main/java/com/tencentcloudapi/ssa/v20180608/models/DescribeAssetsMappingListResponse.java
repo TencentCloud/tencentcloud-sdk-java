@@ -13,22 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeAssetsMappingListResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
+    * 资产测绘列表
+    */
+    @SerializedName("Data")
+    @Expose
+    private DataAssetMapping [] Data;
+
+    /**
+    * 资产测绘总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 类型分类统计数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("CountByType")
     @Expose
-    private Boolean Result;
+    private String CountByType;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +52,55 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资产测绘列表 
+     * @return Data 资产测绘列表
      */
-    public Boolean getResult() {
-        return this.Result;
+    public DataAssetMapping [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
+     * Set 资产测绘列表
+     * @param Data 资产测绘列表
+     */
+    public void setData(DataAssetMapping [] Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 资产测绘总数 
+     * @return TotalCount 资产测绘总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 资产测绘总数
+     * @param TotalCount 资产测绘总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 类型分类统计数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CountByType 类型分类统计数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public String getCountByType() {
+        return this.CountByType;
+    }
+
+    /**
+     * Set 类型分类统计数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CountByType 类型分类统计数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCountByType(String CountByType) {
+        this.CountByType = CountByType;
     }
 
     /**
@@ -77,7 +123,9 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "CountByType", this.CountByType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

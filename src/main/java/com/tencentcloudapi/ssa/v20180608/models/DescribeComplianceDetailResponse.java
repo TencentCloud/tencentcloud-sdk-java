@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeComplianceDetailResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 合规管理检查项详情
     */
-    @SerializedName("Result")
+    @SerializedName("CheckConfigDetail")
     @Expose
-    private Boolean Result;
+    private ComplianceCheckDetail CheckConfigDetail;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 合规管理检查项详情 
+     * @return CheckConfigDetail 合规管理检查项详情
      */
-    public Boolean getResult() {
-        return this.Result;
+    public ComplianceCheckDetail getCheckConfigDetail() {
+        return this.CheckConfigDetail;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 合规管理检查项详情
+     * @param CheckConfigDetail 合规管理检查项详情
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setCheckConfigDetail(ComplianceCheckDetail CheckConfigDetail) {
+        this.CheckConfigDetail = CheckConfigDetail;
     }
 
     /**
@@ -77,7 +72,7 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamObj(map, prefix + "CheckConfigDetail.", this.CheckConfigDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

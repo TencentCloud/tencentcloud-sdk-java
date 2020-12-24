@@ -140,7 +140,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
+     *查询sdkappid维度下每分钟实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
      * @param req DescribeRealtimeNetworkRequest
      * @return DescribeRealtimeNetworkResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *查询sdkappid维度下实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不超过1个小时。
+     *查询sdkappid维度下每分钟实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
      * @param req DescribeRealtimeQualityRequest
      * @return DescribeRealtimeQualityResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *查询sdkappid维度下实时规模，可查询24小时内数据，查询起止时间不超过1个小时。
+     * 查询sdkappid维度下每分钟实时规模，可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
      * @param req DescribeRealtimeScaleRequest
      * @return DescribeRealtimeScaleResponse
      * @throws TencentCloudSDKException

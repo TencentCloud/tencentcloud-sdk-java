@@ -55,6 +55,13 @@ public class AudioInfo extends AbstractModel{
     private Long SampleRate;
 
     /**
+    * 音频降噪信息
+    */
+    @SerializedName("Denoise")
+    @Expose
+    private Denoise Denoise;
+
+    /**
      * Get 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
 注意：当取值为 0，表示音频码率和原始音频保持一致。 
      * @return Bitrate 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
@@ -135,6 +142,22 @@ public class AudioInfo extends AbstractModel{
     }
 
     /**
+     * Get 音频降噪信息 
+     * @return Denoise 音频降噪信息
+     */
+    public Denoise getDenoise() {
+        return this.Denoise;
+    }
+
+    /**
+     * Set 音频降噪信息
+     * @param Denoise 音频降噪信息
+     */
+    public void setDenoise(Denoise Denoise) {
+        this.Denoise = Denoise;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +165,7 @@ public class AudioInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
+        this.setParamObj(map, prefix + "Denoise.", this.Denoise);
 
     }
 }

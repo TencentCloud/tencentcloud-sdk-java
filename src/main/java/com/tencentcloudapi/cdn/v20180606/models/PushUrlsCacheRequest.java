@@ -56,6 +56,17 @@ global：预热全球节点
     private String Layer;
 
     /**
+    * 是否递归解析m3u8文件中的ts分片预热
+注意事项：
+1. 该功能要求m3u8索引文件能直接请求获取
+2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
+3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热
+    */
+    @SerializedName("ParseM3U8")
+    @Expose
+    private Boolean ParseM3U8;
+
+    /**
      * Get URL 列表，需要包含协议头部 http:// 或 https:// 
      * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
@@ -140,6 +151,38 @@ global：预热全球节点
     }
 
     /**
+     * Get 是否递归解析m3u8文件中的ts分片预热
+注意事项：
+1. 该功能要求m3u8索引文件能直接请求获取
+2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
+3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热 
+     * @return ParseM3U8 是否递归解析m3u8文件中的ts分片预热
+注意事项：
+1. 该功能要求m3u8索引文件能直接请求获取
+2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
+3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热
+     */
+    public Boolean getParseM3U8() {
+        return this.ParseM3U8;
+    }
+
+    /**
+     * Set 是否递归解析m3u8文件中的ts分片预热
+注意事项：
+1. 该功能要求m3u8索引文件能直接请求获取
+2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
+3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热
+     * @param ParseM3U8 是否递归解析m3u8文件中的ts分片预热
+注意事项：
+1. 该功能要求m3u8索引文件能直接请求获取
+2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
+3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热
+     */
+    public void setParseM3U8(Boolean ParseM3U8) {
+        this.ParseM3U8 = ParseM3U8;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +190,7 @@ global：预热全球节点
         this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Layer", this.Layer);
+        this.setParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
 
     }
 }

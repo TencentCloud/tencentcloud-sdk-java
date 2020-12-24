@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeLeakDetectionListResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总数
     */
-    @SerializedName("Result")
+    @SerializedName("TotalCount")
     @Expose
-    private Boolean Result;
+    private Long TotalCount;
+
+    /**
+    * 数据列表
+    */
+    @SerializedName("List")
+    @Expose
+    private String [] List;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总数 
+     * @return TotalCount 总数
      */
-    public Boolean getResult() {
-        return this.Result;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总数
+     * @param TotalCount 总数
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 数据列表 
+     * @return List 数据列表
+     */
+    public String [] getList() {
+        return this.List;
+    }
+
+    /**
+     * Set 数据列表
+     * @param List 数据列表
+     */
+    public void setList(String [] List) {
+        this.List = List;
     }
 
     /**
@@ -77,7 +95,8 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

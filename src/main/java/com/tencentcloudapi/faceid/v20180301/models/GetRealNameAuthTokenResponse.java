@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class GetRealNameAuthTokenResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 查询实名认证结果的唯一凭证
     */
-    @SerializedName("Result")
+    @SerializedName("AuthToken")
     @Expose
-    private Boolean Result;
+    private String AuthToken;
+
+    /**
+    * 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
+    */
+    @SerializedName("RedirectURL")
+    @Expose
+    private String RedirectURL;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 查询实名认证结果的唯一凭证 
+     * @return AuthToken 查询实名认证结果的唯一凭证
      */
-    public Boolean getResult() {
-        return this.Result;
+    public String getAuthToken() {
+        return this.AuthToken;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 查询实名认证结果的唯一凭证
+     * @param AuthToken 查询实名认证结果的唯一凭证
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setAuthToken(String AuthToken) {
+        this.AuthToken = AuthToken;
+    }
+
+    /**
+     * Get 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权 
+     * @return RedirectURL 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
+     */
+    public String getRedirectURL() {
+        return this.RedirectURL;
+    }
+
+    /**
+     * Set 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
+     * @param RedirectURL 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
+     */
+    public void setRedirectURL(String RedirectURL) {
+        this.RedirectURL = RedirectURL;
     }
 
     /**
@@ -77,7 +95,8 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "AuthToken", this.AuthToken);
+        this.setParamSimple(map, prefix + "RedirectURL", this.RedirectURL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

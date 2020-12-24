@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeVulListResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 漏洞列表
     */
-    @SerializedName("Result")
+    @SerializedName("Data")
     @Expose
-    private Boolean Result;
+    private VulList Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 漏洞列表 
+     * @return Data 漏洞列表
      */
-    public Boolean getResult() {
-        return this.Result;
+    public VulList getData() {
+        return this.Data;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 漏洞列表
+     * @param Data 漏洞列表
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setData(VulList Data) {
+        this.Data = Data;
     }
 
     /**
@@ -77,7 +72,7 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

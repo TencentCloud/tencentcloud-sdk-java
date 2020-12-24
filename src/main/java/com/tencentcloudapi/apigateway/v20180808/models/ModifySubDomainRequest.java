@@ -72,6 +72,13 @@ public class ModifySubDomainRequest extends AbstractModel{
     private String NetType;
 
     /**
+    * 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+    */
+    @SerializedName("IsForcedHttps")
+    @Expose
+    private Boolean IsForcedHttps;
+
+    /**
      * Get 服务唯一 ID。 
      * @return ServiceId 服务唯一 ID。
      */
@@ -184,6 +191,22 @@ public class ModifySubDomainRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。 
+     * @return IsForcedHttps 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     */
+    public Boolean getIsForcedHttps() {
+        return this.IsForcedHttps;
+    }
+
+    /**
+     * Set 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     * @param IsForcedHttps 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     */
+    public void setIsForcedHttps(Boolean IsForcedHttps) {
+        this.IsForcedHttps = IsForcedHttps;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifySubDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "PathMappingSet.", this.PathMappingSet);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
+        this.setParamSimple(map, prefix + "IsForcedHttps", this.IsForcedHttps);
 
     }
 }

@@ -63,6 +63,38 @@ public class Price extends AbstractModel{
     private Float UnitPriceDiscount;
 
     /**
+    * 高精度预付费云盘预支费用的原价, 单位：元	。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginalPriceHigh")
+    @Expose
+    private String OriginalPriceHigh;
+
+    /**
+    * 高精度预付费云盘预支费用的折扣价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountPriceHigh")
+    @Expose
+    private String DiscountPriceHigh;
+
+    /**
+    * 高精度后付费云盘原单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnitPriceHigh")
+    @Expose
+    private String UnitPriceHigh;
+
+    /**
+    * 高精度后付费云盘折扣单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnitPriceDiscountHigh")
+    @Expose
+    private String UnitPriceDiscountHigh;
+
+    /**
      * Get 预付费云盘预支费用的原价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OriginalPrice 预付费云盘预支费用的原价，单位：元。
@@ -163,6 +195,86 @@ public class Price extends AbstractModel{
     }
 
     /**
+     * Get 高精度预付费云盘预支费用的原价, 单位：元	。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginalPriceHigh 高精度预付费云盘预支费用的原价, 单位：元	。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginalPriceHigh() {
+        return this.OriginalPriceHigh;
+    }
+
+    /**
+     * Set 高精度预付费云盘预支费用的原价, 单位：元	。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginalPriceHigh 高精度预付费云盘预支费用的原价, 单位：元	。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginalPriceHigh(String OriginalPriceHigh) {
+        this.OriginalPriceHigh = OriginalPriceHigh;
+    }
+
+    /**
+     * Get 高精度预付费云盘预支费用的折扣价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountPriceHigh 高精度预付费云盘预支费用的折扣价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountPriceHigh() {
+        return this.DiscountPriceHigh;
+    }
+
+    /**
+     * Set 高精度预付费云盘预支费用的折扣价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountPriceHigh 高精度预付费云盘预支费用的折扣价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountPriceHigh(String DiscountPriceHigh) {
+        this.DiscountPriceHigh = DiscountPriceHigh;
+    }
+
+    /**
+     * Get 高精度后付费云盘原单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnitPriceHigh 高精度后付费云盘原单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUnitPriceHigh() {
+        return this.UnitPriceHigh;
+    }
+
+    /**
+     * Set 高精度后付费云盘原单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnitPriceHigh 高精度后付费云盘原单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnitPriceHigh(String UnitPriceHigh) {
+        this.UnitPriceHigh = UnitPriceHigh;
+    }
+
+    /**
+     * Get 高精度后付费云盘折扣单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnitPriceDiscountHigh 高精度后付费云盘折扣单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUnitPriceDiscountHigh() {
+        return this.UnitPriceDiscountHigh;
+    }
+
+    /**
+     * Set 高精度后付费云盘折扣单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnitPriceDiscountHigh 高精度后付费云盘折扣单价, 单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnitPriceDiscountHigh(String UnitPriceDiscountHigh) {
+        this.UnitPriceDiscountHigh = UnitPriceDiscountHigh;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -171,6 +283,10 @@ public class Price extends AbstractModel{
         this.setParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
         this.setParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
         this.setParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
+        this.setParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
+        this.setParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
+        this.setParamSimple(map, prefix + "UnitPriceHigh", this.UnitPriceHigh);
+        this.setParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
 
     }
 }

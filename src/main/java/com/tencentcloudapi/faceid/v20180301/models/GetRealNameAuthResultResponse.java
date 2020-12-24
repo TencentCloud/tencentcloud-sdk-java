@@ -13,22 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class GetRealNameAuthResultResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 认证结果码，收费情况如下：
+
+收费码：
+0:  姓名和身份证号一致
+-1: 姓名和身份证号不一致
+-2: 姓名和微信实名姓名不一致
+
+不收费码：
+-3: 微信号未实名
     */
-    @SerializedName("Result")
+    @SerializedName("ResultType")
     @Expose
-    private Boolean Result;
+    private String ResultType;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +45,51 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 认证结果码，收费情况如下：
+
+收费码：
+0:  姓名和身份证号一致
+-1: 姓名和身份证号不一致
+-2: 姓名和微信实名姓名不一致
+
+不收费码：
+-3: 微信号未实名 
+     * @return ResultType 认证结果码，收费情况如下：
+
+收费码：
+0:  姓名和身份证号一致
+-1: 姓名和身份证号不一致
+-2: 姓名和微信实名姓名不一致
+
+不收费码：
+-3: 微信号未实名
      */
-    public Boolean getResult() {
-        return this.Result;
+    public String getResultType() {
+        return this.ResultType;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 认证结果码，收费情况如下：
+
+收费码：
+0:  姓名和身份证号一致
+-1: 姓名和身份证号不一致
+-2: 姓名和微信实名姓名不一致
+
+不收费码：
+-3: 微信号未实名
+     * @param ResultType 认证结果码，收费情况如下：
+
+收费码：
+0:  姓名和身份证号一致
+-1: 姓名和身份证号不一致
+-2: 姓名和微信实名姓名不一致
+
+不收费码：
+-3: 微信号未实名
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setResultType(String ResultType) {
+        this.ResultType = ResultType;
     }
 
     /**
@@ -77,7 +112,7 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "ResultType", this.ResultType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

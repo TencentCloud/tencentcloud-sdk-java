@@ -299,6 +299,46 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *获取微信实名认证结果
+     * @param req GetRealNameAuthResultRequest
+     * @return GetRealNameAuthResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRealNameAuthResultResponse GetRealNameAuthResult(GetRealNameAuthResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRealNameAuthResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRealNameAuthResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRealNameAuthResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *微信实名认证授权
+     * @param req GetRealNameAuthTokenRequest
+     * @return GetRealNameAuthTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRealNameAuthTokenResponse GetRealNameAuthToken(GetRealNameAuthTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRealNameAuthTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRealNameAuthTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRealNameAuthToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
      * @param req IdCardOCRVerificationRequest
      * @return IdCardOCRVerificationResponse

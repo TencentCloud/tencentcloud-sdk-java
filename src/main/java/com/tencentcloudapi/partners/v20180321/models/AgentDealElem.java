@@ -219,6 +219,14 @@ public class AgentDealElem extends AbstractModel{
     private String OverdueTime;
 
     /**
+    * 产品详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductInfo")
+    @Expose
+    private ProductInfoElem [] ProductInfo;
+
+    /**
      * Get 订单自增 ID 
      * @return DealId 订单自增 ID
      */
@@ -703,6 +711,26 @@ public class AgentDealElem extends AbstractModel{
     }
 
     /**
+     * Get 产品详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductInfo 产品详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProductInfoElem [] getProductInfo() {
+        return this.ProductInfo;
+    }
+
+    /**
+     * Set 产品详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductInfo 产品详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductInfo(ProductInfoElem [] ProductInfo) {
+        this.ProductInfo = ProductInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -731,6 +759,7 @@ public class AgentDealElem extends AbstractModel{
         this.setParamSimple(map, prefix + "PayerMode", this.PayerMode);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "OverdueTime", this.OverdueTime);
+        this.setParamArrayObj(map, prefix + "ProductInfo.", this.ProductInfo);
 
     }
 }

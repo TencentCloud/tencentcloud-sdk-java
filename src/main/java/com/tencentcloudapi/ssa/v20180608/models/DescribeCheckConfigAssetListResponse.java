@@ -13,22 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSubDomainResponse extends AbstractModel{
+public class DescribeCheckConfigAssetListResponse extends AbstractModel{
 
     /**
-    * 绑定操作是否成功。
+    * 资产列表总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
+    * 资产列表项
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("CheckAssetsList")
     @Expose
-    private Boolean Result;
+    private CheckAssetItem [] CheckAssetsList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +45,39 @@ public class BindSubDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资产列表总数 
+     * @return Total 资产列表总数
      */
-    public Boolean getResult() {
-        return this.Result;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 绑定操作是否成功。
+     * Set 资产列表总数
+     * @param Total 资产列表总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 资产列表项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckAssetsList 资产列表项
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public CheckAssetItem [] getCheckAssetsList() {
+        return this.CheckAssetsList;
+    }
+
+    /**
+     * Set 资产列表项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckAssetsList 资产列表项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckAssetsList(CheckAssetItem [] CheckAssetsList) {
+        this.CheckAssetsList = CheckAssetsList;
     }
 
     /**
@@ -77,7 +100,8 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "CheckAssetsList.", this.CheckAssetsList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
