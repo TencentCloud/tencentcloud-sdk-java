@@ -59,6 +59,26 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *申请互联网CIDR地址
+     * @param req ApplyInternetAddressRequest
+     * @return ApplyInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyInternetAddressResponse ApplyInternetAddress(ApplyInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyInternetAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *申请物理专线接入。
 调用该接口时，请注意：
 账号要进行实名认证，否则不允许申请物理专线；
@@ -224,6 +244,66 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *获取用户互联网公网地址信息
+     * @param req DescribeInternetAddressRequest
+     * @return DescribeInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternetAddressResponse DescribeInternetAddress(DescribeInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternetAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户互联网公网地址配额
+     * @param req DescribeInternetAddressQuotaRequest
+     * @return DescribeInternetAddressQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternetAddressQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户互联网公网地址分配统计信息
+     * @param req DescribeInternetAddressStatisticsRequest
+     * @return DescribeInternetAddressStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternetAddressStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
      * @param req DescribePublicDirectConnectTunnelRoutesRequest
      * @return DescribePublicDirectConnectTunnelRoutesResponse
@@ -236,6 +316,46 @@ public class DcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePublicDirectConnectTunnelRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停用用户申请的公网互联网地址
+     * @param req DisableInternetAddressRequest
+     * @return DisableInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableInternetAddressResponse DisableInternetAddress(DisableInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableInternetAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用已停用的互联网公网地址
+     * @param req EnableInternetAddressRequest
+     * @return EnableInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableInternetAddressResponse EnableInternetAddress(EnableInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableInternetAddress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -316,6 +436,26 @@ public class DcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RejectDirectConnectTunnelResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RejectDirectConnectTunnel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *释放已申请的互联网地址
+     * @param req ReleaseInternetAddressRequest
+     * @return ReleaseInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseInternetAddressResponse ReleaseInternetAddress(ReleaseInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseInternetAddress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -264,6 +264,46 @@ REJECTED:拒绝
     private BGPStatus BgpStatus;
 
     /**
+    * 是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6Enable")
+    @Expose
+    private Long IPv6Enable;
+
+    /**
+    * 腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TencentIPv6Address")
+    @Expose
+    private String TencentIPv6Address;
+
+    /**
+    * 腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TencentBackupIPv6Address")
+    @Expose
+    private String TencentBackupIPv6Address;
+
+    /**
+    * BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BgpIPv6Status")
+    @Expose
+    private BGPStatus BgpIPv6Status;
+
+    /**
+    * 用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomerIPv6Address")
+    @Expose
+    private String CustomerIPv6Address;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -832,6 +872,106 @@ REJECTED:拒绝
     }
 
     /**
+     * Get 是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6Enable 是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIPv6Enable() {
+        return this.IPv6Enable;
+    }
+
+    /**
+     * Set 是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6Enable 是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6Enable(Long IPv6Enable) {
+        this.IPv6Enable = IPv6Enable;
+    }
+
+    /**
+     * Get 腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TencentIPv6Address 腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTencentIPv6Address() {
+        return this.TencentIPv6Address;
+    }
+
+    /**
+     * Set 腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TencentIPv6Address 腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTencentIPv6Address(String TencentIPv6Address) {
+        this.TencentIPv6Address = TencentIPv6Address;
+    }
+
+    /**
+     * Get 腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TencentBackupIPv6Address 腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTencentBackupIPv6Address() {
+        return this.TencentBackupIPv6Address;
+    }
+
+    /**
+     * Set 腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TencentBackupIPv6Address 腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTencentBackupIPv6Address(String TencentBackupIPv6Address) {
+        this.TencentBackupIPv6Address = TencentBackupIPv6Address;
+    }
+
+    /**
+     * Get BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BgpIPv6Status BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BGPStatus getBgpIPv6Status() {
+        return this.BgpIPv6Status;
+    }
+
+    /**
+     * Set BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BgpIPv6Status BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBgpIPv6Status(BGPStatus BgpIPv6Status) {
+        this.BgpIPv6Status = BgpIPv6Status;
+    }
+
+    /**
+     * Get 用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomerIPv6Address 用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomerIPv6Address() {
+        return this.CustomerIPv6Address;
+    }
+
+    /**
+     * Set 用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomerIPv6Address 用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomerIPv6Address(String CustomerIPv6Address) {
+        this.CustomerIPv6Address = CustomerIPv6Address;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -868,6 +1008,11 @@ REJECTED:拒绝
         this.setParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
         this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
         this.setParamObj(map, prefix + "BgpStatus.", this.BgpStatus);
+        this.setParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
+        this.setParamSimple(map, prefix + "TencentIPv6Address", this.TencentIPv6Address);
+        this.setParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
+        this.setParamObj(map, prefix + "BgpIPv6Status.", this.BgpIPv6Status);
+        this.setParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
 
     }
 }

@@ -114,6 +114,14 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     private NQAInfo NqaInfo;
 
     /**
+    * 0：停用IPv6
+1: 启用IPv6
+    */
+    @SerializedName("IPv6Enable")
+    @Expose
+    private Long IPv6Enable;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -322,6 +330,26 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     }
 
     /**
+     * Get 0：停用IPv6
+1: 启用IPv6 
+     * @return IPv6Enable 0：停用IPv6
+1: 启用IPv6
+     */
+    public Long getIPv6Enable() {
+        return this.IPv6Enable;
+    }
+
+    /**
+     * Set 0：停用IPv6
+1: 启用IPv6
+     * @param IPv6Enable 0：停用IPv6
+1: 启用IPv6
+     */
+    public void setIPv6Enable(Long IPv6Enable) {
+        this.IPv6Enable = IPv6Enable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +366,7 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
         this.setParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
         this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
+        this.setParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
 
     }
 }

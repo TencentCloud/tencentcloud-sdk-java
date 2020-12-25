@@ -13,54 +13,54 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.dc.v20180410.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClustersResponse extends AbstractModel{
+public class DescribeInternetAddressQuotaResponse extends AbstractModel{
 
     /**
-    * 冻结流水ID
+    * IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TranId")
+    @SerializedName("Ipv6PrefixLen")
     @Expose
-    private String TranId;
+    private Long Ipv6PrefixLen;
 
     /**
-    * 订单号
+    * BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DealNames")
+    @SerializedName("Ipv4BgpQuota")
     @Expose
-    private String [] DealNames;
+    private Long Ipv4BgpQuota;
 
     /**
-    * 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+    * 非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ResourceIds")
+    @SerializedName("Ipv4OtherQuota")
     @Expose
-    private String [] ResourceIds;
+    private Long Ipv4OtherQuota;
 
     /**
-    * 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+    * BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ClusterIds")
+    @SerializedName("Ipv4BgpNum")
     @Expose
-    private String [] ClusterIds;
+    private Long Ipv4BgpNum;
 
     /**
-    * 大订单号
+    * 非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BigDealIds")
+    @SerializedName("Ipv4OtherNum")
     @Expose
-    private String [] BigDealIds;
+    private Long Ipv4OtherNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -70,103 +70,103 @@ public class CreateClustersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 冻结流水ID
+     * Get IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranId 冻结流水ID
+     * @return Ipv6PrefixLen IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTranId() {
-        return this.TranId;
+    public Long getIpv6PrefixLen() {
+        return this.Ipv6PrefixLen;
     }
 
     /**
-     * Set 冻结流水ID
+     * Set IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranId 冻结流水ID
+     * @param Ipv6PrefixLen IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTranId(String TranId) {
-        this.TranId = TranId;
+    public void setIpv6PrefixLen(Long Ipv6PrefixLen) {
+        this.Ipv6PrefixLen = Ipv6PrefixLen;
     }
 
     /**
-     * Get 订单号
+     * Get BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealNames 订单号
+     * @return Ipv4BgpQuota BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getDealNames() {
-        return this.DealNames;
+    public Long getIpv4BgpQuota() {
+        return this.Ipv4BgpQuota;
     }
 
     /**
-     * Set 订单号
+     * Set BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealNames 订单号
+     * @param Ipv4BgpQuota BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDealNames(String [] DealNames) {
-        this.DealNames = DealNames;
+    public void setIpv4BgpQuota(Long Ipv4BgpQuota) {
+        this.Ipv4BgpQuota = Ipv4BgpQuota;
     }
 
     /**
-     * Get 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * Get 非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceIds 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * @return Ipv4OtherQuota 非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getResourceIds() {
-        return this.ResourceIds;
+    public Long getIpv4OtherQuota() {
+        return this.Ipv4OtherQuota;
     }
 
     /**
-     * Set 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * Set 非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceIds 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * @param Ipv4OtherQuota 非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResourceIds(String [] ResourceIds) {
-        this.ResourceIds = ResourceIds;
+    public void setIpv4OtherQuota(Long Ipv4OtherQuota) {
+        this.Ipv4OtherQuota = Ipv4OtherQuota;
     }
 
     /**
-     * Get 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * Get BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterIds 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * @return Ipv4BgpNum BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getClusterIds() {
-        return this.ClusterIds;
+    public Long getIpv4BgpNum() {
+        return this.Ipv4BgpNum;
     }
 
     /**
-     * Set 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * Set BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterIds 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * @param Ipv4BgpNum BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setClusterIds(String [] ClusterIds) {
-        this.ClusterIds = ClusterIds;
+    public void setIpv4BgpNum(Long Ipv4BgpNum) {
+        this.Ipv4BgpNum = Ipv4BgpNum;
     }
 
     /**
-     * Get 大订单号
+     * Get 非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BigDealIds 大订单号
+     * @return Ipv4OtherNum 非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getBigDealIds() {
-        return this.BigDealIds;
+    public Long getIpv4OtherNum() {
+        return this.Ipv4OtherNum;
     }
 
     /**
-     * Set 大订单号
+     * Set 非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BigDealIds 大订单号
+     * @param Ipv4OtherNum 非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBigDealIds(String [] BigDealIds) {
-        this.BigDealIds = BigDealIds;
+    public void setIpv4OtherNum(Long Ipv4OtherNum) {
+        this.Ipv4OtherNum = Ipv4OtherNum;
     }
 
     /**
@@ -189,11 +189,11 @@ public class CreateClustersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TranId", this.TranId);
-        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
-        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
-        this.setParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
+        this.setParamSimple(map, prefix + "Ipv6PrefixLen", this.Ipv6PrefixLen);
+        this.setParamSimple(map, prefix + "Ipv4BgpQuota", this.Ipv4BgpQuota);
+        this.setParamSimple(map, prefix + "Ipv4OtherQuota", this.Ipv4OtherQuota);
+        this.setParamSimple(map, prefix + "Ipv4BgpNum", this.Ipv4BgpNum);
+        this.setParamSimple(map, prefix + "Ipv4OtherNum", this.Ipv4OtherNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -1556,6 +1556,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *对已发起的任务进行管理。
+     * @param req ManageTaskRequest
+     * @return ManageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageTaskResponse ManageTask(ManageTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ManageTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改用户自定义视频内容分析模板。
 
 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。

@@ -465,6 +465,26 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *本接口（InquirePriceModifyDiskExtraPerformance）用于调整云硬盘额外性能询价。
+     * @param req InquirePriceModifyDiskExtraPerformanceRequest
+     * @return InquirePriceModifyDiskExtraPerformanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(InquirePriceModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceModifyDiskExtraPerformance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（InquiryPriceCreateDisks）用于创建云硬盘询价。
 
 * 支持查询创建多块云硬盘的价格，此时返回结果为总价格。
@@ -570,6 +590,28 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDiskAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyDiskExtraPerformance）用于调整云硬盘额外的性能。
+
+* 目前仅支持极速型SSD云硬盘（CLOUD_TSSD）和高性能SSD云硬盘(CLOUD_HSSD)。
+     * @param req ModifyDiskExtraPerformanceRequest
+     * @return ModifyDiskExtraPerformanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(ModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDiskExtraPerformanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDiskExtraPerformance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -319,7 +319,7 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *微信实名认证授权
+     *输入姓名和身份证号验证与微信实名的信息是否一致
      * @param req GetRealNameAuthTokenRequest
      * @return GetRealNameAuthTokenResponse
      * @throws TencentCloudSDKException

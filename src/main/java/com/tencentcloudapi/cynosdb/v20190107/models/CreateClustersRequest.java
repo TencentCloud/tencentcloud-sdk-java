@@ -60,32 +60,25 @@ public class CreateClustersRequest extends AbstractModel{
     private String DbVersion;
 
     /**
-    * Cpu核数
+    * 所属项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * 普通实例Cpu核数
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存
+    * 普通实例内存
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
-
-    /**
-    * 存储上限，单位GB
-    */
-    @SerializedName("StorageLimit")
-    @Expose
-    private Long StorageLimit;
-
-    /**
-    * 所属项目ID
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Long ProjectId;
 
     /**
     * 存储
@@ -168,6 +161,13 @@ timeRollback，时间点回档
     private Long ExpectTimeThresh;
 
     /**
+    * 普通实例存储上限，单位GB
+    */
+    @SerializedName("StorageLimit")
+    @Expose
+    private Long StorageLimit;
+
+    /**
     * 实例数量
     */
     @SerializedName("InstanceCount")
@@ -234,14 +234,16 @@ timeRollback，时间点回档
     private String DbMode;
 
     /**
-    * 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * 当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+    * 当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     */
     @SerializedName("MaxCpu")
     @Expose
@@ -251,13 +253,15 @@ timeRollback，时间点回档
     * 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
+默认值:yes
     */
     @SerializedName("AutoPause")
     @Expose
     private String AutoPause;
 
     /**
-    * 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+    * 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
     */
     @SerializedName("AutoPauseDelay")
     @Expose
@@ -352,54 +356,6 @@ timeRollback，时间点回档
     }
 
     /**
-     * Get Cpu核数 
-     * @return Cpu Cpu核数
-     */
-    public Long getCpu() {
-        return this.Cpu;
-    }
-
-    /**
-     * Set Cpu核数
-     * @param Cpu Cpu核数
-     */
-    public void setCpu(Long Cpu) {
-        this.Cpu = Cpu;
-    }
-
-    /**
-     * Get 内存 
-     * @return Memory 内存
-     */
-    public Long getMemory() {
-        return this.Memory;
-    }
-
-    /**
-     * Set 内存
-     * @param Memory 内存
-     */
-    public void setMemory(Long Memory) {
-        this.Memory = Memory;
-    }
-
-    /**
-     * Get 存储上限，单位GB 
-     * @return StorageLimit 存储上限，单位GB
-     */
-    public Long getStorageLimit() {
-        return this.StorageLimit;
-    }
-
-    /**
-     * Set 存储上限，单位GB
-     * @param StorageLimit 存储上限，单位GB
-     */
-    public void setStorageLimit(Long StorageLimit) {
-        this.StorageLimit = StorageLimit;
-    }
-
-    /**
      * Get 所属项目ID 
      * @return ProjectId 所属项目ID
      */
@@ -413,6 +369,38 @@ timeRollback，时间点回档
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 普通实例Cpu核数 
+     * @return Cpu 普通实例Cpu核数
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 普通实例Cpu核数
+     * @param Cpu 普通实例Cpu核数
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get 普通实例内存 
+     * @return Memory 普通实例内存
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set 普通实例内存
+     * @param Memory 普通实例内存
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
     }
 
     /**
@@ -604,6 +592,22 @@ timeRollback，时间点回档
     }
 
     /**
+     * Get 普通实例存储上限，单位GB 
+     * @return StorageLimit 普通实例存储上限，单位GB
+     */
+    public Long getStorageLimit() {
+        return this.StorageLimit;
+    }
+
+    /**
+     * Set 普通实例存储上限，单位GB
+     * @param StorageLimit 普通实例存储上限，单位GB
+     */
+    public void setStorageLimit(Long StorageLimit) {
+        this.StorageLimit = StorageLimit;
+    }
+
+    /**
      * Get 实例数量 
      * @return InstanceCount 实例数量
      */
@@ -760,32 +764,40 @@ timeRollback，时间点回档
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MinCpu 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get 当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
+     * @return MinCpu 当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MinCpu 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set 当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param MinCpu 当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MaxCpu 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Get 当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
+     * @return MaxCpu 当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MaxCpu 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * Set 当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param MaxCpu 当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
@@ -794,10 +806,12 @@ timeRollback，时间点回档
     /**
      * Get 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
-<li>no</li> 
+<li>no</li>
+默认值:yes 
      * @return AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
+默认值:yes
      */
     public String getAutoPause() {
         return this.AutoPause;
@@ -807,25 +821,31 @@ timeRollback，时间点回档
      * Set 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
+默认值:yes
      * @param AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
+默认值:yes
      */
     public void setAutoPause(String AutoPause) {
         this.AutoPause = AutoPause;
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF] 
-     * @return AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+     * Get 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600 
+     * @return AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
-     * @param AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+     * Set 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
+     * @param AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
@@ -840,10 +860,9 @@ timeRollback，时间点回档
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
-        this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
@@ -855,6 +874,7 @@ timeRollback，时间点回档
         this.setParamSimple(map, prefix + "OriginalClusterId", this.OriginalClusterId);
         this.setParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
         this.setParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
+        this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
