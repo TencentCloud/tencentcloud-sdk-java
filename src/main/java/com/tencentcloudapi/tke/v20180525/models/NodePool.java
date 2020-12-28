@@ -118,6 +118,30 @@ public class NodePool extends AbstractModel{
     private Long DesiredNodesNum;
 
     /**
+    * 节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodePoolOs")
+    @Expose
+    private String NodePoolOs;
+
+    /**
+    * 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
+    * 镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
      * Get NodePoolId 资源池id 
      * @return NodePoolId NodePoolId 资源池id
      */
@@ -342,6 +366,66 @@ public class NodePool extends AbstractModel{
     }
 
     /**
+     * Get 节点池osName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodePoolOs 节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodePoolOs() {
+        return this.NodePoolOs;
+    }
+
+    /**
+     * Set 节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodePoolOs 节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodePoolOs(String NodePoolOs) {
+        this.NodePoolOs = NodePoolOs;
+    }
+
+    /**
+     * Get 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
+     * Get 镜像id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageId 镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set 镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageId 镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -358,6 +442,9 @@ public class NodePool extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
         this.setParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
         this.setParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+        this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

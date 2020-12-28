@@ -189,6 +189,13 @@ public class BillDetail extends AbstractModel{
     private String RegionId;
 
     /**
+    * 项目ID:资源所属项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -577,6 +584,22 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
+     * Get 项目ID:资源所属项目ID 
+     * @return ProjectId 项目ID:资源所属项目ID
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID:资源所属项目ID
+     * @param ProjectId 项目ID:资源所属项目ID
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -603,6 +626,7 @@ public class BillDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

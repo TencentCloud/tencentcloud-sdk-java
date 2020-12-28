@@ -23,23 +23,48 @@ import java.util.HashMap;
 public class ColorEnhance extends AbstractModel{
 
     /**
-    * 颜色增强类型，可选项：weak,strong。
+    * 颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 颜色增强类型，可选项：weak,strong。 
-     * @return Type 颜色增强类型，可选项：weak,strong。
+     * Get 颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。 
+     * @return Type 颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 颜色增强类型，可选项：weak,strong。
-     * @param Type 颜色增强类型，可选项：weak,strong。
+     * Set 颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
+     * @param Type 颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
      */
     public void setType(String Type) {
         this.Type = Type;

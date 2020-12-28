@@ -101,6 +101,13 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private String ActionType;
 
     /**
+    * 项目ID:资源所属项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 偏移量 
      * @return Offset 偏移量
      */
@@ -281,6 +288,22 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
+     * Get 项目ID:资源所属项目ID 
+     * @return ProjectId 项目ID:资源所属项目ID
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID:资源所属项目ID
+     * @param ProjectId 项目ID:资源所属项目ID
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -295,6 +318,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

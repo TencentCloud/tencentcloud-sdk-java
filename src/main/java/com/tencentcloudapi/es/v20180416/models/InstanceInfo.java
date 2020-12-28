@@ -411,6 +411,14 @@ public class InstanceInfo extends AbstractModel{
     private Long SceneType;
 
     /**
+    * Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaConfig")
+    @Expose
+    private String KibanaConfig;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1327,6 +1335,26 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
+     * Get Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaConfig Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKibanaConfig() {
+        return this.KibanaConfig;
+    }
+
+    /**
+     * Set Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaConfig Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaConfig(String KibanaConfig) {
+        this.KibanaConfig = KibanaConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1383,6 +1411,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
 
     }
 }

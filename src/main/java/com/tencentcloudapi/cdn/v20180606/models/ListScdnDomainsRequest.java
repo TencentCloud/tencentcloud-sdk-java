@@ -37,6 +37,13 @@ public class ListScdnDomainsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 域名信息
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 分页起始地址 
      * @return Offset 分页起始地址
      */
@@ -69,11 +76,28 @@ public class ListScdnDomainsRequest extends AbstractModel{
     }
 
     /**
+     * Get 域名信息 
+     * @return Domain 域名信息
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名信息
+     * @param Domain 域名信息
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

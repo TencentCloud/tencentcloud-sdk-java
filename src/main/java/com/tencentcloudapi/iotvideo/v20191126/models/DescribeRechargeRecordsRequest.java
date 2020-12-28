@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeRechargeRecordsRequest extends AbstractModel{
 
     /**
-    * 账户类型 1:设备接入 2:云存
+    * 账户类型 1:设备接入 2:云存。
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * 从第几条记录开始显示
+    * 从第几条记录开始显示, 默认值为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 总共查询多少条记录
+    * 总共查询多少条记录，默认为值50。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 账户类型 1:设备接入 2:云存 
-     * @return AccountType 账户类型 1:设备接入 2:云存
+     * Get 账户类型 1:设备接入 2:云存。 
+     * @return AccountType 账户类型 1:设备接入 2:云存。
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 账户类型 1:设备接入 2:云存
-     * @param AccountType 账户类型 1:设备接入 2:云存
+     * Set 账户类型 1:设备接入 2:云存。
+     * @param AccountType 账户类型 1:设备接入 2:云存。
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get 从第几条记录开始显示 
-     * @return Offset 从第几条记录开始显示
+     * Get 从第几条记录开始显示, 默认值为0。 
+     * @return Offset 从第几条记录开始显示, 默认值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 从第几条记录开始显示
-     * @param Offset 从第几条记录开始显示
+     * Set 从第几条记录开始显示, 默认值为0。
+     * @param Offset 从第几条记录开始显示, 默认值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 总共查询多少条记录 
-     * @return Limit 总共查询多少条记录
+     * Get 总共查询多少条记录，默认为值50。 
+     * @return Limit 总共查询多少条记录，默认为值50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 总共查询多少条记录
-     * @param Limit 总共查询多少条记录
+     * Set 总共查询多少条记录，默认为值50。
+     * @param Limit 总共查询多少条记录，默认为值50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
