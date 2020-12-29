@@ -220,7 +220,7 @@ UNKNOWN表示未知状态。
     private Long ModifyConfigTime;
 
     /**
-    * 通道类型
+    * 通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyType")
@@ -724,9 +724,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Get 通道类型
+     * Get 通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyType 通道类型
+     * @return ProxyType 通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxyType() {
@@ -734,9 +734,9 @@ UNKNOWN表示未知状态。
     }
 
     /**
-     * Set 通道类型
+     * Set 通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyType 通道类型
+     * @param ProxyType 通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyType(Long ProxyType) {

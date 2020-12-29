@@ -37,6 +37,20 @@ public class DescribeTeamsRequest extends AbstractModel{
     private String [] TeamIds;
 
     /**
+    * 分页偏移量，默认值：0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 返回记录条数，默认值：20，最大值：30。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -69,11 +83,45 @@ public class DescribeTeamsRequest extends AbstractModel{
     }
 
     /**
+     * Get 分页偏移量，默认值：0。 
+     * @return Offset 分页偏移量，默认值：0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移量，默认值：0。
+     * @param Offset 分页偏移量，默认值：0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 返回记录条数，默认值：20，最大值：30。 
+     * @return Limit 返回记录条数，默认值：20，最大值：30。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 返回记录条数，默认值：20，最大值：30。
+     * @param Limit 返回记录条数，默认值：20，最大值：30。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamArraySimple(map, prefix + "TeamIds.", this.TeamIds);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

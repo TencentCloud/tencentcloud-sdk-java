@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeTeamsResponse extends AbstractModel{
 
     /**
+    * 符合条件的记录总数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 团队列表。
     */
     @SerializedName("TeamSet")
@@ -35,6 +42,22 @@ public class DescribeTeamsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 符合条件的记录总数。 
+     * @return TotalCount 符合条件的记录总数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合条件的记录总数。
+     * @param TotalCount 符合条件的记录总数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 团队列表。 
@@ -72,6 +95,7 @@ public class DescribeTeamsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "TeamSet.", this.TeamSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

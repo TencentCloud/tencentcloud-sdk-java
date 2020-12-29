@@ -1804,6 +1804,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *修改模块是否禁止分配外网ip的属性。
+     * @param req ModifyModuleDisableWanIpRequest
+     * @return ModifyModuleDisableWanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModuleDisableWanIpResponse ModifyModuleDisableWanIp(ModifyModuleDisableWanIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyModuleDisableWanIpResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyModuleDisableWanIpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyModuleDisableWanIp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改模块的默认镜像
      * @param req ModifyModuleImageRequest
      * @return ModifyModuleImageResponse

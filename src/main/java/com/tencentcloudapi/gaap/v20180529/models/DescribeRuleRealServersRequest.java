@@ -30,6 +30,20 @@ public class DescribeRuleRealServersRequest extends AbstractModel{
     private String RuleId;
 
     /**
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 返回数量，默认为20，最大值为1000。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get 转发规则ID 
      * @return RuleId 转发规则ID
      */
@@ -46,10 +60,44 @@ public class DescribeRuleRealServersRequest extends AbstractModel{
     }
 
     /**
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 返回数量，默认为20，最大值为1000。 
+     * @return Limit 返回数量，默认为20，最大值为1000。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 返回数量，默认为20，最大值为1000。
+     * @param Limit 返回数量，默认为20，最大值为1000。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

@@ -23,18 +23,11 @@ import java.util.HashMap;
 public class DescribeSubAppIdsRequest extends AbstractModel{
 
     /**
-    * 分页拉取的最大返回结果数。默认值：200；最大值：200。
+    * 子应用名称。
     */
-    @SerializedName("Limit")
+    @SerializedName("Name")
     @Expose
-    private Long Limit;
-
-    /**
-    * 分页拉取的起始偏移量。默认值：0。
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
+    private String Name;
 
     /**
     * 标签信息，查询指定标签的子应用列表。
@@ -44,35 +37,33 @@ public class DescribeSubAppIdsRequest extends AbstractModel{
     private ResourceTag [] Tags;
 
     /**
-     * Get 分页拉取的最大返回结果数。默认值：200；最大值：200。 
-     * @return Limit 分页拉取的最大返回结果数。默认值：200；最大值：200。
+    * 分页拉取的起始偏移量。默认值：0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 分页拉取的最大返回结果数。默认值：200；最大值：200。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get 子应用名称。 
+     * @return Name 子应用名称。
      */
-    public Long getLimit() {
-        return this.Limit;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 分页拉取的最大返回结果数。默认值：200；最大值：200。
-     * @param Limit 分页拉取的最大返回结果数。默认值：200；最大值：200。
+     * Set 子应用名称。
+     * @param Name 子应用名称。
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get 分页拉取的起始偏移量。默认值：0。 
-     * @return Offset 分页拉取的起始偏移量。默认值：0。
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 分页拉取的起始偏移量。默认值：0。
-     * @param Offset 分页拉取的起始偏移量。默认值：0。
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -92,12 +83,45 @@ public class DescribeSubAppIdsRequest extends AbstractModel{
     }
 
     /**
+     * Get 分页拉取的起始偏移量。默认值：0。 
+     * @return Offset 分页拉取的起始偏移量。默认值：0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页拉取的起始偏移量。默认值：0。
+     * @param Offset 分页拉取的起始偏移量。默认值：0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 分页拉取的最大返回结果数。默认值：200；最大值：200。 
+     * @return Limit 分页拉取的最大返回结果数。默认值：200；最大值：200。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页拉取的最大返回结果数。默认值：200；最大值：200。
+     * @param Limit 分页拉取的最大返回结果数。默认值：200；最大值：200。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

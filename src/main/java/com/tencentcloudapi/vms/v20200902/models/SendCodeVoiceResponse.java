@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.faceid.v20180301.models;
+package com.tencentcloudapi.vms.v20200902.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetRealNameAuthTokenResponse extends AbstractModel{
+public class SendCodeVoiceResponse extends AbstractModel{
 
     /**
-    * 查询实名认证结果的唯一凭证
+    * 语音验证码发送状态。
     */
-    @SerializedName("AuthToken")
+    @SerializedName("SendStatus")
     @Expose
-    private String AuthToken;
-
-    /**
-    * 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权，仅能在微信环境下打开。
-    */
-    @SerializedName("RedirectURL")
-    @Expose
-    private String RedirectURL;
+    private SendStatus SendStatus;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class GetRealNameAuthTokenResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询实名认证结果的唯一凭证 
-     * @return AuthToken 查询实名认证结果的唯一凭证
+     * Get 语音验证码发送状态。 
+     * @return SendStatus 语音验证码发送状态。
      */
-    public String getAuthToken() {
-        return this.AuthToken;
+    public SendStatus getSendStatus() {
+        return this.SendStatus;
     }
 
     /**
-     * Set 查询实名认证结果的唯一凭证
-     * @param AuthToken 查询实名认证结果的唯一凭证
+     * Set 语音验证码发送状态。
+     * @param SendStatus 语音验证码发送状态。
      */
-    public void setAuthToken(String AuthToken) {
-        this.AuthToken = AuthToken;
-    }
-
-    /**
-     * Get 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权，仅能在微信环境下打开。 
-     * @return RedirectURL 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权，仅能在微信环境下打开。
-     */
-    public String getRedirectURL() {
-        return this.RedirectURL;
-    }
-
-    /**
-     * Set 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权，仅能在微信环境下打开。
-     * @param RedirectURL 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权，仅能在微信环境下打开。
-     */
-    public void setRedirectURL(String RedirectURL) {
-        this.RedirectURL = RedirectURL;
+    public void setSendStatus(SendStatus SendStatus) {
+        this.SendStatus = SendStatus;
     }
 
     /**
@@ -95,8 +72,7 @@ public class GetRealNameAuthTokenResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AuthToken", this.AuthToken);
-        this.setParamSimple(map, prefix + "RedirectURL", this.RedirectURL);
+        this.setParamObj(map, prefix + "SendStatus.", this.SendStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

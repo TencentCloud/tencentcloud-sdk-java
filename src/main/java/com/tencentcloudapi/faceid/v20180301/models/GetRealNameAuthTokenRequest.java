@@ -37,7 +37,7 @@ public class GetRealNameAuthTokenRequest extends AbstractModel{
     private String IDCard;
 
     /**
-    * 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
+    * 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
     */
     @SerializedName("CallbackURL")
     @Expose
@@ -76,16 +76,16 @@ public class GetRealNameAuthTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方 
-     * @return CallbackURL 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
+     * Get 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。 
+     * @return CallbackURL 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
      */
     public String getCallbackURL() {
         return this.CallbackURL;
     }
 
     /**
-     * Set 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
-     * @param CallbackURL 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
+     * Set 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
+     * @param CallbackURL 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
      */
     public void setCallbackURL(String CallbackURL) {
         this.CallbackURL = CallbackURL;

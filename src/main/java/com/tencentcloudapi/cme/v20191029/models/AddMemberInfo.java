@@ -37,6 +37,15 @@ public class AddMemberInfo extends AbstractModel{
     private String Remark;
 
     /**
+    * 团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
      * Get 团队成员 ID。 
      * @return MemberId 团队成员 ID。
      */
@@ -69,11 +78,36 @@ public class AddMemberInfo extends AbstractModel{
     }
 
     /**
+     * Get 团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li> 
+     * @return Role 团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
+     * @param Role 团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MemberId", this.MemberId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

@@ -171,6 +171,17 @@ public class DomainRuleSet extends AbstractModel{
     private CertificateAliasInfo [] PolyRealServerCertificateAliasInfo;
 
     /**
+    * 域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainStatus")
+    @Expose
+    private Long DomainStatus;
+
+    /**
      * Get 转发规则域名。 
      * @return Domain 转发规则域名。
      */
@@ -547,6 +558,38 @@ public class DomainRuleSet extends AbstractModel{
     }
 
     /**
+     * Get 域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainStatus 域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDomainStatus() {
+        return this.DomainStatus;
+    }
+
+    /**
+     * Set 域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainStatus 域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainStatus(Long DomainStatus) {
+        this.DomainStatus = DomainStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -568,6 +611,7 @@ public class DomainRuleSet extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
         this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
         this.setParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
+        this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
 
     }
 }

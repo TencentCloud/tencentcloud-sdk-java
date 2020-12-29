@@ -95,6 +95,13 @@ public class CreateModuleRequest extends AbstractModel{
     private Long DefaultBandWidthIn;
 
     /**
+    * 是否禁止分配外网IP
+    */
+    @SerializedName("DisableWanIp")
+    @Expose
+    private Boolean DisableWanIp;
+
+    /**
      * Get 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。 
      * @return ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      */
@@ -263,6 +270,22 @@ public class CreateModuleRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否禁止分配外网IP 
+     * @return DisableWanIp 是否禁止分配外网IP
+     */
+    public Boolean getDisableWanIp() {
+        return this.DisableWanIp;
+    }
+
+    /**
+     * Set 是否禁止分配外网IP
+     * @param DisableWanIp 是否禁止分配外网IP
+     */
+    public void setDisableWanIp(Boolean DisableWanIp) {
+        this.DisableWanIp = DisableWanIp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +299,7 @@ public class CreateModuleRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         this.setParamSimple(map, prefix + "DefaultBandWidthIn", this.DefaultBandWidthIn);
+        this.setParamSimple(map, prefix + "DisableWanIp", this.DisableWanIp);
 
     }
 }

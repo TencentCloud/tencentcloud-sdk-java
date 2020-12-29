@@ -37,21 +37,38 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     private String ProjectId;
 
     /**
-    * 云点播媒资 FileId。
+    * 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
     */
     @SerializedName("VodFileId")
     @Expose
     private String VodFileId;
 
     /**
-    * 素材名称，不能超过30个字符。
+    * 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+    */
+    @SerializedName("ExternalMediaInfo")
+    @Expose
+    private ExternalMediaInfo ExternalMediaInfo;
+
+    /**
+    * 媒体名称，不能超过30个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 素材预处理任务模板 ID，取值：
+    * 媒体预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。
     */
@@ -92,42 +109,86 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 云点播媒资 FileId。 
-     * @return VodFileId 云点播媒资 FileId。
+     * Get 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。 
+     * @return SourceType 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     * @param SourceType 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。 
+     * @return VodFileId 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
      */
     public String getVodFileId() {
         return this.VodFileId;
     }
 
     /**
-     * Set 云点播媒资 FileId。
-     * @param VodFileId 云点播媒资 FileId。
+     * Set 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+     * @param VodFileId 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
      */
     public void setVodFileId(String VodFileId) {
         this.VodFileId = VodFileId;
     }
 
     /**
-     * Get 素材名称，不能超过30个字符。 
-     * @return Name 素材名称，不能超过30个字符。
+     * Get 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。 
+     * @return ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     */
+    public ExternalMediaInfo getExternalMediaInfo() {
+        return this.ExternalMediaInfo;
+    }
+
+    /**
+     * Set 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     * @param ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     */
+    public void setExternalMediaInfo(ExternalMediaInfo ExternalMediaInfo) {
+        this.ExternalMediaInfo = ExternalMediaInfo;
+    }
+
+    /**
+     * Get 媒体名称，不能超过30个字符。 
+     * @return Name 媒体名称，不能超过30个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 素材名称，不能超过30个字符。
-     * @param Name 素材名称，不能超过30个字符。
+     * Set 媒体名称，不能超过30个字符。
+     * @param Name 媒体名称，不能超过30个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 素材预处理任务模板 ID，取值：
+     * Get 媒体预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。 
-     * @return PreProcessDefinition 素材预处理任务模板 ID，取值：
+     * @return PreProcessDefinition 媒体预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。
      */
@@ -136,10 +197,10 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     }
 
     /**
-     * Set 素材预处理任务模板 ID，取值：
+     * Set 媒体预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。
-     * @param PreProcessDefinition 素材预处理任务模板 ID，取值：
+     * @param PreProcessDefinition 媒体预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。
      */
@@ -153,7 +214,9 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
+        this.setParamObj(map, prefix + "ExternalMediaInfo.", this.ExternalMediaInfo);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
 

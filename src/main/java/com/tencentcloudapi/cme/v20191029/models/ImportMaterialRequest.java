@@ -30,35 +30,52 @@ public class ImportMaterialRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 云点播媒资 FileId。
-    */
-    @SerializedName("VodFileId")
-    @Expose
-    private String VodFileId;
-
-    /**
-    * 素材归属者。
+    * 媒体归属者，团队或个人。
     */
     @SerializedName("Owner")
     @Expose
     private Entity Owner;
 
     /**
-    * 素材名称，不能超过30个字符。
+    * 媒体名称，不能超过30个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+    * 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+    */
+    @SerializedName("VodFileId")
+    @Expose
+    private String VodFileId;
+
+    /**
+    * 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+    */
+    @SerializedName("ExternalMediaInfo")
+    @Expose
+    private ExternalMediaInfo ExternalMediaInfo;
+
+    /**
+    * 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
     */
     @SerializedName("ClassPath")
     @Expose
     private String ClassPath;
 
     /**
-    * 素材预处理任务模板 ID。取值：
+    * 媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
     */
     @SerializedName("PreProcessDefinition")
@@ -89,73 +106,117 @@ public class ImportMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 云点播媒资 FileId。 
-     * @return VodFileId 云点播媒资 FileId。
-     */
-    public String getVodFileId() {
-        return this.VodFileId;
-    }
-
-    /**
-     * Set 云点播媒资 FileId。
-     * @param VodFileId 云点播媒资 FileId。
-     */
-    public void setVodFileId(String VodFileId) {
-        this.VodFileId = VodFileId;
-    }
-
-    /**
-     * Get 素材归属者。 
-     * @return Owner 素材归属者。
+     * Get 媒体归属者，团队或个人。 
+     * @return Owner 媒体归属者，团队或个人。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 素材归属者。
-     * @param Owner 素材归属者。
+     * Set 媒体归属者，团队或个人。
+     * @param Owner 媒体归属者，团队或个人。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 素材名称，不能超过30个字符。 
-     * @return Name 素材名称，不能超过30个字符。
+     * Get 媒体名称，不能超过30个字符。 
+     * @return Name 媒体名称，不能超过30个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 素材名称，不能超过30个字符。
-     * @param Name 素材名称，不能超过30个字符。
+     * Set 媒体名称，不能超过30个字符。
+     * @param Name 媒体名称，不能超过30个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。 
-     * @return ClassPath 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+     * Get 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。 
+     * @return SourceType 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     * @param SourceType 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。 
+     * @return VodFileId 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+     */
+    public String getVodFileId() {
+        return this.VodFileId;
+    }
+
+    /**
+     * Set 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+     * @param VodFileId 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+     */
+    public void setVodFileId(String VodFileId) {
+        this.VodFileId = VodFileId;
+    }
+
+    /**
+     * Get 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。 
+     * @return ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     */
+    public ExternalMediaInfo getExternalMediaInfo() {
+        return this.ExternalMediaInfo;
+    }
+
+    /**
+     * Set 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     * @param ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     */
+    public void setExternalMediaInfo(ExternalMediaInfo ExternalMediaInfo) {
+        this.ExternalMediaInfo = ExternalMediaInfo;
+    }
+
+    /**
+     * Get 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。 
+     * @return ClassPath 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
      */
     public String getClassPath() {
         return this.ClassPath;
     }
 
     /**
-     * Set 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
-     * @param ClassPath 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+     * Set 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+     * @param ClassPath 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
      */
     public void setClassPath(String ClassPath) {
         this.ClassPath = ClassPath;
     }
 
     /**
-     * Get 素材预处理任务模板 ID。取值：
+     * Get 媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li> 
-     * @return PreProcessDefinition 素材预处理任务模板 ID。取值：
+     * @return PreProcessDefinition 媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
      */
     public Long getPreProcessDefinition() {
@@ -163,9 +224,9 @@ public class ImportMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Set 素材预处理任务模板 ID。取值：
+     * Set 媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
-     * @param PreProcessDefinition 素材预处理任务模板 ID。取值：
+     * @param PreProcessDefinition 媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
      */
     public void setPreProcessDefinition(Long PreProcessDefinition) {
@@ -193,9 +254,11 @@ public class ImportMaterialRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
-        this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
+        this.setParamObj(map, prefix + "ExternalMediaInfo.", this.ExternalMediaInfo);
         this.setParamSimple(map, prefix + "ClassPath", this.ClassPath);
         this.setParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
