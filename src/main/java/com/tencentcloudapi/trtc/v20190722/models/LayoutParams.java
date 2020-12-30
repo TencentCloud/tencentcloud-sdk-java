@@ -72,6 +72,13 @@ public class LayoutParams extends AbstractModel{
     private PresetLayoutConfig [] PresetLayoutConfig;
 
     /**
+    * 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+    */
+    @SerializedName("PlaceHolderMode")
+    @Expose
+    private Long PlaceHolderMode;
+
+    /**
      * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。 
      * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
      */
@@ -184,6 +191,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。 
+     * @return PlaceHolderMode 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+     */
+    public Long getPlaceHolderMode() {
+        return this.PlaceHolderMode;
+    }
+
+    /**
+     * Set 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+     * @param PlaceHolderMode 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+     */
+    public void setPlaceHolderMode(Long PlaceHolderMode) {
+        this.PlaceHolderMode = PlaceHolderMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
         this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
         this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
+        this.setParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
 
     }
 }

@@ -23,14 +23,15 @@ import java.util.HashMap;
 public class DescribeRecordStatisticRequest extends AbstractModel{
 
     /**
-    * 查询开始日期。
+    * 查询开始日期，格式为YYYY-MM-DD。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束日期。
+    * 查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -44,32 +45,36 @@ public class DescribeRecordStatisticRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-     * Get 查询开始日期。 
-     * @return StartTime 查询开始日期。
+     * Get 查询开始日期，格式为YYYY-MM-DD。 
+     * @return StartTime 查询开始日期，格式为YYYY-MM-DD。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始日期。
-     * @param StartTime 查询开始日期。
+     * Set 查询开始日期，格式为YYYY-MM-DD。
+     * @param StartTime 查询开始日期，格式为YYYY-MM-DD。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束日期。 
-     * @return EndTime 查询结束日期。
+     * Get 查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。 
+     * @return EndTime 查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束日期。
-     * @param EndTime 查询结束日期。
+     * Set 查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
+     * @param EndTime 查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

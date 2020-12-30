@@ -72,11 +72,25 @@ public class PresetLayoutConfig extends AbstractModel{
     private Long ZOrder;
 
     /**
-    * 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
+    * 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
     */
     @SerializedName("RenderMode")
     @Expose
     private Long RenderMode;
+
+    /**
+    * 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+    */
+    @SerializedName("MixInputType")
+    @Expose
+    private Long MixInputType;
+
+    /**
+    * 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+    */
+    @SerializedName("PlaceImageId")
+    @Expose
+    private Long PlaceImageId;
 
     /**
      * Get 指定显示在该画面上的用户ID。如果不指定用户ID，会按照用户加入房间的顺序自动匹配PresetLayoutConfig中的画面设置。 
@@ -191,19 +205,51 @@ public class PresetLayoutConfig extends AbstractModel{
     }
 
     /**
-     * Get 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。 
-     * @return RenderMode 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
+     * Get 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。 
+     * @return RenderMode 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
      */
     public Long getRenderMode() {
         return this.RenderMode;
     }
 
     /**
-     * Set 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
-     * @param RenderMode 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
+     * Set 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+     * @param RenderMode 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
      */
     public void setRenderMode(Long RenderMode) {
         this.RenderMode = RenderMode;
+    }
+
+    /**
+     * Get 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。 
+     * @return MixInputType 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+     */
+    public Long getMixInputType() {
+        return this.MixInputType;
+    }
+
+    /**
+     * Set 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+     * @param MixInputType 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+     */
+    public void setMixInputType(Long MixInputType) {
+        this.MixInputType = MixInputType;
+    }
+
+    /**
+     * Get 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769 
+     * @return PlaceImageId 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+     */
+    public Long getPlaceImageId() {
+        return this.PlaceImageId;
+    }
+
+    /**
+     * Set 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+     * @param PlaceImageId 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+     */
+    public void setPlaceImageId(Long PlaceImageId) {
+        this.PlaceImageId = PlaceImageId;
     }
 
     /**
@@ -218,6 +264,8 @@ public class PresetLayoutConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
         this.setParamSimple(map, prefix + "ZOrder", this.ZOrder);
         this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
+        this.setParamSimple(map, prefix + "MixInputType", this.MixInputType);
+        this.setParamSimple(map, prefix + "PlaceImageId", this.PlaceImageId);
 
     }
 }

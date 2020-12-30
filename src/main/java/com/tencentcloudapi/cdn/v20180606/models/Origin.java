@@ -124,6 +124,14 @@ ip：IP 列表作为源站
     private PathRule [] PathRules;
 
     /**
+    * 分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PathBasedOrigin")
+    @Expose
+    private PathBasedOriginRule [] PathBasedOrigin;
+
+    /**
      * Get 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -408,6 +416,26 @@ ip：IP 列表作为源站
     }
 
     /**
+     * Get 分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PathBasedOrigin 分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PathBasedOriginRule [] getPathBasedOrigin() {
+        return this.PathBasedOrigin;
+    }
+
+    /**
+     * Set 分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PathBasedOrigin 分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPathBasedOrigin(PathBasedOriginRule [] PathBasedOrigin) {
+        this.PathBasedOrigin = PathBasedOrigin;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -421,6 +449,7 @@ ip：IP 列表作为源站
         this.setParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
         this.setParamSimple(map, prefix + "BasePath", this.BasePath);
         this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
+        this.setParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
 
     }
 }
