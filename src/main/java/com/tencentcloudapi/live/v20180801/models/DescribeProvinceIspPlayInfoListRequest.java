@@ -88,6 +88,15 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
     private String MainlandOrOversea;
 
     /**
+    * ip类型：
+“Ipv6”：Ipv6数据
+如果为空，查询总的数据；
+    */
+    @SerializedName("IpType")
+    @Expose
+    private String IpType;
+
+    /**
      * Get 起始时间点，当前使用北京时间，
 例：2019-02-21 10:00:00。 
      * @return StartTime 起始时间点，当前使用北京时间，
@@ -252,6 +261,30 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
     }
 
     /**
+     * Get ip类型：
+“Ipv6”：Ipv6数据
+如果为空，查询总的数据； 
+     * @return IpType ip类型：
+“Ipv6”：Ipv6数据
+如果为空，查询总的数据；
+     */
+    public String getIpType() {
+        return this.IpType;
+    }
+
+    /**
+     * Set ip类型：
+“Ipv6”：Ipv6数据
+如果为空，查询总的数据；
+     * @param IpType ip类型：
+“Ipv6”：Ipv6数据
+如果为空，查询总的数据；
+     */
+    public void setIpType(String IpType) {
+        this.IpType = IpType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -263,6 +296,7 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ProvinceNames.", this.ProvinceNames);
         this.setParamArraySimple(map, prefix + "IspNames.", this.IspNames);
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+        this.setParamSimple(map, prefix + "IpType", this.IpType);
 
     }
 }

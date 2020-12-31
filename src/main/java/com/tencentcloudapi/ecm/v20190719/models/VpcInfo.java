@@ -111,7 +111,6 @@ public class VpcInfo extends AbstractModel{
     /**
     * 辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssistantCidrSet")
     @Expose
@@ -119,7 +118,6 @@ public class VpcInfo extends AbstractModel{
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -127,7 +125,6 @@ public class VpcInfo extends AbstractModel{
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -135,7 +132,6 @@ public class VpcInfo extends AbstractModel{
 
     /**
     * 地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -143,7 +139,6 @@ public class VpcInfo extends AbstractModel{
 
     /**
     * 包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetCount")
     @Expose
@@ -151,7 +146,6 @@ public class VpcInfo extends AbstractModel{
 
     /**
     * 包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -359,10 +353,8 @@ public class VpcInfo extends AbstractModel{
 
     /**
      * Get 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssistantCidrSet 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssistantCidr [] getAssistantCidrSet() {
@@ -372,9 +364,7 @@ public class VpcInfo extends AbstractModel{
     /**
      * Set 辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssistantCidrSet 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssistantCidrSet(AssistantCidr [] AssistantCidrSet) {
@@ -382,10 +372,8 @@ public class VpcInfo extends AbstractModel{
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -393,19 +381,15 @@ public class VpcInfo extends AbstractModel{
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -413,19 +397,15 @@ public class VpcInfo extends AbstractModel{
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 地域中文名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域中文名 
      * @return RegionName 地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -433,19 +413,15 @@ public class VpcInfo extends AbstractModel{
 
     /**
      * Set 地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含子网数量 
      * @return SubnetCount 包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubnetCount() {
         return this.SubnetCount;
@@ -453,19 +429,15 @@ public class VpcInfo extends AbstractModel{
 
     /**
      * Set 包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetCount 包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetCount(Long SubnetCount) {
         this.SubnetCount = SubnetCount;
     }
 
     /**
-     * Get 包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含实例数量 
      * @return InstanceCount 包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
@@ -473,9 +445,7 @@ public class VpcInfo extends AbstractModel{
 
     /**
      * Set 包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCount 包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;

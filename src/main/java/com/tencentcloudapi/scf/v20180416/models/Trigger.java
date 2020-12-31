@@ -100,6 +100,13 @@ public class Trigger extends AbstractModel{
     private String TriggerAttribute;
 
     /**
+    * 触发器绑定的别名或版本
+    */
+    @SerializedName("Qualifier")
+    @Expose
+    private String Qualifier;
+
+    /**
      * Get 触发器最后修改时间 
      * @return ModTime 触发器最后修改时间
      */
@@ -276,6 +283,22 @@ public class Trigger extends AbstractModel{
     }
 
     /**
+     * Get 触发器绑定的别名或版本 
+     * @return Qualifier 触发器绑定的别名或版本
+     */
+    public String getQualifier() {
+        return this.Qualifier;
+    }
+
+    /**
+     * Set 触发器绑定的别名或版本
+     * @param Qualifier 触发器绑定的别名或版本
+     */
+    public void setQualifier(String Qualifier) {
+        this.Qualifier = Qualifier;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class Trigger extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
+        this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
 
     }
 }

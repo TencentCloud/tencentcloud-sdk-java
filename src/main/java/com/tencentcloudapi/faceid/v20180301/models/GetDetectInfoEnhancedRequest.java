@@ -37,8 +37,8 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     private String RuleId;
 
     /**
-    * 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息）。
-如 134表示拉取文本类、视频最佳截图信息、视频信息。
+    * 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+如 13表示拉取文本类、视频最佳截图信息。
 默认值：0
     */
     @SerializedName("InfoType")
@@ -46,7 +46,7 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     private String InfoType;
 
     /**
-    * 从活体视频中截取一定张数的最佳帧。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+    * 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
     */
     @SerializedName("BestFramesCount")
     @Expose
@@ -99,11 +99,11 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息）。
-如 134表示拉取文本类、视频最佳截图信息、视频信息。
+     * Get 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+如 13表示拉取文本类、视频最佳截图信息。
 默认值：0 
-     * @return InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息）。
-如 134表示拉取文本类、视频最佳截图信息、视频信息。
+     * @return InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+如 13表示拉取文本类、视频最佳截图信息。
 默认值：0
      */
     public String getInfoType() {
@@ -111,11 +111,11 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     }
 
     /**
-     * Set 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息）。
-如 134表示拉取文本类、视频最佳截图信息、视频信息。
+     * Set 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+如 13表示拉取文本类、视频最佳截图信息。
 默认值：0
-     * @param InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息；4：视频信息）。
-如 134表示拉取文本类、视频最佳截图信息、视频信息。
+     * @param InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+如 13表示拉取文本类、视频最佳截图信息。
 默认值：0
      */
     public void setInfoType(String InfoType) {
@@ -123,16 +123,16 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     }
 
     /**
-     * Get 从活体视频中截取一定张数的最佳帧。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3） 
-     * @return BestFramesCount 从活体视频中截取一定张数的最佳帧。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+     * Get 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3） 
+     * @return BestFramesCount 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
      */
     public Long getBestFramesCount() {
         return this.BestFramesCount;
     }
 
     /**
-     * Set 从活体视频中截取一定张数的最佳帧。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
-     * @param BestFramesCount 从活体视频中截取一定张数的最佳帧。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+     * Set 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+     * @param BestFramesCount 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
      */
     public void setBestFramesCount(Long BestFramesCount) {
         this.BestFramesCount = BestFramesCount;

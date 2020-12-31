@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class RiskDetail extends AbstractModel{
 
     /**
-    * 风险码
+    * 风险码 参数详细定义请加微信：TYXGJ-01
     */
     @SerializedName("RiskCode")
     @Expose
     private Long RiskCode;
 
     /**
-     * Get 风险码 
-     * @return RiskCode 风险码
+     * Get 风险码 参数详细定义请加微信：TYXGJ-01 
+     * @return RiskCode 风险码 参数详细定义请加微信：TYXGJ-01
      */
     public Long getRiskCode() {
         return this.RiskCode;
     }
 
     /**
-     * Set 风险码
-     * @param RiskCode 风险码
+     * Set 风险码 参数详细定义请加微信：TYXGJ-01
+     * @param RiskCode 风险码 参数详细定义请加微信：TYXGJ-01
      */
     public void setRiskCode(Long RiskCode) {
         this.RiskCode = RiskCode;
