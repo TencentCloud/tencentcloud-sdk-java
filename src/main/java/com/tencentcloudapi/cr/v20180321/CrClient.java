@@ -260,6 +260,26 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *导出机器人数据
+     * @param req ExportBotDataRequest
+     * @return ExportBotDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportBotDataResponse ExportBotData(ExportBotDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportBotDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportBotDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportBotData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *实时数据查询
      * @param req QueryInstantDataRequest
      * @return QueryInstantDataResponse
