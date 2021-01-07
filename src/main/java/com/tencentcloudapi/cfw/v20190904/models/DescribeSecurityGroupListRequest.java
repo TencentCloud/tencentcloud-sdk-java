@@ -30,7 +30,7 @@ public class DescribeSecurityGroupListRequest extends AbstractModel{
     private Long Direction;
 
     /**
-    * 腾讯云地域的英文简写
+    * 地域代码（例: ap-guangzhou),支持腾讯云全部地域
     */
     @SerializedName("Area")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeSecurityGroupListRequest extends AbstractModel{
     }
 
     /**
-     * Get 腾讯云地域的英文简写 
-     * @return Area 腾讯云地域的英文简写
+     * Get 地域代码（例: ap-guangzhou),支持腾讯云全部地域 
+     * @return Area 地域代码（例: ap-guangzhou),支持腾讯云全部地域
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 腾讯云地域的英文简写
-     * @param Area 腾讯云地域的英文简写
+     * Set 地域代码（例: ap-guangzhou),支持腾讯云全部地域
+     * @param Area 地域代码（例: ap-guangzhou),支持腾讯云全部地域
      */
     public void setArea(String Area) {
         this.Area = Area;

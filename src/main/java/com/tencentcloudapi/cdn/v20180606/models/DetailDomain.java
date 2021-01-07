@@ -454,6 +454,22 @@ off：不支持
     private AdvanceConfig [] AdvanceSet;
 
     /**
+    * 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OfflineCache")
+    @Expose
+    private OfflineCache OfflineCache;
+
+    /**
+    * 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginCombine")
+    @Expose
+    private OriginCombine OriginCombine;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1554,6 +1570,46 @@ off：不支持
     }
 
     /**
+     * Get 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OfflineCache 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OfflineCache getOfflineCache() {
+        return this.OfflineCache;
+    }
+
+    /**
+     * Set 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OfflineCache 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOfflineCache(OfflineCache OfflineCache) {
+        this.OfflineCache = OfflineCache;
+    }
+
+    /**
+     * Get 合并回源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginCombine 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OriginCombine getOriginCombine() {
+        return this.OriginCombine;
+    }
+
+    /**
+     * Set 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginCombine 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginCombine(OriginCombine OriginCombine) {
+        this.OriginCombine = OriginCombine;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1609,6 +1665,8 @@ off：不支持
         this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
+        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+        this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyTableStatusRequest extends AbstractModel{
 
     /**
-    * EdgeId值
+    * EdgeId值两个vpc间的边id
     */
     @SerializedName("EdgeId")
     @Expose
@@ -51,16 +51,16 @@ public class ModifyTableStatusRequest extends AbstractModel{
     private Long Direction;
 
     /**
-     * Get EdgeId值 
-     * @return EdgeId EdgeId值
+     * Get EdgeId值两个vpc间的边id 
+     * @return EdgeId EdgeId值两个vpc间的边id
      */
     public String getEdgeId() {
         return this.EdgeId;
     }
 
     /**
-     * Set EdgeId值
-     * @param EdgeId EdgeId值
+     * Set EdgeId值两个vpc间的边id
+     * @param EdgeId EdgeId值两个vpc间的边id
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;

@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class DescribeSwitchListsRequest extends AbstractModel{
 
     /**
-    * 防火墙状态
+    * 防火墙状态  0: 关闭，1：开启
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 资产类型
+    * 资产类型 CVM/NAT/VPN/CLB/其它
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 地域
+    * 地域 上海/重庆/广州，等等
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 搜索值
+    * 搜索值  例子："{"common":"106.54.189.45"}"
     */
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
 
     /**
-    * 条数
+    * 条数  默认值:10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移值
+    * 偏移值 默认值: 0
     */
     @SerializedName("Offset")
     @Expose
@@ -72,103 +72,103 @@ public class DescribeSwitchListsRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 排序字段
+    * 排序字段 PortTimes(风险端口数)
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get 防火墙状态 
-     * @return Status 防火墙状态
+     * Get 防火墙状态  0: 关闭，1：开启 
+     * @return Status 防火墙状态  0: 关闭，1：开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 防火墙状态
-     * @param Status 防火墙状态
+     * Set 防火墙状态  0: 关闭，1：开启
+     * @param Status 防火墙状态  0: 关闭，1：开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 资产类型 
-     * @return Type 资产类型
+     * Get 资产类型 CVM/NAT/VPN/CLB/其它 
+     * @return Type 资产类型 CVM/NAT/VPN/CLB/其它
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 资产类型
-     * @param Type 资产类型
+     * Set 资产类型 CVM/NAT/VPN/CLB/其它
+     * @param Type 资产类型 CVM/NAT/VPN/CLB/其它
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 地域 
-     * @return Area 地域
+     * Get 地域 上海/重庆/广州，等等 
+     * @return Area 地域 上海/重庆/广州，等等
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 地域
-     * @param Area 地域
+     * Set 地域 上海/重庆/广州，等等
+     * @param Area 地域 上海/重庆/广州，等等
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 搜索值 
-     * @return SearchValue 搜索值
+     * Get 搜索值  例子："{"common":"106.54.189.45"}" 
+     * @return SearchValue 搜索值  例子："{"common":"106.54.189.45"}"
      */
     public String getSearchValue() {
         return this.SearchValue;
     }
 
     /**
-     * Set 搜索值
-     * @param SearchValue 搜索值
+     * Set 搜索值  例子："{"common":"106.54.189.45"}"
+     * @param SearchValue 搜索值  例子："{"common":"106.54.189.45"}"
      */
     public void setSearchValue(String SearchValue) {
         this.SearchValue = SearchValue;
     }
 
     /**
-     * Get 条数 
-     * @return Limit 条数
+     * Get 条数  默认值:10 
+     * @return Limit 条数  默认值:10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数
-     * @param Limit 条数
+     * Set 条数  默认值:10
+     * @param Limit 条数  默认值:10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移值 
-     * @return Offset 偏移值
+     * Get 偏移值 默认值: 0 
+     * @return Offset 偏移值 默认值: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移值
-     * @param Offset 偏移值
+     * Set 偏移值 默认值: 0
+     * @param Offset 偏移值 默认值: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -191,16 +191,16 @@ public class DescribeSwitchListsRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get 排序字段 PortTimes(风险端口数) 
+     * @return By 排序字段 PortTimes(风险端口数)
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set 排序字段 PortTimes(风险端口数)
+     * @param By 排序字段 PortTimes(风险端口数)
      */
     public void setBy(String By) {
         this.By = By;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel{
 
     /**
-    * 状态，0：全部停用，1：全部启用
+    * 列表规则状态，0：全部停用，1：全部启用
     */
     @SerializedName("Status")
     @Expose
@@ -51,16 +51,16 @@ public class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel{
     private String Area;
 
     /**
-     * Get 状态，0：全部停用，1：全部启用 
-     * @return Status 状态，0：全部停用，1：全部启用
+     * Get 列表规则状态，0：全部停用，1：全部启用 
+     * @return Status 列表规则状态，0：全部停用，1：全部启用
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，0：全部停用，1：全部启用
-     * @param Status 状态，0：全部停用，1：全部启用
+     * Set 列表规则状态，0：全部停用，1：全部启用
+     * @param Status 列表规则状态，0：全部停用，1：全部启用
      */
     public void setStatus(Long Status) {
         this.Status = Status;

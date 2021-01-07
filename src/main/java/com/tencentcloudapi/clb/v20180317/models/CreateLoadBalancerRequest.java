@@ -166,6 +166,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ClusterTag;
 
     /**
+    * EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+    */
+    @SerializedName("EipAddressId")
+    @Expose
+    private String EipAddressId;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
@@ -498,6 +505,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP 
+     * @return EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     */
+    public String getEipAddressId() {
+        return this.EipAddressId;
+    }
+
+    /**
+     * Set EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     * @param EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     */
+    public void setEipAddressId(String EipAddressId) {
+        this.EipAddressId = EipAddressId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -521,6 +544,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+        this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
 
     }
 }

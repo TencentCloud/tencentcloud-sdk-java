@@ -86,14 +86,14 @@ public class Blueprint extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 镜像所需系统盘大小
+    * 镜像所需系统盘大小。
     */
     @SerializedName("RequiredSystemDiskSize")
     @Expose
     private Long RequiredSystemDiskSize;
 
     /**
-    * 镜像状态，取值：ONLINE、OFFLINE
+    * 镜像状态。
     */
     @SerializedName("BlueprintState")
     @Expose
@@ -244,32 +244,32 @@ public class Blueprint extends AbstractModel{
     }
 
     /**
-     * Get 镜像所需系统盘大小 
-     * @return RequiredSystemDiskSize 镜像所需系统盘大小
+     * Get 镜像所需系统盘大小。 
+     * @return RequiredSystemDiskSize 镜像所需系统盘大小。
      */
     public Long getRequiredSystemDiskSize() {
         return this.RequiredSystemDiskSize;
     }
 
     /**
-     * Set 镜像所需系统盘大小
-     * @param RequiredSystemDiskSize 镜像所需系统盘大小
+     * Set 镜像所需系统盘大小。
+     * @param RequiredSystemDiskSize 镜像所需系统盘大小。
      */
     public void setRequiredSystemDiskSize(Long RequiredSystemDiskSize) {
         this.RequiredSystemDiskSize = RequiredSystemDiskSize;
     }
 
     /**
-     * Get 镜像状态，取值：ONLINE、OFFLINE 
-     * @return BlueprintState 镜像状态，取值：ONLINE、OFFLINE
+     * Get 镜像状态。 
+     * @return BlueprintState 镜像状态。
      */
     public String getBlueprintState() {
         return this.BlueprintState;
     }
 
     /**
-     * Set 镜像状态，取值：ONLINE、OFFLINE
-     * @param BlueprintState 镜像状态，取值：ONLINE、OFFLINE
+     * Set 镜像状态。
+     * @param BlueprintState 镜像状态。
      */
     public void setBlueprintState(String BlueprintState) {
         this.BlueprintState = BlueprintState;

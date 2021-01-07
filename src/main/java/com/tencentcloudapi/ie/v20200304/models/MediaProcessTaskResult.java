@@ -35,6 +35,7 @@ public class MediaProcessTaskResult extends AbstractModel{
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -94,6 +95,14 @@ MediaJoining：视频拼接。
     private MediaJoiningTaskResult MediaJoiningTaskResult;
 
     /**
+    * 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MediaRecognitionTaskResult")
+    @Expose
+    private MediaRecognitionTaskResult MediaRecognitionTaskResult;
+
+    /**
      * Get 编辑处理任务ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 编辑处理任务ID。
@@ -118,11 +127,13 @@ MediaJoining：视频拼接。
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 编辑处理任务类型，取值：
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -134,11 +145,13 @@ MediaJoining：视频拼接。
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 编辑处理任务类型，取值：
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -282,6 +295,26 @@ MediaJoining：视频拼接。
     }
 
     /**
+     * Get 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MediaRecognitionTaskResult 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaRecognitionTaskResult getMediaRecognitionTaskResult() {
+        return this.MediaRecognitionTaskResult;
+    }
+
+    /**
+     * Set 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaRecognitionTaskResult 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMediaRecognitionTaskResult(MediaRecognitionTaskResult MediaRecognitionTaskResult) {
+        this.MediaRecognitionTaskResult = MediaRecognitionTaskResult;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -293,6 +326,7 @@ MediaJoining：视频拼接。
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         this.setParamObj(map, prefix + "MediaCuttingTaskResult.", this.MediaCuttingTaskResult);
         this.setParamObj(map, prefix + "MediaJoiningTaskResult.", this.MediaJoiningTaskResult);
+        this.setParamObj(map, prefix + "MediaRecognitionTaskResult.", this.MediaRecognitionTaskResult);
 
     }
 }

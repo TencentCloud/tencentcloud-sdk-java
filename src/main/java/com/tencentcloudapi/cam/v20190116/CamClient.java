@@ -999,6 +999,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取企业微信子用户列表
+     * @param req ListWeChatWorkSubAccountsRequest
+     * @return ListWeChatWorkSubAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListWeChatWorkSubAccountsResponse ListWeChatWorkSubAccounts(ListWeChatWorkSubAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListWeChatWorkSubAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListWeChatWorkSubAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListWeChatWorkSubAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *设置角色权限边界
      * @param req PutRolePermissionsBoundaryRequest
      * @return PutRolePermissionsBoundaryResponse

@@ -58,7 +58,7 @@ public class DescribeNatRuleOverviewResponse extends AbstractModel{
     private Long TotalNum;
 
     /**
-    * 访问规则剩余条数
+    * 访问控制规则剩余配额
     */
     @SerializedName("RemainNum")
     @Expose
@@ -166,16 +166,16 @@ public class DescribeNatRuleOverviewResponse extends AbstractModel{
     }
 
     /**
-     * Get 访问规则剩余条数 
-     * @return RemainNum 访问规则剩余条数
+     * Get 访问控制规则剩余配额 
+     * @return RemainNum 访问控制规则剩余配额
      */
     public Long getRemainNum() {
         return this.RemainNum;
     }
 
     /**
-     * Set 访问规则剩余条数
-     * @param RemainNum 访问规则剩余条数
+     * Set 访问控制规则剩余配额
+     * @param RemainNum 访问控制规则剩余配额
      */
     public void setRemainNum(Long RemainNum) {
         this.RemainNum = RemainNum;

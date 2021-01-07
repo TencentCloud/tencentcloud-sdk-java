@@ -887,6 +887,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *获取单笔代发转账对账单下载URL
+     * @param req QueryBillDownloadURLRequest
+     * @return QueryBillDownloadURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryBillDownloadURLResponse QueryBillDownloadURL(QueryBillDownloadURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryBillDownloadURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryBillDownloadURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryBillDownloadURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
      * @param req QueryCommonTransferRechargeRequest
      * @return QueryCommonTransferRechargeResponse

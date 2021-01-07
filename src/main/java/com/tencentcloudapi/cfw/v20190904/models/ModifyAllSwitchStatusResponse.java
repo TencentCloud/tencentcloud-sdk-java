@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAllSwitchStatusResponse extends AbstractModel{
 
     /**
-    * 开启或者关闭成功与否状态值
+    * 修改成功与否的状态值 0：修改成功，非 0：修改失败
     */
     @SerializedName("Status")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyAllSwitchStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 开启或者关闭成功与否状态值 
-     * @return Status 开启或者关闭成功与否状态值
+     * Get 修改成功与否的状态值 0：修改成功，非 0：修改失败 
+     * @return Status 修改成功与否的状态值 0：修改成功，非 0：修改失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开启或者关闭成功与否状态值
-     * @param Status 开启或者关闭成功与否状态值
+     * Set 修改成功与否的状态值 0：修改成功，非 0：修改失败
+     * @param Status 修改成功与否的状态值 0：修改成功，非 0：修改失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;

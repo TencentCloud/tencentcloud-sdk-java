@@ -118,6 +118,16 @@ public class Bundle extends AbstractModel{
     private String BundleType;
 
     /**
+    * 套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
+    */
+    @SerializedName("BundleDisplayLabel")
+    @Expose
+    private String BundleDisplayLabel;
+
+    /**
      * Get 套餐 ID。 
      * @return BundleId 套餐 ID。
      */
@@ -342,6 +352,34 @@ public class Bundle extends AbstractModel{
     }
 
     /**
+     * Get 套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐 
+     * @return BundleDisplayLabel 套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
+     */
+    public String getBundleDisplayLabel() {
+        return this.BundleDisplayLabel;
+    }
+
+    /**
+     * Set 套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
+     * @param BundleDisplayLabel 套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
+     */
+    public void setBundleDisplayLabel(String BundleDisplayLabel) {
+        this.BundleDisplayLabel = BundleDisplayLabel;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -358,6 +396,7 @@ public class Bundle extends AbstractModel{
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         this.setParamSimple(map, prefix + "BundleSalesState", this.BundleSalesState);
         this.setParamSimple(map, prefix + "BundleType", this.BundleType);
+        this.setParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
 
     }
 }

@@ -27,6 +27,7 @@ public class MediaProcessInfo extends AbstractModel{
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
     */
     @SerializedName("Type")
     @Expose
@@ -47,14 +48,23 @@ MediaJoining：媒体拼接。
     private MediaJoiningInfo MediaJoiningInfo;
 
     /**
+    * 媒体识别任务参数，Type=MediaRecognition时必选
+    */
+    @SerializedName("MediaRecognitionInfo")
+    @Expose
+    private MediaRecognitionInfo MediaRecognitionInfo;
+
+    /**
      * Get 编辑处理任务类型，可选值：
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
-MediaJoining：媒体拼接。 
+MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。 
      * @return Type 编辑处理任务类型，可选值：
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
      */
     public String getType() {
         return this.Type;
@@ -65,10 +75,12 @@ MediaJoining：媒体拼接。
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
      * @param Type 编辑处理任务类型，可选值：
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -107,12 +119,29 @@ MediaJoining：媒体拼接。
     }
 
     /**
+     * Get 媒体识别任务参数，Type=MediaRecognition时必选 
+     * @return MediaRecognitionInfo 媒体识别任务参数，Type=MediaRecognition时必选
+     */
+    public MediaRecognitionInfo getMediaRecognitionInfo() {
+        return this.MediaRecognitionInfo;
+    }
+
+    /**
+     * Set 媒体识别任务参数，Type=MediaRecognition时必选
+     * @param MediaRecognitionInfo 媒体识别任务参数，Type=MediaRecognition时必选
+     */
+    public void setMediaRecognitionInfo(MediaRecognitionInfo MediaRecognitionInfo) {
+        this.MediaRecognitionInfo = MediaRecognitionInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "MediaCuttingInfo.", this.MediaCuttingInfo);
         this.setParamObj(map, prefix + "MediaJoiningInfo.", this.MediaJoiningInfo);
+        this.setParamObj(map, prefix + "MediaRecognitionInfo.", this.MediaRecognitionInfo);
 
     }
 }

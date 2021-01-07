@@ -59,6 +59,26 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *保存游戏存档
+     * @param req SaveGameArchiveRequest
+     * @return SaveGameArchiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaveGameArchiveResponse SaveGameArchive(SaveGameArchiveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SaveGameArchiveResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SaveGameArchiveResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SaveGameArchive");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *强制退出游戏
      * @param req StopGameRequest
      * @return StopGameResponse
@@ -71,6 +91,26 @@ public class GsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopGameResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopGame");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *切换游戏存档
+     * @param req SwitchGameArchiveRequest
+     * @return SwitchGameArchiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchGameArchiveResponse SwitchGameArchive(SwitchGameArchiveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchGameArchiveResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchGameArchiveResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchGameArchive");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

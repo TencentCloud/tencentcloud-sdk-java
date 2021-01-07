@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSyncAssetStatusResponse extends AbstractModel{
 
     /**
-    * 0：同步成功，1：资产更新中，2：后台同步调用失败
+    * 1-更新中 2-更新完成 3、4-更新失败
     */
     @SerializedName("Status")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSyncAssetStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 0：同步成功，1：资产更新中，2：后台同步调用失败 
-     * @return Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * Get 1-更新中 2-更新完成 3、4-更新失败 
+     * @return Status 1-更新中 2-更新完成 3、4-更新失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0：同步成功，1：资产更新中，2：后台同步调用失败
-     * @param Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * Set 1-更新中 2-更新完成 3、4-更新失败
+     * @param Status 1-更新中 2-更新完成 3、4-更新失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSecurityGroupListResponse extends AbstractModel{
 
     /**
-    * 总条数
+    * 列表当前规则总条数
     */
     @SerializedName("Total")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeSecurityGroupListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return Total 总条数
+     * Get 列表当前规则总条数 
+     * @return Total 列表当前规则总条数
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总条数
-     * @param Total 总条数
+     * Set 列表当前规则总条数
+     * @param Total 列表当前规则总条数
      */
     public void setTotal(Long Total) {
         this.Total = Total;

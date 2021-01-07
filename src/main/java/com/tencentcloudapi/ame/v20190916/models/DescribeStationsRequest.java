@@ -30,7 +30,7 @@ public class DescribeStationsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * offset (Default = 0)，(当前页-1) * Limit
+    * offset (Default = 0)，Offset=Offset+Limit
     */
     @SerializedName("Offset")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeStationsRequest extends AbstractModel{
     }
 
     /**
-     * Get offset (Default = 0)，(当前页-1) * Limit 
-     * @return Offset offset (Default = 0)，(当前页-1) * Limit
+     * Get offset (Default = 0)，Offset=Offset+Limit 
+     * @return Offset offset (Default = 0)，Offset=Offset+Limit
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set offset (Default = 0)，(当前页-1) * Limit
-     * @param Offset offset (Default = 0)，(当前页-1) * Limit
+     * Set offset (Default = 0)，Offset=Offset+Limit
+     * @param Offset offset (Default = 0)，Offset=Offset+Limit
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

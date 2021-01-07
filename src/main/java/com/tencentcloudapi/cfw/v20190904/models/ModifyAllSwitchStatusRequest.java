@@ -30,7 +30,7 @@ public class ModifyAllSwitchStatusRequest extends AbstractModel{
     private Long Status;
 
     /**
-    * 0: 边界防火墙开关，1：vpc防火墙开关
+    * 0: 互联网边界防火墙开关，1：vpc防火墙开关
     */
     @SerializedName("Type")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyAllSwitchStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 0: 边界防火墙开关，1：vpc防火墙开关 
-     * @return Type 0: 边界防火墙开关，1：vpc防火墙开关
+     * Get 0: 互联网边界防火墙开关，1：vpc防火墙开关 
+     * @return Type 0: 互联网边界防火墙开关，1：vpc防火墙开关
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 0: 边界防火墙开关，1：vpc防火墙开关
-     * @param Type 0: 边界防火墙开关，1：vpc防火墙开关
+     * Set 0: 互联网边界防火墙开关，1：vpc防火墙开关
+     * @param Type 0: 互联网边界防火墙开关，1：vpc防火墙开关
      */
     public void setType(Long Type) {
         this.Type = Type;

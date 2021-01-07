@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DeleteAllAccessControlRuleRequest extends AbstractModel{
 
     /**
-    * 方向，0：出站，1：入站
+    * 方向，0：出站，1：入站  默认值是 0
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-    * VPC间防火墙开关ID
+    * VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
     */
     @SerializedName("EdgeId")
     @Expose
     private String EdgeId;
 
     /**
-    * nat地域
+    * nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get 方向，0：出站，1：入站 
-     * @return Direction 方向，0：出站，1：入站
+     * Get 方向，0：出站，1：入站  默认值是 0 
+     * @return Direction 方向，0：出站，1：入站  默认值是 0
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 方向，0：出站，1：入站
-     * @param Direction 方向，0：出站，1：入站
+     * Set 方向，0：出站，1：入站  默认值是 0
+     * @param Direction 方向，0：出站，1：入站  默认值是 0
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get VPC间防火墙开关ID 
-     * @return EdgeId VPC间防火墙开关ID
+     * Get VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’ 
+     * @return EdgeId VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
      */
     public String getEdgeId() {
         return this.EdgeId;
     }
 
     /**
-     * Set VPC间防火墙开关ID
-     * @param EdgeId VPC间防火墙开关ID
+     * Set VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
+     * @param EdgeId VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;
     }
 
     /**
-     * Get nat地域 
-     * @return Area nat地域
+     * Get nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’ 
+     * @return Area nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set nat地域
-     * @param Area nat地域
+     * Set nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
+     * @param Area nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
      */
     public void setArea(String Area) {
         this.Area = Area;

@@ -1219,6 +1219,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *预付费实例续费，同时支持按量计费转包年包月
+     * @param req RenewInstanceRequest
+     * @return RenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RenewInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询个人版用户命名空间是否存在
      * @param req ValidateNamespaceExistPersonalRequest
      * @return ValidateNamespaceExistPersonalResponse

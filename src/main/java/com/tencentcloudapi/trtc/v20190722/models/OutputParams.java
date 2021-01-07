@@ -37,7 +37,7 @@ public class OutputParams extends AbstractModel{
     private Long PureAudioStream;
 
     /**
-    * 自定义录制文件名
+    * 自定义录制文件名。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768
     */
     @SerializedName("RecordId")
     @Expose
@@ -83,16 +83,16 @@ public class OutputParams extends AbstractModel{
     }
 
     /**
-     * Get 自定义录制文件名 
-     * @return RecordId 自定义录制文件名
+     * Get 自定义录制文件名。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768 
+     * @return RecordId 自定义录制文件名。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 自定义录制文件名
-     * @param RecordId 自定义录制文件名
+     * Set 自定义录制文件名。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768
+     * @param RecordId 自定义录制文件名。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

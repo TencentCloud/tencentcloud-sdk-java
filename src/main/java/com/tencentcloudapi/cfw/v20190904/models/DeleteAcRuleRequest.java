@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DeleteAcRuleRequest extends AbstractModel{
 
     /**
-    * id值
+    * 删除规则对应的id值 669872
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 出站还是入站
+    * 方向，0：出站，1：入站
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-    * EdgeId值
+    * EdgeId值两个vpc间的边id
     */
     @SerializedName("EdgeId")
     @Expose
@@ -51,48 +51,48 @@ public class DeleteAcRuleRequest extends AbstractModel{
     private String Area;
 
     /**
-     * Get id值 
-     * @return Id id值
+     * Get 删除规则对应的id值 669872 
+     * @return Id 删除规则对应的id值 669872
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set id值
-     * @param Id id值
+     * Set 删除规则对应的id值 669872
+     * @param Id 删除规则对应的id值 669872
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 出站还是入站 
-     * @return Direction 出站还是入站
+     * Get 方向，0：出站，1：入站 
+     * @return Direction 方向，0：出站，1：入站
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 出站还是入站
-     * @param Direction 出站还是入站
+     * Set 方向，0：出站，1：入站
+     * @param Direction 方向，0：出站，1：入站
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get EdgeId值 
-     * @return EdgeId EdgeId值
+     * Get EdgeId值两个vpc间的边id 
+     * @return EdgeId EdgeId值两个vpc间的边id
      */
     public String getEdgeId() {
         return this.EdgeId;
     }
 
     /**
-     * Set EdgeId值
-     * @param EdgeId EdgeId值
+     * Set EdgeId值两个vpc间的边id
+     * @param EdgeId EdgeId值两个vpc间的边id
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;

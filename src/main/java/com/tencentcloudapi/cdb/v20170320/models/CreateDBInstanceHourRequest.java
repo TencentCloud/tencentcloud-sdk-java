@@ -142,7 +142,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String SlaveZone;
 
     /**
-    * 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+    * 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
     */
     @SerializedName("BackupZone")
     @Expose
@@ -491,16 +491,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。 
-     * @return BackupZone 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * Get 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。 
+     * @return BackupZone 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
      */
     public String getBackupZone() {
         return this.BackupZone;
     }
 
     /**
-     * Set 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
-     * @param BackupZone 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * Set 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
+     * @param BackupZone 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
      */
     public void setBackupZone(String BackupZone) {
         this.BackupZone = BackupZone;

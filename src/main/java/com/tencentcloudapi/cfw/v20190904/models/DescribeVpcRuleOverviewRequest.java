@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeVpcRuleOverviewRequest extends AbstractModel{
 
     /**
-    * 边id
+    * EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
     */
     @SerializedName("EdgeId")
     @Expose
     private String EdgeId;
 
     /**
-     * Get 边id 
-     * @return EdgeId 边id
+     * Get EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则 
+     * @return EdgeId EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
      */
     public String getEdgeId() {
         return this.EdgeId;
     }
 
     /**
-     * Set 边id
-     * @param EdgeId 边id
+     * Set EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
+     * @param EdgeId EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;

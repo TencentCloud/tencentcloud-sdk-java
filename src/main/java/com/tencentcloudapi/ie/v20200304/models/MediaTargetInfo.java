@@ -25,8 +25,8 @@ public class MediaTargetInfo extends AbstractModel{
     /**
     * 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
     */
     @SerializedName("FileName")
@@ -59,13 +59,13 @@ NoListFile：不存储结果列表。
     /**
      * Get 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号； 
      * @return FileName 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
      */
     public String getFileName() {
@@ -75,13 +75,13 @@ index：序号；
     /**
      * Set 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
      * @param FileName 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
      */
     public void setFileName(String FileName) {

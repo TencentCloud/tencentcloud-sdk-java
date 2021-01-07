@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeTableStatusRequest extends AbstractModel{
 
     /**
-    * EdgeId值
+    * EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
     */
     @SerializedName("EdgeId")
     @Expose
     private String EdgeId;
 
     /**
-    * 状态值，0：检查表的状态
+    * 状态值，0：检查表的状态 确实只有一个默认值
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Nat所在地域
+    * Nat所在地域 NAT填Area，不要填Edgeid；
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 方向，0：出站，1：入站
+    * 方向，0：出站，1：入站 默认值为 0
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-     * Get EdgeId值 
-     * @return EdgeId EdgeId值
+     * Get EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area； 
+     * @return EdgeId EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
      */
     public String getEdgeId() {
         return this.EdgeId;
     }
 
     /**
-     * Set EdgeId值
-     * @param EdgeId EdgeId值
+     * Set EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
+     * @param EdgeId EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;
     }
 
     /**
-     * Get 状态值，0：检查表的状态 
-     * @return Status 状态值，0：检查表的状态
+     * Get 状态值，0：检查表的状态 确实只有一个默认值 
+     * @return Status 状态值，0：检查表的状态 确实只有一个默认值
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值，0：检查表的状态
-     * @param Status 状态值，0：检查表的状态
+     * Set 状态值，0：检查表的状态 确实只有一个默认值
+     * @param Status 状态值，0：检查表的状态 确实只有一个默认值
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Nat所在地域 
-     * @return Area Nat所在地域
+     * Get Nat所在地域 NAT填Area，不要填Edgeid； 
+     * @return Area Nat所在地域 NAT填Area，不要填Edgeid；
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Nat所在地域
-     * @param Area Nat所在地域
+     * Set Nat所在地域 NAT填Area，不要填Edgeid；
+     * @param Area Nat所在地域 NAT填Area，不要填Edgeid；
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 方向，0：出站，1：入站 
-     * @return Direction 方向，0：出站，1：入站
+     * Get 方向，0：出站，1：入站 默认值为 0 
+     * @return Direction 方向，0：出站，1：入站 默认值为 0
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 方向，0：出站，1：入站
-     * @param Direction 方向，0：出站，1：入站
+     * Set 方向，0：出站，1：入站 默认值为 0
+     * @param Direction 方向，0：出站，1：入站 默认值为 0
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;

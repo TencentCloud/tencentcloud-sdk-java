@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePackagesResponse extends AbstractModel{
 
     /**
-    * 已购曲库包数组
+    * 已购曲库包列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Packages")
@@ -38,9 +38,9 @@ public class DescribePackagesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 已购曲库包数组
+     * Get 已购曲库包列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Packages 已购曲库包数组
+     * @return Packages 已购曲库包列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Package [] getPackages() {
@@ -48,9 +48,9 @@ public class DescribePackagesResponse extends AbstractModel{
     }
 
     /**
-     * Set 已购曲库包数组
+     * Set 已购曲库包列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Packages 已购曲库包数组
+     * @param Packages 已购曲库包列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackages(Package [] Packages) {

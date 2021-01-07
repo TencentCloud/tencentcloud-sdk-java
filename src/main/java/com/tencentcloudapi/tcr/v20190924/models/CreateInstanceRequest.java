@@ -44,6 +44,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private TagSpecification TagSpecification;
 
     /**
+    * 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+    */
+    @SerializedName("RegistryChargeType")
+    @Expose
+    private Long RegistryChargeType;
+
+    /**
      * Get 企业版实例名称 
      * @return RegistryName 企业版实例名称
      */
@@ -92,12 +99,29 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费 
+     * @return RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+     */
+    public Long getRegistryChargeType() {
+        return this.RegistryChargeType;
+    }
+
+    /**
+     * Set 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+     * @param RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+     */
+    public void setRegistryChargeType(Long RegistryChargeType) {
+        this.RegistryChargeType = RegistryChargeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryName", this.RegistryName);
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
 
     }
 }

@@ -289,6 +289,20 @@ global：全球加速
     private Ipv6Access Ipv6Access;
 
     /**
+    * 离线缓存
+    */
+    @SerializedName("OfflineCache")
+    @Expose
+    private OfflineCache OfflineCache;
+
+    /**
+    * 合并回源
+    */
+    @SerializedName("OriginCombine")
+    @Expose
+    private OriginCombine OriginCombine;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -909,6 +923,38 @@ global：全球加速
     }
 
     /**
+     * Get 离线缓存 
+     * @return OfflineCache 离线缓存
+     */
+    public OfflineCache getOfflineCache() {
+        return this.OfflineCache;
+    }
+
+    /**
+     * Set 离线缓存
+     * @param OfflineCache 离线缓存
+     */
+    public void setOfflineCache(OfflineCache OfflineCache) {
+        this.OfflineCache = OfflineCache;
+    }
+
+    /**
+     * Get 合并回源 
+     * @return OriginCombine 合并回源
+     */
+    public OriginCombine getOriginCombine() {
+        return this.OriginCombine;
+    }
+
+    /**
+     * Set 合并回源
+     * @param OriginCombine 合并回源
+     */
+    public void setOriginCombine(OriginCombine OriginCombine) {
+        this.OriginCombine = OriginCombine;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -949,6 +995,8 @@ global：全球加速
         this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
         this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+        this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
 
     }
 }

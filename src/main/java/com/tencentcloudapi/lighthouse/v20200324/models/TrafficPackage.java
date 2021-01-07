@@ -30,7 +30,7 @@ public class TrafficPackage extends AbstractModel{
     private String TrafficPackageId;
 
     /**
-    * 流量包生效周期内的总流量，单位字节。
+    * 流量包生效周期内已使用流量，单位字节。
     */
     @SerializedName("TrafficUsed")
     @Expose
@@ -110,16 +110,16 @@ public class TrafficPackage extends AbstractModel{
     }
 
     /**
-     * Get 流量包生效周期内的总流量，单位字节。 
-     * @return TrafficUsed 流量包生效周期内的总流量，单位字节。
+     * Get 流量包生效周期内已使用流量，单位字节。 
+     * @return TrafficUsed 流量包生效周期内已使用流量，单位字节。
      */
     public Long getTrafficUsed() {
         return this.TrafficUsed;
     }
 
     /**
-     * Set 流量包生效周期内的总流量，单位字节。
-     * @param TrafficUsed 流量包生效周期内的总流量，单位字节。
+     * Set 流量包生效周期内已使用流量，单位字节。
+     * @param TrafficUsed 流量包生效周期内已使用流量，单位字节。
      */
     public void setTrafficUsed(Long TrafficUsed) {
         this.TrafficUsed = TrafficUsed;

@@ -108,6 +108,30 @@ public class Registry extends AbstractModel{
     private TagSpecification TagSpecification;
 
     /**
+    * 实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpiredAt")
+    @Expose
+    private String ExpiredAt;
+
+    /**
+    * 实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMod")
+    @Expose
+    private Long PayMod;
+
+    /**
+    * 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -304,6 +328,66 @@ public class Registry extends AbstractModel{
     }
 
     /**
+     * Get 实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpiredAt 实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpiredAt() {
+        return this.ExpiredAt;
+    }
+
+    /**
+     * Set 实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpiredAt 实例过期时间（预付费）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpiredAt(String ExpiredAt) {
+        this.ExpiredAt = ExpiredAt;
+    }
+
+    /**
+     * Get 实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMod 实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPayMod() {
+        return this.PayMod;
+    }
+
+    /**
+     * Set 实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMod 实例付费类型，0表示后付费，1表示预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMod(Long PayMod) {
+        this.PayMod = PayMod;
+    }
+
+    /**
+     * Get 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +403,9 @@ public class Registry extends AbstractModel{
         this.setParamSimple(map, prefix + "TokenValidTime", this.TokenValidTime);
         this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
+        this.setParamSimple(map, prefix + "PayMod", this.PayMod);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

@@ -1,0 +1,293 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.ame.v20190916.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class MusicOpenDetail extends AbstractModel{
+
+    /**
+    * 音乐Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MusicId")
+    @Expose
+    private String MusicId;
+
+    /**
+    * 专辑名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlbumName")
+    @Expose
+    private String AlbumName;
+
+    /**
+    * 专辑图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlbumImageUrl")
+    @Expose
+    private String AlbumImageUrl;
+
+    /**
+    * 音乐名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MusicName")
+    @Expose
+    private String MusicName;
+
+    /**
+    * 音乐图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MusicImageUrl")
+    @Expose
+    private String MusicImageUrl;
+
+    /**
+    * 歌手
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Singers")
+    @Expose
+    private String [] Singers;
+
+    /**
+    * 播放时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Long Duration;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
+    * 歌词url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LyricUrl")
+    @Expose
+    private String LyricUrl;
+
+    /**
+     * Get 音乐Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MusicId 音乐Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMusicId() {
+        return this.MusicId;
+    }
+
+    /**
+     * Set 音乐Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MusicId 音乐Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMusicId(String MusicId) {
+        this.MusicId = MusicId;
+    }
+
+    /**
+     * Get 专辑名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlbumName 专辑名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlbumName() {
+        return this.AlbumName;
+    }
+
+    /**
+     * Set 专辑名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlbumName 专辑名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlbumName(String AlbumName) {
+        this.AlbumName = AlbumName;
+    }
+
+    /**
+     * Get 专辑图片路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlbumImageUrl 专辑图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlbumImageUrl() {
+        return this.AlbumImageUrl;
+    }
+
+    /**
+     * Set 专辑图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlbumImageUrl 专辑图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlbumImageUrl(String AlbumImageUrl) {
+        this.AlbumImageUrl = AlbumImageUrl;
+    }
+
+    /**
+     * Get 音乐名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MusicName 音乐名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMusicName() {
+        return this.MusicName;
+    }
+
+    /**
+     * Set 音乐名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MusicName 音乐名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMusicName(String MusicName) {
+        this.MusicName = MusicName;
+    }
+
+    /**
+     * Get 音乐图片路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MusicImageUrl 音乐图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMusicImageUrl() {
+        return this.MusicImageUrl;
+    }
+
+    /**
+     * Set 音乐图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MusicImageUrl 音乐图片路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMusicImageUrl(String MusicImageUrl) {
+        this.MusicImageUrl = MusicImageUrl;
+    }
+
+    /**
+     * Get 歌手
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Singers 歌手
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSingers() {
+        return this.Singers;
+    }
+
+    /**
+     * Set 歌手
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Singers 歌手
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSingers(String [] Singers) {
+        this.Singers = Singers;
+    }
+
+    /**
+     * Get 播放时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Duration 播放时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 播放时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Duration 播放时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDuration(Long Duration) {
+        this.Duration = Duration;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 歌词url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LyricUrl 歌词url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLyricUrl() {
+        return this.LyricUrl;
+    }
+
+    /**
+     * Set 歌词url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LyricUrl 歌词url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLyricUrl(String LyricUrl) {
+        this.LyricUrl = LyricUrl;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MusicId", this.MusicId);
+        this.setParamSimple(map, prefix + "AlbumName", this.AlbumName);
+        this.setParamSimple(map, prefix + "AlbumImageUrl", this.AlbumImageUrl);
+        this.setParamSimple(map, prefix + "MusicName", this.MusicName);
+        this.setParamSimple(map, prefix + "MusicImageUrl", this.MusicImageUrl);
+        this.setParamArraySimple(map, prefix + "Singers.", this.Singers);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LyricUrl", this.LyricUrl);
+
+    }
+}
+

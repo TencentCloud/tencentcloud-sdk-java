@@ -255,6 +255,13 @@ global：全球加速
     private Ipv6Access Ipv6Access;
 
     /**
+    * 离线缓存
+    */
+    @SerializedName("OfflineCache")
+    @Expose
+    private OfflineCache OfflineCache;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -799,6 +806,22 @@ global：全球加速
     }
 
     /**
+     * Get 离线缓存 
+     * @return OfflineCache 离线缓存
+     */
+    public OfflineCache getOfflineCache() {
+        return this.OfflineCache;
+    }
+
+    /**
+     * Set 离线缓存
+     * @param OfflineCache 离线缓存
+     */
+    public void setOfflineCache(OfflineCache OfflineCache) {
+        this.OfflineCache = OfflineCache;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -834,6 +857,7 @@ global：全球加速
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
 
     }
 }

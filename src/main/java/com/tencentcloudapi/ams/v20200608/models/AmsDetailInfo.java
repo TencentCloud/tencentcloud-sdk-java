@@ -121,6 +121,13 @@ public class AmsDetailInfo extends AbstractModel{
     private String RequestId;
 
     /**
+    * 音频机审状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 标签 
      * @return Label 标签
      */
@@ -345,6 +352,22 @@ public class AmsDetailInfo extends AbstractModel{
     }
 
     /**
+     * Get 音频机审状态 
+     * @return Status 音频机审状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 音频机审状态
+     * @param Status 音频机审状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class AmsDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "DetailCount", this.DetailCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

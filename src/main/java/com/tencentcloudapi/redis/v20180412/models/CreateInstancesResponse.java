@@ -30,7 +30,7 @@ public class CreateInstancesResponse extends AbstractModel{
     private String DealId;
 
     /**
-    * 实例ID(该字段灰度中，部分地域不可见)
+    * 实例ID
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -60,16 +60,16 @@ public class CreateInstancesResponse extends AbstractModel{
     }
 
     /**
-     * Get 实例ID(该字段灰度中，部分地域不可见) 
-     * @return InstanceIds 实例ID(该字段灰度中，部分地域不可见)
+     * Get 实例ID 
+     * @return InstanceIds 实例ID
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID(该字段灰度中，部分地域不可见)
-     * @param InstanceIds 实例ID(该字段灰度中，部分地域不可见)
+     * Set 实例ID
+     * @param InstanceIds 实例ID
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

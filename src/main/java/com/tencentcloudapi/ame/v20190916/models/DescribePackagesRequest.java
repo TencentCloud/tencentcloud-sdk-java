@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePackagesRequest extends AbstractModel{
 
     /**
-    * 默认0
+    * 默认0，Offset=Offset+Length
     */
     @SerializedName("Offset")
     @Expose
@@ -37,16 +37,16 @@ public class DescribePackagesRequest extends AbstractModel{
     private Long Length;
 
     /**
-     * Get 默认0 
-     * @return Offset 默认0
+     * Get 默认0，Offset=Offset+Length 
+     * @return Offset 默认0，Offset=Offset+Length
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 默认0
-     * @param Offset 默认0
+     * Set 默认0，Offset=Offset+Length
+     * @param Offset 默认0，Offset=Offset+Length
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

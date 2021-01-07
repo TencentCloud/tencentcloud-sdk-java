@@ -44,7 +44,7 @@ public class ModifySequenceRulesRequest extends AbstractModel{
     private String Area;
 
     /**
-    * 0：出向，1：入向
+    * 方向，0：出向，1：入向
     */
     @SerializedName("Direction")
     @Expose
@@ -99,16 +99,16 @@ public class ModifySequenceRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 0：出向，1：入向 
-     * @return Direction 0：出向，1：入向
+     * Get 方向，0：出向，1：入向 
+     * @return Direction 方向，0：出向，1：入向
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 0：出向，1：入向
-     * @param Direction 0：出向，1：入向
+     * Set 方向，0：出向，1：入向
+     * @param Direction 方向，0：出向，1：入向
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;

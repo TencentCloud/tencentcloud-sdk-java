@@ -30,7 +30,7 @@ public class CreateAcRulesRequest extends AbstractModel{
     private RuleInfoData [] Data;
 
     /**
-    * 0：添加，1：插入
+    * 0：添加（默认），1：插入
     */
     @SerializedName("Type")
     @Expose
@@ -95,16 +95,16 @@ public class CreateAcRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 0：添加，1：插入 
-     * @return Type 0：添加，1：插入
+     * Get 0：添加（默认），1：插入 
+     * @return Type 0：添加（默认），1：插入
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 0：添加，1：插入
-     * @param Type 0：添加，1：插入
+     * Set 0：添加（默认），1：插入
+     * @param Type 0：添加（默认），1：插入
      */
     public void setType(Long Type) {
         this.Type = Type;

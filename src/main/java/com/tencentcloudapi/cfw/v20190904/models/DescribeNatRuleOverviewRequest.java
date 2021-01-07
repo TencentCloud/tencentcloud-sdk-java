@@ -23,46 +23,121 @@ import java.util.HashMap;
 public class DescribeNatRuleOverviewRequest extends AbstractModel{
 
     /**
-    * 方向，0：出站，1：入站
+    * 方向，0：出站，1：入站 默认值：0
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-    * NAT地域
+    * NAT地域  这个是必填项，填入相关的英文，'ap-beijing-fsi': '北京金融',
+        'ap-beijing': '北京',
+        'ap-changsha-ec': '长沙EC',
+        'ap-chengdu': '成都',
+        'ap-chongqing': '重庆',
+        'ap-fuzhou-ec': '福州EC',
+        'ap-guangzhou-open': '广州Open',
+        'ap-guangzhou': '广州',
+        'ap-hangzhou-ec': '杭州EC',
+        'ap-jinan-ec': '济南EC',
+        'ap-nanjing': '南京',
+        'ap-shanghai-fsi': '上海金融',
+        'ap-shanghai': '上海',
+        'ap-shenzhen-fsi': '深圳金融',
+        'ap-shenzhen': '深圳',
+        'ap-wuhan-ec': '武汉EC'
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get 方向，0：出站，1：入站 
-     * @return Direction 方向，0：出站，1：入站
+     * Get 方向，0：出站，1：入站 默认值：0 
+     * @return Direction 方向，0：出站，1：入站 默认值：0
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 方向，0：出站，1：入站
-     * @param Direction 方向，0：出站，1：入站
+     * Set 方向，0：出站，1：入站 默认值：0
+     * @param Direction 方向，0：出站，1：入站 默认值：0
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get NAT地域 
-     * @return Area NAT地域
+     * Get NAT地域  这个是必填项，填入相关的英文，'ap-beijing-fsi': '北京金融',
+        'ap-beijing': '北京',
+        'ap-changsha-ec': '长沙EC',
+        'ap-chengdu': '成都',
+        'ap-chongqing': '重庆',
+        'ap-fuzhou-ec': '福州EC',
+        'ap-guangzhou-open': '广州Open',
+        'ap-guangzhou': '广州',
+        'ap-hangzhou-ec': '杭州EC',
+        'ap-jinan-ec': '济南EC',
+        'ap-nanjing': '南京',
+        'ap-shanghai-fsi': '上海金融',
+        'ap-shanghai': '上海',
+        'ap-shenzhen-fsi': '深圳金融',
+        'ap-shenzhen': '深圳',
+        'ap-wuhan-ec': '武汉EC' 
+     * @return Area NAT地域  这个是必填项，填入相关的英文，'ap-beijing-fsi': '北京金融',
+        'ap-beijing': '北京',
+        'ap-changsha-ec': '长沙EC',
+        'ap-chengdu': '成都',
+        'ap-chongqing': '重庆',
+        'ap-fuzhou-ec': '福州EC',
+        'ap-guangzhou-open': '广州Open',
+        'ap-guangzhou': '广州',
+        'ap-hangzhou-ec': '杭州EC',
+        'ap-jinan-ec': '济南EC',
+        'ap-nanjing': '南京',
+        'ap-shanghai-fsi': '上海金融',
+        'ap-shanghai': '上海',
+        'ap-shenzhen-fsi': '深圳金融',
+        'ap-shenzhen': '深圳',
+        'ap-wuhan-ec': '武汉EC'
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set NAT地域
-     * @param Area NAT地域
+     * Set NAT地域  这个是必填项，填入相关的英文，'ap-beijing-fsi': '北京金融',
+        'ap-beijing': '北京',
+        'ap-changsha-ec': '长沙EC',
+        'ap-chengdu': '成都',
+        'ap-chongqing': '重庆',
+        'ap-fuzhou-ec': '福州EC',
+        'ap-guangzhou-open': '广州Open',
+        'ap-guangzhou': '广州',
+        'ap-hangzhou-ec': '杭州EC',
+        'ap-jinan-ec': '济南EC',
+        'ap-nanjing': '南京',
+        'ap-shanghai-fsi': '上海金融',
+        'ap-shanghai': '上海',
+        'ap-shenzhen-fsi': '深圳金融',
+        'ap-shenzhen': '深圳',
+        'ap-wuhan-ec': '武汉EC'
+     * @param Area NAT地域  这个是必填项，填入相关的英文，'ap-beijing-fsi': '北京金融',
+        'ap-beijing': '北京',
+        'ap-changsha-ec': '长沙EC',
+        'ap-chengdu': '成都',
+        'ap-chongqing': '重庆',
+        'ap-fuzhou-ec': '福州EC',
+        'ap-guangzhou-open': '广州Open',
+        'ap-guangzhou': '广州',
+        'ap-hangzhou-ec': '杭州EC',
+        'ap-jinan-ec': '济南EC',
+        'ap-nanjing': '南京',
+        'ap-shanghai-fsi': '上海金融',
+        'ap-shanghai': '上海',
+        'ap-shenzhen-fsi': '深圳金融',
+        'ap-shenzhen': '深圳',
+        'ap-wuhan-ec': '武汉EC'
      */
     public void setArea(String Area) {
         this.Area = Area;

@@ -37,6 +37,13 @@ public class CreateProjectRequest extends AbstractModel{
     private String ProjectDesc;
 
     /**
+    * 实例ID，不带实例ID，默认为公共实例
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 项目名称 
      * @return ProjectName 项目名称
      */
@@ -69,11 +76,28 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例ID，不带实例ID，默认为公共实例 
+     * @return InstanceId 实例ID，不带实例ID，默认为公共实例
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID，不带实例ID，默认为公共实例
+     * @param InstanceId 实例ID，不带实例ID，默认为公共实例
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "ProjectDesc", this.ProjectDesc);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

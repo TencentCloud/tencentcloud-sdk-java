@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribePackageItemsRequest extends AbstractModel{
 
     /**
-    * 订单id
+    * 订单id，从获取已购曲库包列表中获取
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 默认0
+    * 默认0，Offset=Offset+Length
     */
     @SerializedName("Offset")
     @Expose
@@ -44,32 +44,32 @@ public class DescribePackageItemsRequest extends AbstractModel{
     private Long Length;
 
     /**
-     * Get 订单id 
-     * @return OrderId 订单id
+     * Get 订单id，从获取已购曲库包列表中获取 
+     * @return OrderId 订单id，从获取已购曲库包列表中获取
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单id
-     * @param OrderId 订单id
+     * Set 订单id，从获取已购曲库包列表中获取
+     * @param OrderId 订单id，从获取已购曲库包列表中获取
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 默认0 
-     * @return Offset 默认0
+     * Get 默认0，Offset=Offset+Length 
+     * @return Offset 默认0，Offset=Offset+Length
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 默认0
-     * @param Offset 默认0
+     * Set 默认0，Offset=Offset+Length
+     * @param Offset 默认0，Offset=Offset+Length
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

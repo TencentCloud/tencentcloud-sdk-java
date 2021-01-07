@@ -31,7 +31,6 @@ public class HaVip extends AbstractModel{
 
     /**
     * HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HaVipName")
     @Expose
@@ -67,7 +66,6 @@ public class HaVip extends AbstractModel{
 
     /**
     * 被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -75,7 +73,6 @@ public class HaVip extends AbstractModel{
 
     /**
     * 绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressIp")
     @Expose
@@ -99,7 +96,6 @@ UNBIND：未绑定。
 
     /**
     * 使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
     @Expose
@@ -122,10 +118,8 @@ UNBIND：未绑定。
     }
 
     /**
-     * Get HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HAVIP名称。 
      * @return HaVipName HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHaVipName() {
         return this.HaVipName;
@@ -133,9 +127,7 @@ UNBIND：未绑定。
 
     /**
      * Set HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HaVipName HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;
@@ -206,10 +198,8 @@ UNBIND：未绑定。
     }
 
     /**
-     * Get 被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被绑定的实例ID。 
      * @return InstanceId 被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -217,19 +207,15 @@ UNBIND：未绑定。
 
     /**
      * Set 被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定EIP。 
      * @return AddressIp 绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressIp() {
         return this.AddressIp;
@@ -237,9 +223,7 @@ UNBIND：未绑定。
 
     /**
      * Set 绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressIp 绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;
@@ -286,10 +270,8 @@ UNBIND：未绑定。
     }
 
     /**
-     * Get 使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用havip的业务标识。 
      * @return Business 使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusiness() {
         return this.Business;
@@ -297,9 +279,7 @@ UNBIND：未绑定。
 
     /**
      * Set 使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Business 使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(String Business) {
         this.Business = Business;

@@ -39,6 +39,66 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *获取授权项目信息列表
+     * @param req DescribeAuthInfoRequest
+     * @return DescribeAuthInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthInfoResponse DescribeAuthInfo(DescribeAuthInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuthInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuthInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuthInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取云音乐播放信息接口
+     * @param req DescribeCloudMusicRequest
+     * @return DescribeCloudMusicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudMusicResponse DescribeCloudMusic(DescribeCloudMusicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudMusicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudMusicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudMusic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取授权项目下已购云音乐列表
+     * @param req DescribeCloudMusicPurchasedRequest
+     * @return DescribeCloudMusicPurchasedResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudMusicPurchasedResponse DescribeCloudMusicPurchased(DescribeCloudMusicPurchasedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudMusicPurchasedResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudMusicPurchasedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudMusicPurchased");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据歌曲ID查询歌曲信息
      * @param req DescribeItemByIdRequest
      * @return DescribeItemByIdResponse
@@ -59,7 +119,7 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *分类内容下歌曲列表获取，根据CategoryID或CategoryCode
+     *该服务后续会停用，不再建议使用
      * @param req DescribeItemsRequest
      * @return DescribeItemsResponse
      * @throws TencentCloudSDKException
@@ -99,7 +159,7 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *根据接口的模式及歌曲ID来取得对应权限的歌曲播放地址等信息。
+     *获取曲库包歌曲播放信息接口
      * @param req DescribeMusicRequest
      * @return DescribeMusicResponse
      * @throws TencentCloudSDKException
@@ -119,7 +179,7 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *查询曲库包已核验歌曲列表接口
+     *获取曲库包下已核销歌曲列表接口
      * @param req DescribePackageItemsRequest
      * @return DescribePackageItemsResponse
      * @throws TencentCloudSDKException
@@ -139,7 +199,7 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *查询已购曲库包列表接口
+     *获取已购曲库包列表接口
      * @param req DescribePackagesRequest
      * @return DescribePackagesResponse
      * @throws TencentCloudSDKException
@@ -159,7 +219,7 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
-     *获取素材库列表时使用
+     *该服务后续会停用，不再建议使用
      * @param req DescribeStationsRequest
      * @return DescribeStationsResponse
      * @throws TencentCloudSDKException
