@@ -135,6 +135,13 @@ public class CreateSessionRequest extends AbstractModel{
     private String Role;
 
     /**
+    * 游戏相关参数
+    */
+    @SerializedName("GameContext")
+    @Expose
+    private String GameContext;
+
+    /**
      * Get 客户端session信息，从JSSDK请求中获得 
      * @return ClientSession 客户端session信息，从JSSDK请求中获得
      */
@@ -391,6 +398,22 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
+     * Get 游戏相关参数 
+     * @return GameContext 游戏相关参数
+     */
+    public String getGameContext() {
+        return this.GameContext;
+    }
+
+    /**
+     * Set 游戏相关参数
+     * @param GameContext 游戏相关参数
+     */
+    public void setGameContext(String GameContext) {
+        this.GameContext = GameContext;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class CreateSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Optimization", this.Optimization);
         this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "GameContext", this.GameContext);
 
     }
 }

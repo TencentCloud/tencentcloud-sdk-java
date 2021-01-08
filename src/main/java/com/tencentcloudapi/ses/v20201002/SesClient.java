@@ -220,6 +220,26 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *获取邮件发送状态。仅支持查询90天之内的数据
+     * @param req GetSendEmailStatusRequest
+     * @return GetSendEmailStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSendEmailStatusResponse GetSendEmailStatus(GetSendEmailStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSendEmailStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSendEmailStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。最大跨度为14天。
      * @param req GetStatisticsReportRequest
      * @return GetStatisticsReportResponse
