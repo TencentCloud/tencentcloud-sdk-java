@@ -51,7 +51,7 @@ public class ListTriggersRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
+    * 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
     */
     @SerializedName("OrderBy")
     @Expose
@@ -137,16 +137,16 @@ public class ListTriggersRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime 
-     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
+     * Get 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time 
+     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
-     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
+     * Set 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
+     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

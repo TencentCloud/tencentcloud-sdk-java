@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class UrlInfo extends AbstractModel{
 
     /**
-    * 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
+    * 视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
     */
     @SerializedName("Url")
     @Expose
@@ -48,20 +48,20 @@ public class UrlInfo extends AbstractModel{
     private String Host;
 
     /**
-     * Get 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。 
-     * @return Url 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
+     * Get 视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls； 
+     * @return Url 视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
-     * @param Url 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
+     * Set 视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
+     * @param Url 视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
      */
     public void setUrl(String Url) {
         this.Url = Url;

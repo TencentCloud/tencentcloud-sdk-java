@@ -58,6 +58,13 @@ public class StartMCUMixTranscodeByStrRoomIdRequest extends AbstractModel{
     private LayoutParams LayoutParams;
 
     /**
+    * 第三方CDN转推参数。
+    */
+    @SerializedName("PublishCdnParams")
+    @Expose
+    private PublishCdnParams PublishCdnParams;
+
+    /**
      * Get TRTC的SDKAppId。 
      * @return SdkAppId TRTC的SDKAppId。
      */
@@ -138,6 +145,22 @@ public class StartMCUMixTranscodeByStrRoomIdRequest extends AbstractModel{
     }
 
     /**
+     * Get 第三方CDN转推参数。 
+     * @return PublishCdnParams 第三方CDN转推参数。
+     */
+    public PublishCdnParams getPublishCdnParams() {
+        return this.PublishCdnParams;
+    }
+
+    /**
+     * Set 第三方CDN转推参数。
+     * @param PublishCdnParams 第三方CDN转推参数。
+     */
+    public void setPublishCdnParams(PublishCdnParams PublishCdnParams) {
+        this.PublishCdnParams = PublishCdnParams;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class StartMCUMixTranscodeByStrRoomIdRequest extends AbstractModel{
         this.setParamObj(map, prefix + "OutputParams.", this.OutputParams);
         this.setParamObj(map, prefix + "EncodeParams.", this.EncodeParams);
         this.setParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
+        this.setParamObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
 
     }
 }
