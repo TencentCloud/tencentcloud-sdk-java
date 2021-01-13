@@ -280,6 +280,26 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *查询机器人任务状态列表
+     * @param req QueryBotListRequest
+     * @return QueryBotListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryBotListResponse QueryBotList(QueryBotListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryBotListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryBotListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryBotList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *实时数据查询
      * @param req QueryInstantDataRequest
      * @return QueryInstantDataResponse
@@ -312,6 +332,46 @@ public class CrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryProductsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryProducts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询录音列表
+     * @param req QueryRecordListRequest
+     * @return QueryRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryRecordListResponse QueryRecordList(QueryRecordListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryRecordListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryRecordListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryRecordList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上传机器人任务数据
+     * @param req UploadBotDataRequest
+     * @return UploadBotDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadBotDataResponse UploadBotData(UploadBotDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadBotDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadBotDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadBotData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -212,7 +212,7 @@ public class MsInstance extends AbstractModel{
     */
     @SerializedName("RegistrationId")
     @Expose
-    private Long RegistrationId;
+    private String RegistrationId;
 
     /**
     * 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
@@ -688,7 +688,7 @@ public class MsInstance extends AbstractModel{
      * @return RegistrationId 实例注册id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRegistrationId() {
+    public String getRegistrationId() {
         return this.RegistrationId;
     }
 
@@ -698,7 +698,7 @@ public class MsInstance extends AbstractModel{
      * @param RegistrationId 实例注册id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRegistrationId(Long RegistrationId) {
+    public void setRegistrationId(String RegistrationId) {
         this.RegistrationId = RegistrationId;
     }
 

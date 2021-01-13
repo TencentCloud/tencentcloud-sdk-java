@@ -32,7 +32,7 @@ public class SendEmailRequest extends AbstractModel{
     private String FromEmailAddress;
 
     /**
-    * 收信人邮箱地址
+    * 收信人邮箱地址，最多支持群发50人。
     */
     @SerializedName("Destination")
     @Expose
@@ -91,16 +91,16 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 收信人邮箱地址 
-     * @return Destination 收信人邮箱地址
+     * Get 收信人邮箱地址，最多支持群发50人。 
+     * @return Destination 收信人邮箱地址，最多支持群发50人。
      */
     public String [] getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set 收信人邮箱地址
-     * @param Destination 收信人邮箱地址
+     * Set 收信人邮箱地址，最多支持群发50人。
+     * @param Destination 收信人邮箱地址，最多支持群发50人。
      */
     public void setDestination(String [] Destination) {
         this.Destination = Destination;

@@ -37,21 +37,21 @@ public class BatchTarget extends AbstractModel{
     private Long Port;
 
     /**
-    * 子机ID
+    * 子机ID。表示绑定主网卡主IP
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 弹性网卡ip
+    * 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
     */
     @SerializedName("EniIp")
     @Expose
     private String EniIp;
 
     /**
-    * 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+    * 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
     */
     @SerializedName("Weight")
     @Expose
@@ -97,48 +97,48 @@ public class BatchTarget extends AbstractModel{
     }
 
     /**
-     * Get 子机ID 
-     * @return InstanceId 子机ID
+     * Get 子机ID。表示绑定主网卡主IP 
+     * @return InstanceId 子机ID。表示绑定主网卡主IP
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 子机ID
-     * @param InstanceId 子机ID
+     * Set 子机ID。表示绑定主网卡主IP
+     * @param InstanceId 子机ID。表示绑定主网卡主IP
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 弹性网卡ip 
-     * @return EniIp 弹性网卡ip
+     * Get 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。 
+     * @return EniIp 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
      */
     public String getEniIp() {
         return this.EniIp;
     }
 
     /**
-     * Set 弹性网卡ip
-     * @param EniIp 弹性网卡ip
+     * Set 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
+     * @param EniIp 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;
     }
 
     /**
-     * Get 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。 
-     * @return Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * Get 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10 
+     * @return Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
-     * @param Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * Set 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
+     * @param Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

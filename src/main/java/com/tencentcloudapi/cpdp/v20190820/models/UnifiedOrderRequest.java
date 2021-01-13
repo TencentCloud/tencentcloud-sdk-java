@@ -204,6 +204,13 @@ development: 开发环境
     private String WxSubAppId;
 
     /**
+    * 支付通知地址
+    */
+    @SerializedName("PaymentNotifyUrl")
+    @Expose
+    private String PaymentNotifyUrl;
+
+    /**
      * Get ISO 货币代码，CNY 
      * @return CurrencyType ISO 货币代码，CNY
      */
@@ -628,6 +635,22 @@ development: 开发环境
     }
 
     /**
+     * Get 支付通知地址 
+     * @return PaymentNotifyUrl 支付通知地址
+     */
+    public String getPaymentNotifyUrl() {
+        return this.PaymentNotifyUrl;
+    }
+
+    /**
+     * Set 支付通知地址
+     * @param PaymentNotifyUrl 支付通知地址
+     */
+    public void setPaymentNotifyUrl(String PaymentNotifyUrl) {
+        this.PaymentNotifyUrl = PaymentNotifyUrl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -656,6 +679,7 @@ development: 开发环境
         this.setParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
         this.setParamSimple(map, prefix + "WxSubAppId", this.WxSubAppId);
+        this.setParamSimple(map, prefix + "PaymentNotifyUrl", this.PaymentNotifyUrl);
 
     }
 }
