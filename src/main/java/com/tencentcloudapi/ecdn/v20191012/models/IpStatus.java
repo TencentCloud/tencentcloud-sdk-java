@@ -60,6 +60,13 @@ offline：下线状态
     private String Status;
 
     /**
+    * 节点 IP 添加时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 节点 IP 
      * @return Ip 节点 IP
      */
@@ -148,6 +155,22 @@ offline：下线状态
     }
 
     /**
+     * Get 节点 IP 添加时间 
+     * @return CreateTime 节点 IP 添加时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 节点 IP 添加时间
+     * @param CreateTime 节点 IP 添加时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -156,6 +179,7 @@ offline：下线状态
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

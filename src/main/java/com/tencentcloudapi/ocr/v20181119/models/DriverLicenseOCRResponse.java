@@ -51,14 +51,14 @@ public class DriverLicenseOCRResponse extends AbstractModel{
     private String Address;
 
     /**
-    * 出生日期
+    * 出生日期（YYYY-MM-DD）
     */
     @SerializedName("DateOfBirth")
     @Expose
     private String DateOfBirth;
 
     /**
-    * 初次领证日期
+    * 初次领证日期（YYYY-MM-DD）
     */
     @SerializedName("DateOfFirstIssue")
     @Expose
@@ -72,14 +72,14 @@ public class DriverLicenseOCRResponse extends AbstractModel{
     private String Class;
 
     /**
-    * 有效期开始时间
+    * 有效期开始时间（YYYY-MM-DD）
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 有效期截止时间
+    * 有效期截止时间（YYYY-MM-DD）
     */
     @SerializedName("EndDate")
     @Expose
@@ -127,6 +127,13 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     @SerializedName("RecognizeWarnMsg")
     @Expose
     private String [] RecognizeWarnMsg;
+
+    /**
+    * 发证单位
+    */
+    @SerializedName("IssuingAuthority")
+    @Expose
+    private String IssuingAuthority;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -200,32 +207,32 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     }
 
     /**
-     * Get 出生日期 
-     * @return DateOfBirth 出生日期
+     * Get 出生日期（YYYY-MM-DD） 
+     * @return DateOfBirth 出生日期（YYYY-MM-DD）
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set 出生日期
-     * @param DateOfBirth 出生日期
+     * Set 出生日期（YYYY-MM-DD）
+     * @param DateOfBirth 出生日期（YYYY-MM-DD）
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
     }
 
     /**
-     * Get 初次领证日期 
-     * @return DateOfFirstIssue 初次领证日期
+     * Get 初次领证日期（YYYY-MM-DD） 
+     * @return DateOfFirstIssue 初次领证日期（YYYY-MM-DD）
      */
     public String getDateOfFirstIssue() {
         return this.DateOfFirstIssue;
     }
 
     /**
-     * Set 初次领证日期
-     * @param DateOfFirstIssue 初次领证日期
+     * Set 初次领证日期（YYYY-MM-DD）
+     * @param DateOfFirstIssue 初次领证日期（YYYY-MM-DD）
      */
     public void setDateOfFirstIssue(String DateOfFirstIssue) {
         this.DateOfFirstIssue = DateOfFirstIssue;
@@ -249,32 +256,32 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     }
 
     /**
-     * Get 有效期开始时间 
-     * @return StartDate 有效期开始时间
+     * Get 有效期开始时间（YYYY-MM-DD） 
+     * @return StartDate 有效期开始时间（YYYY-MM-DD）
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 有效期开始时间
-     * @param StartDate 有效期开始时间
+     * Set 有效期开始时间（YYYY-MM-DD）
+     * @param StartDate 有效期开始时间（YYYY-MM-DD）
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 有效期截止时间 
-     * @return EndDate 有效期截止时间
+     * Get 有效期截止时间（YYYY-MM-DD） 
+     * @return EndDate 有效期截止时间（YYYY-MM-DD）
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 有效期截止时间
-     * @param EndDate 有效期截止时间
+     * Set 有效期截止时间（YYYY-MM-DD）
+     * @param EndDate 有效期截止时间（YYYY-MM-DD）
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
@@ -393,6 +400,22 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     }
 
     /**
+     * Get 发证单位 
+     * @return IssuingAuthority 发证单位
+     */
+    public String getIssuingAuthority() {
+        return this.IssuingAuthority;
+    }
+
+    /**
+     * Set 发证单位
+     * @param IssuingAuthority 发证单位
+     */
+    public void setIssuingAuthority(String IssuingAuthority) {
+        this.IssuingAuthority = IssuingAuthority;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -426,6 +449,7 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         this.setParamSimple(map, prefix + "Record", this.Record);
         this.setParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
         this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
+        this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

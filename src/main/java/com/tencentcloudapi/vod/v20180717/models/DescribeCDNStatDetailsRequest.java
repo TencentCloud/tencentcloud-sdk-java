@@ -72,7 +72,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
     /**
     * 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -103,7 +103,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
     */
     @SerializedName("Districts")
@@ -117,7 +117,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
     */
@@ -273,7 +273,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
     /**
      * Get 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -304,11 +304,11 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li> 
      * @return Districts 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -339,7 +339,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      */
     public String [] getDistricts() {
@@ -349,7 +349,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
     /**
      * Set 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -380,11 +380,11 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      * @param Districts 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -415,7 +415,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      */
     public void setDistricts(String [] Districts) {
@@ -429,7 +429,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li> 
      * @return Isps 用户所属运营商信息，Area 为 Chinese Mainland 时，取值为以下运营商信息。当 Area 为其它值时忽略 Isps 参数。
@@ -438,7 +438,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
      */
@@ -453,7 +453,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
      * @param Isps 用户所属运营商信息，Area 为 Chinese Mainland 时，取值为以下运营商信息。当 Area 为其它值时忽略 Isps 参数。
@@ -462,7 +462,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
      */

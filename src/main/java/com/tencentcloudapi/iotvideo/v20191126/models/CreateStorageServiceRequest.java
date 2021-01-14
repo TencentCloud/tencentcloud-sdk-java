@@ -36,6 +36,8 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
     */
     @SerializedName("PkgId")
     @Expose
@@ -56,7 +58,7 @@ ye1y30d ：事件30天存储年套餐。
     private Long OrderCount;
 
     /**
-    * 云存服务所在的区域,如ap-guangzhou,ap-singapore
+    * 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
     */
     @SerializedName("StorageRegion")
     @Expose
@@ -96,7 +98,9 @@ ye1m7d ：事件7天存储月套餐。
 ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
-ye1y30d ：事件30天存储年套餐。 
+ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。 
      * @return PkgId 云存套餐ID：
 yc1m3d ： 全时3天存储月套餐。
 yc1m7d ： 全时7天存储月套餐。
@@ -110,6 +114,8 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
      */
     public String getPkgId() {
         return this.PkgId;
@@ -129,6 +135,8 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
      * @param PkgId 云存套餐ID：
 yc1m3d ： 全时3天存储月套餐。
 yc1m7d ： 全时7天存储月套餐。
@@ -142,6 +150,8 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
@@ -180,16 +190,16 @@ ye1y30d ：事件30天存储年套餐。
     }
 
     /**
-     * Get 云存服务所在的区域,如ap-guangzhou,ap-singapore 
-     * @return StorageRegion 云存服务所在的区域,如ap-guangzhou,ap-singapore
+     * Get 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt 
+     * @return StorageRegion 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set 云存服务所在的区域,如ap-guangzhou,ap-singapore
-     * @param StorageRegion 云存服务所在的区域,如ap-guangzhou,ap-singapore
+     * Set 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
+     * @param StorageRegion 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;

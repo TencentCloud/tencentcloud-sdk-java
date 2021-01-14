@@ -65,6 +65,13 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+    */
+    @SerializedName("InstType")
+    @Expose
+    private String InstType;
+
+    /**
      * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
@@ -161,6 +168,22 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     }
 
     /**
+     * Get 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。 
+     * @return InstType 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+     */
+    public String getInstType() {
+        return this.InstType;
+    }
+
+    /**
+     * Set 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+     * @param InstType 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+     */
+    public void setInstType(String InstType) {
+        this.InstType = InstType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "KeyWords.", this.KeyWords);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "InstType", this.InstType);
 
     }
 }

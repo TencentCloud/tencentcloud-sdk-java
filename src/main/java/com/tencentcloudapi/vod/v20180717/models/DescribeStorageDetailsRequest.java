@@ -68,7 +68,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
     /**
     * 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
     */
     @SerializedName("Area")
@@ -190,11 +190,11 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
     /**
      * Get 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。 
      * @return Area 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
      */
     public String getArea() {
@@ -204,11 +204,11 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
     /**
      * Set 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
      * @param Area 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
      */
     public void setArea(String Area) {

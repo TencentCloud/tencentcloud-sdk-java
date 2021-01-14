@@ -142,11 +142,18 @@ public class Snapshot extends AbstractModel{
     private String SnapshotType;
 
     /**
-    * 快照当前被共享数
+    * 快照当前被共享数。
     */
     @SerializedName("ShareReference")
     @Expose
     private Long ShareReference;
+
+    /**
+    * 快照开始共享的时间。
+    */
+    @SerializedName("TimeStartShare")
+    @Expose
+    private String TimeStartShare;
 
     /**
      * Get 快照ID。 
@@ -421,19 +428,35 @@ public class Snapshot extends AbstractModel{
     }
 
     /**
-     * Get 快照当前被共享数 
-     * @return ShareReference 快照当前被共享数
+     * Get 快照当前被共享数。 
+     * @return ShareReference 快照当前被共享数。
      */
     public Long getShareReference() {
         return this.ShareReference;
     }
 
     /**
-     * Set 快照当前被共享数
-     * @param ShareReference 快照当前被共享数
+     * Set 快照当前被共享数。
+     * @param ShareReference 快照当前被共享数。
      */
     public void setShareReference(Long ShareReference) {
         this.ShareReference = ShareReference;
+    }
+
+    /**
+     * Get 快照开始共享的时间。 
+     * @return TimeStartShare 快照开始共享的时间。
+     */
+    public String getTimeStartShare() {
+        return this.TimeStartShare;
+    }
+
+    /**
+     * Set 快照开始共享的时间。
+     * @param TimeStartShare 快照开始共享的时间。
+     */
+    public void setTimeStartShare(String TimeStartShare) {
+        this.TimeStartShare = TimeStartShare;
     }
 
     /**
@@ -458,6 +481,7 @@ public class Snapshot extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageCount", this.ImageCount);
         this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
         this.setParamSimple(map, prefix + "ShareReference", this.ShareReference);
+        this.setParamSimple(map, prefix + "TimeStartShare", this.TimeStartShare);
 
     }
 }

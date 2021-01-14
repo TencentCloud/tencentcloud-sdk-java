@@ -61,6 +61,13 @@ public class ImageProcessingTemplate extends AbstractModel{
     private ImageOperation [] Operations;
 
     /**
+    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 图片处理模板唯一标识。 
      * @return Definition 图片处理模板唯一标识。
      */
@@ -153,6 +160,22 @@ public class ImageProcessingTemplate extends AbstractModel{
     }
 
     /**
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -161,6 +184,7 @@ public class ImageProcessingTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamArrayObj(map, prefix + "Operations.", this.Operations);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

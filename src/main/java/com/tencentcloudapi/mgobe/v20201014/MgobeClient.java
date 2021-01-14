@@ -39,6 +39,46 @@ public class MgobeClient extends AbstractClient{
     }
 
     /**
+     *修改房间玩家自定义属性
+     * @param req ChangeRoomPlayerProfileRequest
+     * @return ChangeRoomPlayerProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeRoomPlayerProfileResponse ChangeRoomPlayerProfile(ChangeRoomPlayerProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeRoomPlayerProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeRoomPlayerProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeRoomPlayerProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改玩家自定义状态
+     * @param req ChangeRoomPlayerStatusRequest
+     * @return ChangeRoomPlayerStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeRoomPlayerStatusResponse ChangeRoomPlayerStatus(ChangeRoomPlayerStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeRoomPlayerStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeRoomPlayerStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeRoomPlayerStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过game_id、room_id解散房间
      * @param req DismissRoomRequest
      * @return DismissRoomResponse
@@ -51,6 +91,46 @@ public class MgobeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DismissRoomResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DismissRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改房间
+     * @param req ModifyRoomRequest
+     * @return ModifyRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *踢出房间玩家
+     * @param req RemoveRoomPlayerRequest
+     * @return RemoveRoomPlayerResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveRoomPlayerResponse RemoveRoomPlayer(RemoveRoomPlayerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveRoomPlayerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveRoomPlayerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveRoomPlayer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

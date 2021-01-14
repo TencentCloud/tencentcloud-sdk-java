@@ -108,6 +108,13 @@ public class CheckAssetItem extends AbstractModel{
     private String Detail;
 
     /**
+    * 备注内容
+    */
+    @SerializedName("Remarks")
+    @Expose
+    private String Remarks;
+
+    /**
      * Get 检查项下资产组ID 
      * @return Id 检查项下资产组ID
      */
@@ -304,6 +311,22 @@ public class CheckAssetItem extends AbstractModel{
     }
 
     /**
+     * Get 备注内容 
+     * @return Remarks 备注内容
+     */
+    public String getRemarks() {
+        return this.Remarks;
+    }
+
+    /**
+     * Set 备注内容
+     * @param Remarks 备注内容
+     */
+    public void setRemarks(String Remarks) {
+        this.Remarks = Remarks;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +342,7 @@ public class CheckAssetItem extends AbstractModel{
         this.setParamSimple(map, prefix + "AssetInfo", this.AssetInfo);
         this.setParamSimple(map, prefix + "AssetId", this.AssetId);
         this.setParamSimple(map, prefix + "Detail", this.Detail);
+        this.setParamSimple(map, prefix + "Remarks", this.Remarks);
 
     }
 }

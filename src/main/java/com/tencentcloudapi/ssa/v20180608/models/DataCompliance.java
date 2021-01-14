@@ -143,6 +143,14 @@ public class DataCompliance extends AbstractModel{
     private Long AssetTotal;
 
     /**
+    * 忽略内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remarks")
+    @Expose
+    private String Remarks;
+
+    /**
      * Get 等保唯一标识符 
      * @return Id 等保唯一标识符
      */
@@ -431,6 +439,26 @@ public class DataCompliance extends AbstractModel{
     }
 
     /**
+     * Get 忽略内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remarks 忽略内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemarks() {
+        return this.Remarks;
+    }
+
+    /**
+     * Set 忽略内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remarks 忽略内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemarks(String Remarks) {
+        this.Remarks = Remarks;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -450,6 +478,7 @@ public class DataCompliance extends AbstractModel{
         this.setParamSimple(map, prefix + "IsIgnored", this.IsIgnored);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "AssetTotal", this.AssetTotal);
+        this.setParamSimple(map, prefix + "Remarks", this.Remarks);
 
     }
 }

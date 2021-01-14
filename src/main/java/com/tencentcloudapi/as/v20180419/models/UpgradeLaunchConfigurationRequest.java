@@ -68,6 +68,7 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     * 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -268,10 +269,12 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     /**
      * Get 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费 
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月 
      * @return InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -281,9 +284,11 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
      * Set 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
      * @param InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

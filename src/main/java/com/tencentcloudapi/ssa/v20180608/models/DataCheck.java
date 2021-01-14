@@ -92,6 +92,14 @@ public class DataCheck extends AbstractModel{
     private Long AssetTotal;
 
     /**
+    * 备注内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remarks")
+    @Expose
+    private String Remarks;
+
+    /**
      * Get 检查项唯一标识符uuid 
      * @return Id 检查项唯一标识符uuid
      */
@@ -260,6 +268,26 @@ public class DataCheck extends AbstractModel{
     }
 
     /**
+     * Get 备注内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remarks 备注内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemarks() {
+        return this.Remarks;
+    }
+
+    /**
+     * Set 备注内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remarks 备注内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemarks(String Remarks) {
+        this.Remarks = Remarks;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -272,6 +300,7 @@ public class DataCheck extends AbstractModel{
         this.setParamSimple(map, prefix + "RiskCount", this.RiskCount);
         this.setParamSimple(map, prefix + "IsChecked", this.IsChecked);
         this.setParamSimple(map, prefix + "AssetTotal", this.AssetTotal);
+        this.setParamSimple(map, prefix + "Remarks", this.Remarks);
 
     }
 }

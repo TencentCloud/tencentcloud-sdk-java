@@ -71,6 +71,47 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
     private String UserData;
 
     /**
+    * 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * 公网带宽相关信息设置。
+    */
+    @SerializedName("InternetAccessible")
+    @Expose
+    private InternetAccessible InternetAccessible;
+
+    /**
+    * 实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+    */
+    @SerializedName("InstanceChargePrepaid")
+    @Expose
+    private InstanceChargePrepaid InstanceChargePrepaid;
+
+    /**
+    * 实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
+    */
+    @SerializedName("InstanceMarketOptions")
+    @Expose
+    private InstanceMarketOptionsRequest InstanceMarketOptions;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -191,6 +232,110 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。 
+     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get 公网带宽相关信息设置。 
+     * @return InternetAccessible 公网带宽相关信息设置。
+     */
+    public InternetAccessible getInternetAccessible() {
+        return this.InternetAccessible;
+    }
+
+    /**
+     * Set 公网带宽相关信息设置。
+     * @param InternetAccessible 公网带宽相关信息设置。
+     */
+    public void setInternetAccessible(InternetAccessible InternetAccessible) {
+        this.InternetAccessible = InternetAccessible;
+    }
+
+    /**
+     * Get 实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月 
+     * @return InstanceChargeType 实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set 实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+     * @param InstanceChargeType 实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。 
+     * @return InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     */
+    public InstanceChargePrepaid getInstanceChargePrepaid() {
+        return this.InstanceChargePrepaid;
+    }
+
+    /**
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     * @param InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     */
+    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
+        this.InstanceChargePrepaid = InstanceChargePrepaid;
+    }
+
+    /**
+     * Get 实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。 
+     * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     */
+    public InstanceMarketOptionsRequest getInstanceMarketOptions() {
+        return this.InstanceMarketOptions;
+    }
+
+    /**
+     * Set 实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     */
+    public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
+        this.InstanceMarketOptions = InstanceMarketOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +345,11 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
         this.setParamSimple(map, prefix + "LaunchConfigurationName", this.LaunchConfigurationName);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
 
     }
 }
