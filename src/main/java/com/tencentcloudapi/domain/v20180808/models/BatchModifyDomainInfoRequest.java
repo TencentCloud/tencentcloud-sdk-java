@@ -37,6 +37,15 @@ public class BatchModifyDomainInfoRequest extends AbstractModel{
     private String TemplateId;
 
     /**
+    * true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+    */
+    @SerializedName("LockTransfer")
+    @Expose
+    private Boolean LockTransfer;
+
+    /**
      * Get 批量修改的域名。 
      * @return Domains 批量修改的域名。
      */
@@ -69,11 +78,36 @@ public class BatchModifyDomainInfoRequest extends AbstractModel{
     }
 
     /**
+     * Get true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true 
+     * @return LockTransfer true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     */
+    public Boolean getLockTransfer() {
+        return this.LockTransfer;
+    }
+
+    /**
+     * Set true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     * @param LockTransfer true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     */
+    public void setLockTransfer(Boolean LockTransfer) {
+        this.LockTransfer = LockTransfer;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
 
     }
 }

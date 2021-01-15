@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateEmailAddressRequest extends AbstractModel{
 
     /**
-    * 您的发信地址，上限为10个
+    * 您的发信地址（发信地址总数上限为10个）
     */
     @SerializedName("EmailAddress")
     @Expose
@@ -37,16 +37,16 @@ public class CreateEmailAddressRequest extends AbstractModel{
     private String EmailSenderName;
 
     /**
-     * Get 您的发信地址，上限为10个 
-     * @return EmailAddress 您的发信地址，上限为10个
+     * Get 您的发信地址（发信地址总数上限为10个） 
+     * @return EmailAddress 您的发信地址（发信地址总数上限为10个）
      */
     public String getEmailAddress() {
         return this.EmailAddress;
     }
 
     /**
-     * Set 您的发信地址，上限为10个
-     * @param EmailAddress 您的发信地址，上限为10个
+     * Set 您的发信地址（发信地址总数上限为10个）
+     * @param EmailAddress 您的发信地址（发信地址总数上限为10个）
      */
     public void setEmailAddress(String EmailAddress) {
         this.EmailAddress = EmailAddress;

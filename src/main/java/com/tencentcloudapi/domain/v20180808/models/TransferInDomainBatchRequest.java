@@ -60,6 +60,15 @@ public class TransferInDomainBatchRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+    */
+    @SerializedName("LockTransfer")
+    @Expose
+    private Boolean LockTransfer;
+
+    /**
      * Get 转入的域名名称数组。 
      * @return Domains 转入的域名名称数组。
      */
@@ -148,6 +157,30 @@ public class TransferInDomainBatchRequest extends AbstractModel{
     }
 
     /**
+     * Get true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true 
+     * @return LockTransfer true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     */
+    public Boolean getLockTransfer() {
+        return this.LockTransfer;
+    }
+
+    /**
+     * Set true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     * @param LockTransfer true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     */
+    public void setLockTransfer(Boolean LockTransfer) {
+        this.LockTransfer = LockTransfer;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -156,6 +189,7 @@ public class TransferInDomainBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
 
     }
 }

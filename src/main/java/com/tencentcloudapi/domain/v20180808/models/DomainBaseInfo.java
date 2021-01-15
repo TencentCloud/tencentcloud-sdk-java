@@ -147,6 +147,21 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
     private String [] NameServer;
 
     /**
+    * true：开启锁定
+false：关闭锁定
+    */
+    @SerializedName("LockTransfer")
+    @Expose
+    private Boolean LockTransfer;
+
+    /**
+    * 锁定结束时间
+    */
+    @SerializedName("LockEndTime")
+    @Expose
+    private String LockEndTime;
+
+    /**
      * Get 域名资源ID。 
      * @return DomainId 域名资源ID。
      */
@@ -499,6 +514,42 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
     }
 
     /**
+     * Get true：开启锁定
+false：关闭锁定 
+     * @return LockTransfer true：开启锁定
+false：关闭锁定
+     */
+    public Boolean getLockTransfer() {
+        return this.LockTransfer;
+    }
+
+    /**
+     * Set true：开启锁定
+false：关闭锁定
+     * @param LockTransfer true：开启锁定
+false：关闭锁定
+     */
+    public void setLockTransfer(Boolean LockTransfer) {
+        this.LockTransfer = LockTransfer;
+    }
+
+    /**
+     * Get 锁定结束时间 
+     * @return LockEndTime 锁定结束时间
+     */
+    public String getLockEndTime() {
+        return this.LockEndTime;
+    }
+
+    /**
+     * Set 锁定结束时间
+     * @param LockEndTime 锁定结束时间
+     */
+    public void setLockEndTime(String LockEndTime) {
+        this.LockEndTime = LockEndTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -514,6 +565,8 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
         this.setParamSimple(map, prefix + "BuyStatus", this.BuyStatus);
         this.setParamSimple(map, prefix + "RegistrarType", this.RegistrarType);
         this.setParamArraySimple(map, prefix + "NameServer.", this.NameServer);
+        this.setParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
+        this.setParamSimple(map, prefix + "LockEndTime", this.LockEndTime);
 
     }
 }

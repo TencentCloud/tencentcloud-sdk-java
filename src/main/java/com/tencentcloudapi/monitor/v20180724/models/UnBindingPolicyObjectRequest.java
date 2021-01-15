@@ -30,7 +30,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 策略组id
+    * 策略组id，如传入PolicyId则该字段可传入任意值
     */
     @SerializedName("GroupId")
     @Expose
@@ -51,6 +51,13 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private Long InstanceGroupId;
 
     /**
+    * 告警策略ID，使用此字段时GroupId可传入任意值
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -67,16 +74,16 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略组id 
-     * @return GroupId 策略组id
+     * Get 策略组id，如传入PolicyId则该字段可传入任意值 
+     * @return GroupId 策略组id，如传入PolicyId则该字段可传入任意值
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id
-     * @param GroupId 策略组id
+     * Set 策略组id，如传入PolicyId则该字段可传入任意值
+     * @param GroupId 策略组id，如传入PolicyId则该字段可传入任意值
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
@@ -115,6 +122,22 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 告警策略ID，使用此字段时GroupId可传入任意值 
+     * @return PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set 告警策略ID，使用此字段时GroupId可传入任意值
+     * @param PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArraySimple(map, prefix + "UniqueId.", this.UniqueId);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

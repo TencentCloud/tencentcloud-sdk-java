@@ -920,6 +920,27 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *非对称密钥签名。
+注意：只有成功创建了KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2 的密钥才可以使用签名功能
+     * @param req SignByAsymmetricKeyRequest
+     * @return SignByAsymmetricKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SignByAsymmetricKeyResponse SignByAsymmetricKey(SignByAsymmetricKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SignByAsymmetricKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SignByAsymmetricKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除指定（key, 资源，云产品）的记录，以表明：指定的云产品的资源已不再使用当前的key。
      * @param req UnbindCloudResourceRequest
      * @return UnbindCloudResourceResponse
@@ -972,6 +993,26 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateKeyDescriptionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateKeyDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用非对称密钥验签
+     * @param req VerifyByAsymmetricKeyRequest
+     * @return VerifyByAsymmetricKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyByAsymmetricKeyResponse VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyByAsymmetricKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyByAsymmetricKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

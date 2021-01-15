@@ -30,14 +30,20 @@ public class AnimatedGraphicTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
-    * 动图在视频中的开始时间，单位为秒。
+    * 动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 动图在视频中的结束时间，单位为秒。
+    * 动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -60,32 +66,56 @@ public class AnimatedGraphicTaskInput extends AbstractModel{
     }
 
     /**
-     * Get 动图在视频中的开始时间，单位为秒。 
-     * @return StartTimeOffset 动图在视频中的开始时间，单位为秒。
+     * Get 动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li> 
+     * @return StartTimeOffset 动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 动图在视频中的开始时间，单位为秒。
-     * @param StartTimeOffset 动图在视频中的开始时间，单位为秒。
+     * Set 动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
+     * @param StartTimeOffset 动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 动图在视频中的结束时间，单位为秒。 
-     * @return EndTimeOffset 动图在视频中的结束时间，单位为秒。
+     * Get 动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li> 
+     * @return EndTimeOffset 动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 动图在视频中的结束时间，单位为秒。
-     * @param EndTimeOffset 动图在视频中的结束时间，单位为秒。
+     * Set 动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
+     * @param EndTimeOffset 动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

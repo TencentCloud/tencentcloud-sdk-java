@@ -199,6 +199,26 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *下载任务录音与文本，第二天12点后可使用此接口获取对应的录音与文本
+     * @param req DownloadBotRecordRequest
+     * @return DownloadBotRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadBotRecordResponse DownloadBotRecord(DownloadBotRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadBotRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadBotRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DownloadBotRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
      * @param req DownloadDialogueTextRequest
      * @return DownloadDialogueTextResponse

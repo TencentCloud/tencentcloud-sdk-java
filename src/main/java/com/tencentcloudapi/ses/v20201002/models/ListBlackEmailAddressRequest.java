@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ListBlackEmailAddressRequest extends AbstractModel{
 
     /**
-    * 开始日期
+    * 开始日期，格式为YYYY-MM-DD
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 结束日期
+    * 结束日期，格式为YYYY-MM-DD
     */
     @SerializedName("EndDate")
     @Expose
@@ -44,7 +44,7 @@ public class ListBlackEmailAddressRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 规范，配合Limit使用
+    * 规范，配合Limit使用，Limit最大取值为100
     */
     @SerializedName("Offset")
     @Expose
@@ -65,32 +65,32 @@ public class ListBlackEmailAddressRequest extends AbstractModel{
     private String TaskID;
 
     /**
-     * Get 开始日期 
-     * @return StartDate 开始日期
+     * Get 开始日期，格式为YYYY-MM-DD 
+     * @return StartDate 开始日期，格式为YYYY-MM-DD
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 开始日期
-     * @param StartDate 开始日期
+     * Set 开始日期，格式为YYYY-MM-DD
+     * @param StartDate 开始日期，格式为YYYY-MM-DD
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 结束日期 
-     * @return EndDate 结束日期
+     * Get 结束日期，格式为YYYY-MM-DD 
+     * @return EndDate 结束日期，格式为YYYY-MM-DD
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 结束日期
-     * @param EndDate 结束日期
+     * Set 结束日期，格式为YYYY-MM-DD
+     * @param EndDate 结束日期，格式为YYYY-MM-DD
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
@@ -113,16 +113,16 @@ public class ListBlackEmailAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get 规范，配合Limit使用 
-     * @return Offset 规范，配合Limit使用
+     * Get 规范，配合Limit使用，Limit最大取值为100 
+     * @return Offset 规范，配合Limit使用，Limit最大取值为100
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 规范，配合Limit使用
-     * @param Offset 规范，配合Limit使用
+     * Set 规范，配合Limit使用，Limit最大取值为100
+     * @param Offset 规范，配合Limit使用，Limit最大取值为100
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

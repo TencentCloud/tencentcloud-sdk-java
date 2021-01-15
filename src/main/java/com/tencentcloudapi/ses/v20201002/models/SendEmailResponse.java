@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendEmailResponse extends AbstractModel{
 
     /**
-    * 接受消息时生成的消息的唯一标识符。
+    * 接受消息生成的唯一消息标识符。
     */
     @SerializedName("MessageId")
     @Expose
@@ -37,16 +37,16 @@ public class SendEmailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 接受消息时生成的消息的唯一标识符。 
-     * @return MessageId 接受消息时生成的消息的唯一标识符。
+     * Get 接受消息生成的唯一消息标识符。 
+     * @return MessageId 接受消息生成的唯一消息标识符。
      */
     public String getMessageId() {
         return this.MessageId;
     }
 
     /**
-     * Set 接受消息时生成的消息的唯一标识符。
-     * @param MessageId 接受消息时生成的消息的唯一标识符。
+     * Set 接受消息生成的唯一消息标识符。
+     * @param MessageId 接受消息生成的唯一消息标识符。
      */
     public void setMessageId(String MessageId) {
         this.MessageId = MessageId;

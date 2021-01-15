@@ -39,6 +39,25 @@ public class TableDetectInfo extends AbstractModel{
     private TableTitle [] Titles;
 
     /**
+    * 图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableCoordPoint")
+    @Expose
+    private Coord [] TableCoordPoint;
+
+    /**
      * Get 单元格内容
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cells 单元格内容
@@ -79,11 +98,65 @@ public class TableDetectInfo extends AbstractModel{
     }
 
     /**
+     * Get 图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableCoordPoint 表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Coord [] getTableCoordPoint() {
+        return this.TableCoordPoint;
+    }
+
+    /**
+     * Set 表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableCoordPoint 表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableCoordPoint(Coord [] TableCoordPoint) {
+        this.TableCoordPoint = TableCoordPoint;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Cells.", this.Cells);
         this.setParamArrayObj(map, prefix + "Titles.", this.Titles);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "TableCoordPoint.", this.TableCoordPoint);
 
     }
 }

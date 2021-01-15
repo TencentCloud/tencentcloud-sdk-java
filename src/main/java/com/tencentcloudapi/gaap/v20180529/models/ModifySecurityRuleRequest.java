@@ -44,6 +44,38 @@ public class ModifySecurityRuleRequest extends AbstractModel{
     private String PolicyId;
 
     /**
+    * 安全规则动作
+    */
+    @SerializedName("RuleAction")
+    @Expose
+    private String RuleAction;
+
+    /**
+    * 规则关联地址，格式需要满足CIDR网络地址规范
+    */
+    @SerializedName("SourceCidr")
+    @Expose
+    private String SourceCidr;
+
+    /**
+    * 协议类型
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * 端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
+    */
+    @SerializedName("DestPortRange")
+    @Expose
+    private String DestPortRange;
+
+    /**
      * Get 规则ID 
      * @return RuleId 规则ID
      */
@@ -92,12 +124,96 @@ public class ModifySecurityRuleRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全规则动作 
+     * @return RuleAction 安全规则动作
+     */
+    public String getRuleAction() {
+        return this.RuleAction;
+    }
+
+    /**
+     * Set 安全规则动作
+     * @param RuleAction 安全规则动作
+     */
+    public void setRuleAction(String RuleAction) {
+        this.RuleAction = RuleAction;
+    }
+
+    /**
+     * Get 规则关联地址，格式需要满足CIDR网络地址规范 
+     * @return SourceCidr 规则关联地址，格式需要满足CIDR网络地址规范
+     */
+    public String getSourceCidr() {
+        return this.SourceCidr;
+    }
+
+    /**
+     * Set 规则关联地址，格式需要满足CIDR网络地址规范
+     * @param SourceCidr 规则关联地址，格式需要满足CIDR网络地址规范
+     */
+    public void setSourceCidr(String SourceCidr) {
+        this.SourceCidr = SourceCidr;
+    }
+
+    /**
+     * Get 协议类型 
+     * @return Protocol 协议类型
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 协议类型
+     * @param Protocol 协议类型
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get 端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL 
+     * @return DestPortRange 端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
+     */
+    public String getDestPortRange() {
+        return this.DestPortRange;
+    }
+
+    /**
+     * Set 端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
+     * @param DestPortRange 端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
+     */
+    public void setDestPortRange(String DestPortRange) {
+        this.DestPortRange = DestPortRange;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "RuleAction", this.RuleAction);
+        this.setParamSimple(map, prefix + "SourceCidr", this.SourceCidr);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "DestPortRange", this.DestPortRange);
 
     }
 }

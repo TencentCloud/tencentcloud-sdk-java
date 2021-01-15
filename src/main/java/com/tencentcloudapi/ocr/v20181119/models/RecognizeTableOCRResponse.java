@@ -44,6 +44,14 @@ public class RecognizeTableOCRResponse extends AbstractModel{
     private Long PdfPageSize;
 
     /**
+    * 图片旋转角度（角度制），文本的水平
+方向为 0°；顺时针为正，逆时针为负
+    */
+    @SerializedName("Angle")
+    @Expose
+    private Float Angle;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +107,26 @@ public class RecognizeTableOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 图片旋转角度（角度制），文本的水平
+方向为 0°；顺时针为正，逆时针为负 
+     * @return Angle 图片旋转角度（角度制），文本的水平
+方向为 0°；顺时针为正，逆时针为负
+     */
+    public Float getAngle() {
+        return this.Angle;
+    }
+
+    /**
+     * Set 图片旋转角度（角度制），文本的水平
+方向为 0°；顺时针为正，逆时针为负
+     * @param Angle 图片旋转角度（角度制），文本的水平
+方向为 0°；顺时针为正，逆时针为负
+     */
+    public void setAngle(Float Angle) {
+        this.Angle = Angle;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -121,6 +149,7 @@ public class RecognizeTableOCRResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TableDetections.", this.TableDetections);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
+        this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

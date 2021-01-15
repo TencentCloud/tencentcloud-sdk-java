@@ -55,6 +55,13 @@ public class RecognizeTableOCRRequest extends AbstractModel{
     private Long PdfPageNumber;
 
     /**
+    * 语言，zh：中英文（默认）jap：日文
+    */
+    @SerializedName("TableLanguage")
+    @Expose
+    private String TableLanguage;
+
+    /**
      * Get 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
@@ -135,6 +142,22 @@ public class RecognizeTableOCRRequest extends AbstractModel{
     }
 
     /**
+     * Get 语言，zh：中英文（默认）jap：日文 
+     * @return TableLanguage 语言，zh：中英文（默认）jap：日文
+     */
+    public String getTableLanguage() {
+        return this.TableLanguage;
+    }
+
+    /**
+     * Set 语言，zh：中英文（默认）jap：日文
+     * @param TableLanguage 语言，zh：中英文（默认）jap：日文
+     */
+    public void setTableLanguage(String TableLanguage) {
+        this.TableLanguage = TableLanguage;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +165,7 @@ public class RecognizeTableOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "TableLanguage", this.TableLanguage);
 
     }
 }

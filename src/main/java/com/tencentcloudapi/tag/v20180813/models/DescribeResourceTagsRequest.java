@@ -51,7 +51,7 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     private String ResourcePrefix;
 
     /**
-    * 资源唯一标识
+    * 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
     */
     @SerializedName("ResourceId")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源唯一标识 
-     * @return ResourceId 资源唯一标识
+     * Get 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数） 
+     * @return ResourceId 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源唯一标识
-     * @param ResourceId 资源唯一标识
+     * Set 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
+     * @param ResourceId 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

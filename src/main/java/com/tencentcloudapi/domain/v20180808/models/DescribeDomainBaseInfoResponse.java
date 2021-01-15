@@ -30,6 +30,14 @@ public class DescribeDomainBaseInfoResponse extends AbstractModel{
     private DomainBaseInfo DomainInfo;
 
     /**
+    * 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +61,26 @@ public class DescribeDomainBaseInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +101,7 @@ public class DescribeDomainBaseInfoResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "DomainInfo.", this.DomainInfo);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

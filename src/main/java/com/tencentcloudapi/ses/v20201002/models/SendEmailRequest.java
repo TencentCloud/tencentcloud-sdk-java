@@ -32,7 +32,7 @@ public class SendEmailRequest extends AbstractModel{
     private String FromEmailAddress;
 
     /**
-    * 收信人邮箱地址，最多支持群发50人。
+    * 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
     */
     @SerializedName("Destination")
     @Expose
@@ -46,7 +46,7 @@ public class SendEmailRequest extends AbstractModel{
     private String Subject;
 
     /**
-    * 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+    * 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
     */
     @SerializedName("ReplyToAddresses")
     @Expose
@@ -65,6 +65,13 @@ public class SendEmailRequest extends AbstractModel{
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
+
+    /**
+    * 需要发送附件时，填写附件相关参数。
+    */
+    @SerializedName("Attachments")
+    @Expose
+    private Attachment [] Attachments;
 
     /**
      * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
@@ -91,16 +98,16 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 收信人邮箱地址，最多支持群发50人。 
-     * @return Destination 收信人邮箱地址，最多支持群发50人。
+     * Get 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。 
+     * @return Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      */
     public String [] getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set 收信人邮箱地址，最多支持群发50人。
-     * @param Destination 收信人邮箱地址，最多支持群发50人。
+     * Set 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+     * @param Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      */
     public void setDestination(String [] Destination) {
         this.Destination = Destination;
@@ -123,16 +130,16 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
-     * Get 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。 
-     * @return ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+     * Get 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。 
+     * @return ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-     * @param ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+     * Set 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
+     * @param ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
@@ -171,6 +178,22 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要发送附件时，填写附件相关参数。 
+     * @return Attachments 需要发送附件时，填写附件相关参数。
+     */
+    public Attachment [] getAttachments() {
+        return this.Attachments;
+    }
+
+    /**
+     * Set 需要发送附件时，填写附件相关参数。
+     * @param Attachments 需要发送附件时，填写附件相关参数。
+     */
+    public void setAttachments(Attachment [] Attachments) {
+        this.Attachments = Attachments;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -180,6 +203,7 @@ public class SendEmailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
         this.setParamObj(map, prefix + "Template.", this.Template);
         this.setParamObj(map, prefix + "Simple.", this.Simple);
+        this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
 
     }
 }

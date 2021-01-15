@@ -48,6 +48,7 @@ public class UpdateServiceDiscoveryRequest extends AbstractModel{
     * 服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = JobMonitor</li>
     */
     @SerializedName("Type")
     @Expose
@@ -115,10 +116,12 @@ public class UpdateServiceDiscoveryRequest extends AbstractModel{
     /**
      * Get 服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
-<li> 2 = PodMonitor</li> 
+<li> 2 = PodMonitor</li>
+<li> 3 = JobMonitor</li> 
      * @return Type 服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = JobMonitor</li>
      */
     public Long getType() {
         return this.Type;
@@ -128,9 +131,11 @@ public class UpdateServiceDiscoveryRequest extends AbstractModel{
      * Set 服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = JobMonitor</li>
      * @param Type 服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = JobMonitor</li>
      */
     public void setType(Long Type) {
         this.Type = Type;

@@ -379,6 +379,26 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *发起一个白板推流任务
+     * @param req StartWhiteboardPushRequest
+     * @return StartWhiteboardPushResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartWhiteboardPushResponse StartWhiteboardPush(StartWhiteboardPushRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartWhiteboardPushResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartWhiteboardPushResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartWhiteboardPush");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *停止实时录制
      * @param req StopOnlineRecordRequest
      * @return StopOnlineRecordResponse
@@ -391,6 +411,26 @@ public class TiwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopOnlineRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopOnlineRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止白板推流任务
+     * @param req StopWhiteboardPushRequest
+     * @return StopWhiteboardPushResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopWhiteboardPushResponse StopWhiteboardPush(StopWhiteboardPushRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopWhiteboardPushResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopWhiteboardPushResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopWhiteboardPush");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
