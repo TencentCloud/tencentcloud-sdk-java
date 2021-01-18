@@ -247,6 +247,20 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private String ServerPath;
 
     /**
+    * 镜像复用的key
+    */
+    @SerializedName("ImageReuseKey")
+    @Expose
+    private String ImageReuseKey;
+
+    /**
+    * 容器的描述文件
+    */
+    @SerializedName("SidecarSpecs")
+    @Expose
+    private CloudBaseRunSideSpec [] SidecarSpecs;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -759,6 +773,38 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 镜像复用的key 
+     * @return ImageReuseKey 镜像复用的key
+     */
+    public String getImageReuseKey() {
+        return this.ImageReuseKey;
+    }
+
+    /**
+     * Set 镜像复用的key
+     * @param ImageReuseKey 镜像复用的key
+     */
+    public void setImageReuseKey(String ImageReuseKey) {
+        this.ImageReuseKey = ImageReuseKey;
+    }
+
+    /**
+     * Get 容器的描述文件 
+     * @return SidecarSpecs 容器的描述文件
+     */
+    public CloudBaseRunSideSpec [] getSidecarSpecs() {
+        return this.SidecarSpecs;
+    }
+
+    /**
+     * Set 容器的描述文件
+     * @param SidecarSpecs 容器的描述文件
+     */
+    public void setSidecarSpecs(CloudBaseRunSideSpec [] SidecarSpecs) {
+        this.SidecarSpecs = SidecarSpecs;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -794,6 +840,8 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
         this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
         this.setParamSimple(map, prefix + "ServerPath", this.ServerPath);
+        this.setParamSimple(map, prefix + "ImageReuseKey", this.ImageReuseKey);
+        this.setParamArrayObj(map, prefix + "SidecarSpecs.", this.SidecarSpecs);
 
     }
 }

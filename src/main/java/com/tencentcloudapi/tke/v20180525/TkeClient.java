@@ -539,6 +539,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取集群可以升级的所有版本
+     * @param req DescribeAvailableClusterVersionRequest
+     * @return DescribeAvailableClusterVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(DescribeAvailableClusterVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAvailableClusterVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAvailableClusterVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAvailableClusterVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *集群弹性伸缩配置
      * @param req DescribeClusterAsGroupOptionRequest
      * @return DescribeClusterAsGroupOptionResponse
@@ -999,6 +1019,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获得节点升级当前的进度 
+     * @param req GetUpgradeInstanceProgressRequest
+     * @return GetUpgradeInstanceProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(GetUpgradeInstanceProgressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetUpgradeInstanceProgressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetUpgradeInstanceProgressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetUpgradeInstanceProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改集群伸缩组属性
      * @param req ModifyClusterAsGroupAttributeRequest
      * @return ModifyClusterAsGroupAttributeResponse
@@ -1171,6 +1211,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SyncPrometheusTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SyncPrometheusTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *升级集群 Master 组件到指定版本
+     * @param req UpdateClusterVersionRequest
+     * @return UpdateClusterVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateClusterVersionResponse UpdateClusterVersion(UpdateClusterVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateClusterVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateClusterVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateClusterVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

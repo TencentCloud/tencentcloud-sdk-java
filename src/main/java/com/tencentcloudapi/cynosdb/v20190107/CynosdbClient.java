@@ -319,6 +319,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *根据计费订单id查询资源列表
+     * @param req DescribeResourcesByDealNameRequest
+     * @return DescribeResourcesByDealNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcesByDealNameResponse DescribeResourcesByDealName(DescribeResourcesByDealNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourcesByDealNameResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourcesByDealNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourcesByDealName");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定集群有效回滚时间范围
      * @param req DescribeRollbackTimeRangeRequest
      * @return DescribeRollbackTimeRangeResponse

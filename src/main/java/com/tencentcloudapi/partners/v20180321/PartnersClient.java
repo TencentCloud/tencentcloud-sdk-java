@@ -319,6 +319,26 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *代理商名下客户解绑记录查询接口
+     * @param req DescribeUnbindClientListRequest
+     * @return DescribeUnbindClientListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnbindClientListResponse DescribeUnbindClientList(DescribeUnbindClientListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnbindClientListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnbindClientListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnbindClientList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *代理商可以对名下客户添加备注、修改备注
      * @param req ModifyClientRemarkRequest
      * @return ModifyClientRemarkResponse

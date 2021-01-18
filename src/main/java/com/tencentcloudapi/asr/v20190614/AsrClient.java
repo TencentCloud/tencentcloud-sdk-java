@@ -39,6 +39,26 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *本接口用于关闭语音流异步识别任务。
+     * @param req CloseAsyncRecognitionTaskRequest
+     * @return CloseAsyncRecognitionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAsyncRecognitionTaskResponse CloseAsyncRecognitionTask(CloseAsyncRecognitionTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseAsyncRecognitionTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseAsyncRecognitionTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseAsyncRecognitionTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户通过本接口进行热词表的创建。
 <br>•   默认最多可创建30个热词表。
 <br>•   每个热词表最多可添加128个词，每个词最长10个字，不能超出限制。

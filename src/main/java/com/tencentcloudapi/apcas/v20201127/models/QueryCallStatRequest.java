@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class QueryCallStatRequest extends AbstractModel{
 
     /**
-    * 请求类型:1,人群特征洞察统计 2购车意向预测统计
+    * 请求类型 1:人群特征洞察统计 2:购车意向预测统计
     */
     @SerializedName("Type")
     @Expose
@@ -37,23 +37,23 @@ public class QueryCallStatRequest extends AbstractModel{
     private Long StartTime;
 
     /**
-    * 结束时间戳(毫秒）
+    * 结束时间戳（毫秒）
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get 请求类型:1,人群特征洞察统计 2购车意向预测统计 
-     * @return Type 请求类型:1,人群特征洞察统计 2购车意向预测统计
+     * Get 请求类型 1:人群特征洞察统计 2:购车意向预测统计 
+     * @return Type 请求类型 1:人群特征洞察统计 2:购车意向预测统计
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 请求类型:1,人群特征洞察统计 2购车意向预测统计
-     * @param Type 请求类型:1,人群特征洞察统计 2购车意向预测统计
+     * Set 请求类型 1:人群特征洞察统计 2:购车意向预测统计
+     * @param Type 请求类型 1:人群特征洞察统计 2:购车意向预测统计
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -76,16 +76,16 @@ public class QueryCallStatRequest extends AbstractModel{
     }
 
     /**
-     * Get 结束时间戳(毫秒） 
-     * @return EndTime 结束时间戳(毫秒）
+     * Get 结束时间戳（毫秒） 
+     * @return EndTime 结束时间戳（毫秒）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间戳(毫秒）
-     * @param EndTime 结束时间戳(毫秒）
+     * Set 结束时间戳（毫秒）
+     * @param EndTime 结束时间戳（毫秒）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

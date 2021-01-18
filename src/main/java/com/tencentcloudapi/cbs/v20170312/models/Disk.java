@@ -86,7 +86,7 @@ public class Disk extends AbstractModel{
     private String DiskState;
 
     /**
-    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+    * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
     */
     @SerializedName("DiskType")
     @Expose
@@ -265,6 +265,14 @@ public class Disk extends AbstractModel{
     private Boolean BackupDisk;
 
     /**
+    * 云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
      * Get 云硬盘ID。 
      * @return DiskId 云硬盘ID。
      */
@@ -409,16 +417,16 @@ public class Disk extends AbstractModel{
     }
 
     /**
-     * Get 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。 
-     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * Get 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。 
+     * @return DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
-     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * Set 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
+     * @param DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -837,6 +845,26 @@ public class Disk extends AbstractModel{
     }
 
     /**
+     * Get 云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThroughputPerformance 云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set 云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThroughputPerformance 云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -873,6 +901,7 @@ public class Disk extends AbstractModel{
         this.setParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
         this.setParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
         this.setParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }
