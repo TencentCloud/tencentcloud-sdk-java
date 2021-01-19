@@ -47,7 +47,7 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     private String SourceType;
 
     /**
-    * 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+    * 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
     */
     @SerializedName("VodFileId")
     @Expose
@@ -75,6 +75,13 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     @SerializedName("PreProcessDefinition")
     @Expose
     private Long PreProcessDefinition;
+
+    /**
+    * 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
 
     /**
      * Get 平台名称，指定访问的平台。 
@@ -137,16 +144,16 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。 
-     * @return VodFileId 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+     * Get 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。 
+     * @return VodFileId 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
      */
     public String getVodFileId() {
         return this.VodFileId;
     }
 
     /**
-     * Set 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
-     * @param VodFileId 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+     * Set 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+     * @param VodFileId 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
      */
     public void setVodFileId(String VodFileId) {
         this.VodFileId = VodFileId;
@@ -209,6 +216,22 @@ public class ImportMediaToProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -219,6 +242,7 @@ public class ImportMediaToProjectRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ExternalMediaInfo.", this.ExternalMediaInfo);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

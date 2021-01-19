@@ -47,20 +47,21 @@ public class CreateProjectRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-    */
-    @SerializedName("AspectRatio")
-    @Expose
-    private String AspectRatio;
-
-    /**
-    * 归属者。
+    * 项目归属者。
     */
     @SerializedName("Owner")
     @Expose
     private Entity Owner;
+
+    /**
+    * 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16。</li>
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
+    */
+    @SerializedName("AspectRatio")
+    @Expose
+    private String AspectRatio;
 
     /**
     * 项目描述信息。
@@ -158,12 +159,30 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 项目归属者。 
+     * @return Owner 项目归属者。
+     */
+    public Entity getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 项目归属者。
+     * @param Owner 项目归属者。
+     */
+    public void setOwner(Entity Owner) {
+        this.Owner = Owner;
+    }
+
+    /**
      * Get 画布宽高比，取值有：
 <li>16:9；</li>
-<li>9:16。</li> 
+<li>9:16。</li>
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。 
      * @return AspectRatio 画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
      */
     public String getAspectRatio() {
         return this.AspectRatio;
@@ -173,28 +192,14 @@ public class CreateProjectRequest extends AbstractModel{
      * Set 画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
      * @param AspectRatio 画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
-    }
-
-    /**
-     * Get 归属者。 
-     * @return Owner 归属者。
-     */
-    public Entity getOwner() {
-        return this.Owner;
-    }
-
-    /**
-     * Set 归属者。
-     * @param Owner 归属者。
-     */
-    public void setOwner(Entity Owner) {
-        this.Owner = Owner;
     }
 
     /**
@@ -284,8 +289,8 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
+        this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
         this.setParamObj(map, prefix + "LiveStreamClipProjectInput.", this.LiveStreamClipProjectInput);

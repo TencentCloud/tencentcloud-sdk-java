@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class VideoEditProjectInput extends AbstractModel{
 
     /**
-    * 视频编辑模板 ID ，通过模板导入项目时填写。
+    * 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。
     */
     @SerializedName("VideoEditTemplateId")
     @Expose
     private String VideoEditTemplateId;
 
     /**
-    * 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+    * 输入的媒体轨道列表，包括视频、音频，等媒体组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
 注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
     */
     @SerializedName("InitTracks")
@@ -38,25 +38,25 @@ public class VideoEditProjectInput extends AbstractModel{
     private MediaTrack [] InitTracks;
 
     /**
-     * Get 视频编辑模板 ID ，通过模板导入项目时填写。 
-     * @return VideoEditTemplateId 视频编辑模板 ID ，通过模板导入项目时填写。
+     * Get 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。 
+     * @return VideoEditTemplateId 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。
      */
     public String getVideoEditTemplateId() {
         return this.VideoEditTemplateId;
     }
 
     /**
-     * Set 视频编辑模板 ID ，通过模板导入项目时填写。
-     * @param VideoEditTemplateId 视频编辑模板 ID ，通过模板导入项目时填写。
+     * Set 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。
+     * @param VideoEditTemplateId 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。
      */
     public void setVideoEditTemplateId(String VideoEditTemplateId) {
         this.VideoEditTemplateId = VideoEditTemplateId;
     }
 
     /**
-     * Get 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+     * Get 输入的媒体轨道列表，包括视频、音频，等媒体组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
 注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。 
-     * @return InitTracks 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+     * @return InitTracks 输入的媒体轨道列表，包括视频、音频，等媒体组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
 注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
      */
     public MediaTrack [] getInitTracks() {
@@ -64,9 +64,9 @@ public class VideoEditProjectInput extends AbstractModel{
     }
 
     /**
-     * Set 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+     * Set 输入的媒体轨道列表，包括视频、音频，等媒体组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
 注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
-     * @param InitTracks 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+     * @param InitTracks 输入的媒体轨道列表，包括视频、音频，等媒体组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
 注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
      */
     public void setInitTracks(MediaTrack [] InitTracks) {

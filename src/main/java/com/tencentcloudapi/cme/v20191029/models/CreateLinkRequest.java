@@ -32,7 +32,7 @@ public class CreateLinkRequest extends AbstractModel{
     /**
     * 链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -46,7 +46,7 @@ public class CreateLinkRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 链接归属实体。
+    * 链接归属者。
     */
     @SerializedName("Owner")
     @Expose
@@ -54,7 +54,7 @@ public class CreateLinkRequest extends AbstractModel{
 
     /**
     * 目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
     */
     @SerializedName("DestinationId")
@@ -101,10 +101,10 @@ public class CreateLinkRequest extends AbstractModel{
     /**
      * Get 链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li> 
+<li> MATERIAL：媒体文件链接。</li> 
      * @return Type 链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
      */
     public String getType() {
         return this.Type;
@@ -113,10 +113,10 @@ public class CreateLinkRequest extends AbstractModel{
     /**
      * Set 链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
      * @param Type 链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -139,16 +139,16 @@ public class CreateLinkRequest extends AbstractModel{
     }
 
     /**
-     * Get 链接归属实体。 
-     * @return Owner 链接归属实体。
+     * Get 链接归属者。 
+     * @return Owner 链接归属者。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 链接归属实体。
-     * @param Owner 链接归属实体。
+     * Set 链接归属者。
+     * @param Owner 链接归属者。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
@@ -156,10 +156,10 @@ public class CreateLinkRequest extends AbstractModel{
 
     /**
      * Get 目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li> 
      * @return DestinationId 目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
      */
     public String getDestinationId() {
@@ -168,10 +168,10 @@ public class CreateLinkRequest extends AbstractModel{
 
     /**
      * Set 目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
      * @param DestinationId 目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
      */
     public void setDestinationId(String DestinationId) {

@@ -2236,6 +2236,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口 (SwitchDBInstanceMasterSlave) 支持用户主动切换实例主从角色。
+     * @param req SwitchDBInstanceMasterSlaveRequest
+     * @return SwitchDBInstanceMasterSlaveResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(SwitchDBInstanceMasterSlaveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDBInstanceMasterSlaveResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceMasterSlaveResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDBInstanceMasterSlave");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(SwitchForUpgrade)用于切换访问新实例，针对主升级中的实例处于待切换状态时，用户可主动发起该流程。
      * @param req SwitchForUpgradeRequest
      * @return SwitchForUpgradeResponse

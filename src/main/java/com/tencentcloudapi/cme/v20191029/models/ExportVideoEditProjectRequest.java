@@ -48,7 +48,7 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
 
     /**
     * 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
+<li>CME：云剪，即导出为云剪媒体；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
     */
     @SerializedName("ExportDestination")
@@ -56,7 +56,7 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     private String ExportDestination;
 
     /**
-    * 导出的云剪素材信息。指定 ExportDestination = CME 时有效。
+    * 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
     */
     @SerializedName("CMEExportInfo")
     @Expose
@@ -68,6 +68,13 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     @SerializedName("VODExportInfo")
     @Expose
     private VODExportInfo VODExportInfo;
+
+    /**
+    * 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
 
     /**
      * Get 平台名称，指定访问的平台。 
@@ -131,10 +138,10 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
 
     /**
      * Get 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
+<li>CME：云剪，即导出为云剪媒体；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li> 
      * @return ExportDestination 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
+<li>CME：云剪，即导出为云剪媒体；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
      */
     public String getExportDestination() {
@@ -143,10 +150,10 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
 
     /**
      * Set 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
+<li>CME：云剪，即导出为云剪媒体；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
      * @param ExportDestination 导出目标。
-<li>CME：云剪，即导出为云剪素材；</li>
+<li>CME：云剪，即导出为云剪媒体；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
      */
     public void setExportDestination(String ExportDestination) {
@@ -154,16 +161,16 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 导出的云剪素材信息。指定 ExportDestination = CME 时有效。 
-     * @return CMEExportInfo 导出的云剪素材信息。指定 ExportDestination = CME 时有效。
+     * Get 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。 
+     * @return CMEExportInfo 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
      */
     public CMEExportInfo getCMEExportInfo() {
         return this.CMEExportInfo;
     }
 
     /**
-     * Set 导出的云剪素材信息。指定 ExportDestination = CME 时有效。
-     * @param CMEExportInfo 导出的云剪素材信息。指定 ExportDestination = CME 时有效。
+     * Set 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
+     * @param CMEExportInfo 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
      */
     public void setCMEExportInfo(CMEExportInfo CMEExportInfo) {
         this.CMEExportInfo = CMEExportInfo;
@@ -186,6 +193,22 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -195,6 +218,7 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExportDestination", this.ExportDestination);
         this.setParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
         this.setParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

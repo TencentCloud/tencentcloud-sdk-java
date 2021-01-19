@@ -51,6 +51,13 @@ public class CreateGameServerSessionQueueRequest extends AbstractModel{
     private Long TimeoutInSeconds;
 
     /**
+    * 标签列表，最大长度50组
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 游戏服务器会话队列名称，长度1~128 
      * @return Name 游戏服务器会话队列名称，长度1~128
      */
@@ -115,6 +122,22 @@ public class CreateGameServerSessionQueueRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，最大长度50组 
+     * @return Tags 标签列表，最大长度50组
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，最大长度50组
+     * @param Tags 标签列表，最大长度50组
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateGameServerSessionQueueRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Destinations.", this.Destinations);
         this.setParamArrayObj(map, prefix + "PlayerLatencyPolicies.", this.PlayerLatencyPolicies);
         this.setParamSimple(map, prefix + "TimeoutInSeconds", this.TimeoutInSeconds);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -44,7 +44,7 @@ public class PenguinMediaPlatformPublishInfo extends AbstractModel{
     private String [] Tags;
 
     /**
-    * 视频分类，详见企鹅号官网视频分类。
+    * 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
     */
     @SerializedName("Category")
     @Expose
@@ -99,16 +99,16 @@ public class PenguinMediaPlatformPublishInfo extends AbstractModel{
     }
 
     /**
-     * Get 视频分类，详见企鹅号官网视频分类。 
-     * @return Category 视频分类，详见企鹅号官网视频分类。
+     * Get 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。 
+     * @return Category 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
      */
     public Long getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 视频分类，详见企鹅号官网视频分类。
-     * @param Category 视频分类，详见企鹅号官网视频分类。
+     * Set 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
+     * @param Category 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
      */
     public void setCategory(Long Category) {
         this.Category = Category;

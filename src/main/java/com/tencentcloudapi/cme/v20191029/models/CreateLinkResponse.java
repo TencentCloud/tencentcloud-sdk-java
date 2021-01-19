@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLinkResponse extends AbstractModel{
 
     /**
-    * 新建链接的素材 Id。
+    * 新建链接的媒体 Id。
     */
     @SerializedName("MaterialId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateLinkResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 新建链接的素材 Id。 
-     * @return MaterialId 新建链接的素材 Id。
+     * Get 新建链接的媒体 Id。 
+     * @return MaterialId 新建链接的媒体 Id。
      */
     public String getMaterialId() {
         return this.MaterialId;
     }
 
     /**
-     * Set 新建链接的素材 Id。
-     * @param MaterialId 新建链接的素材 Id。
+     * Set 新建链接的媒体 Id。
+     * @param MaterialId 新建链接的媒体 Id。
      */
     public void setMaterialId(String MaterialId) {
         this.MaterialId = MaterialId;

@@ -33,28 +33,28 @@ public class SwitcherPgmOutputConfig extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * 导播台输出宽。
+    * 导播台输出宽，单位：像素。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 导播台输出高。
+    * 导播台输出高，单位：像素。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 导播台输出帧率。
+    * 导播台输出帧率，单位：帧/秒
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 导播台输出码率。
+    * 导播台输出码率， 单位：bit/s。
     */
     @SerializedName("BitRate")
     @Expose
@@ -89,64 +89,64 @@ public class SwitcherPgmOutputConfig extends AbstractModel{
     }
 
     /**
-     * Get 导播台输出宽。 
-     * @return Width 导播台输出宽。
+     * Get 导播台输出宽，单位：像素。 
+     * @return Width 导播台输出宽，单位：像素。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 导播台输出宽。
-     * @param Width 导播台输出宽。
+     * Set 导播台输出宽，单位：像素。
+     * @param Width 导播台输出宽，单位：像素。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 导播台输出高。 
-     * @return Height 导播台输出高。
+     * Get 导播台输出高，单位：像素。 
+     * @return Height 导播台输出高，单位：像素。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 导播台输出高。
-     * @param Height 导播台输出高。
+     * Set 导播台输出高，单位：像素。
+     * @param Height 导播台输出高，单位：像素。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 导播台输出帧率。 
-     * @return Fps 导播台输出帧率。
+     * Get 导播台输出帧率，单位：帧/秒 
+     * @return Fps 导播台输出帧率，单位：帧/秒
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 导播台输出帧率。
-     * @param Fps 导播台输出帧率。
+     * Set 导播台输出帧率，单位：帧/秒
+     * @param Fps 导播台输出帧率，单位：帧/秒
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 导播台输出码率。 
-     * @return BitRate 导播台输出码率。
+     * Get 导播台输出码率， 单位：bit/s。 
+     * @return BitRate 导播台输出码率， 单位：bit/s。
      */
     public Long getBitRate() {
         return this.BitRate;
     }
 
     /**
-     * Set 导播台输出码率。
-     * @param BitRate 导播台输出码率。
+     * Set 导播台输出码率， 单位：bit/s。
+     * @param BitRate 导播台输出码率， 单位：bit/s。
      */
     public void setBitRate(Long BitRate) {
         this.BitRate = BitRate;

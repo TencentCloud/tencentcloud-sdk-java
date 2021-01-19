@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cme.v20191029.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportMaterialResponse extends AbstractModel{
+public class RecognizeMediaForZhiXueResponse extends AbstractModel{
 
     /**
-    * 媒体 Id。
+    * 任务 ID，可以通过该 ID 查询任务状态和结果。
     */
-    @SerializedName("MaterialId")
+    @SerializedName("TaskId")
     @Expose
-    private String MaterialId;
-
-    /**
-    * 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
-    */
-    @SerializedName("PreProcessTaskId")
-    @Expose
-    private String PreProcessTaskId;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class ImportMaterialResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 媒体 Id。 
-     * @return MaterialId 媒体 Id。
+     * Get 任务 ID，可以通过该 ID 查询任务状态和结果。 
+     * @return TaskId 任务 ID，可以通过该 ID 查询任务状态和结果。
      */
-    public String getMaterialId() {
-        return this.MaterialId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 媒体 Id。
-     * @param MaterialId 媒体 Id。
+     * Set 任务 ID，可以通过该 ID 查询任务状态和结果。
+     * @param TaskId 任务 ID，可以通过该 ID 查询任务状态和结果。
      */
-    public void setMaterialId(String MaterialId) {
-        this.MaterialId = MaterialId;
-    }
-
-    /**
-     * Get 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。 
-     * @return PreProcessTaskId 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
-     */
-    public String getPreProcessTaskId() {
-        return this.PreProcessTaskId;
-    }
-
-    /**
-     * Set 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
-     * @param PreProcessTaskId 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
-     */
-    public void setPreProcessTaskId(String PreProcessTaskId) {
-        this.PreProcessTaskId = PreProcessTaskId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class ImportMaterialResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
-        this.setParamSimple(map, prefix + "PreProcessTaskId", this.PreProcessTaskId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

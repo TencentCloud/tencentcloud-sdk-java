@@ -121,6 +121,13 @@ public class CopyFleetRequest extends AbstractModel{
     private String SelectedCcnType;
 
     /**
+    * 标签列表，最大长度50组
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 服务器舰队 Id 
      * @return FleetId 服务器舰队 Id
      */
@@ -345,6 +352,22 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，最大长度50组 
+     * @return Tags 标签列表，最大长度50组
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，最大长度50组
+     * @param Tags 标签列表，最大长度50组
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class CopyFleetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
         this.setParamSimple(map, prefix + "SelectedScalingType", this.SelectedScalingType);
         this.setParamSimple(map, prefix + "SelectedCcnType", this.SelectedCcnType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

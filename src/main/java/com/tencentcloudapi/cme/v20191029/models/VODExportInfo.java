@@ -37,7 +37,7 @@ public class VODExportInfo extends AbstractModel{
     private Long ClassId;
 
     /**
-    * 第三方平台发布信息列表。
+    * 第三方平台发布信息列表。暂未正式对外，请勿使用。
     */
     @SerializedName("ThirdPartyPublishInfos")
     @Expose
@@ -76,16 +76,16 @@ public class VODExportInfo extends AbstractModel{
     }
 
     /**
-     * Get 第三方平台发布信息列表。 
-     * @return ThirdPartyPublishInfos 第三方平台发布信息列表。
+     * Get 第三方平台发布信息列表。暂未正式对外，请勿使用。 
+     * @return ThirdPartyPublishInfos 第三方平台发布信息列表。暂未正式对外，请勿使用。
      */
     public ThirdPartyPublishInfo [] getThirdPartyPublishInfos() {
         return this.ThirdPartyPublishInfos;
     }
 
     /**
-     * Set 第三方平台发布信息列表。
-     * @param ThirdPartyPublishInfos 第三方平台发布信息列表。
+     * Set 第三方平台发布信息列表。暂未正式对外，请勿使用。
+     * @param ThirdPartyPublishInfos 第三方平台发布信息列表。暂未正式对外，请勿使用。
      */
     public void setThirdPartyPublishInfos(ThirdPartyPublishInfo [] ThirdPartyPublishInfos) {
         this.ThirdPartyPublishInfos = ThirdPartyPublishInfos;

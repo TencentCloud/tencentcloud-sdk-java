@@ -148,6 +148,14 @@ public class FleetAttributes extends AbstractModel{
     private String BillingStatus;
 
     /**
+    * 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 生成包 Id 
      * @return AssetId 生成包 Id
      */
@@ -456,6 +464,26 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -475,6 +503,7 @@ public class FleetAttributes extends AbstractModel{
         this.setParamSimple(map, prefix + "TerminationTime", this.TerminationTime);
         this.setParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
         this.setParamSimple(map, prefix + "BillingStatus", this.BillingStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

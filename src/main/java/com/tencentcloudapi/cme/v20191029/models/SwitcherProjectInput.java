@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SwitcherProjectInput extends AbstractModel{
 
     /**
-    * 导播台停止时间。
+    * 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
     */
     @SerializedName("StopTime")
     @Expose
     private String StopTime;
 
     /**
-    * 导播台主监输出配置信息。
+    * 导播台主监输出配置信息。若不填，默认输出 720P。
     */
     @SerializedName("PgmOutputConfig")
     @Expose
     private SwitcherPgmOutputConfig PgmOutputConfig;
 
     /**
-     * Get 导播台停止时间。 
-     * @return StopTime 导播台停止时间。
+     * Get 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。 
+     * @return StopTime 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
      */
     public String getStopTime() {
         return this.StopTime;
     }
 
     /**
-     * Set 导播台停止时间。
-     * @param StopTime 导播台停止时间。
+     * Set 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
+     * @param StopTime 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
      */
     public void setStopTime(String StopTime) {
         this.StopTime = StopTime;
     }
 
     /**
-     * Get 导播台主监输出配置信息。 
-     * @return PgmOutputConfig 导播台主监输出配置信息。
+     * Get 导播台主监输出配置信息。若不填，默认输出 720P。 
+     * @return PgmOutputConfig 导播台主监输出配置信息。若不填，默认输出 720P。
      */
     public SwitcherPgmOutputConfig getPgmOutputConfig() {
         return this.PgmOutputConfig;
     }
 
     /**
-     * Set 导播台主监输出配置信息。
-     * @param PgmOutputConfig 导播台主监输出配置信息。
+     * Set 导播台主监输出配置信息。若不填，默认输出 720P。
+     * @param PgmOutputConfig 导播台主监输出配置信息。若不填，默认输出 720P。
      */
     public void setPgmOutputConfig(SwitcherPgmOutputConfig PgmOutputConfig) {
         this.PgmOutputConfig = PgmOutputConfig;

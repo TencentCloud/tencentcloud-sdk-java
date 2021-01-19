@@ -128,6 +128,34 @@ public class VpnConnection extends AbstractModel{
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
+    * 是否支持健康状态探测
+    */
+    @SerializedName("EnableHealthCheck")
+    @Expose
+    private Boolean EnableHealthCheck;
+
+    /**
+    * 本端探测ip
+    */
+    @SerializedName("HealthCheckLocalIp")
+    @Expose
+    private String HealthCheckLocalIp;
+
+    /**
+    * 对端探测ip
+    */
+    @SerializedName("HealthCheckRemoteIp")
+    @Expose
+    private String HealthCheckRemoteIp;
+
+    /**
+    * 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+    */
+    @SerializedName("HealthCheckStatus")
+    @Expose
+    private String HealthCheckStatus;
+
+    /**
      * Get 通道实例ID。 
      * @return VpnConnectionId 通道实例ID。
      */
@@ -368,6 +396,70 @@ public class VpnConnection extends AbstractModel{
     }
 
     /**
+     * Get 是否支持健康状态探测 
+     * @return EnableHealthCheck 是否支持健康状态探测
+     */
+    public Boolean getEnableHealthCheck() {
+        return this.EnableHealthCheck;
+    }
+
+    /**
+     * Set 是否支持健康状态探测
+     * @param EnableHealthCheck 是否支持健康状态探测
+     */
+    public void setEnableHealthCheck(Boolean EnableHealthCheck) {
+        this.EnableHealthCheck = EnableHealthCheck;
+    }
+
+    /**
+     * Get 本端探测ip 
+     * @return HealthCheckLocalIp 本端探测ip
+     */
+    public String getHealthCheckLocalIp() {
+        return this.HealthCheckLocalIp;
+    }
+
+    /**
+     * Set 本端探测ip
+     * @param HealthCheckLocalIp 本端探测ip
+     */
+    public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
+        this.HealthCheckLocalIp = HealthCheckLocalIp;
+    }
+
+    /**
+     * Get 对端探测ip 
+     * @return HealthCheckRemoteIp 对端探测ip
+     */
+    public String getHealthCheckRemoteIp() {
+        return this.HealthCheckRemoteIp;
+    }
+
+    /**
+     * Set 对端探测ip
+     * @param HealthCheckRemoteIp 对端探测ip
+     */
+    public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
+        this.HealthCheckRemoteIp = HealthCheckRemoteIp;
+    }
+
+    /**
+     * Get 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象 
+     * @return HealthCheckStatus 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+     */
+    public String getHealthCheckStatus() {
+        return this.HealthCheckStatus;
+    }
+
+    /**
+     * Set 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+     * @param HealthCheckStatus 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+     */
+    public void setHealthCheckStatus(String HealthCheckStatus) {
+        this.HealthCheckStatus = HealthCheckStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +478,10 @@ public class VpnConnection extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SecurityPolicyDatabaseSet.", this.SecurityPolicyDatabaseSet);
         this.setParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
         this.setParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
+        this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+        this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+        this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+        this.setParamSimple(map, prefix + "HealthCheckStatus", this.HealthCheckStatus);
 
     }
 }

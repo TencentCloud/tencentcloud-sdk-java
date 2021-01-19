@@ -52,8 +52,12 @@ public class DescribeQuotaDataRequest extends AbstractModel{
 <li> StaticFsFluxPkgDay: 当日静态托管流量 </li>
 <li> StaticFsFluxPkg: 当月静态托管流量</li>
 <li> StaticFsSizePkg: 当月静态托管容量 </li>
-<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核 </li>
-<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB </li>
+<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核*秒 </li>
+<li> TkeCpuUsedPkgDay: 当天容器托管CPU使用量，单位核*秒 </li>
+<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB*秒 </li>
+<li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
+<li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
+<li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
     */
     @SerializedName("MetricName")
     @Expose
@@ -105,8 +109,12 @@ public class DescribeQuotaDataRequest extends AbstractModel{
 <li> StaticFsFluxPkgDay: 当日静态托管流量 </li>
 <li> StaticFsFluxPkg: 当月静态托管流量</li>
 <li> StaticFsSizePkg: 当月静态托管容量 </li>
-<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核 </li>
-<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB </li> 
+<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核*秒 </li>
+<li> TkeCpuUsedPkgDay: 当天容器托管CPU使用量，单位核*秒 </li>
+<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB*秒 </li>
+<li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
+<li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
+<li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li> 
      * @return MetricName <li> 指标名: </li>
 <li> StorageSizepkg: 当月存储空间容量, 单位MB </li>
 <li> StorageReadpkg: 当月存储读请求次数 </li>
@@ -129,8 +137,12 @@ public class DescribeQuotaDataRequest extends AbstractModel{
 <li> StaticFsFluxPkgDay: 当日静态托管流量 </li>
 <li> StaticFsFluxPkg: 当月静态托管流量</li>
 <li> StaticFsSizePkg: 当月静态托管容量 </li>
-<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核 </li>
-<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB </li>
+<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核*秒 </li>
+<li> TkeCpuUsedPkgDay: 当天容器托管CPU使用量，单位核*秒 </li>
+<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB*秒 </li>
+<li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
+<li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
+<li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
      */
     public String getMetricName() {
         return this.MetricName;
@@ -159,8 +171,12 @@ public class DescribeQuotaDataRequest extends AbstractModel{
 <li> StaticFsFluxPkgDay: 当日静态托管流量 </li>
 <li> StaticFsFluxPkg: 当月静态托管流量</li>
 <li> StaticFsSizePkg: 当月静态托管容量 </li>
-<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核 </li>
-<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB </li>
+<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核*秒 </li>
+<li> TkeCpuUsedPkgDay: 当天容器托管CPU使用量，单位核*秒 </li>
+<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB*秒 </li>
+<li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
+<li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
+<li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
      * @param MetricName <li> 指标名: </li>
 <li> StorageSizepkg: 当月存储空间容量, 单位MB </li>
 <li> StorageReadpkg: 当月存储读请求次数 </li>
@@ -183,8 +199,12 @@ public class DescribeQuotaDataRequest extends AbstractModel{
 <li> StaticFsFluxPkgDay: 当日静态托管流量 </li>
 <li> StaticFsFluxPkg: 当月静态托管流量</li>
 <li> StaticFsSizePkg: 当月静态托管容量 </li>
-<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核 </li>
-<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB </li>
+<li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核*秒 </li>
+<li> TkeCpuUsedPkgDay: 当天容器托管CPU使用量，单位核*秒 </li>
+<li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB*秒 </li>
+<li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
+<li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
+<li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

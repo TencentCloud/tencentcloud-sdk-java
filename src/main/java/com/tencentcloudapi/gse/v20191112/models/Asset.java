@@ -114,6 +114,14 @@ public class Asset extends AbstractModel{
     private String SharingStatus;
 
     /**
+    * 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 生成包ID 
      * @return AssetId 生成包ID
      */
@@ -322,6 +330,26 @@ public class Asset extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +366,7 @@ public class Asset extends AbstractModel{
         this.setParamSimple(map, prefix + "OsType", this.OsType);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "SharingStatus", this.SharingStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

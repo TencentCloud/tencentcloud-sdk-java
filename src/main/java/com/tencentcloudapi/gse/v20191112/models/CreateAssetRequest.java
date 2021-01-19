@@ -65,6 +65,13 @@ public class CreateAssetRequest extends AbstractModel{
     private String ImageId;
 
     /**
+    * 标签列表，最大长度50组
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 生成包的ZIP包名，例如：server.zip 
      * @return BucketKey 生成包的ZIP包名，例如：server.zip
      */
@@ -161,6 +168,22 @@ public class CreateAssetRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，最大长度50组 
+     * @return Tags 标签列表，最大长度50组
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，最大长度50组
+     * @param Tags 标签列表，最大长度50组
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateAssetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
         this.setParamSimple(map, prefix + "OperateSystem", this.OperateSystem);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

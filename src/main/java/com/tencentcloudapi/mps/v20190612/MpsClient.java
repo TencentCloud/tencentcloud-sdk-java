@@ -1336,6 +1336,26 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
+     * @param req RecognizeMediaForZhiXueRequest
+     * @return RecognizeMediaForZhiXueResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(RecognizeMediaForZhiXueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeMediaForZhiXueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeMediaForZhiXueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeMediaForZhiXue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重新设置一个已经存在且处于禁用状态的工作流。
      * @param req ResetWorkflowRequest
      * @return ResetWorkflowResponse

@@ -44,6 +44,13 @@ public class CreateAliasRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 标签列表，最大长度50组
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 名字，长度不小于1字符不超过1024字符 
      * @return Name 名字，长度不小于1字符不超过1024字符
      */
@@ -92,12 +99,29 @@ public class CreateAliasRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，最大长度50组 
+     * @return Tags 标签列表，最大长度50组
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，最大长度50组
+     * @param Tags 标签列表，最大长度50组
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "RoutingStrategy.", this.RoutingStrategy);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

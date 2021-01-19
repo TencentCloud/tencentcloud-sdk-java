@@ -107,6 +107,13 @@ public class CreateFleetRequest extends AbstractModel{
     private Long GameServerSessionProtectionTimeLimit;
 
     /**
+    * 标签列表，最大长度50组
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 生成包 Id 
      * @return AssetId 生成包 Id
      */
@@ -299,6 +306,22 @@ public class CreateFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，最大长度50组 
+     * @return Tags 标签列表，最大长度50组
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，最大长度50组
+     * @param Tags 标签列表，最大长度50组
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class CreateFleetRequest extends AbstractModel{
         this.setParamObj(map, prefix + "RuntimeConfiguration.", this.RuntimeConfiguration);
         this.setParamSimple(map, prefix + "SubNetId", this.SubNetId);
         this.setParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

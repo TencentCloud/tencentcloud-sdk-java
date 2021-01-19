@@ -70,7 +70,7 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
     private VODExportInfo VODExportInfo;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+    * 操作者。填写用户的 Id，用于标识调用者及校验导出操作权限。
     */
     @SerializedName("Operator")
     @Expose
@@ -193,16 +193,16 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验操作权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验导出操作权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验导出操作权限。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验导出操作权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验导出操作权限。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class CMEExportInfo extends AbstractModel{
 
     /**
-    * 导出的归属者。
+    * 导出媒体归属，个人或团队。
     */
     @SerializedName("Owner")
     @Expose
     private Entity Owner;
 
     /**
-    * 导出的素材名称，不得超过30个字符。
+    * 导出的媒体名称，不得超过30个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 导出的素材信息，不得超过50个字符。
+    * 导出的媒体信息，不得超过50个字符。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 导出的素材分类路径，长度不能超过15字符。
+    * 导出的媒体分类路径，长度不能超过15字符。
     */
     @SerializedName("ClassPath")
     @Expose
     private String ClassPath;
 
     /**
-    * 导出的素材标签，单个标签不得超过10个字符。
+    * 导出的媒体标签，单个标签不得超过10个字符。
     */
     @SerializedName("TagSet")
     @Expose
     private String [] TagSet;
 
     /**
-    * 第三方平台发布信息列表。
+    * 第三方平台发布信息列表。暂未正式对外，请勿使用。
     */
     @SerializedName("ThirdPartyPublishInfos")
     @Expose
     private ThirdPartyPublishInfo [] ThirdPartyPublishInfos;
 
     /**
-     * Get 导出的归属者。 
-     * @return Owner 导出的归属者。
+     * Get 导出媒体归属，个人或团队。 
+     * @return Owner 导出媒体归属，个人或团队。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 导出的归属者。
-     * @param Owner 导出的归属者。
+     * Set 导出媒体归属，个人或团队。
+     * @param Owner 导出媒体归属，个人或团队。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 导出的素材名称，不得超过30个字符。 
-     * @return Name 导出的素材名称，不得超过30个字符。
+     * Get 导出的媒体名称，不得超过30个字符。 
+     * @return Name 导出的媒体名称，不得超过30个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 导出的素材名称，不得超过30个字符。
-     * @param Name 导出的素材名称，不得超过30个字符。
+     * Set 导出的媒体名称，不得超过30个字符。
+     * @param Name 导出的媒体名称，不得超过30个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 导出的素材信息，不得超过50个字符。 
-     * @return Description 导出的素材信息，不得超过50个字符。
+     * Get 导出的媒体信息，不得超过50个字符。 
+     * @return Description 导出的媒体信息，不得超过50个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 导出的素材信息，不得超过50个字符。
-     * @param Description 导出的素材信息，不得超过50个字符。
+     * Set 导出的媒体信息，不得超过50个字符。
+     * @param Description 导出的媒体信息，不得超过50个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 导出的素材分类路径，长度不能超过15字符。 
-     * @return ClassPath 导出的素材分类路径，长度不能超过15字符。
+     * Get 导出的媒体分类路径，长度不能超过15字符。 
+     * @return ClassPath 导出的媒体分类路径，长度不能超过15字符。
      */
     public String getClassPath() {
         return this.ClassPath;
     }
 
     /**
-     * Set 导出的素材分类路径，长度不能超过15字符。
-     * @param ClassPath 导出的素材分类路径，长度不能超过15字符。
+     * Set 导出的媒体分类路径，长度不能超过15字符。
+     * @param ClassPath 导出的媒体分类路径，长度不能超过15字符。
      */
     public void setClassPath(String ClassPath) {
         this.ClassPath = ClassPath;
     }
 
     /**
-     * Get 导出的素材标签，单个标签不得超过10个字符。 
-     * @return TagSet 导出的素材标签，单个标签不得超过10个字符。
+     * Get 导出的媒体标签，单个标签不得超过10个字符。 
+     * @return TagSet 导出的媒体标签，单个标签不得超过10个字符。
      */
     public String [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 导出的素材标签，单个标签不得超过10个字符。
-     * @param TagSet 导出的素材标签，单个标签不得超过10个字符。
+     * Set 导出的媒体标签，单个标签不得超过10个字符。
+     * @param TagSet 导出的媒体标签，单个标签不得超过10个字符。
      */
     public void setTagSet(String [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 第三方平台发布信息列表。 
-     * @return ThirdPartyPublishInfos 第三方平台发布信息列表。
+     * Get 第三方平台发布信息列表。暂未正式对外，请勿使用。 
+     * @return ThirdPartyPublishInfos 第三方平台发布信息列表。暂未正式对外，请勿使用。
      */
     public ThirdPartyPublishInfo [] getThirdPartyPublishInfos() {
         return this.ThirdPartyPublishInfos;
     }
 
     /**
-     * Set 第三方平台发布信息列表。
-     * @param ThirdPartyPublishInfos 第三方平台发布信息列表。
+     * Set 第三方平台发布信息列表。暂未正式对外，请勿使用。
+     * @param ThirdPartyPublishInfos 第三方平台发布信息列表。暂未正式对外，请勿使用。
      */
     public void setThirdPartyPublishInfos(ThirdPartyPublishInfo [] ThirdPartyPublishInfos) {
         this.ThirdPartyPublishInfos = ThirdPartyPublishInfos;

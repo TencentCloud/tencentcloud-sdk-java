@@ -44,6 +44,20 @@ public class AutoRewriteRequest extends AbstractModel{
     private String [] Domains;
 
     /**
+    * 重定向状态码，可取值301,302,307
+    */
+    @SerializedName("RewriteCodes")
+    @Expose
+    private Long [] RewriteCodes;
+
+    /**
+    * 重定向是否携带匹配的url
+    */
+    @SerializedName("TakeUrls")
+    @Expose
+    private Boolean [] TakeUrls;
+
+    /**
      * Get 负载均衡实例ID。 
      * @return LoadBalancerId 负载均衡实例ID。
      */
@@ -92,12 +106,46 @@ public class AutoRewriteRequest extends AbstractModel{
     }
 
     /**
+     * Get 重定向状态码，可取值301,302,307 
+     * @return RewriteCodes 重定向状态码，可取值301,302,307
+     */
+    public Long [] getRewriteCodes() {
+        return this.RewriteCodes;
+    }
+
+    /**
+     * Set 重定向状态码，可取值301,302,307
+     * @param RewriteCodes 重定向状态码，可取值301,302,307
+     */
+    public void setRewriteCodes(Long [] RewriteCodes) {
+        this.RewriteCodes = RewriteCodes;
+    }
+
+    /**
+     * Get 重定向是否携带匹配的url 
+     * @return TakeUrls 重定向是否携带匹配的url
+     */
+    public Boolean [] getTakeUrls() {
+        return this.TakeUrls;
+    }
+
+    /**
+     * Set 重定向是否携带匹配的url
+     * @param TakeUrls 重定向是否携带匹配的url
+     */
+    public void setTakeUrls(Boolean [] TakeUrls) {
+        this.TakeUrls = TakeUrls;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamArraySimple(map, prefix + "RewriteCodes.", this.RewriteCodes);
+        this.setParamArraySimple(map, prefix + "TakeUrls.", this.TakeUrls);
 
     }
 }

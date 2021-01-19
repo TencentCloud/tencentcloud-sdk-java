@@ -37,6 +37,27 @@ public class RewriteLocationMap extends AbstractModel{
     private String TargetLocationId;
 
     /**
+    * 重定向状态码，可取值301,302,307
+    */
+    @SerializedName("RewriteCode")
+    @Expose
+    private Long RewriteCode;
+
+    /**
+    * 重定向是否携带匹配的url，配置RewriteCode时必填
+    */
+    @SerializedName("TakeUrl")
+    @Expose
+    private Boolean TakeUrl;
+
+    /**
+    * 源转发的域名，必须是SourceLocationId对应的域名，配置RewriteCode时必填
+    */
+    @SerializedName("SourceDomain")
+    @Expose
+    private String SourceDomain;
+
+    /**
      * Get 源转发规则ID 
      * @return SourceLocationId 源转发规则ID
      */
@@ -69,11 +90,62 @@ public class RewriteLocationMap extends AbstractModel{
     }
 
     /**
+     * Get 重定向状态码，可取值301,302,307 
+     * @return RewriteCode 重定向状态码，可取值301,302,307
+     */
+    public Long getRewriteCode() {
+        return this.RewriteCode;
+    }
+
+    /**
+     * Set 重定向状态码，可取值301,302,307
+     * @param RewriteCode 重定向状态码，可取值301,302,307
+     */
+    public void setRewriteCode(Long RewriteCode) {
+        this.RewriteCode = RewriteCode;
+    }
+
+    /**
+     * Get 重定向是否携带匹配的url，配置RewriteCode时必填 
+     * @return TakeUrl 重定向是否携带匹配的url，配置RewriteCode时必填
+     */
+    public Boolean getTakeUrl() {
+        return this.TakeUrl;
+    }
+
+    /**
+     * Set 重定向是否携带匹配的url，配置RewriteCode时必填
+     * @param TakeUrl 重定向是否携带匹配的url，配置RewriteCode时必填
+     */
+    public void setTakeUrl(Boolean TakeUrl) {
+        this.TakeUrl = TakeUrl;
+    }
+
+    /**
+     * Get 源转发的域名，必须是SourceLocationId对应的域名，配置RewriteCode时必填 
+     * @return SourceDomain 源转发的域名，必须是SourceLocationId对应的域名，配置RewriteCode时必填
+     */
+    public String getSourceDomain() {
+        return this.SourceDomain;
+    }
+
+    /**
+     * Set 源转发的域名，必须是SourceLocationId对应的域名，配置RewriteCode时必填
+     * @param SourceDomain 源转发的域名，必须是SourceLocationId对应的域名，配置RewriteCode时必填
+     */
+    public void setSourceDomain(String SourceDomain) {
+        this.SourceDomain = SourceDomain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceLocationId", this.SourceLocationId);
         this.setParamSimple(map, prefix + "TargetLocationId", this.TargetLocationId);
+        this.setParamSimple(map, prefix + "RewriteCode", this.RewriteCode);
+        this.setParamSimple(map, prefix + "TakeUrl", this.TakeUrl);
+        this.setParamSimple(map, prefix + "SourceDomain", this.SourceDomain);
 
     }
 }

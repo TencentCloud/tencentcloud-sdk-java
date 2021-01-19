@@ -37,6 +37,14 @@ public class DescribeQuotaDataResponse extends AbstractModel{
     private Long Value;
 
     /**
+    * 指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubValue")
+    @Expose
+    private String SubValue;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeQuotaDataResponse extends AbstractModel{
     }
 
     /**
+     * Get 指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubValue 指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubValue() {
+        return this.SubValue;
+    }
+
+    /**
+     * Set 指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubValue 指标的附加值信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubValue(String SubValue) {
+        this.SubValue = SubValue;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +125,7 @@ public class DescribeQuotaDataResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "SubValue", this.SubValue);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

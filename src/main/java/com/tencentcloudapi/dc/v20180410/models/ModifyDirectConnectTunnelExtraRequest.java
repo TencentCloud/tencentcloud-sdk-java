@@ -44,7 +44,7 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     private BgpPeer BgpPeer;
 
     /**
-    * 用户侧网段地址
+    * 用户侧过滤网段地址
     */
     @SerializedName("RouteFilterPrefixes")
     @Expose
@@ -122,6 +122,13 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     private Long IPv6Enable;
 
     /**
+    * 去往用户侧的路由信息
+    */
+    @SerializedName("CustomerIDCRoutes")
+    @Expose
+    private RouteFilterPrefix [] CustomerIDCRoutes;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -170,16 +177,16 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户侧网段地址 
-     * @return RouteFilterPrefixes 用户侧网段地址
+     * Get 用户侧过滤网段地址 
+     * @return RouteFilterPrefixes 用户侧过滤网段地址
      */
     public RouteFilterPrefix getRouteFilterPrefixes() {
         return this.RouteFilterPrefixes;
     }
 
     /**
-     * Set 用户侧网段地址
-     * @param RouteFilterPrefixes 用户侧网段地址
+     * Set 用户侧过滤网段地址
+     * @param RouteFilterPrefixes 用户侧过滤网段地址
      */
     public void setRouteFilterPrefixes(RouteFilterPrefix RouteFilterPrefixes) {
         this.RouteFilterPrefixes = RouteFilterPrefixes;
@@ -350,6 +357,22 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     }
 
     /**
+     * Get 去往用户侧的路由信息 
+     * @return CustomerIDCRoutes 去往用户侧的路由信息
+     */
+    public RouteFilterPrefix [] getCustomerIDCRoutes() {
+        return this.CustomerIDCRoutes;
+    }
+
+    /**
+     * Set 去往用户侧的路由信息
+     * @param CustomerIDCRoutes 去往用户侧的路由信息
+     */
+    public void setCustomerIDCRoutes(RouteFilterPrefix [] CustomerIDCRoutes) {
+        this.CustomerIDCRoutes = CustomerIDCRoutes;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -367,6 +390,7 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
         this.setParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
         this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
         this.setParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
+        this.setParamArrayObj(map, prefix + "CustomerIDCRoutes.", this.CustomerIDCRoutes);
 
     }
 }

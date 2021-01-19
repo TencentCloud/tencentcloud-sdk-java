@@ -58,6 +58,13 @@ public class DescribeImagesRequest extends AbstractModel{
     private String ImageSenseType;
 
     /**
+    * 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
+    */
+    @SerializedName("LayeredGalleryIds")
+    @Expose
+    private Long [] LayeredGalleryIds;
+
+    /**
      * Get 页偏移量 
      * @return Offset 页偏移量
      */
@@ -138,6 +145,22 @@ public class DescribeImagesRequest extends AbstractModel{
     }
 
     /**
+     * Get 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级) 
+     * @return LayeredGalleryIds 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
+     */
+    public Long [] getLayeredGalleryIds() {
+        return this.LayeredGalleryIds;
+    }
+
+    /**
+     * Set 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
+     * @param LayeredGalleryIds 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
+     */
+    public void setLayeredGalleryIds(Long [] LayeredGalleryIds) {
+        this.LayeredGalleryIds = LayeredGalleryIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeImagesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "Orientation", this.Orientation);
         this.setParamSimple(map, prefix + "ImageSenseType", this.ImageSenseType);
+        this.setParamArraySimple(map, prefix + "LayeredGalleryIds.", this.LayeredGalleryIds);
 
     }
 }
