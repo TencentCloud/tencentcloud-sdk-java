@@ -263,6 +263,22 @@ Public：公网属性， Private：内网属性。
     private Long Isolation;
 
     /**
+    * 负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String [] SecurityGroup;
+
+    /**
+    * 负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Long LoadBalancerPassToTarget;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -863,6 +879,46 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
+     * Get 负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroup 负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroup 负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroup(String [] SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
+     * Get 负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set 负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerPassToTarget(Long LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -896,6 +952,8 @@ Public：公网属性， Private：内网属性。
         this.setParamSimple(map, prefix + "TargetPort", this.TargetPort);
         this.setParamSimple(map, prefix + "TargetWeight", this.TargetWeight);
         this.setParamSimple(map, prefix + "Isolation", this.Isolation);
+        this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
 
     }
 }

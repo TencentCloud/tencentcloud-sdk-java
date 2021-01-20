@@ -47,6 +47,14 @@ public class AddInstanceResult extends AbstractModel{
     private String [] TimeoutInstanceIds;
 
     /**
+    * 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailedReasons")
+    @Expose
+    private String [] FailedReasons;
+
+    /**
      * Get 添加集群失败的节点列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FailedInstanceIds 添加集群失败的节点列表
@@ -107,12 +115,33 @@ public class AddInstanceResult extends AbstractModel{
     }
 
     /**
+     * Get 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailedReasons 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFailedReasons() {
+        return this.FailedReasons;
+    }
+
+    /**
+     * Set 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailedReasons 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailedReasons(String [] FailedReasons) {
+        this.FailedReasons = FailedReasons;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
         this.setParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
         this.setParamArraySimple(map, prefix + "TimeoutInstanceIds.", this.TimeoutInstanceIds);
+        this.setParamArraySimple(map, prefix + "FailedReasons.", this.FailedReasons);
 
     }
 }

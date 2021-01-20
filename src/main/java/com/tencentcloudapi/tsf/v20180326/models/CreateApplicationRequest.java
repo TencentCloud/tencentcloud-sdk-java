@@ -72,6 +72,13 @@ public class CreateApplicationRequest extends AbstractModel{
     private String ApplicationRuntimeType;
 
     /**
+    * 需要绑定的数据集ID
+    */
+    @SerializedName("ProgramId")
+    @Expose
+    private String ProgramId;
+
+    /**
      * Get 应用名称 
      * @return ApplicationName 应用名称
      */
@@ -184,6 +191,22 @@ public class CreateApplicationRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要绑定的数据集ID 
+     * @return ProgramId 需要绑定的数据集ID
+     */
+    public String getProgramId() {
+        return this.ProgramId;
+    }
+
+    /**
+     * Set 需要绑定的数据集ID
+     * @param ProgramId 需要绑定的数据集ID
+     */
+    public void setProgramId(String ProgramId) {
+        this.ProgramId = ProgramId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationLogConfig", this.ApplicationLogConfig);
         this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
         this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
+        this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
 
     }
 }

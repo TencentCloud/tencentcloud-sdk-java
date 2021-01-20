@@ -72,6 +72,13 @@ public class CreateNamespaceRequest extends AbstractModel{
     private String IsHaEnable;
 
     /**
+    * 需要绑定的数据集ID
+    */
+    @SerializedName("ProgramId")
+    @Expose
+    private String ProgramId;
+
+    /**
      * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
      */
@@ -184,6 +191,22 @@ public class CreateNamespaceRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要绑定的数据集ID 
+     * @return ProgramId 需要绑定的数据集ID
+     */
+    public String getProgramId() {
+        return this.ProgramId;
+    }
+
+    /**
+     * Set 需要绑定的数据集ID
+     * @param ProgramId 需要绑定的数据集ID
+     */
+    public void setProgramId(String ProgramId) {
+        this.ProgramId = ProgramId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
+        this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
 
     }
 }

@@ -60,6 +60,8 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -132,6 +134,8 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -177,6 +181,8 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -228,6 +234,8 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -273,6 +281,8 @@ public class ZoneInfo extends AbstractModel{
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>

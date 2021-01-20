@@ -93,6 +93,20 @@ public class AddClusterInstancesRequest extends AbstractModel{
     private String [] FeatureIdList;
 
     /**
+    * 实例额外需要设置参数信息
+    */
+    @SerializedName("InstanceAdvancedSettings")
+    @Expose
+    private InstanceAdvancedSettings InstanceAdvancedSettings;
+
+    /**
+    * 部署组ID
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -253,6 +267,38 @@ public class AddClusterInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例额外需要设置参数信息 
+     * @return InstanceAdvancedSettings 实例额外需要设置参数信息
+     */
+    public InstanceAdvancedSettings getInstanceAdvancedSettings() {
+        return this.InstanceAdvancedSettings;
+    }
+
+    /**
+     * Set 实例额外需要设置参数信息
+     * @param InstanceAdvancedSettings 实例额外需要设置参数信息
+     */
+    public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
+        this.InstanceAdvancedSettings = InstanceAdvancedSettings;
+    }
+
+    /**
+     * Get 部署组ID 
+     * @return SecurityGroupIds 部署组ID
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 部署组ID
+     * @param SecurityGroupIds 部署组ID
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +312,8 @@ public class AddClusterInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceImportMode", this.InstanceImportMode);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamArraySimple(map, prefix + "FeatureIdList.", this.FeatureIdList);
+        this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

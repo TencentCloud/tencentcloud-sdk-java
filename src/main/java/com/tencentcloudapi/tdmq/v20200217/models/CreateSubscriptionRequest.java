@@ -58,6 +58,20 @@ public class CreateSubscriptionRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+    */
+    @SerializedName("AutoCreatePolicyTopic")
+    @Expose
+    private Boolean AutoCreatePolicyTopic;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -138,6 +152,38 @@ public class CreateSubscriptionRequest extends AbstractModel{
     }
 
     /**
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。 
+     * @return AutoCreatePolicyTopic 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+     */
+    public Boolean getAutoCreatePolicyTopic() {
+        return this.AutoCreatePolicyTopic;
+    }
+
+    /**
+     * Set 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+     * @param AutoCreatePolicyTopic 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+     */
+    public void setAutoCreatePolicyTopic(Boolean AutoCreatePolicyTopic) {
+        this.AutoCreatePolicyTopic = AutoCreatePolicyTopic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class CreateSubscriptionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
         this.setParamSimple(map, prefix + "IsIdempotent", this.IsIdempotent);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "AutoCreatePolicyTopic", this.AutoCreatePolicyTopic);
 
     }
 }

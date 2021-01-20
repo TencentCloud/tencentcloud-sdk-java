@@ -64,6 +64,13 @@ public class DescribeTopicsRequest extends AbstractModel{
     private Long TopicType;
 
     /**
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -168,6 +175,22 @@ public class DescribeTopicsRequest extends AbstractModel{
     }
 
     /**
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -176,6 +199,7 @@ public class DescribeTopicsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

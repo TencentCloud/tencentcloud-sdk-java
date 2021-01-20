@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateBandwidthPackageRequest extends AbstractModel{
 
     /**
-    * 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+    * 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
     */
     @SerializedName("NetworkType")
     @Expose
@@ -51,7 +51,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private Long BandwidthPackageCount;
 
     /**
-    * 带宽包限速大小。单位：Mbps，-1表示不限速。
+    * 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
     */
     @SerializedName("InternetMaxBandwidth")
     @Expose
@@ -72,16 +72,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private String Protocol;
 
     /**
-     * Get 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST' 
-     * @return NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+     * Get 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST' 
+     * @return NetworkType 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
-     * @param NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+     * Set 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
+     * @param NetworkType 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -136,16 +136,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。 
-     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。 
+     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
      */
     public Long getInternetMaxBandwidth() {
         return this.InternetMaxBandwidth;
     }
 
     /**
-     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。
-     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
      */
     public void setInternetMaxBandwidth(Long InternetMaxBandwidth) {
         this.InternetMaxBandwidth = InternetMaxBandwidth;

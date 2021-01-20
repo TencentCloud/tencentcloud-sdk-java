@@ -30,6 +30,20 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
     private SubscriptionTopic [] SubscriptionTopicSets;
 
     /**
+    * pulsar集群Id。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 环境（命名空间）名称。
+    */
+    @SerializedName("EnvironmentId")
+    @Expose
+    private String EnvironmentId;
+
+    /**
      * Get 订阅关系集合，每次最多删除20个。 
      * @return SubscriptionTopicSets 订阅关系集合，每次最多删除20个。
      */
@@ -46,10 +60,44 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
     }
 
     /**
+     * Get pulsar集群Id。 
+     * @return ClusterId pulsar集群Id。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set pulsar集群Id。
+     * @param ClusterId pulsar集群Id。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 环境（命名空间）名称。 
+     * @return EnvironmentId 环境（命名空间）名称。
+     */
+    public String getEnvironmentId() {
+        return this.EnvironmentId;
+    }
+
+    /**
+     * Set 环境（命名空间）名称。
+     * @param EnvironmentId 环境（命名空间）名称。
+     */
+    public void setEnvironmentId(String EnvironmentId) {
+        this.EnvironmentId = EnvironmentId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SubscriptionTopicSets.", this.SubscriptionTopicSets);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
 
     }
 }

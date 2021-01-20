@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateVpnConnectionRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -86,16 +86,37 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * 是否支持隧道内健康检查
+    */
+    @SerializedName("EnableHealthCheck")
+    @Expose
+    private Boolean EnableHealthCheck;
+
+    /**
+    * 健康检查本端地址
+    */
+    @SerializedName("HealthCheckLocalIp")
+    @Expose
+    private String HealthCheckLocalIp;
+
+    /**
+    * 健康检查对端地址
+    */
+    @SerializedName("HealthCheckRemoteIp")
+    @Expose
+    private String HealthCheckRemoteIp;
+
+    /**
+     * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。 
+     * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+     * @param VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -230,6 +251,54 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否支持隧道内健康检查 
+     * @return EnableHealthCheck 是否支持隧道内健康检查
+     */
+    public Boolean getEnableHealthCheck() {
+        return this.EnableHealthCheck;
+    }
+
+    /**
+     * Set 是否支持隧道内健康检查
+     * @param EnableHealthCheck 是否支持隧道内健康检查
+     */
+    public void setEnableHealthCheck(Boolean EnableHealthCheck) {
+        this.EnableHealthCheck = EnableHealthCheck;
+    }
+
+    /**
+     * Get 健康检查本端地址 
+     * @return HealthCheckLocalIp 健康检查本端地址
+     */
+    public String getHealthCheckLocalIp() {
+        return this.HealthCheckLocalIp;
+    }
+
+    /**
+     * Set 健康检查本端地址
+     * @param HealthCheckLocalIp 健康检查本端地址
+     */
+    public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
+        this.HealthCheckLocalIp = HealthCheckLocalIp;
+    }
+
+    /**
+     * Get 健康检查对端地址 
+     * @return HealthCheckRemoteIp 健康检查对端地址
+     */
+    public String getHealthCheckRemoteIp() {
+        return this.HealthCheckRemoteIp;
+    }
+
+    /**
+     * Set 健康检查对端地址
+     * @param HealthCheckRemoteIp 健康检查对端地址
+     */
+    public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
+        this.HealthCheckRemoteIp = HealthCheckRemoteIp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +311,9 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
         this.setParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+        this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+        this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
 
     }
 }

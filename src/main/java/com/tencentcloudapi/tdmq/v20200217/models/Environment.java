@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Environment extends AbstractModel{
 
     /**
-    * 环境（命名空间）名称
+    * 命名空间名称
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -58,16 +58,30 @@ public class Environment extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get 环境（命名空间）名称 
-     * @return EnvironmentId 环境（命名空间）名称
+    * 命名空间ID
+    */
+    @SerializedName("NamespaceId")
+    @Expose
+    private String NamespaceId;
+
+    /**
+    * 命名空间名称
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
+     * Get 命名空间名称 
+     * @return EnvironmentId 命名空间名称
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境（命名空间）名称
-     * @param EnvironmentId 环境（命名空间）名称
+     * Set 命名空间名称
+     * @param EnvironmentId 命名空间名称
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -138,6 +152,38 @@ public class Environment extends AbstractModel{
     }
 
     /**
+     * Get 命名空间ID 
+     * @return NamespaceId 命名空间ID
+     */
+    public String getNamespaceId() {
+        return this.NamespaceId;
+    }
+
+    /**
+     * Set 命名空间ID
+     * @param NamespaceId 命名空间ID
+     */
+    public void setNamespaceId(String NamespaceId) {
+        this.NamespaceId = NamespaceId;
+    }
+
+    /**
+     * Get 命名空间名称 
+     * @return NamespaceName 命名空间名称
+     */
+    public String getNamespaceName() {
+        return this.NamespaceName;
+    }
+
+    /**
+     * Set 命名空间名称
+     * @param NamespaceName 命名空间名称
+     */
+    public void setNamespaceName(String NamespaceName) {
+        this.NamespaceName = NamespaceName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class Environment extends AbstractModel{
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
 
     }
 }

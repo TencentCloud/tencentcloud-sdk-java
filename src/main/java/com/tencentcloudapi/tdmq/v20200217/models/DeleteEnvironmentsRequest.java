@@ -30,6 +30,13 @@ public class DeleteEnvironmentsRequest extends AbstractModel{
     private String [] EnvironmentIds;
 
     /**
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
      * Get 环境（命名空间）数组，每次最多删除20个。 
      * @return EnvironmentIds 环境（命名空间）数组，每次最多删除20个。
      */
@@ -46,10 +53,27 @@ public class DeleteEnvironmentsRequest extends AbstractModel{
     }
 
     /**
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EnvironmentIds.", this.EnvironmentIds);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

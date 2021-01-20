@@ -69,6 +69,14 @@ public class ApiDetailResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * API 描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get API 请求参数 
      * @return Request API 请求参数
      */
@@ -181,6 +189,26 @@ public class ApiDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get API 描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description API 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set API 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description API 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -190,6 +218,7 @@ public class ApiDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RequestContentType", this.RequestContentType);
         this.setParamSimple(map, prefix + "CanRun", this.CanRun);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

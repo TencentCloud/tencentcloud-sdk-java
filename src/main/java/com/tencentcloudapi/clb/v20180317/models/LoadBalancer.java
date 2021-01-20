@@ -404,6 +404,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String [] Zones;
 
     /**
+    * CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NfvInfo")
+    @Expose
+    private String NfvInfo;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1352,6 +1360,26 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NfvInfo CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNfvInfo() {
+        return this.NfvInfo;
+    }
+
+    /**
+     * Set CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NfvInfo CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNfvInfo(String NfvInfo) {
+        this.NfvInfo = NfvInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1403,6 +1431,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         this.setParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
 
     }
 }

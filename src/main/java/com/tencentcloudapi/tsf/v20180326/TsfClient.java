@@ -399,6 +399,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建路径重写
+     * @param req CreatePathRewritesRequest
+     * @return CreatePathRewritesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePathRewritesResponse CreatePathRewrites(CreatePathRewritesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePathRewritesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePathRewritesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePathRewrites");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建公共配置项
      * @param req CreatePublicConfigRequest
      * @return CreatePublicConfigResponse
@@ -671,6 +691,26 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteNamespaceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNamespace");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除路径重写
+     * @param req DeletePathRewritesRequest
+     * @return DeletePathRewritesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePathRewritesResponse DeletePathRewrites(DeletePathRewritesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePathRewritesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePathRewritesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePathRewrites");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1561,6 +1601,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询路径重写
+     * @param req DescribePathRewriteRequest
+     * @return DescribePathRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePathRewriteResponse DescribePathRewrite(DescribePathRewriteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePathRewriteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePathRewriteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePathRewrite");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询路径重写列表
+     * @param req DescribePathRewritesRequest
+     * @return DescribePathRewritesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePathRewritesResponse DescribePathRewrites(DescribePathRewritesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePathRewritesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePathRewritesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePathRewrites");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *无
      * @param req DescribePkgsRequest
      * @return DescribePkgsResponse
@@ -2174,6 +2254,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<ModifyMicroserviceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMicroservice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改路径重写
+     * @param req ModifyPathRewriteRequest
+     * @return ModifyPathRewriteResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPathRewriteResponse ModifyPathRewrite(ModifyPathRewriteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPathRewriteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPathRewriteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPathRewrite");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

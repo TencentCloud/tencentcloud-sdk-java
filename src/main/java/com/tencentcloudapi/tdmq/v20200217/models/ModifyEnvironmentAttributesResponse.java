@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyEnvironmentAttributesResponse extends AbstractModel{
 
     /**
-    * 环境（命名空间）名称。
+    * 命名空间名称。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -45,6 +45,14 @@ public class ModifyEnvironmentAttributesResponse extends AbstractModel{
     private String Remark;
 
     /**
+    * 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceId")
+    @Expose
+    private String NamespaceId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -52,16 +60,16 @@ public class ModifyEnvironmentAttributesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 环境（命名空间）名称。 
-     * @return EnvironmentId 环境（命名空间）名称。
+     * Get 命名空间名称。 
+     * @return EnvironmentId 命名空间名称。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境（命名空间）名称。
-     * @param EnvironmentId 环境（命名空间）名称。
+     * Set 命名空间名称。
+     * @param EnvironmentId 命名空间名称。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -104,6 +112,26 @@ public class ModifyEnvironmentAttributesResponse extends AbstractModel{
     }
 
     /**
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceId 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceId() {
+        return this.NamespaceId;
+    }
+
+    /**
+     * Set 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceId 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceId(String NamespaceId) {
+        this.NamespaceId = NamespaceId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -126,6 +154,7 @@ public class ModifyEnvironmentAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
