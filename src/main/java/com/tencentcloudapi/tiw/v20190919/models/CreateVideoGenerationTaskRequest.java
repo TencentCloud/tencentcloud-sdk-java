@@ -73,6 +73,13 @@ public class CreateVideoGenerationTaskRequest extends AbstractModel{
     private RecordControl RecordControl;
 
     /**
+    * 内部参数
+    */
+    @SerializedName("ExtraData")
+    @Expose
+    private String ExtraData;
+
+    /**
      * Get 录制任务的TaskId 
      * @return OnlineRecordTaskId 录制任务的TaskId
      */
@@ -201,6 +208,22 @@ public class CreateVideoGenerationTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 内部参数 
+     * @return ExtraData 内部参数
+     */
+    public String getExtraData() {
+        return this.ExtraData;
+    }
+
+    /**
+     * Set 内部参数
+     * @param ExtraData 内部参数
+     */
+    public void setExtraData(String ExtraData) {
+        this.ExtraData = ExtraData;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -210,6 +233,7 @@ public class CreateVideoGenerationTaskRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Concat.", this.Concat);
         this.setParamObj(map, prefix + "MixStream.", this.MixStream);
         this.setParamObj(map, prefix + "RecordControl.", this.RecordControl);
+        this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
 
     }
 }

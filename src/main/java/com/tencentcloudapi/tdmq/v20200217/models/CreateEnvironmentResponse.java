@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateEnvironmentResponse extends AbstractModel{
 
     /**
-    * 命名空间名称。
+    * 环境（命名空间）名称。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -59,16 +59,16 @@ public class CreateEnvironmentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 命名空间名称。 
-     * @return EnvironmentId 命名空间名称。
+     * Get 环境（命名空间）名称。 
+     * @return EnvironmentId 环境（命名空间）名称。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 命名空间名称。
-     * @param EnvironmentId 命名空间名称。
+     * Set 环境（命名空间）名称。
+     * @param EnvironmentId 环境（命名空间）名称。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;

@@ -338,6 +338,13 @@ public class CreateApiRequest extends AbstractModel{
     private String UserType;
 
     /**
+    * 是否打开Base64编码，只有后端是scf时才会生效。
+    */
+    @SerializedName("IsBase64Encoded")
+    @Expose
+    private Boolean IsBase64Encoded;
+
+    /**
      * Get API 所在的服务唯一 ID。 
      * @return ServiceId API 所在的服务唯一 ID。
      */
@@ -1058,6 +1065,22 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否打开Base64编码，只有后端是scf时才会生效。 
+     * @return IsBase64Encoded 是否打开Base64编码，只有后端是scf时才会生效。
+     */
+    public Boolean getIsBase64Encoded() {
+        return this.IsBase64Encoded;
+    }
+
+    /**
+     * Set 是否打开Base64编码，只有后端是scf时才会生效。
+     * @param IsBase64Encoded 是否打开Base64编码，只有后端是scf时才会生效。
+     */
+    public void setIsBase64Encoded(Boolean IsBase64Encoded) {
+        this.IsBase64Encoded = IsBase64Encoded;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1106,6 +1129,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ResponseErrorCodes.", this.ResponseErrorCodes);
         this.setParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
 
     }
 }

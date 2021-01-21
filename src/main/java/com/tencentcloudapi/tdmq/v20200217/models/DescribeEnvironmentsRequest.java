@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeEnvironmentsRequest extends AbstractModel{
 
     /**
-    * 环境（命名空间）名称，模糊搜索。
+    * 命名空间名称，模糊搜索。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -44,16 +44,23 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 环境（命名空间）名称，模糊搜索。 
-     * @return EnvironmentId 环境（命名空间）名称，模糊搜索。
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+     * Get 命名空间名称，模糊搜索。 
+     * @return EnvironmentId 命名空间名称，模糊搜索。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境（命名空间）名称，模糊搜索。
-     * @param EnvironmentId 环境（命名空间）名称，模糊搜索。
+     * Set 命名空间名称，模糊搜索。
+     * @param EnvironmentId 命名空间名称，模糊搜索。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -92,12 +99,29 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     }
 
     /**
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

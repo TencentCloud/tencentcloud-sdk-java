@@ -140,12 +140,20 @@ public class Listener extends AbstractModel{
     private String SessionType;
 
     /**
-    * 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+    * 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeepaliveEnable")
     @Expose
     private Long KeepaliveEnable;
+
+    /**
+    * 仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Toa")
+    @Expose
+    private Boolean Toa;
 
     /**
      * Get 负载均衡监听器 ID 
@@ -436,9 +444,9 @@ public class Listener extends AbstractModel{
     }
 
     /**
-     * Get 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+     * Get 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeepaliveEnable 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+     * @return KeepaliveEnable 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKeepaliveEnable() {
@@ -446,13 +454,33 @@ public class Listener extends AbstractModel{
     }
 
     /**
-     * Set 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+     * Set 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeepaliveEnable 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+     * @param KeepaliveEnable 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
+     * Get 仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Toa 仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getToa() {
+        return this.Toa;
+    }
+
+    /**
+     * Set 仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Toa 仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setToa(Boolean Toa) {
+        this.Toa = Toa;
     }
 
     /**
@@ -475,6 +503,7 @@ public class Listener extends AbstractModel{
         this.setParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+        this.setParamSimple(map, prefix + "Toa", this.Toa);
 
     }
 }

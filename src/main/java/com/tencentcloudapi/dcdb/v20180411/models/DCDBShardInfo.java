@@ -194,6 +194,13 @@ public class DCDBShardInfo extends AbstractModel{
     private Long Cpu;
 
     /**
+    * 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
+    */
+    @SerializedName("Range")
+    @Expose
+    private String Range;
+
+    /**
      * Get 所属实例Id 
      * @return InstanceId 所属实例Id
      */
@@ -590,6 +597,22 @@ public class DCDBShardInfo extends AbstractModel{
     }
 
     /**
+     * Get 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63 
+     * @return Range 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
+     */
+    public String getRange() {
+        return this.Range;
+    }
+
+    /**
+     * Set 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
+     * @param Range 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
+     */
+    public void setRange(String Range) {
+        this.Range = Range;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -617,6 +640,7 @@ public class DCDBShardInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
         this.setParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Range", this.Range);
 
     }
 }

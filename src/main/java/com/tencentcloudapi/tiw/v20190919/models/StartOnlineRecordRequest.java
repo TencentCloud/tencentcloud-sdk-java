@@ -125,6 +125,13 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     private String ChatGroupId;
 
     /**
+    * 内部参数
+    */
+    @SerializedName("ExtraData")
+    @Expose
+    private String ExtraData;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -377,6 +384,22 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     }
 
     /**
+     * Get 内部参数 
+     * @return ExtraData 内部参数
+     */
+    public String getExtraData() {
+        return this.ExtraData;
+    }
+
+    /**
+     * Set 内部参数
+     * @param ExtraData 内部参数
+     */
+    public void setExtraData(String ExtraData) {
+        this.ExtraData = ExtraData;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -393,6 +416,7 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
         this.setParamObj(map, prefix + "RecordControl.", this.RecordControl);
         this.setParamSimple(map, prefix + "RecordMode", this.RecordMode);
         this.setParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
+        this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
 
     }
 }

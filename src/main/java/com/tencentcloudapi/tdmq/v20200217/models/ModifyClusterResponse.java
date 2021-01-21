@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyClusterResponse extends AbstractModel{
 
     /**
-    * 集群的ID
+    * Pulsar 集群的ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyClusterResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 集群的ID 
-     * @return ClusterId 集群的ID
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群的ID
-     * @param ClusterId 集群的ID
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

@@ -199,6 +199,46 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *查询推流任务状态与结果
+     * @param req DescribeWhiteboardPushRequest
+     * @return DescribeWhiteboardPushResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteboardPushResponse DescribeWhiteboardPush(DescribeWhiteboardPushRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteboardPushResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteboardPushResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWhiteboardPush");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询白板推流回调地址
+     * @param req DescribeWhiteboardPushCallbackRequest
+     * @return DescribeWhiteboardPushCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteboardPushCallbackResponse DescribeWhiteboardPushCallback(DescribeWhiteboardPushCallbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteboardPushCallbackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteboardPushCallbackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWhiteboardPushCallback");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *暂停实时录制
      * @param req PauseOnlineRecordRequest
      * @return PauseOnlineRecordResponse
@@ -351,6 +391,46 @@ public class TiwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetVideoGenerationTaskCallbackKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置白板推流回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+     * @param req SetWhiteboardPushCallbackRequest
+     * @return SetWhiteboardPushCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetWhiteboardPushCallbackResponse SetWhiteboardPushCallback(SetWhiteboardPushCallbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetWhiteboardPushCallbackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetWhiteboardPushCallbackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetWhiteboardPushCallback");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置白板推流回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+     * @param req SetWhiteboardPushCallbackKeyRequest
+     * @return SetWhiteboardPushCallbackKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetWhiteboardPushCallbackKeyResponse SetWhiteboardPushCallbackKey(SetWhiteboardPushCallbackKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetWhiteboardPushCallbackKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetWhiteboardPushCallbackKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetWhiteboardPushCallbackKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

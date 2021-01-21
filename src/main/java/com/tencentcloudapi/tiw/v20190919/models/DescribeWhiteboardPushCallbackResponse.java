@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEnvironmentsResponse extends AbstractModel{
+public class DescribeWhiteboardPushCallbackResponse extends AbstractModel{
 
     /**
-    * 命名空间记录数。
+    * 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Callback")
     @Expose
-    private Long TotalCount;
+    private String Callback;
 
     /**
-    * 命名空间集合数组。
+    * 白板推流回调鉴权密钥
     */
-    @SerializedName("EnvironmentSet")
+    @SerializedName("CallbackKey")
     @Expose
-    private Environment [] EnvironmentSet;
+    private String CallbackKey;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeEnvironmentsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 命名空间记录数。 
-     * @return TotalCount 命名空间记录数。
+     * Get 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串 
+     * @return Callback 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getCallback() {
+        return this.Callback;
     }
 
     /**
-     * Set 命名空间记录数。
-     * @param TotalCount 命名空间记录数。
+     * Set 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
+     * @param Callback 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setCallback(String Callback) {
+        this.Callback = Callback;
     }
 
     /**
-     * Get 命名空间集合数组。 
-     * @return EnvironmentSet 命名空间集合数组。
+     * Get 白板推流回调鉴权密钥 
+     * @return CallbackKey 白板推流回调鉴权密钥
      */
-    public Environment [] getEnvironmentSet() {
-        return this.EnvironmentSet;
+    public String getCallbackKey() {
+        return this.CallbackKey;
     }
 
     /**
-     * Set 命名空间集合数组。
-     * @param EnvironmentSet 命名空间集合数组。
+     * Set 白板推流回调鉴权密钥
+     * @param CallbackKey 白板推流回调鉴权密钥
      */
-    public void setEnvironmentSet(Environment [] EnvironmentSet) {
-        this.EnvironmentSet = EnvironmentSet;
+    public void setCallbackKey(String CallbackKey) {
+        this.CallbackKey = CallbackKey;
     }
 
     /**
@@ -95,8 +95,8 @@ public class DescribeEnvironmentsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "EnvironmentSet.", this.EnvironmentSet);
+        this.setParamSimple(map, prefix + "Callback", this.Callback);
+        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

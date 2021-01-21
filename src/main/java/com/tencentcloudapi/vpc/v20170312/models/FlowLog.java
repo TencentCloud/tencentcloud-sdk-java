@@ -93,6 +93,13 @@ public class FlowLog extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
@@ -253,6 +260,22 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
+     * Get 标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
+     * @return TagSet 标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param TagSet 标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class FlowLog extends AbstractModel{
         this.setParamSimple(map, prefix + "CloudLogState", this.CloudLogState);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

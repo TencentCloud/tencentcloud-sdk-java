@@ -30,7 +30,7 @@ public class CreateClusterRequest extends AbstractModel{
     private String ClusterName;
 
     /**
-    * 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
+    * 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
     */
     @SerializedName("BindClusterId")
     @Expose
@@ -67,16 +67,16 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。 
-     * @return BindClusterId 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
+     * Get 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。 
+     * @return BindClusterId 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
      */
     public Long getBindClusterId() {
         return this.BindClusterId;
     }
 
     /**
-     * Set 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
-     * @param BindClusterId 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
+     * Set 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
+     * @param BindClusterId 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
      */
     public void setBindClusterId(Long BindClusterId) {
         this.BindClusterId = BindClusterId;

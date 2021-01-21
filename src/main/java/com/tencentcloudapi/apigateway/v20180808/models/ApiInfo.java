@@ -407,6 +407,30 @@ public class ApiInfo extends AbstractModel{
     private String [] Environments;
 
     /**
+    * 是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsBase64Encoded")
+    @Expose
+    private Boolean IsBase64Encoded;
+
+    /**
+    * 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsBase64Trigger")
+    @Expose
+    private Boolean IsBase64Trigger;
+
+    /**
+    * Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Base64EncodedTriggerRules")
+    @Expose
+    private Base64EncodedTriggerRule [] Base64EncodedTriggerRules;
+
+    /**
      * Get API 所在的服务唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceId API 所在的服务唯一 ID。
@@ -1367,6 +1391,66 @@ public class ApiInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsBase64Encoded 是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsBase64Encoded() {
+        return this.IsBase64Encoded;
+    }
+
+    /**
+     * Set 是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsBase64Encoded 是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsBase64Encoded(Boolean IsBase64Encoded) {
+        this.IsBase64Encoded = IsBase64Encoded;
+    }
+
+    /**
+     * Get 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsBase64Trigger 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsBase64Trigger() {
+        return this.IsBase64Trigger;
+    }
+
+    /**
+     * Set 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsBase64Trigger 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsBase64Trigger(Boolean IsBase64Trigger) {
+        this.IsBase64Trigger = IsBase64Trigger;
+    }
+
+    /**
+     * Get Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Base64EncodedTriggerRules Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Base64EncodedTriggerRule [] getBase64EncodedTriggerRules() {
+        return this.Base64EncodedTriggerRules;
+    }
+
+    /**
+     * Set Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Base64EncodedTriggerRules Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBase64EncodedTriggerRules(Base64EncodedTriggerRule [] Base64EncodedTriggerRules) {
+        this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1418,6 +1502,9 @@ public class ApiInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableCORS", this.EnableCORS);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArraySimple(map, prefix + "Environments.", this.Environments);
+        this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+        this.setParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
+        this.setParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
 
     }
 }

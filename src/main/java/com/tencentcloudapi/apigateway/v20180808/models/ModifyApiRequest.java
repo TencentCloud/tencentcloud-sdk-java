@@ -338,6 +338,27 @@ public class ModifyApiRequest extends AbstractModel{
     private ResponseErrorCodeReq [] ResponseErrorCodes;
 
     /**
+    * 是否开启Base64编码，只有后端为scf时才会生效。
+    */
+    @SerializedName("IsBase64Encoded")
+    @Expose
+    private Boolean IsBase64Encoded;
+
+    /**
+    * 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+    */
+    @SerializedName("IsBase64Trigger")
+    @Expose
+    private Boolean IsBase64Trigger;
+
+    /**
+    * Header触发规则，总规则数不能超过10。
+    */
+    @SerializedName("Base64EncodedTriggerRules")
+    @Expose
+    private Base64EncodedTriggerRule [] Base64EncodedTriggerRules;
+
+    /**
      * Get API 所在的服务唯一 ID。 
      * @return ServiceId API 所在的服务唯一 ID。
      */
@@ -1058,6 +1079,54 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启Base64编码，只有后端为scf时才会生效。 
+     * @return IsBase64Encoded 是否开启Base64编码，只有后端为scf时才会生效。
+     */
+    public Boolean getIsBase64Encoded() {
+        return this.IsBase64Encoded;
+    }
+
+    /**
+     * Set 是否开启Base64编码，只有后端为scf时才会生效。
+     * @param IsBase64Encoded 是否开启Base64编码，只有后端为scf时才会生效。
+     */
+    public void setIsBase64Encoded(Boolean IsBase64Encoded) {
+        this.IsBase64Encoded = IsBase64Encoded;
+    }
+
+    /**
+     * Get 是否开启Base64编码的header触发，只有后端为scf时才会生效。 
+     * @return IsBase64Trigger 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+     */
+    public Boolean getIsBase64Trigger() {
+        return this.IsBase64Trigger;
+    }
+
+    /**
+     * Set 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+     * @param IsBase64Trigger 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+     */
+    public void setIsBase64Trigger(Boolean IsBase64Trigger) {
+        this.IsBase64Trigger = IsBase64Trigger;
+    }
+
+    /**
+     * Get Header触发规则，总规则数不能超过10。 
+     * @return Base64EncodedTriggerRules Header触发规则，总规则数不能超过10。
+     */
+    public Base64EncodedTriggerRule [] getBase64EncodedTriggerRules() {
+        return this.Base64EncodedTriggerRules;
+    }
+
+    /**
+     * Set Header触发规则，总规则数不能超过10。
+     * @param Base64EncodedTriggerRules Header触发规则，总规则数不能超过10。
+     */
+    public void setBase64EncodedTriggerRules(Base64EncodedTriggerRule [] Base64EncodedTriggerRules) {
+        this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1106,6 +1175,9 @@ public class ModifyApiRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ServiceParameters.", this.ServiceParameters);
         this.setParamObj(map, prefix + "OauthConfig.", this.OauthConfig);
         this.setParamArrayObj(map, prefix + "ResponseErrorCodes.", this.ResponseErrorCodes);
+        this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+        this.setParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
+        this.setParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
 
     }
 }

@@ -44,6 +44,13 @@ public class CreateClusterInstancesRequest extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
+    * 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+    */
+    @SerializedName("SkipValidateOptions")
+    @Expose
+    private String [] SkipValidateOptions;
+
+    /**
      * Get 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段 
      * @return ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      */
@@ -92,12 +99,29 @@ public class CreateClusterInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验） 
+     * @return SkipValidateOptions 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     */
+    public String [] getSkipValidateOptions() {
+        return this.SkipValidateOptions;
+    }
+
+    /**
+     * Set 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     * @param SkipValidateOptions 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     */
+    public void setSkipValidateOptions(String [] SkipValidateOptions) {
+        this.SkipValidateOptions = SkipValidateOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RunInstancePara", this.RunInstancePara);
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+        this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
 
     }
 }

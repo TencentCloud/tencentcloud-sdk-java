@@ -30,7 +30,7 @@ public class DescribeEnvironmentRolesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 环境角色集合。
+    * 命名空间角色集合。
     */
     @SerializedName("EnvironmentRoleSets")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeEnvironmentRolesResponse extends AbstractModel{
     }
 
     /**
-     * Get 环境角色集合。 
-     * @return EnvironmentRoleSets 环境角色集合。
+     * Get 命名空间角色集合。 
+     * @return EnvironmentRoleSets 命名空间角色集合。
      */
     public EnvironmentRole [] getEnvironmentRoleSets() {
         return this.EnvironmentRoleSets;
     }
 
     /**
-     * Set 环境角色集合。
-     * @param EnvironmentRoleSets 环境角色集合。
+     * Set 命名空间角色集合。
+     * @param EnvironmentRoleSets 命名空间角色集合。
      */
     public void setEnvironmentRoleSets(EnvironmentRole [] EnvironmentRoleSets) {
         this.EnvironmentRoleSets = EnvironmentRoleSets;

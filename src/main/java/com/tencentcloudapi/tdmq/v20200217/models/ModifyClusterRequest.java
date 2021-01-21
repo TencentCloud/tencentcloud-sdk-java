@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyClusterRequest extends AbstractModel{
 
     /**
-    * 集群Id，需要更新的集群Id。
+    * Pulsar 集群的ID，需要更新的集群Id。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -44,16 +44,16 @@ public class ModifyClusterRequest extends AbstractModel{
     private String Remark;
 
     /**
-     * Get 集群Id，需要更新的集群Id。 
-     * @return ClusterId 集群Id，需要更新的集群Id。
+     * Get Pulsar 集群的ID，需要更新的集群Id。 
+     * @return ClusterId Pulsar 集群的ID，需要更新的集群Id。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群Id，需要更新的集群Id。
-     * @param ClusterId 集群Id，需要更新的集群Id。
+     * Set Pulsar 集群的ID，需要更新的集群Id。
+     * @param ClusterId Pulsar 集群的ID，需要更新的集群Id。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

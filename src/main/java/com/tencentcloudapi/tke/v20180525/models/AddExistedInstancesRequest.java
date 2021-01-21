@@ -58,13 +58,6 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private LoginSettings LoginSettings;
 
     /**
-    * 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
-    */
-    @SerializedName("SecurityGroupIds")
-    @Expose
-    private String [] SecurityGroupIds;
-
-    /**
     * 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
     */
     @SerializedName("HostName")
@@ -72,11 +65,25 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String HostName;
 
     /**
+    * 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
     * 节点池选项
     */
     @SerializedName("NodePool")
     @Expose
     private NodePoolOption NodePool;
+
+    /**
+    * 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+    */
+    @SerializedName("SkipValidateOptions")
+    @Expose
+    private String [] SkipValidateOptions;
 
     /**
      * Get 集群ID 
@@ -159,22 +166,6 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId） 
-     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
-     */
-    public String [] getSecurityGroupIds() {
-        return this.SecurityGroupIds;
-    }
-
-    /**
-     * Set 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
-     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
-     */
-    public void setSecurityGroupIds(String [] SecurityGroupIds) {
-        this.SecurityGroupIds = SecurityGroupIds;
-    }
-
-    /**
      * Get 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致) 
      * @return HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      */
@@ -188,6 +179,22 @@ public class AddExistedInstancesRequest extends AbstractModel{
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
+    }
+
+    /**
+     * Get 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId） 
+     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
@@ -207,6 +214,22 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验） 
+     * @return SkipValidateOptions 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     */
+    public String [] getSkipValidateOptions() {
+        return this.SkipValidateOptions;
+    }
+
+    /**
+     * Set 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     * @param SkipValidateOptions 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     */
+    public void setSkipValidateOptions(String [] SkipValidateOptions) {
+        this.SkipValidateOptions = SkipValidateOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -215,9 +238,10 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
-        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "NodePool.", this.NodePool);
+        this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
 
     }
 }

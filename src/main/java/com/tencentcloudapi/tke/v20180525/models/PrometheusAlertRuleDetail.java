@@ -66,6 +66,14 @@ public class PrometheusAlertRuleDetail extends AbstractModel{
     private String TemplateId;
 
     /**
+    * 计算周期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Interval")
+    @Expose
+    private String Interval;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -166,6 +174,26 @@ public class PrometheusAlertRuleDetail extends AbstractModel{
     }
 
     /**
+     * Get 计算周期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Interval 计算周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set 计算周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Interval 计算周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterval(String Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -175,6 +203,7 @@ public class PrometheusAlertRuleDetail extends AbstractModel{
         this.setParamObj(map, prefix + "Notification.", this.Notification);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
 
     }
 }

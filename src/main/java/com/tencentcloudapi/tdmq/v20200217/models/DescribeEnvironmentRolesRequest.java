@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeEnvironmentRolesRequest extends AbstractModel{
 
     /**
-    * 环境（命名空间）
+    * 环境（命名空间）名称。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel{
     private String RoleName;
 
     /**
-     * Get 环境（命名空间） 
-     * @return EnvironmentId 环境（命名空间）
+     * Get 环境（命名空间）名称。 
+     * @return EnvironmentId 环境（命名空间）名称。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境（命名空间）
-     * @param EnvironmentId 环境（命名空间）
+     * Set 环境（命名空间）名称。
+     * @param EnvironmentId 环境（命名空间）名称。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;

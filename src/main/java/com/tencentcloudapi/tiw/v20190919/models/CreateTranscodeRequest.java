@@ -71,6 +71,13 @@ tar.gz： 生成`.tar.gz`压缩包
     private String CompressFileType;
 
     /**
+    * 内部参数
+    */
+    @SerializedName("ExtraData")
+    @Expose
+    private String ExtraData;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -191,6 +198,22 @@ tar.gz： 生成`.tar.gz`压缩包
     }
 
     /**
+     * Get 内部参数 
+     * @return ExtraData 内部参数
+     */
+    public String getExtraData() {
+        return this.ExtraData;
+    }
+
+    /**
+     * Set 内部参数
+     * @param ExtraData 内部参数
+     */
+    public void setExtraData(String ExtraData) {
+        this.ExtraData = ExtraData;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +223,7 @@ tar.gz： 生成`.tar.gz`压缩包
         this.setParamSimple(map, prefix + "MinResolution", this.MinResolution);
         this.setParamSimple(map, prefix + "ThumbnailResolution", this.ThumbnailResolution);
         this.setParamSimple(map, prefix + "CompressFileType", this.CompressFileType);
+        this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
 
     }
 }
