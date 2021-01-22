@@ -464,6 +464,7 @@ public abstract class AbstractClient {
             this.profile.getHttpProfile().getConnTimeout(),
             this.profile.getHttpProfile().getReadTimeout(),
             this.profile.getHttpProfile().getWriteTimeout());
+    conn.addInterceptors(log);
     this.trySetProxy(conn);
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
