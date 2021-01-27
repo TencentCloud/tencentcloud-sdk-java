@@ -466,6 +466,26 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *拉取函数异步事件列表
+     * @param req ListAsyncEventsRequest
+     * @return ListAsyncEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAsyncEventsResponse ListAsyncEvents(ListAsyncEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAsyncEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAsyncEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListAsyncEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据传入的查询参数返回相关函数信息。
      * @param req ListFunctionsRequest
      * @return ListFunctionsResponse
@@ -678,6 +698,26 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PutTotalConcurrencyConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PutTotalConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *终止正在运行中的函数异步事件
+     * @param req TerminateAsyncEventRequest
+     * @return TerminateAsyncEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateAsyncEventResponse TerminateAsyncEvent(TerminateAsyncEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateAsyncEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateAsyncEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateAsyncEvent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

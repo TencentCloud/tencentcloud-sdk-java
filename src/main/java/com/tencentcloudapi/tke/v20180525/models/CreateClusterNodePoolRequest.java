@@ -79,6 +79,20 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private Taint [] Taints;
 
     /**
+    * 节点池os
+    */
+    @SerializedName("NodePoolOs")
+    @Expose
+    private String NodePoolOs;
+
+    /**
+    * 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
      * Get cluster id 
      * @return ClusterId cluster id
      */
@@ -207,6 +221,38 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get 节点池os 
+     * @return NodePoolOs 节点池os
+     */
+    public String getNodePoolOs() {
+        return this.NodePoolOs;
+    }
+
+    /**
+     * Set 节点池os
+     * @param NodePoolOs 节点池os
+     */
+    public void setNodePoolOs(String NodePoolOs) {
+        this.NodePoolOs = NodePoolOs;
+    }
+
+    /**
+     * Get 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值) 
+     * @return OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @param OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +264,8 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
 
     }
 }

@@ -571,6 +571,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *展示插件列表和详情，支持分页，支持按照插件类型查询，支持按照插件ID批量查询，支持按照插件名称查询。
+     * @param req DescribePluginsRequest
+     * @return DescribePluginsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePluginsResponse DescribePlugins(DescribePluginsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePluginsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePluginsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePlugins");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeService）用于查询一个服务的详细信息、包括服务的描述、域名、协议、创建时间、发布情况等信息。
      * @param req DescribeServiceRequest
      * @return DescribeServiceResponse

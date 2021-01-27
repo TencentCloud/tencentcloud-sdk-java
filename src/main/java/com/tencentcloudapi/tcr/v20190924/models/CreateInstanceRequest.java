@@ -30,7 +30,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private String RegistryName;
 
     /**
-    * 企业版实例类型
+    * 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
     */
     @SerializedName("RegistryType")
     @Expose
@@ -67,16 +67,16 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 企业版实例类型 
-     * @return RegistryType 企业版实例类型
+     * Get 企业版实例类型（basic 基础版；standard 标准版；premium 高级版） 
+     * @return RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 企业版实例类型
-     * @param RegistryType 企业版实例类型
+     * Set 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
+     * @param RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;

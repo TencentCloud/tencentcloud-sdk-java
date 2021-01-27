@@ -999,6 +999,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBInstanceNetwork）用于修改运行中实例的网络，仅支持从VPC网络到VPC网络的转换
+     * @param req ModifyDBInstanceNetworkRequest
+     * @return ModifyDBInstanceNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(ModifyDBInstanceNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceNetworkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNetworkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceNetwork");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceProject）用于修改数据库实例所属项目。
      * @param req ModifyDBInstanceProjectRequest
      * @return ModifyDBInstanceProjectResponse

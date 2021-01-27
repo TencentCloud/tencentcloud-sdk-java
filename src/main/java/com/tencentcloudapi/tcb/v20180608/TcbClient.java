@@ -599,6 +599,29 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询后付费短信资源量
+1 有免费包的返回SmsFreeQuota结构所有字段
+2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
+3 都没有返回为空数组
+     * @param req DescribeSmsQuotasRequest
+     * @return DescribeSmsQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmsQuotasResponse DescribeSmsQuotas(DescribeSmsQuotasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSmsQuotasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSmsQuotasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSmsQuotas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *销毁环境
      * @param req DestroyEnvRequest
      * @return DestroyEnvResponse

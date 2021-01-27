@@ -37,6 +37,14 @@ public class SegmentCustomizedPortraitPicResponse extends AbstractModel{
     private String MaskImage;
 
     /**
+    * 坐标信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageRects")
+    @Expose
+    private ImageRect [] ImageRects;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class SegmentCustomizedPortraitPicResponse extends AbstractModel{
     }
 
     /**
+     * Get 坐标信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageRects 坐标信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageRect [] getImageRects() {
+        return this.ImageRects;
+    }
+
+    /**
+     * Set 坐标信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageRects 坐标信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageRects(ImageRect [] ImageRects) {
+        this.ImageRects = ImageRects;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +125,7 @@ public class SegmentCustomizedPortraitPicResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
         this.setParamSimple(map, prefix + "MaskImage", this.MaskImage);
+        this.setParamArrayObj(map, prefix + "ImageRects.", this.ImageRects);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

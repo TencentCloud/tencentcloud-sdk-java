@@ -65,6 +65,13 @@ public class ImageItem extends AbstractModel{
     private String Vendor;
 
     /**
+    * 图片关键词
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String Keywords;
+
+    /**
      * Get 图片ID 
      * @return ImageId 图片ID
      */
@@ -161,6 +168,22 @@ public class ImageItem extends AbstractModel{
     }
 
     /**
+     * Get 图片关键词 
+     * @return Keywords 图片关键词
+     */
+    public String getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 图片关键词
+     * @param Keywords 图片关键词
+     */
+    public void setKeywords(String Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class ImageItem extends AbstractModel{
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "ThumbUrl", this.ThumbUrl);
         this.setParamSimple(map, prefix + "Vendor", this.Vendor);
+        this.setParamSimple(map, prefix + "Keywords", this.Keywords);
 
     }
 }

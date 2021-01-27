@@ -287,6 +287,14 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     private Boolean Deployable;
 
     /**
+    * 关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -954,6 +962,26 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1006,6 +1034,7 @@ public class DescribeCertificateDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "SubmittedData.", this.SubmittedData);
         this.setParamSimple(map, prefix + "RenewAble", this.RenewAble);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

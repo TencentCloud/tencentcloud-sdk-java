@@ -65,6 +65,27 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long Cpu;
 
     /**
+    * 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
+
+    /**
+    * 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+    */
+    @SerializedName("HAType")
+    @Expose
+    private String HAType;
+
+    /**
+    * 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+    */
+    @SerializedName("MultiZones")
+    @Expose
+    private String MultiZones;
+
+    /**
      * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
@@ -161,6 +182,54 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本 
+     * @return DBVersion 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+     * @param DBVersion 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+    }
+
+    /**
+     * Get 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构 
+     * @return HAType 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+     */
+    public String getHAType() {
+        return this.HAType;
+    }
+
+    /**
+     * Set 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+     * @param HAType 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+     */
+    public void setHAType(String HAType) {
+        this.HAType = HAType;
+    }
+
+    /**
+     * Get 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区 
+     * @return MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+     */
+    public String getMultiZones() {
+        return this.MultiZones;
+    }
+
+    /**
+     * Set 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+     * @param MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+     */
+    public void setMultiZones(String MultiZones) {
+        this.MultiZones = MultiZones;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +239,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "HAType", this.HAType);
+        this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
 
     }
 }

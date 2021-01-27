@@ -30,7 +30,7 @@ public class MTicket extends AbstractModel{
     private String MatchCode;
 
     /**
-    * 请求TicketId
+    * 匹配票据 ID
     */
     @SerializedName("MatchTicketId")
     @Expose
@@ -53,16 +53,16 @@ public class MTicket extends AbstractModel{
     }
 
     /**
-     * Get 请求TicketId 
-     * @return MatchTicketId 请求TicketId
+     * Get 匹配票据 ID 
+     * @return MatchTicketId 匹配票据 ID
      */
     public String getMatchTicketId() {
         return this.MatchTicketId;
     }
 
     /**
-     * Set 请求TicketId
-     * @param MatchTicketId 请求TicketId
+     * Set 匹配票据 ID
+     * @param MatchTicketId 匹配票据 ID
      */
     public void setMatchTicketId(String MatchTicketId) {
         this.MatchTicketId = MatchTicketId;

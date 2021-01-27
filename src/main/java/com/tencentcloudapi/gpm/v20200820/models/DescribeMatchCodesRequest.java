@@ -37,6 +37,13 @@ public class DescribeMatchCodesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 搜索的字符串
+    */
+    @SerializedName("MatchCode")
+    @Expose
+    private String MatchCode;
+
+    /**
      * Get 偏移量，页码 
      * @return Offset 偏移量，页码
      */
@@ -69,11 +76,28 @@ public class DescribeMatchCodesRequest extends AbstractModel{
     }
 
     /**
+     * Get 搜索的字符串 
+     * @return MatchCode 搜索的字符串
+     */
+    public String getMatchCode() {
+        return this.MatchCode;
+    }
+
+    /**
+     * Set 搜索的字符串
+     * @param MatchCode 搜索的字符串
+     */
+    public void setMatchCode(String MatchCode) {
+        this.MatchCode = MatchCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "MatchCode", this.MatchCode);
 
     }
 }

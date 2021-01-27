@@ -64,6 +64,13 @@ public class DescribeMachinesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * 机器所属业务ID列表
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private Long [] ProjectIds;
+
+    /**
      * Get 云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li> 
@@ -168,6 +175,22 @@ public class DescribeMachinesRequest extends AbstractModel{
     }
 
     /**
+     * Get 机器所属业务ID列表 
+     * @return ProjectIds 机器所属业务ID列表
+     */
+    public Long [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 机器所属业务ID列表
+     * @param ProjectIds 机器所属业务ID列表
+     */
+    public void setProjectIds(Long [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -176,6 +199,7 @@ public class DescribeMachinesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

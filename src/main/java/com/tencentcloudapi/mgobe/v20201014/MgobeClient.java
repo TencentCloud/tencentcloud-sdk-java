@@ -79,6 +79,46 @@ public class MgobeClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询玩家信息。支持两种用法，当OpenId不传的时候，PlayerId必传，传入PlayerId可以查询当前PlayerId的玩家信息，当OpenId传入的时候，PlayerId可不传，按照OpenId查询玩家信息。
+     * @param req DescribePlayerRequest
+     * @return DescribePlayerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlayerResponse DescribePlayer(DescribePlayerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePlayerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePlayerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePlayer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于查询房间信息。支持两种用法，当房间Id不传的时候，玩家Id必传，传入玩家Id可以查询当前玩家所在的房间信息，当房间Id传入的时候，玩家Id可不传，按照房间Id查询房间信息。
+     * @param req DescribeRoomRequest
+     * @return DescribeRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoomResponse DescribeRoom(DescribeRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过game_id、room_id解散房间
      * @param req DismissRoomRequest
      * @return DismissRoomResponse

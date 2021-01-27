@@ -499,6 +499,46 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *当restful api为关闭状态时，可以通过此接口关闭restful api
+     * @param req DisableRestProxyRequest
+     * @return DisableRestProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableRestProxyResponse DisableRestProxy(DisableRestProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableRestProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableRestProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableRestProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *当restful api为关闭状态时，可以通过此接口开启restful apu
+     * @param req EnableRestProxyRequest
+     * @return EnableRestProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableRestProxyResponse EnableRestProxy(EnableRestProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableRestProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableRestProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableRestProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改独占集群机器
      * @param req ModifyClusterMachineRequest
      * @return ModifyClusterMachineResponse

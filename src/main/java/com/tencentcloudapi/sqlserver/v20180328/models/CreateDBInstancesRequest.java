@@ -156,6 +156,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Boolean MultiZones;
 
     /**
+    * 新建实例绑定的标签集合
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
      * Get 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取 
      * @return Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
@@ -460,6 +467,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 新建实例绑定的标签集合 
+     * @return ResourceTags 新建实例绑定的标签集合
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 新建实例绑定的标签集合
+     * @param ResourceTags 新建实例绑定的标签集合
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +505,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Span", this.Span);
         this.setParamSimple(map, prefix + "HAType", this.HAType);
         this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

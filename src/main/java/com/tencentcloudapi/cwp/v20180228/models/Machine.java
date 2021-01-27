@@ -166,6 +166,13 @@ public class Machine extends AbstractModel{
     private Long LicenseStatus;
 
     /**
+    * 项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -510,6 +517,22 @@ public class Machine extends AbstractModel{
     }
 
     /**
+     * Get 项目ID 
+     * @return ProjectId 项目ID
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ProjectId 项目ID
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -532,6 +555,7 @@ public class Machine extends AbstractModel{
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
         this.setParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

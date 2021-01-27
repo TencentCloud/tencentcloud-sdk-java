@@ -79,6 +79,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
+     * @param req DescribeApplicationDataRequest
+     * @return DescribeApplicationDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationDataResponse DescribeApplicationData(DescribeApplicationDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据应用ID和文件ID查询识别结果
      * @param req DescribeFilterResultRequest
      * @return DescribeFilterResultResponse

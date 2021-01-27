@@ -79,6 +79,14 @@ public class ProjectEntryEx extends AbstractModel{
     private Long WebAppCount;
 
     /**
+    * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -207,6 +215,26 @@ public class ProjectEntryEx extends AbstractModel{
     }
 
     /**
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +246,7 @@ public class ProjectEntryEx extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductCount", this.ProductCount);
         this.setParamSimple(map, prefix + "NativeAppCount", this.NativeAppCount);
         this.setParamSimple(map, prefix + "WebAppCount", this.WebAppCount);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

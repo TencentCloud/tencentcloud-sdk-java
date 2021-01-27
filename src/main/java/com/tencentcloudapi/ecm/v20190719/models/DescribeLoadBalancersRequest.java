@@ -95,6 +95,13 @@ tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过�
     private Filter [] Filters;
 
     /**
+    * 安全组。
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
      * Get 区域。如果不传则默认查询所有区域。 
      * @return EcmRegion 区域。如果不传则默认查询所有区域。
      */
@@ -263,6 +270,22 @@ tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过�
     }
 
     /**
+     * Get 安全组。 
+     * @return SecurityGroup 安全组。
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 安全组。
+     * @param SecurityGroup 安全组。
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +299,7 @@ tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过�
         this.setParamSimple(map, prefix + "WithBackend", this.WithBackend);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
 
     }
 }

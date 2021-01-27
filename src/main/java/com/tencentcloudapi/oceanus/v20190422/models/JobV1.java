@@ -231,6 +231,14 @@ public class JobV1 extends AbstractModel{
     private Long SchedulerType;
 
     /**
+    * 作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterStatus")
+    @Expose
+    private Long ClusterStatus;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -751,6 +759,26 @@ public class JobV1 extends AbstractModel{
     }
 
     /**
+     * Get 作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterStatus 作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClusterStatus() {
+        return this.ClusterStatus;
+    }
+
+    /**
+     * Set 作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterStatus 作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterStatus(Long ClusterStatus) {
+        this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -780,6 +808,7 @@ public class JobV1 extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
         this.setParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
+        this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
 
     }
 }

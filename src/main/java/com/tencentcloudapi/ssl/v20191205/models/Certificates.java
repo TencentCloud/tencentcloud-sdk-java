@@ -255,6 +255,14 @@ public class Certificates extends AbstractModel{
     private Boolean Deployable;
 
     /**
+    * 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -835,6 +843,26 @@ public class Certificates extends AbstractModel{
     }
 
     /**
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -867,6 +895,7 @@ public class Certificates extends AbstractModel{
         this.setParamObj(map, prefix + "ProjectInfo.", this.ProjectInfo);
         this.setParamArraySimple(map, prefix + "BoundResource.", this.BoundResource);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

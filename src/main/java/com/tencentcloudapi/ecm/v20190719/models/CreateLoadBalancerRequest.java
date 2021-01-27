@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLoadBalancerRequest extends AbstractModel{
 
     /**
-    * 区域。
+    * ECM区域，形如ap-xian-ecm。
     */
     @SerializedName("EcmRegion")
     @Expose
@@ -80,16 +80,23 @@ public class CreateLoadBalancerRequest extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
-     * Get 区域。 
-     * @return EcmRegion 区域。
+    * 安全组。
+    */
+    @SerializedName("SecurityGroups")
+    @Expose
+    private String [] SecurityGroups;
+
+    /**
+     * Get ECM区域，形如ap-xian-ecm。 
+     * @return EcmRegion ECM区域，形如ap-xian-ecm。
      */
     public String getEcmRegion() {
         return this.EcmRegion;
     }
 
     /**
-     * Set 区域。
-     * @param EcmRegion 区域。
+     * Set ECM区域，形如ap-xian-ecm。
+     * @param EcmRegion ECM区域，形如ap-xian-ecm。
      */
     public void setEcmRegion(String EcmRegion) {
         this.EcmRegion = EcmRegion;
@@ -212,6 +219,22 @@ public class CreateLoadBalancerRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全组。 
+     * @return SecurityGroups 安全组。
+     */
+    public String [] getSecurityGroups() {
+        return this.SecurityGroups;
+    }
+
+    /**
+     * Set 安全组。
+     * @param SecurityGroups 安全组。
+     */
+    public void setSecurityGroups(String [] SecurityGroups) {
+        this.SecurityGroups = SecurityGroups;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -223,6 +246,7 @@ public class CreateLoadBalancerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
 
     }
 }

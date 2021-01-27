@@ -299,6 +299,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建弹性集群
+     * @param req CreateEKSClusterRequest
+     * @return CreateEKSClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEKSClusterResponse CreateEKSCluster(CreateEKSClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEKSClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEKSClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEKSCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建grafana监控面板
      * @param req CreatePrometheusDashboardRequest
      * @return CreatePrometheusDashboardResponse
@@ -491,6 +511,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteTableResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteClusterRouteTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除弹性集群(yunapiv3)
+     * @param req DeleteEKSClusterRequest
+     * @return DeleteEKSClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEKSClusterResponse DeleteEKSCluster(DeleteEKSClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEKSClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEKSClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEKSCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -791,6 +831,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取弹性容器集群的接入认证信息
+     * @param req DescribeEKSClusterCredentialRequest
+     * @return DescribeEKSClusterCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEKSClusterCredentialResponse DescribeEKSClusterCredential(DescribeEKSClusterCredentialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEKSClusterCredentialResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEKSClusterCredentialResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEKSClusterCredential");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询弹性集群列表
+     * @param req DescribeEKSClustersRequest
+     * @return DescribeEKSClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEKSClustersResponse DescribeEKSClusters(DescribeEKSClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEKSClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEKSClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEKSClusters");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1231,6 +1311,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateClusterVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateClusterVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改弹性集群名称等属性 
+     * @param req UpdateEKSClusterRequest
+     * @return UpdateEKSClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEKSClusterResponse UpdateEKSCluster(UpdateEKSClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEKSClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEKSClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEKSCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

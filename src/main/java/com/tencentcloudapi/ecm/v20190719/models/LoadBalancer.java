@@ -128,6 +128,22 @@ public class LoadBalancer extends AbstractModel{
     private LoadBalancerInternetAccessible NetworkAttributes;
 
     /**
+    * 安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecureGroups")
+    @Expose
+    private String [] SecureGroups;
+
+    /**
+    * 后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Boolean LoadBalancerPassToTarget;
+
+    /**
      * Get 区域。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 区域。
@@ -392,6 +408,46 @@ public class LoadBalancer extends AbstractModel{
     }
 
     /**
+     * Get 安全组。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecureGroups 安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecureGroups() {
+        return this.SecureGroups;
+    }
+
+    /**
+     * Set 安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecureGroups 安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecureGroups(String [] SecureGroups) {
+        this.SecureGroups = SecureGroups;
+    }
+
+    /**
+     * Get 后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerPassToTarget 后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set 后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerPassToTarget 后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -408,6 +464,8 @@ public class LoadBalancer extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
         this.setParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
+        this.setParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
 
     }
 }

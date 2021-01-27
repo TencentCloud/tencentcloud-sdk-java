@@ -240,7 +240,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private String OperatorRemark;
 
     /**
-    * 服务路劲
+    * 服务路径
     */
     @SerializedName("ServerPath")
     @Expose
@@ -757,16 +757,16 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务路劲 
-     * @return ServerPath 服务路劲
+     * Get 服务路径 
+     * @return ServerPath 服务路径
      */
     public String getServerPath() {
         return this.ServerPath;
     }
 
     /**
-     * Set 服务路劲
-     * @param ServerPath 服务路劲
+     * Set 服务路径
+     * @param ServerPath 服务路径
      */
     public void setServerPath(String ServerPath) {
         this.ServerPath = ServerPath;

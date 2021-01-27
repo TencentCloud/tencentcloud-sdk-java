@@ -30,13 +30,6 @@ public class SendTtsVoiceRequest extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 模板参数，若模板没有参数，请提供为空数组。
-    */
-    @SerializedName("TemplateParamSet")
-    @Expose
-    private String [] TemplateParamSet;
-
-    /**
     * 被叫手机号码，采用 e.164 标准，格式为+[国家或地区码][用户号码]。
 例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
     */
@@ -50,6 +43,13 @@ public class SendTtsVoiceRequest extends AbstractModel{
     @SerializedName("VoiceSdkAppid")
     @Expose
     private String VoiceSdkAppid;
+
+    /**
+    * 模板参数，若模板没有参数，请提供为空数组。
+    */
+    @SerializedName("TemplateParamSet")
+    @Expose
+    private String [] TemplateParamSet;
 
     /**
     * 播放次数，可选，最多3次，默认2次。
@@ -79,22 +79,6 @@ public class SendTtsVoiceRequest extends AbstractModel{
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
-    }
-
-    /**
-     * Get 模板参数，若模板没有参数，请提供为空数组。 
-     * @return TemplateParamSet 模板参数，若模板没有参数，请提供为空数组。
-     */
-    public String [] getTemplateParamSet() {
-        return this.TemplateParamSet;
-    }
-
-    /**
-     * Set 模板参数，若模板没有参数，请提供为空数组。
-     * @param TemplateParamSet 模板参数，若模板没有参数，请提供为空数组。
-     */
-    public void setTemplateParamSet(String [] TemplateParamSet) {
-        this.TemplateParamSet = TemplateParamSet;
     }
 
     /**
@@ -134,6 +118,22 @@ public class SendTtsVoiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 模板参数，若模板没有参数，请提供为空数组。 
+     * @return TemplateParamSet 模板参数，若模板没有参数，请提供为空数组。
+     */
+    public String [] getTemplateParamSet() {
+        return this.TemplateParamSet;
+    }
+
+    /**
+     * Set 模板参数，若模板没有参数，请提供为空数组。
+     * @param TemplateParamSet 模板参数，若模板没有参数，请提供为空数组。
+     */
+    public void setTemplateParamSet(String [] TemplateParamSet) {
+        this.TemplateParamSet = TemplateParamSet;
+    }
+
+    /**
      * Get 播放次数，可选，最多3次，默认2次。 
      * @return PlayTimes 播放次数，可选，最多3次，默认2次。
      */
@@ -170,9 +170,9 @@ public class SendTtsVoiceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamArraySimple(map, prefix + "TemplateParamSet.", this.TemplateParamSet);
         this.setParamSimple(map, prefix + "CalledNumber", this.CalledNumber);
         this.setParamSimple(map, prefix + "VoiceSdkAppid", this.VoiceSdkAppid);
+        this.setParamArraySimple(map, prefix + "TemplateParamSet.", this.TemplateParamSet);
         this.setParamSimple(map, prefix + "PlayTimes", this.PlayTimes);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 

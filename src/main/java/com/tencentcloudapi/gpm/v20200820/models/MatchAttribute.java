@@ -44,7 +44,7 @@ public class MatchAttribute extends AbstractModel{
     private Float NumberValue;
 
     /**
-    * 字符串属性值 长度 1024 默认 ""
+    * 字符串属性值 长度 128 默认 ""
     */
     @SerializedName("StringValue")
     @Expose
@@ -113,16 +113,16 @@ public class MatchAttribute extends AbstractModel{
     }
 
     /**
-     * Get 字符串属性值 长度 1024 默认 "" 
-     * @return StringValue 字符串属性值 长度 1024 默认 ""
+     * Get 字符串属性值 长度 128 默认 "" 
+     * @return StringValue 字符串属性值 长度 128 默认 ""
      */
     public String getStringValue() {
         return this.StringValue;
     }
 
     /**
-     * Set 字符串属性值 长度 1024 默认 ""
-     * @param StringValue 字符串属性值 长度 1024 默认 ""
+     * Set 字符串属性值 长度 128 默认 ""
+     * @param StringValue 字符串属性值 长度 128 默认 ""
      */
     public void setStringValue(String StringValue) {
         this.StringValue = StringValue;

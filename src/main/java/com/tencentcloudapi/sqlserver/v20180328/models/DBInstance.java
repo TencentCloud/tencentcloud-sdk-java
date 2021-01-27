@@ -279,6 +279,14 @@ public class DBInstance extends AbstractModel{
     private String HAFlag;
 
     /**
+    * 实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -871,6 +879,26 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceTags 实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceTags 实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -910,6 +938,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "SubFlag", this.SubFlag);
         this.setParamSimple(map, prefix + "ROFlag", this.ROFlag);
         this.setParamSimple(map, prefix + "HAFlag", this.HAFlag);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

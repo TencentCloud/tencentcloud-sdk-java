@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MatchTicket extends AbstractModel{
 
     /**
-    * MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
+    * 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
     */
     @SerializedName("Id")
     @Expose
@@ -98,16 +98,16 @@ public class MatchTicket extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get MatchTicketId 长度 128 [a-zA-Z0-9-\.]* 
-     * @return Id MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
+     * Get 匹配票据 ID长度 128 [a-zA-Z0-9-\.]* 
+     * @return Id 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
-     * @param Id MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
+     * Set 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
+     * @param Id 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
      */
     public void setId(String Id) {
         this.Id = Id;

@@ -274,7 +274,7 @@ public class CreateInvoiceRequest extends AbstractModel{
     private String StoreNo;
 
     /**
-    * 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+    * 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
     */
     @SerializedName("InvoiceChannel")
     @Expose
@@ -865,16 +865,16 @@ public class CreateInvoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道 
-     * @return InvoiceChannel 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     * Get 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道 
+     * @return InvoiceChannel 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
      */
     public Long getInvoiceChannel() {
         return this.InvoiceChannel;
     }
 
     /**
-     * Set 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
-     * @param InvoiceChannel 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     * Set 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
+     * @param InvoiceChannel 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
      */
     public void setInvoiceChannel(Long InvoiceChannel) {
         this.InvoiceChannel = InvoiceChannel;

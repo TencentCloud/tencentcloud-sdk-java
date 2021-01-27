@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class ExportMaliciousRequestsRequest extends AbstractModel{
 
     /**
+    * 过滤参数
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filters [] Filters;
+
+    /**
+     * Get 过滤参数 
+     * @return Filters 过滤参数
+     */
+    public Filters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤参数
+     * @param Filters 过滤参数
+     */
+    public void setFilters(Filters [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

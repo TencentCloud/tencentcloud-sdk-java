@@ -2307,6 +2307,46 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *设置负载均衡实例的安全组。
+     * @param req SetLoadBalancerSecurityGroupsRequest
+     * @return SetLoadBalancerSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroups(SetLoadBalancerSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetLoadBalancerSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetLoadBalancerSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *绑定或解绑一个安全组到多个负载均衡实例。
+     * @param req SetSecurityGroupForLoadbalancersRequest
+     * @return SetSecurityGroupForLoadbalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancers(SetSecurityGroupForLoadbalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetSecurityGroupForLoadbalancersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetSecurityGroupForLoadbalancersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetSecurityGroupForLoadbalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。
      * @param req StartInstancesRequest
      * @return StartInstancesResponse

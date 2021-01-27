@@ -1103,7 +1103,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDatabases)用于查询云数据库实例的数据库信息。
+     *本接口(DescribeDatabases)用于查询云数据库实例的数据库信息，仅支持主实例和灾备实例，不支持只读实例。
      * @param req DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
      * @throws TencentCloudSDKException
@@ -1443,7 +1443,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeTables)用于查询云数据库实例的数据库表信息。
+     *本接口(DescribeTables)用于查询云数据库实例的数据库表信息，仅支持主实例和灾备实例，不支持只读实例。
      * @param req DescribeTablesRequest
      * @return DescribeTablesResponse
      * @throws TencentCloudSDKException

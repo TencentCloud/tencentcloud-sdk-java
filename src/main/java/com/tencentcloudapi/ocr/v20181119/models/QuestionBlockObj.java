@@ -30,6 +30,13 @@ public class QuestionBlockObj extends AbstractModel{
     private QuestionObj [] QuestionArr;
 
     /**
+    * 题目主体区域检测框在图片中的像素坐标
+    */
+    @SerializedName("QuestionBboxCoord")
+    @Expose
+    private Rect QuestionBboxCoord;
+
+    /**
      * Get 数学试题识别结构化信息数组 
      * @return QuestionArr 数学试题识别结构化信息数组
      */
@@ -46,10 +53,27 @@ public class QuestionBlockObj extends AbstractModel{
     }
 
     /**
+     * Get 题目主体区域检测框在图片中的像素坐标 
+     * @return QuestionBboxCoord 题目主体区域检测框在图片中的像素坐标
+     */
+    public Rect getQuestionBboxCoord() {
+        return this.QuestionBboxCoord;
+    }
+
+    /**
+     * Set 题目主体区域检测框在图片中的像素坐标
+     * @param QuestionBboxCoord 题目主体区域检测框在图片中的像素坐标
+     */
+    public void setQuestionBboxCoord(Rect QuestionBboxCoord) {
+        this.QuestionBboxCoord = QuestionBboxCoord;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "QuestionArr.", this.QuestionArr);
+        this.setParamObj(map, prefix + "QuestionBboxCoord.", this.QuestionBboxCoord);
 
     }
 }

@@ -31,7 +31,7 @@ public class TimeRange extends AbstractModel{
     private String After;
 
     /**
-    * <li>小于等于此时间（结束时间）。</li>
+    * <li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
     */
     @SerializedName("Before")
@@ -59,9 +59,9 @@ public class TimeRange extends AbstractModel{
     }
 
     /**
-     * Get <li>小于等于此时间（结束时间）。</li>
+     * Get <li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li> 
-     * @return Before <li>小于等于此时间（结束时间）。</li>
+     * @return Before <li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public String getBefore() {
@@ -69,9 +69,9 @@ public class TimeRange extends AbstractModel{
     }
 
     /**
-     * Set <li>小于等于此时间（结束时间）。</li>
+     * Set <li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
-     * @param Before <li>小于等于此时间（结束时间）。</li>
+     * @param Before <li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public void setBefore(String Before) {

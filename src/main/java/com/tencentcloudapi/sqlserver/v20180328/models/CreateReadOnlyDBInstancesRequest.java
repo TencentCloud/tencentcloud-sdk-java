@@ -156,6 +156,13 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
+    * 新建实例绑定的标签集合
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
      * Get 主实例ID，格式如：mssql-3l3fgqn7 
      * @return InstanceId 主实例ID，格式如：mssql-3l3fgqn7
      */
@@ -460,6 +467,22 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 新建实例绑定的标签集合 
+     * @return ResourceTags 新建实例绑定的标签集合
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 新建实例绑定的标签集合
+     * @param ResourceTags 新建实例绑定的标签集合
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +505,7 @@ public class CreateReadOnlyDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupList.", this.SecurityGroupList);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

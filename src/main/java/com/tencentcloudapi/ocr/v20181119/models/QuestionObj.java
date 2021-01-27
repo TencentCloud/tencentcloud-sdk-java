@@ -61,6 +61,13 @@ public class QuestionObj extends AbstractModel{
     private String QuestionSubquestion;
 
     /**
+    * 示意图检测框在的图片中的像素坐标
+    */
+    @SerializedName("QuestionImageCoords")
+    @Expose
+    private Rect [] QuestionImageCoords;
+
+    /**
      * Get 题号 
      * @return QuestionTextNo 题号
      */
@@ -153,6 +160,22 @@ public class QuestionObj extends AbstractModel{
     }
 
     /**
+     * Get 示意图检测框在的图片中的像素坐标 
+     * @return QuestionImageCoords 示意图检测框在的图片中的像素坐标
+     */
+    public Rect [] getQuestionImageCoords() {
+        return this.QuestionImageCoords;
+    }
+
+    /**
+     * Set 示意图检测框在的图片中的像素坐标
+     * @param QuestionImageCoords 示意图检测框在的图片中的像素坐标
+     */
+    public void setQuestionImageCoords(Rect [] QuestionImageCoords) {
+        this.QuestionImageCoords = QuestionImageCoords;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -161,6 +184,7 @@ public class QuestionObj extends AbstractModel{
         this.setParamSimple(map, prefix + "QuestionText", this.QuestionText);
         this.setParamSimple(map, prefix + "QuestionOptions", this.QuestionOptions);
         this.setParamSimple(map, prefix + "QuestionSubquestion", this.QuestionSubquestion);
+        this.setParamArrayObj(map, prefix + "QuestionImageCoords.", this.QuestionImageCoords);
 
     }
 }
