@@ -2256,6 +2256,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
+     * @param req SwitchDrInstanceToMasterRequest
+     * @return SwitchDrInstanceToMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(SwitchDrInstanceToMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDrInstanceToMasterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDrInstanceToMasterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDrInstanceToMaster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(SwitchForUpgrade)用于切换访问新实例，针对主升级中的实例处于待切换状态时，用户可主动发起该流程。
      * @param req SwitchForUpgradeRequest
      * @return SwitchForUpgradeResponse

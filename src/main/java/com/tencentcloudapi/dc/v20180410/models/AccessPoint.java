@@ -73,6 +73,22 @@ public class AccessPoint extends AbstractModel{
     private String [] AvailablePortType;
 
     /**
+    * 接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Coordinate")
+    @Expose
+    private Coordinate Coordinate;
+
+    /**
+    * 接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("City")
+    @Expose
+    private String City;
+
+    /**
      * Get 接入点的名称。 
      * @return AccessPointName 接入点的名称。
      */
@@ -189,6 +205,46 @@ public class AccessPoint extends AbstractModel{
     }
 
     /**
+     * Get 接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Coordinate 接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Coordinate getCoordinate() {
+        return this.Coordinate;
+    }
+
+    /**
+     * Set 接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coordinate 接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoordinate(Coordinate Coordinate) {
+        this.Coordinate = Coordinate;
+    }
+
+    /**
+     * Get 接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return City 接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCity() {
+        return this.City;
+    }
+
+    /**
+     * Set 接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param City 接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCity(String City) {
+        this.City = City;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +255,8 @@ public class AccessPoint extends AbstractModel{
         this.setParamArraySimple(map, prefix + "LineOperator.", this.LineOperator);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
+        this.setParamObj(map, prefix + "Coordinate.", this.Coordinate);
+        this.setParamSimple(map, prefix + "City", this.City);
 
     }
 }

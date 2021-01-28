@@ -311,6 +311,14 @@ public class ContainerGroupDetail extends AbstractModel{
     private String MaxUnavailable;
 
     /**
+    * 部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCheckSettings")
+    @Expose
+    private HealthCheckSettings HealthCheckSettings;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -1031,6 +1039,26 @@ public class ContainerGroupDetail extends AbstractModel{
     }
 
     /**
+     * Get 部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCheckSettings 部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HealthCheckSettings getHealthCheckSettings() {
+        return this.HealthCheckSettings;
+    }
+
+    /**
+     * Set 部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckSettings 部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
+        this.HealthCheckSettings = HealthCheckSettings;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1070,6 +1098,7 @@ public class ContainerGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
         this.setParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
+        this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
 
     }
 }

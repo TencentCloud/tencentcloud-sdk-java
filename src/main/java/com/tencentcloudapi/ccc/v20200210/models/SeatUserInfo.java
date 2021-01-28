@@ -37,7 +37,7 @@ public class SeatUserInfo extends AbstractModel{
     private String Mail;
 
     /**
-    * 坐席电话号码
+    * 坐席电话号码（带0086前缀）
     */
     @SerializedName("Phone")
     @Expose
@@ -106,16 +106,16 @@ public class SeatUserInfo extends AbstractModel{
     }
 
     /**
-     * Get 坐席电话号码 
-     * @return Phone 坐席电话号码
+     * Get 坐席电话号码（带0086前缀） 
+     * @return Phone 坐席电话号码（带0086前缀）
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 坐席电话号码
-     * @param Phone 坐席电话号码
+     * Set 坐席电话号码（带0086前缀）
+     * @param Phone 坐席电话号码（带0086前缀）
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;

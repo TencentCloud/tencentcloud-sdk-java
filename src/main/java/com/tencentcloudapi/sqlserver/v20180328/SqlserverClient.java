@@ -59,6 +59,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloneDB）用于克隆数据库，只支持克隆到本实例，克隆时必须指定新库名称。
+     * @param req CloneDBRequest
+     * @return CloneDBResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneDBResponse CloneDB(CloneDBRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneDBResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneDBResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneDB");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
      * @param req CompleteExpansionRequest
      * @return CompleteExpansionResponse

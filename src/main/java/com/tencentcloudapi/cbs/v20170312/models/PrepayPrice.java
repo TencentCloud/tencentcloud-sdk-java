@@ -24,6 +24,7 @@ public class PrepayPrice extends AbstractModel{
 
     /**
     * 预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalPrice")
     @Expose
@@ -31,6 +32,7 @@ public class PrepayPrice extends AbstractModel{
 
     /**
     * 预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountPrice")
     @Expose
@@ -38,6 +40,7 @@ public class PrepayPrice extends AbstractModel{
 
     /**
     * 高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalPriceHigh")
     @Expose
@@ -45,6 +48,7 @@ public class PrepayPrice extends AbstractModel{
 
     /**
     * 高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountPriceHigh")
     @Expose
@@ -56,7 +60,7 @@ public class PrepayPrice extends AbstractModel{
     */
     @SerializedName("UnitPrice")
     @Expose
-    private String UnitPrice;
+    private Float UnitPrice;
 
     /**
     * 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
@@ -72,7 +76,7 @@ public class PrepayPrice extends AbstractModel{
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
-    private String UnitPriceDiscount;
+    private Float UnitPriceDiscount;
 
     /**
     * 高精度后付费云盘原单价, 单位：元
@@ -91,8 +95,10 @@ public class PrepayPrice extends AbstractModel{
     private String UnitPriceDiscountHigh;
 
     /**
-     * Get 预付费云盘或快照预支费用的原价，单位：元。 
+     * Get 预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OriginalPrice 预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
@@ -100,15 +106,19 @@ public class PrepayPrice extends AbstractModel{
 
     /**
      * Set 预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalPrice 预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 预付费云盘或快照预支费用的折扣价，单位：元。 
+     * Get 预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
@@ -116,15 +126,19 @@ public class PrepayPrice extends AbstractModel{
 
     /**
      * Set 预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get 高精度预付费云盘或快照预支费用的原价，单位：元 
+     * Get 高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OriginalPriceHigh 高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalPriceHigh() {
         return this.OriginalPriceHigh;
@@ -132,15 +146,19 @@ public class PrepayPrice extends AbstractModel{
 
     /**
      * Set 高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalPriceHigh 高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalPriceHigh(String OriginalPriceHigh) {
         this.OriginalPriceHigh = OriginalPriceHigh;
     }
 
     /**
-     * Get 高精度预付费云盘或快照预支费用的折扣价，单位：元 
+     * Get 高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiscountPriceHigh 高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountPriceHigh() {
         return this.DiscountPriceHigh;
@@ -148,7 +166,9 @@ public class PrepayPrice extends AbstractModel{
 
     /**
      * Set 高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountPriceHigh 高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountPriceHigh(String DiscountPriceHigh) {
         this.DiscountPriceHigh = DiscountPriceHigh;
@@ -160,7 +180,7 @@ public class PrepayPrice extends AbstractModel{
      * @return UnitPrice 后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUnitPrice() {
+    public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
@@ -170,7 +190,7 @@ public class PrepayPrice extends AbstractModel{
      * @param UnitPrice 后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnitPrice(String UnitPrice) {
+    public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
@@ -200,7 +220,7 @@ public class PrepayPrice extends AbstractModel{
      * @return UnitPriceDiscount 后付费云盘折扣单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUnitPriceDiscount() {
+    public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
     }
 
@@ -210,7 +230,7 @@ public class PrepayPrice extends AbstractModel{
      * @param UnitPriceDiscount 后付费云盘折扣单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUnitPriceDiscount(String UnitPriceDiscount) {
+    public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 

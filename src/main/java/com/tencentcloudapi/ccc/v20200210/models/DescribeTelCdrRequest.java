@@ -37,32 +37,46 @@ public class DescribeTelCdrRequest extends AbstractModel{
     private Long EndTimeStamp;
 
     /**
-    * 返回记录条数，上限 100
+    * 返回数据条数，上限（deprecated）
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * 偏移（deprecated）
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 实例 ID
+    * 实例 ID（deprecated）
     */
     @SerializedName("InstanceId")
     @Expose
     private Long InstanceId;
 
     /**
-    * 应用ID。
+    * 应用 ID
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
+
+    /**
+    * 分页尺寸，上限 100
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * 分页页码，从 0 开始
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
 
     /**
      * Get 起始时间戳，Unix 时间戳 
@@ -97,67 +111,99 @@ public class DescribeTelCdrRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回记录条数，上限 100 
-     * @return Limit 返回记录条数，上限 100
+     * Get 返回数据条数，上限（deprecated） 
+     * @return Limit 返回数据条数，上限（deprecated）
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数，上限 100
-     * @param Limit 返回记录条数，上限 100
+     * Set 返回数据条数，上限（deprecated）
+     * @param Limit 返回数据条数，上限（deprecated）
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移（deprecated） 
+     * @return Offset 偏移（deprecated）
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移（deprecated）
+     * @param Offset 偏移（deprecated）
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get 实例 ID（deprecated） 
+     * @return InstanceId 实例 ID（deprecated）
      */
     public Long getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set 实例 ID（deprecated）
+     * @param InstanceId 实例 ID（deprecated）
      */
     public void setInstanceId(Long InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 应用ID。 
-     * @return SdkAppId 应用ID。
+     * Get 应用 ID 
+     * @return SdkAppId 应用 ID
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用ID。
-     * @param SdkAppId 应用ID。
+     * Set 应用 ID
+     * @param SdkAppId 应用 ID
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 分页尺寸，上限 100 
+     * @return PageSize 分页尺寸，上限 100
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 分页尺寸，上限 100
+     * @param PageSize 分页尺寸，上限 100
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 分页页码，从 0 开始 
+     * @return PageNumber 分页页码，从 0 开始
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set 分页页码，从 0 开始
+     * @param PageNumber 分页页码，从 0 开始
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
     }
 
     /**
@@ -170,6 +216,8 @@ public class DescribeTelCdrRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
 
     }
 }
