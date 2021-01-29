@@ -86,6 +86,13 @@ public class CreateEKSClusterRequest extends AbstractModel{
     private Boolean EnableVpcCoreDNS;
 
     /**
+    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get k8s版本号。可为1.14.4, 1.12.8。 
      * @return K8SVersion k8s版本号。可为1.14.4, 1.12.8。
      */
@@ -230,6 +237,22 @@ public class CreateEKSClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CreateEKSClusterRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         this.setParamSimple(map, prefix + "EnableVpcCoreDNS", this.EnableVpcCoreDNS);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

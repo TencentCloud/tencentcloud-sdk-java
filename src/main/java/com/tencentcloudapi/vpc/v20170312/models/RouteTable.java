@@ -79,6 +79,14 @@ public class RouteTable extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalCidrForCcn")
+    @Expose
+    private CidrForCcn [] LocalCidrForCcn;
+
+    /**
      * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
@@ -207,6 +215,26 @@ public class RouteTable extends AbstractModel{
     }
 
     /**
+     * Get local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalCidrForCcn local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CidrForCcn [] getLocalCidrForCcn() {
+        return this.LocalCidrForCcn;
+    }
+
+    /**
+     * Set local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalCidrForCcn local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalCidrForCcn(CidrForCcn [] LocalCidrForCcn) {
+        this.LocalCidrForCcn = LocalCidrForCcn;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +246,7 @@ public class RouteTable extends AbstractModel{
         this.setParamSimple(map, prefix + "Main", this.Main);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArrayObj(map, prefix + "LocalCidrForCcn.", this.LocalCidrForCcn);
 
     }
 }

@@ -79,6 +79,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *创建云开发项目
+     * @param req CreateAndDeployCloudBaseProjectRequest
+     * @return CreateAndDeployCloudBaseProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndDeployCloudBaseProjectResponse CreateAndDeployCloudBaseProject(CreateAndDeployCloudBaseProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAndDeployCloudBaseProjectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAndDeployCloudBaseProjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAndDeployCloudBaseProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *增加安全域名
      * @param req CreateAuthDomainRequest
      * @return CreateAuthDomainResponse
@@ -271,6 +291,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseBuildServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCloudBaseBuildService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取云开发项目列表
+     * @param req DescribeCloudBaseProjectLatestVersionListRequest
+     * @return DescribeCloudBaseProjectLatestVersionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseProjectLatestVersionListResponse DescribeCloudBaseProjectLatestVersionList(DescribeCloudBaseProjectLatestVersionListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseProjectLatestVersionListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseProjectLatestVersionListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseProjectLatestVersionList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

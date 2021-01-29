@@ -135,6 +135,13 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private Long [] Enable;
 
     /**
+    * 是否未配置通知规则，1：未配置，0：配置
+    */
+    @SerializedName("NotBindingNoticeRule")
+    @Expose
+    private Long NotBindingNoticeRule;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -391,6 +398,22 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否未配置通知规则，1：未配置，0：配置 
+     * @return NotBindingNoticeRule 是否未配置通知规则，1：未配置，0：配置
+     */
+    public Long getNotBindingNoticeRule() {
+        return this.NotBindingNoticeRule;
+    }
+
+    /**
+     * Set 是否未配置通知规则，1：未配置，0：配置
+     * @param NotBindingNoticeRule 是否未配置通知规则，1：未配置，0：配置
+     */
+    public void setNotBindingNoticeRule(Long NotBindingNoticeRule) {
+        this.NotBindingNoticeRule = NotBindingNoticeRule;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         this.setParamArraySimple(map, prefix + "RuleTypes.", this.RuleTypes);
         this.setParamArraySimple(map, prefix + "Enable.", this.Enable);
+        this.setParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
 
     }
 }

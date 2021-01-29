@@ -30,7 +30,7 @@ public class DeleteRoutesRequest extends AbstractModel{
     private String RouteTableId;
 
     /**
-    * 路由策略对象。
+    * 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
     */
     @SerializedName("Routes")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteRoutesRequest extends AbstractModel{
     }
 
     /**
-     * Get 路由策略对象。 
-     * @return Routes 路由策略对象。
+     * Get 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。 
+     * @return Routes 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
      */
     public Route [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 路由策略对象。
-     * @param Routes 路由策略对象。
+     * Set 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
+     * @param Routes 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
      */
     public void setRoutes(Route [] Routes) {
         this.Routes = Routes;

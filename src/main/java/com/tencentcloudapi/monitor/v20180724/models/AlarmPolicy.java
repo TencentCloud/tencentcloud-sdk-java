@@ -250,6 +250,14 @@ public class AlarmPolicy extends AbstractModel{
     private String OriginId;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagInstances")
+    @Expose
+    private TagInstance [] TagInstances;
+
+    /**
      * Get 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 告警策略 ID
@@ -822,6 +830,26 @@ public class AlarmPolicy extends AbstractModel{
     }
 
     /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagInstances 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInstance [] getTagInstances() {
+        return this.TagInstances;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagInstances 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagInstances(TagInstance [] TagInstances) {
+        this.TagInstances = TagInstances;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -853,6 +881,7 @@ public class AlarmPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceGroupName", this.InstanceGroupName);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "OriginId", this.OriginId);
+        this.setParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
 
     }
 }

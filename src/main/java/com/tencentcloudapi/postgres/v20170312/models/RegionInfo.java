@@ -51,6 +51,14 @@ public class RegionInfo extends AbstractModel{
     private String RegionState;
 
     /**
+    * 该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportInternational")
+    @Expose
+    private Long SupportInternational;
+
+    /**
      * Get 该地域对应的英文名称 
      * @return Region 该地域对应的英文名称
      */
@@ -115,6 +123,26 @@ public class RegionInfo extends AbstractModel{
     }
 
     /**
+     * Get 该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportInternational 该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSupportInternational() {
+        return this.SupportInternational;
+    }
+
+    /**
+     * Set 该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportInternational 该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportInternational(Long SupportInternational) {
+        this.SupportInternational = SupportInternational;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +150,7 @@ public class RegionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionState", this.RegionState);
+        this.setParamSimple(map, prefix + "SupportInternational", this.SupportInternational);
 
     }
 }

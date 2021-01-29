@@ -125,7 +125,16 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     private String ChatGroupId;
 
     /**
-    * 内部参数
+    * 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+    */
+    @SerializedName("AutoStopTimeout")
+    @Expose
+    private Long AutoStopTimeout;
+
+    /**
+    * 内部参数，可忽略
     */
     @SerializedName("ExtraData")
     @Expose
@@ -384,16 +393,40 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     }
 
     /**
-     * Get 内部参数 
-     * @return ExtraData 内部参数
+     * Get 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。 
+     * @return AutoStopTimeout 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+     */
+    public Long getAutoStopTimeout() {
+        return this.AutoStopTimeout;
+    }
+
+    /**
+     * Set 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+     * @param AutoStopTimeout 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+     */
+    public void setAutoStopTimeout(Long AutoStopTimeout) {
+        this.AutoStopTimeout = AutoStopTimeout;
+    }
+
+    /**
+     * Get 内部参数，可忽略 
+     * @return ExtraData 内部参数，可忽略
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 内部参数
-     * @param ExtraData 内部参数
+     * Set 内部参数，可忽略
+     * @param ExtraData 内部参数，可忽略
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;
@@ -416,6 +449,7 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
         this.setParamObj(map, prefix + "RecordControl.", this.RecordControl);
         this.setParamSimple(map, prefix + "RecordMode", this.RecordMode);
         this.setParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
+        this.setParamSimple(map, prefix + "AutoStopTimeout", this.AutoStopTimeout);
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
 
     }

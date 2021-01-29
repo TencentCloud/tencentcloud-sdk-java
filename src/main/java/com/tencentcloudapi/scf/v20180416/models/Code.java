@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Code extends AbstractModel{
 
     /**
-    * 对象存储桶名称
+    * 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
     */
     @SerializedName("CosBucketName")
     @Expose
@@ -121,16 +121,16 @@ public class Code extends AbstractModel{
     private String GitUserNameSecret;
 
     /**
-     * Get 对象存储桶名称 
-     * @return CosBucketName 对象存储桶名称
+     * Get 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid） 
+     * @return CosBucketName 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set 对象存储桶名称
-     * @param CosBucketName 对象存储桶名称
+     * Set 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
+     * @param CosBucketName 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;

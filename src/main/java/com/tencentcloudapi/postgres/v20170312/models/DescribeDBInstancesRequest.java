@@ -37,7 +37,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 分页序号，从0开始。
+    * 数据偏移量，从0开始。
     */
     @SerializedName("Offset")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页序号，从0开始。 
-     * @return Offset 分页序号，从0开始。
+     * Get 数据偏移量，从0开始。 
+     * @return Offset 数据偏移量，从0开始。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页序号，从0开始。
-     * @param Offset 分页序号，从0开始。
+     * Set 数据偏移量，从0开始。
+     * @param Offset 数据偏移量，从0开始。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

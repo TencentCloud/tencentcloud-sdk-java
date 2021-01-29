@@ -30,21 +30,21 @@ public class DescribeCaptchaMiniDataRequest extends AbstractModel{
     private Long CaptchaAppId;
 
     /**
-    * 查询开始时间
+    * 查询开始时间 例如：2019112900
     */
     @SerializedName("Start")
     @Expose
     private Long Start;
 
     /**
-    * 查询结束时间
+    * 查询结束时间 例如：2019112902
     */
     @SerializedName("End")
     @Expose
     private Long End;
 
     /**
-    * 查询类型
+    * 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
     */
     @SerializedName("Type")
     @Expose
@@ -67,48 +67,48 @@ public class DescribeCaptchaMiniDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间 
-     * @return Start 查询开始时间
+     * Get 查询开始时间 例如：2019112900 
+     * @return Start 查询开始时间 例如：2019112900
      */
     public Long getStart() {
         return this.Start;
     }
 
     /**
-     * Set 查询开始时间
-     * @param Start 查询开始时间
+     * Set 查询开始时间 例如：2019112900
+     * @param Start 查询开始时间 例如：2019112900
      */
     public void setStart(Long Start) {
         this.Start = Start;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return End 查询结束时间
+     * Get 查询结束时间 例如：2019112902 
+     * @return End 查询结束时间 例如：2019112902
      */
     public Long getEnd() {
         return this.End;
     }
 
     /**
-     * Set 查询结束时间
-     * @param End 查询结束时间
+     * Set 查询结束时间 例如：2019112902
+     * @param End 查询结束时间 例如：2019112902
      */
     public void setEnd(Long End) {
         this.End = End;
     }
 
     /**
-     * Get 查询类型 
-     * @return Type 查询类型
+     * Get 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟） 
+     * @return Type 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 查询类型
-     * @param Type 查询类型
+     * Set 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+     * @param Type 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
      */
     public void setType(Long Type) {
         this.Type = Type;

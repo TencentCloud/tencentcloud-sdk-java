@@ -30,6 +30,13 @@ public class ArithmeticOCRResponse extends AbstractModel{
     private TextArithmetic [] TextDetections;
 
     /**
+    * 图片横屏的角度(90度或270度)
+    */
+    @SerializedName("Angle")
+    @Expose
+    private Float Angle;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class ArithmeticOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 图片横屏的角度(90度或270度) 
+     * @return Angle 图片横屏的角度(90度或270度)
+     */
+    public Float getAngle() {
+        return this.Angle;
+    }
+
+    /**
+     * Set 图片横屏的角度(90度或270度)
+     * @param Angle 图片横屏的角度(90度或270度)
+     */
+    public void setAngle(Float Angle) {
+        this.Angle = Angle;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class ArithmeticOCRResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
+        this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

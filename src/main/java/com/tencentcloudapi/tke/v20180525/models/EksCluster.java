@@ -107,6 +107,14 @@ public class EksCluster extends AbstractModel{
     private Boolean EnableVpcCoreDNS;
 
     /**
+    * 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get 集群Id 
      * @return ClusterId 集群Id
      */
@@ -299,6 +307,26 @@ public class EksCluster extends AbstractModel{
     }
 
     /**
+     * Get 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSpecification 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSpecification 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +342,7 @@ public class EksCluster extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "NeedDeleteCbs", this.NeedDeleteCbs);
         this.setParamSimple(map, prefix + "EnableVpcCoreDNS", this.EnableVpcCoreDNS);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

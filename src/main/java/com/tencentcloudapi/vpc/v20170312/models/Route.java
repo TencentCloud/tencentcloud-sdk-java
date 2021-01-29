@@ -107,6 +107,14 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String RouteItemId;
 
     /**
+    * 路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublishedToVbc")
+    @Expose
+    private Boolean PublishedToVbc;
+
+    /**
      * Get 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
      * @return DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
@@ -323,6 +331,26 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
+     * Get 路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublishedToVbc 路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPublishedToVbc() {
+        return this.PublishedToVbc;
+    }
+
+    /**
+     * Set 路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublishedToVbc 路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublishedToVbc(Boolean PublishedToVbc) {
+        this.PublishedToVbc = PublishedToVbc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -336,6 +364,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
         this.setParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
+        this.setParamSimple(map, prefix + "PublishedToVbc", this.PublishedToVbc);
 
     }
 }

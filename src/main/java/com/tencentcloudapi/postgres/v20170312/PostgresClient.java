@@ -39,6 +39,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（AddDBInstanceToReadOnlyGroup）用于添加只读实例到只读组
+     * @param req AddDBInstanceToReadOnlyGroupRequest
+     * @return AddDBInstanceToReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddDBInstanceToReadOnlyGroupResponse AddDBInstanceToReadOnlyGroup(AddDBInstanceToReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddDBInstanceToReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -99,6 +119,46 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateReadOnlyDBInstance)用于创建只读实例
+     * @param req CreateReadOnlyDBInstanceRequest
+     * @return CreateReadOnlyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReadOnlyDBInstanceResponse CreateReadOnlyDBInstance(CreateReadOnlyDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReadOnlyDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReadOnlyDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReadOnlyDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateReadOnlyGroup）用于创建只读组
+     * @param req CreateReadOnlyGroupRequest
+     * @return CreateReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReadOnlyGroupResponse CreateReadOnlyGroup(CreateReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
      * @param req CreateServerlessDBInstanceRequest
      * @return CreateServerlessDBInstanceResponse
@@ -111,6 +171,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateServerlessDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateServerlessDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DeleteReadOnlyGroup)用于删除指定的只读组
+     * @param req DeleteReadOnlyGroupRequest
+     * @return DeleteReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReadOnlyGroupResponse DeleteReadOnlyGroup(DeleteReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReadOnlyGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -339,6 +419,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeReadOnlyGroups)用于查询用户输入指定实例的只读组
+     * @param req DescribeReadOnlyGroupsRequest
+     * @return DescribeReadOnlyGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupsResponse DescribeReadOnlyGroups(DescribeReadOnlyGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReadOnlyGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReadOnlyGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReadOnlyGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeRegions) 用于查询售卖地域信息。
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -399,7 +499,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。
+     *本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。当前仅适用于按量计费实例。
      * @param req DestroyDBInstanceRequest
      * @return DestroyDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -539,6 +639,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBInstanceReadOnlyGroup）用于修改实例所属的只读组
+     * @param req ModifyDBInstanceReadOnlyGroupRequest
+     * @return ModifyDBInstanceReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceReadOnlyGroupResponse ModifyDBInstanceReadOnlyGroup(ModifyDBInstanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
      * @param req ModifyDBInstancesProjectRequest
      * @return ModifyDBInstancesProjectResponse
@@ -551,6 +671,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstancesProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyReadOnlyGroupConfig)用于更新只读组配置信息
+     * @param req ModifyReadOnlyGroupConfigRequest
+     * @return ModifyReadOnlyGroupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReadOnlyGroupConfigResponse ModifyReadOnlyGroupConfig(ModifyReadOnlyGroupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyReadOnlyGroupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyReadOnlyGroupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyReadOnlyGroupConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -591,6 +731,46 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenServerlessDBExtranetAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenServerlessDBExtranetAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(RebalanceReadOnlyGroup)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
+     * @param req RebalanceReadOnlyGroupRequest
+     * @return RebalanceReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroup(RebalanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RebalanceReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RebalanceReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RebalanceReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（RemoveDBInstanceFromReadOnlyGroup）用户将只读实例从只读组中移除
+     * @param req RemoveDBInstanceFromReadOnlyGroupRequest
+     * @return RemoveDBInstanceFromReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveDBInstanceFromReadOnlyGroupResponse RemoveDBInstanceFromReadOnlyGroup(RemoveDBInstanceFromReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveDBInstanceFromReadOnlyGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

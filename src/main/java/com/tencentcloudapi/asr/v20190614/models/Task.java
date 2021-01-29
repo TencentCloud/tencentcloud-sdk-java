@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class Task extends AbstractModel{
 
     /**
-    * 任务ID，可通过此ID在轮询接口获取识别状态与结果
+    * 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get 任务ID，可通过此ID在轮询接口获取识别状态与结果 
-     * @return TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果
+     * Get 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64 
+     * @return TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，可通过此ID在轮询接口获取识别状态与结果
-     * @param TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果
+     * Set 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+     * @param TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

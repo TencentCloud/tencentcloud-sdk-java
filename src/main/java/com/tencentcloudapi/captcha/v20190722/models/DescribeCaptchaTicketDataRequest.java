@@ -30,7 +30,7 @@ public class DescribeCaptchaTicketDataRequest extends AbstractModel{
     private Long CaptchaAppId;
 
     /**
-    * 查询开始时间
+    * 查询开始时间 例如：20200909
     */
     @SerializedName("Start")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeCaptchaTicketDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间 
-     * @return Start 查询开始时间
+     * Get 查询开始时间 例如：20200909 
+     * @return Start 查询开始时间 例如：20200909
      */
     public Long getStart() {
         return this.Start;
     }
 
     /**
-     * Set 查询开始时间
-     * @param Start 查询开始时间
+     * Set 查询开始时间 例如：20200909
+     * @param Start 查询开始时间 例如：20200909
      */
     public void setStart(Long Start) {
         this.Start = Start;

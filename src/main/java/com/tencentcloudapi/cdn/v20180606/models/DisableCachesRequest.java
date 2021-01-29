@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DisableCachesRequest extends AbstractModel{
 
     /**
-    * 需要禁用的 URL 列表
+    * 禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
     */
     @SerializedName("Urls")
@@ -31,9 +31,9 @@ public class DisableCachesRequest extends AbstractModel{
     private String [] Urls;
 
     /**
-     * Get 需要禁用的 URL 列表
+     * Get 禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条 
-     * @return Urls 需要禁用的 URL 列表
+     * @return Urls 禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
      */
     public String [] getUrls() {
@@ -41,9 +41,9 @@ public class DisableCachesRequest extends AbstractModel{
     }
 
     /**
-     * Set 需要禁用的 URL 列表
+     * Set 禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
-     * @param Urls 需要禁用的 URL 列表
+     * @param Urls 禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
      */
     public void setUrls(String [] Urls) {

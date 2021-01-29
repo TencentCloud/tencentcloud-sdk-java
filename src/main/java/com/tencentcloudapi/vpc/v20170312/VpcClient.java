@@ -893,6 +893,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateNatGatewaySourceIpTranslationNatRule)用于创建NAT网关SNAT规则
+     * @param req CreateNatGatewaySourceIpTranslationNatRuleRequest
+     * @return CreateNatGatewaySourceIpTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNatGatewaySourceIpTranslationNatRuleResponse CreateNatGatewaySourceIpTranslationNatRule(CreateNatGatewaySourceIpTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNatGatewaySourceIpTranslationNatRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateNetDetect)用于创建网络探测。
      * @param req CreateNetDetectRequest
      * @return CreateNetDetectResponse
@@ -1528,6 +1548,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteNatGatewaySourceIpTranslationNatRule）用于删除NAT网关端口SNAT转发规则。
+     * @param req DeleteNatGatewaySourceIpTranslationNatRuleRequest
+     * @return DeleteNatGatewaySourceIpTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRule(DeleteNatGatewaySourceIpTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNatGatewaySourceIpTranslationNatRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2443,6 +2483,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNatGatewayDestinationIpPortTranslationNatRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNatGatewaySourceIpTranslationNatRules）用于查询NAT网关SNAT转发规则对象数组。
+     * @param req DescribeNatGatewaySourceIpTranslationNatRulesRequest
+     * @return DescribeNatGatewaySourceIpTranslationNatRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRules(DescribeNatGatewaySourceIpTranslationNatRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNatGatewaySourceIpTranslationNatRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3977,6 +4037,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ModifyNatGatewaySourceIpTranslationNatRule）用于修改NAT网关SNAT转发规则。
+     * @param req ModifyNatGatewaySourceIpTranslationNatRuleRequest
+     * @return ModifyNatGatewaySourceIpTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatGatewaySourceIpTranslationNatRuleResponse ModifyNatGatewaySourceIpTranslationNatRule(ModifyNatGatewaySourceIpTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNatGatewaySourceIpTranslationNatRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ModifyNetDetect)用于修改网络探测参数。
      * @param req ModifyNetDetectRequest
      * @return ModifyNetDetectResponse
@@ -4286,6 +4366,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVpnGatewayCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *路由表列表页操作增加“发布到云联网”，用于发布路由到云联网。
+     * @param req NotifyRoutesRequest
+     * @return NotifyRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public NotifyRoutesResponse NotifyRoutes(NotifyRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<NotifyRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<NotifyRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "NotifyRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4738,6 +4838,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<UnassignPrivateIpAddressesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnassignPrivateIpAddresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *路由表列表页操作增加“从云联网撤销”，用于撤销已发布到云联网的路由。
+     * @param req WithdrawNotifyRoutesRequest
+     * @return WithdrawNotifyRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public WithdrawNotifyRoutesResponse WithdrawNotifyRoutes(WithdrawNotifyRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<WithdrawNotifyRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "WithdrawNotifyRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

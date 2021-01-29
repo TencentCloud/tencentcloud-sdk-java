@@ -183,6 +183,14 @@ public class DescribeProductEventListEvents extends AbstractModel{
     private DescribeProductEventListEventsGroupInfo [] GroupInfo;
 
     /**
+    * 显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ViewName")
+    @Expose
+    private String ViewName;
+
+    /**
      * Get 事件ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EventId 事件ID
@@ -583,6 +591,26 @@ public class DescribeProductEventListEvents extends AbstractModel{
     }
 
     /**
+     * Get 显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ViewName 显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getViewName() {
+        return this.ViewName;
+    }
+
+    /**
+     * Set 显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ViewName 显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setViewName(String ViewName) {
+        this.ViewName = ViewName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -606,6 +634,7 @@ public class DescribeProductEventListEvents extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AdditionMsg.", this.AdditionMsg);
         this.setParamSimple(map, prefix + "IsAlarmConfig", this.IsAlarmConfig);
         this.setParamArrayObj(map, prefix + "GroupInfo.", this.GroupInfo);
+        this.setParamSimple(map, prefix + "ViewName", this.ViewName);
 
     }
 }
