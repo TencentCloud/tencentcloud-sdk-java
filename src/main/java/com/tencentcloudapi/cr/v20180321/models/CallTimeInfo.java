@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CallTimeInfo extends AbstractModel{
 
     /**
-    * 产品开始拨打时间，HHmmss格式
+    * 产品开始拨打时间，HHmmss格式,默认090000
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 产品结束拨打时间，HHmmss格式
+    * 产品结束拨打时间，HHmmss格式.默认200000
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 产品开始拨打时间，HHmmss格式 
-     * @return StartTime 产品开始拨打时间，HHmmss格式
+     * Get 产品开始拨打时间，HHmmss格式,默认090000 
+     * @return StartTime 产品开始拨打时间，HHmmss格式,默认090000
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 产品开始拨打时间，HHmmss格式
-     * @param StartTime 产品开始拨打时间，HHmmss格式
+     * Set 产品开始拨打时间，HHmmss格式,默认090000
+     * @param StartTime 产品开始拨打时间，HHmmss格式,默认090000
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 产品结束拨打时间，HHmmss格式 
-     * @return EndTime 产品结束拨打时间，HHmmss格式
+     * Get 产品结束拨打时间，HHmmss格式.默认200000 
+     * @return EndTime 产品结束拨打时间，HHmmss格式.默认200000
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 产品结束拨打时间，HHmmss格式
-     * @param EndTime 产品结束拨打时间，HHmmss格式
+     * Set 产品结束拨打时间，HHmmss格式.默认200000
+     * @param EndTime 产品结束拨打时间，HHmmss格式.默认200000
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -30,7 +30,7 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
     private String UploadUrl;
 
     /**
-    * heder
+    * 上传heder
     */
     @SerializedName("UploadHeaders")
     @Expose
@@ -49,6 +49,22 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
     @SerializedName("PackageVersion")
     @Expose
     private String PackageVersion;
+
+    /**
+    * 下载链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DownloadUrl")
+    @Expose
+    private String DownloadUrl;
+
+    /**
+    * 下载Httpheader
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DownloadHeaders")
+    @Expose
+    private KVPair [] DownloadHeaders;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -74,16 +90,16 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
     }
 
     /**
-     * Get heder 
-     * @return UploadHeaders heder
+     * Get 上传heder 
+     * @return UploadHeaders 上传heder
      */
     public KVPair [] getUploadHeaders() {
         return this.UploadHeaders;
     }
 
     /**
-     * Set heder
-     * @param UploadHeaders heder
+     * Set 上传heder
+     * @param UploadHeaders 上传heder
      */
     public void setUploadHeaders(KVPair [] UploadHeaders) {
         this.UploadHeaders = UploadHeaders;
@@ -122,6 +138,46 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
     }
 
     /**
+     * Get 下载链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DownloadUrl 下载链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDownloadUrl() {
+        return this.DownloadUrl;
+    }
+
+    /**
+     * Set 下载链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DownloadUrl 下载链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDownloadUrl(String DownloadUrl) {
+        this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
+     * Get 下载Httpheader
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DownloadHeaders 下载Httpheader
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KVPair [] getDownloadHeaders() {
+        return this.DownloadHeaders;
+    }
+
+    /**
+     * Set 下载Httpheader
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DownloadHeaders 下载Httpheader
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDownloadHeaders(KVPair [] DownloadHeaders) {
+        this.DownloadHeaders = DownloadHeaders;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -145,6 +201,8 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "UploadHeaders.", this.UploadHeaders);
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
         this.setParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
+        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamArrayObj(map, prefix + "DownloadHeaders.", this.DownloadHeaders);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

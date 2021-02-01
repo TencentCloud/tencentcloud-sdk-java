@@ -58,7 +58,7 @@ public class EksCluster extends AbstractModel{
     private String K8SVersion;
 
     /**
-    * 集群状态
+    * 集群状态(running运行中，initializing 初始化中，failed异常)
     */
     @SerializedName("Status")
     @Expose
@@ -195,16 +195,16 @@ public class EksCluster extends AbstractModel{
     }
 
     /**
-     * Get 集群状态 
-     * @return Status 集群状态
+     * Get 集群状态(running运行中，initializing 初始化中，failed异常) 
+     * @return Status 集群状态(running运行中，initializing 初始化中，failed异常)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态
-     * @param Status 集群状态
+     * Set 集群状态(running运行中，initializing 初始化中，failed异常)
+     * @param Status 集群状态(running运行中，initializing 初始化中，failed异常)
      */
     public void setStatus(String Status) {
         this.Status = Status;

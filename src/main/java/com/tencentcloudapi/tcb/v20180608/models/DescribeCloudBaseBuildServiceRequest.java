@@ -44,6 +44,13 @@ public class DescribeCloudBaseBuildServiceRequest extends AbstractModel{
     private String CIBusiness;
 
     /**
+    * 服务版本
+    */
+    @SerializedName("ServiceVersion")
+    @Expose
+    private String ServiceVersion;
+
+    /**
      * Get 环境id 
      * @return EnvId 环境id
      */
@@ -92,12 +99,29 @@ public class DescribeCloudBaseBuildServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务版本 
+     * @return ServiceVersion 服务版本
+     */
+    public String getServiceVersion() {
+        return this.ServiceVersion;
+    }
+
+    /**
+     * Set 服务版本
+     * @param ServiceVersion 服务版本
+     */
+    public void setServiceVersion(String ServiceVersion) {
+        this.ServiceVersion = ServiceVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "CIBusiness", this.CIBusiness);
+        this.setParamSimple(map, prefix + "ServiceVersion", this.ServiceVersion);
 
     }
 }

@@ -51,32 +51,11 @@ public class CreateBotTaskRequest extends AbstractModel{
     private String FlowId;
 
     /**
-    * 产品拨打时间集合
-    */
-    @SerializedName("CallTimeCollection")
-    @Expose
-    private CallTimeDict CallTimeCollection;
-
-    /**
-    * 是否禁止拨打
+    * 是否禁止拨打，默认Y
     */
     @SerializedName("BanCall")
     @Expose
     private String BanCall;
-
-    /**
-    * 禁止拨打起始时间
-    */
-    @SerializedName("StartTimeBan")
-    @Expose
-    private String StartTimeBan;
-
-    /**
-    * 禁止拨打结束时间
-    */
-    @SerializedName("EndTimeBan")
-    @Expose
-    private String EndTimeBan;
 
     /**
     * 拨打线路集合
@@ -84,6 +63,27 @@ public class CreateBotTaskRequest extends AbstractModel{
     @SerializedName("PhoneCollection")
     @Expose
     private String PhoneCollection;
+
+    /**
+    * 产品拨打时间集合
+    */
+    @SerializedName("CallTimeCollection")
+    @Expose
+    private CallTimeDict CallTimeCollection;
+
+    /**
+    * 禁止拨打起始时间。默认130000
+    */
+    @SerializedName("StartTimeBan")
+    @Expose
+    private String StartTimeBan;
+
+    /**
+    * 禁止拨打结束时间。默认140000
+    */
+    @SerializedName("EndTimeBan")
+    @Expose
+    private String EndTimeBan;
 
     /**
     * 重播方式，NON：未接通、LABEL：意向分级，可多选，用竖线分隔：NON|LABEL
@@ -126,6 +126,27 @@ public class CreateBotTaskRequest extends AbstractModel{
     @SerializedName("SmsTemplateId")
     @Expose
     private String SmsTemplateId;
+
+    /**
+    * 拨打方式。NORMAL - 正常拨打；TIMER - 定时拨打
+    */
+    @SerializedName("CallType")
+    @Expose
+    private String CallType;
+
+    /**
+    * 拨打开始日期。CallType=TIMER时有值，yyyy-MM-dd
+    */
+    @SerializedName("CallStartDate")
+    @Expose
+    private String CallStartDate;
+
+    /**
+    * 拨打结束日期。CallType=PERIOD 时有值，yyyy-MM-dd
+    */
+    @SerializedName("CallEndDate")
+    @Expose
+    private String CallEndDate;
 
     /**
      * Get 模块名。默认值（固定）：AiApi 
@@ -192,67 +213,19 @@ public class CreateBotTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 产品拨打时间集合 
-     * @return CallTimeCollection 产品拨打时间集合
-     */
-    public CallTimeDict getCallTimeCollection() {
-        return this.CallTimeCollection;
-    }
-
-    /**
-     * Set 产品拨打时间集合
-     * @param CallTimeCollection 产品拨打时间集合
-     */
-    public void setCallTimeCollection(CallTimeDict CallTimeCollection) {
-        this.CallTimeCollection = CallTimeCollection;
-    }
-
-    /**
-     * Get 是否禁止拨打 
-     * @return BanCall 是否禁止拨打
+     * Get 是否禁止拨打，默认Y 
+     * @return BanCall 是否禁止拨打，默认Y
      */
     public String getBanCall() {
         return this.BanCall;
     }
 
     /**
-     * Set 是否禁止拨打
-     * @param BanCall 是否禁止拨打
+     * Set 是否禁止拨打，默认Y
+     * @param BanCall 是否禁止拨打，默认Y
      */
     public void setBanCall(String BanCall) {
         this.BanCall = BanCall;
-    }
-
-    /**
-     * Get 禁止拨打起始时间 
-     * @return StartTimeBan 禁止拨打起始时间
-     */
-    public String getStartTimeBan() {
-        return this.StartTimeBan;
-    }
-
-    /**
-     * Set 禁止拨打起始时间
-     * @param StartTimeBan 禁止拨打起始时间
-     */
-    public void setStartTimeBan(String StartTimeBan) {
-        this.StartTimeBan = StartTimeBan;
-    }
-
-    /**
-     * Get 禁止拨打结束时间 
-     * @return EndTimeBan 禁止拨打结束时间
-     */
-    public String getEndTimeBan() {
-        return this.EndTimeBan;
-    }
-
-    /**
-     * Set 禁止拨打结束时间
-     * @param EndTimeBan 禁止拨打结束时间
-     */
-    public void setEndTimeBan(String EndTimeBan) {
-        this.EndTimeBan = EndTimeBan;
     }
 
     /**
@@ -269,6 +242,54 @@ public class CreateBotTaskRequest extends AbstractModel{
      */
     public void setPhoneCollection(String PhoneCollection) {
         this.PhoneCollection = PhoneCollection;
+    }
+
+    /**
+     * Get 产品拨打时间集合 
+     * @return CallTimeCollection 产品拨打时间集合
+     */
+    public CallTimeDict getCallTimeCollection() {
+        return this.CallTimeCollection;
+    }
+
+    /**
+     * Set 产品拨打时间集合
+     * @param CallTimeCollection 产品拨打时间集合
+     */
+    public void setCallTimeCollection(CallTimeDict CallTimeCollection) {
+        this.CallTimeCollection = CallTimeCollection;
+    }
+
+    /**
+     * Get 禁止拨打起始时间。默认130000 
+     * @return StartTimeBan 禁止拨打起始时间。默认130000
+     */
+    public String getStartTimeBan() {
+        return this.StartTimeBan;
+    }
+
+    /**
+     * Set 禁止拨打起始时间。默认130000
+     * @param StartTimeBan 禁止拨打起始时间。默认130000
+     */
+    public void setStartTimeBan(String StartTimeBan) {
+        this.StartTimeBan = StartTimeBan;
+    }
+
+    /**
+     * Get 禁止拨打结束时间。默认140000 
+     * @return EndTimeBan 禁止拨打结束时间。默认140000
+     */
+    public String getEndTimeBan() {
+        return this.EndTimeBan;
+    }
+
+    /**
+     * Set 禁止拨打结束时间。默认140000
+     * @param EndTimeBan 禁止拨打结束时间。默认140000
+     */
+    public void setEndTimeBan(String EndTimeBan) {
+        this.EndTimeBan = EndTimeBan;
     }
 
     /**
@@ -368,6 +389,54 @@ public class CreateBotTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 拨打方式。NORMAL - 正常拨打；TIMER - 定时拨打 
+     * @return CallType 拨打方式。NORMAL - 正常拨打；TIMER - 定时拨打
+     */
+    public String getCallType() {
+        return this.CallType;
+    }
+
+    /**
+     * Set 拨打方式。NORMAL - 正常拨打；TIMER - 定时拨打
+     * @param CallType 拨打方式。NORMAL - 正常拨打；TIMER - 定时拨打
+     */
+    public void setCallType(String CallType) {
+        this.CallType = CallType;
+    }
+
+    /**
+     * Get 拨打开始日期。CallType=TIMER时有值，yyyy-MM-dd 
+     * @return CallStartDate 拨打开始日期。CallType=TIMER时有值，yyyy-MM-dd
+     */
+    public String getCallStartDate() {
+        return this.CallStartDate;
+    }
+
+    /**
+     * Set 拨打开始日期。CallType=TIMER时有值，yyyy-MM-dd
+     * @param CallStartDate 拨打开始日期。CallType=TIMER时有值，yyyy-MM-dd
+     */
+    public void setCallStartDate(String CallStartDate) {
+        this.CallStartDate = CallStartDate;
+    }
+
+    /**
+     * Get 拨打结束日期。CallType=PERIOD 时有值，yyyy-MM-dd 
+     * @return CallEndDate 拨打结束日期。CallType=PERIOD 时有值，yyyy-MM-dd
+     */
+    public String getCallEndDate() {
+        return this.CallEndDate;
+    }
+
+    /**
+     * Set 拨打结束日期。CallType=PERIOD 时有值，yyyy-MM-dd
+     * @param CallEndDate 拨打结束日期。CallType=PERIOD 时有值，yyyy-MM-dd
+     */
+    public void setCallEndDate(String CallEndDate) {
+        this.CallEndDate = CallEndDate;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -375,17 +444,20 @@ public class CreateBotTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "BotName", this.BotName);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamObj(map, prefix + "CallTimeCollection.", this.CallTimeCollection);
         this.setParamSimple(map, prefix + "BanCall", this.BanCall);
+        this.setParamSimple(map, prefix + "PhoneCollection", this.PhoneCollection);
+        this.setParamObj(map, prefix + "CallTimeCollection.", this.CallTimeCollection);
         this.setParamSimple(map, prefix + "StartTimeBan", this.StartTimeBan);
         this.setParamSimple(map, prefix + "EndTimeBan", this.EndTimeBan);
-        this.setParamSimple(map, prefix + "PhoneCollection", this.PhoneCollection);
         this.setParamSimple(map, prefix + "CodeType", this.CodeType);
         this.setParamSimple(map, prefix + "CodeCollection", this.CodeCollection);
         this.setParamSimple(map, prefix + "CallCount", this.CallCount);
         this.setParamSimple(map, prefix + "CallInterval", this.CallInterval);
         this.setParamSimple(map, prefix + "SmsSignId", this.SmsSignId);
         this.setParamSimple(map, prefix + "SmsTemplateId", this.SmsTemplateId);
+        this.setParamSimple(map, prefix + "CallType", this.CallType);
+        this.setParamSimple(map, prefix + "CallStartDate", this.CallStartDate);
+        this.setParamSimple(map, prefix + "CallEndDate", this.CallEndDate);
 
     }
 }

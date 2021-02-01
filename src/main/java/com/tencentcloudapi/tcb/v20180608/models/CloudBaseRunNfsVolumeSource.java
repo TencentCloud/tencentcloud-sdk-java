@@ -44,6 +44,20 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel{
     private Boolean ReadOnly;
 
     /**
+    * secret名称
+    */
+    @SerializedName("SecretName")
+    @Expose
+    private String SecretName;
+
+    /**
+    * 临时目录
+    */
+    @SerializedName("EnableEmptyDirVolume")
+    @Expose
+    private Boolean EnableEmptyDirVolume;
+
+    /**
      * Get NFS挂载Server 
      * @return Server NFS挂载Server
      */
@@ -92,12 +106,46 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel{
     }
 
     /**
+     * Get secret名称 
+     * @return SecretName secret名称
+     */
+    public String getSecretName() {
+        return this.SecretName;
+    }
+
+    /**
+     * Set secret名称
+     * @param SecretName secret名称
+     */
+    public void setSecretName(String SecretName) {
+        this.SecretName = SecretName;
+    }
+
+    /**
+     * Get 临时目录 
+     * @return EnableEmptyDirVolume 临时目录
+     */
+    public Boolean getEnableEmptyDirVolume() {
+        return this.EnableEmptyDirVolume;
+    }
+
+    /**
+     * Set 临时目录
+     * @param EnableEmptyDirVolume 临时目录
+     */
+    public void setEnableEmptyDirVolume(Boolean EnableEmptyDirVolume) {
+        this.EnableEmptyDirVolume = EnableEmptyDirVolume;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "EnableEmptyDirVolume", this.EnableEmptyDirVolume);
 
     }
 }

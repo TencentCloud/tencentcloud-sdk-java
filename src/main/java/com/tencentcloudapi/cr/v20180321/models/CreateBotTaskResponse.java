@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateBotTaskResponse extends AbstractModel{
 
     /**
+    * 机器人任务Id
+    */
+    @SerializedName("BotId")
+    @Expose
+    private String BotId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 机器人任务Id 
+     * @return BotId 机器人任务Id
+     */
+    public String getBotId() {
+        return this.BotId;
+    }
+
+    /**
+     * Set 机器人任务Id
+     * @param BotId 机器人任务Id
+     */
+    public void setBotId(String BotId) {
+        this.BotId = BotId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class CreateBotTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BotId", this.BotId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

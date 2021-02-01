@@ -261,6 +261,13 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private CloudBaseRunSideSpec [] SidecarSpecs;
 
     /**
+    * 安全特性
+    */
+    @SerializedName("Security")
+    @Expose
+    private CloudBaseSecurityContext Security;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -805,6 +812,22 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全特性 
+     * @return Security 安全特性
+     */
+    public CloudBaseSecurityContext getSecurity() {
+        return this.Security;
+    }
+
+    /**
+     * Set 安全特性
+     * @param Security 安全特性
+     */
+    public void setSecurity(CloudBaseSecurityContext Security) {
+        this.Security = Security;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -842,6 +865,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServerPath", this.ServerPath);
         this.setParamSimple(map, prefix + "ImageReuseKey", this.ImageReuseKey);
         this.setParamArrayObj(map, prefix + "SidecarSpecs.", this.SidecarSpecs);
+        this.setParamObj(map, prefix + "Security.", this.Security);
 
     }
 }

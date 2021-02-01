@@ -79,6 +79,13 @@ public class RecordInfo extends AbstractModel{
     private String DialogueLog;
 
     /**
+    * 录音文件名
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
+
+    /**
      * Get 任务Id 
      * @return BotId 任务Id
      */
@@ -207,6 +214,22 @@ public class RecordInfo extends AbstractModel{
     }
 
     /**
+     * Get 录音文件名 
+     * @return CosFileName 录音文件名
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * Set 录音文件名
+     * @param CosFileName 录音文件名
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class RecordInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "CosUrl", this.CosUrl);
         this.setParamSimple(map, prefix + "DialogueLog", this.DialogueLog);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 
     }
 }

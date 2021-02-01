@@ -1312,6 +1312,46 @@ if [AvailableGameServerSessions] >= [400] for [5] minutes, then scaling by [curr
     }
 
     /**
+     *本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
+     * @param req UpdateBucketAccelerateOptRequest
+     * @return UpdateBucketAccelerateOptResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(UpdateBucketAccelerateOptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateBucketAccelerateOptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateBucketAccelerateOpt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
+     * @param req UpdateBucketCORSOptRequest
+     * @return UpdateBucketCORSOptResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateBucketCORSOptResponse UpdateBucketCORSOpt(UpdateBucketCORSOptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateBucketCORSOptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateBucketCORSOpt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UpdateFleetAttributes）用于更新服务器舰队属性。
      * @param req UpdateFleetAttributesRequest
      * @return UpdateFleetAttributesResponse

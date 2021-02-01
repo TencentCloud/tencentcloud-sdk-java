@@ -79,6 +79,14 @@ public class CloudBaseRunSideSpec extends AbstractModel{
     private Long Mem;
 
     /**
+    * 安全特性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Security")
+    @Expose
+    private CloudBaseSecurityContext Security;
+
+    /**
      * Get 容器镜像
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ContainerImage 容器镜像
@@ -219,6 +227,26 @@ public class CloudBaseRunSideSpec extends AbstractModel{
     }
 
     /**
+     * Get 安全特性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Security 安全特性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CloudBaseSecurityContext getSecurity() {
+        return this.Security;
+    }
+
+    /**
+     * Set 安全特性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Security 安全特性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurity(CloudBaseSecurityContext Security) {
+        this.Security = Security;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -229,6 +257,7 @@ public class CloudBaseRunSideSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "InitialDelaySeconds", this.InitialDelaySeconds);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Mem", this.Mem);
+        this.setParamObj(map, prefix + "Security.", this.Security);
 
     }
 }

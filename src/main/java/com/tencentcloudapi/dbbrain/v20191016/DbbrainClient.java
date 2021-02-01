@@ -79,6 +79,46 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *创建安全审计日志导出任务。
+     * @param req CreateSecurityAuditLogExportTaskRequest
+     * @return CreateSecurityAuditLogExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityAuditLogExportTaskResponse CreateSecurityAuditLogExportTask(CreateSecurityAuditLogExportTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSecurityAuditLogExportTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSecurityAuditLogExportTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSecurityAuditLogExportTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除安全审计日志导出任务。
+     * @param req DeleteSecurityAuditLogExportTasksRequest
+     * @return DeleteSecurityAuditLogExportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityAuditLogExportTasksResponse DeleteSecurityAuditLogExportTasks(DeleteSecurityAuditLogExportTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSecurityAuditLogExportTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSecurityAuditLogExportTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSecurityAuditLogExportTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取邮件发送中联系人的相关信息。
      * @param req DescribeAllUserContactRequest
      * @return DescribeAllUserContactResponse
@@ -171,6 +211,46 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSpaceStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBSpaceStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
+     * @param req DescribeSecurityAuditLogDownloadUrlsRequest
+     * @return DescribeSecurityAuditLogDownloadUrlsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityAuditLogDownloadUrlsResponse DescribeSecurityAuditLogDownloadUrls(DescribeSecurityAuditLogDownloadUrlsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityAuditLogDownloadUrlsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityAuditLogDownloadUrlsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSecurityAuditLogDownloadUrls");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询安全审计日志导出任务列表。
+     * @param req DescribeSecurityAuditLogExportTasksRequest
+     * @return DescribeSecurityAuditLogExportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityAuditLogExportTasksResponse DescribeSecurityAuditLogExportTasks(DescribeSecurityAuditLogExportTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityAuditLogExportTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityAuditLogExportTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSecurityAuditLogExportTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
