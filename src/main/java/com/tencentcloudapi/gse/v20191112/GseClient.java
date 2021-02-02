@@ -314,6 +314,27 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteTimerScalingPolicy）用于删除fleet下的定时器。
+
+     * @param req DeleteTimerScalingPolicyRequest
+     * @return DeleteTimerScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicy(DeleteTimerScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTimerScalingPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTimerScalingPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeAlias）用于获取别名详情。
      * @param req DescribeAliasRequest
      * @return DescribeAliasResponse
@@ -794,6 +815,27 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeTimerScalingPolicies）用于查询fleet下的定时器列表。可以通过fleetid，定时器名称分页查询。
+
+     * @param req DescribeTimerScalingPoliciesRequest
+     * @return DescribeTimerScalingPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(DescribeTimerScalingPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimerScalingPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeUserQuota）获取用户单个模块配额。
      * @param req DescribeUserQuotaRequest
      * @return DescribeUserQuotaResponse
@@ -1132,6 +1174,29 @@ if [AvailableGameServerSessions] >= [400] for [5] minutes, then scaling by [curr
     }
 
     /**
+     *本接口（PutTimerScalingPolicy）用于给fleet创建或更新定时器。
+
+填写字段timer_id，表示更新；不填字段timer_id表示新增。
+
+     * @param req PutTimerScalingPolicyRequest
+     * @return PutTimerScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutTimerScalingPolicyResponse PutTimerScalingPolicy(PutTimerScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutTimerScalingPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutTimerScalingPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ResolveAlias）用于获取别名当前指向的fleetId。
      * @param req ResolveAliasRequest
      * @return ResolveAliasResponse
@@ -1164,6 +1229,29 @@ if [AvailableGameServerSessions] >= [400] for [5] minutes, then scaling by [curr
                 Type type = new TypeToken<JsonResponseModel<SearchGameServerSessionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchGameServerSessions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（SetServerReserved）用于将异常的实例标记为保留，用于问题排查。
+
+字段ReserveValue：0默认值，不保留；1 保留
+
+     * @param req SetServerReservedRequest
+     * @return SetServerReservedResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetServerReservedResponse SetServerReserved(SetServerReservedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetServerReservedResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetServerReservedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetServerReserved");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

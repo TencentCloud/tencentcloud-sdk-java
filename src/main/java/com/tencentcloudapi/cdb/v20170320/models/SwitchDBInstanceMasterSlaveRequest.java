@@ -30,7 +30,7 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+    * 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
     */
     @SerializedName("DstSlave")
     @Expose
@@ -67,16 +67,16 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。 
-     * @return DstSlave 模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+     * Get 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。 
+     * @return DstSlave 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
      */
     public String getDstSlave() {
         return this.DstSlave;
     }
 
     /**
-     * Set 模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
-     * @param DstSlave 模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+     * Set 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+     * @param DstSlave 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
      */
     public void setDstSlave(String DstSlave) {
         this.DstSlave = DstSlave;

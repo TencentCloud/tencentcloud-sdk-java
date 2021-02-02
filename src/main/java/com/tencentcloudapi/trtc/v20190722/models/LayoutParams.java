@@ -79,6 +79,13 @@ public class LayoutParams extends AbstractModel{
     private Long PlaceHolderMode;
 
     /**
+    * 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。
+    */
+    @SerializedName("PureAudioHoldPlaceMode")
+    @Expose
+    private Long PureAudioHoldPlaceMode;
+
+    /**
      * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。 
      * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
      */
@@ -207,6 +214,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。 
+     * @return PureAudioHoldPlaceMode 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。
+     */
+    public Long getPureAudioHoldPlaceMode() {
+        return this.PureAudioHoldPlaceMode;
+    }
+
+    /**
+     * Set 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。
+     * @param PureAudioHoldPlaceMode 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。
+     */
+    public void setPureAudioHoldPlaceMode(Long PureAudioHoldPlaceMode) {
+        this.PureAudioHoldPlaceMode = PureAudioHoldPlaceMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
         this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
         this.setParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
+        this.setParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
 
     }
 }

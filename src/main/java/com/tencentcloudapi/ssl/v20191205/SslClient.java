@@ -179,6 +179,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *删除管理人
+     * @param req DeleteManagerRequest
+     * @return DeleteManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteManagerResponse DeleteManager(DeleteManagerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteManagerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteManagerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteManager");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeCertificate）用于获取证书信息。
      * @param req DescribeCertificateRequest
      * @return DescribeCertificateResponse
@@ -251,6 +271,46 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCertificates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询管理人详情
+     * @param req DescribeManagerDetailRequest
+     * @return DescribeManagerDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeManagerDetailResponse DescribeManagerDetail(DescribeManagerDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeManagerDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeManagerDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeManagerDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询管理人列表
+     * @param req DescribeManagersRequest
+     * @return DescribeManagersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeManagersResponse DescribeManagers(DescribeManagersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeManagersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeManagersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeManagers");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -359,6 +419,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *重新提交审核管理人
+     * @param req SubmitAuditManagerRequest
+     * @return SubmitAuditManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitAuditManagerResponse SubmitAuditManager(SubmitAuditManagerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitAuditManagerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitAuditManagerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SubmitAuditManager");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提交证书资料。输入参数信息可以分多次提交，但提交的证书资料应最低限度保持完整。
      * @param req SubmitCertificateInformationRequest
      * @return SubmitCertificateInformationResponse
@@ -431,6 +511,26 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UploadRevokeLetterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UploadRevokeLetter");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重新核验管理人
+     * @param req VerifyManagerRequest
+     * @return VerifyManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyManagerResponse VerifyManager(VerifyManagerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyManagerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyManagerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyManager");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

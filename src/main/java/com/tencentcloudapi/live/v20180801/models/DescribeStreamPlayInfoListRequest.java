@@ -63,6 +63,13 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     private String AppName;
 
     /**
+    * 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
      * Get 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS 
      * @return StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS
      */
@@ -163,6 +170,22 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。 
+     * @return ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     * @param ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -171,6 +194,7 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
 
     }
 }

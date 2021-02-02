@@ -39,7 +39,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口（AddLoginWhiteList）用于添加白名单规则
+     *本接口用于新增异地登录白名单规则。
      * @param req AddLoginWhiteListRequest
      * @return AddLoginWhiteListResponse
      * @throws TencentCloudSDKException
@@ -259,7 +259,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *删除白名单规则
+     *本接口用于删除异地登录白名单规则。
      * @param req DeleteLoginWhiteListRequest
      * @return DeleteLoginWhiteListResponse
      * @throws TencentCloudSDKException
@@ -1882,7 +1882,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *编辑白名单规则
+     *本接口用于编辑异地登录白名单规则。
      * @param req ModifyLoginWhiteListRequest
      * @return ModifyLoginWhiteListResponse
      * @throws TencentCloudSDKException

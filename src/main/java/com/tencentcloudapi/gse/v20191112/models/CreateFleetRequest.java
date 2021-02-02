@@ -114,6 +114,20 @@ public class CreateFleetRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+    */
+    @SerializedName("SystemDiskInfo")
+    @Expose
+    private DiskInfo SystemDiskInfo;
+
+    /**
+    * 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+    */
+    @SerializedName("DataDiskInfo")
+    @Expose
+    private DiskInfo [] DataDiskInfo;
+
+    /**
      * Get 生成包 Id 
      * @return AssetId 生成包 Id
      */
@@ -322,6 +336,38 @@ public class CreateFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位 
+     * @return SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     */
+    public DiskInfo getSystemDiskInfo() {
+        return this.SystemDiskInfo;
+    }
+
+    /**
+     * Set 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     * @param SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     */
+    public void setSystemDiskInfo(DiskInfo SystemDiskInfo) {
+        this.SystemDiskInfo = SystemDiskInfo;
+    }
+
+    /**
+     * Get 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位 
+     * @return DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     */
+    public DiskInfo [] getDataDiskInfo() {
+        return this.DataDiskInfo;
+    }
+
+    /**
+     * Set 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     * @param DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     */
+    public void setDataDiskInfo(DiskInfo [] DataDiskInfo) {
+        this.DataDiskInfo = DataDiskInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +384,8 @@ public class CreateFleetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubNetId", this.SubNetId);
         this.setParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
+        this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
 
     }
 }

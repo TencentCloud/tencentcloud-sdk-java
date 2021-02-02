@@ -141,6 +141,14 @@ public class NetworkInterface extends AbstractModel{
     private Long EniType;
 
     /**
+    * 网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Business")
+    @Expose
+    private String Business;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -421,6 +429,26 @@ public class NetworkInterface extends AbstractModel{
     }
 
     /**
+     * Get 网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Business 网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBusiness() {
+        return this.Business;
+    }
+
+    /**
+     * Set 网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Business 网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusiness(String Business) {
+        this.Business = Business;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -440,6 +468,7 @@ public class NetworkInterface extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "EniType", this.EniType);
+        this.setParamSimple(map, prefix + "Business", this.Business);
 
     }
 }

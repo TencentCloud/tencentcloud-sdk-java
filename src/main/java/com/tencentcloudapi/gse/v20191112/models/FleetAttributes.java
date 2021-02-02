@@ -156,6 +156,22 @@ public class FleetAttributes extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataDiskInfo")
+    @Expose
+    private DiskInfo [] DataDiskInfo;
+
+    /**
+    * 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SystemDiskInfo")
+    @Expose
+    private DiskInfo SystemDiskInfo;
+
+    /**
      * Get 生成包 Id 
      * @return AssetId 生成包 Id
      */
@@ -484,6 +500,46 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
+     * Get 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiskInfo [] getDataDiskInfo() {
+        return this.DataDiskInfo;
+    }
+
+    /**
+     * Set 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataDiskInfo(DiskInfo [] DataDiskInfo) {
+        this.DataDiskInfo = DataDiskInfo;
+    }
+
+    /**
+     * Get 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiskInfo getSystemDiskInfo() {
+        return this.SystemDiskInfo;
+    }
+
+    /**
+     * Set 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSystemDiskInfo(DiskInfo SystemDiskInfo) {
+        this.SystemDiskInfo = SystemDiskInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -504,6 +560,8 @@ public class FleetAttributes extends AbstractModel{
         this.setParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
         this.setParamSimple(map, prefix + "BillingStatus", this.BillingStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
+        this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
 
     }
 }

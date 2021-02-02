@@ -58,6 +58,13 @@ public class DescribeDevicesRequest extends AbstractModel{
     private String DeviceName;
 
     /**
+    * 设备是否启用，0禁用状态1启用状态，默认不区分
+    */
+    @SerializedName("EnableState")
+    @Expose
+    private Long EnableState;
+
+    /**
      * Get 需要查看设备列表的产品 ID 
      * @return ProductId 需要查看设备列表的产品 ID
      */
@@ -138,6 +145,22 @@ public class DescribeDevicesRequest extends AbstractModel{
     }
 
     /**
+     * Get 设备是否启用，0禁用状态1启用状态，默认不区分 
+     * @return EnableState 设备是否启用，0禁用状态1启用状态，默认不区分
+     */
+    public Long getEnableState() {
+        return this.EnableState;
+    }
+
+    /**
+     * Set 设备是否启用，0禁用状态1启用状态，默认不区分
+     * @param EnableState 设备是否启用，0禁用状态1启用状态，默认不区分
+     */
+    public void setEnableState(Long EnableState) {
+        this.EnableState = EnableState;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "EnableState", this.EnableState);
 
     }
 }

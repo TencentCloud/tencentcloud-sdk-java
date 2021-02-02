@@ -128,6 +128,27 @@ public class CopyFleetRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+    */
+    @SerializedName("SystemDiskInfo")
+    @Expose
+    private DiskInfo SystemDiskInfo;
+
+    /**
+    * 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+    */
+    @SerializedName("DataDiskInfo")
+    @Expose
+    private DiskInfo [] DataDiskInfo;
+
+    /**
+    * 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+    */
+    @SerializedName("SelectedTimerType")
+    @Expose
+    private String SelectedTimerType;
+
+    /**
      * Get 服务器舰队 Id 
      * @return FleetId 服务器舰队 Id
      */
@@ -368,6 +389,54 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位 
+     * @return SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     */
+    public DiskInfo getSystemDiskInfo() {
+        return this.SystemDiskInfo;
+    }
+
+    /**
+     * Set 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     * @param SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     */
+    public void setSystemDiskInfo(DiskInfo SystemDiskInfo) {
+        this.SystemDiskInfo = SystemDiskInfo;
+    }
+
+    /**
+     * Get 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位 
+     * @return DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     */
+    public DiskInfo [] getDataDiskInfo() {
+        return this.DataDiskInfo;
+    }
+
+    /**
+     * Set 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     * @param DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     */
+    public void setDataDiskInfo(DiskInfo [] DataDiskInfo) {
+        this.DataDiskInfo = DataDiskInfo;
+    }
+
+    /**
+     * Get 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED 
+     * @return SelectedTimerType 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+     */
+    public String getSelectedTimerType() {
+        return this.SelectedTimerType;
+    }
+
+    /**
+     * Set 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+     * @param SelectedTimerType 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+     */
+    public void setSelectedTimerType(String SelectedTimerType) {
+        this.SelectedTimerType = SelectedTimerType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +455,9 @@ public class CopyFleetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SelectedScalingType", this.SelectedScalingType);
         this.setParamSimple(map, prefix + "SelectedCcnType", this.SelectedCcnType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
+        this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
+        this.setParamSimple(map, prefix + "SelectedTimerType", this.SelectedTimerType);
 
     }
 }

@@ -87,6 +87,22 @@ public class Instance extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 实例权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
+    * 实例是否保留, 1-保留，0-不保留,默认
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReserveValue")
+    @Expose
+    private Long ReserveValue;
+
+    /**
      * Get 服务部署ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FleetId 服务部署ID
@@ -247,6 +263,46 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 实例权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weight 实例权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 实例权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weight 实例权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
+     * Get 实例是否保留, 1-保留，0-不保留,默认
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReserveValue 实例是否保留, 1-保留，0-不保留,默认
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReserveValue() {
+        return this.ReserveValue;
+    }
+
+    /**
+     * Set 实例是否保留, 1-保留，0-不保留,默认
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReserveValue 实例是否保留, 1-保留，0-不保留,默认
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReserveValue(Long ReserveValue) {
+        this.ReserveValue = ReserveValue;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +314,8 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "ReserveValue", this.ReserveValue);
 
     }
 }

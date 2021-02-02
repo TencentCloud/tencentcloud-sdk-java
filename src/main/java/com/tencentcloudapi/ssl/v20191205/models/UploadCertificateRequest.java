@@ -58,6 +58,13 @@ public class UploadCertificateRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
+    */
+    @SerializedName("CertificateUse")
+    @Expose
+    private String CertificateUse;
+
+    /**
      * Get 证书内容。 
      * @return CertificatePublicKey 证书内容。
      */
@@ -138,6 +145,22 @@ public class UploadCertificateRequest extends AbstractModel{
     }
 
     /**
+     * Get 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS” 
+     * @return CertificateUse 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
+     */
+    public String getCertificateUse() {
+        return this.CertificateUse;
+    }
+
+    /**
+     * Set 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
+     * @param CertificateUse 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
+     */
+    public void setCertificateUse(String CertificateUse) {
+        this.CertificateUse = CertificateUse;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class UploadCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CertificateType", this.CertificateType);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
 
     }
 }

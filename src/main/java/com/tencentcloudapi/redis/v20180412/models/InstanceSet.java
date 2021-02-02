@@ -350,6 +350,38 @@ public class InstanceSet extends AbstractModel{
     private String MonitorVersion;
 
     /**
+    * 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientLimitMin")
+    @Expose
+    private Long ClientLimitMin;
+
+    /**
+    * 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientLimitMax")
+    @Expose
+    private Long ClientLimitMax;
+
+    /**
+    * 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeSet")
+    @Expose
+    private RedisNodeInfo [] NodeSet;
+
+    /**
+    * 实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 实例名称 
      * @return InstanceName 实例名称
      */
@@ -1118,6 +1150,86 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
+     * Get 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientLimitMin 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientLimitMin() {
+        return this.ClientLimitMin;
+    }
+
+    /**
+     * Set 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientLimitMin 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientLimitMin(Long ClientLimitMin) {
+        this.ClientLimitMin = ClientLimitMin;
+    }
+
+    /**
+     * Get 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientLimitMax 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientLimitMax() {
+        return this.ClientLimitMax;
+    }
+
+    /**
+     * Set 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientLimitMax 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientLimitMax(Long ClientLimitMax) {
+        this.ClientLimitMax = ClientLimitMax;
+    }
+
+    /**
+     * Get 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeSet 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RedisNodeInfo [] getNodeSet() {
+        return this.NodeSet;
+    }
+
+    /**
+     * Set 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeSet 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeSet(RedisNodeInfo [] NodeSet) {
+        this.NodeSet = NodeSet;
+    }
+
+    /**
+     * Get 实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1166,6 +1278,10 @@ public class InstanceSet extends AbstractModel{
         this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+        this.setParamSimple(map, prefix + "ClientLimitMin", this.ClientLimitMin);
+        this.setParamSimple(map, prefix + "ClientLimitMax", this.ClientLimitMax);
+        this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }
