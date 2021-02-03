@@ -59,6 +59,26 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *获取实例总数和运行数
+     * @param req DescribeInstancesCountRequest
+     * @return DescribeInstancesCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesCountResponse DescribeInstancesCount(DescribeInstancesCountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesCountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesCountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstancesCount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *保存游戏存档
      * @param req SaveGameArchiveRequest
      * @return SaveGameArchiveResponse

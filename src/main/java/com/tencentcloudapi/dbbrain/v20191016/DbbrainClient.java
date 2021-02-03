@@ -39,6 +39,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *添加邮件接收联系人的姓名， 邮件地址，返回值为添加成功的联系人id。Region统一选择广州。
+     * @param req AddUserContactRequest
+     * @return AddUserContactResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddUserContactResponse AddUserContact(AddUserContactRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddUserContactResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddUserContactResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddUserContact");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建健康报告，并可以选择是否发送邮件。
      * @param req CreateDBDiagReportTaskRequest
      * @return CreateDBDiagReportTaskResponse
@@ -59,7 +79,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成邮件配置）。
+     *创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
      * @param req CreateMailProfileRequest
      * @return CreateMailProfileResponse
      * @throws TencentCloudSDKException
@@ -71,6 +91,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMailProfileResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMailProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于创建定期生成健康报告并邮件发送的配置，将健康报告的定期生成时间作为参数传入（周一至周日），用于设置健康报告的定期生成时间，同时保存相应的定期邮件发送的配置。
+     * @param req CreateSchedulerMailProfileRequest
+     * @return CreateSchedulerMailProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSchedulerMailProfileResponse CreateSchedulerMailProfile(CreateSchedulerMailProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSchedulerMailProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSchedulerMailProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSchedulerMailProfile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -211,6 +251,66 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSpaceStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBSpaceStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取实例信息列表。Region统一选择广州。
+     * @param req DescribeDiagDBInstancesRequest
+     * @return DescribeDiagDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiagDBInstancesResponse DescribeDiagDBInstances(DescribeDiagDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiagDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiagDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiagDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。
+     * @param req DescribeHealthScoreRequest
+     * @return DescribeHealthScoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHealthScoreResponse DescribeHealthScore(DescribeHealthScoreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHealthScoreResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHealthScoreResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHealthScore");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。Region统一选择广州。
+     * @param req DescribeMailProfileRequest
+     * @return DescribeMailProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMailProfileResponse DescribeMailProfile(DescribeMailProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMailProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMailProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMailProfile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

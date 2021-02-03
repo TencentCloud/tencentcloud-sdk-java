@@ -86,6 +86,13 @@ public class CreateJobConfigRequest extends AbstractModel{
     private String COSBucket;
 
     /**
+    * 是否采集作业日志
+    */
+    @SerializedName("LogCollect")
+    @Expose
+    private Boolean LogCollect;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -230,6 +237,22 @@ public class CreateJobConfigRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否采集作业日志 
+     * @return LogCollect 是否采集作业日志
+     */
+    public Boolean getLogCollect() {
+        return this.LogCollect;
+    }
+
+    /**
+     * Set 是否采集作业日志
+     * @param LogCollect 是否采集作业日志
+     */
+    public void setLogCollect(Boolean LogCollect) {
+        this.LogCollect = LogCollect;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
         this.setParamSimple(map, prefix + "COSBucket", this.COSBucket);
+        this.setParamSimple(map, prefix + "LogCollect", this.LogCollect);
 
     }
 }

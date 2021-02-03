@@ -186,6 +186,14 @@ public class SubscribeInfo extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
      * Get 数据订阅的实例ID 
      * @return SubscribeId 数据订阅的实例ID
      */
@@ -562,6 +570,26 @@ public class SubscribeInfo extends AbstractModel{
     }
 
     /**
+     * Get 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscribeVersion 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscribeVersion 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -588,6 +616,7 @@ public class SubscribeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SdkConsumedTime", this.SdkConsumedTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
 
     }
 }

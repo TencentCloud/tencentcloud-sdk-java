@@ -25,7 +25,7 @@ public class DetectBodyRequest extends AbstractModel{
     /**
     * 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
     */
     @SerializedName("Image")
@@ -33,10 +33,17 @@ public class DetectBodyRequest extends AbstractModel{
     private String Image;
 
     /**
+    * 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
+    */
+    @SerializedName("MaxBodyNum")
+    @Expose
+    private Long MaxBodyNum;
+
+    /**
     * 人体图片 Url 。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -44,13 +51,6 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     @SerializedName("Url")
     @Expose
     private String Url;
-
-    /**
-    * 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
-    */
-    @SerializedName("MaxBodyNum")
-    @Expose
-    private Long MaxBodyNum;
 
     /**
     * 是否返回年龄、性别、朝向等属性。 
@@ -67,11 +67,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     /**
      * Get 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Image 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public String getImage() {
@@ -81,55 +81,15 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     /**
      * Set 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param Image 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public void setImage(String Image) {
         this.Image = Image;
-    }
-
-    /**
-     * Get 人体图片 Url 。
-Url、Image必须提供一个，如果都提供，只使用 Url。
-图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
-     * @return Url 人体图片 Url 。
-Url、Image必须提供一个，如果都提供，只使用 Url。
-图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set 人体图片 Url 。
-Url、Image必须提供一个，如果都提供，只使用 Url。
-图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param Url 人体图片 Url 。
-Url、Image必须提供一个，如果都提供，只使用 Url。
-图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
     }
 
     /**
@@ -146,6 +106,46 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      */
     public void setMaxBodyNum(Long MaxBodyNum) {
         this.MaxBodyNum = MaxBodyNum;
+    }
+
+    /**
+     * Get 人体图片 Url 。
+Url、Image必须提供一个，如果都提供，只使用 Url。
+图片 base64 编码后大小不可超过5M。 
+图片分辨率不得超过 1920 * 1080 。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
+     * @return Url 人体图片 Url 。
+Url、Image必须提供一个，如果都提供，只使用 Url。
+图片 base64 编码后大小不可超过5M。 
+图片分辨率不得超过 1920 * 1080 。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 人体图片 Url 。
+Url、Image必须提供一个，如果都提供，只使用 Url。
+图片 base64 编码后大小不可超过5M。 
+图片分辨率不得超过 1920 * 1080 。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param Url 人体图片 Url 。
+Url、Image必须提供一个，如果都提供，只使用 Url。
+图片 base64 编码后大小不可超过5M。 
+图片分辨率不得超过 1920 * 1080 。
+图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
+非腾讯云存储的Url速度和稳定性可能受一定影响。 
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
@@ -189,8 +189,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
-        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "MaxBodyNum", this.MaxBodyNum);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "AttributesOptions.", this.AttributesOptions);
 
     }

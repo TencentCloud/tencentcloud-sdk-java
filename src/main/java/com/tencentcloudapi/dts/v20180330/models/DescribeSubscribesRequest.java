@@ -107,6 +107,13 @@ public class DescribeSubscribesRequest extends AbstractModel{
     private TagFilter [] TagFilters;
 
     /**
+    * 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
      * Get 数据订阅的实例ID 
      * @return SubscribeId 数据订阅的实例ID
      */
@@ -299,6 +306,22 @@ public class DescribeSubscribesRequest extends AbstractModel{
     }
 
     /**
+     * Get 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅 
+     * @return SubscribeVersion 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
+     * @param SubscribeVersion 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class DescribeSubscribesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
 
     }
 }

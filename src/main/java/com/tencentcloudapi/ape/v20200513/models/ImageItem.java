@@ -72,6 +72,20 @@ public class ImageItem extends AbstractModel{
     private String Keywords;
 
     /**
+    * 宽
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * 高
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
      * Get 图片ID 
      * @return ImageId 图片ID
      */
@@ -184,6 +198,38 @@ public class ImageItem extends AbstractModel{
     }
 
     /**
+     * Get 宽 
+     * @return Width 宽
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set 宽
+     * @param Width 宽
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get 高 
+     * @return Height 高
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 高
+     * @param Height 高
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class ImageItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ThumbUrl", this.ThumbUrl);
         this.setParamSimple(map, prefix + "Vendor", this.Vendor);
         this.setParamSimple(map, prefix + "Keywords", this.Keywords);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
 
     }
 }

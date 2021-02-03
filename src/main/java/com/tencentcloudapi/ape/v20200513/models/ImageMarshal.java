@@ -79,6 +79,27 @@ public class ImageMarshal extends AbstractModel{
     private Boolean IsVip;
 
     /**
+    * 授权范围id
+    */
+    @SerializedName("LicenseScopeId")
+    @Expose
+    private Long LicenseScopeId;
+
+    /**
+    * 尺寸
+    */
+    @SerializedName("DimensionsName")
+    @Expose
+    private String DimensionsName;
+
+    /**
+    * 尺寸id
+    */
+    @SerializedName("DimensionsNameId")
+    @Expose
+    private Long DimensionsNameId;
+
+    /**
      * Get 售卖组合唯一标识 
      * @return MarshalId 售卖组合唯一标识
      */
@@ -207,6 +228,54 @@ public class ImageMarshal extends AbstractModel{
     }
 
     /**
+     * Get 授权范围id 
+     * @return LicenseScopeId 授权范围id
+     */
+    public Long getLicenseScopeId() {
+        return this.LicenseScopeId;
+    }
+
+    /**
+     * Set 授权范围id
+     * @param LicenseScopeId 授权范围id
+     */
+    public void setLicenseScopeId(Long LicenseScopeId) {
+        this.LicenseScopeId = LicenseScopeId;
+    }
+
+    /**
+     * Get 尺寸 
+     * @return DimensionsName 尺寸
+     */
+    public String getDimensionsName() {
+        return this.DimensionsName;
+    }
+
+    /**
+     * Set 尺寸
+     * @param DimensionsName 尺寸
+     */
+    public void setDimensionsName(String DimensionsName) {
+        this.DimensionsName = DimensionsName;
+    }
+
+    /**
+     * Get 尺寸id 
+     * @return DimensionsNameId 尺寸id
+     */
+    public Long getDimensionsNameId() {
+        return this.DimensionsNameId;
+    }
+
+    /**
+     * Set 尺寸id
+     * @param DimensionsNameId 尺寸id
+     */
+    public void setDimensionsNameId(Long DimensionsNameId) {
+        this.DimensionsNameId = DimensionsNameId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +287,9 @@ public class ImageMarshal extends AbstractModel{
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "LicenseScope", this.LicenseScope);
         this.setParamSimple(map, prefix + "IsVip", this.IsVip);
+        this.setParamSimple(map, prefix + "LicenseScopeId", this.LicenseScopeId);
+        this.setParamSimple(map, prefix + "DimensionsName", this.DimensionsName);
+        this.setParamSimple(map, prefix + "DimensionsNameId", this.DimensionsNameId);
 
     }
 }

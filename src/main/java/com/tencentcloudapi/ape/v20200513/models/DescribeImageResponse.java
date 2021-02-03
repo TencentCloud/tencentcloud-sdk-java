@@ -72,6 +72,55 @@ public class DescribeImageResponse extends AbstractModel{
     private ImageMarshal [] Marshals;
 
     /**
+    * 宽
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * 高
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
+    * 图片格式 jpg/eps/psd/...
+    */
+    @SerializedName("ImageFormat")
+    @Expose
+    private String ImageFormat;
+
+    /**
+    * 图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+    */
+    @SerializedName("ImageSenseType")
+    @Expose
+    private String ImageSenseType;
+
+    /**
+    * 关键词，多关键词用空格分隔
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String Keywords;
+
+    /**
+    * 分层图库id
+    */
+    @SerializedName("LayeredGalleryId")
+    @Expose
+    private Long LayeredGalleryId;
+
+    /**
+    * 构图方式：horizontal:横图、vertical:竖图、square:方图
+    */
+    @SerializedName("Orientation")
+    @Expose
+    private String Orientation;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +240,118 @@ public class DescribeImageResponse extends AbstractModel{
     }
 
     /**
+     * Get 宽 
+     * @return Width 宽
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set 宽
+     * @param Width 宽
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get 高 
+     * @return Height 高
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 高
+     * @param Height 高
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get 图片格式 jpg/eps/psd/... 
+     * @return ImageFormat 图片格式 jpg/eps/psd/...
+     */
+    public String getImageFormat() {
+        return this.ImageFormat;
+    }
+
+    /**
+     * Set 图片格式 jpg/eps/psd/...
+     * @param ImageFormat 图片格式 jpg/eps/psd/...
+     */
+    public void setImageFormat(String ImageFormat) {
+        this.ImageFormat = ImageFormat;
+    }
+
+    /**
+     * Get 图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板 
+     * @return ImageSenseType 图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+     */
+    public String getImageSenseType() {
+        return this.ImageSenseType;
+    }
+
+    /**
+     * Set 图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+     * @param ImageSenseType 图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+     */
+    public void setImageSenseType(String ImageSenseType) {
+        this.ImageSenseType = ImageSenseType;
+    }
+
+    /**
+     * Get 关键词，多关键词用空格分隔 
+     * @return Keywords 关键词，多关键词用空格分隔
+     */
+    public String getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 关键词，多关键词用空格分隔
+     * @param Keywords 关键词，多关键词用空格分隔
+     */
+    public void setKeywords(String Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
+     * Get 分层图库id 
+     * @return LayeredGalleryId 分层图库id
+     */
+    public Long getLayeredGalleryId() {
+        return this.LayeredGalleryId;
+    }
+
+    /**
+     * Set 分层图库id
+     * @param LayeredGalleryId 分层图库id
+     */
+    public void setLayeredGalleryId(Long LayeredGalleryId) {
+        this.LayeredGalleryId = LayeredGalleryId;
+    }
+
+    /**
+     * Get 构图方式：horizontal:横图、vertical:竖图、square:方图 
+     * @return Orientation 构图方式：horizontal:横图、vertical:竖图、square:方图
+     */
+    public String getOrientation() {
+        return this.Orientation;
+    }
+
+    /**
+     * Set 构图方式：horizontal:横图、vertical:竖图、square:方图
+     * @param Orientation 构图方式：horizontal:横图、vertical:竖图、square:方图
+     */
+    public void setOrientation(String Orientation) {
+        this.Orientation = Orientation;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +378,13 @@ public class DescribeImageResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ThumbUrl", this.ThumbUrl);
         this.setParamSimple(map, prefix + "Vendor", this.Vendor);
         this.setParamArrayObj(map, prefix + "Marshals.", this.Marshals);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ImageFormat", this.ImageFormat);
+        this.setParamSimple(map, prefix + "ImageSenseType", this.ImageSenseType);
+        this.setParamSimple(map, prefix + "Keywords", this.Keywords);
+        this.setParamSimple(map, prefix + "LayeredGalleryId", this.LayeredGalleryId);
+        this.setParamSimple(map, prefix + "Orientation", this.Orientation);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

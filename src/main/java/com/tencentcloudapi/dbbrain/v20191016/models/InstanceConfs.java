@@ -30,6 +30,13 @@ public class InstanceConfs extends AbstractModel{
     private String DailyInspection;
 
     /**
+    * 实例概览开关，Yes/No。
+    */
+    @SerializedName("OverviewDisplay")
+    @Expose
+    private String OverviewDisplay;
+
+    /**
      * Get 数据库巡检开关, Yes/No。 
      * @return DailyInspection 数据库巡检开关, Yes/No。
      */
@@ -46,10 +53,27 @@ public class InstanceConfs extends AbstractModel{
     }
 
     /**
+     * Get 实例概览开关，Yes/No。 
+     * @return OverviewDisplay 实例概览开关，Yes/No。
+     */
+    public String getOverviewDisplay() {
+        return this.OverviewDisplay;
+    }
+
+    /**
+     * Set 实例概览开关，Yes/No。
+     * @param OverviewDisplay 实例概览开关，Yes/No。
+     */
+    public void setOverviewDisplay(String OverviewDisplay) {
+        this.OverviewDisplay = OverviewDisplay;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+        this.setParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
 
     }
 }

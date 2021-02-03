@@ -107,6 +107,13 @@ public class EvaluationRequest extends AbstractModel{
     private Long LaTex;
 
     /**
+    * 用于选择是否拒绝模糊题 目。打开则丢弃模糊题目， 不进行后续的判题返回结 果。
+    */
+    @SerializedName("RejectVagueArithmetic")
+    @Expose
+    private Boolean RejectVagueArithmetic;
+
+    /**
      * Get 图片唯一标识，一张图片一个SessionId； 
      * @return SessionId 图片唯一标识，一张图片一个SessionId；
      */
@@ -299,6 +306,22 @@ public class EvaluationRequest extends AbstractModel{
     }
 
     /**
+     * Get 用于选择是否拒绝模糊题 目。打开则丢弃模糊题目， 不进行后续的判题返回结 果。 
+     * @return RejectVagueArithmetic 用于选择是否拒绝模糊题 目。打开则丢弃模糊题目， 不进行后续的判题返回结 果。
+     */
+    public Boolean getRejectVagueArithmetic() {
+        return this.RejectVagueArithmetic;
+    }
+
+    /**
+     * Set 用于选择是否拒绝模糊题 目。打开则丢弃模糊题目， 不进行后续的判题返回结 果。
+     * @param RejectVagueArithmetic 用于选择是否拒绝模糊题 目。打开则丢弃模糊题目， 不进行后续的判题返回结 果。
+     */
+    public void setRejectVagueArithmetic(Boolean RejectVagueArithmetic) {
+        this.RejectVagueArithmetic = RejectVagueArithmetic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class EvaluationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnablePdfRecognize", this.EnablePdfRecognize);
         this.setParamSimple(map, prefix + "PdfPageIndex", this.PdfPageIndex);
         this.setParamSimple(map, prefix + "LaTex", this.LaTex);
+        this.setParamSimple(map, prefix + "RejectVagueArithmetic", this.RejectVagueArithmetic);
 
     }
 }

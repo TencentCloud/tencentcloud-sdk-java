@@ -73,6 +73,22 @@ public class Plugin extends AbstractModel{
     private String ModifiedTime;
 
     /**
+    * 插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachedApiTotalCount")
+    @Expose
+    private Long AttachedApiTotalCount;
+
+    /**
+    * 插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachedApis")
+    @Expose
+    private AttachedApiInfo [] AttachedApis;
+
+    /**
      * Get 插件ID。 
      * @return PluginId 插件ID。
      */
@@ -189,6 +205,46 @@ public class Plugin extends AbstractModel{
     }
 
     /**
+     * Get 插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachedApiTotalCount 插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttachedApiTotalCount() {
+        return this.AttachedApiTotalCount;
+    }
+
+    /**
+     * Set 插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachedApiTotalCount 插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachedApiTotalCount(Long AttachedApiTotalCount) {
+        this.AttachedApiTotalCount = AttachedApiTotalCount;
+    }
+
+    /**
+     * Get 插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachedApis 插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AttachedApiInfo [] getAttachedApis() {
+        return this.AttachedApis;
+    }
+
+    /**
+     * Set 插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachedApis 插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachedApis(AttachedApiInfo [] AttachedApis) {
+        this.AttachedApis = AttachedApis;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +255,8 @@ public class Plugin extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "AttachedApiTotalCount", this.AttachedApiTotalCount);
+        this.setParamArrayObj(map, prefix + "AttachedApis.", this.AttachedApis);
 
     }
 }

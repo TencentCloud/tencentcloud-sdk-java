@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class Item extends AbstractModel{
 
     /**
-    * 识别的算式是否正确
+    * 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
     */
     @SerializedName("Item")
     @Expose
     private String Item;
 
     /**
-    * 识别的算式
+    * 识别出的算式，识别出的文本行字符串
     */
     @SerializedName("ItemString")
     @Expose
     private String ItemString;
 
     /**
-    * 识别的算式在图片上的位置信息
+    * 识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
     */
     @SerializedName("ItemCoord")
     @Expose
     private ItemCoord ItemCoord;
 
     /**
-    * 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+    * 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
     */
     @SerializedName("Answer")
     @Expose
@@ -67,64 +67,72 @@ public class Item extends AbstractModel{
     private Float ItemConf;
 
     /**
-     * Get 识别的算式是否正确 
-     * @return Item 识别的算式是否正确
+    * 用于标识题目 id，如果有若干算式属于同一 题，则其对应的 id 相同。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuestionId")
+    @Expose
+    private String QuestionId;
+
+    /**
+     * Get 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数 
+     * @return Item 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
      */
     public String getItem() {
         return this.Item;
     }
 
     /**
-     * Set 识别的算式是否正确
-     * @param Item 识别的算式是否正确
+     * Set 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
+     * @param Item 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
      */
     public void setItem(String Item) {
         this.Item = Item;
     }
 
     /**
-     * Get 识别的算式 
-     * @return ItemString 识别的算式
+     * Get 识别出的算式，识别出的文本行字符串 
+     * @return ItemString 识别出的算式，识别出的文本行字符串
      */
     public String getItemString() {
         return this.ItemString;
     }
 
     /**
-     * Set 识别的算式
-     * @param ItemString 识别的算式
+     * Set 识别出的算式，识别出的文本行字符串
+     * @param ItemString 识别出的算式，识别出的文本行字符串
      */
     public void setItemString(String ItemString) {
         this.ItemString = ItemString;
     }
 
     /**
-     * Get 识别的算式在图片上的位置信息 
-     * @return ItemCoord 识别的算式在图片上的位置信息
+     * Get 识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height) 
+     * @return ItemCoord 识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
      */
     public ItemCoord getItemCoord() {
         return this.ItemCoord;
     }
 
     /**
-     * Set 识别的算式在图片上的位置信息
-     * @param ItemCoord 识别的算式在图片上的位置信息
+     * Set 识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
+     * @param ItemCoord 识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
      */
     public void setItemCoord(ItemCoord ItemCoord) {
         this.ItemCoord = ItemCoord;
     }
 
     /**
-     * Get 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。 
-     * @return Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+     * Get 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回) 
+     * @return Answer 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
      */
     public String getAnswer() {
         return this.Answer;
     }
 
     /**
-     * Set 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
-     * @param Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+     * Set 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+     * @param Answer 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
      */
     public void setAnswer(String Answer) {
         this.Answer = Answer;
@@ -171,6 +179,26 @@ public class Item extends AbstractModel{
     }
 
     /**
+     * Get 用于标识题目 id，如果有若干算式属于同一 题，则其对应的 id 相同。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuestionId 用于标识题目 id，如果有若干算式属于同一 题，则其对应的 id 相同。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQuestionId() {
+        return this.QuestionId;
+    }
+
+    /**
+     * Set 用于标识题目 id，如果有若干算式属于同一 题，则其对应的 id 相同。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuestionId 用于标识题目 id，如果有若干算式属于同一 题，则其对应的 id 相同。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuestionId(String QuestionId) {
+        this.QuestionId = QuestionId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -180,6 +208,7 @@ public class Item extends AbstractModel{
         this.setParamSimple(map, prefix + "Answer", this.Answer);
         this.setParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
         this.setParamSimple(map, prefix + "ItemConf", this.ItemConf);
+        this.setParamSimple(map, prefix + "QuestionId", this.QuestionId);
 
     }
 }
