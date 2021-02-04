@@ -13,30 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gpm.v20200820.models;
+package com.tencentcloudapi.cii.v20201210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMatchingProgressResponse extends AbstractModel{
+public class DescribeStructureTaskResultResponse extends AbstractModel{
 
     /**
-    * 匹配票据列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
     */
-    @SerializedName("MatchTickets")
+    @SerializedName("Status")
     @Expose
-    private MatchTicket [] MatchTickets;
+    private Long Status;
 
     /**
-    * 错误码
+    * 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ErrCode")
+    @SerializedName("Results")
     @Expose
-    private Long ErrCode;
+    private ResultObject [] Results;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +48,51 @@ public class DescribeMatchingProgressResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 匹配票据列表
+     * Get 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败 
+     * @return Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+     * @param Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MatchTickets 匹配票据列表
+     * @return Results 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public MatchTicket [] getMatchTickets() {
-        return this.MatchTickets;
+    public ResultObject [] getResults() {
+        return this.Results;
     }
 
     /**
-     * Set 匹配票据列表
+     * Set 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MatchTickets 匹配票据列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMatchTickets(MatchTicket [] MatchTickets) {
-        this.MatchTickets = MatchTickets;
-    }
-
-    /**
-     * Get 错误码
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrCode 错误码
+     * @param Results 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getErrCode() {
-        return this.ErrCode;
-    }
-
-    /**
-     * Set 错误码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrCode 错误码
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setErrCode(Long ErrCode) {
-        this.ErrCode = ErrCode;
+    public void setResults(ResultObject [] Results) {
+        this.Results = Results;
     }
 
     /**
@@ -105,8 +115,8 @@ public class DescribeMatchingProgressResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "MatchTickets.", this.MatchTickets);
-        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

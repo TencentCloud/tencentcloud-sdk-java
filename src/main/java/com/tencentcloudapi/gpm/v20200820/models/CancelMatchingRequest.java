@@ -30,7 +30,7 @@ public class CancelMatchingRequest extends AbstractModel{
     private String MatchCode;
 
     /**
-    * 要取消的匹配请求 Id
+    * 要取消的匹配匹配票据 ID
     */
     @SerializedName("MatchTicketId")
     @Expose
@@ -53,16 +53,16 @@ public class CancelMatchingRequest extends AbstractModel{
     }
 
     /**
-     * Get 要取消的匹配请求 Id 
-     * @return MatchTicketId 要取消的匹配请求 Id
+     * Get 要取消的匹配匹配票据 ID 
+     * @return MatchTicketId 要取消的匹配匹配票据 ID
      */
     public String getMatchTicketId() {
         return this.MatchTicketId;
     }
 
     /**
-     * Set 要取消的匹配请求 Id
-     * @param MatchTicketId 要取消的匹配请求 Id
+     * Set 要取消的匹配匹配票据 ID
+     * @param MatchTicketId 要取消的匹配匹配票据 ID
      */
     public void setMatchTicketId(String MatchTicketId) {
         this.MatchTicketId = MatchTicketId;

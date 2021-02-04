@@ -268,6 +268,13 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     private CloudBaseSecurityContext Security;
 
     /**
+    * 服务磁盘挂载
+    */
+    @SerializedName("ServiceVolumes")
+    @Expose
+    private CloudRunServiceVolume [] ServiceVolumes;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -828,6 +835,22 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务磁盘挂载 
+     * @return ServiceVolumes 服务磁盘挂载
+     */
+    public CloudRunServiceVolume [] getServiceVolumes() {
+        return this.ServiceVolumes;
+    }
+
+    /**
+     * Set 服务磁盘挂载
+     * @param ServiceVolumes 服务磁盘挂载
+     */
+    public void setServiceVolumes(CloudRunServiceVolume [] ServiceVolumes) {
+        this.ServiceVolumes = ServiceVolumes;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -866,6 +889,7 @@ public class CreateCloudBaseRunServerVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageReuseKey", this.ImageReuseKey);
         this.setParamArrayObj(map, prefix + "SidecarSpecs.", this.SidecarSpecs);
         this.setParamObj(map, prefix + "Security.", this.Security);
+        this.setParamArrayObj(map, prefix + "ServiceVolumes.", this.ServiceVolumes);
 
     }
 }

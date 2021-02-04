@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAllUserGroupRequest extends AbstractModel{
 
     /**
-    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+    * 服务产品类型，固定值：mysql。
     */
     @SerializedName("Product")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAllUserGroupRequest extends AbstractModel{
     private String [] Names;
 
     /**
-     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。 
-     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * Get 服务产品类型，固定值：mysql。 
+     * @return Product 服务产品类型，固定值：mysql。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
-     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * Set 服务产品类型，固定值：mysql。
+     * @param Product 服务产品类型，固定值：mysql。
      */
     public void setProduct(String Product) {
         this.Product = Product;

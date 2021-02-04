@@ -13,43 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gpm.v20200820.models;
+package com.tencentcloudapi.tsw.v20200924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMatchingProgressRequest extends AbstractModel{
-
-    /**
-    * 匹配票据 ID列表, 列表长度 12。
-    */
-    @SerializedName("MatchTicketIds")
-    @Expose
-    private MTicket [] MatchTicketIds;
-
-    /**
-     * Get 匹配票据 ID列表, 列表长度 12。 
-     * @return MatchTicketIds 匹配票据 ID列表, 列表长度 12。
-     */
-    public MTicket [] getMatchTicketIds() {
-        return this.MatchTicketIds;
-    }
-
-    /**
-     * Set 匹配票据 ID列表, 列表长度 12。
-     * @param MatchTicketIds 匹配票据 ID列表, 列表长度 12。
-     */
-    public void setMatchTicketIds(MTicket [] MatchTicketIds) {
-        this.MatchTicketIds = MatchTicketIds;
-    }
+public class DescribeAgentShellRequest extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "MatchTicketIds.", this.MatchTicketIds);
 
     }
 }

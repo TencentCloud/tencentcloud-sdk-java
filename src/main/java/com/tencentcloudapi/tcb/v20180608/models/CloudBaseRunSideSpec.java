@@ -87,6 +87,14 @@ public class CloudBaseRunSideSpec extends AbstractModel{
     private CloudBaseSecurityContext Security;
 
     /**
+    * 挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeMountInfos")
+    @Expose
+    private CloudBaseRunVolumeMount [] VolumeMountInfos;
+
+    /**
      * Get 容器镜像
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ContainerImage 容器镜像
@@ -247,6 +255,26 @@ public class CloudBaseRunSideSpec extends AbstractModel{
     }
 
     /**
+     * Get 挂载信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeMountInfos 挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CloudBaseRunVolumeMount [] getVolumeMountInfos() {
+        return this.VolumeMountInfos;
+    }
+
+    /**
+     * Set 挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeMountInfos 挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeMountInfos(CloudBaseRunVolumeMount [] VolumeMountInfos) {
+        this.VolumeMountInfos = VolumeMountInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +286,7 @@ public class CloudBaseRunSideSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Mem", this.Mem);
         this.setParamObj(map, prefix + "Security.", this.Security);
+        this.setParamArrayObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
 
     }
 }

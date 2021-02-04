@@ -44,7 +44,7 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
     private String TimeSpan;
 
     /**
-    * 商品的时间单位
+    * 商品的时间单位，m表示月，y表示年
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -113,16 +113,16 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel{
     }
 
     /**
-     * Get 商品的时间单位 
-     * @return TimeUnit 商品的时间单位
+     * Get 商品的时间单位，m表示月，y表示年 
+     * @return TimeUnit 商品的时间单位，m表示月，y表示年
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 商品的时间单位
-     * @param TimeUnit 商品的时间单位
+     * Set 商品的时间单位，m表示月，y表示年
+     * @param TimeUnit 商品的时间单位，m表示月，y表示年
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

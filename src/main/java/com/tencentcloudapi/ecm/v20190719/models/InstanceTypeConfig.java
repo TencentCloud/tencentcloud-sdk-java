@@ -80,6 +80,22 @@ public class InstanceTypeConfig extends AbstractModel{
     private String ExtInfo;
 
     /**
+    * GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vgpu")
+    @Expose
+    private Float Vgpu;
+
+    /**
+    * GPU型号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GpuModelName")
+    @Expose
+    private String GpuModelName;
+
+    /**
      * Get 机型族配置信息 
      * @return InstanceFamilyConfig 机型族配置信息
      */
@@ -212,6 +228,46 @@ public class InstanceTypeConfig extends AbstractModel{
     }
 
     /**
+     * Get GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vgpu GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getVgpu() {
+        return this.Vgpu;
+    }
+
+    /**
+     * Set GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vgpu GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVgpu(Float Vgpu) {
+        this.Vgpu = Vgpu;
+    }
+
+    /**
+     * Get GPU型号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GpuModelName GPU型号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGpuModelName() {
+        return this.GpuModelName;
+    }
+
+    /**
+     * Set GPU型号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GpuModelName GPU型号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGpuModelName(String GpuModelName) {
+        this.GpuModelName = GpuModelName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -223,6 +279,8 @@ public class InstanceTypeConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "CpuModelName", this.CpuModelName);
         this.setParamObj(map, prefix + "InstanceFamilyTypeConfig.", this.InstanceFamilyTypeConfig);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "Vgpu", this.Vgpu);
+        this.setParamSimple(map, prefix + "GpuModelName", this.GpuModelName);
 
     }
 }

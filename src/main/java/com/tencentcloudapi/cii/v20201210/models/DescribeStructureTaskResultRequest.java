@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gpm.v20200820.models;
+package com.tencentcloudapi.cii.v20201210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMatchingProgressRequest extends AbstractModel{
+public class DescribeStructureTaskResultRequest extends AbstractModel{
 
     /**
-    * 匹配票据 ID列表, 列表长度 12。
+    * 结构化任务ID
     */
-    @SerializedName("MatchTicketIds")
+    @SerializedName("TaskId")
     @Expose
-    private MTicket [] MatchTicketIds;
+    private String TaskId;
 
     /**
-     * Get 匹配票据 ID列表, 列表长度 12。 
-     * @return MatchTicketIds 匹配票据 ID列表, 列表长度 12。
+     * Get 结构化任务ID 
+     * @return TaskId 结构化任务ID
      */
-    public MTicket [] getMatchTicketIds() {
-        return this.MatchTicketIds;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 匹配票据 ID列表, 列表长度 12。
-     * @param MatchTicketIds 匹配票据 ID列表, 列表长度 12。
+     * Set 结构化任务ID
+     * @param TaskId 结构化任务ID
      */
-    public void setMatchTicketIds(MTicket [] MatchTicketIds) {
-        this.MatchTicketIds = MatchTicketIds;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "MatchTicketIds.", this.MatchTicketIds);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

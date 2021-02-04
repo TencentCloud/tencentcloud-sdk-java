@@ -30,7 +30,7 @@ public class StartMatchingResponse extends AbstractModel{
     private Long ErrCode;
 
     /**
-    * 请求 id 长度 128。
+    * 匹配票据 ID长度 128。
     */
     @SerializedName("MatchTicketId")
     @Expose
@@ -60,16 +60,16 @@ public class StartMatchingResponse extends AbstractModel{
     }
 
     /**
-     * Get 请求 id 长度 128。 
-     * @return MatchTicketId 请求 id 长度 128。
+     * Get 匹配票据 ID长度 128。 
+     * @return MatchTicketId 匹配票据 ID长度 128。
      */
     public String getMatchTicketId() {
         return this.MatchTicketId;
     }
 
     /**
-     * Set 请求 id 长度 128。
-     * @param MatchTicketId 请求 id 长度 128。
+     * Set 匹配票据 ID长度 128。
+     * @param MatchTicketId 匹配票据 ID长度 128。
      */
     public void setMatchTicketId(String MatchTicketId) {
         this.MatchTicketId = MatchTicketId;

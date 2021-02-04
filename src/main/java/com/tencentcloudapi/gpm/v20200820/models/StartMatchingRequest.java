@@ -37,7 +37,7 @@ public class StartMatchingRequest extends AbstractModel{
     private Player [] Players;
 
     /**
-    * 请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+    * 匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
     */
     @SerializedName("MatchTicketId")
     @Expose
@@ -76,16 +76,16 @@ public class StartMatchingRequest extends AbstractModel{
     }
 
     /**
-     * Get 请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 - 
-     * @return MatchTicketId 请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+     * Get 匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 - 
+     * @return MatchTicketId 匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
      */
     public String getMatchTicketId() {
         return this.MatchTicketId;
     }
 
     /**
-     * Set 请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
-     * @param MatchTicketId 请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+     * Set 匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+     * @param MatchTicketId 匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
      */
     public void setMatchTicketId(String MatchTicketId) {
         this.MatchTicketId = MatchTicketId;

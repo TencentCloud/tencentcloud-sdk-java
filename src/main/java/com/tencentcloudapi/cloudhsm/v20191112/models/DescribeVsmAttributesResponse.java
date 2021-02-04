@@ -37,7 +37,7 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     private String ResourceName;
 
     /**
-    * 资源状态
+    * 资源状态，1表示资源为正常，2表示资源处于隔离状态
     */
     @SerializedName("Status")
     @Expose
@@ -72,21 +72,21 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     private String Model;
 
     /**
-    * 资源类型
+    * 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
     */
     @SerializedName("VsmType")
     @Expose
     private Long VsmType;
 
     /**
-    * 地域Id
+    * 地域Id，返回腾讯云地域代码，如广州为1，北京为8
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 区域Id
+    * 区域Id，返回腾讯云每个地域的可用区代码
     */
     @SerializedName("ZoneId")
     @Expose
@@ -227,16 +227,16 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     }
 
     /**
-     * Get 资源状态 
-     * @return Status 资源状态
+     * Get 资源状态，1表示资源为正常，2表示资源处于隔离状态 
+     * @return Status 资源状态，1表示资源为正常，2表示资源处于隔离状态
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 资源状态
-     * @param Status 资源状态
+     * Set 资源状态，1表示资源为正常，2表示资源处于隔离状态
+     * @param Status 资源状态，1表示资源为正常，2表示资源处于隔离状态
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -307,48 +307,48 @@ public class DescribeVsmAttributesResponse extends AbstractModel{
     }
 
     /**
-     * Get 资源类型 
-     * @return VsmType 资源类型
+     * Get 资源类型，17表示EVSM，33表示GVSM，49表示SVSM 
+     * @return VsmType 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
      */
     public Long getVsmType() {
         return this.VsmType;
     }
 
     /**
-     * Set 资源类型
-     * @param VsmType 资源类型
+     * Set 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
+     * @param VsmType 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
      */
     public void setVsmType(Long VsmType) {
         this.VsmType = VsmType;
     }
 
     /**
-     * Get 地域Id 
-     * @return RegionId 地域Id
+     * Get 地域Id，返回腾讯云地域代码，如广州为1，北京为8 
+     * @return RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域Id
-     * @param RegionId 地域Id
+     * Set 地域Id，返回腾讯云地域代码，如广州为1，北京为8
+     * @param RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域Id 
-     * @return ZoneId 区域Id
+     * Get 区域Id，返回腾讯云每个地域的可用区代码 
+     * @return ZoneId 区域Id，返回腾讯云每个地域的可用区代码
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域Id
-     * @param ZoneId 区域Id
+     * Set 区域Id，返回腾讯云每个地域的可用区代码
+     * @param ZoneId 区域Id，返回腾讯云每个地域的可用区代码
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
