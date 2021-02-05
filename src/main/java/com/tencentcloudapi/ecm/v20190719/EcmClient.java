@@ -1924,6 +1924,26 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *用于修改弹性网卡内网IP属性。
+     * @param req ModifyPrivateIpAddressesAttributeRequest
+     * @return ModifyPrivateIpAddressesAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrivateIpAddressesAttributeResponse ModifyPrivateIpAddressesAttribute(ModifyPrivateIpAddressesAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrivateIpAddressesAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrivateIpAddressesAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrivateIpAddressesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改路由表属性
      * @param req ModifyRouteTableAttributeRequest
      * @return ModifyRouteTableAttributeResponse

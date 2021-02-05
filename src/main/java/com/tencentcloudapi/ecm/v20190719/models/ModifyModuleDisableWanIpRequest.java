@@ -30,7 +30,7 @@ public class ModifyModuleDisableWanIpRequest extends AbstractModel{
     private String ModuleId;
 
     /**
-    * 是否禁止分配外网ip
+    * 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
     */
     @SerializedName("DisableWanIp")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyModuleDisableWanIpRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否禁止分配外网ip 
-     * @return DisableWanIp 是否禁止分配外网ip
+     * Get 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip. 
+     * @return DisableWanIp 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
      */
     public Boolean getDisableWanIp() {
         return this.DisableWanIp;
     }
 
     /**
-     * Set 是否禁止分配外网ip
-     * @param DisableWanIp 是否禁止分配外网ip
+     * Set 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
+     * @param DisableWanIp 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
      */
     public void setDisableWanIp(Boolean DisableWanIp) {
         this.DisableWanIp = DisableWanIp;

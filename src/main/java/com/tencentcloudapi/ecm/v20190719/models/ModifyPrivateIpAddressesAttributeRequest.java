@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachNetworkInterfaceRequest extends AbstractModel{
+public class ModifyPrivateIpAddressesAttributeRequest extends AbstractModel{
 
     /**
     * 弹性网卡实例ID，例如：eni-m6dyj72l。
@@ -30,14 +30,14 @@ public class AttachNetworkInterfaceRequest extends AbstractModel{
     private String NetworkInterfaceId;
 
     /**
-    * 实例ID。形如：ein-r8hr2upy。
+    * 指定的内网IP信息。
     */
-    @SerializedName("InstanceId")
+    @SerializedName("PrivateIpAddresses")
     @Expose
-    private String InstanceId;
+    private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
-    * ECM 地域，形如ap-xian-ecm。
+    * ECM 节点Region信息，形如ap-xian-ecm。
     */
     @SerializedName("EcmRegion")
     @Expose
@@ -60,32 +60,32 @@ public class AttachNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例ID。形如：ein-r8hr2upy。 
-     * @return InstanceId 实例ID。形如：ein-r8hr2upy。
+     * Get 指定的内网IP信息。 
+     * @return PrivateIpAddresses 指定的内网IP信息。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
+        return this.PrivateIpAddresses;
     }
 
     /**
-     * Set 实例ID。形如：ein-r8hr2upy。
-     * @param InstanceId 实例ID。形如：ein-r8hr2upy。
+     * Set 指定的内网IP信息。
+     * @param PrivateIpAddresses 指定的内网IP信息。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
+        this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
-     * Get ECM 地域，形如ap-xian-ecm。 
-     * @return EcmRegion ECM 地域，形如ap-xian-ecm。
+     * Get ECM 节点Region信息，形如ap-xian-ecm。 
+     * @return EcmRegion ECM 节点Region信息，形如ap-xian-ecm。
      */
     public String getEcmRegion() {
         return this.EcmRegion;
     }
 
     /**
-     * Set ECM 地域，形如ap-xian-ecm。
-     * @param EcmRegion ECM 地域，形如ap-xian-ecm。
+     * Set ECM 节点Region信息，形如ap-xian-ecm。
+     * @param EcmRegion ECM 节点Region信息，形如ap-xian-ecm。
      */
     public void setEcmRegion(String EcmRegion) {
         this.EcmRegion = EcmRegion;
@@ -96,7 +96,7 @@ public class AttachNetworkInterfaceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
 
     }

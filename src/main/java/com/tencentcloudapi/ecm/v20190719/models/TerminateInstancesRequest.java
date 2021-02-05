@@ -44,6 +44,15 @@ public class TerminateInstancesRequest extends AbstractModel{
     private String TerminateTime;
 
     /**
+    * 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
+    */
+    @SerializedName("AssociatedResourceDestroy")
+    @Expose
+    private Boolean AssociatedResourceDestroy;
+
+    /**
      * Get 待销毁的实例ID列表。 
      * @return InstanceIdSet 待销毁的实例ID列表。
      */
@@ -92,12 +101,37 @@ public class TerminateInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。 
+     * @return AssociatedResourceDestroy 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
+     */
+    public Boolean getAssociatedResourceDestroy() {
+        return this.AssociatedResourceDestroy;
+    }
+
+    /**
+     * Set 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
+     * @param AssociatedResourceDestroy 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
+     */
+    public void setAssociatedResourceDestroy(Boolean AssociatedResourceDestroy) {
+        this.AssociatedResourceDestroy = AssociatedResourceDestroy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "TerminateDelay", this.TerminateDelay);
         this.setParamSimple(map, prefix + "TerminateTime", this.TerminateTime);
+        this.setParamSimple(map, prefix + "AssociatedResourceDestroy", this.AssociatedResourceDestroy);
 
     }
 }
