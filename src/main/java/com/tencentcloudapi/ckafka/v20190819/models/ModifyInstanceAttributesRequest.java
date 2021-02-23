@@ -51,6 +51,20 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private ModifyInstanceAttributesConfig Config;
 
     /**
+    * 动态消息保留策略配置
+    */
+    @SerializedName("DynamicRetentionConfig")
+    @Expose
+    private DynamicRetentionTime DynamicRetentionConfig;
+
+    /**
+    * 修改升配置rebalance时间
+    */
+    @SerializedName("RebalanceTime")
+    @Expose
+    private Long RebalanceTime;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -115,6 +129,38 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get 动态消息保留策略配置 
+     * @return DynamicRetentionConfig 动态消息保留策略配置
+     */
+    public DynamicRetentionTime getDynamicRetentionConfig() {
+        return this.DynamicRetentionConfig;
+    }
+
+    /**
+     * Set 动态消息保留策略配置
+     * @param DynamicRetentionConfig 动态消息保留策略配置
+     */
+    public void setDynamicRetentionConfig(DynamicRetentionTime DynamicRetentionConfig) {
+        this.DynamicRetentionConfig = DynamicRetentionConfig;
+    }
+
+    /**
+     * Get 修改升配置rebalance时间 
+     * @return RebalanceTime 修改升配置rebalance时间
+     */
+    public Long getRebalanceTime() {
+        return this.RebalanceTime;
+    }
+
+    /**
+     * Set 修改升配置rebalance时间
+     * @param RebalanceTime 修改升配置rebalance时间
+     */
+    public void setRebalanceTime(Long RebalanceTime) {
+        this.RebalanceTime = RebalanceTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamObj(map, prefix + "DynamicRetentionConfig.", this.DynamicRetentionConfig);
+        this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
 
     }
 }

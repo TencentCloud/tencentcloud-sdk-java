@@ -119,6 +119,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建 LoRa 自定义频点
+     * @param req CreateLoRaFrequencyRequest
+     * @return CreateLoRaFrequencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoRaFrequencyResponse CreateLoRaFrequency(CreateLoRaFrequencyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLoRaFrequencyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLoRaFrequencyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLoRaFrequency");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建新 LoRa 网关设备接口
      * @param req CreateLoRaGatewayRequest
      * @return CreateLoRaGatewayResponse
@@ -211,6 +231,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提供删除LoRa自定义频点的能力
+     * @param req DeleteLoRaFrequencyRequest
+     * @return DeleteLoRaFrequencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoRaFrequencyResponse DeleteLoRaFrequency(DeleteLoRaFrequencyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoRaFrequencyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoRaFrequencyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLoRaFrequency");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -351,6 +391,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceDataHistoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDeviceDataHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提供查询LoRa自定义频点详情的能力
+     * @param req DescribeLoRaFrequencyRequest
+     * @return DescribeLoRaFrequencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoRaFrequencyResponse DescribeLoRaFrequency(DescribeLoRaFrequencyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoRaFrequencyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoRaFrequencyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLoRaFrequency");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -591,6 +651,26 @@ public class IotexplorerClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListEventHistoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ListEventHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改LoRa自定义频点
+     * @param req ModifyLoRaFrequencyRequest
+     * @return ModifyLoRaFrequencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoRaFrequencyResponse ModifyLoRaFrequency(ModifyLoRaFrequencyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoRaFrequencyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoRaFrequencyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoRaFrequency");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

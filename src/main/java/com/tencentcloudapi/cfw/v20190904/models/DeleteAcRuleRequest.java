@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteAcRuleRequest extends AbstractModel{
 
     /**
-    * 删除规则对应的id值 669872
+    * 删除规则对应的id值, 对应获取规则列表接口的Id 值
     */
     @SerializedName("Id")
     @Expose
@@ -44,23 +44,23 @@ public class DeleteAcRuleRequest extends AbstractModel{
     private String EdgeId;
 
     /**
-    * NAT地域
+    * NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get 删除规则对应的id值 669872 
-     * @return Id 删除规则对应的id值 669872
+     * Get 删除规则对应的id值, 对应获取规则列表接口的Id 值 
+     * @return Id 删除规则对应的id值, 对应获取规则列表接口的Id 值
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 删除规则对应的id值 669872
-     * @param Id 删除规则对应的id值 669872
+     * Set 删除规则对应的id值, 对应获取规则列表接口的Id 值
+     * @param Id 删除规则对应的id值, 对应获取规则列表接口的Id 值
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -99,16 +99,16 @@ public class DeleteAcRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get NAT地域 
-     * @return Area NAT地域
+     * Get NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等 
+     * @return Area NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set NAT地域
-     * @param Area NAT地域
+     * Set NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
+     * @param Area NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
      */
     public void setArea(String Area) {
         this.Area = Area;

@@ -89,6 +89,14 @@ public class AccessPoint extends AbstractModel{
     private String City;
 
     /**
+    * 接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 接入点的名称。 
      * @return AccessPointName 接入点的名称。
      */
@@ -245,6 +253,26 @@ public class AccessPoint extends AbstractModel{
     }
 
     /**
+     * Get 接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Area 接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Area 接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -257,6 +285,7 @@ public class AccessPoint extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
         this.setParamObj(map, prefix + "Coordinate.", this.Coordinate);
         this.setParamSimple(map, prefix + "City", this.City);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

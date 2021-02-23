@@ -44,7 +44,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * ECM 地域
+    * ECM 地域，形如ap-xian-ecm。
     */
     @SerializedName("EcmRegion")
     @Expose
@@ -134,16 +134,16 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
-     * Get ECM 地域 
-     * @return EcmRegion ECM 地域
+     * Get ECM 地域，形如ap-xian-ecm。 
+     * @return EcmRegion ECM 地域，形如ap-xian-ecm。
      */
     public String getEcmRegion() {
         return this.EcmRegion;
     }
 
     /**
-     * Set ECM 地域
-     * @param EcmRegion ECM 地域
+     * Set ECM 地域，形如ap-xian-ecm。
+     * @param EcmRegion ECM 地域，形如ap-xian-ecm。
      */
     public void setEcmRegion(String EcmRegion) {
         this.EcmRegion = EcmRegion;

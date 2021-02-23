@@ -74,6 +74,13 @@ origin: 保持原始编码格式
     private String Description;
 
     /**
+    * 是否保留视频，0：否，1：是。默认1。
+    */
+    @SerializedName("NeedVideo")
+    @Expose
+    private Long NeedVideo;
+
+    /**
     * 宽，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度
@@ -81,13 +88,6 @@ origin: 保持原始编码格式
     @SerializedName("Width")
     @Expose
     private Long Width;
-
-    /**
-    * 是否保留视频，0：否，1：是。默认1。
-    */
-    @SerializedName("NeedVideo")
-    @Expose
-    private Long NeedVideo;
 
     /**
     * 是否保留音频，0：否，1：是。默认1。
@@ -99,7 +99,7 @@ origin: 保持原始编码格式
     /**
     * 高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
     */
     @SerializedName("Height")
     @Expose
@@ -322,6 +322,22 @@ origin: 保持原始编码格式
     }
 
     /**
+     * Get 是否保留视频，0：否，1：是。默认1。 
+     * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
+     */
+    public Long getNeedVideo() {
+        return this.NeedVideo;
+    }
+
+    /**
+     * Set 是否保留视频，0：否，1：是。默认1。
+     * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
+     */
+    public void setNeedVideo(Long NeedVideo) {
+        this.NeedVideo = NeedVideo;
+    }
+
+    /**
      * Get 宽，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度 
@@ -346,22 +362,6 @@ origin: 保持原始编码格式
     }
 
     /**
-     * Get 是否保留视频，0：否，1：是。默认1。 
-     * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
-     */
-    public Long getNeedVideo() {
-        return this.NeedVideo;
-    }
-
-    /**
-     * Set 是否保留视频，0：否，1：是。默认1。
-     * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
-     */
-    public void setNeedVideo(Long NeedVideo) {
-        this.NeedVideo = NeedVideo;
-    }
-
-    /**
      * Get 是否保留音频，0：否，1：是。默认1。 
      * @return NeedAudio 是否保留音频，0：否，1：是。默认1。
      */
@@ -380,10 +380,10 @@ origin: 保持原始编码格式
     /**
      * Get 高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度 
+数值必须是2的倍数，0是原始高度。 
      * @return Height 高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
      */
     public Long getHeight() {
         return this.Height;
@@ -392,10 +392,10 @@ origin: 保持原始编码格式
     /**
      * Set 高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
      * @param Height 高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -627,8 +627,8 @@ baseline/main/high。默认baseline
         this.setParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
         this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);
         this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "NeedVideo", this.NeedVideo);
+        this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "NeedAudio", this.NeedAudio);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Fps", this.Fps);

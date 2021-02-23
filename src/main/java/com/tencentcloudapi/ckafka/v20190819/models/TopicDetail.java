@@ -110,6 +110,14 @@ public class TopicDetail extends AbstractModel{
     private Config Config;
 
     /**
+    * 消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionTimeConfig")
+    @Expose
+    private TopicRetentionTimeConfigRsp RetentionTimeConfig;
+
+    /**
      * Get 主题名称 
      * @return TopicName 主题名称
      */
@@ -314,6 +322,26 @@ public class TopicDetail extends AbstractModel{
     }
 
     /**
+     * Get 消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionTimeConfig 消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TopicRetentionTimeConfigRsp getRetentionTimeConfig() {
+        return this.RetentionTimeConfig;
+    }
+
+    /**
+     * Set 消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionTimeConfig 消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionTimeConfig(TopicRetentionTimeConfigRsp RetentionTimeConfig) {
+        this.RetentionTimeConfig = RetentionTimeConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -329,6 +357,7 @@ public class TopicDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ForwardStatus", this.ForwardStatus);
         this.setParamSimple(map, prefix + "ForwardInterval", this.ForwardInterval);
         this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
 
     }
 }

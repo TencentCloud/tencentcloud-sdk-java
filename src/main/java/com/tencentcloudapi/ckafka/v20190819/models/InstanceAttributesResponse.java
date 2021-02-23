@@ -203,7 +203,7 @@ public class InstanceAttributesResponse extends AbstractModel{
     private Long MaxGroupNum;
 
     /**
-    * 售卖类型
+    * 售卖类型,0:标准版,1:专业版
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cvm")
@@ -225,6 +225,14 @@ public class InstanceAttributesResponse extends AbstractModel{
     @SerializedName("Features")
     @Expose
     private String [] Features;
+
+    /**
+    * 动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionTimeConfig")
+    @Expose
+    private DynamicRetentionTime RetentionTimeConfig;
 
     /**
      * Get 实例ID 
@@ -647,9 +655,9 @@ public class InstanceAttributesResponse extends AbstractModel{
     }
 
     /**
-     * Get 售卖类型
+     * Get 售卖类型,0:标准版,1:专业版
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cvm 售卖类型
+     * @return Cvm 售卖类型,0:标准版,1:专业版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCvm() {
@@ -657,9 +665,9 @@ public class InstanceAttributesResponse extends AbstractModel{
     }
 
     /**
-     * Set 售卖类型
+     * Set 售卖类型,0:标准版,1:专业版
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cvm 售卖类型
+     * @param Cvm 售卖类型,0:标准版,1:专业版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvm(Long Cvm) {
@@ -707,6 +715,26 @@ public class InstanceAttributesResponse extends AbstractModel{
     }
 
     /**
+     * Get 动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionTimeConfig 动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DynamicRetentionTime getRetentionTimeConfig() {
+        return this.RetentionTimeConfig;
+    }
+
+    /**
+     * Set 动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionTimeConfig 动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionTimeConfig(DynamicRetentionTime RetentionTimeConfig) {
+        this.RetentionTimeConfig = RetentionTimeConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -738,6 +766,7 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Cvm", this.Cvm);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
+        this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
 
     }
 }

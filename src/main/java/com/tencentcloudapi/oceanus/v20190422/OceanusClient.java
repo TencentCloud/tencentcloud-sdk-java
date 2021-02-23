@@ -139,6 +139,26 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *查询作业配置列表，一次最多查询100个
+     * @param req DescribeJobConfigsRequest
+     * @return DescribeJobConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobConfigsResponse DescribeJobConfigs(DescribeJobConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeJobConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeJobConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeJobConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询作业
      * @param req DescribeJobsRequest
      * @return DescribeJobsResponse

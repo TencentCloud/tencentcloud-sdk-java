@@ -180,6 +180,46 @@ public class InstanceDetail extends AbstractModel{
     private Long Cvm;
 
     /**
+    * ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
+    * 当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxTopicNumber")
+    @Expose
+    private Long MaxTopicNumber;
+
+    /**
+    * 当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxPartitionNumber")
+    @Expose
+    private Long MaxPartitionNumber;
+
+    /**
+    * 计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RebalanceTime")
+    @Expose
+    private String RebalanceTime;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -544,6 +584,106 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
+     * Get ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskType 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskType 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
+    /**
+     * Get 当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxTopicNumber 当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxTopicNumber() {
+        return this.MaxTopicNumber;
+    }
+
+    /**
+     * Set 当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxTopicNumber 当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxTopicNumber(Long MaxTopicNumber) {
+        this.MaxTopicNumber = MaxTopicNumber;
+    }
+
+    /**
+     * Get 当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxPartitionNumber 当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxPartitionNumber() {
+        return this.MaxPartitionNumber;
+    }
+
+    /**
+     * Set 当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxPartitionNumber 当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxPartitionNumber(Long MaxPartitionNumber) {
+        this.MaxPartitionNumber = MaxPartitionNumber;
+    }
+
+    /**
+     * Get 计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RebalanceTime 计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRebalanceTime() {
+        return this.RebalanceTime;
+    }
+
+    /**
+     * Set 计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RebalanceTime 计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRebalanceTime(String RebalanceTime) {
+        this.RebalanceTime = RebalanceTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -569,6 +709,11 @@ public class InstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "Cvm", this.Cvm);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "MaxTopicNumber", this.MaxTopicNumber);
+        this.setParamSimple(map, prefix + "MaxPartitionNumber", this.MaxPartitionNumber);
+        this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
 
     }
 }
