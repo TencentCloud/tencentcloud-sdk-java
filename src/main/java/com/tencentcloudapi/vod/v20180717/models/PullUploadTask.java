@@ -71,6 +71,13 @@ public class PullUploadTask extends AbstractModel{
     private MediaBasicInfo MediaBasicInfo;
 
     /**
+    * 原始视频的元信息。
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
     * 转拉上传完成后生成的播放地址。
     */
     @SerializedName("FileUrl")
@@ -219,6 +226,22 @@ public class PullUploadTask extends AbstractModel{
     }
 
     /**
+     * Get 原始视频的元信息。 
+     * @return MetaData 原始视频的元信息。
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set 原始视频的元信息。
+     * @param MetaData 原始视频的元信息。
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * Get 转拉上传完成后生成的播放地址。 
      * @return FileUrl 转拉上传完成后生成的播放地址。
      */
@@ -292,6 +315,7 @@ public class PullUploadTask extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

@@ -67,6 +67,14 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
     private KVPair [] DownloadHeaders;
 
     /**
+    * 下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutDate")
+    @Expose
+    private Boolean OutDate;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -178,6 +186,26 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
     }
 
     /**
+     * Get 下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutDate 下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getOutDate() {
+        return this.OutDate;
+    }
+
+    /**
+     * Set 下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutDate 下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutDate(Boolean OutDate) {
+        this.OutDate = OutDate;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -203,6 +231,7 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
         this.setParamArrayObj(map, prefix + "DownloadHeaders.", this.DownloadHeaders);
+        this.setParamSimple(map, prefix + "OutDate", this.OutDate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -86,6 +86,14 @@ public class InstanceIntegerParam extends AbstractModel{
     private Long Status;
 
     /**
+    * 参数单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Unit")
+    @Expose
+    private String Unit;
+
+    /**
      * Get 参数名 
      * @return ParamName 参数名
      */
@@ -230,6 +238,26 @@ public class InstanceIntegerParam extends AbstractModel{
     }
 
     /**
+     * Get 参数单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Unit 参数单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUnit() {
+        return this.Unit;
+    }
+
+    /**
+     * Set 参数单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Unit 参数单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +270,7 @@ public class InstanceIntegerParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "Max", this.Max);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Unit", this.Unit);
 
     }
 }

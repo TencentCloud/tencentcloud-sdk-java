@@ -71,6 +71,14 @@ public class ComposeMediaTask extends AbstractModel{
     private ComposeMediaTaskOutput Output;
 
     /**
+    * 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
      * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
@@ -191,6 +199,26 @@ public class ComposeMediaTask extends AbstractModel{
     }
 
     /**
+     * Get 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetaData 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaData 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +228,7 @@ public class ComposeMediaTask extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
 
     }
 }

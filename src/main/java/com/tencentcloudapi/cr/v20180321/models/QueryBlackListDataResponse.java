@@ -13,29 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.cr.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityGroupsResponse extends AbstractModel{
+public class QueryBlackListDataResponse extends AbstractModel{
 
     /**
-    * 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SecurityGroupSet")
-    @Expose
-    private SecurityGroup [] SecurityGroupSet;
-
-    /**
-    * 符合条件的实例数量。
+    * 总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 黑名单列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private BlackListData [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +45,39 @@ public class DescribeSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecurityGroupSet 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public SecurityGroup [] getSecurityGroupSet() {
-        return this.SecurityGroupSet;
-    }
-
-    /**
-     * Set 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecurityGroupSet 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSecurityGroupSet(SecurityGroup [] SecurityGroupSet) {
-        this.SecurityGroupSet = SecurityGroupSet;
-    }
-
-    /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get 总数。 
+     * @return TotalCount 总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set 总数。
+     * @param TotalCount 总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 黑名单列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 黑名单列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlackListData [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 黑名单列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 黑名单列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(BlackListData [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -100,8 +100,8 @@ public class DescribeSecurityGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EncodeParams extends AbstractModel{
 
     /**
-    * 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
+    * 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
     */
     @SerializedName("AudioSampleRate")
     @Expose
@@ -93,16 +93,16 @@ public class EncodeParams extends AbstractModel{
     private Long BackgroundImageId;
 
     /**
-     * Get 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。 
-     * @return AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
+     * Get 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。 
+     * @return AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
      */
     public Long getAudioSampleRate() {
         return this.AudioSampleRate;
     }
 
     /**
-     * Set 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
-     * @param AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
+     * Set 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
+     * @param AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
      */
     public void setAudioSampleRate(Long AudioSampleRate) {
         this.AudioSampleRate = AudioSampleRate;

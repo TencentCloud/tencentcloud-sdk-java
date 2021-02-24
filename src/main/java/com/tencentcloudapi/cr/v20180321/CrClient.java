@@ -360,6 +360,26 @@ public class CrClient extends AbstractClient{
     }
 
     /**
+     *查看黑名单数据列表
+     * @param req QueryBlackListDataRequest
+     * @return QueryBlackListDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryBlackListDataResponse QueryBlackListData(QueryBlackListDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryBlackListDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryBlackListDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryBlackListData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询机器人任务状态列表
      * @param req QueryBotListRequest
      * @return QueryBotListResponse

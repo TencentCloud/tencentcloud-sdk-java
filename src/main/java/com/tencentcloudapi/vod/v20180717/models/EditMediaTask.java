@@ -93,6 +93,13 @@ public class EditMediaTask extends AbstractModel{
     private String SessionId;
 
     /**
+    * 原始视频的元信息。
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
      * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
@@ -265,6 +272,22 @@ public class EditMediaTask extends AbstractModel{
     }
 
     /**
+     * Get 原始视频的元信息。 
+     * @return MetaData 原始视频的元信息。
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set 原始视频的元信息。
+     * @param MetaData 原始视频的元信息。
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -277,6 +300,7 @@ public class EditMediaTask extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
 
     }
 }
