@@ -61,6 +61,26 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
+     *上报当前场内所有相机的当前状态
+     * @param req CreateCameraStateRequest
+     * @return CreateCameraStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCameraStateResponse CreateCameraState(CreateCameraStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCameraStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCameraStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCameraState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *场内抓拍上报接口
      * @param req CreateCaptureRequest
      * @return CreateCaptureResponse
@@ -295,6 +315,46 @@ mac为空返回对应GroupCode和MallId全量配置
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeZones");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *集团广场的多经点位配置更新
+     * @param req ModifyMultiBizConfigRequest
+     * @return ModifyMultiBizConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiBizConfigResponse ModifyMultiBizConfig(ModifyMultiBizConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMultiBizConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMultiBizConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMultiBizConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上报服务注册自身的服务地址作为回调地址, 用于信息回传。
+     * @param req ReportServiceRegisterRequest
+     * @return ReportServiceRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportServiceRegisterResponse ReportServiceRegister(ReportServiceRegisterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReportServiceRegisterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReportServiceRegisterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReportServiceRegister");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

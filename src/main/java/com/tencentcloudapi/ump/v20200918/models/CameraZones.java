@@ -54,8 +54,15 @@ public class CameraZones extends AbstractModel{
 
     /**
     * 摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
     */
     @SerializedName("CameraState")
     @Expose
@@ -77,6 +84,14 @@ public class CameraZones extends AbstractModel{
     @SerializedName("Pixel")
     @Expose
     private String Pixel;
+
+    /**
+    * 相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RTSP")
+    @Expose
+    private String RTSP;
 
     /**
      * Get 摄像头ID 
@@ -152,11 +167,25 @@ public class CameraZones extends AbstractModel{
 
     /**
      * Get 摄像头状态:
-0: 异常
-1: 正常 
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常 
      * @return CameraState 摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
      */
     public Long getCameraState() {
         return this.CameraState;
@@ -164,11 +193,25 @@ public class CameraZones extends AbstractModel{
 
     /**
      * Set 摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
      * @param CameraState 摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
      */
     public void setCameraState(Long CameraState) {
         this.CameraState = CameraState;
@@ -219,6 +262,26 @@ public class CameraZones extends AbstractModel{
     }
 
     /**
+     * Get 相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RTSP 相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRTSP() {
+        return this.RTSP;
+    }
+
+    /**
+     * Set 相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RTSP 相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRTSP(String RTSP) {
+        this.RTSP = RTSP;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -229,6 +292,7 @@ public class CameraZones extends AbstractModel{
         this.setParamSimple(map, prefix + "CameraState", this.CameraState);
         this.setParamArrayObj(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "Pixel", this.Pixel);
+        this.setParamSimple(map, prefix + "RTSP", this.RTSP);
 
     }
 }

@@ -759,6 +759,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取主机安全相关统计
+     * @param req DescribeGeneralStatRequest
+     * @return DescribeGeneralStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGeneralStatResponse DescribeGeneralStat(DescribeGeneralStatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGeneralStatResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGeneralStatResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGeneralStat");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
      * @param req DescribeHistoryAccountsRequest
      * @return DescribeHistoryAccountsResponse

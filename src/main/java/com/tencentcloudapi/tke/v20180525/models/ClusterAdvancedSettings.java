@@ -127,6 +127,20 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     private String RuntimeVersion;
 
     /**
+    * 是否开节点podCIDR大小的自定义模式
+    */
+    @SerializedName("EnableCustomizedPodCIDR")
+    @Expose
+    private Boolean EnableCustomizedPodCIDR;
+
+    /**
+    * 自定义模式下的基础pod数量
+    */
+    @SerializedName("BasePodNumber")
+    @Expose
+    private Long BasePodNumber;
+
+    /**
      * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
@@ -375,6 +389,38 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     }
 
     /**
+     * Get 是否开节点podCIDR大小的自定义模式 
+     * @return EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
+     */
+    public Boolean getEnableCustomizedPodCIDR() {
+        return this.EnableCustomizedPodCIDR;
+    }
+
+    /**
+     * Set 是否开节点podCIDR大小的自定义模式
+     * @param EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
+     */
+    public void setEnableCustomizedPodCIDR(Boolean EnableCustomizedPodCIDR) {
+        this.EnableCustomizedPodCIDR = EnableCustomizedPodCIDR;
+    }
+
+    /**
+     * Get 自定义模式下的基础pod数量 
+     * @return BasePodNumber 自定义模式下的基础pod数量
+     */
+    public Long getBasePodNumber() {
+        return this.BasePodNumber;
+    }
+
+    /**
+     * Set 自定义模式下的基础pod数量
+     * @param BasePodNumber 自定义模式下的基础pod数量
+     */
+    public void setBasePodNumber(Long BasePodNumber) {
+        this.BasePodNumber = BasePodNumber;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -392,6 +438,8 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
         this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+        this.setParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
+        this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
 
     }
 }

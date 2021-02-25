@@ -946,6 +946,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *请求设备直播流地址
+     * @param req DescribeStreamRequest
+     * @return DescribeStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamResponse DescribeStream(DescribeStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeTraceIds）用于查询设备日志跟踪白名单。
      * @param req DescribeTraceIdsRequest
      * @return DescribeTraceIdsResponse

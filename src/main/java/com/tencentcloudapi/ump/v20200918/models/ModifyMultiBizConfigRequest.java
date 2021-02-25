@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMultiBizAlertRequest extends AbstractModel{
+public class ModifyMultiBizConfigRequest extends AbstractModel{
 
     /**
     * 集团编码
@@ -51,35 +51,11 @@ public class CreateMultiBizAlertRequest extends AbstractModel{
     private Long CameraId;
 
     /**
-    * 时间戳，毫秒
+    * 监控区域
     */
-    @SerializedName("CaptureTime")
+    @SerializedName("MonitoringAreas")
     @Expose
-    private Long CaptureTime;
-
-    /**
-    * 状态: 
-1: 侵占
-2: 消失
-3: 即侵占又消失
-    */
-    @SerializedName("State")
-    @Expose
-    private Long State;
-
-    /**
-    * 图片base64字符串
-    */
-    @SerializedName("Image")
-    @Expose
-    private String Image;
-
-    /**
-    * 告警列表
-    */
-    @SerializedName("Warnings")
-    @Expose
-    private MultiBizWarning [] Warnings;
+    private Polygon [] MonitoringAreas;
 
     /**
      * Get 集团编码 
@@ -146,79 +122,19 @@ public class CreateMultiBizAlertRequest extends AbstractModel{
     }
 
     /**
-     * Get 时间戳，毫秒 
-     * @return CaptureTime 时间戳，毫秒
+     * Get 监控区域 
+     * @return MonitoringAreas 监控区域
      */
-    public Long getCaptureTime() {
-        return this.CaptureTime;
+    public Polygon [] getMonitoringAreas() {
+        return this.MonitoringAreas;
     }
 
     /**
-     * Set 时间戳，毫秒
-     * @param CaptureTime 时间戳，毫秒
+     * Set 监控区域
+     * @param MonitoringAreas 监控区域
      */
-    public void setCaptureTime(Long CaptureTime) {
-        this.CaptureTime = CaptureTime;
-    }
-
-    /**
-     * Get 状态: 
-1: 侵占
-2: 消失
-3: 即侵占又消失 
-     * @return State 状态: 
-1: 侵占
-2: 消失
-3: 即侵占又消失
-     */
-    public Long getState() {
-        return this.State;
-    }
-
-    /**
-     * Set 状态: 
-1: 侵占
-2: 消失
-3: 即侵占又消失
-     * @param State 状态: 
-1: 侵占
-2: 消失
-3: 即侵占又消失
-     */
-    public void setState(Long State) {
-        this.State = State;
-    }
-
-    /**
-     * Get 图片base64字符串 
-     * @return Image 图片base64字符串
-     */
-    public String getImage() {
-        return this.Image;
-    }
-
-    /**
-     * Set 图片base64字符串
-     * @param Image 图片base64字符串
-     */
-    public void setImage(String Image) {
-        this.Image = Image;
-    }
-
-    /**
-     * Get 告警列表 
-     * @return Warnings 告警列表
-     */
-    public MultiBizWarning [] getWarnings() {
-        return this.Warnings;
-    }
-
-    /**
-     * Set 告警列表
-     * @param Warnings 告警列表
-     */
-    public void setWarnings(MultiBizWarning [] Warnings) {
-        this.Warnings = Warnings;
+    public void setMonitoringAreas(Polygon [] MonitoringAreas) {
+        this.MonitoringAreas = MonitoringAreas;
     }
 
     /**
@@ -229,10 +145,7 @@ public class CreateMultiBizAlertRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MallId", this.MallId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "CameraId", this.CameraId);
-        this.setParamSimple(map, prefix + "CaptureTime", this.CaptureTime);
-        this.setParamSimple(map, prefix + "State", this.State);
-        this.setParamSimple(map, prefix + "Image", this.Image);
-        this.setParamArrayObj(map, prefix + "Warnings.", this.Warnings);
+        this.setParamArrayObj(map, prefix + "MonitoringAreas.", this.MonitoringAreas);
 
     }
 }

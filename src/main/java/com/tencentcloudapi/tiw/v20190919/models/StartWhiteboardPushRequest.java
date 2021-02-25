@@ -101,6 +101,13 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     private String ExtraData;
 
     /**
+    * TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+    */
+    @SerializedName("PrivateMapKey")
+    @Expose
+    private String PrivateMapKey;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -293,6 +300,22 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     }
 
     /**
+     * Get TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。 
+     * @return PrivateMapKey TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+     */
+    public String getPrivateMapKey() {
+        return this.PrivateMapKey;
+    }
+
+    /**
+     * Set TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+     * @param PrivateMapKey TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+     */
+    public void setPrivateMapKey(String PrivateMapKey) {
+        this.PrivateMapKey = PrivateMapKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -306,6 +329,7 @@ public class StartWhiteboardPushRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Backup.", this.Backup);
         this.setParamSimple(map, prefix + "AutoRecord", this.AutoRecord);
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
+        this.setParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
 
     }
 }

@@ -179,6 +179,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建tcr内网私有域名解析
+     * @param req CreateInternalEndpointDnsRequest
+     * @return CreateInternalEndpointDnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInternalEndpointDnsResponse CreateInternalEndpointDns(CreateInternalEndpointDnsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInternalEndpointDnsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInternalEndpointDnsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInternalEndpointDns");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在企业版中创建命名空间
      * @param req CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -431,6 +451,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceTokenResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInstanceToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除tcr内网私有域名解析
+     * @param req DeleteInternalEndpointDnsRequest
+     * @return DeleteInternalEndpointDnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInternalEndpointDnsResponse DeleteInternalEndpointDns(DeleteInternalEndpointDnsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInternalEndpointDnsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInternalEndpointDnsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteInternalEndpointDns");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -771,6 +811,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量查询vpc是否已经添加私有域名解析
+     * @param req DescribeInternalEndpointDnsStatusRequest
+     * @return DescribeInternalEndpointDnsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternalEndpointDnsStatusResponse DescribeInternalEndpointDnsStatus(DescribeInternalEndpointDnsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternalEndpointDnsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternalEndpointDnsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternalEndpointDnsStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
