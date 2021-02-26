@@ -959,6 +959,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取告警历史
+     * @param req DescribePrometheusAlertHistoryRequest
+     * @return DescribePrometheusAlertHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAlertHistoryResponse DescribePrometheusAlertHistory(DescribePrometheusAlertHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusAlertHistoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusAlertHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取告警规则列表
      * @param req DescribePrometheusAlertRuleRequest
      * @return DescribePrometheusAlertRuleResponse

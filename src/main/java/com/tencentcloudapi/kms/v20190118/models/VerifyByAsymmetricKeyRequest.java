@@ -37,14 +37,14 @@ public class VerifyByAsymmetricKeyRequest extends AbstractModel{
     private String SignatureValue;
 
     /**
-    * 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
+    * 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 签名算法，支持的算法：SM2DSA
+    * 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
     */
     @SerializedName("Algorithm")
     @Expose
@@ -90,32 +90,32 @@ public class VerifyByAsymmetricKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节 
-     * @return Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
+     * Get 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节 
+     * @return Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
-     * @param Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
+     * Set 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
+     * @param Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 签名算法，支持的算法：SM2DSA 
-     * @return Algorithm 签名算法，支持的算法：SM2DSA
+     * Get 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 
+     * @return Algorithm 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set 签名算法，支持的算法：SM2DSA
-     * @param Algorithm 签名算法，支持的算法：SM2DSA
+     * Set 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
+     * @param Algorithm 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;

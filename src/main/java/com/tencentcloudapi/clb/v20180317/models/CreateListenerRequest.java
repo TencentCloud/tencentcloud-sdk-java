@@ -108,6 +108,13 @@ public class CreateListenerRequest extends AbstractModel{
     private Long KeepaliveEnable;
 
     /**
+    * 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
+    */
+    @SerializedName("EndPort")
+    @Expose
+    private Long EndPort;
+
+    /**
      * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -304,6 +311,22 @@ public class CreateListenerRequest extends AbstractModel{
     }
 
     /**
+     * Get 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。 
+     * @return EndPort 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
+     */
+    public Long getEndPort() {
+        return this.EndPort;
+    }
+
+    /**
+     * Set 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
+     * @param EndPort 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
+     */
+    public void setEndPort(Long EndPort) {
+        this.EndPort = EndPort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +342,7 @@ public class CreateListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+        this.setParamSimple(map, prefix + "EndPort", this.EndPort);
 
     }
 }

@@ -163,7 +163,7 @@ public class RoInstanceInfo extends AbstractModel{
     private String DeviceType;
 
     /**
-    * RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+    * RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -504,16 +504,16 @@ public class RoInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7 
-     * @return EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+     * Get RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0 
+     * @return EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
-     * @param EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+     * Set RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
+     * @param EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;

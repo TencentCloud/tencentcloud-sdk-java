@@ -79,11 +79,25 @@ public class DescribeDBPriceRequest extends AbstractModel{
     private Long ProtectMode;
 
     /**
-    * 部署策略，取值范围：HA-高可用版
+    * 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
+
+    /**
+    * 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
+    */
+    @SerializedName("InstanceNodes")
+    @Expose
+    private Long InstanceNodes;
+
+    /**
+    * 询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
 
     /**
      * Get 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。 
@@ -214,19 +228,51 @@ public class DescribeDBPriceRequest extends AbstractModel{
     }
 
     /**
-     * Get 部署策略，取值范围：HA-高可用版 
-     * @return DeviceType 部署策略，取值范围：HA-高可用版
+     * Get 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。 
+     * @return DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 部署策略，取值范围：HA-高可用版
-     * @param DeviceType 部署策略，取值范围：HA-高可用版
+     * Set 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
+     * @param DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。 
+     * @return InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
+     */
+    public Long getInstanceNodes() {
+        return this.InstanceNodes;
+    }
+
+    /**
+     * Set 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
+     * @param InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
+     */
+    public void setInstanceNodes(Long InstanceNodes) {
+        this.InstanceNodes = InstanceNodes;
+    }
+
+    /**
+     * Get 询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。 
+     * @return Cpu 询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
+     * @param Cpu 询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
     }
 
     /**
@@ -242,6 +288,8 @@ public class DescribeDBPriceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
         this.setParamSimple(map, prefix + "ProtectMode", this.ProtectMode);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

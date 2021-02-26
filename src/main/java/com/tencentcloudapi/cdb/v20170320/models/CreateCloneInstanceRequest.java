@@ -128,11 +128,18 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     private String BackupZone;
 
     /**
-    * 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
+    * 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
+
+    /**
+    * 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+    */
+    @SerializedName("InstanceNodes")
+    @Expose
+    private Long InstanceNodes;
 
     /**
      * Get 克隆源实例Id。 
@@ -375,19 +382,35 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。 
-     * @return DeviceType 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
+     * Get 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。 
+     * @return DeviceType 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
-     * @param DeviceType 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
+     * Set 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+     * @param DeviceType 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。 
+     * @return InstanceNodes 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+     */
+    public Long getInstanceNodes() {
+        return this.InstanceNodes;
+    }
+
+    /**
+     * Set 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+     * @param InstanceNodes 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+     */
+    public void setInstanceNodes(Long InstanceNodes) {
+        this.InstanceNodes = InstanceNodes;
     }
 
     /**
@@ -410,6 +433,7 @@ public class CreateCloneInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         this.setParamSimple(map, prefix + "BackupZone", this.BackupZone);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
 
     }
 }

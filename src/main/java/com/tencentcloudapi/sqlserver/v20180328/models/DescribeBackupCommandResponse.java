@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyByAsymmetricKeyResponse extends AbstractModel{
+public class DescribeBackupCommandResponse extends AbstractModel{
 
     /**
-    * 签名是否有效。true：签名有效，false：签名无效。
+    * 创建备份命令
     */
-    @SerializedName("SignatureValid")
+    @SerializedName("Command")
     @Expose
-    private Boolean SignatureValid;
+    private String Command;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 签名是否有效。true：签名有效，false：签名无效。 
-     * @return SignatureValid 签名是否有效。true：签名有效，false：签名无效。
+     * Get 创建备份命令 
+     * @return Command 创建备份命令
      */
-    public Boolean getSignatureValid() {
-        return this.SignatureValid;
+    public String getCommand() {
+        return this.Command;
     }
 
     /**
-     * Set 签名是否有效。true：签名有效，false：签名无效。
-     * @param SignatureValid 签名是否有效。true：签名有效，false：签名无效。
+     * Set 创建备份命令
+     * @param Command 创建备份命令
      */
-    public void setSignatureValid(Boolean SignatureValid) {
-        this.SignatureValid = SignatureValid;
+    public void setCommand(String Command) {
+        this.Command = Command;
     }
 
     /**
@@ -72,7 +72,7 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SignatureValid", this.SignatureValid);
+        this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

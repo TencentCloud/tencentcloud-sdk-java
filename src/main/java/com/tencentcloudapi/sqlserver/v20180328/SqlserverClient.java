@@ -159,6 +159,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateBackupMigration）用于创建备份导入任务。
+     * @param req CreateBackupMigrationRequest
+     * @return CreateBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupMigrationResponse CreateBackupMigration(CreateBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateBasicDBInstances）用于创建SQL server基础版实例。
      * @param req CreateBasicDBInstancesRequest
      * @return CreateBasicDBInstancesResponse
@@ -211,6 +231,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateIncrementalMigration）用于创建增量备份导入任务。
+     * @param req CreateIncrementalMigrationRequest
+     * @return CreateIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIncrementalMigrationResponse CreateIncrementalMigration(CreateIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -299,6 +339,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteBackupMigration）用于删除备份导入任务。
+     * @param req DeleteBackupMigrationRequest
+     * @return DeleteBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupMigrationResponse DeleteBackupMigration(DeleteBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DeleteDB)用于删除数据库。
      * @param req DeleteDBRequest
      * @return DeleteDBResponse
@@ -331,6 +391,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteIncrementalMigration）用于删除增量备份导入任务。
+     * @param req DeleteIncrementalMigrationRequest
+     * @return DeleteIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIncrementalMigrationResponse DeleteIncrementalMigration(DeleteIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -411,6 +491,66 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupByFlowIdResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupByFlowId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeBackupCommand）用于查询以规范的格式创建备份的命令。
+     * @param req DescribeBackupCommandRequest
+     * @return DescribeBackupCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupCommandResponse DescribeBackupCommand(DescribeBackupCommandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupCommandResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupCommandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupCommand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeBackupMigration）用于创建增量备份导入任务。
+     * @param req DescribeBackupMigrationRequest
+     * @return DescribeBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupMigrationResponse DescribeBackupMigration(DescribeBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeBackupUploadSize）用于查询上传的备份文件大小。在备份上传类型是COS_UPLOAD(备份放在业务的对象存储上)时有效。
+     * @param req DescribeBackupUploadSizeRequest
+     * @return DescribeBackupUploadSizeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupUploadSizeResponse DescribeBackupUploadSize(DescribeBackupUploadSizeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupUploadSizeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupUploadSizeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupUploadSize");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -531,6 +671,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFlowStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
+     * @param req DescribeIncrementalMigrationRequest
+     * @return DescribeIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIncrementalMigrationResponse DescribeIncrementalMigration(DescribeIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -819,6 +979,46 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeUploadBackupInfo）用于查询备份上传权限。
+     * @param req DescribeUploadBackupInfoRequest
+     * @return DescribeUploadBackupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUploadBackupInfoResponse DescribeUploadBackupInfo(DescribeUploadBackupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUploadBackupInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUploadBackupInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUploadBackupInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeUploadIncrementalInfo）用于查询增量备份上传权限。
+     * @param req DescribeUploadIncrementalInfoRequest
+     * @return DescribeUploadIncrementalInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUploadIncrementalInfoResponse DescribeUploadIncrementalInfo(DescribeUploadIncrementalInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUploadIncrementalInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUploadIncrementalInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUploadIncrementalInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -951,6 +1151,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyBackupMigration）用于修改备份导入任务。
+     * @param req ModifyBackupMigrationRequest
+     * @return ModifyBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupMigrationResponse ModifyBackupMigration(ModifyBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1131,6 +1351,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBRemarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyIncrementalMigration）用于修改增量备份导入任务。
+     * @param req ModifyIncrementalMigrationRequest
+     * @return ModifyIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIncrementalMigrationResponse ModifyIncrementalMigration(ModifyIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1431,6 +1671,46 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RunMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RunMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（StartBackupMigration）用于启动备份导入任务。
+     * @param req StartBackupMigrationRequest
+     * @return StartBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartBackupMigrationResponse StartBackupMigration(StartBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（StartIncrementalMigration）用于启动增量备份导入任务。
+     * @param req StartIncrementalMigrationRequest
+     * @return StartIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartIncrementalMigrationResponse StartIncrementalMigration(StartIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
