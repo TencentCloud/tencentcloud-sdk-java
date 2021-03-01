@@ -54,10 +54,8 @@ public class CreateProjectRequest extends AbstractModel{
     private Entity Owner;
 
     /**
-    * 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
+    * 画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -175,28 +173,20 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。 
-     * @return AspectRatio 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
+     * Get 画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。 
+     * @return AspectRatio 画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
-     * @param AspectRatio 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
+     * Set 画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
+     * @param AspectRatio 画布宽高比。
+该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;

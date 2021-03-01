@@ -128,7 +128,8 @@ Block 确认违规
     private String UpdatedAt;
 
     /**
-    * 图片结果
+    * 视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSegments")
@@ -136,7 +137,8 @@ Block 确认违规
     private ImageSegments [] ImageSegments;
 
     /**
-    * 音频结果
+    * 视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioSegments")
@@ -447,9 +449,11 @@ Block 确认违规
     }
 
     /**
-     * Get 图片结果
+     * Get 视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageSegments 图片结果
+     * @return ImageSegments 视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageSegments [] getImageSegments() {
@@ -457,9 +461,11 @@ Block 确认违规
     }
 
     /**
-     * Set 图片结果
+     * Set 视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSegments 图片结果
+     * @param ImageSegments 视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSegments(ImageSegments [] ImageSegments) {
@@ -467,9 +473,11 @@ Block 确认违规
     }
 
     /**
-     * Get 音频结果
+     * Get 视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioSegments 音频结果
+     * @return AudioSegments 视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioSegments [] getAudioSegments() {
@@ -477,9 +485,11 @@ Block 确认违规
     }
 
     /**
-     * Set 音频结果
+     * Set 视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioSegments 音频结果
+     * @param AudioSegments 视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioSegments(AudioSegments [] AudioSegments) {

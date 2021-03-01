@@ -23,65 +23,6 @@ import java.util.HashMap;
 public class SearchMediaRequest extends AbstractModel{
 
     /**
-    * 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
-<li>数组长度限制：10。</li>
-    */
-    @SerializedName("Tags")
-    @Expose
-    private String [] Tags;
-
-    /**
-    * 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
-    */
-    @SerializedName("ClassIds")
-    @Expose
-    private Long [] ClassIds;
-
-    /**
-    * 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-    */
-    @SerializedName("StreamIds")
-    @Expose
-    private String [] StreamIds;
-
-    /**
-    * 直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-    */
-    @SerializedName("Vids")
-    @Expose
-    private String [] Vids;
-
-    /**
-    * 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
-    */
-    @SerializedName("SourceTypes")
-    @Expose
-    private String [] SourceTypes;
-
-    /**
-    * 文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
-    */
-    @SerializedName("Categories")
-    @Expose
-    private String [] Categories;
-
-    /**
-    * 匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private TimeRange CreateTime;
-
-    /**
     * 文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
@@ -109,13 +50,72 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] NamePrefixes;
 
     /**
-    * 文件描述集合，匹配集合中的任意元素。
+    * 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
 <li>单个描述长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
     */
     @SerializedName("Descriptions")
     @Expose
     private String [] Descriptions;
+
+    /**
+    * 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("ClassIds")
+    @Expose
+    private Long [] ClassIds;
+
+    /**
+    * 标签集合，匹配集合中任意元素。
+<li>单个标签长度限制：8个字符。</li>
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
+    * 文件类型。匹配集合中的任意元素：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+    */
+    @SerializedName("Categories")
+    @Expose
+    private String [] Categories;
+
+    /**
+    * 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("SourceTypes")
+    @Expose
+    private String [] SourceTypes;
+
+    /**
+    * 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("StreamIds")
+    @Expose
+    private String [] StreamIds;
+
+    /**
+    * 直播录制文件的唯一标识。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("Vids")
+    @Expose
+    private String [] Vids;
+
+    /**
+    * 匹配创建时间在此时间段内的文件。
+<li>包含所指定的头尾时间点。</li>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private TimeRange CreateTime;
 
     /**
     * 排序方式。
@@ -167,6 +167,22 @@ public class SearchMediaRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
+    * （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
+搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
+    * （不推荐：应使用 SourceTypes 替代）
+媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
     * （不推荐：应使用 StreamIds 替代）
 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
     */
@@ -181,14 +197,6 @@ public class SearchMediaRequest extends AbstractModel{
     @SerializedName("Vid")
     @Expose
     private String Vid;
-
-    /**
-    * （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
-    */
-    @SerializedName("Text")
-    @Expose
-    private String Text;
 
     /**
     * （不推荐：应使用 CreateTime 替代）
@@ -211,166 +219,6 @@ public class SearchMediaRequest extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-
-    /**
-    * （不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-    */
-    @SerializedName("SourceType")
-    @Expose
-    private String SourceType;
-
-    /**
-     * Get 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
-<li>数组长度限制：10。</li> 
-     * @return Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
-<li>数组长度限制：10。</li>
-     */
-    public String [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
-<li>数组长度限制：10。</li>
-     * @param Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
-<li>数组长度限制：10。</li>
-     */
-    public void setTags(String [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
-     * Get 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li> 
-     * @return ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
-     */
-    public Long [] getClassIds() {
-        return this.ClassIds;
-    }
-
-    /**
-     * Set 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
-     * @param ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-<li>数组长度限制：10。</li>
-     */
-    public void setClassIds(Long [] ClassIds) {
-        this.ClassIds = ClassIds;
-    }
-
-    /**
-     * Get 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li> 
-     * @return StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     */
-    public String [] getStreamIds() {
-        return this.StreamIds;
-    }
-
-    /**
-     * Set 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     * @param StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     */
-    public void setStreamIds(String [] StreamIds) {
-        this.StreamIds = StreamIds;
-    }
-
-    /**
-     * Get 直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li> 
-     * @return Vids 直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     */
-    public String [] getVids() {
-        return this.Vids;
-    }
-
-    /**
-     * Set 直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     * @param Vids 直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     */
-    public void setVids(String [] Vids) {
-        this.Vids = Vids;
-    }
-
-    /**
-     * Get 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li> 
-     * @return SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
-     */
-    public String [] getSourceTypes() {
-        return this.SourceTypes;
-    }
-
-    /**
-     * Set 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
-     * @param SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-<li>数组长度限制：10。</li>
-     */
-    public void setSourceTypes(String [] SourceTypes) {
-        this.SourceTypes = SourceTypes;
-    }
-
-    /**
-     * Get 文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li> 
-     * @return Categories 文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
-     */
-    public String [] getCategories() {
-        return this.Categories;
-    }
-
-    /**
-     * Set 文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
-     * @param Categories 文件类型。匹配集合中的任意元素：
-<li>Video: 视频文件</li>
-<li>Audio: 音频文件</li>
-<li>Image: 图片文件</li>
-     */
-    public void setCategories(String [] Categories) {
-        this.Categories = Categories;
-    }
-
-    /**
-     * Get 匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li> 
-     * @return CreateTime 匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
-     */
-    public TimeRange getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set 匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
-     * @param CreateTime 匹配创建时间在此时间段内的文件。
-<li>包含所指定的头尾时间点。</li>
-     */
-    public void setCreateTime(TimeRange CreateTime) {
-        this.CreateTime = CreateTime;
-    }
 
     /**
      * Get 文件 ID 集合，匹配集合中的任意元素。
@@ -445,10 +293,10 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件描述集合，匹配集合中的任意元素。
+     * Get 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
 <li>单个描述长度限制：100个字符。</li>
 <li>数组长度限制：10。</li> 
-     * @return Descriptions 文件描述集合，匹配集合中的任意元素。
+     * @return Descriptions 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
 <li>单个描述长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
@@ -457,15 +305,167 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
-     * Set 文件描述集合，匹配集合中的任意元素。
+     * Set 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
 <li>单个描述长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
-     * @param Descriptions 文件描述集合，匹配集合中的任意元素。
+     * @param Descriptions 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
 <li>单个描述长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public void setDescriptions(String [] Descriptions) {
         this.Descriptions = Descriptions;
+    }
+
+    /**
+     * Get 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
+<li>数组长度限制：10。</li> 
+     * @return ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
+<li>数组长度限制：10。</li>
+     */
+    public Long [] getClassIds() {
+        return this.ClassIds;
+    }
+
+    /**
+     * Set 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
+<li>数组长度限制：10。</li>
+     * @param ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
+<li>数组长度限制：10。</li>
+     */
+    public void setClassIds(Long [] ClassIds) {
+        this.ClassIds = ClassIds;
+    }
+
+    /**
+     * Get 标签集合，匹配集合中任意元素。
+<li>单个标签长度限制：8个字符。</li>
+<li>数组长度限制：10。</li> 
+     * @return Tags 标签集合，匹配集合中任意元素。
+<li>单个标签长度限制：8个字符。</li>
+<li>数组长度限制：10。</li>
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签集合，匹配集合中任意元素。
+<li>单个标签长度限制：8个字符。</li>
+<li>数组长度限制：10。</li>
+     * @param Tags 标签集合，匹配集合中任意元素。
+<li>单个标签长度限制：8个字符。</li>
+<li>数组长度限制：10。</li>
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 文件类型。匹配集合中的任意元素：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li> 
+     * @return Categories 文件类型。匹配集合中的任意元素：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public String [] getCategories() {
+        return this.Categories;
+    }
+
+    /**
+     * Set 文件类型。匹配集合中的任意元素：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     * @param Categories 文件类型。匹配集合中的任意元素：
+<li>Video: 视频文件</li>
+<li>Audio: 音频文件</li>
+<li>Image: 图片文件</li>
+     */
+    public void setCategories(String [] Categories) {
+        this.Categories = Categories;
+    }
+
+    /**
+     * Get 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+<li>数组长度限制：10。</li> 
+     * @return SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+<li>数组长度限制：10。</li>
+     */
+    public String [] getSourceTypes() {
+        return this.SourceTypes;
+    }
+
+    /**
+     * Set 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+<li>数组长度限制：10。</li>
+     * @param SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+<li>数组长度限制：10。</li>
+     */
+    public void setSourceTypes(String [] SourceTypes) {
+        this.SourceTypes = SourceTypes;
+    }
+
+    /**
+     * Get 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li> 
+     * @return StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public String [] getStreamIds() {
+        return this.StreamIds;
+    }
+
+    /**
+     * Set 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     * @param StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public void setStreamIds(String [] StreamIds) {
+        this.StreamIds = StreamIds;
+    }
+
+    /**
+     * Get 直播录制文件的唯一标识。匹配集合中的任意元素。
+<li>数组长度限制：10。</li> 
+     * @return Vids 直播录制文件的唯一标识。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public String [] getVids() {
+        return this.Vids;
+    }
+
+    /**
+     * Set 直播录制文件的唯一标识。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     * @param Vids 直播录制文件的唯一标识。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public void setVids(String [] Vids) {
+        this.Vids = Vids;
+    }
+
+    /**
+     * Get 匹配创建时间在此时间段内的文件。
+<li>包含所指定的头尾时间点。</li> 
+     * @return CreateTime 匹配创建时间在此时间段内的文件。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public TimeRange getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 匹配创建时间在此时间段内的文件。
+<li>包含所指定的头尾时间点。</li>
+     * @param CreateTime 匹配创建时间在此时间段内的文件。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public void setCreateTime(TimeRange CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
@@ -605,6 +605,46 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
+搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。 
+     * @return Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
+搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
+搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+     * @param Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
+搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+     */
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
+    /**
+     * Get （不推荐：应使用 SourceTypes 替代）
+媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。 
+     * @return SourceType （不推荐：应使用 SourceTypes 替代）
+媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set （不推荐：应使用 SourceTypes 替代）
+媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+     * @param SourceType （不推荐：应使用 SourceTypes 替代）
+媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
      * Get （不推荐：应使用 StreamIds 替代）
 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。 
      * @return StreamId （不推荐：应使用 StreamIds 替代）
@@ -642,26 +682,6 @@ public class SearchMediaRequest extends AbstractModel{
      */
     public void setVid(String Vid) {
         this.Vid = Vid;
-    }
-
-    /**
-     * Get （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。 
-     * @return Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
-     */
-    public String getText() {
-        return this.Text;
-    }
-
-    /**
-     * Set （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
-     * @param Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
-     */
-    public void setText(String Text) {
-        this.Text = Text;
     }
 
     /**
@@ -729,51 +749,31 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get （不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。 
-     * @return SourceType （不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-     */
-    public String getSourceType() {
-        return this.SourceType;
-    }
-
-    /**
-     * Set （不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-     * @param SourceType （不推荐：应使用 SourceTypes 替代）
-媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-     */
-    public void setSourceType(String SourceType) {
-        this.SourceType = SourceType;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
-        this.setParamArraySimple(map, prefix + "ClassIds.", this.ClassIds);
-        this.setParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
-        this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
-        this.setParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
-        this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
-        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamArraySimple(map, prefix + "NamePrefixes.", this.NamePrefixes);
         this.setParamArraySimple(map, prefix + "Descriptions.", this.Descriptions);
+        this.setParamArraySimple(map, prefix + "ClassIds.", this.ClassIds);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
+        this.setParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
+        this.setParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
+        this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
+        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "Vid", this.Vid);
-        this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

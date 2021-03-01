@@ -138,6 +138,13 @@ hlg。
     private VideoEnhance VideoEnhance;
 
     /**
+    * 数字水印参数信息。
+    */
+    @SerializedName("HiddenMarkInfo")
+    @Expose
+    private HiddenMarkInfo HiddenMarkInfo;
+
+    /**
      * Get 视频帧率，取值范围：[0, 60]，单位：Hz。
 注意：当取值为 0，表示帧率和原始视频保持一致。 
      * @return Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
@@ -454,6 +461,22 @@ hlg。
     }
 
     /**
+     * Get 数字水印参数信息。 
+     * @return HiddenMarkInfo 数字水印参数信息。
+     */
+    public HiddenMarkInfo getHiddenMarkInfo() {
+        return this.HiddenMarkInfo;
+    }
+
+    /**
+     * Set 数字水印参数信息。
+     * @param HiddenMarkInfo 数字水印参数信息。
+     */
+    public void setHiddenMarkInfo(HiddenMarkInfo HiddenMarkInfo) {
+        this.HiddenMarkInfo = HiddenMarkInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -469,6 +492,7 @@ hlg。
         this.setParamObj(map, prefix + "DarInfo.", this.DarInfo);
         this.setParamSimple(map, prefix + "Hdr", this.Hdr);
         this.setParamObj(map, prefix + "VideoEnhance.", this.VideoEnhance);
+        this.setParamObj(map, prefix + "HiddenMarkInfo.", this.HiddenMarkInfo);
 
     }
 }

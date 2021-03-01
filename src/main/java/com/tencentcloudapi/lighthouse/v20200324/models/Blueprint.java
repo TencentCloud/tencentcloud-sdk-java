@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Blueprint extends AbstractModel{
 
     /**
-    * 镜像 ID  ，是 blueprint 的唯一标识。
+    * 镜像 ID  ，是 Blueprint 的唯一标识。
     */
     @SerializedName("BlueprintId")
     @Expose
@@ -72,7 +72,7 @@ public class Blueprint extends AbstractModel{
     private String PlatformType;
 
     /**
-    * 镜像类型，如 APP_OS、PURE_OS。
+    * 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
     */
     @SerializedName("BlueprintType")
     @Expose
@@ -100,16 +100,39 @@ public class Blueprint extends AbstractModel{
     private String BlueprintState;
 
     /**
-     * Get 镜像 ID  ，是 blueprint 的唯一标识。 
-     * @return BlueprintId 镜像 ID  ，是 blueprint 的唯一标识。
+    * 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
+    * 镜像名称。
+    */
+    @SerializedName("BlueprintName")
+    @Expose
+    private String BlueprintName;
+
+    /**
+    * 镜像是否支持自动化助手。
+    */
+    @SerializedName("SupportAutomationTools")
+    @Expose
+    private Boolean SupportAutomationTools;
+
+    /**
+     * Get 镜像 ID  ，是 Blueprint 的唯一标识。 
+     * @return BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      */
     public String getBlueprintId() {
         return this.BlueprintId;
     }
 
     /**
-     * Set 镜像 ID  ，是 blueprint 的唯一标识。
-     * @param BlueprintId 镜像 ID  ，是 blueprint 的唯一标识。
+     * Set 镜像 ID  ，是 Blueprint 的唯一标识。
+     * @param BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      */
     public void setBlueprintId(String BlueprintId) {
         this.BlueprintId = BlueprintId;
@@ -212,16 +235,16 @@ public class Blueprint extends AbstractModel{
     }
 
     /**
-     * Get 镜像类型，如 APP_OS、PURE_OS。 
-     * @return BlueprintType 镜像类型，如 APP_OS、PURE_OS。
+     * Get 镜像类型，如 APP_OS、PURE_OS、PRIVATE。 
+     * @return BlueprintType 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
      */
     public String getBlueprintType() {
         return this.BlueprintType;
     }
 
     /**
-     * Set 镜像类型，如 APP_OS、PURE_OS。
-     * @param BlueprintType 镜像类型，如 APP_OS、PURE_OS。
+     * Set 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+     * @param BlueprintType 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
      */
     public void setBlueprintType(String BlueprintType) {
         this.BlueprintType = BlueprintType;
@@ -276,6 +299,62 @@ public class Blueprint extends AbstractModel{
     }
 
     /**
+     * Get 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get 镜像名称。 
+     * @return BlueprintName 镜像名称。
+     */
+    public String getBlueprintName() {
+        return this.BlueprintName;
+    }
+
+    /**
+     * Set 镜像名称。
+     * @param BlueprintName 镜像名称。
+     */
+    public void setBlueprintName(String BlueprintName) {
+        this.BlueprintName = BlueprintName;
+    }
+
+    /**
+     * Get 镜像是否支持自动化助手。 
+     * @return SupportAutomationTools 镜像是否支持自动化助手。
+     */
+    public Boolean getSupportAutomationTools() {
+        return this.SupportAutomationTools;
+    }
+
+    /**
+     * Set 镜像是否支持自动化助手。
+     * @param SupportAutomationTools 镜像是否支持自动化助手。
+     */
+    public void setSupportAutomationTools(Boolean SupportAutomationTools) {
+        this.SupportAutomationTools = SupportAutomationTools;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +369,9 @@ public class Blueprint extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "RequiredSystemDiskSize", this.RequiredSystemDiskSize);
         this.setParamSimple(map, prefix + "BlueprintState", this.BlueprintState);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
+        this.setParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
 
     }
 }

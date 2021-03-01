@@ -23,6 +23,17 @@ import java.util.HashMap;
 public class VideoEditProjectInput extends AbstractModel{
 
     /**
+    * 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+    */
+    @SerializedName("AspectRatio")
+    @Expose
+    private String AspectRatio;
+
+    /**
     * 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。
     */
     @SerializedName("VideoEditTemplateId")
@@ -36,6 +47,38 @@ public class VideoEditProjectInput extends AbstractModel{
     @SerializedName("InitTracks")
     @Expose
     private MediaTrack [] InitTracks;
+
+    /**
+     * Get 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。 
+     * @return AspectRatio 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+     */
+    public String getAspectRatio() {
+        return this.AspectRatio;
+    }
+
+    /**
+     * Set 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+     * @param AspectRatio 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+     */
+    public void setAspectRatio(String AspectRatio) {
+        this.AspectRatio = AspectRatio;
+    }
 
     /**
      * Get 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。 
@@ -77,6 +120,7 @@ public class VideoEditProjectInput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "VideoEditTemplateId", this.VideoEditTemplateId);
         this.setParamArrayObj(map, prefix + "InitTracks.", this.InitTracks);
 

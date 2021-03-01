@@ -47,6 +47,14 @@ public class ClusterExtraArgs extends AbstractModel{
     private String [] KubeScheduler;
 
     /**
+    * etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Etcd")
+    @Expose
+    private String [] Etcd;
+
+    /**
      * Get kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return KubeAPIServer kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
@@ -107,12 +115,33 @@ public class ClusterExtraArgs extends AbstractModel{
     }
 
     /**
+     * Get etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Etcd etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getEtcd() {
+        return this.Etcd;
+    }
+
+    /**
+     * Set etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Etcd etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEtcd(String [] Etcd) {
+        this.Etcd = Etcd;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KubeAPIServer.", this.KubeAPIServer);
         this.setParamArraySimple(map, prefix + "KubeControllerManager.", this.KubeControllerManager);
         this.setParamArraySimple(map, prefix + "KubeScheduler.", this.KubeScheduler);
+        this.setParamArraySimple(map, prefix + "Etcd.", this.Etcd);
 
     }
 }

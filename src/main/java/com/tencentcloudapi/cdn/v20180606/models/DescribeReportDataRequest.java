@@ -24,6 +24,9 @@ public class DescribeReportDataRequest extends AbstractModel{
 
     /**
     * 查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
     */
     @SerializedName("StartTime")
     @Expose
@@ -31,6 +34,9 @@ public class DescribeReportDataRequest extends AbstractModel{
 
     /**
     * 查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
     */
     @SerializedName("EndTime")
     @Expose
@@ -77,8 +83,14 @@ overseas：中国境外
     private Long Project;
 
     /**
-     * Get 查询起始时间：yyyy-MM-dd 
+     * Get 查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天 
      * @return StartTime 查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      */
     public String getStartTime() {
         return this.StartTime;
@@ -86,15 +98,27 @@ overseas：中国境外
 
     /**
      * Set 查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      * @param StartTime 查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间：yyyy-MM-dd 
+     * Get 查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天 
      * @return EndTime 查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      */
     public String getEndTime() {
         return this.EndTime;
@@ -102,7 +126,13 @@ overseas：中国境外
 
     /**
      * Set 查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      * @param EndTime 查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

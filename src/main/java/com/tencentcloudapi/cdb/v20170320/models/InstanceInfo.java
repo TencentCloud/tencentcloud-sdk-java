@@ -318,6 +318,14 @@ public class InstanceInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
+    * 节点数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceNodes")
+    @Expose
+    private Long InstanceNodes;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1006,6 +1014,26 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
+     * Get 节点数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceNodes 节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceNodes() {
+        return this.InstanceNodes;
+    }
+
+    /**
+     * Set 节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceNodes 节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceNodes(Long InstanceNodes) {
+        this.InstanceNodes = InstanceNodes;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1050,6 +1078,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
 
     }
 }

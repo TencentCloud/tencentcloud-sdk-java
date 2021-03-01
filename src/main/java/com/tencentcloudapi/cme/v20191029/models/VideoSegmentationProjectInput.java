@@ -23,6 +23,17 @@ import java.util.HashMap;
 public class VideoSegmentationProjectInput extends AbstractModel{
 
     /**
+    * 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+    */
+    @SerializedName("AspectRatio")
+    @Expose
+    private String AspectRatio;
+
+    /**
     * 视频拆条处理模型，不填则默认为手工分割视频。取值 ：
 <li>AI.GameHighlights.PUBG：和平精英集锦 ;</li>
 <li>AI.GameHighlights.Honor OfKings：王者荣耀集锦 ;</li>
@@ -34,6 +45,38 @@ public class VideoSegmentationProjectInput extends AbstractModel{
     @SerializedName("ProcessModel")
     @Expose
     private String ProcessModel;
+
+    /**
+     * Get 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。 
+     * @return AspectRatio 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+     */
+    public String getAspectRatio() {
+        return this.AspectRatio;
+    }
+
+    /**
+     * Set 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+     * @param AspectRatio 画布宽高比，取值有：
+<li>16:9；</li>
+<li>9:16；</li>
+<li>2:1。</li>
+默认值 16:9 。
+     */
+    public void setAspectRatio(String AspectRatio) {
+        this.AspectRatio = AspectRatio;
+    }
 
     /**
      * Get 视频拆条处理模型，不填则默认为手工分割视频。取值 ：
@@ -79,6 +122,7 @@ public class VideoSegmentationProjectInput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "ProcessModel", this.ProcessModel);
 
     }
