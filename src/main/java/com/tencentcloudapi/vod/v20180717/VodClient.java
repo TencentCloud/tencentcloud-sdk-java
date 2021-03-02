@@ -1007,6 +1007,52 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询指定日期范围内每天的播放统计数据。
+* 可以查询最近30天的播放统计数据。
+     * @param req DescribeDailyMediaPlayStatRequest
+     * @return DescribeDailyMediaPlayStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDailyMediaPlayStatResponse DescribeDailyMediaPlayStat(DescribeDailyMediaPlayStatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDailyMediaPlayStatResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDailyMediaPlayStatResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDailyMediaPlayStat");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于查询每日播放Top100 的媒体文件的播放统计数据。
+* 可以查询最近30天的播放统计数据。
+* 可以按播放次数或者播放流量查询。
+* 播放次数统计说明：
+    1. HLS 文件：访问 M3U8 文件时统计播放次数；访问 TS 文件不统计播放次数。
+    2. 其它文件（如 MP4 文件）：播放请求带有 range 参数且 range 的 start 参数不等于0时不统计播放次数，其它情况统计播放次数。
+     * @param req DescribeDailyMostPlayedStatRequest
+     * @return DescribeDailyMostPlayedStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDailyMostPlayedStatResponse DescribeDailyMostPlayedStat(DescribeDailyMostPlayedStatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDailyMostPlayedStatResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDailyMostPlayedStatResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDailyMostPlayedStat");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于查询播放统计文件的下载地址。
 * 可以查询最近30天的播放统计文件下载地址。
 * 云点播每天对前一天的 CDN 请求日志进行分析处理，生成播放统计文件。

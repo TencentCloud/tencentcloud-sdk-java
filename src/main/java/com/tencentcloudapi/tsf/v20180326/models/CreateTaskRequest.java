@@ -107,7 +107,7 @@ public class CreateTaskRequest extends AbstractModel{
     private String SuccessOperator;
 
     /**
-    * 判断任务成功率的阈值，如99.99
+    * 判断任务成功率的阈值，如100
     */
     @SerializedName("SuccessRatio")
     @Expose
@@ -320,16 +320,16 @@ public class CreateTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 判断任务成功率的阈值，如99.99 
-     * @return SuccessRatio 判断任务成功率的阈值，如99.99
+     * Get 判断任务成功率的阈值，如100 
+     * @return SuccessRatio 判断任务成功率的阈值，如100
      */
     public String getSuccessRatio() {
         return this.SuccessRatio;
     }
 
     /**
-     * Set 判断任务成功率的阈值，如99.99
-     * @param SuccessRatio 判断任务成功率的阈值，如99.99
+     * Set 判断任务成功率的阈值，如100
+     * @param SuccessRatio 判断任务成功率的阈值，如100
      */
     public void setSuccessRatio(String SuccessRatio) {
         this.SuccessRatio = SuccessRatio;

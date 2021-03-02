@@ -50,6 +50,13 @@ region和area只应填写一个。
     private Filter [] Filters;
 
     /**
+    * 统计周期，单位秒。取值60/300。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过30天。 
      * @return StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过30天。
      */
@@ -122,12 +129,29 @@ region和area只应填写一个。
     }
 
     /**
+     * Get 统计周期，单位秒。取值60/300。 
+     * @return Period 统计周期，单位秒。取值60/300。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 统计周期，单位秒。取值60/300。
+     * @param Period 统计周期，单位秒。取值60/300。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

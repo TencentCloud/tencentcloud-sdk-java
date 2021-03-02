@@ -159,6 +159,46 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取技能组信息列表
+     * @param req DescribeSkillGroupInfoListRequest
+     * @return DescribeSkillGroupInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillGroupInfoListResponse DescribeSkillGroupInfoList(DescribeSkillGroupInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSkillGroupInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSkillGroupInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSkillGroupInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取坐席信息列表
+     * @param req DescribeStaffInfoListRequest
+     * @return DescribeStaffInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStaffInfoListResponse DescribeStaffInfoList(DescribeStaffInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStaffInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStaffInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStaffInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *按实例获取电话消耗统计
      * @param req DescribeTelCallInfoRequest
      * @return DescribeTelCallInfoResponse

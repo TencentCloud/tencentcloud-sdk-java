@@ -44,6 +44,13 @@ public class PeakNetwork extends AbstractModel{
     private String PeakOutNetwork;
 
     /**
+    * 计费带宽。单位bps
+    */
+    @SerializedName("ChargeNetwork")
+    @Expose
+    private String ChargeNetwork;
+
+    /**
      * Get 记录时间。 
      * @return RecordTime 记录时间。
      */
@@ -92,12 +99,29 @@ public class PeakNetwork extends AbstractModel{
     }
 
     /**
+     * Get 计费带宽。单位bps 
+     * @return ChargeNetwork 计费带宽。单位bps
+     */
+    public String getChargeNetwork() {
+        return this.ChargeNetwork;
+    }
+
+    /**
+     * Set 计费带宽。单位bps
+     * @param ChargeNetwork 计费带宽。单位bps
+     */
+    public void setChargeNetwork(String ChargeNetwork) {
+        this.ChargeNetwork = ChargeNetwork;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RecordTime", this.RecordTime);
         this.setParamSimple(map, prefix + "PeakInNetwork", this.PeakInNetwork);
         this.setParamSimple(map, prefix + "PeakOutNetwork", this.PeakOutNetwork);
+        this.setParamSimple(map, prefix + "ChargeNetwork", this.ChargeNetwork);
 
     }
 }

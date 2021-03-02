@@ -58,6 +58,13 @@ public class Inbound extends AbstractModel{
     private String Dir;
 
     /**
+    * 规则描述
+    */
+    @SerializedName("Desc")
+    @Expose
+    private String Desc;
+
+    /**
      * Get 策略，ACCEPT 或者 DROP 
      * @return Action 策略，ACCEPT 或者 DROP
      */
@@ -138,6 +145,22 @@ public class Inbound extends AbstractModel{
     }
 
     /**
+     * Get 规则描述 
+     * @return Desc 规则描述
+     */
+    public String getDesc() {
+        return this.Desc;
+    }
+
+    /**
+     * Set 规则描述
+     * @param Desc 规则描述
+     */
+    public void setDesc(String Desc) {
+        this.Desc = Desc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class Inbound extends AbstractModel{
         this.setParamSimple(map, prefix + "PortRange", this.PortRange);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         this.setParamSimple(map, prefix + "Dir", this.Dir);
+        this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }
 }

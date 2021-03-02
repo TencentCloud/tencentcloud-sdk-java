@@ -30,6 +30,13 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+    */
+    @SerializedName("ForReadonlyInstance")
+    @Expose
+    private Boolean ForReadonlyInstance;
+
+    /**
      * Get 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。 
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
@@ -46,10 +53,27 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
+     * Get 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True 
+     * @return ForReadonlyInstance 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+     */
+    public Boolean getForReadonlyInstance() {
+        return this.ForReadonlyInstance;
+    }
+
+    /**
+     * Set 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+     * @param ForReadonlyInstance 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+     */
+    public void setForReadonlyInstance(Boolean ForReadonlyInstance) {
+        this.ForReadonlyInstance = ForReadonlyInstance;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ForReadonlyInstance", this.ForReadonlyInstance);
 
     }
 }

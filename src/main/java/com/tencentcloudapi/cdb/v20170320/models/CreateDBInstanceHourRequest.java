@@ -233,6 +233,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long Cpu;
 
     /**
+    * 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+    */
+    @SerializedName("AutoSyncFlag")
+    @Expose
+    private Long AutoSyncFlag;
+
+    /**
      * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
@@ -713,6 +720,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。 
+     * @return AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+     */
+    public Long getAutoSyncFlag() {
+        return this.AutoSyncFlag;
+    }
+
+    /**
+     * Set 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+     * @param AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+     */
+    public void setAutoSyncFlag(Long AutoSyncFlag) {
+        this.AutoSyncFlag = AutoSyncFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -746,6 +769,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
 
     }
 }
