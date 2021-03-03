@@ -262,6 +262,13 @@ global：全球加速
     private OfflineCache OfflineCache;
 
     /**
+    * QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Quic Quic;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -822,6 +829,22 @@ global：全球加速
     }
 
     /**
+     * Get QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。 
+     * @return Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     */
+    public Quic getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * @param Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     */
+    public void setQuic(Quic Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -858,6 +881,7 @@ global：全球加速
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+        this.setParamObj(map, prefix + "Quic.", this.Quic);
 
     }
 }

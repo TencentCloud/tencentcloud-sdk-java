@@ -619,6 +619,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取网络攻击威胁类型列表
+     * @param req DescribeAttackVulTypeListRequest
+     * @return DescribeAttackVulTypeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(DescribeAttackVulTypeListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAttackVulTypeListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAttackVulTypeListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAttackVulTypeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取高危命令列表
      * @param req DescribeBashEventsRequest
      * @return DescribeBashEventsResponse

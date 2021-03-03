@@ -46,6 +46,14 @@ public class DescribeConfigResponse extends AbstractModel{
     private InstanceNetworkLimitConfig [] InstanceNetworkLimitConfigs;
 
     /**
+    * 镜像限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageLimits")
+    @Expose
+    private ImageLimitConfig ImageLimits;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -109,6 +117,26 @@ public class DescribeConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 镜像限额信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageLimits 镜像限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageLimitConfig getImageLimits() {
+        return this.ImageLimits;
+    }
+
+    /**
+     * Set 镜像限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageLimits 镜像限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageLimits(ImageLimitConfig ImageLimits) {
+        this.ImageLimits = ImageLimits;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +159,7 @@ public class DescribeConfigResponse extends AbstractModel{
         this.setParamObj(map, prefix + "NetworkStorageRange.", this.NetworkStorageRange);
         this.setParamArraySimple(map, prefix + "ImageWhiteSet.", this.ImageWhiteSet);
         this.setParamArrayObj(map, prefix + "InstanceNetworkLimitConfigs.", this.InstanceNetworkLimitConfigs);
+        this.setParamObj(map, prefix + "ImageLimits.", this.ImageLimits);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

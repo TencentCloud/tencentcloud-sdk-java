@@ -79,6 +79,26 @@ public class AswClient extends AbstractClient{
     }
 
     /**
+     *一次执行会有很多步骤，经过很多节点，这个接口描述某一次执行的事件的历史
+     * @param req DescribeExecutionHistoryRequest
+     * @return DescribeExecutionHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExecutionHistoryResponse DescribeExecutionHistory(DescribeExecutionHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExecutionHistoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExecutionHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExecutionHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对状态机的执行历史进行描述.
      * @param req DescribeExecutionsRequest
      * @return DescribeExecutionsResponse

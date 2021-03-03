@@ -599,6 +599,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBCharsets）用于查询实例支持的数据库字符集。
+     * @param req DescribeDBCharsetsRequest
+     * @return DescribeDBCharsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCharsetsResponse DescribeDBCharsets(DescribeDBCharsetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBCharsetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBCharsetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBCharsets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBInstances)用于查询实例列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse

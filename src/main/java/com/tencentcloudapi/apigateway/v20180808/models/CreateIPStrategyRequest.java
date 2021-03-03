@@ -44,7 +44,7 @@ public class CreateIPStrategyRequest extends AbstractModel{
     private String StrategyType;
 
     /**
-    * 策略详情。
+    * 策略详情，多个ip 使用\n 分隔符分开。
     */
     @SerializedName("StrategyData")
     @Expose
@@ -99,16 +99,16 @@ public class CreateIPStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略详情。 
-     * @return StrategyData 策略详情。
+     * Get 策略详情，多个ip 使用\n 分隔符分开。 
+     * @return StrategyData 策略详情，多个ip 使用\n 分隔符分开。
      */
     public String getStrategyData() {
         return this.StrategyData;
     }
 
     /**
-     * Set 策略详情。
-     * @param StrategyData 策略详情。
+     * Set 策略详情，多个ip 使用\n 分隔符分开。
+     * @param StrategyData 策略详情，多个ip 使用\n 分隔符分开。
      */
     public void setStrategyData(String StrategyData) {
         this.StrategyData = StrategyData;

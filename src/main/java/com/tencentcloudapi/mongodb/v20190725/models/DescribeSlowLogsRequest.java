@@ -65,6 +65,13 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
@@ -161,6 +168,22 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
+     * Get 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。 
+     * @return Format 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+     * @param Format 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SlowMS", this.SlowMS);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

@@ -470,6 +470,22 @@ off：不支持
     private OriginCombine OriginCombine;
 
     /**
+    * POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PostMaxSize")
+    @Expose
+    private PostSize PostMaxSize;
+
+    /**
+    * Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Quic Quic;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1610,6 +1626,46 @@ off：不支持
     }
 
     /**
+     * Get POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PostMaxSize POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PostSize getPostMaxSize() {
+        return this.PostMaxSize;
+    }
+
+    /**
+     * Set POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PostMaxSize POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPostMaxSize(PostSize PostMaxSize) {
+        this.PostMaxSize = PostMaxSize;
+    }
+
+    /**
+     * Get Quic配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Quic Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Quic getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Quic Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuic(Quic Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1667,6 +1723,8 @@ off：不支持
         this.setParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+        this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
+        this.setParamObj(map, prefix + "Quic.", this.Quic);
 
     }
 }
