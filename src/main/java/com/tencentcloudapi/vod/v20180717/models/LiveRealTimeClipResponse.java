@@ -52,6 +52,13 @@ public class LiveRealTimeClipResponse extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
+    * <span id="p_segmentset">剪辑后的视频片段信息。</span>
+    */
+    @SerializedName("SegmentSet")
+    @Expose
+    private LiveRealTimeClipMediaSegmentInfo [] SegmentSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -127,6 +134,22 @@ public class LiveRealTimeClipResponse extends AbstractModel{
     }
 
     /**
+     * Get <span id="p_segmentset">剪辑后的视频片段信息。</span> 
+     * @return SegmentSet <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     */
+    public LiveRealTimeClipMediaSegmentInfo [] getSegmentSet() {
+        return this.SegmentSet;
+    }
+
+    /**
+     * Set <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     * @param SegmentSet <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     */
+    public void setSegmentSet(LiveRealTimeClipMediaSegmentInfo [] SegmentSet) {
+        this.SegmentSet = SegmentSet;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -150,6 +173,7 @@ public class LiveRealTimeClipResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "VodTaskId", this.VodTaskId);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

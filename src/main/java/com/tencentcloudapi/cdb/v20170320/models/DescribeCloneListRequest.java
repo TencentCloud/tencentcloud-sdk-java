@@ -30,14 +30,14 @@ public class DescribeCloneListRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 分页查询时的偏移量。
+    * 分页查询时的偏移量，默认值为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页查询时的每页条目数。
+    * 分页查询时的每页条目数，默认值为20。
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeCloneListRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页查询时的偏移量。 
-     * @return Offset 分页查询时的偏移量。
+     * Get 分页查询时的偏移量，默认值为0。 
+     * @return Offset 分页查询时的偏移量，默认值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询时的偏移量。
-     * @param Offset 分页查询时的偏移量。
+     * Set 分页查询时的偏移量，默认值为0。
+     * @param Offset 分页查询时的偏移量，默认值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页查询时的每页条目数。 
-     * @return Limit 分页查询时的每页条目数。
+     * Get 分页查询时的每页条目数，默认值为20。 
+     * @return Limit 分页查询时的每页条目数，默认值为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询时的每页条目数。
-     * @param Limit 分页查询时的每页条目数。
+     * Set 分页查询时的每页条目数，默认值为20。
+     * @param Limit 分页查询时的每页条目数，默认值为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

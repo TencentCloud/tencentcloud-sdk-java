@@ -286,6 +286,26 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *获取账户信息
+     * @param req GetAccountRequest
+     * @return GetAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAccountResponse GetAccount(GetAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取别名的详细信息，包括名称、描述、版本、路由信息等。
      * @param req GetAliasRequest
      * @return GetAliasResponse

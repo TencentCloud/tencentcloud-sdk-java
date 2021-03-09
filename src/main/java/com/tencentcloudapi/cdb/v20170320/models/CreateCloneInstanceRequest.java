@@ -93,7 +93,7 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     private TagInfo [] ResourceTags;
 
     /**
-    * 实例Cpu核数，需要不低于克隆源实例。
+    * 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
     */
     @SerializedName("Cpu")
     @Expose
@@ -302,16 +302,16 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例Cpu核数，需要不低于克隆源实例。 
-     * @return Cpu 实例Cpu核数，需要不低于克隆源实例。
+     * Get 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。 
+     * @return Cpu 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例Cpu核数，需要不低于克隆源实例。
-     * @param Cpu 实例Cpu核数，需要不低于克隆源实例。
+     * Set 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
+     * @param Cpu 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

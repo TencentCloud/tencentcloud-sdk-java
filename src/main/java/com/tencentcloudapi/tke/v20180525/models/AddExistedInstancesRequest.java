@@ -37,7 +37,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 实例额外需要设置参数信息
+    * 实例额外需要设置参数信息(默认值)
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
@@ -118,16 +118,16 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例额外需要设置参数信息 
-     * @return InstanceAdvancedSettings 实例额外需要设置参数信息
+     * Get 实例额外需要设置参数信息(默认值) 
+     * @return InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
     }
 
     /**
-     * Set 实例额外需要设置参数信息
-     * @param InstanceAdvancedSettings 实例额外需要设置参数信息
+     * Set 实例额外需要设置参数信息(默认值)
+     * @param InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;

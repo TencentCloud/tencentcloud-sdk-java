@@ -90,7 +90,7 @@ public class ModifyTaskRequest extends AbstractModel{
     */
     @SerializedName("ShardArguments")
     @Expose
-    private ShardArgument ShardArguments;
+    private ShardArgument [] ShardArguments;
 
     /**
     * 高级设置
@@ -282,7 +282,7 @@ public class ModifyTaskRequest extends AbstractModel{
      * Get 分片参数 
      * @return ShardArguments 分片参数
      */
-    public ShardArgument getShardArguments() {
+    public ShardArgument [] getShardArguments() {
         return this.ShardArguments;
     }
 
@@ -290,7 +290,7 @@ public class ModifyTaskRequest extends AbstractModel{
      * Set 分片参数
      * @param ShardArguments 分片参数
      */
-    public void setShardArguments(ShardArgument ShardArguments) {
+    public void setShardArguments(ShardArgument [] ShardArguments) {
         this.ShardArguments = ShardArguments;
     }
 
@@ -403,7 +403,7 @@ public class ModifyTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeOut", this.TimeOut);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ShardCount", this.ShardCount);
-        this.setParamObj(map, prefix + "ShardArguments.", this.ShardArguments);
+        this.setParamArrayObj(map, prefix + "ShardArguments.", this.ShardArguments);
         this.setParamObj(map, prefix + "AdvanceSettings.", this.AdvanceSettings);
         this.setParamSimple(map, prefix + "SuccessOperator", this.SuccessOperator);
         this.setParamSimple(map, prefix + "SuccessRatio", this.SuccessRatio);

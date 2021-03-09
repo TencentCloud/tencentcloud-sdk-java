@@ -379,6 +379,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询服务版本详情(新)
+     * @param req DescribeCloudBaseRunVersionRequest
+     * @return DescribeCloudBaseRunVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersion(DescribeCloudBaseRunVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudBaseRunVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudBaseRunVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudBaseRunVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询版本历史
      * @param req DescribeCloudBaseRunVersionSnapshotRequest
      * @return DescribeCloudBaseRunVersionSnapshotResponse

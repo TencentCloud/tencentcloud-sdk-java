@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ShardArgument extends AbstractModel{
 
     /**
-    * 分片参数 KEY，整形
+    * 分片参数 KEY，整形, 范围 [1,1000]
     */
     @SerializedName("ShardKey")
     @Expose
@@ -38,16 +38,16 @@ public class ShardArgument extends AbstractModel{
     private String ShardValue;
 
     /**
-     * Get 分片参数 KEY，整形 
-     * @return ShardKey 分片参数 KEY，整形
+     * Get 分片参数 KEY，整形, 范围 [1,1000] 
+     * @return ShardKey 分片参数 KEY，整形, 范围 [1,1000]
      */
     public Long getShardKey() {
         return this.ShardKey;
     }
 
     /**
-     * Set 分片参数 KEY，整形
-     * @param ShardKey 分片参数 KEY，整形
+     * Set 分片参数 KEY，整形, 范围 [1,1000]
+     * @param ShardKey 分片参数 KEY，整形, 范围 [1,1000]
      */
     public void setShardKey(Long ShardKey) {
         this.ShardKey = ShardKey;

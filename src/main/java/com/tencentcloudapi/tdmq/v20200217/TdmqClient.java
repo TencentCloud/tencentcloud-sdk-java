@@ -478,4 +478,44 @@ public class TdmqClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *批量发送消息
+     * @param req SendBatchMessagesRequest
+     * @return SendBatchMessagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendBatchMessagesResponse SendBatchMessages(SendBatchMessagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendBatchMessagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendBatchMessagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendBatchMessages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *发送单条消息
+     * @param req SendMessagesRequest
+     * @return SendMessagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendMessagesResponse SendMessages(SendMessagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendMessagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendMessagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendMessages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

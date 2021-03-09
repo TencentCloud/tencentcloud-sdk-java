@@ -44,7 +44,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private String [] EventName;
 
     /**
-    * 影响对象，比如ins-19708ino
+    * 影响对象，比如"ins-19708ino"
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private DescribeProductEventListDimensions [] Dimensions;
 
     /**
-    * 地域过滤，比如gz
+    * 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
     */
     @SerializedName("RegionList")
     @Expose
@@ -176,16 +176,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get 影响对象，比如ins-19708ino 
-     * @return InstanceId 影响对象，比如ins-19708ino
+     * Get 影响对象，比如"ins-19708ino" 
+     * @return InstanceId 影响对象，比如"ins-19708ino"
      */
     public String [] getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 影响对象，比如ins-19708ino
-     * @param InstanceId 影响对象，比如ins-19708ino
+     * Set 影响对象，比如"ins-19708ino"
+     * @param InstanceId 影响对象，比如"ins-19708ino"
      */
     public void setInstanceId(String [] InstanceId) {
         this.InstanceId = InstanceId;
@@ -208,16 +208,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get 地域过滤，比如gz 
-     * @return RegionList 地域过滤，比如gz
+     * Get 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863) 
+     * @return RegionList 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
      */
     public String [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set 地域过滤，比如gz
-     * @param RegionList 地域过滤，比如gz
+     * Set 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+     * @param RegionList 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;

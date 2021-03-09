@@ -73,6 +73,13 @@ public class OcrTextDetail extends AbstractModel{
     private Location Location;
 
     /**
+    * OCR文本识别置信度
+    */
+    @SerializedName("Rate")
+    @Expose
+    private Long Rate;
+
+    /**
      * Get OCR文本内容 
      * @return Text OCR文本内容
      */
@@ -189,6 +196,22 @@ public class OcrTextDetail extends AbstractModel{
     }
 
     /**
+     * Get OCR文本识别置信度 
+     * @return Rate OCR文本识别置信度
+     */
+    public Long getRate() {
+        return this.Rate;
+    }
+
+    /**
+     * Set OCR文本识别置信度
+     * @param Rate OCR文本识别置信度
+     */
+    public void setRate(Long Rate) {
+        this.Rate = Rate;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +222,7 @@ public class OcrTextDetail extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamObj(map, prefix + "Location.", this.Location);
+        this.setParamSimple(map, prefix + "Rate", this.Rate);
 
     }
 }
