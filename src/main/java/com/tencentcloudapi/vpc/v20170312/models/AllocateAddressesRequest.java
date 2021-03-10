@@ -73,6 +73,7 @@ public class AllocateAddressesRequest extends AbstractModel{
     /**
     * EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+<ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
     */
     @SerializedName("AddressType")
     @Expose
@@ -109,6 +110,13 @@ AnycastEIP是否用于绑定负载均衡。
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
+
+    /**
+    * EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+    */
+    @SerializedName("AddressName")
+    @Expose
+    private String AddressName;
 
     /**
      * Get EIP数量。默认值：1。 
@@ -244,9 +252,11 @@ AnycastEIP是否用于绑定负载均衡。
 
     /**
      * Get EIP类型。默认值：EIP。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul> 
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+<ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul> 
      * @return AddressType EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+<ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
      */
     public String getAddressType() {
         return this.AddressType;
@@ -255,8 +265,10 @@ AnycastEIP是否用于绑定负载均衡。
     /**
      * Set EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+<ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
      * @param AddressType EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+<ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
@@ -343,6 +355,22 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
+     * Get EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名 
+     * @return AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+     */
+    public String getAddressName() {
+        return this.AddressName;
+    }
+
+    /**
+     * Set EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+     * @param AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+     */
+    public void setAddressName(String AddressName) {
+        this.AddressName = AddressName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -356,6 +384,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+        this.setParamSimple(map, prefix + "AddressName", this.AddressName);
 
     }
 }

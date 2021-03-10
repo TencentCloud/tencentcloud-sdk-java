@@ -119,6 +119,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
+     * @param req CreateScdnFailedLogTaskRequest
+     * @return CreateScdnFailedLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScdnFailedLogTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScdnFailedLogTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScdnFailedLogTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *CreateScdnLogTask 用于创建事件日志任务
      * @param req CreateScdnLogTaskRequest
      * @return CreateScdnLogTaskResponse

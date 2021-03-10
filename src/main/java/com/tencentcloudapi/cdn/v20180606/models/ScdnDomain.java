@@ -86,6 +86,14 @@ public class ScdnDomain extends AbstractModel{
     private String Bot;
 
     /**
+    * 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -230,6 +238,26 @@ public class ScdnDomain extends AbstractModel{
     }
 
     /**
+     * Get 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Area 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Area 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +270,7 @@ public class ScdnDomain extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "AclRuleNumbers", this.AclRuleNumbers);
         this.setParamSimple(map, prefix + "Bot", this.Bot);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

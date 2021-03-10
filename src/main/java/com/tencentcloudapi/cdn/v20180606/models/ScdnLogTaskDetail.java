@@ -130,6 +130,14 @@ DefenceMode映射如下：
     private ScdnEventLogConditions [] Conditions;
 
     /**
+    * mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get scdn域名 
      * @return Domain scdn域名
      */
@@ -426,6 +434,26 @@ DefenceMode映射如下：
     }
 
     /**
+     * Get mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Area mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Area mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -440,6 +468,7 @@ DefenceMode映射如下：
         this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamSimple(map, prefix + "DefenceMode", this.DefenceMode);
         this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

@@ -58,28 +58,39 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] MonitorTypes;
 
     /**
-    * 根据命名空间过滤
+    * 根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
     */
     @SerializedName("Namespaces")
     @Expose
     private String [] Namespaces;
 
     /**
-    * 告警对象列表
+    * 告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
     */
     @SerializedName("Dimensions")
     @Expose
     private String Dimensions;
 
     /**
-    * 根据接收人搜索
+    * 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
     */
     @SerializedName("ReceiverUids")
     @Expose
     private Long [] ReceiverUids;
 
     /**
-    * 根据接收组搜索
+    * 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
     */
     @SerializedName("ReceiverGroups")
     @Expose
@@ -93,7 +104,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] PolicyType;
 
     /**
-    * 排序字段
+    * 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
     */
     @SerializedName("Field")
     @Expose
@@ -107,14 +118,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 项目id数组
+    * 策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 告警通知id列表
+    * 通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
     */
     @SerializedName("NoticeIds")
     @Expose
@@ -128,7 +141,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] RuleTypes;
 
     /**
-    * 启停，1：启用   0：停止
+    * 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
     */
     @SerializedName("Enable")
     @Expose
@@ -222,64 +235,108 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据命名空间过滤 
-     * @return Namespaces 根据命名空间过滤
+     * Get 根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397) 
+     * @return Namespaces 根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public String [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set 根据命名空间过滤
-     * @param Namespaces 根据命名空间过滤
+     * Set 根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+     * @param Namespaces 根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;
     }
 
     /**
-     * Get 告警对象列表 
-     * @return Dimensions 告警对象列表
+     * Get 告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397) 
+     * @return Dimensions 告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 告警对象列表
-     * @param Dimensions 告警对象列表
+     * Set 告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+     * @param Dimensions 告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 根据接收人搜索 
-     * @return ReceiverUids 根据接收人搜索
+     * Get 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587) 
+     * @return ReceiverUids 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
      */
     public Long [] getReceiverUids() {
         return this.ReceiverUids;
     }
 
     /**
-     * Set 根据接收人搜索
-     * @param ReceiverUids 根据接收人搜索
+     * Set 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
+     * @param ReceiverUids 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
      */
     public void setReceiverUids(Long [] ReceiverUids) {
         this.ReceiverUids = ReceiverUids;
     }
 
     /**
-     * Get 根据接收组搜索 
-     * @return ReceiverGroups 根据接收组搜索
+     * Get 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589) 
+     * @return ReceiverGroups 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
      */
     public Long [] getReceiverGroups() {
         return this.ReceiverGroups;
     }
 
     /**
-     * Set 根据接收组搜索
-     * @param ReceiverGroups 根据接收组搜索
+     * Set 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
+     * @param ReceiverGroups 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
      */
     public void setReceiverGroups(Long [] ReceiverGroups) {
         this.ReceiverGroups = ReceiverGroups;
@@ -302,16 +359,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段 
-     * @return Field 排序字段
+     * Get 排序字段，例如按照最后修改时间排序，Field: "UpdateTime" 
+     * @return Field 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 排序字段
-     * @param Field 排序字段
+     * Set 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
+     * @param Field 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
      */
     public void setField(String Field) {
         this.Field = Field;
@@ -334,32 +391,40 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目id数组 
-     * @return ProjectIds 项目id数组
+     * Get 策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project) 
+     * @return ProjectIds 策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目id数组
-     * @param ProjectIds 项目id数组
+     * Set 策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
+     * @param ProjectIds 策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 告警通知id列表 
-     * @return NoticeIds 告警通知id列表
+     * Get 通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 
+     * @return NoticeIds 通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 告警通知id列表
-     * @param NoticeIds 告警通知id列表
+     * Set 通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
+     * @param NoticeIds 通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
@@ -382,16 +447,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 启停，1：启用   0：停止 
-     * @return Enable 启停，1：启用   0：停止
+     * Get 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1] 
+     * @return Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
      */
     public Long [] getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 启停，1：启用   0：停止
-     * @param Enable 启停，1：启用   0：停止
+     * Set 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
+     * @param Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
      */
     public void setEnable(Long [] Enable) {
         this.Enable = Enable;

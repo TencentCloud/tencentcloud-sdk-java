@@ -199,7 +199,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询Redis实例列表信息
+     *查询Redis实例列表信息。该接口已废弃。
      * @param req DescribeCommonDBInstancesRequest
      * @return DescribeCommonDBInstancesResponse
      * @throws TencentCloudSDKException

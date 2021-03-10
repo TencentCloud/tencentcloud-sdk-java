@@ -62,6 +62,22 @@ public class ScdnWafConfig extends AbstractModel{
     private ScdnWafRule [] Rules;
 
     /**
+    * waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Level")
+    @Expose
+    private Long Level;
+
+    /**
+    * waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubRuleSwitch")
+    @Expose
+    private WafSubRuleStatus [] SubRuleSwitch;
+
+    /**
      * Get on|off 
      * @return Switch on|off
      */
@@ -158,6 +174,46 @@ public class ScdnWafConfig extends AbstractModel{
     }
 
     /**
+     * Get waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Level waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Level waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLevel(Long Level) {
+        this.Level = Level;
+    }
+
+    /**
+     * Get waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubRuleSwitch waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WafSubRuleStatus [] getSubRuleSwitch() {
+        return this.SubRuleSwitch;
+    }
+
+    /**
+     * Set waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubRuleSwitch waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubRuleSwitch(WafSubRuleStatus [] SubRuleSwitch) {
+        this.SubRuleSwitch = SubRuleSwitch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -166,6 +222,8 @@ public class ScdnWafConfig extends AbstractModel{
         this.setParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
         this.setParamSimple(map, prefix + "WebShellSwitch", this.WebShellSwitch);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamArrayObj(map, prefix + "SubRuleSwitch.", this.SubRuleSwitch);
 
     }
 }

@@ -519,6 +519,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *通过子用户UIN列表查询子用户
+     * @param req DescribeSubAccountsRequest
+     * @return DescribeSubAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubAccountsResponse DescribeSubAccounts(DescribeSubAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSubAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
      * @param req DetachGroupPolicyRequest
      * @return DetachGroupPolicyResponse

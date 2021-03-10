@@ -20,60 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListScdnLogTasksRequest extends AbstractModel{
+public class WafSubRuleStatus extends AbstractModel{
 
     /**
-    * 产品来源 cdn/ecdn
+    * 子规则状态，on|off
     */
-    @SerializedName("Source")
+    @SerializedName("Switch")
     @Expose
-    private String Source;
+    private String Switch;
 
     /**
-    * 地域：mainland 或 overseas 为空表示查询所有地域
+    * 规则id列表
     */
-    @SerializedName("Area")
+    @SerializedName("SubIds")
     @Expose
-    private String Area;
+    private Long [] SubIds;
 
     /**
-     * Get 产品来源 cdn/ecdn 
-     * @return Source 产品来源 cdn/ecdn
+     * Get 子规则状态，on|off 
+     * @return Switch 子规则状态，on|off
      */
-    public String getSource() {
-        return this.Source;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set 产品来源 cdn/ecdn
-     * @param Source 产品来源 cdn/ecdn
+     * Set 子规则状态，on|off
+     * @param Switch 子规则状态，on|off
      */
-    public void setSource(String Source) {
-        this.Source = Source;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
     /**
-     * Get 地域：mainland 或 overseas 为空表示查询所有地域 
-     * @return Area 地域：mainland 或 overseas 为空表示查询所有地域
+     * Get 规则id列表 
+     * @return SubIds 规则id列表
      */
-    public String getArea() {
-        return this.Area;
+    public Long [] getSubIds() {
+        return this.SubIds;
     }
 
     /**
-     * Set 地域：mainland 或 overseas 为空表示查询所有地域
-     * @param Area 地域：mainland 或 overseas 为空表示查询所有地域
+     * Set 规则id列表
+     * @param SubIds 规则id列表
      */
-    public void setArea(String Area) {
-        this.Area = Area;
+    public void setSubIds(Long [] SubIds) {
+        this.SubIds = SubIds;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Source", this.Source);
-        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArraySimple(map, prefix + "SubIds.", this.SubIds);
 
     }
 }

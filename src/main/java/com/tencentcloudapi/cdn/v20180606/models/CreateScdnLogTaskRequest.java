@@ -120,6 +120,20 @@ DefenceMode 映射如下：
     private ScdnEventLogConditions [] Conditions;
 
     /**
+    * 来源产品 cdn ecdn
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
+    * 地域：mainland 或 overseas
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 防护类型
 Mode 映射如下：
   waf = "Web攻击"
@@ -388,6 +402,38 @@ DefenceMode 映射如下：
     }
 
     /**
+     * Get 来源产品 cdn ecdn 
+     * @return Source 来源产品 cdn ecdn
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 来源产品 cdn ecdn
+     * @param Source 来源产品 cdn ecdn
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
+     * Get 地域：mainland 或 overseas 
+     * @return Area 地域：mainland 或 overseas
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 地域：mainland 或 overseas
+     * @param Area 地域：mainland 或 overseas
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -401,6 +447,8 @@ DefenceMode 映射如下：
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArraySimple(map, prefix + "AttackTypes.", this.AttackTypes);
         this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

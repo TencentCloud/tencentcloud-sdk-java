@@ -20,49 +20,49 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListScdnLogTasksRequest extends AbstractModel{
+public class CreateScdnFailedLogTaskRequest extends AbstractModel{
 
     /**
-    * 产品来源 cdn/ecdn
+    * 重试失败任务的taskID
     */
-    @SerializedName("Source")
+    @SerializedName("TaskId")
     @Expose
-    private String Source;
+    private String TaskId;
 
     /**
-    * 地域：mainland 或 overseas 为空表示查询所有地域
+    * 地域：mainland或overseas
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get 产品来源 cdn/ecdn 
-     * @return Source 产品来源 cdn/ecdn
+     * Get 重试失败任务的taskID 
+     * @return TaskId 重试失败任务的taskID
      */
-    public String getSource() {
-        return this.Source;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 产品来源 cdn/ecdn
-     * @param Source 产品来源 cdn/ecdn
+     * Set 重试失败任务的taskID
+     * @param TaskId 重试失败任务的taskID
      */
-    public void setSource(String Source) {
-        this.Source = Source;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
-     * Get 地域：mainland 或 overseas 为空表示查询所有地域 
-     * @return Area 地域：mainland 或 overseas 为空表示查询所有地域
+     * Get 地域：mainland或overseas 
+     * @return Area 地域：mainland或overseas
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 地域：mainland 或 overseas 为空表示查询所有地域
-     * @param Area 地域：mainland 或 overseas 为空表示查询所有地域
+     * Set 地域：mainland或overseas
+     * @param Area 地域：mainland或overseas
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -72,7 +72,7 @@ public class ListScdnLogTasksRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Area", this.Area);
 
     }

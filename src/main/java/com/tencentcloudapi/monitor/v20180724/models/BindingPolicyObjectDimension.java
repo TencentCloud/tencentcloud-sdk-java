@@ -39,7 +39,7 @@ public class BindingPolicyObjectDimension extends AbstractModel{
     /**
     * 实例的维度信息，格式为
 {"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
-[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
+[指标维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
     */
     @SerializedName("Dimensions")
     @Expose
@@ -87,10 +87,10 @@ public class BindingPolicyObjectDimension extends AbstractModel{
     /**
      * Get 实例的维度信息，格式为
 {"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
-[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397) 
+[指标维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397) 
      * @return Dimensions 实例的维度信息，格式为
 {"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
-[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
+[指标维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public String getDimensions() {
         return this.Dimensions;
@@ -99,10 +99,10 @@ public class BindingPolicyObjectDimension extends AbstractModel{
     /**
      * Set 实例的维度信息，格式为
 {"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
-[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
+[指标维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
      * @param Dimensions 实例的维度信息，格式为
 {"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
-[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
+[指标维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;

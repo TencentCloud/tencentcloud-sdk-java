@@ -80,7 +80,7 @@ public class Migration extends AbstractModel{
     private String [] BackupFiles;
 
     /**
-    * 迁移任务状态，
+    * 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
     */
     @SerializedName("Status")
     @Expose
@@ -269,16 +269,16 @@ public class Migration extends AbstractModel{
     }
 
     /**
-     * Get 迁移任务状态， 
-     * @return Status 迁移任务状态，
+     * Get 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中 
+     * @return Status 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 迁移任务状态，
-     * @param Status 迁移任务状态，
+     * Set 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
+     * @param Status 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
