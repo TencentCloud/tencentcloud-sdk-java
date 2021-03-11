@@ -59,6 +59,14 @@ public class ProductModelDefinition extends AbstractModel{
     private String CategoryModel;
 
     /**
+    * 产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetTypeModel")
+    @Expose
+    private String NetTypeModel;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -143,6 +151,26 @@ public class ProductModelDefinition extends AbstractModel{
     }
 
     /**
+     * Get 产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetTypeModel 产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetTypeModel() {
+        return this.NetTypeModel;
+    }
+
+    /**
+     * Set 产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetTypeModel 产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetTypeModel(String NetTypeModel) {
+        this.NetTypeModel = NetTypeModel;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +179,7 @@ public class ProductModelDefinition extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "CategoryModel", this.CategoryModel);
+        this.setParamSimple(map, prefix + "NetTypeModel", this.NetTypeModel);
 
     }
 }
