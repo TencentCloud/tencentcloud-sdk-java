@@ -1099,6 +1099,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *管理实例公网访问
+     * @param req ManageExternalEndpointRequest
+     * @return ManageExternalEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageExternalEndpointResponse ManageExternalEndpoint(ManageExternalEndpointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageExternalEndpointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageExternalEndpointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ManageExternalEndpoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于设置个人版全局镜像版本自动清理策略
      * @param req ManageImageLifecycleGlobalPersonalRequest
      * @return ManageImageLifecycleGlobalPersonalResponse

@@ -177,6 +177,14 @@ public class AlarmHistory extends AbstractModel{
     private Long PolicyExists;
 
     /**
+    * 指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricsInfo")
+    @Expose
+    private AlarmHistoryMetric [] MetricsInfo;
+
+    /**
      * Get 告警历史Id 
      * @return AlarmId 告警历史Id
      */
@@ -529,6 +537,26 @@ public class AlarmHistory extends AbstractModel{
     }
 
     /**
+     * Get 指标信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricsInfo 指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmHistoryMetric [] getMetricsInfo() {
+        return this.MetricsInfo;
+    }
+
+    /**
+     * Set 指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricsInfo 指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricsInfo(AlarmHistoryMetric [] MetricsInfo) {
+        this.MetricsInfo = MetricsInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +582,7 @@ public class AlarmHistory extends AbstractModel{
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
+        this.setParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
 
     }
 }

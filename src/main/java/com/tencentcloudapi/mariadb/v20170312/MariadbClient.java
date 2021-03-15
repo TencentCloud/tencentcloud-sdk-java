@@ -743,6 +743,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（KillSession）用于杀死指定会话。
+     * @param req KillSessionRequest
+     * @return KillSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillSessionResponse KillSession(KillSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyAccountDescription）用于修改云数据库账号备注。
 注意：相同用户名，不同Host是不同的账号。
      * @param req ModifyAccountDescriptionRequest
