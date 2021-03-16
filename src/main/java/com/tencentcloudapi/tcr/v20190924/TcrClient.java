@@ -619,6 +619,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询实例公网访问入口状态
+     * @param req DescribeExternalEndpointStatusRequest
+     * @return DescribeExternalEndpointStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalEndpointStatusResponse DescribeExternalEndpointStatus(DescribeExternalEndpointStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExternalEndpointStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExternalEndpointStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExternalEndpointStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询个人收藏仓库
      * @param req DescribeFavorRepositoryPersonalRequest
      * @return DescribeFavorRepositoryPersonalResponse

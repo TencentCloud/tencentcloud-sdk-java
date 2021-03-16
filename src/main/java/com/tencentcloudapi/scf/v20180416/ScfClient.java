@@ -366,6 +366,26 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *获取函数异步重试配置，包括重试次数和消息保留时间
+     * @param req GetFunctionEventInvokeConfigRequest
+     * @return GetFunctionEventInvokeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(GetFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFunctionEventInvokeConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口根据指定的日志查询条件返回函数运行日志。
      * @param req GetFunctionLogsRequest
      * @return GetFunctionLogsResponse
@@ -798,6 +818,26 @@ public class ScfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionConfigurationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateFunctionConfiguration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新函数的异步重试配置，包括重试次数和消息保留时间
+     * @param req UpdateFunctionEventInvokeConfigRequest
+     * @return UpdateFunctionEventInvokeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(UpdateFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateFunctionEventInvokeConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

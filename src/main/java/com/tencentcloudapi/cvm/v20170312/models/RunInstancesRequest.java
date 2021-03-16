@@ -150,7 +150,7 @@ public class RunInstancesRequest extends AbstractModel{
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
+    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。
     */
     @SerializedName("TagSpecification")
     @Expose
@@ -488,16 +488,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。 
-     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。
      */
     public TagSpecification [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
-     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
         this.TagSpecification = TagSpecification;

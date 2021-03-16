@@ -79,6 +79,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *开通云存服务
+     * @param req CreateCloudStorageRequest
+     * @return CreateCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudStorageResponse CreateCloudStorage(CreateCloudStorageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudStorageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudStorageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudStorage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建转发规则
      * @param req CreateForwardRuleRequest
      * @return CreateForwardRuleResponse
@@ -231,6 +251,106 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCategoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCategory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备云存服务详情
+     * @param req DescribeCloudStorageRequest
+     * @return DescribeCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageResponse DescribeCloudStorage(DescribeCloudStorageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudStorageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudStorageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudStorage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取具有云存的日期
+     * @param req DescribeCloudStorageDateRequest
+     * @return DescribeCloudStorageDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageDateResponse DescribeCloudStorageDate(DescribeCloudStorageDateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudStorageDateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudStorageDateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudStorageDate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取云存事件列表
+     * @param req DescribeCloudStorageEventsRequest
+     * @return DescribeCloudStorageEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageEventsResponse DescribeCloudStorageEvents(DescribeCloudStorageEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudStorageEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudStorageEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudStorageEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取云存事件缩略图
+     * @param req DescribeCloudStorageThumbnailRequest
+     * @return DescribeCloudStorageThumbnailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageThumbnailResponse DescribeCloudStorageThumbnail(DescribeCloudStorageThumbnailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudStorageThumbnailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudStorageThumbnailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudStorageThumbnail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取某一天云存时间轴
+     * @param req DescribeCloudStorageTimeRequest
+     * @return DescribeCloudStorageTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageTimeResponse DescribeCloudStorageTime(DescribeCloudStorageTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudStorageTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudStorageTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudStorageTime");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

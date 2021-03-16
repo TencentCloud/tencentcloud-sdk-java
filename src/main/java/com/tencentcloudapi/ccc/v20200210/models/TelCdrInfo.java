@@ -240,6 +240,14 @@ notInService       不在服务区
     private Long QueuedSkillGroupId;
 
     /**
+    * 会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -832,6 +840,26 @@ notInService       不在服务区
     }
 
     /**
+     * Get 会话 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId 会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId 会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -858,6 +886,7 @@ notInService       不在服务区
         this.setParamSimple(map, prefix + "QueuedTimestamp", this.QueuedTimestamp);
         this.setParamArrayObj(map, prefix + "PostIVRKeyPressed.", this.PostIVRKeyPressed);
         this.setParamSimple(map, prefix + "QueuedSkillGroupId", this.QueuedSkillGroupId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

@@ -39,6 +39,14 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel{
     private String VersionName;
 
     /**
+    * 操作记录id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunId")
+    @Expose
+    private String RunId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel{
     }
 
     /**
+     * Get 操作记录id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunId 操作记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunId() {
+        return this.RunId;
+    }
+
+    /**
+     * Set 操作记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunId 操作记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunId(String RunId) {
+        this.RunId = RunId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -107,6 +135,7 @@ public class CreateCloudBaseRunServerVersionResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "VersionName", this.VersionName);
+        this.setParamSimple(map, prefix + "RunId", this.RunId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -51,14 +51,14 @@ public class EditBashRuleRequest extends AbstractModel{
     private Long Id;
 
     /**
-    * 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+    * 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+    * 主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
     */
     @SerializedName("Hostip")
     @Expose
@@ -136,32 +136,32 @@ public class EditBashRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个) 
-     * @return Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Get 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个) 
+     * @return Uuid 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
-     * @param Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Set 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
+     * @param Uuid 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机IP(IsGlobal为1时，Uuid或Hostip必填一个) 
-     * @return Hostip 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Get 主机IP(IsGlobal为0时，Uuid或Hostip必填一个) 
+     * @return Hostip 主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
      */
     public String getHostip() {
         return this.Hostip;
     }
 
     /**
-     * Set 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
-     * @param Hostip 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Set 主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
+     * @param Hostip 主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
      */
     public void setHostip(String Hostip) {
         this.Hostip = Hostip;

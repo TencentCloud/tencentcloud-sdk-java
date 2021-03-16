@@ -1240,6 +1240,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *入侵检测，获取恶意请求列表
+     * @param req DescribeRiskDnsListRequest
+     * @return DescribeRiskDnsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskDnsListResponse DescribeRiskDnsList(DescribeRiskDnsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskDnsListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskDnsListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskDnsList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询木马扫描进度
      * @param req DescribeScanMalwareScheduleRequest
      * @return DescribeScanMalwareScheduleResponse
@@ -2214,6 +2234,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UntrustMalwaresResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UntrustMalwares");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据基线策略id更新策略信息
+     * @param req UpdateBaselineStrategyRequest
+     * @return UpdateBaselineStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateBaselineStrategyResponse UpdateBaselineStrategy(UpdateBaselineStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateBaselineStrategyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateBaselineStrategyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateBaselineStrategy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

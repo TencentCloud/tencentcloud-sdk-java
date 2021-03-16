@@ -37,7 +37,13 @@ public class Invocation extends AbstractModel{
     private String CommandId;
 
     /**
-    * 执行活动状态。
+    * 执行任务状态。取值范围：
+<li> PENDING：等待下发 
+<li> RUNNING：命令运行中
+<li> SUCCESS：命令成功
+<li> FAILED：命令失败
+<li> TIMEOUT：命令超时
+<li> PARTIAL_FAILED：命令部分失败
     */
     @SerializedName("InvocationStatus")
     @Expose
@@ -118,16 +124,40 @@ public class Invocation extends AbstractModel{
     }
 
     /**
-     * Get 执行活动状态。 
-     * @return InvocationStatus 执行活动状态。
+     * Get 执行任务状态。取值范围：
+<li> PENDING：等待下发 
+<li> RUNNING：命令运行中
+<li> SUCCESS：命令成功
+<li> FAILED：命令失败
+<li> TIMEOUT：命令超时
+<li> PARTIAL_FAILED：命令部分失败 
+     * @return InvocationStatus 执行任务状态。取值范围：
+<li> PENDING：等待下发 
+<li> RUNNING：命令运行中
+<li> SUCCESS：命令成功
+<li> FAILED：命令失败
+<li> TIMEOUT：命令超时
+<li> PARTIAL_FAILED：命令部分失败
      */
     public String getInvocationStatus() {
         return this.InvocationStatus;
     }
 
     /**
-     * Set 执行活动状态。
-     * @param InvocationStatus 执行活动状态。
+     * Set 执行任务状态。取值范围：
+<li> PENDING：等待下发 
+<li> RUNNING：命令运行中
+<li> SUCCESS：命令成功
+<li> FAILED：命令失败
+<li> TIMEOUT：命令超时
+<li> PARTIAL_FAILED：命令部分失败
+     * @param InvocationStatus 执行任务状态。取值范围：
+<li> PENDING：等待下发 
+<li> RUNNING：命令运行中
+<li> SUCCESS：命令成功
+<li> FAILED：命令失败
+<li> TIMEOUT：命令超时
+<li> PARTIAL_FAILED：命令部分失败
      */
     public void setInvocationStatus(String InvocationStatus) {
         this.InvocationStatus = InvocationStatus;

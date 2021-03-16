@@ -72,6 +72,13 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 根据多个实例IP进行过滤
+    */
+    @SerializedName("IpAddresses")
+    @Expose
+    private String [] IpAddresses;
+
+    /**
      * Get 集群 ID，请填写查询集群列表 接口中返回的 ClusterId 字段（仅通过ClusterId获取需要过滤条件中的VPCID。节点状态比较时会使用该地域下所有集群中的节点进行比较。参数不支持同时指定InstanceIds和ClusterId。 
      * @return ClusterId 集群 ID，请填写查询集群列表 接口中返回的 ClusterId 字段（仅通过ClusterId获取需要过滤条件中的VPCID。节点状态比较时会使用该地域下所有集群中的节点进行比较。参数不支持同时指定InstanceIds和ClusterId。
      */
@@ -184,6 +191,22 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 根据多个实例IP进行过滤 
+     * @return IpAddresses 根据多个实例IP进行过滤
+     */
+    public String [] getIpAddresses() {
+        return this.IpAddresses;
+    }
+
+    /**
+     * Set 根据多个实例IP进行过滤
+     * @param IpAddresses 根据多个实例IP进行过滤
+     */
+    public void setIpAddresses(String [] IpAddresses) {
+        this.IpAddresses = IpAddresses;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VagueInstanceName", this.VagueInstanceName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "IpAddresses.", this.IpAddresses);
 
     }
 }

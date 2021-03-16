@@ -44,6 +44,38 @@ public class PrometheusAlertHistoryItem extends AbstractModel{
     private String Content;
 
     /**
+    * 告警状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
+    * 触发的规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleItem")
+    @Expose
+    private String RuleItem;
+
+    /**
+    * 告警渠道的id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
+    * 告警渠道的名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get 告警名称 
      * @return RuleName 告警名称
      */
@@ -92,12 +124,96 @@ public class PrometheusAlertHistoryItem extends AbstractModel{
     }
 
     /**
+     * Get 告警状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return State 告警状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 告警状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param State 告警状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
+    /**
+     * Get 触发的规则名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleItem 触发的规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleItem() {
+        return this.RuleItem;
+    }
+
+    /**
+     * Set 触发的规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleItem 触发的规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleItem(String RuleItem) {
+        this.RuleItem = RuleItem;
+    }
+
+    /**
+     * Get 告警渠道的id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicId 告警渠道的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set 告警渠道的id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicId 告警渠道的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
+
+    /**
+     * Get 告警渠道的名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicName 告警渠道的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set 告警渠道的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicName 告警渠道的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "RuleItem", this.RuleItem);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

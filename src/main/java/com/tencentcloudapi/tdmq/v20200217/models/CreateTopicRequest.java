@@ -30,7 +30,7 @@ public class CreateTopicRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
-    * 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
+    * 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
     */
     @SerializedName("TopicName")
     @Expose
@@ -86,16 +86,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。 
-     * @return TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
+     * Get 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。 
+     * @return TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
-     * @param TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
+     * Set 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+     * @param TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

@@ -31,7 +31,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LoadBalancerType;
 
     /**
-    * 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+    * 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
     */
     @SerializedName("Forward")
     @Expose
@@ -89,7 +89,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String MasterZoneId;
 
     /**
-    * 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+    * 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -110,28 +110,28 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String VipIsp;
 
     /**
-    * 购买负载均衡同时，给负载均衡打上标签
+    * 购买负载均衡同时，给负载均衡打上标签。
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 指定Vip申请负载均衡
+    * 指定Vip申请负载均衡。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
+    * 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * 独占集群信息
+    * 独占集群信息。
     */
     @SerializedName("ExclusiveCluster")
     @Expose
@@ -166,7 +166,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ClusterTag;
 
     /**
-    * EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+    * EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
     */
     @SerializedName("EipAddressId")
     @Expose
@@ -193,16 +193,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1 
-     * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * Get 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。 
+     * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
      */
     public Long getForward() {
         return this.Forward;
     }
 
     /**
-     * Set 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
-     * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * Set 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
+     * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
      */
     public void setForward(Long Forward) {
         this.Forward = Forward;
@@ -329,16 +329,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1 
-     * @return ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * Get 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。 
+     * @return ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
-     * @param ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * Set 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
+     * @param ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -377,64 +377,64 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 购买负载均衡同时，给负载均衡打上标签 
-     * @return Tags 购买负载均衡同时，给负载均衡打上标签
+     * Get 购买负载均衡同时，给负载均衡打上标签。 
+     * @return Tags 购买负载均衡同时，给负载均衡打上标签。
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 购买负载均衡同时，给负载均衡打上标签
-     * @param Tags 购买负载均衡同时，给负载均衡打上标签
+     * Set 购买负载均衡同时，给负载均衡打上标签。
+     * @param Tags 购买负载均衡同时，给负载均衡打上标签。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 指定Vip申请负载均衡 
-     * @return Vip 指定Vip申请负载均衡
+     * Get 指定Vip申请负载均衡。 
+     * @return Vip 指定Vip申请负载均衡。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 指定Vip申请负载均衡
-     * @param Vip 指定Vip申请负载均衡
+     * Set 指定Vip申请负载均衡。
+     * @param Vip 指定Vip申请负载均衡。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE） 
-     * @return BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
+     * Get 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。 
+     * @return BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
-     * @param BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
+     * Set 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
+     * @param BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get 独占集群信息 
-     * @return ExclusiveCluster 独占集群信息
+     * Get 独占集群信息。 
+     * @return ExclusiveCluster 独占集群信息。
      */
     public ExclusiveCluster getExclusiveCluster() {
         return this.ExclusiveCluster;
     }
 
     /**
-     * Set 独占集群信息
-     * @param ExclusiveCluster 独占集群信息
+     * Set 独占集群信息。
+     * @param ExclusiveCluster 独占集群信息。
      */
     public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
         this.ExclusiveCluster = ExclusiveCluster;
@@ -505,16 +505,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP 
-     * @return EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     * Get EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。 
+     * @return EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      */
     public String getEipAddressId() {
         return this.EipAddressId;
     }
 
     /**
-     * Set EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
-     * @param EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     * Set EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
+     * @param EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      */
     public void setEipAddressId(String EipAddressId) {
         this.EipAddressId = EipAddressId;
