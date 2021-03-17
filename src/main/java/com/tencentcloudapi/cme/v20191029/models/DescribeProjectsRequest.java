@@ -44,7 +44,10 @@ public class DescribeProjectsRequest extends AbstractModel{
     private String [] AspectRatioSet;
 
     /**
-    * 项目类别集合。
+    * 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
     */
     @SerializedName("CategorySet")
     @Expose
@@ -79,6 +82,13 @@ public class DescribeProjectsRequest extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
 
     /**
      * Get 平台名称，指定访问的平台。 
@@ -129,16 +139,28 @@ public class DescribeProjectsRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目类别集合。 
-     * @return CategorySet 项目类别集合。
+     * Get 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li> 
+     * @return CategorySet 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      */
     public String [] getCategorySet() {
         return this.CategorySet;
     }
 
     /**
-     * Set 项目类别集合。
-     * @param CategorySet 项目类别集合。
+     * Set 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+     * @param CategorySet 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      */
     public void setCategorySet(String [] CategorySet) {
         this.CategorySet = CategorySet;
@@ -217,6 +239,22 @@ public class DescribeProjectsRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -228,6 +266,7 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

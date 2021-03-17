@@ -30,7 +30,7 @@ public class SearchMaterialResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 素材信息，仅返回基础信息。
+    * 媒体信息，仅返回基础信息。
     */
     @SerializedName("MaterialInfoSet")
     @Expose
@@ -60,16 +60,16 @@ public class SearchMaterialResponse extends AbstractModel{
     }
 
     /**
-     * Get 素材信息，仅返回基础信息。 
-     * @return MaterialInfoSet 素材信息，仅返回基础信息。
+     * Get 媒体信息，仅返回基础信息。 
+     * @return MaterialInfoSet 媒体信息，仅返回基础信息。
      */
     public MaterialInfo [] getMaterialInfoSet() {
         return this.MaterialInfoSet;
     }
 
     /**
-     * Set 素材信息，仅返回基础信息。
-     * @param MaterialInfoSet 素材信息，仅返回基础信息。
+     * Set 媒体信息，仅返回基础信息。
+     * @param MaterialInfoSet 媒体信息，仅返回基础信息。
      */
     public void setMaterialInfoSet(MaterialInfo [] MaterialInfoSet) {
         this.MaterialInfoSet = MaterialInfoSet;

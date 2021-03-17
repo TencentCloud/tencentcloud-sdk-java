@@ -119,6 +119,14 @@ public class ApplicationForPage extends AbstractModel{
     private String ApplicationRemarkName;
 
     /**
+    * 服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceConfigList")
+    @Expose
+    private ServiceConfig [] ServiceConfigList;
+
+    /**
      * Get 应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
@@ -359,6 +367,26 @@ public class ApplicationForPage extends AbstractModel{
     }
 
     /**
+     * Get 服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceConfigList 服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceConfig [] getServiceConfigList() {
+        return this.ServiceConfigList;
+    }
+
+    /**
+     * Set 服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceConfigList 服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceConfigList(ServiceConfig [] ServiceConfigList) {
+        this.ServiceConfigList = ServiceConfigList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -374,6 +402,7 @@ public class ApplicationForPage extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
         this.setParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
         this.setParamSimple(map, prefix + "ApplicationRemarkName", this.ApplicationRemarkName);
+        this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
 
     }
 }

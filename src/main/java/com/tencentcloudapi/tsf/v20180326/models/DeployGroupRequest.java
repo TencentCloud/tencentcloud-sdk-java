@@ -107,6 +107,20 @@ public class DeployGroupRequest extends AbstractModel{
     private Long DeployWaitTime;
 
     /**
+    * 启动脚本 base64编码
+    */
+    @SerializedName("StartScript")
+    @Expose
+    private String StartScript;
+
+    /**
+    * 停止脚本 base64编码
+    */
+    @SerializedName("StopScript")
+    @Expose
+    private String StopScript;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -299,6 +313,38 @@ public class DeployGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 启动脚本 base64编码 
+     * @return StartScript 启动脚本 base64编码
+     */
+    public String getStartScript() {
+        return this.StartScript;
+    }
+
+    /**
+     * Set 启动脚本 base64编码
+     * @param StartScript 启动脚本 base64编码
+     */
+    public void setStartScript(String StartScript) {
+        this.StartScript = StartScript;
+    }
+
+    /**
+     * Get 停止脚本 base64编码 
+     * @return StopScript 停止脚本 base64编码
+     */
+    public String getStopScript() {
+        return this.StopScript;
+    }
+
+    /**
+     * Set 停止脚本 base64编码
+     * @param StopScript 停止脚本 base64编码
+     */
+    public void setStopScript(String StopScript) {
+        this.StopScript = StopScript;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +360,8 @@ public class DeployGroupRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
         this.setParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
         this.setParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
+        this.setParamSimple(map, prefix + "StartScript", this.StartScript);
+        this.setParamSimple(map, prefix + "StopScript", this.StopScript);
 
     }
 }

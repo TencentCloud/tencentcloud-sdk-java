@@ -53,7 +53,7 @@ public class ModifyProjectRequest extends AbstractModel{
     private String AspectRatio;
 
     /**
-    * 归属者。
+    * 项目归属者。
     */
     @SerializedName("Owner")
     @Expose
@@ -132,16 +132,16 @@ public class ModifyProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 归属者。 
-     * @return Owner 归属者。
+     * Get 项目归属者。 
+     * @return Owner 项目归属者。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 归属者。
-     * @param Owner 归属者。
+     * Set 项目归属者。
+     * @param Owner 项目归属者。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;

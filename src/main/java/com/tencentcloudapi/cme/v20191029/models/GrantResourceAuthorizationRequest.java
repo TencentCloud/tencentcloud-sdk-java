@@ -30,7 +30,7 @@ public class GrantResourceAuthorizationRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 资源所属实体。
+    * 资源归属者，个人或者团队。
     */
     @SerializedName("Owner")
     @Expose
@@ -44,7 +44,7 @@ public class GrantResourceAuthorizationRequest extends AbstractModel{
     private Resource [] Resources;
 
     /**
-    * 被授权目标实体。
+    * 被授权目标，个人或者团队。
     */
     @SerializedName("Authorizees")
     @Expose
@@ -52,7 +52,7 @@ public class GrantResourceAuthorizationRequest extends AbstractModel{
 
     /**
     * 详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
@@ -85,16 +85,16 @@ public class GrantResourceAuthorizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源所属实体。 
-     * @return Owner 资源所属实体。
+     * Get 资源归属者，个人或者团队。 
+     * @return Owner 资源归属者，个人或者团队。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 资源所属实体。
-     * @param Owner 资源所属实体。
+     * Set 资源归属者，个人或者团队。
+     * @param Owner 资源归属者，个人或者团队。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
@@ -117,16 +117,16 @@ public class GrantResourceAuthorizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 被授权目标实体。 
-     * @return Authorizees 被授权目标实体。
+     * Get 被授权目标，个人或者团队。 
+     * @return Authorizees 被授权目标，个人或者团队。
      */
     public Entity [] getAuthorizees() {
         return this.Authorizees;
     }
 
     /**
-     * Set 被授权目标实体。
-     * @param Authorizees 被授权目标实体。
+     * Set 被授权目标，个人或者团队。
+     * @param Authorizees 被授权目标，个人或者团队。
      */
     public void setAuthorizees(Entity [] Authorizees) {
         this.Authorizees = Authorizees;
@@ -134,12 +134,12 @@ public class GrantResourceAuthorizationRequest extends AbstractModel{
 
     /**
      * Get 详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li> 
      * @return Permissions 详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
@@ -150,12 +150,12 @@ public class GrantResourceAuthorizationRequest extends AbstractModel{
 
     /**
      * Set 详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
      * @param Permissions 详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>

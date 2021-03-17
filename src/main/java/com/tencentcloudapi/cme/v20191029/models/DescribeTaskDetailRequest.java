@@ -37,6 +37,13 @@ public class DescribeTaskDetailRequest extends AbstractModel{
     private String TaskId;
 
     /**
+    * 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -69,11 +76,28 @@ public class DescribeTaskDetailRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

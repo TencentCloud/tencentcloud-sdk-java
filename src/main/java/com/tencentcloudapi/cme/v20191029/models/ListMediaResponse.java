@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ListMediaResponse extends AbstractModel{
 
     /**
-    * 符合条件的素材记录总数。
+    * 符合条件的媒体记录总数。
     */
     @SerializedName("MaterialTotalCount")
     @Expose
     private Long MaterialTotalCount;
 
     /**
-    * 浏览分类路径下的素材列表信息。
+    * 浏览分类路径下的媒体列表信息。
     */
     @SerializedName("MaterialInfoSet")
     @Expose
@@ -51,32 +51,32 @@ public class ListMediaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的素材记录总数。 
-     * @return MaterialTotalCount 符合条件的素材记录总数。
+     * Get 符合条件的媒体记录总数。 
+     * @return MaterialTotalCount 符合条件的媒体记录总数。
      */
     public Long getMaterialTotalCount() {
         return this.MaterialTotalCount;
     }
 
     /**
-     * Set 符合条件的素材记录总数。
-     * @param MaterialTotalCount 符合条件的素材记录总数。
+     * Set 符合条件的媒体记录总数。
+     * @param MaterialTotalCount 符合条件的媒体记录总数。
      */
     public void setMaterialTotalCount(Long MaterialTotalCount) {
         this.MaterialTotalCount = MaterialTotalCount;
     }
 
     /**
-     * Get 浏览分类路径下的素材列表信息。 
-     * @return MaterialInfoSet 浏览分类路径下的素材列表信息。
+     * Get 浏览分类路径下的媒体列表信息。 
+     * @return MaterialInfoSet 浏览分类路径下的媒体列表信息。
      */
     public MaterialInfo [] getMaterialInfoSet() {
         return this.MaterialInfoSet;
     }
 
     /**
-     * Set 浏览分类路径下的素材列表信息。
-     * @param MaterialInfoSet 浏览分类路径下的素材列表信息。
+     * Set 浏览分类路径下的媒体列表信息。
+     * @param MaterialInfoSet 浏览分类路径下的媒体列表信息。
      */
     public void setMaterialInfoSet(MaterialInfo [] MaterialInfoSet) {
         this.MaterialInfoSet = MaterialInfoSet;

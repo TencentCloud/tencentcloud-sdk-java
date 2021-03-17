@@ -69,6 +69,13 @@ public class DescribeTasksRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -181,6 +188,22 @@ public class DescribeTasksRequest extends AbstractModel{
     }
 
     /**
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -190,6 +213,7 @@ public class DescribeTasksRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

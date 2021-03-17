@@ -30,7 +30,7 @@ public class Env extends AbstractModel{
     private String Name;
 
     /**
-    * 服务端口
+    * 环境变量值
     */
     @SerializedName("Value")
     @Expose
@@ -53,16 +53,16 @@ public class Env extends AbstractModel{
     }
 
     /**
-     * Get 服务端口 
-     * @return Value 服务端口
+     * Get 环境变量值 
+     * @return Value 环境变量值
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 服务端口
-     * @param Value 服务端口
+     * Set 环境变量值
+     * @param Value 环境变量值
      */
     public void setValue(String Value) {
         this.Value = Value;

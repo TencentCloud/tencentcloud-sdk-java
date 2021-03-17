@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class MaterialInfo extends AbstractModel{
 
     /**
-    * 素材基本信息。
+    * 媒体基本信息。
     */
     @SerializedName("BasicInfo")
     @Expose
     private MaterialBasicInfo BasicInfo;
 
     /**
-    * 视频素材信息。
+    * 视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoMaterial")
@@ -38,7 +38,7 @@ public class MaterialInfo extends AbstractModel{
     private VideoMaterial VideoMaterial;
 
     /**
-    * 音频素材信息。
+    * 音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioMaterial")
@@ -46,7 +46,7 @@ public class MaterialInfo extends AbstractModel{
     private AudioMaterial AudioMaterial;
 
     /**
-    * 图片素材信息。
+    * 图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageMaterial")
@@ -54,7 +54,7 @@ public class MaterialInfo extends AbstractModel{
     private ImageMaterial ImageMaterial;
 
     /**
-    * 链接素材信息。
+    * 链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinkMaterial")
@@ -62,25 +62,33 @@ public class MaterialInfo extends AbstractModel{
     private LinkMaterial LinkMaterial;
 
     /**
-     * Get 素材基本信息。 
-     * @return BasicInfo 素材基本信息。
+    * 其他类型媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OtherMaterial")
+    @Expose
+    private OtherMaterial OtherMaterial;
+
+    /**
+     * Get 媒体基本信息。 
+     * @return BasicInfo 媒体基本信息。
      */
     public MaterialBasicInfo getBasicInfo() {
         return this.BasicInfo;
     }
 
     /**
-     * Set 素材基本信息。
-     * @param BasicInfo 素材基本信息。
+     * Set 媒体基本信息。
+     * @param BasicInfo 媒体基本信息。
      */
     public void setBasicInfo(MaterialBasicInfo BasicInfo) {
         this.BasicInfo = BasicInfo;
     }
 
     /**
-     * Get 视频素材信息。
+     * Get 视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoMaterial 视频素材信息。
+     * @return VideoMaterial 视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoMaterial getVideoMaterial() {
@@ -88,9 +96,9 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
-     * Set 视频素材信息。
+     * Set 视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoMaterial 视频素材信息。
+     * @param VideoMaterial 视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoMaterial(VideoMaterial VideoMaterial) {
@@ -98,9 +106,9 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
-     * Get 音频素材信息。
+     * Get 音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioMaterial 音频素材信息。
+     * @return AudioMaterial 音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioMaterial getAudioMaterial() {
@@ -108,9 +116,9 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
-     * Set 音频素材信息。
+     * Set 音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioMaterial 音频素材信息。
+     * @param AudioMaterial 音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioMaterial(AudioMaterial AudioMaterial) {
@@ -118,9 +126,9 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
-     * Get 图片素材信息。
+     * Get 图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageMaterial 图片素材信息。
+     * @return ImageMaterial 图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageMaterial getImageMaterial() {
@@ -128,9 +136,9 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
-     * Set 图片素材信息。
+     * Set 图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageMaterial 图片素材信息。
+     * @param ImageMaterial 图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageMaterial(ImageMaterial ImageMaterial) {
@@ -138,9 +146,9 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
-     * Get 链接素材信息。
+     * Get 链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LinkMaterial 链接素材信息。
+     * @return LinkMaterial 链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LinkMaterial getLinkMaterial() {
@@ -148,13 +156,33 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
-     * Set 链接素材信息。
+     * Set 链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LinkMaterial 链接素材信息。
+     * @param LinkMaterial 链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinkMaterial(LinkMaterial LinkMaterial) {
         this.LinkMaterial = LinkMaterial;
+    }
+
+    /**
+     * Get 其他类型媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OtherMaterial 其他类型媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OtherMaterial getOtherMaterial() {
+        return this.OtherMaterial;
+    }
+
+    /**
+     * Set 其他类型媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherMaterial 其他类型媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOtherMaterial(OtherMaterial OtherMaterial) {
+        this.OtherMaterial = OtherMaterial;
     }
 
     /**
@@ -166,6 +194,7 @@ public class MaterialInfo extends AbstractModel{
         this.setParamObj(map, prefix + "AudioMaterial.", this.AudioMaterial);
         this.setParamObj(map, prefix + "ImageMaterial.", this.ImageMaterial);
         this.setParamObj(map, prefix + "LinkMaterial.", this.LinkMaterial);
+        this.setParamObj(map, prefix + "OtherMaterial.", this.OtherMaterial);
 
     }
 }

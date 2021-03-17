@@ -271,6 +271,30 @@ public class VmGroup extends AbstractModel{
     private HealthCheckSettings HealthCheckSettings;
 
     /**
+    * 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
+    * 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartScript")
+    @Expose
+    private String StartScript;
+
+    /**
+    * 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StopScript")
+    @Expose
+    private String StopScript;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -891,6 +915,66 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
+     * Get 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PackageType 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PackageType 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
+    /**
+     * Get 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartScript 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartScript() {
+        return this.StartScript;
+    }
+
+    /**
+     * Set 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartScript 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartScript(String StartScript) {
+        this.StartScript = StartScript;
+    }
+
+    /**
+     * Get 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StopScript 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStopScript() {
+        return this.StopScript;
+    }
+
+    /**
+     * Set 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StopScript 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStopScript(String StopScript) {
+        this.StopScript = StopScript;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -925,6 +1009,9 @@ public class VmGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
         this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
         this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "StartScript", this.StartScript);
+        this.setParamSimple(map, prefix + "StopScript", this.StopScript);
 
     }
 }

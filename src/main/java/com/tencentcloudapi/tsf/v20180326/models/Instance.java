@@ -319,6 +319,14 @@ public class Instance extends AbstractModel{
     private String Reason;
 
     /**
+    * agent版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentVersion")
+    @Expose
+    private String AgentVersion;
+
+    /**
      * Get 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID
@@ -1059,6 +1067,26 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get agent版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentVersion agent版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgentVersion() {
+        return this.AgentVersion;
+    }
+
+    /**
+     * Set agent版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentVersion agent版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentVersion(String AgentVersion) {
+        this.AgentVersion = AgentVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1099,6 +1127,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
 
     }
 }

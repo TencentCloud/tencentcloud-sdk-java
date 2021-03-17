@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeMaterialsResponse extends AbstractModel{
 
     /**
-    * 素材列表信息。
+    * 媒体列表信息。
     */
     @SerializedName("MaterialInfoSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeMaterialsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 素材列表信息。 
-     * @return MaterialInfoSet 素材列表信息。
+     * Get 媒体列表信息。 
+     * @return MaterialInfoSet 媒体列表信息。
      */
     public MaterialInfo [] getMaterialInfoSet() {
         return this.MaterialInfoSet;
     }
 
     /**
-     * Set 素材列表信息。
-     * @param MaterialInfoSet 素材列表信息。
+     * Set 媒体列表信息。
+     * @param MaterialInfoSet 媒体列表信息。
      */
     public void setMaterialInfoSet(MaterialInfo [] MaterialInfoSet) {
         this.MaterialInfoSet = MaterialInfoSet;

@@ -79,6 +79,13 @@ public class CreateApplicationRequest extends AbstractModel{
     private String ProgramId;
 
     /**
+    * 服务配置信息列表
+    */
+    @SerializedName("ServiceConfigList")
+    @Expose
+    private ServiceConfig [] ServiceConfigList;
+
+    /**
      * Get 应用名称 
      * @return ApplicationName 应用名称
      */
@@ -207,6 +214,22 @@ public class CreateApplicationRequest extends AbstractModel{
     }
 
     /**
+     * Get 服务配置信息列表 
+     * @return ServiceConfigList 服务配置信息列表
+     */
+    public ServiceConfig [] getServiceConfigList() {
+        return this.ServiceConfigList;
+    }
+
+    /**
+     * Set 服务配置信息列表
+     * @param ServiceConfigList 服务配置信息列表
+     */
+    public void setServiceConfigList(ServiceConfig [] ServiceConfigList) {
+        this.ServiceConfigList = ServiceConfigList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CreateApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
         this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
         this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
+        this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
 
     }
 }

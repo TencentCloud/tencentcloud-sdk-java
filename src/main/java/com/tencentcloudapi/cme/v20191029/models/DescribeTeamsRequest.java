@@ -30,7 +30,7 @@ public class DescribeTeamsRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 团队 ID 列表，限30个。
+    * 团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
     */
     @SerializedName("TeamIds")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeTeamsRequest extends AbstractModel{
     }
 
     /**
-     * Get 团队 ID 列表，限30个。 
-     * @return TeamIds 团队 ID 列表，限30个。
+     * Get 团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。 
+     * @return TeamIds 团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
      */
     public String [] getTeamIds() {
         return this.TeamIds;
     }
 
     /**
-     * Set 团队 ID 列表，限30个。
-     * @param TeamIds 团队 ID 列表，限30个。
+     * Set 团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
+     * @param TeamIds 团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
      */
     public void setTeamIds(String [] TeamIds) {
         this.TeamIds = TeamIds;

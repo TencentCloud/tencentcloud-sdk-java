@@ -37,7 +37,7 @@ public class SearchMaterialRequest extends AbstractModel{
     private SearchScope [] SearchScopes;
 
     /**
-    * 素材类型，取值：
+    * 媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
@@ -47,7 +47,7 @@ public class SearchMaterialRequest extends AbstractModel{
     private String [] MaterialTypes;
 
     /**
-    * 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+    * 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
     */
     @SerializedName("Text")
     @Expose
@@ -61,14 +61,14 @@ public class SearchMaterialRequest extends AbstractModel{
     private String Resolution;
 
     /**
-    * 按素材时长检索，单位s。
+    * 按媒体时长检索，单位s。
     */
     @SerializedName("DurationRange")
     @Expose
     private IntegerRange DurationRange;
 
     /**
-    * 按照素材创建时间检索。
+    * 按照媒体创建时间检索。
     */
     @SerializedName("CreateTimeRange")
     @Expose
@@ -103,7 +103,7 @@ public class SearchMaterialRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+    * 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
     */
     @SerializedName("Operator")
     @Expose
@@ -142,11 +142,11 @@ public class SearchMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 素材类型，取值：
+     * Get 媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li> 
-     * @return MaterialTypes 素材类型，取值：
+     * @return MaterialTypes 媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
@@ -156,11 +156,11 @@ public class SearchMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Set 素材类型，取值：
+     * Set 媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
-     * @param MaterialTypes 素材类型，取值：
+     * @param MaterialTypes 媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
@@ -170,16 +170,16 @@ public class SearchMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。 
-     * @return Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+     * Get 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。 
+     * @return Text 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
-     * @param Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+     * Set 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+     * @param Text 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      */
     public void setText(String Text) {
         this.Text = Text;
@@ -202,32 +202,32 @@ public class SearchMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 按素材时长检索，单位s。 
-     * @return DurationRange 按素材时长检索，单位s。
+     * Get 按媒体时长检索，单位s。 
+     * @return DurationRange 按媒体时长检索，单位s。
      */
     public IntegerRange getDurationRange() {
         return this.DurationRange;
     }
 
     /**
-     * Set 按素材时长检索，单位s。
-     * @param DurationRange 按素材时长检索，单位s。
+     * Set 按媒体时长检索，单位s。
+     * @param DurationRange 按媒体时长检索，单位s。
      */
     public void setDurationRange(IntegerRange DurationRange) {
         this.DurationRange = DurationRange;
     }
 
     /**
-     * Get 按照素材创建时间检索。 
-     * @return CreateTimeRange 按照素材创建时间检索。
+     * Get 按照媒体创建时间检索。 
+     * @return CreateTimeRange 按照媒体创建时间检索。
      */
     public TimeRange getCreateTimeRange() {
         return this.CreateTimeRange;
     }
 
     /**
-     * Set 按照素材创建时间检索。
-     * @param CreateTimeRange 按照素材创建时间检索。
+     * Set 按照媒体创建时间检索。
+     * @param CreateTimeRange 按照媒体创建时间检索。
      */
     public void setCreateTimeRange(TimeRange CreateTimeRange) {
         this.CreateTimeRange = CreateTimeRange;
@@ -298,16 +298,16 @@ public class SearchMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验操作权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

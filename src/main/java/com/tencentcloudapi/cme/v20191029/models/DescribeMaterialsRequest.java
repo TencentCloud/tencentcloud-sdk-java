@@ -30,7 +30,7 @@ public class DescribeMaterialsRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 素材 ID 列表，N 从 0 开始取值，最大 19。
+    * 媒体 ID 列表，N 从 0 开始取值，最大 19。
     */
     @SerializedName("MaterialIds")
     @Expose
@@ -46,7 +46,7 @@ public class DescribeMaterialsRequest extends AbstractModel{
     private SortBy Sort;
 
     /**
-    * 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+    * 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
     */
     @SerializedName("Operator")
     @Expose
@@ -69,16 +69,16 @@ public class DescribeMaterialsRequest extends AbstractModel{
     }
 
     /**
-     * Get 素材 ID 列表，N 从 0 开始取值，最大 19。 
-     * @return MaterialIds 素材 ID 列表，N 从 0 开始取值，最大 19。
+     * Get 媒体 ID 列表，N 从 0 开始取值，最大 19。 
+     * @return MaterialIds 媒体 ID 列表，N 从 0 开始取值，最大 19。
      */
     public String [] getMaterialIds() {
         return this.MaterialIds;
     }
 
     /**
-     * Set 素材 ID 列表，N 从 0 开始取值，最大 19。
-     * @param MaterialIds 素材 ID 列表，N 从 0 开始取值，最大 19。
+     * Set 媒体 ID 列表，N 从 0 开始取值，最大 19。
+     * @param MaterialIds 媒体 ID 列表，N 从 0 开始取值，最大 19。
      */
     public void setMaterialIds(String [] MaterialIds) {
         this.MaterialIds = MaterialIds;
@@ -109,16 +109,16 @@ public class DescribeMaterialsRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。填写用户的 Id，用于标识调用者及校验操作权限。 
-     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Get 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。 
+     * @return Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
-     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * Set 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+     * @param Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

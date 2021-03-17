@@ -37,7 +37,7 @@ public class DescribeTeamMembersRequest extends AbstractModel{
     private String TeamId;
 
     /**
-    * 成员 ID 列表，限指定30个指定成员。
+    * 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
     */
     @SerializedName("MemberIds")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeTeamMembersRequest extends AbstractModel{
     }
 
     /**
-     * Get 成员 ID 列表，限指定30个指定成员。 
-     * @return MemberIds 成员 ID 列表，限指定30个指定成员。
+     * Get 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。 
+     * @return MemberIds 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
      */
     public String [] getMemberIds() {
         return this.MemberIds;
     }
 
     /**
-     * Set 成员 ID 列表，限指定30个指定成员。
-     * @param MemberIds 成员 ID 列表，限指定30个指定成员。
+     * Set 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
+     * @param MemberIds 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
      */
     public void setMemberIds(String [] MemberIds) {
         this.MemberIds = MemberIds;

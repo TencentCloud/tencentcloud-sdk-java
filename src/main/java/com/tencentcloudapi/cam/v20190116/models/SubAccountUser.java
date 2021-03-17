@@ -66,6 +66,21 @@ public class SubAccountUser extends AbstractModel{
     private Long UserType;
 
     /**
+    * 最近登录IP
+    */
+    @SerializedName("LastLoginIp")
+    @Expose
+    private String LastLoginIp;
+
+    /**
+    * 最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastLoginTime")
+    @Expose
+    private String LastLoginTime;
+
+    /**
      * Get 子用户用户 ID 
      * @return Uin 子用户用户 ID
      */
@@ -166,6 +181,42 @@ public class SubAccountUser extends AbstractModel{
     }
 
     /**
+     * Get 最近登录IP 
+     * @return LastLoginIp 最近登录IP
+     */
+    public String getLastLoginIp() {
+        return this.LastLoginIp;
+    }
+
+    /**
+     * Set 最近登录IP
+     * @param LastLoginIp 最近登录IP
+     */
+    public void setLastLoginIp(String LastLoginIp) {
+        this.LastLoginIp = LastLoginIp;
+    }
+
+    /**
+     * Get 最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastLoginTime 最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastLoginTime() {
+        return this.LastLoginTime;
+    }
+
+    /**
+     * Set 最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastLoginTime 最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastLoginTime(String LastLoginTime) {
+        this.LastLoginTime = LastLoginTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -175,6 +226,8 @@ public class SubAccountUser extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "LastLoginIp", this.LastLoginIp);
+        this.setParamSimple(map, prefix + "LastLoginTime", this.LastLoginTime);
 
     }
 }

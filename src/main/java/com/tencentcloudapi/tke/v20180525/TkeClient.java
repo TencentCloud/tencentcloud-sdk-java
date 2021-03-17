@@ -1299,6 +1299,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *仅能设置节点池中处于伸缩组的节点
+     * @param req SetNodePoolNodeProtectionRequest
+     * @return SetNodePoolNodeProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(SetNodePoolNodeProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetNodePoolNodeProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetNodePoolNodeProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetNodePoolNodeProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *同步模板到实例或者集群
      * @param req SyncPrometheusTemplateRequest
      * @return SyncPrometheusTemplateResponse

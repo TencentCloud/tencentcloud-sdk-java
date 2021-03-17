@@ -79,6 +79,13 @@ public class DescribePkgsRequest extends AbstractModel{
     private String RepositoryId;
 
     /**
+    * 程序包类型数组支持（fatjar jar war tar.gz zip）
+    */
+    @SerializedName("PackageTypeList")
+    @Expose
+    private String [] PackageTypeList;
+
+    /**
      * Get 应用ID（只传入应用ID，返回该应用下所有软件包信息） 
      * @return ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
      */
@@ -207,6 +214,22 @@ public class DescribePkgsRequest extends AbstractModel{
     }
 
     /**
+     * Get 程序包类型数组支持（fatjar jar war tar.gz zip） 
+     * @return PackageTypeList 程序包类型数组支持（fatjar jar war tar.gz zip）
+     */
+    public String [] getPackageTypeList() {
+        return this.PackageTypeList;
+    }
+
+    /**
+     * Set 程序包类型数组支持（fatjar jar war tar.gz zip）
+     * @param PackageTypeList 程序包类型数组支持（fatjar jar war tar.gz zip）
+     */
+    public void setPackageTypeList(String [] PackageTypeList) {
+        this.PackageTypeList = PackageTypeList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribePkgsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
         this.setParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
+        this.setParamArraySimple(map, prefix + "PackageTypeList.", this.PackageTypeList);
 
     }
 }

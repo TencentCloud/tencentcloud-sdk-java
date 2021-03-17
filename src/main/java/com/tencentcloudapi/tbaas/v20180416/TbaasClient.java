@@ -99,6 +99,26 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *动态部署并发布Bcos合约
+     * @param req DeployDynamicBcosContractRequest
+     * @return DeployDynamicBcosContractResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployDynamicBcosContractResponse DeployDynamicBcosContract(DeployDynamicBcosContractRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeployDynamicBcosContractResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeployDynamicBcosContractResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeployDynamicBcosContract");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *动态部署合约
      * @param req DeployDynamicContractHandlerRequest
      * @return DeployDynamicContractHandlerResponse
@@ -131,6 +151,86 @@ public class TbaasClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadUserCertResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DownloadUserCert");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用块高查询Bcos区块信息
+     * @param req GetBcosBlockByNumberRequest
+     * @return GetBcosBlockByNumberResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBcosBlockByNumberResponse GetBcosBlockByNumber(GetBcosBlockByNumberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBcosBlockByNumberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBcosBlockByNumberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetBcosBlockByNumber");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Bcos分页查询当前群组下的区块列表
+     * @param req GetBcosBlockListRequest
+     * @return GetBcosBlockListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBcosBlockListResponse GetBcosBlockList(GetBcosBlockListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBcosBlockListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBcosBlockListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetBcosBlockList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Bcos根据交易哈希查看交易详细信息
+     * @param req GetBcosTransByHashRequest
+     * @return GetBcosTransByHashResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBcosTransByHashResponse GetBcosTransByHash(GetBcosTransByHashRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBcosTransByHashResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBcosTransByHashResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetBcosTransByHash");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Bcos分页查询当前群组的交易信息列表
+     * @param req GetBcosTransListRequest
+     * @return GetBcosTransListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBcosTransListResponse GetBcosTransList(GetBcosTransListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetBcosTransListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetBcosTransListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetBcosTransList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -471,6 +571,26 @@ public class TbaasClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "Invoke");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *执行Bcos交易，支持动态部署的合约
+     * @param req InvokeBcosTransRequest
+     * @return InvokeBcosTransResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeBcosTransResponse InvokeBcosTrans(InvokeBcosTransRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InvokeBcosTransResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InvokeBcosTransResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InvokeBcosTrans");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

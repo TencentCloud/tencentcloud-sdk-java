@@ -79,6 +79,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *预付费集群隔离后续费资源查询
+     * @param req DescribeInstanceRenewNodesRequest
+     * @return DescribeInstanceRenewNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceRenewNodesResponse DescribeInstanceRenewNodes(DescribeInstanceRenewNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceRenewNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceRenewNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceRenewNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询EMR实例
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -111,6 +131,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeJobFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeJobFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *集群续费询价。
+     * @param req InquirePriceRenewEmrRequest
+     * @return InquirePriceRenewEmrResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRenewEmrResponse InquirePriceRenewEmr(InquirePriceRenewEmrRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceRenewEmrResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceRenewEmrResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceRenewEmr");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

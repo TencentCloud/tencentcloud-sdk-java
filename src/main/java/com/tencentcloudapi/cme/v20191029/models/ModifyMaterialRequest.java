@@ -30,28 +30,28 @@ public class ModifyMaterialRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 素材 Id。
+    * 媒体 Id。
     */
     @SerializedName("MaterialId")
     @Expose
     private String MaterialId;
 
     /**
-    * 素材归属。
+    * 媒体或分类路径归属。
     */
     @SerializedName("Owner")
     @Expose
     private Entity Owner;
 
     /**
-    * 素材名称，不能超过30个字符。
+    * 媒体名称，不能超过30个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
+    * 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
     */
     @SerializedName("ClassPath")
     @Expose
@@ -81,64 +81,64 @@ public class ModifyMaterialRequest extends AbstractModel{
     }
 
     /**
-     * Get 素材 Id。 
-     * @return MaterialId 素材 Id。
+     * Get 媒体 Id。 
+     * @return MaterialId 媒体 Id。
      */
     public String getMaterialId() {
         return this.MaterialId;
     }
 
     /**
-     * Set 素材 Id。
-     * @param MaterialId 素材 Id。
+     * Set 媒体 Id。
+     * @param MaterialId 媒体 Id。
      */
     public void setMaterialId(String MaterialId) {
         this.MaterialId = MaterialId;
     }
 
     /**
-     * Get 素材归属。 
-     * @return Owner 素材归属。
+     * Get 媒体或分类路径归属。 
+     * @return Owner 媒体或分类路径归属。
      */
     public Entity getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 素材归属。
-     * @param Owner 素材归属。
+     * Set 媒体或分类路径归属。
+     * @param Owner 媒体或分类路径归属。
      */
     public void setOwner(Entity Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get 素材名称，不能超过30个字符。 
-     * @return Name 素材名称，不能超过30个字符。
+     * Get 媒体名称，不能超过30个字符。 
+     * @return Name 媒体名称，不能超过30个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 素材名称，不能超过30个字符。
-     * @param Name 素材名称，不能超过30个字符。
+     * Set 媒体名称，不能超过30个字符。
+     * @param Name 媒体名称，不能超过30个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。 
-     * @return ClassPath 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
+     * Get 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。 
+     * @return ClassPath 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
      */
     public String getClassPath() {
         return this.ClassPath;
     }
 
     /**
-     * Set 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
-     * @param ClassPath 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
+     * Set 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
+     * @param ClassPath 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
      */
     public void setClassPath(String ClassPath) {
         this.ClassPath = ClassPath;

@@ -40,7 +40,8 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 <li>banners：暴恐旗帜；</li>
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：暴恐人物；</li>
+<li>scenario：暴恐画面。</li>
     */
     @SerializedName("LabelSet")
     @Expose
@@ -93,7 +94,8 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 <li>banners：暴恐旗帜；</li>
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
-<li>terrorists：暴恐人物。</li> 
+<li>terrorists：暴恐人物；</li>
+<li>scenario：暴恐画面。</li> 
      * @return LabelSet 画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
@@ -102,7 +104,8 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 <li>banners：暴恐旗帜；</li>
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：暴恐人物；</li>
+<li>scenario：暴恐画面。</li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
@@ -117,7 +120,8 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 <li>banners：暴恐旗帜；</li>
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：暴恐人物；</li>
+<li>scenario：暴恐画面。</li>
      * @param LabelSet 画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
@@ -126,7 +130,8 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 <li>banners：暴恐旗帜；</li>
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：暴恐人物；</li>
+<li>scenario：暴恐画面。</li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;

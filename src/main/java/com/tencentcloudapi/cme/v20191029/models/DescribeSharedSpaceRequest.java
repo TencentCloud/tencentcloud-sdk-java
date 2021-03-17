@@ -30,7 +30,7 @@ public class DescribeSharedSpaceRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 被授权目标实体。
+    * 被授权目标,，个人或团队。
     */
     @SerializedName("Authorizee")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeSharedSpaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 被授权目标实体。 
-     * @return Authorizee 被授权目标实体。
+     * Get 被授权目标,，个人或团队。 
+     * @return Authorizee 被授权目标,，个人或团队。
      */
     public Entity getAuthorizee() {
         return this.Authorizee;
     }
 
     /**
-     * Set 被授权目标实体。
-     * @param Authorizee 被授权目标实体。
+     * Set 被授权目标,，个人或团队。
+     * @param Authorizee 被授权目标,，个人或团队。
      */
     public void setAuthorizee(Entity Authorizee) {
         this.Authorizee = Authorizee;

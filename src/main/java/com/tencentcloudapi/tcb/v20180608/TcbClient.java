@@ -579,6 +579,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *描述扩展上传文件信息
+     * @param req DescribeExtensionUploadInfoRequest
+     * @return DescribeExtensionUploadInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtensionUploadInfoResponse DescribeExtensionUploadInfo(DescribeExtensionUploadInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExtensionUploadInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExtensionUploadInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExtensionUploadInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取增值包计费相关信息
      * @param req DescribeExtraPkgBillingInfoRequest
      * @return DescribeExtraPkgBillingInfoResponse

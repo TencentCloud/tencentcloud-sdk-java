@@ -30,7 +30,7 @@ public class FlattenListMediaResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 该分类路径下及其子分类下的所有素材。
+    * 该分类路径下及其子分类下的所有媒体基础信息列表。
     */
     @SerializedName("MaterialInfoSet")
     @Expose
@@ -60,16 +60,16 @@ public class FlattenListMediaResponse extends AbstractModel{
     }
 
     /**
-     * Get 该分类路径下及其子分类下的所有素材。 
-     * @return MaterialInfoSet 该分类路径下及其子分类下的所有素材。
+     * Get 该分类路径下及其子分类下的所有媒体基础信息列表。 
+     * @return MaterialInfoSet 该分类路径下及其子分类下的所有媒体基础信息列表。
      */
     public MaterialInfo [] getMaterialInfoSet() {
         return this.MaterialInfoSet;
     }
 
     /**
-     * Set 该分类路径下及其子分类下的所有素材。
-     * @param MaterialInfoSet 该分类路径下及其子分类下的所有素材。
+     * Set 该分类路径下及其子分类下的所有媒体基础信息列表。
+     * @param MaterialInfoSet 该分类路径下及其子分类下的所有媒体基础信息列表。
      */
     public void setMaterialInfoSet(MaterialInfo [] MaterialInfoSet) {
         this.MaterialInfoSet = MaterialInfoSet;

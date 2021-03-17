@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeExternalEndpointStatusResponse extends AbstractModel{
 
     /**
-    * 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
+    * 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
     */
     @SerializedName("Status")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeExternalEndpointStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等 
-     * @return Status 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
+     * Get 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed） 
+     * @return Status 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
-     * @param Status 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
+     * Set 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
+     * @param Status 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
      */
     public void setStatus(String Status) {
         this.Status = Status;

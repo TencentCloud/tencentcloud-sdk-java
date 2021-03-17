@@ -103,7 +103,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+    * 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -333,16 +333,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。 
-     * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * Get 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。 
+     * @return DbVersionId 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * Set 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
-     * @param DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * Set 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
+     * @param DbVersionId 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;

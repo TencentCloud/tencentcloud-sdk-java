@@ -49,6 +49,7 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
     */
     @SerializedName("Label")
     @Expose
@@ -114,7 +115,8 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
 <li>banners：暴恐旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li> 
+<li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li> 
      * @return Label 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -124,6 +126,7 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
      */
     public String getLabel() {
         return this.Label;
@@ -139,6 +142,7 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
      * @param Label 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -148,6 +152,7 @@ public class AiReviewTerrorismTaskOutput extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

@@ -184,7 +184,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *根据素材 Id 删除素材。
+     *根据媒体 Id 删除媒体。
      * @param req DeleteMaterialRequest
      * @return DeleteMaterialResponse
      * @throws TencentCloudSDKException
@@ -326,7 +326,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *根据素材 Id 批量获取素材详情。
+     *根据媒体 Id 批量获取媒体详情。
      * @param req DescribeMaterialsRequest
      * @return DescribeMaterialsResponse
      * @throws TencentCloudSDKException
@@ -409,7 +409,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *获取共享空间。当实体A对实体B授权某资源以后，实体B的共享空间就会增加实体A。
+     *获取共享空间。当个人或团队A对个人或团队B授权某资源以后，个人或团队B的共享空间就会增加个人或团队A。
      * @param req DescribeSharedSpaceRequest
      * @return DescribeSharedSpaceResponse
      * @throws TencentCloudSDKException
@@ -571,7 +571,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *平铺分类路径下及其子分类下的所有素材。
+     *平铺分类路径下及其子分类下的所有媒体基础信息。
      * @param req FlattenListMediaRequest
      * @return FlattenListMediaResponse
      * @throws TencentCloudSDKException
@@ -613,7 +613,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *资源所属实体对目标实体授予目标资源的相应权限。
+     *资源归属者对目标个人或团队授予目标资源的相应权限。
      * @param req GrantResourceAuthorizationRequest
      * @return GrantResourceAuthorizationResponse
      * @throws TencentCloudSDKException
@@ -673,7 +673,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     * 浏览当前分类路径下的资源，包括素材和子分类。
+     * 浏览当前分类路径下的资源，包括媒体文件和子分类，返回媒资基础信息和分类信息。
      * @param req ListMediaRequest
      * @return ListMediaResponse
      * @throws TencentCloudSDKException
@@ -693,7 +693,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *修改素材信息，支持修改素材名称、分类路径、标签等信息。
+     *修改媒体信息，支持修改媒体名称、分类路径、标签等信息。
      * @param req ModifyMaterialRequest
      * @return ModifyMaterialResponse
      * @throws TencentCloudSDKException
@@ -775,7 +775,9 @@ public class CmeClient extends AbstractClient{
 
     /**
      *移动某一个分类到另外一个分类下，也可用于分类重命名。
-<li>如果 SourceClassPath = /素材/视频/NBA，DestinationClassPath = /素材/视频/篮球，当 DestinationClassPath 不存在时候，操作结果为重命名 ClassPath，如果 DestinationClassPath 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA。</li>
+如果 SourceClassPath = /素材/视频/NBA，DestinationClassPath = /素材/视频/篮球
+<li>当 DestinationClassPath 不存在时候，操作结果为重命名 ClassPath；</li>
+<li>当 DestinationClassPath 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA</li>
      * @param req MoveClassRequest
      * @return MoveClassResponse
      * @throws TencentCloudSDKException
@@ -787,6 +789,32 @@ public class CmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<MoveClassResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "MoveClass");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *移动资源，支持跨个人或团队移动媒体以及分类。如果填写了Operator，则需要校验用户对媒体和分类资源的访问以及写权限。
+<li>当原始资源为媒体时，该接口效果为将该媒体移动到目标分类下面；</li>
+<li>当原始资源为分类时，该接口效果为将原始分类移动到目标分类或者是重命名。</li>
+ 如果 SourceResource.Resource.Id = /素材/视频/NBA，DestinationResource.Resource.Id= /素材/视频/篮球 
+<li>当 DestinationResource.Resource.Id 不存在时候且原始资源与目标资源归属相同，操作结果为重命名原始分类；</li>
+<li>当 DestinationResource.Resource.Id 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA</li>
+
+     * @param req MoveResourceRequest
+     * @return MoveResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public MoveResourceResponse MoveResource(MoveResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MoveResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<MoveResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "MoveResource");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -815,7 +843,7 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
-     *根据检索条件搜索素材，返回素材的基本信息。
+     *根据检索条件搜索媒体，返回媒体的基本信息。
      * @param req SearchMaterialRequest
      * @return SearchMaterialResponse
      * @throws TencentCloudSDKException
