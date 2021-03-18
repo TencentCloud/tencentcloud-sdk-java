@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeClassicalLBHealthStatusResponse extends AbstractModel{
 
     /**
-    * 后端健康状态列表
+    * 后端健康状态列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthList")
@@ -38,9 +38,9 @@ public class DescribeClassicalLBHealthStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 后端健康状态列表
+     * Get 后端健康状态列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HealthList 后端健康状态列表
+     * @return HealthList 后端健康状态列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClassicalHealth [] getHealthList() {
@@ -48,9 +48,9 @@ public class DescribeClassicalLBHealthStatusResponse extends AbstractModel{
     }
 
     /**
-     * Set 后端健康状态列表
+     * Set 后端健康状态列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HealthList 后端健康状态列表
+     * @param HealthList 后端健康状态列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthList(ClassicalHealth [] HealthList) {

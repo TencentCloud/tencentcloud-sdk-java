@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeregisterTargetGroupInstancesRequest extends AbstractModel{
 
     /**
-    * 目标组ID
+    * 目标组ID。
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
 
     /**
-    * 待解绑的服务器信息
+    * 待解绑的服务器信息。
     */
     @SerializedName("TargetGroupInstances")
     @Expose
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
-     * Get 目标组ID 
-     * @return TargetGroupId 目标组ID
+     * Get 目标组ID。 
+     * @return TargetGroupId 目标组ID。
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组ID
-     * @param TargetGroupId 目标组ID
+     * Set 目标组ID。
+     * @param TargetGroupId 目标组ID。
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
     }
 
     /**
-     * Get 待解绑的服务器信息 
-     * @return TargetGroupInstances 待解绑的服务器信息
+     * Get 待解绑的服务器信息。 
+     * @return TargetGroupInstances 待解绑的服务器信息。
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set 待解绑的服务器信息
-     * @param TargetGroupInstances 待解绑的服务器信息
+     * Set 待解绑的服务器信息。
+     * @param TargetGroupInstances 待解绑的服务器信息。
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

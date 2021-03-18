@@ -41,17 +41,10 @@ public class DescribeEcdnStatisticsRequest extends AbstractModel{
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
     */
     @SerializedName("Metrics")
     @Expose
@@ -84,6 +77,17 @@ dynamic_bandwidth：动态带宽，单位为 bps
     @SerializedName("Projects")
     @Expose
     private Long [] Projects;
+
+    /**
+    * 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get 查询起始时间，如：2019-12-13 00:00:00 
@@ -122,32 +126,18 @@ dynamic_bandwidth：动态带宽，单位为 bps
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
-5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps 
+5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个 
      * @return Metrics 指定查询指标，支持的类型有：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
      */
     public String [] getMetrics() {
         return this.Metrics;
@@ -158,32 +148,18 @@ dynamic_bandwidth：动态带宽，单位为 bps
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
      * @param Metrics 指定查询指标，支持的类型有：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
      */
     public void setMetrics(String [] Metrics) {
         this.Metrics = Metrics;
@@ -266,6 +242,38 @@ dynamic_bandwidth：动态带宽，单位为 bps
     }
 
     /**
+     * Get 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global 
+     * @return Area 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+     * @param Area 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -275,6 +283,7 @@ dynamic_bandwidth：动态带宽，单位为 bps
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArraySimple(map, prefix + "Projects.", this.Projects);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

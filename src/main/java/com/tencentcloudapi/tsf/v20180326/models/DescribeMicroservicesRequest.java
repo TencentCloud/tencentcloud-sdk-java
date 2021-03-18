@@ -72,6 +72,13 @@ public class DescribeMicroservicesRequest extends AbstractModel{
     private String [] Status;
 
     /**
+    * IdList
+    */
+    @SerializedName("MicroserviceIdList")
+    @Expose
+    private String [] MicroserviceIdList;
+
+    /**
      * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
      */
@@ -184,6 +191,22 @@ public class DescribeMicroservicesRequest extends AbstractModel{
     }
 
     /**
+     * Get IdList 
+     * @return MicroserviceIdList IdList
+     */
+    public String [] getMicroserviceIdList() {
+        return this.MicroserviceIdList;
+    }
+
+    /**
+     * Set IdList
+     * @param MicroserviceIdList IdList
+     */
+    public void setMicroserviceIdList(String [] MicroserviceIdList) {
+        this.MicroserviceIdList = MicroserviceIdList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class DescribeMicroservicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamArraySimple(map, prefix + "MicroserviceIdList.", this.MicroserviceIdList);
 
     }
 }

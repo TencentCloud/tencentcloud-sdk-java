@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeClusterResourcesResponse extends AbstractModel{
 
     /**
-    * 集群中资源列表
+    * 集群中资源列表。
     */
     @SerializedName("ClusterResourceSet")
     @Expose
     private ClusterResource [] ClusterResourceSet;
 
     /**
-    * 集群中资源总数
+    * 集群中资源总数。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeClusterResourcesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 集群中资源列表 
-     * @return ClusterResourceSet 集群中资源列表
+     * Get 集群中资源列表。 
+     * @return ClusterResourceSet 集群中资源列表。
      */
     public ClusterResource [] getClusterResourceSet() {
         return this.ClusterResourceSet;
     }
 
     /**
-     * Set 集群中资源列表
-     * @param ClusterResourceSet 集群中资源列表
+     * Set 集群中资源列表。
+     * @param ClusterResourceSet 集群中资源列表。
      */
     public void setClusterResourceSet(ClusterResource [] ClusterResourceSet) {
         this.ClusterResourceSet = ClusterResourceSet;
     }
 
     /**
-     * Get 集群中资源总数 
-     * @return TotalCount 集群中资源总数
+     * Get 集群中资源总数。 
+     * @return TotalCount 集群中资源总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 集群中资源总数
-     * @param TotalCount 集群中资源总数
+     * Set 集群中资源总数。
+     * @param TotalCount 集群中资源总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

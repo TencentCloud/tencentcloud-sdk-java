@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteLoadBalancerListenersRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+    * 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
     */
     @SerializedName("ListenerIds")
     @Expose
     private String [] ListenerIds;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器 
-     * @return ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+     * Get 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。 
+     * @return ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
-     * @param ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+     * Set 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
+     * @param ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

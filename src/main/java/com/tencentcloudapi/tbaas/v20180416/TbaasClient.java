@@ -59,7 +59,9 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *Bcos根据块高查询区块信息
+     *版本升级
+
+Bcos根据块高查询区块信息
      * @param req BlockByNumberHandlerRequest
      * @return BlockByNumberHandlerResponse
      * @throws TencentCloudSDKException
@@ -119,7 +121,9 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *动态部署合约
+     *版本升级
+
+动态部署合约
      * @param req DeployDynamicContractHandlerRequest
      * @return DeployDynamicContractHandlerResponse
      * @throws TencentCloudSDKException
@@ -259,7 +263,9 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *Bcos分页查询当前群组下的区块列表
+     *版本升级
+
+Bcos分页查询当前群组下的区块列表
      * @param req GetBlockListHandlerRequest
      * @return GetBlockListHandlerResponse
      * @throws TencentCloudSDKException
@@ -479,7 +485,9 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *Bcos根据交易哈希查看交易详细信息
+     *版本升级
+
+Bcos根据交易哈希查看交易详细信息
      * @param req GetTransByHashHandlerRequest
      * @return GetTransByHashHandlerResponse
      * @throws TencentCloudSDKException
@@ -499,7 +507,9 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *Bcos分页查询当前群组的交易信息列表
+     *版本升级
+
+Bcos分页查询当前群组的交易信息列表
      * @param req GetTransListHandlerRequest
      * @return GetTransListHandlerResponse
      * @throws TencentCloudSDKException
@@ -619,7 +629,9 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *Bcos发送交易
+     *版本升级
+
+Bcos发送交易
      * @param req SendTransactionHandlerRequest
      * @return SendTransactionHandlerResponse
      * @throws TencentCloudSDKException
@@ -659,7 +671,9 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *根据动态部署的合约发送交易
+     *版本升级
+
+根据动态部署的合约发送交易
      * @param req TransByDynamicContractHandlerRequest
      * @return TransByDynamicContractHandlerResponse
      * @throws TencentCloudSDKException

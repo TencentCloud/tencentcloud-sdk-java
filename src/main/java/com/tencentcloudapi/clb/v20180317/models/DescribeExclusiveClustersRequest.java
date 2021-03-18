@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeExclusiveClustersRequest extends AbstractModel{
 
     /**
-    * 返回集群列表数目，默认20，最大值100
+    * 返回集群列表数目，默认值为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 返回集群列表起始偏移量，默认0
+    * 返回集群列表起始偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -53,32 +53,32 @@ public class DescribeExclusiveClustersRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * Get 返回集群列表数目，默认20，最大值100 
-     * @return Limit 返回集群列表数目，默认20，最大值100
+     * Get 返回集群列表数目，默认值为20，最大值为100。 
+     * @return Limit 返回集群列表数目，默认值为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回集群列表数目，默认20，最大值100
-     * @param Limit 返回集群列表数目，默认20，最大值100
+     * Set 返回集群列表数目，默认值为20，最大值为100。
+     * @param Limit 返回集群列表数目，默认值为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 返回集群列表起始偏移量，默认0 
-     * @return Offset 返回集群列表起始偏移量，默认0
+     * Get 返回集群列表起始偏移量，默认为0。 
+     * @return Offset 返回集群列表起始偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回集群列表起始偏移量，默认0
-     * @param Offset 返回集群列表起始偏移量，默认0
+     * Set 返回集群列表起始偏移量，默认为0。
+     * @param Offset 返回集群列表起始偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

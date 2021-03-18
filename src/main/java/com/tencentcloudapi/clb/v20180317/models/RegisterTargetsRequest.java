@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class RegisterTargetsRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器 ID
+    * 负载均衡监听器ID。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 待绑定的后端服务列表，数组长度最大支持20
+    * 待绑定的后端服务列表，数组长度最大支持20。
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
+    * 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * 目标转发规则的域名，提供LocationId参数时本参数不生效
+    * 目标转发规则的域名，提供LocationId参数时本参数不生效。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 目标转发规则的URL，提供LocationId参数时本参数不生效
+    * 目标转发规则的URL，提供LocationId参数时本参数不生效。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡监听器 ID 
-     * @return ListenerId 负载均衡监听器 ID
+     * Get 负载均衡监听器ID。 
+     * @return ListenerId 负载均衡监听器ID。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器 ID
-     * @param ListenerId 负载均衡监听器 ID
+     * Set 负载均衡监听器ID。
+     * @param ListenerId 负载均衡监听器ID。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 待绑定的后端服务列表，数组长度最大支持20 
-     * @return Targets 待绑定的后端服务列表，数组长度最大支持20
+     * Get 待绑定的后端服务列表，数组长度最大支持20。 
+     * @return Targets 待绑定的后端服务列表，数组长度最大支持20。
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 待绑定的后端服务列表，数组长度最大支持20
-     * @param Targets 待绑定的后端服务列表，数组长度最大支持20
+     * Set 待绑定的后端服务列表，数组长度最大支持20。
+     * @param Targets 待绑定的后端服务列表，数组长度最大支持20。
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一 
-     * @return LocationId 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * Get 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。 
+     * @return LocationId 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
-     * @param LocationId 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * Set 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
+     * @param LocationId 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get 目标转发规则的域名，提供LocationId参数时本参数不生效 
-     * @return Domain 目标转发规则的域名，提供LocationId参数时本参数不生效
+     * Get 目标转发规则的域名，提供LocationId参数时本参数不生效。 
+     * @return Domain 目标转发规则的域名，提供LocationId参数时本参数不生效。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 目标转发规则的域名，提供LocationId参数时本参数不生效
-     * @param Domain 目标转发规则的域名，提供LocationId参数时本参数不生效
+     * Set 目标转发规则的域名，提供LocationId参数时本参数不生效。
+     * @param Domain 目标转发规则的域名，提供LocationId参数时本参数不生效。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 目标转发规则的URL，提供LocationId参数时本参数不生效 
-     * @return Url 目标转发规则的URL，提供LocationId参数时本参数不生效
+     * Get 目标转发规则的URL，提供LocationId参数时本参数不生效。 
+     * @return Url 目标转发规则的URL，提供LocationId参数时本参数不生效。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 目标转发规则的URL，提供LocationId参数时本参数不生效
-     * @param Url 目标转发规则的URL，提供LocationId参数时本参数不生效
+     * Set 目标转发规则的URL，提供LocationId参数时本参数不生效。
+     * @param Url 目标转发规则的URL，提供LocationId参数时本参数不生效。
      */
     public void setUrl(String Url) {
         this.Url = Url;

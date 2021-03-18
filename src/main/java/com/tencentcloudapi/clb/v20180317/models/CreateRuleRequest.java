@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreateRuleRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例 ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 监听器 ID
+    * 监听器 ID。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 新建转发规则的信息
+    * 新建转发规则的信息。
     */
     @SerializedName("Rules")
     @Expose
     private RuleInput [] Rules;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例 ID。 
+     * @return LoadBalancerId 负载均衡实例 ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例 ID。
+     * @param LoadBalancerId 负载均衡实例 ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 监听器 ID 
-     * @return ListenerId 监听器 ID
+     * Get 监听器 ID。 
+     * @return ListenerId 监听器 ID。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器 ID
-     * @param ListenerId 监听器 ID
+     * Set 监听器 ID。
+     * @param ListenerId 监听器 ID。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 新建转发规则的信息 
-     * @return Rules 新建转发规则的信息
+     * Get 新建转发规则的信息。 
+     * @return Rules 新建转发规则的信息。
      */
     public RuleInput [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 新建转发规则的信息
-     * @param Rules 新建转发规则的信息
+     * Set 新建转发规则的信息。
+     * @param Rules 新建转发规则的信息。
      */
     public void setRules(RuleInput [] Rules) {
         this.Rules = Rules;

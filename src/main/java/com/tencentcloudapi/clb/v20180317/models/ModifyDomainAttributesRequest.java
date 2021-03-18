@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class ModifyDomainAttributesRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器 ID
+    * 负载均衡监听器ID。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 域名（必须是已经创建的转发规则下的域名）
+    * 域名（必须是已经创建的转发规则下的域名）。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 要修改的新域名
+    * 要修改的新域名。
     */
     @SerializedName("NewDomain")
     @Expose
@@ -79,64 +79,64 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private String NewDefaultServerDomain;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡监听器 ID 
-     * @return ListenerId 负载均衡监听器 ID
+     * Get 负载均衡监听器ID。 
+     * @return ListenerId 负载均衡监听器ID。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器 ID
-     * @param ListenerId 负载均衡监听器 ID
+     * Set 负载均衡监听器ID。
+     * @param ListenerId 负载均衡监听器ID。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 域名（必须是已经创建的转发规则下的域名） 
-     * @return Domain 域名（必须是已经创建的转发规则下的域名）
+     * Get 域名（必须是已经创建的转发规则下的域名）。 
+     * @return Domain 域名（必须是已经创建的转发规则下的域名）。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名（必须是已经创建的转发规则下的域名）
-     * @param Domain 域名（必须是已经创建的转发规则下的域名）
+     * Set 域名（必须是已经创建的转发规则下的域名）。
+     * @param Domain 域名（必须是已经创建的转发规则下的域名）。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 要修改的新域名 
-     * @return NewDomain 要修改的新域名
+     * Get 要修改的新域名。 
+     * @return NewDomain 要修改的新域名。
      */
     public String getNewDomain() {
         return this.NewDomain;
     }
 
     /**
-     * Set 要修改的新域名
-     * @param NewDomain 要修改的新域名
+     * Set 要修改的新域名。
+     * @param NewDomain 要修改的新域名。
      */
     public void setNewDomain(String NewDomain) {
         this.NewDomain = NewDomain;

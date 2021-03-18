@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class ModifyTargetWeightRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器 ID
+    * 负载均衡监听器ID。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+    * 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * 目标规则的域名，提供LocationId参数时本参数不生效
+    * 目标规则的域名，提供LocationId参数时本参数不生效。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 目标规则的URL，提供LocationId参数时本参数不生效
+    * 目标规则的URL，提供LocationId参数时本参数不生效。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 要修改权重的后端服务列表
+    * 要修改权重的后端服务列表。
     */
     @SerializedName("Targets")
     @Expose
@@ -72,96 +72,96 @@ public class ModifyTargetWeightRequest extends AbstractModel{
     private Long Weight;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡监听器 ID 
-     * @return ListenerId 负载均衡监听器 ID
+     * Get 负载均衡监听器ID。 
+     * @return ListenerId 负载均衡监听器ID。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器 ID
-     * @param ListenerId 负载均衡监听器 ID
+     * Set 负载均衡监听器ID。
+     * @param ListenerId 负载均衡监听器ID。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一 
-     * @return LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * Get 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。 
+     * @return LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
-     * @param LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * Set 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
+     * @param LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get 目标规则的域名，提供LocationId参数时本参数不生效 
-     * @return Domain 目标规则的域名，提供LocationId参数时本参数不生效
+     * Get 目标规则的域名，提供LocationId参数时本参数不生效。 
+     * @return Domain 目标规则的域名，提供LocationId参数时本参数不生效。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 目标规则的域名，提供LocationId参数时本参数不生效
-     * @param Domain 目标规则的域名，提供LocationId参数时本参数不生效
+     * Set 目标规则的域名，提供LocationId参数时本参数不生效。
+     * @param Domain 目标规则的域名，提供LocationId参数时本参数不生效。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 目标规则的URL，提供LocationId参数时本参数不生效 
-     * @return Url 目标规则的URL，提供LocationId参数时本参数不生效
+     * Get 目标规则的URL，提供LocationId参数时本参数不生效。 
+     * @return Url 目标规则的URL，提供LocationId参数时本参数不生效。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 目标规则的URL，提供LocationId参数时本参数不生效
-     * @param Url 目标规则的URL，提供LocationId参数时本参数不生效
+     * Set 目标规则的URL，提供LocationId参数时本参数不生效。
+     * @param Url 目标规则的URL，提供LocationId参数时本参数不生效。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 要修改权重的后端服务列表 
-     * @return Targets 要修改权重的后端服务列表
+     * Get 要修改权重的后端服务列表。 
+     * @return Targets 要修改权重的后端服务列表。
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 要修改权重的后端服务列表
-     * @param Targets 要修改权重的后端服务列表
+     * Set 要修改权重的后端服务列表。
+     * @param Targets 要修改权重的后端服务列表。
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
 
     /**
-    * 负载均衡唯一性Id，如lb-12345678
+    * 负载均衡唯一性ID，例如：lb-12345678。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+    * 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
     */
     @SerializedName("SnatIps")
     @Expose
     private SnatIp [] SnatIps;
 
     /**
-     * Get 负载均衡唯一性Id，如lb-12345678 
-     * @return LoadBalancerId 负载均衡唯一性Id，如lb-12345678
+     * Get 负载均衡唯一性ID，例如：lb-12345678。 
+     * @return LoadBalancerId 负载均衡唯一性ID，例如：lb-12345678。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡唯一性Id，如lb-12345678
-     * @param LoadBalancerId 负载均衡唯一性Id，如lb-12345678
+     * Set 负载均衡唯一性ID，例如：lb-12345678。
+     * @param LoadBalancerId 负载均衡唯一性ID，例如：lb-12345678。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请 
-     * @return SnatIps 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+     * Get 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。 
+     * @return SnatIps 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
      */
     public SnatIp [] getSnatIps() {
         return this.SnatIps;
     }
 
     /**
-     * Set 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
-     * @param SnatIps 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+     * Set 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+     * @param SnatIps 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
      */
     public void setSnatIps(SnatIp [] SnatIps) {
         this.SnatIps = SnatIps;

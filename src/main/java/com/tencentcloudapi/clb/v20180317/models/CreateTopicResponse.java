@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateTopicResponse extends AbstractModel{
 
     /**
-    * 日志主题的 ID
+    * 日志主题的 ID。
     */
     @SerializedName("TopicId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateTopicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 日志主题的 ID 
-     * @return TopicId 日志主题的 ID
+     * Get 日志主题的 ID。 
+     * @return TopicId 日志主题的 ID。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题的 ID
-     * @param TopicId 日志主题的 ID
+     * Set 日志主题的 ID。
+     * @param TopicId 日志主题的 ID。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

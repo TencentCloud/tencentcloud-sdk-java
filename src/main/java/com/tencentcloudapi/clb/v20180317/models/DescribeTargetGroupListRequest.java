@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeTargetGroupListRequest extends AbstractModel{
 
     /**
-    * 目标组ID数组
+    * 目标组ID数组。
     */
     @SerializedName("TargetGroupIds")
     @Expose
     private String [] TargetGroupIds;
 
     /**
-    * 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
+    * 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 显示的偏移起始量
+    * 显示的偏移起始量。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 显示条数限制，默认为20
+    * 显示条数限制，默认为20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 目标组ID数组 
-     * @return TargetGroupIds 目标组ID数组
+     * Get 目标组ID数组。 
+     * @return TargetGroupIds 目标组ID数组。
      */
     public String [] getTargetGroupIds() {
         return this.TargetGroupIds;
     }
 
     /**
-     * Set 目标组ID数组
-     * @param TargetGroupIds 目标组ID数组
+     * Set 目标组ID数组。
+     * @param TargetGroupIds 目标组ID数组。
      */
     public void setTargetGroupIds(String [] TargetGroupIds) {
         this.TargetGroupIds = TargetGroupIds;
     }
 
     /**
-     * Get 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID， 
-     * @return Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
+     * Get 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。 
+     * @return Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
-     * @param Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
+     * Set 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
+     * @param Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 显示的偏移起始量 
-     * @return Offset 显示的偏移起始量
+     * Get 显示的偏移起始量。 
+     * @return Offset 显示的偏移起始量。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 显示的偏移起始量
-     * @param Offset 显示的偏移起始量
+     * Set 显示的偏移起始量。
+     * @param Offset 显示的偏移起始量。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 显示条数限制，默认为20 
-     * @return Limit 显示条数限制，默认为20
+     * Get 显示条数限制，默认为20。 
+     * @return Limit 显示条数限制，默认为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 显示条数限制，默认为20
-     * @param Limit 显示条数限制，默认为20
+     * Set 显示条数限制，默认为20。
+     * @param Limit 显示条数限制，默认为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

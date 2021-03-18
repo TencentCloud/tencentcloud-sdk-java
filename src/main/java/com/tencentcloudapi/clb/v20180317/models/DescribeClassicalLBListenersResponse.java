@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeClassicalLBListenersResponse extends AbstractModel{
 
     /**
-    * 监听器列表
+    * 监听器列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Listeners")
@@ -38,9 +38,9 @@ public class DescribeClassicalLBListenersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 监听器列表
+     * Get 监听器列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Listeners 监听器列表
+     * @return Listeners 监听器列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClassicalListener [] getListeners() {
@@ -48,9 +48,9 @@ public class DescribeClassicalLBListenersResponse extends AbstractModel{
     }
 
     /**
-     * Set 监听器列表
+     * Set 监听器列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Listeners 监听器列表
+     * @param Listeners 监听器列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListeners(ClassicalListener [] Listeners) {

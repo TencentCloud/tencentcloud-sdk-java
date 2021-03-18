@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRewriteResponse extends AbstractModel{
 
     /**
-    * 重定向转发规则构成的数组，若无重定向规则，则返回空数组
+    * 重定向转发规则构成的数组，若无重定向规则，则返回空数组。
     */
     @SerializedName("RewriteSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeRewriteResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 重定向转发规则构成的数组，若无重定向规则，则返回空数组 
-     * @return RewriteSet 重定向转发规则构成的数组，若无重定向规则，则返回空数组
+     * Get 重定向转发规则构成的数组，若无重定向规则，则返回空数组。 
+     * @return RewriteSet 重定向转发规则构成的数组，若无重定向规则，则返回空数组。
      */
     public RuleOutput [] getRewriteSet() {
         return this.RewriteSet;
     }
 
     /**
-     * Set 重定向转发规则构成的数组，若无重定向规则，则返回空数组
-     * @param RewriteSet 重定向转发规则构成的数组，若无重定向规则，则返回空数组
+     * Set 重定向转发规则构成的数组，若无重定向规则，则返回空数组。
+     * @param RewriteSet 重定向转发规则构成的数组，若无重定向规则，则返回空数组。
      */
     public void setRewriteSet(RuleOutput [] RewriteSet) {
         this.RewriteSet = RewriteSet;

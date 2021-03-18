@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeListenersRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 要查询的负载均衡监听器 ID数组
+    * 要查询的负载均衡监听器ID数组。
     */
     @SerializedName("ListenerIds")
     @Expose
     private String [] ListenerIds;
 
     /**
-    * 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+    * 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 要查询的监听器的端口
+    * 要查询的监听器的端口。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 要查询的负载均衡监听器 ID数组 
-     * @return ListenerIds 要查询的负载均衡监听器 ID数组
+     * Get 要查询的负载均衡监听器ID数组。 
+     * @return ListenerIds 要查询的负载均衡监听器ID数组。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 要查询的负载均衡监听器 ID数组
-     * @param ListenerIds 要查询的负载均衡监听器 ID数组
+     * Set 要查询的负载均衡监听器ID数组。
+     * @param ListenerIds 要查询的负载均衡监听器ID数组。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;
     }
 
     /**
-     * Get 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL 
-     * @return Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+     * Get 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。 
+     * @return Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
-     * @param Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+     * Set 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+     * @param Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 要查询的监听器的端口 
-     * @return Port 要查询的监听器的端口
+     * Get 要查询的监听器的端口。 
+     * @return Port 要查询的监听器的端口。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 要查询的监听器的端口
-     * @param Port 要查询的监听器的端口
+     * Set 要查询的监听器的端口。
+     * @param Port 要查询的监听器的端口。
      */
     public void setPort(Long Port) {
         this.Port = Port;

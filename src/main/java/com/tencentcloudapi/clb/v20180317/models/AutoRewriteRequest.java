@@ -37,21 +37,21 @@ public class AutoRewriteRequest extends AbstractModel{
     private String ListenerId;
 
     /**
-    * HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+    * HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 重定向状态码，可取值301,302,307
+    * 重定向状态码，可取值301,302,307。
     */
     @SerializedName("RewriteCodes")
     @Expose
     private Long [] RewriteCodes;
 
     /**
-    * 重定向是否携带匹配的url
+    * 重定向是否携带匹配的URL。
     */
     @SerializedName("TakeUrls")
     @Expose
@@ -90,48 +90,48 @@ public class AutoRewriteRequest extends AbstractModel{
     }
 
     /**
-     * Get HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。 
-     * @return Domains HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+     * Get HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。 
+     * @return Domains HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
-     * @param Domains HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+     * Set HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+     * @param Domains HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 重定向状态码，可取值301,302,307 
-     * @return RewriteCodes 重定向状态码，可取值301,302,307
+     * Get 重定向状态码，可取值301,302,307。 
+     * @return RewriteCodes 重定向状态码，可取值301,302,307。
      */
     public Long [] getRewriteCodes() {
         return this.RewriteCodes;
     }
 
     /**
-     * Set 重定向状态码，可取值301,302,307
-     * @param RewriteCodes 重定向状态码，可取值301,302,307
+     * Set 重定向状态码，可取值301,302,307。
+     * @param RewriteCodes 重定向状态码，可取值301,302,307。
      */
     public void setRewriteCodes(Long [] RewriteCodes) {
         this.RewriteCodes = RewriteCodes;
     }
 
     /**
-     * Get 重定向是否携带匹配的url 
-     * @return TakeUrls 重定向是否携带匹配的url
+     * Get 重定向是否携带匹配的URL。 
+     * @return TakeUrls 重定向是否携带匹配的URL。
      */
     public Boolean [] getTakeUrls() {
         return this.TakeUrls;
     }
 
     /**
-     * Set 重定向是否携带匹配的url
-     * @param TakeUrls 重定向是否携带匹配的url
+     * Set 重定向是否携带匹配的URL。
+     * @param TakeUrls 重定向是否携带匹配的URL。
      */
     public void setTakeUrls(Boolean [] TakeUrls) {
         this.TakeUrls = TakeUrls;

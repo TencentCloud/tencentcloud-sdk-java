@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeregisterTargetsFromClassicalLBRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 后端服务的实例ID列表
+    * 后端服务的实例ID列表。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 后端服务的实例ID列表 
-     * @return InstanceIds 后端服务的实例ID列表
+     * Get 后端服务的实例ID列表。 
+     * @return InstanceIds 后端服务的实例ID列表。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 后端服务的实例ID列表
-     * @param InstanceIds 后端服务的实例ID列表
+     * Set 后端服务的实例ID列表。
+     * @param InstanceIds 后端服务的实例ID列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

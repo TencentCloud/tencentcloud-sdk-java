@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeClassicalLBByInstanceIdRequest extends AbstractModel{
 
     /**
-    * 后端实例ID列表
+    * 后端实例ID列表。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 后端实例ID列表 
-     * @return InstanceIds 后端实例ID列表
+     * Get 后端实例ID列表。 
+     * @return InstanceIds 后端实例ID列表。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 后端实例ID列表
-     * @param InstanceIds 后端实例ID列表
+     * Set 后端实例ID列表。
+     * @param InstanceIds 后端实例ID列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

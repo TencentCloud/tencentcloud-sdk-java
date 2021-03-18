@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyRuleRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例 ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器 ID
+    * 负载均衡监听器 ID。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -44,14 +44,14 @@ public class ModifyRuleRequest extends AbstractModel{
     private String LocationId;
 
     /**
-    * 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
+    * 转发规则的新的转发路径，如不需修改Url，则不需提供此参数。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 健康检查信息
+    * 健康检查信息。
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -66,60 +66,60 @@ public class ModifyRuleRequest extends AbstractModel{
     private String Scheduler;
 
     /**
-    * 会话保持时间
+    * 会话保持时间。
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
+    * 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
     */
     @SerializedName("ForwardType")
     @Expose
     private String ForwardType;
 
     /**
-    * TRPC被调服务器路由，ForwardType为TRPC时必填
+    * TRPC被调服务器路由，ForwardType为TRPC时必填。
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * TRPC调用服务接口，ForwardType为TRPC时必填
+    * TRPC调用服务接口，ForwardType为TRPC时必填。
     */
     @SerializedName("TrpcFunc")
     @Expose
     private String TrpcFunc;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例 ID。 
+     * @return LoadBalancerId 负载均衡实例 ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例 ID。
+     * @param LoadBalancerId 负载均衡实例 ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡监听器 ID 
-     * @return ListenerId 负载均衡监听器 ID
+     * Get 负载均衡监听器 ID。 
+     * @return ListenerId 负载均衡监听器 ID。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器 ID
-     * @param ListenerId 负载均衡监听器 ID
+     * Set 负载均衡监听器 ID。
+     * @param ListenerId 负载均衡监听器 ID。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
@@ -142,32 +142,32 @@ public class ModifyRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 转发规则的新的转发路径，如不需修改Url，则不需提供此参数 
-     * @return Url 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
+     * Get 转发规则的新的转发路径，如不需修改Url，则不需提供此参数。 
+     * @return Url 转发规则的新的转发路径，如不需修改Url，则不需提供此参数。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
-     * @param Url 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
+     * Set 转发规则的新的转发路径，如不需修改Url，则不需提供此参数。
+     * @param Url 转发规则的新的转发路径，如不需修改Url，则不需提供此参数。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 健康检查信息 
-     * @return HealthCheck 健康检查信息
+     * Get 健康检查信息。 
+     * @return HealthCheck 健康检查信息。
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查信息
-     * @param HealthCheck 健康检查信息
+     * Set 健康检查信息。
+     * @param HealthCheck 健康检查信息。
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -194,64 +194,64 @@ public class ModifyRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 会话保持时间 
-     * @return SessionExpireTime 会话保持时间
+     * Get 会话保持时间。 
+     * @return SessionExpireTime 会话保持时间。
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间
-     * @param SessionExpireTime 会话保持时间
+     * Set 会话保持时间。
+     * @param SessionExpireTime 会话保持时间。
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC 
-     * @return ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
+     * Get 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。 
+     * @return ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
-     * @param ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
+     * Set 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
+     * @param ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
     }
 
     /**
-     * Get TRPC被调服务器路由，ForwardType为TRPC时必填 
-     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
+     * Get TRPC被调服务器路由，ForwardType为TRPC时必填。 
+     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set TRPC被调服务器路由，ForwardType为TRPC时必填
-     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
+     * Set TRPC被调服务器路由，ForwardType为TRPC时必填。
+     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC调用服务接口，ForwardType为TRPC时必填 
-     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     * Get TRPC调用服务接口，ForwardType为TRPC时必填。 
+     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set TRPC调用服务接口，ForwardType为TRPC时必填
-     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     * Set TRPC调用服务接口，ForwardType为TRPC时必填。
+     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;

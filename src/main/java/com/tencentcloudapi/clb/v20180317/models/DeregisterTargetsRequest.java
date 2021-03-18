@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class DeregisterTargetsRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID，格式如 lb-12345678
+    * 负载均衡实例 ID，格式如 lb-12345678。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 监听器 ID，格式如 lbl-12345678
+    * 监听器 ID，格式如 lbl-12345678。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 要解绑的后端服务列表，数组长度最大支持20
+    * 要解绑的后端服务列表，数组长度最大支持20。
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+    * 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+URL两者之一。
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * 目标规则的域名，提供LocationId参数时本参数不生效
+    * 目标规则的域名，提供LocationId参数时本参数不生效。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 目标规则的URL，提供LocationId参数时本参数不生效
+    * 目标规则的URL，提供LocationId参数时本参数不生效。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get 负载均衡实例 ID，格式如 lb-12345678 
-     * @return LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
+     * Get 负载均衡实例 ID，格式如 lb-12345678。 
+     * @return LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID，格式如 lb-12345678
-     * @param LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
+     * Set 负载均衡实例 ID，格式如 lb-12345678。
+     * @param LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 监听器 ID，格式如 lbl-12345678 
-     * @return ListenerId 监听器 ID，格式如 lbl-12345678
+     * Get 监听器 ID，格式如 lbl-12345678。 
+     * @return ListenerId 监听器 ID，格式如 lbl-12345678。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器 ID，格式如 lbl-12345678
-     * @param ListenerId 监听器 ID，格式如 lbl-12345678
+     * Set 监听器 ID，格式如 lbl-12345678。
+     * @param ListenerId 监听器 ID，格式如 lbl-12345678。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 要解绑的后端服务列表，数组长度最大支持20 
-     * @return Targets 要解绑的后端服务列表，数组长度最大支持20
+     * Get 要解绑的后端服务列表，数组长度最大支持20。 
+     * @return Targets 要解绑的后端服务列表，数组长度最大支持20。
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 要解绑的后端服务列表，数组长度最大支持20
-     * @param Targets 要解绑的后端服务列表，数组长度最大支持20
+     * Set 要解绑的后端服务列表，数组长度最大支持20。
+     * @param Targets 要解绑的后端服务列表，数组长度最大支持20。
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一 
-     * @return LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * Get 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+URL两者之一。 
+     * @return LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+URL两者之一。
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
-     * @param LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * Set 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+URL两者之一。
+     * @param LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+URL两者之一。
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get 目标规则的域名，提供LocationId参数时本参数不生效 
-     * @return Domain 目标规则的域名，提供LocationId参数时本参数不生效
+     * Get 目标规则的域名，提供LocationId参数时本参数不生效。 
+     * @return Domain 目标规则的域名，提供LocationId参数时本参数不生效。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 目标规则的域名，提供LocationId参数时本参数不生效
-     * @param Domain 目标规则的域名，提供LocationId参数时本参数不生效
+     * Set 目标规则的域名，提供LocationId参数时本参数不生效。
+     * @param Domain 目标规则的域名，提供LocationId参数时本参数不生效。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 目标规则的URL，提供LocationId参数时本参数不生效 
-     * @return Url 目标规则的URL，提供LocationId参数时本参数不生效
+     * Get 目标规则的URL，提供LocationId参数时本参数不生效。 
+     * @return Url 目标规则的URL，提供LocationId参数时本参数不生效。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 目标规则的URL，提供LocationId参数时本参数不生效
-     * @param Url 目标规则的URL，提供LocationId参数时本参数不生效
+     * Set 目标规则的URL，提供LocationId参数时本参数不生效。
+     * @param Url 目标规则的URL，提供LocationId参数时本参数不生效。
      */
     public void setUrl(String Url) {
         this.Url = Url;

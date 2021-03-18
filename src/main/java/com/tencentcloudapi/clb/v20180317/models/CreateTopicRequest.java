@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel{
 
     /**
-    * 日志主题的名字
+    * 日志主题的名称。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+    * 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
     */
     @SerializedName("PartitionCount")
     @Expose
     private Long PartitionCount;
 
     /**
-     * Get 日志主题的名字 
-     * @return TopicName 日志主题的名字
+     * Get 日志主题的名称。 
+     * @return TopicName 日志主题的名称。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 日志主题的名字
-     * @param TopicName 日志主题的名字
+     * Set 日志主题的名称。
+     * @param TopicName 日志主题的名称。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。 
-     * @return PartitionCount 主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+     * Get 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。 
+     * @return PartitionCount 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set 主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
-     * @param PartitionCount 主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+     * Set 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+     * @param PartitionCount 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;

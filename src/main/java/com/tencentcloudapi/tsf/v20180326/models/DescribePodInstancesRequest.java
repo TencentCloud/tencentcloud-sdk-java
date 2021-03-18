@@ -44,6 +44,13 @@ public class DescribePodInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 过滤字段
+    */
+    @SerializedName("PodNameList")
+    @Expose
+    private String [] PodNameList;
+
+    /**
      * Get 实例所属groupId 
      * @return GroupId 实例所属groupId
      */
@@ -92,12 +99,29 @@ public class DescribePodInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 过滤字段 
+     * @return PodNameList 过滤字段
+     */
+    public String [] getPodNameList() {
+        return this.PodNameList;
+    }
+
+    /**
+     * Set 过滤字段
+     * @param PodNameList 过滤字段
+     */
+    public void setPodNameList(String [] PodNameList) {
+        this.PodNameList = PodNameList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "PodNameList.", this.PodNameList);
 
     }
 }

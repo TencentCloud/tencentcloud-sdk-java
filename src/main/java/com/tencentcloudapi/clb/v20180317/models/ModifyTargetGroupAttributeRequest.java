@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyTargetGroupAttributeRequest extends AbstractModel{
 
     /**
-    * 目标组的ID
+    * 目标组的ID。
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
 
     /**
-    * 目标组的新名称
+    * 目标组的新名称。
     */
     @SerializedName("TargetGroupName")
     @Expose
     private String TargetGroupName;
 
     /**
-    * 目标组的新默认端口
+    * 目标组的新默认端口。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 目标组的ID 
-     * @return TargetGroupId 目标组的ID
+     * Get 目标组的ID。 
+     * @return TargetGroupId 目标组的ID。
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组的ID
-     * @param TargetGroupId 目标组的ID
+     * Set 目标组的ID。
+     * @param TargetGroupId 目标组的ID。
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
     }
 
     /**
-     * Get 目标组的新名称 
-     * @return TargetGroupName 目标组的新名称
+     * Get 目标组的新名称。 
+     * @return TargetGroupName 目标组的新名称。
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set 目标组的新名称
-     * @param TargetGroupName 目标组的新名称
+     * Set 目标组的新名称。
+     * @param TargetGroupName 目标组的新名称。
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
     }
 
     /**
-     * Get 目标组的新默认端口 
-     * @return Port 目标组的新默认端口
+     * Get 目标组的新默认端口。 
+     * @return Port 目标组的新默认端口。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 目标组的新默认端口
-     * @param Port 目标组的新默认端口
+     * Set 目标组的新默认端口。
+     * @param Port 目标组的新默认端口。
      */
     public void setPort(Long Port) {
         this.Port = Port;

@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeTargetsRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 监听器 ID列表
+    * 监听器ID列表。
     */
     @SerializedName("ListenerIds")
     @Expose
     private String [] ListenerIds;
 
     /**
-    * 监听器协议类型
+    * 监听器协议类型。
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 监听器端口
+    * 监听器端口。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 监听器 ID列表 
-     * @return ListenerIds 监听器 ID列表
+     * Get 监听器ID列表。 
+     * @return ListenerIds 监听器ID列表。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 监听器 ID列表
-     * @param ListenerIds 监听器 ID列表
+     * Set 监听器ID列表。
+     * @param ListenerIds 监听器ID列表。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;
     }
 
     /**
-     * Get 监听器协议类型 
-     * @return Protocol 监听器协议类型
+     * Get 监听器协议类型。 
+     * @return Protocol 监听器协议类型。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 监听器协议类型
-     * @param Protocol 监听器协议类型
+     * Set 监听器协议类型。
+     * @param Protocol 监听器协议类型。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 监听器端口 
-     * @return Port 监听器端口
+     * Get 监听器端口。 
+     * @return Port 监听器端口。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 监听器端口
-     * @param Port 监听器端口
+     * Set 监听器端口。
+     * @param Port 监听器端口。
      */
     public void setPort(Long Port) {
         this.Port = Port;

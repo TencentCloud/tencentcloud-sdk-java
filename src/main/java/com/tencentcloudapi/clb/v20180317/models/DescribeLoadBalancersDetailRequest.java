@@ -30,7 +30,7 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 返回负载均衡列表起始偏移量，默认0
+    * 返回负载均衡列表起始偏移量，默认0。
     */
     @SerializedName("Offset")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回负载均衡列表起始偏移量，默认0 
-     * @return Offset 返回负载均衡列表起始偏移量，默认0
+     * Get 返回负载均衡列表起始偏移量，默认0。 
+     * @return Offset 返回负载均衡列表起始偏移量，默认0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回负载均衡列表起始偏移量，默认0
-     * @param Offset 返回负载均衡列表起始偏移量，默认0
+     * Set 返回负载均衡列表起始偏移量，默认0。
+     * @param Offset 返回负载均衡列表起始偏移量，默认0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

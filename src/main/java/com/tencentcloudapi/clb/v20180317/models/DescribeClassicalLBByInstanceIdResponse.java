@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeClassicalLBByInstanceIdResponse extends AbstractModel{
 
     /**
-    * 负载均衡相关信息列表
+    * 负载均衡相关信息列表。
     */
     @SerializedName("LoadBalancerInfoList")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeClassicalLBByInstanceIdResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 负载均衡相关信息列表 
-     * @return LoadBalancerInfoList 负载均衡相关信息列表
+     * Get 负载均衡相关信息列表。 
+     * @return LoadBalancerInfoList 负载均衡相关信息列表。
      */
     public ClassicalLoadBalancerInfo [] getLoadBalancerInfoList() {
         return this.LoadBalancerInfoList;
     }
 
     /**
-     * Set 负载均衡相关信息列表
-     * @param LoadBalancerInfoList 负载均衡相关信息列表
+     * Set 负载均衡相关信息列表。
+     * @param LoadBalancerInfoList 负载均衡相关信息列表。
      */
     public void setLoadBalancerInfoList(ClassicalLoadBalancerInfo [] LoadBalancerInfoList) {
         this.LoadBalancerInfoList = LoadBalancerInfoList;

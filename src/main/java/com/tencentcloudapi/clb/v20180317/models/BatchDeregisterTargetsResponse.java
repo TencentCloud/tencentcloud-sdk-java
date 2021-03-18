@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BatchDeregisterTargetsResponse extends AbstractModel{
 
     /**
-    * 解绑失败的监听器ID
+    * 解绑失败的监听器ID。
     */
     @SerializedName("FailListenerIdSet")
     @Expose
@@ -37,16 +37,16 @@ public class BatchDeregisterTargetsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 解绑失败的监听器ID 
-     * @return FailListenerIdSet 解绑失败的监听器ID
+     * Get 解绑失败的监听器ID。 
+     * @return FailListenerIdSet 解绑失败的监听器ID。
      */
     public String [] getFailListenerIdSet() {
         return this.FailListenerIdSet;
     }
 
     /**
-     * Set 解绑失败的监听器ID
-     * @param FailListenerIdSet 解绑失败的监听器ID
+     * Set 解绑失败的监听器ID。
+     * @param FailListenerIdSet 解绑失败的监听器ID。
      */
     public void setFailListenerIdSet(String [] FailListenerIdSet) {
         this.FailListenerIdSet = FailListenerIdSet;

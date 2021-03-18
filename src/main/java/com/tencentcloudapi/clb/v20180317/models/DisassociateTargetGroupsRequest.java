@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DisassociateTargetGroupsRequest extends AbstractModel{
 
     /**
-    * 待解绑的规则关系数组
+    * 待解绑的规则关系数组。
     */
     @SerializedName("Associations")
     @Expose
     private TargetGroupAssociation [] Associations;
 
     /**
-     * Get 待解绑的规则关系数组 
-     * @return Associations 待解绑的规则关系数组
+     * Get 待解绑的规则关系数组。 
+     * @return Associations 待解绑的规则关系数组。
      */
     public TargetGroupAssociation [] getAssociations() {
         return this.Associations;
     }
 
     /**
-     * Set 待解绑的规则关系数组
-     * @param Associations 待解绑的规则关系数组
+     * Set 待解绑的规则关系数组。
+     * @param Associations 待解绑的规则关系数组。
      */
     public void setAssociations(TargetGroupAssociation [] Associations) {
         this.Associations = Associations;

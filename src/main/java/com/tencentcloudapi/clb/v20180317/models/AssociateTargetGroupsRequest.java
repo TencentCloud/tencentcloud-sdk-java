@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AssociateTargetGroupsRequest extends AbstractModel{
 
     /**
-    * 绑定的关系数组
+    * 绑定的关系数组。
     */
     @SerializedName("Associations")
     @Expose
     private TargetGroupAssociation [] Associations;
 
     /**
-     * Get 绑定的关系数组 
-     * @return Associations 绑定的关系数组
+     * Get 绑定的关系数组。 
+     * @return Associations 绑定的关系数组。
      */
     public TargetGroupAssociation [] getAssociations() {
         return this.Associations;
     }
 
     /**
-     * Set 绑定的关系数组
-     * @param Associations 绑定的关系数组
+     * Set 绑定的关系数组。
+     * @param Associations 绑定的关系数组。
      */
     public void setAssociations(TargetGroupAssociation [] Associations) {
         this.Associations = Associations;

@@ -79,6 +79,13 @@ public class DescribeApplicationsRequest extends AbstractModel{
     private String [] ApplicationResourceTypeList;
 
     /**
+    * IdList
+    */
+    @SerializedName("ApplicationIdList")
+    @Expose
+    private String [] ApplicationIdList;
+
+    /**
      * Get 搜索字段 
      * @return SearchWord 搜索字段
      */
@@ -207,6 +214,22 @@ public class DescribeApplicationsRequest extends AbstractModel{
     }
 
     /**
+     * Get IdList 
+     * @return ApplicationIdList IdList
+     */
+    public String [] getApplicationIdList() {
+        return this.ApplicationIdList;
+    }
+
+    /**
+     * Set IdList
+     * @param ApplicationIdList IdList
+     */
+    public void setApplicationIdList(String [] ApplicationIdList) {
+        this.ApplicationIdList = ApplicationIdList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribeApplicationsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         this.setParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
         this.setParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
+        this.setParamArraySimple(map, prefix + "ApplicationIdList.", this.ApplicationIdList);
 
     }
 }

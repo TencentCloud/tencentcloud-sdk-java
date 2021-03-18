@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateListenerResponse extends AbstractModel{
 
     /**
-    * 创建的监听器的唯一标识数组
+    * 创建的监听器的唯一标识数组。
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -37,16 +37,16 @@ public class CreateListenerResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建的监听器的唯一标识数组 
-     * @return ListenerIds 创建的监听器的唯一标识数组
+     * Get 创建的监听器的唯一标识数组。 
+     * @return ListenerIds 创建的监听器的唯一标识数组。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 创建的监听器的唯一标识数组
-     * @param ListenerIds 创建的监听器的唯一标识数组
+     * Set 创建的监听器的唯一标识数组。
+     * @param ListenerIds 创建的监听器的唯一标识数组。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

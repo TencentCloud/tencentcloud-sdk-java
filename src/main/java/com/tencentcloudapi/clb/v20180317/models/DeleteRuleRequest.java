@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DeleteRuleRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器 ID
+    * 负载均衡监听器ID。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 要删除的转发规则的ID组成的数组
+    * 要删除的转发规则的ID组成的数组。
     */
     @SerializedName("LocationIds")
     @Expose
     private String [] LocationIds;
 
     /**
-    * 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+    * 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+    * 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
     */
     @SerializedName("Url")
     @Expose
@@ -65,80 +65,80 @@ public class DeleteRuleRequest extends AbstractModel{
     private String NewDefaultServerDomain;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡监听器 ID 
-     * @return ListenerId 负载均衡监听器 ID
+     * Get 负载均衡监听器ID。 
+     * @return ListenerId 负载均衡监听器ID。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器 ID
-     * @param ListenerId 负载均衡监听器 ID
+     * Set 负载均衡监听器ID。
+     * @param ListenerId 负载均衡监听器ID。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 要删除的转发规则的ID组成的数组 
-     * @return LocationIds 要删除的转发规则的ID组成的数组
+     * Get 要删除的转发规则的ID组成的数组。 
+     * @return LocationIds 要删除的转发规则的ID组成的数组。
      */
     public String [] getLocationIds() {
         return this.LocationIds;
     }
 
     /**
-     * Set 要删除的转发规则的ID组成的数组
-     * @param LocationIds 要删除的转发规则的ID组成的数组
+     * Set 要删除的转发规则的ID组成的数组。
+     * @param LocationIds 要删除的转发规则的ID组成的数组。
      */
     public void setLocationIds(String [] LocationIds) {
         this.LocationIds = LocationIds;
     }
 
     /**
-     * Get 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效 
-     * @return Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+     * Get 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。 
+     * @return Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
-     * @param Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+     * Set 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+     * @param Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效 
-     * @return Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+     * Get 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。 
+     * @return Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
-     * @param Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+     * Set 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
+     * @param Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
      */
     public void setUrl(String Url) {
         this.Url = Url;

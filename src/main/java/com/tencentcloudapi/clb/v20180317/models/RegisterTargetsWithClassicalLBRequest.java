@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class RegisterTargetsWithClassicalLBRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 后端服务信息
+    * 后端服务信息。
     */
     @SerializedName("Targets")
     @Expose
     private ClassicalTargetInfo [] Targets;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 后端服务信息 
-     * @return Targets 后端服务信息
+     * Get 后端服务信息。 
+     * @return Targets 后端服务信息。
      */
     public ClassicalTargetInfo [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 后端服务信息
-     * @param Targets 后端服务信息
+     * Set 后端服务信息。
+     * @param Targets 后端服务信息。
      */
     public void setTargets(ClassicalTargetInfo [] Targets) {
         this.Targets = Targets;
