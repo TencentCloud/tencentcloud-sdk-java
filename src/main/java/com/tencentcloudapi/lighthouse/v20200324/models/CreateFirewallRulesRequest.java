@@ -37,6 +37,13 @@ public class CreateFirewallRulesRequest extends AbstractModel{
     private FirewallRule [] FirewallRules;
 
     /**
+    * 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
+    */
+    @SerializedName("FirewallVersion")
+    @Expose
+    private Long FirewallVersion;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -69,11 +76,28 @@ public class CreateFirewallRulesRequest extends AbstractModel{
     }
 
     /**
+     * Get 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。 
+     * @return FirewallVersion 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
+     */
+    public Long getFirewallVersion() {
+        return this.FirewallVersion;
+    }
+
+    /**
+     * Set 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
+     * @param FirewallVersion 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
+     */
+    public void setFirewallVersion(Long FirewallVersion) {
+        this.FirewallVersion = FirewallVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "FirewallRules.", this.FirewallRules);
+        this.setParamSimple(map, prefix + "FirewallVersion", this.FirewallVersion);
 
     }
 }

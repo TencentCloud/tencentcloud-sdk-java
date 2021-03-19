@@ -115,6 +115,13 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private Boolean PublishedToVbc;
 
     /**
+    * 路由策略创建时间
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
      * @return DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
@@ -351,6 +358,22 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
+     * Get 路由策略创建时间 
+     * @return CreatedTime 路由策略创建时间
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 路由策略创建时间
+     * @param CreatedTime 路由策略创建时间
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -365,6 +388,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.setParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
         this.setParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
         this.setParamSimple(map, prefix + "PublishedToVbc", this.PublishedToVbc);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }

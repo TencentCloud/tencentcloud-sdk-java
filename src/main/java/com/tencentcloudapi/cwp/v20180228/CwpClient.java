@@ -899,6 +899,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询可筛选操作系统列表.
+     * @param req DescribeMachineOsListRequest
+     * @return DescribeMachineOsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMachineOsListResponse DescribeMachineOsList(DescribeMachineOsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMachineOsListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMachineOsListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMachineOsList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeMachines) 用于获取区域主机列表。
      * @param req DescribeMachinesRequest
      * @return DescribeMachinesResponse

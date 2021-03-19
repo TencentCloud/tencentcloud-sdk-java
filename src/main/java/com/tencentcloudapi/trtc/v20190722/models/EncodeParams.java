@@ -30,7 +30,7 @@ public class EncodeParams extends AbstractModel{
     private Long AudioSampleRate;
 
     /**
-    * 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
+    * 混流-输出流音频码率。取值范围[8,500]，单位为kbps。
     */
     @SerializedName("AudioBitrate")
     @Expose
@@ -58,7 +58,7 @@ public class EncodeParams extends AbstractModel{
     private Long VideoHeight;
 
     /**
-    * 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
+    * 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。
     */
     @SerializedName("VideoBitrate")
     @Expose
@@ -79,7 +79,14 @@ public class EncodeParams extends AbstractModel{
     private Long VideoGop;
 
     /**
-    * 混流-输出流背景色。
+    * 混流-输出流背景色，取值是十进制整数。常用的颜色有：
+红色：0xff0000，对应的十进制整数是16724736。
+黄色：0xffff00。对应的十进制整数是16776960。
+绿色：0x33cc00。对应的十进制整数是3394560。
+蓝色：0x0066ff。对应的十进制整数是26367。
+黑色：0x000000。对应的十进制整数是0。
+白色：0xFFFFFF。对应的十进制整数是16777215。
+灰色：0x999999。对应的十进制整数是10066329。
     */
     @SerializedName("BackgroundColor")
     @Expose
@@ -91,6 +98,13 @@ public class EncodeParams extends AbstractModel{
     @SerializedName("BackgroundImageId")
     @Expose
     private Long BackgroundImageId;
+
+    /**
+    * 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+    */
+    @SerializedName("AudioCodec")
+    @Expose
+    private Long AudioCodec;
 
     /**
      * Get 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。 
@@ -109,16 +123,16 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。 
-     * @return AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
+     * Get 混流-输出流音频码率。取值范围[8,500]，单位为kbps。 
+     * @return AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为kbps。
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
-     * @param AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
+     * Set 混流-输出流音频码率。取值范围[8,500]，单位为kbps。
+     * @param AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为kbps。
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
@@ -173,16 +187,16 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。 
-     * @return VideoBitrate 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
+     * Get 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。 
+     * @return VideoBitrate 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
-     * @param VideoBitrate 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
+     * Set 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。
+     * @param VideoBitrate 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
@@ -221,16 +235,44 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get 混流-输出流背景色。 
-     * @return BackgroundColor 混流-输出流背景色。
+     * Get 混流-输出流背景色，取值是十进制整数。常用的颜色有：
+红色：0xff0000，对应的十进制整数是16724736。
+黄色：0xffff00。对应的十进制整数是16776960。
+绿色：0x33cc00。对应的十进制整数是3394560。
+蓝色：0x0066ff。对应的十进制整数是26367。
+黑色：0x000000。对应的十进制整数是0。
+白色：0xFFFFFF。对应的十进制整数是16777215。
+灰色：0x999999。对应的十进制整数是10066329。 
+     * @return BackgroundColor 混流-输出流背景色，取值是十进制整数。常用的颜色有：
+红色：0xff0000，对应的十进制整数是16724736。
+黄色：0xffff00。对应的十进制整数是16776960。
+绿色：0x33cc00。对应的十进制整数是3394560。
+蓝色：0x0066ff。对应的十进制整数是26367。
+黑色：0x000000。对应的十进制整数是0。
+白色：0xFFFFFF。对应的十进制整数是16777215。
+灰色：0x999999。对应的十进制整数是10066329。
      */
     public Long getBackgroundColor() {
         return this.BackgroundColor;
     }
 
     /**
-     * Set 混流-输出流背景色。
-     * @param BackgroundColor 混流-输出流背景色。
+     * Set 混流-输出流背景色，取值是十进制整数。常用的颜色有：
+红色：0xff0000，对应的十进制整数是16724736。
+黄色：0xffff00。对应的十进制整数是16776960。
+绿色：0x33cc00。对应的十进制整数是3394560。
+蓝色：0x0066ff。对应的十进制整数是26367。
+黑色：0x000000。对应的十进制整数是0。
+白色：0xFFFFFF。对应的十进制整数是16777215。
+灰色：0x999999。对应的十进制整数是10066329。
+     * @param BackgroundColor 混流-输出流背景色，取值是十进制整数。常用的颜色有：
+红色：0xff0000，对应的十进制整数是16724736。
+黄色：0xffff00。对应的十进制整数是16776960。
+绿色：0x33cc00。对应的十进制整数是3394560。
+蓝色：0x0066ff。对应的十进制整数是26367。
+黑色：0x000000。对应的十进制整数是0。
+白色：0xFFFFFF。对应的十进制整数是16777215。
+灰色：0x999999。对应的十进制整数是10066329。
      */
     public void setBackgroundColor(Long BackgroundColor) {
         this.BackgroundColor = BackgroundColor;
@@ -253,6 +295,22 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
+     * Get 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000] 
+     * @return AudioCodec 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+     */
+    public Long getAudioCodec() {
+        return this.AudioCodec;
+    }
+
+    /**
+     * Set 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+     * @param AudioCodec 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+     */
+    public void setAudioCodec(Long AudioCodec) {
+        this.AudioCodec = AudioCodec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +324,7 @@ public class EncodeParams extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoGop", this.VideoGop);
         this.setParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
+        this.setParamSimple(map, prefix + "AudioCodec", this.AudioCodec);
 
     }
 }

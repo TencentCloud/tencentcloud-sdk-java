@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFirewallRulesResponse extends AbstractModel{
+public class ListFirmwaresResponse extends AbstractModel{
 
     /**
-    * 符合条件的防火墙规则数量。
+    * 固件总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 防火墙规则详细信息列表。
+    * 固件列表
     */
-    @SerializedName("FirewallRuleSet")
+    @SerializedName("Firmwares")
     @Expose
-    private FirewallRuleInfo [] FirewallRuleSet;
-
-    /**
-    * 防火墙版本号。
-    */
-    @SerializedName("FirewallVersion")
-    @Expose
-    private Long FirewallVersion;
+    private FirmwareInfo [] Firmwares;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeFirewallRulesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的防火墙规则数量。 
-     * @return TotalCount 符合条件的防火墙规则数量。
+     * Get 固件总数 
+     * @return TotalCount 固件总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的防火墙规则数量。
-     * @param TotalCount 符合条件的防火墙规则数量。
+     * Set 固件总数
+     * @param TotalCount 固件总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 防火墙规则详细信息列表。 
-     * @return FirewallRuleSet 防火墙规则详细信息列表。
+     * Get 固件列表 
+     * @return Firmwares 固件列表
      */
-    public FirewallRuleInfo [] getFirewallRuleSet() {
-        return this.FirewallRuleSet;
+    public FirmwareInfo [] getFirmwares() {
+        return this.Firmwares;
     }
 
     /**
-     * Set 防火墙规则详细信息列表。
-     * @param FirewallRuleSet 防火墙规则详细信息列表。
+     * Set 固件列表
+     * @param Firmwares 固件列表
      */
-    public void setFirewallRuleSet(FirewallRuleInfo [] FirewallRuleSet) {
-        this.FirewallRuleSet = FirewallRuleSet;
-    }
-
-    /**
-     * Get 防火墙版本号。 
-     * @return FirewallVersion 防火墙版本号。
-     */
-    public Long getFirewallVersion() {
-        return this.FirewallVersion;
-    }
-
-    /**
-     * Set 防火墙版本号。
-     * @param FirewallVersion 防火墙版本号。
-     */
-    public void setFirewallVersion(Long FirewallVersion) {
-        this.FirewallVersion = FirewallVersion;
+    public void setFirmwares(FirmwareInfo [] Firmwares) {
+        this.Firmwares = Firmwares;
     }
 
     /**
@@ -119,8 +96,7 @@ public class DescribeFirewallRulesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "FirewallRuleSet.", this.FirewallRuleSet);
-        this.setParamSimple(map, prefix + "FirewallVersion", this.FirewallVersion);
+        this.setParamArrayObj(map, prefix + "Firmwares.", this.Firmwares);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

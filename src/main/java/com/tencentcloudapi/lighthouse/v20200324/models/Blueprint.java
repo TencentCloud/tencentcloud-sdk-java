@@ -123,6 +123,13 @@ public class Blueprint extends AbstractModel{
     private Boolean SupportAutomationTools;
 
     /**
+    * 镜像所需内存大小, 单位: GB
+    */
+    @SerializedName("RequiredMemorySize")
+    @Expose
+    private Long RequiredMemorySize;
+
+    /**
      * Get 镜像 ID  ，是 Blueprint 的唯一标识。 
      * @return BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      */
@@ -355,6 +362,22 @@ public class Blueprint extends AbstractModel{
     }
 
     /**
+     * Get 镜像所需内存大小, 单位: GB 
+     * @return RequiredMemorySize 镜像所需内存大小, 单位: GB
+     */
+    public Long getRequiredMemorySize() {
+        return this.RequiredMemorySize;
+    }
+
+    /**
+     * Set 镜像所需内存大小, 单位: GB
+     * @param RequiredMemorySize 镜像所需内存大小, 单位: GB
+     */
+    public void setRequiredMemorySize(Long RequiredMemorySize) {
+        this.RequiredMemorySize = RequiredMemorySize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -372,6 +395,7 @@ public class Blueprint extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
         this.setParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
+        this.setParamSimple(map, prefix + "RequiredMemorySize", this.RequiredMemorySize);
 
     }
 }

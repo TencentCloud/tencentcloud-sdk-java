@@ -23,12 +23,12 @@ import java.util.HashMap;
 public class DescribeCdnLogsResponse extends AbstractModel{
 
     /**
-    * 国内CDN节点的日志下载列表。
+    * 日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DomesticCdnLogs")
+    @SerializedName("TotalCount")
     @Expose
-    private CdnLogInfo [] DomesticCdnLogs;
+    private Long TotalCount;
 
     /**
     * 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
@@ -39,6 +39,14 @@ public class DescribeCdnLogsResponse extends AbstractModel{
     private CdnLogInfo [] OverseaCdnLogs;
 
     /**
+    * 国内CDN节点的日志下载列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomesticCdnLogs")
+    @Expose
+    private CdnLogInfo [] DomesticCdnLogs;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -46,23 +54,23 @@ public class DescribeCdnLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 国内CDN节点的日志下载列表。
+     * Get 日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DomesticCdnLogs 国内CDN节点的日志下载列表。
+     * @return TotalCount 日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public CdnLogInfo [] getDomesticCdnLogs() {
-        return this.DomesticCdnLogs;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 国内CDN节点的日志下载列表。
+     * Set 日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DomesticCdnLogs 国内CDN节点的日志下载列表。
+     * @param TotalCount 日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
-        this.DomesticCdnLogs = DomesticCdnLogs;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -86,6 +94,26 @@ public class DescribeCdnLogsResponse extends AbstractModel{
     }
 
     /**
+     * Get 国内CDN节点的日志下载列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomesticCdnLogs 国内CDN节点的日志下载列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CdnLogInfo [] getDomesticCdnLogs() {
+        return this.DomesticCdnLogs;
+    }
+
+    /**
+     * Set 国内CDN节点的日志下载列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomesticCdnLogs 国内CDN节点的日志下载列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
+        this.DomesticCdnLogs = DomesticCdnLogs;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,8 +133,9 @@ public class DescribeCdnLogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "OverseaCdnLogs.", this.OverseaCdnLogs);
+        this.setParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

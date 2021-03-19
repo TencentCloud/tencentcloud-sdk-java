@@ -44,6 +44,13 @@ public class DescribeMicroserviceRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 可选，根据部署组ID进行过滤
+    */
+    @SerializedName("GroupIds")
+    @Expose
+    private String [] GroupIds;
+
+    /**
      * Get 微服务ID 
      * @return MicroserviceId 微服务ID
      */
@@ -92,12 +99,29 @@ public class DescribeMicroserviceRequest extends AbstractModel{
     }
 
     /**
+     * Get 可选，根据部署组ID进行过滤 
+     * @return GroupIds 可选，根据部署组ID进行过滤
+     */
+    public String [] getGroupIds() {
+        return this.GroupIds;
+    }
+
+    /**
+     * Set 可选，根据部署组ID进行过滤
+     * @param GroupIds 可选，根据部署组ID进行过滤
+     */
+    public void setGroupIds(String [] GroupIds) {
+        this.GroupIds = GroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MicroserviceId", this.MicroserviceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
 
     }
 }

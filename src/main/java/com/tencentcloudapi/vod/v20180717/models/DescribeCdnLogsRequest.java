@@ -44,6 +44,20 @@ public class DescribeCdnLogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * 分页拉取的最大返回结果数。默认值：100；最大值：1000。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 分页拉取的起始偏移量。默认值：0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
@@ -99,6 +113,38 @@ public class DescribeCdnLogsRequest extends AbstractModel{
     }
 
     /**
+     * Get 分页拉取的最大返回结果数。默认值：100；最大值：1000。 
+     * @return Limit 分页拉取的最大返回结果数。默认值：100；最大值：1000。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页拉取的最大返回结果数。默认值：100；最大值：1000。
+     * @param Limit 分页拉取的最大返回结果数。默认值：100；最大值：1000。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 分页拉取的起始偏移量。默认值：0。 
+     * @return Offset 分页拉取的起始偏移量。默认值：0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页拉取的起始偏移量。默认值：0。
+     * @param Offset 分页拉取的起始偏移量。默认值：0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
@@ -121,6 +167,8 @@ public class DescribeCdnLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

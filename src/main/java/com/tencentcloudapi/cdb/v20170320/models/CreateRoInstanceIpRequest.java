@@ -37,7 +37,7 @@ public class CreateRoInstanceIpRequest extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-    * vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+    * vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -76,16 +76,16 @@ public class CreateRoInstanceIpRequest extends AbstractModel{
     }
 
     /**
-     * Get vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传 
-     * @return UniqVpcId vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+     * Get vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传 
+     * @return UniqVpcId vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
-     * @param UniqVpcId vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+     * Set vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
+     * @param UniqVpcId vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;

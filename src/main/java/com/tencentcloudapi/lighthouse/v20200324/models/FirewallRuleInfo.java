@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class FirewallRuleInfo extends AbstractModel{
 
     /**
-    * 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，ALL。
+    * 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * 协议，取值：TCP，UDP，ALL。
+    * 协议，取值：TCP，UDP，ICMP，ALL。
     */
     @SerializedName("Protocol")
     @Expose
@@ -44,32 +44,53 @@ public class FirewallRuleInfo extends AbstractModel{
     private String Port;
 
     /**
-     * Get 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，ALL。 
-     * @return AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，ALL。
+    * 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
+    * 取值：ACCEPT，DROP。默认为 ACCEPT。
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
+
+    /**
+    * 防火墙规则描述。
+    */
+    @SerializedName("FirewallRuleDescription")
+    @Expose
+    private String FirewallRuleDescription;
+
+    /**
+     * Get 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。 
+     * @return AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，ALL。
-     * @param AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，ALL。
+     * Set 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
+     * @param AppType 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，Ping-ICMP，ALL。
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get 协议，取值：TCP，UDP，ALL。 
-     * @return Protocol 协议，取值：TCP，UDP，ALL。
+     * Get 协议，取值：TCP，UDP，ICMP，ALL。 
+     * @return Protocol 协议，取值：TCP，UDP，ICMP，ALL。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议，取值：TCP，UDP，ALL。
-     * @param Protocol 协议，取值：TCP，UDP，ALL。
+     * Set 协议，取值：TCP，UDP，ICMP，ALL。
+     * @param Protocol 协议，取值：TCP，UDP，ICMP，ALL。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -92,12 +113,63 @@ public class FirewallRuleInfo extends AbstractModel{
     }
 
     /**
+     * Get 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。 
+     * @return CidrBlock 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+     * @param CidrBlock 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
+    }
+
+    /**
+     * Get 取值：ACCEPT，DROP。默认为 ACCEPT。 
+     * @return Action 取值：ACCEPT，DROP。默认为 ACCEPT。
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set 取值：ACCEPT，DROP。默认为 ACCEPT。
+     * @param Action 取值：ACCEPT，DROP。默认为 ACCEPT。
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
+    }
+
+    /**
+     * Get 防火墙规则描述。 
+     * @return FirewallRuleDescription 防火墙规则描述。
+     */
+    public String getFirewallRuleDescription() {
+        return this.FirewallRuleDescription;
+    }
+
+    /**
+     * Set 防火墙规则描述。
+     * @param FirewallRuleDescription 防火墙规则描述。
+     */
+    public void setFirewallRuleDescription(String FirewallRuleDescription) {
+        this.FirewallRuleDescription = FirewallRuleDescription;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+        this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamSimple(map, prefix + "FirewallRuleDescription", this.FirewallRuleDescription);
 
     }
 }

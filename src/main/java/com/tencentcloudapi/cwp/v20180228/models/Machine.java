@@ -40,7 +40,7 @@ public class Machine extends AbstractModel{
     * 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -173,6 +173,13 @@ public class Machine extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 是否有资产扫描接口，0无，1有
+    */
+    @SerializedName("HasAssetScan")
+    @Expose
+    private Long HasAssetScan;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -208,11 +215,11 @@ public class Machine extends AbstractModel{
      * Get 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li> 
+<li>SHUTDOWN: 已关机</li> 
      * @return MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
      */
     public String getMachineStatus() {
         return this.MachineStatus;
@@ -222,11 +229,11 @@ public class Machine extends AbstractModel{
      * Set 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
      * @param MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
@@ -533,6 +540,22 @@ public class Machine extends AbstractModel{
     }
 
     /**
+     * Get 是否有资产扫描接口，0无，1有 
+     * @return HasAssetScan 是否有资产扫描接口，0无，1有
+     */
+    public Long getHasAssetScan() {
+        return this.HasAssetScan;
+    }
+
+    /**
+     * Set 是否有资产扫描接口，0无，1有
+     * @param HasAssetScan 是否有资产扫描接口，0无，1有
+     */
+    public void setHasAssetScan(Long HasAssetScan) {
+        this.HasAssetScan = HasAssetScan;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -556,6 +579,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
         this.setParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
 
     }
 }

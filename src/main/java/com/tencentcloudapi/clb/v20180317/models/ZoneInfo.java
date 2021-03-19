@@ -47,6 +47,22 @@ public class ZoneInfo extends AbstractModel{
     private String ZoneName;
 
     /**
+    * 可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneRegion")
+    @Expose
+    private String ZoneRegion;
+
+    /**
+    * 可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalZone")
+    @Expose
+    private Boolean LocalZone;
+
+    /**
      * Get 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneId 可用区数值形式的唯一ID，如：100001
@@ -107,12 +123,54 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
+     * Get 可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneRegion 可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneRegion() {
+        return this.ZoneRegion;
+    }
+
+    /**
+     * Set 可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneRegion 可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneRegion(String ZoneRegion) {
+        this.ZoneRegion = ZoneRegion;
+    }
+
+    /**
+     * Get 可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalZone 可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLocalZone() {
+        return this.LocalZone;
+    }
+
+    /**
+     * Set 可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalZone 可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalZone(Boolean LocalZone) {
+        this.LocalZone = LocalZone;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
+        this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
 
     }
 }
