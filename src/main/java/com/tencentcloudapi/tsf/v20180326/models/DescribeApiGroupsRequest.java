@@ -79,6 +79,13 @@ public class DescribeApiGroupsRequest extends AbstractModel{
     private Long OrderType;
 
     /**
+    * 网关实体ID
+    */
+    @SerializedName("GatewayInstanceId")
+    @Expose
+    private String GatewayInstanceId;
+
+    /**
      * Get 搜索关键字 
      * @return SearchWord 搜索关键字
      */
@@ -207,6 +214,22 @@ public class DescribeApiGroupsRequest extends AbstractModel{
     }
 
     /**
+     * Get 网关实体ID 
+     * @return GatewayInstanceId 网关实体ID
+     */
+    public String getGatewayInstanceId() {
+        return this.GatewayInstanceId;
+    }
+
+    /**
+     * Set 网关实体ID
+     * @param GatewayInstanceId 网关实体ID
+     */
+    public void setGatewayInstanceId(String GatewayInstanceId) {
+        this.GatewayInstanceId = GatewayInstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class DescribeApiGroupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
 
     }
 }

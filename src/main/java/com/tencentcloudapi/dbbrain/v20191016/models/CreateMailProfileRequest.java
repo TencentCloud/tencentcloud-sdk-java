@@ -58,7 +58,7 @@ public class CreateMailProfileRequest extends AbstractModel{
     private String Product;
 
     /**
-    * 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
+    * 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
     */
     @SerializedName("BindInstanceIds")
     @Expose
@@ -145,16 +145,16 @@ public class CreateMailProfileRequest extends AbstractModel{
     }
 
     /**
-     * Get 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。 
-     * @return BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
+     * Get 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。 
+     * @return BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
      */
     public String [] getBindInstanceIds() {
         return this.BindInstanceIds;
     }
 
     /**
-     * Set 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
-     * @param BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
+     * Set 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
+     * @param BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
      */
     public void setBindInstanceIds(String [] BindInstanceIds) {
         this.BindInstanceIds = BindInstanceIds;

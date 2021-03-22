@@ -531,6 +531,26 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *使用视频编辑模板直接导出视频。
+     * @param req ExportVideoByTemplateRequest
+     * @return ExportVideoByTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportVideoByTemplateResponse ExportVideoByTemplate(ExportVideoByTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportVideoByTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportVideoByTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportVideoByTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
      * @param req ExportVideoByVideoSegmentationDataRequest
      * @return ExportVideoByVideoSegmentationDataResponse

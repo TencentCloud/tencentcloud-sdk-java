@@ -51,6 +51,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * CVM实例公网IP
+    */
+    @SerializedName("IpAddress")
+    @Expose
+    private String IpAddress;
+
+    /**
      * Get 服务器舰队ID 
      * @return FleetId 服务器舰队ID
      */
@@ -115,6 +122,22 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get CVM实例公网IP 
+     * @return IpAddress CVM实例公网IP
+     */
+    public String getIpAddress() {
+        return this.IpAddress;
+    }
+
+    /**
+     * Set CVM实例公网IP
+     * @param IpAddress CVM实例公网IP
+     */
+    public void setIpAddress(String IpAddress) {
+        this.IpAddress = IpAddress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "IpAddress", this.IpAddress);
 
     }
 }

@@ -83,6 +83,29 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     private WhiteboardPushBackupParam Backup;
 
     /**
+    * TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+    */
+    @SerializedName("PrivateMapKey")
+    @Expose
+    private String PrivateMapKey;
+
+    /**
+    * 白板推流视频帧率，取值范围[0, 30]，默认20fps
+    */
+    @SerializedName("VideoFPS")
+    @Expose
+    private Long VideoFPS;
+
+    /**
+    * 白板推流码率， 取值范围[0, 2000]，默认1200kbps。
+
+这里的码率设置是一个参考值，实际推流的时候使用的是动态码率，所以真实码率不会固定为指定值，会在指定值附近波动。
+    */
+    @SerializedName("VideoBitrate")
+    @Expose
+    private Long VideoBitrate;
+
+    /**
     * 在实时音视频云端录制模式选择为 `指定用户录制` 模式的时候是否自动录制白板推流。
 
 默认在实时音视频的云端录制模式选择为 `指定用户录制` 模式的情况下，不会自动进行白板推流录制，如果希望进行白板推流录制，请将此参数设置为true。
@@ -94,18 +117,58 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     private Boolean AutoRecord;
 
     /**
+    * 指定白板推流录制的RecordID，指定的RecordID会用于填充实时音视频云端录制完成后的回调消息中的 "userdefinerecordid" 字段内容，便于您更方便的识别录制回调，以及在点播媒体资源管理中查找相应的录制视频文件。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoRecord`字段取值如何，都将自动进行白板推流录制。
+
+默认RecordId生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：RecordId = 12345678_12345_push_user_1
+    */
+    @SerializedName("UserDefinedRecordId")
+    @Expose
+    private String UserDefinedRecordId;
+
+    /**
+    * 在实时音视频旁路推流模式选择为`指定用户旁路`模式的时候，是否自动旁路白板推流。
+
+默认在实时音视频的旁路推流模式选择为 `指定用户旁路` 模式的情况下，不会自动旁路白板推流，如果希望旁路白板推流，请将此参数设置为true。
+
+如果实时音视频的旁路推流模式选择为 `全局自动旁路` 模式，可忽略此参数。
+    */
+    @SerializedName("AutoPublish")
+    @Expose
+    private Boolean AutoPublish;
+
+    /**
+    * 指定实时音视频在旁路白板推流时的StreamID，设置之后，您就可以在腾讯云直播 CDN 上通过标准直播方案（FLV或HLS）播放该用户的音视频流。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoPublish`字段取值如何，都将自动旁路白板推流。
+
+默认StreamID生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID_main)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：StreamID = 12345678_12345_push_user_1_main
+    */
+    @SerializedName("UserDefinedStreamId")
+    @Expose
+    private String UserDefinedStreamId;
+
+    /**
     * 内部参数，不需要关注此参数
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
-
-    /**
-    * TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
-    */
-    @SerializedName("PrivateMapKey")
-    @Expose
-    private String PrivateMapKey;
 
     /**
      * Get 客户的SdkAppId 
@@ -252,6 +315,62 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     }
 
     /**
+     * Get TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。 
+     * @return PrivateMapKey TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+     */
+    public String getPrivateMapKey() {
+        return this.PrivateMapKey;
+    }
+
+    /**
+     * Set TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+     * @param PrivateMapKey TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+     */
+    public void setPrivateMapKey(String PrivateMapKey) {
+        this.PrivateMapKey = PrivateMapKey;
+    }
+
+    /**
+     * Get 白板推流视频帧率，取值范围[0, 30]，默认20fps 
+     * @return VideoFPS 白板推流视频帧率，取值范围[0, 30]，默认20fps
+     */
+    public Long getVideoFPS() {
+        return this.VideoFPS;
+    }
+
+    /**
+     * Set 白板推流视频帧率，取值范围[0, 30]，默认20fps
+     * @param VideoFPS 白板推流视频帧率，取值范围[0, 30]，默认20fps
+     */
+    public void setVideoFPS(Long VideoFPS) {
+        this.VideoFPS = VideoFPS;
+    }
+
+    /**
+     * Get 白板推流码率， 取值范围[0, 2000]，默认1200kbps。
+
+这里的码率设置是一个参考值，实际推流的时候使用的是动态码率，所以真实码率不会固定为指定值，会在指定值附近波动。 
+     * @return VideoBitrate 白板推流码率， 取值范围[0, 2000]，默认1200kbps。
+
+这里的码率设置是一个参考值，实际推流的时候使用的是动态码率，所以真实码率不会固定为指定值，会在指定值附近波动。
+     */
+    public Long getVideoBitrate() {
+        return this.VideoBitrate;
+    }
+
+    /**
+     * Set 白板推流码率， 取值范围[0, 2000]，默认1200kbps。
+
+这里的码率设置是一个参考值，实际推流的时候使用的是动态码率，所以真实码率不会固定为指定值，会在指定值附近波动。
+     * @param VideoBitrate 白板推流码率， 取值范围[0, 2000]，默认1200kbps。
+
+这里的码率设置是一个参考值，实际推流的时候使用的是动态码率，所以真实码率不会固定为指定值，会在指定值附近波动。
+     */
+    public void setVideoBitrate(Long VideoBitrate) {
+        this.VideoBitrate = VideoBitrate;
+    }
+
+    /**
      * Get 在实时音视频云端录制模式选择为 `指定用户录制` 模式的时候是否自动录制白板推流。
 
 默认在实时音视频的云端录制模式选择为 `指定用户录制` 模式的情况下，不会自动进行白板推流录制，如果希望进行白板推流录制，请将此参数设置为true。
@@ -284,6 +403,158 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     }
 
     /**
+     * Get 指定白板推流录制的RecordID，指定的RecordID会用于填充实时音视频云端录制完成后的回调消息中的 "userdefinerecordid" 字段内容，便于您更方便的识别录制回调，以及在点播媒体资源管理中查找相应的录制视频文件。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoRecord`字段取值如何，都将自动进行白板推流录制。
+
+默认RecordId生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：RecordId = 12345678_12345_push_user_1 
+     * @return UserDefinedRecordId 指定白板推流录制的RecordID，指定的RecordID会用于填充实时音视频云端录制完成后的回调消息中的 "userdefinerecordid" 字段内容，便于您更方便的识别录制回调，以及在点播媒体资源管理中查找相应的录制视频文件。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoRecord`字段取值如何，都将自动进行白板推流录制。
+
+默认RecordId生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：RecordId = 12345678_12345_push_user_1
+     */
+    public String getUserDefinedRecordId() {
+        return this.UserDefinedRecordId;
+    }
+
+    /**
+     * Set 指定白板推流录制的RecordID，指定的RecordID会用于填充实时音视频云端录制完成后的回调消息中的 "userdefinerecordid" 字段内容，便于您更方便的识别录制回调，以及在点播媒体资源管理中查找相应的录制视频文件。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoRecord`字段取值如何，都将自动进行白板推流录制。
+
+默认RecordId生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：RecordId = 12345678_12345_push_user_1
+     * @param UserDefinedRecordId 指定白板推流录制的RecordID，指定的RecordID会用于填充实时音视频云端录制完成后的回调消息中的 "userdefinerecordid" 字段内容，便于您更方便的识别录制回调，以及在点播媒体资源管理中查找相应的录制视频文件。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoRecord`字段取值如何，都将自动进行白板推流录制。
+
+默认RecordId生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：RecordId = 12345678_12345_push_user_1
+     */
+    public void setUserDefinedRecordId(String UserDefinedRecordId) {
+        this.UserDefinedRecordId = UserDefinedRecordId;
+    }
+
+    /**
+     * Get 在实时音视频旁路推流模式选择为`指定用户旁路`模式的时候，是否自动旁路白板推流。
+
+默认在实时音视频的旁路推流模式选择为 `指定用户旁路` 模式的情况下，不会自动旁路白板推流，如果希望旁路白板推流，请将此参数设置为true。
+
+如果实时音视频的旁路推流模式选择为 `全局自动旁路` 模式，可忽略此参数。 
+     * @return AutoPublish 在实时音视频旁路推流模式选择为`指定用户旁路`模式的时候，是否自动旁路白板推流。
+
+默认在实时音视频的旁路推流模式选择为 `指定用户旁路` 模式的情况下，不会自动旁路白板推流，如果希望旁路白板推流，请将此参数设置为true。
+
+如果实时音视频的旁路推流模式选择为 `全局自动旁路` 模式，可忽略此参数。
+     */
+    public Boolean getAutoPublish() {
+        return this.AutoPublish;
+    }
+
+    /**
+     * Set 在实时音视频旁路推流模式选择为`指定用户旁路`模式的时候，是否自动旁路白板推流。
+
+默认在实时音视频的旁路推流模式选择为 `指定用户旁路` 模式的情况下，不会自动旁路白板推流，如果希望旁路白板推流，请将此参数设置为true。
+
+如果实时音视频的旁路推流模式选择为 `全局自动旁路` 模式，可忽略此参数。
+     * @param AutoPublish 在实时音视频旁路推流模式选择为`指定用户旁路`模式的时候，是否自动旁路白板推流。
+
+默认在实时音视频的旁路推流模式选择为 `指定用户旁路` 模式的情况下，不会自动旁路白板推流，如果希望旁路白板推流，请将此参数设置为true。
+
+如果实时音视频的旁路推流模式选择为 `全局自动旁路` 模式，可忽略此参数。
+     */
+    public void setAutoPublish(Boolean AutoPublish) {
+        this.AutoPublish = AutoPublish;
+    }
+
+    /**
+     * Get 指定实时音视频在旁路白板推流时的StreamID，设置之后，您就可以在腾讯云直播 CDN 上通过标准直播方案（FLV或HLS）播放该用户的音视频流。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoPublish`字段取值如何，都将自动旁路白板推流。
+
+默认StreamID生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID_main)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：StreamID = 12345678_12345_push_user_1_main 
+     * @return UserDefinedStreamId 指定实时音视频在旁路白板推流时的StreamID，设置之后，您就可以在腾讯云直播 CDN 上通过标准直播方案（FLV或HLS）播放该用户的音视频流。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoPublish`字段取值如何，都将自动旁路白板推流。
+
+默认StreamID生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID_main)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：StreamID = 12345678_12345_push_user_1_main
+     */
+    public String getUserDefinedStreamId() {
+        return this.UserDefinedStreamId;
+    }
+
+    /**
+     * Set 指定实时音视频在旁路白板推流时的StreamID，设置之后，您就可以在腾讯云直播 CDN 上通过标准直播方案（FLV或HLS）播放该用户的音视频流。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoPublish`字段取值如何，都将自动旁路白板推流。
+
+默认StreamID生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID_main)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：StreamID = 12345678_12345_push_user_1_main
+     * @param UserDefinedStreamId 指定实时音视频在旁路白板推流时的StreamID，设置之后，您就可以在腾讯云直播 CDN 上通过标准直播方案（FLV或HLS）播放该用户的音视频流。
+
+限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符。
+
+此字段设置后，不管`AutoPublish`字段取值如何，都将自动旁路白板推流。
+
+默认StreamID生成规则如下：
+urlencode(SdkAppID_RoomID_PushUserID_main)
+
+例如：
+SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
+那么：StreamID = 12345678_12345_push_user_1_main
+     */
+    public void setUserDefinedStreamId(String UserDefinedStreamId) {
+        this.UserDefinedStreamId = UserDefinedStreamId;
+    }
+
+    /**
      * Get 内部参数，不需要关注此参数 
      * @return ExtraData 内部参数，不需要关注此参数
      */
@@ -300,22 +571,6 @@ public class StartWhiteboardPushRequest extends AbstractModel{
     }
 
     /**
-     * Get TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。 
-     * @return PrivateMapKey TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
-     */
-    public String getPrivateMapKey() {
-        return this.PrivateMapKey;
-    }
-
-    /**
-     * Set TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
-     * @param PrivateMapKey TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
-     */
-    public void setPrivateMapKey(String PrivateMapKey) {
-        this.PrivateMapKey = PrivateMapKey;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -327,9 +582,14 @@ public class StartWhiteboardPushRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoStopTimeout", this.AutoStopTimeout);
         this.setParamSimple(map, prefix + "AutoManageBackup", this.AutoManageBackup);
         this.setParamObj(map, prefix + "Backup.", this.Backup);
-        this.setParamSimple(map, prefix + "AutoRecord", this.AutoRecord);
-        this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
         this.setParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
+        this.setParamSimple(map, prefix + "VideoFPS", this.VideoFPS);
+        this.setParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
+        this.setParamSimple(map, prefix + "AutoRecord", this.AutoRecord);
+        this.setParamSimple(map, prefix + "UserDefinedRecordId", this.UserDefinedRecordId);
+        this.setParamSimple(map, prefix + "AutoPublish", this.AutoPublish);
+        this.setParamSimple(map, prefix + "UserDefinedStreamId", this.UserDefinedStreamId);
+        this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
 
     }
 }

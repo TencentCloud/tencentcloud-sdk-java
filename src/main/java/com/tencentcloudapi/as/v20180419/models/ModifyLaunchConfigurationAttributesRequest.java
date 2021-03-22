@@ -115,6 +115,15 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
+    * 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+    */
+    @SerializedName("DiskTypePolicy")
+    @Expose
+    private String DiskTypePolicy;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -351,6 +360,30 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。 
+     * @return DiskTypePolicy 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+     */
+    public String getDiskTypePolicy() {
+        return this.DiskTypePolicy;
+    }
+
+    /**
+     * Set 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+     * @param DiskTypePolicy 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+     */
+    public void setDiskTypePolicy(String DiskTypePolicy) {
+        this.DiskTypePolicy = DiskTypePolicy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -365,6 +398,7 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+        this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
 
     }
 }

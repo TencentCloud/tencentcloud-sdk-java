@@ -58,6 +58,13 @@ public class CreateApiGroupRequest extends AbstractModel{
     private String GroupType;
 
     /**
+    * 网关实体ID
+    */
+    @SerializedName("GatewayInstanceId")
+    @Expose
+    private String GatewayInstanceId;
+
+    /**
      * Get 分组名称, 不能包含中文 
      * @return GroupName 分组名称, 不能包含中文
      */
@@ -138,6 +145,22 @@ public class CreateApiGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 网关实体ID 
+     * @return GatewayInstanceId 网关实体ID
+     */
+    public String getGatewayInstanceId() {
+        return this.GatewayInstanceId;
+    }
+
+    /**
+     * Set 网关实体ID
+     * @param GatewayInstanceId 网关实体ID
+     */
+    public void setGatewayInstanceId(String GatewayInstanceId) {
+        this.GatewayInstanceId = GatewayInstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateApiGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
 
     }
 }

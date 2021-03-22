@@ -519,6 +519,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建单元化规则
+     * @param req CreateUnitRuleRequest
+     * @return CreateUnitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUnitRuleResponse CreateUnitRule(CreateUnitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUnitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUnitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUnitRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除Api分组
      * @param req DeleteApiGroupRequest
      * @return DeleteApiGroupResponse
@@ -812,6 +832,46 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除单元化命名空间
+     * @param req DeleteUnitNamespacesRequest
+     * @return DeleteUnitNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUnitNamespacesResponse DeleteUnitNamespaces(DeleteUnitNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUnitNamespacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUnitNamespacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUnitNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除单元化规则
+     * @param req DeleteUnitRuleRequest
+     * @return DeleteUnitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUnitRuleResponse DeleteUnitRule(DeleteUnitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUnitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUnitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUnitRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1273,6 +1333,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeDownloadInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDownloadInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询生效的单元化规则
+     * @param req DescribeEnabledUnitRuleRequest
+     * @return DescribeEnabledUnitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(DescribeEnabledUnitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnabledUnitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnabledUnitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnabledUnitRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2001,6 +2081,66 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询单元化命名空间列表
+     * @param req DescribeUnitNamespacesRequest
+     * @return DescribeUnitNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnitNamespacesResponse DescribeUnitNamespaces(DescribeUnitNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnitNamespacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnitNamespacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnitNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询单元化规则详情
+     * @param req DescribeUnitRuleRequest
+     * @return DescribeUnitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnitRuleResponse DescribeUnitRule(DescribeUnitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnitRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询单元化规则列表
+     * @param req DescribeUnitRulesRequest
+     * @return DescribeUnitRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnitRulesResponse DescribeUnitRules(DescribeUnitRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnitRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnitRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnitRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
      * @param req DescribeUploadInfoRequest
@@ -2014,6 +2154,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUploadInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询可用于被导入的命名空间列表
+     * @param req DescribeUsableUnitNamespacesRequest
+     * @return DescribeUsableUnitNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespaces(DescribeUsableUnitNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUsableUnitNamespacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUsableUnitNamespacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUsableUnitNamespaces");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2054,6 +2214,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DisableTaskFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableTaskFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *禁用单元化路由
+     * @param req DisableUnitRouteRequest
+     * @return DisableUnitRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableUnitRouteResponse DisableUnitRoute(DisableUnitRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableUnitRouteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableUnitRouteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableUnitRoute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *禁用单元化规则
+     * @param req DisableUnitRuleRequest
+     * @return DisableUnitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableUnitRuleResponse DisableUnitRule(DisableUnitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableUnitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableUnitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableUnitRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2114,6 +2314,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<EnableTaskFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableTaskFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用单元化路由
+     * @param req EnableUnitRouteRequest
+     * @return EnableUnitRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableUnitRouteResponse EnableUnitRoute(EnableUnitRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableUnitRouteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableUnitRouteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableUnitRoute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用单元化规则
+     * @param req EnableUnitRuleRequest
+     * @return EnableUnitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableUnitRuleResponse EnableUnitRule(EnableUnitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableUnitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableUnitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableUnitRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2823,6 +3063,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *批量更新API超时
+     * @param req UpdateApiTimeoutsRequest
+     * @return UpdateApiTimeoutsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApiTimeoutsResponse UpdateApiTimeouts(UpdateApiTimeoutsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateApiTimeoutsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateApiTimeoutsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateApiTimeouts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新API
      * @param req UpdateGatewayApiRequest
      * @return UpdateGatewayApiResponse
@@ -2875,6 +3135,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<UpdateRepositoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateRepository");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新单元化规则
+     * @param req UpdateUnitRuleRequest
+     * @return UpdateUnitRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUnitRuleResponse UpdateUnitRule(UpdateUnitRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateUnitRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateUnitRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateUnitRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

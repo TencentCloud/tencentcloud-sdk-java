@@ -279,6 +279,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建实例公网访问白名单策略
+     * @param req CreateSecurityPolicyRequest
+     * @return CreateSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityPolicyResponse CreateSecurityPolicy(CreateSecurityPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSecurityPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSecurityPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建个人用户
      * @param req CreateUserPersonalRequest
      * @return CreateUserPersonalResponse
@@ -551,6 +571,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteRepositoryPersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRepositoryPersonal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除实例公网访问白名单策略
+     * @param req DeleteSecurityPolicyRequest
+     * @return DeleteSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityPolicyResponse DeleteSecurityPolicy(DeleteSecurityPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSecurityPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSecurityPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSecurityPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1039,6 +1079,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询实例公网访问白名单策略
+     * @param req DescribeSecurityPoliciesRequest
+     * @return DescribeSecurityPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityPoliciesResponse DescribeSecurityPolicies(DescribeSecurityPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSecurityPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询个人用户配额
      * @param req DescribeUserQuotaPersonalRequest
      * @return DescribeUserQuotaPersonalResponse
@@ -1291,6 +1351,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRepositoryInfoPersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRepositoryInfoPersonal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新实例公网访问白名单
+     * @param req ModifySecurityPolicyRequest
+     * @return ModifySecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityPolicyResponse ModifySecurityPolicy(ModifySecurityPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySecurityPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySecurityPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

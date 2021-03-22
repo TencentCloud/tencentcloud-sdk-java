@@ -37,7 +37,9 @@ public class CreateCloudStorageRequest extends AbstractModel{
     private String DeviceName;
 
     /**
-    * 云存套餐ID
+    * 云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
     */
     @SerializedName("PackageId")
     @Expose
@@ -76,16 +78,24 @@ public class CreateCloudStorageRequest extends AbstractModel{
     }
 
     /**
-     * Get 云存套餐ID 
-     * @return PackageId 云存套餐ID
+     * Get 云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。 
+     * @return PackageId 云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set 云存套餐ID
-     * @param PackageId 云存套餐ID
+     * Set 云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
+     * @param PackageId 云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
