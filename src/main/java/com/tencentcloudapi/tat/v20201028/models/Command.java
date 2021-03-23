@@ -86,6 +86,20 @@ public class Command extends AbstractModel{
     private String UpdatedTime;
 
     /**
+    * 是否启用自定义参数功能。
+    */
+    @SerializedName("EnableParameter")
+    @Expose
+    private Boolean EnableParameter;
+
+    /**
+    * 自定义参数的默认取值。
+    */
+    @SerializedName("DefaultParameters")
+    @Expose
+    private String DefaultParameters;
+
+    /**
      * Get 命令ID。 
      * @return CommandId 命令ID。
      */
@@ -230,6 +244,38 @@ public class Command extends AbstractModel{
     }
 
     /**
+     * Get 是否启用自定义参数功能。 
+     * @return EnableParameter 是否启用自定义参数功能。
+     */
+    public Boolean getEnableParameter() {
+        return this.EnableParameter;
+    }
+
+    /**
+     * Set 是否启用自定义参数功能。
+     * @param EnableParameter 是否启用自定义参数功能。
+     */
+    public void setEnableParameter(Boolean EnableParameter) {
+        this.EnableParameter = EnableParameter;
+    }
+
+    /**
+     * Get 自定义参数的默认取值。 
+     * @return DefaultParameters 自定义参数的默认取值。
+     */
+    public String getDefaultParameters() {
+        return this.DefaultParameters;
+    }
+
+    /**
+     * Set 自定义参数的默认取值。
+     * @param DefaultParameters 自定义参数的默认取值。
+     */
+    public void setDefaultParameters(String DefaultParameters) {
+        this.DefaultParameters = DefaultParameters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +288,8 @@ public class Command extends AbstractModel{
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
+        this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
 
     }
 }

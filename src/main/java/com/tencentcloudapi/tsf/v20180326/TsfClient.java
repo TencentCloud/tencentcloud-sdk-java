@@ -99,6 +99,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *插件与网关分组/API批量绑定
+     * @param req BindPluginRequest
+     * @return BindPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindPluginResponse BindPlugin(BindPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindPlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启用或禁用API
      * @param req ChangeApiUsableStatusRequest
      * @return ChangeApiUsableStatusResponse
@@ -1541,6 +1561,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询某个插件下绑定或未绑定的API分组
+     * @param req DescribeGroupsWithPluginRequest
+     * @return DescribeGroupsWithPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupsWithPluginResponse DescribeGroupsWithPlugin(DescribeGroupsWithPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupsWithPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupsWithPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupsWithPlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *镜像仓库列表 
      * @param req DescribeImageRepositoryRequest
      * @return DescribeImageRepositoryResponse
@@ -1733,6 +1773,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribePkgsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePkgs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *分页查询网关分组/API绑定（或未绑定）的插件列表
+     * @param req DescribePluginInstancesRequest
+     * @return DescribePluginInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePluginInstancesResponse DescribePluginInstances(DescribePluginInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePluginInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePluginInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePluginInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

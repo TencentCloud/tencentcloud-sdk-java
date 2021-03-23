@@ -84,6 +84,37 @@ public class RunCommandRequest extends AbstractModel{
     private Boolean SaveCommand;
 
     /**
+    * 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+    */
+    @SerializedName("EnableParameter")
+    @Expose
+    private Boolean EnableParameter;
+
+    /**
+    * 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+    */
+    @SerializedName("DefaultParameters")
+    @Expose
+    private String DefaultParameters;
+
+    /**
+    * Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+    */
+    @SerializedName("Parameters")
+    @Expose
+    private String Parameters;
+
+    /**
      * Get Base64编码后的命令内容，长度不可超过64KB。 
      * @return Content Base64编码后的命令内容，长度不可超过64KB。
      */
@@ -232,6 +263,94 @@ public class RunCommandRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。 
+     * @return EnableParameter 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+     */
+    public Boolean getEnableParameter() {
+        return this.EnableParameter;
+    }
+
+    /**
+     * Set 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+     * @param EnableParameter 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+     */
+    public void setEnableParameter(Boolean EnableParameter) {
+        this.EnableParameter = EnableParameter;
+    }
+
+    /**
+     * Get 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
+     * @return DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public String getDefaultParameters() {
+        return this.DefaultParameters;
+    }
+
+    /**
+     * Set 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * @param DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public void setDefaultParameters(String DefaultParameters) {
+        this.DefaultParameters = DefaultParameters;
+    }
+
+    /**
+     * Get Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
+     * @return Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public String getParameters() {
+        return this.Parameters;
+    }
+
+    /**
+     * Set Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * @param Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public void setParameters(String Parameters) {
+        this.Parameters = Parameters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -243,6 +362,9 @@ public class RunCommandRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "SaveCommand", this.SaveCommand);
+        this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
+        this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamSimple(map, prefix + "Parameters", this.Parameters);
 
     }
 }

@@ -72,6 +72,18 @@ public class ModifyCommandRequest extends AbstractModel{
     private Long Timeout;
 
     /**
+    * 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+采取整体全覆盖式修改，即修改时必须提供所有新默认值。
+必须 Command 的 EnableParameter 为 true 时，才允许修改这个值。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+    */
+    @SerializedName("DefaultParameters")
+    @Expose
+    private String DefaultParameters;
+
+    /**
      * Get 命令ID。 
      * @return CommandId 命令ID。
      */
@@ -184,6 +196,42 @@ public class ModifyCommandRequest extends AbstractModel{
     }
 
     /**
+     * Get 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+采取整体全覆盖式修改，即修改时必须提供所有新默认值。
+必须 Command 的 EnableParameter 为 true 时，才允许修改这个值。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
+     * @return DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+采取整体全覆盖式修改，即修改时必须提供所有新默认值。
+必须 Command 的 EnableParameter 为 true 时，才允许修改这个值。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public String getDefaultParameters() {
+        return this.DefaultParameters;
+    }
+
+    /**
+     * Set 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+采取整体全覆盖式修改，即修改时必须提供所有新默认值。
+必须 Command 的 EnableParameter 为 true 时，才允许修改这个值。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * @param DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+采取整体全覆盖式修改，即修改时必须提供所有新默认值。
+必须 Command 的 EnableParameter 为 true 时，才允许修改这个值。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public void setDefaultParameters(String DefaultParameters) {
+        this.DefaultParameters = DefaultParameters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +242,7 @@ public class ModifyCommandRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CommandType", this.CommandType);
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
 
     }
 }

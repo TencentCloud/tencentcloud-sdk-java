@@ -98,6 +98,14 @@ public class TargetGroupBackend extends AbstractModel{
     private String EniId;
 
     /**
+    * 后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
      * Get 目标组ID 
      * @return TargetGroupId 目标组ID
      */
@@ -278,6 +286,26 @@ public class TargetGroupBackend extends AbstractModel{
     }
 
     /**
+     * Get 后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneId 后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneId 后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -291,6 +319,7 @@ public class TargetGroupBackend extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
         this.setParamSimple(map, prefix + "EniId", this.EniId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

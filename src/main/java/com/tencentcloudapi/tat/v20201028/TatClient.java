@@ -225,6 +225,26 @@ public class TatClient extends AbstractClient{
     }
 
     /**
+     *此接口用于预览自定义参数替换后的命令内容。不会触发真实执行。
+     * @param req PreviewReplacedCommandContentRequest
+     * @return PreviewReplacedCommandContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public PreviewReplacedCommandContentResponse PreviewReplacedCommandContent(PreviewReplacedCommandContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PreviewReplacedCommandContentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PreviewReplacedCommandContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PreviewReplacedCommandContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *执行命令，调用成功返回执行活动ID（inv-xxxxxxxx），每个执行活动内部有一个或多个执行任务（invt-xxxxxxxx），每个执行任务代表命令在一台 CVM 或一台 Lighthouse 上的执行记录。
 
 * 如果指定实例未安装 agent，或 agent 不在线，返回失败

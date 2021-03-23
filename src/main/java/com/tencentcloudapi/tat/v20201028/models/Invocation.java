@@ -92,6 +92,20 @@ public class Invocation extends AbstractModel{
     private String UpdatedTime;
 
     /**
+    * 自定义参数取值。
+    */
+    @SerializedName("Parameters")
+    @Expose
+    private String Parameters;
+
+    /**
+    * 自定义参数的默认取值。
+    */
+    @SerializedName("DefaultParameters")
+    @Expose
+    private String DefaultParameters;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -260,6 +274,38 @@ public class Invocation extends AbstractModel{
     }
 
     /**
+     * Get 自定义参数取值。 
+     * @return Parameters 自定义参数取值。
+     */
+    public String getParameters() {
+        return this.Parameters;
+    }
+
+    /**
+     * Set 自定义参数取值。
+     * @param Parameters 自定义参数取值。
+     */
+    public void setParameters(String Parameters) {
+        this.Parameters = Parameters;
+    }
+
+    /**
+     * Get 自定义参数的默认取值。 
+     * @return DefaultParameters 自定义参数的默认取值。
+     */
+    public String getDefaultParameters() {
+        return this.DefaultParameters;
+    }
+
+    /**
+     * Set 自定义参数的默认取值。
+     * @param DefaultParameters 自定义参数的默认取值。
+     */
+    public void setDefaultParameters(String DefaultParameters) {
+        this.DefaultParameters = DefaultParameters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -272,6 +318,8 @@ public class Invocation extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+        this.setParamSimple(map, prefix + "Parameters", this.Parameters);
+        this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
 
     }
 }

@@ -44,11 +44,27 @@ public class UpdateRecordPlanRequest extends AbstractModel{
     private String TimeTemplateId;
 
     /**
+    * 触发录制的事件 1：全部
+    */
+    @SerializedName("EventId")
+    @Expose
+    private Long EventId;
+
+    /**
     * 录制设备列表
     */
     @SerializedName("Devices")
     @Expose
     private DeviceItem [] Devices;
+
+    /**
+    * 是否更新绑定此录制计划的设备列表
+0 - 不更新
+1 - 更新，如果Devices参数为空则清空设备列表，Devices不为空则全量更新设备列表
+    */
+    @SerializedName("IsModifyDevices")
+    @Expose
+    private Long IsModifyDevices;
 
     /**
      * Get 录制计划ID 
@@ -99,6 +115,22 @@ public class UpdateRecordPlanRequest extends AbstractModel{
     }
 
     /**
+     * Get 触发录制的事件 1：全部 
+     * @return EventId 触发录制的事件 1：全部
+     */
+    public Long getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 触发录制的事件 1：全部
+     * @param EventId 触发录制的事件 1：全部
+     */
+    public void setEventId(Long EventId) {
+        this.EventId = EventId;
+    }
+
+    /**
      * Get 录制设备列表 
      * @return Devices 录制设备列表
      */
@@ -115,13 +147,39 @@ public class UpdateRecordPlanRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否更新绑定此录制计划的设备列表
+0 - 不更新
+1 - 更新，如果Devices参数为空则清空设备列表，Devices不为空则全量更新设备列表 
+     * @return IsModifyDevices 是否更新绑定此录制计划的设备列表
+0 - 不更新
+1 - 更新，如果Devices参数为空则清空设备列表，Devices不为空则全量更新设备列表
+     */
+    public Long getIsModifyDevices() {
+        return this.IsModifyDevices;
+    }
+
+    /**
+     * Set 是否更新绑定此录制计划的设备列表
+0 - 不更新
+1 - 更新，如果Devices参数为空则清空设备列表，Devices不为空则全量更新设备列表
+     * @param IsModifyDevices 是否更新绑定此录制计划的设备列表
+0 - 不更新
+1 - 更新，如果Devices参数为空则清空设备列表，Devices不为空则全量更新设备列表
+     */
+    public void setIsModifyDevices(Long IsModifyDevices) {
+        this.IsModifyDevices = IsModifyDevices;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "TimeTemplateId", this.TimeTemplateId);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
+        this.setParamSimple(map, prefix + "IsModifyDevices", this.IsModifyDevices);
 
     }
 }

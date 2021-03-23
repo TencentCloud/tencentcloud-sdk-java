@@ -37,6 +37,13 @@ public class CreateRecordPlanRequest extends AbstractModel{
     private String TimeTemplateId;
 
     /**
+    * 触发录制的事件类别 1:全部
+    */
+    @SerializedName("EventId")
+    @Expose
+    private Long EventId;
+
+    /**
     * 该录制计划绑定的设备列表
     */
     @SerializedName("Devices")
@@ -76,6 +83,22 @@ public class CreateRecordPlanRequest extends AbstractModel{
     }
 
     /**
+     * Get 触发录制的事件类别 1:全部 
+     * @return EventId 触发录制的事件类别 1:全部
+     */
+    public Long getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 触发录制的事件类别 1:全部
+     * @param EventId 触发录制的事件类别 1:全部
+     */
+    public void setEventId(Long EventId) {
+        this.EventId = EventId;
+    }
+
+    /**
      * Get 该录制计划绑定的设备列表 
      * @return Devices 该录制计划绑定的设备列表
      */
@@ -97,6 +120,7 @@ public class CreateRecordPlanRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "TimeTemplateId", this.TimeTemplateId);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
 
     }

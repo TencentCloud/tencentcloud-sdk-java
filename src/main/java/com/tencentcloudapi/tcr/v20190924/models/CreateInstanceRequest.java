@@ -44,7 +44,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private TagSpecification TagSpecification;
 
     /**
-    * 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+    * 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
     */
     @SerializedName("RegistryChargeType")
     @Expose
@@ -99,16 +99,16 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费 
-     * @return RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+     * Get 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费 
+     * @return RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
      */
     public Long getRegistryChargeType() {
         return this.RegistryChargeType;
     }
 
     /**
-     * Set 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
-     * @param RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+     * Set 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+     * @param RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
      */
     public void setRegistryChargeType(Long RegistryChargeType) {
         this.RegistryChargeType = RegistryChargeType;
