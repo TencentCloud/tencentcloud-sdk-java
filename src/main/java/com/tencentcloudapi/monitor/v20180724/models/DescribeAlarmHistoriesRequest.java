@@ -51,14 +51,14 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 起始时间，默认一天前的时间戳
+    * 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间，默认当前时间戳
+    * 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
     */
     @SerializedName("EndTime")
     @Expose
@@ -213,32 +213,32 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 起始时间，默认一天前的时间戳 
-     * @return StartTime 起始时间，默认一天前的时间戳
+     * Get 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。 
+     * @return StartTime 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间，默认一天前的时间戳
-     * @param StartTime 起始时间，默认一天前的时间戳
+     * Set 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
+     * @param StartTime 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，默认当前时间戳 
-     * @return EndTime 结束时间，默认当前时间戳
+     * Get 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。 
+     * @return EndTime 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，默认当前时间戳
-     * @param EndTime 结束时间，默认当前时间戳
+     * Set 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
+     * @param EndTime 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

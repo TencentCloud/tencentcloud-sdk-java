@@ -49,7 +49,7 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
     private String ExportDestination;
 
     /**
-    * 在线编辑轨道数据。
+    * 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
     */
     @SerializedName("TrackData")
     @Expose
@@ -145,16 +145,16 @@ public class ExportVideoByEditorTrackDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 在线编辑轨道数据。 
-     * @return TrackData 在线编辑轨道数据。
+     * Get 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。 
+     * @return TrackData 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
      */
     public String getTrackData() {
         return this.TrackData;
     }
 
     /**
-     * Set 在线编辑轨道数据。
-     * @param TrackData 在线编辑轨道数据。
+     * Set 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
+     * @param TrackData 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
      */
     public void setTrackData(String TrackData) {
         this.TrackData = TrackData;

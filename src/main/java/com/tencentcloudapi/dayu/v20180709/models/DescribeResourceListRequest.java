@@ -58,7 +58,7 @@ public class DescribeResourceListRequest extends AbstractModel{
     private String Name;
 
     /**
-    * IP搜索列表，可选，当不为空时表示安装IP搜索资源；
+    * IP搜索列表，可选，当不为空时表示按照IP搜索资源；
     */
     @SerializedName("IpList")
     @Expose
@@ -194,16 +194,16 @@ public class DescribeResourceListRequest extends AbstractModel{
     }
 
     /**
-     * Get IP搜索列表，可选，当不为空时表示安装IP搜索资源； 
-     * @return IpList IP搜索列表，可选，当不为空时表示安装IP搜索资源；
+     * Get IP搜索列表，可选，当不为空时表示按照IP搜索资源； 
+     * @return IpList IP搜索列表，可选，当不为空时表示按照IP搜索资源；
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set IP搜索列表，可选，当不为空时表示安装IP搜索资源；
-     * @param IpList IP搜索列表，可选，当不为空时表示安装IP搜索资源；
+     * Set IP搜索列表，可选，当不为空时表示按照IP搜索资源；
+     * @param IpList IP搜索列表，可选，当不为空时表示按照IP搜索资源；
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;

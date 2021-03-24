@@ -51,6 +51,13 @@ public class RealServerBindSetReq extends AbstractModel{
     private Long RealServerWeight;
 
     /**
+    * 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+    */
+    @SerializedName("RealServerFailoverRole")
+    @Expose
+    private String RealServerFailoverRole;
+
+    /**
      * Get 源站id 
      * @return RealServerId 源站id
      */
@@ -115,6 +122,22 @@ public class RealServerBindSetReq extends AbstractModel{
     }
 
     /**
+     * Get 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器 
+     * @return RealServerFailoverRole 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+     */
+    public String getRealServerFailoverRole() {
+        return this.RealServerFailoverRole;
+    }
+
+    /**
+     * Set 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+     * @param RealServerFailoverRole 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+     */
+    public void setRealServerFailoverRole(String RealServerFailoverRole) {
+        this.RealServerFailoverRole = RealServerFailoverRole;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class RealServerBindSetReq extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
         this.setParamSimple(map, prefix + "RealServerIP", this.RealServerIP);
         this.setParamSimple(map, prefix + "RealServerWeight", this.RealServerWeight);
+        this.setParamSimple(map, prefix + "RealServerFailoverRole", this.RealServerFailoverRole);
 
     }
 }

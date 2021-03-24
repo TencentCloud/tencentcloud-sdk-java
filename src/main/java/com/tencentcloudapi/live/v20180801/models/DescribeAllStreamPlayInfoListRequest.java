@@ -30,6 +30,13 @@ public class DescribeAllStreamPlayInfoListRequest extends AbstractModel{
     private String QueryTime;
 
     /**
+    * 播放域名列表，若不填，表示总体数据。
+    */
+    @SerializedName("PlayDomains")
+    @Expose
+    private String [] PlayDomains;
+
+    /**
      * Get 查询时间点，精确到分钟粒度，支持最近1个月的数据查询，数据延迟为5分钟左右，如果要查询实时的数据，建议传递5分钟前的时间点，格式为yyyy-mm-dd HH:MM:00。（只精确至分钟，秒数填00）。 
      * @return QueryTime 查询时间点，精确到分钟粒度，支持最近1个月的数据查询，数据延迟为5分钟左右，如果要查询实时的数据，建议传递5分钟前的时间点，格式为yyyy-mm-dd HH:MM:00。（只精确至分钟，秒数填00）。
      */
@@ -46,10 +53,27 @@ public class DescribeAllStreamPlayInfoListRequest extends AbstractModel{
     }
 
     /**
+     * Get 播放域名列表，若不填，表示总体数据。 
+     * @return PlayDomains 播放域名列表，若不填，表示总体数据。
+     */
+    public String [] getPlayDomains() {
+        return this.PlayDomains;
+    }
+
+    /**
+     * Set 播放域名列表，若不填，表示总体数据。
+     * @param PlayDomains 播放域名列表，若不填，表示总体数据。
+     */
+    public void setPlayDomains(String [] PlayDomains) {
+        this.PlayDomains = PlayDomains;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "QueryTime", this.QueryTime);
+        this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
 
     }
 }

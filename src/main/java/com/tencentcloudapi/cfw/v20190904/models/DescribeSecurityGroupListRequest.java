@@ -44,21 +44,21 @@ public class DescribeSecurityGroupListRequest extends AbstractModel{
     private String SearchValue;
 
     /**
-    * 每页条数
+    * 每页条数，默认为10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移值
+    * 偏移值，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * '': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+    * 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
     */
     @SerializedName("Status")
     @Expose
@@ -120,48 +120,48 @@ public class DescribeSecurityGroupListRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页条数 
-     * @return Limit 每页条数
+     * Get 每页条数，默认为10 
+     * @return Limit 每页条数，默认为10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数
-     * @param Limit 每页条数
+     * Set 每页条数，默认为10
+     * @param Limit 每页条数，默认为10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移值 
-     * @return Offset 偏移值
+     * Get 偏移值，默认为0 
+     * @return Offset 偏移值，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移值
-     * @param Offset 偏移值
+     * Set 偏移值，默认为0
+     * @param Offset 偏移值，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get '': 全部，'0'：筛选停用规则，'1'：筛选启用规则 
-     * @return Status '': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+     * Get 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则 
+     * @return Status 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set '': 全部，'0'：筛选停用规则，'1'：筛选启用规则
-     * @param Status '': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+     * Set 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+     * @param Status 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
      */
     public void setStatus(String Status) {
         this.Status = Status;

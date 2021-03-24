@@ -122,6 +122,7 @@ public class Bundle extends AbstractModel{
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
     */
     @SerializedName("BundleDisplayLabel")
     @Expose
@@ -355,11 +356,13 @@ public class Bundle extends AbstractModel{
      * Get 套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,
-"NORMAL": 普通套餐 
+"NORMAL": 普通套餐
+"CAREFREE": 无忧套餐 
      * @return BundleDisplayLabel 套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
      */
     public String getBundleDisplayLabel() {
         return this.BundleDisplayLabel;
@@ -370,10 +373,12 @@ public class Bundle extends AbstractModel{
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
      * @param BundleDisplayLabel 套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
      */
     public void setBundleDisplayLabel(String BundleDisplayLabel) {
         this.BundleDisplayLabel = BundleDisplayLabel;

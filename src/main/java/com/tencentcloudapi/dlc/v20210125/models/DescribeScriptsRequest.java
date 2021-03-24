@@ -37,7 +37,7 @@ public class DescribeScriptsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 按字段爱旭，支持如下字段类型，update-time
+    * 按字段排序，支持如下字段类型，update-time
     */
     @SerializedName("SortBy")
     @Expose
@@ -92,16 +92,16 @@ script-name-keyword - String - （过滤条件）数据表名称,形如：script
     }
 
     /**
-     * Get 按字段爱旭，支持如下字段类型，update-time 
-     * @return SortBy 按字段爱旭，支持如下字段类型，update-time
+     * Get 按字段排序，支持如下字段类型，update-time 
+     * @return SortBy 按字段排序，支持如下字段类型，update-time
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 按字段爱旭，支持如下字段类型，update-time
-     * @param SortBy 按字段爱旭，支持如下字段类型，update-time
+     * Set 按字段排序，支持如下字段类型，update-time
+     * @param SortBy 按字段排序，支持如下字段类型，update-time
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

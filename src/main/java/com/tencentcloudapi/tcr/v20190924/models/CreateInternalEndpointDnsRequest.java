@@ -44,8 +44,9 @@ public class CreateInternalEndpointDnsRequest extends AbstractModel{
     private String EniLBIp;
 
     /**
-    * true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+    * true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
     */
     @SerializedName("UsePublicDomain")
     @Expose
@@ -100,20 +101,24 @@ false: use instancename+"-vpc" as subdomain
     }
 
     /**
-     * Get true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain 
-     * @return UsePublicDomain true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+     * Get true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名 
+     * @return UsePublicDomain true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
      */
     public Boolean getUsePublicDomain() {
         return this.UsePublicDomain;
     }
 
     /**
-     * Set true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
-     * @param UsePublicDomain true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+     * Set true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
+     * @param UsePublicDomain true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
      */
     public void setUsePublicDomain(Boolean UsePublicDomain) {
         this.UsePublicDomain = UsePublicDomain;

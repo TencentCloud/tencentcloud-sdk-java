@@ -959,6 +959,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *重置云存服务
+     * @param req ResetCloudStorageRequest
+     * @return ResetCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetCloudStorageResponse ResetCloudStorage(ResetCloudStorageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetCloudStorageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetCloudStorageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetCloudStorage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于重试设备升级任务
      * @param req RetryDeviceFirmwareTaskRequest
      * @return RetryDeviceFirmwareTaskResponse
@@ -991,6 +1011,26 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetForwardAuthResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetForwardAuth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *转移云存服务
+     * @param req TransferCloudStorageRequest
+     * @return TransferCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferCloudStorageResponse TransferCloudStorage(TransferCloudStorageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TransferCloudStorageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TransferCloudStorageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TransferCloudStorage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

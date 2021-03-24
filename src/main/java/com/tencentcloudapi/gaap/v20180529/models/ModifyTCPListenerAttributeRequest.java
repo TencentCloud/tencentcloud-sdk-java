@@ -79,6 +79,13 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     private Long HealthCheck;
 
     /**
+    * 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -207,6 +214,22 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启 
+     * @return FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     * @param FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
         this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
         this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
 
     }
 }

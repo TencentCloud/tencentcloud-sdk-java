@@ -44,7 +44,7 @@ public class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel{
     private String EdgeId;
 
     /**
-    * NAT地域
+    * NAT地域, 腾讯云地域的英文简写
     */
     @SerializedName("Area")
     @Expose
@@ -99,16 +99,16 @@ public class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get NAT地域 
-     * @return Area NAT地域
+     * Get NAT地域, 腾讯云地域的英文简写 
+     * @return Area NAT地域, 腾讯云地域的英文简写
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set NAT地域
-     * @param Area NAT地域
+     * Set NAT地域, 腾讯云地域的英文简写
+     * @param Area NAT地域, 腾讯云地域的英文简写
      */
     public void setArea(String Area) {
         this.Area = Area;

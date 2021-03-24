@@ -100,6 +100,13 @@ public class CreateTCPListenersRequest extends AbstractModel{
     private Long ClientIPMethod;
 
     /**
+    * 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
      * Get 监听器名称。 
      * @return ListenerName 监听器名称。
      */
@@ -276,6 +283,22 @@ public class CreateTCPListenersRequest extends AbstractModel{
     }
 
     /**
+     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启 
+     * @return FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     * @param FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class CreateTCPListenersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
         this.setParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
         this.setParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
 
     }
 }

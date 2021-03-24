@@ -148,7 +148,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private Long [] Enable;
 
     /**
-    * 是否未配置通知规则，1：未配置，0：配置
+    * 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
     */
     @SerializedName("NotBindingNoticeRule")
     @Expose
@@ -463,16 +463,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否未配置通知规则，1：未配置，0：配置 
-     * @return NotBindingNoticeRule 是否未配置通知规则，1：未配置，0：配置
+     * Get 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。 
+     * @return NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
      */
     public Long getNotBindingNoticeRule() {
         return this.NotBindingNoticeRule;
     }
 
     /**
-     * Set 是否未配置通知规则，1：未配置，0：配置
-     * @param NotBindingNoticeRule 是否未配置通知规则，1：未配置，0：配置
+     * Set 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+     * @param NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
      */
     public void setNotBindingNoticeRule(Long NotBindingNoticeRule) {
         this.NotBindingNoticeRule = NotBindingNoticeRule;

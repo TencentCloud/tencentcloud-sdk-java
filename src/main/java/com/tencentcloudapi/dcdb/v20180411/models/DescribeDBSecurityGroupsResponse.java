@@ -30,6 +30,22 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
+    * 实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VIP")
+    @Expose
+    private String VIP;
+
+    /**
+    * 实例端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VPort")
+    @Expose
+    private Long VPort;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +69,46 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     }
 
     /**
+     * Get 实例VIP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VIP 实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVIP() {
+        return this.VIP;
+    }
+
+    /**
+     * Set 实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VIP 实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVIP(String VIP) {
+        this.VIP = VIP;
+    }
+
+    /**
+     * Get 实例端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VPort 实例端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVPort() {
+        return this.VPort;
+    }
+
+    /**
+     * Set 实例端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VPort 实例端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVPort(Long VPort) {
+        this.VPort = VPort;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +129,8 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "VIP", this.VIP);
+        this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

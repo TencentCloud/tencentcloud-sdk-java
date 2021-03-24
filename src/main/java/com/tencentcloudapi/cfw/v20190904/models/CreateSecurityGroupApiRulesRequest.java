@@ -37,7 +37,7 @@ public class CreateSecurityGroupApiRulesRequest extends AbstractModel{
     private Long Direction;
 
     /**
-    * 0：后插，1：前插，2：中插
+    * 插入类型，0：后插，1：前插，2：中插
     */
     @SerializedName("Type")
     @Expose
@@ -83,16 +83,16 @@ public class CreateSecurityGroupApiRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 0：后插，1：前插，2：中插 
-     * @return Type 0：后插，1：前插，2：中插
+     * Get 插入类型，0：后插，1：前插，2：中插 
+     * @return Type 插入类型，0：后插，1：前插，2：中插
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 0：后插，1：前插，2：中插
-     * @param Type 0：后插，1：前插，2：中插
+     * Set 插入类型，0：后插，1：前插，2：中插
+     * @param Type 插入类型，0：后插，1：前插，2：中插
      */
     public void setType(Long Type) {
         this.Type = Type;
