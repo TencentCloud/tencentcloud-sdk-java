@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class WebSocket extends AbstractModel{
 
     /**
-    * WebSocket配置开关，on或off。
+    * WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
     */
     @SerializedName("Switch")
     @Expose
@@ -38,16 +40,24 @@ public class WebSocket extends AbstractModel{
     private Long Timeout;
 
     /**
-     * Get WebSocket配置开关，on或off。 
-     * @return Switch WebSocket配置开关，on或off。
+     * Get WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白. 
+     * @return Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set WebSocket配置开关，on或off。
-     * @param Switch WebSocket配置开关，on或off。
+     * Set WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
+     * @param Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

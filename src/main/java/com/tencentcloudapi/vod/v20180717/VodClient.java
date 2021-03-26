@@ -1213,6 +1213,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口可以查询用户已经购买的预付费商品的信息，包括：
+    1. 商品的类型、生效和失效日期。
+    2. 商品中每种资源的额度和剩余额度。
+     * @param req DescribePrepaidProductsRequest
+     * @return DescribePrepaidProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrepaidProductsResponse DescribePrepaidProducts(DescribePrepaidProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrepaidProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrepaidProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrepaidProducts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据任务流模板名字，获取任务流模板详情列表。
      * @param req DescribeProcedureTemplatesRequest
      * @return DescribeProcedureTemplatesResponse

@@ -1239,6 +1239,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *管理实例同步
+     * @param req ManageReplicationRequest
+     * @return ManageReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageReplicationResponse ManageReplication(ManageReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ManageReplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于修改应用更新触发器
      * @param req ModifyApplicationTriggerPersonalRequest
      * @return ModifyApplicationTriggerPersonalResponse

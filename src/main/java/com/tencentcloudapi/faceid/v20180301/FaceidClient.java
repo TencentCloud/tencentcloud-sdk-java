@@ -240,6 +240,46 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *完成验证后，用EidToken调用本接口获取结果信息，EidToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+     * @param req GetEidResultRequest
+     * @return GetEidResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetEidResultResponse GetEidResult(GetEidResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetEidResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetEidResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetEidResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *每次调用人脸核身小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+     * @param req GetEidTokenRequest
+     * @return GetEidTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetEidTokenResponse GetEidToken(GetEidTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetEidTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetEidTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetEidToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *完成验证后，用FaceIdToken调用本接口获取结果信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
      * @param req GetFaceIdResultRequest
      * @return GetFaceIdResultResponse

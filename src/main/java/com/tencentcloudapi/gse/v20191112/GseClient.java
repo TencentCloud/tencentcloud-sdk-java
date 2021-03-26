@@ -515,6 +515,26 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
+     * @param req DescribeFleetRelatedResourcesRequest
+     * @return DescribeFleetRelatedResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFleetRelatedResourcesResponse DescribeFleetRelatedResources(DescribeFleetRelatedResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFleetRelatedResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFleetRelatedResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFleetRelatedResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情。
      * @param req DescribeFleetStatisticDetailsRequest
      * @return DescribeFleetStatisticDetailsResponse
@@ -888,6 +908,26 @@ public class GseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetachCcnInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DetachCcnInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于获取游戏服务器实例的日志URL。
+     * @param req GetGameServerInstanceLogUrlRequest
+     * @return GetGameServerInstanceLogUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetGameServerInstanceLogUrlResponse GetGameServerInstanceLogUrl(GetGameServerInstanceLogUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetGameServerInstanceLogUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetGameServerInstanceLogUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetGameServerInstanceLogUrl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

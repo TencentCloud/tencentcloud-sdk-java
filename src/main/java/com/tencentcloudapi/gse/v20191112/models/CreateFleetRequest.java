@@ -128,6 +128,13 @@ public class CreateFleetRequest extends AbstractModel{
     private DiskInfo [] DataDiskInfo;
 
     /**
+    * 云联网信息，包含对应的账号信息及所属id
+    */
+    @SerializedName("CcnInfos")
+    @Expose
+    private CcnInfo [] CcnInfos;
+
+    /**
      * Get 生成包 Id 
      * @return AssetId 生成包 Id
      */
@@ -368,6 +375,22 @@ public class CreateFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get 云联网信息，包含对应的账号信息及所属id 
+     * @return CcnInfos 云联网信息，包含对应的账号信息及所属id
+     */
+    public CcnInfo [] getCcnInfos() {
+        return this.CcnInfos;
+    }
+
+    /**
+     * Set 云联网信息，包含对应的账号信息及所属id
+     * @param CcnInfos 云联网信息，包含对应的账号信息及所属id
+     */
+    public void setCcnInfos(CcnInfo [] CcnInfos) {
+        this.CcnInfos = CcnInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class CreateFleetRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
+        this.setParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
 
     }
 }

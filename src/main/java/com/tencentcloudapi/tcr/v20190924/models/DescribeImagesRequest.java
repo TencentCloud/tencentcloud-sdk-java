@@ -44,7 +44,7 @@ public class DescribeImagesRequest extends AbstractModel{
     private String RepositoryName;
 
     /**
-    * 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+    * 指定镜像版本进行查找，当前为模糊搜索
     */
     @SerializedName("ImageVersion")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeImagesRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像 
-     * @return ImageVersion 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+     * Get 指定镜像版本进行查找，当前为模糊搜索 
+     * @return ImageVersion 指定镜像版本进行查找，当前为模糊搜索
      */
     public String getImageVersion() {
         return this.ImageVersion;
     }
 
     /**
-     * Set 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
-     * @param ImageVersion 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+     * Set 指定镜像版本进行查找，当前为模糊搜索
+     * @param ImageVersion 指定镜像版本进行查找，当前为模糊搜索
      */
     public void setImageVersion(String ImageVersion) {
         this.ImageVersion = ImageVersion;

@@ -54,21 +54,21 @@ task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
     private String SortBy;
 
     /**
-    * 排序方式，desc表示正序，asc表示反序
+    * 排序方式，desc表示正序，asc表示反序， 默认为asc。
     */
     @SerializedName("Sorting")
     @Expose
     private String Sorting;
 
     /**
-    * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+    * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
+    * 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
     */
     @SerializedName("EndTime")
     @Expose
@@ -151,48 +151,48 @@ task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
     }
 
     /**
-     * Get 排序方式，desc表示正序，asc表示反序 
-     * @return Sorting 排序方式，desc表示正序，asc表示反序
+     * Get 排序方式，desc表示正序，asc表示反序， 默认为asc。 
+     * @return Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
      */
     public String getSorting() {
         return this.Sorting;
     }
 
     /**
-     * Set 排序方式，desc表示正序，asc表示反序
-     * @param Sorting 排序方式，desc表示正序，asc表示反序
+     * Set 排序方式，desc表示正序，asc表示反序， 默认为asc。
+     * @param Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
      */
     public void setSorting(String Sorting) {
         this.Sorting = Sorting;
     }
 
     /**
-     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
-     * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻 
+     * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
+     * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。 
-     * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
+     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻 
+     * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
-     * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
+     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+     * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

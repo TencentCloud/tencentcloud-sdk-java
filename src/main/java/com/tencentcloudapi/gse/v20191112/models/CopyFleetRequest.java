@@ -114,7 +114,7 @@ public class CopyFleetRequest extends AbstractModel{
     private String SelectedScalingType;
 
     /**
-    * 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+    * 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
     */
     @SerializedName("SelectedCcnType")
     @Expose
@@ -147,6 +147,13 @@ public class CopyFleetRequest extends AbstractModel{
     @SerializedName("SelectedTimerType")
     @Expose
     private String SelectedTimerType;
+
+    /**
+    * 云联网信息，包含对应的账号信息及所属id
+    */
+    @SerializedName("CcnInfos")
+    @Expose
+    private CcnInfo [] CcnInfos;
 
     /**
      * Get 服务器舰队 Id 
@@ -357,16 +364,16 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED 
-     * @return SelectedCcnType 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+     * Get 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED 
+     * @return SelectedCcnType 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
      */
     public String getSelectedCcnType() {
         return this.SelectedCcnType;
     }
 
     /**
-     * Set 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
-     * @param SelectedCcnType 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+     * Set 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
+     * @param SelectedCcnType 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
      */
     public void setSelectedCcnType(String SelectedCcnType) {
         this.SelectedCcnType = SelectedCcnType;
@@ -437,6 +444,22 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get 云联网信息，包含对应的账号信息及所属id 
+     * @return CcnInfos 云联网信息，包含对应的账号信息及所属id
+     */
+    public CcnInfo [] getCcnInfos() {
+        return this.CcnInfos;
+    }
+
+    /**
+     * Set 云联网信息，包含对应的账号信息及所属id
+     * @param CcnInfos 云联网信息，包含对应的账号信息及所属id
+     */
+    public void setCcnInfos(CcnInfo [] CcnInfos) {
+        this.CcnInfos = CcnInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class CopyFleetRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
         this.setParamSimple(map, prefix + "SelectedTimerType", this.SelectedTimerType);
+        this.setParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
 
     }
 }

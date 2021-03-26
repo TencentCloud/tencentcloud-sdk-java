@@ -37,7 +37,7 @@ public class CreateScriptRequest extends AbstractModel{
     private String SQLStatement;
 
     /**
-    * 脚本描述,
+    * 脚本描述， 不能超过50个字符
     */
     @SerializedName("ScriptDesc")
     @Expose
@@ -83,16 +83,16 @@ public class CreateScriptRequest extends AbstractModel{
     }
 
     /**
-     * Get 脚本描述, 
-     * @return ScriptDesc 脚本描述,
+     * Get 脚本描述， 不能超过50个字符 
+     * @return ScriptDesc 脚本描述， 不能超过50个字符
      */
     public String getScriptDesc() {
         return this.ScriptDesc;
     }
 
     /**
-     * Set 脚本描述,
-     * @param ScriptDesc 脚本描述,
+     * Set 脚本描述， 不能超过50个字符
+     * @param ScriptDesc 脚本描述， 不能超过50个字符
      */
     public void setScriptDesc(String ScriptDesc) {
         this.ScriptDesc = ScriptDesc;

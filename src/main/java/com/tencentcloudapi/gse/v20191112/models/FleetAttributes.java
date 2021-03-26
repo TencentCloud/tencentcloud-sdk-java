@@ -172,6 +172,14 @@ public class FleetAttributes extends AbstractModel{
     private DiskInfo SystemDiskInfo;
 
     /**
+    * 云联网相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelatedCcnInfos")
+    @Expose
+    private RelatedCcnInfo [] RelatedCcnInfos;
+
+    /**
      * Get 生成包 Id 
      * @return AssetId 生成包 Id
      */
@@ -540,6 +548,26 @@ public class FleetAttributes extends AbstractModel{
     }
 
     /**
+     * Get 云联网相关信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelatedCcnInfos 云联网相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RelatedCcnInfo [] getRelatedCcnInfos() {
+        return this.RelatedCcnInfos;
+    }
+
+    /**
+     * Set 云联网相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelatedCcnInfos 云联网相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelatedCcnInfos(RelatedCcnInfo [] RelatedCcnInfos) {
+        this.RelatedCcnInfos = RelatedCcnInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -562,6 +590,7 @@ public class FleetAttributes extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
         this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
+        this.setParamArrayObj(map, prefix + "RelatedCcnInfos.", this.RelatedCcnInfos);
 
     }
 }
