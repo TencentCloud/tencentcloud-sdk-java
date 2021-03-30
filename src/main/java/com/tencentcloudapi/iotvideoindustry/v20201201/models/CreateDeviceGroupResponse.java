@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDeviceGroupResponse extends AbstractModel{
 
     /**
-    * 响应结果
+    * 响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -46,9 +46,9 @@ public class CreateDeviceGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 响应结果
+     * Get 响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 响应结果
+     * @return Status 响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -56,9 +56,9 @@ public class CreateDeviceGroupResponse extends AbstractModel{
     }
 
     /**
-     * Set 响应结果
+     * Set 响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 响应结果
+     * @param Status 响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

@@ -206,7 +206,7 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
-     *该接口根据传入的参数创建命名空间。
+     *该接口根据传入的参数删除命名空间。
      * @param req DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
      * @throws TencentCloudSDKException

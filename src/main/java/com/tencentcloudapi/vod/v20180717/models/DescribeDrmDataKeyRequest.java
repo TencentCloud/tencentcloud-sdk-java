@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotvideoindustry.v20201201.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupByPathRequest extends AbstractModel{
+public class DescribeDrmDataKeyRequest extends AbstractModel{
 
     /**
-    * 分组路径，格式为/aaa(/bbb/ccc)
+    * 加密后的数据密钥列表，最大支持10个。
     */
-    @SerializedName("GroupPath")
+    @SerializedName("EdkList")
     @Expose
-    private String GroupPath;
+    private String [] EdkList;
 
     /**
-     * Get 分组路径，格式为/aaa(/bbb/ccc) 
-     * @return GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * Get 加密后的数据密钥列表，最大支持10个。 
+     * @return EdkList 加密后的数据密钥列表，最大支持10个。
      */
-    public String getGroupPath() {
-        return this.GroupPath;
+    public String [] getEdkList() {
+        return this.EdkList;
     }
 
     /**
-     * Set 分组路径，格式为/aaa(/bbb/ccc)
-     * @param GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * Set 加密后的数据密钥列表，最大支持10个。
+     * @param EdkList 加密后的数据密钥列表，最大支持10个。
      */
-    public void setGroupPath(String GroupPath) {
-        this.GroupPath = GroupPath;
+    public void setEdkList(String [] EdkList) {
+        this.EdkList = EdkList;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupPath", this.GroupPath);
+        this.setParamArraySimple(map, prefix + "EdkList.", this.EdkList);
 
     }
 }

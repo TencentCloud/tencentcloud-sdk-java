@@ -45,6 +45,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
 
     /**
     * 备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveConfig")
     @Expose
@@ -52,10 +53,18 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
 
     /**
     * 强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupConfig")
     @Expose
     private BackupConfig BackupConfig;
+
+    /**
+    * 是否切换备库。
+    */
+    @SerializedName("Switched")
+    @Expose
+    private Boolean Switched;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -113,8 +122,10 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get 备库的配置信息。 
+     * Get 备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SlaveConfig 备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveConfig getSlaveConfig() {
         return this.SlaveConfig;
@@ -122,15 +133,19 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
 
     /**
      * Set 备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveConfig 备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveConfig(SlaveConfig SlaveConfig) {
         this.SlaveConfig = SlaveConfig;
     }
 
     /**
-     * Get 强同步实例第二备库的配置信息。 
+     * Get 强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BackupConfig 强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupConfig getBackupConfig() {
         return this.BackupConfig;
@@ -138,10 +153,28 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
 
     /**
      * Set 强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupConfig 强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupConfig(BackupConfig BackupConfig) {
         this.BackupConfig = BackupConfig;
+    }
+
+    /**
+     * Get 是否切换备库。 
+     * @return Switched 是否切换备库。
+     */
+    public Boolean getSwitched() {
+        return this.Switched;
+    }
+
+    /**
+     * Set 是否切换备库。
+     * @param Switched 是否切换备库。
+     */
+    public void setSwitched(Boolean Switched) {
+        this.Switched = Switched;
     }
 
     /**
@@ -169,6 +202,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamObj(map, prefix + "SlaveConfig.", this.SlaveConfig);
         this.setParamObj(map, prefix + "BackupConfig.", this.BackupConfig);
+        this.setParamSimple(map, prefix + "Switched", this.Switched);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

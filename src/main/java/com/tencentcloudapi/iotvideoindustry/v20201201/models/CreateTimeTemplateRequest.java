@@ -30,7 +30,7 @@ public class CreateTimeTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 是否为每周全时录制，即7*24h录制
+    * 是否为每周全时录制（即7*24h录制），0：非全时录制，1；全时录制，默认0
     */
     @SerializedName("IsAllWeek")
     @Expose
@@ -60,16 +60,16 @@ public class CreateTimeTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为每周全时录制，即7*24h录制 
-     * @return IsAllWeek 是否为每周全时录制，即7*24h录制
+     * Get 是否为每周全时录制（即7*24h录制），0：非全时录制，1；全时录制，默认0 
+     * @return IsAllWeek 是否为每周全时录制（即7*24h录制），0：非全时录制，1；全时录制，默认0
      */
     public Long getIsAllWeek() {
         return this.IsAllWeek;
     }
 
     /**
-     * Set 是否为每周全时录制，即7*24h录制
-     * @param IsAllWeek 是否为每周全时录制，即7*24h录制
+     * Set 是否为每周全时录制（即7*24h录制），0：非全时录制，1；全时录制，默认0
+     * @param IsAllWeek 是否为每周全时录制（即7*24h录制），0：非全时录制，1；全时录制，默认0
      */
     public void setIsAllWeek(Long IsAllWeek) {
         this.IsAllWeek = IsAllWeek;

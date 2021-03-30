@@ -480,7 +480,7 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
-     *本接口()用于查询设备含有录像文件的日期列表。
+     *本接口(GetRecordDatesByDev)用于查询设备含有录像文件的日期列表。
      * @param req GetRecordDatesByDevRequest
      * @return GetRecordDatesByDevResponse
      * @throws TencentCloudSDKException

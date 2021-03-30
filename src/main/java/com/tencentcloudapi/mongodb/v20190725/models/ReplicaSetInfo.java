@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotvideoindustry.v20201201.models;
+package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupByPathRequest extends AbstractModel{
+public class ReplicaSetInfo extends AbstractModel{
 
     /**
-    * 分组路径，格式为/aaa(/bbb/ccc)
+    * 分片名称
     */
-    @SerializedName("GroupPath")
+    @SerializedName("ReplicaSetId")
     @Expose
-    private String GroupPath;
+    private String ReplicaSetId;
 
     /**
-     * Get 分组路径，格式为/aaa(/bbb/ccc) 
-     * @return GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * Get 分片名称 
+     * @return ReplicaSetId 分片名称
      */
-    public String getGroupPath() {
-        return this.GroupPath;
+    public String getReplicaSetId() {
+        return this.ReplicaSetId;
     }
 
     /**
-     * Set 分组路径，格式为/aaa(/bbb/ccc)
-     * @param GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * Set 分片名称
+     * @param ReplicaSetId 分片名称
      */
-    public void setGroupPath(String GroupPath) {
-        this.GroupPath = GroupPath;
+    public void setReplicaSetId(String ReplicaSetId) {
+        this.ReplicaSetId = ReplicaSetId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupPath", this.GroupPath);
+        this.setParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
 
     }
 }

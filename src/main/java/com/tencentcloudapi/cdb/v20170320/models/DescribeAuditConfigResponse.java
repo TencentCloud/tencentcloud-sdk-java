@@ -38,6 +38,13 @@ public class DescribeAuditConfigResponse extends AbstractModel{
     private String LogType;
 
     /**
+    * 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
+    */
+    @SerializedName("IsClosing")
+    @Expose
+    private String IsClosing;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +88,22 @@ public class DescribeAuditConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是 
+     * @return IsClosing 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
+     */
+    public String getIsClosing() {
+        return this.IsClosing;
+    }
+
+    /**
+     * Set 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
+     * @param IsClosing 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
+     */
+    public void setIsClosing(String IsClosing) {
+        this.IsClosing = IsClosing;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -102,6 +125,7 @@ public class DescribeAuditConfigResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "IsClosing", this.IsClosing);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

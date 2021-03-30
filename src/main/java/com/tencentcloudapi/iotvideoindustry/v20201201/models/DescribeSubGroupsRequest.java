@@ -37,7 +37,7 @@ public class DescribeSubGroupsRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * 偏移量
+    * 偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeSubGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认0 
+     * @return Offset 偏移量，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认0
+     * @param Offset 偏移量，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

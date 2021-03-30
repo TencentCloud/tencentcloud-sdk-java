@@ -239,6 +239,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建从实例
+     * @param req CreateReplicationInstanceRequest
+     * @return CreateReplicationInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReplicationInstanceResponse CreateReplicationInstance(CreateReplicationInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReplicationInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReplicationInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReplicationInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于企业版创建镜像仓库
      * @param req CreateRepositoryRequest
      * @return CreateRepositoryResponse

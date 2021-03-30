@@ -103,6 +103,14 @@ public class MediaInfo extends AbstractModel{
     private MediaMiniProgramReviewInfo MiniProgramReviewInfo;
 
     /**
+    * 字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubtitleInfo")
+    @Expose
+    private MediaSubtitleInfo SubtitleInfo;
+
+    /**
     * 媒体文件唯一标识 ID。
     */
     @SerializedName("FileId")
@@ -310,6 +318,26 @@ public class MediaInfo extends AbstractModel{
     }
 
     /**
+     * Get 字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubtitleInfo 字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaSubtitleInfo getSubtitleInfo() {
+        return this.SubtitleInfo;
+    }
+
+    /**
+     * Set 字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitleInfo 字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubtitleInfo(MediaSubtitleInfo SubtitleInfo) {
+        this.SubtitleInfo = SubtitleInfo;
+    }
+
+    /**
      * Get 媒体文件唯一标识 ID。 
      * @return FileId 媒体文件唯一标识 ID。
      */
@@ -339,6 +367,7 @@ public class MediaInfo extends AbstractModel{
         this.setParamObj(map, prefix + "KeyFrameDescInfo.", this.KeyFrameDescInfo);
         this.setParamObj(map, prefix + "AdaptiveDynamicStreamingInfo.", this.AdaptiveDynamicStreamingInfo);
         this.setParamObj(map, prefix + "MiniProgramReviewInfo.", this.MiniProgramReviewInfo);
+        this.setParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }

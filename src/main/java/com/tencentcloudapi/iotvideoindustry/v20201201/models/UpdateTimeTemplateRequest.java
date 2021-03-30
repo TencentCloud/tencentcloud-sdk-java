@@ -37,7 +37,8 @@ public class UpdateTimeTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 是否全时录制，即7*24小时录制
+    * 是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
     */
     @SerializedName("IsAllWeek")
     @Expose
@@ -83,16 +84,20 @@ public class UpdateTimeTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否全时录制，即7*24小时录制 
-     * @return IsAllWeek 是否全时录制，即7*24小时录制
+     * Get 是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1 
+     * @return IsAllWeek 是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
      */
     public Long getIsAllWeek() {
         return this.IsAllWeek;
     }
 
     /**
-     * Set 是否全时录制，即7*24小时录制
-     * @param IsAllWeek 是否全时录制，即7*24小时录制
+     * Set 是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
+     * @param IsAllWeek 是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
      */
     public void setIsAllWeek(Long IsAllWeek) {
         this.IsAllWeek = IsAllWeek;

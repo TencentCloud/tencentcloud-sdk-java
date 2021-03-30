@@ -31,7 +31,7 @@ public class AllDeviceInfo extends AbstractModel{
     private String DeviceId;
 
     /**
-    * 设备类型
+    * 设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
@@ -39,7 +39,7 @@ public class AllDeviceInfo extends AbstractModel{
     private Long DeviceType;
 
     /**
-    * 设备状态
+    * 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -87,7 +87,7 @@ public class AllDeviceInfo extends AbstractModel{
     private String DeviceCode;
 
     /**
-    * 是否存在录像
+    * 是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRecord")
@@ -115,9 +115,9 @@ public class AllDeviceInfo extends AbstractModel{
     }
 
     /**
-     * Get 设备类型
+     * Get 设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceType 设备类型
+     * @return DeviceType 设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceType() {
@@ -125,9 +125,9 @@ public class AllDeviceInfo extends AbstractModel{
     }
 
     /**
-     * Set 设备类型
+     * Set 设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceType 设备类型
+     * @param DeviceType 设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(Long DeviceType) {
@@ -135,9 +135,9 @@ public class AllDeviceInfo extends AbstractModel{
     }
 
     /**
-     * Get 设备状态
+     * Get 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 设备状态
+     * @return Status 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -145,9 +145,9 @@ public class AllDeviceInfo extends AbstractModel{
     }
 
     /**
-     * Set 设备状态
+     * Set 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 设备状态
+     * @param Status 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -255,9 +255,9 @@ public class AllDeviceInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否存在录像
+     * Get 是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsRecord 是否存在录像
+     * @return IsRecord 是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRecord() {
@@ -265,9 +265,9 @@ public class AllDeviceInfo extends AbstractModel{
     }
 
     /**
-     * Set 是否存在录像
+     * Set 是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsRecord 是否存在录像
+     * @param IsRecord 是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRecord(Long IsRecord) {

@@ -44,6 +44,13 @@ public class ImageInfo extends AbstractModel{
     private Long DimensionsNameId;
 
     /**
+    * 平台用户标识
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 图片Id 
      * @return ImageId 图片Id
      */
@@ -92,12 +99,29 @@ public class ImageInfo extends AbstractModel{
     }
 
     /**
+     * Get 平台用户标识 
+     * @return UserId 平台用户标识
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 平台用户标识
+     * @param UserId 平台用户标识
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "LicenseScopeId", this.LicenseScopeId);
         this.setParamSimple(map, prefix + "DimensionsNameId", this.DimensionsNameId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

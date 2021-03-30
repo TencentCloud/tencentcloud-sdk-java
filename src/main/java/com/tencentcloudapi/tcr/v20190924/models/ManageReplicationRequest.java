@@ -51,6 +51,13 @@ public class ManageReplicationRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 目标实例的地域ID，如广州是1
+    */
+    @SerializedName("DestinationRegionId")
+    @Expose
+    private Long DestinationRegionId;
+
+    /**
      * Get 复制源实例ID 
      * @return SourceRegistryId 复制源实例ID
      */
@@ -115,6 +122,22 @@ public class ManageReplicationRequest extends AbstractModel{
     }
 
     /**
+     * Get 目标实例的地域ID，如广州是1 
+     * @return DestinationRegionId 目标实例的地域ID，如广州是1
+     */
+    public Long getDestinationRegionId() {
+        return this.DestinationRegionId;
+    }
+
+    /**
+     * Set 目标实例的地域ID，如广州是1
+     * @param DestinationRegionId 目标实例的地域ID，如广州是1
+     */
+    public void setDestinationRegionId(Long DestinationRegionId) {
+        this.DestinationRegionId = DestinationRegionId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ManageReplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DestinationRegistryId", this.DestinationRegistryId);
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "DestinationRegionId", this.DestinationRegionId);
 
     }
 }

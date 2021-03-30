@@ -37,6 +37,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
+    */
+    @SerializedName("SubtitleSet")
+    @Expose
+    private String [] SubtitleSet;
+
+    /**
      * Get 转自适应码流模板 ID。 
      * @return Definition 转自适应码流模板 ID。
      */
@@ -69,11 +76,28 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     }
 
     /**
+     * Get 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。 
+     * @return SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
+     */
+    public String [] getSubtitleSet() {
+        return this.SubtitleSet;
+    }
+
+    /**
+     * Set 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
+     * @param SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
+     */
+    public void setSubtitleSet(String [] SubtitleSet) {
+        this.SubtitleSet = SubtitleSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }
 }

@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotvideoindustry.v20201201.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupByPathRequest extends AbstractModel{
+public class MediaSubtitleInfo extends AbstractModel{
 
     /**
-    * 分组路径，格式为/aaa(/bbb/ccc)
+    * 字幕信息列表。
     */
-    @SerializedName("GroupPath")
+    @SerializedName("SubtitleSet")
     @Expose
-    private String GroupPath;
+    private MediaSubtitleItem [] SubtitleSet;
 
     /**
-     * Get 分组路径，格式为/aaa(/bbb/ccc) 
-     * @return GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * Get 字幕信息列表。 
+     * @return SubtitleSet 字幕信息列表。
      */
-    public String getGroupPath() {
-        return this.GroupPath;
+    public MediaSubtitleItem [] getSubtitleSet() {
+        return this.SubtitleSet;
     }
 
     /**
-     * Set 分组路径，格式为/aaa(/bbb/ccc)
-     * @param GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * Set 字幕信息列表。
+     * @param SubtitleSet 字幕信息列表。
      */
-    public void setGroupPath(String GroupPath) {
-        this.GroupPath = GroupPath;
+    public void setSubtitleSet(MediaSubtitleItem [] SubtitleSet) {
+        this.SubtitleSet = SubtitleSet;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupPath", this.GroupPath);
+        this.setParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }
 }

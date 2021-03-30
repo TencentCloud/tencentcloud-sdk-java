@@ -30,6 +30,13 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
+    * 安全组规则数量。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     }
 
     /**
+     * Get 安全组规则数量。 
+     * @return TotalCount 安全组规则数量。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 安全组规则数量。
+     * @param TotalCount 安全组规则数量。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

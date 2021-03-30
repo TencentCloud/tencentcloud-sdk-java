@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteRecordPlanResponse extends AbstractModel{
 
     /**
-    * 操作结果
+    * 操作结果，OK：成功，其他：失败
     */
     @SerializedName("Status")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteRecordPlanResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 操作结果 
-     * @return Status 操作结果
+     * Get 操作结果，OK：成功，其他：失败 
+     * @return Status 操作结果，OK：成功，其他：失败
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 操作结果
-     * @param Status 操作结果
+     * Set 操作结果，OK：成功，其他：失败
+     * @param Status 操作结果，OK：成功，其他：失败
      */
     public void setStatus(String Status) {
         this.Status = Status;

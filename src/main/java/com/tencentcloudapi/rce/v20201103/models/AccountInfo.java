@@ -27,9 +27,11 @@ public class AccountInfo extends AbstractModel{
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。
+8：设备号（imei/imeiMD5/idfa/idfaMD5）。
 0：其他。
-10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
+10004：支持手机号MD5加密和sha256加密；
+标准中国大陆手机号11位，MD5加密后取长度32位小写字符串；例如：手机号13112345678的Md5加密结果为手"dafc728802534d51fbf85c70313a2bd2"
+标准中国大陆手机号11位，sha256加密后取长度为64位的小写字符串；例如：手机号13112345678的sha256加密的结果为“9f46715cff1a9ac969ec01924111f7f3697a97ad98a4fd53e15a78d79d1f3551”
     */
     @SerializedName("AccountType")
     @Expose
@@ -61,16 +63,20 @@ public class AccountInfo extends AbstractModel{
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。
+8：设备号（imei/imeiMD5/idfa/idfaMD5）。
 0：其他。
-10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值） 
+10004：支持手机号MD5加密和sha256加密；
+标准中国大陆手机号11位，MD5加密后取长度32位小写字符串；例如：手机号13112345678的Md5加密结果为手"dafc728802534d51fbf85c70313a2bd2"
+标准中国大陆手机号11位，sha256加密后取长度为64位的小写字符串；例如：手机号13112345678的sha256加密的结果为“9f46715cff1a9ac969ec01924111f7f3697a97ad98a4fd53e15a78d79d1f3551” 
      * @return AccountType 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。
+8：设备号（imei/imeiMD5/idfa/idfaMD5）。
 0：其他。
-10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
+10004：支持手机号MD5加密和sha256加密；
+标准中国大陆手机号11位，MD5加密后取长度32位小写字符串；例如：手机号13112345678的Md5加密结果为手"dafc728802534d51fbf85c70313a2bd2"
+标准中国大陆手机号11位，sha256加密后取长度为64位的小写字符串；例如：手机号13112345678的sha256加密的结果为“9f46715cff1a9ac969ec01924111f7f3697a97ad98a4fd53e15a78d79d1f3551”
      */
     public Long getAccountType() {
         return this.AccountType;
@@ -81,16 +87,20 @@ public class AccountInfo extends AbstractModel{
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。
+8：设备号（imei/imeiMD5/idfa/idfaMD5）。
 0：其他。
-10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
+10004：支持手机号MD5加密和sha256加密；
+标准中国大陆手机号11位，MD5加密后取长度32位小写字符串；例如：手机号13112345678的Md5加密结果为手"dafc728802534d51fbf85c70313a2bd2"
+标准中国大陆手机号11位，sha256加密后取长度为64位的小写字符串；例如：手机号13112345678的sha256加密的结果为“9f46715cff1a9ac969ec01924111f7f3697a97ad98a4fd53e15a78d79d1f3551”
      * @param AccountType 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。
+8：设备号（imei/imeiMD5/idfa/idfaMD5）。
 0：其他。
-10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
+10004：支持手机号MD5加密和sha256加密；
+标准中国大陆手机号11位，MD5加密后取长度32位小写字符串；例如：手机号13112345678的Md5加密结果为手"dafc728802534d51fbf85c70313a2bd2"
+标准中国大陆手机号11位，sha256加密后取长度为64位的小写字符串；例如：手机号13112345678的sha256加密的结果为“9f46715cff1a9ac969ec01924111f7f3697a97ad98a4fd53e15a78d79d1f3551”
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;

@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabasesResponse extends AbstractModel{
+public class DescribeVodDomainsResponse extends AbstractModel{
 
     /**
-    * 符合查询条件的实例总数。
+    * 域名总数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 返回的实例信息。
+    * 域名信息列表。
     */
-    @SerializedName("Items")
+    @SerializedName("DomainSet")
     @Expose
-    private String [] Items;
-
-    /**
-    * 数据库名以及字符集
-    */
-    @SerializedName("DatabaseList")
-    @Expose
-    private DatabasesWithCharacterLists [] DatabaseList;
+    private DomainDetailInfo [] DomainSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeDatabasesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合查询条件的实例总数。 
-     * @return TotalCount 符合查询条件的实例总数。
+     * Get 域名总数量。 
+     * @return TotalCount 域名总数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的实例总数。
-     * @param TotalCount 符合查询条件的实例总数。
+     * Set 域名总数量。
+     * @param TotalCount 域名总数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 返回的实例信息。 
-     * @return Items 返回的实例信息。
+     * Get 域名信息列表。 
+     * @return DomainSet 域名信息列表。
      */
-    public String [] getItems() {
-        return this.Items;
+    public DomainDetailInfo [] getDomainSet() {
+        return this.DomainSet;
     }
 
     /**
-     * Set 返回的实例信息。
-     * @param Items 返回的实例信息。
+     * Set 域名信息列表。
+     * @param DomainSet 域名信息列表。
      */
-    public void setItems(String [] Items) {
-        this.Items = Items;
-    }
-
-    /**
-     * Get 数据库名以及字符集 
-     * @return DatabaseList 数据库名以及字符集
-     */
-    public DatabasesWithCharacterLists [] getDatabaseList() {
-        return this.DatabaseList;
-    }
-
-    /**
-     * Set 数据库名以及字符集
-     * @param DatabaseList 数据库名以及字符集
-     */
-    public void setDatabaseList(DatabasesWithCharacterLists [] DatabaseList) {
-        this.DatabaseList = DatabaseList;
+    public void setDomainSet(DomainDetailInfo [] DomainSet) {
+        this.DomainSet = DomainSet;
     }
 
     /**
@@ -119,8 +96,7 @@ public class DescribeDatabasesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArraySimple(map, prefix + "Items.", this.Items);
-        this.setParamArrayObj(map, prefix + "DatabaseList.", this.DatabaseList);
+        this.setParamArrayObj(map, prefix + "DomainSet.", this.DomainSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

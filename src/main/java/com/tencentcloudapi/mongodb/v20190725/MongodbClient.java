@@ -80,6 +80,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口用来创建某个备份文件的下载任务
+     * @param req CreateBackupDownloadTaskRequest
+     * @return CreateBackupDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupDownloadTaskResponse CreateBackupDownloadTask(CreateBackupDownloadTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupDownloadTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupDownloadTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackupDownloadTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -152,6 +172,26 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询备份下载任务信息
+     * @param req DescribeBackupDownloadTaskRequest
+     * @return DescribeBackupDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadTaskResponse DescribeBackupDownloadTask(DescribeBackupDownloadTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

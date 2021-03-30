@@ -37,7 +37,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String Name;
 
     /**
-    * 参数模板描述
+    * 参数模板对应实例版本
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -56,6 +56,13 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     @SerializedName("Items")
     @Expose
     private ParameterDetail [] Items;
+
+    /**
+    * 参数模板描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -97,16 +104,16 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 参数模板描述 
-     * @return EngineVersion 参数模板描述
+     * Get 参数模板对应实例版本 
+     * @return EngineVersion 参数模板对应实例版本
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 参数模板描述
-     * @param EngineVersion 参数模板描述
+     * Set 参数模板对应实例版本
+     * @param EngineVersion 参数模板对应实例版本
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -145,6 +152,22 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 参数模板描述 
+     * @return Description 参数模板描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 参数模板描述
+     * @param Description 参数模板描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -169,6 +192,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

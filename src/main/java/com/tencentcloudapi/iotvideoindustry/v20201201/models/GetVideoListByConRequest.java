@@ -30,21 +30,21 @@ public class GetVideoListByConRequest extends AbstractModel{
     private String DeviceId;
 
     /**
-    * 偏移量
+    * 偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制量
+    * 限制量，默认200
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 0：查询指定日期的录像；1：查询最近一天的录像
+    * 0：查询指定日期的录像；1：查询最近一天的录像；默认0
     */
     @SerializedName("LatestDay")
     @Expose
@@ -75,48 +75,48 @@ public class GetVideoListByConRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认0 
+     * @return Offset 偏移量，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认0
+     * @param Offset 偏移量，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制量 
-     * @return Limit 限制量
+     * Get 限制量，默认200 
+     * @return Limit 限制量，默认200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制量
-     * @param Limit 限制量
+     * Set 限制量，默认200
+     * @param Limit 限制量，默认200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 0：查询指定日期的录像；1：查询最近一天的录像 
-     * @return LatestDay 0：查询指定日期的录像；1：查询最近一天的录像
+     * Get 0：查询指定日期的录像；1：查询最近一天的录像；默认0 
+     * @return LatestDay 0：查询指定日期的录像；1：查询最近一天的录像；默认0
      */
     public Long getLatestDay() {
         return this.LatestDay;
     }
 
     /**
-     * Set 0：查询指定日期的录像；1：查询最近一天的录像
-     * @param LatestDay 0：查询指定日期的录像；1：查询最近一天的录像
+     * Set 0：查询指定日期的录像；1：查询最近一天的录像；默认0
+     * @param LatestDay 0：查询指定日期的录像；1：查询最近一天的录像；默认0
      */
     public void setLatestDay(Long LatestDay) {
         this.LatestDay = LatestDay;

@@ -1080,6 +1080,27 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中[DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643)的升级版本。
+如果您是新接入点播加密的用户，不要使用该 API。请参考[视频加密综述](https://cloud.tencent.com/document/product/266/45552)使用。
+     * @param req DescribeDrmDataKeyRequest
+     * @return DescribeDrmDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDrmDataKeyResponse DescribeDrmDataKey(DescribeDrmDataKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDrmDataKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDrmDataKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDrmDataKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
 
      * @param req DescribeEventsStateRequest
@@ -1458,6 +1479,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTranscodeTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于查询点播域名信息列表。
+     * @param req DescribeVodDomainsRequest
+     * @return DescribeVodDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVodDomainsResponse DescribeVodDomains(DescribeVodDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVodDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVodDomains");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
