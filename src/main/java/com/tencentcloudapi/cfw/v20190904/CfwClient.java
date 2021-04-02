@@ -199,6 +199,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询防火墙弹性公网ip
+     * @param req DescribeCfwEipsRequest
+     * @return DescribeCfwEipsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwEipsResponse DescribeCfwEips(DescribeCfwEipsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCfwEipsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCfwEipsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCfwEips");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *nat规则列表概况
      * @param req DescribeNatRuleOverviewRequest
      * @return DescribeNatRuleOverviewResponse
@@ -331,6 +351,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcRuleOverviewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVpcRuleOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *防火墙垂直扩容
+     * @param req ExpandCfwVerticalRequest
+     * @return ExpandCfwVerticalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExpandCfwVerticalResponse ExpandCfwVertical(ExpandCfwVerticalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExpandCfwVerticalResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExpandCfwVerticalResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExpandCfwVertical");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -491,6 +531,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RunSyncAssetResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RunSyncAsset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *配置防火墙Dnat规则
+     * @param req SetNatFwDnatRuleRequest
+     * @return SetNatFwDnatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetNatFwDnatRuleResponse SetNatFwDnatRule(SetNatFwDnatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetNatFwDnatRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetNatFwDnatRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetNatFwDnatRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

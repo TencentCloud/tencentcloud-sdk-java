@@ -164,6 +164,20 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private String YarnNodeLabel;
 
     /**
+    * POD自定义权限和自定义参数
+    */
+    @SerializedName("PodParameter")
+    @Expose
+    private PodParameter PodParameter;
+
+    /**
+    * 扩容的Master节点的数量。
+    */
+    @SerializedName("MasterCount")
+    @Expose
+    private Long MasterCount;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -500,6 +514,38 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get POD自定义权限和自定义参数 
+     * @return PodParameter POD自定义权限和自定义参数
+     */
+    public PodParameter getPodParameter() {
+        return this.PodParameter;
+    }
+
+    /**
+     * Set POD自定义权限和自定义参数
+     * @param PodParameter POD自定义权限和自定义参数
+     */
+    public void setPodParameter(PodParameter PodParameter) {
+        this.PodParameter = PodParameter;
+    }
+
+    /**
+     * Get 扩容的Master节点的数量。 
+     * @return MasterCount 扩容的Master节点的数量。
+     */
+    public Long getMasterCount() {
+        return this.MasterCount;
+    }
+
+    /**
+     * Set 扩容的Master节点的数量。
+     * @param MasterCount 扩容的Master节点的数量。
+     */
+    public void setMasterCount(Long MasterCount) {
+        this.MasterCount = MasterCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -522,6 +568,8 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClickHouseClusterName", this.ClickHouseClusterName);
         this.setParamSimple(map, prefix + "ClickHouseClusterType", this.ClickHouseClusterType);
         this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+        this.setParamObj(map, prefix + "PodParameter.", this.PodParameter);
+        this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
 
     }
 }

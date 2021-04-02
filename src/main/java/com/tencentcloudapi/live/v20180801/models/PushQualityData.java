@@ -156,6 +156,13 @@ public class PushQualityData extends AbstractModel{
     private Long MateFps;
 
     /**
+    * 推流参数
+    */
+    @SerializedName("StreamParam")
+    @Expose
+    private String StreamParam;
+
+    /**
      * Get 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
      * @return Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
@@ -460,6 +467,22 @@ public class PushQualityData extends AbstractModel{
     }
 
     /**
+     * Get 推流参数 
+     * @return StreamParam 推流参数
+     */
+    public String getStreamParam() {
+        return this.StreamParam;
+    }
+
+    /**
+     * Set 推流参数
+     * @param StreamParam 推流参数
+     */
+    public void setStreamParam(String StreamParam) {
+        this.StreamParam = StreamParam;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +505,7 @@ public class PushQualityData extends AbstractModel{
         this.setParamSimple(map, prefix + "MetaVideoRate", this.MetaVideoRate);
         this.setParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
         this.setParamSimple(map, prefix + "MateFps", this.MateFps);
+        this.setParamSimple(map, prefix + "StreamParam", this.StreamParam);
 
     }
 }

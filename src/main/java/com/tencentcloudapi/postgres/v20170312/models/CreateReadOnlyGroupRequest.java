@@ -93,6 +93,13 @@ public class CreateReadOnlyGroupRequest extends AbstractModel{
     private Long MinDelayEliminateReserve;
 
     /**
+    * 安全组id
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 主实例ID 
      * @return MasterDBInstanceId 主实例ID
      */
@@ -253,6 +260,22 @@ public class CreateReadOnlyGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全组id 
+     * @return SecurityGroupIds 安全组id
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组id
+     * @param SecurityGroupIds 安全组id
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class CreateReadOnlyGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxReplayLag", this.MaxReplayLag);
         this.setParamSimple(map, prefix + "MaxReplayLatency", this.MaxReplayLatency);
         this.setParamSimple(map, prefix + "MinDelayEliminateReserve", this.MinDelayEliminateReserve);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

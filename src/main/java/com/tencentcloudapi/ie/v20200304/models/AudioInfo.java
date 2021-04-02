@@ -62,6 +62,16 @@ public class AudioInfo extends AbstractModel{
     private Denoise Denoise;
 
     /**
+    * 开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
+    */
+    @SerializedName("EnableMuteAudio")
+    @Expose
+    private Long EnableMuteAudio;
+
+    /**
      * Get 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
 注意：当取值为 0，表示音频码率和原始音频保持一致。 
      * @return Bitrate 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
@@ -158,6 +168,34 @@ public class AudioInfo extends AbstractModel{
     }
 
     /**
+     * Get 开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启 
+     * @return EnableMuteAudio 开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
+     */
+    public Long getEnableMuteAudio() {
+        return this.EnableMuteAudio;
+    }
+
+    /**
+     * Set 开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
+     * @param EnableMuteAudio 开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
+     */
+    public void setEnableMuteAudio(Long EnableMuteAudio) {
+        this.EnableMuteAudio = EnableMuteAudio;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -166,6 +204,7 @@ public class AudioInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamObj(map, prefix + "Denoise.", this.Denoise);
+        this.setParamSimple(map, prefix + "EnableMuteAudio", this.EnableMuteAudio);
 
     }
 }

@@ -184,6 +184,22 @@ public class CloudBaseProjectVersion extends AbstractModel{
     private String FailType;
 
     /**
+    * 私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepoUrl")
+    @Expose
+    private String RepoUrl;
+
+    /**
+    * 是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoDeployOnCodeChange")
+    @Expose
+    private Boolean AutoDeployOnCodeChange;
+
+    /**
      * Get 项目名 
      * @return Name 项目名
      */
@@ -600,6 +616,46 @@ public class CloudBaseProjectVersion extends AbstractModel{
     }
 
     /**
+     * Get 私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepoUrl 私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepoUrl() {
+        return this.RepoUrl;
+    }
+
+    /**
+     * Set 私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepoUrl 私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepoUrl(String RepoUrl) {
+        this.RepoUrl = RepoUrl;
+    }
+
+    /**
+     * Get 是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoDeployOnCodeChange 是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoDeployOnCodeChange() {
+        return this.AutoDeployOnCodeChange;
+    }
+
+    /**
+     * Set 是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoDeployOnCodeChange 是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoDeployOnCodeChange(Boolean AutoDeployOnCodeChange) {
+        this.AutoDeployOnCodeChange = AutoDeployOnCodeChange;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -622,6 +678,8 @@ public class CloudBaseProjectVersion extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         this.setParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
         this.setParamSimple(map, prefix + "FailType", this.FailType);
+        this.setParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
+        this.setParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
 
     }
 }

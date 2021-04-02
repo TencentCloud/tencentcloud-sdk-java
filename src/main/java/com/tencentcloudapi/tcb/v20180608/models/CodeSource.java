@@ -79,6 +79,14 @@ public class CodeSource extends AbstractModel{
     private String RawCode;
 
     /**
+    * 代码分支
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Branch")
+    @Expose
+    private String Branch;
+
+    /**
      * Get 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
@@ -219,6 +227,26 @@ public class CodeSource extends AbstractModel{
     }
 
     /**
+     * Get 代码分支
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Branch 代码分支
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBranch() {
+        return this.Branch;
+    }
+
+    /**
+     * Set 代码分支
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Branch 代码分支
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBranch(String Branch) {
+        this.Branch = Branch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -229,6 +257,7 @@ public class CodeSource extends AbstractModel{
         this.setParamSimple(map, prefix + "CodingPackageName", this.CodingPackageName);
         this.setParamSimple(map, prefix + "CodingPackageVersion", this.CodingPackageVersion);
         this.setParamSimple(map, prefix + "RawCode", this.RawCode);
+        this.setParamSimple(map, prefix + "Branch", this.Branch);
 
     }
 }

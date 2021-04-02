@@ -142,6 +142,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Tag [] TagList;
 
     /**
+    * 安全组id
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
      * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      */
@@ -414,6 +421,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全组id 
+     * @return SecurityGroupIds 安全组id
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组id
+     * @param SecurityGroupIds 安全组id
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

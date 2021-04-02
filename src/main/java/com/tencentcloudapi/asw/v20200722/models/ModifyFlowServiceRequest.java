@@ -79,6 +79,13 @@ public class ModifyFlowServiceRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 是否允许日志投递
+    */
+    @SerializedName("EnableCLS")
+    @Expose
+    private Boolean EnableCLS;
+
+    /**
      * Get 状态机资源名 
      * @return FlowServiceResource 状态机资源名
      */
@@ -207,6 +214,22 @@ public class ModifyFlowServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否允许日志投递 
+     * @return EnableCLS 是否允许日志投递
+     */
+    public Boolean getEnableCLS() {
+        return this.EnableCLS;
+    }
+
+    /**
+     * Set 是否允许日志投递
+     * @param EnableCLS 是否允许日志投递
+     */
+    public void setEnableCLS(Boolean EnableCLS) {
+        this.EnableCLS = EnableCLS;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class ModifyFlowServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RoleResource", this.RoleResource);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "EnableCLS", this.EnableCLS);
 
     }
 }

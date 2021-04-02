@@ -67,6 +67,13 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     private Boolean IsNeedIdCardAvatar;
 
     /**
+    * 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+    */
+    @SerializedName("IsEncrypt")
+    @Expose
+    private Boolean IsEncrypt;
+
+    /**
      * Get 人脸核身流程的标识，调用DetectAuth接口时生成。 
      * @return BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      */
@@ -171,6 +178,22 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName 
+     * @return IsEncrypt 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     */
+    public Boolean getIsEncrypt() {
+        return this.IsEncrypt;
+    }
+
+    /**
+     * Set 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     * @param IsEncrypt 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     */
+    public void setIsEncrypt(Boolean IsEncrypt) {
+        this.IsEncrypt = IsEncrypt;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -180,6 +203,7 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BestFramesCount", this.BestFramesCount);
         this.setParamSimple(map, prefix + "IsCutIdCardImage", this.IsCutIdCardImage);
         this.setParamSimple(map, prefix + "IsNeedIdCardAvatar", this.IsNeedIdCardAvatar);
+        this.setParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
 
     }
 }

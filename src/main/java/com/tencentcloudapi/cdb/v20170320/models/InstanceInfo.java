@@ -319,7 +319,6 @@ public class InstanceInfo extends AbstractModel{
 
     /**
     * 节点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNodes")
     @Expose
@@ -1014,10 +1013,8 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 节点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点数 
      * @return InstanceNodes 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceNodes() {
         return this.InstanceNodes;
@@ -1025,9 +1022,7 @@ public class InstanceInfo extends AbstractModel{
 
     /**
      * Set 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNodes 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNodes(Long InstanceNodes) {
         this.InstanceNodes = InstanceNodes;

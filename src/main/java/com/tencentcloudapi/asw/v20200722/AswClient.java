@@ -198,4 +198,24 @@ public class AswClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *终止某个状态机
+     * @param req StopExecutionRequest
+     * @return StopExecutionResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopExecutionResponse StopExecution(StopExecutionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopExecutionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopExecutionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopExecution");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

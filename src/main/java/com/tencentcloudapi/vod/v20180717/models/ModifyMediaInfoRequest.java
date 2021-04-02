@@ -109,6 +109,28 @@ public class ModifyMediaInfoRequest extends AbstractModel{
     private Long ClearTags;
 
     /**
+    * 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+    */
+    @SerializedName("AddSubtitles")
+    @Expose
+    private MediaSubtitleInput [] AddSubtitles;
+
+    /**
+    * 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+    */
+    @SerializedName("DeleteSubtitleIds")
+    @Expose
+    private String [] DeleteSubtitleIds;
+
+    /**
+    * 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+    */
+    @SerializedName("ClearSubtitles")
+    @Expose
+    private Long ClearSubtitles;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
@@ -316,6 +338,58 @@ public class ModifyMediaInfoRequest extends AbstractModel{
     }
 
     /**
+     * Get 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。 
+     * @return AddSubtitles 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     */
+    public MediaSubtitleInput [] getAddSubtitles() {
+        return this.AddSubtitles;
+    }
+
+    /**
+     * Set 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * @param AddSubtitles 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     */
+    public void setAddSubtitles(MediaSubtitleInput [] AddSubtitles) {
+        this.AddSubtitles = AddSubtitles;
+    }
+
+    /**
+     * Get 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。 
+     * @return DeleteSubtitleIds 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     */
+    public String [] getDeleteSubtitleIds() {
+        return this.DeleteSubtitleIds;
+    }
+
+    /**
+     * Set 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * @param DeleteSubtitleIds 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     */
+    public void setDeleteSubtitleIds(String [] DeleteSubtitleIds) {
+        this.DeleteSubtitleIds = DeleteSubtitleIds;
+    }
+
+    /**
+     * Get 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。 
+     * @return ClearSubtitles 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+     */
+    public Long getClearSubtitles() {
+        return this.ClearSubtitles;
+    }
+
+    /**
+     * Set 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+     * @param ClearSubtitles 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+     */
+    public void setClearSubtitles(Long ClearSubtitles) {
+        this.ClearSubtitles = ClearSubtitles;
+    }
+
+    /**
      * Get 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
@@ -347,6 +421,9 @@ public class ModifyMediaInfoRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AddTags.", this.AddTags);
         this.setParamArraySimple(map, prefix + "DeleteTags.", this.DeleteTags);
         this.setParamSimple(map, prefix + "ClearTags", this.ClearTags);
+        this.setParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
+        this.setParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
+        this.setParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

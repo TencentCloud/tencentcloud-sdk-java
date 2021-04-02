@@ -320,6 +320,22 @@ public class NodeHardwareInfo extends AbstractModel{
     private String HardwareResourceType;
 
     /**
+    * 是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDynamicSpec")
+    @Expose
+    private Long IsDynamicSpec;
+
+    /**
+    * 浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DynamicPodSpec")
+    @Expose
+    private String DynamicPodSpec;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1064,6 +1080,46 @@ public class NodeHardwareInfo extends AbstractModel{
     }
 
     /**
+     * Get 是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDynamicSpec 是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsDynamicSpec() {
+        return this.IsDynamicSpec;
+    }
+
+    /**
+     * Set 是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDynamicSpec 是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDynamicSpec(Long IsDynamicSpec) {
+        this.IsDynamicSpec = IsDynamicSpec;
+    }
+
+    /**
+     * Get 浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DynamicPodSpec 浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDynamicPodSpec() {
+        return this.DynamicPodSpec;
+    }
+
+    /**
+     * Set 浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DynamicPodSpec 浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDynamicPodSpec(String DynamicPodSpec) {
+        this.DynamicPodSpec = DynamicPodSpec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1104,6 +1160,8 @@ public class NodeHardwareInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
+        this.setParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
 
     }
 }

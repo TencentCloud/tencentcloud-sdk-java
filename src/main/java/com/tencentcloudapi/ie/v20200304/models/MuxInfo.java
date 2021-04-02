@@ -30,6 +30,13 @@ public class MuxInfo extends AbstractModel{
     private String DeleteStream;
 
     /**
+    * Flv 参数，目前支持add_keyframe_index
+    */
+    @SerializedName("FlvFlags")
+    @Expose
+    private String FlvFlags;
+
+    /**
      * Get 删除流，可选项：video,audio。 
      * @return DeleteStream 删除流，可选项：video,audio。
      */
@@ -46,10 +53,27 @@ public class MuxInfo extends AbstractModel{
     }
 
     /**
+     * Get Flv 参数，目前支持add_keyframe_index 
+     * @return FlvFlags Flv 参数，目前支持add_keyframe_index
+     */
+    public String getFlvFlags() {
+        return this.FlvFlags;
+    }
+
+    /**
+     * Set Flv 参数，目前支持add_keyframe_index
+     * @param FlvFlags Flv 参数，目前支持add_keyframe_index
+     */
+    public void setFlvFlags(String FlvFlags) {
+        this.FlvFlags = FlvFlags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeleteStream", this.DeleteStream);
+        this.setParamSimple(map, prefix + "FlvFlags", this.FlvFlags);
 
     }
 }

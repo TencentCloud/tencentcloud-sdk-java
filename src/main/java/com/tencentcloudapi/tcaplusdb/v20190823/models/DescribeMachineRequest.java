@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeMachineRequest extends AbstractModel{
 
     /**
-    * 是否按ipv6过滤
+    * 不为0，表示查询支持ipv6的机器
     */
     @SerializedName("Ipv6Enable")
     @Expose
     private Long Ipv6Enable;
 
     /**
-     * Get 是否按ipv6过滤 
-     * @return Ipv6Enable 是否按ipv6过滤
+     * Get 不为0，表示查询支持ipv6的机器 
+     * @return Ipv6Enable 不为0，表示查询支持ipv6的机器
      */
     public Long getIpv6Enable() {
         return this.Ipv6Enable;
     }
 
     /**
-     * Set 是否按ipv6过滤
-     * @param Ipv6Enable 是否按ipv6过滤
+     * Set 不为0，表示查询支持ipv6的机器
+     * @param Ipv6Enable 不为0，表示查询支持ipv6的机器
      */
     public void setIpv6Enable(Long Ipv6Enable) {
         this.Ipv6Enable = Ipv6Enable;

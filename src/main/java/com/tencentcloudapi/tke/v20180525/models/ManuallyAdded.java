@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ManuallyAdded extends AbstractModel{
 
     /**
-    * 加入中节的点数量
+    * 加入中的节点数量
     */
     @SerializedName("Joining")
     @Expose
@@ -51,16 +51,16 @@ public class ManuallyAdded extends AbstractModel{
     private Long Total;
 
     /**
-     * Get 加入中节的点数量 
-     * @return Joining 加入中节的点数量
+     * Get 加入中的节点数量 
+     * @return Joining 加入中的节点数量
      */
     public Long getJoining() {
         return this.Joining;
     }
 
     /**
-     * Set 加入中节的点数量
-     * @param Joining 加入中节的点数量
+     * Set 加入中的节点数量
+     * @param Joining 加入中的节点数量
      */
     public void setJoining(Long Joining) {
         this.Joining = Joining;

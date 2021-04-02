@@ -31,6 +31,13 @@ public class ModifyMediaInfoResponse extends AbstractModel{
     private String CoverUrl;
 
     /**
+    * 新增的字幕信息。
+    */
+    @SerializedName("AddedSubtitleSet")
+    @Expose
+    private MediaSubtitleItem [] AddedSubtitleSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -58,6 +65,22 @@ public class ModifyMediaInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 新增的字幕信息。 
+     * @return AddedSubtitleSet 新增的字幕信息。
+     */
+    public MediaSubtitleItem [] getAddedSubtitleSet() {
+        return this.AddedSubtitleSet;
+    }
+
+    /**
+     * Set 新增的字幕信息。
+     * @param AddedSubtitleSet 新增的字幕信息。
+     */
+    public void setAddedSubtitleSet(MediaSubtitleItem [] AddedSubtitleSet) {
+        this.AddedSubtitleSet = AddedSubtitleSet;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -78,6 +101,7 @@ public class ModifyMediaInfoResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+        this.setParamArrayObj(map, prefix + "AddedSubtitleSet.", this.AddedSubtitleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

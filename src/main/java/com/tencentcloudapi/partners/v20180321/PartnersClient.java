@@ -200,6 +200,27 @@ public class PartnersClient extends AbstractClient{
 
     /**
      *供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+     * @param req DescribeAgentDealsByCacheRequest
+     * @return DescribeAgentDealsByCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentDealsByCacheResponse DescribeAgentDealsByCache(DescribeAgentDealsByCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentDealsByCacheResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentDealsByCacheResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAgentDealsByCache");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *【该接口将逐步下线，请切换使用升级版本DescribeAgentDealsByCache】供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+
      * @param req DescribeAgentDealsCacheRequest
      * @return DescribeAgentDealsCacheResponse
      * @throws TencentCloudSDKException

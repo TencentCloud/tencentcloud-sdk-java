@@ -79,6 +79,21 @@ public class PodSpec extends AbstractModel{
     private PodVolume [] PodVolumes;
 
     /**
+    * 是否浮动规格，1是，0否
+    */
+    @SerializedName("IsDynamicSpec")
+    @Expose
+    private Long IsDynamicSpec;
+
+    /**
+    * 浮动规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DynamicPodSpec")
+    @Expose
+    private DynamicPodSpec DynamicPodSpec;
+
+    /**
      * Get 外部资源提供者的标识符，例如"cls-a1cd23fa"。 
      * @return ResourceProviderIdentifier 外部资源提供者的标识符，例如"cls-a1cd23fa"。
      */
@@ -207,6 +222,42 @@ public class PodSpec extends AbstractModel{
     }
 
     /**
+     * Get 是否浮动规格，1是，0否 
+     * @return IsDynamicSpec 是否浮动规格，1是，0否
+     */
+    public Long getIsDynamicSpec() {
+        return this.IsDynamicSpec;
+    }
+
+    /**
+     * Set 是否浮动规格，1是，0否
+     * @param IsDynamicSpec 是否浮动规格，1是，0否
+     */
+    public void setIsDynamicSpec(Long IsDynamicSpec) {
+        this.IsDynamicSpec = IsDynamicSpec;
+    }
+
+    /**
+     * Get 浮动规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DynamicPodSpec 浮动规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DynamicPodSpec getDynamicPodSpec() {
+        return this.DynamicPodSpec;
+    }
+
+    /**
+     * Set 浮动规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DynamicPodSpec 浮动规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDynamicPodSpec(DynamicPodSpec DynamicPodSpec) {
+        this.DynamicPodSpec = DynamicPodSpec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +269,8 @@ public class PodSpec extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DataVolumes.", this.DataVolumes);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
         this.setParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
+        this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
+        this.setParamObj(map, prefix + "DynamicPodSpec.", this.DynamicPodSpec);
 
     }
 }

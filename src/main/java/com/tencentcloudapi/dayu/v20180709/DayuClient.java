@@ -680,6 +680,26 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取业务流量状态码统计
+     * @param req DescribeBizHttpStatusRequest
+     * @return DescribeBizHttpStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBizHttpStatusResponse DescribeBizHttpStatus(DescribeBizHttpStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBizHttpStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBizHttpStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取业务流量曲线
      * @param req DescribeBizTrendRequest
      * @return DescribeBizTrendResponse

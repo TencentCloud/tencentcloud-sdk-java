@@ -80,6 +80,20 @@ public class HmtResidentPermitOCRResponse extends AbstractModel{
     private String Authority;
 
     /**
+    * 签发次数
+    */
+    @SerializedName("VisaNum")
+    @Expose
+    private String VisaNum;
+
+    /**
+    * 通行证号码
+    */
+    @SerializedName("PassNo")
+    @Expose
+    private String PassNo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -219,6 +233,38 @@ public class HmtResidentPermitOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 签发次数 
+     * @return VisaNum 签发次数
+     */
+    public String getVisaNum() {
+        return this.VisaNum;
+    }
+
+    /**
+     * Set 签发次数
+     * @param VisaNum 签发次数
+     */
+    public void setVisaNum(String VisaNum) {
+        this.VisaNum = VisaNum;
+    }
+
+    /**
+     * Get 通行证号码 
+     * @return PassNo 通行证号码
+     */
+    public String getPassNo() {
+        return this.PassNo;
+    }
+
+    /**
+     * Set 通行证号码
+     * @param PassNo 通行证号码
+     */
+    public void setPassNo(String PassNo) {
+        this.PassNo = PassNo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -246,6 +292,8 @@ public class HmtResidentPermitOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CardType", this.CardType);
         this.setParamSimple(map, prefix + "ValidDate", this.ValidDate);
         this.setParamSimple(map, prefix + "Authority", this.Authority);
+        this.setParamSimple(map, prefix + "VisaNum", this.VisaNum);
+        this.setParamSimple(map, prefix + "PassNo", this.PassNo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

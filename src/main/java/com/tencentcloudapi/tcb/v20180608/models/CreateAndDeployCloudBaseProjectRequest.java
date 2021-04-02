@@ -100,6 +100,20 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
     private String FreeQuota;
 
     /**
+    * 是否代码变更触发自动部署
+    */
+    @SerializedName("AutoDeployOnCodeChange")
+    @Expose
+    private Boolean AutoDeployOnCodeChange;
+
+    /**
+    * 私有仓库地址
+    */
+    @SerializedName("RepoUrl")
+    @Expose
+    private String RepoUrl;
+
+    /**
      * Get 项目名 
      * @return Name 项目名
      */
@@ -276,6 +290,38 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否代码变更触发自动部署 
+     * @return AutoDeployOnCodeChange 是否代码变更触发自动部署
+     */
+    public Boolean getAutoDeployOnCodeChange() {
+        return this.AutoDeployOnCodeChange;
+    }
+
+    /**
+     * Set 是否代码变更触发自动部署
+     * @param AutoDeployOnCodeChange 是否代码变更触发自动部署
+     */
+    public void setAutoDeployOnCodeChange(Boolean AutoDeployOnCodeChange) {
+        this.AutoDeployOnCodeChange = AutoDeployOnCodeChange;
+    }
+
+    /**
+     * Get 私有仓库地址 
+     * @return RepoUrl 私有仓库地址
+     */
+    public String getRepoUrl() {
+        return this.RepoUrl;
+    }
+
+    /**
+     * Set 私有仓库地址
+     * @param RepoUrl 私有仓库地址
+     */
+    public void setRepoUrl(String RepoUrl) {
+        this.RepoUrl = RepoUrl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
         this.setParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
+        this.setParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
+        this.setParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
 
     }
 }

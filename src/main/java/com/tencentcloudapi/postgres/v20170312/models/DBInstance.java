@@ -244,6 +244,14 @@ public class DBInstance extends AbstractModel{
     private String StatusInReadonlyGroup;
 
     /**
+    * 下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OfflineTime")
+    @Expose
+    private String OfflineTime;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
@@ -756,6 +764,26 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get 下线时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OfflineTime 下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOfflineTime() {
+        return this.OfflineTime;
+    }
+
+    /**
+     * Set 下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OfflineTime 下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOfflineTime(String OfflineTime) {
+        this.OfflineTime = OfflineTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -790,6 +818,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
         this.setParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
         this.setParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
+        this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
 
     }
 }

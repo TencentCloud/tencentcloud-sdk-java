@@ -83,6 +83,30 @@ public class DescribeFlowServiceDetailResponse extends AbstractModel{
     private String FlowServiceChineseName;
 
     /**
+    * 是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableCLS")
+    @Expose
+    private Boolean EnableCLS;
+
+    /**
+    * CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CLSUrl")
+    @Expose
+    private String CLSUrl;
+
+    /**
+    * 工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowInput")
+    @Expose
+    private String FlowInput;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -234,6 +258,66 @@ public class DescribeFlowServiceDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableCLS 是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableCLS() {
+        return this.EnableCLS;
+    }
+
+    /**
+     * Set 是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableCLS 是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableCLS(Boolean EnableCLS) {
+        this.EnableCLS = EnableCLS;
+    }
+
+    /**
+     * Get CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CLSUrl CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCLSUrl() {
+        return this.CLSUrl;
+    }
+
+    /**
+     * Set CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CLSUrl CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCLSUrl(String CLSUrl) {
+        this.CLSUrl = CLSUrl;
+    }
+
+    /**
+     * Get 工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowInput 工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlowInput() {
+        return this.FlowInput;
+    }
+
+    /**
+     * Set 工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowInput 工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowInput(String FlowInput) {
+        this.FlowInput = FlowInput;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -261,6 +345,9 @@ public class DescribeFlowServiceDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateDate", this.CreateDate);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "FlowServiceChineseName", this.FlowServiceChineseName);
+        this.setParamSimple(map, prefix + "EnableCLS", this.EnableCLS);
+        this.setParamSimple(map, prefix + "CLSUrl", this.CLSUrl);
+        this.setParamSimple(map, prefix + "FlowInput", this.FlowInput);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

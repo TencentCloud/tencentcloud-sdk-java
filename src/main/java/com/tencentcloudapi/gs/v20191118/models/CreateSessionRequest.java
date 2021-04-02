@@ -44,7 +44,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String GameId;
 
     /**
-    * 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+    * 【已废弃】只在TrylockWorker时生效
     */
     @SerializedName("GameRegion")
     @Expose
@@ -58,7 +58,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String GameParas;
 
     /**
-    * 分辨率,，可设置为1080p或720p
+    * 分辨率,，可设置为1080p或720p或1920x1080格式
     */
     @SerializedName("Resolution")
     @Expose
@@ -72,28 +72,28 @@ public class CreateSessionRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
-    * 【废弃】资源池编号
+    * 【已废弃】
     */
     @SerializedName("SetNo")
     @Expose
     private Long SetNo;
 
     /**
-    * 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+    * 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 单位Mbps，动态调整最大码率
+    * 单位Mbps，动态调整最大码率，有一定浮动范围
     */
     @SerializedName("MaxBitrate")
     @Expose
     private Long MaxBitrate;
 
     /**
-    * 单位Mbps，动态调整最小码率
+    * 单位Mbps，动态调整最小码率，有一定浮动范围
     */
     @SerializedName("MinBitrate")
     @Expose
@@ -107,28 +107,28 @@ public class CreateSessionRequest extends AbstractModel{
     private Long Fps;
 
     /**
-    * 游戏用户IP，用于就近调度，例如125.127.178.228
+    * 【已废弃】只在TrylockWorker时生效
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-    * 优化项，便于客户灰度开启新的优化项，默认为0
+    * 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
     */
     @SerializedName("Optimization")
     @Expose
     private Long Optimization;
 
     /**
-    * 【多人云游】游戏主机用户ID
+    * 【互动云游】游戏主机用户ID
     */
     @SerializedName("HostUserId")
     @Expose
     private String HostUserId;
 
     /**
-    * 【多人云游】角色；Player表示玩家；Viewer表示观察者
+    * 【互动云游】角色；Player表示玩家；Viewer表示观察者
     */
     @SerializedName("Role")
     @Expose
@@ -190,16 +190,16 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等 
-     * @return GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+     * Get 【已废弃】只在TrylockWorker时生效 
+     * @return GameRegion 【已废弃】只在TrylockWorker时生效
      */
     public String getGameRegion() {
         return this.GameRegion;
     }
 
     /**
-     * Set 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
-     * @param GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+     * Set 【已废弃】只在TrylockWorker时生效
+     * @param GameRegion 【已废弃】只在TrylockWorker时生效
      */
     public void setGameRegion(String GameRegion) {
         this.GameRegion = GameRegion;
@@ -222,16 +222,16 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 分辨率,，可设置为1080p或720p 
-     * @return Resolution 分辨率,，可设置为1080p或720p
+     * Get 分辨率,，可设置为1080p或720p或1920x1080格式 
+     * @return Resolution 分辨率,，可设置为1080p或720p或1920x1080格式
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 分辨率,，可设置为1080p或720p
-     * @param Resolution 分辨率,，可设置为1080p或720p
+     * Set 分辨率,，可设置为1080p或720p或1920x1080格式
+     * @param Resolution 分辨率,，可设置为1080p或720p或1920x1080格式
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
@@ -254,64 +254,64 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 【废弃】资源池编号 
-     * @return SetNo 【废弃】资源池编号
+     * Get 【已废弃】 
+     * @return SetNo 【已废弃】
      */
     public Long getSetNo() {
         return this.SetNo;
     }
 
     /**
-     * Set 【废弃】资源池编号
-     * @param SetNo 【废弃】资源池编号
+     * Set 【已废弃】
+     * @param SetNo 【已废弃】
      */
     public void setSetNo(Long SetNo) {
         this.SetNo = SetNo;
     }
 
     /**
-     * Get 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效) 
-     * @return Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * Get 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效) 
+     * @return Bitrate 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
-     * @param Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * Set 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * @param Bitrate 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 单位Mbps，动态调整最大码率 
-     * @return MaxBitrate 单位Mbps，动态调整最大码率
+     * Get 单位Mbps，动态调整最大码率，有一定浮动范围 
+     * @return MaxBitrate 单位Mbps，动态调整最大码率，有一定浮动范围
      */
     public Long getMaxBitrate() {
         return this.MaxBitrate;
     }
 
     /**
-     * Set 单位Mbps，动态调整最大码率
-     * @param MaxBitrate 单位Mbps，动态调整最大码率
+     * Set 单位Mbps，动态调整最大码率，有一定浮动范围
+     * @param MaxBitrate 单位Mbps，动态调整最大码率，有一定浮动范围
      */
     public void setMaxBitrate(Long MaxBitrate) {
         this.MaxBitrate = MaxBitrate;
     }
 
     /**
-     * Get 单位Mbps，动态调整最小码率 
-     * @return MinBitrate 单位Mbps，动态调整最小码率
+     * Get 单位Mbps，动态调整最小码率，有一定浮动范围 
+     * @return MinBitrate 单位Mbps，动态调整最小码率，有一定浮动范围
      */
     public Long getMinBitrate() {
         return this.MinBitrate;
     }
 
     /**
-     * Set 单位Mbps，动态调整最小码率
-     * @param MinBitrate 单位Mbps，动态调整最小码率
+     * Set 单位Mbps，动态调整最小码率，有一定浮动范围
+     * @param MinBitrate 单位Mbps，动态调整最小码率，有一定浮动范围
      */
     public void setMinBitrate(Long MinBitrate) {
         this.MinBitrate = MinBitrate;
@@ -334,64 +334,64 @@ public class CreateSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 游戏用户IP，用于就近调度，例如125.127.178.228 
-     * @return UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     * Get 【已废弃】只在TrylockWorker时生效 
+     * @return UserIp 【已废弃】只在TrylockWorker时生效
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 游戏用户IP，用于就近调度，例如125.127.178.228
-     * @param UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     * Set 【已废弃】只在TrylockWorker时生效
+     * @param UserIp 【已废弃】只在TrylockWorker时生效
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get 优化项，便于客户灰度开启新的优化项，默认为0 
-     * @return Optimization 优化项，便于客户灰度开启新的优化项，默认为0
+     * Get 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0 
+     * @return Optimization 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
      */
     public Long getOptimization() {
         return this.Optimization;
     }
 
     /**
-     * Set 优化项，便于客户灰度开启新的优化项，默认为0
-     * @param Optimization 优化项，便于客户灰度开启新的优化项，默认为0
+     * Set 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
+     * @param Optimization 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
      */
     public void setOptimization(Long Optimization) {
         this.Optimization = Optimization;
     }
 
     /**
-     * Get 【多人云游】游戏主机用户ID 
-     * @return HostUserId 【多人云游】游戏主机用户ID
+     * Get 【互动云游】游戏主机用户ID 
+     * @return HostUserId 【互动云游】游戏主机用户ID
      */
     public String getHostUserId() {
         return this.HostUserId;
     }
 
     /**
-     * Set 【多人云游】游戏主机用户ID
-     * @param HostUserId 【多人云游】游戏主机用户ID
+     * Set 【互动云游】游戏主机用户ID
+     * @param HostUserId 【互动云游】游戏主机用户ID
      */
     public void setHostUserId(String HostUserId) {
         this.HostUserId = HostUserId;
     }
 
     /**
-     * Get 【多人云游】角色；Player表示玩家；Viewer表示观察者 
-     * @return Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * Get 【互动云游】角色；Player表示玩家；Viewer表示观察者 
+     * @return Role 【互动云游】角色；Player表示玩家；Viewer表示观察者
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 【多人云游】角色；Player表示玩家；Viewer表示观察者
-     * @param Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * Set 【互动云游】角色；Player表示玩家；Viewer表示观察者
+     * @param Role 【互动云游】角色；Player表示玩家；Viewer表示观察者
      */
     public void setRole(String Role) {
         this.Role = Role;

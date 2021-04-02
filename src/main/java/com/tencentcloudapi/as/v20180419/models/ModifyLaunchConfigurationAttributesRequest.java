@@ -124,6 +124,20 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
     private String DiskTypePolicy;
 
     /**
+    * 实例系统盘配置信息。
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -384,6 +398,38 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例系统盘配置信息。 
+     * @return SystemDisk 实例系统盘配置信息。
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 实例系统盘配置信息。
+     * @param SystemDisk 实例系统盘配置信息。
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。 
+     * @return DataDisks 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+     * @param DataDisks 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -399,6 +445,8 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
     }
 }

@@ -30,14 +30,14 @@ public class CreateSessionResponse extends AbstractModel{
     private String ServerSession;
 
     /**
-    * 【多人游戏】角色编号；比如1、2、3、4
+    * 【已废弃】
     */
     @SerializedName("RoleNumber")
     @Expose
     private String RoleNumber;
 
     /**
-    * 【多人云游】角色；Player表示玩家；Viewer表示观察者
+    * 【互动云游】角色；Player表示玩家；Viewer表示观察者
     */
     @SerializedName("Role")
     @Expose
@@ -67,32 +67,32 @@ public class CreateSessionResponse extends AbstractModel{
     }
 
     /**
-     * Get 【多人游戏】角色编号；比如1、2、3、4 
-     * @return RoleNumber 【多人游戏】角色编号；比如1、2、3、4
+     * Get 【已废弃】 
+     * @return RoleNumber 【已废弃】
      */
     public String getRoleNumber() {
         return this.RoleNumber;
     }
 
     /**
-     * Set 【多人游戏】角色编号；比如1、2、3、4
-     * @param RoleNumber 【多人游戏】角色编号；比如1、2、3、4
+     * Set 【已废弃】
+     * @param RoleNumber 【已废弃】
      */
     public void setRoleNumber(String RoleNumber) {
         this.RoleNumber = RoleNumber;
     }
 
     /**
-     * Get 【多人云游】角色；Player表示玩家；Viewer表示观察者 
-     * @return Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * Get 【互动云游】角色；Player表示玩家；Viewer表示观察者 
+     * @return Role 【互动云游】角色；Player表示玩家；Viewer表示观察者
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 【多人云游】角色；Player表示玩家；Viewer表示观察者
-     * @param Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * Set 【互动云游】角色；Player表示玩家；Viewer表示观察者
+     * @param Role 【互动云游】角色；Player表示玩家；Viewer表示观察者
      */
     public void setRole(String Role) {
         this.Role = Role;

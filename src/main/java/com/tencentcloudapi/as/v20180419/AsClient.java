@@ -60,6 +60,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
+     * @param req ClearLaunchConfigurationAttributesRequest
+     * @return ClearLaunchConfigurationAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(ClearLaunchConfigurationAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ClearLaunchConfigurationAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ClearLaunchConfigurationAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ClearLaunchConfigurationAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CompleteLifecycleAction）用于完成生命周期动作。
 
 * 用户通过调用本接口，指定一个具体的生命周期挂钩的结果（“CONITNUE”或者“ABANDON”）。如果一直不调用本接口，则生命周期挂钩会在超时后按照“DefaultResult”进行处理。

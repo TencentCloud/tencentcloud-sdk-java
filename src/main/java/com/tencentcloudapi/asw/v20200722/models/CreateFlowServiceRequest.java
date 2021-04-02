@@ -72,6 +72,20 @@ public class CreateFlowServiceRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 是否开启CLS日志投递功能
+    */
+    @SerializedName("EnableCLS")
+    @Expose
+    private Boolean EnableCLS;
+
+    /**
+    * 该状态机的默认输入
+    */
+    @SerializedName("Input")
+    @Expose
+    private String Input;
+
+    /**
      * Get 定义文本（JSON格式） 
      * @return Definition 定义文本（JSON格式）
      */
@@ -184,6 +198,38 @@ public class CreateFlowServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启CLS日志投递功能 
+     * @return EnableCLS 是否开启CLS日志投递功能
+     */
+    public Boolean getEnableCLS() {
+        return this.EnableCLS;
+    }
+
+    /**
+     * Set 是否开启CLS日志投递功能
+     * @param EnableCLS 是否开启CLS日志投递功能
+     */
+    public void setEnableCLS(Boolean EnableCLS) {
+        this.EnableCLS = EnableCLS;
+    }
+
+    /**
+     * Get 该状态机的默认输入 
+     * @return Input 该状态机的默认输入
+     */
+    public String getInput() {
+        return this.Input;
+    }
+
+    /**
+     * Set 该状态机的默认输入
+     * @param Input 该状态机的默认输入
+     */
+    public void setInput(String Input) {
+        this.Input = Input;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class CreateFlowServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowServiceChineseName", this.FlowServiceChineseName);
         this.setParamSimple(map, prefix + "RoleResource", this.RoleResource);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "EnableCLS", this.EnableCLS);
+        this.setParamSimple(map, prefix + "Input", this.Input);
 
     }
 }
