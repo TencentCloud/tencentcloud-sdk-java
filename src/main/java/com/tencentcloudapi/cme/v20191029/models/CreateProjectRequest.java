@@ -34,6 +34,7 @@ public class CreateProjectRequest extends AbstractModel{
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
     */
     @SerializedName("Category")
     @Expose
@@ -97,6 +98,13 @@ public class CreateProjectRequest extends AbstractModel{
     private VideoSegmentationProjectInput VideoSegmentationProjectInput;
 
     /**
+    * 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+    */
+    @SerializedName("StreamConnectProjectInput")
+    @Expose
+    private StreamConnectProjectInput StreamConnectProjectInput;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -116,11 +124,13 @@ public class CreateProjectRequest extends AbstractModel{
      * Get 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
-<li>VIDEO_SEGMENTATION：视频拆条。</li> 
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li> 
      * @return Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
      */
     public String getCategory() {
         return this.Category;
@@ -131,10 +141,12 @@ public class CreateProjectRequest extends AbstractModel{
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
      * @param Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;
@@ -273,6 +285,22 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。 
+     * @return StreamConnectProjectInput 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     */
+    public StreamConnectProjectInput getStreamConnectProjectInput() {
+        return this.StreamConnectProjectInput;
+    }
+
+    /**
+     * Set 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     * @param StreamConnectProjectInput 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     */
+    public void setStreamConnectProjectInput(StreamConnectProjectInput StreamConnectProjectInput) {
+        this.StreamConnectProjectInput = StreamConnectProjectInput;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -286,6 +314,7 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamObj(map, prefix + "LiveStreamClipProjectInput.", this.LiveStreamClipProjectInput);
         this.setParamObj(map, prefix + "VideoEditProjectInput.", this.VideoEditProjectInput);
         this.setParamObj(map, prefix + "VideoSegmentationProjectInput.", this.VideoSegmentationProjectInput);
+        this.setParamObj(map, prefix + "StreamConnectProjectInput.", this.StreamConnectProjectInput);
 
     }
 }

@@ -44,7 +44,12 @@ public class ProjectInfo extends AbstractModel{
     private String AspectRatio;
 
     /**
-    * 项目类别。
+    * 项目类别，取值：
+项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
     */
     @SerializedName("Category")
     @Expose
@@ -127,16 +132,36 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 项目类别。 
-     * @return Category 项目类别。
+     * Get 项目类别，取值：
+项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li> 
+     * @return Category 项目类别，取值：
+项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 项目类别。
-     * @param Category 项目类别。
+     * Set 项目类别，取值：
+项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
+     * @param Category 项目类别，取值：
+项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;

@@ -41,14 +41,14 @@ subnet-id - String - HAVIP所在子网ID。
     private Filter [] Filters;
 
     /**
-    * 偏移量。
+    * 偏移量，默认值是0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量。
+    * 返回数量，默认值是20，最大是100。
     */
     @SerializedName("Limit")
     @Expose
@@ -110,32 +110,32 @@ subnet-id - String - HAVIP所在子网ID。
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get 偏移量，默认值是0。 
+     * @return Offset 偏移量，默认值是0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set 偏移量，默认值是0。
+     * @param Offset 偏移量，默认值是0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量。 
-     * @return Limit 返回数量。
+     * Get 返回数量，默认值是20，最大是100。 
+     * @return Limit 返回数量，默认值是20，最大是100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量。
-     * @param Limit 返回数量。
+     * Set 返回数量，默认值是20，最大是100。
+     * @param Limit 返回数量，默认值是20，最大是100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

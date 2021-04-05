@@ -24,9 +24,10 @@ public class MediaTrackItem extends AbstractModel{
 
     /**
     * 片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -55,14 +56,23 @@ public class MediaTrackItem extends AbstractModel{
     private EmptyTrackItem EmptyItem;
 
     /**
+    * 转场，当 Type = Transition 时有效。
+    */
+    @SerializedName("TransitionItem")
+    @Expose
+    private MediaTransitionItem TransitionItem;
+
+    /**
      * Get 片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li> 
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li> 
      * @return Type 片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
      */
     public String getType() {
         return this.Type;
@@ -70,13 +80,15 @@ public class MediaTrackItem extends AbstractModel{
 
     /**
      * Set 片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
      * @param Type 片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -135,6 +147,22 @@ public class MediaTrackItem extends AbstractModel{
     }
 
     /**
+     * Get 转场，当 Type = Transition 时有效。 
+     * @return TransitionItem 转场，当 Type = Transition 时有效。
+     */
+    public MediaTransitionItem getTransitionItem() {
+        return this.TransitionItem;
+    }
+
+    /**
+     * Set 转场，当 Type = Transition 时有效。
+     * @param TransitionItem 转场，当 Type = Transition 时有效。
+     */
+    public void setTransitionItem(MediaTransitionItem TransitionItem) {
+        this.TransitionItem = TransitionItem;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +170,7 @@ public class MediaTrackItem extends AbstractModel{
         this.setParamObj(map, prefix + "VideoItem.", this.VideoItem);
         this.setParamObj(map, prefix + "AudioItem.", this.AudioItem);
         this.setParamObj(map, prefix + "EmptyItem.", this.EmptyItem);
+        this.setParamObj(map, prefix + "TransitionItem.", this.TransitionItem);
 
     }
 }
