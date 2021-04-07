@@ -142,6 +142,22 @@ public class NodePool extends AbstractModel{
     private String ImageId;
 
     /**
+    * 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DesiredPodNum")
+    @Expose
+    private Long DesiredPodNum;
+
+    /**
+    * 用户自定义脚本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserScript")
+    @Expose
+    private String UserScript;
+
+    /**
      * Get NodePoolId 资源池id 
      * @return NodePoolId NodePoolId 资源池id
      */
@@ -426,6 +442,46 @@ public class NodePool extends AbstractModel{
     }
 
     /**
+     * Get 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DesiredPodNum 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDesiredPodNum() {
+        return this.DesiredPodNum;
+    }
+
+    /**
+     * Set 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DesiredPodNum 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDesiredPodNum(Long DesiredPodNum) {
+        this.DesiredPodNum = DesiredPodNum;
+    }
+
+    /**
+     * Get 用户自定义脚本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserScript 用户自定义脚本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserScript() {
+        return this.UserScript;
+    }
+
+    /**
+     * Set 用户自定义脚本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserScript 用户自定义脚本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserScript(String UserScript) {
+        this.UserScript = UserScript;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -445,6 +501,8 @@ public class NodePool extends AbstractModel{
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
+        this.setParamSimple(map, prefix + "UserScript", this.UserScript);
 
     }
 }

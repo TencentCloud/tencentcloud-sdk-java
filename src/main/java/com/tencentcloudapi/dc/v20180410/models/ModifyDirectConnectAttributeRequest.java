@@ -107,6 +107,13 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     private Boolean SignLaw;
 
     /**
+    * 物理专线带宽
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
      * Get 物理专线的ID。 
      * @return DirectConnectId 物理专线的ID。
      */
@@ -299,6 +306,22 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get 物理专线带宽 
+     * @return Bandwidth 物理专线带宽
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 物理专线带宽
+     * @param Bandwidth 物理专线带宽
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 
     }
 }

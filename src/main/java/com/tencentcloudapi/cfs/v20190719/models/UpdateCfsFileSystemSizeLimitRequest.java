@@ -30,7 +30,7 @@ public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
     private Long FsLimit;
 
     /**
-    * 文件系统ID
+    * 文件系统ID，目前仅支持标准型文件系统。
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -53,16 +53,16 @@ public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件系统ID 
-     * @return FileSystemId 文件系统ID
+     * Get 文件系统ID，目前仅支持标准型文件系统。 
+     * @return FileSystemId 文件系统ID，目前仅支持标准型文件系统。
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统ID
-     * @param FileSystemId 文件系统ID
+     * Set 文件系统ID，目前仅支持标准型文件系统。
+     * @param FileSystemId 文件系统ID，目前仅支持标准型文件系统。
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

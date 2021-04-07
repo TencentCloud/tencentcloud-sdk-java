@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecm.v20190719.models;
+package com.tencentcloudapi.ccc.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoadBalancerInternetAccessible extends AbstractModel{
+public class DescribeTelSessionRequest extends AbstractModel{
 
     /**
-    * 最大出带宽，单位Mbps。默认值10
+    * 应用ID
     */
-    @SerializedName("InternetMaxBandwidthOut")
+    @SerializedName("SdkAppId")
     @Expose
-    private Long InternetMaxBandwidthOut;
+    private Long SdkAppId;
 
     /**
-     * Get 最大出带宽，单位Mbps。默认值10 
-     * @return InternetMaxBandwidthOut 最大出带宽，单位Mbps。默认值10
+    * 会话ID
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+     * Get 应用ID 
+     * @return SdkAppId 应用ID
      */
-    public Long getInternetMaxBandwidthOut() {
-        return this.InternetMaxBandwidthOut;
+    public Long getSdkAppId() {
+        return this.SdkAppId;
     }
 
     /**
-     * Set 最大出带宽，单位Mbps。默认值10
-     * @param InternetMaxBandwidthOut 最大出带宽，单位Mbps。默认值10
+     * Set 应用ID
+     * @param SdkAppId 应用ID
      */
-    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
-        this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 会话ID 
+     * @return SessionId 会话ID
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 会话ID
+     * @param SessionId 会话ID
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

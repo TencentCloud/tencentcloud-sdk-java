@@ -62,6 +62,14 @@ public class MaterialInfo extends AbstractModel{
     private LinkMaterial LinkMaterial;
 
     /**
+    * 模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VideoEditTemplateMaterial")
+    @Expose
+    private VideoEditTemplateMaterial VideoEditTemplateMaterial;
+
+    /**
     * 其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -166,6 +174,26 @@ public class MaterialInfo extends AbstractModel{
     }
 
     /**
+     * Get 模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VideoEditTemplateMaterial 模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VideoEditTemplateMaterial getVideoEditTemplateMaterial() {
+        return this.VideoEditTemplateMaterial;
+    }
+
+    /**
+     * Set 模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoEditTemplateMaterial 模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVideoEditTemplateMaterial(VideoEditTemplateMaterial VideoEditTemplateMaterial) {
+        this.VideoEditTemplateMaterial = VideoEditTemplateMaterial;
+    }
+
+    /**
      * Get 其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OtherMaterial 其他类型媒体信息。
@@ -194,6 +222,7 @@ public class MaterialInfo extends AbstractModel{
         this.setParamObj(map, prefix + "AudioMaterial.", this.AudioMaterial);
         this.setParamObj(map, prefix + "ImageMaterial.", this.ImageMaterial);
         this.setParamObj(map, prefix + "LinkMaterial.", this.LinkMaterial);
+        this.setParamObj(map, prefix + "VideoEditTemplateMaterial.", this.VideoEditTemplateMaterial);
         this.setParamObj(map, prefix + "OtherMaterial.", this.OtherMaterial);
 
     }

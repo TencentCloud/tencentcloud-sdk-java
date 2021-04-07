@@ -238,4 +238,24 @@ public class CccClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取 PSTN 会话信息
+     * @param req DescribeTelSessionRequest
+     * @return DescribeTelSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTelSessionResponse DescribeTelSession(DescribeTelSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTelSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTelSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTelSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
