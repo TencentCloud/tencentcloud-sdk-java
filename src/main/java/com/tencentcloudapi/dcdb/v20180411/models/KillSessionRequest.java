@@ -37,11 +37,18 @@ public class KillSessionRequest extends AbstractModel{
     private Long [] SessionId;
 
     /**
-    * 分片ID
+    * 分片ID，与ShardSerialId设置一个
     */
     @SerializedName("ShardId")
     @Expose
     private String ShardId;
+
+    /**
+    * 分片序列ID，与ShardId设置一个
+    */
+    @SerializedName("ShardSerialId")
+    @Expose
+    private String ShardSerialId;
 
     /**
      * Get 实例ID 
@@ -76,19 +83,35 @@ public class KillSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 分片ID 
-     * @return ShardId 分片ID
+     * Get 分片ID，与ShardSerialId设置一个 
+     * @return ShardId 分片ID，与ShardSerialId设置一个
      */
     public String getShardId() {
         return this.ShardId;
     }
 
     /**
-     * Set 分片ID
-     * @param ShardId 分片ID
+     * Set 分片ID，与ShardSerialId设置一个
+     * @param ShardId 分片ID，与ShardSerialId设置一个
      */
     public void setShardId(String ShardId) {
         this.ShardId = ShardId;
+    }
+
+    /**
+     * Get 分片序列ID，与ShardId设置一个 
+     * @return ShardSerialId 分片序列ID，与ShardId设置一个
+     */
+    public String getShardSerialId() {
+        return this.ShardSerialId;
+    }
+
+    /**
+     * Set 分片序列ID，与ShardId设置一个
+     * @param ShardSerialId 分片序列ID，与ShardId设置一个
+     */
+    public void setShardSerialId(String ShardSerialId) {
+        this.ShardSerialId = ShardSerialId;
     }
 
     /**
@@ -98,6 +121,7 @@ public class KillSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "SessionId.", this.SessionId);
         this.setParamSimple(map, prefix + "ShardId", this.ShardId);
+        this.setParamSimple(map, prefix + "ShardSerialId", this.ShardSerialId);
 
     }
 }

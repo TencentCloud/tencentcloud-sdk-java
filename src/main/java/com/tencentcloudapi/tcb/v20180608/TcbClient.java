@@ -259,6 +259,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *删除安全网关路由
+     * @param req DeleteWxGatewayRouteRequest
+     * @return DeleteWxGatewayRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWxGatewayRouteResponse DeleteWxGatewayRoute(DeleteWxGatewayRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWxGatewayRouteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWxGatewayRouteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteWxGatewayRoute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取安全域名列表
      * @param req DescribeAuthDomainsRequest
      * @return DescribeAuthDomainsResponse
@@ -774,6 +794,26 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EstablishCloudBaseRunServerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EstablishCloudBaseRunServer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建或修改安全网关路由
+     * @param req EstablishWxGatewayRouteRequest
+     * @return EstablishWxGatewayRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(EstablishWxGatewayRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EstablishWxGatewayRouteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EstablishWxGatewayRouteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EstablishWxGatewayRoute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

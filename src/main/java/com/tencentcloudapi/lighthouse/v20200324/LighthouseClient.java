@@ -39,6 +39,49 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
+<li>仅支持回滚到原系统盘。</li>
+<li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
+<li>回滚快照时，实例的状态必须为 STOPPED 或 RUNNING，可通过 DescribeInstances 接口查询实例状态。处于 RUNNING 状态的实例会强制关机，然后回滚快照。</li>
+     * @param req ApplyInstanceSnapshotRequest
+     * @return ApplyInstanceSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyInstanceSnapshotResponse ApplyInstanceSnapshot(ApplyInstanceSnapshotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyInstanceSnapshotResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyInstanceSnapshotResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyInstanceSnapshot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (CreateBlueprint) 用于创建镜像。
+     * @param req CreateBlueprintRequest
+     * @return CreateBlueprintResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlueprintResponse CreateBlueprint(CreateBlueprintRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBlueprintResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBlueprintResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBlueprint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
 
 
@@ -69,6 +112,46 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
+     * @param req CreateInstanceSnapshotRequest
+     * @return CreateInstanceSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceSnapshotResponse CreateInstanceSnapshot(CreateInstanceSnapshotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceSnapshotResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceSnapshotResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstanceSnapshot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DeleteBlueprints) 用于删除镜像。
+     * @param req DeleteBlueprintsRequest
+     * @return DeleteBlueprintsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlueprintsResponse DeleteBlueprints(DeleteBlueprintsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBlueprintsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBlueprintsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBlueprints");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
 
 * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接删除指定的规则。
@@ -90,6 +173,27 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteFirewallRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteFirewallRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteSnapshots）用于删除快照。
+快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
+     * @param req DeleteSnapshotsRequest
+     * @return DeleteSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSnapshots");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -195,6 +299,67 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesTrafficPackagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstancesTrafficPackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSnapshots）用于查询快照的详细信息。
+     * @param req DescribeSnapshotsRequest
+     * @return DescribeSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshots");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
+     * @param req ModifyBlueprintAttributeRequest
+     * @return ModifyBlueprintAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlueprintAttributeResponse ModifyBlueprintAttribute(ModifyBlueprintAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBlueprintAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBlueprintAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBlueprintAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
+<li>“快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。</li>
+     * @param req ModifySnapshotAttributeRequest
+     * @return ModifySnapshotAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySnapshotAttributeResponse ModifySnapshotAttribute(ModifySnapshotAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySnapshotAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySnapshotAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySnapshotAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

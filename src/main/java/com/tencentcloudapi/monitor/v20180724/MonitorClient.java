@@ -423,7 +423,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *获取基础指标详情
+     *获取基础指标属性
      * @param req DescribeBaseMetricsRequest
      * @return DescribeBaseMetricsResponse
      * @throws TencentCloudSDKException

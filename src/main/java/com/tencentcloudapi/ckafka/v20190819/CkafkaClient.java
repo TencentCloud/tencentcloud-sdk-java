@@ -179,6 +179,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *删除ACL规则
+     * @param req DeleteAclRuleRequest
+     * @return DeleteAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAclRuleResponse DeleteAclRule(DeleteAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAclRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAclRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除ckafka主题
      * @param req DeleteTopicRequest
      * @return DeleteTopicResponse
