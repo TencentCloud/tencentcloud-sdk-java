@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BindingPolicyObjectRequest extends AbstractModel{
 
     /**
-    * 策略组id，如传入PolicyId则该字段可传入任意值
+    * 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
     */
     @SerializedName("GroupId")
     @Expose
@@ -51,23 +51,23 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     private BindingPolicyObjectDimension [] Dimensions;
 
     /**
-    * 告警策略ID，使用此字段时GroupId可传入任意值
+    * 告警策略ID，使用此字段时 GroupId 会被忽略
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-     * Get 策略组id，如传入PolicyId则该字段可传入任意值 
-     * @return GroupId 策略组id，如传入PolicyId则该字段可传入任意值
+     * Get 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0 
+     * @return GroupId 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id，如传入PolicyId则该字段可传入任意值
-     * @param GroupId 策略组id，如传入PolicyId则该字段可传入任意值
+     * Set 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
+     * @param GroupId 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
@@ -122,16 +122,16 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 告警策略ID，使用此字段时GroupId可传入任意值 
-     * @return PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
+     * Get 告警策略ID，使用此字段时 GroupId 会被忽略 
+     * @return PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略ID，使用此字段时GroupId可传入任意值
-     * @param PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
+     * Set 告警策略ID，使用此字段时 GroupId 会被忽略
+     * @param PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

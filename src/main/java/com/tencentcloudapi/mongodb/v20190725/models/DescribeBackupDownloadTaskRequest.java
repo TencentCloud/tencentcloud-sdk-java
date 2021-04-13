@@ -37,14 +37,14 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     private String BackupName;
 
     /**
-    * 指定要查询任务的时间范围，StartTime指定开始时间
+    * 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 指定要查询任务的时间范围，StartTime指定结束时间
+    * 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -79,7 +79,7 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     private String OrderByType;
 
     /**
-    * 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+    * 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
     */
     @SerializedName("Status")
     @Expose
@@ -118,32 +118,32 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定要查询任务的时间范围，StartTime指定开始时间 
-     * @return StartTime 指定要查询任务的时间范围，StartTime指定开始时间
+     * Get 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间 
+     * @return StartTime 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 指定要查询任务的时间范围，StartTime指定开始时间
-     * @param StartTime 指定要查询任务的时间范围，StartTime指定开始时间
+     * Set 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+     * @param StartTime 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 指定要查询任务的时间范围，StartTime指定结束时间 
-     * @return EndTime 指定要查询任务的时间范围，StartTime指定结束时间
+     * Get 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间 
+     * @return EndTime 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 指定要查询任务的时间范围，StartTime指定结束时间
-     * @param EndTime 指定要查询任务的时间范围，StartTime指定结束时间
+     * Set 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+     * @param EndTime 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -214,16 +214,16 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试 
-     * @return Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * Get 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型 
+     * @return Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
-     * @param Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * Set 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+     * @param Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

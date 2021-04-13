@@ -37,7 +37,7 @@ public class SpecItem extends AbstractModel{
     private Long Status;
 
     /**
-    * 规格有效标志，取值：0-停止售卖，1-开放售卖
+    * 计算资源规格，单位为CPU核心数
     */
     @SerializedName("Cpu")
     @Expose
@@ -202,16 +202,16 @@ public class SpecItem extends AbstractModel{
     }
 
     /**
-     * Get 规格有效标志，取值：0-停止售卖，1-开放售卖 
-     * @return Cpu 规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Get 计算资源规格，单位为CPU核心数 
+     * @return Cpu 计算资源规格，单位为CPU核心数
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 规格有效标志，取值：0-停止售卖，1-开放售卖
-     * @param Cpu 规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Set 计算资源规格，单位为CPU核心数
+     * @param Cpu 计算资源规格，单位为CPU核心数
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

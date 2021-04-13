@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class LookUpEventsRequest extends AbstractModel{
 
     /**
-    * 结束时间
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private Long EndTime;
-
-    /**
     * 开始时间
     */
     @SerializedName("StartTime")
@@ -37,11 +30,25 @@ public class LookUpEventsRequest extends AbstractModel{
     private Long StartTime;
 
     /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
     * 检索条件
     */
     @SerializedName("LookupAttributes")
     @Expose
     private LookupAttribute [] LookupAttributes;
+
+    /**
+    * 查看更多日志的凭证
+    */
+    @SerializedName("NextToken")
+    @Expose
+    private String NextToken;
 
     /**
     * 返回日志的最大条数
@@ -56,29 +63,6 @@ public class LookUpEventsRequest extends AbstractModel{
     @SerializedName("Mode")
     @Expose
     private String Mode;
-
-    /**
-    * 查看更多日志的凭证
-    */
-    @SerializedName("NextToken")
-    @Expose
-    private String NextToken;
-
-    /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
-     */
-    public Long getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set 结束时间
-     * @param EndTime 结束时间
-     */
-    public void setEndTime(Long EndTime) {
-        this.EndTime = EndTime;
-    }
 
     /**
      * Get 开始时间 
@@ -97,6 +81,22 @@ public class LookUpEventsRequest extends AbstractModel{
     }
 
     /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
      * Get 检索条件 
      * @return LookupAttributes 检索条件
      */
@@ -110,6 +110,22 @@ public class LookUpEventsRequest extends AbstractModel{
      */
     public void setLookupAttributes(LookupAttribute [] LookupAttributes) {
         this.LookupAttributes = LookupAttributes;
+    }
+
+    /**
+     * Get 查看更多日志的凭证 
+     * @return NextToken 查看更多日志的凭证
+     */
+    public String getNextToken() {
+        return this.NextToken;
+    }
+
+    /**
+     * Set 查看更多日志的凭证
+     * @param NextToken 查看更多日志的凭证
+     */
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
     }
 
     /**
@@ -145,31 +161,15 @@ public class LookUpEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查看更多日志的凭证 
-     * @return NextToken 查看更多日志的凭证
-     */
-    public String getNextToken() {
-        return this.NextToken;
-    }
-
-    /**
-     * Set 查看更多日志的凭证
-     * @param NextToken 查看更多日志的凭证
-     */
-    public void setNextToken(String NextToken) {
-        this.NextToken = NextToken;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
-        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
 
     }
 }

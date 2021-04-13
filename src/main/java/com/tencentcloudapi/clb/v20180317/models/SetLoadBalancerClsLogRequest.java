@@ -23,72 +23,95 @@ import java.util.HashMap;
 public class SetLoadBalancerClsLogRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * 负载均衡实例 ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 日志服务(CLS)的日志集ID
+    * 日志服务(CLS)的日志集ID。
     */
     @SerializedName("LogSetId")
     @Expose
     private String LogSetId;
 
     /**
-    * 日志服务(CLS)的日志主题ID
+    * 日志服务(CLS)的日志主题ID。
     */
     @SerializedName("LogTopicId")
     @Expose
     private String LogTopicId;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+    * 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
+     * Get 负载均衡实例 ID。 
+     * @return LoadBalancerId 负载均衡实例 ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set 负载均衡实例 ID。
+     * @param LoadBalancerId 负载均衡实例 ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 日志服务(CLS)的日志集ID 
-     * @return LogSetId 日志服务(CLS)的日志集ID
+     * Get 日志服务(CLS)的日志集ID。 
+     * @return LogSetId 日志服务(CLS)的日志集ID。
      */
     public String getLogSetId() {
         return this.LogSetId;
     }
 
     /**
-     * Set 日志服务(CLS)的日志集ID
-     * @param LogSetId 日志服务(CLS)的日志集ID
+     * Set 日志服务(CLS)的日志集ID。
+     * @param LogSetId 日志服务(CLS)的日志集ID。
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get 日志服务(CLS)的日志主题ID 
-     * @return LogTopicId 日志服务(CLS)的日志主题ID
+     * Get 日志服务(CLS)的日志主题ID。 
+     * @return LogTopicId 日志服务(CLS)的日志主题ID。
      */
     public String getLogTopicId() {
         return this.LogTopicId;
     }
 
     /**
-     * Set 日志服务(CLS)的日志主题ID
-     * @param LogTopicId 日志服务(CLS)的日志主题ID
+     * Set 日志服务(CLS)的日志主题ID。
+     * @param LogTopicId 日志服务(CLS)的日志主题ID。
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
+    }
+
+    /**
+     * Get 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。 
+     * @return LogType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     * @param LogType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
     }
 
     /**
@@ -98,6 +121,7 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
 
     }
 }

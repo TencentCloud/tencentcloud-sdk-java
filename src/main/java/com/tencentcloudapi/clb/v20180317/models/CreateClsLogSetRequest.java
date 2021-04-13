@@ -37,6 +37,13 @@ public class CreateClsLogSetRequest extends AbstractModel{
     private String LogsetName;
 
     /**
+    * 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+    */
+    @SerializedName("LogsetType")
+    @Expose
+    private String LogsetType;
+
+    /**
      * Get 日志集的保存周期，单位：天，最大 90。 
      * @return Period 日志集的保存周期，单位：天，最大 90。
      */
@@ -69,11 +76,28 @@ public class CreateClsLogSetRequest extends AbstractModel{
     }
 
     /**
+     * Get 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。 
+     * @return LogsetType 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     */
+    public String getLogsetType() {
+        return this.LogsetType;
+    }
+
+    /**
+     * Set 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     * @param LogsetType 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     */
+    public void setLogsetType(String LogsetType) {
+        this.LogsetType = LogsetType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
+        this.setParamSimple(map, prefix + "LogsetType", this.LogsetType);
 
     }
 }

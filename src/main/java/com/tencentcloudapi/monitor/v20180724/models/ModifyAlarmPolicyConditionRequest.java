@@ -37,6 +37,13 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private String PolicyId;
 
     /**
+    * 触发条件模板 Id，可不传
+    */
+    @SerializedName("ConditionTemplateId")
+    @Expose
+    private Long ConditionTemplateId;
+
+    /**
     * 指标触发条件
     */
     @SerializedName("Condition")
@@ -83,6 +90,22 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     }
 
     /**
+     * Get 触发条件模板 Id，可不传 
+     * @return ConditionTemplateId 触发条件模板 Id，可不传
+     */
+    public Long getConditionTemplateId() {
+        return this.ConditionTemplateId;
+    }
+
+    /**
+     * Set 触发条件模板 Id，可不传
+     * @param ConditionTemplateId 触发条件模板 Id，可不传
+     */
+    public void setConditionTemplateId(Long ConditionTemplateId) {
+        this.ConditionTemplateId = ConditionTemplateId;
+    }
+
+    /**
      * Get 指标触发条件 
      * @return Condition 指标触发条件
      */
@@ -120,6 +143,7 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
 

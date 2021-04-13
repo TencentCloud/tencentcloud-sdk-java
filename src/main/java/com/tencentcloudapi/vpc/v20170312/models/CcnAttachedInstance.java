@@ -112,6 +112,13 @@ public class CcnAttachedInstance extends AbstractModel{
     private String InstanceArea;
 
     /**
+    * 备注
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 云联网实例ID。 
      * @return CcnId 云联网实例ID。
      */
@@ -336,6 +343,22 @@ public class CcnAttachedInstance extends AbstractModel{
     }
 
     /**
+     * Get 备注 
+     * @return Description 备注
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 备注
+     * @param Description 备注
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -350,6 +373,7 @@ public class CcnAttachedInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "AttachedTime", this.AttachedTime);
         this.setParamSimple(map, prefix + "CcnUin", this.CcnUin);
         this.setParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

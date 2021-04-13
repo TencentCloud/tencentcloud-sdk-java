@@ -23,11 +23,25 @@ import java.util.HashMap;
 public class DescribeAuditResponse extends AbstractModel{
 
     /**
-    * 跟踪集名称。
+    * 是否开启cmq消息通知。1：是，0：否。
     */
-    @SerializedName("AuditName")
+    @SerializedName("IsEnableCmqNotify")
     @Expose
-    private String AuditName;
+    private Long IsEnableCmqNotify;
+
+    /**
+    * 管理事件读写属性，1：只读，2：只写，3：全部
+    */
+    @SerializedName("ReadWriteAttribute")
+    @Expose
+    private Long ReadWriteAttribute;
+
+    /**
+    * CMK的全局唯一标识符。
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
 
     /**
     * 跟踪集状态，1：开启，0：停止。
@@ -37,25 +51,11 @@ public class DescribeAuditResponse extends AbstractModel{
     private Long AuditStatus;
 
     /**
-    * 队列名称。
+    * 跟踪集名称。
     */
-    @SerializedName("CmqQueueName")
+    @SerializedName("AuditName")
     @Expose
-    private String CmqQueueName;
-
-    /**
-    * 队列所在地域。
-    */
-    @SerializedName("CmqRegion")
-    @Expose
-    private String CmqRegion;
-
-    /**
-    * cos存储桶名称。
-    */
-    @SerializedName("CosBucketName")
-    @Expose
-    private String CosBucketName;
+    private String AuditName;
 
     /**
     * cos存储桶所在地域。
@@ -65,25 +65,11 @@ public class DescribeAuditResponse extends AbstractModel{
     private String CosRegion;
 
     /**
-    * 是否开启cmq消息通知。1：是，0：否。
+    * 队列名称。
     */
-    @SerializedName("IsEnableCmqNotify")
+    @SerializedName("CmqQueueName")
     @Expose
-    private Long IsEnableCmqNotify;
-
-    /**
-    * 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
-    */
-    @SerializedName("IsEnableKmsEncry")
-    @Expose
-    private Long IsEnableKmsEncry;
-
-    /**
-    * CMK的全局唯一标识符。
-    */
-    @SerializedName("KeyId")
-    @Expose
-    private String KeyId;
+    private String CmqQueueName;
 
     /**
     * CMK别名。
@@ -100,18 +86,32 @@ public class DescribeAuditResponse extends AbstractModel{
     private String KmsRegion;
 
     /**
+    * 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+    */
+    @SerializedName("IsEnableKmsEncry")
+    @Expose
+    private Long IsEnableKmsEncry;
+
+    /**
+    * cos存储桶名称。
+    */
+    @SerializedName("CosBucketName")
+    @Expose
+    private String CosBucketName;
+
+    /**
+    * 队列所在地域。
+    */
+    @SerializedName("CmqRegion")
+    @Expose
+    private String CmqRegion;
+
+    /**
     * 日志前缀。
     */
     @SerializedName("LogFilePrefix")
     @Expose
     private String LogFilePrefix;
-
-    /**
-    * 管理事件读写属性，1：只读，2：只写，3：全部
-    */
-    @SerializedName("ReadWriteAttribute")
-    @Expose
-    private Long ReadWriteAttribute;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -121,19 +121,51 @@ public class DescribeAuditResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 跟踪集名称。 
-     * @return AuditName 跟踪集名称。
+     * Get 是否开启cmq消息通知。1：是，0：否。 
+     * @return IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。
      */
-    public String getAuditName() {
-        return this.AuditName;
+    public Long getIsEnableCmqNotify() {
+        return this.IsEnableCmqNotify;
     }
 
     /**
-     * Set 跟踪集名称。
-     * @param AuditName 跟踪集名称。
+     * Set 是否开启cmq消息通知。1：是，0：否。
+     * @param IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。
      */
-    public void setAuditName(String AuditName) {
-        this.AuditName = AuditName;
+    public void setIsEnableCmqNotify(Long IsEnableCmqNotify) {
+        this.IsEnableCmqNotify = IsEnableCmqNotify;
+    }
+
+    /**
+     * Get 管理事件读写属性，1：只读，2：只写，3：全部 
+     * @return ReadWriteAttribute 管理事件读写属性，1：只读，2：只写，3：全部
+     */
+    public Long getReadWriteAttribute() {
+        return this.ReadWriteAttribute;
+    }
+
+    /**
+     * Set 管理事件读写属性，1：只读，2：只写，3：全部
+     * @param ReadWriteAttribute 管理事件读写属性，1：只读，2：只写，3：全部
+     */
+    public void setReadWriteAttribute(Long ReadWriteAttribute) {
+        this.ReadWriteAttribute = ReadWriteAttribute;
+    }
+
+    /**
+     * Get CMK的全局唯一标识符。 
+     * @return KeyId CMK的全局唯一标识符。
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set CMK的全局唯一标识符。
+     * @param KeyId CMK的全局唯一标识符。
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
     }
 
     /**
@@ -153,51 +185,19 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
-     * Get 队列名称。 
-     * @return CmqQueueName 队列名称。
+     * Get 跟踪集名称。 
+     * @return AuditName 跟踪集名称。
      */
-    public String getCmqQueueName() {
-        return this.CmqQueueName;
+    public String getAuditName() {
+        return this.AuditName;
     }
 
     /**
-     * Set 队列名称。
-     * @param CmqQueueName 队列名称。
+     * Set 跟踪集名称。
+     * @param AuditName 跟踪集名称。
      */
-    public void setCmqQueueName(String CmqQueueName) {
-        this.CmqQueueName = CmqQueueName;
-    }
-
-    /**
-     * Get 队列所在地域。 
-     * @return CmqRegion 队列所在地域。
-     */
-    public String getCmqRegion() {
-        return this.CmqRegion;
-    }
-
-    /**
-     * Set 队列所在地域。
-     * @param CmqRegion 队列所在地域。
-     */
-    public void setCmqRegion(String CmqRegion) {
-        this.CmqRegion = CmqRegion;
-    }
-
-    /**
-     * Get cos存储桶名称。 
-     * @return CosBucketName cos存储桶名称。
-     */
-    public String getCosBucketName() {
-        return this.CosBucketName;
-    }
-
-    /**
-     * Set cos存储桶名称。
-     * @param CosBucketName cos存储桶名称。
-     */
-    public void setCosBucketName(String CosBucketName) {
-        this.CosBucketName = CosBucketName;
+    public void setAuditName(String AuditName) {
+        this.AuditName = AuditName;
     }
 
     /**
@@ -217,51 +217,19 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
-     * Get 是否开启cmq消息通知。1：是，0：否。 
-     * @return IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。
+     * Get 队列名称。 
+     * @return CmqQueueName 队列名称。
      */
-    public Long getIsEnableCmqNotify() {
-        return this.IsEnableCmqNotify;
+    public String getCmqQueueName() {
+        return this.CmqQueueName;
     }
 
     /**
-     * Set 是否开启cmq消息通知。1：是，0：否。
-     * @param IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。
+     * Set 队列名称。
+     * @param CmqQueueName 队列名称。
      */
-    public void setIsEnableCmqNotify(Long IsEnableCmqNotify) {
-        this.IsEnableCmqNotify = IsEnableCmqNotify;
-    }
-
-    /**
-     * Get 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。 
-     * @return IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
-     */
-    public Long getIsEnableKmsEncry() {
-        return this.IsEnableKmsEncry;
-    }
-
-    /**
-     * Set 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
-     * @param IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
-     */
-    public void setIsEnableKmsEncry(Long IsEnableKmsEncry) {
-        this.IsEnableKmsEncry = IsEnableKmsEncry;
-    }
-
-    /**
-     * Get CMK的全局唯一标识符。 
-     * @return KeyId CMK的全局唯一标识符。
-     */
-    public String getKeyId() {
-        return this.KeyId;
-    }
-
-    /**
-     * Set CMK的全局唯一标识符。
-     * @param KeyId CMK的全局唯一标识符。
-     */
-    public void setKeyId(String KeyId) {
-        this.KeyId = KeyId;
+    public void setCmqQueueName(String CmqQueueName) {
+        this.CmqQueueName = CmqQueueName;
     }
 
     /**
@@ -297,6 +265,54 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。 
+     * @return IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public Long getIsEnableKmsEncry() {
+        return this.IsEnableKmsEncry;
+    }
+
+    /**
+     * Set 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     * @param IsEnableKmsEncry 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+     */
+    public void setIsEnableKmsEncry(Long IsEnableKmsEncry) {
+        this.IsEnableKmsEncry = IsEnableKmsEncry;
+    }
+
+    /**
+     * Get cos存储桶名称。 
+     * @return CosBucketName cos存储桶名称。
+     */
+    public String getCosBucketName() {
+        return this.CosBucketName;
+    }
+
+    /**
+     * Set cos存储桶名称。
+     * @param CosBucketName cos存储桶名称。
+     */
+    public void setCosBucketName(String CosBucketName) {
+        this.CosBucketName = CosBucketName;
+    }
+
+    /**
+     * Get 队列所在地域。 
+     * @return CmqRegion 队列所在地域。
+     */
+    public String getCmqRegion() {
+        return this.CmqRegion;
+    }
+
+    /**
+     * Set 队列所在地域。
+     * @param CmqRegion 队列所在地域。
+     */
+    public void setCmqRegion(String CmqRegion) {
+        this.CmqRegion = CmqRegion;
+    }
+
+    /**
      * Get 日志前缀。 
      * @return LogFilePrefix 日志前缀。
      */
@@ -310,22 +326,6 @@ public class DescribeAuditResponse extends AbstractModel{
      */
     public void setLogFilePrefix(String LogFilePrefix) {
         this.LogFilePrefix = LogFilePrefix;
-    }
-
-    /**
-     * Get 管理事件读写属性，1：只读，2：只写，3：全部 
-     * @return ReadWriteAttribute 管理事件读写属性，1：只读，2：只写，3：全部
-     */
-    public Long getReadWriteAttribute() {
-        return this.ReadWriteAttribute;
-    }
-
-    /**
-     * Set 管理事件读写属性，1：只读，2：只写，3：全部
-     * @param ReadWriteAttribute 管理事件读写属性，1：只读，2：只写，3：全部
-     */
-    public void setReadWriteAttribute(Long ReadWriteAttribute) {
-        this.ReadWriteAttribute = ReadWriteAttribute;
     }
 
     /**
@@ -348,19 +348,19 @@ public class DescribeAuditResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AuditName", this.AuditName);
-        this.setParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
-        this.setParamSimple(map, prefix + "CmqQueueName", this.CmqQueueName);
-        this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
-        this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
-        this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "IsEnableCmqNotify", this.IsEnableCmqNotify);
-        this.setParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+        this.setParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
+        this.setParamSimple(map, prefix + "AuditName", this.AuditName);
+        this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
+        this.setParamSimple(map, prefix + "CmqQueueName", this.CmqQueueName);
         this.setParamSimple(map, prefix + "KmsAlias", this.KmsAlias);
         this.setParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
+        this.setParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+        this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+        this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
         this.setParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
-        this.setParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

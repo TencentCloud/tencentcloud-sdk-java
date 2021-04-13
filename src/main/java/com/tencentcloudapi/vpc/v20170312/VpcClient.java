@@ -853,6 +853,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建用于CDC的本地网关。
+     * @param req CreateLocalGatewayRequest
+     * @return CreateLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLocalGatewayResponse CreateLocalGateway(CreateLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLocalGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateNatGateway)用于创建NAT网关。
      * @param req CreateNatGatewayRequest
      * @return CreateNatGatewayResponse
@@ -1507,6 +1527,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIp6TranslatorsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteIp6Translators");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于删除CDC的本地网关。
+     * @param req DeleteLocalGatewayRequest
+     * @return DeleteLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLocalGatewayResponse DeleteLocalGateway(DeleteLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLocalGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2463,6 +2503,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIpGeolocationInfosResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIpGeolocationInfos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于查询CDC的本地网关。
+     * @param req DescribeLocalGatewayRequest
+     * @return DescribeLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLocalGatewayResponse DescribeLocalGateway(DescribeLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLocalGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3756,6 +3816,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *修改CCN关联实例属性，目前仅修改备注description
+     * @param req ModifyCcnAttachedInstancesAttributeRequest
+     * @return ModifyCcnAttachedInstancesAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttribute(ModifyCcnAttachedInstancesAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCcnAttachedInstancesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
      * @param req ModifyCcnAttributeRequest
      * @return ModifyCcnAttributeResponse
@@ -3989,6 +4069,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<ModifyIpv6AddressesAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIpv6AddressesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于修改CDC的本地网关。
+     * @param req ModifyLocalGatewayRequest
+     * @return ModifyLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLocalGatewayResponse ModifyLocalGateway(ModifyLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLocalGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -24,6 +24,7 @@ public class ListAuditsResponse extends AbstractModel{
 
     /**
     * 查询跟踪集概要集合
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditSummarys")
     @Expose
@@ -37,8 +38,10 @@ public class ListAuditsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询跟踪集概要集合 
+     * Get 查询跟踪集概要集合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AuditSummarys 查询跟踪集概要集合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditSummary [] getAuditSummarys() {
         return this.AuditSummarys;
@@ -46,7 +49,9 @@ public class ListAuditsResponse extends AbstractModel{
 
     /**
      * Set 查询跟踪集概要集合
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditSummarys 查询跟踪集概要集合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditSummarys(AuditSummary [] AuditSummarys) {
         this.AuditSummarys = AuditSummarys;

@@ -387,6 +387,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *智慧零售-发票开具V2
+     * @param req CreateInvoiceV2Request
+     * @return CreateInvoiceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateInvoiceV2Response CreateInvoiceV2(CreateInvoiceV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInvoiceV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInvoiceV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInvoiceV2");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *智慧零售-商户注册
      * @param req CreateMerchantRequest
      * @return CreateMerchantResponse
@@ -419,6 +439,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateRedInvoiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateRedInvoice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智慧零售-发票红冲V2
+     * @param req CreateRedInvoiceV2Request
+     * @return CreateRedInvoiceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateRedInvoiceV2Response CreateRedInvoiceV2(CreateRedInvoiceV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRedInvoiceV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRedInvoiceV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRedInvoiceV2");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -979,6 +1019,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryInvoiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryInvoice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智慧零售-发票查询V2
+     * @param req QueryInvoiceV2Request
+     * @return QueryInvoiceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public QueryInvoiceV2Response QueryInvoiceV2(QueryInvoiceV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryInvoiceV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryInvoiceV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryInvoiceV2");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

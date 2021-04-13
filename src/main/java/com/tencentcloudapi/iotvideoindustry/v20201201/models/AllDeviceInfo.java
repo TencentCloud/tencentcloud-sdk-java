@@ -95,6 +95,14 @@ public class AllDeviceInfo extends AbstractModel{
     private Long IsRecord;
 
     /**
+    * 该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Recordable")
+    @Expose
+    private Long Recordable;
+
+    /**
      * Get 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备唯一标识
@@ -275,6 +283,26 @@ public class AllDeviceInfo extends AbstractModel{
     }
 
     /**
+     * Get 该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Recordable 该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRecordable() {
+        return this.Recordable;
+    }
+
+    /**
+     * Set 该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Recordable 该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordable(Long Recordable) {
+        this.Recordable = Recordable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +315,7 @@ public class AllDeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupPath", this.GroupPath);
         this.setParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
         this.setParamSimple(map, prefix + "IsRecord", this.IsRecord);
+        this.setParamSimple(map, prefix + "Recordable", this.Recordable);
 
     }
 }

@@ -51,6 +51,13 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
     private String NickName;
 
     /**
+    * 过滤不可录制设备
+    */
+    @SerializedName("Recordable")
+    @Expose
+    private Long Recordable;
+
+    /**
      * Get 分组ID 
      * @return GroupId 分组ID
      */
@@ -115,6 +122,22 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
     }
 
     /**
+     * Get 过滤不可录制设备 
+     * @return Recordable 过滤不可录制设备
+     */
+    public Long getRecordable() {
+        return this.Recordable;
+    }
+
+    /**
+     * Set 过滤不可录制设备
+     * @param Recordable 过滤不可录制设备
+     */
+    public void setRecordable(Long Recordable) {
+        this.Recordable = Recordable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DescribeGroupDevicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
+        this.setParamSimple(map, prefix + "Recordable", this.Recordable);
 
     }
 }

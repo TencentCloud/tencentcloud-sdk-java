@@ -103,6 +103,14 @@ public class GroupItem extends AbstractModel{
     private Long CreateTime;
 
     /**
+    * 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupStatus")
+    @Expose
+    private Long GroupStatus;
+
+    /**
      * Get 分组名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 分组名称
@@ -303,6 +311,26 @@ public class GroupItem extends AbstractModel{
     }
 
     /**
+     * Get 分组状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupStatus 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGroupStatus() {
+        return this.GroupStatus;
+    }
+
+    /**
+     * Set 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupStatus 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupStatus(Long GroupStatus) {
+        this.GroupStatus = GroupStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -316,6 +344,7 @@ public class GroupItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ExtraInformation", this.ExtraInformation);
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
 
     }
 }

@@ -412,6 +412,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String NfvInfo;
 
     /**
+    * 负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthLogSetId")
+    @Expose
+    private String HealthLogSetId;
+
+    /**
+    * 负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthLogTopicId")
+    @Expose
+    private String HealthLogTopicId;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1380,6 +1396,46 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthLogSetId 负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHealthLogSetId() {
+        return this.HealthLogSetId;
+    }
+
+    /**
+     * Set 负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthLogSetId 负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthLogSetId(String HealthLogSetId) {
+        this.HealthLogSetId = HealthLogSetId;
+    }
+
+    /**
+     * Get 负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHealthLogTopicId() {
+        return this.HealthLogTopicId;
+    }
+
+    /**
+     * Set 负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthLogTopicId(String HealthLogTopicId) {
+        this.HealthLogTopicId = HealthLogTopicId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1432,6 +1488,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
+        this.setParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
+        this.setParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
 
     }
 }

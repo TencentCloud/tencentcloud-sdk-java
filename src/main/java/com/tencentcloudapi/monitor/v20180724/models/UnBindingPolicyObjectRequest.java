@@ -30,7 +30,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 策略组id，如传入PolicyId则该字段可传入任意值
+    * 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
     */
     @SerializedName("GroupId")
     @Expose
@@ -44,14 +44,14 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private String [] UniqueId;
 
     /**
-    * 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+    * 实例分组id，如果按实例分组删除的话UniqueId参数是无效的
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private Long InstanceGroupId;
 
     /**
-    * 告警策略ID，使用此字段时GroupId可传入任意值
+    * 告警策略ID，使用此字段时 GroupId 会被忽略
     */
     @SerializedName("PolicyId")
     @Expose
@@ -74,16 +74,16 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略组id，如传入PolicyId则该字段可传入任意值 
-     * @return GroupId 策略组id，如传入PolicyId则该字段可传入任意值
+     * Get 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0 
+     * @return GroupId 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 策略组id，如传入PolicyId则该字段可传入任意值
-     * @param GroupId 策略组id，如传入PolicyId则该字段可传入任意值
+     * Set 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+     * @param GroupId 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
@@ -106,32 +106,32 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的 
-     * @return InstanceGroupId 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+     * Get 实例分组id，如果按实例分组删除的话UniqueId参数是无效的 
+     * @return InstanceGroupId 实例分组id，如果按实例分组删除的话UniqueId参数是无效的
      */
     public Long getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
-     * @param InstanceGroupId 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+     * Set 实例分组id，如果按实例分组删除的话UniqueId参数是无效的
+     * @param InstanceGroupId 实例分组id，如果按实例分组删除的话UniqueId参数是无效的
      */
     public void setInstanceGroupId(Long InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get 告警策略ID，使用此字段时GroupId可传入任意值 
-     * @return PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
+     * Get 告警策略ID，使用此字段时 GroupId 会被忽略 
+     * @return PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 告警策略ID，使用此字段时GroupId可传入任意值
-     * @param PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
+     * Set 告警策略ID，使用此字段时 GroupId 会被忽略
+     * @param PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

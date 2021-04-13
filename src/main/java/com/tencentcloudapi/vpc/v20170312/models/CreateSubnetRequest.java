@@ -58,6 +58,13 @@ public class CreateSubnetRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * CDC实例ID。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
@@ -138,6 +145,22 @@ public class CreateSubnetRequest extends AbstractModel{
     }
 
     /**
+     * Get CDC实例ID。 
+     * @return CdcId CDC实例ID。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC实例ID。
+     * @param CdcId CDC实例ID。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateSubnetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

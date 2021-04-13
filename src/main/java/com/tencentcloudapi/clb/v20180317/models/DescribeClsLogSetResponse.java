@@ -30,6 +30,13 @@ public class DescribeClsLogSetResponse extends AbstractModel{
     private String LogsetId;
 
     /**
+    * 健康检查日志集的 ID。
+    */
+    @SerializedName("HealthLogsetId")
+    @Expose
+    private String HealthLogsetId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class DescribeClsLogSetResponse extends AbstractModel{
     }
 
     /**
+     * Get 健康检查日志集的 ID。 
+     * @return HealthLogsetId 健康检查日志集的 ID。
+     */
+    public String getHealthLogsetId() {
+        return this.HealthLogsetId;
+    }
+
+    /**
+     * Set 健康检查日志集的 ID。
+     * @param HealthLogsetId 健康检查日志集的 ID。
+     */
+    public void setHealthLogsetId(String HealthLogsetId) {
+        this.HealthLogsetId = HealthLogsetId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +96,7 @@ public class DescribeClsLogSetResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
+        this.setParamSimple(map, prefix + "HealthLogsetId", this.HealthLogsetId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

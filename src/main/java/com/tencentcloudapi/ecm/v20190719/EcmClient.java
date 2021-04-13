@@ -1097,6 +1097,26 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *获取客户节点上的出入带宽月峰和计费带宽信息
+     * @param req DescribeMonthPeakNetworkRequest
+     * @return DescribeMonthPeakNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMonthPeakNetworkResponse DescribeMonthPeakNetwork(DescribeMonthPeakNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMonthPeakNetworkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMonthPeakNetworkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMonthPeakNetwork");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询弹性网卡列表
      * @param req DescribeNetworkInterfacesRequest
      * @return DescribeNetworkInterfacesResponse

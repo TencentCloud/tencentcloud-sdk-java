@@ -1290,7 +1290,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *增加、删除、更新负载均衡的日志服务(CLS)主题
+     *增加、删除、更新负载均衡的日志服务(CLS)主题。
      * @param req SetLoadBalancerClsLogRequest
      * @return SetLoadBalancerClsLogResponse
      * @throws TencentCloudSDKException

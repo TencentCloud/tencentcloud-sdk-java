@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class Event extends AbstractModel{
 
     /**
-    * 资源对
+    * 日志ID
     */
-    @SerializedName("Resources")
+    @SerializedName("EventId")
     @Expose
-    private Resource Resources;
+    private String EventId;
 
     /**
-    * 主账号ID
+    * 用户名
     */
-    @SerializedName("AccountID")
+    @SerializedName("Username")
     @Expose
-    private Long AccountID;
+    private String Username;
+
+    /**
+    * 事件时间
+    */
+    @SerializedName("EventTime")
+    @Expose
+    private String EventTime;
 
     /**
     * 日志详情
@@ -44,18 +51,18 @@ public class Event extends AbstractModel{
     private String CloudAuditEvent;
 
     /**
+    * 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+    */
+    @SerializedName("ResourceTypeCn")
+    @Expose
+    private String ResourceTypeCn;
+
+    /**
     * 鉴权错误码
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
-
-    /**
-    * 日志ID
-    */
-    @SerializedName("EventId")
-    @Expose
-    private String EventId;
 
     /**
     * 事件名称
@@ -65,18 +72,12 @@ public class Event extends AbstractModel{
     private String EventName;
 
     /**
-    * 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+    * 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("EventNameCn")
+    @SerializedName("SecretId")
     @Expose
-    private String EventNameCn;
-
-    /**
-    * 事件地域
-    */
-    @SerializedName("EventRegion")
-    @Expose
-    private String EventRegion;
+    private String SecretId;
 
     /**
     * 请求来源
@@ -84,13 +85,6 @@ public class Event extends AbstractModel{
     @SerializedName("EventSource")
     @Expose
     private String EventSource;
-
-    /**
-    * 事件时间
-    */
-    @SerializedName("EventTime")
-    @Expose
-    private String EventTime;
 
     /**
     * 请求ID
@@ -107,63 +101,87 @@ public class Event extends AbstractModel{
     private String ResourceRegion;
 
     /**
-    * 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+    * 主账号ID
     */
-    @SerializedName("ResourceTypeCn")
+    @SerializedName("AccountID")
     @Expose
-    private String ResourceTypeCn;
-
-    /**
-    * 证书ID
-    */
-    @SerializedName("SecretId")
-    @Expose
-    private String SecretId;
+    private Long AccountID;
 
     /**
     * 源IP
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceIPAddress")
     @Expose
     private String SourceIPAddress;
 
     /**
-    * 用户名
+    * 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
     */
-    @SerializedName("Username")
+    @SerializedName("EventNameCn")
     @Expose
-    private String Username;
+    private String EventNameCn;
 
     /**
-     * Get 资源对 
-     * @return Resources 资源对
+    * 资源对
+    */
+    @SerializedName("Resources")
+    @Expose
+    private Resource Resources;
+
+    /**
+    * 事件地域
+    */
+    @SerializedName("EventRegion")
+    @Expose
+    private String EventRegion;
+
+    /**
+     * Get 日志ID 
+     * @return EventId 日志ID
      */
-    public Resource getResources() {
-        return this.Resources;
+    public String getEventId() {
+        return this.EventId;
     }
 
     /**
-     * Set 资源对
-     * @param Resources 资源对
+     * Set 日志ID
+     * @param EventId 日志ID
      */
-    public void setResources(Resource Resources) {
-        this.Resources = Resources;
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
     }
 
     /**
-     * Get 主账号ID 
-     * @return AccountID 主账号ID
+     * Get 用户名 
+     * @return Username 用户名
      */
-    public Long getAccountID() {
-        return this.AccountID;
+    public String getUsername() {
+        return this.Username;
     }
 
     /**
-     * Set 主账号ID
-     * @param AccountID 主账号ID
+     * Set 用户名
+     * @param Username 用户名
      */
-    public void setAccountID(Long AccountID) {
-        this.AccountID = AccountID;
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    /**
+     * Get 事件时间 
+     * @return EventTime 事件时间
+     */
+    public String getEventTime() {
+        return this.EventTime;
+    }
+
+    /**
+     * Set 事件时间
+     * @param EventTime 事件时间
+     */
+    public void setEventTime(String EventTime) {
+        this.EventTime = EventTime;
     }
 
     /**
@@ -183,6 +201,22 @@ public class Event extends AbstractModel{
     }
 
     /**
+     * Get 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述） 
+     * @return ResourceTypeCn 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     */
+    public String getResourceTypeCn() {
+        return this.ResourceTypeCn;
+    }
+
+    /**
+     * Set 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * @param ResourceTypeCn 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     */
+    public void setResourceTypeCn(String ResourceTypeCn) {
+        this.ResourceTypeCn = ResourceTypeCn;
+    }
+
+    /**
      * Get 鉴权错误码 
      * @return ErrorCode 鉴权错误码
      */
@@ -196,22 +230,6 @@ public class Event extends AbstractModel{
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
-    }
-
-    /**
-     * Get 日志ID 
-     * @return EventId 日志ID
-     */
-    public String getEventId() {
-        return this.EventId;
-    }
-
-    /**
-     * Set 日志ID
-     * @param EventId 日志ID
-     */
-    public void setEventId(String EventId) {
-        this.EventId = EventId;
     }
 
     /**
@@ -231,35 +249,23 @@ public class Event extends AbstractModel{
     }
 
     /**
-     * Get 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述） 
-     * @return EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * Get 证书ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecretId 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getEventNameCn() {
-        return this.EventNameCn;
+    public String getSecretId() {
+        return this.SecretId;
     }
 
     /**
-     * Set 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
-     * @param EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * Set 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecretId 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEventNameCn(String EventNameCn) {
-        this.EventNameCn = EventNameCn;
-    }
-
-    /**
-     * Get 事件地域 
-     * @return EventRegion 事件地域
-     */
-    public String getEventRegion() {
-        return this.EventRegion;
-    }
-
-    /**
-     * Set 事件地域
-     * @param EventRegion 事件地域
-     */
-    public void setEventRegion(String EventRegion) {
-        this.EventRegion = EventRegion;
+    public void setSecretId(String SecretId) {
+        this.SecretId = SecretId;
     }
 
     /**
@@ -276,22 +282,6 @@ public class Event extends AbstractModel{
      */
     public void setEventSource(String EventSource) {
         this.EventSource = EventSource;
-    }
-
-    /**
-     * Get 事件时间 
-     * @return EventTime 事件时间
-     */
-    public String getEventTime() {
-        return this.EventTime;
-    }
-
-    /**
-     * Set 事件时间
-     * @param EventTime 事件时间
-     */
-    public void setEventTime(String EventTime) {
-        this.EventTime = EventTime;
     }
 
     /**
@@ -327,40 +317,26 @@ public class Event extends AbstractModel{
     }
 
     /**
-     * Get 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述） 
-     * @return ResourceTypeCn 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * Get 主账号ID 
+     * @return AccountID 主账号ID
      */
-    public String getResourceTypeCn() {
-        return this.ResourceTypeCn;
+    public Long getAccountID() {
+        return this.AccountID;
     }
 
     /**
-     * Set 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
-     * @param ResourceTypeCn 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * Set 主账号ID
+     * @param AccountID 主账号ID
      */
-    public void setResourceTypeCn(String ResourceTypeCn) {
-        this.ResourceTypeCn = ResourceTypeCn;
+    public void setAccountID(Long AccountID) {
+        this.AccountID = AccountID;
     }
 
     /**
-     * Get 证书ID 
-     * @return SecretId 证书ID
-     */
-    public String getSecretId() {
-        return this.SecretId;
-    }
-
-    /**
-     * Set 证书ID
-     * @param SecretId 证书ID
-     */
-    public void setSecretId(String SecretId) {
-        this.SecretId = SecretId;
-    }
-
-    /**
-     * Get 源IP 
+     * Get 源IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceIPAddress 源IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceIPAddress() {
         return this.SourceIPAddress;
@@ -368,48 +344,82 @@ public class Event extends AbstractModel{
 
     /**
      * Set 源IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceIPAddress 源IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceIPAddress(String SourceIPAddress) {
         this.SourceIPAddress = SourceIPAddress;
     }
 
     /**
-     * Get 用户名 
-     * @return Username 用户名
+     * Get 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述） 
+     * @return EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
-    public String getUsername() {
-        return this.Username;
+    public String getEventNameCn() {
+        return this.EventNameCn;
     }
 
     /**
-     * Set 用户名
-     * @param Username 用户名
+     * Set 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+     * @param EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      */
-    public void setUsername(String Username) {
-        this.Username = Username;
+    public void setEventNameCn(String EventNameCn) {
+        this.EventNameCn = EventNameCn;
+    }
+
+    /**
+     * Get 资源对 
+     * @return Resources 资源对
+     */
+    public Resource getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set 资源对
+     * @param Resources 资源对
+     */
+    public void setResources(Resource Resources) {
+        this.Resources = Resources;
+    }
+
+    /**
+     * Get 事件地域 
+     * @return EventRegion 事件地域
+     */
+    public String getEventRegion() {
+        return this.EventRegion;
+    }
+
+    /**
+     * Set 事件地域
+     * @param EventRegion 事件地域
+     */
+    public void setEventRegion(String EventRegion) {
+        this.EventRegion = EventRegion;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Resources.", this.Resources);
-        this.setParamSimple(map, prefix + "AccountID", this.AccountID);
-        this.setParamSimple(map, prefix + "CloudAuditEvent", this.CloudAuditEvent);
-        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
-        this.setParamSimple(map, prefix + "EventName", this.EventName);
-        this.setParamSimple(map, prefix + "EventNameCn", this.EventNameCn);
-        this.setParamSimple(map, prefix + "EventRegion", this.EventRegion);
-        this.setParamSimple(map, prefix + "EventSource", this.EventSource);
+        this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "EventTime", this.EventTime);
+        this.setParamSimple(map, prefix + "CloudAuditEvent", this.CloudAuditEvent);
+        this.setParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamSimple(map, prefix + "EventName", this.EventName);
+        this.setParamSimple(map, prefix + "SecretId", this.SecretId);
+        this.setParamSimple(map, prefix + "EventSource", this.EventSource);
         this.setParamSimple(map, prefix + "RequestID", this.RequestID);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
-        this.setParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
-        this.setParamSimple(map, prefix + "SecretId", this.SecretId);
+        this.setParamSimple(map, prefix + "AccountID", this.AccountID);
         this.setParamSimple(map, prefix + "SourceIPAddress", this.SourceIPAddress);
-        this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "EventNameCn", this.EventNameCn);
+        this.setParamObj(map, prefix + "Resources.", this.Resources);
+        this.setParamSimple(map, prefix + "EventRegion", this.EventRegion);
 
     }
 }

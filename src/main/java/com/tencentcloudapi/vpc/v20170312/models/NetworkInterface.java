@@ -149,6 +149,14 @@ public class NetworkInterface extends AbstractModel{
     private String Business;
 
     /**
+    * 网卡所关联的CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
@@ -449,6 +457,26 @@ public class NetworkInterface extends AbstractModel{
     }
 
     /**
+     * Get 网卡所关联的CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId 网卡所关联的CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set 网卡所关联的CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId 网卡所关联的CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -469,6 +497,7 @@ public class NetworkInterface extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "EniType", this.EniType);
         this.setParamSimple(map, prefix + "Business", this.Business);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

@@ -37,6 +37,13 @@ public class UpdateClusterVersionRequest extends AbstractModel{
     private String DstVersion;
 
     /**
+    * 集群自定义参数
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private ClusterExtraArgs ExtraArgs;
+
+    /**
     * 可容忍的最大不可用pod数目
     */
     @SerializedName("MaxNotReadyPercent")
@@ -83,6 +90,22 @@ public class UpdateClusterVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get 集群自定义参数 
+     * @return ExtraArgs 集群自定义参数
+     */
+    public ClusterExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set 集群自定义参数
+     * @param ExtraArgs 集群自定义参数
+     */
+    public void setExtraArgs(ClusterExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
      * Get 可容忍的最大不可用pod数目 
      * @return MaxNotReadyPercent 可容忍的最大不可用pod数目
      */
@@ -120,6 +143,7 @@ public class UpdateClusterVersionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "DstVersion", this.DstVersion);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
         this.setParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
 

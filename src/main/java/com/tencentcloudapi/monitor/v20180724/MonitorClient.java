@@ -687,7 +687,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *编辑告警策略触发条件
+     *修改告警策略触发条件
      * @param req ModifyAlarmPolicyConditionRequest
      * @return ModifyAlarmPolicyConditionResponse
      * @throws TencentCloudSDKException

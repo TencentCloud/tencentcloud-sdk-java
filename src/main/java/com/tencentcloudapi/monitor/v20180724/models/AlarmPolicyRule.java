@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AlarmPolicyRule extends AbstractModel{
 
     /**
-    * 指标名
+    * 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricName")
@@ -31,7 +31,7 @@ public class AlarmPolicyRule extends AbstractModel{
     private String MetricName;
 
     /**
-    * 秒数 统计周期
+    * 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
@@ -57,6 +57,7 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
@@ -64,7 +65,7 @@ re=正则匹配
     private String Operator;
 
     /**
-    * 阈值
+    * 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -72,7 +73,7 @@ re=正则匹配
     private String Value;
 
     /**
-    * 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+    * 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinuePeriod")
@@ -120,7 +121,7 @@ re=正则匹配
     private String Unit;
 
     /**
-    * 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+    * 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
@@ -128,9 +129,9 @@ re=正则匹配
     private String RuleType;
 
     /**
-     * Get 指标名
+     * Get 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricName 指标名
+     * @return MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetricName() {
@@ -138,9 +139,9 @@ re=正则匹配
     }
 
     /**
-     * Set 指标名
+     * Set 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricName 指标名
+     * @param MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricName(String MetricName) {
@@ -148,9 +149,9 @@ re=正则匹配
     }
 
     /**
-     * Get 秒数 统计周期
+     * Get 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Period 秒数 统计周期
+     * @return Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
@@ -158,9 +159,9 @@ re=正则匹配
     }
 
     /**
-     * Set 秒数 统计周期
+     * Set 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Period 秒数 统计周期
+     * @param Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {
@@ -186,6 +187,7 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Operator 英文运算符
 intelligent=无阈值智能检测
@@ -205,6 +207,7 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
@@ -230,6 +233,7 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 英文运算符
 intelligent=无阈值智能检测
@@ -249,6 +253,7 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
@@ -256,9 +261,9 @@ re=正则匹配
     }
 
     /**
-     * Get 阈值
+     * Get 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 阈值
+     * @return Value 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -266,9 +271,9 @@ re=正则匹配
     }
 
     /**
-     * Set 阈值
+     * Set 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 阈值
+     * @param Value 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
@@ -276,9 +281,9 @@ re=正则匹配
     }
 
     /**
-     * Get 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+     * Get 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+     * @return ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getContinuePeriod() {
@@ -286,9 +291,9 @@ re=正则匹配
     }
 
     /**
-     * Set 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+     * Set 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+     * @param ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinuePeriod(Long ContinuePeriod) {
@@ -396,9 +401,9 @@ re=正则匹配
     }
 
     /**
-     * Get 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+     * Get 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+     * @return RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
@@ -406,9 +411,9 @@ re=正则匹配
     }
 
     /**
-     * Set 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+     * Set 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+     * @param RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {

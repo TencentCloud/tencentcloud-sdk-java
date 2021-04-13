@@ -31,6 +31,22 @@ public class TaskResultFile extends AbstractModel{
     private String Url;
 
     /**
+    * 文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Long FileSize;
+
+    /**
+    * 媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MediaInfo")
+    @Expose
+    private MediaResultInfo MediaInfo;
+
+    /**
      * Get 文件链接。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 文件链接。
@@ -51,10 +67,52 @@ public class TaskResultFile extends AbstractModel{
     }
 
     /**
+     * Get 文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileSize 文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set 文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileSize 文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileSize(Long FileSize) {
+        this.FileSize = FileSize;
+    }
+
+    /**
+     * Get 媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MediaInfo 媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaResultInfo getMediaInfo() {
+        return this.MediaInfo;
+    }
+
+    /**
+     * Set 媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaInfo 媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMediaInfo(MediaResultInfo MediaInfo) {
+        this.MediaInfo = MediaInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
+        this.setParamObj(map, prefix + "MediaInfo.", this.MediaInfo);
 
     }
 }

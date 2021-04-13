@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class ReplaceRoutesResponse extends AbstractModel{
 
     /**
+    * 原路由策略信息。
+    */
+    @SerializedName("OldRouteSet")
+    @Expose
+    private Route [] OldRouteSet;
+
+    /**
+    * 修改后的路由策略信息。
+    */
+    @SerializedName("NewRouteSet")
+    @Expose
+    private Route [] NewRouteSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 原路由策略信息。 
+     * @return OldRouteSet 原路由策略信息。
+     */
+    public Route [] getOldRouteSet() {
+        return this.OldRouteSet;
+    }
+
+    /**
+     * Set 原路由策略信息。
+     * @param OldRouteSet 原路由策略信息。
+     */
+    public void setOldRouteSet(Route [] OldRouteSet) {
+        this.OldRouteSet = OldRouteSet;
+    }
+
+    /**
+     * Get 修改后的路由策略信息。 
+     * @return NewRouteSet 修改后的路由策略信息。
+     */
+    public Route [] getNewRouteSet() {
+        return this.NewRouteSet;
+    }
+
+    /**
+     * Set 修改后的路由策略信息。
+     * @param NewRouteSet 修改后的路由策略信息。
+     */
+    public void setNewRouteSet(Route [] NewRouteSet) {
+        this.NewRouteSet = NewRouteSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +95,8 @@ public class ReplaceRoutesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "OldRouteSet.", this.OldRouteSet);
+        this.setParamArrayObj(map, prefix + "NewRouteSet.", this.NewRouteSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,7 +23,16 @@ import java.util.HashMap;
 public class LookUpEventsResponse extends AbstractModel{
 
     /**
+    * 查看更多日志的凭证
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NextToken")
+    @Expose
+    private String NextToken;
+
+    /**
     * 日志集合
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
@@ -31,17 +40,11 @@ public class LookUpEventsResponse extends AbstractModel{
 
     /**
     * 日志集合是否结束
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
-
-    /**
-    * 查看更多日志的凭证
-    */
-    @SerializedName("NextToken")
-    @Expose
-    private String NextToken;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,40 +54,10 @@ public class LookUpEventsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 日志集合 
-     * @return Events 日志集合
-     */
-    public Event [] getEvents() {
-        return this.Events;
-    }
-
-    /**
-     * Set 日志集合
-     * @param Events 日志集合
-     */
-    public void setEvents(Event [] Events) {
-        this.Events = Events;
-    }
-
-    /**
-     * Get 日志集合是否结束 
-     * @return ListOver 日志集合是否结束
-     */
-    public Boolean getListOver() {
-        return this.ListOver;
-    }
-
-    /**
-     * Set 日志集合是否结束
-     * @param ListOver 日志集合是否结束
-     */
-    public void setListOver(Boolean ListOver) {
-        this.ListOver = ListOver;
-    }
-
-    /**
-     * Get 查看更多日志的凭证 
+     * Get 查看更多日志的凭证
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NextToken 查看更多日志的凭证
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextToken() {
         return this.NextToken;
@@ -92,10 +65,52 @@ public class LookUpEventsResponse extends AbstractModel{
 
     /**
      * Set 查看更多日志的凭证
+注意：此字段可能返回 null，表示取不到有效值。
      * @param NextToken 查看更多日志的凭证
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
+    }
+
+    /**
+     * Get 日志集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Events 日志集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Event [] getEvents() {
+        return this.Events;
+    }
+
+    /**
+     * Set 日志集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Events 日志集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEvents(Event [] Events) {
+        this.Events = Events;
+    }
+
+    /**
+     * Get 日志集合是否结束
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ListOver 日志集合是否结束
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getListOver() {
+        return this.ListOver;
+    }
+
+    /**
+     * Set 日志集合是否结束
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ListOver 日志集合是否结束
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setListOver(Boolean ListOver) {
+        this.ListOver = ListOver;
     }
 
     /**
@@ -118,9 +133,9 @@ public class LookUpEventsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
-        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

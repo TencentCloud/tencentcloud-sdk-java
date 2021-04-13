@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ListKeyAliasByRegionResponse extends AbstractModel{
 
     /**
-    * 密钥别名
-    */
-    @SerializedName("KeyMetadatas")
-    @Expose
-    private KeyMetadata [] KeyMetadatas;
-
-    /**
     * CMK的总数量
     */
     @SerializedName("TotalCount")
@@ -37,27 +30,18 @@ public class ListKeyAliasByRegionResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * 密钥别名
+    */
+    @SerializedName("KeyMetadatas")
+    @Expose
+    private KeyMetadata [] KeyMetadatas;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 密钥别名 
-     * @return KeyMetadatas 密钥别名
-     */
-    public KeyMetadata [] getKeyMetadatas() {
-        return this.KeyMetadatas;
-    }
-
-    /**
-     * Set 密钥别名
-     * @param KeyMetadatas 密钥别名
-     */
-    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
-        this.KeyMetadatas = KeyMetadatas;
-    }
 
     /**
      * Get CMK的总数量 
@@ -73,6 +57,22 @@ public class ListKeyAliasByRegionResponse extends AbstractModel{
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 密钥别名 
+     * @return KeyMetadatas 密钥别名
+     */
+    public KeyMetadata [] getKeyMetadatas() {
+        return this.KeyMetadatas;
+    }
+
+    /**
+     * Set 密钥别名
+     * @param KeyMetadatas 密钥别名
+     */
+    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
+        this.KeyMetadatas = KeyMetadatas;
     }
 
     /**
@@ -95,8 +95,8 @@ public class ListKeyAliasByRegionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

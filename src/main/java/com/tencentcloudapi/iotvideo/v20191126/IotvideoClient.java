@@ -1066,6 +1066,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *修改设备信息
+     * @param req ModifyDeviceRequest
+     * @return ModifyDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceResponse ModifyDevice(ModifyDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDeviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDeviceAction）用于修改设备物模型的行为（Action）。
 
 可对ctlVal数据属性进行写入,如:Action.takePhoto.ctlVal,设备在线且成功发送到设备才返回,物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。

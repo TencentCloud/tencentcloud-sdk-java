@@ -37,14 +37,14 @@ public class CreateTaskRequest extends AbstractModel{
     private String TaskContent;
 
     /**
-    * 执行类型，UNICAST/BROADCAST
+    * 执行类型，unicast/broadcast
     */
     @SerializedName("ExecuteType")
     @Expose
     private String ExecuteType;
 
     /**
-    * 任务类型
+    * 任务类型,java
     */
     @SerializedName("TaskType")
     @Expose
@@ -160,32 +160,32 @@ public class CreateTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 执行类型，UNICAST/BROADCAST 
-     * @return ExecuteType 执行类型，UNICAST/BROADCAST
+     * Get 执行类型，unicast/broadcast 
+     * @return ExecuteType 执行类型，unicast/broadcast
      */
     public String getExecuteType() {
         return this.ExecuteType;
     }
 
     /**
-     * Set 执行类型，UNICAST/BROADCAST
-     * @param ExecuteType 执行类型，UNICAST/BROADCAST
+     * Set 执行类型，unicast/broadcast
+     * @param ExecuteType 执行类型，unicast/broadcast
      */
     public void setExecuteType(String ExecuteType) {
         this.ExecuteType = ExecuteType;
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskType 任务类型
+     * Get 任务类型,java 
+     * @return TaskType 任务类型,java
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskType 任务类型
+     * Set 任务类型,java
+     * @param TaskType 任务类型,java
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

@@ -39,6 +39,14 @@ public class CreateDeviceResponse extends AbstractModel{
     private String DeviceId;
 
     /**
+    * 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VirtualGroupId")
+    @Expose
+    private String VirtualGroupId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class CreateDeviceResponse extends AbstractModel{
     }
 
     /**
+     * Get 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VirtualGroupId 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVirtualGroupId() {
+        return this.VirtualGroupId;
+    }
+
+    /**
+     * Set 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VirtualGroupId 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVirtualGroupId(String VirtualGroupId) {
+        this.VirtualGroupId = VirtualGroupId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -107,6 +135,7 @@ public class CreateDeviceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "VirtualGroupId", this.VirtualGroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,7 +44,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private String MonitorType;
 
     /**
-    * 告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
+    * 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
     */
     @SerializedName("Namespace")
     @Expose
@@ -65,28 +65,35 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private Long Enable;
 
     /**
-    * 项目 Id -1=无项目 0=默认项目，可不传 默认为-1
+    * 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 指标触发条件
+    * 触发条件模板 Id ，可不传
+    */
+    @SerializedName("ConditionTemplateId")
+    @Expose
+    private Long ConditionTemplateId;
+
+    /**
+    * 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
     */
     @SerializedName("Condition")
     @Expose
     private AlarmPolicyCondition Condition;
 
     /**
-    * 事件触发条件
+    * 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
     */
     @SerializedName("EventCondition")
     @Expose
     private AlarmPolicyEventCondition EventCondition;
 
     /**
-    * 通知规则 Id 列表，由 DescribeAlarmNotices 获得
+    * 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
     */
     @SerializedName("NoticeIds")
     @Expose
@@ -148,16 +155,16 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device 
-     * @return Namespace 告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
+     * Get 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device 
+     * @return Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
-     * @param Namespace 告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
+     * Set 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
+     * @param Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -196,64 +203,80 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目 Id -1=无项目 0=默认项目，可不传 默认为-1 
-     * @return ProjectId 项目 Id -1=无项目 0=默认项目，可不传 默认为-1
+     * Get 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。 
+     * @return ProjectId 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 Id -1=无项目 0=默认项目，可不传 默认为-1
-     * @param ProjectId 项目 Id -1=无项目 0=默认项目，可不传 默认为-1
+     * Set 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
+     * @param ProjectId 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 指标触发条件 
-     * @return Condition 指标触发条件
+     * Get 触发条件模板 Id ，可不传 
+     * @return ConditionTemplateId 触发条件模板 Id ，可不传
+     */
+    public Long getConditionTemplateId() {
+        return this.ConditionTemplateId;
+    }
+
+    /**
+     * Set 触发条件模板 Id ，可不传
+     * @param ConditionTemplateId 触发条件模板 Id ，可不传
+     */
+    public void setConditionTemplateId(Long ConditionTemplateId) {
+        this.ConditionTemplateId = ConditionTemplateId;
+    }
+
+    /**
+     * Get 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。 
+     * @return Condition 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
      */
     public AlarmPolicyCondition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 指标触发条件
-     * @param Condition 指标触发条件
+     * Set 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
+     * @param Condition 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
      */
     public void setCondition(AlarmPolicyCondition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 事件触发条件 
-     * @return EventCondition 事件触发条件
+     * Get 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。 
+     * @return EventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
      */
     public AlarmPolicyEventCondition getEventCondition() {
         return this.EventCondition;
     }
 
     /**
-     * Set 事件触发条件
-     * @param EventCondition 事件触发条件
+     * Set 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
+     * @param EventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
      */
     public void setEventCondition(AlarmPolicyEventCondition EventCondition) {
         this.EventCondition = EventCondition;
     }
 
     /**
-     * Get 通知规则 Id 列表，由 DescribeAlarmNotices 获得 
-     * @return NoticeIds 通知规则 Id 列表，由 DescribeAlarmNotices 获得
+     * Get 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得 
+     * @return NoticeIds 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 通知规则 Id 列表，由 DescribeAlarmNotices 获得
-     * @param NoticeIds 通知规则 Id 列表，由 DescribeAlarmNotices 获得
+     * Set 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
+     * @param NoticeIds 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
@@ -286,6 +309,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);

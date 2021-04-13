@@ -79,6 +79,22 @@ public class GroupInfo extends AbstractModel{
     private Long CreateTime;
 
     /**
+    * 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupStatus")
+    @Expose
+    private Long GroupStatus;
+
+    /**
+    * 设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get 分组ID 
      * @return GroupId 分组ID
      */
@@ -207,6 +223,46 @@ public class GroupInfo extends AbstractModel{
     }
 
     /**
+     * Get 分组状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupStatus 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGroupStatus() {
+        return this.GroupStatus;
+    }
+
+    /**
+     * Set 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupStatus 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupStatus(Long GroupStatus) {
+        this.GroupStatus = GroupStatus;
+    }
+
+    /**
+     * Get 设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Error 设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set 设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Error 设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +274,8 @@ public class GroupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupDescribe", this.GroupDescribe);
         this.setParamSimple(map, prefix + "ExtraInformation", this.ExtraInformation);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

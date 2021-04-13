@@ -100,6 +100,20 @@ public class Command extends AbstractModel{
     private String DefaultParameters;
 
     /**
+    * 命令的结构化描述。公共命令有值，用户命令为空字符串。
+    */
+    @SerializedName("FormattedDescription")
+    @Expose
+    private String FormattedDescription;
+
+    /**
+    * 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+    */
+    @SerializedName("CreatedBy")
+    @Expose
+    private String CreatedBy;
+
+    /**
      * Get 命令ID。 
      * @return CommandId 命令ID。
      */
@@ -276,6 +290,38 @@ public class Command extends AbstractModel{
     }
 
     /**
+     * Get 命令的结构化描述。公共命令有值，用户命令为空字符串。 
+     * @return FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     */
+    public String getFormattedDescription() {
+        return this.FormattedDescription;
+    }
+
+    /**
+     * Set 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     * @param FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     */
+    public void setFormattedDescription(String FormattedDescription) {
+        this.FormattedDescription = FormattedDescription;
+    }
+
+    /**
+     * Get 命令创建者。TAT 代表公共命令，USER 代表个人命令。 
+     * @return CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     */
+    public String getCreatedBy() {
+        return this.CreatedBy;
+    }
+
+    /**
+     * Set 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     * @param CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     */
+    public void setCreatedBy(String CreatedBy) {
+        this.CreatedBy = CreatedBy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class Command extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
+        this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
 
     }
 }

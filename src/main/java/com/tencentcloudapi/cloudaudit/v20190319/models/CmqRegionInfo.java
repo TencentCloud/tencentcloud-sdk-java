@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CmqRegionInfo extends AbstractModel{
 
     /**
-    * cmq地域
-    */
-    @SerializedName("CmqRegion")
-    @Expose
-    private String CmqRegion;
-
-    /**
     * 地域描述
     */
     @SerializedName("CmqRegionName")
@@ -37,20 +30,11 @@ public class CmqRegionInfo extends AbstractModel{
     private String CmqRegionName;
 
     /**
-     * Get cmq地域 
-     * @return CmqRegion cmq地域
-     */
-    public String getCmqRegion() {
-        return this.CmqRegion;
-    }
-
-    /**
-     * Set cmq地域
-     * @param CmqRegion cmq地域
-     */
-    public void setCmqRegion(String CmqRegion) {
-        this.CmqRegion = CmqRegion;
-    }
+    * cmq地域
+    */
+    @SerializedName("CmqRegion")
+    @Expose
+    private String CmqRegion;
 
     /**
      * Get 地域描述 
@@ -69,11 +53,27 @@ public class CmqRegionInfo extends AbstractModel{
     }
 
     /**
+     * Get cmq地域 
+     * @return CmqRegion cmq地域
+     */
+    public String getCmqRegion() {
+        return this.CmqRegion;
+    }
+
+    /**
+     * Set cmq地域
+     * @param CmqRegion cmq地域
+     */
+    public void setCmqRegion(String CmqRegion) {
+        this.CmqRegion = CmqRegion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
         this.setParamSimple(map, prefix + "CmqRegionName", this.CmqRegionName);
+        this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
 
     }
 }

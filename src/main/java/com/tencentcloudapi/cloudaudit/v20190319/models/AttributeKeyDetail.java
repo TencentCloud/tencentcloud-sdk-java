@@ -23,25 +23,11 @@ import java.util.HashMap;
 public class AttributeKeyDetail extends AbstractModel{
 
     /**
-    * 中文标签
-    */
-    @SerializedName("Label")
-    @Expose
-    private String Label;
-
-    /**
     * 输入框类型
     */
     @SerializedName("LabelType")
     @Expose
     private String LabelType;
-
-    /**
-    * 展示排序
-    */
-    @SerializedName("Order")
-    @Expose
-    private Long Order;
 
     /**
     * 初始化展示
@@ -51,6 +37,13 @@ public class AttributeKeyDetail extends AbstractModel{
     private String Starter;
 
     /**
+    * 展示排序
+    */
+    @SerializedName("Order")
+    @Expose
+    private Long Order;
+
+    /**
     * AttributeKey值
     */
     @SerializedName("Value")
@@ -58,20 +51,11 @@ public class AttributeKeyDetail extends AbstractModel{
     private String Value;
 
     /**
-     * Get 中文标签 
-     * @return Label 中文标签
-     */
-    public String getLabel() {
-        return this.Label;
-    }
-
-    /**
-     * Set 中文标签
-     * @param Label 中文标签
-     */
-    public void setLabel(String Label) {
-        this.Label = Label;
-    }
+    * 中文标签
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
 
     /**
      * Get 输入框类型 
@@ -87,22 +71,6 @@ public class AttributeKeyDetail extends AbstractModel{
      */
     public void setLabelType(String LabelType) {
         this.LabelType = LabelType;
-    }
-
-    /**
-     * Get 展示排序 
-     * @return Order 展示排序
-     */
-    public Long getOrder() {
-        return this.Order;
-    }
-
-    /**
-     * Set 展示排序
-     * @param Order 展示排序
-     */
-    public void setOrder(Long Order) {
-        this.Order = Order;
     }
 
     /**
@@ -122,6 +90,22 @@ public class AttributeKeyDetail extends AbstractModel{
     }
 
     /**
+     * Get 展示排序 
+     * @return Order 展示排序
+     */
+    public Long getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 展示排序
+     * @param Order 展示排序
+     */
+    public void setOrder(Long Order) {
+        this.Order = Order;
+    }
+
+    /**
      * Get AttributeKey值 
      * @return Value AttributeKey值
      */
@@ -138,14 +122,30 @@ public class AttributeKeyDetail extends AbstractModel{
     }
 
     /**
+     * Get 中文标签 
+     * @return Label 中文标签
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 中文标签
+     * @param Label 中文标签
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "LabelType", this.LabelType);
-        this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Starter", this.Starter);
+        this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Label", this.Label);
 
     }
 }

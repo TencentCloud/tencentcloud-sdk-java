@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class AuditSummary extends AbstractModel{
 
     /**
-    * 跟踪集名称
-    */
-    @SerializedName("AuditName")
-    @Expose
-    private String AuditName;
-
-    /**
     * 跟踪集状态，1：开启，0：关闭
     */
     @SerializedName("AuditStatus")
@@ -44,27 +37,18 @@ public class AuditSummary extends AbstractModel{
     private String CosBucketName;
 
     /**
+    * 跟踪集名称
+    */
+    @SerializedName("AuditName")
+    @Expose
+    private String AuditName;
+
+    /**
     * 日志前缀
     */
     @SerializedName("LogFilePrefix")
     @Expose
     private String LogFilePrefix;
-
-    /**
-     * Get 跟踪集名称 
-     * @return AuditName 跟踪集名称
-     */
-    public String getAuditName() {
-        return this.AuditName;
-    }
-
-    /**
-     * Set 跟踪集名称
-     * @param AuditName 跟踪集名称
-     */
-    public void setAuditName(String AuditName) {
-        this.AuditName = AuditName;
-    }
 
     /**
      * Get 跟踪集状态，1：开启，0：关闭 
@@ -99,6 +83,22 @@ public class AuditSummary extends AbstractModel{
     }
 
     /**
+     * Get 跟踪集名称 
+     * @return AuditName 跟踪集名称
+     */
+    public String getAuditName() {
+        return this.AuditName;
+    }
+
+    /**
+     * Set 跟踪集名称
+     * @param AuditName 跟踪集名称
+     */
+    public void setAuditName(String AuditName) {
+        this.AuditName = AuditName;
+    }
+
+    /**
      * Get 日志前缀 
      * @return LogFilePrefix 日志前缀
      */
@@ -118,9 +118,9 @@ public class AuditSummary extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AuditName", this.AuditName);
         this.setParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
         this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+        this.setParamSimple(map, prefix + "AuditName", this.AuditName);
         this.setParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
 
     }

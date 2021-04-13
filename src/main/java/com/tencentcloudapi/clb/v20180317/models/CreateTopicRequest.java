@@ -37,6 +37,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long PartitionCount;
 
     /**
+    * 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+    */
+    @SerializedName("TopicType")
+    @Expose
+    private String TopicType;
+
+    /**
      * Get 日志主题的名称。 
      * @return TopicName 日志主题的名称。
      */
@@ -69,11 +76,28 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
+     * Get 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。 
+     * @return TopicType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     */
+    public String getTopicType() {
+        return this.TopicType;
+    }
+
+    /**
+     * Set 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     * @param TopicType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     */
+    public void setTopicType(String TopicType) {
+        this.TopicType = TopicType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
+        this.setParamSimple(map, prefix + "TopicType", this.TopicType);
 
     }
 }

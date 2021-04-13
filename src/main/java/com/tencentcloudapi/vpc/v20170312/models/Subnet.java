@@ -128,6 +128,22 @@ public class Subnet extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * 是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsCdcSubnet")
+    @Expose
+    private Long IsCdcSubnet;
+
+    /**
      * Get `VPC`实例`ID`。 
      * @return VpcId `VPC`实例`ID`。
      */
@@ -368,6 +384,46 @@ public class Subnet extends AbstractModel{
     }
 
     /**
+     * Get CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get 是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsCdcSubnet 是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsCdcSubnet() {
+        return this.IsCdcSubnet;
+    }
+
+    /**
+     * Set 是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsCdcSubnet 是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsCdcSubnet(Long IsCdcSubnet) {
+        this.IsCdcSubnet = IsCdcSubnet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +442,8 @@ public class Subnet extends AbstractModel{
         this.setParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
         this.setParamSimple(map, prefix + "TotalIpAddressCount", this.TotalIpAddressCount);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "IsCdcSubnet", this.IsCdcSubnet);
 
     }
 }
