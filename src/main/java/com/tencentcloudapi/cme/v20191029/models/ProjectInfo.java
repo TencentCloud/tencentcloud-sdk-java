@@ -50,6 +50,7 @@ public class ProjectInfo extends AbstractModel{
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
     */
     @SerializedName("Category")
     @Expose
@@ -137,13 +138,15 @@ public class ProjectInfo extends AbstractModel{
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
-<li>STREAM_CONNECT：云转推。</li> 
+<li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li> 
      * @return Category 项目类别，取值：
 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      */
     public String getCategory() {
         return this.Category;
@@ -156,12 +159,14 @@ public class ProjectInfo extends AbstractModel{
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      * @param Category 项目类别，取值：
 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;

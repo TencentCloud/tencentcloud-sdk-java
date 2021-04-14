@@ -37,7 +37,7 @@ public class InvokeRequest extends AbstractModel{
     private String InvocationType;
 
     /**
-    * 触发函数的版本号
+    * 触发函数的版本号或别名
     */
     @SerializedName("Qualifier")
     @Expose
@@ -51,7 +51,7 @@ public class InvokeRequest extends AbstractModel{
     private String ClientContext;
 
     /**
-    * 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
+    * 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
     */
     @SerializedName("LogType")
     @Expose
@@ -104,16 +104,16 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get 触发函数的版本号 
-     * @return Qualifier 触发函数的版本号
+     * Get 触发函数的版本号或别名 
+     * @return Qualifier 触发函数的版本号或别名
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set 触发函数的版本号
-     * @param Qualifier 触发函数的版本号
+     * Set 触发函数的版本号或别名
+     * @param Qualifier 触发函数的版本号或别名
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
@@ -136,16 +136,16 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志 
-     * @return LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
+     * Get 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志 
+     * @return LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
-     * @param LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
+     * Set 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+     * @param LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

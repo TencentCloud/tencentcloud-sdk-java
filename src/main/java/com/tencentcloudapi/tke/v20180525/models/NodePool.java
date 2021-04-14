@@ -44,7 +44,7 @@ public class NodePool extends AbstractModel{
     private String ClusterInstanceId;
 
     /**
-    * LifeState 状态
+    * LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
     */
     @SerializedName("LifeState")
     @Expose
@@ -206,16 +206,16 @@ public class NodePool extends AbstractModel{
     }
 
     /**
-     * Get LifeState 状态 
-     * @return LifeState LifeState 状态
+     * Get LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted 
+     * @return LifeState LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
      */
     public String getLifeState() {
         return this.LifeState;
     }
 
     /**
-     * Set LifeState 状态
-     * @param LifeState LifeState 状态
+     * Set LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
+     * @param LifeState LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
      */
     public void setLifeState(String LifeState) {
         this.LifeState = LifeState;

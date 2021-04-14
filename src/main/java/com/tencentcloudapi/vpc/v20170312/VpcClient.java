@@ -1247,6 +1247,66 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *创建终端节点。
+     * @param req CreateVpcEndPointRequest
+     * @return CreateVpcEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcEndPointResponse CreateVpcEndPoint(CreateVpcEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcEndPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcEndPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建终端节点服务。
+     * @param req CreateVpcEndPointServiceRequest
+     * @return CreateVpcEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcEndPointServiceResponse CreateVpcEndPointService(CreateVpcEndPointServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcEndPointServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcEndPointServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcEndPointService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建终端服务白名单。
+     * @param req CreateVpcEndPointServiceWhiteListRequest
+     * @return CreateVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcEndPointServiceWhiteListResponse CreateVpcEndPointServiceWhiteList(CreateVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcEndPointServiceWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateVpnConnection）用于创建VPN通道。
      * @param req CreateVpnConnectionRequest
      * @return CreateVpnConnectionResponse
@@ -1837,6 +1897,68 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteVpcResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除终端节点。
+     * @param req DeleteVpcEndPointRequest
+     * @return DeleteVpcEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcEndPointResponse DeleteVpcEndPoint(DeleteVpcEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcEndPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcEndPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除终端节点服务。
+
+
+     * @param req DeleteVpcEndPointServiceRequest
+     * @return DeleteVpcEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcEndPointServiceResponse DeleteVpcEndPointService(DeleteVpcEndPointServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcEndPointServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcEndPointServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcEndPointService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除终端节点服务白名单。
+     * @param req DeleteVpcEndPointServiceWhiteListRequest
+     * @return DeleteVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteList(DeleteVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcEndPointServiceWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2951,6 +3073,66 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *查询终端节点列表。
+     * @param req DescribeVpcEndPointRequest
+     * @return DescribeVpcEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcEndPointResponse DescribeVpcEndPoint(DescribeVpcEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcEndPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcEndPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询终端节点服务列表。
+     * @param req DescribeVpcEndPointServiceRequest
+     * @return DescribeVpcEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcEndPointServiceResponse DescribeVpcEndPointService(DescribeVpcEndPointServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcEndPointServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcEndPointServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcEndPointService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询终端节点服务的服务白名单列表。
+     * @param req DescribeVpcEndPointServiceWhiteListRequest
+     * @return DescribeVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcEndPointServiceWhiteListResponse DescribeVpcEndPointServiceWhiteList(DescribeVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcEndPointServiceWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
      * @param req DescribeVpcInstancesRequest
      * @return DescribeVpcInstancesResponse
@@ -3407,6 +3589,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *终端节点解绑安全组。
+     * @param req DisassociateVpcEndPointSecurityGroupsRequest
+     * @return DisassociateVpcEndPointSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateVpcEndPointSecurityGroupsResponse DisassociateVpcEndPointSecurityGroups(DisassociateVpcEndPointSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateVpcEndPointSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
      * @param req DownloadCustomerGatewayConfigurationRequest
      * @return DownloadCustomerGatewayConfigurationResponse
@@ -3481,6 +3683,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<EnableRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *是否接受终端节点连接请求。
+     * @param req EnableVpcEndPointConnectRequest
+     * @return EnableVpcEndPointConnectResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableVpcEndPointConnectResponse EnableVpcEndPointConnect(EnableVpcEndPointConnectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableVpcEndPointConnectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableVpcEndPointConnectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableVpcEndPointConnect");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4406,6 +4628,68 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<ModifyVpcAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVpcAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改终端节点属性。
+     * @param req ModifyVpcEndPointAttributeRequest
+     * @return ModifyVpcEndPointAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcEndPointAttributeResponse ModifyVpcEndPointAttribute(ModifyVpcEndPointAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcEndPointAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcEndPointAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcEndPointAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改终端节点服务属性。
+
+
+     * @param req ModifyVpcEndPointServiceAttributeRequest
+     * @return ModifyVpcEndPointServiceAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcEndPointServiceAttributeResponse ModifyVpcEndPointServiceAttribute(ModifyVpcEndPointServiceAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcEndPointServiceAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改终端节点服务白名单属性。
+     * @param req ModifyVpcEndPointServiceWhiteListRequest
+     * @return ModifyVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcEndPointServiceWhiteListResponse ModifyVpcEndPointServiceWhiteList(ModifyVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcEndPointServiceWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

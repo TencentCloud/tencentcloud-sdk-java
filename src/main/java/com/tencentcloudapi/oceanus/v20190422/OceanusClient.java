@@ -119,6 +119,46 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *删除资源版本
+     * @param req DeleteResourceConfigsRequest
+     * @return DeleteResourceConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceConfigsResponse DeleteResourceConfigs(DeleteResourceConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteResourceConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteResourceConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteResourceConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除资源接口
+     * @param req DeleteResourcesRequest
+     * @return DeleteResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourcesResponse DeleteResources(DeleteResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除作业表配置
      * @param req DeleteTableConfigRequest
      * @return DeleteTableConfigResponse
@@ -171,6 +211,66 @@ public class OceanusClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeJobsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *描述资源配置接口
+     * @param req DescribeResourceConfigsRequest
+     * @return DescribeResourceConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceConfigsResponse DescribeResourceConfigs(DescribeResourceConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取资源关联作业信息
+     * @param req DescribeResourceRelatedJobsRequest
+     * @return DescribeResourceRelatedJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceRelatedJobsResponse DescribeResourceRelatedJobs(DescribeResourceRelatedJobsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceRelatedJobsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceRelatedJobsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceRelatedJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *描述资源接口
+     * @param req DescribeResourcesRequest
+     * @return DescribeResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcesResponse DescribeResources(DescribeResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResources");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

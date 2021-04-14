@@ -1,0 +1,133 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.ame.v20190916.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class PutMusicOnTheShelvesResponse extends AbstractModel{
+
+    /**
+    * 操作成功数量
+    */
+    @SerializedName("SuccessNum")
+    @Expose
+    private Long SuccessNum;
+
+    /**
+    * 操作失败数量
+    */
+    @SerializedName("FailedNum")
+    @Expose
+    private Long FailedNum;
+
+    /**
+    * 失败歌曲Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailedMusicIds")
+    @Expose
+    private String [] FailedMusicIds;
+
+    /**
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 操作成功数量 
+     * @return SuccessNum 操作成功数量
+     */
+    public Long getSuccessNum() {
+        return this.SuccessNum;
+    }
+
+    /**
+     * Set 操作成功数量
+     * @param SuccessNum 操作成功数量
+     */
+    public void setSuccessNum(Long SuccessNum) {
+        this.SuccessNum = SuccessNum;
+    }
+
+    /**
+     * Get 操作失败数量 
+     * @return FailedNum 操作失败数量
+     */
+    public Long getFailedNum() {
+        return this.FailedNum;
+    }
+
+    /**
+     * Set 操作失败数量
+     * @param FailedNum 操作失败数量
+     */
+    public void setFailedNum(Long FailedNum) {
+        this.FailedNum = FailedNum;
+    }
+
+    /**
+     * Get 失败歌曲Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailedMusicIds 失败歌曲Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFailedMusicIds() {
+        return this.FailedMusicIds;
+    }
+
+    /**
+     * Set 失败歌曲Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailedMusicIds 失败歌曲Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailedMusicIds(String [] FailedMusicIds) {
+        this.FailedMusicIds = FailedMusicIds;
+    }
+
+    /**
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SuccessNum", this.SuccessNum);
+        this.setParamSimple(map, prefix + "FailedNum", this.FailedNum);
+        this.setParamArraySimple(map, prefix + "FailedMusicIds.", this.FailedMusicIds);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

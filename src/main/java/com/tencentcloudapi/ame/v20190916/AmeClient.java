@@ -239,6 +239,46 @@ public class AmeClient extends AbstractClient{
     }
 
     /**
+     *根据资源方，需要变更的参数，请求该接口进行变更，为空的参数默认为无变更
+     * @param req ModifyMusicOnShelvesRequest
+     * @return ModifyMusicOnShelvesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMusicOnShelvesResponse ModifyMusicOnShelves(ModifyMusicOnShelvesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMusicOnShelvesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMusicOnShelvesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMusicOnShelves");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据资源方所传歌曲信息，进行歌曲上架，多个歌曲同时请求时，需构造复合结构进行请求
+     * @param req PutMusicOnTheShelvesRequest
+     * @return PutMusicOnTheShelvesResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutMusicOnTheShelvesResponse PutMusicOnTheShelves(PutMusicOnTheShelvesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutMusicOnTheShelvesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutMusicOnTheShelvesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutMusicOnTheShelves");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *客户上报用户数据功能，为了更好地为用户提供优质服务
      * @param req ReportDataRequest
      * @return ReportDataResponse
@@ -251,6 +291,26 @@ public class AmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReportDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReportData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据资源方所传MusicId进行将歌曲进行下架，多个MusicId使用逗号隔开
+     * @param req TakeMusicOffShelvesRequest
+     * @return TakeMusicOffShelvesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TakeMusicOffShelvesResponse TakeMusicOffShelves(TakeMusicOffShelvesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TakeMusicOffShelvesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TakeMusicOffShelvesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TakeMusicOffShelves");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

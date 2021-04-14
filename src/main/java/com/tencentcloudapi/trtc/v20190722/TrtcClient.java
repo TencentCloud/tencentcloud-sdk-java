@@ -39,6 +39,26 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *上传图片
+     * @param req CreatePictureRequest
+     * @return CreatePictureResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePictureResponse CreatePicture(CreatePictureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePictureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePictureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePicture");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建异常信息
      * @param req CreateTroubleInfoRequest
      * @return CreateTroubleInfoResponse
@@ -51,6 +71,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTroubleInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTroubleInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除图片
+     * @param req DeletePictureRequest
+     * @return DeletePictureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePictureResponse DeletePicture(DeletePictureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePictureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePictureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePicture");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -132,6 +172,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeHistoryScaleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeHistoryScale");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询某图片相关参数。
+     * @param req DescribePictureRequest
+     * @return DescribePictureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePictureResponse DescribePicture(DescribePictureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePictureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePictureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePicture");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -347,6 +407,26 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DismissRoomByStrRoomIdResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DismissRoomByStrRoomId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改图片相关参数。
+     * @param req ModifyPictureRequest
+     * @return ModifyPictureResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPictureResponse ModifyPicture(ModifyPictureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPictureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPictureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPicture");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
