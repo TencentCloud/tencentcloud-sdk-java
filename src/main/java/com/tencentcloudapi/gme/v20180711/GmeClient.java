@@ -200,6 +200,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *修改房间信息
+     * @param req ModifyRoomInfoRequest
+     * @return ModifyRoomInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoomInfoResponse ModifyRoomInfo(ModifyRoomInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoomInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoomInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoomInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
 </br></br>
 

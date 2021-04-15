@@ -1179,6 +1179,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于在TCR中下载helm chart
+     * @param req DownloadHelmChartRequest
+     * @return DownloadHelmChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadHelmChartResponse DownloadHelmChart(DownloadHelmChartRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadHelmChartResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadHelmChartResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DownloadHelmChart");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在个人版镜像仓库中复制镜像版本
      * @param req DuplicateImagePersonalRequest
      * @return DuplicateImagePersonalResponse

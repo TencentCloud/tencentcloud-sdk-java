@@ -35,6 +35,7 @@ public class CreateProjectRequest extends AbstractModel{
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
     */
     @SerializedName("Category")
     @Expose
@@ -105,6 +106,13 @@ public class CreateProjectRequest extends AbstractModel{
     private StreamConnectProjectInput StreamConnectProjectInput;
 
     /**
+    * 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+    */
+    @SerializedName("RecordReplayProjectInput")
+    @Expose
+    private RecordReplayProjectInput RecordReplayProjectInput;
+
+    /**
      * Get 平台名称，指定访问的平台。 
      * @return Platform 平台名称，指定访问的平台。
      */
@@ -125,12 +133,14 @@ public class CreateProjectRequest extends AbstractModel{
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
-<li>STREAM_CONNECT：云转推。</li> 
+<li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li> 
      * @return Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      */
     public String getCategory() {
         return this.Category;
@@ -142,11 +152,13 @@ public class CreateProjectRequest extends AbstractModel{
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      * @param Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;
@@ -301,6 +313,22 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。 
+     * @return RecordReplayProjectInput 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+     */
+    public RecordReplayProjectInput getRecordReplayProjectInput() {
+        return this.RecordReplayProjectInput;
+    }
+
+    /**
+     * Set 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+     * @param RecordReplayProjectInput 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+     */
+    public void setRecordReplayProjectInput(RecordReplayProjectInput RecordReplayProjectInput) {
+        this.RecordReplayProjectInput = RecordReplayProjectInput;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -315,6 +343,7 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VideoEditProjectInput.", this.VideoEditProjectInput);
         this.setParamObj(map, prefix + "VideoSegmentationProjectInput.", this.VideoSegmentationProjectInput);
         this.setParamObj(map, prefix + "StreamConnectProjectInput.", this.StreamConnectProjectInput);
+        this.setParamObj(map, prefix + "RecordReplayProjectInput.", this.RecordReplayProjectInput);
 
     }
 }

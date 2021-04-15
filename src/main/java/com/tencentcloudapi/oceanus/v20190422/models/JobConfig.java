@@ -124,6 +124,14 @@ public class JobConfig extends AbstractModel{
     private Long LogCollect;
 
     /**
+    * 作业的最大并行度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxParallelism")
+    @Expose
+    private Long MaxParallelism;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -372,6 +380,26 @@ public class JobConfig extends AbstractModel{
     }
 
     /**
+     * Get 作业的最大并行度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxParallelism 作业的最大并行度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxParallelism() {
+        return this.MaxParallelism;
+    }
+
+    /**
+     * Set 作业的最大并行度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxParallelism 作业的最大并行度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxParallelism(Long MaxParallelism) {
+        this.MaxParallelism = MaxParallelism;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -388,6 +416,7 @@ public class JobConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "COSBucket", this.COSBucket);
         this.setParamSimple(map, prefix + "LogCollect", this.LogCollect);
+        this.setParamSimple(map, prefix + "MaxParallelism", this.MaxParallelism);
 
     }
 }

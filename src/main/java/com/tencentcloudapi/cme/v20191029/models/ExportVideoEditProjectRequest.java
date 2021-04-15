@@ -56,6 +56,13 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     private String ExportDestination;
 
     /**
+    * 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
+    */
+    @SerializedName("CoverData")
+    @Expose
+    private String CoverData;
+
+    /**
     * 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
     */
     @SerializedName("CMEExportInfo")
@@ -161,6 +168,22 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。 
+     * @return CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
+     */
+    public String getCoverData() {
+        return this.CoverData;
+    }
+
+    /**
+     * Set 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
+     * @param CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
+     */
+    public void setCoverData(String CoverData) {
+        this.CoverData = CoverData;
+    }
+
+    /**
      * Get 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。 
      * @return CMEExportInfo 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
      */
@@ -216,6 +239,7 @@ public class ExportVideoEditProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "ExportDestination", this.ExportDestination);
+        this.setParamSimple(map, prefix + "CoverData", this.CoverData);
         this.setParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
         this.setParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
