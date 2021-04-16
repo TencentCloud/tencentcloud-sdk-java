@@ -1,0 +1,152 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iotvideoindustry.v20201201.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeRecordStreamRequest extends AbstractModel{
+
+    /**
+    * 设备Id
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
+
+    /**
+    * 流失效时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * 录像文件Id
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
+    * 录像流开始时间，当录像文件Id为空时有效
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * 录像流结束时间，当录像文件Id为空时有效
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+     * Get 设备Id 
+     * @return DeviceId 设备Id
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 设备Id
+     * @param DeviceId 设备Id
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 流失效时间 
+     * @return ExpireTime 流失效时间
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 流失效时间
+     * @param ExpireTime 流失效时间
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 录像文件Id 
+     * @return RecordId 录像文件Id
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set 录像文件Id
+     * @param RecordId 录像文件Id
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
+    }
+
+    /**
+     * Get 录像流开始时间，当录像文件Id为空时有效 
+     * @return StartTime 录像流开始时间，当录像文件Id为空时有效
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 录像流开始时间，当录像文件Id为空时有效
+     * @param StartTime 录像流开始时间，当录像文件Id为空时有效
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 录像流结束时间，当录像文件Id为空时有效 
+     * @return EndTime 录像流结束时间，当录像文件Id为空时有效
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 录像流结束时间，当录像文件Id为空时有效
+     * @param EndTime 录像流结束时间，当录像文件Id为空时有效
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+
+    }
+}
+

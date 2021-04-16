@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAccountBalanceResponse extends AbstractModel{
 
     /**
-    * 云账户信息中的”展示可用余额”字段，单位为"分"
+    * 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
     */
     @SerializedName("Balance")
     @Expose
@@ -37,42 +37,42 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     private Long Uin;
 
     /**
-    * 当前真实可用余额
+    * 当前真实可用余额,单位 分
     */
     @SerializedName("RealBalance")
     @Expose
     private Float RealBalance;
 
     /**
-    * 现金账户余额
+    * 现金账户余额,单位 分
     */
     @SerializedName("CashAccountBalance")
     @Expose
     private Float CashAccountBalance;
 
     /**
-    * 收益转入账户余额
+    * 收益转入账户余额,单位 分
     */
     @SerializedName("IncomeIntoAccountBalance")
     @Expose
     private Float IncomeIntoAccountBalance;
 
     /**
-    * 赠送账户余额
+    * 赠送账户余额,单位 分
     */
     @SerializedName("PresentAccountBalance")
     @Expose
     private Float PresentAccountBalance;
 
     /**
-    * 冻结金额
+    * 冻结金额,单位 分
     */
     @SerializedName("FreezeAmount")
     @Expose
     private Float FreezeAmount;
 
     /**
-    * 欠费金额
+    * 欠费金额,单位 分
     */
     @SerializedName("OweAmount")
     @Expose
@@ -121,16 +121,16 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 云账户信息中的”展示可用余额”字段，单位为"分" 
-     * @return Balance 云账户信息中的”展示可用余额”字段，单位为"分"
+     * Get 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分 
+     * @return Balance 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
      */
     public Long getBalance() {
         return this.Balance;
     }
 
     /**
-     * Set 云账户信息中的”展示可用余额”字段，单位为"分"
-     * @param Balance 云账户信息中的”展示可用余额”字段，单位为"分"
+     * Set 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
+     * @param Balance 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
      */
     public void setBalance(Long Balance) {
         this.Balance = Balance;
@@ -153,96 +153,96 @@ public class DescribeAccountBalanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 当前真实可用余额 
-     * @return RealBalance 当前真实可用余额
+     * Get 当前真实可用余额,单位 分 
+     * @return RealBalance 当前真实可用余额,单位 分
      */
     public Float getRealBalance() {
         return this.RealBalance;
     }
 
     /**
-     * Set 当前真实可用余额
-     * @param RealBalance 当前真实可用余额
+     * Set 当前真实可用余额,单位 分
+     * @param RealBalance 当前真实可用余额,单位 分
      */
     public void setRealBalance(Float RealBalance) {
         this.RealBalance = RealBalance;
     }
 
     /**
-     * Get 现金账户余额 
-     * @return CashAccountBalance 现金账户余额
+     * Get 现金账户余额,单位 分 
+     * @return CashAccountBalance 现金账户余额,单位 分
      */
     public Float getCashAccountBalance() {
         return this.CashAccountBalance;
     }
 
     /**
-     * Set 现金账户余额
-     * @param CashAccountBalance 现金账户余额
+     * Set 现金账户余额,单位 分
+     * @param CashAccountBalance 现金账户余额,单位 分
      */
     public void setCashAccountBalance(Float CashAccountBalance) {
         this.CashAccountBalance = CashAccountBalance;
     }
 
     /**
-     * Get 收益转入账户余额 
-     * @return IncomeIntoAccountBalance 收益转入账户余额
+     * Get 收益转入账户余额,单位 分 
+     * @return IncomeIntoAccountBalance 收益转入账户余额,单位 分
      */
     public Float getIncomeIntoAccountBalance() {
         return this.IncomeIntoAccountBalance;
     }
 
     /**
-     * Set 收益转入账户余额
-     * @param IncomeIntoAccountBalance 收益转入账户余额
+     * Set 收益转入账户余额,单位 分
+     * @param IncomeIntoAccountBalance 收益转入账户余额,单位 分
      */
     public void setIncomeIntoAccountBalance(Float IncomeIntoAccountBalance) {
         this.IncomeIntoAccountBalance = IncomeIntoAccountBalance;
     }
 
     /**
-     * Get 赠送账户余额 
-     * @return PresentAccountBalance 赠送账户余额
+     * Get 赠送账户余额,单位 分 
+     * @return PresentAccountBalance 赠送账户余额,单位 分
      */
     public Float getPresentAccountBalance() {
         return this.PresentAccountBalance;
     }
 
     /**
-     * Set 赠送账户余额
-     * @param PresentAccountBalance 赠送账户余额
+     * Set 赠送账户余额,单位 分
+     * @param PresentAccountBalance 赠送账户余额,单位 分
      */
     public void setPresentAccountBalance(Float PresentAccountBalance) {
         this.PresentAccountBalance = PresentAccountBalance;
     }
 
     /**
-     * Get 冻结金额 
-     * @return FreezeAmount 冻结金额
+     * Get 冻结金额,单位 分 
+     * @return FreezeAmount 冻结金额,单位 分
      */
     public Float getFreezeAmount() {
         return this.FreezeAmount;
     }
 
     /**
-     * Set 冻结金额
-     * @param FreezeAmount 冻结金额
+     * Set 冻结金额,单位 分
+     * @param FreezeAmount 冻结金额,单位 分
      */
     public void setFreezeAmount(Float FreezeAmount) {
         this.FreezeAmount = FreezeAmount;
     }
 
     /**
-     * Get 欠费金额 
-     * @return OweAmount 欠费金额
+     * Get 欠费金额,单位 分 
+     * @return OweAmount 欠费金额,单位 分
      */
     public Float getOweAmount() {
         return this.OweAmount;
     }
 
     /**
-     * Set 欠费金额
-     * @param OweAmount 欠费金额
+     * Set 欠费金额,单位 分
+     * @param OweAmount 欠费金额,单位 分
      */
     public void setOweAmount(Float OweAmount) {
         this.OweAmount = OweAmount;

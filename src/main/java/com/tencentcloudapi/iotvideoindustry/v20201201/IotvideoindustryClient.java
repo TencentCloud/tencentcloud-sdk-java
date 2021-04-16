@@ -400,6 +400,29 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
+     *获取回放视频流(NVR录制用)
+RecordId和StartTime/EndTime互斥
+当存在RecordId时，StartTime和EndTime无效
+当RecordId为空，StartTime和EndTime生效
+     * @param req DescribeRecordStreamRequest
+     * @return DescribeRecordStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordStreamResponse DescribeRecordStream(DescribeRecordStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取SIP服务器相关配置，用户可以通过这些配置项，将设备通过GB28181协议注册到本服务。
      * @param req DescribeSIPServerRequest
      * @return DescribeSIPServerResponse
@@ -472,6 +495,26 @@ public class IotvideoindustryClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSubGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSubGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据时间获取回放文件列表(云端录制用)
+     * @param req DescribeVideoListRequest
+     * @return DescribeVideoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoListResponse DescribeVideoList(DescribeVideoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVideoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVideoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVideoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -1648,6 +1648,46 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *直播平台-上传代理商完税列表
+     * @param req UploadTaxListRequest
+     * @return UploadTaxListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadTaxListResponse UploadTaxList(UploadTaxListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadTaxListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadTaxListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadTaxList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *直播平台-上传代理商完税证明
+     * @param req UploadTaxPaymentRequest
+     * @return UploadTaxPaymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadTaxPaymentResponse UploadTaxPayment(UploadTaxPaymentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadTaxPaymentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadTaxPaymentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadTaxPayment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *会员提现-不验证。此接口受理会员发起的提现申请。会员子账户的可提现余额、可用余额会减少，市场的资金汇总账户(监管账户)会减少相应的发生金额，提现到会员申请的收款账户。		
      * @param req WithdrawCashMembershipRequest
      * @return WithdrawCashMembershipResponse

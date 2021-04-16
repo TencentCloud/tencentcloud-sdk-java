@@ -1298,4 +1298,24 @@ public class RedisClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *升级实例支持多AZ
+     * @param req UpgradeVersionToMultiAvailabilityZonesRequest
+     * @return UpgradeVersionToMultiAvailabilityZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(UpgradeVersionToMultiAvailabilityZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeVersionToMultiAvailabilityZones");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
