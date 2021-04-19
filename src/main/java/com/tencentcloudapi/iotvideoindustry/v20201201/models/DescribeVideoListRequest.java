@@ -51,6 +51,13 @@ public class DescribeVideoListRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 设备Id
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
+
+    /**
      * Get 开始时间戳，秒级 
      * @return StartTime 开始时间戳，秒级
      */
@@ -115,6 +122,22 @@ public class DescribeVideoListRequest extends AbstractModel{
     }
 
     /**
+     * Get 设备Id 
+     * @return DeviceId 设备Id
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 设备Id
+     * @param DeviceId 设备Id
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DescribeVideoListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
 
     }
 }

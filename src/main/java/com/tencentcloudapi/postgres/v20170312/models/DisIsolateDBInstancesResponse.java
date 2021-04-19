@@ -20,36 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyDBInstanceRequest extends AbstractModel{
+public class DisIsolateDBInstancesResponse extends AbstractModel{
 
     /**
-    * 待下线实例ID
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("DBInstanceId")
+    @SerializedName("RequestId")
     @Expose
-    private String DBInstanceId;
+    private String RequestId;
 
     /**
-     * Get 待下线实例ID 
-     * @return DBInstanceId 待下线实例ID
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 待下线实例ID
-     * @param DBInstanceId 待下线实例ID
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

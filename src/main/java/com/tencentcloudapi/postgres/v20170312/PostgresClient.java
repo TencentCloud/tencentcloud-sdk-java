@@ -499,7 +499,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。当前仅适用于按量计费实例。
+     *本接口 (DestroyDBInstance) 用于彻底下线指定DBInstanceId对应的实例，下线后实例数据将彻底删除，无法找回，只能下线隔离中的实例。
      * @param req DestroyDBInstanceRequest
      * @return DestroyDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -511,6 +511,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DestroyDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DestroyDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DisIsolateDBInstances）用于解隔离实例
+     * @param req DisIsolateDBInstancesRequest
+     * @return DisIsolateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisIsolateDBInstancesResponse DisIsolateDBInstances(DisIsolateDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisIsolateDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisIsolateDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisIsolateDBInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -591,6 +611,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquiryPriceUpgradeDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（IsolateDBInstances）用于隔离实例
+     * @param req IsolateDBInstancesRequest
+     * @return IsolateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateDBInstancesResponse IsolateDBInstances(IsolateDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateDBInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

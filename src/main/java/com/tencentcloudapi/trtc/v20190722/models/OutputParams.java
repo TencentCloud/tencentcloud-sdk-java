@@ -44,7 +44,7 @@ public class OutputParams extends AbstractModel{
     private String RecordId;
 
     /**
-    * 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+    * 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
     */
     @SerializedName("RecordAudioOnly")
     @Expose
@@ -99,16 +99,16 @@ public class OutputParams extends AbstractModel{
     }
 
     /**
-     * Get 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3 
-     * @return RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+     * Get 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。 
+     * @return RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
      */
     public Long getRecordAudioOnly() {
         return this.RecordAudioOnly;
     }
 
     /**
-     * Set 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
-     * @param RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+     * Set 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
+     * @param RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
      */
     public void setRecordAudioOnly(Long RecordAudioOnly) {
         this.RecordAudioOnly = RecordAudioOnly;

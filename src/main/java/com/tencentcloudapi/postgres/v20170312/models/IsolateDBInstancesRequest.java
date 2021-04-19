@@ -20,36 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyDBInstanceRequest extends AbstractModel{
+public class IsolateDBInstancesRequest extends AbstractModel{
 
     /**
-    * 待下线实例ID
+    * 实例ID集合
     */
-    @SerializedName("DBInstanceId")
+    @SerializedName("DBInstanceIdSet")
     @Expose
-    private String DBInstanceId;
+    private String [] DBInstanceIdSet;
 
     /**
-     * Get 待下线实例ID 
-     * @return DBInstanceId 待下线实例ID
+     * Get 实例ID集合 
+     * @return DBInstanceIdSet 实例ID集合
      */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String [] getDBInstanceIdSet() {
+        return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 待下线实例ID
-     * @param DBInstanceId 待下线实例ID
+     * Set 实例ID集合
+     * @param DBInstanceIdSet 实例ID集合
      */
-    public void setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
+        this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
 
     }
 }

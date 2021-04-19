@@ -139,6 +139,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *获取房间内用户信息
+     * @param req DescribeRoomInfoRequest
+     * @return DescribeRoomInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoomInfoResponse DescribeRoomInfo(DescribeRoomInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoomInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoomInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRoomInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
 <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
      * @param req DescribeScanResultListRequest
