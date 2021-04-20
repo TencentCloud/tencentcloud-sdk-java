@@ -319,6 +319,46 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *手动执行版本保留
+     * @param req CreateTagRetentionExecutionRequest
+     * @return CreateTagRetentionExecutionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTagRetentionExecutionResponse CreateTagRetentionExecution(CreateTagRetentionExecutionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTagRetentionExecutionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTagRetentionExecutionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTagRetentionExecution");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建版本保留规则
+     * @param req CreateTagRetentionRuleRequest
+     * @return CreateTagRetentionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTagRetentionRuleResponse CreateTagRetentionRule(CreateTagRetentionRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTagRetentionRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTagRetentionRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTagRetentionRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建个人用户
      * @param req CreateUserPersonalRequest
      * @return CreateUserPersonalResponse
@@ -611,6 +651,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除版本保留规则
+     * @param req DeleteTagRetentionRuleRequest
+     * @return DeleteTagRetentionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTagRetentionRuleResponse DeleteTagRetentionRule(DeleteTagRetentionRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTagRetentionRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTagRetentionRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTagRetentionRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1119,6 +1179,66 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询版本保留执行记录
+     * @param req DescribeTagRetentionExecutionRequest
+     * @return DescribeTagRetentionExecutionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTagRetentionExecutionResponse DescribeTagRetentionExecution(DescribeTagRetentionExecutionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTagRetentionExecutionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTagRetentionExecutionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTagRetentionExecution");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询版本保留执行任务
+     * @param req DescribeTagRetentionExecutionTaskRequest
+     * @return DescribeTagRetentionExecutionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTagRetentionExecutionTaskResponse DescribeTagRetentionExecutionTask(DescribeTagRetentionExecutionTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTagRetentionExecutionTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTagRetentionExecutionTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTagRetentionExecutionTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询版本保留规则
+     * @param req DescribeTagRetentionRulesRequest
+     * @return DescribeTagRetentionRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTagRetentionRulesResponse DescribeTagRetentionRules(DescribeTagRetentionRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTagRetentionRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTagRetentionRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTagRetentionRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询个人用户配额
      * @param req DescribeUserQuotaPersonalRequest
      * @return DescribeUserQuotaPersonalResponse
@@ -1431,6 +1551,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新版本保留规则
+     * @param req ModifyTagRetentionRuleRequest
+     * @return ModifyTagRetentionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTagRetentionRuleResponse ModifyTagRetentionRule(ModifyTagRetentionRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTagRetentionRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTagRetentionRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTagRetentionRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

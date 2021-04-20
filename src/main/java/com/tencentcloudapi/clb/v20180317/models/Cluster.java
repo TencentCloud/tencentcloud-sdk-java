@@ -185,6 +185,14 @@ public class Cluster extends AbstractModel{
     private ClustersZone ClustersZone;
 
     /**
+    * 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClustersVersion")
+    @Expose
+    private String ClustersVersion;
+
+    /**
      * Get 集群唯一ID 
      * @return ClusterId 集群唯一ID
      */
@@ -581,6 +589,26 @@ public class Cluster extends AbstractModel{
     }
 
     /**
+     * Get 集群版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClustersVersion 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClustersVersion() {
+        return this.ClustersVersion;
+    }
+
+    /**
+     * Set 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClustersVersion 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClustersVersion(String ClustersVersion) {
+        this.ClustersVersion = ClustersVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -605,6 +633,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalanceDirectorCount", this.LoadBalanceDirectorCount);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamObj(map, prefix + "ClustersZone.", this.ClustersZone);
+        this.setParamSimple(map, prefix + "ClustersVersion", this.ClustersVersion);
 
     }
 }

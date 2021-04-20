@@ -161,6 +161,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
 
     /**
     * 云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
     */
     @SerializedName("InstanceNameSettings")
     @Expose
@@ -515,8 +516,10 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get 云服务器实例名（InstanceName）的相关设置。 
+     * Get 云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。 
      * @return InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
      */
     public InstanceNameSettings getInstanceNameSettings() {
         return this.InstanceNameSettings;
@@ -524,7 +527,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
 
     /**
      * Set 云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
      * @param InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
      */
     public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
         this.InstanceNameSettings = InstanceNameSettings;

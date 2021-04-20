@@ -243,6 +243,38 @@ public class DirectConnect extends AbstractModel{
     private Boolean SignLaw;
 
     /**
+    * 物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalZone")
+    @Expose
+    private Boolean LocalZone;
+
+    /**
+    * 该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VlanZeroDirectConnectTunnelCount")
+    @Expose
+    private Long VlanZeroDirectConnectTunnelCount;
+
+    /**
+    * 该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OtherVlanDirectConnectTunnelCount")
+    @Expose
+    private Long OtherVlanDirectConnectTunnelCount;
+
+    /**
+    * 物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinBandwidth")
+    @Expose
+    private Long MinBandwidth;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -787,6 +819,86 @@ public class DirectConnect extends AbstractModel{
     }
 
     /**
+     * Get 物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalZone 物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLocalZone() {
+        return this.LocalZone;
+    }
+
+    /**
+     * Set 物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalZone 物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalZone(Boolean LocalZone) {
+        this.LocalZone = LocalZone;
+    }
+
+    /**
+     * Get 该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVlanZeroDirectConnectTunnelCount() {
+        return this.VlanZeroDirectConnectTunnelCount;
+    }
+
+    /**
+     * Set 该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVlanZeroDirectConnectTunnelCount(Long VlanZeroDirectConnectTunnelCount) {
+        this.VlanZeroDirectConnectTunnelCount = VlanZeroDirectConnectTunnelCount;
+    }
+
+    /**
+     * Get 该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOtherVlanDirectConnectTunnelCount() {
+        return this.OtherVlanDirectConnectTunnelCount;
+    }
+
+    /**
+     * Set 该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOtherVlanDirectConnectTunnelCount(Long OtherVlanDirectConnectTunnelCount) {
+        this.OtherVlanDirectConnectTunnelCount = OtherVlanDirectConnectTunnelCount;
+    }
+
+    /**
+     * Get 物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinBandwidth 物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMinBandwidth() {
+        return this.MinBandwidth;
+    }
+
+    /**
+     * Set 物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinBandwidth 物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinBandwidth(Long MinBandwidth) {
+        this.MinBandwidth = MinBandwidth;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -818,6 +930,10 @@ public class DirectConnect extends AbstractModel{
         this.setParamSimple(map, prefix + "ChargeState", this.ChargeState);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "VlanZeroDirectConnectTunnelCount", this.VlanZeroDirectConnectTunnelCount);
+        this.setParamSimple(map, prefix + "OtherVlanDirectConnectTunnelCount", this.OtherVlanDirectConnectTunnelCount);
+        this.setParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
 
     }
 }

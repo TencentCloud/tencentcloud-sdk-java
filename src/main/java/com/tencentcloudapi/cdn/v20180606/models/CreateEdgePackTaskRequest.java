@@ -37,18 +37,18 @@ public class CreateEdgePackTaskRequest extends AbstractModel{
     private String CosUriFrom;
 
     /**
-    * 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
-    */
-    @SerializedName("CosUriTo")
-    @Expose
-    private String CosUriTo;
-
-    /**
     * BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案
     */
     @SerializedName("BlockID")
     @Expose
     private Long BlockID;
+
+    /**
+    * 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
+    */
+    @SerializedName("CosUriTo")
+    @Expose
+    private String CosUriTo;
 
     /**
      * Get apk 所在的 cos 存储桶, 如 edgepack-xxxxxxxx 
@@ -83,22 +83,6 @@ public class CreateEdgePackTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk 
-     * @return CosUriTo 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
-     */
-    public String getCosUriTo() {
-        return this.CosUriTo;
-    }
-
-    /**
-     * Set 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
-     * @param CosUriTo 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
-     */
-    public void setCosUriTo(String CosUriTo) {
-        this.CosUriTo = CosUriTo;
-    }
-
-    /**
      * Get BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案 
      * @return BlockID BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案
      */
@@ -115,13 +99,29 @@ public class CreateEdgePackTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk 
+     * @return CosUriTo 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
+     */
+    public String getCosUriTo() {
+        return this.CosUriTo;
+    }
+
+    /**
+     * Set 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
+     * @param CosUriTo 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
+     */
+    public void setCosUriTo(String CosUriTo) {
+        this.CosUriTo = CosUriTo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamSimple(map, prefix + "CosUriFrom", this.CosUriFrom);
-        this.setParamSimple(map, prefix + "CosUriTo", this.CosUriTo);
         this.setParamSimple(map, prefix + "BlockID", this.BlockID);
+        this.setParamSimple(map, prefix + "CosUriTo", this.CosUriTo);
 
     }
 }

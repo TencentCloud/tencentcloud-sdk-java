@@ -51,6 +51,24 @@ public class ImageInfo extends AbstractModel{
     private String UserId;
 
     /**
+    * 平台用户下载图片购买的价格(单位:分)
+    */
+    @SerializedName("DownloadPrice")
+    @Expose
+    private Long DownloadPrice;
+
+    /**
+    * 下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
+    */
+    @SerializedName("DownloadType")
+    @Expose
+    private String DownloadType;
+
+    /**
      * Get 图片Id 
      * @return ImageId 图片Id
      */
@@ -115,6 +133,54 @@ public class ImageInfo extends AbstractModel{
     }
 
     /**
+     * Get 平台用户下载图片购买的价格(单位:分) 
+     * @return DownloadPrice 平台用户下载图片购买的价格(单位:分)
+     */
+    public Long getDownloadPrice() {
+        return this.DownloadPrice;
+    }
+
+    /**
+     * Set 平台用户下载图片购买的价格(单位:分)
+     * @param DownloadPrice 平台用户下载图片购买的价格(单位:分)
+     */
+    public void setDownloadPrice(Long DownloadPrice) {
+        this.DownloadPrice = DownloadPrice;
+    }
+
+    /**
+     * Get 下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li> 
+     * @return DownloadType 下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
+     */
+    public String getDownloadType() {
+        return this.DownloadType;
+    }
+
+    /**
+     * Set 下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
+     * @param DownloadType 下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
+     */
+    public void setDownloadType(String DownloadType) {
+        this.DownloadType = DownloadType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +188,8 @@ public class ImageInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LicenseScopeId", this.LicenseScopeId);
         this.setParamSimple(map, prefix + "DimensionsNameId", this.DimensionsNameId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "DownloadPrice", this.DownloadPrice);
+        this.setParamSimple(map, prefix + "DownloadType", this.DownloadType);
 
     }
 }
