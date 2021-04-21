@@ -539,7 +539,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *删除一个云原生Promehtheus配置模板
+     *删除一个云原生Prometheus配置模板
      * @param req DeletePrometheusTemplateRequest
      * @return DeletePrometheusTemplateResponse
      * @throws TencentCloudSDKException

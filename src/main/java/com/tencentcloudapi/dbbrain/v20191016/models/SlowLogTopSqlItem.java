@@ -163,6 +163,34 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private Float RowsSentRatio;
 
     /**
+    * 平均执行时间
+    */
+    @SerializedName("QueryTimeAvg")
+    @Expose
+    private Float QueryTimeAvg;
+
+    /**
+    * 平均返回行数
+    */
+    @SerializedName("RowsSentAvg")
+    @Expose
+    private Float RowsSentAvg;
+
+    /**
+    * 平均锁等待时间
+    */
+    @SerializedName("LockTimeAvg")
+    @Expose
+    private Float LockTimeAvg;
+
+    /**
+    * 平均扫描行数
+    */
+    @SerializedName("RowsExaminedAvg")
+    @Expose
+    private Float RowsExaminedAvg;
+
+    /**
      * Get sql总锁等待时间 
      * @return LockTime sql总锁等待时间
      */
@@ -483,6 +511,70 @@ public class SlowLogTopSqlItem extends AbstractModel{
     }
 
     /**
+     * Get 平均执行时间 
+     * @return QueryTimeAvg 平均执行时间
+     */
+    public Float getQueryTimeAvg() {
+        return this.QueryTimeAvg;
+    }
+
+    /**
+     * Set 平均执行时间
+     * @param QueryTimeAvg 平均执行时间
+     */
+    public void setQueryTimeAvg(Float QueryTimeAvg) {
+        this.QueryTimeAvg = QueryTimeAvg;
+    }
+
+    /**
+     * Get 平均返回行数 
+     * @return RowsSentAvg 平均返回行数
+     */
+    public Float getRowsSentAvg() {
+        return this.RowsSentAvg;
+    }
+
+    /**
+     * Set 平均返回行数
+     * @param RowsSentAvg 平均返回行数
+     */
+    public void setRowsSentAvg(Float RowsSentAvg) {
+        this.RowsSentAvg = RowsSentAvg;
+    }
+
+    /**
+     * Get 平均锁等待时间 
+     * @return LockTimeAvg 平均锁等待时间
+     */
+    public Float getLockTimeAvg() {
+        return this.LockTimeAvg;
+    }
+
+    /**
+     * Set 平均锁等待时间
+     * @param LockTimeAvg 平均锁等待时间
+     */
+    public void setLockTimeAvg(Float LockTimeAvg) {
+        this.LockTimeAvg = LockTimeAvg;
+    }
+
+    /**
+     * Get 平均扫描行数 
+     * @return RowsExaminedAvg 平均扫描行数
+     */
+    public Float getRowsExaminedAvg() {
+        return this.RowsExaminedAvg;
+    }
+
+    /**
+     * Set 平均扫描行数
+     * @param RowsExaminedAvg 平均扫描行数
+     */
+    public void setRowsExaminedAvg(Float RowsExaminedAvg) {
+        this.RowsExaminedAvg = RowsExaminedAvg;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -506,6 +598,10 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.setParamSimple(map, prefix + "LockTimeRatio", this.LockTimeRatio);
         this.setParamSimple(map, prefix + "RowsExaminedRatio", this.RowsExaminedRatio);
         this.setParamSimple(map, prefix + "RowsSentRatio", this.RowsSentRatio);
+        this.setParamSimple(map, prefix + "QueryTimeAvg", this.QueryTimeAvg);
+        this.setParamSimple(map, prefix + "RowsSentAvg", this.RowsSentAvg);
+        this.setParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
+        this.setParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
 
     }
 }

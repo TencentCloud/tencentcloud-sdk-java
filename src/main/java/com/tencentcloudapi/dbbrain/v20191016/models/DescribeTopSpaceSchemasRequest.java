@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
+public class DescribeTopSpaceSchemasRequest extends AbstractModel{
 
     /**
     * 实例 ID 。
@@ -30,32 +30,18 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 返回的Top表数量，最大值为100，默认为20。
+    * 返回的Top库数量，最大值为100，默认为20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+    * 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
-
-    /**
-    * 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
-    */
-    @SerializedName("StartDate")
-    @Expose
-    private String StartDate;
-
-    /**
-    * 截止日期，最早为当日的前第29天，默认为当日。
-    */
-    @SerializedName("EndDate")
-    @Expose
-    private String EndDate;
 
     /**
     * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
@@ -81,67 +67,35 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回的Top表数量，最大值为100，默认为20。 
-     * @return Limit 返回的Top表数量，最大值为100，默认为20。
+     * Get 返回的Top库数量，最大值为100，默认为20。 
+     * @return Limit 返回的Top库数量，最大值为100，默认为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回的Top表数量，最大值为100，默认为20。
-     * @param Limit 返回的Top表数量，最大值为100，默认为20。
+     * Set 返回的Top库数量，最大值为100，默认为20。
+     * @param Limit 返回的Top库数量，最大值为100，默认为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。 
-     * @return SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * Get 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。 
+     * @return SortBy 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
-     * @param SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * Set 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+     * @param SortBy 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
-    }
-
-    /**
-     * Get 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。 
-     * @return StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
-     */
-    public String getStartDate() {
-        return this.StartDate;
-    }
-
-    /**
-     * Set 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
-     * @param StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
-     */
-    public void setStartDate(String StartDate) {
-        this.StartDate = StartDate;
-    }
-
-    /**
-     * Get 截止日期，最早为当日的前第29天，默认为当日。 
-     * @return EndDate 截止日期，最早为当日的前第29天，默认为当日。
-     */
-    public String getEndDate() {
-        return this.EndDate;
-    }
-
-    /**
-     * Set 截止日期，最早为当日的前第29天，默认为当日。
-     * @param EndDate 截止日期，最早为当日的前第29天，默认为当日。
-     */
-    public void setEndDate(String EndDate) {
-        this.EndDate = EndDate;
     }
 
     /**
@@ -167,8 +121,6 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
-        this.setParamSimple(map, prefix + "StartDate", this.StartDate);
-        this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "Product", this.Product);
 
     }

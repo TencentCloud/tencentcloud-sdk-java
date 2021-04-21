@@ -129,6 +129,15 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     private RouteFilterPrefix [] CustomerIDCRoutes;
 
     /**
+    * 是否开启巨帧
+1：开启
+0：不开启
+    */
+    @SerializedName("JumboEnable")
+    @Expose
+    private Long JumboEnable;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -373,6 +382,30 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启巨帧
+1：开启
+0：不开启 
+     * @return JumboEnable 是否开启巨帧
+1：开启
+0：不开启
+     */
+    public Long getJumboEnable() {
+        return this.JumboEnable;
+    }
+
+    /**
+     * Set 是否开启巨帧
+1：开启
+0：不开启
+     * @param JumboEnable 是否开启巨帧
+1：开启
+0：不开启
+     */
+    public void setJumboEnable(Long JumboEnable) {
+        this.JumboEnable = JumboEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -391,6 +424,7 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel{
         this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
         this.setParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
         this.setParamArrayObj(map, prefix + "CustomerIDCRoutes.", this.CustomerIDCRoutes);
+        this.setParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
 
     }
 }

@@ -39,6 +39,13 @@ public class DescribeLiveForbidStreamListRequest extends AbstractModel{
     private Long PageSize;
 
     /**
+    * 搜索的推流 id 名称。
+    */
+    @SerializedName("StreamName")
+    @Expose
+    private String StreamName;
+
+    /**
      * Get 取得第几页，默认1。 
      * @return PageNum 取得第几页，默认1。
      */
@@ -79,11 +86,28 @@ public class DescribeLiveForbidStreamListRequest extends AbstractModel{
     }
 
     /**
+     * Get 搜索的推流 id 名称。 
+     * @return StreamName 搜索的推流 id 名称。
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * Set 搜索的推流 id 名称。
+     * @param StreamName 搜索的推流 id 名称。
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
 
     }
 }

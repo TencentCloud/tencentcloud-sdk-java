@@ -44,7 +44,7 @@ public class CreateDomainBatchRequest extends AbstractModel{
     private String [] Domains;
 
     /**
-    * 付费模式 0手动在线付费，1使用余额付费
+    * 付费模式 0手动在线付费，1使用余额付费，2使用特惠包
     */
     @SerializedName("PayMode")
     @Expose
@@ -58,6 +58,13 @@ public class CreateDomainBatchRequest extends AbstractModel{
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
+
+    /**
+    * 使用的特惠包ID，PayMode为2时必填
+    */
+    @SerializedName("PackageResourceId")
+    @Expose
+    private String PackageResourceId;
 
     /**
      * Get 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940) 
@@ -108,16 +115,16 @@ public class CreateDomainBatchRequest extends AbstractModel{
     }
 
     /**
-     * Get 付费模式 0手动在线付费，1使用余额付费 
-     * @return PayMode 付费模式 0手动在线付费，1使用余额付费
+     * Get 付费模式 0手动在线付费，1使用余额付费，2使用特惠包 
+     * @return PayMode 付费模式 0手动在线付费，1使用余额付费，2使用特惠包
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式 0手动在线付费，1使用余额付费
-     * @param PayMode 付费模式 0手动在线付费，1使用余额付费
+     * Set 付费模式 0手动在线付费，1使用余额付费，2使用特惠包
+     * @param PayMode 付费模式 0手动在线付费，1使用余额付费，2使用特惠包
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -148,6 +155,22 @@ public class CreateDomainBatchRequest extends AbstractModel{
     }
 
     /**
+     * Get 使用的特惠包ID，PayMode为2时必填 
+     * @return PackageResourceId 使用的特惠包ID，PayMode为2时必填
+     */
+    public String getPackageResourceId() {
+        return this.PackageResourceId;
+    }
+
+    /**
+     * Set 使用的特惠包ID，PayMode为2时必填
+     * @param PackageResourceId 使用的特惠包ID，PayMode为2时必填
+     */
+    public void setPackageResourceId(String PackageResourceId) {
+        this.PackageResourceId = PackageResourceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -156,6 +179,7 @@ public class CreateDomainBatchRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "PackageResourceId", this.PackageResourceId);
 
     }
 }

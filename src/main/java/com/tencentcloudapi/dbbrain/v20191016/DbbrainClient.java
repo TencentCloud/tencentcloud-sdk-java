@@ -79,6 +79,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *创建健康报告的浏览地址。
+     * @param req CreateDBDiagReportUrlRequest
+     * @return CreateDBDiagReportUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBDiagReportUrlResponse CreateDBDiagReportUrl(CreateDBDiagReportUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBDiagReportUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBDiagReportUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDBDiagReportUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
      * @param req CreateMailProfileRequest
      * @return CreateMailProfileResponse
@@ -239,6 +259,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询健康报告生成任务列表。
+     * @param req DescribeDBDiagReportTasksRequest
+     * @return DescribeDBDiagReportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasks(DescribeDBDiagReportTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBDiagReportTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBDiagReportTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBDiagReportTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
      * @param req DescribeDBSpaceStatusRequest
      * @return DescribeDBSpaceStatusResponse
@@ -391,6 +431,66 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogTopSqlsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSlowLogTopSqls");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取慢日志来源地址统计分布图。
+     * @param req DescribeSlowLogUserHostStatsRequest
+     * @return DescribeSlowLogUserHostStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogUserHostStatsResponse DescribeSlowLogUserHostStats(DescribeSlowLogUserHostStatsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogUserHostStatsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowLogUserHostStats");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取实例占用空间最大的前几个库在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。
+     * @param req DescribeTopSpaceSchemaTimeSeriesRequest
+     * @return DescribeTopSpaceSchemaTimeSeriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceSchemaTimeSeriesResponse DescribeTopSpaceSchemaTimeSeries(DescribeTopSpaceSchemaTimeSeriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopSpaceSchemaTimeSeries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取实例Top库的实时空间统计信息，默认返回按大小排序。
+     * @param req DescribeTopSpaceSchemasRequest
+     * @return DescribeTopSpaceSchemasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceSchemasResponse DescribeTopSpaceSchemas(DescribeTopSpaceSchemasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceSchemasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceSchemasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopSpaceSchemas");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

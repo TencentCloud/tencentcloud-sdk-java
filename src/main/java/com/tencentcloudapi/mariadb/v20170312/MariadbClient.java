@@ -502,6 +502,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceNodeInfo）用于获取数据库实例主备节点信息
+     * @param req DescribeInstanceNodeInfoRequest
+     * @return DescribeInstanceNodeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceNodeInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
      * @param req DescribeLogFileRetentionPeriodRequest
      * @return DescribeLogFileRetentionPeriodResponse

@@ -20,24 +20,24 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
+public class DescribeTopSpaceSchemaTimeSeriesRequest extends AbstractModel{
 
     /**
-    * 实例 ID 。
+    * 实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 返回的Top表数量，最大值为100，默认为20。
+    * 返回的Top库数量，最大值为100，默认为20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+    * 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
     */
     @SerializedName("SortBy")
     @Expose
@@ -65,48 +65,48 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String Product;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 返回的Top表数量，最大值为100，默认为20。 
-     * @return Limit 返回的Top表数量，最大值为100，默认为20。
+     * Get 返回的Top库数量，最大值为100，默认为20。 
+     * @return Limit 返回的Top库数量，最大值为100，默认为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回的Top表数量，最大值为100，默认为20。
-     * @param Limit 返回的Top表数量，最大值为100，默认为20。
+     * Set 返回的Top库数量，最大值为100，默认为20。
+     * @param Limit 返回的Top库数量，最大值为100，默认为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。 
-     * @return SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * Get 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。 
+     * @return SortBy 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
-     * @param SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * Set 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+     * @param SortBy 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

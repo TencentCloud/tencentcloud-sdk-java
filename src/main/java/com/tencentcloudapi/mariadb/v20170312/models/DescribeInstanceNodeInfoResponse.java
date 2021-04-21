@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotvideoindustry.v20201201.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVideoListResponse extends AbstractModel{
+public class DescribeInstanceNodeInfoResponse extends AbstractModel{
 
     /**
-    * 总数
+    * 节点总个数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 已废弃
+    * 节点信息
     */
-    @SerializedName("VideoList")
+    @SerializedName("NodesInfo")
     @Expose
-    private RecordTaskItem VideoList;
-
-    /**
-    * 录像详情列表
-    */
-    @SerializedName("RecordList")
-    @Expose
-    private RecordTaskItem [] RecordList;
+    private NodeInfo [] NodesInfo;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeVideoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get 节点总个数 
+     * @return TotalCount 节点总个数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set 节点总个数
+     * @param TotalCount 节点总个数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 已废弃 
-     * @return VideoList 已废弃
+     * Get 节点信息 
+     * @return NodesInfo 节点信息
      */
-    public RecordTaskItem getVideoList() {
-        return this.VideoList;
+    public NodeInfo [] getNodesInfo() {
+        return this.NodesInfo;
     }
 
     /**
-     * Set 已废弃
-     * @param VideoList 已废弃
+     * Set 节点信息
+     * @param NodesInfo 节点信息
      */
-    public void setVideoList(RecordTaskItem VideoList) {
-        this.VideoList = VideoList;
-    }
-
-    /**
-     * Get 录像详情列表 
-     * @return RecordList 录像详情列表
-     */
-    public RecordTaskItem [] getRecordList() {
-        return this.RecordList;
-    }
-
-    /**
-     * Set 录像详情列表
-     * @param RecordList 录像详情列表
-     */
-    public void setRecordList(RecordTaskItem [] RecordList) {
-        this.RecordList = RecordList;
+    public void setNodesInfo(NodeInfo [] NodesInfo) {
+        this.NodesInfo = NodesInfo;
     }
 
     /**
@@ -119,8 +96,7 @@ public class DescribeVideoListResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "VideoList.", this.VideoList);
-        this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
+        this.setParamArrayObj(map, prefix + "NodesInfo.", this.NodesInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotvideoindustry.v20201201.models;
+package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVideoListResponse extends AbstractModel{
+public class DescribeTopSpaceSchemasResponse extends AbstractModel{
 
     /**
-    * 总数
+    * 返回的Top库空间统计信息列表。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("TopSpaceSchemas")
     @Expose
-    private Long TotalCount;
+    private SchemaSpaceData [] TopSpaceSchemas;
 
     /**
-    * 已废弃
+    * 采集库空间数据的时间戳（秒）。
     */
-    @SerializedName("VideoList")
+    @SerializedName("Timestamp")
     @Expose
-    private RecordTaskItem VideoList;
-
-    /**
-    * 录像详情列表
-    */
-    @SerializedName("RecordList")
-    @Expose
-    private RecordTaskItem [] RecordList;
+    private Long Timestamp;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribeVideoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get 返回的Top库空间统计信息列表。 
+     * @return TopSpaceSchemas 返回的Top库空间统计信息列表。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public SchemaSpaceData [] getTopSpaceSchemas() {
+        return this.TopSpaceSchemas;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set 返回的Top库空间统计信息列表。
+     * @param TopSpaceSchemas 返回的Top库空间统计信息列表。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setTopSpaceSchemas(SchemaSpaceData [] TopSpaceSchemas) {
+        this.TopSpaceSchemas = TopSpaceSchemas;
     }
 
     /**
-     * Get 已废弃 
-     * @return VideoList 已废弃
+     * Get 采集库空间数据的时间戳（秒）。 
+     * @return Timestamp 采集库空间数据的时间戳（秒）。
      */
-    public RecordTaskItem getVideoList() {
-        return this.VideoList;
+    public Long getTimestamp() {
+        return this.Timestamp;
     }
 
     /**
-     * Set 已废弃
-     * @param VideoList 已废弃
+     * Set 采集库空间数据的时间戳（秒）。
+     * @param Timestamp 采集库空间数据的时间戳（秒）。
      */
-    public void setVideoList(RecordTaskItem VideoList) {
-        this.VideoList = VideoList;
-    }
-
-    /**
-     * Get 录像详情列表 
-     * @return RecordList 录像详情列表
-     */
-    public RecordTaskItem [] getRecordList() {
-        return this.RecordList;
-    }
-
-    /**
-     * Set 录像详情列表
-     * @param RecordList 录像详情列表
-     */
-    public void setRecordList(RecordTaskItem [] RecordList) {
-        this.RecordList = RecordList;
+    public void setTimestamp(Long Timestamp) {
+        this.Timestamp = Timestamp;
     }
 
     /**
@@ -118,9 +95,8 @@ public class DescribeVideoListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "VideoList.", this.VideoList);
-        this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
+        this.setParamArrayObj(map, prefix + "TopSpaceSchemas.", this.TopSpaceSchemas);
+        this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

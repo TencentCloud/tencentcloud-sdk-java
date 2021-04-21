@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoadBalancersRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID。
+    * 负载均衡实例ID。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -80,7 +80,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String [] BackendPrivateIps;
 
     /**
-    * 数据偏移量，默认为 0。
+    * 数据偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -137,14 +137,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String VpcId;
 
     /**
-    * 安全组ID，如 sg-m1cc9123
+    * 安全组ID，如 sg-m1cc****。
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String SecurityGroup;
 
     /**
-    * 主可用区ID，如 ："100001" （对应的是广州一区）
+    * 主可用区ID，如 ："100001" （对应的是广州一区）。
     */
     @SerializedName("MasterZone")
     @Expose
@@ -157,22 +157,24 @@ OPEN：公网属性， INTERNAL：内网属性。
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照CLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</li>
 <li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> vip-isp - String - 是否必填：否 - （过滤条件）按照 CLB VIP的运营商类型过滤，如："BGP","INTERNAL","CMCC","CTCC","CUCC"等。</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 负载均衡实例 ID。 
-     * @return LoadBalancerIds 负载均衡实例 ID。
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerIds 负载均衡实例ID。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 负载均衡实例 ID。
-     * @param LoadBalancerIds 负载均衡实例 ID。
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerIds 负载均衡实例ID。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
@@ -295,16 +297,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 数据偏移量，默认为 0。 
-     * @return Offset 数据偏移量，默认为 0。
+     * Get 数据偏移量，默认为0。 
+     * @return Offset 数据偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，默认为 0。
-     * @param Offset 数据偏移量，默认为 0。
+     * Set 数据偏移量，默认为0。
+     * @param Offset 数据偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -427,32 +429,32 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 安全组ID，如 sg-m1cc9123 
-     * @return SecurityGroup 安全组ID，如 sg-m1cc9123
+     * Get 安全组ID，如 sg-m1cc****。 
+     * @return SecurityGroup 安全组ID，如 sg-m1cc****。
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 安全组ID，如 sg-m1cc9123
-     * @param SecurityGroup 安全组ID，如 sg-m1cc9123
+     * Set 安全组ID，如 sg-m1cc****。
+     * @param SecurityGroup 安全组ID，如 sg-m1cc****。
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get 主可用区ID，如 ："100001" （对应的是广州一区） 
-     * @return MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）
+     * Get 主可用区ID，如 ："100001" （对应的是广州一区）。 
+     * @return MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）。
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set 主可用区ID，如 ："100001" （对应的是广州一区）
-     * @param MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）
+     * Set 主可用区ID，如 ："100001" （对应的是广州一区）。
+     * @param MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）。
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
@@ -464,13 +466,17 @@ OPEN：公网属性， INTERNAL：内网属性。
 <li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照CLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</li>
-<li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li> 
+<li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> vip-isp - String - 是否必填：否 - （过滤条件）按照 CLB VIP的运营商类型过滤，如："BGP","INTERNAL","CMCC","CTCC","CUCC"等。</li> 
      * @return Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 <li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
 <li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照CLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</li>
 <li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> vip-isp - String - 是否必填：否 - （过滤条件）按照 CLB VIP的运营商类型过滤，如："BGP","INTERNAL","CMCC","CTCC","CUCC"等。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -483,12 +489,16 @@ OPEN：公网属性， INTERNAL：内网属性。
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照CLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</li>
 <li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> vip-isp - String - 是否必填：否 - （过滤条件）按照 CLB VIP的运营商类型过滤，如："BGP","INTERNAL","CMCC","CTCC","CUCC"等。</li>
      * @param Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 <li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
 <li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照CLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</li>
 <li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> function-name - String - 是否必填：否 - （过滤条件）按照 CLB 后端绑定的SCF云函数的函数名称过滤。</li>
+<li> vip-isp - String - 是否必填：否 - （过滤条件）按照 CLB VIP的运营商类型过滤，如："BGP","INTERNAL","CMCC","CTCC","CUCC"等。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

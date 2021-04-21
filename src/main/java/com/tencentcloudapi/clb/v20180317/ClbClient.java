@@ -733,7 +733,7 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *查询一个地域的负载均衡实例列表
+     *查询一个地域的负载均衡实例列表。
 
      * @param req DescribeLoadBalancersRequest
      * @return DescribeLoadBalancersResponse
