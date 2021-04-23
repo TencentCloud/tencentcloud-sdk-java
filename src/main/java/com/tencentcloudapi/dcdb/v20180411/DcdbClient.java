@@ -301,6 +301,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDCDBInstanceNodeInfo）用于获取实例节点信息
+     * @param req DescribeDCDBInstanceNodeInfoRequest
+     * @return DescribeDCDBInstanceNodeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfo(DescribeDCDBInstanceNodeInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDCDBInstanceNodeInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
 如果不指定任何筛选条件，则默认返回10条实例记录，单次请求最多支持返回100条实例记录。
      * @param req DescribeDCDBInstancesRequest

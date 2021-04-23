@@ -80,6 +80,10 @@ public class DeliverStorageServiceResponse extends AbstractModel{
 
     /**
     * 服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
     */
     @SerializedName("Status")
     @Expose
@@ -228,8 +232,16 @@ public class DeliverStorageServiceResponse extends AbstractModel{
     }
 
     /**
-     * Get 服务状态 
+     * Get 服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。 
      * @return Status 服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
      */
     public Long getStatus() {
         return this.Status;
@@ -237,7 +249,15 @@ public class DeliverStorageServiceResponse extends AbstractModel{
 
     /**
      * Set 服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
      * @param Status 服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

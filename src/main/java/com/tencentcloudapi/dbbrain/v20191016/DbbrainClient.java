@@ -539,6 +539,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *获取SQL优化建议。
+     * @param req DescribeUserSqlAdviceRequest
+     * @return DescribeUserSqlAdviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSqlAdviceResponse DescribeUserSqlAdvice(DescribeUserSqlAdviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserSqlAdviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserSqlAdviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserSqlAdvice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改实例巡检开关。
      * @param req ModifyDiagDBInstanceConfRequest
      * @return ModifyDiagDBInstanceConfResponse

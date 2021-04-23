@@ -86,6 +86,13 @@ public class CreateServiceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 独享实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 用户自定义的服务名称。 
      * @return ServiceName 用户自定义的服务名称。
      */
@@ -230,6 +237,22 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 独享实例id 
+     * @return InstanceId 独享实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 独享实例id
+     * @param InstanceId 独享实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SetServerName", this.SetServerName);
         this.setParamSimple(map, prefix + "AppIdType", this.AppIdType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

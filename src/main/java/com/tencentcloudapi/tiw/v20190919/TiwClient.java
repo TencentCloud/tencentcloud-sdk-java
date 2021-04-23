@@ -119,6 +119,26 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *查询互动白板质量数据
+     * @param req DescribeQualityMetricsRequest
+     * @return DescribeQualityMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQualityMetricsResponse DescribeQualityMetrics(DescribeQualityMetricsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQualityMetricsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQualityMetricsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeQualityMetrics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询文档转码任务的执行进度与转码结果
      * @param req DescribeTranscodeRequest
      * @return DescribeTranscodeResponse

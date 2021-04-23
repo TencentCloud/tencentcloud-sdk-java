@@ -72,7 +72,7 @@ public class ModifyApiRequest extends AbstractModel{
     private String ApiType;
 
     /**
-    * API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
+    * API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
     */
     @SerializedName("AuthType")
     @Expose
@@ -471,16 +471,16 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。 
-     * @return AuthType API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
+     * Get API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。 
+     * @return AuthType API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
-     * @param AuthType API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
+     * Set API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
+     * @param AuthType API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;

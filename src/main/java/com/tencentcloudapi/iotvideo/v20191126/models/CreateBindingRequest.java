@@ -51,6 +51,13 @@ public class CreateBindingRequest extends AbstractModel{
     private Boolean ForceBind;
 
     /**
+    * 设备昵称
+    */
+    @SerializedName("Nick")
+    @Expose
+    private String Nick;
+
+    /**
      * Get 终端用户在IoT Video上的唯一标识ID 
      * @return AccessId 终端用户在IoT Video上的唯一标识ID
      */
@@ -115,6 +122,22 @@ public class CreateBindingRequest extends AbstractModel{
     }
 
     /**
+     * Get 设备昵称 
+     * @return Nick 设备昵称
+     */
+    public String getNick() {
+        return this.Nick;
+    }
+
+    /**
+     * Set 设备昵称
+     * @param Nick 设备昵称
+     */
+    public void setNick(String Nick) {
+        this.Nick = Nick;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateBindingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Tid", this.Tid);
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "ForceBind", this.ForceBind);
+        this.setParamSimple(map, prefix + "Nick", this.Nick);
 
     }
 }

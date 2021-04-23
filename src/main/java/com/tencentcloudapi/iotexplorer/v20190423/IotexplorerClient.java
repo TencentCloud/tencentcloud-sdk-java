@@ -559,6 +559,26 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（GetCOSURL）用于获取固件存储在COS的URL 
+     * @param req GetCOSURLRequest
+     * @return GetCOSURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCOSURLResponse GetCOSURL(GetCOSURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCOSURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCOSURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetCOSURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询某个产品下的设备列表
      * @param req GetDeviceListRequest
      * @return GetDeviceListResponse

@@ -39,6 +39,46 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询微服务注册引擎实例访问地址
+     * @param req DescribeSREInstanceAccessAddressRequest
+     * @return DescribeSREInstanceAccessAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(DescribeSREInstanceAccessAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSREInstanceAccessAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSREInstanceAccessAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSREInstanceAccessAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询微服务注册中心实例列表
+     * @param req DescribeSREInstancesRequest
+     * @return DescribeSREInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSREInstancesResponse DescribeSREInstances(DescribeSREInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSREInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSREInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSREInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *管理配置
      * @param req ManageConfigRequest
      * @return ManageConfigResponse

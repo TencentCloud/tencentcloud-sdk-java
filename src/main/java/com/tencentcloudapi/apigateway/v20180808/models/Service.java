@@ -151,6 +151,22 @@ public class Service extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SetType")
+    @Expose
+    private String SetType;
+
+    /**
      * Get 内网访问https端口。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InnerHttpsPort 内网访问https端口。
@@ -471,6 +487,46 @@ public class Service extends AbstractModel{
     }
 
     /**
+     * Get 独享实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SetType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSetType() {
+        return this.SetType;
+    }
+
+    /**
+     * Set 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SetType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSetType(String SetType) {
+        this.SetType = SetType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -490,6 +546,8 @@ public class Service extends AbstractModel{
         this.setParamSimple(map, prefix + "InnerSubDomain", this.InnerSubDomain);
         this.setParamSimple(map, prefix + "TradeIsolateStatus", this.TradeIsolateStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SetType", this.SetType);
 
     }
 }

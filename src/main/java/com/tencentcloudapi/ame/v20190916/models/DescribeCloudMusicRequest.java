@@ -30,7 +30,8 @@ public class DescribeCloudMusicRequest extends AbstractModel{
     private String MusicId;
 
     /**
-    * 歌曲类型，请填写：MP3-320K-FTD
+    * MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
     */
     @SerializedName("MusicType")
     @Expose
@@ -53,16 +54,20 @@ public class DescribeCloudMusicRequest extends AbstractModel{
     }
 
     /**
-     * Get 歌曲类型，请填写：MP3-320K-FTD 
-     * @return MusicType 歌曲类型，请填写：MP3-320K-FTD
+     * Get MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。 
+     * @return MusicType MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
      */
     public String getMusicType() {
         return this.MusicType;
     }
 
     /**
-     * Set 歌曲类型，请填写：MP3-320K-FTD
-     * @param MusicType 歌曲类型，请填写：MP3-320K-FTD
+     * Set MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+     * @param MusicType MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
      */
     public void setMusicType(String MusicType) {
         this.MusicType = MusicType;

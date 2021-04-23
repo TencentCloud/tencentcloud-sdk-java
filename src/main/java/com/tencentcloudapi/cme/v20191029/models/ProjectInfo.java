@@ -44,8 +44,7 @@ public class ProjectInfo extends AbstractModel{
     private String AspectRatio;
 
     /**
-    * 项目类别，取值：
-项目类别，取值有：
+    * 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
@@ -69,6 +68,14 @@ public class ProjectInfo extends AbstractModel{
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
+
+    /**
+    * 云转推项目信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StreamConnectProjectInfo")
+    @Expose
+    private StreamConnectProjectInfo StreamConnectProjectInfo;
 
     /**
     * 项目创建时间，格式按照 ISO 8601 标准表示。
@@ -133,15 +140,13 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 项目类别，取值：
-项目类别，取值有：
+     * Get 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li> 
-     * @return Category 项目类别，取值：
-项目类别，取值有：
+     * @return Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
@@ -153,15 +158,13 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Set 项目类别，取值：
-项目类别，取值有：
+     * Set 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
-     * @param Category 项目类别，取值：
-项目类别，取值有：
+     * @param Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
@@ -202,6 +205,26 @@ public class ProjectInfo extends AbstractModel{
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
+    }
+
+    /**
+     * Get 云转推项目信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StreamConnectProjectInfo 云转推项目信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StreamConnectProjectInfo getStreamConnectProjectInfo() {
+        return this.StreamConnectProjectInfo;
+    }
+
+    /**
+     * Set 云转推项目信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StreamConnectProjectInfo 云转推项目信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStreamConnectProjectInfo(StreamConnectProjectInfo StreamConnectProjectInfo) {
+        this.StreamConnectProjectInfo = StreamConnectProjectInfo;
     }
 
     /**
@@ -246,6 +269,7 @@ public class ProjectInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+        this.setParamObj(map, prefix + "StreamConnectProjectInfo.", this.StreamConnectProjectInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

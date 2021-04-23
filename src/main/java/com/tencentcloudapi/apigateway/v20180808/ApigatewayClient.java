@@ -123,6 +123,46 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     }
 
     /**
+     *构建 API 文档
+     * @param req BuildAPIDocRequest
+     * @return BuildAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public BuildAPIDocResponse BuildAPIDoc(BuildAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BuildAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BuildAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BuildAPIDoc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建 API 文档
+     * @param req CreateAPIDocRequest
+     * @return CreateAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAPIDocResponse CreateAPIDoc(CreateAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAPIDoc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateApi）用于创建 API 接口，创建 API 前，用户需要先创建服务，每个 API 都有自己归属的服务。
      * @param req CreateApiRequest
      * @return CreateApiResponse
@@ -217,6 +257,26 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
                 Type type = new TypeToken<JsonResponseModel<CreateUsagePlanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateUsagePlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除 API 文档
+     * @param req DeleteAPIDocRequest
+     * @return DeleteAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAPIDocResponse DeleteAPIDoc(DeleteAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAPIDoc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -360,6 +420,46 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
                 Type type = new TypeToken<JsonResponseModel<DemoteServiceUsagePlanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DemoteServiceUsagePlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询 API 文档详情
+     * @param req DescribeAPIDocDetailRequest
+     * @return DescribeAPIDocDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAPIDocDetailResponse DescribeAPIDocDetail(DescribeAPIDocDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAPIDocDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询 API 文档列表
+     * @param req DescribeAPIDocsRequest
+     * @return DescribeAPIDocsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAPIDocsResponse DescribeAPIDocs(DescribeAPIDocsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAPIDocs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -918,6 +1018,26 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
+     *修改 API 文档
+     * @param req ModifyAPIDocRequest
+     * @return ModifyAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAPIDocResponse ModifyAPIDoc(ModifyAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAPIDoc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyApi）用于修改 API 接口，可调用此接口对已经配置的 API 接口进行编辑修改。修改后的 API 需要重新发布 API 所在的服务到对应环境方能生效。
      * @param req ModifyApiRequest
      * @return ModifyApiResponse
@@ -1091,6 +1211,26 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
                 Type type = new TypeToken<JsonResponseModel<ReleaseServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重置API文档密码
+     * @param req ResetAPIDocPasswordRequest
+     * @return ResetAPIDocPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAPIDocPasswordResponse ResetAPIDocPassword(ResetAPIDocPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetAPIDocPasswordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetAPIDocPassword");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

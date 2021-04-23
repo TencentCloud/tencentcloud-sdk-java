@@ -30,7 +30,7 @@ public class CreateTranscodeRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 需要进行转码文件地址
+    * 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
     */
     @SerializedName("Url")
     @Expose
@@ -94,16 +94,16 @@ tar.gz： 生成`.tar.gz`压缩包
     }
 
     /**
-     * Get 需要进行转码文件地址 
-     * @return Url 需要进行转码文件地址
+     * Get 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。 
+     * @return Url 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 需要进行转码文件地址
-     * @param Url 需要进行转码文件地址
+     * Set 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
+     * @param Url 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
      */
     public void setUrl(String Url) {
         this.Url = Url;

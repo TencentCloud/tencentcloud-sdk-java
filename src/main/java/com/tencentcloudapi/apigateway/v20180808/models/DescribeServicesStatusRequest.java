@@ -37,7 +37,7 @@ public class DescribeServicesStatusRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
+    * 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
     */
     @SerializedName("Filters")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeServicesStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。 
-     * @return Filters 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
+     * Get 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId 
+     * @return Filters 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
-     * @param Filters 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
+     * Set 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
+     * @param Filters 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

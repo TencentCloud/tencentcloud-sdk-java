@@ -30,18 +30,6 @@ public class CreateProjectRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 项目类别，取值有：
-<li>VIDEO_EDIT：视频编辑。</li>
-<li>SWITCHER：导播台。</li>
-<li>VIDEO_SEGMENTATION：视频拆条。</li>
-<li>STREAM_CONNECT：云转推。</li>
-<li>RECORD_REPLAY：录制回放。</li>
-    */
-    @SerializedName("Category")
-    @Expose
-    private String Category;
-
-    /**
     * 项目名称，不可超过30个字符。
     */
     @SerializedName("Name")
@@ -54,6 +42,18 @@ public class CreateProjectRequest extends AbstractModel{
     @SerializedName("Owner")
     @Expose
     private Entity Owner;
+
+    /**
+    * 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
 
     /**
     * 画布宽高比。
@@ -129,6 +129,38 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
+     * Get 项目名称，不可超过30个字符。 
+     * @return Name 项目名称，不可超过30个字符。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 项目名称，不可超过30个字符。
+     * @param Name 项目名称，不可超过30个字符。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 项目归属者。 
+     * @return Owner 项目归属者。
+     */
+    public Entity getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 项目归属者。
+     * @param Owner 项目归属者。
+     */
+    public void setOwner(Entity Owner) {
+        this.Owner = Owner;
+    }
+
+    /**
      * Get 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
@@ -162,38 +194,6 @@ public class CreateProjectRequest extends AbstractModel{
      */
     public void setCategory(String Category) {
         this.Category = Category;
-    }
-
-    /**
-     * Get 项目名称，不可超过30个字符。 
-     * @return Name 项目名称，不可超过30个字符。
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 项目名称，不可超过30个字符。
-     * @param Name 项目名称，不可超过30个字符。
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 项目归属者。 
-     * @return Owner 项目归属者。
-     */
-    public Entity getOwner() {
-        return this.Owner;
-    }
-
-    /**
-     * Set 项目归属者。
-     * @param Owner 项目归属者。
-     */
-    public void setOwner(Entity Owner) {
-        this.Owner = Owner;
     }
 
     /**
@@ -333,9 +333,9 @@ public class CreateProjectRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
-        this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
+        this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);

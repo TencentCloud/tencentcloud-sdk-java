@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EncryptResponse extends AbstractModel{
 
     /**
-    * 加密后经过base64编码的密文
+    * 加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -44,16 +44,16 @@ public class EncryptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 加密后经过base64编码的密文 
-     * @return CiphertextBlob 加密后经过base64编码的密文
+     * Get 加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。 
+     * @return CiphertextBlob 加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * Set 加密后经过base64编码的密文
-     * @param CiphertextBlob 加密后经过base64编码的密文
+     * Set 加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
+     * @param CiphertextBlob 加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

@@ -59,6 +59,14 @@ public class ServiceEnvironmentStrategy extends AbstractModel{
     private Long Strategy;
 
     /**
+    * 最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxStrategy")
+    @Expose
+    private Long MaxStrategy;
+
+    /**
      * Get 环境名。 
      * @return EnvironmentName 环境名。
      */
@@ -143,6 +151,26 @@ public class ServiceEnvironmentStrategy extends AbstractModel{
     }
 
     /**
+     * Get 最大限流值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxStrategy 最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxStrategy() {
+        return this.MaxStrategy;
+    }
+
+    /**
+     * Set 最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxStrategy 最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxStrategy(Long MaxStrategy) {
+        this.MaxStrategy = MaxStrategy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +179,7 @@ public class ServiceEnvironmentStrategy extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VersionName", this.VersionName);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
+        this.setParamSimple(map, prefix + "MaxStrategy", this.MaxStrategy);
 
     }
 }
