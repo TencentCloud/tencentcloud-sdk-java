@@ -31,6 +31,14 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel{
     private String Status;
 
     /**
+    * 开启访问入口失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -58,6 +66,26 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get 开启访问入口失败信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMsg 开启访问入口失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 开启访问入口失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMsg 开启访问入口失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -78,6 +106,7 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

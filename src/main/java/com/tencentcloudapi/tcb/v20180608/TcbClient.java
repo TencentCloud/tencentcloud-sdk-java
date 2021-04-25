@@ -219,6 +219,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *创建微信云托管
+     * @param req CreateWxCloudBaseRunEnvRequest
+     * @return CreateWxCloudBaseRunEnvResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWxCloudBaseRunEnvResponse CreateWxCloudBaseRunEnv(CreateWxCloudBaseRunEnvRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWxCloudBaseRunEnvResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWxCloudBaseRunEnvResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateWxCloudBaseRunEnv");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除云项目
      * @param req DeleteCloudBaseProjectLatestVersionRequest
      * @return DeleteCloudBaseProjectLatestVersionResponse
@@ -734,6 +754,46 @@ public class TcbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSmsQuotasResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSmsQuotas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询微信云托管环境信息
+     * @param req DescribeWxCloudBaseRunEnvsRequest
+     * @return DescribeWxCloudBaseRunEnvsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvs(DescribeWxCloudBaseRunEnvsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWxCloudBaseRunEnvsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWxCloudBaseRunEnvsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWxCloudBaseRunEnvs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询微信云托管子网
+     * @param req DescribeWxCloudBaseRunSubNetsRequest
+     * @return DescribeWxCloudBaseRunSubNetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNets(DescribeWxCloudBaseRunSubNetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWxCloudBaseRunSubNetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWxCloudBaseRunSubNetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWxCloudBaseRunSubNets");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

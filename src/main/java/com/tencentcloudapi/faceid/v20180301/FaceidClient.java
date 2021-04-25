@@ -180,6 +180,26 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
+     * @param req EncryptedPhoneVerificationRequest
+     * @return EncryptedPhoneVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public EncryptedPhoneVerificationResponse EncryptedPhoneVerification(EncryptedPhoneVerificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EncryptedPhoneVerificationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EncryptedPhoneVerificationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EncryptedPhoneVerification");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用动作活体检测模式前，需调用本接口获取动作顺序。
      * @param req GetActionSequenceRequest
      * @return GetActionSequenceResponse

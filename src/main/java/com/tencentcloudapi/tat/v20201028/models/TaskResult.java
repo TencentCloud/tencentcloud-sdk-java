@@ -51,6 +51,13 @@ public class TaskResult extends AbstractModel{
     private String ExecEndTime;
 
     /**
+    * 命令最终输出被截断的字节数。
+    */
+    @SerializedName("Dropped")
+    @Expose
+    private Long Dropped;
+
+    /**
      * Get 命令执行ExitCode。 
      * @return ExitCode 命令执行ExitCode。
      */
@@ -115,6 +122,22 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
+     * Get 命令最终输出被截断的字节数。 
+     * @return Dropped 命令最终输出被截断的字节数。
+     */
+    public Long getDropped() {
+        return this.Dropped;
+    }
+
+    /**
+     * Set 命令最终输出被截断的字节数。
+     * @param Dropped 命令最终输出被截断的字节数。
+     */
+    public void setDropped(Long Dropped) {
+        this.Dropped = Dropped;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class TaskResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Output", this.Output);
         this.setParamSimple(map, prefix + "ExecStartTime", this.ExecStartTime);
         this.setParamSimple(map, prefix + "ExecEndTime", this.ExecEndTime);
+        this.setParamSimple(map, prefix + "Dropped", this.Dropped);
 
     }
 }

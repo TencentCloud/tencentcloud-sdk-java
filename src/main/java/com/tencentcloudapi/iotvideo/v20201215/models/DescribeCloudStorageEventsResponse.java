@@ -51,6 +51,13 @@ public class DescribeCloudStorageEventsResponse extends AbstractModel{
     private Long Total;
 
     /**
+    * 视频播放URL
+    */
+    @SerializedName("VideoURL")
+    @Expose
+    private String VideoURL;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeCloudStorageEventsResponse extends AbstractModel{
     }
 
     /**
+     * Get 视频播放URL 
+     * @return VideoURL 视频播放URL
+     */
+    public String getVideoURL() {
+        return this.VideoURL;
+    }
+
+    /**
+     * Set 视频播放URL
+     * @param VideoURL 视频播放URL
+     */
+    public void setVideoURL(String VideoURL) {
+        this.VideoURL = VideoURL;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -145,6 +168,7 @@ public class DescribeCloudStorageEventsResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Listover", this.Listover);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "VideoURL", this.VideoURL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
