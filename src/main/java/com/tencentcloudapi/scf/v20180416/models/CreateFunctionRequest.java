@@ -170,6 +170,20 @@ public class CreateFunctionRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 是否开启异步属性，TRUE 为开启，FALSE为关闭
+    */
+    @SerializedName("AsyncRunEnable")
+    @Expose
+    private String AsyncRunEnable;
+
+    /**
+    * 是否开启事件追踪，TRUE 为开启，FALSE为关闭
+    */
+    @SerializedName("TraceEnable")
+    @Expose
+    private String TraceEnable;
+
+    /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -506,6 +520,38 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启异步属性，TRUE 为开启，FALSE为关闭 
+     * @return AsyncRunEnable 是否开启异步属性，TRUE 为开启，FALSE为关闭
+     */
+    public String getAsyncRunEnable() {
+        return this.AsyncRunEnable;
+    }
+
+    /**
+     * Set 是否开启异步属性，TRUE 为开启，FALSE为关闭
+     * @param AsyncRunEnable 是否开启异步属性，TRUE 为开启，FALSE为关闭
+     */
+    public void setAsyncRunEnable(String AsyncRunEnable) {
+        this.AsyncRunEnable = AsyncRunEnable;
+    }
+
+    /**
+     * Get 是否开启事件追踪，TRUE 为开启，FALSE为关闭 
+     * @return TraceEnable 是否开启事件追踪，TRUE 为开启，FALSE为关闭
+     */
+    public String getTraceEnable() {
+        return this.TraceEnable;
+    }
+
+    /**
+     * Set 是否开启事件追踪，TRUE 为开启，FALSE为关闭
+     * @param TraceEnable 是否开启事件追踪，TRUE 为开启，FALSE为关闭
+     */
+    public void setTraceEnable(String TraceEnable) {
+        this.TraceEnable = TraceEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +576,8 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+        this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
 
     }
 }

@@ -4461,6 +4461,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *修改弹性网卡服务质量
+     * @param req ModifyNetworkInterfaceQosRequest
+     * @return ModifyNetworkInterfaceQosResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkInterfaceQosResponse ModifyNetworkInterfaceQos(ModifyNetworkInterfaceQosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkInterfaceQosResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkInterfaceQosResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNetworkInterfaceQos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyPrivateIpAddressesAttribute）用于修改弹性网卡内网IP属性。
      * @param req ModifyPrivateIpAddressesAttributeRequest
      * @return ModifyPrivateIpAddressesAttributeResponse

@@ -51,6 +51,13 @@ public class RegionInfo extends AbstractModel{
     private String RegionCode;
 
     /**
+    * 地域英文名
+    */
+    @SerializedName("RegionNameEn")
+    @Expose
+    private String RegionNameEn;
+
+    /**
      * Get 地域标志，如 ap-guangzhou，ap-shanghai，ap-beijing 
      * @return Region 地域标志，如 ap-guangzhou，ap-shanghai，ap-beijing
      */
@@ -115,6 +122,22 @@ public class RegionInfo extends AbstractModel{
     }
 
     /**
+     * Get 地域英文名 
+     * @return RegionNameEn 地域英文名
+     */
+    public String getRegionNameEn() {
+        return this.RegionNameEn;
+    }
+
+    /**
+     * Set 地域英文名
+     * @param RegionNameEn 地域英文名
+     */
+    public void setRegionNameEn(String RegionNameEn) {
+        this.RegionNameEn = RegionNameEn;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class RegionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
+        this.setParamSimple(map, prefix + "RegionNameEn", this.RegionNameEn);
 
     }
 }

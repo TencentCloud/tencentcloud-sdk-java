@@ -166,7 +166,7 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     private String UploadType;
 
     /**
-    * Repo的类型(coding/gitlab/github/coding)
+    * Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoType")
@@ -621,9 +621,9 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     }
 
     /**
-     * Get Repo的类型(coding/gitlab/github/coding)
+     * Get Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RepoType Repo的类型(coding/gitlab/github/coding)
+     * @return RepoType Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoType() {
@@ -631,9 +631,9 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     }
 
     /**
-     * Set Repo的类型(coding/gitlab/github/coding)
+     * Set Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RepoType Repo的类型(coding/gitlab/github/coding)
+     * @param RepoType Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoType(String RepoType) {

@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribePictureRequest extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 图片id,不传时返回该应用下所有图片
+    * 图片ID，不填时返回该应用下所有图片
     */
     @SerializedName("PictureId")
     @Expose
     private Long PictureId;
 
     /**
-    * 每页数量
+    * 每页数量，不填时默认为10
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 页码
+    * 页码，不填时默认为1
     */
     @SerializedName("PageNo")
     @Expose
     private Long PageNo;
 
     /**
-     * Get 应用id 
-     * @return SdkAppId 应用id
+     * Get 应用ID 
+     * @return SdkAppId 应用ID
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用id
-     * @param SdkAppId 应用id
+     * Set 应用ID
+     * @param SdkAppId 应用ID
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 图片id,不传时返回该应用下所有图片 
-     * @return PictureId 图片id,不传时返回该应用下所有图片
+     * Get 图片ID，不填时返回该应用下所有图片 
+     * @return PictureId 图片ID，不填时返回该应用下所有图片
      */
     public Long getPictureId() {
         return this.PictureId;
     }
 
     /**
-     * Set 图片id,不传时返回该应用下所有图片
-     * @param PictureId 图片id,不传时返回该应用下所有图片
+     * Set 图片ID，不填时返回该应用下所有图片
+     * @param PictureId 图片ID，不填时返回该应用下所有图片
      */
     public void setPictureId(Long PictureId) {
         this.PictureId = PictureId;
     }
 
     /**
-     * Get 每页数量 
-     * @return PageSize 每页数量
+     * Get 每页数量，不填时默认为10 
+     * @return PageSize 每页数量，不填时默认为10
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量
-     * @param PageSize 每页数量
+     * Set 每页数量，不填时默认为10
+     * @param PageSize 每页数量，不填时默认为10
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 页码 
-     * @return PageNo 页码
+     * Get 页码，不填时默认为1 
+     * @return PageNo 页码，不填时默认为1
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 页码
-     * @param PageNo 页码
+     * Set 页码，不填时默认为1
+     * @param PageNo 页码，不填时默认为1
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;

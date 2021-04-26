@@ -51,6 +51,13 @@ public class BoundIpInfo extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 运营商，0：电信；1：联通；2：移动；5：BGP
+    */
+    @SerializedName("IspCode")
+    @Expose
+    private Long IspCode;
+
+    /**
      * Get IP地址 
      * @return Ip IP地址
      */
@@ -115,6 +122,22 @@ public class BoundIpInfo extends AbstractModel{
     }
 
     /**
+     * Get 运营商，0：电信；1：联通；2：移动；5：BGP 
+     * @return IspCode 运营商，0：电信；1：联通；2：移动；5：BGP
+     */
+    public Long getIspCode() {
+        return this.IspCode;
+    }
+
+    /**
+     * Set 运营商，0：电信；1：联通；2：移动；5：BGP
+     * @param IspCode 运营商，0：电信；1：联通；2：移动；5：BGP
+     */
+    public void setIspCode(Long IspCode) {
+        this.IspCode = IspCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class BoundIpInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IspCode", this.IspCode);
 
     }
 }

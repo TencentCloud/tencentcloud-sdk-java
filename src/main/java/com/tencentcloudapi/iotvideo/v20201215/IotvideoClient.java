@@ -799,6 +799,26 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *获取视频防盗链播放URL
+     * @param req GenerateSignedVideoURLRequest
+     * @return GenerateSignedVideoURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateSignedVideoURLResponse GenerateSignedVideoURL(GenerateSignedVideoURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateSignedVideoURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateSignedVideoURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateSignedVideoURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（GetAllFirmwareVersion）用于获取所有的版本列表 
      * @param req GetAllFirmwareVersionRequest
      * @return GetAllFirmwareVersionResponse

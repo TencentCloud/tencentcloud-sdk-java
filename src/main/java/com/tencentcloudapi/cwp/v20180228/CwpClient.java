@@ -919,6 +919,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取机器地域列表
+     * @param req DescribeMachineRegionsRequest
+     * @return DescribeMachineRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMachineRegionsResponse DescribeMachineRegions(DescribeMachineRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMachineRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMachineRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMachineRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeMachines) 用于获取区域主机列表。
      * @param req DescribeMachinesRequest
      * @return DescribeMachinesResponse
