@@ -20,89 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Env extends AbstractModel{
+public class FieldRef extends AbstractModel{
 
     /**
-    * 环境变量名称
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 环境变量值
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-    * k8s ValueFrom
+    * k8s 的 FieldPath
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ValueFrom")
+    @SerializedName("FieldPath")
     @Expose
-    private ValueFrom ValueFrom;
+    private String FieldPath;
 
     /**
-     * Get 环境变量名称 
-     * @return Name 环境变量名称
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 环境变量名称
-     * @param Name 环境变量名称
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 环境变量值 
-     * @return Value 环境变量值
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set 环境变量值
-     * @param Value 环境变量值
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    /**
-     * Get k8s ValueFrom
+     * Get k8s 的 FieldPath
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValueFrom k8s ValueFrom
+     * @return FieldPath k8s 的 FieldPath
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ValueFrom getValueFrom() {
-        return this.ValueFrom;
+    public String getFieldPath() {
+        return this.FieldPath;
     }
 
     /**
-     * Set k8s ValueFrom
+     * Set k8s 的 FieldPath
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValueFrom k8s ValueFrom
+     * @param FieldPath k8s 的 FieldPath
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValueFrom(ValueFrom ValueFrom) {
-        this.ValueFrom = ValueFrom;
+    public void setFieldPath(String FieldPath) {
+        this.FieldPath = FieldPath;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
-        this.setParamObj(map, prefix + "ValueFrom.", this.ValueFrom);
+        this.setParamSimple(map, prefix + "FieldPath", this.FieldPath);
 
     }
 }

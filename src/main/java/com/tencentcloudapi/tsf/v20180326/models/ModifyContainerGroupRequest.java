@@ -65,6 +65,13 @@ public class ModifyContainerGroupRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 部署组备注
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -161,6 +168,22 @@ public class ModifyContainerGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 部署组备注 
+     * @return Alias 部署组备注
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 部署组备注
+     * @param Alias 部署组备注
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class ModifyContainerGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
         this.setParamSimple(map, prefix + "UpdateIvl", this.UpdateIvl);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

@@ -20,89 +20,99 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Env extends AbstractModel{
+public class MetricDataPoint extends AbstractModel{
 
     /**
-    * 环境变量名称
+    * 数据点键
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Name")
+    @SerializedName("Key")
     @Expose
-    private String Name;
+    private String Key;
 
     /**
-    * 环境变量值
+    * 数据点值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * k8s ValueFrom
+    * 数据点标签
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ValueFrom")
+    @SerializedName("Tag")
     @Expose
-    private ValueFrom ValueFrom;
+    private String Tag;
 
     /**
-     * Get 环境变量名称 
-     * @return Name 环境变量名称
+     * Get 数据点键
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Key 数据点键
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getName() {
-        return this.Name;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 环境变量名称
-     * @param Name 环境变量名称
+     * Set 数据点键
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Key 数据点键
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * Get 环境变量值 
-     * @return Value 环境变量值
+     * Get 数据点值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value 数据点值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 环境变量值
-     * @param Value 环境变量值
+     * Set 数据点值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value 数据点值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get k8s ValueFrom
+     * Get 数据点标签
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValueFrom k8s ValueFrom
+     * @return Tag 数据点标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ValueFrom getValueFrom() {
-        return this.ValueFrom;
+    public String getTag() {
+        return this.Tag;
     }
 
     /**
-     * Set k8s ValueFrom
+     * Set 数据点标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValueFrom k8s ValueFrom
+     * @param Tag 数据点标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValueFrom(ValueFrom ValueFrom) {
-        this.ValueFrom = ValueFrom;
+    public void setTag(String Tag) {
+        this.Tag = Tag;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
-        this.setParamObj(map, prefix + "ValueFrom.", this.ValueFrom);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

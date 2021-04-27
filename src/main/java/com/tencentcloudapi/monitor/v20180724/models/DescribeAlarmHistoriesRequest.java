@@ -51,21 +51,21 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String Order;
 
     /**
-    * 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
+    * 起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
+    * 结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
+    * 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
     */
     @SerializedName("MonitorTypes")
     @Expose
@@ -87,6 +87,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
 
     /**
     * 根据项目ID过滤，-1=无项目 0=默认项目
+可在此页面查询 [项目管理](https://console.cloud.tencent.com/project)
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -100,7 +101,8 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private Long [] InstanceGroupIds;
 
     /**
-    * 根据策略类型过滤
+    * 根据策略类型过滤，策略类型是监控类型之下的概念，在这里两者都需要传入，例如 `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询
     */
     @SerializedName("Namespaces")
     @Expose
@@ -128,14 +130,14 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String Content;
 
     /**
-    * 根据接收人搜索
+    * 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
     */
     @SerializedName("ReceiverUids")
     @Expose
     private Long [] ReceiverUids;
 
     /**
-    * 根据接收组搜索
+    * 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
     */
     @SerializedName("ReceiverGroups")
     @Expose
@@ -213,48 +215,48 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。 
-     * @return StartTime 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
+     * Get 起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。 
+     * @return StartTime 起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
-     * @param StartTime 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
+     * Set 起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。
+     * @param StartTime 起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。 
-     * @return EndTime 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
+     * Get 结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。 
+     * @return EndTime 结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
-     * @param EndTime 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
+     * Set 结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
+     * @param EndTime 结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 " 
-     * @return MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
+     * Get 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 
+     * @return MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
      */
     public String [] getMonitorTypes() {
         return this.MonitorTypes;
     }
 
     /**
-     * Set 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
-     * @param MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
+     * Set 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
+     * @param MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;
@@ -293,8 +295,10 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据项目ID过滤，-1=无项目 0=默认项目 
+     * Get 根据项目ID过滤，-1=无项目 0=默认项目
+可在此页面查询 [项目管理](https://console.cloud.tencent.com/project) 
      * @return ProjectIds 根据项目ID过滤，-1=无项目 0=默认项目
+可在此页面查询 [项目管理](https://console.cloud.tencent.com/project)
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
@@ -302,7 +306,9 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
 
     /**
      * Set 根据项目ID过滤，-1=无项目 0=默认项目
+可在此页面查询 [项目管理](https://console.cloud.tencent.com/project)
      * @param ProjectIds 根据项目ID过滤，-1=无项目 0=默认项目
+可在此页面查询 [项目管理](https://console.cloud.tencent.com/project)
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
@@ -325,16 +331,20 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据策略类型过滤 
-     * @return Namespaces 根据策略类型过滤
+     * Get 根据策略类型过滤，策略类型是监控类型之下的概念，在这里两者都需要传入，例如 `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询 
+     * @return Namespaces 根据策略类型过滤，策略类型是监控类型之下的概念，在这里两者都需要传入，例如 `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询
      */
     public MonitorTypeNamespace [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set 根据策略类型过滤
-     * @param Namespaces 根据策略类型过滤
+     * Set 根据策略类型过滤，策略类型是监控类型之下的概念，在这里两者都需要传入，例如 `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询
+     * @param Namespaces 根据策略类型过滤，策略类型是监控类型之下的概念，在这里两者都需要传入，例如 `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询
      */
     public void setNamespaces(MonitorTypeNamespace [] Namespaces) {
         this.Namespaces = Namespaces;
@@ -389,32 +399,32 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据接收人搜索 
-     * @return ReceiverUids 根据接收人搜索
+     * Get 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段 
+     * @return ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
      */
     public Long [] getReceiverUids() {
         return this.ReceiverUids;
     }
 
     /**
-     * Set 根据接收人搜索
-     * @param ReceiverUids 根据接收人搜索
+     * Set 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+     * @param ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
      */
     public void setReceiverUids(Long [] ReceiverUids) {
         this.ReceiverUids = ReceiverUids;
     }
 
     /**
-     * Get 根据接收组搜索 
-     * @return ReceiverGroups 根据接收组搜索
+     * Get 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段 
+     * @return ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      */
     public Long [] getReceiverGroups() {
         return this.ReceiverGroups;
     }
 
     /**
-     * Set 根据接收组搜索
-     * @param ReceiverGroups 根据接收组搜索
+     * Set 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
+     * @param ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      */
     public void setReceiverGroups(Long [] ReceiverGroups) {
         this.ReceiverGroups = ReceiverGroups;

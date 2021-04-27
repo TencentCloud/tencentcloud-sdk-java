@@ -148,6 +148,15 @@ public class MediaBasicInfo extends AbstractModel{
     private String Status;
 
     /**
+    * 媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
+    */
+    @SerializedName("StorageClass")
+    @Expose
+    private String StorageClass;
+
+    /**
      * Get 媒体文件名称。 
      * @return Name 媒体文件名称。
      */
@@ -444,6 +453,30 @@ public class MediaBasicInfo extends AbstractModel{
     }
 
     /**
+     * Get 媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li> 
+     * @return StorageClass 媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
+     */
+    public String getStorageClass() {
+        return this.StorageClass;
+    }
+
+    /**
+     * Set 媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
+     * @param StorageClass 媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
+     */
+    public void setStorageClass(String StorageClass) {
+        this.StorageClass = StorageClass;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -464,6 +497,7 @@ public class MediaBasicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Vid", this.Vid);
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StorageClass", this.StorageClass);
 
     }
 }

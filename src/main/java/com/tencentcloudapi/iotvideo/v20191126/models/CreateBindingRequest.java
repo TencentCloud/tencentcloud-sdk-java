@@ -51,7 +51,7 @@ public class CreateBindingRequest extends AbstractModel{
     private Boolean ForceBind;
 
     /**
-    * 设备昵称
+    * 设备昵称，最多不超过64个字符
     */
     @SerializedName("Nick")
     @Expose
@@ -122,16 +122,16 @@ public class CreateBindingRequest extends AbstractModel{
     }
 
     /**
-     * Get 设备昵称 
-     * @return Nick 设备昵称
+     * Get 设备昵称，最多不超过64个字符 
+     * @return Nick 设备昵称，最多不超过64个字符
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set 设备昵称
-     * @param Nick 设备昵称
+     * Set 设备昵称，最多不超过64个字符
+     * @param Nick 设备昵称，最多不超过64个字符
      */
     public void setNick(String Nick) {
         this.Nick = Nick;

@@ -65,6 +65,13 @@ public class CreateGroupRequest extends AbstractModel{
     private String GroupResourceType;
 
     /**
+    * 部署组备注
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get 部署组所属的应用ID 
      * @return ApplicationId 部署组所属的应用ID
      */
@@ -161,6 +168,22 @@ public class CreateGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 部署组备注 
+     * @return Alias 部署组备注
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 部署组备注
+     * @param Alias 部署组备注
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "GroupDesc", this.GroupDesc);
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

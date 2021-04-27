@@ -839,6 +839,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询批量导入机器信息
+     * @param req DescribeImportMachineInfoRequest
+     * @return DescribeImportMachineInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImportMachineInfoResponse DescribeImportMachineInfo(DescribeImportMachineInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImportMachineInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImportMachineInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImportMachineInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取异地登录白名单列表
      * @param req DescribeLoginWhiteListRequest
      * @return DescribeLoginWhiteListResponse
@@ -1874,6 +1894,46 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ExportTasksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ExportTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *导出本次漏洞检测Excel
+     * @param req ExportVulDetectionExcelRequest
+     * @return ExportVulDetectionExcelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportVulDetectionExcelResponse ExportVulDetectionExcel(ExportVulDetectionExcelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportVulDetectionExcelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportVulDetectionExcelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportVulDetectionExcel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *导出漏洞检测报告。
+     * @param req ExportVulDetectionReportRequest
+     * @return ExportVulDetectionReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportVulDetectionReportResponse ExportVulDetectionReport(ExportVulDetectionReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportVulDetectionReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportVulDetectionReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportVulDetectionReport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

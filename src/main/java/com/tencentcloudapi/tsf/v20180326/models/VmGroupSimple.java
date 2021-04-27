@@ -159,6 +159,14 @@ public class VmGroupSimple extends AbstractModel{
     private String DeployDesc;
 
     /**
+    * 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -499,6 +507,26 @@ public class VmGroupSimple extends AbstractModel{
     }
 
     /**
+     * Get 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Alias 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Alias 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -519,6 +547,7 @@ public class VmGroupSimple extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

@@ -160,7 +160,9 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeBackupAccess）用于获取备份文件的下载授权，具体的备份文件信息可通过查询实例备份列表（DescribeDBBackups）接口获取
+     *备份下载功能已调整，此接口即将下线
+
+本接口（DescribeBackupAccess）用于获取备份文件的下载授权，具体的备份文件信息可通过查询实例备份列表（DescribeDBBackups）接口获取
      * @param req DescribeBackupAccessRequest
      * @return DescribeBackupAccessResponse
      * @throws TencentCloudSDKException

@@ -295,6 +295,14 @@ public class VmGroup extends AbstractModel{
     private String StopScript;
 
     /**
+    * 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -975,6 +983,26 @@ public class VmGroup extends AbstractModel{
     }
 
     /**
+     * Get 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Alias 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Alias 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1012,6 +1040,7 @@ public class VmGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "StartScript", this.StartScript);
         this.setParamSimple(map, prefix + "StopScript", this.StopScript);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

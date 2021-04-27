@@ -30,6 +30,20 @@ public class TaskSimpleInfo extends AbstractModel{
     private String TaskId;
 
     /**
+    * 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 视频 ID。
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
     * 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务</li>
@@ -94,6 +108,38 @@ public class TaskSimpleInfo extends AbstractModel{
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。 
+     * @return Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @param Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 视频 ID。 
+     * @return FileId 视频 ID。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 视频 ID。
+     * @param FileId 视频 ID。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     /**
@@ -233,6 +279,8 @@ public class TaskSimpleInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);

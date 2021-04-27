@@ -37,6 +37,29 @@ public class DescribeTasksRequest extends AbstractModel{
     private String FileId;
 
     /**
+    * 过滤条件：任务创建时间。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private TimeRange CreateTime;
+
+    /**
+    * 过滤条件：任务结束时间。
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private TimeRange FinishTime;
+
+    /**
+    * 排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
+    */
+    @SerializedName("Sort")
+    @Expose
+    private SortBy Sort;
+
+    /**
     * 返回记录条数，默认值：10，最大值：100。
     */
     @SerializedName("Limit")
@@ -87,6 +110,62 @@ public class DescribeTasksRequest extends AbstractModel{
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
+    }
+
+    /**
+     * Get 过滤条件：任务创建时间。 
+     * @return CreateTime 过滤条件：任务创建时间。
+     */
+    public TimeRange getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 过滤条件：任务创建时间。
+     * @param CreateTime 过滤条件：任务创建时间。
+     */
+    public void setCreateTime(TimeRange CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 过滤条件：任务结束时间。 
+     * @return FinishTime 过滤条件：任务结束时间。
+     */
+    public TimeRange getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 过滤条件：任务结束时间。
+     * @param FinishTime 过滤条件：任务结束时间。
+     */
+    public void setFinishTime(TimeRange FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
+    /**
+     * Get 排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li> 
+     * @return Sort 排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
+     */
+    public SortBy getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
+     * @param Sort 排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
+     */
+    public void setSort(SortBy Sort) {
+        this.Sort = Sort;
     }
 
     /**
@@ -143,6 +222,9 @@ public class DescribeTasksRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
+        this.setParamObj(map, prefix + "FinishTime.", this.FinishTime);
+        this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);

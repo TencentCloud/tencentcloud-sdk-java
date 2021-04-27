@@ -1280,6 +1280,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *获取容器事件列表
+     * @param req DescribeContainerEventsRequest
+     * @return DescribeContainerEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContainerEventsResponse DescribeContainerEvents(DescribeContainerEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeContainerEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeContainerEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeContainerEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 容器部署组详情
      * @param req DescribeContainerGroupDetailRequest
      * @return DescribeContainerGroupDetailResponse
@@ -2133,6 +2153,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskLastStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTaskLastStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
+     * @param req DescribeUnitApiUseDetailRequest
+     * @return DescribeUnitApiUseDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnitApiUseDetailResponse DescribeUnitApiUseDetail(DescribeUnitApiUseDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnitApiUseDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnitApiUseDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnitApiUseDetail");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

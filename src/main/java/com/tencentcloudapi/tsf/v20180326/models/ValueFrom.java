@@ -20,89 +20,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Env extends AbstractModel{
+public class ValueFrom extends AbstractModel{
 
     /**
-    * 环境变量名称
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 环境变量值
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-    * k8s ValueFrom
+    * k8s env 的 FieldRef
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ValueFrom")
+    @SerializedName("FieldRef")
     @Expose
-    private ValueFrom ValueFrom;
+    private FieldRef FieldRef;
 
     /**
-     * Get 环境变量名称 
-     * @return Name 环境变量名称
-     */
-    public String getName() {
-        return this.Name;
-    }
+    * k8s env 的 ResourceFieldRef
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceFieldRef")
+    @Expose
+    private ResourceFieldRef ResourceFieldRef;
 
     /**
-     * Set 环境变量名称
-     * @param Name 环境变量名称
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 环境变量值 
-     * @return Value 环境变量值
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set 环境变量值
-     * @param Value 环境变量值
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    /**
-     * Get k8s ValueFrom
+     * Get k8s env 的 FieldRef
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValueFrom k8s ValueFrom
+     * @return FieldRef k8s env 的 FieldRef
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ValueFrom getValueFrom() {
-        return this.ValueFrom;
+    public FieldRef getFieldRef() {
+        return this.FieldRef;
     }
 
     /**
-     * Set k8s ValueFrom
+     * Set k8s env 的 FieldRef
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValueFrom k8s ValueFrom
+     * @param FieldRef k8s env 的 FieldRef
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValueFrom(ValueFrom ValueFrom) {
-        this.ValueFrom = ValueFrom;
+    public void setFieldRef(FieldRef FieldRef) {
+        this.FieldRef = FieldRef;
+    }
+
+    /**
+     * Get k8s env 的 ResourceFieldRef
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceFieldRef k8s env 的 ResourceFieldRef
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceFieldRef getResourceFieldRef() {
+        return this.ResourceFieldRef;
+    }
+
+    /**
+     * Set k8s env 的 ResourceFieldRef
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceFieldRef k8s env 的 ResourceFieldRef
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceFieldRef(ResourceFieldRef ResourceFieldRef) {
+        this.ResourceFieldRef = ResourceFieldRef;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
-        this.setParamObj(map, prefix + "ValueFrom.", this.ValueFrom);
+        this.setParamObj(map, prefix + "FieldRef.", this.FieldRef);
+        this.setParamObj(map, prefix + "ResourceFieldRef.", this.ResourceFieldRef);
 
     }
 }

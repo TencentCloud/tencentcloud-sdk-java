@@ -55,6 +55,22 @@ public class GatewayApiGroupVo extends AbstractModel{
     private GatewayGroupApiVo [] GroupApis;
 
     /**
+    * 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayInstanceType")
+    @Expose
+    private String GatewayInstanceType;
+
+    /**
+    * 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayInstanceId")
+    @Expose
+    private String GatewayInstanceId;
+
+    /**
      * Get 分组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 分组ID
@@ -135,6 +151,46 @@ public class GatewayApiGroupVo extends AbstractModel{
     }
 
     /**
+     * Get 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayInstanceType 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayInstanceType() {
+        return this.GatewayInstanceType;
+    }
+
+    /**
+     * Set 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayInstanceType 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayInstanceType(String GatewayInstanceType) {
+        this.GatewayInstanceType = GatewayInstanceType;
+    }
+
+    /**
+     * Get 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayInstanceId 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayInstanceId() {
+        return this.GatewayInstanceId;
+    }
+
+    /**
+     * Set 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayInstanceId 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayInstanceId(String GatewayInstanceId) {
+        this.GatewayInstanceId = GatewayInstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -142,6 +198,8 @@ public class GatewayApiGroupVo extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupApiCount", this.GroupApiCount);
         this.setParamArrayObj(map, prefix + "GroupApis.", this.GroupApis);
+        this.setParamSimple(map, prefix + "GatewayInstanceType", this.GatewayInstanceType);
+        this.setParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
 
     }
 }

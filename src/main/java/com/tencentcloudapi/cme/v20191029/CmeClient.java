@@ -268,6 +268,26 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *获取用户账号信息。
+     * @param req DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取指定归属者下所有的分类信息。
      * @param req DescribeClassRequest
      * @return DescribeClassResponse

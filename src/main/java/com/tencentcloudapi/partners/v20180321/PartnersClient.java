@@ -240,7 +240,7 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *可以查询代理商代付的所有订单
+     *【该接口将逐步下线，请切换使用升级版本DescribeAgentPayDealsV2】可以查询代理商代付的所有订单
      * @param req DescribeAgentPayDealsRequest
      * @return DescribeAgentPayDealsResponse
      * @throws TencentCloudSDKException
@@ -260,7 +260,27 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *可以查询代理商下指定客户的自付订单
+     *可以查询代理商代付的所有订单
+     * @param req DescribeAgentPayDealsV2Request
+     * @return DescribeAgentPayDealsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(DescribeAgentPayDealsV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentPayDealsV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentPayDealsV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAgentPayDealsV2");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *【该接口将逐步下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
      * @param req DescribeAgentSelfPayDealsRequest
      * @return DescribeAgentSelfPayDealsResponse
      * @throws TencentCloudSDKException
@@ -272,6 +292,26 @@ public class PartnersClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentSelfPayDealsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAgentSelfPayDeals");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *可以查询代理商下指定客户的自付订单
+     * @param req DescribeAgentSelfPayDealsV2Request
+     * @return DescribeAgentSelfPayDealsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(DescribeAgentSelfPayDealsV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentSelfPayDealsV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentSelfPayDealsV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAgentSelfPayDealsV2");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

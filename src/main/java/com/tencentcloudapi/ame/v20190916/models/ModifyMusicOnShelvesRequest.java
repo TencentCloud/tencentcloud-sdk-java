@@ -23,26 +23,49 @@ import java.util.HashMap;
 public class ModifyMusicOnShelvesRequest extends AbstractModel{
 
     /**
-    * 无
+    * 歌曲变更信息
     */
     @SerializedName("MusicDetailInfos")
     @Expose
     private MusicDetailInfo MusicDetailInfos;
 
     /**
-     * Get 无 
-     * @return MusicDetailInfos 无
+    * ame对接资源方密钥
+    */
+    @SerializedName("AmeKey")
+    @Expose
+    private String AmeKey;
+
+    /**
+     * Get 歌曲变更信息 
+     * @return MusicDetailInfos 歌曲变更信息
      */
     public MusicDetailInfo getMusicDetailInfos() {
         return this.MusicDetailInfos;
     }
 
     /**
-     * Set 无
-     * @param MusicDetailInfos 无
+     * Set 歌曲变更信息
+     * @param MusicDetailInfos 歌曲变更信息
      */
     public void setMusicDetailInfos(MusicDetailInfo MusicDetailInfos) {
         this.MusicDetailInfos = MusicDetailInfos;
+    }
+
+    /**
+     * Get ame对接资源方密钥 
+     * @return AmeKey ame对接资源方密钥
+     */
+    public String getAmeKey() {
+        return this.AmeKey;
+    }
+
+    /**
+     * Set ame对接资源方密钥
+     * @param AmeKey ame对接资源方密钥
+     */
+    public void setAmeKey(String AmeKey) {
+        this.AmeKey = AmeKey;
     }
 
     /**
@@ -50,6 +73,7 @@ public class ModifyMusicOnShelvesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "MusicDetailInfos.", this.MusicDetailInfos);
+        this.setParamSimple(map, prefix + "AmeKey", this.AmeKey);
 
     }
 }
