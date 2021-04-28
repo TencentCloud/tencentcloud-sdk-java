@@ -378,4 +378,24 @@ public class GpmClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
+     * @param req StartMatchingBackfillRequest
+     * @return StartMatchingBackfillResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartMatchingBackfillResponse StartMatchingBackfill(StartMatchingBackfillRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartMatchingBackfillResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartMatchingBackfillResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartMatchingBackfill");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

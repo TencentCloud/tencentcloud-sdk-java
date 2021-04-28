@@ -256,6 +256,14 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     private String ISP;
 
     /**
+    * 物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PhysicalPosition")
+    @Expose
+    private PhysicalPosition PhysicalPosition;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -864,6 +872,26 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     }
 
     /**
+     * Get 物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhysicalPosition 物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PhysicalPosition getPhysicalPosition() {
+        return this.PhysicalPosition;
+    }
+
+    /**
+     * Set 物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhysicalPosition 物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhysicalPosition(PhysicalPosition PhysicalPosition) {
+        this.PhysicalPosition = PhysicalPosition;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -894,6 +922,7 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
         this.setParamSimple(map, prefix + "ISP", this.ISP);
+        this.setParamObj(map, prefix + "PhysicalPosition.", this.PhysicalPosition);
 
     }
 }

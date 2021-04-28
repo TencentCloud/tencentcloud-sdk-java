@@ -1828,6 +1828,31 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *腾讯云点播为客户提供了媒体上传、媒体管理、媒体处理等等服务，在这些服务执行过程或执行结束时，腾讯云点播也提供各种对应的事件通知，方便开发者感知服务处理状态，并做下一步的业务操作。
+
+开发者可以通过调用本接口来实现：
+- 设置接收回调通知的类型，目前有[ HTTP 回调通知](https://cloud.tencent.com/document/product/266/33779) 和 [基于消息队列的可靠通知](https://cloud.tencent.com/document/product/266/33779) 两种类型。
+- 对于[ HTTP 回调通知](https://cloud.tencent.com/document/product/266/33779)，可设置 3.0 格式回调的地址。3.0 格式回调的说明参见 [历史格式回调](https://cloud.tencent.com/document/product/266/33796)。
+- 对具体事件服务的通知事件选择设置接收或者忽略。
+     * @param req ModifyEventConfigRequest
+     * @return ModifyEventConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEventConfigResponse ModifyEventConfig(ModifyEventConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEventConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEventConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEventConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改用户自定义雪碧图模板。
      * @param req ModifyImageSpriteTemplateRequest
      * @return ModifyImageSpriteTemplateResponse

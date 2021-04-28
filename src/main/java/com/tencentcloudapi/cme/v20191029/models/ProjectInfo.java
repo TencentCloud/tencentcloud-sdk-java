@@ -70,7 +70,7 @@ public class ProjectInfo extends AbstractModel{
     private String CoverUrl;
 
     /**
-    * 云转推项目信息。
+    * 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamConnectProjectInfo")
@@ -208,9 +208,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Get 云转推项目信息。
+     * Get 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StreamConnectProjectInfo 云转推项目信息。
+     * @return StreamConnectProjectInfo 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StreamConnectProjectInfo getStreamConnectProjectInfo() {
@@ -218,9 +218,9 @@ public class ProjectInfo extends AbstractModel{
     }
 
     /**
-     * Set 云转推项目信息。
+     * Set 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StreamConnectProjectInfo 云转推项目信息。
+     * @param StreamConnectProjectInfo 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamConnectProjectInfo(StreamConnectProjectInfo StreamConnectProjectInfo) {

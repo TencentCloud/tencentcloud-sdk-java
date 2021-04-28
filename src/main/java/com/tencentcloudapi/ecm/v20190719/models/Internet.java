@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Internet extends AbstractModel{
 
     /**
-    * 实例的内网相关信息列表。
+    * 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIPAddressSet")
@@ -31,7 +31,7 @@ public class Internet extends AbstractModel{
     private PrivateIPAddressInfo [] PrivateIPAddressSet;
 
     /**
-    * 实例的公网相关信息列表。
+    * 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIPAddressSet")
@@ -47,9 +47,9 @@ public class Internet extends AbstractModel{
     private InstanceNetworkInfo [] InstanceNetworkInfoSet;
 
     /**
-     * Get 实例的内网相关信息列表。
+     * Get 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrivateIPAddressSet 实例的内网相关信息列表。
+     * @return PrivateIPAddressSet 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrivateIPAddressInfo [] getPrivateIPAddressSet() {
@@ -57,9 +57,9 @@ public class Internet extends AbstractModel{
     }
 
     /**
-     * Set 实例的内网相关信息列表。
+     * Set 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrivateIPAddressSet 实例的内网相关信息列表。
+     * @param PrivateIPAddressSet 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIPAddressSet(PrivateIPAddressInfo [] PrivateIPAddressSet) {
@@ -67,9 +67,9 @@ public class Internet extends AbstractModel{
     }
 
     /**
-     * Get 实例的公网相关信息列表。
+     * Get 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicIPAddressSet 实例的公网相关信息列表。
+     * @return PublicIPAddressSet 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PublicIPAddressInfo [] getPublicIPAddressSet() {
@@ -77,9 +77,9 @@ public class Internet extends AbstractModel{
     }
 
     /**
-     * Set 实例的公网相关信息列表。
+     * Set 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicIPAddressSet 实例的公网相关信息列表。
+     * @param PublicIPAddressSet 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIPAddressSet(PublicIPAddressInfo [] PublicIPAddressSet) {

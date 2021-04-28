@@ -92,6 +92,15 @@ ipv6：指定查询 ipv6 对应指标
     private String IpProtocol;
 
     /**
+    * 时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+    */
+    @SerializedName("Interval")
+    @Expose
+    private String Interval;
+
+    /**
      * Get 域名列表，最多支持20个域名 
      * @return Domains 域名列表，最多支持20个域名
      */
@@ -272,6 +281,30 @@ ipv6：指定查询 ipv6 对应指标
     }
 
     /**
+     * Get 时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据 
+     * @return Interval 时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+     */
+    public String getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set 时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+     * @param Interval 时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+     */
+    public void setInterval(String Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -283,6 +316,7 @@ ipv6：指定查询 ipv6 对应指标
         this.setParamArraySimple(map, prefix + "Isps.", this.Isps);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
 
     }
 }

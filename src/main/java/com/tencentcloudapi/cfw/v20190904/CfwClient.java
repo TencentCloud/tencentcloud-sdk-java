@@ -439,6 +439,29 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *支持对拦截列表、忽略列表如下操作：
+批量增加拦截IP、忽略IP/域名
+批量删除拦截IP、忽略IP/域名
+批量修改拦截IP、忽略IP/域名生效事件
+     * @param req ModifyBlockIgnoreListRequest
+     * @return ModifyBlockIgnoreListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlockIgnoreListResponse ModifyBlockIgnoreList(ModifyBlockIgnoreListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBlockIgnoreListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBlockIgnoreListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBlockIgnoreList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改单个防火墙开关
      * @param req ModifyItemSwitchStatusRequest
      * @return ModifyItemSwitchStatusResponse

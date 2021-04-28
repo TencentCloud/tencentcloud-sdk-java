@@ -56,6 +56,16 @@ public class DescribeProjectsRequest extends AbstractModel{
     private String [] CategorySet;
 
     /**
+    * 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+    */
+    @SerializedName("Modes")
+    @Expose
+    private String [] Modes;
+
+    /**
     * 列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
@@ -177,6 +187,34 @@ public class DescribeProjectsRequest extends AbstractModel{
     }
 
     /**
+     * Get 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li> 
+     * @return Modes 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     */
+    public String [] getModes() {
+        return this.Modes;
+    }
+
+    /**
+     * Set 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     * @param Modes 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     */
+    public void setModes(String [] Modes) {
+        this.Modes = Modes;
+    }
+
+    /**
      * Get 列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li> 
@@ -272,6 +310,7 @@ public class DescribeProjectsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamArraySimple(map, prefix + "AspectRatioSet.", this.AspectRatioSet);
         this.setParamArraySimple(map, prefix + "CategorySet.", this.CategorySet);
+        this.setParamArraySimple(map, prefix + "Modes.", this.Modes);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

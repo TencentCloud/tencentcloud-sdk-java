@@ -299,6 +299,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *用于查看ckafka的可用区列表
+     * @param req DescribeCkafkaZoneRequest
+     * @return DescribeCkafkaZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCkafkaZoneResponse DescribeCkafkaZone(DescribeCkafkaZoneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCkafkaZoneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCkafkaZoneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCkafkaZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询消费分组信息
      * @param req DescribeConsumerGroupRequest
      * @return DescribeConsumerGroupResponse
@@ -431,6 +451,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstancesDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *枚举地域,只支持广州地域
+     * @param req DescribeRegionRequest
+     * @return DescribeRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionResponse DescribeRegion(DescribeRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRegion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

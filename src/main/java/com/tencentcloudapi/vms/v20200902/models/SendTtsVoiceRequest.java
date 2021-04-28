@@ -46,6 +46,7 @@ public class SendTtsVoiceRequest extends AbstractModel{
 
     /**
     * 模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
     */
     @SerializedName("TemplateParamSet")
     @Expose
@@ -118,8 +119,10 @@ public class SendTtsVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板参数，若模板没有参数，请提供为空数组。 
+     * Get 模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。 
      * @return TemplateParamSet 模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
      */
     public String [] getTemplateParamSet() {
         return this.TemplateParamSet;
@@ -127,7 +130,9 @@ public class SendTtsVoiceRequest extends AbstractModel{
 
     /**
      * Set 模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
      * @param TemplateParamSet 模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
      */
     public void setTemplateParamSet(String [] TemplateParamSet) {
         this.TemplateParamSet = TemplateParamSet;

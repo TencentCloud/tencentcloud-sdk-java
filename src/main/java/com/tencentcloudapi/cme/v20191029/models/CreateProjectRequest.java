@@ -56,6 +56,16 @@ public class CreateProjectRequest extends AbstractModel{
     private String Category;
 
     /**
+    * 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
     * 画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
     */
@@ -194,6 +204,34 @@ public class CreateProjectRequest extends AbstractModel{
      */
     public void setCategory(String Category) {
         this.Category = Category;
+    }
+
+    /**
+     * Get 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li> 
+     * @return Mode 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     * @param Mode 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
     }
 
     /**
@@ -336,6 +374,7 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamSimple(map, prefix + "Category", this.Category);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
