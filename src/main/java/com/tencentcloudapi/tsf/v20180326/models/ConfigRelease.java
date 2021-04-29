@@ -119,6 +119,14 @@ public class ConfigRelease extends AbstractModel{
     private String ReleaseDesc;
 
     /**
+    * 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigReleaseId 配置项发布ID
@@ -359,6 +367,26 @@ public class ConfigRelease extends AbstractModel{
     }
 
     /**
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -374,6 +402,7 @@ public class ConfigRelease extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ReleaseDesc", this.ReleaseDesc);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }

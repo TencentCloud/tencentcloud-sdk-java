@@ -1059,6 +1059,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询从实例同步状态
+     * @param req DescribeReplicationInstanceSyncStatusRequest
+     * @return DescribeReplicationInstanceSyncStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationInstanceSyncStatusResponse DescribeReplicationInstanceSyncStatus(DescribeReplicationInstanceSyncStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReplicationInstanceSyncStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询从实例列表
      * @param req DescribeReplicationInstancesRequest
      * @return DescribeReplicationInstancesResponse
