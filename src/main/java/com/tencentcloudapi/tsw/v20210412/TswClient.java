@@ -78,4 +78,24 @@ public class TswClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *查询token
+     * @param req DescribeTokenRequest
+     * @return DescribeTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenResponse DescribeToken(DescribeTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

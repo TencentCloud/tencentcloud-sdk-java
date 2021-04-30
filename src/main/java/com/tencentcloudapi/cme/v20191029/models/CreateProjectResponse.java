@@ -30,6 +30,14 @@ public class CreateProjectResponse extends AbstractModel{
     private String ProjectId;
 
     /**
+    * 输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
+    */
+    @SerializedName("RtmpPushInputInfoSet")
+    @Expose
+    private RtmpPushInputInfo [] RtmpPushInputInfoSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -53,6 +61,26 @@ public class CreateProjectResponse extends AbstractModel{
     }
 
     /**
+     * Get 输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li> 
+     * @return RtmpPushInputInfoSet 输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
+     */
+    public RtmpPushInputInfo [] getRtmpPushInputInfoSet() {
+        return this.RtmpPushInputInfoSet;
+    }
+
+    /**
+     * Set 输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
+     * @param RtmpPushInputInfoSet 输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
+     */
+    public void setRtmpPushInputInfoSet(RtmpPushInputInfo [] RtmpPushInputInfoSet) {
+        this.RtmpPushInputInfoSet = RtmpPushInputInfoSet;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +101,7 @@ public class CreateProjectResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "RtmpPushInputInfoSet.", this.RtmpPushInputInfoSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -71,7 +71,7 @@ public class TransferSinglePayRequest extends AbstractModel{
     private String PayeeId;
 
     /**
-    * 收款方姓名，微信，支付宝可选；平安模式下必传
+    * 收款方姓名。支付宝可选；微信，平安模式下必传
     */
     @SerializedName("PayeeName")
     @Expose
@@ -236,16 +236,16 @@ PayeeBankName：收款人开户行名称
     }
 
     /**
-     * Get 收款方姓名，微信，支付宝可选；平安模式下必传 
-     * @return PayeeName 收款方姓名，微信，支付宝可选；平安模式下必传
+     * Get 收款方姓名。支付宝可选；微信，平安模式下必传 
+     * @return PayeeName 收款方姓名。支付宝可选；微信，平安模式下必传
      */
     public String getPayeeName() {
         return this.PayeeName;
     }
 
     /**
-     * Set 收款方姓名，微信，支付宝可选；平安模式下必传
-     * @param PayeeName 收款方姓名，微信，支付宝可选；平安模式下必传
+     * Set 收款方姓名。支付宝可选；微信，平安模式下必传
+     * @param PayeeName 收款方姓名。支付宝可选；微信，平安模式下必传
      */
     public void setPayeeName(String PayeeName) {
         this.PayeeName = PayeeName;

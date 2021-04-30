@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cme.v20191029.models;
+package com.tencentcloudapi.tsw.v20210412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HandleStreamConnectProjectResponse extends AbstractModel{
+public class DescribeTokenResponse extends AbstractModel{
 
     /**
-    * 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+    * token
     */
-    @SerializedName("StreamInputRtmpPushUrl")
+    @SerializedName("Result")
     @Expose
-    private String StreamInputRtmpPushUrl;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class HandleStreamConnectProjectResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。 
-     * @return StreamInputRtmpPushUrl 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+     * Get token 
+     * @return Result token
      */
-    public String getStreamInputRtmpPushUrl() {
-        return this.StreamInputRtmpPushUrl;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
-     * @param StreamInputRtmpPushUrl 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+     * Set token
+     * @param Result token
      */
-    public void setStreamInputRtmpPushUrl(String StreamInputRtmpPushUrl) {
-        this.StreamInputRtmpPushUrl = StreamInputRtmpPushUrl;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -72,7 +72,7 @@ public class HandleStreamConnectProjectResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StreamInputRtmpPushUrl", this.StreamInputRtmpPushUrl);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
