@@ -59,7 +59,27 @@ public class TemClient extends AbstractClient{
     }
 
     /**
-     *创建命名空间
+     *生成Cos临时秘钥
+     * @param req CreateCosTokenV2Request
+     * @return CreateCosTokenV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosTokenV2Response CreateCosTokenV2(CreateCosTokenV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCosTokenV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCosTokenV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCosTokenV2");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建环境
      * @param req CreateNamespaceRequest
      * @return CreateNamespaceResponse
      * @throws TencentCloudSDKException
@@ -79,7 +99,130 @@ public class TemClient extends AbstractClient{
     }
 
     /**
-     *获取租户命名空间列表
+     *绑定云资源
+     * @param req CreateResourceRequest
+     * @return CreateResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceResponse CreateResource(CreateResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateResourceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建服务
+     * @param req CreateServiceV2Request
+     * @return CreateServiceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateServiceV2Response CreateServiceV2(CreateServiceV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateServiceV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateServiceV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateServiceV2");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除 Ingress 规则
+     * @param req DeleteIngressRequest
+     * @return DeleteIngressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIngressResponse DeleteIngress(DeleteIngressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIngressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIngressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIngress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *服务部署
+ - 创建新版本
+ - 部署新版本
+ - 一个服务只能有一个版本，所以前端无需关心版本及版本ID
+     * @param req DeployServiceV2Request
+     * @return DeployServiceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DeployServiceV2Response DeployServiceV2(DeployServiceV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<DeployServiceV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeployServiceV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeployServiceV2");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询 Ingress 规则
+     * @param req DescribeIngressRequest
+     * @return DescribeIngressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIngressResponse DescribeIngress(DescribeIngressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIngressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIngressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIngress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询 Ingress 规则列表
+     * @param req DescribeIngressesRequest
+     * @return DescribeIngressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIngressesResponse DescribeIngresses(DescribeIngressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIngressesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIngressesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIngresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取租户环境列表
      * @param req DescribeNamespacesRequest
      * @return DescribeNamespacesResponse
      * @throws TencentCloudSDKException
@@ -91,6 +234,26 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNamespacesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取服务下面运行pod列表
+     * @param req DescribeServiceRunPodListV2Request
+     * @return DescribeServiceRunPodListV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceRunPodListV2Response DescribeServiceRunPodListV2(DescribeServiceRunPodListV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServiceRunPodListV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServiceRunPodListV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeServiceRunPodListV2");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,7 +282,7 @@ public class TemClient extends AbstractClient{
     }
 
     /**
-     *编辑命名空间
+     *编辑环境
      * @param req ModifyNamespaceRequest
      * @return ModifyNamespaceResponse
      * @throws TencentCloudSDKException

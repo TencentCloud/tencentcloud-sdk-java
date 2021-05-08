@@ -135,6 +135,13 @@ public class CreateFleetRequest extends AbstractModel{
     private CcnInfo [] CcnInfos;
 
     /**
+    * fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+    */
+    @SerializedName("InternetMaxBandwidthOut")
+    @Expose
+    private Long InternetMaxBandwidthOut;
+
+    /**
      * Get 生成包 Id 
      * @return AssetId 生成包 Id
      */
@@ -391,6 +398,22 @@ public class CreateFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps 
+     * @return InternetMaxBandwidthOut fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+     */
+    public Long getInternetMaxBandwidthOut() {
+        return this.InternetMaxBandwidthOut;
+    }
+
+    /**
+     * Set fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+     * @param InternetMaxBandwidthOut fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+     */
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+        this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class CreateFleetRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
         this.setParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
+        this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
 
     }
 }

@@ -30,8 +30,9 @@ public class InputManageMarketingRisk extends AbstractModel{
     private AccountInfo Account;
 
     /**
-    * 场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
+    * 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
     */
     @SerializedName("SceneCode")
     @Expose
@@ -252,20 +253,24 @@ IOS wifi_mac String 否 WiFi MAC地址
     }
 
     /**
-     * Get 场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景 
-     * @return SceneCode 场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
+     * Get 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot； 
+     * @return SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
      */
     public String getSceneCode() {
         return this.SceneCode;
     }
 
     /**
-     * Set 场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
-     * @param SceneCode 场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
+     * Set 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
+     * @param SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
      */
     public void setSceneCode(String SceneCode) {
         this.SceneCode = SceneCode;

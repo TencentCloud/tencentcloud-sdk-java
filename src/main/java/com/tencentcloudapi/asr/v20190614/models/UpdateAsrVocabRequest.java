@@ -30,7 +30,7 @@ public class UpdateAsrVocabRequest extends AbstractModel{
     private String VocabId;
 
     /**
-    * 热词表名称
+    * 热词表名称，长度在1-255之间
     */
     @SerializedName("Name")
     @Expose
@@ -52,7 +52,7 @@ public class UpdateAsrVocabRequest extends AbstractModel{
     private String WordWeightStr;
 
     /**
-    * 热词表描述
+    * 热词表描述，长度在0-1000之间
     */
     @SerializedName("Description")
     @Expose
@@ -75,16 +75,16 @@ public class UpdateAsrVocabRequest extends AbstractModel{
     }
 
     /**
-     * Get 热词表名称 
-     * @return Name 热词表名称
+     * Get 热词表名称，长度在1-255之间 
+     * @return Name 热词表名称，长度在1-255之间
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 热词表名称
-     * @param Name 热词表名称
+     * Set 热词表名称，长度在1-255之间
+     * @param Name 热词表名称，长度在1-255之间
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -127,16 +127,16 @@ public class UpdateAsrVocabRequest extends AbstractModel{
     }
 
     /**
-     * Get 热词表描述 
-     * @return Description 热词表描述
+     * Get 热词表描述，长度在0-1000之间 
+     * @return Description 热词表描述，长度在0-1000之间
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 热词表描述
-     * @param Description 热词表描述
+     * Set 热词表描述，长度在0-1000之间
+     * @param Description 热词表描述，长度在0-1000之间
      */
     public void setDescription(String Description) {
         this.Description = Description;

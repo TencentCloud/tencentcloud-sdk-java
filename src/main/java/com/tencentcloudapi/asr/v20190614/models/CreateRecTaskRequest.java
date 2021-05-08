@@ -64,14 +64,14 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long SourceType;
 
     /**
-    * 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
+    * 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)，默认值为 0。
     */
     @SerializedName("SpeakerDiarization")
     @Expose
     private Long SpeakerDiarization;
 
     /**
-    * 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
+    * 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
     */
     @SerializedName("SpeakerNumber")
@@ -135,14 +135,14 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ConvertNumMode;
 
     /**
-    * 附加参数
+    * 附加参数(该参数无意义，忽略即可)
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-    * 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+    * 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
     */
     @SerializedName("FilterPunc")
     @Expose
@@ -265,25 +265,25 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频) 
-     * @return SpeakerDiarization 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
+     * Get 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)，默认值为 0。 
+     * @return SpeakerDiarization 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)，默认值为 0。
      */
     public Long getSpeakerDiarization() {
         return this.SpeakerDiarization;
     }
 
     /**
-     * Set 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
-     * @param SpeakerDiarization 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
+     * Set 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)，默认值为 0。
+     * @param SpeakerDiarization 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)，默认值为 0。
      */
     public void setSpeakerDiarization(Long SpeakerDiarization) {
         this.SpeakerDiarization = SpeakerDiarization;
     }
 
     /**
-     * Get 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
+     * Get 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用 
-     * @return SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
+     * @return SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
      */
     public Long getSpeakerNumber() {
@@ -291,9 +291,9 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Set 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
+     * Set 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
-     * @param SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
+     * @param SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
      */
     public void setSpeakerNumber(Long SpeakerNumber) {
@@ -429,32 +429,32 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 附加参数 
-     * @return Extra 附加参数
+     * Get 附加参数(该参数无意义，忽略即可) 
+     * @return Extra 附加参数(该参数无意义，忽略即可)
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 附加参数
-     * @param Extra 附加参数
+     * Set 附加参数(该参数无意义，忽略即可)
+     * @param Extra 附加参数(该参数无意义，忽略即可)
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * Get 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。 
-     * @return FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+     * Get 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。 
+     * @return FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
      */
     public Long getFilterPunc() {
         return this.FilterPunc;
     }
 
     /**
-     * Set 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
-     * @param FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+     * Set 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
+     * @param FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
      */
     public void setFilterPunc(Long FilterPunc) {
         this.FilterPunc = FilterPunc;

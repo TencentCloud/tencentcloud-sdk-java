@@ -37,6 +37,13 @@ public class CreateDeviceRequest extends AbstractModel{
     private String PassWord;
 
     /**
+    * 设备类型 2:国标IPC设备; 3:NVR设备
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private Long DeviceType;
+
+    /**
     * 设备需要绑定的分组ID，参数为空则默认绑定到根分组
     */
     @SerializedName("GroupId")
@@ -76,6 +83,22 @@ public class CreateDeviceRequest extends AbstractModel{
     }
 
     /**
+     * Get 设备类型 2:国标IPC设备; 3:NVR设备 
+     * @return DeviceType 设备类型 2:国标IPC设备; 3:NVR设备
+     */
+    public Long getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 设备类型 2:国标IPC设备; 3:NVR设备
+     * @param DeviceType 设备类型 2:国标IPC设备; 3:NVR设备
+     */
+    public void setDeviceType(Long DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
      * Get 设备需要绑定的分组ID，参数为空则默认绑定到根分组 
      * @return GroupId 设备需要绑定的分组ID，参数为空则默认绑定到根分组
      */
@@ -97,6 +120,7 @@ public class CreateDeviceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }

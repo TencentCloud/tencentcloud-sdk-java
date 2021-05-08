@@ -30,14 +30,14 @@ public class GetCustomizationListRequest extends AbstractModel{
     private String [] TagInfos;
 
     /**
-    * 分页大小
+    * 分页大小，默认1000
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页offset
+    * 分页offset，默认0
     */
     @SerializedName("Offset")
     @Expose
@@ -60,32 +60,32 @@ public class GetCustomizationListRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get 分页大小，默认1000 
+     * @return Limit 分页大小，默认1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set 分页大小，默认1000
+     * @param Limit 分页大小，默认1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页offset 
-     * @return Offset 分页offset
+     * Get 分页offset，默认0 
+     * @return Offset 分页offset，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页offset
-     * @param Offset 分页offset
+     * Set 分页offset，默认0
+     * @param Offset 分页offset，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

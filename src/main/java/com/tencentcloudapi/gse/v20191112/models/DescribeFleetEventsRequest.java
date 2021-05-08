@@ -44,6 +44,27 @@ public class DescribeFleetEventsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 事件代码
+    */
+    @SerializedName("EventCode")
+    @Expose
+    private String EventCode;
+
+    /**
+    * 发生事件的开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 发生事件的结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get 服务器舰队 Id 
      * @return FleetId 服务器舰队 Id
      */
@@ -92,12 +113,63 @@ public class DescribeFleetEventsRequest extends AbstractModel{
     }
 
     /**
+     * Get 事件代码 
+     * @return EventCode 事件代码
+     */
+    public String getEventCode() {
+        return this.EventCode;
+    }
+
+    /**
+     * Set 事件代码
+     * @param EventCode 事件代码
+     */
+    public void setEventCode(String EventCode) {
+        this.EventCode = EventCode;
+    }
+
+    /**
+     * Get 发生事件的开始时间 
+     * @return StartTime 发生事件的开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 发生事件的开始时间
+     * @param StartTime 发生事件的开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 发生事件的结束时间 
+     * @return EndTime 发生事件的结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 发生事件的结束时间
+     * @param EndTime 发生事件的结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FleetId", this.FleetId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "EventCode", this.EventCode);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }
