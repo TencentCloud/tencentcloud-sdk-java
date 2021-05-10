@@ -30,6 +30,13 @@ public class DeleteServiceRequest extends AbstractModel{
     private String ServiceId;
 
     /**
+    * 跳过删除前置条件校验（仅支持独享实例上的服务）
+    */
+    @SerializedName("SkipVerification")
+    @Expose
+    private Long SkipVerification;
+
+    /**
      * Get 待删除服务的唯一 ID。 
      * @return ServiceId 待删除服务的唯一 ID。
      */
@@ -46,10 +53,27 @@ public class DeleteServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get 跳过删除前置条件校验（仅支持独享实例上的服务） 
+     * @return SkipVerification 跳过删除前置条件校验（仅支持独享实例上的服务）
+     */
+    public Long getSkipVerification() {
+        return this.SkipVerification;
+    }
+
+    /**
+     * Set 跳过删除前置条件校验（仅支持独享实例上的服务）
+     * @param SkipVerification 跳过删除前置条件校验（仅支持独享实例上的服务）
+     */
+    public void setSkipVerification(Long SkipVerification) {
+        this.SkipVerification = SkipVerification;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "SkipVerification", this.SkipVerification);
 
     }
 }

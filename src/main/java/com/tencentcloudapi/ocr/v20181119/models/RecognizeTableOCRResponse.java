@@ -44,8 +44,7 @@ public class RecognizeTableOCRResponse extends AbstractModel{
     private Long PdfPageSize;
 
     /**
-    * 图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
+    * 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
     */
     @SerializedName("Angle")
     @Expose
@@ -107,20 +106,16 @@ public class RecognizeTableOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负 
-     * @return Angle 图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
+     * Get 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。 
+     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
-     * @param Angle 图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
+     * Set 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;

@@ -93,6 +93,13 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     private Long RouterCount;
 
     /**
+    * 扩容的Master节点数量。
+    */
+    @SerializedName("MasterCount")
+    @Expose
+    private Long MasterCount;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -265,6 +272,22 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 扩容的Master节点数量。 
+     * @return MasterCount 扩容的Master节点数量。
+     */
+    public Long getMasterCount() {
+        return this.MasterCount;
+    }
+
+    /**
+     * Set 扩容的Master节点数量。
+     * @param MasterCount 扩容的Master节点数量。
+     */
+    public void setMasterCount(Long MasterCount) {
+        this.MasterCount = MasterCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -277,6 +300,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskCount", this.TaskCount);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "RouterCount", this.RouterCount);
+        this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
 
     }
 }

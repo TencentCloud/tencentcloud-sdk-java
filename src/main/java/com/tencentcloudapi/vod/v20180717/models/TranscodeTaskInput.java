@@ -44,6 +44,13 @@ public class TranscodeTaskInput extends AbstractModel{
     private MosaicInput [] MosaicSet;
 
     /**
+    * 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+    */
+    @SerializedName("HeadTailSet")
+    @Expose
+    private HeadTailTaskInput [] HeadTailSet;
+
+    /**
     * 转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
@@ -112,6 +119,22 @@ public class TranscodeTaskInput extends AbstractModel{
     }
 
     /**
+     * Get 片头片尾列表，支持多片头片尾，最大可支持 10 个。 
+     * @return HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+     */
+    public HeadTailTaskInput [] getHeadTailSet() {
+        return this.HeadTailSet;
+    }
+
+    /**
+     * Set 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+     * @param HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+     */
+    public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
+        this.HeadTailSet = HeadTailSet;
+    }
+
+    /**
      * Get 转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
@@ -174,6 +197,7 @@ public class TranscodeTaskInput extends AbstractModel{
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+        this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
 

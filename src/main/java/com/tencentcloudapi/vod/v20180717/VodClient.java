@@ -272,6 +272,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建片头片尾模板。
+     * @param req CreateHeadTailTemplateRequest
+     * @return CreateHeadTailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHeadTailTemplateResponse CreateHeadTailTemplate(CreateHeadTailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHeadTailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHeadTailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateHeadTailTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
      * @param req CreateImageProcessingTemplateRequest
      * @return CreateImageProcessingTemplateResponse
@@ -607,6 +627,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteContentReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除片头片尾模板。
+     * @param req DeleteHeadTailTemplateRequest
+     * @return DeleteHeadTailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHeadTailTemplateResponse DeleteHeadTailTemplate(DeleteHeadTailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteHeadTailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteHeadTailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteHeadTailTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1158,6 +1198,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEventsStateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEventsState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取片头片尾模板列表。
+     * @param req DescribeHeadTailTemplatesRequest
+     * @return DescribeHeadTailTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHeadTailTemplatesResponse DescribeHeadTailTemplates(DescribeHeadTailTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHeadTailTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHeadTailTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHeadTailTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1869,6 +1929,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyEventConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyEventConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改片头片尾模板。
+     * @param req ModifyHeadTailTemplateRequest
+     * @return ModifyHeadTailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHeadTailTemplateResponse ModifyHeadTailTemplate(ModifyHeadTailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyHeadTailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyHeadTailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyHeadTailTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
