@@ -23,7 +23,16 @@ import java.util.HashMap;
 public class EntityRelationObject extends AbstractModel{
 
     /**
+    * object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Popular")
+    @Expose
+    private Long [] Popular;
+
+    /**
     * object对应id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -31,53 +40,17 @@ public class EntityRelationObject extends AbstractModel{
 
     /**
     * object对应name
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String [] Name;
 
     /**
-    * object对应popular值
-    */
-    @SerializedName("Popular")
-    @Expose
-    private Long [] Popular;
-
-    /**
-     * Get object对应id 
-     * @return Id object对应id
-     */
-    public String [] getId() {
-        return this.Id;
-    }
-
-    /**
-     * Set object对应id
-     * @param Id object对应id
-     */
-    public void setId(String [] Id) {
-        this.Id = Id;
-    }
-
-    /**
-     * Get object对应name 
-     * @return Name object对应name
-     */
-    public String [] getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set object对应name
-     * @param Name object对应name
-     */
-    public void setName(String [] Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get object对应popular值 
+     * Get object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Popular object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPopular() {
         return this.Popular;
@@ -85,19 +58,61 @@ public class EntityRelationObject extends AbstractModel{
 
     /**
      * Set object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Popular object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPopular(Long [] Popular) {
         this.Popular = Popular;
     }
 
     /**
+     * Get object对应id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id object对应id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set object对应id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id object对应id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String [] Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get object对应name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name object对应name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set object对应name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name object对应name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String [] Name) {
+        this.Name = Name;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "Popular.", this.Popular);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
         this.setParamArraySimple(map, prefix + "Name.", this.Name);
-        this.setParamArraySimple(map, prefix + "Popular.", this.Popular);
 
     }
 }

@@ -24,6 +24,7 @@ public class SearchWordItemsResponse extends AbstractModel{
 
     /**
     * 词条检索结果集合。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -37,8 +38,10 @@ public class SearchWordItemsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 词条检索结果集合。 
+     * Get 词条检索结果集合。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Results 词条检索结果集合。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchResult [] getResults() {
         return this.Results;
@@ -46,7 +49,9 @@ public class SearchWordItemsResponse extends AbstractModel{
 
     /**
      * Set 词条检索结果集合。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 词条检索结果集合。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(SearchResult [] Results) {
         this.Results = Results;

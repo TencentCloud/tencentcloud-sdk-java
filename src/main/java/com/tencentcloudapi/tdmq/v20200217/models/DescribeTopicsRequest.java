@@ -71,6 +71,16 @@ public class DescribeTopicsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * * TopicName
+按照主题名字查询，精确查询。
+类型：String
+必选：否
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -191,6 +201,34 @@ public class DescribeTopicsRequest extends AbstractModel{
     }
 
     /**
+     * Get * TopicName
+按照主题名字查询，精确查询。
+类型：String
+必选：否 
+     * @return Filters * TopicName
+按照主题名字查询，精确查询。
+类型：String
+必选：否
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set * TopicName
+按照主题名字查询，精确查询。
+类型：String
+必选：否
+     * @param Filters * TopicName
+按照主题名字查询，精确查询。
+类型：String
+必选：否
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +238,7 @@ public class DescribeTopicsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

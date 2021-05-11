@@ -23,25 +23,26 @@ import java.util.HashMap;
 public class SentimentAnalysisResponse extends AbstractModel{
 
     /**
-    * 负面情感概率
+    * 正面情感概率
     */
-    @SerializedName("Negative")
+    @SerializedName("Positive")
     @Expose
-    private Float Negative;
+    private Float Positive;
 
     /**
     * 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Neutral")
     @Expose
     private Float Neutral;
 
     /**
-    * 正面情感概率
+    * 负面情感概率
     */
-    @SerializedName("Positive")
+    @SerializedName("Negative")
     @Expose
-    private Float Positive;
+    private Float Negative;
 
     /**
     * 情感分类结果：
@@ -61,38 +62,6 @@ public class SentimentAnalysisResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 负面情感概率 
-     * @return Negative 负面情感概率
-     */
-    public Float getNegative() {
-        return this.Negative;
-    }
-
-    /**
-     * Set 负面情感概率
-     * @param Negative 负面情感概率
-     */
-    public void setNegative(Float Negative) {
-        this.Negative = Negative;
-    }
-
-    /**
-     * Get 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空 
-     * @return Neutral 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
-     */
-    public Float getNeutral() {
-        return this.Neutral;
-    }
-
-    /**
-     * Set 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
-     * @param Neutral 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
-     */
-    public void setNeutral(Float Neutral) {
-        this.Neutral = Neutral;
-    }
-
-    /**
      * Get 正面情感概率 
      * @return Positive 正面情感概率
      */
@@ -106,6 +75,42 @@ public class SentimentAnalysisResponse extends AbstractModel{
      */
     public void setPositive(Float Positive) {
         this.Positive = Positive;
+    }
+
+    /**
+     * Get 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Neutral 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getNeutral() {
+        return this.Neutral;
+    }
+
+    /**
+     * Set 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Neutral 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNeutral(Float Neutral) {
+        this.Neutral = Neutral;
+    }
+
+    /**
+     * Get 负面情感概率 
+     * @return Negative 负面情感概率
+     */
+    public Float getNegative() {
+        return this.Negative;
+    }
+
+    /**
+     * Set 负面情感概率
+     * @param Negative 负面情感概率
+     */
+    public void setNegative(Float Negative) {
+        this.Negative = Negative;
     }
 
     /**
@@ -156,9 +161,9 @@ public class SentimentAnalysisResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Negative", this.Negative);
-        this.setParamSimple(map, prefix + "Neutral", this.Neutral);
         this.setParamSimple(map, prefix + "Positive", this.Positive);
+        this.setParamSimple(map, prefix + "Neutral", this.Neutral);
+        this.setParamSimple(map, prefix + "Negative", this.Negative);
         this.setParamSimple(map, prefix + "Sentiment", this.Sentiment);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

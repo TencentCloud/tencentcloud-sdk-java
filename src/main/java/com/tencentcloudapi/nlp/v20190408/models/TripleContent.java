@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class TripleContent extends AbstractModel{
 
     /**
-    * 实体id
+    * 实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Id")
+    @SerializedName("Popular")
     @Expose
-    private String Id;
+    private Long Popular;
 
     /**
     * 实体名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -38,69 +40,25 @@ public class TripleContent extends AbstractModel{
 
     /**
     * 实体order
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Order")
     @Expose
     private Long Order;
 
     /**
-    * 实体流行度
+    * 实体id
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Popular")
+    @SerializedName("Id")
     @Expose
-    private Long Popular;
+    private String Id;
 
     /**
-     * Get 实体id 
-     * @return Id 实体id
-     */
-    public String getId() {
-        return this.Id;
-    }
-
-    /**
-     * Set 实体id
-     * @param Id 实体id
-     */
-    public void setId(String Id) {
-        this.Id = Id;
-    }
-
-    /**
-     * Get 实体名称 
-     * @return Name 实体名称
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 实体名称
-     * @param Name 实体名称
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 实体order 
-     * @return Order 实体order
-     */
-    public Long getOrder() {
-        return this.Order;
-    }
-
-    /**
-     * Set 实体order
-     * @param Order 实体order
-     */
-    public void setOrder(Long Order) {
-        this.Order = Order;
-    }
-
-    /**
-     * Get 实体流行度 
+     * Get 实体流行度
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Popular 实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPopular() {
         return this.Popular;
@@ -108,20 +66,82 @@ public class TripleContent extends AbstractModel{
 
     /**
      * Set 实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Popular 实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPopular(Long Popular) {
         this.Popular = Popular;
     }
 
     /**
+     * Get 实体名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 实体名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 实体名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 实体名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 实体order
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Order 实体order
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 实体order
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Order 实体order
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrder(Long Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 实体id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 实体id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 实体id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 实体id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Popular", this.Popular);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Order", this.Order);
-        this.setParamSimple(map, prefix + "Popular", this.Popular);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

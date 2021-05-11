@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeDictsResponse extends AbstractModel{
 
     /**
-    * 自定义词库信息列表。
-    */
-    @SerializedName("Dicts")
-    @Expose
-    private DictInfo [] Dicts;
-
-    /**
     * 记录总条数。
     */
     @SerializedName("TotalCount")
@@ -37,27 +30,19 @@ public class DescribeDictsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * 自定义词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Dicts")
+    @Expose
+    private DictInfo [] Dicts;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 自定义词库信息列表。 
-     * @return Dicts 自定义词库信息列表。
-     */
-    public DictInfo [] getDicts() {
-        return this.Dicts;
-    }
-
-    /**
-     * Set 自定义词库信息列表。
-     * @param Dicts 自定义词库信息列表。
-     */
-    public void setDicts(DictInfo [] Dicts) {
-        this.Dicts = Dicts;
-    }
 
     /**
      * Get 记录总条数。 
@@ -73,6 +58,26 @@ public class DescribeDictsResponse extends AbstractModel{
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 自定义词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Dicts 自定义词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DictInfo [] getDicts() {
+        return this.Dicts;
+    }
+
+    /**
+     * Set 自定义词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Dicts 自定义词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDicts(DictInfo [] Dicts) {
+        this.Dicts = Dicts;
     }
 
     /**
@@ -95,8 +100,8 @@ public class DescribeDictsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Dicts.", this.Dicts);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Dicts.", this.Dicts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -239,6 +239,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *开通微信云托管MySQL数据库服务
+     * @param req CreateWxCloudBaseRunServerDBClusterRequest
+     * @return CreateWxCloudBaseRunServerDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWxCloudBaseRunServerDBClusterResponse CreateWxCloudBaseRunServerDBCluster(CreateWxCloudBaseRunServerDBClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWxCloudBaseRunServerDBClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWxCloudBaseRunServerDBClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateWxCloudBaseRunServerDBCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除云项目
      * @param req DeleteCloudBaseProjectLatestVersionRequest
      * @return DeleteCloudBaseProjectLatestVersionResponse

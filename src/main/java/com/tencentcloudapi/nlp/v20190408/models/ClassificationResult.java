@@ -30,13 +30,6 @@ public class ClassificationResult extends AbstractModel{
     private String FirstClassName;
 
     /**
-    * 一级分类概率
-    */
-    @SerializedName("FirstClassProbability")
-    @Expose
-    private Float FirstClassProbability;
-
-    /**
     * 二级分类名称
     */
     @SerializedName("SecondClassName")
@@ -44,11 +37,68 @@ public class ClassificationResult extends AbstractModel{
     private String SecondClassName;
 
     /**
+    * 一级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstClassProbability")
+    @Expose
+    private Float FirstClassProbability;
+
+    /**
     * 二级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondClassProbability")
     @Expose
     private Float SecondClassProbability;
+
+    /**
+    * 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThirdClassName")
+    @Expose
+    private String ThirdClassName;
+
+    /**
+    * 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThirdClassProbability")
+    @Expose
+    private Float ThirdClassProbability;
+
+    /**
+    * 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FourthClassName")
+    @Expose
+    private String FourthClassName;
+
+    /**
+    * 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FourthClassProbability")
+    @Expose
+    private Float FourthClassProbability;
+
+    /**
+    * 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FifthClassName")
+    @Expose
+    private String FifthClassName;
+
+    /**
+    * 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FifthClassProbability")
+    @Expose
+    private Float FifthClassProbability;
 
     /**
      * Get 一级分类名称 
@@ -64,22 +114,6 @@ public class ClassificationResult extends AbstractModel{
      */
     public void setFirstClassName(String FirstClassName) {
         this.FirstClassName = FirstClassName;
-    }
-
-    /**
-     * Get 一级分类概率 
-     * @return FirstClassProbability 一级分类概率
-     */
-    public Float getFirstClassProbability() {
-        return this.FirstClassProbability;
-    }
-
-    /**
-     * Set 一级分类概率
-     * @param FirstClassProbability 一级分类概率
-     */
-    public void setFirstClassProbability(Float FirstClassProbability) {
-        this.FirstClassProbability = FirstClassProbability;
     }
 
     /**
@@ -99,8 +133,30 @@ public class ClassificationResult extends AbstractModel{
     }
 
     /**
-     * Get 二级分类概率 
+     * Get 一级分类概率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstClassProbability 一级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getFirstClassProbability() {
+        return this.FirstClassProbability;
+    }
+
+    /**
+     * Set 一级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstClassProbability 一级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstClassProbability(Float FirstClassProbability) {
+        this.FirstClassProbability = FirstClassProbability;
+    }
+
+    /**
+     * Get 二级分类概率
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecondClassProbability 二级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSecondClassProbability() {
         return this.SecondClassProbability;
@@ -108,10 +164,132 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 二级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondClassProbability 二级分类概率
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondClassProbability(Float SecondClassProbability) {
         this.SecondClassProbability = SecondClassProbability;
+    }
+
+    /**
+     * Get 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThirdClassName 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getThirdClassName() {
+        return this.ThirdClassName;
+    }
+
+    /**
+     * Set 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThirdClassName 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThirdClassName(String ThirdClassName) {
+        this.ThirdClassName = ThirdClassName;
+    }
+
+    /**
+     * Get 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThirdClassProbability 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getThirdClassProbability() {
+        return this.ThirdClassProbability;
+    }
+
+    /**
+     * Set 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThirdClassProbability 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThirdClassProbability(Float ThirdClassProbability) {
+        this.ThirdClassProbability = ThirdClassProbability;
+    }
+
+    /**
+     * Get 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FourthClassName 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFourthClassName() {
+        return this.FourthClassName;
+    }
+
+    /**
+     * Set 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FourthClassName 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFourthClassName(String FourthClassName) {
+        this.FourthClassName = FourthClassName;
+    }
+
+    /**
+     * Get 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FourthClassProbability 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getFourthClassProbability() {
+        return this.FourthClassProbability;
+    }
+
+    /**
+     * Set 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FourthClassProbability 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFourthClassProbability(Float FourthClassProbability) {
+        this.FourthClassProbability = FourthClassProbability;
+    }
+
+    /**
+     * Get 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FifthClassName 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFifthClassName() {
+        return this.FifthClassName;
+    }
+
+    /**
+     * Set 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FifthClassName 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFifthClassName(String FifthClassName) {
+        this.FifthClassName = FifthClassName;
+    }
+
+    /**
+     * Get 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FifthClassProbability 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getFifthClassProbability() {
+        return this.FifthClassProbability;
+    }
+
+    /**
+     * Set 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FifthClassProbability 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFifthClassProbability(Float FifthClassProbability) {
+        this.FifthClassProbability = FifthClassProbability;
     }
 
     /**
@@ -119,9 +297,15 @@ public class ClassificationResult extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FirstClassName", this.FirstClassName);
-        this.setParamSimple(map, prefix + "FirstClassProbability", this.FirstClassProbability);
         this.setParamSimple(map, prefix + "SecondClassName", this.SecondClassName);
+        this.setParamSimple(map, prefix + "FirstClassProbability", this.FirstClassProbability);
         this.setParamSimple(map, prefix + "SecondClassProbability", this.SecondClassProbability);
+        this.setParamSimple(map, prefix + "ThirdClassName", this.ThirdClassName);
+        this.setParamSimple(map, prefix + "ThirdClassProbability", this.ThirdClassProbability);
+        this.setParamSimple(map, prefix + "FourthClassName", this.FourthClassName);
+        this.setParamSimple(map, prefix + "FourthClassProbability", this.FourthClassProbability);
+        this.setParamSimple(map, prefix + "FifthClassName", this.FifthClassName);
+        this.setParamSimple(map, prefix + "FifthClassProbability", this.FifthClassProbability);
 
     }
 }

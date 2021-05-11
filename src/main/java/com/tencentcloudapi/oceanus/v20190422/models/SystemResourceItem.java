@@ -37,7 +37,7 @@ public class SystemResourceItem extends AbstractModel{
     private String Name;
 
     /**
-    * 资源类型
+    * 资源类型。1 表示 JAR 包，目前只支持该值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -97,16 +97,16 @@ public class SystemResourceItem extends AbstractModel{
     }
 
     /**
-     * Get 资源类型 
-     * @return ResourceType 资源类型
+     * Get 资源类型。1 表示 JAR 包，目前只支持该值。 
+     * @return ResourceType 资源类型。1 表示 JAR 包，目前只支持该值。
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型
-     * @param ResourceType 资源类型
+     * Set 资源类型。1 表示 JAR 包，目前只支持该值。
+     * @param ResourceType 资源类型。1 表示 JAR 包，目前只支持该值。
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;

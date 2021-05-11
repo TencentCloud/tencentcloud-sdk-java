@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeWordItemsResponse extends AbstractModel{
 
     /**
-    * 词条信息列表。
-    */
-    @SerializedName("WordItems")
-    @Expose
-    private WordItem [] WordItems;
-
-    /**
     * 词条记录总条数。
     */
     @SerializedName("TotalCount")
@@ -37,27 +30,19 @@ public class DescribeWordItemsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * 词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WordItems")
+    @Expose
+    private WordItem [] WordItems;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 词条信息列表。 
-     * @return WordItems 词条信息列表。
-     */
-    public WordItem [] getWordItems() {
-        return this.WordItems;
-    }
-
-    /**
-     * Set 词条信息列表。
-     * @param WordItems 词条信息列表。
-     */
-    public void setWordItems(WordItem [] WordItems) {
-        this.WordItems = WordItems;
-    }
 
     /**
      * Get 词条记录总条数。 
@@ -73,6 +58,26 @@ public class DescribeWordItemsResponse extends AbstractModel{
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WordItems 词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WordItem [] getWordItems() {
+        return this.WordItems;
+    }
+
+    /**
+     * Set 词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WordItems 词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWordItems(WordItem [] WordItems) {
+        this.WordItems = WordItems;
     }
 
     /**
@@ -95,8 +100,8 @@ public class DescribeWordItemsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "WordItems.", this.WordItems);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "WordItems.", this.WordItems);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

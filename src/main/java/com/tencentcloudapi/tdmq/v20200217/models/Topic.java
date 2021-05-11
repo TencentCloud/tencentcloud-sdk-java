@@ -181,6 +181,22 @@ public class Topic extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProducerLimit")
+    @Expose
+    private String ProducerLimit;
+
+    /**
+    * 消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsumerLimit")
+    @Expose
+    private String ConsumerLimit;
+
+    /**
      * Get 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
@@ -585,6 +601,46 @@ public class Topic extends AbstractModel{
     }
 
     /**
+     * Get 生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProducerLimit 生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProducerLimit() {
+        return this.ProducerLimit;
+    }
+
+    /**
+     * Set 生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProducerLimit 生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProducerLimit(String ProducerLimit) {
+        this.ProducerLimit = ProducerLimit;
+    }
+
+    /**
+     * Get 消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsumerLimit 消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConsumerLimit() {
+        return this.ConsumerLimit;
+    }
+
+    /**
+     * Set 消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsumerLimit 消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsumerLimit(String ConsumerLimit) {
+        this.ConsumerLimit = ConsumerLimit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -607,6 +663,8 @@ public class Topic extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
+        this.setParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
 
     }
 }

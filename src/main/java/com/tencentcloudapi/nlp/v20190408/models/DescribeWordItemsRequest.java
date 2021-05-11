@@ -30,18 +30,18 @@ public class DescribeWordItemsRequest extends AbstractModel{
     private String DictId;
 
     /**
-    * 每页数据量，范围为1~100，默认为10。
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
     * 分页偏移量，从0开始，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * 每页数据量，范围为1~100，默认为10。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
     * 待检索的词条文本，支持模糊匹配。
@@ -67,22 +67,6 @@ public class DescribeWordItemsRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页数据量，范围为1~100，默认为10。 
-     * @return Limit 每页数据量，范围为1~100，默认为10。
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 每页数据量，范围为1~100，默认为10。
-     * @param Limit 每页数据量，范围为1~100，默认为10。
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
      * Get 分页偏移量，从0开始，默认为0。 
      * @return Offset 分页偏移量，从0开始，默认为0。
      */
@@ -96,6 +80,22 @@ public class DescribeWordItemsRequest extends AbstractModel{
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get 每页数据量，范围为1~100，默认为10。 
+     * @return Limit 每页数据量，范围为1~100，默认为10。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页数据量，范围为1~100，默认为10。
+     * @param Limit 每页数据量，范围为1~100，默认为10。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     /**
@@ -119,8 +119,8 @@ public class DescribeWordItemsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DictId", this.DictId);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Text", this.Text);
 
     }

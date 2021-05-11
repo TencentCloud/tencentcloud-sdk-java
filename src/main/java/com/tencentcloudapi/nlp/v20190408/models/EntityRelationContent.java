@@ -24,28 +24,33 @@ public class EntityRelationContent extends AbstractModel{
 
     /**
     * 实体关系查询返回关系的object
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Object")
     @Expose
     private EntityRelationObject [] Object;
 
     /**
-    * 实体关系查询返回关系的subject
-    */
-    @SerializedName("Subject")
-    @Expose
-    private EntityRelationSubject [] Subject;
-
-    /**
     * 实体关系查询返回的关系名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
-     * Get 实体关系查询返回关系的object 
+    * 实体关系查询返回关系的subject
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Subject")
+    @Expose
+    private EntityRelationSubject [] Subject;
+
+    /**
+     * Get 实体关系查询返回关系的object
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Object 实体关系查询返回关系的object
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public EntityRelationObject [] getObject() {
         return this.Object;
@@ -53,31 +58,19 @@ public class EntityRelationContent extends AbstractModel{
 
     /**
      * Set 实体关系查询返回关系的object
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Object 实体关系查询返回关系的object
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObject(EntityRelationObject [] Object) {
         this.Object = Object;
     }
 
     /**
-     * Get 实体关系查询返回关系的subject 
-     * @return Subject 实体关系查询返回关系的subject
-     */
-    public EntityRelationSubject [] getSubject() {
-        return this.Subject;
-    }
-
-    /**
-     * Set 实体关系查询返回关系的subject
-     * @param Subject 实体关系查询返回关系的subject
-     */
-    public void setSubject(EntityRelationSubject [] Subject) {
-        this.Subject = Subject;
-    }
-
-    /**
-     * Get 实体关系查询返回的关系名称 
+     * Get 实体关系查询返回的关系名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Relation 实体关系查询返回的关系名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -85,10 +78,32 @@ public class EntityRelationContent extends AbstractModel{
 
     /**
      * Set 实体关系查询返回的关系名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 实体关系查询返回的关系名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
+    }
+
+    /**
+     * Get 实体关系查询返回关系的subject
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Subject 实体关系查询返回关系的subject
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EntityRelationSubject [] getSubject() {
+        return this.Subject;
+    }
+
+    /**
+     * Set 实体关系查询返回关系的subject
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Subject 实体关系查询返回关系的subject
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubject(EntityRelationSubject [] Subject) {
+        this.Subject = Subject;
     }
 
     /**
@@ -96,8 +111,8 @@ public class EntityRelationContent extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Object.", this.Object);
-        this.setParamArrayObj(map, prefix + "Subject.", this.Subject);
         this.setParamSimple(map, prefix + "Relation", this.Relation);
+        this.setParamArrayObj(map, prefix + "Subject.", this.Subject);
 
     }
 }

@@ -24,6 +24,7 @@ public class KeywordsExtractionResponse extends AbstractModel{
 
     /**
     * 关键词提取结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
     @Expose
@@ -37,8 +38,10 @@ public class KeywordsExtractionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 关键词提取结果 
+     * Get 关键词提取结果
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Keywords 关键词提取结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Keyword [] getKeywords() {
         return this.Keywords;
@@ -46,7 +49,9 @@ public class KeywordsExtractionResponse extends AbstractModel{
 
     /**
      * Set 关键词提取结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Keywords 关键词提取结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(Keyword [] Keywords) {
         this.Keywords = Keywords;

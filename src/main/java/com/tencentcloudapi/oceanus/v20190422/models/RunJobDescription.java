@@ -37,14 +37,14 @@ public class RunJobDescription extends AbstractModel{
     private Long RunType;
 
     /**
-    * SQL类型作业启动参数：指定数据源消费起始时间点
+    * 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
     */
     @SerializedName("StartMode")
     @Expose
     private String StartMode;
 
     /**
-    * 已发布上线的作业配置版本
+    * 当前作业的某个版本
     */
     @SerializedName("JobConfigVersion")
     @Expose
@@ -83,32 +83,32 @@ public class RunJobDescription extends AbstractModel{
     }
 
     /**
-     * Get SQL类型作业启动参数：指定数据源消费起始时间点 
-     * @return StartMode SQL类型作业启动参数：指定数据源消费起始时间点
+     * Get 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点 
+     * @return StartMode 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
      */
     public String getStartMode() {
         return this.StartMode;
     }
 
     /**
-     * Set SQL类型作业启动参数：指定数据源消费起始时间点
-     * @param StartMode SQL类型作业启动参数：指定数据源消费起始时间点
+     * Set 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+     * @param StartMode 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
      */
     public void setStartMode(String StartMode) {
         this.StartMode = StartMode;
     }
 
     /**
-     * Get 已发布上线的作业配置版本 
-     * @return JobConfigVersion 已发布上线的作业配置版本
+     * Get 当前作业的某个版本 
+     * @return JobConfigVersion 当前作业的某个版本
      */
     public Long getJobConfigVersion() {
         return this.JobConfigVersion;
     }
 
     /**
-     * Set 已发布上线的作业配置版本
-     * @param JobConfigVersion 已发布上线的作业配置版本
+     * Set 当前作业的某个版本
+     * @param JobConfigVersion 当前作业的某个版本
      */
     public void setJobConfigVersion(Long JobConfigVersion) {
         this.JobConfigVersion = JobConfigVersion;

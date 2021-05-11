@@ -33,7 +33,7 @@ public class AuthenticationTypeD extends AbstractModel{
 
     /**
     * 签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -106,9 +106,9 @@ hex：十六进制
 
     /**
      * Get 签名过期时间设置
-单位为秒，最大可设置为 31536000 
+单位为秒，最大可设置为 630720000 
      * @return ExpireTime 签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -116,9 +116,9 @@ hex：十六进制
 
     /**
      * Set 签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
      * @param ExpireTime 签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

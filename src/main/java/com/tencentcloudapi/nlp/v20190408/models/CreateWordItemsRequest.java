@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateWordItemsRequest extends AbstractModel{
 
     /**
-    * 待添加的词条集合。
-    */
-    @SerializedName("WordItems")
-    @Expose
-    private WordItem [] WordItems;
-
-    /**
     * 自定义词库ID。
     */
     @SerializedName("DictId")
@@ -37,20 +30,11 @@ public class CreateWordItemsRequest extends AbstractModel{
     private String DictId;
 
     /**
-     * Get 待添加的词条集合。 
-     * @return WordItems 待添加的词条集合。
-     */
-    public WordItem [] getWordItems() {
-        return this.WordItems;
-    }
-
-    /**
-     * Set 待添加的词条集合。
-     * @param WordItems 待添加的词条集合。
-     */
-    public void setWordItems(WordItem [] WordItems) {
-        this.WordItems = WordItems;
-    }
+    * 待添加的词条集合。
+    */
+    @SerializedName("WordItems")
+    @Expose
+    private WordItem [] WordItems;
 
     /**
      * Get 自定义词库ID。 
@@ -69,11 +53,27 @@ public class CreateWordItemsRequest extends AbstractModel{
     }
 
     /**
+     * Get 待添加的词条集合。 
+     * @return WordItems 待添加的词条集合。
+     */
+    public WordItem [] getWordItems() {
+        return this.WordItems;
+    }
+
+    /**
+     * Set 待添加的词条集合。
+     * @param WordItems 待添加的词条集合。
+     */
+    public void setWordItems(WordItem [] WordItems) {
+        this.WordItems = WordItems;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "WordItems.", this.WordItems);
         this.setParamSimple(map, prefix + "DictId", this.DictId);
+        this.setParamArrayObj(map, prefix + "WordItems.", this.WordItems);
 
     }
 }

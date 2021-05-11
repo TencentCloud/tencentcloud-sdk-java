@@ -37,7 +37,7 @@ public class CreateResourceRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 资源类型，占时只支持jar，填1
+    * 资源类型。目前只支持 JAR，取值为 1
     */
     @SerializedName("ResourceType")
     @Expose
@@ -90,16 +90,16 @@ public class CreateResourceRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源类型，占时只支持jar，填1 
-     * @return ResourceType 资源类型，占时只支持jar，填1
+     * Get 资源类型。目前只支持 JAR，取值为 1 
+     * @return ResourceType 资源类型。目前只支持 JAR，取值为 1
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，占时只支持jar，填1
-     * @param ResourceType 资源类型，占时只支持jar，填1
+     * Set 资源类型。目前只支持 JAR，取值为 1
+     * @param ResourceType 资源类型。目前只支持 JAR，取值为 1
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;

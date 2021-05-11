@@ -63,6 +63,13 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
     private String ModeType;
 
     /**
+    * 专线网关可用区
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 专线网关名称 
      * @return DirectConnectGatewayName 专线网关名称
      */
@@ -163,6 +170,22 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
     }
 
     /**
+     * Get 专线网关可用区 
+     * @return Zone 专线网关可用区
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 专线网关可用区
+     * @param Zone 专线网关可用区
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -171,6 +194,7 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

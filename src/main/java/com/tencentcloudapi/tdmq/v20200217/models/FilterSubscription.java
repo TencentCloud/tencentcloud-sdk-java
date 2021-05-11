@@ -44,6 +44,13 @@ public class FilterSubscription extends AbstractModel{
     private Boolean ConsumerHasExpired;
 
     /**
+    * 按照订阅名过滤，精确查询。
+    */
+    @SerializedName("SubscriptionNames")
+    @Expose
+    private String [] SubscriptionNames;
+
+    /**
      * Get 是否仅展示包含真实消费者的订阅。 
      * @return ConsumerHasCount 是否仅展示包含真实消费者的订阅。
      */
@@ -92,12 +99,29 @@ public class FilterSubscription extends AbstractModel{
     }
 
     /**
+     * Get 按照订阅名过滤，精确查询。 
+     * @return SubscriptionNames 按照订阅名过滤，精确查询。
+     */
+    public String [] getSubscriptionNames() {
+        return this.SubscriptionNames;
+    }
+
+    /**
+     * Set 按照订阅名过滤，精确查询。
+     * @param SubscriptionNames 按照订阅名过滤，精确查询。
+     */
+    public void setSubscriptionNames(String [] SubscriptionNames) {
+        this.SubscriptionNames = SubscriptionNames;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConsumerHasCount", this.ConsumerHasCount);
         this.setParamSimple(map, prefix + "ConsumerHasBacklog", this.ConsumerHasBacklog);
         this.setParamSimple(map, prefix + "ConsumerHasExpired", this.ConsumerHasExpired);
+        this.setParamArraySimple(map, prefix + "SubscriptionNames.", this.SubscriptionNames);
 
     }
 }

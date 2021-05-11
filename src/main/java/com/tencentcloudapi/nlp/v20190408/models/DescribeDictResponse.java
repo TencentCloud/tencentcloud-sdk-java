@@ -24,6 +24,7 @@ public class DescribeDictResponse extends AbstractModel{
 
     /**
     * 查询到的词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dicts")
     @Expose
@@ -37,8 +38,10 @@ public class DescribeDictResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询到的词库信息列表。 
+     * Get 查询到的词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Dicts 查询到的词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DictInfo [] getDicts() {
         return this.Dicts;
@@ -46,7 +49,9 @@ public class DescribeDictResponse extends AbstractModel{
 
     /**
      * Set 查询到的词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Dicts 查询到的词库信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDicts(DictInfo [] Dicts) {
         this.Dicts = Dicts;

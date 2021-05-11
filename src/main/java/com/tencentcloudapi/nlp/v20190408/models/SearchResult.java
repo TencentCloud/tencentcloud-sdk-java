@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class SearchResult extends AbstractModel{
 
     /**
+    * 被搜索的词条文本。
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
     * 0表示词条不存在，1表示存在。
     */
     @SerializedName("IsExist")
@@ -31,56 +38,19 @@ public class SearchResult extends AbstractModel{
 
     /**
     * 匹配到的词条文本。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchText")
     @Expose
     private String MatchText;
 
     /**
-    * 被搜索的词条文本。
-    */
-    @SerializedName("Text")
-    @Expose
-    private String Text;
-
-    /**
     * 词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pos")
     @Expose
     private String Pos;
-
-    /**
-     * Get 0表示词条不存在，1表示存在。 
-     * @return IsExist 0表示词条不存在，1表示存在。
-     */
-    public Long getIsExist() {
-        return this.IsExist;
-    }
-
-    /**
-     * Set 0表示词条不存在，1表示存在。
-     * @param IsExist 0表示词条不存在，1表示存在。
-     */
-    public void setIsExist(Long IsExist) {
-        this.IsExist = IsExist;
-    }
-
-    /**
-     * Get 匹配到的词条文本。 
-     * @return MatchText 匹配到的词条文本。
-     */
-    public String getMatchText() {
-        return this.MatchText;
-    }
-
-    /**
-     * Set 匹配到的词条文本。
-     * @param MatchText 匹配到的词条文本。
-     */
-    public void setMatchText(String MatchText) {
-        this.MatchText = MatchText;
-    }
 
     /**
      * Get 被搜索的词条文本。 
@@ -99,8 +69,46 @@ public class SearchResult extends AbstractModel{
     }
 
     /**
-     * Get 词条的词性。 
+     * Get 0表示词条不存在，1表示存在。 
+     * @return IsExist 0表示词条不存在，1表示存在。
+     */
+    public Long getIsExist() {
+        return this.IsExist;
+    }
+
+    /**
+     * Set 0表示词条不存在，1表示存在。
+     * @param IsExist 0表示词条不存在，1表示存在。
+     */
+    public void setIsExist(Long IsExist) {
+        this.IsExist = IsExist;
+    }
+
+    /**
+     * Get 匹配到的词条文本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchText 匹配到的词条文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchText() {
+        return this.MatchText;
+    }
+
+    /**
+     * Set 匹配到的词条文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchText 匹配到的词条文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchText(String MatchText) {
+        this.MatchText = MatchText;
+    }
+
+    /**
+     * Get 词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Pos 词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPos() {
         return this.Pos;
@@ -108,7 +116,9 @@ public class SearchResult extends AbstractModel{
 
     /**
      * Set 词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Pos 词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPos(String Pos) {
         this.Pos = Pos;
@@ -118,9 +128,9 @@ public class SearchResult extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "IsExist", this.IsExist);
         this.setParamSimple(map, prefix + "MatchText", this.MatchText);
-        this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Pos", this.Pos);
 
     }

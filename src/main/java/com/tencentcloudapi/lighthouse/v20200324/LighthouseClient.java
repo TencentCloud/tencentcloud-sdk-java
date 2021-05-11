@@ -308,6 +308,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBundleDiscount）用于查询套餐折扣信息。
+     * @param req DescribeBundleDiscountRequest
+     * @return DescribeBundleDiscountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBundleDiscountResponse DescribeBundleDiscount(DescribeBundleDiscountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBundleDiscountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBundleDiscountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBundleDiscount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeBundles）用于查询套餐信息。
      * @param req DescribeBundlesRequest
      * @return DescribeBundlesResponse

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class EntityRelationSubject extends AbstractModel{
 
     /**
+    * Subject对应popular
+    */
+    @SerializedName("Popular")
+    @Expose
+    private Long [] Popular;
+
+    /**
     * Subject对应id
     */
     @SerializedName("Id")
@@ -37,11 +44,20 @@ public class EntityRelationSubject extends AbstractModel{
     private String [] Name;
 
     /**
-    * Subject对应popular
-    */
-    @SerializedName("Popular")
-    @Expose
-    private Long [] Popular;
+     * Get Subject对应popular 
+     * @return Popular Subject对应popular
+     */
+    public Long [] getPopular() {
+        return this.Popular;
+    }
+
+    /**
+     * Set Subject对应popular
+     * @param Popular Subject对应popular
+     */
+    public void setPopular(Long [] Popular) {
+        this.Popular = Popular;
+    }
 
     /**
      * Get Subject对应id 
@@ -76,28 +92,12 @@ public class EntityRelationSubject extends AbstractModel{
     }
 
     /**
-     * Get Subject对应popular 
-     * @return Popular Subject对应popular
-     */
-    public Long [] getPopular() {
-        return this.Popular;
-    }
-
-    /**
-     * Set Subject对应popular
-     * @param Popular Subject对应popular
-     */
-    public void setPopular(Long [] Popular) {
-        this.Popular = Popular;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "Popular.", this.Popular);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
         this.setParamArraySimple(map, prefix + "Name.", this.Name);
-        this.setParamArraySimple(map, prefix + "Popular.", this.Popular);
 
     }
 }

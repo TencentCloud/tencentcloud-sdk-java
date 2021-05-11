@@ -759,6 +759,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取ES查询文档列表
+     * @param req DescribeESHitsRequest
+     * @return DescribeESHitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeESHitsResponse DescribeESHits(DescribeESHitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeESHitsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeESHitsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeESHits");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeExportMachines) 用于导出区域主机列表。
      * @param req DescribeExportMachinesRequest
      * @return DescribeExportMachinesResponse

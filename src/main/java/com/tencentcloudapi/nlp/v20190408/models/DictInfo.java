@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DictInfo extends AbstractModel{
 
     /**
-    * 自定义词库ID。
-    */
-    @SerializedName("Id")
-    @Expose
-    private String Id;
-
-    /**
     * 自定义词库名称。
     */
     @SerializedName("Name")
@@ -37,14 +30,15 @@ public class DictInfo extends AbstractModel{
     private String Name;
 
     /**
-    * 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+    * 自定义词库ID。
     */
-    @SerializedName("CreateTime")
+    @SerializedName("Id")
     @Expose
-    private String CreateTime;
+    private String Id;
 
     /**
     * 自定义词库描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -52,26 +46,19 @@ public class DictInfo extends AbstractModel{
 
     /**
     * 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 自定义词库ID。 
-     * @return Id 自定义词库ID。
-     */
-    public String getId() {
-        return this.Id;
-    }
-
-    /**
-     * Set 自定义词库ID。
-     * @param Id 自定义词库ID。
-     */
-    public void setId(String Id) {
-        this.Id = Id;
-    }
+    * 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
      * Get 自定义词库名称。 
@@ -90,24 +77,26 @@ public class DictInfo extends AbstractModel{
     }
 
     /**
-     * Get 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。 
-     * @return CreateTime 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+     * Get 自定义词库ID。 
+     * @return Id 自定义词库ID。
      */
-    public String getCreateTime() {
-        return this.CreateTime;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-     * @param CreateTime 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+     * Set 自定义词库ID。
+     * @param Id 自定义词库ID。
      */
-    public void setCreateTime(String CreateTime) {
-        this.CreateTime = CreateTime;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
-     * Get 自定义词库描述信息。 
+     * Get 自定义词库描述信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 自定义词库描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -115,15 +104,19 @@ public class DictInfo extends AbstractModel{
 
     /**
      * Set 自定义词库描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 自定义词库描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。 
+     * Get 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -131,21 +124,43 @@ public class DictInfo extends AbstractModel{
 
     /**
      * Set 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
+     * Get 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CCIToken extends AbstractModel{
 
     /**
+    * 错别字内容
+    */
+    @SerializedName("Word")
+    @Expose
+    private String Word;
+
+    /**
     * 错别字的起始位置，从0开始
     */
     @SerializedName("BeginOffset")
@@ -37,11 +44,20 @@ public class CCIToken extends AbstractModel{
     private String CorrectWord;
 
     /**
-    * 错别字内容
-    */
-    @SerializedName("Word")
-    @Expose
-    private String Word;
+     * Get 错别字内容 
+     * @return Word 错别字内容
+     */
+    public String getWord() {
+        return this.Word;
+    }
+
+    /**
+     * Set 错别字内容
+     * @param Word 错别字内容
+     */
+    public void setWord(String Word) {
+        this.Word = Word;
+    }
 
     /**
      * Get 错别字的起始位置，从0开始 
@@ -76,28 +92,12 @@ public class CCIToken extends AbstractModel{
     }
 
     /**
-     * Get 错别字内容 
-     * @return Word 错别字内容
-     */
-    public String getWord() {
-        return this.Word;
-    }
-
-    /**
-     * Set 错别字内容
-     * @param Word 错别字内容
-     */
-    public void setWord(String Word) {
-        this.Word = Word;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Word", this.Word);
         this.setParamSimple(map, prefix + "BeginOffset", this.BeginOffset);
         this.setParamSimple(map, prefix + "CorrectWord", this.CorrectWord);
-        this.setParamSimple(map, prefix + "Word", this.Word);
 
     }
 }

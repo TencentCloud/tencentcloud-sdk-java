@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class PosToken extends AbstractModel{
 
     /**
-    * 起始位置
+    * 基础词
     */
-    @SerializedName("BeginOffset")
+    @SerializedName("Word")
     @Expose
-    private Long BeginOffset;
+    private String Word;
 
     /**
     * 长度
@@ -37,6 +37,13 @@ public class PosToken extends AbstractModel{
     private Long Length;
 
     /**
+    * 起始位置
+    */
+    @SerializedName("BeginOffset")
+    @Expose
+    private Long BeginOffset;
+
+    /**
     * 词性
     */
     @SerializedName("Pos")
@@ -44,26 +51,19 @@ public class PosToken extends AbstractModel{
     private String Pos;
 
     /**
-    * 基础词
-    */
-    @SerializedName("Word")
-    @Expose
-    private String Word;
-
-    /**
-     * Get 起始位置 
-     * @return BeginOffset 起始位置
+     * Get 基础词 
+     * @return Word 基础词
      */
-    public Long getBeginOffset() {
-        return this.BeginOffset;
+    public String getWord() {
+        return this.Word;
     }
 
     /**
-     * Set 起始位置
-     * @param BeginOffset 起始位置
+     * Set 基础词
+     * @param Word 基础词
      */
-    public void setBeginOffset(Long BeginOffset) {
-        this.BeginOffset = BeginOffset;
+    public void setWord(String Word) {
+        this.Word = Word;
     }
 
     /**
@@ -83,6 +83,22 @@ public class PosToken extends AbstractModel{
     }
 
     /**
+     * Get 起始位置 
+     * @return BeginOffset 起始位置
+     */
+    public Long getBeginOffset() {
+        return this.BeginOffset;
+    }
+
+    /**
+     * Set 起始位置
+     * @param BeginOffset 起始位置
+     */
+    public void setBeginOffset(Long BeginOffset) {
+        this.BeginOffset = BeginOffset;
+    }
+
+    /**
      * Get 词性 
      * @return Pos 词性
      */
@@ -99,29 +115,13 @@ public class PosToken extends AbstractModel{
     }
 
     /**
-     * Get 基础词 
-     * @return Word 基础词
-     */
-    public String getWord() {
-        return this.Word;
-    }
-
-    /**
-     * Set 基础词
-     * @param Word 基础词
-     */
-    public void setWord(String Word) {
-        this.Word = Word;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BeginOffset", this.BeginOffset);
-        this.setParamSimple(map, prefix + "Length", this.Length);
-        this.setParamSimple(map, prefix + "Pos", this.Pos);
         this.setParamSimple(map, prefix + "Word", this.Word);
+        this.setParamSimple(map, prefix + "Length", this.Length);
+        this.setParamSimple(map, prefix + "BeginOffset", this.BeginOffset);
+        this.setParamSimple(map, prefix + "Pos", this.Pos);
 
     }
 }

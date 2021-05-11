@@ -30,18 +30,18 @@ public class ChatBotRequest extends AbstractModel{
     private String Query;
 
     /**
-    * 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
-    */
-    @SerializedName("Flag")
-    @Expose
-    private Long Flag;
-
-    /**
     * 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
+
+    /**
+    * 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+    */
+    @SerializedName("Flag")
+    @Expose
+    private Long Flag;
 
     /**
      * Get 用户请求的query 
@@ -57,22 +57,6 @@ public class ChatBotRequest extends AbstractModel{
      */
     public void setQuery(String Query) {
         this.Query = Query;
-    }
-
-    /**
-     * Get 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊 
-     * @return Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
-     */
-    public Long getFlag() {
-        return this.Flag;
-    }
-
-    /**
-     * Set 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
-     * @param Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
-     */
-    public void setFlag(Long Flag) {
-        this.Flag = Flag;
     }
 
     /**
@@ -92,12 +76,28 @@ public class ChatBotRequest extends AbstractModel{
     }
 
     /**
+     * Get 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊 
+     * @return Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+     */
+    public Long getFlag() {
+        return this.Flag;
+    }
+
+    /**
+     * Set 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+     * @param Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+     */
+    public void setFlag(Long Flag) {
+        this.Flag = Flag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Query", this.Query);
-        this.setParamSimple(map, prefix + "Flag", this.Flag);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "Flag", this.Flag);
 
     }
 }

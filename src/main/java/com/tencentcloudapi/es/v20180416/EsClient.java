@@ -139,6 +139,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *智能运维诊断集群
+     * @param req DiagnoseInstanceRequest
+     * @return DiagnoseInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DiagnoseInstanceResponse DiagnoseInstance(DiagnoseInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DiagnoseInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DiagnoseInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DiagnoseInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取接收客户端请求的节点类型
      * @param req GetRequestTargetNodeTypesRequest
      * @return GetRequestTargetNodeTypesResponse
@@ -211,6 +231,26 @@ public class EsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RestartNodesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RestartNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新智能运维配置
+     * @param req UpdateDiagnoseSettingsRequest
+     * @return UpdateDiagnoseSettingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDiagnoseSettingsResponse UpdateDiagnoseSettings(UpdateDiagnoseSettingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDiagnoseSettingsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDiagnoseSettingsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDiagnoseSettings");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

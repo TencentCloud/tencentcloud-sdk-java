@@ -140,6 +140,22 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     private String ModeType;
 
     /**
+    * 是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalZone")
+    @Expose
+    private Boolean LocalZone;
+
+    /**
+    * 专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 专线网关`ID`。 
      * @return DirectConnectGatewayId 专线网关`ID`。
      */
@@ -428,6 +444,46 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
+     * Get 是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalZone 是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLocalZone() {
+        return this.LocalZone;
+    }
+
+    /**
+     * Set 是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalZone 是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalZone(Boolean LocalZone) {
+        this.LocalZone = LocalZone;
+    }
+
+    /**
+     * Get 专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -446,6 +502,8 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
         this.setParamArraySimple(map, prefix + "VXLANSupport.", this.VXLANSupport);
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
+        this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

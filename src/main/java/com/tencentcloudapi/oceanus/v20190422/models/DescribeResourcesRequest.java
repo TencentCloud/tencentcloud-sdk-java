@@ -30,14 +30,14 @@ public class DescribeResourcesRequest extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-    * 偏移量
+    * 偏移量，仅当设置 Limit 参数时有效
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 条数限制
+    * 条数限制。如果不填，默认返回 20 条
     */
     @SerializedName("Limit")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeResourcesRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，仅当设置 Limit 参数时有效 
+     * @return Offset 偏移量，仅当设置 Limit 参数时有效
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，仅当设置 Limit 参数时有效
+     * @param Offset 偏移量，仅当设置 Limit 参数时有效
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 条数限制 
-     * @return Limit 条数限制
+     * Get 条数限制。如果不填，默认返回 20 条 
+     * @return Limit 条数限制。如果不填，默认返回 20 条
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数限制
-     * @param Limit 条数限制
+     * Set 条数限制。如果不填，默认返回 20 条
+     * @param Limit 条数限制。如果不填，默认返回 20 条
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

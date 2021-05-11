@@ -30,21 +30,21 @@ public class DescribeSystemResourcesRequest extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-    * 偏移量
+    * 偏移量，仅当设置 Limit 参数时有效
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 条数限制
+    * 条数限制，默认返回 20 条
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+    * 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
     */
     @SerializedName("Filters")
     @Expose
@@ -74,48 +74,48 @@ public class DescribeSystemResourcesRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，仅当设置 Limit 参数时有效 
+     * @return Offset 偏移量，仅当设置 Limit 参数时有效
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，仅当设置 Limit 参数时有效
+     * @param Offset 偏移量，仅当设置 Limit 参数时有效
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 条数限制 
-     * @return Limit 条数限制
+     * Get 条数限制，默认返回 20 条 
+     * @return Limit 条数限制，默认返回 20 条
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数限制
-     * @param Limit 条数限制
+     * Set 条数限制，默认返回 20 条
+     * @param Limit 条数限制，默认返回 20 条
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表 
-     * @return Filters 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+     * Get 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表 
+     * @return Filters 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
-     * @param Filters 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+     * Set 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
+     * @param Filters 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

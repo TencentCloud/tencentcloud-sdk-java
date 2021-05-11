@@ -38,6 +38,8 @@ public class ModifyEndUserRequest extends AbstractModel{
 
     /**
     * 帐号的状态
+<li>ENABLE</li>
+<li>DISABLE</li>
     */
     @SerializedName("Status")
     @Expose
@@ -76,8 +78,12 @@ public class ModifyEndUserRequest extends AbstractModel{
     }
 
     /**
-     * Get 帐号的状态 
+     * Get 帐号的状态
+<li>ENABLE</li>
+<li>DISABLE</li> 
      * @return Status 帐号的状态
+<li>ENABLE</li>
+<li>DISABLE</li>
      */
     public String getStatus() {
         return this.Status;
@@ -85,7 +91,11 @@ public class ModifyEndUserRequest extends AbstractModel{
 
     /**
      * Set 帐号的状态
+<li>ENABLE</li>
+<li>DISABLE</li>
      * @param Status 帐号的状态
+<li>ENABLE</li>
+<li>DISABLE</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

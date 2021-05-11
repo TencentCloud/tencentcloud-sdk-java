@@ -24,6 +24,7 @@ public class CreateDictResponse extends AbstractModel{
 
     /**
     * 创建的自定义词库ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DictId")
     @Expose
@@ -37,8 +38,10 @@ public class CreateDictResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建的自定义词库ID。 
+     * Get 创建的自定义词库ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DictId 创建的自定义词库ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDictId() {
         return this.DictId;
@@ -46,7 +49,9 @@ public class CreateDictResponse extends AbstractModel{
 
     /**
      * Set 创建的自定义词库ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DictId 创建的自定义词库ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDictId(String DictId) {
         this.DictId = DictId;

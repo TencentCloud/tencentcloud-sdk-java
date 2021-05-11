@@ -23,68 +23,42 @@ import java.util.HashMap;
 public class DpToken extends AbstractModel{
 
     /**
-    * 当前词父节点的序号
-    */
-    @SerializedName("HeadId")
-    @Expose
-    private Long HeadId;
-
-    /**
-    * 基础词的序号
-    */
-    @SerializedName("Id")
-    @Expose
-    private Long Id;
-
-    /**
     * 句法依存关系的类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
+    * 当前词父节点的序号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeadId")
+    @Expose
+    private Long HeadId;
+
+    /**
     * 基础词
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Word")
     @Expose
     private String Word;
 
     /**
-     * Get 当前词父节点的序号 
-     * @return HeadId 当前词父节点的序号
-     */
-    public Long getHeadId() {
-        return this.HeadId;
-    }
+    * 基础词的序号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
 
     /**
-     * Set 当前词父节点的序号
-     * @param HeadId 当前词父节点的序号
-     */
-    public void setHeadId(Long HeadId) {
-        this.HeadId = HeadId;
-    }
-
-    /**
-     * Get 基础词的序号 
-     * @return Id 基础词的序号
-     */
-    public Long getId() {
-        return this.Id;
-    }
-
-    /**
-     * Set 基础词的序号
-     * @param Id 基础词的序号
-     */
-    public void setId(Long Id) {
-        this.Id = Id;
-    }
-
-    /**
-     * Get 句法依存关系的类型 
+     * Get 句法依存关系的类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Relation 句法依存关系的类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -92,15 +66,39 @@ public class DpToken extends AbstractModel{
 
     /**
      * Set 句法依存关系的类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 句法依存关系的类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
     }
 
     /**
-     * Get 基础词 
+     * Get 当前词父节点的序号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeadId 当前词父节点的序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHeadId() {
+        return this.HeadId;
+    }
+
+    /**
+     * Set 当前词父节点的序号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeadId 当前词父节点的序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeadId(Long HeadId) {
+        this.HeadId = HeadId;
+    }
+
+    /**
+     * Get 基础词
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Word 基础词
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWord() {
         return this.Word;
@@ -108,20 +106,42 @@ public class DpToken extends AbstractModel{
 
     /**
      * Set 基础词
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Word 基础词
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
+     * Get 基础词的序号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 基础词的序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 基础词的序号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 基础词的序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HeadId", this.HeadId);
-        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Relation", this.Relation);
+        this.setParamSimple(map, prefix + "HeadId", this.HeadId);
         this.setParamSimple(map, prefix + "Word", this.Word);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

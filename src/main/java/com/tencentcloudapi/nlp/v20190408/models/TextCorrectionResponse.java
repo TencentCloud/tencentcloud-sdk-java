@@ -24,6 +24,7 @@ public class TextCorrectionResponse extends AbstractModel{
 
     /**
     * 纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CCITokens")
     @Expose
@@ -44,8 +45,10 @@ public class TextCorrectionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 纠错详情 
+     * Get 纠错详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CCITokens 纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CCIToken [] getCCITokens() {
         return this.CCITokens;
@@ -53,7 +56,9 @@ public class TextCorrectionResponse extends AbstractModel{
 
     /**
      * Set 纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CCITokens 纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCCITokens(CCIToken [] CCITokens) {
         this.CCITokens = CCITokens;

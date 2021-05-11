@@ -51,6 +51,16 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * * EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 命名空间名称，模糊搜索。 
      * @return EnvironmentId 命名空间名称，模糊搜索。
      */
@@ -115,6 +125,34 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     }
 
     /**
+     * Get * EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否 
+     * @return Filters * EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set * EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
+     * @param Filters * EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +160,7 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

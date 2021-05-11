@@ -30,7 +30,7 @@ public class CreateCustomizationRequest extends AbstractModel{
     private String ModelName;
 
     /**
-    * 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
+    * 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
     */
     @SerializedName("TextUrl")
     @Expose
@@ -67,16 +67,16 @@ public class CreateCustomizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos 
-     * @return TextUrl 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
+     * Get 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos 
+     * @return TextUrl 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
      */
     public String getTextUrl() {
         return this.TextUrl;
     }
 
     /**
-     * Set 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
-     * @param TextUrl 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
+     * Set 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
+     * @param TextUrl 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
      */
     public void setTextUrl(String TextUrl) {
         this.TextUrl = TextUrl;

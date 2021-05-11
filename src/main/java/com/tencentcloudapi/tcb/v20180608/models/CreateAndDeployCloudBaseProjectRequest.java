@@ -58,7 +58,7 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
     private KVPair [] Parameters;
 
     /**
-    * 环境别名
+    * 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
     */
     @SerializedName("EnvAlias")
     @Expose
@@ -93,7 +93,7 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
     private String NetworkConfig;
 
     /**
-    * 免费额度的"basic", 不使用的用""
+    * 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
     */
     @SerializedName("FreeQuota")
     @Expose
@@ -194,16 +194,16 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 环境别名 
-     * @return EnvAlias 环境别名
+     * Get 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符 
+     * @return EnvAlias 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
      */
     public String getEnvAlias() {
         return this.EnvAlias;
     }
 
     /**
-     * Set 环境别名
-     * @param EnvAlias 环境别名
+     * Set 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
+     * @param EnvAlias 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
      */
     public void setEnvAlias(String EnvAlias) {
         this.EnvAlias = EnvAlias;
@@ -274,16 +274,16 @@ public class CreateAndDeployCloudBaseProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 免费额度的"basic", 不使用的用"" 
-     * @return FreeQuota 免费额度的"basic", 不使用的用""
+     * Get 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。 
+     * @return FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
      */
     public String getFreeQuota() {
         return this.FreeQuota;
     }
 
     /**
-     * Set 免费额度的"basic", 不使用的用""
-     * @param FreeQuota 免费额度的"basic", 不使用的用""
+     * Set 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * @param FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
      */
     public void setFreeQuota(String FreeQuota) {
         this.FreeQuota = FreeQuota;

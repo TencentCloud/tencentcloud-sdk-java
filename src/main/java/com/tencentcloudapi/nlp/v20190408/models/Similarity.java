@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class Similarity extends AbstractModel{
 
     /**
-    * 相似度分数
-    */
-    @SerializedName("Score")
-    @Expose
-    private Float Score;
-
-    /**
     * 目标文本句子
     */
     @SerializedName("Text")
@@ -37,20 +30,11 @@ public class Similarity extends AbstractModel{
     private String Text;
 
     /**
-     * Get 相似度分数 
-     * @return Score 相似度分数
-     */
-    public Float getScore() {
-        return this.Score;
-    }
-
-    /**
-     * Set 相似度分数
-     * @param Score 相似度分数
-     */
-    public void setScore(Float Score) {
-        this.Score = Score;
-    }
+    * 相似度分数
+    */
+    @SerializedName("Score")
+    @Expose
+    private Float Score;
 
     /**
      * Get 目标文本句子 
@@ -69,11 +53,27 @@ public class Similarity extends AbstractModel{
     }
 
     /**
+     * Get 相似度分数 
+     * @return Score 相似度分数
+     */
+    public Float getScore() {
+        return this.Score;
+    }
+
+    /**
+     * Set 相似度分数
+     * @param Score 相似度分数
+     */
+    public void setScore(Float Score) {
+        this.Score = Score;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "Score", this.Score);
 
     }
 }

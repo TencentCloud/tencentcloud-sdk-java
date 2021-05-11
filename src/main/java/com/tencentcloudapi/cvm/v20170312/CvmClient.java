@@ -238,6 +238,26 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeAccountQuota)用于查询用户配额详情。
+     * @param req DescribeAccountQuotaRequest
+     * @return DescribeAccountQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountQuotaResponse DescribeAccountQuota(DescribeAccountQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccountQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
      * @param req DescribeDisasterRecoverGroupQuotaRequest
      * @return DescribeDisasterRecoverGroupQuotaResponse
